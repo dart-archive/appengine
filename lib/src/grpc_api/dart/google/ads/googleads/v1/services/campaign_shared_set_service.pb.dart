@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -254,27 +253,4 @@ class MutateCampaignSharedSetResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CampaignSharedSetServiceApi {
-  $pb.RpcClient _client;
-  CampaignSharedSetServiceApi(this._client);
-
-  $async.Future<$0.CampaignSharedSet> getCampaignSharedSet(
-      $pb.ClientContext ctx, GetCampaignSharedSetRequest request) {
-    var emptyResponse = $0.CampaignSharedSet();
-    return _client.invoke<$0.CampaignSharedSet>(ctx, 'CampaignSharedSetService',
-        'GetCampaignSharedSet', request, emptyResponse);
-  }
-
-  $async.Future<MutateCampaignSharedSetsResponse> mutateCampaignSharedSets(
-      $pb.ClientContext ctx, MutateCampaignSharedSetsRequest request) {
-    var emptyResponse = MutateCampaignSharedSetsResponse();
-    return _client.invoke<MutateCampaignSharedSetsResponse>(
-        ctx,
-        'CampaignSharedSetService',
-        'MutateCampaignSharedSets',
-        request,
-        emptyResponse);
-  }
 }

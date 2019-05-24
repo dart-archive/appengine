@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'transfer_types.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/empty.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $2;
 
 class GetGoogleServiceAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -97,8 +95,8 @@ class UpdateTransferJobRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'projectId')
     ..a<$0.TransferJob>(3, 'transferJob', $pb.PbFieldType.OM,
         $0.TransferJob.getDefault, $0.TransferJob.create)
-    ..a<$1.FieldMask>(4, 'updateTransferJobFieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(4, 'updateTransferJobFieldMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTransferJobRequest() : super();
@@ -146,8 +144,8 @@ class UpdateTransferJobRequest extends $pb.GeneratedMessage {
   $core.bool hasTransferJob() => $_has(2);
   void clearTransferJob() => clearField(3);
 
-  $1.FieldMask get updateTransferJobFieldMask => $_getN(3);
-  set updateTransferJobFieldMask($1.FieldMask v) {
+  $2.FieldMask get updateTransferJobFieldMask => $_getN(3);
+  set updateTransferJobFieldMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -370,62 +368,4 @@ class ResumeTransferOperationRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class StorageTransferServiceApi {
-  $pb.RpcClient _client;
-  StorageTransferServiceApi(this._client);
-
-  $async.Future<$0.GoogleServiceAccount> getGoogleServiceAccount(
-      $pb.ClientContext ctx, GetGoogleServiceAccountRequest request) {
-    var emptyResponse = $0.GoogleServiceAccount();
-    return _client.invoke<$0.GoogleServiceAccount>(
-        ctx,
-        'StorageTransferService',
-        'GetGoogleServiceAccount',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.TransferJob> createTransferJob(
-      $pb.ClientContext ctx, CreateTransferJobRequest request) {
-    var emptyResponse = $0.TransferJob();
-    return _client.invoke<$0.TransferJob>(ctx, 'StorageTransferService',
-        'CreateTransferJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.TransferJob> updateTransferJob(
-      $pb.ClientContext ctx, UpdateTransferJobRequest request) {
-    var emptyResponse = $0.TransferJob();
-    return _client.invoke<$0.TransferJob>(ctx, 'StorageTransferService',
-        'UpdateTransferJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.TransferJob> getTransferJob(
-      $pb.ClientContext ctx, GetTransferJobRequest request) {
-    var emptyResponse = $0.TransferJob();
-    return _client.invoke<$0.TransferJob>(ctx, 'StorageTransferService',
-        'GetTransferJob', request, emptyResponse);
-  }
-
-  $async.Future<ListTransferJobsResponse> listTransferJobs(
-      $pb.ClientContext ctx, ListTransferJobsRequest request) {
-    var emptyResponse = ListTransferJobsResponse();
-    return _client.invoke<ListTransferJobsResponse>(ctx,
-        'StorageTransferService', 'ListTransferJobs', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> pauseTransferOperation(
-      $pb.ClientContext ctx, PauseTransferOperationRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(ctx, 'StorageTransferService',
-        'PauseTransferOperation', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> resumeTransferOperation(
-      $pb.ClientContext ctx, ResumeTransferOperationRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(ctx, 'StorageTransferService',
-        'ResumeTransferOperation', request, emptyResponse);
-  }
 }

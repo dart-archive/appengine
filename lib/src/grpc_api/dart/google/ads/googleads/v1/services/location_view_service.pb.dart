@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/location_view.pb.dart' as $0;
 
 class GetLocationViewRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLocationViewRequest',
@@ -46,16 +43,4 @@ class GetLocationViewRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class LocationViewServiceApi {
-  $pb.RpcClient _client;
-  LocationViewServiceApi(this._client);
-
-  $async.Future<$0.LocationView> getLocationView(
-      $pb.ClientContext ctx, GetLocationViewRequest request) {
-    var emptyResponse = $0.LocationView();
-    return _client.invoke<$0.LocationView>(
-        ctx, 'LocationViewService', 'GetLocationView', request, emptyResponse);
-  }
 }

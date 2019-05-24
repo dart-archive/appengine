@@ -4,15 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $4;
-import 'assets.pbjson.dart' as $1;
-import '../../../protobuf/struct.pbjson.dart' as $5;
-import '../../../iam/v1/policy.pbjson.dart' as $6;
-import '../../../type/expr.pbjson.dart' as $7;
-
 const ContentType$json = {
   '1': 'ContentType',
   '2': [
@@ -140,47 +131,4 @@ const GcsDestination$json = {
   '8': [
     {'1': 'object_uri'},
   ],
-};
-
-const AssetServiceBase$json = {
-  '1': 'AssetService',
-  '2': [
-    {
-      '1': 'ExportAssets',
-      '2': '.google.cloud.asset.v1beta1.ExportAssetsRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'BatchGetAssetsHistory',
-      '2': '.google.cloud.asset.v1beta1.BatchGetAssetsHistoryRequest',
-      '3': '.google.cloud.asset.v1beta1.BatchGetAssetsHistoryResponse',
-      '4': {}
-    },
-  ],
-};
-
-const AssetServiceBase$messageJson = {
-  '.google.cloud.asset.v1beta1.ExportAssetsRequest': ExportAssetsRequest$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.asset.v1beta1.OutputConfig': OutputConfig$json,
-  '.google.cloud.asset.v1beta1.GcsDestination': GcsDestination$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $4.Status$json,
-  '.google.cloud.asset.v1beta1.BatchGetAssetsHistoryRequest':
-      BatchGetAssetsHistoryRequest$json,
-  '.google.cloud.asset.v1beta1.TimeWindow': $1.TimeWindow$json,
-  '.google.cloud.asset.v1beta1.BatchGetAssetsHistoryResponse':
-      BatchGetAssetsHistoryResponse$json,
-  '.google.cloud.asset.v1beta1.TemporalAsset': $1.TemporalAsset$json,
-  '.google.cloud.asset.v1beta1.Asset': $1.Asset$json,
-  '.google.cloud.asset.v1beta1.Resource': $1.Resource$json,
-  '.google.protobuf.Struct': $5.Struct$json,
-  '.google.protobuf.Struct.FieldsEntry': $5.Struct_FieldsEntry$json,
-  '.google.protobuf.Value': $5.Value$json,
-  '.google.protobuf.ListValue': $5.ListValue$json,
-  '.google.iam.v1.Policy': $6.Policy$json,
-  '.google.iam.v1.Binding': $6.Binding$json,
-  '.google.type.Expr': $7.Expr$json,
 };

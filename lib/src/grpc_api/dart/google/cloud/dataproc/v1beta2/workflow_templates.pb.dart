@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import 'clusters.pb.dart' as $1;
-import 'jobs.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
-import '../../../protobuf/empty.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import 'clusters.pb.dart' as $3;
+import 'jobs.pb.dart' as $4;
 
 import 'workflow_templates.pbenum.dart';
 
@@ -26,10 +23,10 @@ class WorkflowTemplate extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<$core.int>(3, 'version', $pb.PbFieldType.O3)
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..m<$core.String, $core.String>(
         6,
         'labels',
@@ -90,16 +87,16 @@ class WorkflowTemplate extends $pb.GeneratedMessage {
   $core.bool hasVersion() => $_has(2);
   void clearVersion() => clearField(3);
 
-  $0.Timestamp get createTime => $_getN(3);
-  set createTime($0.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(3);
+  set createTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $0.Timestamp get updateTime => $_getN(4);
-  set updateTime($0.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(4);
+  set updateTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -190,8 +187,8 @@ class ManagedCluster extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManagedCluster',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
     ..aOS(2, 'clusterName')
-    ..a<$1.ClusterConfig>(3, 'config', $pb.PbFieldType.OM,
-        $1.ClusterConfig.getDefault, $1.ClusterConfig.create)
+    ..a<$3.ClusterConfig>(3, 'config', $pb.PbFieldType.OM,
+        $3.ClusterConfig.getDefault, $3.ClusterConfig.create)
     ..m<$core.String, $core.String>(
         4,
         'labels',
@@ -230,8 +227,8 @@ class ManagedCluster extends $pb.GeneratedMessage {
   $core.bool hasClusterName() => $_has(0);
   void clearClusterName() => clearField(2);
 
-  $1.ClusterConfig get config => $_getN(1);
-  set config($1.ClusterConfig v) {
+  $3.ClusterConfig get config => $_getN(1);
+  set config($3.ClusterConfig v) {
     setField(3, v);
   }
 
@@ -311,18 +308,18 @@ class OrderedJob extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OrderedJob',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
     ..aOS(1, 'stepId')
-    ..a<$2.HadoopJob>(2, 'hadoopJob', $pb.PbFieldType.OM,
-        $2.HadoopJob.getDefault, $2.HadoopJob.create)
-    ..a<$2.SparkJob>(3, 'sparkJob', $pb.PbFieldType.OM, $2.SparkJob.getDefault,
-        $2.SparkJob.create)
-    ..a<$2.PySparkJob>(4, 'pysparkJob', $pb.PbFieldType.OM,
-        $2.PySparkJob.getDefault, $2.PySparkJob.create)
-    ..a<$2.HiveJob>(5, 'hiveJob', $pb.PbFieldType.OM, $2.HiveJob.getDefault,
-        $2.HiveJob.create)
-    ..a<$2.PigJob>(
-        6, 'pigJob', $pb.PbFieldType.OM, $2.PigJob.getDefault, $2.PigJob.create)
-    ..a<$2.SparkSqlJob>(7, 'sparkSqlJob', $pb.PbFieldType.OM,
-        $2.SparkSqlJob.getDefault, $2.SparkSqlJob.create)
+    ..a<$4.HadoopJob>(2, 'hadoopJob', $pb.PbFieldType.OM,
+        $4.HadoopJob.getDefault, $4.HadoopJob.create)
+    ..a<$4.SparkJob>(3, 'sparkJob', $pb.PbFieldType.OM, $4.SparkJob.getDefault,
+        $4.SparkJob.create)
+    ..a<$4.PySparkJob>(4, 'pysparkJob', $pb.PbFieldType.OM,
+        $4.PySparkJob.getDefault, $4.PySparkJob.create)
+    ..a<$4.HiveJob>(5, 'hiveJob', $pb.PbFieldType.OM, $4.HiveJob.getDefault,
+        $4.HiveJob.create)
+    ..a<$4.PigJob>(
+        6, 'pigJob', $pb.PbFieldType.OM, $4.PigJob.getDefault, $4.PigJob.create)
+    ..a<$4.SparkSqlJob>(7, 'sparkSqlJob', $pb.PbFieldType.OM,
+        $4.SparkSqlJob.getDefault, $4.SparkSqlJob.create)
     ..m<$core.String, $core.String>(
         8,
         'labels',
@@ -333,8 +330,8 @@ class OrderedJob extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.cloud.dataproc.v1beta2'))
-    ..a<$2.JobScheduling>(9, 'scheduling', $pb.PbFieldType.OM,
-        $2.JobScheduling.getDefault, $2.JobScheduling.create)
+    ..a<$4.JobScheduling>(9, 'scheduling', $pb.PbFieldType.OM,
+        $4.JobScheduling.getDefault, $4.JobScheduling.create)
     ..pPS(10, 'prerequisiteStepIds')
     ..oo(0, [2, 3, 4, 5, 6, 7])
     ..hasRequiredFields = false;
@@ -368,48 +365,48 @@ class OrderedJob extends $pb.GeneratedMessage {
   $core.bool hasStepId() => $_has(0);
   void clearStepId() => clearField(1);
 
-  $2.HadoopJob get hadoopJob => $_getN(1);
-  set hadoopJob($2.HadoopJob v) {
+  $4.HadoopJob get hadoopJob => $_getN(1);
+  set hadoopJob($4.HadoopJob v) {
     setField(2, v);
   }
 
   $core.bool hasHadoopJob() => $_has(1);
   void clearHadoopJob() => clearField(2);
 
-  $2.SparkJob get sparkJob => $_getN(2);
-  set sparkJob($2.SparkJob v) {
+  $4.SparkJob get sparkJob => $_getN(2);
+  set sparkJob($4.SparkJob v) {
     setField(3, v);
   }
 
   $core.bool hasSparkJob() => $_has(2);
   void clearSparkJob() => clearField(3);
 
-  $2.PySparkJob get pysparkJob => $_getN(3);
-  set pysparkJob($2.PySparkJob v) {
+  $4.PySparkJob get pysparkJob => $_getN(3);
+  set pysparkJob($4.PySparkJob v) {
     setField(4, v);
   }
 
   $core.bool hasPysparkJob() => $_has(3);
   void clearPysparkJob() => clearField(4);
 
-  $2.HiveJob get hiveJob => $_getN(4);
-  set hiveJob($2.HiveJob v) {
+  $4.HiveJob get hiveJob => $_getN(4);
+  set hiveJob($4.HiveJob v) {
     setField(5, v);
   }
 
   $core.bool hasHiveJob() => $_has(4);
   void clearHiveJob() => clearField(5);
 
-  $2.PigJob get pigJob => $_getN(5);
-  set pigJob($2.PigJob v) {
+  $4.PigJob get pigJob => $_getN(5);
+  set pigJob($4.PigJob v) {
     setField(6, v);
   }
 
   $core.bool hasPigJob() => $_has(5);
   void clearPigJob() => clearField(6);
 
-  $2.SparkSqlJob get sparkSqlJob => $_getN(6);
-  set sparkSqlJob($2.SparkSqlJob v) {
+  $4.SparkSqlJob get sparkSqlJob => $_getN(6);
+  set sparkSqlJob($4.SparkSqlJob v) {
     setField(7, v);
   }
 
@@ -418,8 +415,8 @@ class OrderedJob extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(7);
 
-  $2.JobScheduling get scheduling => $_getN(8);
-  set scheduling($2.JobScheduling v) {
+  $4.JobScheduling get scheduling => $_getN(8);
+  set scheduling($4.JobScheduling v) {
     setField(9, v);
   }
 
@@ -628,10 +625,10 @@ class WorkflowMetadata extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.cloud.dataproc.v1beta2'))
-    ..a<$0.Timestamp>(9, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(10, 'endTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(9, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(10, 'endTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..aOS(11, 'clusterUuid')
     ..hasRequiredFields = false;
 
@@ -712,16 +709,16 @@ class WorkflowMetadata extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get parameters => $_getMap(7);
 
-  $0.Timestamp get startTime => $_getN(8);
-  set startTime($0.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(8);
+  set startTime($2.Timestamp v) {
     setField(9, v);
   }
 
   $core.bool hasStartTime() => $_has(8);
   void clearStartTime() => clearField(9);
 
-  $0.Timestamp get endTime => $_getN(9);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(9);
+  set endTime($2.Timestamp v) {
     setField(10, v);
   }
 
@@ -1317,62 +1314,4 @@ class DeleteWorkflowTemplateRequest extends $pb.GeneratedMessage {
 
   $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
-}
-
-class WorkflowTemplateServiceApi {
-  $pb.RpcClient _client;
-  WorkflowTemplateServiceApi(this._client);
-
-  $async.Future<WorkflowTemplate> createWorkflowTemplate(
-      $pb.ClientContext ctx, CreateWorkflowTemplateRequest request) {
-    var emptyResponse = WorkflowTemplate();
-    return _client.invoke<WorkflowTemplate>(ctx, 'WorkflowTemplateService',
-        'CreateWorkflowTemplate', request, emptyResponse);
-  }
-
-  $async.Future<WorkflowTemplate> getWorkflowTemplate(
-      $pb.ClientContext ctx, GetWorkflowTemplateRequest request) {
-    var emptyResponse = WorkflowTemplate();
-    return _client.invoke<WorkflowTemplate>(ctx, 'WorkflowTemplateService',
-        'GetWorkflowTemplate', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> instantiateWorkflowTemplate(
-      $pb.ClientContext ctx, InstantiateWorkflowTemplateRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(ctx, 'WorkflowTemplateService',
-        'InstantiateWorkflowTemplate', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> instantiateInlineWorkflowTemplate(
-      $pb.ClientContext ctx, InstantiateInlineWorkflowTemplateRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(ctx, 'WorkflowTemplateService',
-        'InstantiateInlineWorkflowTemplate', request, emptyResponse);
-  }
-
-  $async.Future<WorkflowTemplate> updateWorkflowTemplate(
-      $pb.ClientContext ctx, UpdateWorkflowTemplateRequest request) {
-    var emptyResponse = WorkflowTemplate();
-    return _client.invoke<WorkflowTemplate>(ctx, 'WorkflowTemplateService',
-        'UpdateWorkflowTemplate', request, emptyResponse);
-  }
-
-  $async.Future<ListWorkflowTemplatesResponse> listWorkflowTemplates(
-      $pb.ClientContext ctx, ListWorkflowTemplatesRequest request) {
-    var emptyResponse = ListWorkflowTemplatesResponse();
-    return _client.invoke<ListWorkflowTemplatesResponse>(
-        ctx,
-        'WorkflowTemplateService',
-        'ListWorkflowTemplates',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteWorkflowTemplate(
-      $pb.ClientContext ctx, DeleteWorkflowTemplateRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'WorkflowTemplateService',
-        'DeleteWorkflowTemplate', request, emptyResponse);
-  }
 }

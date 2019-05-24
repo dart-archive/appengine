@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/ad_group_bid_modifier.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../common/criteria.pbjson.dart' as $4;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-
 const GetAdGroupBidModifierRequest$json = {
   '1': 'GetAdGroupBidModifierRequest',
   '2': [
@@ -98,55 +91,4 @@ const MutateAdGroupBidModifierResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const AdGroupBidModifierServiceBase$json = {
-  '1': 'AdGroupBidModifierService',
-  '2': [
-    {
-      '1': 'GetAdGroupBidModifier',
-      '2': '.google.ads.googleads.v1.services.GetAdGroupBidModifierRequest',
-      '3': '.google.ads.googleads.v1.resources.AdGroupBidModifier',
-      '4': {}
-    },
-    {
-      '1': 'MutateAdGroupBidModifiers',
-      '2': '.google.ads.googleads.v1.services.MutateAdGroupBidModifiersRequest',
-      '3':
-          '.google.ads.googleads.v1.services.MutateAdGroupBidModifiersResponse',
-      '4': {}
-    },
-  ],
-};
-
-const AdGroupBidModifierServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetAdGroupBidModifierRequest':
-      GetAdGroupBidModifierRequest$json,
-  '.google.ads.googleads.v1.resources.AdGroupBidModifier':
-      $0.AdGroupBidModifier$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.DoubleValue': $3.DoubleValue$json,
-  '.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo':
-      $4.HotelDateSelectionTypeInfo$json,
-  '.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo':
-      $4.HotelAdvanceBookingWindowInfo$json,
-  '.google.ads.googleads.v1.common.HotelLengthOfStayInfo':
-      $4.HotelLengthOfStayInfo$json,
-  '.google.ads.googleads.v1.common.HotelCheckInDayInfo':
-      $4.HotelCheckInDayInfo$json,
-  '.google.ads.googleads.v1.common.DeviceInfo': $4.DeviceInfo$json,
-  '.google.ads.googleads.v1.common.PreferredContentInfo':
-      $4.PreferredContentInfo$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupBidModifiersRequest':
-      MutateAdGroupBidModifiersRequest$json,
-  '.google.ads.googleads.v1.services.AdGroupBidModifierOperation':
-      AdGroupBidModifierOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupBidModifiersResponse':
-      MutateAdGroupBidModifiersResponse$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupBidModifierResult':
-      MutateAdGroupBidModifierResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $5.Any$json,
 };

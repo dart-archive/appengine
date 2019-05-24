@@ -9,9 +9,9 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'geometry.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import 'product_search_service.pb.dart' as $2;
+import 'geometry.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import 'product_search_service.pb.dart' as $4;
 
 class ProductSearchParams extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSearchParams',
@@ -19,8 +19,8 @@ class ProductSearchParams extends $pb.GeneratedMessage {
     ..aOS(6, 'productSet')
     ..pPS(7, 'productCategories')
     ..aOS(8, 'filter')
-    ..a<$0.BoundingPoly>(9, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(9, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..hasRequiredFields = false;
 
   ProductSearchParams() : super();
@@ -60,8 +60,8 @@ class ProductSearchParams extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(8);
 
-  $0.BoundingPoly get boundingPoly => $_getN(3);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(3);
+  set boundingPoly($2.BoundingPoly v) {
     setField(9, v);
   }
 
@@ -73,8 +73,8 @@ class ProductSearchResults_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.Result',
       package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
-    ..a<$2.Product>(1, 'product', $pb.PbFieldType.OM, $2.Product.getDefault,
-        $2.Product.create)
+    ..a<$4.Product>(1, 'product', $pb.PbFieldType.OM, $4.Product.getDefault,
+        $4.Product.create)
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..aOS(3, 'image')
     ..hasRequiredFields = false;
@@ -101,8 +101,8 @@ class ProductSearchResults_Result extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ProductSearchResults_Result _defaultInstance;
 
-  $2.Product get product => $_getN(0);
-  set product($2.Product v) {
+  $4.Product get product => $_getN(0);
+  set product($4.Product v) {
     setField(1, v);
   }
 
@@ -130,8 +130,8 @@ class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.GroupedResult',
       package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
-    ..a<$0.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..pc<ProductSearchResults_Result>(
         2, 'results', $pb.PbFieldType.PM, ProductSearchResults_Result.create)
     ..hasRequiredFields = false;
@@ -159,8 +159,8 @@ class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ProductSearchResults_GroupedResult _defaultInstance;
 
-  $0.BoundingPoly get boundingPoly => $_getN(0);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(0);
+  set boundingPoly($2.BoundingPoly v) {
     setField(1, v);
   }
 
@@ -173,8 +173,8 @@ class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
 class ProductSearchResults extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSearchResults',
       package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
-    ..a<$1.Timestamp>(2, 'indexTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'indexTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..pc<ProductSearchResults_Result>(
         5, 'results', $pb.PbFieldType.PM, ProductSearchResults_Result.create)
     ..pc<ProductSearchResults_GroupedResult>(6, 'productGroupedResults',
@@ -201,8 +201,8 @@ class ProductSearchResults extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ProductSearchResults _defaultInstance;
 
-  $1.Timestamp get indexTime => $_getN(0);
-  set indexTime($1.Timestamp v) {
+  $3.Timestamp get indexTime => $_getN(0);
+  set indexTime($3.Timestamp v) {
     setField(2, v);
   }
 

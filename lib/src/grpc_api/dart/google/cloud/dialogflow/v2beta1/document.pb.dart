@@ -4,14 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $0;
-import '../../../longrunning/operations.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 import 'document.pbenum.dart';
 
@@ -327,8 +325,8 @@ class UpdateDocumentRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..a<Document>(
         1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
-    ..a<$0.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDocumentRequest() : super();
@@ -360,8 +358,8 @@ class UpdateDocumentRequest extends $pb.GeneratedMessage {
   $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
-  $0.FieldMask get updateMask => $_getN(1);
-  set updateMask($0.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -447,51 +445,4 @@ class ReloadDocumentRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class DocumentsApi {
-  $pb.RpcClient _client;
-  DocumentsApi(this._client);
-
-  $async.Future<ListDocumentsResponse> listDocuments(
-      $pb.ClientContext ctx, ListDocumentsRequest request) {
-    var emptyResponse = ListDocumentsResponse();
-    return _client.invoke<ListDocumentsResponse>(
-        ctx, 'Documents', 'ListDocuments', request, emptyResponse);
-  }
-
-  $async.Future<Document> getDocument(
-      $pb.ClientContext ctx, GetDocumentRequest request) {
-    var emptyResponse = Document();
-    return _client.invoke<Document>(
-        ctx, 'Documents', 'GetDocument', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> createDocument(
-      $pb.ClientContext ctx, CreateDocumentRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'Documents', 'CreateDocument', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> deleteDocument(
-      $pb.ClientContext ctx, DeleteDocumentRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'Documents', 'DeleteDocument', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> updateDocument(
-      $pb.ClientContext ctx, UpdateDocumentRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'Documents', 'UpdateDocument', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> reloadDocument(
-      $pb.ClientContext ctx, ReloadDocumentRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'Documents', 'ReloadDocument', request, emptyResponse);
-  }
 }

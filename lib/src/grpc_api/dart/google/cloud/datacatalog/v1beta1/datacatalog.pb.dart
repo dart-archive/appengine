@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -181,16 +180,4 @@ class Entry extends $pb.GeneratedMessage {
 
   $core.bool hasBigqueryTableSpec() => $_has(7);
   void clearBigqueryTableSpec() => clearField(12);
-}
-
-class DataCatalogApi {
-  $pb.RpcClient _client;
-  DataCatalogApi(this._client);
-
-  $async.Future<Entry> lookupEntry(
-      $pb.ClientContext ctx, LookupEntryRequest request) {
-    var emptyResponse = Entry();
-    return _client.invoke<Entry>(
-        ctx, 'DataCatalog', 'LookupEntry', request, emptyResponse);
-  }
 }

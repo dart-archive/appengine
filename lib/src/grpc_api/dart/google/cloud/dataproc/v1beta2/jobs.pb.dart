@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 import 'jobs.pbenum.dart';
 
@@ -718,8 +716,8 @@ class JobStatus extends $pb.GeneratedMessage {
         JobStatus_State.valueOf,
         JobStatus_State.values)
     ..aOS(2, 'details')
-    ..a<$0.Timestamp>(6, 'stateStartTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(6, 'stateStartTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..e<JobStatus_Substate>(
         7,
         'substate',
@@ -762,8 +760,8 @@ class JobStatus extends $pb.GeneratedMessage {
   $core.bool hasDetails() => $_has(1);
   void clearDetails() => clearField(2);
 
-  $0.Timestamp get stateStartTime => $_getN(2);
-  set stateStartTime($0.Timestamp v) {
+  $1.Timestamp get stateStartTime => $_getN(2);
+  set stateStartTime($1.Timestamp v) {
     setField(6, v);
   }
 
@@ -1347,8 +1345,8 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'region')
     ..aOS(3, 'jobId')
     ..a<Job>(4, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
-    ..a<$1.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateJobRequest() : super();
@@ -1402,8 +1400,8 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   $core.bool hasJob() => $_has(3);
   void clearJob() => clearField(4);
 
-  $1.FieldMask get updateMask => $_getN(4);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(4);
+  set updateMask($2.FieldMask v) {
     setField(5, v);
   }
 
@@ -1550,50 +1548,4 @@ class DeleteJobRequest extends $pb.GeneratedMessage {
 
   $core.bool hasRegion() => $_has(2);
   void clearRegion() => clearField(3);
-}
-
-class JobControllerApi {
-  $pb.RpcClient _client;
-  JobControllerApi(this._client);
-
-  $async.Future<Job> submitJob(
-      $pb.ClientContext ctx, SubmitJobRequest request) {
-    var emptyResponse = Job();
-    return _client.invoke<Job>(
-        ctx, 'JobController', 'SubmitJob', request, emptyResponse);
-  }
-
-  $async.Future<Job> getJob($pb.ClientContext ctx, GetJobRequest request) {
-    var emptyResponse = Job();
-    return _client.invoke<Job>(
-        ctx, 'JobController', 'GetJob', request, emptyResponse);
-  }
-
-  $async.Future<ListJobsResponse> listJobs(
-      $pb.ClientContext ctx, ListJobsRequest request) {
-    var emptyResponse = ListJobsResponse();
-    return _client.invoke<ListJobsResponse>(
-        ctx, 'JobController', 'ListJobs', request, emptyResponse);
-  }
-
-  $async.Future<Job> updateJob(
-      $pb.ClientContext ctx, UpdateJobRequest request) {
-    var emptyResponse = Job();
-    return _client.invoke<Job>(
-        ctx, 'JobController', 'UpdateJob', request, emptyResponse);
-  }
-
-  $async.Future<Job> cancelJob(
-      $pb.ClientContext ctx, CancelJobRequest request) {
-    var emptyResponse = Job();
-    return _client.invoke<Job>(
-        ctx, 'JobController', 'CancelJob', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteJob(
-      $pb.ClientContext ctx, DeleteJobRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'JobController', 'DeleteJob', request, emptyResponse);
-  }
 }

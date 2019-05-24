@@ -4,18 +4,15 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'dataset.pb.dart' as $0;
-import 'human_annotation_config.pb.dart' as $1;
-import 'annotation_spec_set.pb.dart' as $2;
-import 'instruction.pb.dart' as $3;
-import '../../../protobuf/empty.pb.dart' as $4;
-import '../../../longrunning/operations.pb.dart' as $5;
+import 'dataset.pb.dart' as $1;
+import 'human_annotation_config.pb.dart' as $5;
+import 'annotation_spec_set.pb.dart' as $3;
+import 'instruction.pb.dart' as $4;
 
 import 'data_labeling_service.pbenum.dart';
 
@@ -25,8 +22,8 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDatasetRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $0.Dataset.getDefault,
-        $0.Dataset.create)
+    ..a<$1.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $1.Dataset.getDefault,
+        $1.Dataset.create)
     ..hasRequiredFields = false;
 
   CreateDatasetRequest() : super();
@@ -57,8 +54,8 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Dataset get dataset => $_getN(1);
-  set dataset($0.Dataset v) {
+  $1.Dataset get dataset => $_getN(1);
+  set dataset($1.Dataset v) {
     setField(2, v);
   }
 
@@ -164,7 +161,7 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
 class ListDatasetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsResponse',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
-    ..pc<$0.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $0.Dataset.create)
+    ..pc<$1.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $1.Dataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -188,7 +185,7 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDatasetsResponse _defaultInstance;
 
-  $core.List<$0.Dataset> get datasets => $_getList(0);
+  $core.List<$1.Dataset> get datasets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -238,8 +235,8 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDataRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.InputConfig>(2, 'inputConfig', $pb.PbFieldType.OM,
-        $0.InputConfig.getDefault, $0.InputConfig.create)
+    ..a<$1.InputConfig>(2, 'inputConfig', $pb.PbFieldType.OM,
+        $1.InputConfig.getDefault, $1.InputConfig.create)
     ..hasRequiredFields = false;
 
   ImportDataRequest() : super();
@@ -269,8 +266,8 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.InputConfig get inputConfig => $_getN(1);
-  set inputConfig($0.InputConfig v) {
+  $1.InputConfig get inputConfig => $_getN(1);
+  set inputConfig($1.InputConfig v) {
     setField(2, v);
   }
 
@@ -284,8 +281,8 @@ class ExportDataRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'annotatedDataset')
     ..aOS(3, 'filter')
-    ..a<$0.OutputConfig>(4, 'outputConfig', $pb.PbFieldType.OM,
-        $0.OutputConfig.getDefault, $0.OutputConfig.create)
+    ..a<$1.OutputConfig>(4, 'outputConfig', $pb.PbFieldType.OM,
+        $1.OutputConfig.getDefault, $1.OutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportDataRequest() : super();
@@ -331,8 +328,8 @@ class ExportDataRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(3);
 
-  $0.OutputConfig get outputConfig => $_getN(3);
-  set outputConfig($0.OutputConfig v) {
+  $1.OutputConfig get outputConfig => $_getN(3);
+  set outputConfig($1.OutputConfig v) {
     setField(4, v);
   }
 
@@ -439,7 +436,7 @@ class ListDataItemsRequest extends $pb.GeneratedMessage {
 class ListDataItemsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDataItemsResponse',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
-    ..pc<$0.DataItem>(1, 'dataItems', $pb.PbFieldType.PM, $0.DataItem.create)
+    ..pc<$1.DataItem>(1, 'dataItems', $pb.PbFieldType.PM, $1.DataItem.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -464,7 +461,7 @@ class ListDataItemsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDataItemsResponse _defaultInstance;
 
-  $core.List<$0.DataItem> get dataItems => $_getList(0);
+  $core.List<$1.DataItem> get dataItems => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -622,8 +619,8 @@ class ListAnnotatedDatasetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListAnnotatedDatasetsResponse',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
-    ..pc<$0.AnnotatedDataset>(
-        1, 'annotatedDatasets', $pb.PbFieldType.PM, $0.AnnotatedDataset.create)
+    ..pc<$1.AnnotatedDataset>(
+        1, 'annotatedDatasets', $pb.PbFieldType.PM, $1.AnnotatedDataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -650,7 +647,7 @@ class ListAnnotatedDatasetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListAnnotatedDatasetsResponse _defaultInstance;
 
-  $core.List<$0.AnnotatedDataset> get annotatedDatasets => $_getList(0);
+  $core.List<$1.AnnotatedDataset> get annotatedDatasets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -681,8 +678,8 @@ class LabelImageRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelImageRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
-        $1.HumanAnnotationConfig.getDefault, $1.HumanAnnotationConfig.create)
+    ..a<$5.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
+        $5.HumanAnnotationConfig.getDefault, $5.HumanAnnotationConfig.create)
     ..e<LabelImageRequest_Feature>(
         3,
         'feature',
@@ -690,18 +687,18 @@ class LabelImageRequest extends $pb.GeneratedMessage {
         LabelImageRequest_Feature.FEATURE_UNSPECIFIED,
         LabelImageRequest_Feature.valueOf,
         LabelImageRequest_Feature.values)
-    ..a<$1.ImageClassificationConfig>(
+    ..a<$5.ImageClassificationConfig>(
         4,
         'imageClassificationConfig',
         $pb.PbFieldType.OM,
-        $1.ImageClassificationConfig.getDefault,
-        $1.ImageClassificationConfig.create)
-    ..a<$1.BoundingPolyConfig>(5, 'boundingPolyConfig', $pb.PbFieldType.OM,
-        $1.BoundingPolyConfig.getDefault, $1.BoundingPolyConfig.create)
-    ..a<$1.PolylineConfig>(6, 'polylineConfig', $pb.PbFieldType.OM,
-        $1.PolylineConfig.getDefault, $1.PolylineConfig.create)
-    ..a<$1.SegmentationConfig>(7, 'segmentationConfig', $pb.PbFieldType.OM,
-        $1.SegmentationConfig.getDefault, $1.SegmentationConfig.create)
+        $5.ImageClassificationConfig.getDefault,
+        $5.ImageClassificationConfig.create)
+    ..a<$5.BoundingPolyConfig>(5, 'boundingPolyConfig', $pb.PbFieldType.OM,
+        $5.BoundingPolyConfig.getDefault, $5.BoundingPolyConfig.create)
+    ..a<$5.PolylineConfig>(6, 'polylineConfig', $pb.PbFieldType.OM,
+        $5.PolylineConfig.getDefault, $5.PolylineConfig.create)
+    ..a<$5.SegmentationConfig>(7, 'segmentationConfig', $pb.PbFieldType.OM,
+        $5.SegmentationConfig.getDefault, $5.SegmentationConfig.create)
     ..oo(0, [4, 5, 6, 7])
     ..hasRequiredFields = false;
 
@@ -736,8 +733,8 @@ class LabelImageRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.HumanAnnotationConfig get basicConfig => $_getN(1);
-  set basicConfig($1.HumanAnnotationConfig v) {
+  $5.HumanAnnotationConfig get basicConfig => $_getN(1);
+  set basicConfig($5.HumanAnnotationConfig v) {
     setField(2, v);
   }
 
@@ -752,32 +749,32 @@ class LabelImageRequest extends $pb.GeneratedMessage {
   $core.bool hasFeature() => $_has(2);
   void clearFeature() => clearField(3);
 
-  $1.ImageClassificationConfig get imageClassificationConfig => $_getN(3);
-  set imageClassificationConfig($1.ImageClassificationConfig v) {
+  $5.ImageClassificationConfig get imageClassificationConfig => $_getN(3);
+  set imageClassificationConfig($5.ImageClassificationConfig v) {
     setField(4, v);
   }
 
   $core.bool hasImageClassificationConfig() => $_has(3);
   void clearImageClassificationConfig() => clearField(4);
 
-  $1.BoundingPolyConfig get boundingPolyConfig => $_getN(4);
-  set boundingPolyConfig($1.BoundingPolyConfig v) {
+  $5.BoundingPolyConfig get boundingPolyConfig => $_getN(4);
+  set boundingPolyConfig($5.BoundingPolyConfig v) {
     setField(5, v);
   }
 
   $core.bool hasBoundingPolyConfig() => $_has(4);
   void clearBoundingPolyConfig() => clearField(5);
 
-  $1.PolylineConfig get polylineConfig => $_getN(5);
-  set polylineConfig($1.PolylineConfig v) {
+  $5.PolylineConfig get polylineConfig => $_getN(5);
+  set polylineConfig($5.PolylineConfig v) {
     setField(6, v);
   }
 
   $core.bool hasPolylineConfig() => $_has(5);
   void clearPolylineConfig() => clearField(6);
 
-  $1.SegmentationConfig get segmentationConfig => $_getN(6);
-  set segmentationConfig($1.SegmentationConfig v) {
+  $5.SegmentationConfig get segmentationConfig => $_getN(6);
+  set segmentationConfig($5.SegmentationConfig v) {
     setField(7, v);
   }
 
@@ -805,8 +802,8 @@ class LabelVideoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelVideoRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
-        $1.HumanAnnotationConfig.getDefault, $1.HumanAnnotationConfig.create)
+    ..a<$5.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
+        $5.HumanAnnotationConfig.getDefault, $5.HumanAnnotationConfig.create)
     ..e<LabelVideoRequest_Feature>(
         3,
         'feature',
@@ -814,22 +811,22 @@ class LabelVideoRequest extends $pb.GeneratedMessage {
         LabelVideoRequest_Feature.FEATURE_UNSPECIFIED,
         LabelVideoRequest_Feature.valueOf,
         LabelVideoRequest_Feature.values)
-    ..a<$1.VideoClassificationConfig>(
+    ..a<$5.VideoClassificationConfig>(
         4,
         'videoClassificationConfig',
         $pb.PbFieldType.OM,
-        $1.VideoClassificationConfig.getDefault,
-        $1.VideoClassificationConfig.create)
-    ..a<$1.ObjectDetectionConfig>(
+        $5.VideoClassificationConfig.getDefault,
+        $5.VideoClassificationConfig.create)
+    ..a<$5.ObjectDetectionConfig>(
         5,
         'objectDetectionConfig',
         $pb.PbFieldType.OM,
-        $1.ObjectDetectionConfig.getDefault,
-        $1.ObjectDetectionConfig.create)
-    ..a<$1.ObjectTrackingConfig>(6, 'objectTrackingConfig', $pb.PbFieldType.OM,
-        $1.ObjectTrackingConfig.getDefault, $1.ObjectTrackingConfig.create)
-    ..a<$1.EventConfig>(7, 'eventConfig', $pb.PbFieldType.OM,
-        $1.EventConfig.getDefault, $1.EventConfig.create)
+        $5.ObjectDetectionConfig.getDefault,
+        $5.ObjectDetectionConfig.create)
+    ..a<$5.ObjectTrackingConfig>(6, 'objectTrackingConfig', $pb.PbFieldType.OM,
+        $5.ObjectTrackingConfig.getDefault, $5.ObjectTrackingConfig.create)
+    ..a<$5.EventConfig>(7, 'eventConfig', $pb.PbFieldType.OM,
+        $5.EventConfig.getDefault, $5.EventConfig.create)
     ..oo(0, [4, 5, 6, 7])
     ..hasRequiredFields = false;
 
@@ -864,8 +861,8 @@ class LabelVideoRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.HumanAnnotationConfig get basicConfig => $_getN(1);
-  set basicConfig($1.HumanAnnotationConfig v) {
+  $5.HumanAnnotationConfig get basicConfig => $_getN(1);
+  set basicConfig($5.HumanAnnotationConfig v) {
     setField(2, v);
   }
 
@@ -880,32 +877,32 @@ class LabelVideoRequest extends $pb.GeneratedMessage {
   $core.bool hasFeature() => $_has(2);
   void clearFeature() => clearField(3);
 
-  $1.VideoClassificationConfig get videoClassificationConfig => $_getN(3);
-  set videoClassificationConfig($1.VideoClassificationConfig v) {
+  $5.VideoClassificationConfig get videoClassificationConfig => $_getN(3);
+  set videoClassificationConfig($5.VideoClassificationConfig v) {
     setField(4, v);
   }
 
   $core.bool hasVideoClassificationConfig() => $_has(3);
   void clearVideoClassificationConfig() => clearField(4);
 
-  $1.ObjectDetectionConfig get objectDetectionConfig => $_getN(4);
-  set objectDetectionConfig($1.ObjectDetectionConfig v) {
+  $5.ObjectDetectionConfig get objectDetectionConfig => $_getN(4);
+  set objectDetectionConfig($5.ObjectDetectionConfig v) {
     setField(5, v);
   }
 
   $core.bool hasObjectDetectionConfig() => $_has(4);
   void clearObjectDetectionConfig() => clearField(5);
 
-  $1.ObjectTrackingConfig get objectTrackingConfig => $_getN(5);
-  set objectTrackingConfig($1.ObjectTrackingConfig v) {
+  $5.ObjectTrackingConfig get objectTrackingConfig => $_getN(5);
+  set objectTrackingConfig($5.ObjectTrackingConfig v) {
     setField(6, v);
   }
 
   $core.bool hasObjectTrackingConfig() => $_has(5);
   void clearObjectTrackingConfig() => clearField(6);
 
-  $1.EventConfig get eventConfig => $_getN(6);
-  set eventConfig($1.EventConfig v) {
+  $5.EventConfig get eventConfig => $_getN(6);
+  set eventConfig($5.EventConfig v) {
     setField(7, v);
   }
 
@@ -929,20 +926,20 @@ class LabelTextRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelTextRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
-        $1.HumanAnnotationConfig.getDefault, $1.HumanAnnotationConfig.create)
-    ..a<$1.TextClassificationConfig>(
+    ..a<$5.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
+        $5.HumanAnnotationConfig.getDefault, $5.HumanAnnotationConfig.create)
+    ..a<$5.TextClassificationConfig>(
         4,
         'textClassificationConfig',
         $pb.PbFieldType.OM,
-        $1.TextClassificationConfig.getDefault,
-        $1.TextClassificationConfig.create)
-    ..a<$1.TextEntityExtractionConfig>(
+        $5.TextClassificationConfig.getDefault,
+        $5.TextClassificationConfig.create)
+    ..a<$5.TextEntityExtractionConfig>(
         5,
         'textEntityExtractionConfig',
         $pb.PbFieldType.OM,
-        $1.TextEntityExtractionConfig.getDefault,
-        $1.TextEntityExtractionConfig.create)
+        $5.TextEntityExtractionConfig.getDefault,
+        $5.TextEntityExtractionConfig.create)
     ..e<LabelTextRequest_Feature>(
         6,
         'feature',
@@ -984,24 +981,24 @@ class LabelTextRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.HumanAnnotationConfig get basicConfig => $_getN(1);
-  set basicConfig($1.HumanAnnotationConfig v) {
+  $5.HumanAnnotationConfig get basicConfig => $_getN(1);
+  set basicConfig($5.HumanAnnotationConfig v) {
     setField(2, v);
   }
 
   $core.bool hasBasicConfig() => $_has(1);
   void clearBasicConfig() => clearField(2);
 
-  $1.TextClassificationConfig get textClassificationConfig => $_getN(2);
-  set textClassificationConfig($1.TextClassificationConfig v) {
+  $5.TextClassificationConfig get textClassificationConfig => $_getN(2);
+  set textClassificationConfig($5.TextClassificationConfig v) {
     setField(4, v);
   }
 
   $core.bool hasTextClassificationConfig() => $_has(2);
   void clearTextClassificationConfig() => clearField(4);
 
-  $1.TextEntityExtractionConfig get textEntityExtractionConfig => $_getN(3);
-  set textEntityExtractionConfig($1.TextEntityExtractionConfig v) {
+  $5.TextEntityExtractionConfig get textEntityExtractionConfig => $_getN(3);
+  set textEntityExtractionConfig($5.TextEntityExtractionConfig v) {
     setField(5, v);
   }
 
@@ -1021,8 +1018,8 @@ class LabelAudioRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelAudioRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
-        $1.HumanAnnotationConfig.getDefault, $1.HumanAnnotationConfig.create)
+    ..a<$5.HumanAnnotationConfig>(2, 'basicConfig', $pb.PbFieldType.OM,
+        $5.HumanAnnotationConfig.getDefault, $5.HumanAnnotationConfig.create)
     ..e<LabelAudioRequest_Feature>(
         3,
         'feature',
@@ -1059,8 +1056,8 @@ class LabelAudioRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.HumanAnnotationConfig get basicConfig => $_getN(1);
-  set basicConfig($1.HumanAnnotationConfig v) {
+  $5.HumanAnnotationConfig get basicConfig => $_getN(1);
+  set basicConfig($5.HumanAnnotationConfig v) {
     setField(2, v);
   }
 
@@ -1183,7 +1180,7 @@ class ListExamplesRequest extends $pb.GeneratedMessage {
 class ListExamplesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListExamplesResponse',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
-    ..pc<$0.Example>(1, 'examples', $pb.PbFieldType.PM, $0.Example.create)
+    ..pc<$1.Example>(1, 'examples', $pb.PbFieldType.PM, $1.Example.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1207,7 +1204,7 @@ class ListExamplesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListExamplesResponse _defaultInstance;
 
-  $core.List<$0.Example> get examples => $_getList(0);
+  $core.List<$1.Example> get examples => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1223,8 +1220,8 @@ class CreateAnnotationSpecSetRequest extends $pb.GeneratedMessage {
       'CreateAnnotationSpecSetRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$2.AnnotationSpecSet>(2, 'annotationSpecSet', $pb.PbFieldType.OM,
-        $2.AnnotationSpecSet.getDefault, $2.AnnotationSpecSet.create)
+    ..a<$3.AnnotationSpecSet>(2, 'annotationSpecSet', $pb.PbFieldType.OM,
+        $3.AnnotationSpecSet.getDefault, $3.AnnotationSpecSet.create)
     ..hasRequiredFields = false;
 
   CreateAnnotationSpecSetRequest() : super();
@@ -1258,8 +1255,8 @@ class CreateAnnotationSpecSetRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.AnnotationSpecSet get annotationSpecSet => $_getN(1);
-  set annotationSpecSet($2.AnnotationSpecSet v) {
+  $3.AnnotationSpecSet get annotationSpecSet => $_getN(1);
+  set annotationSpecSet($3.AnnotationSpecSet v) {
     setField(2, v);
   }
 
@@ -1375,8 +1372,8 @@ class ListAnnotationSpecSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListAnnotationSpecSetsResponse',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
-    ..pc<$2.AnnotationSpecSet>(1, 'annotationSpecSets', $pb.PbFieldType.PM,
-        $2.AnnotationSpecSet.create)
+    ..pc<$3.AnnotationSpecSet>(1, 'annotationSpecSets', $pb.PbFieldType.PM,
+        $3.AnnotationSpecSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1403,7 +1400,7 @@ class ListAnnotationSpecSetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListAnnotationSpecSetsResponse _defaultInstance;
 
-  $core.List<$2.AnnotationSpecSet> get annotationSpecSets => $_getList(0);
+  $core.List<$3.AnnotationSpecSet> get annotationSpecSets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1457,8 +1454,8 @@ class CreateInstructionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstructionRequest',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$3.Instruction>(2, 'instruction', $pb.PbFieldType.OM,
-        $3.Instruction.getDefault, $3.Instruction.create)
+    ..a<$4.Instruction>(2, 'instruction', $pb.PbFieldType.OM,
+        $4.Instruction.getDefault, $4.Instruction.create)
     ..hasRequiredFields = false;
 
   CreateInstructionRequest() : super();
@@ -1490,8 +1487,8 @@ class CreateInstructionRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $3.Instruction get instruction => $_getN(1);
-  set instruction($3.Instruction v) {
+  $4.Instruction get instruction => $_getN(1);
+  set instruction($4.Instruction v) {
     setField(2, v);
   }
 
@@ -1637,8 +1634,8 @@ class ListInstructionsRequest extends $pb.GeneratedMessage {
 class ListInstructionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstructionsResponse',
       package: const $pb.PackageName('google.cloud.datalabeling.v1beta1'))
-    ..pc<$3.Instruction>(
-        1, 'instructions', $pb.PbFieldType.PM, $3.Instruction.create)
+    ..pc<$4.Instruction>(
+        1, 'instructions', $pb.PbFieldType.PM, $4.Instruction.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1663,7 +1660,7 @@ class ListInstructionsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListInstructionsResponse _defaultInstance;
 
-  $core.List<$3.Instruction> get instructions => $_getList(0);
+  $core.List<$4.Instruction> get instructions => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1672,188 +1669,4 @@ class ListInstructionsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class DataLabelingServiceApi {
-  $pb.RpcClient _client;
-  DataLabelingServiceApi(this._client);
-
-  $async.Future<$0.Dataset> createDataset(
-      $pb.ClientContext ctx, CreateDatasetRequest request) {
-    var emptyResponse = $0.Dataset();
-    return _client.invoke<$0.Dataset>(
-        ctx, 'DataLabelingService', 'CreateDataset', request, emptyResponse);
-  }
-
-  $async.Future<$0.Dataset> getDataset(
-      $pb.ClientContext ctx, GetDatasetRequest request) {
-    var emptyResponse = $0.Dataset();
-    return _client.invoke<$0.Dataset>(
-        ctx, 'DataLabelingService', 'GetDataset', request, emptyResponse);
-  }
-
-  $async.Future<ListDatasetsResponse> listDatasets(
-      $pb.ClientContext ctx, ListDatasetsRequest request) {
-    var emptyResponse = ListDatasetsResponse();
-    return _client.invoke<ListDatasetsResponse>(
-        ctx, 'DataLabelingService', 'ListDatasets', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteDataset(
-      $pb.ClientContext ctx, DeleteDatasetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'DataLabelingService', 'DeleteDataset', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> importData(
-      $pb.ClientContext ctx, ImportDataRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'DataLabelingService', 'ImportData', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> exportData(
-      $pb.ClientContext ctx, ExportDataRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'DataLabelingService', 'ExportData', request, emptyResponse);
-  }
-
-  $async.Future<$0.DataItem> getDataItem(
-      $pb.ClientContext ctx, GetDataItemRequest request) {
-    var emptyResponse = $0.DataItem();
-    return _client.invoke<$0.DataItem>(
-        ctx, 'DataLabelingService', 'GetDataItem', request, emptyResponse);
-  }
-
-  $async.Future<ListDataItemsResponse> listDataItems(
-      $pb.ClientContext ctx, ListDataItemsRequest request) {
-    var emptyResponse = ListDataItemsResponse();
-    return _client.invoke<ListDataItemsResponse>(
-        ctx, 'DataLabelingService', 'ListDataItems', request, emptyResponse);
-  }
-
-  $async.Future<$0.AnnotatedDataset> getAnnotatedDataset(
-      $pb.ClientContext ctx, GetAnnotatedDatasetRequest request) {
-    var emptyResponse = $0.AnnotatedDataset();
-    return _client.invoke<$0.AnnotatedDataset>(ctx, 'DataLabelingService',
-        'GetAnnotatedDataset', request, emptyResponse);
-  }
-
-  $async.Future<ListAnnotatedDatasetsResponse> listAnnotatedDatasets(
-      $pb.ClientContext ctx, ListAnnotatedDatasetsRequest request) {
-    var emptyResponse = ListAnnotatedDatasetsResponse();
-    return _client.invoke<ListAnnotatedDatasetsResponse>(ctx,
-        'DataLabelingService', 'ListAnnotatedDatasets', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteAnnotatedDataset(
-      $pb.ClientContext ctx, DeleteAnnotatedDatasetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'DataLabelingService',
-        'DeleteAnnotatedDataset', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> labelImage(
-      $pb.ClientContext ctx, LabelImageRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'DataLabelingService', 'LabelImage', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> labelVideo(
-      $pb.ClientContext ctx, LabelVideoRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'DataLabelingService', 'LabelVideo', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> labelText(
-      $pb.ClientContext ctx, LabelTextRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'DataLabelingService', 'LabelText', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> labelAudio(
-      $pb.ClientContext ctx, LabelAudioRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'DataLabelingService', 'LabelAudio', request, emptyResponse);
-  }
-
-  $async.Future<$0.Example> getExample(
-      $pb.ClientContext ctx, GetExampleRequest request) {
-    var emptyResponse = $0.Example();
-    return _client.invoke<$0.Example>(
-        ctx, 'DataLabelingService', 'GetExample', request, emptyResponse);
-  }
-
-  $async.Future<ListExamplesResponse> listExamples(
-      $pb.ClientContext ctx, ListExamplesRequest request) {
-    var emptyResponse = ListExamplesResponse();
-    return _client.invoke<ListExamplesResponse>(
-        ctx, 'DataLabelingService', 'ListExamples', request, emptyResponse);
-  }
-
-  $async.Future<$2.AnnotationSpecSet> createAnnotationSpecSet(
-      $pb.ClientContext ctx, CreateAnnotationSpecSetRequest request) {
-    var emptyResponse = $2.AnnotationSpecSet();
-    return _client.invoke<$2.AnnotationSpecSet>(ctx, 'DataLabelingService',
-        'CreateAnnotationSpecSet', request, emptyResponse);
-  }
-
-  $async.Future<$2.AnnotationSpecSet> getAnnotationSpecSet(
-      $pb.ClientContext ctx, GetAnnotationSpecSetRequest request) {
-    var emptyResponse = $2.AnnotationSpecSet();
-    return _client.invoke<$2.AnnotationSpecSet>(ctx, 'DataLabelingService',
-        'GetAnnotationSpecSet', request, emptyResponse);
-  }
-
-  $async.Future<ListAnnotationSpecSetsResponse> listAnnotationSpecSets(
-      $pb.ClientContext ctx, ListAnnotationSpecSetsRequest request) {
-    var emptyResponse = ListAnnotationSpecSetsResponse();
-    return _client.invoke<ListAnnotationSpecSetsResponse>(
-        ctx,
-        'DataLabelingService',
-        'ListAnnotationSpecSets',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteAnnotationSpecSet(
-      $pb.ClientContext ctx, DeleteAnnotationSpecSetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'DataLabelingService',
-        'DeleteAnnotationSpecSet', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> createInstruction(
-      $pb.ClientContext ctx, CreateInstructionRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(ctx, 'DataLabelingService',
-        'CreateInstruction', request, emptyResponse);
-  }
-
-  $async.Future<$3.Instruction> getInstruction(
-      $pb.ClientContext ctx, GetInstructionRequest request) {
-    var emptyResponse = $3.Instruction();
-    return _client.invoke<$3.Instruction>(
-        ctx, 'DataLabelingService', 'GetInstruction', request, emptyResponse);
-  }
-
-  $async.Future<ListInstructionsResponse> listInstructions(
-      $pb.ClientContext ctx, ListInstructionsRequest request) {
-    var emptyResponse = ListInstructionsResponse();
-    return _client.invoke<ListInstructionsResponse>(
-        ctx, 'DataLabelingService', 'ListInstructions', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteInstruction(
-      $pb.ClientContext ctx, DeleteInstructionRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'DataLabelingService',
-        'DeleteInstruction', request, emptyResponse);
-  }
 }

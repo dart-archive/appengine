@@ -4,16 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'operation.pbjson.dart' as $0;
-import '../../../protobuf/timestamp.pbjson.dart' as $3;
-import 'metric_value.pbjson.dart' as $4;
-import 'distribution.pbjson.dart' as $5;
-import 'log_entry.pbjson.dart' as $6;
-import '../../../protobuf/any.pbjson.dart' as $7;
-import '../../../protobuf/struct.pbjson.dart' as $8;
-import 'check_error.pbjson.dart' as $1;
-import '../../../rpc/status.pbjson.dart' as $2;
-
 const CheckRequest$json = {
   '1': 'CheckRequest',
   '2': [
@@ -135,60 +125,4 @@ const ReportResponse_ReportError$json = {
       '10': 'status'
     },
   ],
-};
-
-const ServiceControllerServiceBase$json = {
-  '1': 'ServiceController',
-  '2': [
-    {
-      '1': 'Check',
-      '2': '.google.api.servicecontrol.v1.CheckRequest',
-      '3': '.google.api.servicecontrol.v1.CheckResponse',
-      '4': {}
-    },
-    {
-      '1': 'Report',
-      '2': '.google.api.servicecontrol.v1.ReportRequest',
-      '3': '.google.api.servicecontrol.v1.ReportResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ServiceControllerServiceBase$messageJson = {
-  '.google.api.servicecontrol.v1.CheckRequest': CheckRequest$json,
-  '.google.api.servicecontrol.v1.Operation': $0.Operation$json,
-  '.google.protobuf.Timestamp': $3.Timestamp$json,
-  '.google.api.servicecontrol.v1.Operation.LabelsEntry':
-      $0.Operation_LabelsEntry$json,
-  '.google.api.servicecontrol.v1.MetricValueSet': $4.MetricValueSet$json,
-  '.google.api.servicecontrol.v1.MetricValue': $4.MetricValue$json,
-  '.google.api.servicecontrol.v1.MetricValue.LabelsEntry':
-      $4.MetricValue_LabelsEntry$json,
-  '.google.api.servicecontrol.v1.Distribution': $5.Distribution$json,
-  '.google.api.servicecontrol.v1.Distribution.LinearBuckets':
-      $5.Distribution_LinearBuckets$json,
-  '.google.api.servicecontrol.v1.Distribution.ExponentialBuckets':
-      $5.Distribution_ExponentialBuckets$json,
-  '.google.api.servicecontrol.v1.Distribution.ExplicitBuckets':
-      $5.Distribution_ExplicitBuckets$json,
-  '.google.api.servicecontrol.v1.LogEntry': $6.LogEntry$json,
-  '.google.protobuf.Any': $7.Any$json,
-  '.google.protobuf.Struct': $8.Struct$json,
-  '.google.protobuf.Struct.FieldsEntry': $8.Struct_FieldsEntry$json,
-  '.google.protobuf.Value': $8.Value$json,
-  '.google.protobuf.ListValue': $8.ListValue$json,
-  '.google.api.servicecontrol.v1.LogEntry.LabelsEntry':
-      $6.LogEntry_LabelsEntry$json,
-  '.google.api.servicecontrol.v1.CheckResponse': CheckResponse$json,
-  '.google.api.servicecontrol.v1.CheckError': $1.CheckError$json,
-  '.google.api.servicecontrol.v1.CheckResponse.CheckInfo':
-      CheckResponse_CheckInfo$json,
-  '.google.api.servicecontrol.v1.CheckResponse.ConsumerInfo':
-      CheckResponse_ConsumerInfo$json,
-  '.google.api.servicecontrol.v1.ReportRequest': ReportRequest$json,
-  '.google.api.servicecontrol.v1.ReportResponse': ReportResponse$json,
-  '.google.api.servicecontrol.v1.ReportResponse.ReportError':
-      ReportResponse_ReportError$json,
-  '.google.rpc.Status': $2.Status$json,
 };

@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/feed_mapping.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../../../../rpc/status.pbjson.dart' as $1;
-import '../../../../protobuf/any.pbjson.dart' as $3;
-
 const GetFeedMappingRequest$json = {
   '1': 'GetFeedMappingRequest',
   '2': [
@@ -79,42 +74,4 @@ const MutateFeedMappingResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const FeedMappingServiceBase$json = {
-  '1': 'FeedMappingService',
-  '2': [
-    {
-      '1': 'GetFeedMapping',
-      '2': '.google.ads.googleads.v1.services.GetFeedMappingRequest',
-      '3': '.google.ads.googleads.v1.resources.FeedMapping',
-      '4': {}
-    },
-    {
-      '1': 'MutateFeedMappings',
-      '2': '.google.ads.googleads.v1.services.MutateFeedMappingsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateFeedMappingsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const FeedMappingServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetFeedMappingRequest':
-      GetFeedMappingRequest$json,
-  '.google.ads.googleads.v1.resources.FeedMapping': $0.FeedMapping$json,
-  '.google.protobuf.StringValue': $2.StringValue$json,
-  '.google.ads.googleads.v1.resources.AttributeFieldMapping':
-      $0.AttributeFieldMapping$json,
-  '.google.protobuf.Int64Value': $2.Int64Value$json,
-  '.google.ads.googleads.v1.services.MutateFeedMappingsRequest':
-      MutateFeedMappingsRequest$json,
-  '.google.ads.googleads.v1.services.FeedMappingOperation':
-      FeedMappingOperation$json,
-  '.google.ads.googleads.v1.services.MutateFeedMappingsResponse':
-      MutateFeedMappingsResponse$json,
-  '.google.ads.googleads.v1.services.MutateFeedMappingResult':
-      MutateFeedMappingResult$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
 };

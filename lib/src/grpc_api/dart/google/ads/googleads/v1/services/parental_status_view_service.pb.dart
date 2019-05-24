@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/parental_status_view.pb.dart' as $0;
 
 class GetParentalStatusViewRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -49,20 +46,4 @@ class GetParentalStatusViewRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class ParentalStatusViewServiceApi {
-  $pb.RpcClient _client;
-  ParentalStatusViewServiceApi(this._client);
-
-  $async.Future<$0.ParentalStatusView> getParentalStatusView(
-      $pb.ClientContext ctx, GetParentalStatusViewRequest request) {
-    var emptyResponse = $0.ParentalStatusView();
-    return _client.invoke<$0.ParentalStatusView>(
-        ctx,
-        'ParentalStatusViewService',
-        'GetParentalStatusView',
-        request,
-        emptyResponse);
-  }
 }

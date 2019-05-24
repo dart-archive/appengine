@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/duration.pb.dart' as $0;
-import '../../protobuf/timestamp.pb.dart' as $1;
-import '../../longrunning/operations.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import '../../protobuf/duration.pb.dart' as $2;
+import '../../protobuf/timestamp.pb.dart' as $3;
 
 import '../../rpc/code.pbenum.dart' as $4;
 import 'pipelines.pbenum.dart';
@@ -273,8 +270,8 @@ class RunPipelineArgs extends $pb.GeneratedMessage {
         PipelineResources.getDefault, PipelineResources.create)
     ..a<LoggingOptions>(7, 'logging', $pb.PbFieldType.OM,
         LoggingOptions.getDefault, LoggingOptions.create)
-    ..a<$0.Duration>(8, 'keepVmAliveOnFailureDuration', $pb.PbFieldType.OM,
-        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$2.Duration>(8, 'keepVmAliveOnFailureDuration', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
     ..m<$core.String, $core.String>(
         9,
         'labels',
@@ -350,8 +347,8 @@ class RunPipelineArgs extends $pb.GeneratedMessage {
   $core.bool hasLogging() => $_has(6);
   void clearLogging() => clearField(7);
 
-  $0.Duration get keepVmAliveOnFailureDuration => $_getN(7);
-  set keepVmAliveOnFailureDuration($0.Duration v) {
+  $2.Duration get keepVmAliveOnFailureDuration => $_getN(7);
+  set keepVmAliveOnFailureDuration($2.Duration v) {
     setField(8, v);
   }
 
@@ -794,8 +791,8 @@ class TimestampEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimestampEvent',
       package: const $pb.PackageName('google.genomics.v1alpha2'))
     ..aOS(1, 'description')
-    ..a<$1.Timestamp>(2, 'timestamp', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'timestamp', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   TimestampEvent() : super();
@@ -824,8 +821,8 @@ class TimestampEvent extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(0);
   void clearDescription() => clearField(1);
 
-  $1.Timestamp get timestamp => $_getN(1);
-  set timestamp($1.Timestamp v) {
+  $3.Timestamp get timestamp => $_getN(1);
+  set timestamp($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -1288,58 +1285,4 @@ class DockerExecutor extends $pb.GeneratedMessage {
 
   $core.bool hasCmd() => $_has(1);
   void clearCmd() => clearField(2);
-}
-
-class PipelinesV1Alpha2Api {
-  $pb.RpcClient _client;
-  PipelinesV1Alpha2Api(this._client);
-
-  $async.Future<Pipeline> createPipeline(
-      $pb.ClientContext ctx, CreatePipelineRequest request) {
-    var emptyResponse = Pipeline();
-    return _client.invoke<Pipeline>(
-        ctx, 'PipelinesV1Alpha2', 'CreatePipeline', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> runPipeline(
-      $pb.ClientContext ctx, RunPipelineRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'PipelinesV1Alpha2', 'RunPipeline', request, emptyResponse);
-  }
-
-  $async.Future<Pipeline> getPipeline(
-      $pb.ClientContext ctx, GetPipelineRequest request) {
-    var emptyResponse = Pipeline();
-    return _client.invoke<Pipeline>(
-        ctx, 'PipelinesV1Alpha2', 'GetPipeline', request, emptyResponse);
-  }
-
-  $async.Future<ListPipelinesResponse> listPipelines(
-      $pb.ClientContext ctx, ListPipelinesRequest request) {
-    var emptyResponse = ListPipelinesResponse();
-    return _client.invoke<ListPipelinesResponse>(
-        ctx, 'PipelinesV1Alpha2', 'ListPipelines', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deletePipeline(
-      $pb.ClientContext ctx, DeletePipelineRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'PipelinesV1Alpha2', 'DeletePipeline', request, emptyResponse);
-  }
-
-  $async.Future<ControllerConfig> getControllerConfig(
-      $pb.ClientContext ctx, GetControllerConfigRequest request) {
-    var emptyResponse = ControllerConfig();
-    return _client.invoke<ControllerConfig>(ctx, 'PipelinesV1Alpha2',
-        'GetControllerConfig', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> setOperationStatus(
-      $pb.ClientContext ctx, SetOperationStatusRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'PipelinesV1Alpha2', 'SetOperationStatus', request, emptyResponse);
-  }
 }

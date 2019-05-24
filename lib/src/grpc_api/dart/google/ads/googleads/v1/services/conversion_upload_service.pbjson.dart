@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../../protobuf/wrappers.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $0;
-import '../../../../protobuf/any.pbjson.dart' as $2;
-
 const UploadClickConversionsRequest$json = {
   '1': 'UploadClickConversionsRequest',
   '2': [
@@ -290,45 +286,4 @@ const CallConversionResult$json = {
       '10': 'conversionDateTime'
     },
   ],
-};
-
-const ConversionUploadServiceBase$json = {
-  '1': 'ConversionUploadService',
-  '2': [
-    {
-      '1': 'UploadClickConversions',
-      '2': '.google.ads.googleads.v1.services.UploadClickConversionsRequest',
-      '3': '.google.ads.googleads.v1.services.UploadClickConversionsResponse',
-      '4': {}
-    },
-    {
-      '1': 'UploadCallConversions',
-      '2': '.google.ads.googleads.v1.services.UploadCallConversionsRequest',
-      '3': '.google.ads.googleads.v1.services.UploadCallConversionsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ConversionUploadServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.UploadClickConversionsRequest':
-      UploadClickConversionsRequest$json,
-  '.google.ads.googleads.v1.services.ClickConversion': ClickConversion$json,
-  '.google.protobuf.StringValue': $1.StringValue$json,
-  '.google.protobuf.DoubleValue': $1.DoubleValue$json,
-  '.google.ads.googleads.v1.services.ExternalAttributionData':
-      ExternalAttributionData$json,
-  '.google.ads.googleads.v1.services.UploadClickConversionsResponse':
-      UploadClickConversionsResponse$json,
-  '.google.rpc.Status': $0.Status$json,
-  '.google.protobuf.Any': $2.Any$json,
-  '.google.ads.googleads.v1.services.ClickConversionResult':
-      ClickConversionResult$json,
-  '.google.ads.googleads.v1.services.UploadCallConversionsRequest':
-      UploadCallConversionsRequest$json,
-  '.google.ads.googleads.v1.services.CallConversion': CallConversion$json,
-  '.google.ads.googleads.v1.services.UploadCallConversionsResponse':
-      UploadCallConversionsResponse$json,
-  '.google.ads.googleads.v1.services.CallConversionResult':
-      CallConversionResult$json,
 };

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -217,23 +216,4 @@ class Location extends $pb.GeneratedMessage {
 
   $core.bool hasDisplayName() => $_has(4);
   void clearDisplayName() => clearField(5);
-}
-
-class LocationsApi {
-  $pb.RpcClient _client;
-  LocationsApi(this._client);
-
-  $async.Future<ListLocationsResponse> listLocations(
-      $pb.ClientContext ctx, ListLocationsRequest request) {
-    var emptyResponse = ListLocationsResponse();
-    return _client.invoke<ListLocationsResponse>(
-        ctx, 'Locations', 'ListLocations', request, emptyResponse);
-  }
-
-  $async.Future<Location> getLocation(
-      $pb.ClientContext ctx, GetLocationRequest request) {
-    var emptyResponse = Location();
-    return _client.invoke<Location>(
-        ctx, 'Locations', 'GetLocation', request, emptyResponse);
-  }
 }

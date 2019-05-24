@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'data.pbjson.dart' as $0;
-import '../../protobuf/wrappers.pbjson.dart' as $1;
-import '../../rpc/status.pbjson.dart' as $2;
-import '../../protobuf/any.pbjson.dart' as $3;
-
 const ReadRowsRequest$json = {
   '1': 'ReadRowsRequest',
   '2': [
@@ -262,96 +257,4 @@ const ReadModifyWriteRowResponse$json = {
       '10': 'row'
     },
   ],
-};
-
-const BigtableServiceBase$json = {
-  '1': 'Bigtable',
-  '2': [
-    {
-      '1': 'ReadRows',
-      '2': '.google.bigtable.v2.ReadRowsRequest',
-      '3': '.google.bigtable.v2.ReadRowsResponse',
-      '4': {},
-      '6': true
-    },
-    {
-      '1': 'SampleRowKeys',
-      '2': '.google.bigtable.v2.SampleRowKeysRequest',
-      '3': '.google.bigtable.v2.SampleRowKeysResponse',
-      '4': {},
-      '6': true
-    },
-    {
-      '1': 'MutateRow',
-      '2': '.google.bigtable.v2.MutateRowRequest',
-      '3': '.google.bigtable.v2.MutateRowResponse',
-      '4': {}
-    },
-    {
-      '1': 'MutateRows',
-      '2': '.google.bigtable.v2.MutateRowsRequest',
-      '3': '.google.bigtable.v2.MutateRowsResponse',
-      '4': {},
-      '6': true
-    },
-    {
-      '1': 'CheckAndMutateRow',
-      '2': '.google.bigtable.v2.CheckAndMutateRowRequest',
-      '3': '.google.bigtable.v2.CheckAndMutateRowResponse',
-      '4': {}
-    },
-    {
-      '1': 'ReadModifyWriteRow',
-      '2': '.google.bigtable.v2.ReadModifyWriteRowRequest',
-      '3': '.google.bigtable.v2.ReadModifyWriteRowResponse',
-      '4': {}
-    },
-  ],
-};
-
-const BigtableServiceBase$messageJson = {
-  '.google.bigtable.v2.ReadRowsRequest': ReadRowsRequest$json,
-  '.google.bigtable.v2.RowSet': $0.RowSet$json,
-  '.google.bigtable.v2.RowRange': $0.RowRange$json,
-  '.google.bigtable.v2.RowFilter': $0.RowFilter$json,
-  '.google.bigtable.v2.RowFilter.Chain': $0.RowFilter_Chain$json,
-  '.google.bigtable.v2.RowFilter.Interleave': $0.RowFilter_Interleave$json,
-  '.google.bigtable.v2.RowFilter.Condition': $0.RowFilter_Condition$json,
-  '.google.bigtable.v2.ColumnRange': $0.ColumnRange$json,
-  '.google.bigtable.v2.TimestampRange': $0.TimestampRange$json,
-  '.google.bigtable.v2.ValueRange': $0.ValueRange$json,
-  '.google.bigtable.v2.ReadRowsResponse': ReadRowsResponse$json,
-  '.google.bigtable.v2.ReadRowsResponse.CellChunk':
-      ReadRowsResponse_CellChunk$json,
-  '.google.protobuf.StringValue': $1.StringValue$json,
-  '.google.protobuf.BytesValue': $1.BytesValue$json,
-  '.google.bigtable.v2.SampleRowKeysRequest': SampleRowKeysRequest$json,
-  '.google.bigtable.v2.SampleRowKeysResponse': SampleRowKeysResponse$json,
-  '.google.bigtable.v2.MutateRowRequest': MutateRowRequest$json,
-  '.google.bigtable.v2.Mutation': $0.Mutation$json,
-  '.google.bigtable.v2.Mutation.SetCell': $0.Mutation_SetCell$json,
-  '.google.bigtable.v2.Mutation.DeleteFromColumn':
-      $0.Mutation_DeleteFromColumn$json,
-  '.google.bigtable.v2.Mutation.DeleteFromFamily':
-      $0.Mutation_DeleteFromFamily$json,
-  '.google.bigtable.v2.Mutation.DeleteFromRow': $0.Mutation_DeleteFromRow$json,
-  '.google.bigtable.v2.MutateRowResponse': MutateRowResponse$json,
-  '.google.bigtable.v2.MutateRowsRequest': MutateRowsRequest$json,
-  '.google.bigtable.v2.MutateRowsRequest.Entry': MutateRowsRequest_Entry$json,
-  '.google.bigtable.v2.MutateRowsResponse': MutateRowsResponse$json,
-  '.google.bigtable.v2.MutateRowsResponse.Entry': MutateRowsResponse_Entry$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.bigtable.v2.CheckAndMutateRowRequest': CheckAndMutateRowRequest$json,
-  '.google.bigtable.v2.CheckAndMutateRowResponse':
-      CheckAndMutateRowResponse$json,
-  '.google.bigtable.v2.ReadModifyWriteRowRequest':
-      ReadModifyWriteRowRequest$json,
-  '.google.bigtable.v2.ReadModifyWriteRule': $0.ReadModifyWriteRule$json,
-  '.google.bigtable.v2.ReadModifyWriteRowResponse':
-      ReadModifyWriteRowResponse$json,
-  '.google.bigtable.v2.Row': $0.Row$json,
-  '.google.bigtable.v2.Family': $0.Family$json,
-  '.google.bigtable.v2.Column': $0.Column$json,
-  '.google.bigtable.v2.Cell': $0.Cell$json,
 };

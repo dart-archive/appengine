@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/geographic_view.pb.dart' as $0;
 
 class GetGeographicViewRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetGeographicViewRequest',
@@ -46,16 +43,4 @@ class GetGeographicViewRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class GeographicViewServiceApi {
-  $pb.RpcClient _client;
-  GeographicViewServiceApi(this._client);
-
-  $async.Future<$0.GeographicView> getGeographicView(
-      $pb.ClientContext ctx, GetGeographicViewRequest request) {
-    var emptyResponse = $0.GeographicView();
-    return _client.invoke<$0.GeographicView>(ctx, 'GeographicViewService',
-        'GetGeographicView', request, emptyResponse);
-  }
 }

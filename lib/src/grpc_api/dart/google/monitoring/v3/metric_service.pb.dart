@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -12,10 +11,9 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../api/monitored_resource.pb.dart' as $0;
 import '../../api/metric.pb.dart' as $1;
-import 'common.pb.dart' as $2;
-import 'metric.pb.dart' as $3;
-import '../../rpc/status.pb.dart' as $4;
-import '../../protobuf/empty.pb.dart' as $5;
+import 'common.pb.dart' as $3;
+import 'metric.pb.dart' as $4;
+import '../../rpc/status.pb.dart' as $5;
 
 import 'metric_service.pbenum.dart';
 
@@ -410,10 +408,10 @@ class ListTimeSeriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTimeSeriesRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(2, 'filter')
-    ..a<$2.TimeInterval>(4, 'interval', $pb.PbFieldType.OM,
-        $2.TimeInterval.getDefault, $2.TimeInterval.create)
-    ..a<$2.Aggregation>(5, 'aggregation', $pb.PbFieldType.OM,
-        $2.Aggregation.getDefault, $2.Aggregation.create)
+    ..a<$3.TimeInterval>(4, 'interval', $pb.PbFieldType.OM,
+        $3.TimeInterval.getDefault, $3.TimeInterval.create)
+    ..a<$3.Aggregation>(5, 'aggregation', $pb.PbFieldType.OM,
+        $3.Aggregation.getDefault, $3.Aggregation.create)
     ..aOS(6, 'orderBy')
     ..e<ListTimeSeriesRequest_TimeSeriesView>(
         7,
@@ -456,16 +454,16 @@ class ListTimeSeriesRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(2);
 
-  $2.TimeInterval get interval => $_getN(1);
-  set interval($2.TimeInterval v) {
+  $3.TimeInterval get interval => $_getN(1);
+  set interval($3.TimeInterval v) {
     setField(4, v);
   }
 
   $core.bool hasInterval() => $_has(1);
   void clearInterval() => clearField(4);
 
-  $2.Aggregation get aggregation => $_getN(2);
-  set aggregation($2.Aggregation v) {
+  $3.Aggregation get aggregation => $_getN(2);
+  set aggregation($3.Aggregation v) {
     setField(5, v);
   }
 
@@ -516,10 +514,10 @@ class ListTimeSeriesRequest extends $pb.GeneratedMessage {
 class ListTimeSeriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTimeSeriesResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$3.TimeSeries>(
-        1, 'timeSeries', $pb.PbFieldType.PM, $3.TimeSeries.create)
+    ..pc<$4.TimeSeries>(
+        1, 'timeSeries', $pb.PbFieldType.PM, $4.TimeSeries.create)
     ..aOS(2, 'nextPageToken')
-    ..pc<$4.Status>(3, 'executionErrors', $pb.PbFieldType.PM, $4.Status.create)
+    ..pc<$5.Status>(3, 'executionErrors', $pb.PbFieldType.PM, $5.Status.create)
     ..hasRequiredFields = false;
 
   ListTimeSeriesResponse() : super();
@@ -543,7 +541,7 @@ class ListTimeSeriesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTimeSeriesResponse _defaultInstance;
 
-  $core.List<$3.TimeSeries> get timeSeries => $_getList(0);
+  $core.List<$4.TimeSeries> get timeSeries => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -553,14 +551,14 @@ class ListTimeSeriesResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $core.List<$4.Status> get executionErrors => $_getList(2);
+  $core.List<$5.Status> get executionErrors => $_getList(2);
 }
 
 class CreateTimeSeriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTimeSeriesRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$3.TimeSeries>(
-        2, 'timeSeries', $pb.PbFieldType.PM, $3.TimeSeries.create)
+    ..pc<$4.TimeSeries>(
+        2, 'timeSeries', $pb.PbFieldType.PM, $4.TimeSeries.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -585,7 +583,7 @@ class CreateTimeSeriesRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateTimeSeriesRequest _defaultInstance;
 
-  $core.List<$3.TimeSeries> get timeSeries => $_getList(0);
+  $core.List<$4.TimeSeries> get timeSeries => $_getList(0);
 
   $core.String get name => $_getS(1, '');
   set name($core.String v) {
@@ -599,10 +597,10 @@ class CreateTimeSeriesRequest extends $pb.GeneratedMessage {
 class CreateTimeSeriesError extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTimeSeriesError',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$3.TimeSeries>(1, 'timeSeries', $pb.PbFieldType.OM,
-        $3.TimeSeries.getDefault, $3.TimeSeries.create)
-    ..a<$4.Status>(
-        2, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
+    ..a<$4.TimeSeries>(1, 'timeSeries', $pb.PbFieldType.OM,
+        $4.TimeSeries.getDefault, $4.TimeSeries.create)
+    ..a<$5.Status>(
+        2, 'status', $pb.PbFieldType.OM, $5.Status.getDefault, $5.Status.create)
     ..hasRequiredFields = false;
 
   CreateTimeSeriesError() : super();
@@ -626,85 +624,19 @@ class CreateTimeSeriesError extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateTimeSeriesError _defaultInstance;
 
-  $3.TimeSeries get timeSeries => $_getN(0);
-  set timeSeries($3.TimeSeries v) {
+  $4.TimeSeries get timeSeries => $_getN(0);
+  set timeSeries($4.TimeSeries v) {
     setField(1, v);
   }
 
   $core.bool hasTimeSeries() => $_has(0);
   void clearTimeSeries() => clearField(1);
 
-  $4.Status get status => $_getN(1);
-  set status($4.Status v) {
+  $5.Status get status => $_getN(1);
+  set status($5.Status v) {
     setField(2, v);
   }
 
   $core.bool hasStatus() => $_has(1);
   void clearStatus() => clearField(2);
-}
-
-class MetricServiceApi {
-  $pb.RpcClient _client;
-  MetricServiceApi(this._client);
-
-  $async.Future<ListMonitoredResourceDescriptorsResponse>
-      listMonitoredResourceDescriptors($pb.ClientContext ctx,
-          ListMonitoredResourceDescriptorsRequest request) {
-    var emptyResponse = ListMonitoredResourceDescriptorsResponse();
-    return _client.invoke<ListMonitoredResourceDescriptorsResponse>(
-        ctx,
-        'MetricService',
-        'ListMonitoredResourceDescriptors',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.MonitoredResourceDescriptor> getMonitoredResourceDescriptor(
-      $pb.ClientContext ctx, GetMonitoredResourceDescriptorRequest request) {
-    var emptyResponse = $0.MonitoredResourceDescriptor();
-    return _client.invoke<$0.MonitoredResourceDescriptor>(ctx, 'MetricService',
-        'GetMonitoredResourceDescriptor', request, emptyResponse);
-  }
-
-  $async.Future<ListMetricDescriptorsResponse> listMetricDescriptors(
-      $pb.ClientContext ctx, ListMetricDescriptorsRequest request) {
-    var emptyResponse = ListMetricDescriptorsResponse();
-    return _client.invoke<ListMetricDescriptorsResponse>(
-        ctx, 'MetricService', 'ListMetricDescriptors', request, emptyResponse);
-  }
-
-  $async.Future<$1.MetricDescriptor> getMetricDescriptor(
-      $pb.ClientContext ctx, GetMetricDescriptorRequest request) {
-    var emptyResponse = $1.MetricDescriptor();
-    return _client.invoke<$1.MetricDescriptor>(
-        ctx, 'MetricService', 'GetMetricDescriptor', request, emptyResponse);
-  }
-
-  $async.Future<$1.MetricDescriptor> createMetricDescriptor(
-      $pb.ClientContext ctx, CreateMetricDescriptorRequest request) {
-    var emptyResponse = $1.MetricDescriptor();
-    return _client.invoke<$1.MetricDescriptor>(
-        ctx, 'MetricService', 'CreateMetricDescriptor', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteMetricDescriptor(
-      $pb.ClientContext ctx, DeleteMetricDescriptorRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'MetricService', 'DeleteMetricDescriptor', request, emptyResponse);
-  }
-
-  $async.Future<ListTimeSeriesResponse> listTimeSeries(
-      $pb.ClientContext ctx, ListTimeSeriesRequest request) {
-    var emptyResponse = ListTimeSeriesResponse();
-    return _client.invoke<ListTimeSeriesResponse>(
-        ctx, 'MetricService', 'ListTimeSeries', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> createTimeSeries(
-      $pb.ClientContext ctx, CreateTimeSeriesRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'MetricService', 'CreateTimeSeries', request, emptyResponse);
-  }
 }

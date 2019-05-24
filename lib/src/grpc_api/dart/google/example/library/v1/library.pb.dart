@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../../../protobuf/empty.pb.dart' as $0;
 
 class Book extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Book',
@@ -620,84 +617,4 @@ class MoveBookRequest extends $pb.GeneratedMessage {
 
   $core.bool hasOtherShelfName() => $_has(1);
   void clearOtherShelfName() => clearField(2);
-}
-
-class LibraryServiceApi {
-  $pb.RpcClient _client;
-  LibraryServiceApi(this._client);
-
-  $async.Future<Shelf> createShelf(
-      $pb.ClientContext ctx, CreateShelfRequest request) {
-    var emptyResponse = Shelf();
-    return _client.invoke<Shelf>(
-        ctx, 'LibraryService', 'CreateShelf', request, emptyResponse);
-  }
-
-  $async.Future<Shelf> getShelf(
-      $pb.ClientContext ctx, GetShelfRequest request) {
-    var emptyResponse = Shelf();
-    return _client.invoke<Shelf>(
-        ctx, 'LibraryService', 'GetShelf', request, emptyResponse);
-  }
-
-  $async.Future<ListShelvesResponse> listShelves(
-      $pb.ClientContext ctx, ListShelvesRequest request) {
-    var emptyResponse = ListShelvesResponse();
-    return _client.invoke<ListShelvesResponse>(
-        ctx, 'LibraryService', 'ListShelves', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> deleteShelf(
-      $pb.ClientContext ctx, DeleteShelfRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'LibraryService', 'DeleteShelf', request, emptyResponse);
-  }
-
-  $async.Future<Shelf> mergeShelves(
-      $pb.ClientContext ctx, MergeShelvesRequest request) {
-    var emptyResponse = Shelf();
-    return _client.invoke<Shelf>(
-        ctx, 'LibraryService', 'MergeShelves', request, emptyResponse);
-  }
-
-  $async.Future<Book> createBook(
-      $pb.ClientContext ctx, CreateBookRequest request) {
-    var emptyResponse = Book();
-    return _client.invoke<Book>(
-        ctx, 'LibraryService', 'CreateBook', request, emptyResponse);
-  }
-
-  $async.Future<Book> getBook($pb.ClientContext ctx, GetBookRequest request) {
-    var emptyResponse = Book();
-    return _client.invoke<Book>(
-        ctx, 'LibraryService', 'GetBook', request, emptyResponse);
-  }
-
-  $async.Future<ListBooksResponse> listBooks(
-      $pb.ClientContext ctx, ListBooksRequest request) {
-    var emptyResponse = ListBooksResponse();
-    return _client.invoke<ListBooksResponse>(
-        ctx, 'LibraryService', 'ListBooks', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> deleteBook(
-      $pb.ClientContext ctx, DeleteBookRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'LibraryService', 'DeleteBook', request, emptyResponse);
-  }
-
-  $async.Future<Book> updateBook(
-      $pb.ClientContext ctx, UpdateBookRequest request) {
-    var emptyResponse = Book();
-    return _client.invoke<Book>(
-        ctx, 'LibraryService', 'UpdateBook', request, emptyResponse);
-  }
-
-  $async.Future<Book> moveBook($pb.ClientContext ctx, MoveBookRequest request) {
-    var emptyResponse = Book();
-    return _client.invoke<Book>(
-        ctx, 'LibraryService', 'MoveBook', request, emptyResponse);
-  }
 }

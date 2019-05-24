@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../protobuf/empty.pbjson.dart' as $1;
-
 const AutoscalingPolicy$json = {
   '1': 'AutoscalingPolicy',
   '2': [
@@ -171,64 +168,4 @@ const ListAutoscalingPoliciesResponse$json = {
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
-};
-
-const AutoscalingPolicyServiceBase$json = {
-  '1': 'AutoscalingPolicyService',
-  '2': [
-    {
-      '1': 'CreateAutoscalingPolicy',
-      '2': '.google.cloud.dataproc.v1beta2.CreateAutoscalingPolicyRequest',
-      '3': '.google.cloud.dataproc.v1beta2.AutoscalingPolicy',
-      '4': {}
-    },
-    {
-      '1': 'UpdateAutoscalingPolicy',
-      '2': '.google.cloud.dataproc.v1beta2.UpdateAutoscalingPolicyRequest',
-      '3': '.google.cloud.dataproc.v1beta2.AutoscalingPolicy',
-      '4': {}
-    },
-    {
-      '1': 'GetAutoscalingPolicy',
-      '2': '.google.cloud.dataproc.v1beta2.GetAutoscalingPolicyRequest',
-      '3': '.google.cloud.dataproc.v1beta2.AutoscalingPolicy',
-      '4': {}
-    },
-    {
-      '1': 'ListAutoscalingPolicies',
-      '2': '.google.cloud.dataproc.v1beta2.ListAutoscalingPoliciesRequest',
-      '3': '.google.cloud.dataproc.v1beta2.ListAutoscalingPoliciesResponse',
-      '4': {}
-    },
-    {
-      '1': 'DeleteAutoscalingPolicy',
-      '2': '.google.cloud.dataproc.v1beta2.DeleteAutoscalingPolicyRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const AutoscalingPolicyServiceBase$messageJson = {
-  '.google.cloud.dataproc.v1beta2.CreateAutoscalingPolicyRequest':
-      CreateAutoscalingPolicyRequest$json,
-  '.google.cloud.dataproc.v1beta2.AutoscalingPolicy': AutoscalingPolicy$json,
-  '.google.cloud.dataproc.v1beta2.BasicAutoscalingAlgorithm':
-      BasicAutoscalingAlgorithm$json,
-  '.google.cloud.dataproc.v1beta2.BasicYarnAutoscalingConfig':
-      BasicYarnAutoscalingConfig$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.cloud.dataproc.v1beta2.InstanceGroupAutoscalingPolicyConfig':
-      InstanceGroupAutoscalingPolicyConfig$json,
-  '.google.cloud.dataproc.v1beta2.UpdateAutoscalingPolicyRequest':
-      UpdateAutoscalingPolicyRequest$json,
-  '.google.cloud.dataproc.v1beta2.GetAutoscalingPolicyRequest':
-      GetAutoscalingPolicyRequest$json,
-  '.google.cloud.dataproc.v1beta2.ListAutoscalingPoliciesRequest':
-      ListAutoscalingPoliciesRequest$json,
-  '.google.cloud.dataproc.v1beta2.ListAutoscalingPoliciesResponse':
-      ListAutoscalingPoliciesResponse$json,
-  '.google.cloud.dataproc.v1beta2.DeleteAutoscalingPolicyRequest':
-      DeleteAutoscalingPolicyRequest$json,
-  '.google.protobuf.Empty': $1.Empty$json,
 };

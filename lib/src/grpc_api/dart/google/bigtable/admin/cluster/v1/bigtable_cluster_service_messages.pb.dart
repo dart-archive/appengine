@@ -9,8 +9,8 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'bigtable_cluster_data.pb.dart' as $0;
-import '../../../../protobuf/timestamp.pb.dart' as $1;
+import 'bigtable_cluster_data.pb.dart' as $1;
+import '../../../../protobuf/timestamp.pb.dart' as $2;
 
 class ListZonesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListZonesRequest',
@@ -49,7 +49,7 @@ class ListZonesRequest extends $pb.GeneratedMessage {
 class ListZonesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListZonesResponse',
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
-    ..pc<$0.Zone>(1, 'zones', $pb.PbFieldType.PM, $0.Zone.create)
+    ..pc<$1.Zone>(1, 'zones', $pb.PbFieldType.PM, $1.Zone.create)
     ..hasRequiredFields = false;
 
   ListZonesResponse() : super();
@@ -71,7 +71,7 @@ class ListZonesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListZonesResponse _defaultInstance;
 
-  $core.List<$0.Zone> get zones => $_getList(0);
+  $core.List<$1.Zone> get zones => $_getList(0);
 }
 
 class GetClusterRequest extends $pb.GeneratedMessage {
@@ -145,8 +145,8 @@ class ListClustersRequest extends $pb.GeneratedMessage {
 class ListClustersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersResponse',
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
-    ..pc<$0.Cluster>(1, 'clusters', $pb.PbFieldType.PM, $0.Cluster.create)
-    ..pc<$0.Zone>(2, 'failedZones', $pb.PbFieldType.PM, $0.Zone.create)
+    ..pc<$1.Cluster>(1, 'clusters', $pb.PbFieldType.PM, $1.Cluster.create)
+    ..pc<$1.Zone>(2, 'failedZones', $pb.PbFieldType.PM, $1.Zone.create)
     ..hasRequiredFields = false;
 
   ListClustersResponse() : super();
@@ -169,9 +169,9 @@ class ListClustersResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListClustersResponse _defaultInstance;
 
-  $core.List<$0.Cluster> get clusters => $_getList(0);
+  $core.List<$1.Cluster> get clusters => $_getList(0);
 
-  $core.List<$0.Zone> get failedZones => $_getList(1);
+  $core.List<$1.Zone> get failedZones => $_getList(1);
 }
 
 class CreateClusterRequest extends $pb.GeneratedMessage {
@@ -179,8 +179,8 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'clusterId')
-    ..a<$0.Cluster>(3, 'cluster', $pb.PbFieldType.OM, $0.Cluster.getDefault,
-        $0.Cluster.create)
+    ..a<$1.Cluster>(3, 'cluster', $pb.PbFieldType.OM, $1.Cluster.getDefault,
+        $1.Cluster.create)
     ..hasRequiredFields = false;
 
   CreateClusterRequest() : super();
@@ -219,8 +219,8 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   $core.bool hasClusterId() => $_has(1);
   void clearClusterId() => clearField(2);
 
-  $0.Cluster get cluster => $_getN(2);
-  set cluster($0.Cluster v) {
+  $1.Cluster get cluster => $_getN(2);
+  set cluster($1.Cluster v) {
     setField(3, v);
   }
 
@@ -233,10 +233,10 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..a<CreateClusterRequest>(1, 'originalRequest', $pb.PbFieldType.OM,
         CreateClusterRequest.getDefault, CreateClusterRequest.create)
-    ..a<$1.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateClusterMetadata() : super();
@@ -268,16 +268,16 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $1.Timestamp get requestTime => $_getN(1);
-  set requestTime($1.Timestamp v) {
+  $2.Timestamp get requestTime => $_getN(1);
+  set requestTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $1.Timestamp get finishTime => $_getN(2);
-  set finishTime($1.Timestamp v) {
+  $2.Timestamp get finishTime => $_getN(2);
+  set finishTime($2.Timestamp v) {
     setField(3, v);
   }
 
@@ -288,14 +288,14 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
 class UpdateClusterMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateClusterMetadata',
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
-    ..a<$0.Cluster>(1, 'originalRequest', $pb.PbFieldType.OM,
-        $0.Cluster.getDefault, $0.Cluster.create)
-    ..a<$1.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(4, 'finishTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Cluster>(1, 'originalRequest', $pb.PbFieldType.OM,
+        $1.Cluster.getDefault, $1.Cluster.create)
+    ..a<$2.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'finishTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateClusterMetadata() : super();
@@ -319,32 +319,32 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateClusterMetadata _defaultInstance;
 
-  $0.Cluster get originalRequest => $_getN(0);
-  set originalRequest($0.Cluster v) {
+  $1.Cluster get originalRequest => $_getN(0);
+  set originalRequest($1.Cluster v) {
     setField(1, v);
   }
 
   $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $1.Timestamp get requestTime => $_getN(1);
-  set requestTime($1.Timestamp v) {
+  $2.Timestamp get requestTime => $_getN(1);
+  set requestTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $1.Timestamp get cancelTime => $_getN(2);
-  set cancelTime($1.Timestamp v) {
+  $2.Timestamp get cancelTime => $_getN(2);
+  set cancelTime($2.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasCancelTime() => $_has(2);
   void clearCancelTime() => clearField(3);
 
-  $1.Timestamp get finishTime => $_getN(3);
-  set finishTime($1.Timestamp v) {
+  $2.Timestamp get finishTime => $_getN(3);
+  set finishTime($2.Timestamp v) {
     setField(4, v);
   }
 
@@ -426,10 +426,10 @@ class UndeleteClusterRequest extends $pb.GeneratedMessage {
 class UndeleteClusterMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteClusterMetadata',
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
-    ..a<$1.Timestamp>(1, 'requestTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(2, 'finishTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(1, 'requestTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'finishTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   UndeleteClusterMetadata() : super();
@@ -453,16 +453,16 @@ class UndeleteClusterMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UndeleteClusterMetadata _defaultInstance;
 
-  $1.Timestamp get requestTime => $_getN(0);
-  set requestTime($1.Timestamp v) {
+  $2.Timestamp get requestTime => $_getN(0);
+  set requestTime($2.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasRequestTime() => $_has(0);
   void clearRequestTime() => clearField(1);
 
-  $1.Timestamp get finishTime => $_getN(1);
-  set finishTime($1.Timestamp v) {
+  $2.Timestamp get finishTime => $_getN(1);
+  set finishTime($2.Timestamp v) {
     setField(2, v);
   }
 

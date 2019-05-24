@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/customer_negative_criterion.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../common/criteria.pbjson.dart' as $3;
-import '../../../../rpc/status.pbjson.dart' as $1;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetCustomerNegativeCriterionRequest$json = {
   '1': 'GetCustomerNegativeCriterionRequest',
   '2': [
@@ -82,53 +76,4 @@ const MutateCustomerNegativeCriteriaResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const CustomerNegativeCriterionServiceBase$json = {
-  '1': 'CustomerNegativeCriterionService',
-  '2': [
-    {
-      '1': 'GetCustomerNegativeCriterion',
-      '2':
-          '.google.ads.googleads.v1.services.GetCustomerNegativeCriterionRequest',
-      '3': '.google.ads.googleads.v1.resources.CustomerNegativeCriterion',
-      '4': {}
-    },
-    {
-      '1': 'MutateCustomerNegativeCriteria',
-      '2':
-          '.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaRequest',
-      '3':
-          '.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CustomerNegativeCriterionServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetCustomerNegativeCriterionRequest':
-      GetCustomerNegativeCriterionRequest$json,
-  '.google.ads.googleads.v1.resources.CustomerNegativeCriterion':
-      $0.CustomerNegativeCriterion$json,
-  '.google.protobuf.Int64Value': $2.Int64Value$json,
-  '.google.ads.googleads.v1.common.ContentLabelInfo': $3.ContentLabelInfo$json,
-  '.google.ads.googleads.v1.common.MobileApplicationInfo':
-      $3.MobileApplicationInfo$json,
-  '.google.protobuf.StringValue': $2.StringValue$json,
-  '.google.ads.googleads.v1.common.MobileAppCategoryInfo':
-      $3.MobileAppCategoryInfo$json,
-  '.google.ads.googleads.v1.common.PlacementInfo': $3.PlacementInfo$json,
-  '.google.ads.googleads.v1.common.YouTubeVideoInfo': $3.YouTubeVideoInfo$json,
-  '.google.ads.googleads.v1.common.YouTubeChannelInfo':
-      $3.YouTubeChannelInfo$json,
-  '.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaRequest':
-      MutateCustomerNegativeCriteriaRequest$json,
-  '.google.ads.googleads.v1.services.CustomerNegativeCriterionOperation':
-      CustomerNegativeCriterionOperation$json,
-  '.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaResponse':
-      MutateCustomerNegativeCriteriaResponse$json,
-  '.google.ads.googleads.v1.services.MutateCustomerNegativeCriteriaResult':
-      MutateCustomerNegativeCriteriaResult$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

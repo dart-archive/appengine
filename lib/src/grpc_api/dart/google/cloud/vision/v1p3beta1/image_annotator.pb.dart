@@ -4,22 +4,20 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'geometry.pb.dart' as $0;
-import '../../../type/latlng.pb.dart' as $1;
-import '../../../type/color.pb.dart' as $2;
-import 'product_search.pb.dart' as $3;
-import '../../../rpc/status.pb.dart' as $4;
-import 'text_annotation.pb.dart' as $5;
-import 'web_detection.pb.dart' as $6;
-import '../../../protobuf/timestamp.pb.dart' as $7;
-import '../../../longrunning/operations.pb.dart' as $8;
+import 'geometry.pb.dart' as $2;
+import '../../../type/latlng.pb.dart' as $3;
+import '../../../type/color.pb.dart' as $4;
+import 'product_search.pb.dart' as $5;
+import '../../../rpc/status.pb.dart' as $6;
+import 'text_annotation.pb.dart' as $7;
+import 'web_detection.pb.dart' as $8;
+import '../../../protobuf/timestamp.pb.dart' as $9;
 
 import 'image_annotator.pbenum.dart';
 
@@ -174,8 +172,8 @@ class FaceAnnotation_Landmark extends $pb.GeneratedMessage {
         FaceAnnotation_Landmark_Type.UNKNOWN_LANDMARK,
         FaceAnnotation_Landmark_Type.valueOf,
         FaceAnnotation_Landmark_Type.values)
-    ..a<$0.Position>(4, 'position', $pb.PbFieldType.OM, $0.Position.getDefault,
-        $0.Position.create)
+    ..a<$2.Position>(4, 'position', $pb.PbFieldType.OM, $2.Position.getDefault,
+        $2.Position.create)
     ..hasRequiredFields = false;
 
   FaceAnnotation_Landmark() : super();
@@ -207,8 +205,8 @@ class FaceAnnotation_Landmark extends $pb.GeneratedMessage {
   $core.bool hasType() => $_has(0);
   void clearType() => clearField(3);
 
-  $0.Position get position => $_getN(1);
-  set position($0.Position v) {
+  $2.Position get position => $_getN(1);
+  set position($2.Position v) {
     setField(4, v);
   }
 
@@ -219,10 +217,10 @@ class FaceAnnotation_Landmark extends $pb.GeneratedMessage {
 class FaceAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceAnnotation',
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
-    ..a<$0.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
-    ..a<$0.BoundingPoly>(2, 'fdBoundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(2, 'fdBoundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..pc<FaceAnnotation_Landmark>(
         3, 'landmarks', $pb.PbFieldType.PM, FaceAnnotation_Landmark.create)
     ..a<$core.double>(4, 'rollAngle', $pb.PbFieldType.OF)
@@ -264,16 +262,16 @@ class FaceAnnotation extends $pb.GeneratedMessage {
   static FaceAnnotation getDefault() => _defaultInstance ??= create()..freeze();
   static FaceAnnotation _defaultInstance;
 
-  $0.BoundingPoly get boundingPoly => $_getN(0);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(0);
+  set boundingPoly($2.BoundingPoly v) {
     setField(1, v);
   }
 
   $core.bool hasBoundingPoly() => $_has(0);
   void clearBoundingPoly() => clearField(1);
 
-  $0.BoundingPoly get fdBoundingPoly => $_getN(1);
-  set fdBoundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get fdBoundingPoly => $_getN(1);
+  set fdBoundingPoly($2.BoundingPoly v) {
     setField(2, v);
   }
 
@@ -382,8 +380,8 @@ class FaceAnnotation extends $pb.GeneratedMessage {
 class LocationInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationInfo',
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
-    ..a<$1.LatLng>(
-        1, 'latLng', $pb.PbFieldType.OM, $1.LatLng.getDefault, $1.LatLng.create)
+    ..a<$3.LatLng>(
+        1, 'latLng', $pb.PbFieldType.OM, $3.LatLng.getDefault, $3.LatLng.create)
     ..hasRequiredFields = false;
 
   LocationInfo() : super();
@@ -404,8 +402,8 @@ class LocationInfo extends $pb.GeneratedMessage {
   static LocationInfo getDefault() => _defaultInstance ??= create()..freeze();
   static LocationInfo _defaultInstance;
 
-  $1.LatLng get latLng => $_getN(0);
-  set latLng($1.LatLng v) {
+  $3.LatLng get latLng => $_getN(0);
+  set latLng($3.LatLng v) {
     setField(1, v);
   }
 
@@ -472,8 +470,8 @@ class EntityAnnotation extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
     ..a<$core.double>(5, 'confidence', $pb.PbFieldType.OF)
     ..a<$core.double>(6, 'topicality', $pb.PbFieldType.OF)
-    ..a<$0.BoundingPoly>(7, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(7, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..pc<LocationInfo>(8, 'locations', $pb.PbFieldType.PM, LocationInfo.create)
     ..pc<Property>(9, 'properties', $pb.PbFieldType.PM, Property.create)
     ..hasRequiredFields = false;
@@ -545,8 +543,8 @@ class EntityAnnotation extends $pb.GeneratedMessage {
   $core.bool hasTopicality() => $_has(5);
   void clearTopicality() => clearField(6);
 
-  $0.BoundingPoly get boundingPoly => $_getN(6);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(6);
+  set boundingPoly($2.BoundingPoly v) {
     setField(7, v);
   }
 
@@ -565,8 +563,8 @@ class LocalizedObjectAnnotation extends $pb.GeneratedMessage {
     ..aOS(2, 'languageCode')
     ..aOS(3, 'name')
     ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
-    ..a<$0.BoundingPoly>(5, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(5, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..hasRequiredFields = false;
 
   LocalizedObjectAnnotation() : super();
@@ -623,8 +621,8 @@ class LocalizedObjectAnnotation extends $pb.GeneratedMessage {
   $core.bool hasScore() => $_has(3);
   void clearScore() => clearField(4);
 
-  $0.BoundingPoly get boundingPoly => $_getN(4);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(4);
+  set boundingPoly($2.BoundingPoly v) {
     setField(5, v);
   }
 
@@ -711,10 +709,10 @@ class SafeSearchAnnotation extends $pb.GeneratedMessage {
 class LatLongRect extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LatLongRect',
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
-    ..a<$1.LatLng>(1, 'minLatLng', $pb.PbFieldType.OM, $1.LatLng.getDefault,
-        $1.LatLng.create)
-    ..a<$1.LatLng>(2, 'maxLatLng', $pb.PbFieldType.OM, $1.LatLng.getDefault,
-        $1.LatLng.create)
+    ..a<$3.LatLng>(1, 'minLatLng', $pb.PbFieldType.OM, $3.LatLng.getDefault,
+        $3.LatLng.create)
+    ..a<$3.LatLng>(2, 'maxLatLng', $pb.PbFieldType.OM, $3.LatLng.getDefault,
+        $3.LatLng.create)
     ..hasRequiredFields = false;
 
   LatLongRect() : super();
@@ -734,16 +732,16 @@ class LatLongRect extends $pb.GeneratedMessage {
   static LatLongRect getDefault() => _defaultInstance ??= create()..freeze();
   static LatLongRect _defaultInstance;
 
-  $1.LatLng get minLatLng => $_getN(0);
-  set minLatLng($1.LatLng v) {
+  $3.LatLng get minLatLng => $_getN(0);
+  set minLatLng($3.LatLng v) {
     setField(1, v);
   }
 
   $core.bool hasMinLatLng() => $_has(0);
   void clearMinLatLng() => clearField(1);
 
-  $1.LatLng get maxLatLng => $_getN(1);
-  set maxLatLng($1.LatLng v) {
+  $3.LatLng get maxLatLng => $_getN(1);
+  set maxLatLng($3.LatLng v) {
     setField(2, v);
   }
 
@@ -754,8 +752,8 @@ class LatLongRect extends $pb.GeneratedMessage {
 class ColorInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ColorInfo',
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
-    ..a<$2.Color>(
-        1, 'color', $pb.PbFieldType.OM, $2.Color.getDefault, $2.Color.create)
+    ..a<$4.Color>(
+        1, 'color', $pb.PbFieldType.OM, $4.Color.getDefault, $4.Color.create)
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..a<$core.double>(3, 'pixelFraction', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -777,8 +775,8 @@ class ColorInfo extends $pb.GeneratedMessage {
   static ColorInfo getDefault() => _defaultInstance ??= create()..freeze();
   static ColorInfo _defaultInstance;
 
-  $2.Color get color => $_getN(0);
-  set color($2.Color v) {
+  $4.Color get color => $_getN(0);
+  set color($4.Color v) {
     setField(1, v);
   }
 
@@ -870,8 +868,8 @@ class ImageProperties extends $pb.GeneratedMessage {
 class CropHint extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CropHint',
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
-    ..a<$0.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..a<$core.double>(3, 'importanceFraction', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -893,8 +891,8 @@ class CropHint extends $pb.GeneratedMessage {
   static CropHint getDefault() => _defaultInstance ??= create()..freeze();
   static CropHint _defaultInstance;
 
-  $0.BoundingPoly get boundingPoly => $_getN(0);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(0);
+  set boundingPoly($2.BoundingPoly v) {
     setField(1, v);
   }
 
@@ -1016,8 +1014,8 @@ class ImageContext extends $pb.GeneratedMessage {
     ..pPS(2, 'languageHints')
     ..a<CropHintsParams>(4, 'cropHintsParams', $pb.PbFieldType.OM,
         CropHintsParams.getDefault, CropHintsParams.create)
-    ..a<$3.ProductSearchParams>(5, 'productSearchParams', $pb.PbFieldType.OM,
-        $3.ProductSearchParams.getDefault, $3.ProductSearchParams.create)
+    ..a<$5.ProductSearchParams>(5, 'productSearchParams', $pb.PbFieldType.OM,
+        $5.ProductSearchParams.getDefault, $5.ProductSearchParams.create)
     ..a<WebDetectionParams>(6, 'webDetectionParams', $pb.PbFieldType.OM,
         WebDetectionParams.getDefault, WebDetectionParams.create)
     ..hasRequiredFields = false;
@@ -1058,8 +1056,8 @@ class ImageContext extends $pb.GeneratedMessage {
   $core.bool hasCropHintsParams() => $_has(2);
   void clearCropHintsParams() => clearField(4);
 
-  $3.ProductSearchParams get productSearchParams => $_getN(3);
-  set productSearchParams($3.ProductSearchParams v) {
+  $5.ProductSearchParams get productSearchParams => $_getN(3);
+  set productSearchParams($5.ProductSearchParams v) {
     setField(5, v);
   }
 
@@ -1185,16 +1183,16 @@ class AnnotateImageResponse extends $pb.GeneratedMessage {
         SafeSearchAnnotation.getDefault, SafeSearchAnnotation.create)
     ..a<ImageProperties>(8, 'imagePropertiesAnnotation', $pb.PbFieldType.OM,
         ImageProperties.getDefault, ImageProperties.create)
-    ..a<$4.Status>(
-        9, 'error', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
+    ..a<$6.Status>(
+        9, 'error', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
     ..a<CropHintsAnnotation>(11, 'cropHintsAnnotation', $pb.PbFieldType.OM,
         CropHintsAnnotation.getDefault, CropHintsAnnotation.create)
-    ..a<$5.TextAnnotation>(12, 'fullTextAnnotation', $pb.PbFieldType.OM,
-        $5.TextAnnotation.getDefault, $5.TextAnnotation.create)
-    ..a<$6.WebDetection>(13, 'webDetection', $pb.PbFieldType.OM,
-        $6.WebDetection.getDefault, $6.WebDetection.create)
-    ..a<$3.ProductSearchResults>(14, 'productSearchResults', $pb.PbFieldType.OM,
-        $3.ProductSearchResults.getDefault, $3.ProductSearchResults.create)
+    ..a<$7.TextAnnotation>(12, 'fullTextAnnotation', $pb.PbFieldType.OM,
+        $7.TextAnnotation.getDefault, $7.TextAnnotation.create)
+    ..a<$8.WebDetection>(13, 'webDetection', $pb.PbFieldType.OM,
+        $8.WebDetection.getDefault, $8.WebDetection.create)
+    ..a<$5.ProductSearchResults>(14, 'productSearchResults', $pb.PbFieldType.OM,
+        $5.ProductSearchResults.getDefault, $5.ProductSearchResults.create)
     ..a<ImageAnnotationContext>(21, 'context', $pb.PbFieldType.OM, ImageAnnotationContext.getDefault, ImageAnnotationContext.create)
     ..pc<LocalizedObjectAnnotation>(22, 'localizedObjectAnnotations', $pb.PbFieldType.PM, LocalizedObjectAnnotation.create)
     ..hasRequiredFields = false;
@@ -1246,8 +1244,8 @@ class AnnotateImageResponse extends $pb.GeneratedMessage {
   $core.bool hasImagePropertiesAnnotation() => $_has(6);
   void clearImagePropertiesAnnotation() => clearField(8);
 
-  $4.Status get error => $_getN(7);
-  set error($4.Status v) {
+  $6.Status get error => $_getN(7);
+  set error($6.Status v) {
     setField(9, v);
   }
 
@@ -1262,24 +1260,24 @@ class AnnotateImageResponse extends $pb.GeneratedMessage {
   $core.bool hasCropHintsAnnotation() => $_has(8);
   void clearCropHintsAnnotation() => clearField(11);
 
-  $5.TextAnnotation get fullTextAnnotation => $_getN(9);
-  set fullTextAnnotation($5.TextAnnotation v) {
+  $7.TextAnnotation get fullTextAnnotation => $_getN(9);
+  set fullTextAnnotation($7.TextAnnotation v) {
     setField(12, v);
   }
 
   $core.bool hasFullTextAnnotation() => $_has(9);
   void clearFullTextAnnotation() => clearField(12);
 
-  $6.WebDetection get webDetection => $_getN(10);
-  set webDetection($6.WebDetection v) {
+  $8.WebDetection get webDetection => $_getN(10);
+  set webDetection($8.WebDetection v) {
     setField(13, v);
   }
 
   $core.bool hasWebDetection() => $_has(10);
   void clearWebDetection() => clearField(13);
 
-  $3.ProductSearchResults get productSearchResults => $_getN(11);
-  set productSearchResults($3.ProductSearchResults v) {
+  $5.ProductSearchResults get productSearchResults => $_getN(11);
+  set productSearchResults($5.ProductSearchResults v) {
     setField(14, v);
   }
 
@@ -1730,10 +1728,10 @@ class OperationMetadata extends $pb.GeneratedMessage {
         OperationMetadata_State.STATE_UNSPECIFIED,
         OperationMetadata_State.valueOf,
         OperationMetadata_State.values)
-    ..a<$7.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
-    ..a<$7.Timestamp>(6, 'updateTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
+    ..a<$9.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
+    ..a<$9.Timestamp>(6, 'updateTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata() : super();
@@ -1763,38 +1761,19 @@ class OperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(0);
   void clearState() => clearField(1);
 
-  $7.Timestamp get createTime => $_getN(1);
-  set createTime($7.Timestamp v) {
+  $9.Timestamp get createTime => $_getN(1);
+  set createTime($9.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasCreateTime() => $_has(1);
   void clearCreateTime() => clearField(5);
 
-  $7.Timestamp get updateTime => $_getN(2);
-  set updateTime($7.Timestamp v) {
+  $9.Timestamp get updateTime => $_getN(2);
+  set updateTime($9.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasUpdateTime() => $_has(2);
   void clearUpdateTime() => clearField(6);
-}
-
-class ImageAnnotatorApi {
-  $pb.RpcClient _client;
-  ImageAnnotatorApi(this._client);
-
-  $async.Future<BatchAnnotateImagesResponse> batchAnnotateImages(
-      $pb.ClientContext ctx, BatchAnnotateImagesRequest request) {
-    var emptyResponse = BatchAnnotateImagesResponse();
-    return _client.invoke<BatchAnnotateImagesResponse>(
-        ctx, 'ImageAnnotator', 'BatchAnnotateImages', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> asyncBatchAnnotateFiles(
-      $pb.ClientContext ctx, AsyncBatchAnnotateFilesRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(ctx, 'ImageAnnotator',
-        'AsyncBatchAnnotateFiles', request, emptyResponse);
-  }
 }

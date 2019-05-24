@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-
 const CreateAssessmentRequest$json = {
   '1': 'CreateAssessmentRequest',
   '2': [
@@ -142,38 +140,4 @@ const TokenProperties_InvalidReason$json = {
     {'1': 'SITE_MISMATCH', '2': 5},
     {'1': 'MISSING', '2': 6},
   ],
-};
-
-const RecaptchaEnterpriseServiceV1Beta1ServiceBase$json = {
-  '1': 'RecaptchaEnterpriseServiceV1Beta1',
-  '2': [
-    {
-      '1': 'CreateAssessment',
-      '2': '.google.cloud.recaptchaenterprise.v1beta1.CreateAssessmentRequest',
-      '3': '.google.cloud.recaptchaenterprise.v1beta1.Assessment',
-      '4': {}
-    },
-    {
-      '1': 'AnnotateAssessment',
-      '2':
-          '.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentRequest',
-      '3':
-          '.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentResponse',
-      '4': {}
-    },
-  ],
-};
-
-const RecaptchaEnterpriseServiceV1Beta1ServiceBase$messageJson = {
-  '.google.cloud.recaptchaenterprise.v1beta1.CreateAssessmentRequest':
-      CreateAssessmentRequest$json,
-  '.google.cloud.recaptchaenterprise.v1beta1.Assessment': Assessment$json,
-  '.google.cloud.recaptchaenterprise.v1beta1.Event': Event$json,
-  '.google.cloud.recaptchaenterprise.v1beta1.TokenProperties':
-      TokenProperties$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentRequest':
-      AnnotateAssessmentRequest$json,
-  '.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentResponse':
-      AnnotateAssessmentResponse$json,
 };

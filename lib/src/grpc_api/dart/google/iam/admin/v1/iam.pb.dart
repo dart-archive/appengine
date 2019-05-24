@@ -4,17 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
-import '../../v1/iam_policy.pb.dart' as $3;
-import '../../v1/policy.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'iam.pbenum.dart';
 
@@ -484,10 +480,10 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
         ServiceAccountPrivateKeyType.valueOf,
         ServiceAccountPrivateKeyType.values)
     ..a<$core.List<$core.int>>(3, 'privateKeyData', $pb.PbFieldType.OY)
-    ..a<$0.Timestamp>(4, 'validAfterTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'validBeforeTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'validAfterTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'validBeforeTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<$core.List<$core.int>>(7, 'publicKeyData', $pb.PbFieldType.OY)
     ..e<ServiceAccountKeyAlgorithm>(
         8,
@@ -541,16 +537,16 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   $core.bool hasPrivateKeyData() => $_has(2);
   void clearPrivateKeyData() => clearField(3);
 
-  $0.Timestamp get validAfterTime => $_getN(3);
-  set validAfterTime($0.Timestamp v) {
+  $3.Timestamp get validAfterTime => $_getN(3);
+  set validAfterTime($3.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasValidAfterTime() => $_has(3);
   void clearValidAfterTime() => clearField(4);
 
-  $0.Timestamp get validBeforeTime => $_getN(4);
-  set validBeforeTime($0.Timestamp v) {
+  $3.Timestamp get validBeforeTime => $_getN(4);
+  set validBeforeTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -1244,8 +1240,8 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.iam.admin.v1'))
     ..aOS(1, 'name')
     ..a<Role>(2, 'role', $pb.PbFieldType.OM, Role.getDefault, Role.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateRoleRequest() : super();
@@ -1283,8 +1279,8 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
   $core.bool hasRole() => $_has(1);
   void clearRole() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -1564,161 +1560,4 @@ class QueryTestablePermissionsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class IAMApi {
-  $pb.RpcClient _client;
-  IAMApi(this._client);
-
-  $async.Future<ListServiceAccountsResponse> listServiceAccounts(
-      $pb.ClientContext ctx, ListServiceAccountsRequest request) {
-    var emptyResponse = ListServiceAccountsResponse();
-    return _client.invoke<ListServiceAccountsResponse>(
-        ctx, 'IAM', 'ListServiceAccounts', request, emptyResponse);
-  }
-
-  $async.Future<ServiceAccount> getServiceAccount(
-      $pb.ClientContext ctx, GetServiceAccountRequest request) {
-    var emptyResponse = ServiceAccount();
-    return _client.invoke<ServiceAccount>(
-        ctx, 'IAM', 'GetServiceAccount', request, emptyResponse);
-  }
-
-  $async.Future<ServiceAccount> createServiceAccount(
-      $pb.ClientContext ctx, CreateServiceAccountRequest request) {
-    var emptyResponse = ServiceAccount();
-    return _client.invoke<ServiceAccount>(
-        ctx, 'IAM', 'CreateServiceAccount', request, emptyResponse);
-  }
-
-  $async.Future<ServiceAccount> updateServiceAccount(
-      $pb.ClientContext ctx, ServiceAccount request) {
-    var emptyResponse = ServiceAccount();
-    return _client.invoke<ServiceAccount>(
-        ctx, 'IAM', 'UpdateServiceAccount', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteServiceAccount(
-      $pb.ClientContext ctx, DeleteServiceAccountRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'IAM', 'DeleteServiceAccount', request, emptyResponse);
-  }
-
-  $async.Future<ListServiceAccountKeysResponse> listServiceAccountKeys(
-      $pb.ClientContext ctx, ListServiceAccountKeysRequest request) {
-    var emptyResponse = ListServiceAccountKeysResponse();
-    return _client.invoke<ListServiceAccountKeysResponse>(
-        ctx, 'IAM', 'ListServiceAccountKeys', request, emptyResponse);
-  }
-
-  $async.Future<ServiceAccountKey> getServiceAccountKey(
-      $pb.ClientContext ctx, GetServiceAccountKeyRequest request) {
-    var emptyResponse = ServiceAccountKey();
-    return _client.invoke<ServiceAccountKey>(
-        ctx, 'IAM', 'GetServiceAccountKey', request, emptyResponse);
-  }
-
-  $async.Future<ServiceAccountKey> createServiceAccountKey(
-      $pb.ClientContext ctx, CreateServiceAccountKeyRequest request) {
-    var emptyResponse = ServiceAccountKey();
-    return _client.invoke<ServiceAccountKey>(
-        ctx, 'IAM', 'CreateServiceAccountKey', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteServiceAccountKey(
-      $pb.ClientContext ctx, DeleteServiceAccountKeyRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'IAM', 'DeleteServiceAccountKey', request, emptyResponse);
-  }
-
-  $async.Future<SignBlobResponse> signBlob(
-      $pb.ClientContext ctx, SignBlobRequest request) {
-    var emptyResponse = SignBlobResponse();
-    return _client.invoke<SignBlobResponse>(
-        ctx, 'IAM', 'SignBlob', request, emptyResponse);
-  }
-
-  $async.Future<SignJwtResponse> signJwt(
-      $pb.ClientContext ctx, SignJwtRequest request) {
-    var emptyResponse = SignJwtResponse();
-    return _client.invoke<SignJwtResponse>(
-        ctx, 'IAM', 'SignJwt', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'IAM', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'IAM', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
-    var emptyResponse = $3.TestIamPermissionsResponse();
-    return _client.invoke<$3.TestIamPermissionsResponse>(
-        ctx, 'IAM', 'TestIamPermissions', request, emptyResponse);
-  }
-
-  $async.Future<QueryGrantableRolesResponse> queryGrantableRoles(
-      $pb.ClientContext ctx, QueryGrantableRolesRequest request) {
-    var emptyResponse = QueryGrantableRolesResponse();
-    return _client.invoke<QueryGrantableRolesResponse>(
-        ctx, 'IAM', 'QueryGrantableRoles', request, emptyResponse);
-  }
-
-  $async.Future<ListRolesResponse> listRoles(
-      $pb.ClientContext ctx, ListRolesRequest request) {
-    var emptyResponse = ListRolesResponse();
-    return _client.invoke<ListRolesResponse>(
-        ctx, 'IAM', 'ListRoles', request, emptyResponse);
-  }
-
-  $async.Future<Role> getRole($pb.ClientContext ctx, GetRoleRequest request) {
-    var emptyResponse = Role();
-    return _client.invoke<Role>(ctx, 'IAM', 'GetRole', request, emptyResponse);
-  }
-
-  $async.Future<Role> createRole(
-      $pb.ClientContext ctx, CreateRoleRequest request) {
-    var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'CreateRole', request, emptyResponse);
-  }
-
-  $async.Future<Role> updateRole(
-      $pb.ClientContext ctx, UpdateRoleRequest request) {
-    var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'UpdateRole', request, emptyResponse);
-  }
-
-  $async.Future<Role> deleteRole(
-      $pb.ClientContext ctx, DeleteRoleRequest request) {
-    var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'DeleteRole', request, emptyResponse);
-  }
-
-  $async.Future<Role> undeleteRole(
-      $pb.ClientContext ctx, UndeleteRoleRequest request) {
-    var emptyResponse = Role();
-    return _client.invoke<Role>(
-        ctx, 'IAM', 'UndeleteRole', request, emptyResponse);
-  }
-
-  $async.Future<QueryTestablePermissionsResponse> queryTestablePermissions(
-      $pb.ClientContext ctx, QueryTestablePermissionsRequest request) {
-    var emptyResponse = QueryTestablePermissionsResponse();
-    return _client.invoke<QueryTestablePermissionsResponse>(
-        ctx, 'IAM', 'QueryTestablePermissions', request, emptyResponse);
-  }
 }

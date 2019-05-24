@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../longrunning/operations.pbjson.dart' as $3;
-import '../../../protobuf/any.pbjson.dart' as $4;
-import '../../../rpc/status.pbjson.dart' as $1;
-
 const Feature$json = {
   '1': 'Feature',
   '2': [
@@ -783,90 +778,4 @@ const StreamingVideoConfig$json = {
   '8': [
     {'1': 'streaming_config'},
   ],
-};
-
-const VideoIntelligenceServiceBase$json = {
-  '1': 'VideoIntelligenceService',
-  '2': [
-    {
-      '1': 'AnnotateVideo',
-      '2': '.google.cloud.videointelligence.v1p3beta1.AnnotateVideoRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const VideoIntelligenceServiceBase$messageJson = {
-  '.google.cloud.videointelligence.v1p3beta1.AnnotateVideoRequest':
-      AnnotateVideoRequest$json,
-  '.google.cloud.videointelligence.v1p3beta1.VideoContext': VideoContext$json,
-  '.google.cloud.videointelligence.v1p3beta1.VideoSegment': VideoSegment$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.cloud.videointelligence.v1p3beta1.LabelDetectionConfig':
-      LabelDetectionConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.ShotChangeDetectionConfig':
-      ShotChangeDetectionConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.ExplicitContentDetectionConfig':
-      ExplicitContentDetectionConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.TextDetectionConfig':
-      TextDetectionConfig$json,
-  '.google.longrunning.Operation': $3.Operation$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.rpc.Status': $1.Status$json,
-};
-
-const StreamingVideoIntelligenceServiceBase$json = {
-  '1': 'StreamingVideoIntelligenceService',
-  '2': [
-    {
-      '1': 'StreamingAnnotateVideo',
-      '2':
-          '.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest',
-      '3':
-          '.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoResponse',
-      '5': true,
-      '6': true
-    },
-  ],
-};
-
-const StreamingVideoIntelligenceServiceBase$messageJson = {
-  '.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest':
-      StreamingAnnotateVideoRequest$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingVideoConfig':
-      StreamingVideoConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingShotChangeDetectionConfig':
-      StreamingShotChangeDetectionConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingLabelDetectionConfig':
-      StreamingLabelDetectionConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingExplicitContentDetectionConfig':
-      StreamingExplicitContentDetectionConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingObjectTrackingConfig':
-      StreamingObjectTrackingConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingStorageConfig':
-      StreamingStorageConfig$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoResponse':
-      StreamingAnnotateVideoResponse$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.cloud.videointelligence.v1p3beta1.StreamingVideoAnnotationResults':
-      StreamingVideoAnnotationResults$json,
-  '.google.cloud.videointelligence.v1p3beta1.VideoSegment': VideoSegment$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.cloud.videointelligence.v1p3beta1.LabelAnnotation':
-      LabelAnnotation$json,
-  '.google.cloud.videointelligence.v1p3beta1.Entity': Entity$json,
-  '.google.cloud.videointelligence.v1p3beta1.LabelSegment': LabelSegment$json,
-  '.google.cloud.videointelligence.v1p3beta1.LabelFrame': LabelFrame$json,
-  '.google.cloud.videointelligence.v1p3beta1.ExplicitContentAnnotation':
-      ExplicitContentAnnotation$json,
-  '.google.cloud.videointelligence.v1p3beta1.ExplicitContentFrame':
-      ExplicitContentFrame$json,
-  '.google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation':
-      ObjectTrackingAnnotation$json,
-  '.google.cloud.videointelligence.v1p3beta1.ObjectTrackingFrame':
-      ObjectTrackingFrame$json,
-  '.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingBox':
-      NormalizedBoundingBox$json,
 };

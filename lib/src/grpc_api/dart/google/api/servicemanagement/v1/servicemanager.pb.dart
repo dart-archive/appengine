@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $0;
-import '../../service.pb.dart' as $1;
-import '../../../protobuf/any.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
+import 'resources.pb.dart' as $1;
+import '../../service.pb.dart' as $3;
+import '../../../protobuf/any.pb.dart' as $4;
 
 import 'servicemanager.pbenum.dart';
 
@@ -83,8 +81,8 @@ class ListServicesRequest extends $pb.GeneratedMessage {
 class ListServicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesResponse',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$0.ManagedService>(
-        1, 'services', $pb.PbFieldType.PM, $0.ManagedService.create)
+    ..pc<$1.ManagedService>(
+        1, 'services', $pb.PbFieldType.PM, $1.ManagedService.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -108,7 +106,7 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListServicesResponse _defaultInstance;
 
-  $core.List<$0.ManagedService> get services => $_getList(0);
+  $core.List<$1.ManagedService> get services => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -156,8 +154,8 @@ class GetServiceRequest extends $pb.GeneratedMessage {
 class CreateServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceRequest',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$0.ManagedService>(1, 'service', $pb.PbFieldType.OM,
-        $0.ManagedService.getDefault, $0.ManagedService.create)
+    ..a<$1.ManagedService>(1, 'service', $pb.PbFieldType.OM,
+        $1.ManagedService.getDefault, $1.ManagedService.create)
     ..hasRequiredFields = false;
 
   CreateServiceRequest() : super();
@@ -180,8 +178,8 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateServiceRequest _defaultInstance;
 
-  $0.ManagedService get service => $_getN(0);
-  set service($0.ManagedService v) {
+  $1.ManagedService get service => $_getN(0);
+  set service($1.ManagedService v) {
     setField(1, v);
   }
 
@@ -263,8 +261,8 @@ class UndeleteServiceRequest extends $pb.GeneratedMessage {
 class UndeleteServiceResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteServiceResponse',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$0.ManagedService>(1, 'service', $pb.PbFieldType.OM,
-        $0.ManagedService.getDefault, $0.ManagedService.create)
+    ..a<$1.ManagedService>(1, 'service', $pb.PbFieldType.OM,
+        $1.ManagedService.getDefault, $1.ManagedService.create)
     ..hasRequiredFields = false;
 
   UndeleteServiceResponse() : super();
@@ -288,8 +286,8 @@ class UndeleteServiceResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UndeleteServiceResponse _defaultInstance;
 
-  $0.ManagedService get service => $_getN(0);
-  set service($0.ManagedService v) {
+  $1.ManagedService get service => $_getN(0);
+  set service($1.ManagedService v) {
     setField(1, v);
   }
 
@@ -416,7 +414,7 @@ class ListServiceConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListServiceConfigsResponse',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$1.Service>(1, 'serviceConfigs', $pb.PbFieldType.PM, $1.Service.create)
+    ..pc<$3.Service>(1, 'serviceConfigs', $pb.PbFieldType.PM, $3.Service.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -442,7 +440,7 @@ class ListServiceConfigsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListServiceConfigsResponse _defaultInstance;
 
-  $core.List<$1.Service> get serviceConfigs => $_getList(0);
+  $core.List<$3.Service> get serviceConfigs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -458,8 +456,8 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
       'CreateServiceConfigRequest',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..a<$1.Service>(2, 'serviceConfig', $pb.PbFieldType.OM,
-        $1.Service.getDefault, $1.Service.create)
+    ..a<$3.Service>(2, 'serviceConfig', $pb.PbFieldType.OM,
+        $3.Service.getDefault, $3.Service.create)
     ..hasRequiredFields = false;
 
   CreateServiceConfigRequest() : super();
@@ -492,8 +490,8 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  $1.Service get serviceConfig => $_getN(1);
-  set serviceConfig($1.Service v) {
+  $3.Service get serviceConfig => $_getN(1);
+  set serviceConfig($3.Service v) {
     setField(2, v);
   }
 
@@ -505,8 +503,8 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SubmitConfigSourceRequest',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..a<$0.ConfigSource>(2, 'configSource', $pb.PbFieldType.OM,
-        $0.ConfigSource.getDefault, $0.ConfigSource.create)
+    ..a<$1.ConfigSource>(2, 'configSource', $pb.PbFieldType.OM,
+        $1.ConfigSource.getDefault, $1.ConfigSource.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -540,8 +538,8 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  $0.ConfigSource get configSource => $_getN(1);
-  set configSource($0.ConfigSource v) {
+  $1.ConfigSource get configSource => $_getN(1);
+  set configSource($1.ConfigSource v) {
     setField(2, v);
   }
 
@@ -561,8 +559,8 @@ class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SubmitConfigSourceResponse',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$1.Service>(1, 'serviceConfig', $pb.PbFieldType.OM,
-        $1.Service.getDefault, $1.Service.create)
+    ..a<$3.Service>(1, 'serviceConfig', $pb.PbFieldType.OM,
+        $3.Service.getDefault, $3.Service.create)
     ..hasRequiredFields = false;
 
   SubmitConfigSourceResponse() : super();
@@ -587,8 +585,8 @@ class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SubmitConfigSourceResponse _defaultInstance;
 
-  $1.Service get serviceConfig => $_getN(0);
-  set serviceConfig($1.Service v) {
+  $3.Service get serviceConfig => $_getN(0);
+  set serviceConfig($3.Service v) {
     setField(1, v);
   }
 
@@ -601,8 +599,8 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
       'CreateServiceRolloutRequest',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
-    ..a<$0.Rollout>(2, 'rollout', $pb.PbFieldType.OM, $0.Rollout.getDefault,
-        $0.Rollout.create)
+    ..a<$1.Rollout>(2, 'rollout', $pb.PbFieldType.OM, $1.Rollout.getDefault,
+        $1.Rollout.create)
     ..hasRequiredFields = false;
 
   CreateServiceRolloutRequest() : super();
@@ -635,8 +633,8 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
   $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  $0.Rollout get rollout => $_getN(1);
-  set rollout($0.Rollout v) {
+  $1.Rollout get rollout => $_getN(1);
+  set rollout($1.Rollout v) {
     setField(2, v);
   }
 
@@ -713,7 +711,7 @@ class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListServiceRolloutsResponse',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$0.Rollout>(1, 'rollouts', $pb.PbFieldType.PM, $0.Rollout.create)
+    ..pc<$1.Rollout>(1, 'rollouts', $pb.PbFieldType.PM, $1.Rollout.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -739,7 +737,7 @@ class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListServiceRolloutsResponse _defaultInstance;
 
-  $core.List<$0.Rollout> get rollouts => $_getList(0);
+  $core.List<$1.Rollout> get rollouts => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -888,10 +886,10 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GenerateConfigReportRequest',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$2.Any>(
-        1, 'newConfig', $pb.PbFieldType.OM, $2.Any.getDefault, $2.Any.create)
-    ..a<$2.Any>(
-        2, 'oldConfig', $pb.PbFieldType.OM, $2.Any.getDefault, $2.Any.create)
+    ..a<$4.Any>(
+        1, 'newConfig', $pb.PbFieldType.OM, $4.Any.getDefault, $4.Any.create)
+    ..a<$4.Any>(
+        2, 'oldConfig', $pb.PbFieldType.OM, $4.Any.getDefault, $4.Any.create)
     ..hasRequiredFields = false;
 
   GenerateConfigReportRequest() : super();
@@ -916,16 +914,16 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static GenerateConfigReportRequest _defaultInstance;
 
-  $2.Any get newConfig => $_getN(0);
-  set newConfig($2.Any v) {
+  $4.Any get newConfig => $_getN(0);
+  set newConfig($4.Any v) {
     setField(1, v);
   }
 
   $core.bool hasNewConfig() => $_has(0);
   void clearNewConfig() => clearField(1);
 
-  $2.Any get oldConfig => $_getN(1);
-  set oldConfig($2.Any v) {
+  $4.Any get oldConfig => $_getN(1);
+  set oldConfig($4.Any v) {
     setField(2, v);
   }
 
@@ -939,10 +937,10 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'serviceName')
     ..aOS(2, 'id')
-    ..pc<$0.ChangeReport>(
-        3, 'changeReports', $pb.PbFieldType.PM, $0.ChangeReport.create)
-    ..pc<$0.Diagnostic>(
-        4, 'diagnostics', $pb.PbFieldType.PM, $0.Diagnostic.create)
+    ..pc<$1.ChangeReport>(
+        3, 'changeReports', $pb.PbFieldType.PM, $1.ChangeReport.create)
+    ..pc<$1.Diagnostic>(
+        4, 'diagnostics', $pb.PbFieldType.PM, $1.Diagnostic.create)
     ..hasRequiredFields = false;
 
   GenerateConfigReportResponse() : super();
@@ -984,117 +982,7 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
   $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  $core.List<$0.ChangeReport> get changeReports => $_getList(2);
+  $core.List<$1.ChangeReport> get changeReports => $_getList(2);
 
-  $core.List<$0.Diagnostic> get diagnostics => $_getList(3);
-}
-
-class ServiceManagerApi {
-  $pb.RpcClient _client;
-  ServiceManagerApi(this._client);
-
-  $async.Future<ListServicesResponse> listServices(
-      $pb.ClientContext ctx, ListServicesRequest request) {
-    var emptyResponse = ListServicesResponse();
-    return _client.invoke<ListServicesResponse>(
-        ctx, 'ServiceManager', 'ListServices', request, emptyResponse);
-  }
-
-  $async.Future<$0.ManagedService> getService(
-      $pb.ClientContext ctx, GetServiceRequest request) {
-    var emptyResponse = $0.ManagedService();
-    return _client.invoke<$0.ManagedService>(
-        ctx, 'ServiceManager', 'GetService', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> createService(
-      $pb.ClientContext ctx, CreateServiceRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'CreateService', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> deleteService(
-      $pb.ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'DeleteService', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> undeleteService(
-      $pb.ClientContext ctx, UndeleteServiceRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'UndeleteService', request, emptyResponse);
-  }
-
-  $async.Future<ListServiceConfigsResponse> listServiceConfigs(
-      $pb.ClientContext ctx, ListServiceConfigsRequest request) {
-    var emptyResponse = ListServiceConfigsResponse();
-    return _client.invoke<ListServiceConfigsResponse>(
-        ctx, 'ServiceManager', 'ListServiceConfigs', request, emptyResponse);
-  }
-
-  $async.Future<$1.Service> getServiceConfig(
-      $pb.ClientContext ctx, GetServiceConfigRequest request) {
-    var emptyResponse = $1.Service();
-    return _client.invoke<$1.Service>(
-        ctx, 'ServiceManager', 'GetServiceConfig', request, emptyResponse);
-  }
-
-  $async.Future<$1.Service> createServiceConfig(
-      $pb.ClientContext ctx, CreateServiceConfigRequest request) {
-    var emptyResponse = $1.Service();
-    return _client.invoke<$1.Service>(
-        ctx, 'ServiceManager', 'CreateServiceConfig', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> submitConfigSource(
-      $pb.ClientContext ctx, SubmitConfigSourceRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'SubmitConfigSource', request, emptyResponse);
-  }
-
-  $async.Future<ListServiceRolloutsResponse> listServiceRollouts(
-      $pb.ClientContext ctx, ListServiceRolloutsRequest request) {
-    var emptyResponse = ListServiceRolloutsResponse();
-    return _client.invoke<ListServiceRolloutsResponse>(
-        ctx, 'ServiceManager', 'ListServiceRollouts', request, emptyResponse);
-  }
-
-  $async.Future<$0.Rollout> getServiceRollout(
-      $pb.ClientContext ctx, GetServiceRolloutRequest request) {
-    var emptyResponse = $0.Rollout();
-    return _client.invoke<$0.Rollout>(
-        ctx, 'ServiceManager', 'GetServiceRollout', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> createServiceRollout(
-      $pb.ClientContext ctx, CreateServiceRolloutRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'CreateServiceRollout', request, emptyResponse);
-  }
-
-  $async.Future<GenerateConfigReportResponse> generateConfigReport(
-      $pb.ClientContext ctx, GenerateConfigReportRequest request) {
-    var emptyResponse = GenerateConfigReportResponse();
-    return _client.invoke<GenerateConfigReportResponse>(
-        ctx, 'ServiceManager', 'GenerateConfigReport', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> enableService(
-      $pb.ClientContext ctx, EnableServiceRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'EnableService', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> disableService(
-      $pb.ClientContext ctx, DisableServiceRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ServiceManager', 'DisableService', request, emptyResponse);
-  }
+  $core.List<$1.Diagnostic> get diagnostics => $_getList(3);
 }

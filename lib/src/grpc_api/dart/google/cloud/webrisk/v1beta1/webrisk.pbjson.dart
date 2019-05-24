@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-
 const ThreatType$json = {
   '1': 'ThreatType',
   '2': [
@@ -325,55 +323,4 @@ const RiceDeltaEncoding$json = {
     {'1': 'entry_count', '3': 3, '4': 1, '5': 5, '10': 'entryCount'},
     {'1': 'encoded_data', '3': 4, '4': 1, '5': 12, '10': 'encodedData'},
   ],
-};
-
-const WebRiskServiceV1Beta1ServiceBase$json = {
-  '1': 'WebRiskServiceV1Beta1',
-  '2': [
-    {
-      '1': 'ComputeThreatListDiff',
-      '2': '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffRequest',
-      '3': '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffResponse',
-      '4': {}
-    },
-    {
-      '1': 'SearchUris',
-      '2': '.google.cloud.webrisk.v1beta1.SearchUrisRequest',
-      '3': '.google.cloud.webrisk.v1beta1.SearchUrisResponse',
-      '4': {}
-    },
-    {
-      '1': 'SearchHashes',
-      '2': '.google.cloud.webrisk.v1beta1.SearchHashesRequest',
-      '3': '.google.cloud.webrisk.v1beta1.SearchHashesResponse',
-      '4': {}
-    },
-  ],
-};
-
-const WebRiskServiceV1Beta1ServiceBase$messageJson = {
-  '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffRequest':
-      ComputeThreatListDiffRequest$json,
-  '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffRequest.Constraints':
-      ComputeThreatListDiffRequest_Constraints$json,
-  '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffResponse':
-      ComputeThreatListDiffResponse$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.webrisk.v1beta1.ThreatEntryAdditions':
-      ThreatEntryAdditions$json,
-  '.google.cloud.webrisk.v1beta1.RawHashes': RawHashes$json,
-  '.google.cloud.webrisk.v1beta1.RiceDeltaEncoding': RiceDeltaEncoding$json,
-  '.google.cloud.webrisk.v1beta1.ThreatEntryRemovals': ThreatEntryRemovals$json,
-  '.google.cloud.webrisk.v1beta1.RawIndices': RawIndices$json,
-  '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffResponse.Checksum':
-      ComputeThreatListDiffResponse_Checksum$json,
-  '.google.cloud.webrisk.v1beta1.SearchUrisRequest': SearchUrisRequest$json,
-  '.google.cloud.webrisk.v1beta1.SearchUrisResponse': SearchUrisResponse$json,
-  '.google.cloud.webrisk.v1beta1.SearchUrisResponse.ThreatUri':
-      SearchUrisResponse_ThreatUri$json,
-  '.google.cloud.webrisk.v1beta1.SearchHashesRequest': SearchHashesRequest$json,
-  '.google.cloud.webrisk.v1beta1.SearchHashesResponse':
-      SearchHashesResponse$json,
-  '.google.cloud.webrisk.v1beta1.SearchHashesResponse.ThreatHash':
-      SearchHashesResponse_ThreatHash$json,
 };

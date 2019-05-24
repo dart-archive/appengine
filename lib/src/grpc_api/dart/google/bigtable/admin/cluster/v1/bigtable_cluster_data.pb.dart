@@ -9,7 +9,7 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../longrunning/operations.pb.dart' as $0;
+import '../../../../longrunning/operations.pb.dart' as $1;
 
 import 'bigtable_cluster_data.pbenum.dart';
 
@@ -70,8 +70,8 @@ class Cluster extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster',
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..a<$0.Operation>(3, 'currentOperation', $pb.PbFieldType.OM,
-        $0.Operation.getDefault, $0.Operation.create)
+    ..a<$1.Operation>(3, 'currentOperation', $pb.PbFieldType.OM,
+        $1.Operation.getDefault, $1.Operation.create)
     ..aOS(4, 'displayName')
     ..a<$core.int>(5, 'serveNodes', $pb.PbFieldType.O3)
     ..e<StorageType>(
@@ -108,8 +108,8 @@ class Cluster extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Operation get currentOperation => $_getN(1);
-  set currentOperation($0.Operation v) {
+  $1.Operation get currentOperation => $_getN(1);
+  set currentOperation($1.Operation v) {
     setField(3, v);
   }
 

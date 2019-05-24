@@ -9,15 +9,15 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'bigtable_table_data.pb.dart' as $0;
+import 'bigtable_table_data.pb.dart' as $1;
 
 class CreateTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTableRequest',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'tableId')
-    ..a<$0.Table>(
-        3, 'table', $pb.PbFieldType.OM, $0.Table.getDefault, $0.Table.create)
+    ..a<$1.Table>(
+        3, 'table', $pb.PbFieldType.OM, $1.Table.getDefault, $1.Table.create)
     ..pPS(4, 'initialSplitKeys')
     ..hasRequiredFields = false;
 
@@ -56,8 +56,8 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   $core.bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
-  $0.Table get table => $_getN(2);
-  set table($0.Table v) {
+  $1.Table get table => $_getN(2);
+  set table($1.Table v) {
     setField(3, v);
   }
 
@@ -104,7 +104,7 @@ class ListTablesRequest extends $pb.GeneratedMessage {
 class ListTablesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesResponse',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
-    ..pc<$0.Table>(1, 'tables', $pb.PbFieldType.PM, $0.Table.create)
+    ..pc<$1.Table>(1, 'tables', $pb.PbFieldType.PM, $1.Table.create)
     ..hasRequiredFields = false;
 
   ListTablesResponse() : super();
@@ -126,7 +126,7 @@ class ListTablesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTablesResponse _defaultInstance;
 
-  $core.List<$0.Table> get tables => $_getList(0);
+  $core.List<$1.Table> get tables => $_getList(0);
 }
 
 class GetTableRequest extends $pb.GeneratedMessage {
@@ -245,8 +245,8 @@ class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'columnFamilyId')
-    ..a<$0.ColumnFamily>(3, 'columnFamily', $pb.PbFieldType.OM,
-        $0.ColumnFamily.getDefault, $0.ColumnFamily.create)
+    ..a<$1.ColumnFamily>(3, 'columnFamily', $pb.PbFieldType.OM,
+        $1.ColumnFamily.getDefault, $1.ColumnFamily.create)
     ..hasRequiredFields = false;
 
   CreateColumnFamilyRequest() : super();
@@ -287,8 +287,8 @@ class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
   $core.bool hasColumnFamilyId() => $_has(1);
   void clearColumnFamilyId() => clearField(2);
 
-  $0.ColumnFamily get columnFamily => $_getN(2);
-  set columnFamily($0.ColumnFamily v) {
+  $1.ColumnFamily get columnFamily => $_getN(2);
+  set columnFamily($1.ColumnFamily v) {
     setField(3, v);
   }
 

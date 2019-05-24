@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $1;
 
 import 'job_service.pbenum.dart';
 
@@ -684,12 +682,12 @@ class Job extends $pb.GeneratedMessage {
         TrainingInput.getDefault, TrainingInput.create)
     ..a<PredictionInput>(3, 'predictionInput', $pb.PbFieldType.OM,
         PredictionInput.getDefault, PredictionInput.create)
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
+        $1.Timestamp.create)
     ..e<Job_State>(7, 'state', $pb.PbFieldType.OE, Job_State.STATE_UNSPECIFIED,
         Job_State.valueOf, Job_State.values)
     ..aOS(8, 'errorMessage')
@@ -748,24 +746,24 @@ class Job extends $pb.GeneratedMessage {
   $core.bool hasPredictionInput() => $_has(2);
   void clearPredictionInput() => clearField(3);
 
-  $0.Timestamp get createTime => $_getN(3);
-  set createTime($0.Timestamp v) {
+  $1.Timestamp get createTime => $_getN(3);
+  set createTime($1.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $0.Timestamp get startTime => $_getN(4);
-  set startTime($0.Timestamp v) {
+  $1.Timestamp get startTime => $_getN(4);
+  set startTime($1.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(5);
 
-  $0.Timestamp get endTime => $_getN(5);
-  set endTime($0.Timestamp v) {
+  $1.Timestamp get endTime => $_getN(5);
+  set endTime($1.Timestamp v) {
     setField(6, v);
   }
 
@@ -1011,36 +1009,4 @@ class CancelJobRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class JobServiceApi {
-  $pb.RpcClient _client;
-  JobServiceApi(this._client);
-
-  $async.Future<Job> createJob(
-      $pb.ClientContext ctx, CreateJobRequest request) {
-    var emptyResponse = Job();
-    return _client.invoke<Job>(
-        ctx, 'JobService', 'CreateJob', request, emptyResponse);
-  }
-
-  $async.Future<ListJobsResponse> listJobs(
-      $pb.ClientContext ctx, ListJobsRequest request) {
-    var emptyResponse = ListJobsResponse();
-    return _client.invoke<ListJobsResponse>(
-        ctx, 'JobService', 'ListJobs', request, emptyResponse);
-  }
-
-  $async.Future<Job> getJob($pb.ClientContext ctx, GetJobRequest request) {
-    var emptyResponse = Job();
-    return _client.invoke<Job>(
-        ctx, 'JobService', 'GetJob', request, emptyResponse);
-  }
-
-  $async.Future<$1.Empty> cancelJob(
-      $pb.ClientContext ctx, CancelJobRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(
-        ctx, 'JobService', 'CancelJob', request, emptyResponse);
-  }
 }

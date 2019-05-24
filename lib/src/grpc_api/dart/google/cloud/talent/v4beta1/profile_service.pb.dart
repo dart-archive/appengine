@@ -4,19 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $0;
-import 'profile.pb.dart' as $1;
-import 'common.pb.dart' as $2;
-import 'filters.pb.dart' as $3;
-import 'histogram.pb.dart' as $4;
-import '../../../protobuf/empty.pb.dart' as $5;
+import '../../../protobuf/field_mask.pb.dart' as $2;
+import 'profile.pb.dart' as $0;
+import 'common.pb.dart' as $3;
+import 'filters.pb.dart' as $4;
+import 'histogram.pb.dart' as $5;
 
 class ListProfilesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProfilesRequest',
@@ -24,8 +22,8 @@ class ListProfilesRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
-    ..a<$0.FieldMask>(4, 'readMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$2.FieldMask>(4, 'readMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   ListProfilesRequest() : super();
@@ -71,8 +69,8 @@ class ListProfilesRequest extends $pb.GeneratedMessage {
   $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  $0.FieldMask get readMask => $_getN(3);
-  set readMask($0.FieldMask v) {
+  $2.FieldMask get readMask => $_getN(3);
+  set readMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -83,7 +81,7 @@ class ListProfilesRequest extends $pb.GeneratedMessage {
 class ListProfilesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProfilesResponse',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..pc<$1.Profile>(1, 'profiles', $pb.PbFieldType.PM, $1.Profile.create)
+    ..pc<$0.Profile>(1, 'profiles', $pb.PbFieldType.PM, $0.Profile.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -107,7 +105,7 @@ class ListProfilesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListProfilesResponse _defaultInstance;
 
-  $core.List<$1.Profile> get profiles => $_getList(0);
+  $core.List<$0.Profile> get profiles => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -122,8 +120,8 @@ class CreateProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateProfileRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.Profile>(2, 'profile', $pb.PbFieldType.OM, $1.Profile.getDefault,
-        $1.Profile.create)
+    ..a<$0.Profile>(2, 'profile', $pb.PbFieldType.OM, $0.Profile.getDefault,
+        $0.Profile.create)
     ..hasRequiredFields = false;
 
   CreateProfileRequest() : super();
@@ -154,8 +152,8 @@ class CreateProfileRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.Profile get profile => $_getN(1);
-  set profile($1.Profile v) {
+  $0.Profile get profile => $_getN(1);
+  set profile($0.Profile v) {
     setField(2, v);
   }
 
@@ -200,10 +198,10 @@ class GetProfileRequest extends $pb.GeneratedMessage {
 class UpdateProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateProfileRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..a<$1.Profile>(1, 'profile', $pb.PbFieldType.OM, $1.Profile.getDefault,
-        $1.Profile.create)
-    ..a<$0.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$0.Profile>(1, 'profile', $pb.PbFieldType.OM, $0.Profile.getDefault,
+        $0.Profile.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProfileRequest() : super();
@@ -226,16 +224,16 @@ class UpdateProfileRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateProfileRequest _defaultInstance;
 
-  $1.Profile get profile => $_getN(0);
-  set profile($1.Profile v) {
+  $0.Profile get profile => $_getN(0);
+  set profile($0.Profile v) {
     setField(1, v);
   }
 
   $core.bool hasProfile() => $_has(0);
   void clearProfile() => clearField(1);
 
-  $0.FieldMask get updateMask => $_getN(1);
-  set updateMask($0.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -282,18 +280,18 @@ class SearchProfilesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchProfilesRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..aOS(1, 'parent')
-    ..a<$2.RequestMetadata>(2, 'requestMetadata', $pb.PbFieldType.OM,
-        $2.RequestMetadata.getDefault, $2.RequestMetadata.create)
-    ..a<$3.ProfileQuery>(3, 'profileQuery', $pb.PbFieldType.OM,
-        $3.ProfileQuery.getDefault, $3.ProfileQuery.create)
+    ..a<$3.RequestMetadata>(2, 'requestMetadata', $pb.PbFieldType.OM,
+        $3.RequestMetadata.getDefault, $3.RequestMetadata.create)
+    ..a<$4.ProfileQuery>(3, 'profileQuery', $pb.PbFieldType.OM,
+        $4.ProfileQuery.getDefault, $4.ProfileQuery.create)
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
     ..a<$core.int>(6, 'offset', $pb.PbFieldType.O3)
     ..aOB(7, 'disableSpellCheck')
     ..aOS(8, 'orderBy')
     ..aOB(9, 'caseSensitiveSort')
-    ..pc<$4.HistogramQuery>(
-        10, 'histogramQueries', $pb.PbFieldType.PM, $4.HistogramQuery.create)
+    ..pc<$5.HistogramQuery>(
+        10, 'histogramQueries', $pb.PbFieldType.PM, $5.HistogramQuery.create)
     ..hasRequiredFields = false;
 
   SearchProfilesRequest() : super();
@@ -325,16 +323,16 @@ class SearchProfilesRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.RequestMetadata get requestMetadata => $_getN(1);
-  set requestMetadata($2.RequestMetadata v) {
+  $3.RequestMetadata get requestMetadata => $_getN(1);
+  set requestMetadata($3.RequestMetadata v) {
     setField(2, v);
   }
 
   $core.bool hasRequestMetadata() => $_has(1);
   void clearRequestMetadata() => clearField(2);
 
-  $3.ProfileQuery get profileQuery => $_getN(2);
-  set profileQuery($3.ProfileQuery v) {
+  $4.ProfileQuery get profileQuery => $_getN(2);
+  set profileQuery($4.ProfileQuery v) {
     setField(3, v);
   }
 
@@ -389,20 +387,20 @@ class SearchProfilesRequest extends $pb.GeneratedMessage {
   $core.bool hasCaseSensitiveSort() => $_has(8);
   void clearCaseSensitiveSort() => clearField(9);
 
-  $core.List<$4.HistogramQuery> get histogramQueries => $_getList(9);
+  $core.List<$5.HistogramQuery> get histogramQueries => $_getList(9);
 }
 
 class SearchProfilesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchProfilesResponse',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..aInt64(1, 'estimatedTotalSize')
-    ..a<$2.SpellingCorrection>(2, 'spellCorrection', $pb.PbFieldType.OM,
-        $2.SpellingCorrection.getDefault, $2.SpellingCorrection.create)
-    ..a<$2.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
-        $2.ResponseMetadata.getDefault, $2.ResponseMetadata.create)
+    ..a<$3.SpellingCorrection>(2, 'spellCorrection', $pb.PbFieldType.OM,
+        $3.SpellingCorrection.getDefault, $3.SpellingCorrection.create)
+    ..a<$3.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
+        $3.ResponseMetadata.getDefault, $3.ResponseMetadata.create)
     ..aOS(4, 'nextPageToken')
-    ..pc<$4.HistogramQueryResult>(5, 'histogramQueryResults',
-        $pb.PbFieldType.PM, $4.HistogramQueryResult.create)
+    ..pc<$5.HistogramQueryResult>(5, 'histogramQueryResults',
+        $pb.PbFieldType.PM, $5.HistogramQueryResult.create)
     ..pc<SummarizedProfile>(
         6, 'summarizedProfiles', $pb.PbFieldType.PM, SummarizedProfile.create)
     ..hasRequiredFields = false;
@@ -436,16 +434,16 @@ class SearchProfilesResponse extends $pb.GeneratedMessage {
   $core.bool hasEstimatedTotalSize() => $_has(0);
   void clearEstimatedTotalSize() => clearField(1);
 
-  $2.SpellingCorrection get spellCorrection => $_getN(1);
-  set spellCorrection($2.SpellingCorrection v) {
+  $3.SpellingCorrection get spellCorrection => $_getN(1);
+  set spellCorrection($3.SpellingCorrection v) {
     setField(2, v);
   }
 
   $core.bool hasSpellCorrection() => $_has(1);
   void clearSpellCorrection() => clearField(2);
 
-  $2.ResponseMetadata get metadata => $_getN(2);
-  set metadata($2.ResponseMetadata v) {
+  $3.ResponseMetadata get metadata => $_getN(2);
+  set metadata($3.ResponseMetadata v) {
     setField(3, v);
   }
 
@@ -460,7 +458,7 @@ class SearchProfilesResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(3);
   void clearNextPageToken() => clearField(4);
 
-  $core.List<$4.HistogramQueryResult> get histogramQueryResults => $_getList(4);
+  $core.List<$5.HistogramQueryResult> get histogramQueryResults => $_getList(4);
 
   $core.List<SummarizedProfile> get summarizedProfiles => $_getList(5);
 }
@@ -468,9 +466,9 @@ class SearchProfilesResponse extends $pb.GeneratedMessage {
 class SummarizedProfile extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SummarizedProfile',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..pc<$1.Profile>(1, 'profiles', $pb.PbFieldType.PM, $1.Profile.create)
-    ..a<$1.Profile>(2, 'summary', $pb.PbFieldType.OM, $1.Profile.getDefault,
-        $1.Profile.create)
+    ..pc<$0.Profile>(1, 'profiles', $pb.PbFieldType.PM, $0.Profile.create)
+    ..a<$0.Profile>(2, 'summary', $pb.PbFieldType.OM, $0.Profile.getDefault,
+        $0.Profile.create)
     ..hasRequiredFields = false;
 
   SummarizedProfile() : super();
@@ -492,60 +490,13 @@ class SummarizedProfile extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SummarizedProfile _defaultInstance;
 
-  $core.List<$1.Profile> get profiles => $_getList(0);
+  $core.List<$0.Profile> get profiles => $_getList(0);
 
-  $1.Profile get summary => $_getN(1);
-  set summary($1.Profile v) {
+  $0.Profile get summary => $_getN(1);
+  set summary($0.Profile v) {
     setField(2, v);
   }
 
   $core.bool hasSummary() => $_has(1);
   void clearSummary() => clearField(2);
-}
-
-class ProfileServiceApi {
-  $pb.RpcClient _client;
-  ProfileServiceApi(this._client);
-
-  $async.Future<ListProfilesResponse> listProfiles(
-      $pb.ClientContext ctx, ListProfilesRequest request) {
-    var emptyResponse = ListProfilesResponse();
-    return _client.invoke<ListProfilesResponse>(
-        ctx, 'ProfileService', 'ListProfiles', request, emptyResponse);
-  }
-
-  $async.Future<$1.Profile> createProfile(
-      $pb.ClientContext ctx, CreateProfileRequest request) {
-    var emptyResponse = $1.Profile();
-    return _client.invoke<$1.Profile>(
-        ctx, 'ProfileService', 'CreateProfile', request, emptyResponse);
-  }
-
-  $async.Future<$1.Profile> getProfile(
-      $pb.ClientContext ctx, GetProfileRequest request) {
-    var emptyResponse = $1.Profile();
-    return _client.invoke<$1.Profile>(
-        ctx, 'ProfileService', 'GetProfile', request, emptyResponse);
-  }
-
-  $async.Future<$1.Profile> updateProfile(
-      $pb.ClientContext ctx, UpdateProfileRequest request) {
-    var emptyResponse = $1.Profile();
-    return _client.invoke<$1.Profile>(
-        ctx, 'ProfileService', 'UpdateProfile', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteProfile(
-      $pb.ClientContext ctx, DeleteProfileRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'ProfileService', 'DeleteProfile', request, emptyResponse);
-  }
-
-  $async.Future<SearchProfilesResponse> searchProfiles(
-      $pb.ClientContext ctx, SearchProfilesRequest request) {
-    var emptyResponse = SearchProfilesResponse();
-    return _client.invoke<SearchProfilesResponse>(
-        ctx, 'ProfileService', 'SearchProfiles', request, emptyResponse);
-  }
 }

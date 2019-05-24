@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -251,23 +250,4 @@ class MutateFeedResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class FeedServiceApi {
-  $pb.RpcClient _client;
-  FeedServiceApi(this._client);
-
-  $async.Future<$0.Feed> getFeed(
-      $pb.ClientContext ctx, GetFeedRequest request) {
-    var emptyResponse = $0.Feed();
-    return _client.invoke<$0.Feed>(
-        ctx, 'FeedService', 'GetFeed', request, emptyResponse);
-  }
-
-  $async.Future<MutateFeedsResponse> mutateFeeds(
-      $pb.ClientContext ctx, MutateFeedsRequest request) {
-    var emptyResponse = MutateFeedsResponse();
-    return _client.invoke<MutateFeedsResponse>(
-        ctx, 'FeedService', 'MutateFeeds', request, emptyResponse);
-  }
 }

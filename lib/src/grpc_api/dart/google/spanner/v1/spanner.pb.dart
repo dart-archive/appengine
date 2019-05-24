@@ -4,22 +4,20 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
-import 'transaction.pb.dart' as $1;
-import '../../protobuf/struct.pb.dart' as $2;
-import 'type.pb.dart' as $3;
-import 'result_set.pb.dart' as $4;
-import '../../rpc/status.pb.dart' as $5;
-import 'keys.pb.dart' as $6;
-import 'mutation.pb.dart' as $7;
-import '../../protobuf/empty.pb.dart' as $8;
+import '../../protobuf/timestamp.pb.dart' as $3;
+import 'transaction.pb.dart' as $2;
+import '../../protobuf/struct.pb.dart' as $4;
+import 'type.pb.dart' as $5;
+import 'result_set.pb.dart' as $1;
+import '../../rpc/status.pb.dart' as $6;
+import 'keys.pb.dart' as $7;
+import 'mutation.pb.dart' as $8;
 
 import 'spanner.pbenum.dart';
 
@@ -84,10 +82,10 @@ class Session extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
-    ..a<$0.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(4, 'approximateLastUseTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'approximateLastUseTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   Session() : super();
@@ -117,16 +115,16 @@ class Session extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
-  $0.Timestamp get createTime => $_getN(2);
-  set createTime($0.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(2);
+  set createTime($3.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasCreateTime() => $_has(2);
   void clearCreateTime() => clearField(3);
 
-  $0.Timestamp get approximateLastUseTime => $_getN(3);
-  set approximateLastUseTime($0.Timestamp v) {
+  $3.Timestamp get approximateLastUseTime => $_getN(3);
+  set approximateLastUseTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -306,18 +304,18 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteSqlRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$1.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $1.TransactionSelector.getDefault, $1.TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$2.Struct>(
-        4, 'params', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
-    ..m<$core.String, $3.Type>(
+    ..a<$4.Struct>(
+        4, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
+    ..m<$core.String, $5.Type>(
         5,
         'paramTypes',
         'ExecuteSqlRequest.ParamTypesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $3.Type.create,
+        $5.Type.create,
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
@@ -360,8 +358,8 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $1.TransactionSelector get transaction => $_getN(1);
-  set transaction($1.TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -376,15 +374,15 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   $core.bool hasSql() => $_has(2);
   void clearSql() => clearField(3);
 
-  $2.Struct get params => $_getN(3);
-  set params($2.Struct v) {
+  $4.Struct get params => $_getN(3);
+  set params($4.Struct v) {
     setField(4, v);
   }
 
   $core.bool hasParams() => $_has(3);
   void clearParams() => clearField(4);
 
-  $core.Map<$core.String, $3.Type> get paramTypes => $_getMap(4);
+  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(4);
 
   $core.List<$core.int> get resumeToken => $_getN(5);
   set resumeToken($core.List<$core.int> v) {
@@ -424,15 +422,15 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
       'ExecuteBatchDmlRequest.Statement',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'sql')
-    ..a<$2.Struct>(
-        2, 'params', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
-    ..m<$core.String, $3.Type>(
+    ..a<$4.Struct>(
+        2, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
+    ..m<$core.String, $5.Type>(
         3,
         'paramTypes',
         'ExecuteBatchDmlRequest.Statement.ParamTypesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $3.Type.create,
+        $5.Type.create,
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
@@ -469,23 +467,23 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
   $core.bool hasSql() => $_has(0);
   void clearSql() => clearField(1);
 
-  $2.Struct get params => $_getN(1);
-  set params($2.Struct v) {
+  $4.Struct get params => $_getN(1);
+  set params($4.Struct v) {
     setField(2, v);
   }
 
   $core.bool hasParams() => $_has(1);
   void clearParams() => clearField(2);
 
-  $core.Map<$core.String, $3.Type> get paramTypes => $_getMap(2);
+  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(2);
 }
 
 class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$1.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $1.TransactionSelector.getDefault, $1.TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..pc<ExecuteBatchDmlRequest_Statement>(3, 'statements', $pb.PbFieldType.PM,
         ExecuteBatchDmlRequest_Statement.create)
     ..aInt64(4, 'seqno')
@@ -520,8 +518,8 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $1.TransactionSelector get transaction => $_getN(1);
-  set transaction($1.TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -542,9 +540,9 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
 class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlResponse',
       package: const $pb.PackageName('google.spanner.v1'))
-    ..pc<$4.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM, $4.ResultSet.create)
-    ..a<$5.Status>(
-        2, 'status', $pb.PbFieldType.OM, $5.Status.getDefault, $5.Status.create)
+    ..pc<$1.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM, $1.ResultSet.create)
+    ..a<$6.Status>(
+        2, 'status', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
     ..hasRequiredFields = false;
 
   ExecuteBatchDmlResponse() : super();
@@ -568,10 +566,10 @@ class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExecuteBatchDmlResponse _defaultInstance;
 
-  $core.List<$4.ResultSet> get resultSets => $_getList(0);
+  $core.List<$1.ResultSet> get resultSets => $_getList(0);
 
-  $5.Status get status => $_getN(1);
-  set status($5.Status v) {
+  $6.Status get status => $_getN(1);
+  set status($6.Status v) {
     setField(2, v);
   }
 
@@ -626,18 +624,18 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionQueryRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$1.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $1.TransactionSelector.getDefault, $1.TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$2.Struct>(
-        4, 'params', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
-    ..m<$core.String, $3.Type>(
+    ..a<$4.Struct>(
+        4, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
+    ..m<$core.String, $5.Type>(
         5,
         'paramTypes',
         'PartitionQueryRequest.ParamTypesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $3.Type.create,
+        $5.Type.create,
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
@@ -674,8 +672,8 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $1.TransactionSelector get transaction => $_getN(1);
-  set transaction($1.TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -690,15 +688,15 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasSql() => $_has(2);
   void clearSql() => clearField(3);
 
-  $2.Struct get params => $_getN(3);
-  set params($2.Struct v) {
+  $4.Struct get params => $_getN(3);
+  set params($4.Struct v) {
     setField(4, v);
   }
 
   $core.bool hasParams() => $_has(3);
   void clearParams() => clearField(4);
 
-  $core.Map<$core.String, $3.Type> get paramTypes => $_getMap(4);
+  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(4);
 
   PartitionOptions get partitionOptions => $_getN(5);
   set partitionOptions(PartitionOptions v) {
@@ -713,13 +711,13 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionReadRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$1.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $1.TransactionSelector.getDefault, $1.TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<$6.KeySet>(
-        6, 'keySet', $pb.PbFieldType.OM, $6.KeySet.getDefault, $6.KeySet.create)
+    ..a<$7.KeySet>(
+        6, 'keySet', $pb.PbFieldType.OM, $7.KeySet.getDefault, $7.KeySet.create)
     ..a<PartitionOptions>(9, 'partitionOptions', $pb.PbFieldType.OM,
         PartitionOptions.getDefault, PartitionOptions.create)
     ..hasRequiredFields = false;
@@ -752,8 +750,8 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $1.TransactionSelector get transaction => $_getN(1);
-  set transaction($1.TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -778,8 +776,8 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get columns => $_getList(4);
 
-  $6.KeySet get keySet => $_getN(5);
-  set keySet($6.KeySet v) {
+  $7.KeySet get keySet => $_getN(5);
+  set keySet($7.KeySet v) {
     setField(6, v);
   }
 
@@ -831,8 +829,8 @@ class PartitionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionResponse',
       package: const $pb.PackageName('google.spanner.v1'))
     ..pc<Partition>(1, 'partitions', $pb.PbFieldType.PM, Partition.create)
-    ..a<$1.Transaction>(2, 'transaction', $pb.PbFieldType.OM,
-        $1.Transaction.getDefault, $1.Transaction.create)
+    ..a<$2.Transaction>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.Transaction.getDefault, $2.Transaction.create)
     ..hasRequiredFields = false;
 
   PartitionResponse() : super();
@@ -856,8 +854,8 @@ class PartitionResponse extends $pb.GeneratedMessage {
 
   $core.List<Partition> get partitions => $_getList(0);
 
-  $1.Transaction get transaction => $_getN(1);
-  set transaction($1.Transaction v) {
+  $2.Transaction get transaction => $_getN(1);
+  set transaction($2.Transaction v) {
     setField(2, v);
   }
 
@@ -869,13 +867,13 @@ class ReadRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$1.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $1.TransactionSelector.getDefault, $1.TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<$6.KeySet>(
-        6, 'keySet', $pb.PbFieldType.OM, $6.KeySet.getDefault, $6.KeySet.create)
+    ..a<$7.KeySet>(
+        6, 'keySet', $pb.PbFieldType.OM, $7.KeySet.getDefault, $7.KeySet.create)
     ..aInt64(8, 'limit')
     ..a<$core.List<$core.int>>(9, 'resumeToken', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(10, 'partitionToken', $pb.PbFieldType.OY)
@@ -906,8 +904,8 @@ class ReadRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $1.TransactionSelector get transaction => $_getN(1);
-  set transaction($1.TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -932,8 +930,8 @@ class ReadRequest extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get columns => $_getList(4);
 
-  $6.KeySet get keySet => $_getN(5);
-  set keySet($6.KeySet v) {
+  $7.KeySet get keySet => $_getN(5);
+  set keySet($7.KeySet v) {
     setField(6, v);
   }
 
@@ -969,8 +967,8 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$1.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
-        $1.TransactionOptions.getDefault, $1.TransactionOptions.create)
+    ..a<$2.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest() : super();
@@ -1002,8 +1000,8 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $1.TransactionOptions get options => $_getN(1);
-  set options($1.TransactionOptions v) {
+  $2.TransactionOptions get options => $_getN(1);
+  set options($2.TransactionOptions v) {
     setField(2, v);
   }
 
@@ -1024,9 +1022,9 @@ class CommitRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
     ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
-    ..a<$1.TransactionOptions>(3, 'singleUseTransaction', $pb.PbFieldType.OM,
-        $1.TransactionOptions.getDefault, $1.TransactionOptions.create)
-    ..pc<$7.Mutation>(4, 'mutations', $pb.PbFieldType.PM, $7.Mutation.create)
+    ..a<$2.TransactionOptions>(3, 'singleUseTransaction', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
+    ..pc<$8.Mutation>(4, 'mutations', $pb.PbFieldType.PM, $8.Mutation.create)
     ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
@@ -1068,22 +1066,22 @@ class CommitRequest extends $pb.GeneratedMessage {
   $core.bool hasTransactionId() => $_has(1);
   void clearTransactionId() => clearField(2);
 
-  $1.TransactionOptions get singleUseTransaction => $_getN(2);
-  set singleUseTransaction($1.TransactionOptions v) {
+  $2.TransactionOptions get singleUseTransaction => $_getN(2);
+  set singleUseTransaction($2.TransactionOptions v) {
     setField(3, v);
   }
 
   $core.bool hasSingleUseTransaction() => $_has(2);
   void clearSingleUseTransaction() => clearField(3);
 
-  $core.List<$7.Mutation> get mutations => $_getList(3);
+  $core.List<$8.Mutation> get mutations => $_getList(3);
 }
 
 class CommitResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
       package: const $pb.PackageName('google.spanner.v1'))
-    ..a<$0.Timestamp>(1, 'commitTimestamp', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'commitTimestamp', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   CommitResponse() : super();
@@ -1104,8 +1102,8 @@ class CommitResponse extends $pb.GeneratedMessage {
   static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
   static CommitResponse _defaultInstance;
 
-  $0.Timestamp get commitTimestamp => $_getN(0);
-  set commitTimestamp($0.Timestamp v) {
+  $3.Timestamp get commitTimestamp => $_getN(0);
+  set commitTimestamp($3.Timestamp v) {
     setField(1, v);
   }
 
@@ -1154,106 +1152,4 @@ class RollbackRequest extends $pb.GeneratedMessage {
 
   $core.bool hasTransactionId() => $_has(1);
   void clearTransactionId() => clearField(2);
-}
-
-class SpannerApi {
-  $pb.RpcClient _client;
-  SpannerApi(this._client);
-
-  $async.Future<Session> createSession(
-      $pb.ClientContext ctx, CreateSessionRequest request) {
-    var emptyResponse = Session();
-    return _client.invoke<Session>(
-        ctx, 'Spanner', 'CreateSession', request, emptyResponse);
-  }
-
-  $async.Future<Session> getSession(
-      $pb.ClientContext ctx, GetSessionRequest request) {
-    var emptyResponse = Session();
-    return _client.invoke<Session>(
-        ctx, 'Spanner', 'GetSession', request, emptyResponse);
-  }
-
-  $async.Future<ListSessionsResponse> listSessions(
-      $pb.ClientContext ctx, ListSessionsRequest request) {
-    var emptyResponse = ListSessionsResponse();
-    return _client.invoke<ListSessionsResponse>(
-        ctx, 'Spanner', 'ListSessions', request, emptyResponse);
-  }
-
-  $async.Future<$8.Empty> deleteSession(
-      $pb.ClientContext ctx, DeleteSessionRequest request) {
-    var emptyResponse = $8.Empty();
-    return _client.invoke<$8.Empty>(
-        ctx, 'Spanner', 'DeleteSession', request, emptyResponse);
-  }
-
-  $async.Future<$4.ResultSet> executeSql(
-      $pb.ClientContext ctx, ExecuteSqlRequest request) {
-    var emptyResponse = $4.ResultSet();
-    return _client.invoke<$4.ResultSet>(
-        ctx, 'Spanner', 'ExecuteSql', request, emptyResponse);
-  }
-
-  $async.Future<$4.PartialResultSet> executeStreamingSql(
-      $pb.ClientContext ctx, ExecuteSqlRequest request) {
-    var emptyResponse = $4.PartialResultSet();
-    return _client.invoke<$4.PartialResultSet>(
-        ctx, 'Spanner', 'ExecuteStreamingSql', request, emptyResponse);
-  }
-
-  $async.Future<ExecuteBatchDmlResponse> executeBatchDml(
-      $pb.ClientContext ctx, ExecuteBatchDmlRequest request) {
-    var emptyResponse = ExecuteBatchDmlResponse();
-    return _client.invoke<ExecuteBatchDmlResponse>(
-        ctx, 'Spanner', 'ExecuteBatchDml', request, emptyResponse);
-  }
-
-  $async.Future<$4.ResultSet> read($pb.ClientContext ctx, ReadRequest request) {
-    var emptyResponse = $4.ResultSet();
-    return _client.invoke<$4.ResultSet>(
-        ctx, 'Spanner', 'Read', request, emptyResponse);
-  }
-
-  $async.Future<$4.PartialResultSet> streamingRead(
-      $pb.ClientContext ctx, ReadRequest request) {
-    var emptyResponse = $4.PartialResultSet();
-    return _client.invoke<$4.PartialResultSet>(
-        ctx, 'Spanner', 'StreamingRead', request, emptyResponse);
-  }
-
-  $async.Future<$1.Transaction> beginTransaction(
-      $pb.ClientContext ctx, BeginTransactionRequest request) {
-    var emptyResponse = $1.Transaction();
-    return _client.invoke<$1.Transaction>(
-        ctx, 'Spanner', 'BeginTransaction', request, emptyResponse);
-  }
-
-  $async.Future<CommitResponse> commit(
-      $pb.ClientContext ctx, CommitRequest request) {
-    var emptyResponse = CommitResponse();
-    return _client.invoke<CommitResponse>(
-        ctx, 'Spanner', 'Commit', request, emptyResponse);
-  }
-
-  $async.Future<$8.Empty> rollback(
-      $pb.ClientContext ctx, RollbackRequest request) {
-    var emptyResponse = $8.Empty();
-    return _client.invoke<$8.Empty>(
-        ctx, 'Spanner', 'Rollback', request, emptyResponse);
-  }
-
-  $async.Future<PartitionResponse> partitionQuery(
-      $pb.ClientContext ctx, PartitionQueryRequest request) {
-    var emptyResponse = PartitionResponse();
-    return _client.invoke<PartitionResponse>(
-        ctx, 'Spanner', 'PartitionQuery', request, emptyResponse);
-  }
-
-  $async.Future<PartitionResponse> partitionRead(
-      $pb.ClientContext ctx, PartitionReadRequest request) {
-    var emptyResponse = PartitionResponse();
-    return _client.invoke<PartitionResponse>(
-        ctx, 'Spanner', 'PartitionRead', request, emptyResponse);
-  }
 }

@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'build_events.pbjson.dart' as $1;
-import '../../../protobuf/timestamp.pbjson.dart' as $3;
-import '../../../protobuf/any.pbjson.dart' as $4;
-import 'build_status.pbjson.dart' as $5;
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../protobuf/empty.pbjson.dart' as $2;
-
 const PublishLifecycleEventRequest$json = {
   '1': 'PublishLifecycleEventRequest',
   '2': [
@@ -117,53 +110,4 @@ const PublishBuildToolEventStreamRequest$json = {
     },
     {'1': 'project_id', '3': 6, '4': 1, '5': 9, '10': 'projectId'},
   ],
-};
-
-const PublishBuildEventServiceBase$json = {
-  '1': 'PublishBuildEvent',
-  '2': [
-    {
-      '1': 'PublishLifecycleEvent',
-      '2': '.google.devtools.build.v1.PublishLifecycleEventRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'PublishBuildToolEventStream',
-      '2': '.google.devtools.build.v1.PublishBuildToolEventStreamRequest',
-      '3': '.google.devtools.build.v1.PublishBuildToolEventStreamResponse',
-      '4': {},
-      '5': true,
-      '6': true
-    },
-  ],
-};
-
-const PublishBuildEventServiceBase$messageJson = {
-  '.google.devtools.build.v1.PublishLifecycleEventRequest':
-      PublishLifecycleEventRequest$json,
-  '.google.devtools.build.v1.OrderedBuildEvent': OrderedBuildEvent$json,
-  '.google.devtools.build.v1.StreamId': $1.StreamId$json,
-  '.google.devtools.build.v1.BuildEvent': $1.BuildEvent$json,
-  '.google.protobuf.Timestamp': $3.Timestamp$json,
-  '.google.devtools.build.v1.BuildEvent.InvocationAttemptStarted':
-      $1.BuildEvent_InvocationAttemptStarted$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.devtools.build.v1.BuildEvent.InvocationAttemptFinished':
-      $1.BuildEvent_InvocationAttemptFinished$json,
-  '.google.devtools.build.v1.BuildStatus': $5.BuildStatus$json,
-  '.google.devtools.build.v1.BuildEvent.BuildEnqueued':
-      $1.BuildEvent_BuildEnqueued$json,
-  '.google.devtools.build.v1.BuildEvent.BuildFinished':
-      $1.BuildEvent_BuildFinished$json,
-  '.google.devtools.build.v1.BuildEvent.ConsoleOutput':
-      $1.BuildEvent_ConsoleOutput$json,
-  '.google.devtools.build.v1.BuildEvent.BuildComponentStreamFinished':
-      $1.BuildEvent_BuildComponentStreamFinished$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.protobuf.Empty': $2.Empty$json,
-  '.google.devtools.build.v1.PublishBuildToolEventStreamRequest':
-      PublishBuildToolEventStreamRequest$json,
-  '.google.devtools.build.v1.PublishBuildToolEventStreamResponse':
-      PublishBuildToolEventStreamResponse$json,
 };

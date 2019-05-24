@@ -4,17 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../../longrunning/operations.pb.dart' as $1;
-import '../../../../protobuf/empty.pb.dart' as $2;
-import '../../../../iam/v1/iam_policy.pb.dart' as $3;
-import '../../../../iam/v1/policy.pb.dart' as $4;
+import '../../../../protobuf/timestamp.pb.dart' as $4;
 
 import 'spanner_database_admin.pbenum.dart';
 
@@ -330,8 +325,8 @@ class UpdateDatabaseDdlMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.admin.database.v1'))
     ..aOS(1, 'database')
     ..pPS(2, 'statements')
-    ..pc<$0.Timestamp>(
-        3, 'commitTimestamps', $pb.PbFieldType.PM, $0.Timestamp.create)
+    ..pc<$4.Timestamp>(
+        3, 'commitTimestamps', $pb.PbFieldType.PM, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateDatabaseDdlMetadata() : super();
@@ -366,7 +361,7 @@ class UpdateDatabaseDdlMetadata extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get statements => $_getList(1);
 
-  $core.List<$0.Timestamp> get commitTimestamps => $_getList(2);
+  $core.List<$4.Timestamp> get commitTimestamps => $_getList(2);
 }
 
 class DropDatabaseRequest extends $pb.GeneratedMessage {
@@ -467,72 +462,4 @@ class GetDatabaseDdlResponse extends $pb.GeneratedMessage {
   static GetDatabaseDdlResponse _defaultInstance;
 
   $core.List<$core.String> get statements => $_getList(0);
-}
-
-class DatabaseAdminApi {
-  $pb.RpcClient _client;
-  DatabaseAdminApi(this._client);
-
-  $async.Future<ListDatabasesResponse> listDatabases(
-      $pb.ClientContext ctx, ListDatabasesRequest request) {
-    var emptyResponse = ListDatabasesResponse();
-    return _client.invoke<ListDatabasesResponse>(
-        ctx, 'DatabaseAdmin', 'ListDatabases', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> createDatabase(
-      $pb.ClientContext ctx, CreateDatabaseRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'DatabaseAdmin', 'CreateDatabase', request, emptyResponse);
-  }
-
-  $async.Future<Database> getDatabase(
-      $pb.ClientContext ctx, GetDatabaseRequest request) {
-    var emptyResponse = Database();
-    return _client.invoke<Database>(
-        ctx, 'DatabaseAdmin', 'GetDatabase', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> updateDatabaseDdl(
-      $pb.ClientContext ctx, UpdateDatabaseDdlRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'DatabaseAdmin', 'UpdateDatabaseDdl', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> dropDatabase(
-      $pb.ClientContext ctx, DropDatabaseRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DatabaseAdmin', 'DropDatabase', request, emptyResponse);
-  }
-
-  $async.Future<GetDatabaseDdlResponse> getDatabaseDdl(
-      $pb.ClientContext ctx, GetDatabaseDdlRequest request) {
-    var emptyResponse = GetDatabaseDdlResponse();
-    return _client.invoke<GetDatabaseDdlResponse>(
-        ctx, 'DatabaseAdmin', 'GetDatabaseDdl', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'DatabaseAdmin', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'DatabaseAdmin', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
-    var emptyResponse = $3.TestIamPermissionsResponse();
-    return _client.invoke<$3.TestIamPermissionsResponse>(
-        ctx, 'DatabaseAdmin', 'TestIamPermissions', request, emptyResponse);
-  }
 }

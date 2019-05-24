@@ -4,23 +4,21 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'data_items.pb.dart' as $0;
-import 'annotation_payload.pb.dart' as $1;
-import 'io.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
+import 'data_items.pb.dart' as $2;
+import 'annotation_payload.pb.dart' as $3;
+import 'io.pb.dart' as $4;
 
 class PredictRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PredictRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.ExamplePayload>(2, 'payload', $pb.PbFieldType.OM,
-        $0.ExamplePayload.getDefault, $0.ExamplePayload.create)
+    ..a<$2.ExamplePayload>(2, 'payload', $pb.PbFieldType.OM,
+        $2.ExamplePayload.getDefault, $2.ExamplePayload.create)
     ..m<$core.String, $core.String>(
         3,
         'params',
@@ -59,8 +57,8 @@ class PredictRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.ExamplePayload get payload => $_getN(1);
-  set payload($0.ExamplePayload v) {
+  $2.ExamplePayload get payload => $_getN(1);
+  set payload($2.ExamplePayload v) {
     setField(2, v);
   }
 
@@ -73,8 +71,8 @@ class PredictRequest extends $pb.GeneratedMessage {
 class PredictResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PredictResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$1.AnnotationPayload>(
-        1, 'payload', $pb.PbFieldType.PM, $1.AnnotationPayload.create)
+    ..pc<$3.AnnotationPayload>(
+        1, 'payload', $pb.PbFieldType.PM, $3.AnnotationPayload.create)
     ..m<$core.String, $core.String>(
         2,
         'metadata',
@@ -106,7 +104,7 @@ class PredictResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PredictResponse _defaultInstance;
 
-  $core.List<$1.AnnotationPayload> get payload => $_getList(0);
+  $core.List<$3.AnnotationPayload> get payload => $_getList(0);
 
   $core.Map<$core.String, $core.String> get metadata => $_getMap(1);
 }
@@ -115,18 +113,18 @@ class BatchPredictRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchPredictRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$2.BatchPredictInputConfig>(
+    ..a<$4.BatchPredictInputConfig>(
         3,
         'inputConfig',
         $pb.PbFieldType.OM,
-        $2.BatchPredictInputConfig.getDefault,
-        $2.BatchPredictInputConfig.create)
-    ..a<$2.BatchPredictOutputConfig>(
+        $4.BatchPredictInputConfig.getDefault,
+        $4.BatchPredictInputConfig.create)
+    ..a<$4.BatchPredictOutputConfig>(
         4,
         'outputConfig',
         $pb.PbFieldType.OM,
-        $2.BatchPredictOutputConfig.getDefault,
-        $2.BatchPredictOutputConfig.create)
+        $4.BatchPredictOutputConfig.getDefault,
+        $4.BatchPredictOutputConfig.create)
     ..m<$core.String, $core.String>(
         5,
         'params',
@@ -166,16 +164,16 @@ class BatchPredictRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.BatchPredictInputConfig get inputConfig => $_getN(1);
-  set inputConfig($2.BatchPredictInputConfig v) {
+  $4.BatchPredictInputConfig get inputConfig => $_getN(1);
+  set inputConfig($4.BatchPredictInputConfig v) {
     setField(3, v);
   }
 
   $core.bool hasInputConfig() => $_has(1);
   void clearInputConfig() => clearField(3);
 
-  $2.BatchPredictOutputConfig get outputConfig => $_getN(2);
-  set outputConfig($2.BatchPredictOutputConfig v) {
+  $4.BatchPredictOutputConfig get outputConfig => $_getN(2);
+  set outputConfig($4.BatchPredictOutputConfig v) {
     setField(4, v);
   }
 
@@ -208,23 +206,4 @@ class BatchPredictResult extends $pb.GeneratedMessage {
   static BatchPredictResult getDefault() =>
       _defaultInstance ??= create()..freeze();
   static BatchPredictResult _defaultInstance;
-}
-
-class PredictionServiceApi {
-  $pb.RpcClient _client;
-  PredictionServiceApi(this._client);
-
-  $async.Future<PredictResponse> predict(
-      $pb.ClientContext ctx, PredictRequest request) {
-    var emptyResponse = PredictResponse();
-    return _client.invoke<PredictResponse>(
-        ctx, 'PredictionService', 'Predict', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> batchPredict(
-      $pb.ClientContext ctx, BatchPredictRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'PredictionService', 'BatchPredict', request, emptyResponse);
-  }
 }

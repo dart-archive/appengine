@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -81,23 +80,4 @@ class UpdateGroupRequest extends $pb.GeneratedMessage {
 
   $core.bool hasGroup() => $_has(0);
   void clearGroup() => clearField(1);
-}
-
-class ErrorGroupServiceApi {
-  $pb.RpcClient _client;
-  ErrorGroupServiceApi(this._client);
-
-  $async.Future<$0.ErrorGroup> getGroup(
-      $pb.ClientContext ctx, GetGroupRequest request) {
-    var emptyResponse = $0.ErrorGroup();
-    return _client.invoke<$0.ErrorGroup>(
-        ctx, 'ErrorGroupService', 'GetGroup', request, emptyResponse);
-  }
-
-  $async.Future<$0.ErrorGroup> updateGroup(
-      $pb.ClientContext ctx, UpdateGroupRequest request) {
-    var emptyResponse = $0.ErrorGroup();
-    return _client.invoke<$0.ErrorGroup>(
-        ctx, 'ErrorGroupService', 'UpdateGroup', request, emptyResponse);
-  }
 }

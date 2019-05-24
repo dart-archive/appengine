@@ -9,17 +9,17 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'session.pb.dart' as $0;
-import 'intent.pb.dart' as $1;
-import '../../../protobuf/struct.pb.dart' as $2;
-import 'context.pb.dart' as $3;
+import 'session.pb.dart' as $2;
+import 'intent.pb.dart' as $3;
+import '../../../protobuf/struct.pb.dart' as $4;
+import 'context.pb.dart' as $5;
 
 class WebhookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebhookRequest',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'responseId')
-    ..a<$0.QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
-        $0.QueryResult.getDefault, $0.QueryResult.create)
+    ..a<$2.QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
+        $2.QueryResult.getDefault, $2.QueryResult.create)
     ..a<OriginalDetectIntentRequest>(
         3,
         'originalDetectIntentRequest',
@@ -55,8 +55,8 @@ class WebhookRequest extends $pb.GeneratedMessage {
   $core.bool hasResponseId() => $_has(0);
   void clearResponseId() => clearField(1);
 
-  $0.QueryResult get queryResult => $_getN(1);
-  set queryResult($0.QueryResult v) {
+  $2.QueryResult get queryResult => $_getN(1);
+  set queryResult($2.QueryResult v) {
     setField(2, v);
   }
 
@@ -84,14 +84,14 @@ class WebhookResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebhookResponse',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'fulfillmentText')
-    ..pc<$1.Intent_Message>(
-        2, 'fulfillmentMessages', $pb.PbFieldType.PM, $1.Intent_Message.create)
+    ..pc<$3.Intent_Message>(
+        2, 'fulfillmentMessages', $pb.PbFieldType.PM, $3.Intent_Message.create)
     ..aOS(3, 'source')
-    ..a<$2.Struct>(4, 'payload', $pb.PbFieldType.OM, $2.Struct.getDefault,
-        $2.Struct.create)
-    ..pc<$3.Context>(5, 'outputContexts', $pb.PbFieldType.PM, $3.Context.create)
-    ..a<$0.EventInput>(6, 'followupEventInput', $pb.PbFieldType.OM,
-        $0.EventInput.getDefault, $0.EventInput.create)
+    ..a<$4.Struct>(4, 'payload', $pb.PbFieldType.OM, $4.Struct.getDefault,
+        $4.Struct.create)
+    ..pc<$5.Context>(5, 'outputContexts', $pb.PbFieldType.PM, $5.Context.create)
+    ..a<$2.EventInput>(6, 'followupEventInput', $pb.PbFieldType.OM,
+        $2.EventInput.getDefault, $2.EventInput.create)
     ..hasRequiredFields = false;
 
   WebhookResponse() : super();
@@ -121,7 +121,7 @@ class WebhookResponse extends $pb.GeneratedMessage {
   $core.bool hasFulfillmentText() => $_has(0);
   void clearFulfillmentText() => clearField(1);
 
-  $core.List<$1.Intent_Message> get fulfillmentMessages => $_getList(1);
+  $core.List<$3.Intent_Message> get fulfillmentMessages => $_getList(1);
 
   $core.String get source => $_getS(2, '');
   set source($core.String v) {
@@ -131,18 +131,18 @@ class WebhookResponse extends $pb.GeneratedMessage {
   $core.bool hasSource() => $_has(2);
   void clearSource() => clearField(3);
 
-  $2.Struct get payload => $_getN(3);
-  set payload($2.Struct v) {
+  $4.Struct get payload => $_getN(3);
+  set payload($4.Struct v) {
     setField(4, v);
   }
 
   $core.bool hasPayload() => $_has(3);
   void clearPayload() => clearField(4);
 
-  $core.List<$3.Context> get outputContexts => $_getList(4);
+  $core.List<$5.Context> get outputContexts => $_getList(4);
 
-  $0.EventInput get followupEventInput => $_getN(5);
-  set followupEventInput($0.EventInput v) {
+  $2.EventInput get followupEventInput => $_getN(5);
+  set followupEventInput($2.EventInput v) {
     setField(6, v);
   }
 
@@ -156,8 +156,8 @@ class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'source')
     ..aOS(2, 'version')
-    ..a<$2.Struct>(3, 'payload', $pb.PbFieldType.OM, $2.Struct.getDefault,
-        $2.Struct.create)
+    ..a<$4.Struct>(3, 'payload', $pb.PbFieldType.OM, $4.Struct.getDefault,
+        $4.Struct.create)
     ..hasRequiredFields = false;
 
   OriginalDetectIntentRequest() : super();
@@ -198,8 +198,8 @@ class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  $2.Struct get payload => $_getN(2);
-  set payload($2.Struct v) {
+  $4.Struct get payload => $_getN(2);
+  set payload($4.Struct v) {
     setField(3, v);
   }
 

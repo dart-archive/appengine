@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/struct.pbjson.dart' as $0;
-import '../../../protobuf/empty.pbjson.dart' as $2;
-import 'device.pbjson.dart' as $1;
-
 const RequestSyncDevicesRequest$json = {
   '1': 'RequestSyncDevicesRequest',
   '2': [
@@ -222,75 +218,4 @@ const SyncResponsePayload$json = {
       '10': 'devices'
     },
   ],
-};
-
-const HomeGraphApiServiceBase$json = {
-  '1': 'HomeGraphApiService',
-  '2': [
-    {
-      '1': 'RequestSyncDevices',
-      '2': '.google.home.graph.v1.RequestSyncDevicesRequest',
-      '3': '.google.home.graph.v1.RequestSyncDevicesResponse',
-      '4': {}
-    },
-    {
-      '1': 'ReportStateAndNotification',
-      '2': '.google.home.graph.v1.ReportStateAndNotificationRequest',
-      '3': '.google.home.graph.v1.ReportStateAndNotificationResponse',
-      '4': {}
-    },
-    {
-      '1': 'DeleteAgentUser',
-      '2': '.google.home.graph.v1.DeleteAgentUserRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'Query',
-      '2': '.google.home.graph.v1.QueryRequest',
-      '3': '.google.home.graph.v1.QueryResponse',
-      '4': {}
-    },
-    {
-      '1': 'Sync',
-      '2': '.google.home.graph.v1.SyncRequest',
-      '3': '.google.home.graph.v1.SyncResponse',
-      '4': {}
-    },
-  ],
-};
-
-const HomeGraphApiServiceBase$messageJson = {
-  '.google.home.graph.v1.RequestSyncDevicesRequest':
-      RequestSyncDevicesRequest$json,
-  '.google.home.graph.v1.RequestSyncDevicesResponse':
-      RequestSyncDevicesResponse$json,
-  '.google.home.graph.v1.ReportStateAndNotificationRequest':
-      ReportStateAndNotificationRequest$json,
-  '.google.home.graph.v1.StateAndNotificationPayload':
-      StateAndNotificationPayload$json,
-  '.google.home.graph.v1.ReportStateAndNotificationDevice':
-      ReportStateAndNotificationDevice$json,
-  '.google.protobuf.Struct': $0.Struct$json,
-  '.google.protobuf.Struct.FieldsEntry': $0.Struct_FieldsEntry$json,
-  '.google.protobuf.Value': $0.Value$json,
-  '.google.protobuf.ListValue': $0.ListValue$json,
-  '.google.home.graph.v1.ReportStateAndNotificationResponse':
-      ReportStateAndNotificationResponse$json,
-  '.google.home.graph.v1.DeleteAgentUserRequest': DeleteAgentUserRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
-  '.google.home.graph.v1.QueryRequest': QueryRequest$json,
-  '.google.home.graph.v1.QueryRequestInput': QueryRequestInput$json,
-  '.google.home.graph.v1.QueryRequestPayload': QueryRequestPayload$json,
-  '.google.home.graph.v1.AgentDeviceId': AgentDeviceId$json,
-  '.google.home.graph.v1.QueryResponse': QueryResponse$json,
-  '.google.home.graph.v1.QueryResponsePayload': QueryResponsePayload$json,
-  '.google.home.graph.v1.QueryResponsePayload.DevicesEntry':
-      QueryResponsePayload_DevicesEntry$json,
-  '.google.home.graph.v1.SyncRequest': SyncRequest$json,
-  '.google.home.graph.v1.SyncResponse': SyncResponse$json,
-  '.google.home.graph.v1.SyncResponsePayload': SyncResponsePayload$json,
-  '.google.home.graph.v1.Device': $1.Device$json,
-  '.google.home.graph.v1.DeviceNames': $1.DeviceNames$json,
-  '.google.home.graph.v1.DeviceInfo': $1.DeviceInfo$json,
 };

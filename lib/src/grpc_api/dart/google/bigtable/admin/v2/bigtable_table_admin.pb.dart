@@ -4,19 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'table.pb.dart' as $0;
-import '../../../protobuf/duration.pb.dart' as $1;
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
-import '../../../protobuf/empty.pb.dart' as $4;
+import 'table.pb.dart' as $1;
+import '../../../protobuf/duration.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $4;
 
-import 'table.pbenum.dart' as $0;
+import 'table.pbenum.dart' as $1;
 
 class CreateTableRequest_Split extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTableRequest.Split',
@@ -59,8 +56,8 @@ class CreateTableRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'tableId')
-    ..a<$0.Table>(
-        3, 'table', $pb.PbFieldType.OM, $0.Table.getDefault, $0.Table.create)
+    ..a<$1.Table>(
+        3, 'table', $pb.PbFieldType.OM, $1.Table.getDefault, $1.Table.create)
     ..pc<CreateTableRequest_Split>(
         4, 'initialSplits', $pb.PbFieldType.PM, CreateTableRequest_Split.create)
     ..hasRequiredFields = false;
@@ -100,8 +97,8 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   $core.bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
-  $0.Table get table => $_getN(2);
-  set table($0.Table v) {
+  $1.Table get table => $_getN(2);
+  set table($1.Table v) {
     setField(3, v);
   }
 
@@ -237,13 +234,13 @@ class ListTablesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesRequest',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'parent')
-    ..e<$0.Table_View>(
+    ..e<$1.Table_View>(
         2,
         'view',
         $pb.PbFieldType.OE,
-        $0.Table_View.VIEW_UNSPECIFIED,
-        $0.Table_View.valueOf,
-        $0.Table_View.values)
+        $1.Table_View.VIEW_UNSPECIFIED,
+        $1.Table_View.valueOf,
+        $1.Table_View.values)
     ..aOS(3, 'pageToken')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -275,8 +272,8 @@ class ListTablesRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Table_View get view => $_getN(1);
-  set view($0.Table_View v) {
+  $1.Table_View get view => $_getN(1);
+  set view($1.Table_View v) {
     setField(2, v);
   }
 
@@ -303,7 +300,7 @@ class ListTablesRequest extends $pb.GeneratedMessage {
 class ListTablesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesResponse',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..pc<$0.Table>(1, 'tables', $pb.PbFieldType.PM, $0.Table.create)
+    ..pc<$1.Table>(1, 'tables', $pb.PbFieldType.PM, $1.Table.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -326,7 +323,7 @@ class ListTablesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTablesResponse _defaultInstance;
 
-  $core.List<$0.Table> get tables => $_getList(0);
+  $core.List<$1.Table> get tables => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -341,13 +338,13 @@ class GetTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTableRequest',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
-    ..e<$0.Table_View>(
+    ..e<$1.Table_View>(
         2,
         'view',
         $pb.PbFieldType.OE,
-        $0.Table_View.VIEW_UNSPECIFIED,
-        $0.Table_View.valueOf,
-        $0.Table_View.values)
+        $1.Table_View.VIEW_UNSPECIFIED,
+        $1.Table_View.valueOf,
+        $1.Table_View.values)
     ..hasRequiredFields = false;
 
   GetTableRequest() : super();
@@ -377,8 +374,8 @@ class GetTableRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Table_View get view => $_getN(1);
-  set view($0.Table_View v) {
+  $1.Table_View get view => $_getN(1);
+  set view($1.Table_View v) {
     setField(2, v);
   }
 
@@ -440,10 +437,10 @@ class ModifyColumnFamiliesRequest_Modification extends $pb.GeneratedMessage {
       'ModifyColumnFamiliesRequest.Modification',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'id')
-    ..a<$0.ColumnFamily>(2, 'create_2', $pb.PbFieldType.OM,
-        $0.ColumnFamily.getDefault, $0.ColumnFamily.create)
-    ..a<$0.ColumnFamily>(3, 'update', $pb.PbFieldType.OM,
-        $0.ColumnFamily.getDefault, $0.ColumnFamily.create)
+    ..a<$1.ColumnFamily>(2, 'create_2', $pb.PbFieldType.OM,
+        $1.ColumnFamily.getDefault, $1.ColumnFamily.create)
+    ..a<$1.ColumnFamily>(3, 'update', $pb.PbFieldType.OM,
+        $1.ColumnFamily.getDefault, $1.ColumnFamily.create)
     ..aOB(4, 'drop')
     ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
@@ -484,16 +481,16 @@ class ModifyColumnFamiliesRequest_Modification extends $pb.GeneratedMessage {
   $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  $0.ColumnFamily get create_2 => $_getN(1);
-  set create_2($0.ColumnFamily v) {
+  $1.ColumnFamily get create_2 => $_getN(1);
+  set create_2($1.ColumnFamily v) {
     setField(2, v);
   }
 
   $core.bool hasCreate_2() => $_has(1);
   void clearCreate_2() => clearField(2);
 
-  $0.ColumnFamily get update => $_getN(2);
-  set update($0.ColumnFamily v) {
+  $1.ColumnFamily get update => $_getN(2);
+  set update($1.ColumnFamily v) {
     setField(3, v);
   }
 
@@ -717,8 +714,8 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'cluster')
     ..aOS(3, 'snapshotId')
-    ..a<$1.Duration>(4, 'ttl', $pb.PbFieldType.OM, $1.Duration.getDefault,
-        $1.Duration.create)
+    ..a<$3.Duration>(4, 'ttl', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
     ..aOS(5, 'description')
     ..hasRequiredFields = false;
 
@@ -766,8 +763,8 @@ class SnapshotTableRequest extends $pb.GeneratedMessage {
   $core.bool hasSnapshotId() => $_has(2);
   void clearSnapshotId() => clearField(3);
 
-  $1.Duration get ttl => $_getN(3);
-  set ttl($1.Duration v) {
+  $3.Duration get ttl => $_getN(3);
+  set ttl($3.Duration v) {
     setField(4, v);
   }
 
@@ -873,7 +870,7 @@ class ListSnapshotsRequest extends $pb.GeneratedMessage {
 class ListSnapshotsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSnapshotsResponse',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..pc<$0.Snapshot>(1, 'snapshots', $pb.PbFieldType.PM, $0.Snapshot.create)
+    ..pc<$1.Snapshot>(1, 'snapshots', $pb.PbFieldType.PM, $1.Snapshot.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -898,7 +895,7 @@ class ListSnapshotsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListSnapshotsResponse _defaultInstance;
 
-  $core.List<$0.Snapshot> get snapshots => $_getList(0);
+  $core.List<$1.Snapshot> get snapshots => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -950,10 +947,10 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..a<SnapshotTableRequest>(1, 'originalRequest', $pb.PbFieldType.OM,
         SnapshotTableRequest.getDefault, SnapshotTableRequest.create)
-    ..a<$2.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   SnapshotTableMetadata() : super();
@@ -985,16 +982,16 @@ class SnapshotTableMetadata extends $pb.GeneratedMessage {
   $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $2.Timestamp get requestTime => $_getN(1);
-  set requestTime($2.Timestamp v) {
+  $4.Timestamp get requestTime => $_getN(1);
+  set requestTime($4.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $2.Timestamp get finishTime => $_getN(2);
-  set finishTime($2.Timestamp v) {
+  $4.Timestamp get finishTime => $_getN(2);
+  set finishTime($4.Timestamp v) {
     setField(3, v);
   }
 
@@ -1012,10 +1009,10 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         CreateTableFromSnapshotRequest.getDefault,
         CreateTableFromSnapshotRequest.create)
-    ..a<$2.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateTableFromSnapshotMetadata() : super();
@@ -1049,119 +1046,19 @@ class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
   $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $2.Timestamp get requestTime => $_getN(1);
-  set requestTime($2.Timestamp v) {
+  $4.Timestamp get requestTime => $_getN(1);
+  set requestTime($4.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $2.Timestamp get finishTime => $_getN(2);
-  set finishTime($2.Timestamp v) {
+  $4.Timestamp get finishTime => $_getN(2);
+  set finishTime($4.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasFinishTime() => $_has(2);
   void clearFinishTime() => clearField(3);
-}
-
-class BigtableTableAdminApi {
-  $pb.RpcClient _client;
-  BigtableTableAdminApi(this._client);
-
-  $async.Future<$0.Table> createTable(
-      $pb.ClientContext ctx, CreateTableRequest request) {
-    var emptyResponse = $0.Table();
-    return _client.invoke<$0.Table>(
-        ctx, 'BigtableTableAdmin', 'CreateTable', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> createTableFromSnapshot(
-      $pb.ClientContext ctx, CreateTableFromSnapshotRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(ctx, 'BigtableTableAdmin',
-        'CreateTableFromSnapshot', request, emptyResponse);
-  }
-
-  $async.Future<ListTablesResponse> listTables(
-      $pb.ClientContext ctx, ListTablesRequest request) {
-    var emptyResponse = ListTablesResponse();
-    return _client.invoke<ListTablesResponse>(
-        ctx, 'BigtableTableAdmin', 'ListTables', request, emptyResponse);
-  }
-
-  $async.Future<$0.Table> getTable(
-      $pb.ClientContext ctx, GetTableRequest request) {
-    var emptyResponse = $0.Table();
-    return _client.invoke<$0.Table>(
-        ctx, 'BigtableTableAdmin', 'GetTable', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteTable(
-      $pb.ClientContext ctx, DeleteTableRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'BigtableTableAdmin', 'DeleteTable', request, emptyResponse);
-  }
-
-  $async.Future<$0.Table> modifyColumnFamilies(
-      $pb.ClientContext ctx, ModifyColumnFamiliesRequest request) {
-    var emptyResponse = $0.Table();
-    return _client.invoke<$0.Table>(ctx, 'BigtableTableAdmin',
-        'ModifyColumnFamilies', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> dropRowRange(
-      $pb.ClientContext ctx, DropRowRangeRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'BigtableTableAdmin', 'DropRowRange', request, emptyResponse);
-  }
-
-  $async.Future<GenerateConsistencyTokenResponse> generateConsistencyToken(
-      $pb.ClientContext ctx, GenerateConsistencyTokenRequest request) {
-    var emptyResponse = GenerateConsistencyTokenResponse();
-    return _client.invoke<GenerateConsistencyTokenResponse>(
-        ctx,
-        'BigtableTableAdmin',
-        'GenerateConsistencyToken',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<CheckConsistencyResponse> checkConsistency(
-      $pb.ClientContext ctx, CheckConsistencyRequest request) {
-    var emptyResponse = CheckConsistencyResponse();
-    return _client.invoke<CheckConsistencyResponse>(
-        ctx, 'BigtableTableAdmin', 'CheckConsistency', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> snapshotTable(
-      $pb.ClientContext ctx, SnapshotTableRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'BigtableTableAdmin', 'SnapshotTable', request, emptyResponse);
-  }
-
-  $async.Future<$0.Snapshot> getSnapshot(
-      $pb.ClientContext ctx, GetSnapshotRequest request) {
-    var emptyResponse = $0.Snapshot();
-    return _client.invoke<$0.Snapshot>(
-        ctx, 'BigtableTableAdmin', 'GetSnapshot', request, emptyResponse);
-  }
-
-  $async.Future<ListSnapshotsResponse> listSnapshots(
-      $pb.ClientContext ctx, ListSnapshotsRequest request) {
-    var emptyResponse = ListSnapshotsResponse();
-    return _client.invoke<ListSnapshotsResponse>(
-        ctx, 'BigtableTableAdmin', 'ListSnapshots', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteSnapshot(
-      $pb.ClientContext ctx, DeleteSnapshotRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'BigtableTableAdmin', 'DeleteSnapshot', request, emptyResponse);
-  }
 }

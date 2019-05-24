@@ -4,18 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/timestamp.pb.dart' as $0;
-import 'avro.pb.dart' as $1;
-import 'table_reference.pb.dart' as $2;
-import 'read_options.pb.dart' as $3;
-import '../../../../protobuf/empty.pb.dart' as $4;
+import '../../../../protobuf/timestamp.pb.dart' as $1;
+import 'avro.pb.dart' as $2;
+import 'table_reference.pb.dart' as $3;
+import 'read_options.pb.dart' as $4;
 
 import 'storage.pbenum.dart';
 
@@ -116,15 +114,15 @@ class ReadSession extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadSession',
       package: const $pb.PackageName('google.cloud.bigquery.storage.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..pc<Stream>(4, 'streams', $pb.PbFieldType.PM, Stream.create)
-    ..a<$1.AvroSchema>(5, 'avroSchema', $pb.PbFieldType.OM,
-        $1.AvroSchema.getDefault, $1.AvroSchema.create)
-    ..a<$2.TableReference>(7, 'tableReference', $pb.PbFieldType.OM,
-        $2.TableReference.getDefault, $2.TableReference.create)
-    ..a<$2.TableModifiers>(8, 'tableModifiers', $pb.PbFieldType.OM,
-        $2.TableModifiers.getDefault, $2.TableModifiers.create)
+    ..a<$2.AvroSchema>(5, 'avroSchema', $pb.PbFieldType.OM,
+        $2.AvroSchema.getDefault, $2.AvroSchema.create)
+    ..a<$3.TableReference>(7, 'tableReference', $pb.PbFieldType.OM,
+        $3.TableReference.getDefault, $3.TableReference.create)
+    ..a<$3.TableModifiers>(8, 'tableModifiers', $pb.PbFieldType.OM,
+        $3.TableModifiers.getDefault, $3.TableModifiers.create)
     ..oo(0, [5])
     ..hasRequiredFields = false;
 
@@ -156,8 +154,8 @@ class ReadSession extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Timestamp get expireTime => $_getN(1);
-  set expireTime($0.Timestamp v) {
+  $1.Timestamp get expireTime => $_getN(1);
+  set expireTime($1.Timestamp v) {
     setField(2, v);
   }
 
@@ -166,24 +164,24 @@ class ReadSession extends $pb.GeneratedMessage {
 
   $core.List<Stream> get streams => $_getList(2);
 
-  $1.AvroSchema get avroSchema => $_getN(3);
-  set avroSchema($1.AvroSchema v) {
+  $2.AvroSchema get avroSchema => $_getN(3);
+  set avroSchema($2.AvroSchema v) {
     setField(5, v);
   }
 
   $core.bool hasAvroSchema() => $_has(3);
   void clearAvroSchema() => clearField(5);
 
-  $2.TableReference get tableReference => $_getN(4);
-  set tableReference($2.TableReference v) {
+  $3.TableReference get tableReference => $_getN(4);
+  set tableReference($3.TableReference v) {
     setField(7, v);
   }
 
   $core.bool hasTableReference() => $_has(4);
   void clearTableReference() => clearField(7);
 
-  $2.TableModifiers get tableModifiers => $_getN(5);
-  set tableModifiers($2.TableModifiers v) {
+  $3.TableModifiers get tableModifiers => $_getN(5);
+  set tableModifiers($3.TableModifiers v) {
     setField(8, v);
   }
 
@@ -194,13 +192,13 @@ class ReadSession extends $pb.GeneratedMessage {
 class CreateReadSessionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateReadSessionRequest',
       package: const $pb.PackageName('google.cloud.bigquery.storage.v1beta1'))
-    ..a<$2.TableReference>(1, 'tableReference', $pb.PbFieldType.OM,
-        $2.TableReference.getDefault, $2.TableReference.create)
-    ..a<$2.TableModifiers>(2, 'tableModifiers', $pb.PbFieldType.OM,
-        $2.TableModifiers.getDefault, $2.TableModifiers.create)
+    ..a<$3.TableReference>(1, 'tableReference', $pb.PbFieldType.OM,
+        $3.TableReference.getDefault, $3.TableReference.create)
+    ..a<$3.TableModifiers>(2, 'tableModifiers', $pb.PbFieldType.OM,
+        $3.TableModifiers.getDefault, $3.TableModifiers.create)
     ..a<$core.int>(3, 'requestedStreams', $pb.PbFieldType.O3)
-    ..a<$3.TableReadOptions>(4, 'readOptions', $pb.PbFieldType.OM,
-        $3.TableReadOptions.getDefault, $3.TableReadOptions.create)
+    ..a<$4.TableReadOptions>(4, 'readOptions', $pb.PbFieldType.OM,
+        $4.TableReadOptions.getDefault, $4.TableReadOptions.create)
     ..e<DataFormat>(
         5,
         'format',
@@ -232,16 +230,16 @@ class CreateReadSessionRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateReadSessionRequest _defaultInstance;
 
-  $2.TableReference get tableReference => $_getN(0);
-  set tableReference($2.TableReference v) {
+  $3.TableReference get tableReference => $_getN(0);
+  set tableReference($3.TableReference v) {
     setField(1, v);
   }
 
   $core.bool hasTableReference() => $_has(0);
   void clearTableReference() => clearField(1);
 
-  $2.TableModifiers get tableModifiers => $_getN(1);
-  set tableModifiers($2.TableModifiers v) {
+  $3.TableModifiers get tableModifiers => $_getN(1);
+  set tableModifiers($3.TableModifiers v) {
     setField(2, v);
   }
 
@@ -256,8 +254,8 @@ class CreateReadSessionRequest extends $pb.GeneratedMessage {
   $core.bool hasRequestedStreams() => $_has(2);
   void clearRequestedStreams() => clearField(3);
 
-  $3.TableReadOptions get readOptions => $_getN(3);
-  set readOptions($3.TableReadOptions v) {
+  $4.TableReadOptions get readOptions => $_getN(3);
+  set readOptions($4.TableReadOptions v) {
     setField(4, v);
   }
 
@@ -394,8 +392,8 @@ class ReadRowsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.bigquery.storage.v1beta1'))
     ..a<StreamStatus>(2, 'status', $pb.PbFieldType.OM, StreamStatus.getDefault,
         StreamStatus.create)
-    ..a<$1.AvroRows>(3, 'avroRows', $pb.PbFieldType.OM, $1.AvroRows.getDefault,
-        $1.AvroRows.create)
+    ..a<$2.AvroRows>(3, 'avroRows', $pb.PbFieldType.OM, $2.AvroRows.getDefault,
+        $2.AvroRows.create)
     ..a<ThrottleStatus>(5, 'throttleStatus', $pb.PbFieldType.OM,
         ThrottleStatus.getDefault, ThrottleStatus.create)
     ..oo(0, [3])
@@ -432,8 +430,8 @@ class ReadRowsResponse extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(0);
   void clearStatus() => clearField(2);
 
-  $1.AvroRows get avroRows => $_getN(1);
-  set avroRows($1.AvroRows v) {
+  $2.AvroRows get avroRows => $_getN(1);
+  set avroRows($2.AvroRows v) {
     setField(3, v);
   }
 
@@ -650,49 +648,4 @@ class SplitReadStreamResponse extends $pb.GeneratedMessage {
 
   $core.bool hasRemainderStream() => $_has(1);
   void clearRemainderStream() => clearField(2);
-}
-
-class BigQueryStorageApi {
-  $pb.RpcClient _client;
-  BigQueryStorageApi(this._client);
-
-  $async.Future<ReadSession> createReadSession(
-      $pb.ClientContext ctx, CreateReadSessionRequest request) {
-    var emptyResponse = ReadSession();
-    return _client.invoke<ReadSession>(
-        ctx, 'BigQueryStorage', 'CreateReadSession', request, emptyResponse);
-  }
-
-  $async.Future<ReadRowsResponse> readRows(
-      $pb.ClientContext ctx, ReadRowsRequest request) {
-    var emptyResponse = ReadRowsResponse();
-    return _client.invoke<ReadRowsResponse>(
-        ctx, 'BigQueryStorage', 'ReadRows', request, emptyResponse);
-  }
-
-  $async.Future<BatchCreateReadSessionStreamsResponse>
-      batchCreateReadSessionStreams(
-          $pb.ClientContext ctx, BatchCreateReadSessionStreamsRequest request) {
-    var emptyResponse = BatchCreateReadSessionStreamsResponse();
-    return _client.invoke<BatchCreateReadSessionStreamsResponse>(
-        ctx,
-        'BigQueryStorage',
-        'BatchCreateReadSessionStreams',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$4.Empty> finalizeStream(
-      $pb.ClientContext ctx, FinalizeStreamRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'BigQueryStorage', 'FinalizeStream', request, emptyResponse);
-  }
-
-  $async.Future<SplitReadStreamResponse> splitReadStream(
-      $pb.ClientContext ctx, SplitReadStreamRequest request) {
-    var emptyResponse = SplitReadStreamResponse();
-    return _client.invoke<SplitReadStreamResponse>(
-        ctx, 'BigQueryStorage', 'SplitReadStream', request, emptyResponse);
-  }
 }

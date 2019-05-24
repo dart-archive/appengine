@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -247,23 +246,4 @@ class MutateCustomerLabelResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CustomerLabelServiceApi {
-  $pb.RpcClient _client;
-  CustomerLabelServiceApi(this._client);
-
-  $async.Future<$0.CustomerLabel> getCustomerLabel(
-      $pb.ClientContext ctx, GetCustomerLabelRequest request) {
-    var emptyResponse = $0.CustomerLabel();
-    return _client.invoke<$0.CustomerLabel>(ctx, 'CustomerLabelService',
-        'GetCustomerLabel', request, emptyResponse);
-  }
-
-  $async.Future<MutateCustomerLabelsResponse> mutateCustomerLabels(
-      $pb.ClientContext ctx, MutateCustomerLabelsRequest request) {
-    var emptyResponse = MutateCustomerLabelsResponse();
-    return _client.invoke<MutateCustomerLabelsResponse>(ctx,
-        'CustomerLabelService', 'MutateCustomerLabels', request, emptyResponse);
-  }
 }

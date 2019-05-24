@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -150,15 +149,4 @@ class Change extends $pb.GeneratedMessage {
 
   $core.bool hasData() => $_has(4);
   void clearData() => clearField(6);
-}
-
-class WatcherApi {
-  $pb.RpcClient _client;
-  WatcherApi(this._client);
-
-  $async.Future<ChangeBatch> watch($pb.ClientContext ctx, Request request) {
-    var emptyResponse = ChangeBatch();
-    return _client.invoke<ChangeBatch>(
-        ctx, 'Watcher', 'Watch', request, emptyResponse);
-  }
 }

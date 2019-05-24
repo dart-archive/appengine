@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity_type.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import 'entity_type.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $3;
 
 import 'session_entity_type.pbenum.dart';
 
@@ -29,8 +27,8 @@ class SessionEntityType extends $pb.GeneratedMessage {
         SessionEntityType_EntityOverrideMode.ENTITY_OVERRIDE_MODE_UNSPECIFIED,
         SessionEntityType_EntityOverrideMode.valueOf,
         SessionEntityType_EntityOverrideMode.values)
-    ..pc<$0.EntityType_Entity>(
-        3, 'entities', $pb.PbFieldType.PM, $0.EntityType_Entity.create)
+    ..pc<$2.EntityType_Entity>(
+        3, 'entities', $pb.PbFieldType.PM, $2.EntityType_Entity.create)
     ..hasRequiredFields = false;
 
   SessionEntityType() : super();
@@ -68,7 +66,7 @@ class SessionEntityType extends $pb.GeneratedMessage {
   $core.bool hasEntityOverrideMode() => $_has(1);
   void clearEntityOverrideMode() => clearField(2);
 
-  $core.List<$0.EntityType_Entity> get entities => $_getList(2);
+  $core.List<$2.EntityType_Entity> get entities => $_getList(2);
 }
 
 class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
@@ -264,8 +262,8 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..a<SessionEntityType>(1, 'sessionEntityType', $pb.PbFieldType.OM,
         SessionEntityType.getDefault, SessionEntityType.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSessionEntityTypeRequest() : super();
@@ -299,8 +297,8 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   $core.bool hasSessionEntityType() => $_has(0);
   void clearSessionEntityType() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(1);
+  set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
@@ -345,44 +343,4 @@ class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class SessionEntityTypesApi {
-  $pb.RpcClient _client;
-  SessionEntityTypesApi(this._client);
-
-  $async.Future<ListSessionEntityTypesResponse> listSessionEntityTypes(
-      $pb.ClientContext ctx, ListSessionEntityTypesRequest request) {
-    var emptyResponse = ListSessionEntityTypesResponse();
-    return _client.invoke<ListSessionEntityTypesResponse>(ctx,
-        'SessionEntityTypes', 'ListSessionEntityTypes', request, emptyResponse);
-  }
-
-  $async.Future<SessionEntityType> getSessionEntityType(
-      $pb.ClientContext ctx, GetSessionEntityTypeRequest request) {
-    var emptyResponse = SessionEntityType();
-    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
-        'GetSessionEntityType', request, emptyResponse);
-  }
-
-  $async.Future<SessionEntityType> createSessionEntityType(
-      $pb.ClientContext ctx, CreateSessionEntityTypeRequest request) {
-    var emptyResponse = SessionEntityType();
-    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
-        'CreateSessionEntityType', request, emptyResponse);
-  }
-
-  $async.Future<SessionEntityType> updateSessionEntityType(
-      $pb.ClientContext ctx, UpdateSessionEntityTypeRequest request) {
-    var emptyResponse = SessionEntityType();
-    return _client.invoke<SessionEntityType>(ctx, 'SessionEntityTypes',
-        'UpdateSessionEntityType', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteSessionEntityType(
-      $pb.ClientContext ctx, DeleteSessionEntityTypeRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(ctx, 'SessionEntityTypes',
-        'DeleteSessionEntityType', request, emptyResponse);
-  }
 }

@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/customer_client.pb.dart' as $0;
 
 class GetCustomerClientRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCustomerClientRequest',
@@ -46,16 +43,4 @@ class GetCustomerClientRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CustomerClientServiceApi {
-  $pb.RpcClient _client;
-  CustomerClientServiceApi(this._client);
-
-  $async.Future<$0.CustomerClient> getCustomerClient(
-      $pb.ClientContext ctx, GetCustomerClientRequest request) {
-    var emptyResponse = $0.CustomerClient();
-    return _client.invoke<$0.CustomerClient>(ctx, 'CustomerClientService',
-        'GetCustomerClient', request, emptyResponse);
-  }
 }

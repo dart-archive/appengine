@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -636,30 +635,4 @@ class DeleteEventsResponse extends $pb.GeneratedMessage {
   static DeleteEventsResponse getDefault() =>
       _defaultInstance ??= create()..freeze();
   static DeleteEventsResponse _defaultInstance;
-}
-
-class ErrorStatsServiceApi {
-  $pb.RpcClient _client;
-  ErrorStatsServiceApi(this._client);
-
-  $async.Future<ListGroupStatsResponse> listGroupStats(
-      $pb.ClientContext ctx, ListGroupStatsRequest request) {
-    var emptyResponse = ListGroupStatsResponse();
-    return _client.invoke<ListGroupStatsResponse>(
-        ctx, 'ErrorStatsService', 'ListGroupStats', request, emptyResponse);
-  }
-
-  $async.Future<ListEventsResponse> listEvents(
-      $pb.ClientContext ctx, ListEventsRequest request) {
-    var emptyResponse = ListEventsResponse();
-    return _client.invoke<ListEventsResponse>(
-        ctx, 'ErrorStatsService', 'ListEvents', request, emptyResponse);
-  }
-
-  $async.Future<DeleteEventsResponse> deleteEvents(
-      $pb.ClientContext ctx, DeleteEventsRequest request) {
-    var emptyResponse = DeleteEventsResponse();
-    return _client.invoke<DeleteEventsResponse>(
-        ctx, 'ErrorStatsService', 'DeleteEvents', request, emptyResponse);
-  }
 }

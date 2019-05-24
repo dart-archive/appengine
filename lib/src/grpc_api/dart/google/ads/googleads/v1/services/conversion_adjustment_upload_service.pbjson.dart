@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../../protobuf/wrappers.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $0;
-import '../../../../protobuf/any.pbjson.dart' as $3;
-
 const UploadConversionAdjustmentsRequest$json = {
   '1': 'UploadConversionAdjustmentsRequest',
   '2': [
@@ -201,35 +197,4 @@ const ConversionAdjustmentResult$json = {
   '8': [
     {'1': 'conversion_identifier'},
   ],
-};
-
-const ConversionAdjustmentUploadServiceBase$json = {
-  '1': 'ConversionAdjustmentUploadService',
-  '2': [
-    {
-      '1': 'UploadConversionAdjustments',
-      '2':
-          '.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ConversionAdjustmentUploadServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest':
-      UploadConversionAdjustmentsRequest$json,
-  '.google.ads.googleads.v1.services.ConversionAdjustment':
-      ConversionAdjustment$json,
-  '.google.ads.googleads.v1.services.GclidDateTimePair': GclidDateTimePair$json,
-  '.google.protobuf.StringValue': $1.StringValue$json,
-  '.google.ads.googleads.v1.services.RestatementValue': RestatementValue$json,
-  '.google.protobuf.DoubleValue': $1.DoubleValue$json,
-  '.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse':
-      UploadConversionAdjustmentsResponse$json,
-  '.google.rpc.Status': $0.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.ads.googleads.v1.services.ConversionAdjustmentResult':
-      ConversionAdjustmentResult$json,
 };

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -433,44 +432,4 @@ class UpdateProjectBillingInfoRequest extends $pb.GeneratedMessage {
 
   $core.bool hasProjectBillingInfo() => $_has(1);
   void clearProjectBillingInfo() => clearField(2);
-}
-
-class CloudBillingApi {
-  $pb.RpcClient _client;
-  CloudBillingApi(this._client);
-
-  $async.Future<BillingAccount> getBillingAccount(
-      $pb.ClientContext ctx, GetBillingAccountRequest request) {
-    var emptyResponse = BillingAccount();
-    return _client.invoke<BillingAccount>(
-        ctx, 'CloudBilling', 'GetBillingAccount', request, emptyResponse);
-  }
-
-  $async.Future<ListBillingAccountsResponse> listBillingAccounts(
-      $pb.ClientContext ctx, ListBillingAccountsRequest request) {
-    var emptyResponse = ListBillingAccountsResponse();
-    return _client.invoke<ListBillingAccountsResponse>(
-        ctx, 'CloudBilling', 'ListBillingAccounts', request, emptyResponse);
-  }
-
-  $async.Future<ListProjectBillingInfoResponse> listProjectBillingInfo(
-      $pb.ClientContext ctx, ListProjectBillingInfoRequest request) {
-    var emptyResponse = ListProjectBillingInfoResponse();
-    return _client.invoke<ListProjectBillingInfoResponse>(
-        ctx, 'CloudBilling', 'ListProjectBillingInfo', request, emptyResponse);
-  }
-
-  $async.Future<ProjectBillingInfo> getProjectBillingInfo(
-      $pb.ClientContext ctx, GetProjectBillingInfoRequest request) {
-    var emptyResponse = ProjectBillingInfo();
-    return _client.invoke<ProjectBillingInfo>(
-        ctx, 'CloudBilling', 'GetProjectBillingInfo', request, emptyResponse);
-  }
-
-  $async.Future<ProjectBillingInfo> updateProjectBillingInfo(
-      $pb.ClientContext ctx, UpdateProjectBillingInfoRequest request) {
-    var emptyResponse = ProjectBillingInfo();
-    return _client.invoke<ProjectBillingInfo>(ctx, 'CloudBilling',
-        'UpdateProjectBillingInfo', request, emptyResponse);
-  }
 }

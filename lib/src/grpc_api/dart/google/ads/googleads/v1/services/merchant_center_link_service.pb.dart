@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -330,42 +329,4 @@ class MutateMerchantCenterLinkResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class MerchantCenterLinkServiceApi {
-  $pb.RpcClient _client;
-  MerchantCenterLinkServiceApi(this._client);
-
-  $async.Future<ListMerchantCenterLinksResponse> listMerchantCenterLinks(
-      $pb.ClientContext ctx, ListMerchantCenterLinksRequest request) {
-    var emptyResponse = ListMerchantCenterLinksResponse();
-    return _client.invoke<ListMerchantCenterLinksResponse>(
-        ctx,
-        'MerchantCenterLinkService',
-        'ListMerchantCenterLinks',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.MerchantCenterLink> getMerchantCenterLink(
-      $pb.ClientContext ctx, GetMerchantCenterLinkRequest request) {
-    var emptyResponse = $0.MerchantCenterLink();
-    return _client.invoke<$0.MerchantCenterLink>(
-        ctx,
-        'MerchantCenterLinkService',
-        'GetMerchantCenterLink',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateMerchantCenterLinkResponse> mutateMerchantCenterLink(
-      $pb.ClientContext ctx, MutateMerchantCenterLinkRequest request) {
-    var emptyResponse = MutateMerchantCenterLinkResponse();
-    return _client.invoke<MutateMerchantCenterLinkResponse>(
-        ctx,
-        'MerchantCenterLinkService',
-        'MutateMerchantCenterLink',
-        request,
-        emptyResponse);
-  }
 }

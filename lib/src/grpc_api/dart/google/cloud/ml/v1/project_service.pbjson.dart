@@ -24,20 +24,3 @@ const GetConfigResponse$json = {
     },
   ],
 };
-
-const ProjectManagementServiceBase$json = {
-  '1': 'ProjectManagementService',
-  '2': [
-    {
-      '1': 'GetConfig',
-      '2': '.google.cloud.ml.v1.GetConfigRequest',
-      '3': '.google.cloud.ml.v1.GetConfigResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ProjectManagementServiceBase$messageJson = {
-  '.google.cloud.ml.v1.GetConfigRequest': GetConfigRequest$json,
-  '.google.cloud.ml.v1.GetConfigResponse': GetConfigResponse$json,
-};

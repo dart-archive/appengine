@@ -4,14 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $1;
 
 class KnowledgeBase extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KnowledgeBase',
@@ -289,8 +287,8 @@ class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..a<KnowledgeBase>(1, 'knowledgeBase', $pb.PbFieldType.OM,
         KnowledgeBase.getDefault, KnowledgeBase.create)
-    ..a<$0.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateKnowledgeBaseRequest() : super();
@@ -323,51 +321,11 @@ class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
   $core.bool hasKnowledgeBase() => $_has(0);
   void clearKnowledgeBase() => clearField(1);
 
-  $0.FieldMask get updateMask => $_getN(1);
-  set updateMask($0.FieldMask v) {
+  $1.FieldMask get updateMask => $_getN(1);
+  set updateMask($1.FieldMask v) {
     setField(2, v);
   }
 
   $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
-}
-
-class KnowledgeBasesApi {
-  $pb.RpcClient _client;
-  KnowledgeBasesApi(this._client);
-
-  $async.Future<ListKnowledgeBasesResponse> listKnowledgeBases(
-      $pb.ClientContext ctx, ListKnowledgeBasesRequest request) {
-    var emptyResponse = ListKnowledgeBasesResponse();
-    return _client.invoke<ListKnowledgeBasesResponse>(
-        ctx, 'KnowledgeBases', 'ListKnowledgeBases', request, emptyResponse);
-  }
-
-  $async.Future<KnowledgeBase> getKnowledgeBase(
-      $pb.ClientContext ctx, GetKnowledgeBaseRequest request) {
-    var emptyResponse = KnowledgeBase();
-    return _client.invoke<KnowledgeBase>(
-        ctx, 'KnowledgeBases', 'GetKnowledgeBase', request, emptyResponse);
-  }
-
-  $async.Future<KnowledgeBase> createKnowledgeBase(
-      $pb.ClientContext ctx, CreateKnowledgeBaseRequest request) {
-    var emptyResponse = KnowledgeBase();
-    return _client.invoke<KnowledgeBase>(
-        ctx, 'KnowledgeBases', 'CreateKnowledgeBase', request, emptyResponse);
-  }
-
-  $async.Future<$1.Empty> deleteKnowledgeBase(
-      $pb.ClientContext ctx, DeleteKnowledgeBaseRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(
-        ctx, 'KnowledgeBases', 'DeleteKnowledgeBase', request, emptyResponse);
-  }
-
-  $async.Future<KnowledgeBase> updateKnowledgeBase(
-      $pb.ClientContext ctx, UpdateKnowledgeBaseRequest request) {
-    var emptyResponse = KnowledgeBase();
-    return _client.invoke<KnowledgeBase>(
-        ctx, 'KnowledgeBases', 'UpdateKnowledgeBase', request, emptyResponse);
-  }
 }

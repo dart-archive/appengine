@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -501,72 +500,4 @@ class GetIssueTaxonomyRequest extends $pb.GeneratedMessage {
   static GetIssueTaxonomyRequest getDefault() =>
       _defaultInstance ??= create()..freeze();
   static GetIssueTaxonomyRequest _defaultInstance;
-}
-
-class CloudSupportApi {
-  $pb.RpcClient _client;
-  CloudSupportApi(this._client);
-
-  $async.Future<$0.SupportAccount> getSupportAccount(
-      $pb.ClientContext ctx, GetSupportAccountRequest request) {
-    var emptyResponse = $0.SupportAccount();
-    return _client.invoke<$0.SupportAccount>(
-        ctx, 'CloudSupport', 'GetSupportAccount', request, emptyResponse);
-  }
-
-  $async.Future<ListSupportAccountsResponse> listSupportAccounts(
-      $pb.ClientContext ctx, ListSupportAccountsRequest request) {
-    var emptyResponse = ListSupportAccountsResponse();
-    return _client.invoke<ListSupportAccountsResponse>(
-        ctx, 'CloudSupport', 'ListSupportAccounts', request, emptyResponse);
-  }
-
-  $async.Future<$0.Case> getCase(
-      $pb.ClientContext ctx, GetCaseRequest request) {
-    var emptyResponse = $0.Case();
-    return _client.invoke<$0.Case>(
-        ctx, 'CloudSupport', 'GetCase', request, emptyResponse);
-  }
-
-  $async.Future<ListCasesResponse> listCases(
-      $pb.ClientContext ctx, ListCasesRequest request) {
-    var emptyResponse = ListCasesResponse();
-    return _client.invoke<ListCasesResponse>(
-        ctx, 'CloudSupport', 'ListCases', request, emptyResponse);
-  }
-
-  $async.Future<ListCommentsResponse> listComments(
-      $pb.ClientContext ctx, ListCommentsRequest request) {
-    var emptyResponse = ListCommentsResponse();
-    return _client.invoke<ListCommentsResponse>(
-        ctx, 'CloudSupport', 'ListComments', request, emptyResponse);
-  }
-
-  $async.Future<$0.Case> createCase(
-      $pb.ClientContext ctx, CreateCaseRequest request) {
-    var emptyResponse = $0.Case();
-    return _client.invoke<$0.Case>(
-        ctx, 'CloudSupport', 'CreateCase', request, emptyResponse);
-  }
-
-  $async.Future<$0.Case> updateCase(
-      $pb.ClientContext ctx, UpdateCaseRequest request) {
-    var emptyResponse = $0.Case();
-    return _client.invoke<$0.Case>(
-        ctx, 'CloudSupport', 'UpdateCase', request, emptyResponse);
-  }
-
-  $async.Future<$0.Comment> createComment(
-      $pb.ClientContext ctx, CreateCommentRequest request) {
-    var emptyResponse = $0.Comment();
-    return _client.invoke<$0.Comment>(
-        ctx, 'CloudSupport', 'CreateComment', request, emptyResponse);
-  }
-
-  $async.Future<$0.IssueTaxonomy> getIssueTaxonomy(
-      $pb.ClientContext ctx, GetIssueTaxonomyRequest request) {
-    var emptyResponse = $0.IssueTaxonomy();
-    return _client.invoke<$0.IssueTaxonomy>(
-        ctx, 'CloudSupport', 'GetIssueTaxonomy', request, emptyResponse);
-  }
 }

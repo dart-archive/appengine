@@ -4,28 +4,26 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/timestamp.pb.dart' as $0;
-import '../vulnerability/vulnerability.pb.dart' as $1;
-import '../build/build.pb.dart' as $2;
-import '../image/image.pb.dart' as $3;
-import '../package/package.pb.dart' as $4;
-import '../deployment/deployment.pb.dart' as $5;
-import '../discovery/discovery.pb.dart' as $6;
-import '../attestation/attestation.pb.dart' as $7;
-import '../provenance/provenance.pb.dart' as $8;
-import '../common/common.pb.dart' as $9;
-import '../../../../protobuf/field_mask.pb.dart' as $10;
-import '../../../../protobuf/empty.pb.dart' as $11;
+import '../../../../protobuf/timestamp.pb.dart' as $1;
+import '../vulnerability/vulnerability.pb.dart' as $2;
+import '../build/build.pb.dart' as $3;
+import '../image/image.pb.dart' as $4;
+import '../package/package.pb.dart' as $5;
+import '../deployment/deployment.pb.dart' as $6;
+import '../discovery/discovery.pb.dart' as $7;
+import '../attestation/attestation.pb.dart' as $8;
+import '../provenance/provenance.pb.dart' as $9;
+import '../common/common.pb.dart' as $10;
+import '../../../../protobuf/field_mask.pb.dart' as $11;
 
-import '../common/common.pbenum.dart' as $9;
-import '../vulnerability/vulnerability.pbenum.dart' as $1;
+import '../common/common.pbenum.dart' as $10;
+import '../vulnerability/vulnerability.pbenum.dart' as $2;
 
 enum Occurrence_Details {
   vulnerability,
@@ -56,31 +54,31 @@ class Occurrence extends $pb.GeneratedMessage {
     ..a<Resource>(
         2, 'resource', $pb.PbFieldType.OM, Resource.getDefault, Resource.create)
     ..aOS(3, 'noteName')
-    ..e<$9.NoteKind>(
+    ..e<$10.NoteKind>(
         4,
         'kind',
         $pb.PbFieldType.OE,
-        $9.NoteKind.NOTE_KIND_UNSPECIFIED,
-        $9.NoteKind.valueOf,
-        $9.NoteKind.values)
+        $10.NoteKind.NOTE_KIND_UNSPECIFIED,
+        $10.NoteKind.valueOf,
+        $10.NoteKind.values)
     ..aOS(5, 'remediation')
-    ..a<$0.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(7, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$1.Details>(8, 'vulnerability', $pb.PbFieldType.OM,
-        $1.Details.getDefault, $1.Details.create)
-    ..a<$2.Details>(9, 'build', $pb.PbFieldType.OM, $2.Details.getDefault,
-        $2.Details.create)
-    ..a<$3.Details>(10, 'derivedImage', $pb.PbFieldType.OM,
-        $3.Details.getDefault, $3.Details.create)
-    ..a<$4.Details>(11, 'installation', $pb.PbFieldType.OM,
+    ..a<$1.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(7, 'updateTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Details>(8, 'vulnerability', $pb.PbFieldType.OM,
+        $2.Details.getDefault, $2.Details.create)
+    ..a<$3.Details>(9, 'build', $pb.PbFieldType.OM, $3.Details.getDefault,
+        $3.Details.create)
+    ..a<$4.Details>(10, 'derivedImage', $pb.PbFieldType.OM,
         $4.Details.getDefault, $4.Details.create)
-    ..a<$5.Details>(12, 'deployment', $pb.PbFieldType.OM, $5.Details.getDefault,
-        $5.Details.create)
-    ..a<$6.Details>(13, 'discovered', $pb.PbFieldType.OM, $6.Details.getDefault,
+    ..a<$5.Details>(11, 'installation', $pb.PbFieldType.OM,
+        $5.Details.getDefault, $5.Details.create)
+    ..a<$6.Details>(12, 'deployment', $pb.PbFieldType.OM, $6.Details.getDefault,
         $6.Details.create)
-    ..a<$7.Details>(14, 'attestation', $pb.PbFieldType.OM, $7.Details.getDefault, $7.Details.create)
+    ..a<$7.Details>(13, 'discovered', $pb.PbFieldType.OM, $7.Details.getDefault,
+        $7.Details.create)
+    ..a<$8.Details>(14, 'attestation', $pb.PbFieldType.OM, $8.Details.getDefault, $8.Details.create)
     ..oo(0, [8, 9, 10, 11, 12, 13, 14])
     ..hasRequiredFields = false;
 
@@ -129,8 +127,8 @@ class Occurrence extends $pb.GeneratedMessage {
   $core.bool hasNoteName() => $_has(2);
   void clearNoteName() => clearField(3);
 
-  $9.NoteKind get kind => $_getN(3);
-  set kind($9.NoteKind v) {
+  $10.NoteKind get kind => $_getN(3);
+  set kind($10.NoteKind v) {
     setField(4, v);
   }
 
@@ -145,72 +143,72 @@ class Occurrence extends $pb.GeneratedMessage {
   $core.bool hasRemediation() => $_has(4);
   void clearRemediation() => clearField(5);
 
-  $0.Timestamp get createTime => $_getN(5);
-  set createTime($0.Timestamp v) {
+  $1.Timestamp get createTime => $_getN(5);
+  set createTime($1.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasCreateTime() => $_has(5);
   void clearCreateTime() => clearField(6);
 
-  $0.Timestamp get updateTime => $_getN(6);
-  set updateTime($0.Timestamp v) {
+  $1.Timestamp get updateTime => $_getN(6);
+  set updateTime($1.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasUpdateTime() => $_has(6);
   void clearUpdateTime() => clearField(7);
 
-  $1.Details get vulnerability => $_getN(7);
-  set vulnerability($1.Details v) {
+  $2.Details get vulnerability => $_getN(7);
+  set vulnerability($2.Details v) {
     setField(8, v);
   }
 
   $core.bool hasVulnerability() => $_has(7);
   void clearVulnerability() => clearField(8);
 
-  $2.Details get build => $_getN(8);
-  set build($2.Details v) {
+  $3.Details get build => $_getN(8);
+  set build($3.Details v) {
     setField(9, v);
   }
 
   $core.bool hasBuild() => $_has(8);
   void clearBuild() => clearField(9);
 
-  $3.Details get derivedImage => $_getN(9);
-  set derivedImage($3.Details v) {
+  $4.Details get derivedImage => $_getN(9);
+  set derivedImage($4.Details v) {
     setField(10, v);
   }
 
   $core.bool hasDerivedImage() => $_has(9);
   void clearDerivedImage() => clearField(10);
 
-  $4.Details get installation => $_getN(10);
-  set installation($4.Details v) {
+  $5.Details get installation => $_getN(10);
+  set installation($5.Details v) {
     setField(11, v);
   }
 
   $core.bool hasInstallation() => $_has(10);
   void clearInstallation() => clearField(11);
 
-  $5.Details get deployment => $_getN(11);
-  set deployment($5.Details v) {
+  $6.Details get deployment => $_getN(11);
+  set deployment($6.Details v) {
     setField(12, v);
   }
 
   $core.bool hasDeployment() => $_has(11);
   void clearDeployment() => clearField(12);
 
-  $6.Details get discovered => $_getN(12);
-  set discovered($6.Details v) {
+  $7.Details get discovered => $_getN(12);
+  set discovered($7.Details v) {
     setField(13, v);
   }
 
   $core.bool hasDiscovered() => $_has(12);
   void clearDiscovered() => clearField(13);
 
-  $7.Details get attestation => $_getN(13);
-  set attestation($7.Details v) {
+  $8.Details get attestation => $_getN(13);
+  set attestation($8.Details v) {
     setField(14, v);
   }
 
@@ -223,8 +221,8 @@ class Resource extends $pb.GeneratedMessage {
       package: const $pb.PackageName('grafeas.v1beta1'))
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..a<$8.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $8.Hash.getDefault,
-        $8.Hash.create)
+    ..a<$9.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $9.Hash.getDefault,
+        $9.Hash.create)
     ..hasRequiredFields = false;
 
   Resource() : super();
@@ -260,8 +258,8 @@ class Resource extends $pb.GeneratedMessage {
   $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 
-  $8.Hash get contentHash => $_getN(2);
-  set contentHash($8.Hash v) {
+  $9.Hash get contentHash => $_getN(2);
+  set contentHash($9.Hash v) {
     setField(3, v);
   }
 
@@ -296,34 +294,34 @@ class Note extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'shortDescription')
     ..aOS(3, 'longDescription')
-    ..e<$9.NoteKind>(
+    ..e<$10.NoteKind>(
         4,
         'kind',
         $pb.PbFieldType.OE,
-        $9.NoteKind.NOTE_KIND_UNSPECIFIED,
-        $9.NoteKind.valueOf,
-        $9.NoteKind.values)
-    ..pc<$9.RelatedUrl>(
-        5, 'relatedUrl', $pb.PbFieldType.PM, $9.RelatedUrl.create)
-    ..a<$0.Timestamp>(6, 'expirationTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+        $10.NoteKind.NOTE_KIND_UNSPECIFIED,
+        $10.NoteKind.valueOf,
+        $10.NoteKind.values)
+    ..pc<$10.RelatedUrl>(
+        5, 'relatedUrl', $pb.PbFieldType.PM, $10.RelatedUrl.create)
+    ..a<$1.Timestamp>(6, 'expirationTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..pPS(9, 'relatedNoteNames')
-    ..a<$1.Vulnerability>(10, 'vulnerability', $pb.PbFieldType.OM,
-        $1.Vulnerability.getDefault, $1.Vulnerability.create)
-    ..a<$2.Build>(
-        11, 'build', $pb.PbFieldType.OM, $2.Build.getDefault, $2.Build.create)
-    ..a<$3.Basis>(12, 'baseImage', $pb.PbFieldType.OM, $3.Basis.getDefault,
-        $3.Basis.create)
-    ..a<$4.Package>(13, 'package', $pb.PbFieldType.OM, $4.Package.getDefault,
-        $4.Package.create)
-    ..a<$5.Deployable>(14, 'deployable', $pb.PbFieldType.OM,
-        $5.Deployable.getDefault, $5.Deployable.create)
-    ..a<$6.Discovery>(15, 'discovery', $pb.PbFieldType.OM, $6.Discovery.getDefault, $6.Discovery.create)
-    ..a<$7.Authority>(16, 'attestationAuthority', $pb.PbFieldType.OM, $7.Authority.getDefault, $7.Authority.create)
+    ..a<$2.Vulnerability>(10, 'vulnerability', $pb.PbFieldType.OM,
+        $2.Vulnerability.getDefault, $2.Vulnerability.create)
+    ..a<$3.Build>(
+        11, 'build', $pb.PbFieldType.OM, $3.Build.getDefault, $3.Build.create)
+    ..a<$4.Basis>(12, 'baseImage', $pb.PbFieldType.OM, $4.Basis.getDefault,
+        $4.Basis.create)
+    ..a<$5.Package>(13, 'package', $pb.PbFieldType.OM, $5.Package.getDefault,
+        $5.Package.create)
+    ..a<$6.Deployable>(14, 'deployable', $pb.PbFieldType.OM,
+        $6.Deployable.getDefault, $6.Deployable.create)
+    ..a<$7.Discovery>(15, 'discovery', $pb.PbFieldType.OM, $7.Discovery.getDefault, $7.Discovery.create)
+    ..a<$8.Authority>(16, 'attestationAuthority', $pb.PbFieldType.OM, $8.Authority.getDefault, $8.Authority.create)
     ..oo(0, [10, 11, 12, 13, 14, 15, 16])
     ..hasRequiredFields = false;
 
@@ -371,34 +369,34 @@ class Note extends $pb.GeneratedMessage {
   $core.bool hasLongDescription() => $_has(2);
   void clearLongDescription() => clearField(3);
 
-  $9.NoteKind get kind => $_getN(3);
-  set kind($9.NoteKind v) {
+  $10.NoteKind get kind => $_getN(3);
+  set kind($10.NoteKind v) {
     setField(4, v);
   }
 
   $core.bool hasKind() => $_has(3);
   void clearKind() => clearField(4);
 
-  $core.List<$9.RelatedUrl> get relatedUrl => $_getList(4);
+  $core.List<$10.RelatedUrl> get relatedUrl => $_getList(4);
 
-  $0.Timestamp get expirationTime => $_getN(5);
-  set expirationTime($0.Timestamp v) {
+  $1.Timestamp get expirationTime => $_getN(5);
+  set expirationTime($1.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasExpirationTime() => $_has(5);
   void clearExpirationTime() => clearField(6);
 
-  $0.Timestamp get createTime => $_getN(6);
-  set createTime($0.Timestamp v) {
+  $1.Timestamp get createTime => $_getN(6);
+  set createTime($1.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasCreateTime() => $_has(6);
   void clearCreateTime() => clearField(7);
 
-  $0.Timestamp get updateTime => $_getN(7);
-  set updateTime($0.Timestamp v) {
+  $1.Timestamp get updateTime => $_getN(7);
+  set updateTime($1.Timestamp v) {
     setField(8, v);
   }
 
@@ -407,56 +405,56 @@ class Note extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get relatedNoteNames => $_getList(8);
 
-  $1.Vulnerability get vulnerability => $_getN(9);
-  set vulnerability($1.Vulnerability v) {
+  $2.Vulnerability get vulnerability => $_getN(9);
+  set vulnerability($2.Vulnerability v) {
     setField(10, v);
   }
 
   $core.bool hasVulnerability() => $_has(9);
   void clearVulnerability() => clearField(10);
 
-  $2.Build get build => $_getN(10);
-  set build($2.Build v) {
+  $3.Build get build => $_getN(10);
+  set build($3.Build v) {
     setField(11, v);
   }
 
   $core.bool hasBuild() => $_has(10);
   void clearBuild() => clearField(11);
 
-  $3.Basis get baseImage => $_getN(11);
-  set baseImage($3.Basis v) {
+  $4.Basis get baseImage => $_getN(11);
+  set baseImage($4.Basis v) {
     setField(12, v);
   }
 
   $core.bool hasBaseImage() => $_has(11);
   void clearBaseImage() => clearField(12);
 
-  $4.Package get package => $_getN(12);
-  set package($4.Package v) {
+  $5.Package get package => $_getN(12);
+  set package($5.Package v) {
     setField(13, v);
   }
 
   $core.bool hasPackage() => $_has(12);
   void clearPackage() => clearField(13);
 
-  $5.Deployable get deployable => $_getN(13);
-  set deployable($5.Deployable v) {
+  $6.Deployable get deployable => $_getN(13);
+  set deployable($6.Deployable v) {
     setField(14, v);
   }
 
   $core.bool hasDeployable() => $_has(13);
   void clearDeployable() => clearField(14);
 
-  $6.Discovery get discovery => $_getN(14);
-  set discovery($6.Discovery v) {
+  $7.Discovery get discovery => $_getN(14);
+  set discovery($7.Discovery v) {
     setField(15, v);
   }
 
   $core.bool hasDiscovery() => $_has(14);
   void clearDiscovery() => clearField(15);
 
-  $7.Authority get attestationAuthority => $_getN(15);
-  set attestationAuthority($7.Authority v) {
+  $8.Authority get attestationAuthority => $_getN(15);
+  set attestationAuthority($8.Authority v) {
     setField(16, v);
   }
 
@@ -689,8 +687,8 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault,
         Occurrence.create)
-    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOccurrenceRequest() : super();
@@ -730,8 +728,8 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   $core.bool hasOccurrence() => $_has(1);
   void clearOccurrence() => clearField(2);
 
-  $10.FieldMask get updateMask => $_getN(2);
-  set updateMask($10.FieldMask v) {
+  $11.FieldMask get updateMask => $_getN(2);
+  set updateMask($11.FieldMask v) {
     setField(3, v);
   }
 
@@ -997,8 +995,8 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('grafeas.v1beta1'))
     ..aOS(1, 'name')
     ..a<Note>(2, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
-    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateNoteRequest() : super();
@@ -1036,8 +1034,8 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   $core.bool hasNote() => $_has(1);
   void clearNote() => clearField(2);
 
-  $10.FieldMask get updateMask => $_getN(2);
-  set updateMask($10.FieldMask v) {
+  $11.FieldMask get updateMask => $_getN(2);
+  set updateMask($11.FieldMask v) {
     setField(3, v);
   }
 
@@ -1360,13 +1358,13 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
       package: const $pb.PackageName('grafeas.v1beta1'))
     ..a<Resource>(
         1, 'resource', $pb.PbFieldType.OM, Resource.getDefault, Resource.create)
-    ..e<$1.Severity>(
+    ..e<$2.Severity>(
         2,
         'severity',
         $pb.PbFieldType.OE,
-        $1.Severity.SEVERITY_UNSPECIFIED,
-        $1.Severity.valueOf,
-        $1.Severity.values)
+        $2.Severity.SEVERITY_UNSPECIFIED,
+        $2.Severity.valueOf,
+        $2.Severity.values)
     ..aInt64(3, 'fixableCount')
     ..aInt64(4, 'totalCount')
     ..hasRequiredFields = false;
@@ -1407,8 +1405,8 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  $1.Severity get severity => $_getN(1);
-  set severity($1.Severity v) {
+  $2.Severity get severity => $_getN(1);
+  set severity($2.Severity v) {
     setField(2, v);
   }
 
@@ -1468,118 +1466,4 @@ class VulnerabilityOccurrencesSummary extends $pb.GeneratedMessage {
 
   $core.List<VulnerabilityOccurrencesSummary_FixableTotalByDigest> get counts =>
       $_getList(0);
-}
-
-class GrafeasV1Beta1Api {
-  $pb.RpcClient _client;
-  GrafeasV1Beta1Api(this._client);
-
-  $async.Future<Occurrence> getOccurrence(
-      $pb.ClientContext ctx, GetOccurrenceRequest request) {
-    var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'GrafeasV1Beta1', 'GetOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<ListOccurrencesResponse> listOccurrences(
-      $pb.ClientContext ctx, ListOccurrencesRequest request) {
-    var emptyResponse = ListOccurrencesResponse();
-    return _client.invoke<ListOccurrencesResponse>(
-        ctx, 'GrafeasV1Beta1', 'ListOccurrences', request, emptyResponse);
-  }
-
-  $async.Future<$11.Empty> deleteOccurrence(
-      $pb.ClientContext ctx, DeleteOccurrenceRequest request) {
-    var emptyResponse = $11.Empty();
-    return _client.invoke<$11.Empty>(
-        ctx, 'GrafeasV1Beta1', 'DeleteOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<Occurrence> createOccurrence(
-      $pb.ClientContext ctx, CreateOccurrenceRequest request) {
-    var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'GrafeasV1Beta1', 'CreateOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<BatchCreateOccurrencesResponse> batchCreateOccurrences(
-      $pb.ClientContext ctx, BatchCreateOccurrencesRequest request) {
-    var emptyResponse = BatchCreateOccurrencesResponse();
-    return _client.invoke<BatchCreateOccurrencesResponse>(ctx, 'GrafeasV1Beta1',
-        'BatchCreateOccurrences', request, emptyResponse);
-  }
-
-  $async.Future<Occurrence> updateOccurrence(
-      $pb.ClientContext ctx, UpdateOccurrenceRequest request) {
-    var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'GrafeasV1Beta1', 'UpdateOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<Note> getOccurrenceNote(
-      $pb.ClientContext ctx, GetOccurrenceNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'GrafeasV1Beta1', 'GetOccurrenceNote', request, emptyResponse);
-  }
-
-  $async.Future<Note> getNote($pb.ClientContext ctx, GetNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'GrafeasV1Beta1', 'GetNote', request, emptyResponse);
-  }
-
-  $async.Future<ListNotesResponse> listNotes(
-      $pb.ClientContext ctx, ListNotesRequest request) {
-    var emptyResponse = ListNotesResponse();
-    return _client.invoke<ListNotesResponse>(
-        ctx, 'GrafeasV1Beta1', 'ListNotes', request, emptyResponse);
-  }
-
-  $async.Future<$11.Empty> deleteNote(
-      $pb.ClientContext ctx, DeleteNoteRequest request) {
-    var emptyResponse = $11.Empty();
-    return _client.invoke<$11.Empty>(
-        ctx, 'GrafeasV1Beta1', 'DeleteNote', request, emptyResponse);
-  }
-
-  $async.Future<Note> createNote(
-      $pb.ClientContext ctx, CreateNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'GrafeasV1Beta1', 'CreateNote', request, emptyResponse);
-  }
-
-  $async.Future<BatchCreateNotesResponse> batchCreateNotes(
-      $pb.ClientContext ctx, BatchCreateNotesRequest request) {
-    var emptyResponse = BatchCreateNotesResponse();
-    return _client.invoke<BatchCreateNotesResponse>(
-        ctx, 'GrafeasV1Beta1', 'BatchCreateNotes', request, emptyResponse);
-  }
-
-  $async.Future<Note> updateNote(
-      $pb.ClientContext ctx, UpdateNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'GrafeasV1Beta1', 'UpdateNote', request, emptyResponse);
-  }
-
-  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences(
-      $pb.ClientContext ctx, ListNoteOccurrencesRequest request) {
-    var emptyResponse = ListNoteOccurrencesResponse();
-    return _client.invoke<ListNoteOccurrencesResponse>(
-        ctx, 'GrafeasV1Beta1', 'ListNoteOccurrences', request, emptyResponse);
-  }
-
-  $async.Future<VulnerabilityOccurrencesSummary>
-      getVulnerabilityOccurrencesSummary($pb.ClientContext ctx,
-          GetVulnerabilityOccurrencesSummaryRequest request) {
-    var emptyResponse = VulnerabilityOccurrencesSummary();
-    return _client.invoke<VulnerabilityOccurrencesSummary>(
-        ctx,
-        'GrafeasV1Beta1',
-        'GetVulnerabilityOccurrencesSummary',
-        request,
-        emptyResponse);
-  }
 }

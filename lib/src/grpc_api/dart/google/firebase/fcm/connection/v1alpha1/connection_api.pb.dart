@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -199,16 +198,4 @@ class Message extends $pb.GeneratedMessage {
   void clearExpireTime() => clearField(3);
 
   $core.Map<$core.String, $core.String> get data => $_getMap(3);
-}
-
-class ConnectionApiApi {
-  $pb.RpcClient _client;
-  ConnectionApiApi(this._client);
-
-  $async.Future<DownstreamResponse> connect(
-      $pb.ClientContext ctx, UpstreamRequest request) {
-    var emptyResponse = DownstreamResponse();
-    return _client.invoke<DownstreamResponse>(
-        ctx, 'ConnectionApi', 'Connect', request, emptyResponse);
-  }
 }

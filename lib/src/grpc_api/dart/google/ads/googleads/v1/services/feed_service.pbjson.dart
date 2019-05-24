@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/feed.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetFeedRequest$json = {
   '1': 'GetFeedRequest',
   '2': [
@@ -97,48 +91,4 @@ const MutateFeedResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const FeedServiceBase$json = {
-  '1': 'FeedService',
-  '2': [
-    {
-      '1': 'GetFeed',
-      '2': '.google.ads.googleads.v1.services.GetFeedRequest',
-      '3': '.google.ads.googleads.v1.resources.Feed',
-      '4': {}
-    },
-    {
-      '1': 'MutateFeeds',
-      '2': '.google.ads.googleads.v1.services.MutateFeedsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateFeedsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const FeedServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetFeedRequest': GetFeedRequest$json,
-  '.google.ads.googleads.v1.resources.Feed': $0.Feed$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.resources.FeedAttribute': $0.FeedAttribute$json,
-  '.google.protobuf.BoolValue': $3.BoolValue$json,
-  '.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData':
-      $0.Feed_PlacesLocationFeedData$json,
-  '.google.ads.googleads.v1.resources.Feed.PlacesLocationFeedData.OAuthInfo':
-      $0.Feed_PlacesLocationFeedData_OAuthInfo$json,
-  '.google.ads.googleads.v1.resources.Feed.AffiliateLocationFeedData':
-      $0.Feed_AffiliateLocationFeedData$json,
-  '.google.ads.googleads.v1.resources.FeedAttributeOperation':
-      $0.FeedAttributeOperation$json,
-  '.google.ads.googleads.v1.services.MutateFeedsRequest':
-      MutateFeedsRequest$json,
-  '.google.ads.googleads.v1.services.FeedOperation': FeedOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateFeedsResponse':
-      MutateFeedsResponse$json,
-  '.google.ads.googleads.v1.services.MutateFeedResult': MutateFeedResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

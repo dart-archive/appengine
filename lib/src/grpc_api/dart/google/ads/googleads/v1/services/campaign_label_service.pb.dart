@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -247,23 +246,4 @@ class MutateCampaignLabelResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CampaignLabelServiceApi {
-  $pb.RpcClient _client;
-  CampaignLabelServiceApi(this._client);
-
-  $async.Future<$0.CampaignLabel> getCampaignLabel(
-      $pb.ClientContext ctx, GetCampaignLabelRequest request) {
-    var emptyResponse = $0.CampaignLabel();
-    return _client.invoke<$0.CampaignLabel>(ctx, 'CampaignLabelService',
-        'GetCampaignLabel', request, emptyResponse);
-  }
-
-  $async.Future<MutateCampaignLabelsResponse> mutateCampaignLabels(
-      $pb.ClientContext ctx, MutateCampaignLabelsRequest request) {
-    var emptyResponse = MutateCampaignLabelsResponse();
-    return _client.invoke<MutateCampaignLabelsResponse>(ctx,
-        'CampaignLabelService', 'MutateCampaignLabels', request, emptyResponse);
-  }
 }

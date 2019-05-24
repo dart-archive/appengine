@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'table_reference.pbjson.dart' as $2;
-import '../../../../protobuf/timestamp.pbjson.dart' as $0;
-import 'read_options.pbjson.dart' as $3;
-import 'avro.pbjson.dart' as $1;
-import '../../../../protobuf/empty.pbjson.dart' as $4;
-
 const DataFormat$json = {
   '1': 'DataFormat',
   '2': [
@@ -289,77 +283,4 @@ const SplitReadStreamResponse$json = {
       '10': 'remainderStream'
     },
   ],
-};
-
-const BigQueryStorageServiceBase$json = {
-  '1': 'BigQueryStorage',
-  '2': [
-    {
-      '1': 'CreateReadSession',
-      '2': '.google.cloud.bigquery.storage.v1beta1.CreateReadSessionRequest',
-      '3': '.google.cloud.bigquery.storage.v1beta1.ReadSession',
-      '4': {}
-    },
-    {
-      '1': 'ReadRows',
-      '2': '.google.cloud.bigquery.storage.v1beta1.ReadRowsRequest',
-      '3': '.google.cloud.bigquery.storage.v1beta1.ReadRowsResponse',
-      '4': {},
-      '6': true
-    },
-    {
-      '1': 'BatchCreateReadSessionStreams',
-      '2':
-          '.google.cloud.bigquery.storage.v1beta1.BatchCreateReadSessionStreamsRequest',
-      '3':
-          '.google.cloud.bigquery.storage.v1beta1.BatchCreateReadSessionStreamsResponse',
-      '4': {}
-    },
-    {
-      '1': 'FinalizeStream',
-      '2': '.google.cloud.bigquery.storage.v1beta1.FinalizeStreamRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'SplitReadStream',
-      '2': '.google.cloud.bigquery.storage.v1beta1.SplitReadStreamRequest',
-      '3': '.google.cloud.bigquery.storage.v1beta1.SplitReadStreamResponse',
-      '4': {}
-    },
-  ],
-};
-
-const BigQueryStorageServiceBase$messageJson = {
-  '.google.cloud.bigquery.storage.v1beta1.CreateReadSessionRequest':
-      CreateReadSessionRequest$json,
-  '.google.cloud.bigquery.storage.v1beta1.TableReference':
-      $2.TableReference$json,
-  '.google.cloud.bigquery.storage.v1beta1.TableModifiers':
-      $2.TableModifiers$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.bigquery.storage.v1beta1.TableReadOptions':
-      $3.TableReadOptions$json,
-  '.google.cloud.bigquery.storage.v1beta1.ReadSession': ReadSession$json,
-  '.google.cloud.bigquery.storage.v1beta1.Stream': Stream$json,
-  '.google.cloud.bigquery.storage.v1beta1.AvroSchema': $1.AvroSchema$json,
-  '.google.cloud.bigquery.storage.v1beta1.ReadRowsRequest':
-      ReadRowsRequest$json,
-  '.google.cloud.bigquery.storage.v1beta1.StreamPosition': StreamPosition$json,
-  '.google.cloud.bigquery.storage.v1beta1.ReadRowsResponse':
-      ReadRowsResponse$json,
-  '.google.cloud.bigquery.storage.v1beta1.StreamStatus': StreamStatus$json,
-  '.google.cloud.bigquery.storage.v1beta1.AvroRows': $1.AvroRows$json,
-  '.google.cloud.bigquery.storage.v1beta1.ThrottleStatus': ThrottleStatus$json,
-  '.google.cloud.bigquery.storage.v1beta1.BatchCreateReadSessionStreamsRequest':
-      BatchCreateReadSessionStreamsRequest$json,
-  '.google.cloud.bigquery.storage.v1beta1.BatchCreateReadSessionStreamsResponse':
-      BatchCreateReadSessionStreamsResponse$json,
-  '.google.cloud.bigquery.storage.v1beta1.FinalizeStreamRequest':
-      FinalizeStreamRequest$json,
-  '.google.protobuf.Empty': $4.Empty$json,
-  '.google.cloud.bigquery.storage.v1beta1.SplitReadStreamRequest':
-      SplitReadStreamRequest$json,
-  '.google.cloud.bigquery.storage.v1beta1.SplitReadStreamResponse':
-      SplitReadStreamResponse$json,
 };

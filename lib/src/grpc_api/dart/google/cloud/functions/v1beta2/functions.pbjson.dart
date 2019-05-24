@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../protobuf/timestamp.pbjson.dart' as $1;
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $4;
-
 const CloudFunctionStatus$json = {
   '1': 'CloudFunctionStatus',
   '2': [
@@ -220,73 +214,4 @@ const CallFunctionResponse$json = {
     {'1': 'result', '3': 2, '4': 1, '5': 9, '10': 'result'},
     {'1': 'error', '3': 3, '4': 1, '5': 9, '10': 'error'},
   ],
-};
-
-const CloudFunctionsServiceBase$json = {
-  '1': 'CloudFunctionsService',
-  '2': [
-    {
-      '1': 'ListFunctions',
-      '2': '.google.cloud.functions.v1beta2.ListFunctionsRequest',
-      '3': '.google.cloud.functions.v1beta2.ListFunctionsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetFunction',
-      '2': '.google.cloud.functions.v1beta2.GetFunctionRequest',
-      '3': '.google.cloud.functions.v1beta2.CloudFunction',
-      '4': {}
-    },
-    {
-      '1': 'CreateFunction',
-      '2': '.google.cloud.functions.v1beta2.CreateFunctionRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'UpdateFunction',
-      '2': '.google.cloud.functions.v1beta2.UpdateFunctionRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'DeleteFunction',
-      '2': '.google.cloud.functions.v1beta2.DeleteFunctionRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'CallFunction',
-      '2': '.google.cloud.functions.v1beta2.CallFunctionRequest',
-      '3': '.google.cloud.functions.v1beta2.CallFunctionResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CloudFunctionsServiceBase$messageJson = {
-  '.google.cloud.functions.v1beta2.ListFunctionsRequest':
-      ListFunctionsRequest$json,
-  '.google.cloud.functions.v1beta2.ListFunctionsResponse':
-      ListFunctionsResponse$json,
-  '.google.cloud.functions.v1beta2.CloudFunction': CloudFunction$json,
-  '.google.cloud.functions.v1beta2.SourceRepository': SourceRepository$json,
-  '.google.cloud.functions.v1beta2.HTTPSTrigger': HTTPSTrigger$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.cloud.functions.v1beta2.EventTrigger': EventTrigger$json,
-  '.google.protobuf.Timestamp': $1.Timestamp$json,
-  '.google.cloud.functions.v1beta2.GetFunctionRequest': GetFunctionRequest$json,
-  '.google.cloud.functions.v1beta2.CreateFunctionRequest':
-      CreateFunctionRequest$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $4.Status$json,
-  '.google.cloud.functions.v1beta2.UpdateFunctionRequest':
-      UpdateFunctionRequest$json,
-  '.google.cloud.functions.v1beta2.DeleteFunctionRequest':
-      DeleteFunctionRequest$json,
-  '.google.cloud.functions.v1beta2.CallFunctionRequest':
-      CallFunctionRequest$json,
-  '.google.cloud.functions.v1beta2.CallFunctionResponse':
-      CallFunctionResponse$json,
 };

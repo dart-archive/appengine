@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -299,30 +298,4 @@ class Deployment extends $pb.GeneratedMessage {
   void clearTarget() => clearField(2);
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(2);
-}
-
-class ProfilerServiceApi {
-  $pb.RpcClient _client;
-  ProfilerServiceApi(this._client);
-
-  $async.Future<Profile> createProfile(
-      $pb.ClientContext ctx, CreateProfileRequest request) {
-    var emptyResponse = Profile();
-    return _client.invoke<Profile>(
-        ctx, 'ProfilerService', 'CreateProfile', request, emptyResponse);
-  }
-
-  $async.Future<Profile> createOfflineProfile(
-      $pb.ClientContext ctx, CreateOfflineProfileRequest request) {
-    var emptyResponse = Profile();
-    return _client.invoke<Profile>(
-        ctx, 'ProfilerService', 'CreateOfflineProfile', request, emptyResponse);
-  }
-
-  $async.Future<Profile> updateProfile(
-      $pb.ClientContext ctx, UpdateProfileRequest request) {
-    var emptyResponse = Profile();
-    return _client.invoke<Profile>(
-        ctx, 'ProfilerService', 'UpdateProfile', request, emptyResponse);
-  }
 }

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -697,45 +696,4 @@ class KeywordPlanKeywordHistoricalMetrics extends $pb.GeneratedMessage {
 
   $core.bool hasKeywordMetrics() => $_has(1);
   void clearKeywordMetrics() => clearField(2);
-}
-
-class KeywordPlanServiceApi {
-  $pb.RpcClient _client;
-  KeywordPlanServiceApi(this._client);
-
-  $async.Future<$0.KeywordPlan> getKeywordPlan(
-      $pb.ClientContext ctx, GetKeywordPlanRequest request) {
-    var emptyResponse = $0.KeywordPlan();
-    return _client.invoke<$0.KeywordPlan>(
-        ctx, 'KeywordPlanService', 'GetKeywordPlan', request, emptyResponse);
-  }
-
-  $async.Future<MutateKeywordPlansResponse> mutateKeywordPlans(
-      $pb.ClientContext ctx, MutateKeywordPlansRequest request) {
-    var emptyResponse = MutateKeywordPlansResponse();
-    return _client.invoke<MutateKeywordPlansResponse>(ctx, 'KeywordPlanService',
-        'MutateKeywordPlans', request, emptyResponse);
-  }
-
-  $async.Future<GenerateForecastMetricsResponse> generateForecastMetrics(
-      $pb.ClientContext ctx, GenerateForecastMetricsRequest request) {
-    var emptyResponse = GenerateForecastMetricsResponse();
-    return _client.invoke<GenerateForecastMetricsResponse>(
-        ctx,
-        'KeywordPlanService',
-        'GenerateForecastMetrics',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<GenerateHistoricalMetricsResponse> generateHistoricalMetrics(
-      $pb.ClientContext ctx, GenerateHistoricalMetricsRequest request) {
-    var emptyResponse = GenerateHistoricalMetricsResponse();
-    return _client.invoke<GenerateHistoricalMetricsResponse>(
-        ctx,
-        'KeywordPlanService',
-        'GenerateHistoricalMetrics',
-        request,
-        emptyResponse);
-  }
 }

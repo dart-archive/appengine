@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/ad_group_extension_setting.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetAdGroupExtensionSettingRequest$json = {
   '1': 'GetAdGroupExtensionSettingRequest',
   '2': [
@@ -98,44 +92,4 @@ const MutateAdGroupExtensionSettingResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const AdGroupExtensionSettingServiceBase$json = {
-  '1': 'AdGroupExtensionSettingService',
-  '2': [
-    {
-      '1': 'GetAdGroupExtensionSetting',
-      '2':
-          '.google.ads.googleads.v1.services.GetAdGroupExtensionSettingRequest',
-      '3': '.google.ads.googleads.v1.resources.AdGroupExtensionSetting',
-      '4': {}
-    },
-    {
-      '1': 'MutateAdGroupExtensionSettings',
-      '2':
-          '.google.ads.googleads.v1.services.MutateAdGroupExtensionSettingsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.MutateAdGroupExtensionSettingsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const AdGroupExtensionSettingServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetAdGroupExtensionSettingRequest':
-      GetAdGroupExtensionSettingRequest$json,
-  '.google.ads.googleads.v1.resources.AdGroupExtensionSetting':
-      $0.AdGroupExtensionSetting$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupExtensionSettingsRequest':
-      MutateAdGroupExtensionSettingsRequest$json,
-  '.google.ads.googleads.v1.services.AdGroupExtensionSettingOperation':
-      AdGroupExtensionSettingOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupExtensionSettingsResponse':
-      MutateAdGroupExtensionSettingsResponse$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupExtensionSettingResult':
-      MutateAdGroupExtensionSettingResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

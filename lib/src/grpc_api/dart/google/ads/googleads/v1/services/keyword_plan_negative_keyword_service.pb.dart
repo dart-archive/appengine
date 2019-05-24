@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -296,32 +295,4 @@ class MutateKeywordPlanNegativeKeywordResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class KeywordPlanNegativeKeywordServiceApi {
-  $pb.RpcClient _client;
-  KeywordPlanNegativeKeywordServiceApi(this._client);
-
-  $async.Future<$0.KeywordPlanNegativeKeyword> getKeywordPlanNegativeKeyword(
-      $pb.ClientContext ctx, GetKeywordPlanNegativeKeywordRequest request) {
-    var emptyResponse = $0.KeywordPlanNegativeKeyword();
-    return _client.invoke<$0.KeywordPlanNegativeKeyword>(
-        ctx,
-        'KeywordPlanNegativeKeywordService',
-        'GetKeywordPlanNegativeKeyword',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateKeywordPlanNegativeKeywordsResponse>
-      mutateKeywordPlanNegativeKeywords($pb.ClientContext ctx,
-          MutateKeywordPlanNegativeKeywordsRequest request) {
-    var emptyResponse = MutateKeywordPlanNegativeKeywordsResponse();
-    return _client.invoke<MutateKeywordPlanNegativeKeywordsResponse>(
-        ctx,
-        'KeywordPlanNegativeKeywordService',
-        'MutateKeywordPlanNegativeKeywords',
-        request,
-        emptyResponse);
-  }
 }

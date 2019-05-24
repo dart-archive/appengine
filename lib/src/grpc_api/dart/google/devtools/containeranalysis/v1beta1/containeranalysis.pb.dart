@@ -4,15 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../iam/v1/iam_policy.pb.dart' as $1;
-import '../../../iam/v1/policy.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 class ScanConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanConfig',
@@ -21,10 +18,10 @@ class ScanConfig extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'enabled')
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   ScanConfig() : super();
@@ -68,16 +65,16 @@ class ScanConfig extends $pb.GeneratedMessage {
   $core.bool hasEnabled() => $_has(2);
   void clearEnabled() => clearField(3);
 
-  $0.Timestamp get createTime => $_getN(3);
-  set createTime($0.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(3);
+  set createTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $0.Timestamp get updateTime => $_getN(4);
-  set updateTime($0.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(4);
+  set updateTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -270,55 +267,4 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
 
   $core.bool hasScanConfig() => $_has(1);
   void clearScanConfig() => clearField(2);
-}
-
-class ContainerAnalysisV1Beta1Api {
-  $pb.RpcClient _client;
-  ContainerAnalysisV1Beta1Api(this._client);
-
-  $async.Future<$2.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $1.SetIamPolicyRequest request) {
-    var emptyResponse = $2.Policy();
-    return _client.invoke<$2.Policy>(ctx, 'ContainerAnalysisV1Beta1',
-        'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$2.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $1.GetIamPolicyRequest request) {
-    var emptyResponse = $2.Policy();
-    return _client.invoke<$2.Policy>(ctx, 'ContainerAnalysisV1Beta1',
-        'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$1.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $1.TestIamPermissionsRequest request) {
-    var emptyResponse = $1.TestIamPermissionsResponse();
-    return _client.invoke<$1.TestIamPermissionsResponse>(
-        ctx,
-        'ContainerAnalysisV1Beta1',
-        'TestIamPermissions',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<ScanConfig> getScanConfig(
-      $pb.ClientContext ctx, GetScanConfigRequest request) {
-    var emptyResponse = ScanConfig();
-    return _client.invoke<ScanConfig>(ctx, 'ContainerAnalysisV1Beta1',
-        'GetScanConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListScanConfigsResponse> listScanConfigs(
-      $pb.ClientContext ctx, ListScanConfigsRequest request) {
-    var emptyResponse = ListScanConfigsResponse();
-    return _client.invoke<ListScanConfigsResponse>(ctx,
-        'ContainerAnalysisV1Beta1', 'ListScanConfigs', request, emptyResponse);
-  }
-
-  $async.Future<ScanConfig> updateScanConfig(
-      $pb.ClientContext ctx, UpdateScanConfigRequest request) {
-    var emptyResponse = ScanConfig();
-    return _client.invoke<ScanConfig>(ctx, 'ContainerAnalysisV1Beta1',
-        'UpdateScanConfig', request, emptyResponse);
-  }
 }

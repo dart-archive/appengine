@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'common.pbjson.dart' as $0;
-
 const CompleteQueryRequest$json = {
   '1': 'CompleteQueryRequest',
   '2': [
@@ -94,26 +92,4 @@ const CompleteQueryResponse_CompletionResult$json = {
     },
     {'1': 'image_uri', '3': 3, '4': 1, '5': 9, '10': 'imageUri'},
   ],
-};
-
-const CompletionServiceBase$json = {
-  '1': 'Completion',
-  '2': [
-    {
-      '1': 'CompleteQuery',
-      '2': '.google.cloud.talent.v4beta1.CompleteQueryRequest',
-      '3': '.google.cloud.talent.v4beta1.CompleteQueryResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CompletionServiceBase$messageJson = {
-  '.google.cloud.talent.v4beta1.CompleteQueryRequest':
-      CompleteQueryRequest$json,
-  '.google.cloud.talent.v4beta1.CompleteQueryResponse':
-      CompleteQueryResponse$json,
-  '.google.cloud.talent.v4beta1.CompleteQueryResponse.CompletionResult':
-      CompleteQueryResponse_CompletionResult$json,
-  '.google.cloud.talent.v4beta1.ResponseMetadata': $0.ResponseMetadata$json,
 };

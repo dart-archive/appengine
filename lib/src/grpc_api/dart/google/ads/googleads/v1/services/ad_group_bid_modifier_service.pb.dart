@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -277,31 +276,4 @@ class MutateAdGroupBidModifierResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class AdGroupBidModifierServiceApi {
-  $pb.RpcClient _client;
-  AdGroupBidModifierServiceApi(this._client);
-
-  $async.Future<$0.AdGroupBidModifier> getAdGroupBidModifier(
-      $pb.ClientContext ctx, GetAdGroupBidModifierRequest request) {
-    var emptyResponse = $0.AdGroupBidModifier();
-    return _client.invoke<$0.AdGroupBidModifier>(
-        ctx,
-        'AdGroupBidModifierService',
-        'GetAdGroupBidModifier',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateAdGroupBidModifiersResponse> mutateAdGroupBidModifiers(
-      $pb.ClientContext ctx, MutateAdGroupBidModifiersRequest request) {
-    var emptyResponse = MutateAdGroupBidModifiersResponse();
-    return _client.invoke<MutateAdGroupBidModifiersResponse>(
-        ctx,
-        'AdGroupBidModifierService',
-        'MutateAdGroupBidModifiers',
-        request,
-        emptyResponse);
-  }
 }

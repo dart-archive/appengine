@@ -4,28 +4,24 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
-import '../../../iam/v1/iam_policy.pb.dart' as $3;
-import '../../../iam/v1/policy.pb.dart' as $4;
+import 'resources.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
-import 'resources.pbenum.dart' as $0;
+import 'resources.pbenum.dart' as $1;
 
 class CreateDeviceRegistryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateDeviceRegistryRequest',
       package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'parent')
-    ..a<$0.DeviceRegistry>(2, 'deviceRegistry', $pb.PbFieldType.OM,
-        $0.DeviceRegistry.getDefault, $0.DeviceRegistry.create)
+    ..a<$1.DeviceRegistry>(2, 'deviceRegistry', $pb.PbFieldType.OM,
+        $1.DeviceRegistry.getDefault, $1.DeviceRegistry.create)
     ..hasRequiredFields = false;
 
   CreateDeviceRegistryRequest() : super();
@@ -58,8 +54,8 @@ class CreateDeviceRegistryRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.DeviceRegistry get deviceRegistry => $_getN(1);
-  set deviceRegistry($0.DeviceRegistry v) {
+  $1.DeviceRegistry get deviceRegistry => $_getN(1);
+  set deviceRegistry($1.DeviceRegistry v) {
     setField(2, v);
   }
 
@@ -145,10 +141,10 @@ class UpdateDeviceRegistryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateDeviceRegistryRequest',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..a<$0.DeviceRegistry>(1, 'deviceRegistry', $pb.PbFieldType.OM,
-        $0.DeviceRegistry.getDefault, $0.DeviceRegistry.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$1.DeviceRegistry>(1, 'deviceRegistry', $pb.PbFieldType.OM,
+        $1.DeviceRegistry.getDefault, $1.DeviceRegistry.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDeviceRegistryRequest() : super();
@@ -173,16 +169,16 @@ class UpdateDeviceRegistryRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateDeviceRegistryRequest _defaultInstance;
 
-  $0.DeviceRegistry get deviceRegistry => $_getN(0);
-  set deviceRegistry($0.DeviceRegistry v) {
+  $1.DeviceRegistry get deviceRegistry => $_getN(0);
+  set deviceRegistry($1.DeviceRegistry v) {
     setField(1, v);
   }
 
   $core.bool hasDeviceRegistry() => $_has(0);
   void clearDeviceRegistry() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -250,8 +246,8 @@ class ListDeviceRegistriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeviceRegistriesResponse',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$0.DeviceRegistry>(
-        1, 'deviceRegistries', $pb.PbFieldType.PM, $0.DeviceRegistry.create)
+    ..pc<$1.DeviceRegistry>(
+        1, 'deviceRegistries', $pb.PbFieldType.PM, $1.DeviceRegistry.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -278,7 +274,7 @@ class ListDeviceRegistriesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDeviceRegistriesResponse _defaultInstance;
 
-  $core.List<$0.DeviceRegistry> get deviceRegistries => $_getList(0);
+  $core.List<$1.DeviceRegistry> get deviceRegistries => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -293,8 +289,8 @@ class CreateDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDeviceRequest',
       package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'parent')
-    ..a<$0.Device>(
-        2, 'device', $pb.PbFieldType.OM, $0.Device.getDefault, $0.Device.create)
+    ..a<$1.Device>(
+        2, 'device', $pb.PbFieldType.OM, $1.Device.getDefault, $1.Device.create)
     ..hasRequiredFields = false;
 
   CreateDeviceRequest() : super();
@@ -324,8 +320,8 @@ class CreateDeviceRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Device get device => $_getN(1);
-  set device($0.Device v) {
+  $1.Device get device => $_getN(1);
+  set device($1.Device v) {
     setField(2, v);
   }
 
@@ -337,8 +333,8 @@ class GetDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDeviceRequest',
       package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'name')
-    ..a<$1.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$4.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetDeviceRequest() : super();
@@ -368,8 +364,8 @@ class GetDeviceRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $1.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($1.FieldMask v) {
+  $4.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -380,10 +376,10 @@ class GetDeviceRequest extends $pb.GeneratedMessage {
 class UpdateDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDeviceRequest',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..a<$0.Device>(
-        2, 'device', $pb.PbFieldType.OM, $0.Device.getDefault, $0.Device.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$1.Device>(
+        2, 'device', $pb.PbFieldType.OM, $1.Device.getDefault, $1.Device.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDeviceRequest() : super();
@@ -405,16 +401,16 @@ class UpdateDeviceRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateDeviceRequest _defaultInstance;
 
-  $0.Device get device => $_getN(0);
-  set device($0.Device v) {
+  $1.Device get device => $_getN(0);
+  set device($1.Device v) {
     setField(2, v);
   }
 
   $core.bool hasDevice() => $_has(0);
   void clearDevice() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -462,8 +458,8 @@ class ListDevicesRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..p<Int64>(2, 'deviceNumIds', $pb.PbFieldType.PU6)
     ..pPS(3, 'deviceIds')
-    ..a<$1.FieldMask>(4, 'fieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$4.FieldMask>(4, 'fieldMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..a<GatewayListOptions>(6, 'gatewayListOptions', $pb.PbFieldType.OM,
         GatewayListOptions.getDefault, GatewayListOptions.create)
     ..a<$core.int>(100, 'pageSize', $pb.PbFieldType.O3)
@@ -501,8 +497,8 @@ class ListDevicesRequest extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get deviceIds => $_getList(2);
 
-  $1.FieldMask get fieldMask => $_getN(3);
-  set fieldMask($1.FieldMask v) {
+  $4.FieldMask get fieldMask => $_getN(3);
+  set fieldMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -551,13 +547,13 @@ class GatewayListOptions extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GatewayListOptions',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..e<$0.GatewayType>(
+    ..e<$1.GatewayType>(
         1,
         'gatewayType',
         $pb.PbFieldType.OE,
-        $0.GatewayType.GATEWAY_TYPE_UNSPECIFIED,
-        $0.GatewayType.valueOf,
-        $0.GatewayType.values)
+        $1.GatewayType.GATEWAY_TYPE_UNSPECIFIED,
+        $1.GatewayType.valueOf,
+        $1.GatewayType.values)
     ..aOS(2, 'associationsGatewayId')
     ..aOS(3, 'associationsDeviceId')
     ..oo(0, [1, 2, 3])
@@ -586,8 +582,8 @@ class GatewayListOptions extends $pb.GeneratedMessage {
       _GatewayListOptions_FilterByTag[$_whichOneof(0)];
   void clearFilter() => clearField($_whichOneof(0));
 
-  $0.GatewayType get gatewayType => $_getN(0);
-  set gatewayType($0.GatewayType v) {
+  $1.GatewayType get gatewayType => $_getN(0);
+  set gatewayType($1.GatewayType v) {
     setField(1, v);
   }
 
@@ -614,7 +610,7 @@ class GatewayListOptions extends $pb.GeneratedMessage {
 class ListDevicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDevicesResponse',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$0.Device>(1, 'devices', $pb.PbFieldType.PM, $0.Device.create)
+    ..pc<$1.Device>(1, 'devices', $pb.PbFieldType.PM, $1.Device.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -637,7 +633,7 @@ class ListDevicesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDevicesResponse _defaultInstance;
 
-  $core.List<$0.Device> get devices => $_getList(0);
+  $core.List<$1.Device> get devices => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -757,8 +753,8 @@ class ListDeviceConfigVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeviceConfigVersionsResponse',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$0.DeviceConfig>(
-        1, 'deviceConfigs', $pb.PbFieldType.PM, $0.DeviceConfig.create)
+    ..pc<$1.DeviceConfig>(
+        1, 'deviceConfigs', $pb.PbFieldType.PM, $1.DeviceConfig.create)
     ..hasRequiredFields = false;
 
   ListDeviceConfigVersionsResponse() : super();
@@ -784,7 +780,7 @@ class ListDeviceConfigVersionsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDeviceConfigVersionsResponse _defaultInstance;
 
-  $core.List<$0.DeviceConfig> get deviceConfigs => $_getList(0);
+  $core.List<$1.DeviceConfig> get deviceConfigs => $_getList(0);
 }
 
 class ListDeviceStatesRequest extends $pb.GeneratedMessage {
@@ -835,8 +831,8 @@ class ListDeviceStatesRequest extends $pb.GeneratedMessage {
 class ListDeviceStatesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDeviceStatesResponse',
       package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$0.DeviceState>(
-        1, 'deviceStates', $pb.PbFieldType.PM, $0.DeviceState.create)
+    ..pc<$1.DeviceState>(
+        1, 'deviceStates', $pb.PbFieldType.PM, $1.DeviceState.create)
     ..hasRequiredFields = false;
 
   ListDeviceStatesResponse() : super();
@@ -860,7 +856,7 @@ class ListDeviceStatesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDeviceStatesResponse _defaultInstance;
 
-  $core.List<$0.DeviceState> get deviceStates => $_getList(0);
+  $core.List<$1.DeviceState> get deviceStates => $_getList(0);
 }
 
 class SendCommandToDeviceRequest extends $pb.GeneratedMessage {
@@ -1118,142 +1114,4 @@ class UnbindDeviceFromGatewayResponse extends $pb.GeneratedMessage {
   static UnbindDeviceFromGatewayResponse getDefault() =>
       _defaultInstance ??= create()..freeze();
   static UnbindDeviceFromGatewayResponse _defaultInstance;
-}
-
-class DeviceManagerApi {
-  $pb.RpcClient _client;
-  DeviceManagerApi(this._client);
-
-  $async.Future<$0.DeviceRegistry> createDeviceRegistry(
-      $pb.ClientContext ctx, CreateDeviceRegistryRequest request) {
-    var emptyResponse = $0.DeviceRegistry();
-    return _client.invoke<$0.DeviceRegistry>(
-        ctx, 'DeviceManager', 'CreateDeviceRegistry', request, emptyResponse);
-  }
-
-  $async.Future<$0.DeviceRegistry> getDeviceRegistry(
-      $pb.ClientContext ctx, GetDeviceRegistryRequest request) {
-    var emptyResponse = $0.DeviceRegistry();
-    return _client.invoke<$0.DeviceRegistry>(
-        ctx, 'DeviceManager', 'GetDeviceRegistry', request, emptyResponse);
-  }
-
-  $async.Future<$0.DeviceRegistry> updateDeviceRegistry(
-      $pb.ClientContext ctx, UpdateDeviceRegistryRequest request) {
-    var emptyResponse = $0.DeviceRegistry();
-    return _client.invoke<$0.DeviceRegistry>(
-        ctx, 'DeviceManager', 'UpdateDeviceRegistry', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteDeviceRegistry(
-      $pb.ClientContext ctx, DeleteDeviceRegistryRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DeviceManager', 'DeleteDeviceRegistry', request, emptyResponse);
-  }
-
-  $async.Future<ListDeviceRegistriesResponse> listDeviceRegistries(
-      $pb.ClientContext ctx, ListDeviceRegistriesRequest request) {
-    var emptyResponse = ListDeviceRegistriesResponse();
-    return _client.invoke<ListDeviceRegistriesResponse>(
-        ctx, 'DeviceManager', 'ListDeviceRegistries', request, emptyResponse);
-  }
-
-  $async.Future<$0.Device> createDevice(
-      $pb.ClientContext ctx, CreateDeviceRequest request) {
-    var emptyResponse = $0.Device();
-    return _client.invoke<$0.Device>(
-        ctx, 'DeviceManager', 'CreateDevice', request, emptyResponse);
-  }
-
-  $async.Future<$0.Device> getDevice(
-      $pb.ClientContext ctx, GetDeviceRequest request) {
-    var emptyResponse = $0.Device();
-    return _client.invoke<$0.Device>(
-        ctx, 'DeviceManager', 'GetDevice', request, emptyResponse);
-  }
-
-  $async.Future<$0.Device> updateDevice(
-      $pb.ClientContext ctx, UpdateDeviceRequest request) {
-    var emptyResponse = $0.Device();
-    return _client.invoke<$0.Device>(
-        ctx, 'DeviceManager', 'UpdateDevice', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteDevice(
-      $pb.ClientContext ctx, DeleteDeviceRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DeviceManager', 'DeleteDevice', request, emptyResponse);
-  }
-
-  $async.Future<ListDevicesResponse> listDevices(
-      $pb.ClientContext ctx, ListDevicesRequest request) {
-    var emptyResponse = ListDevicesResponse();
-    return _client.invoke<ListDevicesResponse>(
-        ctx, 'DeviceManager', 'ListDevices', request, emptyResponse);
-  }
-
-  $async.Future<$0.DeviceConfig> modifyCloudToDeviceConfig(
-      $pb.ClientContext ctx, ModifyCloudToDeviceConfigRequest request) {
-    var emptyResponse = $0.DeviceConfig();
-    return _client.invoke<$0.DeviceConfig>(ctx, 'DeviceManager',
-        'ModifyCloudToDeviceConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListDeviceConfigVersionsResponse> listDeviceConfigVersions(
-      $pb.ClientContext ctx, ListDeviceConfigVersionsRequest request) {
-    var emptyResponse = ListDeviceConfigVersionsResponse();
-    return _client.invoke<ListDeviceConfigVersionsResponse>(ctx,
-        'DeviceManager', 'ListDeviceConfigVersions', request, emptyResponse);
-  }
-
-  $async.Future<ListDeviceStatesResponse> listDeviceStates(
-      $pb.ClientContext ctx, ListDeviceStatesRequest request) {
-    var emptyResponse = ListDeviceStatesResponse();
-    return _client.invoke<ListDeviceStatesResponse>(
-        ctx, 'DeviceManager', 'ListDeviceStates', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'DeviceManager', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'DeviceManager', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
-    var emptyResponse = $3.TestIamPermissionsResponse();
-    return _client.invoke<$3.TestIamPermissionsResponse>(
-        ctx, 'DeviceManager', 'TestIamPermissions', request, emptyResponse);
-  }
-
-  $async.Future<SendCommandToDeviceResponse> sendCommandToDevice(
-      $pb.ClientContext ctx, SendCommandToDeviceRequest request) {
-    var emptyResponse = SendCommandToDeviceResponse();
-    return _client.invoke<SendCommandToDeviceResponse>(
-        ctx, 'DeviceManager', 'SendCommandToDevice', request, emptyResponse);
-  }
-
-  $async.Future<BindDeviceToGatewayResponse> bindDeviceToGateway(
-      $pb.ClientContext ctx, BindDeviceToGatewayRequest request) {
-    var emptyResponse = BindDeviceToGatewayResponse();
-    return _client.invoke<BindDeviceToGatewayResponse>(
-        ctx, 'DeviceManager', 'BindDeviceToGateway', request, emptyResponse);
-  }
-
-  $async.Future<UnbindDeviceFromGatewayResponse> unbindDeviceFromGateway(
-      $pb.ClientContext ctx, UnbindDeviceFromGatewayRequest request) {
-    var emptyResponse = UnbindDeviceFromGatewayResponse();
-    return _client.invoke<UnbindDeviceFromGatewayResponse>(ctx, 'DeviceManager',
-        'UnbindDeviceFromGateway', request, emptyResponse);
-  }
 }

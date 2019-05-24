@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'worker.pbjson.dart' as $0;
-import '../../../rpc/status.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../protobuf/timestamp.pbjson.dart' as $1;
-import '../../../protobuf/field_mask.pbjson.dart' as $4;
-import '../../../protobuf/empty.pbjson.dart' as $5;
-
 const BotStatus$json = {
   '1': 'BotStatus',
   '2': [
@@ -236,51 +229,4 @@ const PostBotEventTempRequest_Type$json = {
     {'1': 'INFO', '2': 1},
     {'1': 'ERROR', '2': 2},
   ],
-};
-
-const BotsServiceBase$json = {
-  '1': 'Bots',
-  '2': [
-    {
-      '1': 'CreateBotSession',
-      '2': '.google.devtools.remoteworkers.v1test2.CreateBotSessionRequest',
-      '3': '.google.devtools.remoteworkers.v1test2.BotSession',
-      '4': {}
-    },
-    {
-      '1': 'UpdateBotSession',
-      '2': '.google.devtools.remoteworkers.v1test2.UpdateBotSessionRequest',
-      '3': '.google.devtools.remoteworkers.v1test2.BotSession',
-      '4': {}
-    },
-    {
-      '1': 'PostBotEventTemp',
-      '2': '.google.devtools.remoteworkers.v1test2.PostBotEventTempRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const BotsServiceBase$messageJson = {
-  '.google.devtools.remoteworkers.v1test2.CreateBotSessionRequest':
-      CreateBotSessionRequest$json,
-  '.google.devtools.remoteworkers.v1test2.BotSession': BotSession$json,
-  '.google.devtools.remoteworkers.v1test2.Worker': $0.Worker$json,
-  '.google.devtools.remoteworkers.v1test2.Device': $0.Device$json,
-  '.google.devtools.remoteworkers.v1test2.Device.Property':
-      $0.Device_Property$json,
-  '.google.devtools.remoteworkers.v1test2.Worker.Property':
-      $0.Worker_Property$json,
-  '.google.devtools.remoteworkers.v1test2.Worker.Config': $0.Worker_Config$json,
-  '.google.devtools.remoteworkers.v1test2.Lease': Lease$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.protobuf.Timestamp': $1.Timestamp$json,
-  '.google.devtools.remoteworkers.v1test2.UpdateBotSessionRequest':
-      UpdateBotSessionRequest$json,
-  '.google.protobuf.FieldMask': $4.FieldMask$json,
-  '.google.devtools.remoteworkers.v1test2.PostBotEventTempRequest':
-      PostBotEventTempRequest$json,
-  '.google.protobuf.Empty': $5.Empty$json,
 };

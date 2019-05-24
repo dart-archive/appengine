@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -214,16 +213,4 @@ class CompleteQueryResponse extends $pb.GeneratedMessage {
 
   $core.bool hasMetadata() => $_has(1);
   void clearMetadata() => clearField(2);
-}
-
-class CompletionApi {
-  $pb.RpcClient _client;
-  CompletionApi(this._client);
-
-  $async.Future<CompleteQueryResponse> completeQuery(
-      $pb.ClientContext ctx, CompleteQueryRequest request) {
-    var emptyResponse = CompleteQueryResponse();
-    return _client.invoke<CompleteQueryResponse>(
-        ctx, 'Completion', 'CompleteQuery', request, emptyResponse);
-  }
 }

@@ -4,14 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $0;
-import '../resources/geo_target_constant.pb.dart' as $1;
+import '../../../../protobuf/wrappers.pb.dart' as $1;
+import '../resources/geo_target_constant.pb.dart' as $0;
 
 class GetGeoTargetConstantRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -56,7 +55,7 @@ class SuggestGeoTargetConstantsRequest_LocationNames
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SuggestGeoTargetConstantsRequest.LocationNames',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$0.StringValue>(1, 'names', $pb.PbFieldType.PM, $0.StringValue.create)
+    ..pc<$1.StringValue>(1, 'names', $pb.PbFieldType.PM, $1.StringValue.create)
     ..hasRequiredFields = false;
 
   SuggestGeoTargetConstantsRequest_LocationNames() : super();
@@ -86,15 +85,15 @@ class SuggestGeoTargetConstantsRequest_LocationNames
       _defaultInstance ??= create()..freeze();
   static SuggestGeoTargetConstantsRequest_LocationNames _defaultInstance;
 
-  $core.List<$0.StringValue> get names => $_getList(0);
+  $core.List<$1.StringValue> get names => $_getList(0);
 }
 
 class SuggestGeoTargetConstantsRequest_GeoTargets extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SuggestGeoTargetConstantsRequest.GeoTargets',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$0.StringValue>(
-        1, 'geoTargetConstants', $pb.PbFieldType.PM, $0.StringValue.create)
+    ..pc<$1.StringValue>(
+        1, 'geoTargetConstants', $pb.PbFieldType.PM, $1.StringValue.create)
     ..hasRequiredFields = false;
 
   SuggestGeoTargetConstantsRequest_GeoTargets() : super();
@@ -122,7 +121,7 @@ class SuggestGeoTargetConstantsRequest_GeoTargets extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SuggestGeoTargetConstantsRequest_GeoTargets _defaultInstance;
 
-  $core.List<$0.StringValue> get geoTargetConstants => $_getList(0);
+  $core.List<$1.StringValue> get geoTargetConstants => $_getList(0);
 }
 
 enum SuggestGeoTargetConstantsRequest_Query {
@@ -153,10 +152,10 @@ class SuggestGeoTargetConstantsRequest extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         SuggestGeoTargetConstantsRequest_GeoTargets.getDefault,
         SuggestGeoTargetConstantsRequest_GeoTargets.create)
-    ..a<$0.StringValue>(3, 'locale', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(5, 'countryCode', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+    ..a<$1.StringValue>(3, 'locale', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$1.StringValue>(5, 'countryCode', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
     ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
@@ -203,16 +202,16 @@ class SuggestGeoTargetConstantsRequest extends $pb.GeneratedMessage {
   $core.bool hasGeoTargets() => $_has(1);
   void clearGeoTargets() => clearField(2);
 
-  $0.StringValue get locale => $_getN(2);
-  set locale($0.StringValue v) {
+  $1.StringValue get locale => $_getN(2);
+  set locale($1.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasLocale() => $_has(2);
   void clearLocale() => clearField(3);
 
-  $0.StringValue get countryCode => $_getN(3);
-  set countryCode($0.StringValue v) {
+  $1.StringValue get countryCode => $_getN(3);
+  set countryCode($1.StringValue v) {
     setField(5, v);
   }
 
@@ -259,16 +258,16 @@ class GeoTargetConstantSuggestion extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GeoTargetConstantSuggestion',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.StringValue>(1, 'locale', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.Int64Value>(2, 'reach', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
-        $0.Int64Value.create)
-    ..a<$0.StringValue>(3, 'searchTerm', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$1.GeoTargetConstant>(4, 'geoTargetConstant', $pb.PbFieldType.OM,
-        $1.GeoTargetConstant.getDefault, $1.GeoTargetConstant.create)
-    ..pc<$1.GeoTargetConstant>(5, 'geoTargetConstantParents',
-        $pb.PbFieldType.PM, $1.GeoTargetConstant.create)
+    ..a<$1.StringValue>(1, 'locale', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$1.Int64Value>(2, 'reach', $pb.PbFieldType.OM, $1.Int64Value.getDefault,
+        $1.Int64Value.create)
+    ..a<$1.StringValue>(3, 'searchTerm', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$0.GeoTargetConstant>(4, 'geoTargetConstant', $pb.PbFieldType.OM,
+        $0.GeoTargetConstant.getDefault, $0.GeoTargetConstant.create)
+    ..pc<$0.GeoTargetConstant>(5, 'geoTargetConstantParents',
+        $pb.PbFieldType.PM, $0.GeoTargetConstant.create)
     ..hasRequiredFields = false;
 
   GeoTargetConstantSuggestion() : super();
@@ -293,60 +292,37 @@ class GeoTargetConstantSuggestion extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static GeoTargetConstantSuggestion _defaultInstance;
 
-  $0.StringValue get locale => $_getN(0);
-  set locale($0.StringValue v) {
+  $1.StringValue get locale => $_getN(0);
+  set locale($1.StringValue v) {
     setField(1, v);
   }
 
   $core.bool hasLocale() => $_has(0);
   void clearLocale() => clearField(1);
 
-  $0.Int64Value get reach => $_getN(1);
-  set reach($0.Int64Value v) {
+  $1.Int64Value get reach => $_getN(1);
+  set reach($1.Int64Value v) {
     setField(2, v);
   }
 
   $core.bool hasReach() => $_has(1);
   void clearReach() => clearField(2);
 
-  $0.StringValue get searchTerm => $_getN(2);
-  set searchTerm($0.StringValue v) {
+  $1.StringValue get searchTerm => $_getN(2);
+  set searchTerm($1.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasSearchTerm() => $_has(2);
   void clearSearchTerm() => clearField(3);
 
-  $1.GeoTargetConstant get geoTargetConstant => $_getN(3);
-  set geoTargetConstant($1.GeoTargetConstant v) {
+  $0.GeoTargetConstant get geoTargetConstant => $_getN(3);
+  set geoTargetConstant($0.GeoTargetConstant v) {
     setField(4, v);
   }
 
   $core.bool hasGeoTargetConstant() => $_has(3);
   void clearGeoTargetConstant() => clearField(4);
 
-  $core.List<$1.GeoTargetConstant> get geoTargetConstantParents => $_getList(4);
-}
-
-class GeoTargetConstantServiceApi {
-  $pb.RpcClient _client;
-  GeoTargetConstantServiceApi(this._client);
-
-  $async.Future<$1.GeoTargetConstant> getGeoTargetConstant(
-      $pb.ClientContext ctx, GetGeoTargetConstantRequest request) {
-    var emptyResponse = $1.GeoTargetConstant();
-    return _client.invoke<$1.GeoTargetConstant>(ctx, 'GeoTargetConstantService',
-        'GetGeoTargetConstant', request, emptyResponse);
-  }
-
-  $async.Future<SuggestGeoTargetConstantsResponse> suggestGeoTargetConstants(
-      $pb.ClientContext ctx, SuggestGeoTargetConstantsRequest request) {
-    var emptyResponse = SuggestGeoTargetConstantsResponse();
-    return _client.invoke<SuggestGeoTargetConstantsResponse>(
-        ctx,
-        'GeoTargetConstantService',
-        'SuggestGeoTargetConstants',
-        request,
-        emptyResponse);
-  }
+  $core.List<$0.GeoTargetConstant> get geoTargetConstantParents => $_getList(4);
 }

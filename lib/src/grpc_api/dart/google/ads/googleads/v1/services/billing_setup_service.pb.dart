@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -227,23 +226,4 @@ class MutateBillingSetupResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class BillingSetupServiceApi {
-  $pb.RpcClient _client;
-  BillingSetupServiceApi(this._client);
-
-  $async.Future<$0.BillingSetup> getBillingSetup(
-      $pb.ClientContext ctx, GetBillingSetupRequest request) {
-    var emptyResponse = $0.BillingSetup();
-    return _client.invoke<$0.BillingSetup>(
-        ctx, 'BillingSetupService', 'GetBillingSetup', request, emptyResponse);
-  }
-
-  $async.Future<MutateBillingSetupResponse> mutateBillingSetup(
-      $pb.ClientContext ctx, MutateBillingSetupRequest request) {
-    var emptyResponse = MutateBillingSetupResponse();
-    return _client.invoke<MutateBillingSetupResponse>(ctx,
-        'BillingSetupService', 'MutateBillingSetup', request, emptyResponse);
-  }
 }

@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import 'assets.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import 'assets.pb.dart' as $3;
 
 import 'asset_service.pbenum.dart';
 
@@ -22,8 +20,8 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportAssetsRequest',
       package: const $pb.PackageName('google.cloud.asset.v1'))
     ..aOS(1, 'parent')
-    ..a<$0.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..pPS(3, 'assetTypes')
     ..e<ContentType>(
         4,
@@ -63,8 +61,8 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Timestamp get readTime => $_getN(1);
-  set readTime($0.Timestamp v) {
+  $2.Timestamp get readTime => $_getN(1);
+  set readTime($2.Timestamp v) {
     setField(2, v);
   }
 
@@ -93,8 +91,8 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
 class ExportAssetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportAssetsResponse',
       package: const $pb.PackageName('google.cloud.asset.v1'))
-    ..a<$0.Timestamp>(1, 'readTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(1, 'readTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..a<OutputConfig>(2, 'outputConfig', $pb.PbFieldType.OM,
         OutputConfig.getDefault, OutputConfig.create)
     ..hasRequiredFields = false;
@@ -119,8 +117,8 @@ class ExportAssetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExportAssetsResponse _defaultInstance;
 
-  $0.Timestamp get readTime => $_getN(0);
-  set readTime($0.Timestamp v) {
+  $2.Timestamp get readTime => $_getN(0);
+  set readTime($2.Timestamp v) {
     setField(1, v);
   }
 
@@ -149,8 +147,8 @@ class BatchGetAssetsHistoryRequest extends $pb.GeneratedMessage {
         ContentType.CONTENT_TYPE_UNSPECIFIED,
         ContentType.valueOf,
         ContentType.values)
-    ..a<$1.TimeWindow>(4, 'readTimeWindow', $pb.PbFieldType.OM,
-        $1.TimeWindow.getDefault, $1.TimeWindow.create)
+    ..a<$3.TimeWindow>(4, 'readTimeWindow', $pb.PbFieldType.OM,
+        $3.TimeWindow.getDefault, $3.TimeWindow.create)
     ..hasRequiredFields = false;
 
   BatchGetAssetsHistoryRequest() : super();
@@ -194,8 +192,8 @@ class BatchGetAssetsHistoryRequest extends $pb.GeneratedMessage {
   $core.bool hasContentType() => $_has(2);
   void clearContentType() => clearField(3);
 
-  $1.TimeWindow get readTimeWindow => $_getN(3);
-  set readTimeWindow($1.TimeWindow v) {
+  $3.TimeWindow get readTimeWindow => $_getN(3);
+  set readTimeWindow($3.TimeWindow v) {
     setField(4, v);
   }
 
@@ -207,8 +205,8 @@ class BatchGetAssetsHistoryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchGetAssetsHistoryResponse',
       package: const $pb.PackageName('google.cloud.asset.v1'))
-    ..pc<$1.TemporalAsset>(
-        1, 'assets', $pb.PbFieldType.PM, $1.TemporalAsset.create)
+    ..pc<$3.TemporalAsset>(
+        1, 'assets', $pb.PbFieldType.PM, $3.TemporalAsset.create)
     ..hasRequiredFields = false;
 
   BatchGetAssetsHistoryResponse() : super();
@@ -234,7 +232,7 @@ class BatchGetAssetsHistoryResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static BatchGetAssetsHistoryResponse _defaultInstance;
 
-  $core.List<$1.TemporalAsset> get assets => $_getList(0);
+  $core.List<$3.TemporalAsset> get assets => $_getList(0);
 }
 
 enum OutputConfig_Destination { gcsDestination, notSet }
@@ -326,23 +324,4 @@ class GcsDestination extends $pb.GeneratedMessage {
 
   $core.bool hasUri() => $_has(0);
   void clearUri() => clearField(1);
-}
-
-class AssetServiceApi {
-  $pb.RpcClient _client;
-  AssetServiceApi(this._client);
-
-  $async.Future<$2.Operation> exportAssets(
-      $pb.ClientContext ctx, ExportAssetsRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'AssetService', 'ExportAssets', request, emptyResponse);
-  }
-
-  $async.Future<BatchGetAssetsHistoryResponse> batchGetAssetsHistory(
-      $pb.ClientContext ctx, BatchGetAssetsHistoryRequest request) {
-    var emptyResponse = BatchGetAssetsHistoryResponse();
-    return _client.invoke<BatchGetAssetsHistoryResponse>(
-        ctx, 'AssetService', 'BatchGetAssetsHistory', request, emptyResponse);
-  }
 }

@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/product_group_view.pb.dart' as $0;
 
 class GetProductGroupViewRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -48,16 +45,4 @@ class GetProductGroupViewRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class ProductGroupViewServiceApi {
-  $pb.RpcClient _client;
-  ProductGroupViewServiceApi(this._client);
-
-  $async.Future<$0.ProductGroupView> getProductGroupView(
-      $pb.ClientContext ctx, GetProductGroupViewRequest request) {
-    var emptyResponse = $0.ProductGroupView();
-    return _client.invoke<$0.ProductGroupView>(ctx, 'ProductGroupViewService',
-        'GetProductGroupView', request, emptyResponse);
-  }
 }

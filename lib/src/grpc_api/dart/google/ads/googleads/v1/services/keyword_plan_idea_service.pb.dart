@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -314,20 +313,4 @@ class GenerateKeywordIdeaResult extends $pb.GeneratedMessage {
 
   $core.bool hasKeywordIdeaMetrics() => $_has(1);
   void clearKeywordIdeaMetrics() => clearField(3);
-}
-
-class KeywordPlanIdeaServiceApi {
-  $pb.RpcClient _client;
-  KeywordPlanIdeaServiceApi(this._client);
-
-  $async.Future<GenerateKeywordIdeaResponse> generateKeywordIdeas(
-      $pb.ClientContext ctx, GenerateKeywordIdeasRequest request) {
-    var emptyResponse = GenerateKeywordIdeaResponse();
-    return _client.invoke<GenerateKeywordIdeaResponse>(
-        ctx,
-        'KeywordPlanIdeaService',
-        'GenerateKeywordIdeas',
-        request,
-        emptyResponse);
-  }
 }

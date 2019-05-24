@@ -9,8 +9,8 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../config_change.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../config_change.pb.dart' as $2;
 
 import 'resources.pbenum.dart';
 
@@ -116,8 +116,8 @@ class OperationMetadata extends $pb.GeneratedMessage {
     ..pc<OperationMetadata_Step>(
         2, 'steps', $pb.PbFieldType.PM, OperationMetadata_Step.create)
     ..a<$core.int>(3, 'progressPercentage', $pb.PbFieldType.O3)
-    ..a<$0.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata() : super();
@@ -151,8 +151,8 @@ class OperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasProgressPercentage() => $_has(2);
   void clearProgressPercentage() => clearField(3);
 
-  $0.Timestamp get startTime => $_getN(3);
-  set startTime($0.Timestamp v) {
+  $1.Timestamp get startTime => $_getN(3);
+  set startTime($1.Timestamp v) {
     setField(4, v);
   }
 
@@ -338,8 +338,8 @@ class ConfigRef extends $pb.GeneratedMessage {
 class ChangeReport extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChangeReport',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$1.ConfigChange>(
-        1, 'configChanges', $pb.PbFieldType.PM, $1.ConfigChange.create)
+    ..pc<$2.ConfigChange>(
+        1, 'configChanges', $pb.PbFieldType.PM, $2.ConfigChange.create)
     ..hasRequiredFields = false;
 
   ChangeReport() : super();
@@ -360,7 +360,7 @@ class ChangeReport extends $pb.GeneratedMessage {
   static ChangeReport getDefault() => _defaultInstance ??= create()..freeze();
   static ChangeReport _defaultInstance;
 
-  $core.List<$1.ConfigChange> get configChanges => $_getList(0);
+  $core.List<$2.ConfigChange> get configChanges => $_getList(0);
 }
 
 class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
@@ -446,8 +446,8 @@ class Rollout extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Rollout',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..aOS(1, 'rolloutId')
-    ..a<$0.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..aOS(3, 'createdBy')
     ..e<Rollout_RolloutStatus>(
         4,
@@ -500,8 +500,8 @@ class Rollout extends $pb.GeneratedMessage {
   $core.bool hasRolloutId() => $_has(0);
   void clearRolloutId() => clearField(1);
 
-  $0.Timestamp get createTime => $_getN(1);
-  set createTime($0.Timestamp v) {
+  $1.Timestamp get createTime => $_getN(1);
+  set createTime($1.Timestamp v) {
     setField(2, v);
   }
 

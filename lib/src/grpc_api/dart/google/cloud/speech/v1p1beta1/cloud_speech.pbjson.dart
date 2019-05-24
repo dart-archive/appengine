@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $2;
-import '../../../longrunning/operations.pbjson.dart' as $3;
-import '../../../protobuf/any.pbjson.dart' as $4;
-import '../../../rpc/status.pbjson.dart' as $1;
-
 const RecognizeRequest$json = {
   '1': 'RecognizeRequest',
   '2': [
@@ -511,59 +506,4 @@ const WordInfo$json = {
     {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
     {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '10': 'speakerTag'},
   ],
-};
-
-const SpeechServiceBase$json = {
-  '1': 'Speech',
-  '2': [
-    {
-      '1': 'Recognize',
-      '2': '.google.cloud.speech.v1p1beta1.RecognizeRequest',
-      '3': '.google.cloud.speech.v1p1beta1.RecognizeResponse',
-      '4': {}
-    },
-    {
-      '1': 'LongRunningRecognize',
-      '2': '.google.cloud.speech.v1p1beta1.LongRunningRecognizeRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'StreamingRecognize',
-      '2': '.google.cloud.speech.v1p1beta1.StreamingRecognizeRequest',
-      '3': '.google.cloud.speech.v1p1beta1.StreamingRecognizeResponse',
-      '4': {},
-      '5': true,
-      '6': true
-    },
-  ],
-};
-
-const SpeechServiceBase$messageJson = {
-  '.google.cloud.speech.v1p1beta1.RecognizeRequest': RecognizeRequest$json,
-  '.google.cloud.speech.v1p1beta1.RecognitionConfig': RecognitionConfig$json,
-  '.google.cloud.speech.v1p1beta1.SpeechContext': SpeechContext$json,
-  '.google.cloud.speech.v1p1beta1.RecognitionMetadata':
-      RecognitionMetadata$json,
-  '.google.cloud.speech.v1p1beta1.RecognitionAudio': RecognitionAudio$json,
-  '.google.cloud.speech.v1p1beta1.RecognizeResponse': RecognizeResponse$json,
-  '.google.cloud.speech.v1p1beta1.SpeechRecognitionResult':
-      SpeechRecognitionResult$json,
-  '.google.cloud.speech.v1p1beta1.SpeechRecognitionAlternative':
-      SpeechRecognitionAlternative$json,
-  '.google.cloud.speech.v1p1beta1.WordInfo': WordInfo$json,
-  '.google.protobuf.Duration': $2.Duration$json,
-  '.google.cloud.speech.v1p1beta1.LongRunningRecognizeRequest':
-      LongRunningRecognizeRequest$json,
-  '.google.longrunning.Operation': $3.Operation$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.cloud.speech.v1p1beta1.StreamingRecognizeRequest':
-      StreamingRecognizeRequest$json,
-  '.google.cloud.speech.v1p1beta1.StreamingRecognitionConfig':
-      StreamingRecognitionConfig$json,
-  '.google.cloud.speech.v1p1beta1.StreamingRecognizeResponse':
-      StreamingRecognizeResponse$json,
-  '.google.cloud.speech.v1p1beta1.StreamingRecognitionResult':
-      StreamingRecognitionResult$json,
 };

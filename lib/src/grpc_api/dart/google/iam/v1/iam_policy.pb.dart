@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -160,30 +159,4 @@ class TestIamPermissionsResponse extends $pb.GeneratedMessage {
   static TestIamPermissionsResponse _defaultInstance;
 
   $core.List<$core.String> get permissions => $_getList(0);
-}
-
-class IAMPolicyApi {
-  $pb.RpcClient _client;
-  IAMPolicyApi(this._client);
-
-  $async.Future<$0.Policy> setIamPolicy(
-      $pb.ClientContext ctx, SetIamPolicyRequest request) {
-    var emptyResponse = $0.Policy();
-    return _client.invoke<$0.Policy>(
-        ctx, 'IAMPolicy', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$0.Policy> getIamPolicy(
-      $pb.ClientContext ctx, GetIamPolicyRequest request) {
-    var emptyResponse = $0.Policy();
-    return _client.invoke<$0.Policy>(
-        ctx, 'IAMPolicy', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, TestIamPermissionsRequest request) {
-    var emptyResponse = TestIamPermissionsResponse();
-    return _client.invoke<TestIamPermissionsResponse>(
-        ctx, 'IAMPolicy', 'TestIamPermissions', request, emptyResponse);
-  }
 }

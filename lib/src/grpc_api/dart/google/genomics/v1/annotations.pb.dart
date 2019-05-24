@@ -4,18 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $0;
-import '../../protobuf/wrappers.pb.dart' as $1;
-import '../../protobuf/field_mask.pb.dart' as $2;
-import '../../rpc/status.pb.dart' as $3;
-import '../../protobuf/empty.pb.dart' as $4;
+import '../../protobuf/struct.pb.dart' as $1;
+import '../../protobuf/wrappers.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
+import '../../rpc/status.pb.dart' as $4;
 
 import 'annotations.pbenum.dart';
 
@@ -36,13 +34,13 @@ class AnnotationSet extends $pb.GeneratedMessage {
         AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
         AnnotationType.valueOf,
         AnnotationType.values)
-    ..m<$core.String, $0.ListValue>(
+    ..m<$core.String, $1.ListValue>(
         17,
         'info',
         'AnnotationSet.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.ListValue.create,
+        $1.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -114,7 +112,7 @@ class AnnotationSet extends $pb.GeneratedMessage {
   $core.bool hasType() => $_has(5);
   void clearType() => clearField(6);
 
-  $core.Map<$core.String, $0.ListValue> get info => $_getMap(6);
+  $core.Map<$core.String, $1.ListValue> get info => $_getMap(6);
 }
 
 enum Annotation_Value { variant, transcript, notSet }
@@ -146,13 +144,13 @@ class Annotation extends $pb.GeneratedMessage {
         VariantAnnotation.getDefault, VariantAnnotation.create)
     ..a<Transcript>(11, 'transcript', $pb.PbFieldType.OM, Transcript.getDefault,
         Transcript.create)
-    ..m<$core.String, $0.ListValue>(
+    ..m<$core.String, $1.ListValue>(
         12,
         'info',
         'Annotation.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.ListValue.create,
+        $1.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -267,7 +265,7 @@ class Annotation extends $pb.GeneratedMessage {
   $core.bool hasTranscript() => $_has(10);
   void clearTranscript() => clearField(11);
 
-  $core.Map<$core.String, $0.ListValue> get info => $_getMap(11);
+  $core.Map<$core.String, $1.ListValue> get info => $_getMap(11);
 }
 
 class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
@@ -426,8 +424,8 @@ class Transcript_Exon extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.genomics.v1'))
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
-    ..a<$1.Int32Value>(3, 'frame', $pb.PbFieldType.OM, $1.Int32Value.getDefault,
-        $1.Int32Value.create)
+    ..a<$2.Int32Value>(3, 'frame', $pb.PbFieldType.OM, $2.Int32Value.getDefault,
+        $2.Int32Value.create)
     ..hasRequiredFields = false;
 
   Transcript_Exon() : super();
@@ -465,8 +463,8 @@ class Transcript_Exon extends $pb.GeneratedMessage {
   $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 
-  $1.Int32Value get frame => $_getN(2);
-  set frame($1.Int32Value v) {
+  $2.Int32Value get frame => $_getN(2);
+  set frame($2.Int32Value v) {
     setField(3, v);
   }
 
@@ -689,8 +687,8 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationSetId')
     ..a<AnnotationSet>(2, 'annotationSet', $pb.PbFieldType.OM,
         AnnotationSet.getDefault, AnnotationSet.create)
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateAnnotationSetRequest() : super();
@@ -731,8 +729,8 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
   $core.bool hasAnnotationSet() => $_has(1);
   void clearAnnotationSet() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -976,8 +974,8 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchCreateAnnotationsResponse.Entry',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..a<$3.Status>(
-        1, 'status', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..a<$4.Status>(
+        1, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
     ..a<Annotation>(2, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
     ..hasRequiredFields = false;
@@ -1005,8 +1003,8 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static BatchCreateAnnotationsResponse_Entry _defaultInstance;
 
-  $3.Status get status => $_getN(0);
-  set status($3.Status v) {
+  $4.Status get status => $_getN(0);
+  set status($4.Status v) {
     setField(1, v);
   }
 
@@ -1097,8 +1095,8 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationId')
     ..a<Annotation>(2, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateAnnotationRequest() : super();
@@ -1138,8 +1136,8 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
   $core.bool hasAnnotation() => $_has(1);
   void clearAnnotation() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -1318,90 +1316,4 @@ class SearchAnnotationsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class AnnotationServiceV1Api {
-  $pb.RpcClient _client;
-  AnnotationServiceV1Api(this._client);
-
-  $async.Future<AnnotationSet> createAnnotationSet(
-      $pb.ClientContext ctx, CreateAnnotationSetRequest request) {
-    var emptyResponse = AnnotationSet();
-    return _client.invoke<AnnotationSet>(ctx, 'AnnotationServiceV1',
-        'CreateAnnotationSet', request, emptyResponse);
-  }
-
-  $async.Future<AnnotationSet> getAnnotationSet(
-      $pb.ClientContext ctx, GetAnnotationSetRequest request) {
-    var emptyResponse = AnnotationSet();
-    return _client.invoke<AnnotationSet>(
-        ctx, 'AnnotationServiceV1', 'GetAnnotationSet', request, emptyResponse);
-  }
-
-  $async.Future<AnnotationSet> updateAnnotationSet(
-      $pb.ClientContext ctx, UpdateAnnotationSetRequest request) {
-    var emptyResponse = AnnotationSet();
-    return _client.invoke<AnnotationSet>(ctx, 'AnnotationServiceV1',
-        'UpdateAnnotationSet', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteAnnotationSet(
-      $pb.ClientContext ctx, DeleteAnnotationSetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'AnnotationServiceV1',
-        'DeleteAnnotationSet', request, emptyResponse);
-  }
-
-  $async.Future<SearchAnnotationSetsResponse> searchAnnotationSets(
-      $pb.ClientContext ctx, SearchAnnotationSetsRequest request) {
-    var emptyResponse = SearchAnnotationSetsResponse();
-    return _client.invoke<SearchAnnotationSetsResponse>(ctx,
-        'AnnotationServiceV1', 'SearchAnnotationSets', request, emptyResponse);
-  }
-
-  $async.Future<Annotation> createAnnotation(
-      $pb.ClientContext ctx, CreateAnnotationRequest request) {
-    var emptyResponse = Annotation();
-    return _client.invoke<Annotation>(
-        ctx, 'AnnotationServiceV1', 'CreateAnnotation', request, emptyResponse);
-  }
-
-  $async.Future<BatchCreateAnnotationsResponse> batchCreateAnnotations(
-      $pb.ClientContext ctx, BatchCreateAnnotationsRequest request) {
-    var emptyResponse = BatchCreateAnnotationsResponse();
-    return _client.invoke<BatchCreateAnnotationsResponse>(
-        ctx,
-        'AnnotationServiceV1',
-        'BatchCreateAnnotations',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<Annotation> getAnnotation(
-      $pb.ClientContext ctx, GetAnnotationRequest request) {
-    var emptyResponse = Annotation();
-    return _client.invoke<Annotation>(
-        ctx, 'AnnotationServiceV1', 'GetAnnotation', request, emptyResponse);
-  }
-
-  $async.Future<Annotation> updateAnnotation(
-      $pb.ClientContext ctx, UpdateAnnotationRequest request) {
-    var emptyResponse = Annotation();
-    return _client.invoke<Annotation>(
-        ctx, 'AnnotationServiceV1', 'UpdateAnnotation', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteAnnotation(
-      $pb.ClientContext ctx, DeleteAnnotationRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'AnnotationServiceV1', 'DeleteAnnotation', request, emptyResponse);
-  }
-
-  $async.Future<SearchAnnotationsResponse> searchAnnotations(
-      $pb.ClientContext ctx, SearchAnnotationsRequest request) {
-    var emptyResponse = SearchAnnotationsResponse();
-    return _client.invoke<SearchAnnotationsResponse>(ctx, 'AnnotationServiceV1',
-        'SearchAnnotations', request, emptyResponse);
-  }
 }

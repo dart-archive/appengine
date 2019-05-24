@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -249,27 +248,4 @@ class MutateSharedCriterionResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class SharedCriterionServiceApi {
-  $pb.RpcClient _client;
-  SharedCriterionServiceApi(this._client);
-
-  $async.Future<$0.SharedCriterion> getSharedCriterion(
-      $pb.ClientContext ctx, GetSharedCriterionRequest request) {
-    var emptyResponse = $0.SharedCriterion();
-    return _client.invoke<$0.SharedCriterion>(ctx, 'SharedCriterionService',
-        'GetSharedCriterion', request, emptyResponse);
-  }
-
-  $async.Future<MutateSharedCriteriaResponse> mutateSharedCriteria(
-      $pb.ClientContext ctx, MutateSharedCriteriaRequest request) {
-    var emptyResponse = MutateSharedCriteriaResponse();
-    return _client.invoke<MutateSharedCriteriaResponse>(
-        ctx,
-        'SharedCriterionService',
-        'MutateSharedCriteria',
-        request,
-        emptyResponse);
-  }
 }

@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/campaign_draft.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $4;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-import '../../../../longrunning/operations.pbjson.dart' as $3;
-
 const GetCampaignDraftRequest$json = {
   '1': 'GetCampaignDraftRequest',
   '2': [
@@ -129,63 +122,4 @@ const ListCampaignDraftAsyncErrorsResponse$json = {
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
-};
-
-const CampaignDraftServiceBase$json = {
-  '1': 'CampaignDraftService',
-  '2': [
-    {
-      '1': 'GetCampaignDraft',
-      '2': '.google.ads.googleads.v1.services.GetCampaignDraftRequest',
-      '3': '.google.ads.googleads.v1.resources.CampaignDraft',
-      '4': {}
-    },
-    {
-      '1': 'MutateCampaignDrafts',
-      '2': '.google.ads.googleads.v1.services.MutateCampaignDraftsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateCampaignDraftsResponse',
-      '4': {}
-    },
-    {
-      '1': 'PromoteCampaignDraft',
-      '2': '.google.ads.googleads.v1.services.PromoteCampaignDraftRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ListCampaignDraftAsyncErrors',
-      '2':
-          '.google.ads.googleads.v1.services.ListCampaignDraftAsyncErrorsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.ListCampaignDraftAsyncErrorsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CampaignDraftServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetCampaignDraftRequest':
-      GetCampaignDraftRequest$json,
-  '.google.ads.googleads.v1.resources.CampaignDraft': $0.CampaignDraft$json,
-  '.google.protobuf.Int64Value': $4.Int64Value$json,
-  '.google.protobuf.StringValue': $4.StringValue$json,
-  '.google.protobuf.BoolValue': $4.BoolValue$json,
-  '.google.ads.googleads.v1.services.MutateCampaignDraftsRequest':
-      MutateCampaignDraftsRequest$json,
-  '.google.ads.googleads.v1.services.CampaignDraftOperation':
-      CampaignDraftOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateCampaignDraftsResponse':
-      MutateCampaignDraftsResponse$json,
-  '.google.ads.googleads.v1.services.MutateCampaignDraftResult':
-      MutateCampaignDraftResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $5.Any$json,
-  '.google.ads.googleads.v1.services.PromoteCampaignDraftRequest':
-      PromoteCampaignDraftRequest$json,
-  '.google.longrunning.Operation': $3.Operation$json,
-  '.google.ads.googleads.v1.services.ListCampaignDraftAsyncErrorsRequest':
-      ListCampaignDraftAsyncErrorsRequest$json,
-  '.google.ads.googleads.v1.services.ListCampaignDraftAsyncErrorsResponse':
-      ListCampaignDraftAsyncErrorsResponse$json,
 };

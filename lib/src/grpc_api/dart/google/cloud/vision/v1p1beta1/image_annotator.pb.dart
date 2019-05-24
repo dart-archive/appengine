@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -1207,16 +1206,4 @@ class BatchAnnotateImagesResponse extends $pb.GeneratedMessage {
   static BatchAnnotateImagesResponse _defaultInstance;
 
   $core.List<AnnotateImageResponse> get responses => $_getList(0);
-}
-
-class ImageAnnotatorApi {
-  $pb.RpcClient _client;
-  ImageAnnotatorApi(this._client);
-
-  $async.Future<BatchAnnotateImagesResponse> batchAnnotateImages(
-      $pb.ClientContext ctx, BatchAnnotateImagesRequest request) {
-    var emptyResponse = BatchAnnotateImagesResponse();
-    return _client.invoke<BatchAnnotateImagesResponse>(
-        ctx, 'ImageAnnotator', 'BatchAnnotateImages', request, emptyResponse);
-  }
 }

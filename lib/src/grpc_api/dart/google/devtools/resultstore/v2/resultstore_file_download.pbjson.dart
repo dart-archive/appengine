@@ -35,30 +35,3 @@ const GetFileTailResponse$json = {
     {'1': 'data', '3': 1, '4': 1, '5': 12, '10': 'data'},
   ],
 };
-
-const ResultStoreFileDownloadServiceBase$json = {
-  '1': 'ResultStoreFileDownload',
-  '2': [
-    {
-      '1': 'GetFile',
-      '2': '.google.devtools.resultstore.v2.GetFileRequest',
-      '3': '.google.devtools.resultstore.v2.GetFileResponse',
-      '4': {},
-      '6': true
-    },
-    {
-      '1': 'GetFileTail',
-      '2': '.google.devtools.resultstore.v2.GetFileTailRequest',
-      '3': '.google.devtools.resultstore.v2.GetFileTailResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ResultStoreFileDownloadServiceBase$messageJson = {
-  '.google.devtools.resultstore.v2.GetFileRequest': GetFileRequest$json,
-  '.google.devtools.resultstore.v2.GetFileResponse': GetFileResponse$json,
-  '.google.devtools.resultstore.v2.GetFileTailRequest': GetFileTailRequest$json,
-  '.google.devtools.resultstore.v2.GetFileTailResponse':
-      GetFileTailResponse$json,
-};

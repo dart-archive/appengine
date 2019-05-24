@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'context.pb.dart' as $0;
-import '../../../protobuf/struct.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $3;
-import '../../../longrunning/operations.pb.dart' as $4;
+import 'context.pb.dart' as $2;
+import '../../../protobuf/struct.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'intent.pbenum.dart';
 
@@ -1136,8 +1133,8 @@ class Intent_Message extends $pb.GeneratedMessage {
         Intent_Message_QuickReplies.create)
     ..a<Intent_Message_Card>(4, 'card', $pb.PbFieldType.OM,
         Intent_Message_Card.getDefault, Intent_Message_Card.create)
-    ..a<$1.Struct>(5, 'payload', $pb.PbFieldType.OM, $1.Struct.getDefault,
-        $1.Struct.create)
+    ..a<$3.Struct>(5, 'payload', $pb.PbFieldType.OM, $3.Struct.getDefault,
+        $3.Struct.create)
     ..e<Intent_Message_Platform>(
         6,
         'platform',
@@ -1230,8 +1227,8 @@ class Intent_Message extends $pb.GeneratedMessage {
   $core.bool hasCard() => $_has(3);
   void clearCard() => clearField(4);
 
-  $1.Struct get payload => $_getN(4);
-  set payload($1.Struct v) {
+  $3.Struct get payload => $_getN(4);
+  set payload($3.Struct v) {
     setField(5, v);
   }
 
@@ -1360,8 +1357,8 @@ class Intent extends $pb.GeneratedMessage {
     ..pc<Intent_TrainingPhrase>(
         9, 'trainingPhrases', $pb.PbFieldType.PM, Intent_TrainingPhrase.create)
     ..aOS(10, 'action')
-    ..pc<$0.Context>(
-        11, 'outputContexts', $pb.PbFieldType.PM, $0.Context.create)
+    ..pc<$2.Context>(
+        11, 'outputContexts', $pb.PbFieldType.PM, $2.Context.create)
     ..aOB(12, 'resetContexts')
     ..pc<Intent_Parameter>(
         13, 'parameters', $pb.PbFieldType.PM, Intent_Parameter.create)
@@ -1452,7 +1449,7 @@ class Intent extends $pb.GeneratedMessage {
   $core.bool hasAction() => $_has(8);
   void clearAction() => clearField(10);
 
-  $core.List<$0.Context> get outputContexts => $_getList(9);
+  $core.List<$2.Context> get outputContexts => $_getList(9);
 
   $core.bool get resetContexts => $_get(10, false);
   set resetContexts($core.bool v) {
@@ -1741,8 +1738,8 @@ class UpdateIntentRequest extends $pb.GeneratedMessage {
     ..a<Intent>(
         1, 'intent', $pb.PbFieldType.OM, Intent.getDefault, Intent.create)
     ..aOS(2, 'languageCode')
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..e<IntentView>(
         4,
         'intentView',
@@ -1787,8 +1784,8 @@ class UpdateIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -1858,8 +1855,8 @@ class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
     ..a<IntentBatch>(3, 'intentBatchInline', $pb.PbFieldType.OM,
         IntentBatch.getDefault, IntentBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$2.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$4.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..e<IntentView>(
         6,
         'intentView',
@@ -1928,8 +1925,8 @@ class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(3);
   void clearLanguageCode() => clearField(4);
 
-  $2.FieldMask get updateMask => $_getN(4);
-  set updateMask($2.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(4);
+  set updateMask($4.FieldMask v) {
     setField(5, v);
   }
 
@@ -2041,58 +2038,4 @@ class IntentBatch extends $pb.GeneratedMessage {
   static IntentBatch _defaultInstance;
 
   $core.List<Intent> get intents => $_getList(0);
-}
-
-class IntentsApi {
-  $pb.RpcClient _client;
-  IntentsApi(this._client);
-
-  $async.Future<ListIntentsResponse> listIntents(
-      $pb.ClientContext ctx, ListIntentsRequest request) {
-    var emptyResponse = ListIntentsResponse();
-    return _client.invoke<ListIntentsResponse>(
-        ctx, 'Intents', 'ListIntents', request, emptyResponse);
-  }
-
-  $async.Future<Intent> getIntent(
-      $pb.ClientContext ctx, GetIntentRequest request) {
-    var emptyResponse = Intent();
-    return _client.invoke<Intent>(
-        ctx, 'Intents', 'GetIntent', request, emptyResponse);
-  }
-
-  $async.Future<Intent> createIntent(
-      $pb.ClientContext ctx, CreateIntentRequest request) {
-    var emptyResponse = Intent();
-    return _client.invoke<Intent>(
-        ctx, 'Intents', 'CreateIntent', request, emptyResponse);
-  }
-
-  $async.Future<Intent> updateIntent(
-      $pb.ClientContext ctx, UpdateIntentRequest request) {
-    var emptyResponse = Intent();
-    return _client.invoke<Intent>(
-        ctx, 'Intents', 'UpdateIntent', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteIntent(
-      $pb.ClientContext ctx, DeleteIntentRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Intents', 'DeleteIntent', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> batchUpdateIntents(
-      $pb.ClientContext ctx, BatchUpdateIntentsRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Intents', 'BatchUpdateIntents', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> batchDeleteIntents(
-      $pb.ClientContext ctx, BatchDeleteIntentsRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Intents', 'BatchDeleteIntents', request, emptyResponse);
-  }
 }

@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../rpc/status.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 import 'video_intelligence.pbenum.dart';
 
@@ -565,8 +563,8 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
         3, 'faceAnnotations', $pb.PbFieldType.PM, FaceAnnotation.create)
     ..pc<VideoSegment>(
         4, 'shotAnnotations', $pb.PbFieldType.PM, VideoSegment.create)
-    ..a<$0.Status>(
-        5, 'error', $pb.PbFieldType.OM, $0.Status.getDefault, $0.Status.create)
+    ..a<$2.Status>(
+        5, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
     ..pc<SafeSearchAnnotation>(6, 'safeSearchAnnotations', $pb.PbFieldType.PM,
         SafeSearchAnnotation.create)
     ..hasRequiredFields = false;
@@ -606,8 +604,8 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
 
   $core.List<VideoSegment> get shotAnnotations => $_getList(3);
 
-  $0.Status get error => $_getN(4);
-  set error($0.Status v) {
+  $2.Status get error => $_getN(4);
+  set error($2.Status v) {
     setField(5, v);
   }
 
@@ -653,10 +651,10 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.videointelligence.v1beta1'))
     ..aOS(1, 'inputUri')
     ..a<$core.int>(2, 'progressPercent', $pb.PbFieldType.O3)
-    ..a<$1.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationProgress() : super();
@@ -696,16 +694,16 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
   $core.bool hasProgressPercent() => $_has(1);
   void clearProgressPercent() => clearField(2);
 
-  $1.Timestamp get startTime => $_getN(2);
-  set startTime($1.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(2);
+  set startTime($3.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasStartTime() => $_has(2);
   void clearStartTime() => clearField(3);
 
-  $1.Timestamp get updateTime => $_getN(3);
-  set updateTime($1.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(3);
+  set updateTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -742,16 +740,4 @@ class AnnotateVideoProgress extends $pb.GeneratedMessage {
   static AnnotateVideoProgress _defaultInstance;
 
   $core.List<VideoAnnotationProgress> get annotationProgress => $_getList(0);
-}
-
-class VideoIntelligenceServiceApi {
-  $pb.RpcClient _client;
-  VideoIntelligenceServiceApi(this._client);
-
-  $async.Future<$2.Operation> annotateVideo(
-      $pb.ClientContext ctx, AnnotateVideoRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(ctx, 'VideoIntelligenceService',
-        'AnnotateVideo', request, emptyResponse);
-  }
 }

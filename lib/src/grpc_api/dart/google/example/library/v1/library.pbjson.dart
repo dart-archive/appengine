@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/empty.pbjson.dart' as $0;
-
 const Book$json = {
   '1': 'Book',
   '2': [
@@ -176,95 +174,4 @@ const MoveBookRequest$json = {
       '10': 'otherShelfName'
     },
   ],
-};
-
-const LibraryServiceBase$json = {
-  '1': 'LibraryService',
-  '2': [
-    {
-      '1': 'CreateShelf',
-      '2': '.google.example.library.v1.CreateShelfRequest',
-      '3': '.google.example.library.v1.Shelf',
-      '4': {}
-    },
-    {
-      '1': 'GetShelf',
-      '2': '.google.example.library.v1.GetShelfRequest',
-      '3': '.google.example.library.v1.Shelf',
-      '4': {}
-    },
-    {
-      '1': 'ListShelves',
-      '2': '.google.example.library.v1.ListShelvesRequest',
-      '3': '.google.example.library.v1.ListShelvesResponse',
-      '4': {}
-    },
-    {
-      '1': 'DeleteShelf',
-      '2': '.google.example.library.v1.DeleteShelfRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'MergeShelves',
-      '2': '.google.example.library.v1.MergeShelvesRequest',
-      '3': '.google.example.library.v1.Shelf',
-      '4': {}
-    },
-    {
-      '1': 'CreateBook',
-      '2': '.google.example.library.v1.CreateBookRequest',
-      '3': '.google.example.library.v1.Book',
-      '4': {}
-    },
-    {
-      '1': 'GetBook',
-      '2': '.google.example.library.v1.GetBookRequest',
-      '3': '.google.example.library.v1.Book',
-      '4': {}
-    },
-    {
-      '1': 'ListBooks',
-      '2': '.google.example.library.v1.ListBooksRequest',
-      '3': '.google.example.library.v1.ListBooksResponse',
-      '4': {}
-    },
-    {
-      '1': 'DeleteBook',
-      '2': '.google.example.library.v1.DeleteBookRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'UpdateBook',
-      '2': '.google.example.library.v1.UpdateBookRequest',
-      '3': '.google.example.library.v1.Book',
-      '4': {}
-    },
-    {
-      '1': 'MoveBook',
-      '2': '.google.example.library.v1.MoveBookRequest',
-      '3': '.google.example.library.v1.Book',
-      '4': {}
-    },
-  ],
-};
-
-const LibraryServiceBase$messageJson = {
-  '.google.example.library.v1.CreateShelfRequest': CreateShelfRequest$json,
-  '.google.example.library.v1.Shelf': Shelf$json,
-  '.google.example.library.v1.GetShelfRequest': GetShelfRequest$json,
-  '.google.example.library.v1.ListShelvesRequest': ListShelvesRequest$json,
-  '.google.example.library.v1.ListShelvesResponse': ListShelvesResponse$json,
-  '.google.example.library.v1.DeleteShelfRequest': DeleteShelfRequest$json,
-  '.google.protobuf.Empty': $0.Empty$json,
-  '.google.example.library.v1.MergeShelvesRequest': MergeShelvesRequest$json,
-  '.google.example.library.v1.CreateBookRequest': CreateBookRequest$json,
-  '.google.example.library.v1.Book': Book$json,
-  '.google.example.library.v1.GetBookRequest': GetBookRequest$json,
-  '.google.example.library.v1.ListBooksRequest': ListBooksRequest$json,
-  '.google.example.library.v1.ListBooksResponse': ListBooksResponse$json,
-  '.google.example.library.v1.DeleteBookRequest': DeleteBookRequest$json,
-  '.google.example.library.v1.UpdateBookRequest': UpdateBookRequest$json,
-  '.google.example.library.v1.MoveBookRequest': MoveBookRequest$json,
 };

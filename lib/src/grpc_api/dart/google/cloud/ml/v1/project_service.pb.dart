@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -86,16 +85,4 @@ class GetConfigResponse extends $pb.GeneratedMessage {
 
   $core.bool hasServiceAccountProject() => $_has(1);
   void clearServiceAccountProject() => clearField(2);
-}
-
-class ProjectManagementServiceApi {
-  $pb.RpcClient _client;
-  ProjectManagementServiceApi(this._client);
-
-  $async.Future<GetConfigResponse> getConfig(
-      $pb.ClientContext ctx, GetConfigRequest request) {
-    var emptyResponse = GetConfigResponse();
-    return _client.invoke<GetConfigResponse>(
-        ctx, 'ProjectManagementService', 'GetConfig', request, emptyResponse);
-  }
 }

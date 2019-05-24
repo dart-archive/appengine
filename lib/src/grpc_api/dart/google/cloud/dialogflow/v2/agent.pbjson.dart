@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../longrunning/operations.pbjson.dart' as $0;
-import '../../../protobuf/any.pbjson.dart' as $1;
-import '../../../rpc/status.pbjson.dart' as $2;
-
 const Agent$json = {
   '1': 'Agent',
   '2': [
@@ -159,60 +155,4 @@ const RestoreAgentRequest$json = {
   '8': [
     {'1': 'agent'},
   ],
-};
-
-const AgentsServiceBase$json = {
-  '1': 'Agents',
-  '2': [
-    {
-      '1': 'GetAgent',
-      '2': '.google.cloud.dialogflow.v2.GetAgentRequest',
-      '3': '.google.cloud.dialogflow.v2.Agent',
-      '4': {}
-    },
-    {
-      '1': 'SearchAgents',
-      '2': '.google.cloud.dialogflow.v2.SearchAgentsRequest',
-      '3': '.google.cloud.dialogflow.v2.SearchAgentsResponse',
-      '4': {}
-    },
-    {
-      '1': 'TrainAgent',
-      '2': '.google.cloud.dialogflow.v2.TrainAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ExportAgent',
-      '2': '.google.cloud.dialogflow.v2.ExportAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ImportAgent',
-      '2': '.google.cloud.dialogflow.v2.ImportAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'RestoreAgent',
-      '2': '.google.cloud.dialogflow.v2.RestoreAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const AgentsServiceBase$messageJson = {
-  '.google.cloud.dialogflow.v2.GetAgentRequest': GetAgentRequest$json,
-  '.google.cloud.dialogflow.v2.Agent': Agent$json,
-  '.google.cloud.dialogflow.v2.SearchAgentsRequest': SearchAgentsRequest$json,
-  '.google.cloud.dialogflow.v2.SearchAgentsResponse': SearchAgentsResponse$json,
-  '.google.cloud.dialogflow.v2.TrainAgentRequest': TrainAgentRequest$json,
-  '.google.longrunning.Operation': $0.Operation$json,
-  '.google.protobuf.Any': $1.Any$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.cloud.dialogflow.v2.ExportAgentRequest': ExportAgentRequest$json,
-  '.google.cloud.dialogflow.v2.ImportAgentRequest': ImportAgentRequest$json,
-  '.google.cloud.dialogflow.v2.RestoreAgentRequest': RestoreAgentRequest$json,
 };

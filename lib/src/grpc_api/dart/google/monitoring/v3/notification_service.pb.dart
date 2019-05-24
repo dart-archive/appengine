@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'notification.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/timestamp.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $2;
+import '../../protobuf/timestamp.pb.dart' as $3;
 
 class ListNotificationChannelDescriptorsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -367,8 +365,8 @@ class UpdateNotificationChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateNotificationChannelRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..a<$0.NotificationChannel>(3, 'notificationChannel', $pb.PbFieldType.OM,
         $0.NotificationChannel.getDefault, $0.NotificationChannel.create)
     ..hasRequiredFields = false;
@@ -396,8 +394,8 @@ class UpdateNotificationChannelRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateNotificationChannelRequest _defaultInstance;
 
-  $1.FieldMask get updateMask => $_getN(0);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(0);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -511,8 +509,8 @@ class GetNotificationChannelVerificationCodeRequest
       'GetNotificationChannelVerificationCodeRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(1, 'name')
-    ..a<$2.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   GetNotificationChannelVerificationCodeRequest() : super();
@@ -550,8 +548,8 @@ class GetNotificationChannelVerificationCodeRequest
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.Timestamp get expireTime => $_getN(1);
-  set expireTime($2.Timestamp v) {
+  $3.Timestamp get expireTime => $_getN(1);
+  set expireTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -565,8 +563,8 @@ class GetNotificationChannelVerificationCodeResponse
       'GetNotificationChannelVerificationCodeResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(1, 'code')
-    ..a<$2.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   GetNotificationChannelVerificationCodeResponse() : super();
@@ -604,8 +602,8 @@ class GetNotificationChannelVerificationCodeResponse
   $core.bool hasCode() => $_has(0);
   void clearCode() => clearField(1);
 
-  $2.Timestamp get expireTime => $_getN(1);
-  set expireTime($2.Timestamp v) {
+  $3.Timestamp get expireTime => $_getN(1);
+  set expireTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -659,115 +657,4 @@ class VerifyNotificationChannelRequest extends $pb.GeneratedMessage {
 
   $core.bool hasCode() => $_has(1);
   void clearCode() => clearField(2);
-}
-
-class NotificationChannelServiceApi {
-  $pb.RpcClient _client;
-  NotificationChannelServiceApi(this._client);
-
-  $async.Future<ListNotificationChannelDescriptorsResponse>
-      listNotificationChannelDescriptors($pb.ClientContext ctx,
-          ListNotificationChannelDescriptorsRequest request) {
-    var emptyResponse = ListNotificationChannelDescriptorsResponse();
-    return _client.invoke<ListNotificationChannelDescriptorsResponse>(
-        ctx,
-        'NotificationChannelService',
-        'ListNotificationChannelDescriptors',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.NotificationChannelDescriptor>
-      getNotificationChannelDescriptor($pb.ClientContext ctx,
-          GetNotificationChannelDescriptorRequest request) {
-    var emptyResponse = $0.NotificationChannelDescriptor();
-    return _client.invoke<$0.NotificationChannelDescriptor>(
-        ctx,
-        'NotificationChannelService',
-        'GetNotificationChannelDescriptor',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<ListNotificationChannelsResponse> listNotificationChannels(
-      $pb.ClientContext ctx, ListNotificationChannelsRequest request) {
-    var emptyResponse = ListNotificationChannelsResponse();
-    return _client.invoke<ListNotificationChannelsResponse>(
-        ctx,
-        'NotificationChannelService',
-        'ListNotificationChannels',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.NotificationChannel> getNotificationChannel(
-      $pb.ClientContext ctx, GetNotificationChannelRequest request) {
-    var emptyResponse = $0.NotificationChannel();
-    return _client.invoke<$0.NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'GetNotificationChannel',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.NotificationChannel> createNotificationChannel(
-      $pb.ClientContext ctx, CreateNotificationChannelRequest request) {
-    var emptyResponse = $0.NotificationChannel();
-    return _client.invoke<$0.NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'CreateNotificationChannel',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.NotificationChannel> updateNotificationChannel(
-      $pb.ClientContext ctx, UpdateNotificationChannelRequest request) {
-    var emptyResponse = $0.NotificationChannel();
-    return _client.invoke<$0.NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'UpdateNotificationChannel',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteNotificationChannel(
-      $pb.ClientContext ctx, DeleteNotificationChannelRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(ctx, 'NotificationChannelService',
-        'DeleteNotificationChannel', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> sendNotificationChannelVerificationCode(
-      $pb.ClientContext ctx,
-      SendNotificationChannelVerificationCodeRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(ctx, 'NotificationChannelService',
-        'SendNotificationChannelVerificationCode', request, emptyResponse);
-  }
-
-  $async.Future<GetNotificationChannelVerificationCodeResponse>
-      getNotificationChannelVerificationCode($pb.ClientContext ctx,
-          GetNotificationChannelVerificationCodeRequest request) {
-    var emptyResponse = GetNotificationChannelVerificationCodeResponse();
-    return _client.invoke<GetNotificationChannelVerificationCodeResponse>(
-        ctx,
-        'NotificationChannelService',
-        'GetNotificationChannelVerificationCode',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.NotificationChannel> verifyNotificationChannel(
-      $pb.ClientContext ctx, VerifyNotificationChannelRequest request) {
-    var emptyResponse = $0.NotificationChannel();
-    return _client.invoke<$0.NotificationChannel>(
-        ctx,
-        'NotificationChannelService',
-        'VerifyNotificationChannel',
-        request,
-        emptyResponse);
-  }
 }

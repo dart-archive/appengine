@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -778,51 +777,4 @@ class ReadModifyWriteRowResponse extends $pb.GeneratedMessage {
 
   $core.bool hasRow() => $_has(0);
   void clearRow() => clearField(1);
-}
-
-class BigtableApi {
-  $pb.RpcClient _client;
-  BigtableApi(this._client);
-
-  $async.Future<ReadRowsResponse> readRows(
-      $pb.ClientContext ctx, ReadRowsRequest request) {
-    var emptyResponse = ReadRowsResponse();
-    return _client.invoke<ReadRowsResponse>(
-        ctx, 'Bigtable', 'ReadRows', request, emptyResponse);
-  }
-
-  $async.Future<SampleRowKeysResponse> sampleRowKeys(
-      $pb.ClientContext ctx, SampleRowKeysRequest request) {
-    var emptyResponse = SampleRowKeysResponse();
-    return _client.invoke<SampleRowKeysResponse>(
-        ctx, 'Bigtable', 'SampleRowKeys', request, emptyResponse);
-  }
-
-  $async.Future<MutateRowResponse> mutateRow(
-      $pb.ClientContext ctx, MutateRowRequest request) {
-    var emptyResponse = MutateRowResponse();
-    return _client.invoke<MutateRowResponse>(
-        ctx, 'Bigtable', 'MutateRow', request, emptyResponse);
-  }
-
-  $async.Future<MutateRowsResponse> mutateRows(
-      $pb.ClientContext ctx, MutateRowsRequest request) {
-    var emptyResponse = MutateRowsResponse();
-    return _client.invoke<MutateRowsResponse>(
-        ctx, 'Bigtable', 'MutateRows', request, emptyResponse);
-  }
-
-  $async.Future<CheckAndMutateRowResponse> checkAndMutateRow(
-      $pb.ClientContext ctx, CheckAndMutateRowRequest request) {
-    var emptyResponse = CheckAndMutateRowResponse();
-    return _client.invoke<CheckAndMutateRowResponse>(
-        ctx, 'Bigtable', 'CheckAndMutateRow', request, emptyResponse);
-  }
-
-  $async.Future<ReadModifyWriteRowResponse> readModifyWriteRow(
-      $pb.ClientContext ctx, ReadModifyWriteRowRequest request) {
-    var emptyResponse = ReadModifyWriteRowResponse();
-    return _client.invoke<ReadModifyWriteRowResponse>(
-        ctx, 'Bigtable', 'ReadModifyWriteRow', request, emptyResponse);
-  }
 }

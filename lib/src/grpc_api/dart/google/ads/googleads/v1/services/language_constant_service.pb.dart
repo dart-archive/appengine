@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/language_constant.pb.dart' as $0;
 
 class GetLanguageConstantRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -48,16 +45,4 @@ class GetLanguageConstantRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class LanguageConstantServiceApi {
-  $pb.RpcClient _client;
-  LanguageConstantServiceApi(this._client);
-
-  $async.Future<$0.LanguageConstant> getLanguageConstant(
-      $pb.ClientContext ctx, GetLanguageConstantRequest request) {
-    var emptyResponse = $0.LanguageConstant();
-    return _client.invoke<$0.LanguageConstant>(ctx, 'LanguageConstantService',
-        'GetLanguageConstant', request, emptyResponse);
-  }
 }

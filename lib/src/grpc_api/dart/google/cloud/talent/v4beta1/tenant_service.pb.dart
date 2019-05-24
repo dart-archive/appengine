@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'tenant.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import 'common.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $2;
+import 'common.pb.dart' as $3;
 
 class CreateTenantRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTenantRequest',
@@ -98,8 +96,8 @@ class UpdateTenantRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..a<$0.Tenant>(
         1, 'tenant', $pb.PbFieldType.OM, $0.Tenant.getDefault, $0.Tenant.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTenantRequest() : super();
@@ -129,8 +127,8 @@ class UpdateTenantRequest extends $pb.GeneratedMessage {
   $core.bool hasTenant() => $_has(0);
   void clearTenant() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -229,8 +227,8 @@ class ListTenantsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..pc<$0.Tenant>(1, 'tenants', $pb.PbFieldType.PM, $0.Tenant.create)
     ..aOS(2, 'nextPageToken')
-    ..a<$2.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
-        $2.ResponseMetadata.getDefault, $2.ResponseMetadata.create)
+    ..a<$3.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
+        $3.ResponseMetadata.getDefault, $3.ResponseMetadata.create)
     ..hasRequiredFields = false;
 
   ListTenantsResponse() : super();
@@ -262,51 +260,11 @@ class ListTenantsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $2.ResponseMetadata get metadata => $_getN(2);
-  set metadata($2.ResponseMetadata v) {
+  $3.ResponseMetadata get metadata => $_getN(2);
+  set metadata($3.ResponseMetadata v) {
     setField(3, v);
   }
 
   $core.bool hasMetadata() => $_has(2);
   void clearMetadata() => clearField(3);
-}
-
-class TenantServiceApi {
-  $pb.RpcClient _client;
-  TenantServiceApi(this._client);
-
-  $async.Future<$0.Tenant> createTenant(
-      $pb.ClientContext ctx, CreateTenantRequest request) {
-    var emptyResponse = $0.Tenant();
-    return _client.invoke<$0.Tenant>(
-        ctx, 'TenantService', 'CreateTenant', request, emptyResponse);
-  }
-
-  $async.Future<$0.Tenant> getTenant(
-      $pb.ClientContext ctx, GetTenantRequest request) {
-    var emptyResponse = $0.Tenant();
-    return _client.invoke<$0.Tenant>(
-        ctx, 'TenantService', 'GetTenant', request, emptyResponse);
-  }
-
-  $async.Future<$0.Tenant> updateTenant(
-      $pb.ClientContext ctx, UpdateTenantRequest request) {
-    var emptyResponse = $0.Tenant();
-    return _client.invoke<$0.Tenant>(
-        ctx, 'TenantService', 'UpdateTenant', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteTenant(
-      $pb.ClientContext ctx, DeleteTenantRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'TenantService', 'DeleteTenant', request, emptyResponse);
-  }
-
-  $async.Future<ListTenantsResponse> listTenants(
-      $pb.ClientContext ctx, ListTenantsRequest request) {
-    var emptyResponse = ListTenantsResponse();
-    return _client.invoke<ListTenantsResponse>(
-        ctx, 'TenantService', 'ListTenants', request, emptyResponse);
-  }
 }

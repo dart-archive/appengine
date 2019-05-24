@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../longrunning/operations.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 import 'datastore_admin.pbenum.dart';
 
@@ -21,10 +19,10 @@ export 'datastore_admin.pbenum.dart';
 class CommonMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommonMetadata',
       package: const $pb.PackageName('google.datastore.admin.v1beta1'))
-    ..a<$0.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..e<OperationType>(
         3,
         'operationType',
@@ -69,16 +67,16 @@ class CommonMetadata extends $pb.GeneratedMessage {
   static CommonMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static CommonMetadata _defaultInstance;
 
-  $0.Timestamp get startTime => $_getN(0);
-  set startTime($0.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(0);
+  set startTime($2.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $0.Timestamp get endTime => $_getN(1);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(1);
+  set endTime($2.Timestamp v) {
     setField(2, v);
   }
 
@@ -495,23 +493,4 @@ class EntityFilter extends $pb.GeneratedMessage {
   $core.List<$core.String> get kinds => $_getList(0);
 
   $core.List<$core.String> get namespaceIds => $_getList(1);
-}
-
-class DatastoreAdminApi {
-  $pb.RpcClient _client;
-  DatastoreAdminApi(this._client);
-
-  $async.Future<$1.Operation> exportEntities(
-      $pb.ClientContext ctx, ExportEntitiesRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'DatastoreAdmin', 'ExportEntities', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> importEntities(
-      $pb.ClientContext ctx, ImportEntitiesRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'DatastoreAdmin', 'ImportEntities', request, emptyResponse);
-  }
 }

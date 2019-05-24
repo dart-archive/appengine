@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'company.pbjson.dart' as $0;
-import 'common.pbjson.dart' as $2;
-import '../../../type/postal_address.pbjson.dart' as $4;
-import '../../../type/latlng.pbjson.dart' as $5;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../protobuf/empty.pbjson.dart' as $3;
-
 const CreateCompanyRequest$json = {
   '1': 'CreateCompanyRequest',
   '2': [
@@ -93,63 +86,4 @@ const ListCompaniesResponse$json = {
       '10': 'metadata'
     },
   ],
-};
-
-const CompanyServiceBase$json = {
-  '1': 'CompanyService',
-  '2': [
-    {
-      '1': 'CreateCompany',
-      '2': '.google.cloud.talent.v4beta1.CreateCompanyRequest',
-      '3': '.google.cloud.talent.v4beta1.Company',
-      '4': {}
-    },
-    {
-      '1': 'GetCompany',
-      '2': '.google.cloud.talent.v4beta1.GetCompanyRequest',
-      '3': '.google.cloud.talent.v4beta1.Company',
-      '4': {}
-    },
-    {
-      '1': 'UpdateCompany',
-      '2': '.google.cloud.talent.v4beta1.UpdateCompanyRequest',
-      '3': '.google.cloud.talent.v4beta1.Company',
-      '4': {}
-    },
-    {
-      '1': 'DeleteCompany',
-      '2': '.google.cloud.talent.v4beta1.DeleteCompanyRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'ListCompanies',
-      '2': '.google.cloud.talent.v4beta1.ListCompaniesRequest',
-      '3': '.google.cloud.talent.v4beta1.ListCompaniesResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CompanyServiceBase$messageJson = {
-  '.google.cloud.talent.v4beta1.CreateCompanyRequest':
-      CreateCompanyRequest$json,
-  '.google.cloud.talent.v4beta1.Company': $0.Company$json,
-  '.google.cloud.talent.v4beta1.Company.DerivedInfo':
-      $0.Company_DerivedInfo$json,
-  '.google.cloud.talent.v4beta1.Location': $2.Location$json,
-  '.google.type.PostalAddress': $4.PostalAddress$json,
-  '.google.type.LatLng': $5.LatLng$json,
-  '.google.cloud.talent.v4beta1.GetCompanyRequest': GetCompanyRequest$json,
-  '.google.cloud.talent.v4beta1.UpdateCompanyRequest':
-      UpdateCompanyRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.talent.v4beta1.DeleteCompanyRequest':
-      DeleteCompanyRequest$json,
-  '.google.protobuf.Empty': $3.Empty$json,
-  '.google.cloud.talent.v4beta1.ListCompaniesRequest':
-      ListCompaniesRequest$json,
-  '.google.cloud.talent.v4beta1.ListCompaniesResponse':
-      ListCompaniesResponse$json,
-  '.google.cloud.talent.v4beta1.ResponseMetadata': $2.ResponseMetadata$json,
 };

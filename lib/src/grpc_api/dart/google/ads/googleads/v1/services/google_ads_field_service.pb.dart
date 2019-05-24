@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -156,27 +155,4 @@ class SearchGoogleAdsFieldsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasTotalResultsCount() => $_has(2);
   void clearTotalResultsCount() => clearField(3);
-}
-
-class GoogleAdsFieldServiceApi {
-  $pb.RpcClient _client;
-  GoogleAdsFieldServiceApi(this._client);
-
-  $async.Future<$0.GoogleAdsField> getGoogleAdsField(
-      $pb.ClientContext ctx, GetGoogleAdsFieldRequest request) {
-    var emptyResponse = $0.GoogleAdsField();
-    return _client.invoke<$0.GoogleAdsField>(ctx, 'GoogleAdsFieldService',
-        'GetGoogleAdsField', request, emptyResponse);
-  }
-
-  $async.Future<SearchGoogleAdsFieldsResponse> searchGoogleAdsFields(
-      $pb.ClientContext ctx, SearchGoogleAdsFieldsRequest request) {
-    var emptyResponse = SearchGoogleAdsFieldsResponse();
-    return _client.invoke<SearchGoogleAdsFieldsResponse>(
-        ctx,
-        'GoogleAdsFieldService',
-        'SearchGoogleAdsFields',
-        request,
-        emptyResponse);
-  }
 }

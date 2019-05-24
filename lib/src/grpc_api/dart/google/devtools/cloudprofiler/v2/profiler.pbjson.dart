@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $1;
-import '../../../protobuf/field_mask.pbjson.dart' as $0;
-
 const ProfileType$json = {
   '1': 'ProfileType',
   '2': [
@@ -155,45 +152,4 @@ const Deployment_LabelsEntry$json = {
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
   '7': {'7': true},
-};
-
-const ProfilerServiceBase$json = {
-  '1': 'ProfilerService',
-  '2': [
-    {
-      '1': 'CreateProfile',
-      '2': '.google.devtools.cloudprofiler.v2.CreateProfileRequest',
-      '3': '.google.devtools.cloudprofiler.v2.Profile',
-      '4': {}
-    },
-    {
-      '1': 'CreateOfflineProfile',
-      '2': '.google.devtools.cloudprofiler.v2.CreateOfflineProfileRequest',
-      '3': '.google.devtools.cloudprofiler.v2.Profile',
-      '4': {}
-    },
-    {
-      '1': 'UpdateProfile',
-      '2': '.google.devtools.cloudprofiler.v2.UpdateProfileRequest',
-      '3': '.google.devtools.cloudprofiler.v2.Profile',
-      '4': {}
-    },
-  ],
-};
-
-const ProfilerServiceBase$messageJson = {
-  '.google.devtools.cloudprofiler.v2.CreateProfileRequest':
-      CreateProfileRequest$json,
-  '.google.devtools.cloudprofiler.v2.Deployment': Deployment$json,
-  '.google.devtools.cloudprofiler.v2.Deployment.LabelsEntry':
-      Deployment_LabelsEntry$json,
-  '.google.devtools.cloudprofiler.v2.Profile': Profile$json,
-  '.google.protobuf.Duration': $1.Duration$json,
-  '.google.devtools.cloudprofiler.v2.Profile.LabelsEntry':
-      Profile_LabelsEntry$json,
-  '.google.devtools.cloudprofiler.v2.CreateOfflineProfileRequest':
-      CreateOfflineProfileRequest$json,
-  '.google.devtools.cloudprofiler.v2.UpdateProfileRequest':
-      UpdateProfileRequest$json,
-  '.google.protobuf.FieldMask': $0.FieldMask$json,
 };

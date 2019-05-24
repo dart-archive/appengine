@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'schema.pbjson.dart' as $0;
-import 'timestamps.pbjson.dart' as $1;
-import '../../../protobuf/timestamp.pbjson.dart' as $3;
-import 'table_spec.pbjson.dart' as $2;
-
 const EntryType$json = {
   '1': 'EntryType',
   '2': [
@@ -80,30 +75,4 @@ const Entry$json = {
   '8': [
     {'1': 'type_spec'},
   ],
-};
-
-const DataCatalogServiceBase$json = {
-  '1': 'DataCatalog',
-  '2': [
-    {
-      '1': 'LookupEntry',
-      '2': '.google.cloud.datacatalog.v1beta1.LookupEntryRequest',
-      '3': '.google.cloud.datacatalog.v1beta1.Entry',
-      '4': {}
-    },
-  ],
-};
-
-const DataCatalogServiceBase$messageJson = {
-  '.google.cloud.datacatalog.v1beta1.LookupEntryRequest':
-      LookupEntryRequest$json,
-  '.google.cloud.datacatalog.v1beta1.Entry': Entry$json,
-  '.google.cloud.datacatalog.v1beta1.Schema': $0.Schema$json,
-  '.google.cloud.datacatalog.v1beta1.ColumnSchema': $0.ColumnSchema$json,
-  '.google.cloud.datacatalog.v1beta1.SystemTimestamps':
-      $1.SystemTimestamps$json,
-  '.google.protobuf.Timestamp': $3.Timestamp$json,
-  '.google.cloud.datacatalog.v1beta1.BigQueryTableSpec':
-      $2.BigQueryTableSpec$json,
-  '.google.cloud.datacatalog.v1beta1.ViewSpec': $2.ViewSpec$json,
 };

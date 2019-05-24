@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../protobuf/any.pbjson.dart' as $0;
-
 const ListLocationsRequest$json = {
   '1': 'ListLocationsRequest',
   '2': [
@@ -71,31 +69,4 @@ const Location_LabelsEntry$json = {
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
   '7': {'7': true},
-};
-
-const LocationsServiceBase$json = {
-  '1': 'Locations',
-  '2': [
-    {
-      '1': 'ListLocations',
-      '2': '.google.cloud.location.ListLocationsRequest',
-      '3': '.google.cloud.location.ListLocationsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetLocation',
-      '2': '.google.cloud.location.GetLocationRequest',
-      '3': '.google.cloud.location.Location',
-      '4': {}
-    },
-  ],
-};
-
-const LocationsServiceBase$messageJson = {
-  '.google.cloud.location.ListLocationsRequest': ListLocationsRequest$json,
-  '.google.cloud.location.ListLocationsResponse': ListLocationsResponse$json,
-  '.google.cloud.location.Location': Location$json,
-  '.google.cloud.location.Location.LabelsEntry': Location_LabelsEntry$json,
-  '.google.protobuf.Any': $0.Any$json,
-  '.google.cloud.location.GetLocationRequest': GetLocationRequest$json,
 };

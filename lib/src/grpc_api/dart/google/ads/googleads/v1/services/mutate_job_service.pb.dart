@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'google_ads_service.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
-import '../resources/mutate_job.pb.dart' as $2;
-import '../../../../longrunning/operations.pb.dart' as $3;
+import 'google_ads_service.pb.dart' as $42;
+import '../../../../rpc/status.pb.dart' as $43;
 
 class CreateMutateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateMutateJobRequest',
@@ -162,8 +159,8 @@ class AddMutateJobOperationsRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..aOS(1, 'resourceName')
     ..aOS(2, 'sequenceToken')
-    ..pc<$0.MutateOperation>(
-        3, 'mutateOperations', $pb.PbFieldType.PM, $0.MutateOperation.create)
+    ..pc<$42.MutateOperation>(
+        3, 'mutateOperations', $pb.PbFieldType.PM, $42.MutateOperation.create)
     ..hasRequiredFields = false;
 
   AddMutateJobOperationsRequest() : super();
@@ -205,7 +202,7 @@ class AddMutateJobOperationsRequest extends $pb.GeneratedMessage {
   $core.bool hasSequenceToken() => $_has(1);
   void clearSequenceToken() => clearField(2);
 
-  $core.List<$0.MutateOperation> get mutateOperations => $_getList(2);
+  $core.List<$42.MutateOperation> get mutateOperations => $_getList(2);
 }
 
 class AddMutateJobOperationsResponse extends $pb.GeneratedMessage {
@@ -359,14 +356,14 @@ class MutateJobResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateJobResult',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..aInt64(1, 'operationIndex')
-    ..a<$0.MutateOperationResponse>(
+    ..a<$42.MutateOperationResponse>(
         2,
         'mutateOperationResponse',
         $pb.PbFieldType.OM,
-        $0.MutateOperationResponse.getDefault,
-        $0.MutateOperationResponse.create)
-    ..a<$1.Status>(
-        3, 'status', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+        $42.MutateOperationResponse.getDefault,
+        $42.MutateOperationResponse.create)
+    ..a<$43.Status>(3, 'status', $pb.PbFieldType.OM, $43.Status.getDefault,
+        $43.Status.create)
     ..hasRequiredFields = false;
 
   MutateJobResult() : super();
@@ -396,59 +393,19 @@ class MutateJobResult extends $pb.GeneratedMessage {
   $core.bool hasOperationIndex() => $_has(0);
   void clearOperationIndex() => clearField(1);
 
-  $0.MutateOperationResponse get mutateOperationResponse => $_getN(1);
-  set mutateOperationResponse($0.MutateOperationResponse v) {
+  $42.MutateOperationResponse get mutateOperationResponse => $_getN(1);
+  set mutateOperationResponse($42.MutateOperationResponse v) {
     setField(2, v);
   }
 
   $core.bool hasMutateOperationResponse() => $_has(1);
   void clearMutateOperationResponse() => clearField(2);
 
-  $1.Status get status => $_getN(2);
-  set status($1.Status v) {
+  $43.Status get status => $_getN(2);
+  set status($43.Status v) {
     setField(3, v);
   }
 
   $core.bool hasStatus() => $_has(2);
   void clearStatus() => clearField(3);
-}
-
-class MutateJobServiceApi {
-  $pb.RpcClient _client;
-  MutateJobServiceApi(this._client);
-
-  $async.Future<CreateMutateJobResponse> createMutateJob(
-      $pb.ClientContext ctx, CreateMutateJobRequest request) {
-    var emptyResponse = CreateMutateJobResponse();
-    return _client.invoke<CreateMutateJobResponse>(
-        ctx, 'MutateJobService', 'CreateMutateJob', request, emptyResponse);
-  }
-
-  $async.Future<$2.MutateJob> getMutateJob(
-      $pb.ClientContext ctx, GetMutateJobRequest request) {
-    var emptyResponse = $2.MutateJob();
-    return _client.invoke<$2.MutateJob>(
-        ctx, 'MutateJobService', 'GetMutateJob', request, emptyResponse);
-  }
-
-  $async.Future<ListMutateJobResultsResponse> listMutateJobResults(
-      $pb.ClientContext ctx, ListMutateJobResultsRequest request) {
-    var emptyResponse = ListMutateJobResultsResponse();
-    return _client.invoke<ListMutateJobResultsResponse>(ctx, 'MutateJobService',
-        'ListMutateJobResults', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> runMutateJob(
-      $pb.ClientContext ctx, RunMutateJobRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'MutateJobService', 'RunMutateJob', request, emptyResponse);
-  }
-
-  $async.Future<AddMutateJobOperationsResponse> addMutateJobOperations(
-      $pb.ClientContext ctx, AddMutateJobOperationsRequest request) {
-    var emptyResponse = AddMutateJobOperationsResponse();
-    return _client.invoke<AddMutateJobOperationsResponse>(ctx,
-        'MutateJobService', 'AddMutateJobOperations', request, emptyResponse);
-  }
 }

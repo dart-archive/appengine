@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../api/metric.pbjson.dart' as $0;
-import '../../api/label.pbjson.dart' as $3;
-import '../../protobuf/duration.pbjson.dart' as $4;
-import '../../api/distribution.pbjson.dart' as $1;
-import '../../protobuf/empty.pbjson.dart' as $2;
-
 const LogMetric$json = {
   '1': 'LogMetric',
   '2': [
@@ -138,65 +132,4 @@ const DeleteLogMetricRequest$json = {
   '2': [
     {'1': 'metric_name', '3': 1, '4': 1, '5': 9, '10': 'metricName'},
   ],
-};
-
-const MetricsServiceV2ServiceBase$json = {
-  '1': 'MetricsServiceV2',
-  '2': [
-    {
-      '1': 'ListLogMetrics',
-      '2': '.google.logging.v2.ListLogMetricsRequest',
-      '3': '.google.logging.v2.ListLogMetricsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetLogMetric',
-      '2': '.google.logging.v2.GetLogMetricRequest',
-      '3': '.google.logging.v2.LogMetric',
-      '4': {}
-    },
-    {
-      '1': 'CreateLogMetric',
-      '2': '.google.logging.v2.CreateLogMetricRequest',
-      '3': '.google.logging.v2.LogMetric',
-      '4': {}
-    },
-    {
-      '1': 'UpdateLogMetric',
-      '2': '.google.logging.v2.UpdateLogMetricRequest',
-      '3': '.google.logging.v2.LogMetric',
-      '4': {}
-    },
-    {
-      '1': 'DeleteLogMetric',
-      '2': '.google.logging.v2.DeleteLogMetricRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const MetricsServiceV2ServiceBase$messageJson = {
-  '.google.logging.v2.ListLogMetricsRequest': ListLogMetricsRequest$json,
-  '.google.logging.v2.ListLogMetricsResponse': ListLogMetricsResponse$json,
-  '.google.logging.v2.LogMetric': LogMetric$json,
-  '.google.api.MetricDescriptor': $0.MetricDescriptor$json,
-  '.google.api.LabelDescriptor': $3.LabelDescriptor$json,
-  '.google.api.MetricDescriptor.MetricDescriptorMetadata':
-      $0.MetricDescriptor_MetricDescriptorMetadata$json,
-  '.google.protobuf.Duration': $4.Duration$json,
-  '.google.logging.v2.LogMetric.LabelExtractorsEntry':
-      LogMetric_LabelExtractorsEntry$json,
-  '.google.api.Distribution.BucketOptions': $1.Distribution_BucketOptions$json,
-  '.google.api.Distribution.BucketOptions.Linear':
-      $1.Distribution_BucketOptions_Linear$json,
-  '.google.api.Distribution.BucketOptions.Exponential':
-      $1.Distribution_BucketOptions_Exponential$json,
-  '.google.api.Distribution.BucketOptions.Explicit':
-      $1.Distribution_BucketOptions_Explicit$json,
-  '.google.logging.v2.GetLogMetricRequest': GetLogMetricRequest$json,
-  '.google.logging.v2.CreateLogMetricRequest': CreateLogMetricRequest$json,
-  '.google.logging.v2.UpdateLogMetricRequest': UpdateLogMetricRequest$json,
-  '.google.logging.v2.DeleteLogMetricRequest': DeleteLogMetricRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
 };

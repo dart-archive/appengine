@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/remarketing_action.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../common/tag_snippet.pbjson.dart' as $4;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-
 const GetRemarketingActionRequest$json = {
   '1': 'GetRemarketingActionRequest',
   '2': [
@@ -97,43 +90,4 @@ const MutateRemarketingActionResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const RemarketingActionServiceBase$json = {
-  '1': 'RemarketingActionService',
-  '2': [
-    {
-      '1': 'GetRemarketingAction',
-      '2': '.google.ads.googleads.v1.services.GetRemarketingActionRequest',
-      '3': '.google.ads.googleads.v1.resources.RemarketingAction',
-      '4': {}
-    },
-    {
-      '1': 'MutateRemarketingActions',
-      '2': '.google.ads.googleads.v1.services.MutateRemarketingActionsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateRemarketingActionsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const RemarketingActionServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetRemarketingActionRequest':
-      GetRemarketingActionRequest$json,
-  '.google.ads.googleads.v1.resources.RemarketingAction':
-      $0.RemarketingAction$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.common.TagSnippet': $4.TagSnippet$json,
-  '.google.ads.googleads.v1.services.MutateRemarketingActionsRequest':
-      MutateRemarketingActionsRequest$json,
-  '.google.ads.googleads.v1.services.RemarketingActionOperation':
-      RemarketingActionOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateRemarketingActionsResponse':
-      MutateRemarketingActionsResponse$json,
-  '.google.ads.googleads.v1.services.MutateRemarketingActionResult':
-      MutateRemarketingActionResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $5.Any$json,
 };

@@ -4,21 +4,19 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'incidents.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import 'incidents.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 class CreateIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIncidentRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Incident>(1, 'incident', $pb.PbFieldType.OM, $0.Incident.getDefault,
-        $0.Incident.create)
+    ..a<$3.Incident>(1, 'incident', $pb.PbFieldType.OM, $3.Incident.getDefault,
+        $3.Incident.create)
     ..aOS(2, 'parent')
     ..hasRequiredFields = false;
 
@@ -43,8 +41,8 @@ class CreateIncidentRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateIncidentRequest _defaultInstance;
 
-  $0.Incident get incident => $_getN(0);
-  set incident($0.Incident v) {
+  $3.Incident get incident => $_getN(0);
+  set incident($3.Incident v) {
     setField(1, v);
   }
 
@@ -97,10 +95,10 @@ class GetIncidentRequest extends $pb.GeneratedMessage {
 class UpdateIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateIncidentRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Incident>(1, 'incident', $pb.PbFieldType.OM, $0.Incident.getDefault,
-        $0.Incident.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.Incident>(1, 'incident', $pb.PbFieldType.OM, $3.Incident.getDefault,
+        $3.Incident.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateIncidentRequest() : super();
@@ -124,16 +122,16 @@ class UpdateIncidentRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateIncidentRequest _defaultInstance;
 
-  $0.Incident get incident => $_getN(0);
-  set incident($0.Incident v) {
+  $3.Incident get incident => $_getN(0);
+  set incident($3.Incident v) {
     setField(1, v);
   }
 
   $core.bool hasIncident() => $_has(0);
   void clearIncident() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -202,8 +200,8 @@ class SearchSimilarIncidentsResponse_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchSimilarIncidentsResponse.Result',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Incident>(1, 'incident', $pb.PbFieldType.OM, $0.Incident.getDefault,
-        $0.Incident.create)
+    ..a<$3.Incident>(1, 'incident', $pb.PbFieldType.OM, $3.Incident.getDefault,
+        $3.Incident.create)
     ..hasRequiredFields = false;
 
   SearchSimilarIncidentsResponse_Result() : super();
@@ -229,8 +227,8 @@ class SearchSimilarIncidentsResponse_Result extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchSimilarIncidentsResponse_Result _defaultInstance;
 
-  $0.Incident get incident => $_getN(0);
-  set incident($0.Incident v) {
+  $3.Incident get incident => $_getN(0);
+  set incident($3.Incident v) {
     setField(1, v);
   }
 
@@ -285,8 +283,8 @@ class CreateAnnotationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAnnotationRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'parent')
-    ..a<$0.Annotation>(2, 'annotation', $pb.PbFieldType.OM,
-        $0.Annotation.getDefault, $0.Annotation.create)
+    ..a<$3.Annotation>(2, 'annotation', $pb.PbFieldType.OM,
+        $3.Annotation.getDefault, $3.Annotation.create)
     ..hasRequiredFields = false;
 
   CreateAnnotationRequest() : super();
@@ -318,8 +316,8 @@ class CreateAnnotationRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Annotation get annotation => $_getN(1);
-  set annotation($0.Annotation v) {
+  $3.Annotation get annotation => $_getN(1);
+  set annotation($3.Annotation v) {
     setField(2, v);
   }
 
@@ -384,8 +382,8 @@ class ListAnnotationsRequest extends $pb.GeneratedMessage {
 class ListAnnotationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAnnotationsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.Annotation>(
-        1, 'annotations', $pb.PbFieldType.PM, $0.Annotation.create)
+    ..pc<$3.Annotation>(
+        1, 'annotations', $pb.PbFieldType.PM, $3.Annotation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -410,7 +408,7 @@ class ListAnnotationsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListAnnotationsResponse _defaultInstance;
 
-  $core.List<$0.Annotation> get annotations => $_getList(0);
+  $core.List<$3.Annotation> get annotations => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -425,7 +423,7 @@ class CreateTagRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTagRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'parent')
-    ..a<$0.Tag>(2, 'tag', $pb.PbFieldType.OM, $0.Tag.getDefault, $0.Tag.create)
+    ..a<$3.Tag>(2, 'tag', $pb.PbFieldType.OM, $3.Tag.getDefault, $3.Tag.create)
     ..hasRequiredFields = false;
 
   CreateTagRequest() : super();
@@ -455,8 +453,8 @@ class CreateTagRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Tag get tag => $_getN(1);
-  set tag($0.Tag v) {
+  $3.Tag get tag => $_getN(1);
+  set tag($3.Tag v) {
     setField(2, v);
   }
 
@@ -553,7 +551,7 @@ class ListTagsRequest extends $pb.GeneratedMessage {
 class ListTagsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTagsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.Tag>(1, 'tags', $pb.PbFieldType.PM, $0.Tag.create)
+    ..pc<$3.Tag>(1, 'tags', $pb.PbFieldType.PM, $3.Tag.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -576,7 +574,7 @@ class ListTagsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTagsResponse _defaultInstance;
 
-  $core.List<$0.Tag> get tags => $_getList(0);
+  $core.List<$3.Tag> get tags => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -591,8 +589,8 @@ class CreateSignalRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSignalRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'parent')
-    ..a<$0.Signal>(
-        2, 'signal', $pb.PbFieldType.OM, $0.Signal.getDefault, $0.Signal.create)
+    ..a<$3.Signal>(
+        2, 'signal', $pb.PbFieldType.OM, $3.Signal.getDefault, $3.Signal.create)
     ..hasRequiredFields = false;
 
   CreateSignalRequest() : super();
@@ -622,8 +620,8 @@ class CreateSignalRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Signal get signal => $_getN(1);
-  set signal($0.Signal v) {
+  $3.Signal get signal => $_getN(1);
+  set signal($3.Signal v) {
     setField(2, v);
   }
 
@@ -696,7 +694,7 @@ class SearchSignalsRequest extends $pb.GeneratedMessage {
 class SearchSignalsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchSignalsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.Signal>(1, 'signals', $pb.PbFieldType.PM, $0.Signal.create)
+    ..pc<$3.Signal>(1, 'signals', $pb.PbFieldType.PM, $3.Signal.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -721,7 +719,7 @@ class SearchSignalsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchSignalsResponse _defaultInstance;
 
-  $core.List<$0.Signal> get signals => $_getList(0);
+  $core.List<$3.Signal> get signals => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -769,10 +767,10 @@ class GetSignalRequest extends $pb.GeneratedMessage {
 class UpdateSignalRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSignalRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Signal>(
-        1, 'signal', $pb.PbFieldType.OM, $0.Signal.getDefault, $0.Signal.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.Signal>(
+        1, 'signal', $pb.PbFieldType.OM, $3.Signal.getDefault, $3.Signal.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSignalRequest() : super();
@@ -794,16 +792,16 @@ class UpdateSignalRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateSignalRequest _defaultInstance;
 
-  $0.Signal get signal => $_getN(0);
-  set signal($0.Signal v) {
+  $3.Signal get signal => $_getN(0);
+  set signal($3.Signal v) {
     setField(1, v);
   }
 
   $core.bool hasSignal() => $_has(0);
   void clearSignal() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -886,7 +884,7 @@ class SearchIncidentsRequest extends $pb.GeneratedMessage {
 class SearchIncidentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchIncidentsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.Incident>(1, 'incidents', $pb.PbFieldType.PM, $0.Incident.create)
+    ..pc<$3.Incident>(1, 'incidents', $pb.PbFieldType.PM, $3.Incident.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -911,7 +909,7 @@ class SearchIncidentsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchIncidentsResponse _defaultInstance;
 
-  $core.List<$0.Incident> get incidents => $_getList(0);
+  $core.List<$3.Incident> get incidents => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -925,16 +923,16 @@ class SearchIncidentsResponse extends $pb.GeneratedMessage {
 class EscalateIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EscalateIncidentRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Incident>(1, 'incident', $pb.PbFieldType.OM, $0.Incident.getDefault,
-        $0.Incident.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
-    ..pc<$0.Subscription>(
-        3, 'subscriptions', $pb.PbFieldType.PM, $0.Subscription.create)
-    ..pc<$0.Tag>(4, 'tags', $pb.PbFieldType.PM, $0.Tag.create)
-    ..pc<$0.IncidentRoleAssignment>(
-        5, 'roles', $pb.PbFieldType.PM, $0.IncidentRoleAssignment.create)
-    ..pc<$0.Artifact>(6, 'artifacts', $pb.PbFieldType.PM, $0.Artifact.create)
+    ..a<$3.Incident>(1, 'incident', $pb.PbFieldType.OM, $3.Incident.getDefault,
+        $3.Incident.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..pc<$3.Subscription>(
+        3, 'subscriptions', $pb.PbFieldType.PM, $3.Subscription.create)
+    ..pc<$3.Tag>(4, 'tags', $pb.PbFieldType.PM, $3.Tag.create)
+    ..pc<$3.IncidentRoleAssignment>(
+        5, 'roles', $pb.PbFieldType.PM, $3.IncidentRoleAssignment.create)
+    ..pc<$3.Artifact>(6, 'artifacts', $pb.PbFieldType.PM, $3.Artifact.create)
     ..hasRequiredFields = false;
 
   EscalateIncidentRequest() : super();
@@ -958,42 +956,42 @@ class EscalateIncidentRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static EscalateIncidentRequest _defaultInstance;
 
-  $0.Incident get incident => $_getN(0);
-  set incident($0.Incident v) {
+  $3.Incident get incident => $_getN(0);
+  set incident($3.Incident v) {
     setField(1, v);
   }
 
   $core.bool hasIncident() => $_has(0);
   void clearIncident() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
   $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 
-  $core.List<$0.Subscription> get subscriptions => $_getList(2);
+  $core.List<$3.Subscription> get subscriptions => $_getList(2);
 
-  $core.List<$0.Tag> get tags => $_getList(3);
+  $core.List<$3.Tag> get tags => $_getList(3);
 
-  $core.List<$0.IncidentRoleAssignment> get roles => $_getList(4);
+  $core.List<$3.IncidentRoleAssignment> get roles => $_getList(4);
 
-  $core.List<$0.Artifact> get artifacts => $_getList(5);
+  $core.List<$3.Artifact> get artifacts => $_getList(5);
 }
 
 class EscalateIncidentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EscalateIncidentResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Incident>(1, 'incident', $pb.PbFieldType.OM, $0.Incident.getDefault,
-        $0.Incident.create)
-    ..pc<$0.Subscription>(
-        2, 'subscriptions', $pb.PbFieldType.PM, $0.Subscription.create)
-    ..pc<$0.Tag>(3, 'tags', $pb.PbFieldType.PM, $0.Tag.create)
-    ..pc<$0.IncidentRole>(
-        4, 'roles', $pb.PbFieldType.PM, $0.IncidentRole.create)
-    ..pc<$0.Artifact>(5, 'artifacts', $pb.PbFieldType.PM, $0.Artifact.create)
+    ..a<$3.Incident>(1, 'incident', $pb.PbFieldType.OM, $3.Incident.getDefault,
+        $3.Incident.create)
+    ..pc<$3.Subscription>(
+        2, 'subscriptions', $pb.PbFieldType.PM, $3.Subscription.create)
+    ..pc<$3.Tag>(3, 'tags', $pb.PbFieldType.PM, $3.Tag.create)
+    ..pc<$3.IncidentRole>(
+        4, 'roles', $pb.PbFieldType.PM, $3.IncidentRole.create)
+    ..pc<$3.Artifact>(5, 'artifacts', $pb.PbFieldType.PM, $3.Artifact.create)
     ..hasRequiredFields = false;
 
   EscalateIncidentResponse() : super();
@@ -1017,29 +1015,29 @@ class EscalateIncidentResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static EscalateIncidentResponse _defaultInstance;
 
-  $0.Incident get incident => $_getN(0);
-  set incident($0.Incident v) {
+  $3.Incident get incident => $_getN(0);
+  set incident($3.Incident v) {
     setField(1, v);
   }
 
   $core.bool hasIncident() => $_has(0);
   void clearIncident() => clearField(1);
 
-  $core.List<$0.Subscription> get subscriptions => $_getList(1);
+  $core.List<$3.Subscription> get subscriptions => $_getList(1);
 
-  $core.List<$0.Tag> get tags => $_getList(2);
+  $core.List<$3.Tag> get tags => $_getList(2);
 
-  $core.List<$0.IncidentRole> get roles => $_getList(3);
+  $core.List<$3.IncidentRole> get roles => $_getList(3);
 
-  $core.List<$0.Artifact> get artifacts => $_getList(4);
+  $core.List<$3.Artifact> get artifacts => $_getList(4);
 }
 
 class CreateArtifactRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateArtifactRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'parent')
-    ..a<$0.Artifact>(2, 'artifact', $pb.PbFieldType.OM, $0.Artifact.getDefault,
-        $0.Artifact.create)
+    ..a<$3.Artifact>(2, 'artifact', $pb.PbFieldType.OM, $3.Artifact.getDefault,
+        $3.Artifact.create)
     ..hasRequiredFields = false;
 
   CreateArtifactRequest() : super();
@@ -1071,8 +1069,8 @@ class CreateArtifactRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Artifact get artifact => $_getN(1);
-  set artifact($0.Artifact v) {
+  $3.Artifact get artifact => $_getN(1);
+  set artifact($3.Artifact v) {
     setField(2, v);
   }
 
@@ -1136,7 +1134,7 @@ class ListArtifactsRequest extends $pb.GeneratedMessage {
 class ListArtifactsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListArtifactsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.Artifact>(1, 'artifacts', $pb.PbFieldType.PM, $0.Artifact.create)
+    ..pc<$3.Artifact>(1, 'artifacts', $pb.PbFieldType.PM, $3.Artifact.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1161,7 +1159,7 @@ class ListArtifactsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListArtifactsResponse _defaultInstance;
 
-  $core.List<$0.Artifact> get artifacts => $_getList(0);
+  $core.List<$3.Artifact> get artifacts => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1175,10 +1173,10 @@ class ListArtifactsResponse extends $pb.GeneratedMessage {
 class UpdateArtifactRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateArtifactRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Artifact>(1, 'artifact', $pb.PbFieldType.OM, $0.Artifact.getDefault,
-        $0.Artifact.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.Artifact>(1, 'artifact', $pb.PbFieldType.OM, $3.Artifact.getDefault,
+        $3.Artifact.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateArtifactRequest() : super();
@@ -1202,16 +1200,16 @@ class UpdateArtifactRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateArtifactRequest _defaultInstance;
 
-  $0.Artifact get artifact => $_getN(0);
-  set artifact($0.Artifact v) {
+  $3.Artifact get artifact => $_getN(0);
+  set artifact($3.Artifact v) {
     setField(1, v);
   }
 
   $core.bool hasArtifact() => $_has(0);
   void clearArtifact() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -1425,8 +1423,8 @@ class CreateSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSubscriptionRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'parent')
-    ..a<$0.Subscription>(2, 'subscription', $pb.PbFieldType.OM,
-        $0.Subscription.getDefault, $0.Subscription.create)
+    ..a<$3.Subscription>(2, 'subscription', $pb.PbFieldType.OM,
+        $3.Subscription.getDefault, $3.Subscription.create)
     ..hasRequiredFields = false;
 
   CreateSubscriptionRequest() : super();
@@ -1459,8 +1457,8 @@ class CreateSubscriptionRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Subscription get subscription => $_getN(1);
-  set subscription($0.Subscription v) {
+  $3.Subscription get subscription => $_getN(1);
+  set subscription($3.Subscription v) {
     setField(2, v);
   }
 
@@ -1471,10 +1469,10 @@ class CreateSubscriptionRequest extends $pb.GeneratedMessage {
 class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSubscriptionRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$0.Subscription>(1, 'subscription', $pb.PbFieldType.OM,
-        $0.Subscription.getDefault, $0.Subscription.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.Subscription>(1, 'subscription', $pb.PbFieldType.OM,
+        $3.Subscription.getDefault, $3.Subscription.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSubscriptionRequest() : super();
@@ -1499,16 +1497,16 @@ class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateSubscriptionRequest _defaultInstance;
 
-  $0.Subscription get subscription => $_getN(0);
-  set subscription($0.Subscription v) {
+  $3.Subscription get subscription => $_getN(0);
+  set subscription($3.Subscription v) {
     setField(1, v);
   }
 
   $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -1573,8 +1571,8 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
 class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.Subscription>(
-        1, 'subscriptions', $pb.PbFieldType.PM, $0.Subscription.create)
+    ..pc<$3.Subscription>(
+        1, 'subscriptions', $pb.PbFieldType.PM, $3.Subscription.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1600,7 +1598,7 @@ class ListSubscriptionsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListSubscriptionsResponse _defaultInstance;
 
-  $core.List<$0.Subscription> get subscriptions => $_getList(0);
+  $core.List<$3.Subscription> get subscriptions => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1653,12 +1651,12 @@ class CreateIncidentRoleAssignmentRequest extends $pb.GeneratedMessage {
       'CreateIncidentRoleAssignmentRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'parent')
-    ..a<$0.IncidentRoleAssignment>(
+    ..a<$3.IncidentRoleAssignment>(
         2,
         'incidentRoleAssignment',
         $pb.PbFieldType.OM,
-        $0.IncidentRoleAssignment.getDefault,
-        $0.IncidentRoleAssignment.create)
+        $3.IncidentRoleAssignment.getDefault,
+        $3.IncidentRoleAssignment.create)
     ..hasRequiredFields = false;
 
   CreateIncidentRoleAssignmentRequest() : super();
@@ -1692,8 +1690,8 @@ class CreateIncidentRoleAssignmentRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.IncidentRoleAssignment get incidentRoleAssignment => $_getN(1);
-  set incidentRoleAssignment($0.IncidentRoleAssignment v) {
+  $3.IncidentRoleAssignment get incidentRoleAssignment => $_getN(1);
+  set incidentRoleAssignment($3.IncidentRoleAssignment v) {
     setField(2, v);
   }
 
@@ -1801,8 +1799,8 @@ class ListIncidentRoleAssignmentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListIncidentRoleAssignmentsResponse',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$0.IncidentRoleAssignment>(1, 'incidentRoleAssignments',
-        $pb.PbFieldType.PM, $0.IncidentRoleAssignment.create)
+    ..pc<$3.IncidentRoleAssignment>(1, 'incidentRoleAssignments',
+        $pb.PbFieldType.PM, $3.IncidentRoleAssignment.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1829,7 +1827,7 @@ class ListIncidentRoleAssignmentsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListIncidentRoleAssignmentsResponse _defaultInstance;
 
-  $core.List<$0.IncidentRoleAssignment> get incidentRoleAssignments =>
+  $core.List<$3.IncidentRoleAssignment> get incidentRoleAssignments =>
       $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
@@ -1846,8 +1844,8 @@ class RequestIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
       'RequestIncidentRoleHandoverRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'name')
-    ..a<$0.User>(2, 'newAssignee', $pb.PbFieldType.OM, $0.User.getDefault,
-        $0.User.create)
+    ..a<$3.User>(2, 'newAssignee', $pb.PbFieldType.OM, $3.User.getDefault,
+        $3.User.create)
     ..hasRequiredFields = false;
 
   RequestIncidentRoleHandoverRequest() : super();
@@ -1881,8 +1879,8 @@ class RequestIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.User get newAssignee => $_getN(1);
-  set newAssignee($0.User v) {
+  $3.User get newAssignee => $_getN(1);
+  set newAssignee($3.User v) {
     setField(2, v);
   }
 
@@ -1895,8 +1893,8 @@ class ConfirmIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
       'ConfirmIncidentRoleHandoverRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'name')
-    ..a<$0.User>(2, 'newAssignee', $pb.PbFieldType.OM, $0.User.getDefault,
-        $0.User.create)
+    ..a<$3.User>(2, 'newAssignee', $pb.PbFieldType.OM, $3.User.getDefault,
+        $3.User.create)
     ..hasRequiredFields = false;
 
   ConfirmIncidentRoleHandoverRequest() : super();
@@ -1930,8 +1928,8 @@ class ConfirmIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.User get newAssignee => $_getN(1);
-  set newAssignee($0.User v) {
+  $3.User get newAssignee => $_getN(1);
+  set newAssignee($3.User v) {
     setField(2, v);
   }
 
@@ -1944,8 +1942,8 @@ class ForceIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
       'ForceIncidentRoleHandoverRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'name')
-    ..a<$0.User>(2, 'newAssignee', $pb.PbFieldType.OM, $0.User.getDefault,
-        $0.User.create)
+    ..a<$3.User>(2, 'newAssignee', $pb.PbFieldType.OM, $3.User.getDefault,
+        $3.User.create)
     ..hasRequiredFields = false;
 
   ForceIncidentRoleHandoverRequest() : super();
@@ -1979,8 +1977,8 @@ class ForceIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.User get newAssignee => $_getN(1);
-  set newAssignee($0.User v) {
+  $3.User get newAssignee => $_getN(1);
+  set newAssignee($3.User v) {
     setField(2, v);
   }
 
@@ -1993,8 +1991,8 @@ class CancelIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
       'CancelIncidentRoleHandoverRequest',
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'name')
-    ..a<$0.User>(2, 'newAssignee', $pb.PbFieldType.OM, $0.User.getDefault,
-        $0.User.create)
+    ..a<$3.User>(2, 'newAssignee', $pb.PbFieldType.OM, $3.User.getDefault,
+        $3.User.create)
     ..hasRequiredFields = false;
 
   CancelIncidentRoleHandoverRequest() : super();
@@ -2028,238 +2026,11 @@ class CancelIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.User get newAssignee => $_getN(1);
-  set newAssignee($0.User v) {
+  $3.User get newAssignee => $_getN(1);
+  set newAssignee($3.User v) {
     setField(2, v);
   }
 
   $core.bool hasNewAssignee() => $_has(1);
   void clearNewAssignee() => clearField(2);
-}
-
-class IncidentServiceApi {
-  $pb.RpcClient _client;
-  IncidentServiceApi(this._client);
-
-  $async.Future<$0.Incident> createIncident(
-      $pb.ClientContext ctx, CreateIncidentRequest request) {
-    var emptyResponse = $0.Incident();
-    return _client.invoke<$0.Incident>(
-        ctx, 'IncidentService', 'CreateIncident', request, emptyResponse);
-  }
-
-  $async.Future<$0.Incident> getIncident(
-      $pb.ClientContext ctx, GetIncidentRequest request) {
-    var emptyResponse = $0.Incident();
-    return _client.invoke<$0.Incident>(
-        ctx, 'IncidentService', 'GetIncident', request, emptyResponse);
-  }
-
-  $async.Future<SearchIncidentsResponse> searchIncidents(
-      $pb.ClientContext ctx, SearchIncidentsRequest request) {
-    var emptyResponse = SearchIncidentsResponse();
-    return _client.invoke<SearchIncidentsResponse>(
-        ctx, 'IncidentService', 'SearchIncidents', request, emptyResponse);
-  }
-
-  $async.Future<$0.Incident> updateIncident(
-      $pb.ClientContext ctx, UpdateIncidentRequest request) {
-    var emptyResponse = $0.Incident();
-    return _client.invoke<$0.Incident>(
-        ctx, 'IncidentService', 'UpdateIncident', request, emptyResponse);
-  }
-
-  $async.Future<SearchSimilarIncidentsResponse> searchSimilarIncidents(
-      $pb.ClientContext ctx, SearchSimilarIncidentsRequest request) {
-    var emptyResponse = SearchSimilarIncidentsResponse();
-    return _client.invoke<SearchSimilarIncidentsResponse>(ctx,
-        'IncidentService', 'SearchSimilarIncidents', request, emptyResponse);
-  }
-
-  $async.Future<$0.Annotation> createAnnotation(
-      $pb.ClientContext ctx, CreateAnnotationRequest request) {
-    var emptyResponse = $0.Annotation();
-    return _client.invoke<$0.Annotation>(
-        ctx, 'IncidentService', 'CreateAnnotation', request, emptyResponse);
-  }
-
-  $async.Future<ListAnnotationsResponse> listAnnotations(
-      $pb.ClientContext ctx, ListAnnotationsRequest request) {
-    var emptyResponse = ListAnnotationsResponse();
-    return _client.invoke<ListAnnotationsResponse>(
-        ctx, 'IncidentService', 'ListAnnotations', request, emptyResponse);
-  }
-
-  $async.Future<$0.Tag> createTag(
-      $pb.ClientContext ctx, CreateTagRequest request) {
-    var emptyResponse = $0.Tag();
-    return _client.invoke<$0.Tag>(
-        ctx, 'IncidentService', 'CreateTag', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteTag(
-      $pb.ClientContext ctx, DeleteTagRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'IncidentService', 'DeleteTag', request, emptyResponse);
-  }
-
-  $async.Future<ListTagsResponse> listTags(
-      $pb.ClientContext ctx, ListTagsRequest request) {
-    var emptyResponse = ListTagsResponse();
-    return _client.invoke<ListTagsResponse>(
-        ctx, 'IncidentService', 'ListTags', request, emptyResponse);
-  }
-
-  $async.Future<$0.Signal> createSignal(
-      $pb.ClientContext ctx, CreateSignalRequest request) {
-    var emptyResponse = $0.Signal();
-    return _client.invoke<$0.Signal>(
-        ctx, 'IncidentService', 'CreateSignal', request, emptyResponse);
-  }
-
-  $async.Future<SearchSignalsResponse> searchSignals(
-      $pb.ClientContext ctx, SearchSignalsRequest request) {
-    var emptyResponse = SearchSignalsResponse();
-    return _client.invoke<SearchSignalsResponse>(
-        ctx, 'IncidentService', 'SearchSignals', request, emptyResponse);
-  }
-
-  $async.Future<$0.Signal> getSignal(
-      $pb.ClientContext ctx, GetSignalRequest request) {
-    var emptyResponse = $0.Signal();
-    return _client.invoke<$0.Signal>(
-        ctx, 'IncidentService', 'GetSignal', request, emptyResponse);
-  }
-
-  $async.Future<$0.Signal> updateSignal(
-      $pb.ClientContext ctx, UpdateSignalRequest request) {
-    var emptyResponse = $0.Signal();
-    return _client.invoke<$0.Signal>(
-        ctx, 'IncidentService', 'UpdateSignal', request, emptyResponse);
-  }
-
-  $async.Future<EscalateIncidentResponse> escalateIncident(
-      $pb.ClientContext ctx, EscalateIncidentRequest request) {
-    var emptyResponse = EscalateIncidentResponse();
-    return _client.invoke<EscalateIncidentResponse>(
-        ctx, 'IncidentService', 'EscalateIncident', request, emptyResponse);
-  }
-
-  $async.Future<$0.Artifact> createArtifact(
-      $pb.ClientContext ctx, CreateArtifactRequest request) {
-    var emptyResponse = $0.Artifact();
-    return _client.invoke<$0.Artifact>(
-        ctx, 'IncidentService', 'CreateArtifact', request, emptyResponse);
-  }
-
-  $async.Future<ListArtifactsResponse> listArtifacts(
-      $pb.ClientContext ctx, ListArtifactsRequest request) {
-    var emptyResponse = ListArtifactsResponse();
-    return _client.invoke<ListArtifactsResponse>(
-        ctx, 'IncidentService', 'ListArtifacts', request, emptyResponse);
-  }
-
-  $async.Future<$0.Artifact> updateArtifact(
-      $pb.ClientContext ctx, UpdateArtifactRequest request) {
-    var emptyResponse = $0.Artifact();
-    return _client.invoke<$0.Artifact>(
-        ctx, 'IncidentService', 'UpdateArtifact', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteArtifact(
-      $pb.ClientContext ctx, DeleteArtifactRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'IncidentService', 'DeleteArtifact', request, emptyResponse);
-  }
-
-  $async.Future<SendShiftHandoffResponse> sendShiftHandoff(
-      $pb.ClientContext ctx, SendShiftHandoffRequest request) {
-    var emptyResponse = SendShiftHandoffResponse();
-    return _client.invoke<SendShiftHandoffResponse>(
-        ctx, 'IncidentService', 'SendShiftHandoff', request, emptyResponse);
-  }
-
-  $async.Future<$0.Subscription> createSubscription(
-      $pb.ClientContext ctx, CreateSubscriptionRequest request) {
-    var emptyResponse = $0.Subscription();
-    return _client.invoke<$0.Subscription>(
-        ctx, 'IncidentService', 'CreateSubscription', request, emptyResponse);
-  }
-
-  $async.Future<$0.Subscription> updateSubscription(
-      $pb.ClientContext ctx, UpdateSubscriptionRequest request) {
-    var emptyResponse = $0.Subscription();
-    return _client.invoke<$0.Subscription>(
-        ctx, 'IncidentService', 'UpdateSubscription', request, emptyResponse);
-  }
-
-  $async.Future<ListSubscriptionsResponse> listSubscriptions(
-      $pb.ClientContext ctx, ListSubscriptionsRequest request) {
-    var emptyResponse = ListSubscriptionsResponse();
-    return _client.invoke<ListSubscriptionsResponse>(
-        ctx, 'IncidentService', 'ListSubscriptions', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteSubscription(
-      $pb.ClientContext ctx, DeleteSubscriptionRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'IncidentService', 'DeleteSubscription', request, emptyResponse);
-  }
-
-  $async.Future<$0.IncidentRoleAssignment> createIncidentRoleAssignment(
-      $pb.ClientContext ctx, CreateIncidentRoleAssignmentRequest request) {
-    var emptyResponse = $0.IncidentRoleAssignment();
-    return _client.invoke<$0.IncidentRoleAssignment>(ctx, 'IncidentService',
-        'CreateIncidentRoleAssignment', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteIncidentRoleAssignment(
-      $pb.ClientContext ctx, DeleteIncidentRoleAssignmentRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(ctx, 'IncidentService',
-        'DeleteIncidentRoleAssignment', request, emptyResponse);
-  }
-
-  $async.Future<ListIncidentRoleAssignmentsResponse>
-      listIncidentRoleAssignments(
-          $pb.ClientContext ctx, ListIncidentRoleAssignmentsRequest request) {
-    var emptyResponse = ListIncidentRoleAssignmentsResponse();
-    return _client.invoke<ListIncidentRoleAssignmentsResponse>(
-        ctx,
-        'IncidentService',
-        'ListIncidentRoleAssignments',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$0.IncidentRoleAssignment> requestIncidentRoleHandover(
-      $pb.ClientContext ctx, RequestIncidentRoleHandoverRequest request) {
-    var emptyResponse = $0.IncidentRoleAssignment();
-    return _client.invoke<$0.IncidentRoleAssignment>(ctx, 'IncidentService',
-        'RequestIncidentRoleHandover', request, emptyResponse);
-  }
-
-  $async.Future<$0.IncidentRoleAssignment> confirmIncidentRoleHandover(
-      $pb.ClientContext ctx, ConfirmIncidentRoleHandoverRequest request) {
-    var emptyResponse = $0.IncidentRoleAssignment();
-    return _client.invoke<$0.IncidentRoleAssignment>(ctx, 'IncidentService',
-        'ConfirmIncidentRoleHandover', request, emptyResponse);
-  }
-
-  $async.Future<$0.IncidentRoleAssignment> forceIncidentRoleHandover(
-      $pb.ClientContext ctx, ForceIncidentRoleHandoverRequest request) {
-    var emptyResponse = $0.IncidentRoleAssignment();
-    return _client.invoke<$0.IncidentRoleAssignment>(ctx, 'IncidentService',
-        'ForceIncidentRoleHandover', request, emptyResponse);
-  }
-
-  $async.Future<$0.IncidentRoleAssignment> cancelIncidentRoleHandover(
-      $pb.ClientContext ctx, CancelIncidentRoleHandoverRequest request) {
-    var emptyResponse = $0.IncidentRoleAssignment();
-    return _client.invoke<$0.IncidentRoleAssignment>(ctx, 'IncidentService',
-        'CancelIncidentRoleHandover', request, emptyResponse);
-  }
 }

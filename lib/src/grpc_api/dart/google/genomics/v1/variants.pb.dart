@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../longrunning/operations.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import '../../protobuf/struct.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
 
 import 'variants.pbenum.dart';
 
@@ -25,13 +22,13 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'key')
     ..aOS(2, 'value')
-    ..m<$core.String, $0.ListValue>(
+    ..m<$core.String, $2.ListValue>(
         3,
         'info',
         'VariantSetMetadata.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.ListValue.create,
+        $2.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -82,7 +79,7 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
-  $core.Map<$core.String, $0.ListValue> get info => $_getMap(2);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(2);
 
   $core.String get id => $_getS(3, '');
   set id($core.String v) {
@@ -202,13 +199,13 @@ class Variant extends $pb.GeneratedMessage {
     ..pPS(7, 'alternateBases')
     ..a<$core.double>(8, 'quality', $pb.PbFieldType.OD)
     ..pPS(9, 'filter')
-    ..m<$core.String, $0.ListValue>(
+    ..m<$core.String, $2.ListValue>(
         10,
         'info',
         'Variant.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.ListValue.create,
+        $2.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -267,7 +264,7 @@ class Variant extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get filter => $_getList(5);
 
-  $core.Map<$core.String, $0.ListValue> get info => $_getMap(6);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(6);
 
   $core.List<VariantCall> get calls => $_getList(7);
 
@@ -315,13 +312,13 @@ class Variant extends $pb.GeneratedMessage {
 class VariantCall extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VariantCall',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..m<$core.String, $0.ListValue>(
+    ..m<$core.String, $2.ListValue>(
         2,
         'info',
         'VariantCall.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.ListValue.create,
+        $2.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -349,7 +346,7 @@ class VariantCall extends $pb.GeneratedMessage {
   static VariantCall getDefault() => _defaultInstance ??= create()..freeze();
   static VariantCall _defaultInstance;
 
-  $core.Map<$core.String, $0.ListValue> get info => $_getMap(0);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(0);
 
   $core.String get phaseset => $_getS(1, '');
   set phaseset($core.String v) {
@@ -385,13 +382,13 @@ class CallSet extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'name')
-    ..m<$core.String, $0.ListValue>(
+    ..m<$core.String, $2.ListValue>(
         4,
         'info',
         'CallSet.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.ListValue.create,
+        $2.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -433,7 +430,7 @@ class CallSet extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
-  $core.Map<$core.String, $0.ListValue> get info => $_getMap(2);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(2);
 
   Int64 get created => $_getI64(3);
   set created(Int64 v) {
@@ -885,8 +882,8 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantSetId')
     ..a<VariantSet>(2, 'variantSet', $pb.PbFieldType.OM, VariantSet.getDefault,
         VariantSet.create)
-    ..a<$1.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateVariantSetRequest() : super();
@@ -926,8 +923,8 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
   $core.bool hasVariantSet() => $_has(1);
   void clearVariantSet() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(5, v);
   }
 
@@ -1112,8 +1109,8 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantId')
     ..a<Variant>(
         2, 'variant', $pb.PbFieldType.OM, Variant.getDefault, Variant.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateVariantRequest() : super();
@@ -1152,8 +1149,8 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
   $core.bool hasVariant() => $_has(1);
   void clearVariant() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -1419,8 +1416,8 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'callSetId')
     ..a<CallSet>(
         2, 'callSet', $pb.PbFieldType.OM, CallSet.getDefault, CallSet.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCallSetRequest() : super();
@@ -1459,8 +1456,8 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
   $core.bool hasCallSet() => $_has(1);
   void clearCallSet() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -1640,147 +1637,4 @@ class StreamVariantsResponse extends $pb.GeneratedMessage {
   static StreamVariantsResponse _defaultInstance;
 
   $core.List<Variant> get variants => $_getList(0);
-}
-
-class StreamingVariantServiceApi {
-  $pb.RpcClient _client;
-  StreamingVariantServiceApi(this._client);
-
-  $async.Future<StreamVariantsResponse> streamVariants(
-      $pb.ClientContext ctx, StreamVariantsRequest request) {
-    var emptyResponse = StreamVariantsResponse();
-    return _client.invoke<StreamVariantsResponse>(ctx,
-        'StreamingVariantService', 'StreamVariants', request, emptyResponse);
-  }
-}
-
-class VariantServiceV1Api {
-  $pb.RpcClient _client;
-  VariantServiceV1Api(this._client);
-
-  $async.Future<$2.Operation> importVariants(
-      $pb.ClientContext ctx, ImportVariantsRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'VariantServiceV1', 'ImportVariants', request, emptyResponse);
-  }
-
-  $async.Future<VariantSet> createVariantSet(
-      $pb.ClientContext ctx, CreateVariantSetRequest request) {
-    var emptyResponse = VariantSet();
-    return _client.invoke<VariantSet>(
-        ctx, 'VariantServiceV1', 'CreateVariantSet', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> exportVariantSet(
-      $pb.ClientContext ctx, ExportVariantSetRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'VariantServiceV1', 'ExportVariantSet', request, emptyResponse);
-  }
-
-  $async.Future<VariantSet> getVariantSet(
-      $pb.ClientContext ctx, GetVariantSetRequest request) {
-    var emptyResponse = VariantSet();
-    return _client.invoke<VariantSet>(
-        ctx, 'VariantServiceV1', 'GetVariantSet', request, emptyResponse);
-  }
-
-  $async.Future<SearchVariantSetsResponse> searchVariantSets(
-      $pb.ClientContext ctx, SearchVariantSetsRequest request) {
-    var emptyResponse = SearchVariantSetsResponse();
-    return _client.invoke<SearchVariantSetsResponse>(
-        ctx, 'VariantServiceV1', 'SearchVariantSets', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteVariantSet(
-      $pb.ClientContext ctx, DeleteVariantSetRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'VariantServiceV1', 'DeleteVariantSet', request, emptyResponse);
-  }
-
-  $async.Future<VariantSet> updateVariantSet(
-      $pb.ClientContext ctx, UpdateVariantSetRequest request) {
-    var emptyResponse = VariantSet();
-    return _client.invoke<VariantSet>(
-        ctx, 'VariantServiceV1', 'UpdateVariantSet', request, emptyResponse);
-  }
-
-  $async.Future<SearchVariantsResponse> searchVariants(
-      $pb.ClientContext ctx, SearchVariantsRequest request) {
-    var emptyResponse = SearchVariantsResponse();
-    return _client.invoke<SearchVariantsResponse>(
-        ctx, 'VariantServiceV1', 'SearchVariants', request, emptyResponse);
-  }
-
-  $async.Future<Variant> createVariant(
-      $pb.ClientContext ctx, CreateVariantRequest request) {
-    var emptyResponse = Variant();
-    return _client.invoke<Variant>(
-        ctx, 'VariantServiceV1', 'CreateVariant', request, emptyResponse);
-  }
-
-  $async.Future<Variant> updateVariant(
-      $pb.ClientContext ctx, UpdateVariantRequest request) {
-    var emptyResponse = Variant();
-    return _client.invoke<Variant>(
-        ctx, 'VariantServiceV1', 'UpdateVariant', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteVariant(
-      $pb.ClientContext ctx, DeleteVariantRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'VariantServiceV1', 'DeleteVariant', request, emptyResponse);
-  }
-
-  $async.Future<Variant> getVariant(
-      $pb.ClientContext ctx, GetVariantRequest request) {
-    var emptyResponse = Variant();
-    return _client.invoke<Variant>(
-        ctx, 'VariantServiceV1', 'GetVariant', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> mergeVariants(
-      $pb.ClientContext ctx, MergeVariantsRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'VariantServiceV1', 'MergeVariants', request, emptyResponse);
-  }
-
-  $async.Future<SearchCallSetsResponse> searchCallSets(
-      $pb.ClientContext ctx, SearchCallSetsRequest request) {
-    var emptyResponse = SearchCallSetsResponse();
-    return _client.invoke<SearchCallSetsResponse>(
-        ctx, 'VariantServiceV1', 'SearchCallSets', request, emptyResponse);
-  }
-
-  $async.Future<CallSet> createCallSet(
-      $pb.ClientContext ctx, CreateCallSetRequest request) {
-    var emptyResponse = CallSet();
-    return _client.invoke<CallSet>(
-        ctx, 'VariantServiceV1', 'CreateCallSet', request, emptyResponse);
-  }
-
-  $async.Future<CallSet> updateCallSet(
-      $pb.ClientContext ctx, UpdateCallSetRequest request) {
-    var emptyResponse = CallSet();
-    return _client.invoke<CallSet>(
-        ctx, 'VariantServiceV1', 'UpdateCallSet', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteCallSet(
-      $pb.ClientContext ctx, DeleteCallSetRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'VariantServiceV1', 'DeleteCallSet', request, emptyResponse);
-  }
-
-  $async.Future<CallSet> getCallSet(
-      $pb.ClientContext ctx, GetCallSetRequest request) {
-    var emptyResponse = CallSet();
-    return _client.invoke<CallSet>(
-        ctx, 'VariantServiceV1', 'GetCallSet', request, emptyResponse);
-  }
 }

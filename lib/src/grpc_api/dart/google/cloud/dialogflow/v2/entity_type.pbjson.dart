@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/field_mask.pbjson.dart' as $0;
-import '../../../protobuf/empty.pbjson.dart' as $1;
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $4;
-
 const EntityType$json = {
   '1': 'EntityType',
   '2': [
@@ -267,102 +261,4 @@ const EntityTypeBatch$json = {
       '10': 'entityTypes'
     },
   ],
-};
-
-const EntityTypesServiceBase$json = {
-  '1': 'EntityTypes',
-  '2': [
-    {
-      '1': 'ListEntityTypes',
-      '2': '.google.cloud.dialogflow.v2.ListEntityTypesRequest',
-      '3': '.google.cloud.dialogflow.v2.ListEntityTypesResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetEntityType',
-      '2': '.google.cloud.dialogflow.v2.GetEntityTypeRequest',
-      '3': '.google.cloud.dialogflow.v2.EntityType',
-      '4': {}
-    },
-    {
-      '1': 'CreateEntityType',
-      '2': '.google.cloud.dialogflow.v2.CreateEntityTypeRequest',
-      '3': '.google.cloud.dialogflow.v2.EntityType',
-      '4': {}
-    },
-    {
-      '1': 'UpdateEntityType',
-      '2': '.google.cloud.dialogflow.v2.UpdateEntityTypeRequest',
-      '3': '.google.cloud.dialogflow.v2.EntityType',
-      '4': {}
-    },
-    {
-      '1': 'DeleteEntityType',
-      '2': '.google.cloud.dialogflow.v2.DeleteEntityTypeRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'BatchUpdateEntityTypes',
-      '2': '.google.cloud.dialogflow.v2.BatchUpdateEntityTypesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'BatchDeleteEntityTypes',
-      '2': '.google.cloud.dialogflow.v2.BatchDeleteEntityTypesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'BatchCreateEntities',
-      '2': '.google.cloud.dialogflow.v2.BatchCreateEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'BatchUpdateEntities',
-      '2': '.google.cloud.dialogflow.v2.BatchUpdateEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'BatchDeleteEntities',
-      '2': '.google.cloud.dialogflow.v2.BatchDeleteEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const EntityTypesServiceBase$messageJson = {
-  '.google.cloud.dialogflow.v2.ListEntityTypesRequest':
-      ListEntityTypesRequest$json,
-  '.google.cloud.dialogflow.v2.ListEntityTypesResponse':
-      ListEntityTypesResponse$json,
-  '.google.cloud.dialogflow.v2.EntityType': EntityType$json,
-  '.google.cloud.dialogflow.v2.EntityType.Entity': EntityType_Entity$json,
-  '.google.cloud.dialogflow.v2.GetEntityTypeRequest': GetEntityTypeRequest$json,
-  '.google.cloud.dialogflow.v2.CreateEntityTypeRequest':
-      CreateEntityTypeRequest$json,
-  '.google.cloud.dialogflow.v2.UpdateEntityTypeRequest':
-      UpdateEntityTypeRequest$json,
-  '.google.protobuf.FieldMask': $0.FieldMask$json,
-  '.google.cloud.dialogflow.v2.DeleteEntityTypeRequest':
-      DeleteEntityTypeRequest$json,
-  '.google.protobuf.Empty': $1.Empty$json,
-  '.google.cloud.dialogflow.v2.BatchUpdateEntityTypesRequest':
-      BatchUpdateEntityTypesRequest$json,
-  '.google.cloud.dialogflow.v2.EntityTypeBatch': EntityTypeBatch$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $4.Status$json,
-  '.google.cloud.dialogflow.v2.BatchDeleteEntityTypesRequest':
-      BatchDeleteEntityTypesRequest$json,
-  '.google.cloud.dialogflow.v2.BatchCreateEntitiesRequest':
-      BatchCreateEntitiesRequest$json,
-  '.google.cloud.dialogflow.v2.BatchUpdateEntitiesRequest':
-      BatchUpdateEntitiesRequest$json,
-  '.google.cloud.dialogflow.v2.BatchDeleteEntitiesRequest':
-      BatchDeleteEntitiesRequest$json,
 };

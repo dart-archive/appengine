@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -928,93 +927,4 @@ class ListFileSetsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class ResultStoreDownloadApi {
-  $pb.RpcClient _client;
-  ResultStoreDownloadApi(this._client);
-
-  $async.Future<$0.Invocation> getInvocation(
-      $pb.ClientContext ctx, GetInvocationRequest request) {
-    var emptyResponse = $0.Invocation();
-    return _client.invoke<$0.Invocation>(
-        ctx, 'ResultStoreDownload', 'GetInvocation', request, emptyResponse);
-  }
-
-  $async.Future<SearchInvocationsResponse> searchInvocations(
-      $pb.ClientContext ctx, SearchInvocationsRequest request) {
-    var emptyResponse = SearchInvocationsResponse();
-    return _client.invoke<SearchInvocationsResponse>(ctx, 'ResultStoreDownload',
-        'SearchInvocations', request, emptyResponse);
-  }
-
-  $async.Future<$1.Configuration> getConfiguration(
-      $pb.ClientContext ctx, GetConfigurationRequest request) {
-    var emptyResponse = $1.Configuration();
-    return _client.invoke<$1.Configuration>(
-        ctx, 'ResultStoreDownload', 'GetConfiguration', request, emptyResponse);
-  }
-
-  $async.Future<ListConfigurationsResponse> listConfigurations(
-      $pb.ClientContext ctx, ListConfigurationsRequest request) {
-    var emptyResponse = ListConfigurationsResponse();
-    return _client.invoke<ListConfigurationsResponse>(ctx,
-        'ResultStoreDownload', 'ListConfigurations', request, emptyResponse);
-  }
-
-  $async.Future<$2.Target> getTarget(
-      $pb.ClientContext ctx, GetTargetRequest request) {
-    var emptyResponse = $2.Target();
-    return _client.invoke<$2.Target>(
-        ctx, 'ResultStoreDownload', 'GetTarget', request, emptyResponse);
-  }
-
-  $async.Future<ListTargetsResponse> listTargets(
-      $pb.ClientContext ctx, ListTargetsRequest request) {
-    var emptyResponse = ListTargetsResponse();
-    return _client.invoke<ListTargetsResponse>(
-        ctx, 'ResultStoreDownload', 'ListTargets', request, emptyResponse);
-  }
-
-  $async.Future<$3.ConfiguredTarget> getConfiguredTarget(
-      $pb.ClientContext ctx, GetConfiguredTargetRequest request) {
-    var emptyResponse = $3.ConfiguredTarget();
-    return _client.invoke<$3.ConfiguredTarget>(ctx, 'ResultStoreDownload',
-        'GetConfiguredTarget', request, emptyResponse);
-  }
-
-  $async.Future<ListConfiguredTargetsResponse> listConfiguredTargets(
-      $pb.ClientContext ctx, ListConfiguredTargetsRequest request) {
-    var emptyResponse = ListConfiguredTargetsResponse();
-    return _client.invoke<ListConfiguredTargetsResponse>(ctx,
-        'ResultStoreDownload', 'ListConfiguredTargets', request, emptyResponse);
-  }
-
-  $async.Future<$4.Action> getAction(
-      $pb.ClientContext ctx, GetActionRequest request) {
-    var emptyResponse = $4.Action();
-    return _client.invoke<$4.Action>(
-        ctx, 'ResultStoreDownload', 'GetAction', request, emptyResponse);
-  }
-
-  $async.Future<ListActionsResponse> listActions(
-      $pb.ClientContext ctx, ListActionsRequest request) {
-    var emptyResponse = ListActionsResponse();
-    return _client.invoke<ListActionsResponse>(
-        ctx, 'ResultStoreDownload', 'ListActions', request, emptyResponse);
-  }
-
-  $async.Future<$5.FileSet> getFileSet(
-      $pb.ClientContext ctx, GetFileSetRequest request) {
-    var emptyResponse = $5.FileSet();
-    return _client.invoke<$5.FileSet>(
-        ctx, 'ResultStoreDownload', 'GetFileSet', request, emptyResponse);
-  }
-
-  $async.Future<ListFileSetsResponse> listFileSets(
-      $pb.ClientContext ctx, ListFileSetsRequest request) {
-    var emptyResponse = ListFileSetsResponse();
-    return _client.invoke<ListFileSetsResponse>(
-        ctx, 'ResultStoreDownload', 'ListFileSets', request, emptyResponse);
-  }
 }

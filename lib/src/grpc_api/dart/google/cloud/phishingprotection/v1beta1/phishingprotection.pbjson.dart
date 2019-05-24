@@ -15,22 +15,3 @@ const ReportPhishingRequest$json = {
 const ReportPhishingResponse$json = {
   '1': 'ReportPhishingResponse',
 };
-
-const PhishingProtectionServiceV1Beta1ServiceBase$json = {
-  '1': 'PhishingProtectionServiceV1Beta1',
-  '2': [
-    {
-      '1': 'ReportPhishing',
-      '2': '.google.cloud.phishingprotection.v1beta1.ReportPhishingRequest',
-      '3': '.google.cloud.phishingprotection.v1beta1.ReportPhishingResponse',
-      '4': {}
-    },
-  ],
-};
-
-const PhishingProtectionServiceV1Beta1ServiceBase$messageJson = {
-  '.google.cloud.phishingprotection.v1beta1.ReportPhishingRequest':
-      ReportPhishingRequest$json,
-  '.google.cloud.phishingprotection.v1beta1.ReportPhishingResponse':
-      ReportPhishingResponse$json,
-};

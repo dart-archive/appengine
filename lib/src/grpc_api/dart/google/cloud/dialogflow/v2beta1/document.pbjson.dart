@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../longrunning/operations.pbjson.dart' as $1;
-import '../../../protobuf/any.pbjson.dart' as $2;
-import '../../../rpc/status.pbjson.dart' as $3;
-import '../../../protobuf/field_mask.pbjson.dart' as $0;
-
 const Document$json = {
   '1': 'Document',
   '2': [
@@ -155,68 +150,4 @@ const ReloadDocumentRequest$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
-};
-
-const DocumentsServiceBase$json = {
-  '1': 'Documents',
-  '2': [
-    {
-      '1': 'ListDocuments',
-      '2': '.google.cloud.dialogflow.v2beta1.ListDocumentsRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.ListDocumentsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetDocument',
-      '2': '.google.cloud.dialogflow.v2beta1.GetDocumentRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.Document',
-      '4': {}
-    },
-    {
-      '1': 'CreateDocument',
-      '2': '.google.cloud.dialogflow.v2beta1.CreateDocumentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'DeleteDocument',
-      '2': '.google.cloud.dialogflow.v2beta1.DeleteDocumentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'UpdateDocument',
-      '2': '.google.cloud.dialogflow.v2beta1.UpdateDocumentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ReloadDocument',
-      '2': '.google.cloud.dialogflow.v2beta1.ReloadDocumentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const DocumentsServiceBase$messageJson = {
-  '.google.cloud.dialogflow.v2beta1.ListDocumentsRequest':
-      ListDocumentsRequest$json,
-  '.google.cloud.dialogflow.v2beta1.ListDocumentsResponse':
-      ListDocumentsResponse$json,
-  '.google.cloud.dialogflow.v2beta1.Document': Document$json,
-  '.google.cloud.dialogflow.v2beta1.GetDocumentRequest':
-      GetDocumentRequest$json,
-  '.google.cloud.dialogflow.v2beta1.CreateDocumentRequest':
-      CreateDocumentRequest$json,
-  '.google.longrunning.Operation': $1.Operation$json,
-  '.google.protobuf.Any': $2.Any$json,
-  '.google.rpc.Status': $3.Status$json,
-  '.google.cloud.dialogflow.v2beta1.DeleteDocumentRequest':
-      DeleteDocumentRequest$json,
-  '.google.cloud.dialogflow.v2beta1.UpdateDocumentRequest':
-      UpdateDocumentRequest$json,
-  '.google.protobuf.FieldMask': $0.FieldMask$json,
-  '.google.cloud.dialogflow.v2beta1.ReloadDocumentRequest':
-      ReloadDocumentRequest$json,
 };

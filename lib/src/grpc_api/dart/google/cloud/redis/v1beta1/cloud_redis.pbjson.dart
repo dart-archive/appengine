@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $4;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-
 const Instance$json = {
   '1': 'Instance',
   '2': [
@@ -266,70 +260,4 @@ const LocationMetadata_AvailableZonesEntry$json = {
 
 const ZoneMetadata$json = {
   '1': 'ZoneMetadata',
-};
-
-const CloudRedisServiceBase$json = {
-  '1': 'CloudRedis',
-  '2': [
-    {
-      '1': 'ListInstances',
-      '2': '.google.cloud.redis.v1beta1.ListInstancesRequest',
-      '3': '.google.cloud.redis.v1beta1.ListInstancesResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetInstance',
-      '2': '.google.cloud.redis.v1beta1.GetInstanceRequest',
-      '3': '.google.cloud.redis.v1beta1.Instance',
-      '4': {}
-    },
-    {
-      '1': 'CreateInstance',
-      '2': '.google.cloud.redis.v1beta1.CreateInstanceRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'UpdateInstance',
-      '2': '.google.cloud.redis.v1beta1.UpdateInstanceRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'FailoverInstance',
-      '2': '.google.cloud.redis.v1beta1.FailoverInstanceRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'DeleteInstance',
-      '2': '.google.cloud.redis.v1beta1.DeleteInstanceRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const CloudRedisServiceBase$messageJson = {
-  '.google.cloud.redis.v1beta1.ListInstancesRequest': ListInstancesRequest$json,
-  '.google.cloud.redis.v1beta1.ListInstancesResponse':
-      ListInstancesResponse$json,
-  '.google.cloud.redis.v1beta1.Instance': Instance$json,
-  '.google.cloud.redis.v1beta1.Instance.LabelsEntry': Instance_LabelsEntry$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.redis.v1beta1.Instance.RedisConfigsEntry':
-      Instance_RedisConfigsEntry$json,
-  '.google.cloud.redis.v1beta1.GetInstanceRequest': GetInstanceRequest$json,
-  '.google.cloud.redis.v1beta1.CreateInstanceRequest':
-      CreateInstanceRequest$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $4.Status$json,
-  '.google.cloud.redis.v1beta1.UpdateInstanceRequest':
-      UpdateInstanceRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.redis.v1beta1.FailoverInstanceRequest':
-      FailoverInstanceRequest$json,
-  '.google.cloud.redis.v1beta1.DeleteInstanceRequest':
-      DeleteInstanceRequest$json,
 };

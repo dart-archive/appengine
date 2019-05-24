@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -228,31 +227,4 @@ class MutateCustomerManagerLinkResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CustomerManagerLinkServiceApi {
-  $pb.RpcClient _client;
-  CustomerManagerLinkServiceApi(this._client);
-
-  $async.Future<$0.CustomerManagerLink> getCustomerManagerLink(
-      $pb.ClientContext ctx, GetCustomerManagerLinkRequest request) {
-    var emptyResponse = $0.CustomerManagerLink();
-    return _client.invoke<$0.CustomerManagerLink>(
-        ctx,
-        'CustomerManagerLinkService',
-        'GetCustomerManagerLink',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateCustomerManagerLinkResponse> mutateCustomerManagerLink(
-      $pb.ClientContext ctx, MutateCustomerManagerLinkRequest request) {
-    var emptyResponse = MutateCustomerManagerLinkResponse();
-    return _client.invoke<MutateCustomerManagerLinkResponse>(
-        ctx,
-        'CustomerManagerLinkService',
-        'MutateCustomerManagerLink',
-        request,
-        emptyResponse);
-  }
 }

@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../protobuf/duration.pbjson.dart' as $0;
-import '../../longrunning/operations.pbjson.dart' as $2;
-import '../../protobuf/any.pbjson.dart' as $5;
-import '../../rpc/status.pbjson.dart' as $6;
-import '../../protobuf/empty.pbjson.dart' as $3;
-import '../../protobuf/timestamp.pbjson.dart' as $1;
-
 const ComputeEngine$json = {
   '1': 'ComputeEngine',
   '2': [
@@ -509,100 +502,4 @@ const DockerExecutor$json = {
     {'1': 'image_name', '3': 1, '4': 1, '5': 9, '10': 'imageName'},
     {'1': 'cmd', '3': 2, '4': 1, '5': 9, '10': 'cmd'},
   ],
-};
-
-const PipelinesV1Alpha2ServiceBase$json = {
-  '1': 'PipelinesV1Alpha2',
-  '2': [
-    {
-      '1': 'CreatePipeline',
-      '2': '.google.genomics.v1alpha2.CreatePipelineRequest',
-      '3': '.google.genomics.v1alpha2.Pipeline',
-      '4': {}
-    },
-    {
-      '1': 'RunPipeline',
-      '2': '.google.genomics.v1alpha2.RunPipelineRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'GetPipeline',
-      '2': '.google.genomics.v1alpha2.GetPipelineRequest',
-      '3': '.google.genomics.v1alpha2.Pipeline',
-      '4': {}
-    },
-    {
-      '1': 'ListPipelines',
-      '2': '.google.genomics.v1alpha2.ListPipelinesRequest',
-      '3': '.google.genomics.v1alpha2.ListPipelinesResponse',
-      '4': {}
-    },
-    {
-      '1': 'DeletePipeline',
-      '2': '.google.genomics.v1alpha2.DeletePipelineRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'GetControllerConfig',
-      '2': '.google.genomics.v1alpha2.GetControllerConfigRequest',
-      '3': '.google.genomics.v1alpha2.ControllerConfig',
-      '4': {}
-    },
-    {
-      '1': 'SetOperationStatus',
-      '2': '.google.genomics.v1alpha2.SetOperationStatusRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const PipelinesV1Alpha2ServiceBase$messageJson = {
-  '.google.genomics.v1alpha2.CreatePipelineRequest': CreatePipelineRequest$json,
-  '.google.genomics.v1alpha2.Pipeline': Pipeline$json,
-  '.google.genomics.v1alpha2.DockerExecutor': DockerExecutor$json,
-  '.google.genomics.v1alpha2.PipelineResources': PipelineResources$json,
-  '.google.genomics.v1alpha2.PipelineResources.Disk':
-      PipelineResources_Disk$json,
-  '.google.genomics.v1alpha2.PipelineParameter': PipelineParameter$json,
-  '.google.genomics.v1alpha2.PipelineParameter.LocalCopy':
-      PipelineParameter_LocalCopy$json,
-  '.google.genomics.v1alpha2.RunPipelineRequest': RunPipelineRequest$json,
-  '.google.genomics.v1alpha2.RunPipelineArgs': RunPipelineArgs$json,
-  '.google.genomics.v1alpha2.RunPipelineArgs.InputsEntry':
-      RunPipelineArgs_InputsEntry$json,
-  '.google.genomics.v1alpha2.RunPipelineArgs.OutputsEntry':
-      RunPipelineArgs_OutputsEntry$json,
-  '.google.genomics.v1alpha2.ServiceAccount': ServiceAccount$json,
-  '.google.genomics.v1alpha2.LoggingOptions': LoggingOptions$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.genomics.v1alpha2.RunPipelineArgs.LabelsEntry':
-      RunPipelineArgs_LabelsEntry$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $5.Any$json,
-  '.google.rpc.Status': $6.Status$json,
-  '.google.genomics.v1alpha2.GetPipelineRequest': GetPipelineRequest$json,
-  '.google.genomics.v1alpha2.ListPipelinesRequest': ListPipelinesRequest$json,
-  '.google.genomics.v1alpha2.ListPipelinesResponse': ListPipelinesResponse$json,
-  '.google.genomics.v1alpha2.DeletePipelineRequest': DeletePipelineRequest$json,
-  '.google.protobuf.Empty': $3.Empty$json,
-  '.google.genomics.v1alpha2.GetControllerConfigRequest':
-      GetControllerConfigRequest$json,
-  '.google.genomics.v1alpha2.ControllerConfig': ControllerConfig$json,
-  '.google.genomics.v1alpha2.ControllerConfig.VarsEntry':
-      ControllerConfig_VarsEntry$json,
-  '.google.genomics.v1alpha2.ControllerConfig.DisksEntry':
-      ControllerConfig_DisksEntry$json,
-  '.google.genomics.v1alpha2.ControllerConfig.GcsSourcesEntry':
-      ControllerConfig_GcsSourcesEntry$json,
-  '.google.genomics.v1alpha2.ControllerConfig.RepeatedString':
-      ControllerConfig_RepeatedString$json,
-  '.google.genomics.v1alpha2.ControllerConfig.GcsSinksEntry':
-      ControllerConfig_GcsSinksEntry$json,
-  '.google.genomics.v1alpha2.SetOperationStatusRequest':
-      SetOperationStatusRequest$json,
-  '.google.genomics.v1alpha2.TimestampEvent': TimestampEvent$json,
-  '.google.protobuf.Timestamp': $1.Timestamp$json,
 };

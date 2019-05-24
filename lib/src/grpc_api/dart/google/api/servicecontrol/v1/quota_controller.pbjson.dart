@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'metric_value.pbjson.dart' as $0;
-import '../../../protobuf/timestamp.pbjson.dart' as $1;
-import 'distribution.pbjson.dart' as $2;
-
 const AllocateQuotaRequest$json = {
   '1': 'AllocateQuotaRequest',
   '2': [
@@ -129,39 +125,4 @@ const QuotaError_Code$json = {
     {'1': 'API_KEY_INVALID', '2': 105},
     {'1': 'API_KEY_EXPIRED', '2': 112},
   ],
-};
-
-const QuotaControllerServiceBase$json = {
-  '1': 'QuotaController',
-  '2': [
-    {
-      '1': 'AllocateQuota',
-      '2': '.google.api.servicecontrol.v1.AllocateQuotaRequest',
-      '3': '.google.api.servicecontrol.v1.AllocateQuotaResponse',
-      '4': {}
-    },
-  ],
-};
-
-const QuotaControllerServiceBase$messageJson = {
-  '.google.api.servicecontrol.v1.AllocateQuotaRequest':
-      AllocateQuotaRequest$json,
-  '.google.api.servicecontrol.v1.QuotaOperation': QuotaOperation$json,
-  '.google.api.servicecontrol.v1.QuotaOperation.LabelsEntry':
-      QuotaOperation_LabelsEntry$json,
-  '.google.api.servicecontrol.v1.MetricValueSet': $0.MetricValueSet$json,
-  '.google.api.servicecontrol.v1.MetricValue': $0.MetricValue$json,
-  '.google.api.servicecontrol.v1.MetricValue.LabelsEntry':
-      $0.MetricValue_LabelsEntry$json,
-  '.google.protobuf.Timestamp': $1.Timestamp$json,
-  '.google.api.servicecontrol.v1.Distribution': $2.Distribution$json,
-  '.google.api.servicecontrol.v1.Distribution.LinearBuckets':
-      $2.Distribution_LinearBuckets$json,
-  '.google.api.servicecontrol.v1.Distribution.ExponentialBuckets':
-      $2.Distribution_ExponentialBuckets$json,
-  '.google.api.servicecontrol.v1.Distribution.ExplicitBuckets':
-      $2.Distribution_ExplicitBuckets$json,
-  '.google.api.servicecontrol.v1.AllocateQuotaResponse':
-      AllocateQuotaResponse$json,
-  '.google.api.servicecontrol.v1.QuotaError': QuotaError$json,
 };

@@ -4,18 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'worker.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../rpc/status.pb.dart' as $2;
-import '../../../protobuf/any.pb.dart' as $3;
-import '../../../protobuf/field_mask.pb.dart' as $4;
-import '../../../protobuf/empty.pb.dart' as $5;
+import 'worker.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
+import '../../../protobuf/any.pb.dart' as $4;
+import '../../../protobuf/field_mask.pb.dart' as $5;
 
 import 'bots.pbenum.dart';
 
@@ -28,11 +26,11 @@ class BotSession extends $pb.GeneratedMessage {
     ..aOS(2, 'botId')
     ..e<BotStatus>(3, 'status', $pb.PbFieldType.OE,
         BotStatus.BOT_STATUS_UNSPECIFIED, BotStatus.valueOf, BotStatus.values)
-    ..a<$0.Worker>(
-        4, 'worker', $pb.PbFieldType.OM, $0.Worker.getDefault, $0.Worker.create)
+    ..a<$1.Worker>(
+        4, 'worker', $pb.PbFieldType.OM, $1.Worker.getDefault, $1.Worker.create)
     ..pc<Lease>(5, 'leases', $pb.PbFieldType.PM, Lease.create)
-    ..a<$1.Timestamp>(6, 'expireTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'expireTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..aOS(7, 'version')
     ..hasRequiredFields = false;
 
@@ -77,8 +75,8 @@ class BotSession extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(2);
   void clearStatus() => clearField(3);
 
-  $0.Worker get worker => $_getN(3);
-  set worker($0.Worker v) {
+  $1.Worker get worker => $_getN(3);
+  set worker($1.Worker v) {
     setField(4, v);
   }
 
@@ -87,8 +85,8 @@ class BotSession extends $pb.GeneratedMessage {
 
   $core.List<Lease> get leases => $_getList(4);
 
-  $1.Timestamp get expireTime => $_getN(5);
-  set expireTime($1.Timestamp v) {
+  $2.Timestamp get expireTime => $_getN(5);
+  set expireTime($2.Timestamp v) {
     setField(6, v);
   }
 
@@ -115,19 +113,19 @@ class Lease extends $pb.GeneratedMessage {
         LeaseState.LEASE_STATE_UNSPECIFIED,
         LeaseState.valueOf,
         LeaseState.values)
-    ..a<$2.Status>(
-        3, 'status', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
-    ..a<$0.Worker>(4, 'requirements', $pb.PbFieldType.OM, $0.Worker.getDefault,
-        $0.Worker.create)
-    ..a<$1.Timestamp>(5, 'expireTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$3.Any>(6, 'inlineAssignment', $pb.PbFieldType.OM, $3.Any.getDefault,
-        $3.Any.create)
+    ..a<$3.Status>(
+        3, 'status', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..a<$1.Worker>(4, 'requirements', $pb.PbFieldType.OM, $1.Worker.getDefault,
+        $1.Worker.create)
+    ..a<$2.Timestamp>(5, 'expireTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$4.Any>(6, 'inlineAssignment', $pb.PbFieldType.OM, $4.Any.getDefault,
+        $4.Any.create)
     ..aOS(7, 'id')
-    ..a<$3.Any>(
-        8, 'payload', $pb.PbFieldType.OM, $3.Any.getDefault, $3.Any.create)
-    ..a<$3.Any>(
-        9, 'result', $pb.PbFieldType.OM, $3.Any.getDefault, $3.Any.create)
+    ..a<$4.Any>(
+        8, 'payload', $pb.PbFieldType.OM, $4.Any.getDefault, $4.Any.create)
+    ..a<$4.Any>(
+        9, 'result', $pb.PbFieldType.OM, $4.Any.getDefault, $4.Any.create)
     ..hasRequiredFields = false;
 
   Lease() : super();
@@ -167,24 +165,24 @@ class Lease extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(1);
   void clearState() => clearField(2);
 
-  $2.Status get status => $_getN(2);
-  set status($2.Status v) {
+  $3.Status get status => $_getN(2);
+  set status($3.Status v) {
     setField(3, v);
   }
 
   $core.bool hasStatus() => $_has(2);
   void clearStatus() => clearField(3);
 
-  $0.Worker get requirements => $_getN(3);
-  set requirements($0.Worker v) {
+  $1.Worker get requirements => $_getN(3);
+  set requirements($1.Worker v) {
     setField(4, v);
   }
 
   $core.bool hasRequirements() => $_has(3);
   void clearRequirements() => clearField(4);
 
-  $1.Timestamp get expireTime => $_getN(4);
-  set expireTime($1.Timestamp v) {
+  $2.Timestamp get expireTime => $_getN(4);
+  set expireTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -192,9 +190,9 @@ class Lease extends $pb.GeneratedMessage {
   void clearExpireTime() => clearField(5);
 
   @$core.Deprecated('This field is deprecated.')
-  $3.Any get inlineAssignment => $_getN(5);
+  $4.Any get inlineAssignment => $_getN(5);
   @$core.Deprecated('This field is deprecated.')
-  set inlineAssignment($3.Any v) {
+  set inlineAssignment($4.Any v) {
     setField(6, v);
   }
 
@@ -211,16 +209,16 @@ class Lease extends $pb.GeneratedMessage {
   $core.bool hasId() => $_has(6);
   void clearId() => clearField(7);
 
-  $3.Any get payload => $_getN(7);
-  set payload($3.Any v) {
+  $4.Any get payload => $_getN(7);
+  set payload($4.Any v) {
     setField(8, v);
   }
 
   $core.bool hasPayload() => $_has(7);
   void clearPayload() => clearField(8);
 
-  $3.Any get result => $_getN(8);
-  set result($3.Any v) {
+  $4.Any get result => $_getN(8);
+  set result($4.Any v) {
     setField(9, v);
   }
 
@@ -327,8 +325,8 @@ class UpdateBotSessionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<BotSession>(2, 'botSession', $pb.PbFieldType.OM, BotSession.getDefault,
         BotSession.create)
-    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..a<$5.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateBotSessionRequest() : super();
@@ -368,8 +366,8 @@ class UpdateBotSessionRequest extends $pb.GeneratedMessage {
   $core.bool hasBotSession() => $_has(1);
   void clearBotSession() => clearField(2);
 
-  $4.FieldMask get updateMask => $_getN(2);
-  set updateMask($4.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(2);
+  set updateMask($5.FieldMask v) {
     setField(3, v);
   }
 
@@ -435,30 +433,4 @@ class PostBotEventTempRequest extends $pb.GeneratedMessage {
 
   $core.bool hasMsg() => $_has(2);
   void clearMsg() => clearField(3);
-}
-
-class BotsApi {
-  $pb.RpcClient _client;
-  BotsApi(this._client);
-
-  $async.Future<BotSession> createBotSession(
-      $pb.ClientContext ctx, CreateBotSessionRequest request) {
-    var emptyResponse = BotSession();
-    return _client.invoke<BotSession>(
-        ctx, 'Bots', 'CreateBotSession', request, emptyResponse);
-  }
-
-  $async.Future<BotSession> updateBotSession(
-      $pb.ClientContext ctx, UpdateBotSessionRequest request) {
-    var emptyResponse = BotSession();
-    return _client.invoke<BotSession>(
-        ctx, 'Bots', 'UpdateBotSession', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> postBotEventTemp(
-      $pb.ClientContext ctx, PostBotEventTempRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'Bots', 'PostBotEventTemp', request, emptyResponse);
-  }
 }

@@ -4,22 +4,18 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'queue.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import 'task.pb.dart' as $2;
-import '../../../protobuf/duration.pb.dart' as $3;
-import '../../../protobuf/timestamp.pb.dart' as $4;
-import '../../../protobuf/empty.pb.dart' as $5;
-import '../../../iam/v1/iam_policy.pb.dart' as $6;
-import '../../../iam/v1/policy.pb.dart' as $7;
+import 'queue.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $5;
+import 'task.pb.dart' as $4;
+import '../../../protobuf/duration.pb.dart' as $6;
+import '../../../protobuf/timestamp.pb.dart' as $7;
 
-import 'task.pbenum.dart' as $2;
+import 'task.pbenum.dart' as $4;
 
 class ListQueuesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListQueuesRequest',
@@ -85,7 +81,7 @@ class ListQueuesRequest extends $pb.GeneratedMessage {
 class ListQueuesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListQueuesResponse',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..pc<$0.Queue>(1, 'queues', $pb.PbFieldType.PM, $0.Queue.create)
+    ..pc<$1.Queue>(1, 'queues', $pb.PbFieldType.PM, $1.Queue.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -108,7 +104,7 @@ class ListQueuesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListQueuesResponse _defaultInstance;
 
-  $core.List<$0.Queue> get queues => $_getList(0);
+  $core.List<$1.Queue> get queues => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -157,8 +153,8 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateQueueRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'parent')
-    ..a<$0.Queue>(
-        2, 'queue', $pb.PbFieldType.OM, $0.Queue.getDefault, $0.Queue.create)
+    ..a<$1.Queue>(
+        2, 'queue', $pb.PbFieldType.OM, $1.Queue.getDefault, $1.Queue.create)
     ..hasRequiredFields = false;
 
   CreateQueueRequest() : super();
@@ -188,8 +184,8 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Queue get queue => $_getN(1);
-  set queue($0.Queue v) {
+  $1.Queue get queue => $_getN(1);
+  set queue($1.Queue v) {
     setField(2, v);
   }
 
@@ -200,10 +196,10 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
 class UpdateQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateQueueRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..a<$0.Queue>(
-        1, 'queue', $pb.PbFieldType.OM, $0.Queue.getDefault, $0.Queue.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$1.Queue>(
+        1, 'queue', $pb.PbFieldType.OM, $1.Queue.getDefault, $1.Queue.create)
+    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateQueueRequest() : super();
@@ -225,16 +221,16 @@ class UpdateQueueRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateQueueRequest _defaultInstance;
 
-  $0.Queue get queue => $_getN(0);
-  set queue($0.Queue v) {
+  $1.Queue get queue => $_getN(0);
+  set queue($1.Queue v) {
     setField(1, v);
   }
 
   $core.bool hasQueue() => $_has(0);
   void clearQueue() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(1);
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -382,13 +378,13 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTasksRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'parent')
-    ..e<$2.Task_View>(
+    ..e<$4.Task_View>(
         2,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
     ..hasRequiredFields = false;
@@ -420,8 +416,8 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.Task_View get responseView => $_getN(1);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(1);
+  set responseView($4.Task_View v) {
     setField(2, v);
   }
 
@@ -448,7 +444,7 @@ class ListTasksRequest extends $pb.GeneratedMessage {
 class ListTasksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTasksResponse',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..pc<$2.Task>(1, 'tasks', $pb.PbFieldType.PM, $2.Task.create)
+    ..pc<$4.Task>(1, 'tasks', $pb.PbFieldType.PM, $4.Task.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -471,7 +467,7 @@ class ListTasksResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTasksResponse _defaultInstance;
 
-  $core.List<$2.Task> get tasks => $_getList(0);
+  $core.List<$4.Task> get tasks => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -486,13 +482,13 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'name')
-    ..e<$2.Task_View>(
+    ..e<$4.Task_View>(
         2,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..hasRequiredFields = false;
 
   GetTaskRequest() : super();
@@ -521,8 +517,8 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.Task_View get responseView => $_getN(1);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(1);
+  set responseView($4.Task_View v) {
     setField(2, v);
   }
 
@@ -534,15 +530,15 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'parent')
-    ..a<$2.Task>(
-        2, 'task', $pb.PbFieldType.OM, $2.Task.getDefault, $2.Task.create)
-    ..e<$2.Task_View>(
+    ..a<$4.Task>(
+        2, 'task', $pb.PbFieldType.OM, $4.Task.getDefault, $4.Task.create)
+    ..e<$4.Task_View>(
         3,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..hasRequiredFields = false;
 
   CreateTaskRequest() : super();
@@ -572,16 +568,16 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.Task get task => $_getN(1);
-  set task($2.Task v) {
+  $4.Task get task => $_getN(1);
+  set task($4.Task v) {
     setField(2, v);
   }
 
   $core.bool hasTask() => $_has(1);
   void clearTask() => clearField(2);
 
-  $2.Task_View get responseView => $_getN(2);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(2);
+  set responseView($4.Task_View v) {
     setField(3, v);
   }
 
@@ -628,15 +624,15 @@ class LeaseTasksRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'maxTasks', $pb.PbFieldType.O3)
-    ..a<$3.Duration>(3, 'leaseDuration', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
-    ..e<$2.Task_View>(
+    ..a<$6.Duration>(3, 'leaseDuration', $pb.PbFieldType.OM,
+        $6.Duration.getDefault, $6.Duration.create)
+    ..e<$4.Task_View>(
         4,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..aOS(5, 'filter')
     ..hasRequiredFields = false;
 
@@ -675,16 +671,16 @@ class LeaseTasksRequest extends $pb.GeneratedMessage {
   $core.bool hasMaxTasks() => $_has(1);
   void clearMaxTasks() => clearField(2);
 
-  $3.Duration get leaseDuration => $_getN(2);
-  set leaseDuration($3.Duration v) {
+  $6.Duration get leaseDuration => $_getN(2);
+  set leaseDuration($6.Duration v) {
     setField(3, v);
   }
 
   $core.bool hasLeaseDuration() => $_has(2);
   void clearLeaseDuration() => clearField(3);
 
-  $2.Task_View get responseView => $_getN(3);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(3);
+  set responseView($4.Task_View v) {
     setField(4, v);
   }
 
@@ -703,7 +699,7 @@ class LeaseTasksRequest extends $pb.GeneratedMessage {
 class LeaseTasksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LeaseTasksResponse',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..pc<$2.Task>(1, 'tasks', $pb.PbFieldType.PM, $2.Task.create)
+    ..pc<$4.Task>(1, 'tasks', $pb.PbFieldType.PM, $4.Task.create)
     ..hasRequiredFields = false;
 
   LeaseTasksResponse() : super();
@@ -725,15 +721,15 @@ class LeaseTasksResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static LeaseTasksResponse _defaultInstance;
 
-  $core.List<$2.Task> get tasks => $_getList(0);
+  $core.List<$4.Task> get tasks => $_getList(0);
 }
 
 class AcknowledgeTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AcknowledgeTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'name')
-    ..a<$4.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$7.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
+        $7.Timestamp.getDefault, $7.Timestamp.create)
     ..hasRequiredFields = false;
 
   AcknowledgeTaskRequest() : super();
@@ -765,8 +761,8 @@ class AcknowledgeTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $4.Timestamp get scheduleTime => $_getN(1);
-  set scheduleTime($4.Timestamp v) {
+  $7.Timestamp get scheduleTime => $_getN(1);
+  set scheduleTime($7.Timestamp v) {
     setField(2, v);
   }
 
@@ -778,17 +774,17 @@ class RenewLeaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RenewLeaseRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'name')
-    ..a<$4.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
-    ..a<$3.Duration>(3, 'leaseDuration', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
-    ..e<$2.Task_View>(
+    ..a<$7.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
+        $7.Timestamp.getDefault, $7.Timestamp.create)
+    ..a<$6.Duration>(3, 'leaseDuration', $pb.PbFieldType.OM,
+        $6.Duration.getDefault, $6.Duration.create)
+    ..e<$4.Task_View>(
         4,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..hasRequiredFields = false;
 
   RenewLeaseRequest() : super();
@@ -818,24 +814,24 @@ class RenewLeaseRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $4.Timestamp get scheduleTime => $_getN(1);
-  set scheduleTime($4.Timestamp v) {
+  $7.Timestamp get scheduleTime => $_getN(1);
+  set scheduleTime($7.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasScheduleTime() => $_has(1);
   void clearScheduleTime() => clearField(2);
 
-  $3.Duration get leaseDuration => $_getN(2);
-  set leaseDuration($3.Duration v) {
+  $6.Duration get leaseDuration => $_getN(2);
+  set leaseDuration($6.Duration v) {
     setField(3, v);
   }
 
   $core.bool hasLeaseDuration() => $_has(2);
   void clearLeaseDuration() => clearField(3);
 
-  $2.Task_View get responseView => $_getN(3);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(3);
+  set responseView($4.Task_View v) {
     setField(4, v);
   }
 
@@ -847,15 +843,15 @@ class CancelLeaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelLeaseRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'name')
-    ..a<$4.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
-    ..e<$2.Task_View>(
+    ..a<$7.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
+        $7.Timestamp.getDefault, $7.Timestamp.create)
+    ..e<$4.Task_View>(
         3,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..hasRequiredFields = false;
 
   CancelLeaseRequest() : super();
@@ -885,16 +881,16 @@ class CancelLeaseRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $4.Timestamp get scheduleTime => $_getN(1);
-  set scheduleTime($4.Timestamp v) {
+  $7.Timestamp get scheduleTime => $_getN(1);
+  set scheduleTime($7.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasScheduleTime() => $_has(1);
   void clearScheduleTime() => clearField(2);
 
-  $2.Task_View get responseView => $_getN(2);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(2);
+  set responseView($4.Task_View v) {
     setField(3, v);
   }
 
@@ -906,13 +902,13 @@ class RunTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..aOS(1, 'name')
-    ..e<$2.Task_View>(
+    ..e<$4.Task_View>(
         2,
         'responseView',
         $pb.PbFieldType.OE,
-        $2.Task_View.VIEW_UNSPECIFIED,
-        $2.Task_View.valueOf,
-        $2.Task_View.values)
+        $4.Task_View.VIEW_UNSPECIFIED,
+        $4.Task_View.valueOf,
+        $4.Task_View.values)
     ..hasRequiredFields = false;
 
   RunTaskRequest() : super();
@@ -941,156 +937,11 @@ class RunTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.Task_View get responseView => $_getN(1);
-  set responseView($2.Task_View v) {
+  $4.Task_View get responseView => $_getN(1);
+  set responseView($4.Task_View v) {
     setField(2, v);
   }
 
   $core.bool hasResponseView() => $_has(1);
   void clearResponseView() => clearField(2);
-}
-
-class CloudTasksApi {
-  $pb.RpcClient _client;
-  CloudTasksApi(this._client);
-
-  $async.Future<ListQueuesResponse> listQueues(
-      $pb.ClientContext ctx, ListQueuesRequest request) {
-    var emptyResponse = ListQueuesResponse();
-    return _client.invoke<ListQueuesResponse>(
-        ctx, 'CloudTasks', 'ListQueues', request, emptyResponse);
-  }
-
-  $async.Future<$0.Queue> getQueue(
-      $pb.ClientContext ctx, GetQueueRequest request) {
-    var emptyResponse = $0.Queue();
-    return _client.invoke<$0.Queue>(
-        ctx, 'CloudTasks', 'GetQueue', request, emptyResponse);
-  }
-
-  $async.Future<$0.Queue> createQueue(
-      $pb.ClientContext ctx, CreateQueueRequest request) {
-    var emptyResponse = $0.Queue();
-    return _client.invoke<$0.Queue>(
-        ctx, 'CloudTasks', 'CreateQueue', request, emptyResponse);
-  }
-
-  $async.Future<$0.Queue> updateQueue(
-      $pb.ClientContext ctx, UpdateQueueRequest request) {
-    var emptyResponse = $0.Queue();
-    return _client.invoke<$0.Queue>(
-        ctx, 'CloudTasks', 'UpdateQueue', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteQueue(
-      $pb.ClientContext ctx, DeleteQueueRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'CloudTasks', 'DeleteQueue', request, emptyResponse);
-  }
-
-  $async.Future<$0.Queue> purgeQueue(
-      $pb.ClientContext ctx, PurgeQueueRequest request) {
-    var emptyResponse = $0.Queue();
-    return _client.invoke<$0.Queue>(
-        ctx, 'CloudTasks', 'PurgeQueue', request, emptyResponse);
-  }
-
-  $async.Future<$0.Queue> pauseQueue(
-      $pb.ClientContext ctx, PauseQueueRequest request) {
-    var emptyResponse = $0.Queue();
-    return _client.invoke<$0.Queue>(
-        ctx, 'CloudTasks', 'PauseQueue', request, emptyResponse);
-  }
-
-  $async.Future<$0.Queue> resumeQueue(
-      $pb.ClientContext ctx, ResumeQueueRequest request) {
-    var emptyResponse = $0.Queue();
-    return _client.invoke<$0.Queue>(
-        ctx, 'CloudTasks', 'ResumeQueue', request, emptyResponse);
-  }
-
-  $async.Future<$7.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $6.GetIamPolicyRequest request) {
-    var emptyResponse = $7.Policy();
-    return _client.invoke<$7.Policy>(
-        ctx, 'CloudTasks', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$7.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $6.SetIamPolicyRequest request) {
-    var emptyResponse = $7.Policy();
-    return _client.invoke<$7.Policy>(
-        ctx, 'CloudTasks', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$6.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $6.TestIamPermissionsRequest request) {
-    var emptyResponse = $6.TestIamPermissionsResponse();
-    return _client.invoke<$6.TestIamPermissionsResponse>(
-        ctx, 'CloudTasks', 'TestIamPermissions', request, emptyResponse);
-  }
-
-  $async.Future<ListTasksResponse> listTasks(
-      $pb.ClientContext ctx, ListTasksRequest request) {
-    var emptyResponse = ListTasksResponse();
-    return _client.invoke<ListTasksResponse>(
-        ctx, 'CloudTasks', 'ListTasks', request, emptyResponse);
-  }
-
-  $async.Future<$2.Task> getTask(
-      $pb.ClientContext ctx, GetTaskRequest request) {
-    var emptyResponse = $2.Task();
-    return _client.invoke<$2.Task>(
-        ctx, 'CloudTasks', 'GetTask', request, emptyResponse);
-  }
-
-  $async.Future<$2.Task> createTask(
-      $pb.ClientContext ctx, CreateTaskRequest request) {
-    var emptyResponse = $2.Task();
-    return _client.invoke<$2.Task>(
-        ctx, 'CloudTasks', 'CreateTask', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteTask(
-      $pb.ClientContext ctx, DeleteTaskRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'CloudTasks', 'DeleteTask', request, emptyResponse);
-  }
-
-  $async.Future<LeaseTasksResponse> leaseTasks(
-      $pb.ClientContext ctx, LeaseTasksRequest request) {
-    var emptyResponse = LeaseTasksResponse();
-    return _client.invoke<LeaseTasksResponse>(
-        ctx, 'CloudTasks', 'LeaseTasks', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> acknowledgeTask(
-      $pb.ClientContext ctx, AcknowledgeTaskRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'CloudTasks', 'AcknowledgeTask', request, emptyResponse);
-  }
-
-  $async.Future<$2.Task> renewLease(
-      $pb.ClientContext ctx, RenewLeaseRequest request) {
-    var emptyResponse = $2.Task();
-    return _client.invoke<$2.Task>(
-        ctx, 'CloudTasks', 'RenewLease', request, emptyResponse);
-  }
-
-  $async.Future<$2.Task> cancelLease(
-      $pb.ClientContext ctx, CancelLeaseRequest request) {
-    var emptyResponse = $2.Task();
-    return _client.invoke<$2.Task>(
-        ctx, 'CloudTasks', 'CancelLease', request, emptyResponse);
-  }
-
-  $async.Future<$2.Task> runTask(
-      $pb.ClientContext ctx, RunTaskRequest request) {
-    var emptyResponse = $2.Task();
-    return _client.invoke<$2.Task>(
-        ctx, 'CloudTasks', 'RunTask', request, emptyResponse);
-  }
 }

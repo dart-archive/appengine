@@ -4,15 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 import 'entity_type.pbenum.dart';
 
@@ -337,8 +334,8 @@ class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
     ..a<EntityType>(1, 'entityType', $pb.PbFieldType.OM, EntityType.getDefault,
         EntityType.create)
     ..aOS(2, 'languageCode')
-    ..a<$0.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateEntityTypeRequest() : super();
@@ -378,8 +375,8 @@ class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  $0.FieldMask get updateMask => $_getN(2);
-  set updateMask($0.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
@@ -445,8 +442,8 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
     ..a<EntityTypeBatch>(3, 'entityTypeBatchInline', $pb.PbFieldType.OM,
         EntityTypeBatch.getDefault, EntityTypeBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$0.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$2.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
@@ -509,8 +506,8 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(3);
   void clearLanguageCode() => clearField(4);
 
-  $0.FieldMask get updateMask => $_getN(4);
-  set updateMask($0.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(4);
+  set updateMask($2.FieldMask v) {
     setField(5, v);
   }
 
@@ -652,8 +649,8 @@ class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
     ..pc<EntityType_Entity>(
         2, 'entities', $pb.PbFieldType.PM, EntityType_Entity.create)
     ..aOS(3, 'languageCode')
-    ..a<$0.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   BatchUpdateEntitiesRequest() : super();
@@ -696,8 +693,8 @@ class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 
-  $0.FieldMask get updateMask => $_getN(3);
-  set updateMask($0.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -781,79 +778,4 @@ class EntityTypeBatch extends $pb.GeneratedMessage {
   static EntityTypeBatch _defaultInstance;
 
   $core.List<EntityType> get entityTypes => $_getList(0);
-}
-
-class EntityTypesApi {
-  $pb.RpcClient _client;
-  EntityTypesApi(this._client);
-
-  $async.Future<ListEntityTypesResponse> listEntityTypes(
-      $pb.ClientContext ctx, ListEntityTypesRequest request) {
-    var emptyResponse = ListEntityTypesResponse();
-    return _client.invoke<ListEntityTypesResponse>(
-        ctx, 'EntityTypes', 'ListEntityTypes', request, emptyResponse);
-  }
-
-  $async.Future<EntityType> getEntityType(
-      $pb.ClientContext ctx, GetEntityTypeRequest request) {
-    var emptyResponse = EntityType();
-    return _client.invoke<EntityType>(
-        ctx, 'EntityTypes', 'GetEntityType', request, emptyResponse);
-  }
-
-  $async.Future<EntityType> createEntityType(
-      $pb.ClientContext ctx, CreateEntityTypeRequest request) {
-    var emptyResponse = EntityType();
-    return _client.invoke<EntityType>(
-        ctx, 'EntityTypes', 'CreateEntityType', request, emptyResponse);
-  }
-
-  $async.Future<EntityType> updateEntityType(
-      $pb.ClientContext ctx, UpdateEntityTypeRequest request) {
-    var emptyResponse = EntityType();
-    return _client.invoke<EntityType>(
-        ctx, 'EntityTypes', 'UpdateEntityType', request, emptyResponse);
-  }
-
-  $async.Future<$1.Empty> deleteEntityType(
-      $pb.ClientContext ctx, DeleteEntityTypeRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(
-        ctx, 'EntityTypes', 'DeleteEntityType', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> batchUpdateEntityTypes(
-      $pb.ClientContext ctx, BatchUpdateEntityTypesRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'EntityTypes', 'BatchUpdateEntityTypes', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> batchDeleteEntityTypes(
-      $pb.ClientContext ctx, BatchDeleteEntityTypesRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'EntityTypes', 'BatchDeleteEntityTypes', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> batchCreateEntities(
-      $pb.ClientContext ctx, BatchCreateEntitiesRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'EntityTypes', 'BatchCreateEntities', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> batchUpdateEntities(
-      $pb.ClientContext ctx, BatchUpdateEntitiesRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'EntityTypes', 'BatchUpdateEntities', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> batchDeleteEntities(
-      $pb.ClientContext ctx, BatchDeleteEntitiesRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'EntityTypes', 'BatchDeleteEntities', request, emptyResponse);
-  }
 }

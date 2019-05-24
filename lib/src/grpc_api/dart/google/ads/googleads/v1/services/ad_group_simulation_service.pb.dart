@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/ad_group_simulation.pb.dart' as $0;
 
 class GetAdGroupSimulationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -48,16 +45,4 @@ class GetAdGroupSimulationRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class AdGroupSimulationServiceApi {
-  $pb.RpcClient _client;
-  AdGroupSimulationServiceApi(this._client);
-
-  $async.Future<$0.AdGroupSimulation> getAdGroupSimulation(
-      $pb.ClientContext ctx, GetAdGroupSimulationRequest request) {
-    var emptyResponse = $0.AdGroupSimulation();
-    return _client.invoke<$0.AdGroupSimulation>(ctx, 'AdGroupSimulationService',
-        'GetAdGroupSimulation', request, emptyResponse);
-  }
 }

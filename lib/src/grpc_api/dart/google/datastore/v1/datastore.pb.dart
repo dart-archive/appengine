@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -968,58 +967,4 @@ class TransactionOptions extends $pb.GeneratedMessage {
 
   $core.bool hasReadOnly() => $_has(1);
   void clearReadOnly() => clearField(2);
-}
-
-class DatastoreApi {
-  $pb.RpcClient _client;
-  DatastoreApi(this._client);
-
-  $async.Future<LookupResponse> lookup(
-      $pb.ClientContext ctx, LookupRequest request) {
-    var emptyResponse = LookupResponse();
-    return _client.invoke<LookupResponse>(
-        ctx, 'Datastore', 'Lookup', request, emptyResponse);
-  }
-
-  $async.Future<RunQueryResponse> runQuery(
-      $pb.ClientContext ctx, RunQueryRequest request) {
-    var emptyResponse = RunQueryResponse();
-    return _client.invoke<RunQueryResponse>(
-        ctx, 'Datastore', 'RunQuery', request, emptyResponse);
-  }
-
-  $async.Future<BeginTransactionResponse> beginTransaction(
-      $pb.ClientContext ctx, BeginTransactionRequest request) {
-    var emptyResponse = BeginTransactionResponse();
-    return _client.invoke<BeginTransactionResponse>(
-        ctx, 'Datastore', 'BeginTransaction', request, emptyResponse);
-  }
-
-  $async.Future<CommitResponse> commit(
-      $pb.ClientContext ctx, CommitRequest request) {
-    var emptyResponse = CommitResponse();
-    return _client.invoke<CommitResponse>(
-        ctx, 'Datastore', 'Commit', request, emptyResponse);
-  }
-
-  $async.Future<RollbackResponse> rollback(
-      $pb.ClientContext ctx, RollbackRequest request) {
-    var emptyResponse = RollbackResponse();
-    return _client.invoke<RollbackResponse>(
-        ctx, 'Datastore', 'Rollback', request, emptyResponse);
-  }
-
-  $async.Future<AllocateIdsResponse> allocateIds(
-      $pb.ClientContext ctx, AllocateIdsRequest request) {
-    var emptyResponse = AllocateIdsResponse();
-    return _client.invoke<AllocateIdsResponse>(
-        ctx, 'Datastore', 'AllocateIds', request, emptyResponse);
-  }
-
-  $async.Future<ReserveIdsResponse> reserveIds(
-      $pb.ClientContext ctx, ReserveIdsRequest request) {
-    var emptyResponse = ReserveIdsResponse();
-    return _client.invoke<ReserveIdsResponse>(
-        ctx, 'Datastore', 'ReserveIds', request, emptyResponse);
-  }
 }

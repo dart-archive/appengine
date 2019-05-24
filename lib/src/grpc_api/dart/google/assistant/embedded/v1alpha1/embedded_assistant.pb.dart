@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -461,16 +460,4 @@ class ConverseResponse extends $pb.GeneratedMessage {
 
   $core.bool hasResult() => $_has(3);
   void clearResult() => clearField(5);
-}
-
-class EmbeddedAssistantApi {
-  $pb.RpcClient _client;
-  EmbeddedAssistantApi(this._client);
-
-  $async.Future<ConverseResponse> converse(
-      $pb.ClientContext ctx, ConverseRequest request) {
-    var emptyResponse = ConverseResponse();
-    return _client.invoke<ConverseResponse>(
-        ctx, 'EmbeddedAssistant', 'Converse', request, emptyResponse);
-  }
 }

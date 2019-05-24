@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -291,32 +290,4 @@ class MutateCampaignExtensionSettingResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CampaignExtensionSettingServiceApi {
-  $pb.RpcClient _client;
-  CampaignExtensionSettingServiceApi(this._client);
-
-  $async.Future<$0.CampaignExtensionSetting> getCampaignExtensionSetting(
-      $pb.ClientContext ctx, GetCampaignExtensionSettingRequest request) {
-    var emptyResponse = $0.CampaignExtensionSetting();
-    return _client.invoke<$0.CampaignExtensionSetting>(
-        ctx,
-        'CampaignExtensionSettingService',
-        'GetCampaignExtensionSetting',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateCampaignExtensionSettingsResponse>
-      mutateCampaignExtensionSettings($pb.ClientContext ctx,
-          MutateCampaignExtensionSettingsRequest request) {
-    var emptyResponse = MutateCampaignExtensionSettingsResponse();
-    return _client.invoke<MutateCampaignExtensionSettingsResponse>(
-        ctx,
-        'CampaignExtensionSettingService',
-        'MutateCampaignExtensionSettings',
-        request,
-        emptyResponse);
-  }
 }

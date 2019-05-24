@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../../protobuf/empty.pbjson.dart' as $1;
-
 const Trace$json = {
   '1': 'Trace',
   '2': [
@@ -180,42 +177,4 @@ const PatchTracesRequest$json = {
       '10': 'traces'
     },
   ],
-};
-
-const TraceServiceBase$json = {
-  '1': 'TraceService',
-  '2': [
-    {
-      '1': 'ListTraces',
-      '2': '.google.devtools.cloudtrace.v1.ListTracesRequest',
-      '3': '.google.devtools.cloudtrace.v1.ListTracesResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetTrace',
-      '2': '.google.devtools.cloudtrace.v1.GetTraceRequest',
-      '3': '.google.devtools.cloudtrace.v1.Trace',
-      '4': {}
-    },
-    {
-      '1': 'PatchTraces',
-      '2': '.google.devtools.cloudtrace.v1.PatchTracesRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const TraceServiceBase$messageJson = {
-  '.google.devtools.cloudtrace.v1.ListTracesRequest': ListTracesRequest$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.devtools.cloudtrace.v1.ListTracesResponse': ListTracesResponse$json,
-  '.google.devtools.cloudtrace.v1.Trace': Trace$json,
-  '.google.devtools.cloudtrace.v1.TraceSpan': TraceSpan$json,
-  '.google.devtools.cloudtrace.v1.TraceSpan.LabelsEntry':
-      TraceSpan_LabelsEntry$json,
-  '.google.devtools.cloudtrace.v1.GetTraceRequest': GetTraceRequest$json,
-  '.google.devtools.cloudtrace.v1.PatchTracesRequest': PatchTracesRequest$json,
-  '.google.devtools.cloudtrace.v1.Traces': Traces$json,
-  '.google.protobuf.Empty': $1.Empty$json,
 };

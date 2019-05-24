@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/duration.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import '../../protobuf/timestamp.pb.dart' as $1;
+import '../../protobuf/field_mask.pb.dart' as $2;
+import '../../protobuf/duration.pb.dart' as $3;
 
 class MessageStoragePolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MessageStoragePolicy',
@@ -122,8 +120,8 @@ class PubsubMessage extends $pb.GeneratedMessage {
         null,
         const $pb.PackageName('google.pubsub.v1'))
     ..aOS(3, 'messageId')
-    ..a<$0.Timestamp>(4, 'publishTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'publishTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..aOS(5, 'orderingKey')
     ..hasRequiredFields = false;
 
@@ -163,8 +161,8 @@ class PubsubMessage extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(2);
   void clearMessageId() => clearField(3);
 
-  $0.Timestamp get publishTime => $_getN(3);
-  set publishTime($0.Timestamp v) {
+  $1.Timestamp get publishTime => $_getN(3);
+  set publishTime($1.Timestamp v) {
     setField(4, v);
   }
 
@@ -218,8 +216,8 @@ class UpdateTopicRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTopicRequest',
       package: const $pb.PackageName('google.pubsub.v1'))
     ..a<Topic>(1, 'topic', $pb.PbFieldType.OM, Topic.getDefault, Topic.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTopicRequest() : super();
@@ -249,8 +247,8 @@ class UpdateTopicRequest extends $pb.GeneratedMessage {
   $core.bool hasTopic() => $_has(0);
   void clearTopic() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -649,8 +647,8 @@ class Subscription extends $pb.GeneratedMessage {
         PushConfig.create)
     ..a<$core.int>(5, 'ackDeadlineSeconds', $pb.PbFieldType.O3)
     ..aOB(7, 'retainAckedMessages')
-    ..a<$2.Duration>(8, 'messageRetentionDuration', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(8, 'messageRetentionDuration', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..m<$core.String, $core.String>(
         9,
         'labels',
@@ -724,8 +722,8 @@ class Subscription extends $pb.GeneratedMessage {
   $core.bool hasRetainAckedMessages() => $_has(4);
   void clearRetainAckedMessages() => clearField(7);
 
-  $2.Duration get messageRetentionDuration => $_getN(5);
-  set messageRetentionDuration($2.Duration v) {
+  $3.Duration get messageRetentionDuration => $_getN(5);
+  set messageRetentionDuration($3.Duration v) {
     setField(8, v);
   }
 
@@ -754,8 +752,8 @@ class Subscription extends $pb.GeneratedMessage {
 class ExpirationPolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExpirationPolicy',
       package: const $pb.PackageName('google.pubsub.v1'))
-    ..a<$2.Duration>(1, 'ttl', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
+    ..a<$3.Duration>(1, 'ttl', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
     ..hasRequiredFields = false;
 
   ExpirationPolicy() : super();
@@ -777,8 +775,8 @@ class ExpirationPolicy extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExpirationPolicy _defaultInstance;
 
-  $2.Duration get ttl => $_getN(0);
-  set ttl($2.Duration v) {
+  $3.Duration get ttl => $_getN(0);
+  set ttl($3.Duration v) {
     setField(1, v);
   }
 
@@ -981,8 +979,8 @@ class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.pubsub.v1'))
     ..a<Subscription>(1, 'subscription', $pb.PbFieldType.OM,
         Subscription.getDefault, Subscription.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSubscriptionRequest() : super();
@@ -1015,8 +1013,8 @@ class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
   $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -1511,8 +1509,8 @@ class UpdateSnapshotRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.pubsub.v1'))
     ..a<Snapshot>(
         1, 'snapshot', $pb.PbFieldType.OM, Snapshot.getDefault, Snapshot.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSnapshotRequest() : super();
@@ -1544,8 +1542,8 @@ class UpdateSnapshotRequest extends $pb.GeneratedMessage {
   $core.bool hasSnapshot() => $_has(0);
   void clearSnapshot() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -1558,8 +1556,8 @@ class Snapshot extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.pubsub.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'topic')
-    ..a<$0.Timestamp>(3, 'expireTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'expireTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..m<$core.String, $core.String>(
         4,
         'labels',
@@ -1605,8 +1603,8 @@ class Snapshot extends $pb.GeneratedMessage {
   $core.bool hasTopic() => $_has(1);
   void clearTopic() => clearField(2);
 
-  $0.Timestamp get expireTime => $_getN(2);
-  set expireTime($0.Timestamp v) {
+  $1.Timestamp get expireTime => $_getN(2);
+  set expireTime($1.Timestamp v) {
     setField(3, v);
   }
 
@@ -1790,8 +1788,8 @@ class SeekRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SeekRequest',
       package: const $pb.PackageName('google.pubsub.v1'))
     ..aOS(1, 'subscription')
-    ..a<$0.Timestamp>(2, 'time', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'time', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
+        $1.Timestamp.create)
     ..aOS(3, 'snapshot')
     ..oo(0, [2, 3])
     ..hasRequiredFields = false;
@@ -1824,8 +1822,8 @@ class SeekRequest extends $pb.GeneratedMessage {
   $core.bool hasSubscription() => $_has(0);
   void clearSubscription() => clearField(1);
 
-  $0.Timestamp get time => $_getN(1);
-  set time($0.Timestamp v) {
+  $1.Timestamp get time => $_getN(1);
+  set time($1.Timestamp v) {
     setField(2, v);
   }
 
@@ -1863,179 +1861,4 @@ class SeekResponse extends $pb.GeneratedMessage {
       $pb.PbList<SeekResponse>();
   static SeekResponse getDefault() => _defaultInstance ??= create()..freeze();
   static SeekResponse _defaultInstance;
-}
-
-class PublisherApi {
-  $pb.RpcClient _client;
-  PublisherApi(this._client);
-
-  $async.Future<Topic> createTopic($pb.ClientContext ctx, Topic request) {
-    var emptyResponse = Topic();
-    return _client.invoke<Topic>(
-        ctx, 'Publisher', 'CreateTopic', request, emptyResponse);
-  }
-
-  $async.Future<Topic> updateTopic(
-      $pb.ClientContext ctx, UpdateTopicRequest request) {
-    var emptyResponse = Topic();
-    return _client.invoke<Topic>(
-        ctx, 'Publisher', 'UpdateTopic', request, emptyResponse);
-  }
-
-  $async.Future<PublishResponse> publish(
-      $pb.ClientContext ctx, PublishRequest request) {
-    var emptyResponse = PublishResponse();
-    return _client.invoke<PublishResponse>(
-        ctx, 'Publisher', 'Publish', request, emptyResponse);
-  }
-
-  $async.Future<Topic> getTopic(
-      $pb.ClientContext ctx, GetTopicRequest request) {
-    var emptyResponse = Topic();
-    return _client.invoke<Topic>(
-        ctx, 'Publisher', 'GetTopic', request, emptyResponse);
-  }
-
-  $async.Future<ListTopicsResponse> listTopics(
-      $pb.ClientContext ctx, ListTopicsRequest request) {
-    var emptyResponse = ListTopicsResponse();
-    return _client.invoke<ListTopicsResponse>(
-        ctx, 'Publisher', 'ListTopics', request, emptyResponse);
-  }
-
-  $async.Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
-      $pb.ClientContext ctx, ListTopicSubscriptionsRequest request) {
-    var emptyResponse = ListTopicSubscriptionsResponse();
-    return _client.invoke<ListTopicSubscriptionsResponse>(
-        ctx, 'Publisher', 'ListTopicSubscriptions', request, emptyResponse);
-  }
-
-  $async.Future<ListTopicSnapshotsResponse> listTopicSnapshots(
-      $pb.ClientContext ctx, ListTopicSnapshotsRequest request) {
-    var emptyResponse = ListTopicSnapshotsResponse();
-    return _client.invoke<ListTopicSnapshotsResponse>(
-        ctx, 'Publisher', 'ListTopicSnapshots', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteTopic(
-      $pb.ClientContext ctx, DeleteTopicRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Publisher', 'DeleteTopic', request, emptyResponse);
-  }
-}
-
-class SubscriberApi {
-  $pb.RpcClient _client;
-  SubscriberApi(this._client);
-
-  $async.Future<Subscription> createSubscription(
-      $pb.ClientContext ctx, Subscription request) {
-    var emptyResponse = Subscription();
-    return _client.invoke<Subscription>(
-        ctx, 'Subscriber', 'CreateSubscription', request, emptyResponse);
-  }
-
-  $async.Future<Subscription> getSubscription(
-      $pb.ClientContext ctx, GetSubscriptionRequest request) {
-    var emptyResponse = Subscription();
-    return _client.invoke<Subscription>(
-        ctx, 'Subscriber', 'GetSubscription', request, emptyResponse);
-  }
-
-  $async.Future<Subscription> updateSubscription(
-      $pb.ClientContext ctx, UpdateSubscriptionRequest request) {
-    var emptyResponse = Subscription();
-    return _client.invoke<Subscription>(
-        ctx, 'Subscriber', 'UpdateSubscription', request, emptyResponse);
-  }
-
-  $async.Future<ListSubscriptionsResponse> listSubscriptions(
-      $pb.ClientContext ctx, ListSubscriptionsRequest request) {
-    var emptyResponse = ListSubscriptionsResponse();
-    return _client.invoke<ListSubscriptionsResponse>(
-        ctx, 'Subscriber', 'ListSubscriptions', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteSubscription(
-      $pb.ClientContext ctx, DeleteSubscriptionRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Subscriber', 'DeleteSubscription', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> modifyAckDeadline(
-      $pb.ClientContext ctx, ModifyAckDeadlineRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Subscriber', 'ModifyAckDeadline', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> acknowledge(
-      $pb.ClientContext ctx, AcknowledgeRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Subscriber', 'Acknowledge', request, emptyResponse);
-  }
-
-  $async.Future<PullResponse> pull($pb.ClientContext ctx, PullRequest request) {
-    var emptyResponse = PullResponse();
-    return _client.invoke<PullResponse>(
-        ctx, 'Subscriber', 'Pull', request, emptyResponse);
-  }
-
-  $async.Future<StreamingPullResponse> streamingPull(
-      $pb.ClientContext ctx, StreamingPullRequest request) {
-    var emptyResponse = StreamingPullResponse();
-    return _client.invoke<StreamingPullResponse>(
-        ctx, 'Subscriber', 'StreamingPull', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> modifyPushConfig(
-      $pb.ClientContext ctx, ModifyPushConfigRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Subscriber', 'ModifyPushConfig', request, emptyResponse);
-  }
-
-  $async.Future<Snapshot> getSnapshot(
-      $pb.ClientContext ctx, GetSnapshotRequest request) {
-    var emptyResponse = Snapshot();
-    return _client.invoke<Snapshot>(
-        ctx, 'Subscriber', 'GetSnapshot', request, emptyResponse);
-  }
-
-  $async.Future<ListSnapshotsResponse> listSnapshots(
-      $pb.ClientContext ctx, ListSnapshotsRequest request) {
-    var emptyResponse = ListSnapshotsResponse();
-    return _client.invoke<ListSnapshotsResponse>(
-        ctx, 'Subscriber', 'ListSnapshots', request, emptyResponse);
-  }
-
-  $async.Future<Snapshot> createSnapshot(
-      $pb.ClientContext ctx, CreateSnapshotRequest request) {
-    var emptyResponse = Snapshot();
-    return _client.invoke<Snapshot>(
-        ctx, 'Subscriber', 'CreateSnapshot', request, emptyResponse);
-  }
-
-  $async.Future<Snapshot> updateSnapshot(
-      $pb.ClientContext ctx, UpdateSnapshotRequest request) {
-    var emptyResponse = Snapshot();
-    return _client.invoke<Snapshot>(
-        ctx, 'Subscriber', 'UpdateSnapshot', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteSnapshot(
-      $pb.ClientContext ctx, DeleteSnapshotRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Subscriber', 'DeleteSnapshot', request, emptyResponse);
-  }
-
-  $async.Future<SeekResponse> seek($pb.ClientContext ctx, SeekRequest request) {
-    var emptyResponse = SeekResponse();
-    return _client.invoke<SeekResponse>(
-        ctx, 'Subscriber', 'Seek', request, emptyResponse);
-  }
 }

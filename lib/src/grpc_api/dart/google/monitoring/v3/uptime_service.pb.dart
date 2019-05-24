@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'uptime.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/empty.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $2;
 
 class ListUptimeCheckConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -214,8 +212,8 @@ class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateUptimeCheckConfigRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..a<$0.UptimeCheckConfig>(3, 'uptimeCheckConfig', $pb.PbFieldType.OM,
         $0.UptimeCheckConfig.getDefault, $0.UptimeCheckConfig.create)
     ..hasRequiredFields = false;
@@ -243,8 +241,8 @@ class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateUptimeCheckConfigRequest _defaultInstance;
 
-  $1.FieldMask get updateMask => $_getN(0);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(0);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -385,51 +383,4 @@ class ListUptimeCheckIpsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class UptimeCheckServiceApi {
-  $pb.RpcClient _client;
-  UptimeCheckServiceApi(this._client);
-
-  $async.Future<ListUptimeCheckConfigsResponse> listUptimeCheckConfigs(
-      $pb.ClientContext ctx, ListUptimeCheckConfigsRequest request) {
-    var emptyResponse = ListUptimeCheckConfigsResponse();
-    return _client.invoke<ListUptimeCheckConfigsResponse>(ctx,
-        'UptimeCheckService', 'ListUptimeCheckConfigs', request, emptyResponse);
-  }
-
-  $async.Future<$0.UptimeCheckConfig> getUptimeCheckConfig(
-      $pb.ClientContext ctx, GetUptimeCheckConfigRequest request) {
-    var emptyResponse = $0.UptimeCheckConfig();
-    return _client.invoke<$0.UptimeCheckConfig>(ctx, 'UptimeCheckService',
-        'GetUptimeCheckConfig', request, emptyResponse);
-  }
-
-  $async.Future<$0.UptimeCheckConfig> createUptimeCheckConfig(
-      $pb.ClientContext ctx, CreateUptimeCheckConfigRequest request) {
-    var emptyResponse = $0.UptimeCheckConfig();
-    return _client.invoke<$0.UptimeCheckConfig>(ctx, 'UptimeCheckService',
-        'CreateUptimeCheckConfig', request, emptyResponse);
-  }
-
-  $async.Future<$0.UptimeCheckConfig> updateUptimeCheckConfig(
-      $pb.ClientContext ctx, UpdateUptimeCheckConfigRequest request) {
-    var emptyResponse = $0.UptimeCheckConfig();
-    return _client.invoke<$0.UptimeCheckConfig>(ctx, 'UptimeCheckService',
-        'UpdateUptimeCheckConfig', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteUptimeCheckConfig(
-      $pb.ClientContext ctx, DeleteUptimeCheckConfigRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(ctx, 'UptimeCheckService',
-        'DeleteUptimeCheckConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListUptimeCheckIpsResponse> listUptimeCheckIps(
-      $pb.ClientContext ctx, ListUptimeCheckIpsRequest request) {
-    var emptyResponse = ListUptimeCheckIpsResponse();
-    return _client.invoke<ListUptimeCheckIpsResponse>(ctx, 'UptimeCheckService',
-        'ListUptimeCheckIps', request, emptyResponse);
-  }
 }

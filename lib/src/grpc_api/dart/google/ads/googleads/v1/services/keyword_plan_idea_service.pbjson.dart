@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../../protobuf/wrappers.pbjson.dart' as $0;
-import '../common/keyword_plan_common.pbjson.dart' as $1;
-
 const GenerateKeywordIdeasRequest$json = {
   '1': 'GenerateKeywordIdeasRequest',
   '2': [
@@ -153,32 +150,4 @@ const GenerateKeywordIdeaResult$json = {
       '10': 'keywordIdeaMetrics'
     },
   ],
-};
-
-const KeywordPlanIdeaServiceBase$json = {
-  '1': 'KeywordPlanIdeaService',
-  '2': [
-    {
-      '1': 'GenerateKeywordIdeas',
-      '2': '.google.ads.googleads.v1.services.GenerateKeywordIdeasRequest',
-      '3': '.google.ads.googleads.v1.services.GenerateKeywordIdeaResponse',
-      '4': {}
-    },
-  ],
-};
-
-const KeywordPlanIdeaServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GenerateKeywordIdeasRequest':
-      GenerateKeywordIdeasRequest$json,
-  '.google.ads.googleads.v1.services.KeywordAndUrlSeed': KeywordAndUrlSeed$json,
-  '.google.protobuf.StringValue': $0.StringValue$json,
-  '.google.ads.googleads.v1.services.KeywordSeed': KeywordSeed$json,
-  '.google.ads.googleads.v1.services.UrlSeed': UrlSeed$json,
-  '.google.ads.googleads.v1.services.GenerateKeywordIdeaResponse':
-      GenerateKeywordIdeaResponse$json,
-  '.google.ads.googleads.v1.services.GenerateKeywordIdeaResult':
-      GenerateKeywordIdeaResult$json,
-  '.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics':
-      $1.KeywordPlanHistoricalMetrics$json,
-  '.google.protobuf.Int64Value': $0.Int64Value$json,
 };

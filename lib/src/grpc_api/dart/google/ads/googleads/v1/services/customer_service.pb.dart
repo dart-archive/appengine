@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -367,37 +366,4 @@ class ListAccessibleCustomersResponse extends $pb.GeneratedMessage {
   static ListAccessibleCustomersResponse _defaultInstance;
 
   $core.List<$core.String> get resourceNames => $_getList(0);
-}
-
-class CustomerServiceApi {
-  $pb.RpcClient _client;
-  CustomerServiceApi(this._client);
-
-  $async.Future<$0.Customer> getCustomer(
-      $pb.ClientContext ctx, GetCustomerRequest request) {
-    var emptyResponse = $0.Customer();
-    return _client.invoke<$0.Customer>(
-        ctx, 'CustomerService', 'GetCustomer', request, emptyResponse);
-  }
-
-  $async.Future<MutateCustomerResponse> mutateCustomer(
-      $pb.ClientContext ctx, MutateCustomerRequest request) {
-    var emptyResponse = MutateCustomerResponse();
-    return _client.invoke<MutateCustomerResponse>(
-        ctx, 'CustomerService', 'MutateCustomer', request, emptyResponse);
-  }
-
-  $async.Future<ListAccessibleCustomersResponse> listAccessibleCustomers(
-      $pb.ClientContext ctx, ListAccessibleCustomersRequest request) {
-    var emptyResponse = ListAccessibleCustomersResponse();
-    return _client.invoke<ListAccessibleCustomersResponse>(ctx,
-        'CustomerService', 'ListAccessibleCustomers', request, emptyResponse);
-  }
-
-  $async.Future<CreateCustomerClientResponse> createCustomerClient(
-      $pb.ClientContext ctx, CreateCustomerClientRequest request) {
-    var emptyResponse = CreateCustomerClientResponse();
-    return _client.invoke<CreateCustomerClientResponse>(
-        ctx, 'CustomerService', 'CreateCustomerClient', request, emptyResponse);
-  }
 }

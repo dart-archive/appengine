@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../longrunning/operations.pbjson.dart' as $1;
-import '../../../protobuf/any.pbjson.dart' as $2;
-import '../../../rpc/status.pbjson.dart' as $3;
-
 const OperationType$json = {
   '1': 'OperationType',
   '2': [
@@ -255,37 +251,4 @@ const EntityFilter$json = {
     {'1': 'kinds', '3': 1, '4': 3, '5': 9, '10': 'kinds'},
     {'1': 'namespace_ids', '3': 2, '4': 3, '5': 9, '10': 'namespaceIds'},
   ],
-};
-
-const DatastoreAdminServiceBase$json = {
-  '1': 'DatastoreAdmin',
-  '2': [
-    {
-      '1': 'ExportEntities',
-      '2': '.google.datastore.admin.v1beta1.ExportEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ImportEntities',
-      '2': '.google.datastore.admin.v1beta1.ImportEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const DatastoreAdminServiceBase$messageJson = {
-  '.google.datastore.admin.v1beta1.ExportEntitiesRequest':
-      ExportEntitiesRequest$json,
-  '.google.datastore.admin.v1beta1.ExportEntitiesRequest.LabelsEntry':
-      ExportEntitiesRequest_LabelsEntry$json,
-  '.google.datastore.admin.v1beta1.EntityFilter': EntityFilter$json,
-  '.google.longrunning.Operation': $1.Operation$json,
-  '.google.protobuf.Any': $2.Any$json,
-  '.google.rpc.Status': $3.Status$json,
-  '.google.datastore.admin.v1beta1.ImportEntitiesRequest':
-      ImportEntitiesRequest$json,
-  '.google.datastore.admin.v1beta1.ImportEntitiesRequest.LabelsEntry':
-      ImportEntitiesRequest_LabelsEntry$json,
 };

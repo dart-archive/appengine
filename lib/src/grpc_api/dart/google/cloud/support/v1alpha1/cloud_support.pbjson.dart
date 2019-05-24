@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../common.pbjson.dart' as $0;
-import '../../../protobuf/timestamp.pbjson.dart' as $2;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-
 const GetSupportAccountRequest$json = {
   '1': 'GetSupportAccountRequest',
   '2': [
@@ -146,101 +142,4 @@ const CreateCommentRequest$json = {
 
 const GetIssueTaxonomyRequest$json = {
   '1': 'GetIssueTaxonomyRequest',
-};
-
-const CloudSupportServiceBase$json = {
-  '1': 'CloudSupport',
-  '2': [
-    {
-      '1': 'GetSupportAccount',
-      '2': '.google.cloud.support.v1alpha1.GetSupportAccountRequest',
-      '3': '.google.cloud.support.common.SupportAccount',
-      '4': {}
-    },
-    {
-      '1': 'ListSupportAccounts',
-      '2': '.google.cloud.support.v1alpha1.ListSupportAccountsRequest',
-      '3': '.google.cloud.support.v1alpha1.ListSupportAccountsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetCase',
-      '2': '.google.cloud.support.v1alpha1.GetCaseRequest',
-      '3': '.google.cloud.support.common.Case',
-      '4': {}
-    },
-    {
-      '1': 'ListCases',
-      '2': '.google.cloud.support.v1alpha1.ListCasesRequest',
-      '3': '.google.cloud.support.v1alpha1.ListCasesResponse',
-      '4': {}
-    },
-    {
-      '1': 'ListComments',
-      '2': '.google.cloud.support.v1alpha1.ListCommentsRequest',
-      '3': '.google.cloud.support.v1alpha1.ListCommentsResponse',
-      '4': {}
-    },
-    {
-      '1': 'CreateCase',
-      '2': '.google.cloud.support.v1alpha1.CreateCaseRequest',
-      '3': '.google.cloud.support.common.Case',
-      '4': {}
-    },
-    {
-      '1': 'UpdateCase',
-      '2': '.google.cloud.support.v1alpha1.UpdateCaseRequest',
-      '3': '.google.cloud.support.common.Case',
-      '4': {}
-    },
-    {
-      '1': 'CreateComment',
-      '2': '.google.cloud.support.v1alpha1.CreateCommentRequest',
-      '3': '.google.cloud.support.common.Comment',
-      '4': {}
-    },
-    {
-      '1': 'GetIssueTaxonomy',
-      '2': '.google.cloud.support.v1alpha1.GetIssueTaxonomyRequest',
-      '3': '.google.cloud.support.common.IssueTaxonomy',
-      '4': {}
-    },
-  ],
-};
-
-const CloudSupportServiceBase$messageJson = {
-  '.google.cloud.support.v1alpha1.GetSupportAccountRequest':
-      GetSupportAccountRequest$json,
-  '.google.cloud.support.common.SupportAccount': $0.SupportAccount$json,
-  '.google.protobuf.Timestamp': $2.Timestamp$json,
-  '.google.cloud.support.v1alpha1.ListSupportAccountsRequest':
-      ListSupportAccountsRequest$json,
-  '.google.cloud.support.v1alpha1.ListSupportAccountsResponse':
-      ListSupportAccountsResponse$json,
-  '.google.cloud.support.v1alpha1.GetCaseRequest': GetCaseRequest$json,
-  '.google.cloud.support.common.Case': $0.Case$json,
-  '.google.cloud.support.common.CustomerIssue': $0.CustomerIssue$json,
-  '.google.cloud.support.v1alpha1.ListCasesRequest': ListCasesRequest$json,
-  '.google.cloud.support.v1alpha1.ListCasesResponse': ListCasesResponse$json,
-  '.google.cloud.support.v1alpha1.ListCommentsRequest':
-      ListCommentsRequest$json,
-  '.google.cloud.support.v1alpha1.ListCommentsResponse':
-      ListCommentsResponse$json,
-  '.google.cloud.support.common.Comment': $0.Comment$json,
-  '.google.cloud.support.v1alpha1.CreateCaseRequest': CreateCaseRequest$json,
-  '.google.cloud.support.v1alpha1.UpdateCaseRequest': UpdateCaseRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.support.v1alpha1.CreateCommentRequest':
-      CreateCommentRequest$json,
-  '.google.cloud.support.v1alpha1.GetIssueTaxonomyRequest':
-      GetIssueTaxonomyRequest$json,
-  '.google.cloud.support.common.IssueTaxonomy': $0.IssueTaxonomy$json,
-  '.google.cloud.support.common.IssueTaxonomy.CategoriesEntry':
-      $0.IssueTaxonomy_CategoriesEntry$json,
-  '.google.cloud.support.common.IssueTaxonomy.Category':
-      $0.IssueTaxonomy_Category$json,
-  '.google.cloud.support.common.IssueTaxonomy.Category.ComponentsEntry':
-      $0.IssueTaxonomy_Category_ComponentsEntry$json,
-  '.google.cloud.support.common.IssueTaxonomy.Component':
-      $0.IssueTaxonomy_Component$json,
 };

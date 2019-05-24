@@ -4,16 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../protobuf/empty.pbjson.dart' as $3;
-import '../../api/monitored_resource.pbjson.dart' as $0;
-import 'log_entry.pbjson.dart' as $1;
-import '../../protobuf/any.pbjson.dart' as $4;
-import '../../protobuf/struct.pbjson.dart' as $5;
-import '../type/http_request.pbjson.dart' as $6;
-import '../../protobuf/duration.pbjson.dart' as $7;
-import '../../protobuf/timestamp.pbjson.dart' as $8;
-import '../../api/label.pbjson.dart' as $9;
-
 const DeleteLogRequest$json = {
   '1': 'DeleteLogRequest',
   '2': [
@@ -172,78 +162,4 @@ const ListLogsResponse$json = {
     {'1': 'log_names', '3': 3, '4': 3, '5': 9, '10': 'logNames'},
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
-};
-
-const LoggingServiceV2ServiceBase$json = {
-  '1': 'LoggingServiceV2',
-  '2': [
-    {
-      '1': 'DeleteLog',
-      '2': '.google.logging.v2.DeleteLogRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'WriteLogEntries',
-      '2': '.google.logging.v2.WriteLogEntriesRequest',
-      '3': '.google.logging.v2.WriteLogEntriesResponse',
-      '4': {}
-    },
-    {
-      '1': 'ListLogEntries',
-      '2': '.google.logging.v2.ListLogEntriesRequest',
-      '3': '.google.logging.v2.ListLogEntriesResponse',
-      '4': {}
-    },
-    {
-      '1': 'ListMonitoredResourceDescriptors',
-      '2': '.google.logging.v2.ListMonitoredResourceDescriptorsRequest',
-      '3': '.google.logging.v2.ListMonitoredResourceDescriptorsResponse',
-      '4': {}
-    },
-    {
-      '1': 'ListLogs',
-      '2': '.google.logging.v2.ListLogsRequest',
-      '3': '.google.logging.v2.ListLogsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const LoggingServiceV2ServiceBase$messageJson = {
-  '.google.logging.v2.DeleteLogRequest': DeleteLogRequest$json,
-  '.google.protobuf.Empty': $3.Empty$json,
-  '.google.logging.v2.WriteLogEntriesRequest': WriteLogEntriesRequest$json,
-  '.google.api.MonitoredResource': $0.MonitoredResource$json,
-  '.google.api.MonitoredResource.LabelsEntry':
-      $0.MonitoredResource_LabelsEntry$json,
-  '.google.logging.v2.WriteLogEntriesRequest.LabelsEntry':
-      WriteLogEntriesRequest_LabelsEntry$json,
-  '.google.logging.v2.LogEntry': $1.LogEntry$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.protobuf.Struct': $5.Struct$json,
-  '.google.protobuf.Struct.FieldsEntry': $5.Struct_FieldsEntry$json,
-  '.google.protobuf.Value': $5.Value$json,
-  '.google.protobuf.ListValue': $5.ListValue$json,
-  '.google.logging.type.HttpRequest': $6.HttpRequest$json,
-  '.google.protobuf.Duration': $7.Duration$json,
-  '.google.protobuf.Timestamp': $8.Timestamp$json,
-  '.google.logging.v2.LogEntry.LabelsEntry': $1.LogEntry_LabelsEntry$json,
-  '.google.logging.v2.LogEntryOperation': $1.LogEntryOperation$json,
-  '.google.logging.v2.LogEntrySourceLocation': $1.LogEntrySourceLocation$json,
-  '.google.api.MonitoredResourceMetadata': $0.MonitoredResourceMetadata$json,
-  '.google.api.MonitoredResourceMetadata.UserLabelsEntry':
-      $0.MonitoredResourceMetadata_UserLabelsEntry$json,
-  '.google.logging.v2.WriteLogEntriesResponse': WriteLogEntriesResponse$json,
-  '.google.logging.v2.ListLogEntriesRequest': ListLogEntriesRequest$json,
-  '.google.logging.v2.ListLogEntriesResponse': ListLogEntriesResponse$json,
-  '.google.logging.v2.ListMonitoredResourceDescriptorsRequest':
-      ListMonitoredResourceDescriptorsRequest$json,
-  '.google.logging.v2.ListMonitoredResourceDescriptorsResponse':
-      ListMonitoredResourceDescriptorsResponse$json,
-  '.google.api.MonitoredResourceDescriptor':
-      $0.MonitoredResourceDescriptor$json,
-  '.google.api.LabelDescriptor': $9.LabelDescriptor$json,
-  '.google.logging.v2.ListLogsRequest': ListLogsRequest$json,
-  '.google.logging.v2.ListLogsResponse': ListLogsResponse$json,
 };

@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/ad_parameter.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetAdParameterRequest$json = {
   '1': 'GetAdParameterRequest',
   '2': [
@@ -97,41 +91,4 @@ const MutateAdParameterResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const AdParameterServiceBase$json = {
-  '1': 'AdParameterService',
-  '2': [
-    {
-      '1': 'GetAdParameter',
-      '2': '.google.ads.googleads.v1.services.GetAdParameterRequest',
-      '3': '.google.ads.googleads.v1.resources.AdParameter',
-      '4': {}
-    },
-    {
-      '1': 'MutateAdParameters',
-      '2': '.google.ads.googleads.v1.services.MutateAdParametersRequest',
-      '3': '.google.ads.googleads.v1.services.MutateAdParametersResponse',
-      '4': {}
-    },
-  ],
-};
-
-const AdParameterServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetAdParameterRequest':
-      GetAdParameterRequest$json,
-  '.google.ads.googleads.v1.resources.AdParameter': $0.AdParameter$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.ads.googleads.v1.services.MutateAdParametersRequest':
-      MutateAdParametersRequest$json,
-  '.google.ads.googleads.v1.services.AdParameterOperation':
-      AdParameterOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateAdParametersResponse':
-      MutateAdParametersResponse$json,
-  '.google.ads.googleads.v1.services.MutateAdParameterResult':
-      MutateAdParameterResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

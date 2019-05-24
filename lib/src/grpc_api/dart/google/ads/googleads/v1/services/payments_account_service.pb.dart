@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -82,20 +81,4 @@ class ListPaymentsAccountsResponse extends $pb.GeneratedMessage {
   static ListPaymentsAccountsResponse _defaultInstance;
 
   $core.List<$0.PaymentsAccount> get paymentsAccounts => $_getList(0);
-}
-
-class PaymentsAccountServiceApi {
-  $pb.RpcClient _client;
-  PaymentsAccountServiceApi(this._client);
-
-  $async.Future<ListPaymentsAccountsResponse> listPaymentsAccounts(
-      $pb.ClientContext ctx, ListPaymentsAccountsRequest request) {
-    var emptyResponse = ListPaymentsAccountsResponse();
-    return _client.invoke<ListPaymentsAccountsResponse>(
-        ctx,
-        'PaymentsAccountService',
-        'ListPaymentsAccounts',
-        request,
-        emptyResponse);
-  }
 }

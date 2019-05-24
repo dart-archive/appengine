@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'index.pbjson.dart' as $1;
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $4;
-import '../../../rpc/status.pbjson.dart' as $5;
-import '../../../protobuf/empty.pbjson.dart' as $3;
-
 const OperationState$json = {
   '1': 'OperationState',
   '2': [
@@ -255,65 +249,4 @@ const ImportDocumentsMetadata$json = {
     {'1': 'collection_ids', '3': 6, '4': 3, '5': 9, '10': 'collectionIds'},
     {'1': 'input_uri_prefix', '3': 7, '4': 1, '5': 9, '10': 'inputUriPrefix'},
   ],
-};
-
-const FirestoreAdminServiceBase$json = {
-  '1': 'FirestoreAdmin',
-  '2': [
-    {
-      '1': 'CreateIndex',
-      '2': '.google.firestore.admin.v1beta1.CreateIndexRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ListIndexes',
-      '2': '.google.firestore.admin.v1beta1.ListIndexesRequest',
-      '3': '.google.firestore.admin.v1beta1.ListIndexesResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetIndex',
-      '2': '.google.firestore.admin.v1beta1.GetIndexRequest',
-      '3': '.google.firestore.admin.v1beta1.Index',
-      '4': {}
-    },
-    {
-      '1': 'DeleteIndex',
-      '2': '.google.firestore.admin.v1beta1.DeleteIndexRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'ExportDocuments',
-      '2': '.google.firestore.admin.v1beta1.ExportDocumentsRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ImportDocuments',
-      '2': '.google.firestore.admin.v1beta1.ImportDocumentsRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const FirestoreAdminServiceBase$messageJson = {
-  '.google.firestore.admin.v1beta1.CreateIndexRequest': CreateIndexRequest$json,
-  '.google.firestore.admin.v1beta1.Index': $1.Index$json,
-  '.google.firestore.admin.v1beta1.IndexField': $1.IndexField$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.rpc.Status': $5.Status$json,
-  '.google.firestore.admin.v1beta1.ListIndexesRequest': ListIndexesRequest$json,
-  '.google.firestore.admin.v1beta1.ListIndexesResponse':
-      ListIndexesResponse$json,
-  '.google.firestore.admin.v1beta1.GetIndexRequest': GetIndexRequest$json,
-  '.google.firestore.admin.v1beta1.DeleteIndexRequest': DeleteIndexRequest$json,
-  '.google.protobuf.Empty': $3.Empty$json,
-  '.google.firestore.admin.v1beta1.ExportDocumentsRequest':
-      ExportDocumentsRequest$json,
-  '.google.firestore.admin.v1beta1.ImportDocumentsRequest':
-      ImportDocumentsRequest$json,
 };

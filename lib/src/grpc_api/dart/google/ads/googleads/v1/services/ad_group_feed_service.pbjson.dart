@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/ad_group_feed.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../common/matching_function.pbjson.dart' as $4;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-
 const GetAdGroupFeedRequest$json = {
   '1': 'GetAdGroupFeedRequest',
   '2': [
@@ -98,53 +91,4 @@ const MutateAdGroupFeedResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const AdGroupFeedServiceBase$json = {
-  '1': 'AdGroupFeedService',
-  '2': [
-    {
-      '1': 'GetAdGroupFeed',
-      '2': '.google.ads.googleads.v1.services.GetAdGroupFeedRequest',
-      '3': '.google.ads.googleads.v1.resources.AdGroupFeed',
-      '4': {}
-    },
-    {
-      '1': 'MutateAdGroupFeeds',
-      '2': '.google.ads.googleads.v1.services.MutateAdGroupFeedsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateAdGroupFeedsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const AdGroupFeedServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetAdGroupFeedRequest':
-      GetAdGroupFeedRequest$json,
-  '.google.ads.googleads.v1.resources.AdGroupFeed': $0.AdGroupFeed$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.common.MatchingFunction': $4.MatchingFunction$json,
-  '.google.ads.googleads.v1.common.Operand': $4.Operand$json,
-  '.google.ads.googleads.v1.common.Operand.ConstantOperand':
-      $4.Operand_ConstantOperand$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.BoolValue': $3.BoolValue$json,
-  '.google.protobuf.DoubleValue': $3.DoubleValue$json,
-  '.google.ads.googleads.v1.common.Operand.FeedAttributeOperand':
-      $4.Operand_FeedAttributeOperand$json,
-  '.google.ads.googleads.v1.common.Operand.FunctionOperand':
-      $4.Operand_FunctionOperand$json,
-  '.google.ads.googleads.v1.common.Operand.RequestContextOperand':
-      $4.Operand_RequestContextOperand$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupFeedsRequest':
-      MutateAdGroupFeedsRequest$json,
-  '.google.ads.googleads.v1.services.AdGroupFeedOperation':
-      AdGroupFeedOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupFeedsResponse':
-      MutateAdGroupFeedsResponse$json,
-  '.google.ads.googleads.v1.services.MutateAdGroupFeedResult':
-      MutateAdGroupFeedResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $5.Any$json,
 };

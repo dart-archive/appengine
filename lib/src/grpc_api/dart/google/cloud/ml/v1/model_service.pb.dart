@@ -4,14 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../longrunning/operations.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 class Model extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model',
@@ -83,10 +81,10 @@ class Version extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..aOB(3, 'isDefault')
     ..aOS(4, 'deploymentUri')
-    ..a<$0.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(6, 'lastUseTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'lastUseTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..aOS(8, 'runtimeVersion')
     ..a<ManualScaling>(9, 'manualScaling', $pb.PbFieldType.OM,
         ManualScaling.getDefault, ManualScaling.create)
@@ -141,16 +139,16 @@ class Version extends $pb.GeneratedMessage {
   $core.bool hasDeploymentUri() => $_has(3);
   void clearDeploymentUri() => clearField(4);
 
-  $0.Timestamp get createTime => $_getN(4);
-  set createTime($0.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(4);
+  set createTime($2.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(5);
 
-  $0.Timestamp get lastUseTime => $_getN(5);
-  set lastUseTime($0.Timestamp v) {
+  $2.Timestamp get lastUseTime => $_getN(5);
+  set lastUseTime($2.Timestamp v) {
     setField(6, v);
   }
 
@@ -645,72 +643,4 @@ class SetDefaultVersionRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class ModelServiceApi {
-  $pb.RpcClient _client;
-  ModelServiceApi(this._client);
-
-  $async.Future<Model> createModel(
-      $pb.ClientContext ctx, CreateModelRequest request) {
-    var emptyResponse = Model();
-    return _client.invoke<Model>(
-        ctx, 'ModelService', 'CreateModel', request, emptyResponse);
-  }
-
-  $async.Future<ListModelsResponse> listModels(
-      $pb.ClientContext ctx, ListModelsRequest request) {
-    var emptyResponse = ListModelsResponse();
-    return _client.invoke<ListModelsResponse>(
-        ctx, 'ModelService', 'ListModels', request, emptyResponse);
-  }
-
-  $async.Future<Model> getModel(
-      $pb.ClientContext ctx, GetModelRequest request) {
-    var emptyResponse = Model();
-    return _client.invoke<Model>(
-        ctx, 'ModelService', 'GetModel', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> deleteModel(
-      $pb.ClientContext ctx, DeleteModelRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'ModelService', 'DeleteModel', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> createVersion(
-      $pb.ClientContext ctx, CreateVersionRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'ModelService', 'CreateVersion', request, emptyResponse);
-  }
-
-  $async.Future<ListVersionsResponse> listVersions(
-      $pb.ClientContext ctx, ListVersionsRequest request) {
-    var emptyResponse = ListVersionsResponse();
-    return _client.invoke<ListVersionsResponse>(
-        ctx, 'ModelService', 'ListVersions', request, emptyResponse);
-  }
-
-  $async.Future<Version> getVersion(
-      $pb.ClientContext ctx, GetVersionRequest request) {
-    var emptyResponse = Version();
-    return _client.invoke<Version>(
-        ctx, 'ModelService', 'GetVersion', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> deleteVersion(
-      $pb.ClientContext ctx, DeleteVersionRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'ModelService', 'DeleteVersion', request, emptyResponse);
-  }
-
-  $async.Future<Version> setDefaultVersion(
-      $pb.ClientContext ctx, SetDefaultVersionRequest request) {
-    var emptyResponse = Version();
-    return _client.invoke<Version>(
-        ctx, 'ModelService', 'SetDefaultVersion', request, emptyResponse);
-  }
 }

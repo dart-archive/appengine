@@ -4,17 +4,15 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
+import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'clusters.pbenum.dart';
 
@@ -564,8 +562,8 @@ class NodeInitializationAction extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NodeInitializationAction',
       package: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..aOS(1, 'executableFile')
-    ..a<$0.Duration>(2, 'executionTimeout', $pb.PbFieldType.OM,
-        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$2.Duration>(2, 'executionTimeout', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
     ..hasRequiredFields = false;
 
   NodeInitializationAction() : super();
@@ -597,8 +595,8 @@ class NodeInitializationAction extends $pb.GeneratedMessage {
   $core.bool hasExecutableFile() => $_has(0);
   void clearExecutableFile() => clearField(1);
 
-  $0.Duration get executionTimeout => $_getN(1);
-  set executionTimeout($0.Duration v) {
+  $2.Duration get executionTimeout => $_getN(1);
+  set executionTimeout($2.Duration v) {
     setField(2, v);
   }
 
@@ -617,8 +615,8 @@ class ClusterStatus extends $pb.GeneratedMessage {
         ClusterStatus_State.valueOf,
         ClusterStatus_State.values)
     ..aOS(2, 'detail')
-    ..a<$1.Timestamp>(3, 'stateStartTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'stateStartTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..e<ClusterStatus_Substate>(
         4,
         'substate',
@@ -662,8 +660,8 @@ class ClusterStatus extends $pb.GeneratedMessage {
   $core.bool hasDetail() => $_has(1);
   void clearDetail() => clearField(2);
 
-  $1.Timestamp get stateStartTime => $_getN(2);
-  set stateStartTime($1.Timestamp v) {
+  $3.Timestamp get stateStartTime => $_getN(2);
+  set stateStartTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -842,11 +840,11 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'clusterName')
     ..a<Cluster>(
         3, 'cluster', $pb.PbFieldType.OM, Cluster.getDefault, Cluster.create)
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$4.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..aOS(5, 'region')
-    ..a<$0.Duration>(6, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
-        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$2.Duration>(6, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
     ..aOS(7, 'requestId')
     ..hasRequiredFields = false;
 
@@ -894,8 +892,8 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   $core.bool hasCluster() => $_has(2);
   void clearCluster() => clearField(3);
 
-  $2.FieldMask get updateMask => $_getN(3);
-  set updateMask($2.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(3);
+  set updateMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -910,8 +908,8 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
   $core.bool hasRegion() => $_has(4);
   void clearRegion() => clearField(5);
 
-  $0.Duration get gracefulDecommissionTimeout => $_getN(5);
-  set gracefulDecommissionTimeout($0.Duration v) {
+  $2.Duration get gracefulDecommissionTimeout => $_getN(5);
+  set gracefulDecommissionTimeout($2.Duration v) {
     setField(6, v);
   }
 
@@ -1246,51 +1244,4 @@ class DiagnoseClusterResults extends $pb.GeneratedMessage {
 
   $core.bool hasOutputUri() => $_has(0);
   void clearOutputUri() => clearField(1);
-}
-
-class ClusterControllerApi {
-  $pb.RpcClient _client;
-  ClusterControllerApi(this._client);
-
-  $async.Future<$3.Operation> createCluster(
-      $pb.ClientContext ctx, CreateClusterRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ClusterController', 'CreateCluster', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> updateCluster(
-      $pb.ClientContext ctx, UpdateClusterRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ClusterController', 'UpdateCluster', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> deleteCluster(
-      $pb.ClientContext ctx, DeleteClusterRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ClusterController', 'DeleteCluster', request, emptyResponse);
-  }
-
-  $async.Future<Cluster> getCluster(
-      $pb.ClientContext ctx, GetClusterRequest request) {
-    var emptyResponse = Cluster();
-    return _client.invoke<Cluster>(
-        ctx, 'ClusterController', 'GetCluster', request, emptyResponse);
-  }
-
-  $async.Future<ListClustersResponse> listClusters(
-      $pb.ClientContext ctx, ListClustersRequest request) {
-    var emptyResponse = ListClustersResponse();
-    return _client.invoke<ListClustersResponse>(
-        ctx, 'ClusterController', 'ListClusters', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> diagnoseCluster(
-      $pb.ClientContext ctx, DiagnoseClusterRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'ClusterController', 'DiagnoseCluster', request, emptyResponse);
-  }
 }

@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../protobuf/empty.pbjson.dart' as $2;
-
 const LoggingConfig$json = {
   '1': 'LoggingConfig',
   '2': [
@@ -797,94 +793,4 @@ const DeleteJobRequest$json = {
     {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
     {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
   ],
-};
-
-const JobControllerServiceBase$json = {
-  '1': 'JobController',
-  '2': [
-    {
-      '1': 'SubmitJob',
-      '2': '.google.cloud.dataproc.v1.SubmitJobRequest',
-      '3': '.google.cloud.dataproc.v1.Job',
-      '4': {}
-    },
-    {
-      '1': 'GetJob',
-      '2': '.google.cloud.dataproc.v1.GetJobRequest',
-      '3': '.google.cloud.dataproc.v1.Job',
-      '4': {}
-    },
-    {
-      '1': 'ListJobs',
-      '2': '.google.cloud.dataproc.v1.ListJobsRequest',
-      '3': '.google.cloud.dataproc.v1.ListJobsResponse',
-      '4': {}
-    },
-    {
-      '1': 'UpdateJob',
-      '2': '.google.cloud.dataproc.v1.UpdateJobRequest',
-      '3': '.google.cloud.dataproc.v1.Job',
-      '4': {}
-    },
-    {
-      '1': 'CancelJob',
-      '2': '.google.cloud.dataproc.v1.CancelJobRequest',
-      '3': '.google.cloud.dataproc.v1.Job',
-      '4': {}
-    },
-    {
-      '1': 'DeleteJob',
-      '2': '.google.cloud.dataproc.v1.DeleteJobRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const JobControllerServiceBase$messageJson = {
-  '.google.cloud.dataproc.v1.SubmitJobRequest': SubmitJobRequest$json,
-  '.google.cloud.dataproc.v1.Job': Job$json,
-  '.google.cloud.dataproc.v1.JobReference': JobReference$json,
-  '.google.cloud.dataproc.v1.JobPlacement': JobPlacement$json,
-  '.google.cloud.dataproc.v1.HadoopJob': HadoopJob$json,
-  '.google.cloud.dataproc.v1.HadoopJob.PropertiesEntry':
-      HadoopJob_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.LoggingConfig': LoggingConfig$json,
-  '.google.cloud.dataproc.v1.LoggingConfig.DriverLogLevelsEntry':
-      LoggingConfig_DriverLogLevelsEntry$json,
-  '.google.cloud.dataproc.v1.SparkJob': SparkJob$json,
-  '.google.cloud.dataproc.v1.SparkJob.PropertiesEntry':
-      SparkJob_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.PySparkJob': PySparkJob$json,
-  '.google.cloud.dataproc.v1.PySparkJob.PropertiesEntry':
-      PySparkJob_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.HiveJob': HiveJob$json,
-  '.google.cloud.dataproc.v1.QueryList': QueryList$json,
-  '.google.cloud.dataproc.v1.HiveJob.ScriptVariablesEntry':
-      HiveJob_ScriptVariablesEntry$json,
-  '.google.cloud.dataproc.v1.HiveJob.PropertiesEntry':
-      HiveJob_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.PigJob': PigJob$json,
-  '.google.cloud.dataproc.v1.PigJob.ScriptVariablesEntry':
-      PigJob_ScriptVariablesEntry$json,
-  '.google.cloud.dataproc.v1.PigJob.PropertiesEntry':
-      PigJob_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.JobStatus': JobStatus$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.dataproc.v1.YarnApplication': YarnApplication$json,
-  '.google.cloud.dataproc.v1.SparkSqlJob': SparkSqlJob$json,
-  '.google.cloud.dataproc.v1.SparkSqlJob.ScriptVariablesEntry':
-      SparkSqlJob_ScriptVariablesEntry$json,
-  '.google.cloud.dataproc.v1.SparkSqlJob.PropertiesEntry':
-      SparkSqlJob_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.Job.LabelsEntry': Job_LabelsEntry$json,
-  '.google.cloud.dataproc.v1.JobScheduling': JobScheduling$json,
-  '.google.cloud.dataproc.v1.GetJobRequest': GetJobRequest$json,
-  '.google.cloud.dataproc.v1.ListJobsRequest': ListJobsRequest$json,
-  '.google.cloud.dataproc.v1.ListJobsResponse': ListJobsResponse$json,
-  '.google.cloud.dataproc.v1.UpdateJobRequest': UpdateJobRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.dataproc.v1.CancelJobRequest': CancelJobRequest$json,
-  '.google.cloud.dataproc.v1.DeleteJobRequest': DeleteJobRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
 };

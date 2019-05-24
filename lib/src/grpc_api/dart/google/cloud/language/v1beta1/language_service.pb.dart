@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -1091,37 +1090,4 @@ class AnnotateTextResponse extends $pb.GeneratedMessage {
 
   $core.bool hasLanguage() => $_has(4);
   void clearLanguage() => clearField(5);
-}
-
-class LanguageServiceApi {
-  $pb.RpcClient _client;
-  LanguageServiceApi(this._client);
-
-  $async.Future<AnalyzeSentimentResponse> analyzeSentiment(
-      $pb.ClientContext ctx, AnalyzeSentimentRequest request) {
-    var emptyResponse = AnalyzeSentimentResponse();
-    return _client.invoke<AnalyzeSentimentResponse>(
-        ctx, 'LanguageService', 'AnalyzeSentiment', request, emptyResponse);
-  }
-
-  $async.Future<AnalyzeEntitiesResponse> analyzeEntities(
-      $pb.ClientContext ctx, AnalyzeEntitiesRequest request) {
-    var emptyResponse = AnalyzeEntitiesResponse();
-    return _client.invoke<AnalyzeEntitiesResponse>(
-        ctx, 'LanguageService', 'AnalyzeEntities', request, emptyResponse);
-  }
-
-  $async.Future<AnalyzeSyntaxResponse> analyzeSyntax(
-      $pb.ClientContext ctx, AnalyzeSyntaxRequest request) {
-    var emptyResponse = AnalyzeSyntaxResponse();
-    return _client.invoke<AnalyzeSyntaxResponse>(
-        ctx, 'LanguageService', 'AnalyzeSyntax', request, emptyResponse);
-  }
-
-  $async.Future<AnnotateTextResponse> annotateText(
-      $pb.ClientContext ctx, AnnotateTextRequest request) {
-    var emptyResponse = AnnotateTextResponse();
-    return _client.invoke<AnnotateTextResponse>(
-        ctx, 'LanguageService', 'AnnotateText', request, emptyResponse);
-  }
 }

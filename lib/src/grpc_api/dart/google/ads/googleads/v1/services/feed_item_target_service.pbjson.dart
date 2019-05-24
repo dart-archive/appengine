@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/feed_item_target.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $1;
-import '../common/criteria.pbjson.dart' as $2;
-
 const GetFeedItemTargetRequest$json = {
   '1': 'GetFeedItemTargetRequest',
   '2': [
@@ -68,41 +64,4 @@ const MutateFeedItemTargetResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const FeedItemTargetServiceBase$json = {
-  '1': 'FeedItemTargetService',
-  '2': [
-    {
-      '1': 'GetFeedItemTarget',
-      '2': '.google.ads.googleads.v1.services.GetFeedItemTargetRequest',
-      '3': '.google.ads.googleads.v1.resources.FeedItemTarget',
-      '4': {}
-    },
-    {
-      '1': 'MutateFeedItemTargets',
-      '2': '.google.ads.googleads.v1.services.MutateFeedItemTargetsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateFeedItemTargetsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const FeedItemTargetServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetFeedItemTargetRequest':
-      GetFeedItemTargetRequest$json,
-  '.google.ads.googleads.v1.resources.FeedItemTarget': $0.FeedItemTarget$json,
-  '.google.protobuf.StringValue': $1.StringValue$json,
-  '.google.protobuf.Int64Value': $1.Int64Value$json,
-  '.google.ads.googleads.v1.common.KeywordInfo': $2.KeywordInfo$json,
-  '.google.ads.googleads.v1.common.AdScheduleInfo': $2.AdScheduleInfo$json,
-  '.google.protobuf.Int32Value': $1.Int32Value$json,
-  '.google.ads.googleads.v1.services.MutateFeedItemTargetsRequest':
-      MutateFeedItemTargetsRequest$json,
-  '.google.ads.googleads.v1.services.FeedItemTargetOperation':
-      FeedItemTargetOperation$json,
-  '.google.ads.googleads.v1.services.MutateFeedItemTargetsResponse':
-      MutateFeedItemTargetsResponse$json,
-  '.google.ads.googleads.v1.services.MutateFeedItemTargetResult':
-      MutateFeedItemTargetResult$json,
 };

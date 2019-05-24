@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/empty.pbjson.dart' as $2;
-import '../common/common.pbjson.dart' as $0;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-
 const LoginProfile$json = {
   '1': 'LoginProfile',
   '2': [
@@ -128,70 +124,4 @@ const UpdateSshPublicKeyRequest$json = {
       '10': 'updateMask'
     },
   ],
-};
-
-const OsLoginServiceBase$json = {
-  '1': 'OsLoginService',
-  '2': [
-    {
-      '1': 'DeletePosixAccount',
-      '2': '.google.cloud.oslogin.v1beta.DeletePosixAccountRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'DeleteSshPublicKey',
-      '2': '.google.cloud.oslogin.v1beta.DeleteSshPublicKeyRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'GetLoginProfile',
-      '2': '.google.cloud.oslogin.v1beta.GetLoginProfileRequest',
-      '3': '.google.cloud.oslogin.v1beta.LoginProfile',
-      '4': {}
-    },
-    {
-      '1': 'GetSshPublicKey',
-      '2': '.google.cloud.oslogin.v1beta.GetSshPublicKeyRequest',
-      '3': '.google.cloud.oslogin.common.SshPublicKey',
-      '4': {}
-    },
-    {
-      '1': 'ImportSshPublicKey',
-      '2': '.google.cloud.oslogin.v1beta.ImportSshPublicKeyRequest',
-      '3': '.google.cloud.oslogin.v1beta.ImportSshPublicKeyResponse',
-      '4': {}
-    },
-    {
-      '1': 'UpdateSshPublicKey',
-      '2': '.google.cloud.oslogin.v1beta.UpdateSshPublicKeyRequest',
-      '3': '.google.cloud.oslogin.common.SshPublicKey',
-      '4': {}
-    },
-  ],
-};
-
-const OsLoginServiceBase$messageJson = {
-  '.google.cloud.oslogin.v1beta.DeletePosixAccountRequest':
-      DeletePosixAccountRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
-  '.google.cloud.oslogin.v1beta.DeleteSshPublicKeyRequest':
-      DeleteSshPublicKeyRequest$json,
-  '.google.cloud.oslogin.v1beta.GetLoginProfileRequest':
-      GetLoginProfileRequest$json,
-  '.google.cloud.oslogin.v1beta.LoginProfile': LoginProfile$json,
-  '.google.cloud.oslogin.common.PosixAccount': $0.PosixAccount$json,
-  '.google.cloud.oslogin.v1beta.LoginProfile.SshPublicKeysEntry':
-      LoginProfile_SshPublicKeysEntry$json,
-  '.google.cloud.oslogin.common.SshPublicKey': $0.SshPublicKey$json,
-  '.google.cloud.oslogin.v1beta.GetSshPublicKeyRequest':
-      GetSshPublicKeyRequest$json,
-  '.google.cloud.oslogin.v1beta.ImportSshPublicKeyRequest':
-      ImportSshPublicKeyRequest$json,
-  '.google.cloud.oslogin.v1beta.ImportSshPublicKeyResponse':
-      ImportSshPublicKeyResponse$json,
-  '.google.cloud.oslogin.v1beta.UpdateSshPublicKeyRequest':
-      UpdateSshPublicKeyRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
 };

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -180,23 +179,4 @@ class GetFileTailResponse extends $pb.GeneratedMessage {
 
   $core.bool hasData() => $_has(0);
   void clearData() => clearField(1);
-}
-
-class ResultStoreFileDownloadApi {
-  $pb.RpcClient _client;
-  ResultStoreFileDownloadApi(this._client);
-
-  $async.Future<GetFileResponse> getFile(
-      $pb.ClientContext ctx, GetFileRequest request) {
-    var emptyResponse = GetFileResponse();
-    return _client.invoke<GetFileResponse>(
-        ctx, 'ResultStoreFileDownload', 'GetFile', request, emptyResponse);
-  }
-
-  $async.Future<GetFileTailResponse> getFileTail(
-      $pb.ClientContext ctx, GetFileTailRequest request) {
-    var emptyResponse = GetFileTailResponse();
-    return _client.invoke<GetFileTailResponse>(
-        ctx, 'ResultStoreFileDownload', 'GetFileTail', request, emptyResponse);
-  }
 }

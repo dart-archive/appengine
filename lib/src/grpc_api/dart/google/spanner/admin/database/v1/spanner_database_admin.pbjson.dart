@@ -4,14 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../../longrunning/operations.pbjson.dart' as $1;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-import '../../../../rpc/status.pbjson.dart' as $6;
-import '../../../../protobuf/empty.pbjson.dart' as $2;
-import '../../../../iam/v1/iam_policy.pbjson.dart' as $3;
-import '../../../../iam/v1/policy.pbjson.dart' as $4;
-import '../../../../type/expr.pbjson.dart' as $7;
-
 const Database$json = {
   '1': 'Database',
   '2': [
@@ -128,96 +120,4 @@ const GetDatabaseDdlResponse$json = {
   '2': [
     {'1': 'statements', '3': 1, '4': 3, '5': 9, '10': 'statements'},
   ],
-};
-
-const DatabaseAdminServiceBase$json = {
-  '1': 'DatabaseAdmin',
-  '2': [
-    {
-      '1': 'ListDatabases',
-      '2': '.google.spanner.admin.database.v1.ListDatabasesRequest',
-      '3': '.google.spanner.admin.database.v1.ListDatabasesResponse',
-      '4': {}
-    },
-    {
-      '1': 'CreateDatabase',
-      '2': '.google.spanner.admin.database.v1.CreateDatabaseRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'GetDatabase',
-      '2': '.google.spanner.admin.database.v1.GetDatabaseRequest',
-      '3': '.google.spanner.admin.database.v1.Database',
-      '4': {}
-    },
-    {
-      '1': 'UpdateDatabaseDdl',
-      '2': '.google.spanner.admin.database.v1.UpdateDatabaseDdlRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'DropDatabase',
-      '2': '.google.spanner.admin.database.v1.DropDatabaseRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'GetDatabaseDdl',
-      '2': '.google.spanner.admin.database.v1.GetDatabaseDdlRequest',
-      '3': '.google.spanner.admin.database.v1.GetDatabaseDdlResponse',
-      '4': {}
-    },
-    {
-      '1': 'SetIamPolicy',
-      '2': '.google.iam.v1.SetIamPolicyRequest',
-      '3': '.google.iam.v1.Policy',
-      '4': {}
-    },
-    {
-      '1': 'GetIamPolicy',
-      '2': '.google.iam.v1.GetIamPolicyRequest',
-      '3': '.google.iam.v1.Policy',
-      '4': {}
-    },
-    {
-      '1': 'TestIamPermissions',
-      '2': '.google.iam.v1.TestIamPermissionsRequest',
-      '3': '.google.iam.v1.TestIamPermissionsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const DatabaseAdminServiceBase$messageJson = {
-  '.google.spanner.admin.database.v1.ListDatabasesRequest':
-      ListDatabasesRequest$json,
-  '.google.spanner.admin.database.v1.ListDatabasesResponse':
-      ListDatabasesResponse$json,
-  '.google.spanner.admin.database.v1.Database': Database$json,
-  '.google.spanner.admin.database.v1.CreateDatabaseRequest':
-      CreateDatabaseRequest$json,
-  '.google.longrunning.Operation': $1.Operation$json,
-  '.google.protobuf.Any': $5.Any$json,
-  '.google.rpc.Status': $6.Status$json,
-  '.google.spanner.admin.database.v1.GetDatabaseRequest':
-      GetDatabaseRequest$json,
-  '.google.spanner.admin.database.v1.UpdateDatabaseDdlRequest':
-      UpdateDatabaseDdlRequest$json,
-  '.google.spanner.admin.database.v1.DropDatabaseRequest':
-      DropDatabaseRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
-  '.google.spanner.admin.database.v1.GetDatabaseDdlRequest':
-      GetDatabaseDdlRequest$json,
-  '.google.spanner.admin.database.v1.GetDatabaseDdlResponse':
-      GetDatabaseDdlResponse$json,
-  '.google.iam.v1.SetIamPolicyRequest': $3.SetIamPolicyRequest$json,
-  '.google.iam.v1.Policy': $4.Policy$json,
-  '.google.iam.v1.Binding': $4.Binding$json,
-  '.google.type.Expr': $7.Expr$json,
-  '.google.iam.v1.GetIamPolicyRequest': $3.GetIamPolicyRequest$json,
-  '.google.iam.v1.TestIamPermissionsRequest': $3.TestIamPermissionsRequest$json,
-  '.google.iam.v1.TestIamPermissionsResponse':
-      $3.TestIamPermissionsResponse$json,
 };

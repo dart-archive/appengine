@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'company.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import 'common.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $2;
+import 'common.pb.dart' as $3;
 
 class CreateCompanyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCompanyRequest',
@@ -99,8 +97,8 @@ class UpdateCompanyRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..a<$0.Company>(1, 'company', $pb.PbFieldType.OM, $0.Company.getDefault,
         $0.Company.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCompanyRequest() : super();
@@ -131,8 +129,8 @@ class UpdateCompanyRequest extends $pb.GeneratedMessage {
   $core.bool hasCompany() => $_has(0);
   void clearCompany() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -242,8 +240,8 @@ class ListCompaniesResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..pc<$0.Company>(1, 'companies', $pb.PbFieldType.PM, $0.Company.create)
     ..aOS(2, 'nextPageToken')
-    ..a<$2.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
-        $2.ResponseMetadata.getDefault, $2.ResponseMetadata.create)
+    ..a<$3.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
+        $3.ResponseMetadata.getDefault, $3.ResponseMetadata.create)
     ..hasRequiredFields = false;
 
   ListCompaniesResponse() : super();
@@ -277,51 +275,11 @@ class ListCompaniesResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $2.ResponseMetadata get metadata => $_getN(2);
-  set metadata($2.ResponseMetadata v) {
+  $3.ResponseMetadata get metadata => $_getN(2);
+  set metadata($3.ResponseMetadata v) {
     setField(3, v);
   }
 
   $core.bool hasMetadata() => $_has(2);
   void clearMetadata() => clearField(3);
-}
-
-class CompanyServiceApi {
-  $pb.RpcClient _client;
-  CompanyServiceApi(this._client);
-
-  $async.Future<$0.Company> createCompany(
-      $pb.ClientContext ctx, CreateCompanyRequest request) {
-    var emptyResponse = $0.Company();
-    return _client.invoke<$0.Company>(
-        ctx, 'CompanyService', 'CreateCompany', request, emptyResponse);
-  }
-
-  $async.Future<$0.Company> getCompany(
-      $pb.ClientContext ctx, GetCompanyRequest request) {
-    var emptyResponse = $0.Company();
-    return _client.invoke<$0.Company>(
-        ctx, 'CompanyService', 'GetCompany', request, emptyResponse);
-  }
-
-  $async.Future<$0.Company> updateCompany(
-      $pb.ClientContext ctx, UpdateCompanyRequest request) {
-    var emptyResponse = $0.Company();
-    return _client.invoke<$0.Company>(
-        ctx, 'CompanyService', 'UpdateCompany', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteCompany(
-      $pb.ClientContext ctx, DeleteCompanyRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'CompanyService', 'DeleteCompany', request, emptyResponse);
-  }
-
-  $async.Future<ListCompaniesResponse> listCompanies(
-      $pb.ClientContext ctx, ListCompaniesRequest request) {
-    var emptyResponse = ListCompaniesResponse();
-    return _client.invoke<ListCompaniesResponse>(
-        ctx, 'CompanyService', 'ListCompanies', request, emptyResponse);
-  }
 }

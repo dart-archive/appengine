@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -256,32 +255,4 @@ class MutateAdGroupCriterionLabelResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class AdGroupCriterionLabelServiceApi {
-  $pb.RpcClient _client;
-  AdGroupCriterionLabelServiceApi(this._client);
-
-  $async.Future<$0.AdGroupCriterionLabel> getAdGroupCriterionLabel(
-      $pb.ClientContext ctx, GetAdGroupCriterionLabelRequest request) {
-    var emptyResponse = $0.AdGroupCriterionLabel();
-    return _client.invoke<$0.AdGroupCriterionLabel>(
-        ctx,
-        'AdGroupCriterionLabelService',
-        'GetAdGroupCriterionLabel',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateAdGroupCriterionLabelsResponse>
-      mutateAdGroupCriterionLabels(
-          $pb.ClientContext ctx, MutateAdGroupCriterionLabelsRequest request) {
-    var emptyResponse = MutateAdGroupCriterionLabelsResponse();
-    return _client.invoke<MutateAdGroupCriterionLabelsResponse>(
-        ctx,
-        'AdGroupCriterionLabelService',
-        'MutateAdGroupCriterionLabels',
-        request,
-        emptyResponse);
-  }
 }

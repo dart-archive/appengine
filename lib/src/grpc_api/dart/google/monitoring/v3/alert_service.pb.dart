@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'alert.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/empty.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $2;
 
 class CreateAlertPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAlertPolicyRequest',
@@ -212,8 +210,8 @@ class ListAlertPoliciesResponse extends $pb.GeneratedMessage {
 class UpdateAlertPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAlertPolicyRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..a<$0.AlertPolicy>(3, 'alertPolicy', $pb.PbFieldType.OM,
         $0.AlertPolicy.getDefault, $0.AlertPolicy.create)
     ..hasRequiredFields = false;
@@ -239,8 +237,8 @@ class UpdateAlertPolicyRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateAlertPolicyRequest _defaultInstance;
 
-  $1.FieldMask get updateMask => $_getN(0);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(0);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -290,44 +288,4 @@ class DeleteAlertPolicyRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(3);
-}
-
-class AlertPolicyServiceApi {
-  $pb.RpcClient _client;
-  AlertPolicyServiceApi(this._client);
-
-  $async.Future<ListAlertPoliciesResponse> listAlertPolicies(
-      $pb.ClientContext ctx, ListAlertPoliciesRequest request) {
-    var emptyResponse = ListAlertPoliciesResponse();
-    return _client.invoke<ListAlertPoliciesResponse>(
-        ctx, 'AlertPolicyService', 'ListAlertPolicies', request, emptyResponse);
-  }
-
-  $async.Future<$0.AlertPolicy> getAlertPolicy(
-      $pb.ClientContext ctx, GetAlertPolicyRequest request) {
-    var emptyResponse = $0.AlertPolicy();
-    return _client.invoke<$0.AlertPolicy>(
-        ctx, 'AlertPolicyService', 'GetAlertPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$0.AlertPolicy> createAlertPolicy(
-      $pb.ClientContext ctx, CreateAlertPolicyRequest request) {
-    var emptyResponse = $0.AlertPolicy();
-    return _client.invoke<$0.AlertPolicy>(
-        ctx, 'AlertPolicyService', 'CreateAlertPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteAlertPolicy(
-      $pb.ClientContext ctx, DeleteAlertPolicyRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'AlertPolicyService', 'DeleteAlertPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$0.AlertPolicy> updateAlertPolicy(
-      $pb.ClientContext ctx, UpdateAlertPolicyRequest request) {
-    var emptyResponse = $0.AlertPolicy();
-    return _client.invoke<$0.AlertPolicy>(
-        ctx, 'AlertPolicyService', 'UpdateAlertPolicy', request, emptyResponse);
-  }
 }

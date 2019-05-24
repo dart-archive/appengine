@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../protobuf/any.pbjson.dart' as $0;
-import '../rpc/status.pbjson.dart' as $1;
-import '../protobuf/empty.pbjson.dart' as $3;
-import '../protobuf/duration.pbjson.dart' as $2;
-
 const Operation$json = {
   '1': 'Operation',
   '2': [
@@ -113,54 +108,4 @@ const OperationInfo$json = {
     {'1': 'response_type', '3': 1, '4': 1, '5': 9, '10': 'responseType'},
     {'1': 'metadata_type', '3': 2, '4': 1, '5': 9, '10': 'metadataType'},
   ],
-};
-
-const OperationsServiceBase$json = {
-  '1': 'Operations',
-  '2': [
-    {
-      '1': 'ListOperations',
-      '2': '.google.longrunning.ListOperationsRequest',
-      '3': '.google.longrunning.ListOperationsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetOperation',
-      '2': '.google.longrunning.GetOperationRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'DeleteOperation',
-      '2': '.google.longrunning.DeleteOperationRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'CancelOperation',
-      '2': '.google.longrunning.CancelOperationRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'WaitOperation',
-      '2': '.google.longrunning.WaitOperationRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const OperationsServiceBase$messageJson = {
-  '.google.longrunning.ListOperationsRequest': ListOperationsRequest$json,
-  '.google.longrunning.ListOperationsResponse': ListOperationsResponse$json,
-  '.google.longrunning.Operation': Operation$json,
-  '.google.protobuf.Any': $0.Any$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.longrunning.GetOperationRequest': GetOperationRequest$json,
-  '.google.longrunning.DeleteOperationRequest': DeleteOperationRequest$json,
-  '.google.protobuf.Empty': $3.Empty$json,
-  '.google.longrunning.CancelOperationRequest': CancelOperationRequest$json,
-  '.google.longrunning.WaitOperationRequest': WaitOperationRequest$json,
-  '.google.protobuf.Duration': $2.Duration$json,
 };

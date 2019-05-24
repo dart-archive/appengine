@@ -4,29 +4,9 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/gender_view.pbjson.dart' as $0;
-
 const GetGenderViewRequest$json = {
   '1': 'GetGenderViewRequest',
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const GenderViewServiceBase$json = {
-  '1': 'GenderViewService',
-  '2': [
-    {
-      '1': 'GetGenderView',
-      '2': '.google.ads.googleads.v1.services.GetGenderViewRequest',
-      '3': '.google.ads.googleads.v1.resources.GenderView',
-      '4': {}
-    },
-  ],
-};
-
-const GenderViewServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetGenderViewRequest':
-      GetGenderViewRequest$json,
-  '.google.ads.googleads.v1.resources.GenderView': $0.GenderView$json,
 };

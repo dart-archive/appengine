@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/custom_interest.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-
 const GetCustomInterestRequest$json = {
   '1': 'GetCustomInterestRequest',
   '2': [
@@ -85,41 +81,4 @@ const MutateCustomInterestResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const CustomInterestServiceBase$json = {
-  '1': 'CustomInterestService',
-  '2': [
-    {
-      '1': 'GetCustomInterest',
-      '2': '.google.ads.googleads.v1.services.GetCustomInterestRequest',
-      '3': '.google.ads.googleads.v1.resources.CustomInterest',
-      '4': {}
-    },
-    {
-      '1': 'MutateCustomInterests',
-      '2': '.google.ads.googleads.v1.services.MutateCustomInterestsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateCustomInterestsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CustomInterestServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetCustomInterestRequest':
-      GetCustomInterestRequest$json,
-  '.google.ads.googleads.v1.resources.CustomInterest': $0.CustomInterest$json,
-  '.google.protobuf.Int64Value': $2.Int64Value$json,
-  '.google.protobuf.StringValue': $2.StringValue$json,
-  '.google.ads.googleads.v1.resources.CustomInterestMember':
-      $0.CustomInterestMember$json,
-  '.google.ads.googleads.v1.services.MutateCustomInterestsRequest':
-      MutateCustomInterestsRequest$json,
-  '.google.ads.googleads.v1.services.CustomInterestOperation':
-      CustomInterestOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateCustomInterestsResponse':
-      MutateCustomInterestsResponse$json,
-  '.google.ads.googleads.v1.services.MutateCustomInterestResult':
-      MutateCustomInterestResult$json,
 };

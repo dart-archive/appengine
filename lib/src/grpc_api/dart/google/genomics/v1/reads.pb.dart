@@ -4,19 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'readgroupset.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import 'range.pb.dart' as $2;
-import 'readalignment.pb.dart' as $3;
-import '../../longrunning/operations.pb.dart' as $4;
-import '../../protobuf/empty.pb.dart' as $5;
+import 'readgroupset.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
+import 'range.pb.dart' as $4;
+import 'readalignment.pb.dart' as $5;
 
 import 'reads.pbenum.dart';
 
@@ -85,8 +82,8 @@ class SearchReadGroupSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchReadGroupSetsResponse',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<$0.ReadGroupSet>(
-        1, 'readGroupSets', $pb.PbFieldType.PM, $0.ReadGroupSet.create)
+    ..pc<$2.ReadGroupSet>(
+        1, 'readGroupSets', $pb.PbFieldType.PM, $2.ReadGroupSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -112,7 +109,7 @@ class SearchReadGroupSetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchReadGroupSetsResponse _defaultInstance;
 
-  $core.List<$0.ReadGroupSet> get readGroupSets => $_getList(0);
+  $core.List<$2.ReadGroupSet> get readGroupSets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -284,10 +281,10 @@ class UpdateReadGroupSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateReadGroupSetRequest',
       package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'readGroupSetId')
-    ..a<$0.ReadGroupSet>(2, 'readGroupSet', $pb.PbFieldType.OM,
-        $0.ReadGroupSet.getDefault, $0.ReadGroupSet.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.ReadGroupSet>(2, 'readGroupSet', $pb.PbFieldType.OM,
+        $2.ReadGroupSet.getDefault, $2.ReadGroupSet.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateReadGroupSetRequest() : super();
@@ -320,16 +317,16 @@ class UpdateReadGroupSetRequest extends $pb.GeneratedMessage {
   $core.bool hasReadGroupSetId() => $_has(0);
   void clearReadGroupSetId() => clearField(1);
 
-  $0.ReadGroupSet get readGroupSet => $_getN(1);
-  set readGroupSet($0.ReadGroupSet v) {
+  $2.ReadGroupSet get readGroupSet => $_getN(1);
+  set readGroupSet($2.ReadGroupSet v) {
     setField(2, v);
   }
 
   $core.bool hasReadGroupSet() => $_has(1);
   void clearReadGroupSet() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -505,8 +502,8 @@ class ListCoverageBucketsRequest extends $pb.GeneratedMessage {
 class CoverageBucket extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CoverageBucket',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..a<$2.Range>(
-        1, 'range', $pb.PbFieldType.OM, $2.Range.getDefault, $2.Range.create)
+    ..a<$4.Range>(
+        1, 'range', $pb.PbFieldType.OM, $4.Range.getDefault, $4.Range.create)
     ..a<$core.double>(2, 'meanCoverage', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -528,8 +525,8 @@ class CoverageBucket extends $pb.GeneratedMessage {
   static CoverageBucket getDefault() => _defaultInstance ??= create()..freeze();
   static CoverageBucket _defaultInstance;
 
-  $2.Range get range => $_getN(0);
-  set range($2.Range v) {
+  $4.Range get range => $_getN(0);
+  set range($4.Range v) {
     setField(1, v);
   }
 
@@ -675,7 +672,7 @@ class SearchReadsRequest extends $pb.GeneratedMessage {
 class SearchReadsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchReadsResponse',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<$3.Read>(1, 'alignments', $pb.PbFieldType.PM, $3.Read.create)
+    ..pc<$5.Read>(1, 'alignments', $pb.PbFieldType.PM, $5.Read.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -698,7 +695,7 @@ class SearchReadsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchReadsResponse _defaultInstance;
 
-  $core.List<$3.Read> get alignments => $_getList(0);
+  $core.List<$5.Read> get alignments => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -800,7 +797,7 @@ class StreamReadsRequest extends $pb.GeneratedMessage {
 class StreamReadsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamReadsResponse',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<$3.Read>(1, 'alignments', $pb.PbFieldType.PM, $3.Read.create)
+    ..pc<$5.Read>(1, 'alignments', $pb.PbFieldType.PM, $5.Read.create)
     ..hasRequiredFields = false;
 
   StreamReadsResponse() : super();
@@ -822,78 +819,5 @@ class StreamReadsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StreamReadsResponse _defaultInstance;
 
-  $core.List<$3.Read> get alignments => $_getList(0);
-}
-
-class StreamingReadServiceApi {
-  $pb.RpcClient _client;
-  StreamingReadServiceApi(this._client);
-
-  $async.Future<StreamReadsResponse> streamReads(
-      $pb.ClientContext ctx, StreamReadsRequest request) {
-    var emptyResponse = StreamReadsResponse();
-    return _client.invoke<StreamReadsResponse>(
-        ctx, 'StreamingReadService', 'StreamReads', request, emptyResponse);
-  }
-}
-
-class ReadServiceV1Api {
-  $pb.RpcClient _client;
-  ReadServiceV1Api(this._client);
-
-  $async.Future<$4.Operation> importReadGroupSets(
-      $pb.ClientContext ctx, ImportReadGroupSetsRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'ReadServiceV1', 'ImportReadGroupSets', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> exportReadGroupSet(
-      $pb.ClientContext ctx, ExportReadGroupSetRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'ReadServiceV1', 'ExportReadGroupSet', request, emptyResponse);
-  }
-
-  $async.Future<SearchReadGroupSetsResponse> searchReadGroupSets(
-      $pb.ClientContext ctx, SearchReadGroupSetsRequest request) {
-    var emptyResponse = SearchReadGroupSetsResponse();
-    return _client.invoke<SearchReadGroupSetsResponse>(
-        ctx, 'ReadServiceV1', 'SearchReadGroupSets', request, emptyResponse);
-  }
-
-  $async.Future<$0.ReadGroupSet> updateReadGroupSet(
-      $pb.ClientContext ctx, UpdateReadGroupSetRequest request) {
-    var emptyResponse = $0.ReadGroupSet();
-    return _client.invoke<$0.ReadGroupSet>(
-        ctx, 'ReadServiceV1', 'UpdateReadGroupSet', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteReadGroupSet(
-      $pb.ClientContext ctx, DeleteReadGroupSetRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(
-        ctx, 'ReadServiceV1', 'DeleteReadGroupSet', request, emptyResponse);
-  }
-
-  $async.Future<$0.ReadGroupSet> getReadGroupSet(
-      $pb.ClientContext ctx, GetReadGroupSetRequest request) {
-    var emptyResponse = $0.ReadGroupSet();
-    return _client.invoke<$0.ReadGroupSet>(
-        ctx, 'ReadServiceV1', 'GetReadGroupSet', request, emptyResponse);
-  }
-
-  $async.Future<ListCoverageBucketsResponse> listCoverageBuckets(
-      $pb.ClientContext ctx, ListCoverageBucketsRequest request) {
-    var emptyResponse = ListCoverageBucketsResponse();
-    return _client.invoke<ListCoverageBucketsResponse>(
-        ctx, 'ReadServiceV1', 'ListCoverageBuckets', request, emptyResponse);
-  }
-
-  $async.Future<SearchReadsResponse> searchReads(
-      $pb.ClientContext ctx, SearchReadsRequest request) {
-    var emptyResponse = SearchReadsResponse();
-    return _client.invoke<SearchReadsResponse>(
-        ctx, 'ReadServiceV1', 'SearchReads', request, emptyResponse);
-  }
+  $core.List<$5.Read> get alignments => $_getList(0);
 }

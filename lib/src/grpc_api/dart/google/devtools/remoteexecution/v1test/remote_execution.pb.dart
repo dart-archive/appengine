@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
 
 import 'remote_execution.pbenum.dart';
 
@@ -30,8 +28,8 @@ class Action extends $pb.GeneratedMessage {
     ..pPS(4, 'outputDirectories')
     ..a<Platform>(
         5, 'platform', $pb.PbFieldType.OM, Platform.getDefault, Platform.create)
-    ..a<$0.Duration>(6, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault,
-        $0.Duration.create)
+    ..a<$2.Duration>(6, 'timeout', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
     ..aOB(7, 'doNotCache')
     ..hasRequiredFields = false;
 
@@ -80,8 +78,8 @@ class Action extends $pb.GeneratedMessage {
   $core.bool hasPlatform() => $_has(4);
   void clearPlatform() => clearField(5);
 
-  $0.Duration get timeout => $_getN(5);
-  set timeout($0.Duration v) {
+  $2.Duration get timeout => $_getN(5);
+  set timeout($2.Duration v) {
     setField(6, v);
   }
 
@@ -756,8 +754,8 @@ class ExecuteResponse extends $pb.GeneratedMessage {
     ..a<ActionResult>(1, 'result', $pb.PbFieldType.OM, ActionResult.getDefault,
         ActionResult.create)
     ..aOB(2, 'cachedResult')
-    ..a<$1.Status>(
-        3, 'status', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+    ..a<$3.Status>(
+        3, 'status', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
     ..m<$core.String, LogFile>(
         4,
         'serverLogs',
@@ -805,8 +803,8 @@ class ExecuteResponse extends $pb.GeneratedMessage {
   $core.bool hasCachedResult() => $_has(1);
   void clearCachedResult() => clearField(2);
 
-  $1.Status get status => $_getN(2);
-  set status($1.Status v) {
+  $3.Status get status => $_getN(2);
+  set status($3.Status v) {
     setField(3, v);
   }
 
@@ -1148,8 +1146,8 @@ class BatchUpdateBlobsResponse_Response extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
     ..a<Digest>(
         1, 'blobDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..a<$1.Status>(
-        2, 'status', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+    ..a<$3.Status>(
+        2, 'status', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
   BatchUpdateBlobsResponse_Response() : super();
@@ -1183,8 +1181,8 @@ class BatchUpdateBlobsResponse_Response extends $pb.GeneratedMessage {
   $core.bool hasBlobDigest() => $_has(0);
   void clearBlobDigest() => clearField(1);
 
-  $1.Status get status => $_getN(1);
-  set status($1.Status v) {
+  $3.Status get status => $_getN(1);
+  set status($3.Status v) {
     setField(2, v);
   }
 
@@ -1422,69 +1420,4 @@ class RequestMetadata extends $pb.GeneratedMessage {
 
   $core.bool hasCorrelatedInvocationsId() => $_has(3);
   void clearCorrelatedInvocationsId() => clearField(4);
-}
-
-class ExecutionApi {
-  $pb.RpcClient _client;
-  ExecutionApi(this._client);
-
-  $async.Future<$2.Operation> execute(
-      $pb.ClientContext ctx, ExecuteRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'Execution', 'Execute', request, emptyResponse);
-  }
-}
-
-class ActionCacheApi {
-  $pb.RpcClient _client;
-  ActionCacheApi(this._client);
-
-  $async.Future<ActionResult> getActionResult(
-      $pb.ClientContext ctx, GetActionResultRequest request) {
-    var emptyResponse = ActionResult();
-    return _client.invoke<ActionResult>(
-        ctx, 'ActionCache', 'GetActionResult', request, emptyResponse);
-  }
-
-  $async.Future<ActionResult> updateActionResult(
-      $pb.ClientContext ctx, UpdateActionResultRequest request) {
-    var emptyResponse = ActionResult();
-    return _client.invoke<ActionResult>(
-        ctx, 'ActionCache', 'UpdateActionResult', request, emptyResponse);
-  }
-}
-
-class ContentAddressableStorageApi {
-  $pb.RpcClient _client;
-  ContentAddressableStorageApi(this._client);
-
-  $async.Future<FindMissingBlobsResponse> findMissingBlobs(
-      $pb.ClientContext ctx, FindMissingBlobsRequest request) {
-    var emptyResponse = FindMissingBlobsResponse();
-    return _client.invoke<FindMissingBlobsResponse>(
-        ctx,
-        'ContentAddressableStorage',
-        'FindMissingBlobs',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<BatchUpdateBlobsResponse> batchUpdateBlobs(
-      $pb.ClientContext ctx, BatchUpdateBlobsRequest request) {
-    var emptyResponse = BatchUpdateBlobsResponse();
-    return _client.invoke<BatchUpdateBlobsResponse>(
-        ctx,
-        'ContentAddressableStorage',
-        'BatchUpdateBlobs',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<GetTreeResponse> getTree(
-      $pb.ClientContext ctx, GetTreeRequest request) {
-    var emptyResponse = GetTreeResponse();
-    return _client.invoke<GetTreeResponse>(
-        ctx, 'ContentAddressableStorage', 'GetTree', request, emptyResponse);
-  }
 }

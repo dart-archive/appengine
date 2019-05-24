@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../protobuf/any.pbjson.dart' as $0;
-
 const Request$json = {
   '1': 'Request',
   '2': [
@@ -62,24 +60,4 @@ const Change_State$json = {
     {'1': 'INITIAL_STATE_SKIPPED', '2': 2},
     {'1': 'ERROR', '2': 3},
   ],
-};
-
-const WatcherServiceBase$json = {
-  '1': 'Watcher',
-  '2': [
-    {
-      '1': 'Watch',
-      '2': '.google.watcher.v1.Request',
-      '3': '.google.watcher.v1.ChangeBatch',
-      '4': {},
-      '6': true
-    },
-  ],
-};
-
-const WatcherServiceBase$messageJson = {
-  '.google.watcher.v1.Request': Request$json,
-  '.google.watcher.v1.ChangeBatch': ChangeBatch$json,
-  '.google.watcher.v1.Change': Change$json,
-  '.google.protobuf.Any': $0.Any$json,
 };

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -847,16 +846,4 @@ class DeviceLocation extends $pb.GeneratedMessage {
 
   $core.bool hasCoordinates() => $_has(0);
   void clearCoordinates() => clearField(1);
-}
-
-class EmbeddedAssistantApi {
-  $pb.RpcClient _client;
-  EmbeddedAssistantApi(this._client);
-
-  $async.Future<AssistResponse> assist(
-      $pb.ClientContext ctx, AssistRequest request) {
-    var emptyResponse = AssistResponse();
-    return _client.invoke<AssistResponse>(
-        ctx, 'EmbeddedAssistant', 'Assist', request, emptyResponse);
-  }
 }

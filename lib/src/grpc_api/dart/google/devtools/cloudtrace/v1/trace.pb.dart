@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $1;
 
 import 'trace.pbenum.dart';
 
@@ -100,10 +98,10 @@ class TraceSpan extends $pb.GeneratedMessage {
         TraceSpan_SpanKind.valueOf,
         TraceSpan_SpanKind.values)
     ..aOS(3, 'name')
-    ..a<$0.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$1.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
+        $1.Timestamp.create)
     ..a<Int64>(6, 'parentSpanId', $pb.PbFieldType.OF6, Int64.ZERO)
     ..m<$core.String, $core.String>(
         7,
@@ -158,16 +156,16 @@ class TraceSpan extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  $0.Timestamp get startTime => $_getN(3);
-  set startTime($0.Timestamp v) {
+  $1.Timestamp get startTime => $_getN(3);
+  set startTime($1.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasStartTime() => $_has(3);
   void clearStartTime() => clearField(4);
 
-  $0.Timestamp get endTime => $_getN(4);
-  set endTime($0.Timestamp v) {
+  $1.Timestamp get endTime => $_getN(4);
+  set endTime($1.Timestamp v) {
     setField(5, v);
   }
 
@@ -198,10 +196,10 @@ class ListTracesRequest extends $pb.GeneratedMessage {
         ListTracesRequest_ViewType.values)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..a<$0.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$1.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
+        $1.Timestamp.create)
     ..aOS(7, 'filter')
     ..aOS(8, 'orderBy')
     ..hasRequiredFields = false;
@@ -257,16 +255,16 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 
-  $0.Timestamp get startTime => $_getN(4);
-  set startTime($0.Timestamp v) {
+  $1.Timestamp get startTime => $_getN(4);
+  set startTime($1.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(5);
 
-  $0.Timestamp get endTime => $_getN(5);
-  set endTime($0.Timestamp v) {
+  $1.Timestamp get endTime => $_getN(5);
+  set endTime($1.Timestamp v) {
     setField(6, v);
   }
 
@@ -412,30 +410,4 @@ class PatchTracesRequest extends $pb.GeneratedMessage {
 
   $core.bool hasTraces() => $_has(1);
   void clearTraces() => clearField(2);
-}
-
-class TraceServiceApi {
-  $pb.RpcClient _client;
-  TraceServiceApi(this._client);
-
-  $async.Future<ListTracesResponse> listTraces(
-      $pb.ClientContext ctx, ListTracesRequest request) {
-    var emptyResponse = ListTracesResponse();
-    return _client.invoke<ListTracesResponse>(
-        ctx, 'TraceService', 'ListTraces', request, emptyResponse);
-  }
-
-  $async.Future<Trace> getTrace(
-      $pb.ClientContext ctx, GetTraceRequest request) {
-    var emptyResponse = Trace();
-    return _client.invoke<Trace>(
-        ctx, 'TraceService', 'GetTrace', request, emptyResponse);
-  }
-
-  $async.Future<$1.Empty> patchTraces(
-      $pb.ClientContext ctx, PatchTracesRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(
-        ctx, 'TraceService', 'PatchTraces', request, emptyResponse);
-  }
 }

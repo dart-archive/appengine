@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'entity_type.pbjson.dart' as $0;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../protobuf/empty.pbjson.dart' as $2;
-
 const SessionEntityType$json = {
   '1': 'SessionEntityType',
   '2': [
@@ -115,60 +111,4 @@ const DeleteSessionEntityTypeRequest$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
-};
-
-const SessionEntityTypesServiceBase$json = {
-  '1': 'SessionEntityTypes',
-  '2': [
-    {
-      '1': 'ListSessionEntityTypes',
-      '2': '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetSessionEntityType',
-      '2': '.google.cloud.dialogflow.v2beta1.GetSessionEntityTypeRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
-      '4': {}
-    },
-    {
-      '1': 'CreateSessionEntityType',
-      '2': '.google.cloud.dialogflow.v2beta1.CreateSessionEntityTypeRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
-      '4': {}
-    },
-    {
-      '1': 'UpdateSessionEntityType',
-      '2': '.google.cloud.dialogflow.v2beta1.UpdateSessionEntityTypeRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
-      '4': {}
-    },
-    {
-      '1': 'DeleteSessionEntityType',
-      '2': '.google.cloud.dialogflow.v2beta1.DeleteSessionEntityTypeRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const SessionEntityTypesServiceBase$messageJson = {
-  '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesRequest':
-      ListSessionEntityTypesRequest$json,
-  '.google.cloud.dialogflow.v2beta1.ListSessionEntityTypesResponse':
-      ListSessionEntityTypesResponse$json,
-  '.google.cloud.dialogflow.v2beta1.SessionEntityType': SessionEntityType$json,
-  '.google.cloud.dialogflow.v2beta1.EntityType.Entity':
-      $0.EntityType_Entity$json,
-  '.google.cloud.dialogflow.v2beta1.GetSessionEntityTypeRequest':
-      GetSessionEntityTypeRequest$json,
-  '.google.cloud.dialogflow.v2beta1.CreateSessionEntityTypeRequest':
-      CreateSessionEntityTypeRequest$json,
-  '.google.cloud.dialogflow.v2beta1.UpdateSessionEntityTypeRequest':
-      UpdateSessionEntityTypeRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.dialogflow.v2beta1.DeleteSessionEntityTypeRequest':
-      DeleteSessionEntityTypeRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
 };

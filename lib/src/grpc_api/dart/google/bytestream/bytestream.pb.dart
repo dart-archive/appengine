@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -266,29 +265,4 @@ class QueryWriteStatusResponse extends $pb.GeneratedMessage {
 
   $core.bool hasComplete() => $_has(1);
   void clearComplete() => clearField(2);
-}
-
-class ByteStreamApi {
-  $pb.RpcClient _client;
-  ByteStreamApi(this._client);
-
-  $async.Future<ReadResponse> read($pb.ClientContext ctx, ReadRequest request) {
-    var emptyResponse = ReadResponse();
-    return _client.invoke<ReadResponse>(
-        ctx, 'ByteStream', 'Read', request, emptyResponse);
-  }
-
-  $async.Future<WriteResponse> write(
-      $pb.ClientContext ctx, WriteRequest request) {
-    var emptyResponse = WriteResponse();
-    return _client.invoke<WriteResponse>(
-        ctx, 'ByteStream', 'Write', request, emptyResponse);
-  }
-
-  $async.Future<QueryWriteStatusResponse> queryWriteStatus(
-      $pb.ClientContext ctx, QueryWriteStatusRequest request) {
-    var emptyResponse = QueryWriteStatusResponse();
-    return _client.invoke<QueryWriteStatusResponse>(
-        ctx, 'ByteStream', 'QueryWriteStatus', request, emptyResponse);
-  }
 }

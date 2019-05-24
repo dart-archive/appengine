@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../protobuf/timestamp.pbjson.dart' as $1;
-import '../../../longrunning/operations.pbjson.dart' as $3;
-import '../../../protobuf/any.pbjson.dart' as $4;
-import '../../../rpc/status.pbjson.dart' as $5;
-import '../../../protobuf/field_mask.pbjson.dart' as $2;
-
 const Cluster$json = {
   '1': 'Cluster',
   '2': [
@@ -515,85 +508,4 @@ const DiagnoseClusterResults$json = {
   '2': [
     {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '10': 'outputUri'},
   ],
-};
-
-const ClusterControllerServiceBase$json = {
-  '1': 'ClusterController',
-  '2': [
-    {
-      '1': 'CreateCluster',
-      '2': '.google.cloud.dataproc.v1.CreateClusterRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'UpdateCluster',
-      '2': '.google.cloud.dataproc.v1.UpdateClusterRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'DeleteCluster',
-      '2': '.google.cloud.dataproc.v1.DeleteClusterRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'GetCluster',
-      '2': '.google.cloud.dataproc.v1.GetClusterRequest',
-      '3': '.google.cloud.dataproc.v1.Cluster',
-      '4': {}
-    },
-    {
-      '1': 'ListClusters',
-      '2': '.google.cloud.dataproc.v1.ListClustersRequest',
-      '3': '.google.cloud.dataproc.v1.ListClustersResponse',
-      '4': {}
-    },
-    {
-      '1': 'DiagnoseCluster',
-      '2': '.google.cloud.dataproc.v1.DiagnoseClusterRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const ClusterControllerServiceBase$messageJson = {
-  '.google.cloud.dataproc.v1.CreateClusterRequest': CreateClusterRequest$json,
-  '.google.cloud.dataproc.v1.Cluster': Cluster$json,
-  '.google.cloud.dataproc.v1.ClusterConfig': ClusterConfig$json,
-  '.google.cloud.dataproc.v1.GceClusterConfig': GceClusterConfig$json,
-  '.google.cloud.dataproc.v1.GceClusterConfig.MetadataEntry':
-      GceClusterConfig_MetadataEntry$json,
-  '.google.cloud.dataproc.v1.InstanceGroupConfig': InstanceGroupConfig$json,
-  '.google.cloud.dataproc.v1.DiskConfig': DiskConfig$json,
-  '.google.cloud.dataproc.v1.ManagedGroupConfig': ManagedGroupConfig$json,
-  '.google.cloud.dataproc.v1.AcceleratorConfig': AcceleratorConfig$json,
-  '.google.cloud.dataproc.v1.NodeInitializationAction':
-      NodeInitializationAction$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.cloud.dataproc.v1.SoftwareConfig': SoftwareConfig$json,
-  '.google.cloud.dataproc.v1.SoftwareConfig.PropertiesEntry':
-      SoftwareConfig_PropertiesEntry$json,
-  '.google.cloud.dataproc.v1.EncryptionConfig': EncryptionConfig$json,
-  '.google.cloud.dataproc.v1.ClusterStatus': ClusterStatus$json,
-  '.google.protobuf.Timestamp': $1.Timestamp$json,
-  '.google.cloud.dataproc.v1.Cluster.LabelsEntry': Cluster_LabelsEntry$json,
-  '.google.cloud.dataproc.v1.ClusterMetrics': ClusterMetrics$json,
-  '.google.cloud.dataproc.v1.ClusterMetrics.HdfsMetricsEntry':
-      ClusterMetrics_HdfsMetricsEntry$json,
-  '.google.cloud.dataproc.v1.ClusterMetrics.YarnMetricsEntry':
-      ClusterMetrics_YarnMetricsEntry$json,
-  '.google.longrunning.Operation': $3.Operation$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.rpc.Status': $5.Status$json,
-  '.google.cloud.dataproc.v1.UpdateClusterRequest': UpdateClusterRequest$json,
-  '.google.protobuf.FieldMask': $2.FieldMask$json,
-  '.google.cloud.dataproc.v1.DeleteClusterRequest': DeleteClusterRequest$json,
-  '.google.cloud.dataproc.v1.GetClusterRequest': GetClusterRequest$json,
-  '.google.cloud.dataproc.v1.ListClustersRequest': ListClustersRequest$json,
-  '.google.cloud.dataproc.v1.ListClustersResponse': ListClustersResponse$json,
-  '.google.cloud.dataproc.v1.DiagnoseClusterRequest':
-      DiagnoseClusterRequest$json,
 };

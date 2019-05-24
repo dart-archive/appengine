@@ -4,17 +4,15 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $0;
-import '../resources/ad.pb.dart' as $1;
-import '../common/extensions.pb.dart' as $2;
-import '../../../../rpc/status.pb.dart' as $3;
-import '../resources/recommendation.pb.dart' as $4;
+import '../../../../protobuf/wrappers.pb.dart' as $1;
+import '../resources/ad.pb.dart' as $2;
+import '../common/extensions.pb.dart' as $3;
+import '../../../../rpc/status.pb.dart' as $4;
 
 import '../enums/keyword_match_type.pbenum.dart' as $5;
 
@@ -110,8 +108,8 @@ class ApplyRecommendationOperation_CampaignBudgetParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.CampaignBudgetParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.Int64Value>(1, 'newBudgetAmountMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$1.Int64Value>(1, 'newBudgetAmountMicros', $pb.PbFieldType.OM,
+        $1.Int64Value.getDefault, $1.Int64Value.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_CampaignBudgetParameters() : super();
@@ -142,8 +140,8 @@ class ApplyRecommendationOperation_CampaignBudgetParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_CampaignBudgetParameters _defaultInstance;
 
-  $0.Int64Value get newBudgetAmountMicros => $_getN(0);
-  set newBudgetAmountMicros($0.Int64Value v) {
+  $1.Int64Value get newBudgetAmountMicros => $_getN(0);
+  set newBudgetAmountMicros($1.Int64Value v) {
     setField(1, v);
   }
 
@@ -156,7 +154,7 @@ class ApplyRecommendationOperation_TextAdParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.TextAdParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.Ad>(1, 'ad', $pb.PbFieldType.OM, $1.Ad.getDefault, $1.Ad.create)
+    ..a<$2.Ad>(1, 'ad', $pb.PbFieldType.OM, $2.Ad.getDefault, $2.Ad.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_TextAdParameters() : super();
@@ -186,8 +184,8 @@ class ApplyRecommendationOperation_TextAdParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_TextAdParameters _defaultInstance;
 
-  $1.Ad get ad => $_getN(0);
-  set ad($1.Ad v) {
+  $2.Ad get ad => $_getN(0);
+  set ad($2.Ad v) {
     setField(1, v);
   }
 
@@ -200,8 +198,8 @@ class ApplyRecommendationOperation_KeywordParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.KeywordParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.StringValue>(1, 'adGroup', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+    ..a<$1.StringValue>(1, 'adGroup', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
     ..e<$5.KeywordMatchTypeEnum_KeywordMatchType>(
         2,
         'matchType',
@@ -209,8 +207,8 @@ class ApplyRecommendationOperation_KeywordParameters
         $5.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
         $5.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
         $5.KeywordMatchTypeEnum_KeywordMatchType.values)
-    ..a<$0.Int64Value>(3, 'cpcBidMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$1.Int64Value>(3, 'cpcBidMicros', $pb.PbFieldType.OM,
+        $1.Int64Value.getDefault, $1.Int64Value.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_KeywordParameters() : super();
@@ -240,8 +238,8 @@ class ApplyRecommendationOperation_KeywordParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_KeywordParameters _defaultInstance;
 
-  $0.StringValue get adGroup => $_getN(0);
-  set adGroup($0.StringValue v) {
+  $1.StringValue get adGroup => $_getN(0);
+  set adGroup($1.StringValue v) {
     setField(1, v);
   }
 
@@ -256,8 +254,8 @@ class ApplyRecommendationOperation_KeywordParameters
   $core.bool hasMatchType() => $_has(1);
   void clearMatchType() => clearField(2);
 
-  $0.Int64Value get cpcBidMicros => $_getN(2);
-  set cpcBidMicros($0.Int64Value v) {
+  $1.Int64Value get cpcBidMicros => $_getN(2);
+  set cpcBidMicros($1.Int64Value v) {
     setField(3, v);
   }
 
@@ -270,10 +268,10 @@ class ApplyRecommendationOperation_TargetCpaOptInParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.TargetCpaOptInParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.Int64Value>(1, 'targetCpaMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(2, 'newCampaignBudgetAmountMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$1.Int64Value>(1, 'targetCpaMicros', $pb.PbFieldType.OM,
+        $1.Int64Value.getDefault, $1.Int64Value.create)
+    ..a<$1.Int64Value>(2, 'newCampaignBudgetAmountMicros', $pb.PbFieldType.OM,
+        $1.Int64Value.getDefault, $1.Int64Value.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_TargetCpaOptInParameters() : super();
@@ -304,16 +302,16 @@ class ApplyRecommendationOperation_TargetCpaOptInParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_TargetCpaOptInParameters _defaultInstance;
 
-  $0.Int64Value get targetCpaMicros => $_getN(0);
-  set targetCpaMicros($0.Int64Value v) {
+  $1.Int64Value get targetCpaMicros => $_getN(0);
+  set targetCpaMicros($1.Int64Value v) {
     setField(1, v);
   }
 
   $core.bool hasTargetCpaMicros() => $_has(0);
   void clearTargetCpaMicros() => clearField(1);
 
-  $0.Int64Value get newCampaignBudgetAmountMicros => $_getN(1);
-  set newCampaignBudgetAmountMicros($0.Int64Value v) {
+  $1.Int64Value get newCampaignBudgetAmountMicros => $_getN(1);
+  set newCampaignBudgetAmountMicros($1.Int64Value v) {
     setField(2, v);
   }
 
@@ -326,8 +324,8 @@ class ApplyRecommendationOperation_CalloutExtensionParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.CalloutExtensionParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$2.CalloutFeedItem>(
-        1, 'calloutExtensions', $pb.PbFieldType.PM, $2.CalloutFeedItem.create)
+    ..pc<$3.CalloutFeedItem>(
+        1, 'calloutExtensions', $pb.PbFieldType.PM, $3.CalloutFeedItem.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_CalloutExtensionParameters() : super();
@@ -360,7 +358,7 @@ class ApplyRecommendationOperation_CalloutExtensionParameters
   static ApplyRecommendationOperation_CalloutExtensionParameters
       _defaultInstance;
 
-  $core.List<$2.CalloutFeedItem> get calloutExtensions => $_getList(0);
+  $core.List<$3.CalloutFeedItem> get calloutExtensions => $_getList(0);
 }
 
 class ApplyRecommendationOperation_CallExtensionParameters
@@ -368,8 +366,8 @@ class ApplyRecommendationOperation_CallExtensionParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.CallExtensionParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$2.CallFeedItem>(
-        1, 'callExtensions', $pb.PbFieldType.PM, $2.CallFeedItem.create)
+    ..pc<$3.CallFeedItem>(
+        1, 'callExtensions', $pb.PbFieldType.PM, $3.CallFeedItem.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_CallExtensionParameters() : super();
@@ -400,7 +398,7 @@ class ApplyRecommendationOperation_CallExtensionParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_CallExtensionParameters _defaultInstance;
 
-  $core.List<$2.CallFeedItem> get callExtensions => $_getList(0);
+  $core.List<$3.CallFeedItem> get callExtensions => $_getList(0);
 }
 
 class ApplyRecommendationOperation_SitelinkExtensionParameters
@@ -408,8 +406,8 @@ class ApplyRecommendationOperation_SitelinkExtensionParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.SitelinkExtensionParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$2.SitelinkFeedItem>(
-        1, 'sitelinkExtensions', $pb.PbFieldType.PM, $2.SitelinkFeedItem.create)
+    ..pc<$3.SitelinkFeedItem>(
+        1, 'sitelinkExtensions', $pb.PbFieldType.PM, $3.SitelinkFeedItem.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_SitelinkExtensionParameters() : super();
@@ -443,7 +441,7 @@ class ApplyRecommendationOperation_SitelinkExtensionParameters
   static ApplyRecommendationOperation_SitelinkExtensionParameters
       _defaultInstance;
 
-  $core.List<$2.SitelinkFeedItem> get sitelinkExtensions => $_getList(0);
+  $core.List<$3.SitelinkFeedItem> get sitelinkExtensions => $_getList(0);
 }
 
 class ApplyRecommendationOperation_MoveUnusedBudgetParameters
@@ -451,8 +449,8 @@ class ApplyRecommendationOperation_MoveUnusedBudgetParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.MoveUnusedBudgetParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.Int64Value>(1, 'budgetMicrosToMove', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$1.Int64Value>(1, 'budgetMicrosToMove', $pb.PbFieldType.OM,
+        $1.Int64Value.getDefault, $1.Int64Value.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationOperation_MoveUnusedBudgetParameters() : super();
@@ -485,8 +483,8 @@ class ApplyRecommendationOperation_MoveUnusedBudgetParameters
   static ApplyRecommendationOperation_MoveUnusedBudgetParameters
       _defaultInstance;
 
-  $0.Int64Value get budgetMicrosToMove => $_getN(0);
-  set budgetMicrosToMove($0.Int64Value v) {
+  $1.Int64Value get budgetMicrosToMove => $_getN(0);
+  set budgetMicrosToMove($1.Int64Value v) {
     setField(1, v);
   }
 
@@ -690,8 +688,8 @@ class ApplyRecommendationResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<ApplyRecommendationResult>(
         1, 'results', $pb.PbFieldType.PM, ApplyRecommendationResult.create)
-    ..a<$3.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
-        $3.Status.getDefault, $3.Status.create)
+    ..a<$4.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
+        $4.Status.getDefault, $4.Status.create)
     ..hasRequiredFields = false;
 
   ApplyRecommendationResponse() : super();
@@ -718,8 +716,8 @@ class ApplyRecommendationResponse extends $pb.GeneratedMessage {
 
   $core.List<ApplyRecommendationResult> get results => $_getList(0);
 
-  $3.Status get partialFailureError => $_getN(1);
-  set partialFailureError($3.Status v) {
+  $4.Status get partialFailureError => $_getN(1);
+  set partialFailureError($4.Status v) {
     setField(2, v);
   }
 
@@ -925,8 +923,8 @@ class DismissRecommendationResponse extends $pb.GeneratedMessage {
         'results',
         $pb.PbFieldType.PM,
         DismissRecommendationResponse_DismissRecommendationResult.create)
-    ..a<$3.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
-        $3.Status.getDefault, $3.Status.create)
+    ..a<$4.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
+        $4.Status.getDefault, $4.Status.create)
     ..hasRequiredFields = false;
 
   DismissRecommendationResponse() : super();
@@ -955,41 +953,11 @@ class DismissRecommendationResponse extends $pb.GeneratedMessage {
   $core.List<DismissRecommendationResponse_DismissRecommendationResult>
       get results => $_getList(0);
 
-  $3.Status get partialFailureError => $_getN(1);
-  set partialFailureError($3.Status v) {
+  $4.Status get partialFailureError => $_getN(1);
+  set partialFailureError($4.Status v) {
     setField(2, v);
   }
 
   $core.bool hasPartialFailureError() => $_has(1);
   void clearPartialFailureError() => clearField(2);
-}
-
-class RecommendationServiceApi {
-  $pb.RpcClient _client;
-  RecommendationServiceApi(this._client);
-
-  $async.Future<$4.Recommendation> getRecommendation(
-      $pb.ClientContext ctx, GetRecommendationRequest request) {
-    var emptyResponse = $4.Recommendation();
-    return _client.invoke<$4.Recommendation>(ctx, 'RecommendationService',
-        'GetRecommendation', request, emptyResponse);
-  }
-
-  $async.Future<ApplyRecommendationResponse> applyRecommendation(
-      $pb.ClientContext ctx, ApplyRecommendationRequest request) {
-    var emptyResponse = ApplyRecommendationResponse();
-    return _client.invoke<ApplyRecommendationResponse>(ctx,
-        'RecommendationService', 'ApplyRecommendation', request, emptyResponse);
-  }
-
-  $async.Future<DismissRecommendationResponse> dismissRecommendation(
-      $pb.ClientContext ctx, DismissRecommendationRequest request) {
-    var emptyResponse = DismissRecommendationResponse();
-    return _client.invoke<DismissRecommendationResponse>(
-        ctx,
-        'RecommendationService',
-        'DismissRecommendation',
-        request,
-        emptyResponse);
-  }
 }

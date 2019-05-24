@@ -4,19 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'job.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import 'common.pb.dart' as $2;
-import 'filters.pb.dart' as $3;
-import 'histogram.pb.dart' as $4;
-import '../../../protobuf/duration.pb.dart' as $5;
-import '../../../protobuf/empty.pb.dart' as $6;
+import 'job.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
+import 'common.pb.dart' as $3;
+import 'filters.pb.dart' as $4;
+import 'histogram.pb.dart' as $5;
+import '../../../protobuf/duration.pb.dart' as $6;
 
 import 'job_service.pbenum.dart';
 
@@ -26,7 +24,7 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateJobRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Job>(2, 'job', $pb.PbFieldType.OM, $0.Job.getDefault, $0.Job.create)
+    ..a<$1.Job>(2, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
     ..hasRequiredFields = false;
 
   CreateJobRequest() : super();
@@ -56,8 +54,8 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Job get job => $_getN(1);
-  set job($0.Job v) {
+  $1.Job get job => $_getN(1);
+  set job($1.Job v) {
     setField(2, v);
   }
 
@@ -101,9 +99,9 @@ class GetJobRequest extends $pb.GeneratedMessage {
 class UpdateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateJobRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..a<$0.Job>(1, 'job', $pb.PbFieldType.OM, $0.Job.getDefault, $0.Job.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$1.Job>(1, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateJobRequest() : super();
@@ -125,16 +123,16 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateJobRequest _defaultInstance;
 
-  $0.Job get job => $_getN(0);
-  set job($0.Job v) {
+  $1.Job get job => $_getN(0);
+  set job($1.Job v) {
     setField(1, v);
   }
 
   $core.bool hasJob() => $_has(0);
   void clearJob() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -295,10 +293,10 @@ class ListJobsRequest extends $pb.GeneratedMessage {
 class ListJobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobsResponse',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..pc<$0.Job>(1, 'jobs', $pb.PbFieldType.PM, $0.Job.create)
+    ..pc<$1.Job>(1, 'jobs', $pb.PbFieldType.PM, $1.Job.create)
     ..aOS(2, 'nextPageToken')
-    ..a<$2.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
-        $2.ResponseMetadata.getDefault, $2.ResponseMetadata.create)
+    ..a<$3.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
+        $3.ResponseMetadata.getDefault, $3.ResponseMetadata.create)
     ..hasRequiredFields = false;
 
   ListJobsResponse() : super();
@@ -320,7 +318,7 @@ class ListJobsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListJobsResponse _defaultInstance;
 
-  $core.List<$0.Job> get jobs => $_getList(0);
+  $core.List<$1.Job> get jobs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -330,8 +328,8 @@ class ListJobsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $2.ResponseMetadata get metadata => $_getN(2);
-  set metadata($2.ResponseMetadata v) {
+  $3.ResponseMetadata get metadata => $_getN(2);
+  set metadata($3.ResponseMetadata v) {
     setField(3, v);
   }
 
@@ -406,14 +404,14 @@ class SearchJobsRequest extends $pb.GeneratedMessage {
         SearchJobsRequest_SearchMode.SEARCH_MODE_UNSPECIFIED,
         SearchJobsRequest_SearchMode.valueOf,
         SearchJobsRequest_SearchMode.values)
-    ..a<$2.RequestMetadata>(3, 'requestMetadata', $pb.PbFieldType.OM,
-        $2.RequestMetadata.getDefault, $2.RequestMetadata.create)
-    ..a<$3.JobQuery>(4, 'jobQuery', $pb.PbFieldType.OM, $3.JobQuery.getDefault,
-        $3.JobQuery.create)
+    ..a<$3.RequestMetadata>(3, 'requestMetadata', $pb.PbFieldType.OM,
+        $3.RequestMetadata.getDefault, $3.RequestMetadata.create)
+    ..a<$4.JobQuery>(4, 'jobQuery', $pb.PbFieldType.OM, $4.JobQuery.getDefault,
+        $4.JobQuery.create)
     ..aOB(5, 'enableBroadening')
     ..aOB(6, 'requirePreciseResultSize')
-    ..pc<$4.HistogramQuery>(
-        7, 'histogramQueries', $pb.PbFieldType.PM, $4.HistogramQuery.create)
+    ..pc<$5.HistogramQuery>(
+        7, 'histogramQueries', $pb.PbFieldType.PM, $5.HistogramQuery.create)
     ..e<JobView>(8, 'jobView', $pb.PbFieldType.OE, JobView.JOB_VIEW_UNSPECIFIED,
         JobView.valueOf, JobView.values)
     ..a<$core.int>(9, 'offset', $pb.PbFieldType.O3)
@@ -472,16 +470,16 @@ class SearchJobsRequest extends $pb.GeneratedMessage {
   $core.bool hasSearchMode() => $_has(1);
   void clearSearchMode() => clearField(2);
 
-  $2.RequestMetadata get requestMetadata => $_getN(2);
-  set requestMetadata($2.RequestMetadata v) {
+  $3.RequestMetadata get requestMetadata => $_getN(2);
+  set requestMetadata($3.RequestMetadata v) {
     setField(3, v);
   }
 
   $core.bool hasRequestMetadata() => $_has(2);
   void clearRequestMetadata() => clearField(3);
 
-  $3.JobQuery get jobQuery => $_getN(3);
-  set jobQuery($3.JobQuery v) {
+  $4.JobQuery get jobQuery => $_getN(3);
+  set jobQuery($4.JobQuery v) {
     setField(4, v);
   }
 
@@ -504,7 +502,7 @@ class SearchJobsRequest extends $pb.GeneratedMessage {
   $core.bool hasRequirePreciseResultSize() => $_has(5);
   void clearRequirePreciseResultSize() => clearField(6);
 
-  $core.List<$4.HistogramQuery> get histogramQueries => $_getList(6);
+  $core.List<$5.HistogramQuery> get histogramQueries => $_getList(6);
 
   JobView get jobView => $_getN(7);
   set jobView(JobView v) {
@@ -575,7 +573,7 @@ class SearchJobsResponse_MatchingJob extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchJobsResponse.MatchingJob',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..a<$0.Job>(1, 'job', $pb.PbFieldType.OM, $0.Job.getDefault, $0.Job.create)
+    ..a<$1.Job>(1, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
     ..aOS(2, 'jobSummary')
     ..aOS(3, 'jobTitleSnippet')
     ..aOS(4, 'searchTextSnippet')
@@ -610,8 +608,8 @@ class SearchJobsResponse_MatchingJob extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchJobsResponse_MatchingJob _defaultInstance;
 
-  $0.Job get job => $_getN(0);
-  set job($0.Job v) {
+  $1.Job get job => $_getN(0);
+  set job($1.Job v) {
     setField(1, v);
   }
 
@@ -655,10 +653,10 @@ class SearchJobsResponse_CommuteInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchJobsResponse.CommuteInfo',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..a<$2.Location>(1, 'jobLocation', $pb.PbFieldType.OM,
-        $2.Location.getDefault, $2.Location.create)
-    ..a<$5.Duration>(2, 'travelDuration', $pb.PbFieldType.OM,
-        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$3.Location>(1, 'jobLocation', $pb.PbFieldType.OM,
+        $3.Location.getDefault, $3.Location.create)
+    ..a<$6.Duration>(2, 'travelDuration', $pb.PbFieldType.OM,
+        $6.Duration.getDefault, $6.Duration.create)
     ..hasRequiredFields = false;
 
   SearchJobsResponse_CommuteInfo() : super();
@@ -684,16 +682,16 @@ class SearchJobsResponse_CommuteInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchJobsResponse_CommuteInfo _defaultInstance;
 
-  $2.Location get jobLocation => $_getN(0);
-  set jobLocation($2.Location v) {
+  $3.Location get jobLocation => $_getN(0);
+  set jobLocation($3.Location v) {
     setField(1, v);
   }
 
   $core.bool hasJobLocation() => $_has(0);
   void clearJobLocation() => clearField(1);
 
-  $5.Duration get travelDuration => $_getN(1);
-  set travelDuration($5.Duration v) {
+  $6.Duration get travelDuration => $_getN(1);
+  set travelDuration($6.Duration v) {
     setField(2, v);
   }
 
@@ -706,18 +704,18 @@ class SearchJobsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..pc<SearchJobsResponse_MatchingJob>(1, 'matchingJobs', $pb.PbFieldType.PM,
         SearchJobsResponse_MatchingJob.create)
-    ..pc<$4.HistogramQueryResult>(2, 'histogramQueryResults',
-        $pb.PbFieldType.PM, $4.HistogramQueryResult.create)
+    ..pc<$5.HistogramQueryResult>(2, 'histogramQueryResults',
+        $pb.PbFieldType.PM, $5.HistogramQueryResult.create)
     ..aOS(3, 'nextPageToken')
-    ..pc<$2.Location>(
-        4, 'locationFilters', $pb.PbFieldType.PM, $2.Location.create)
+    ..pc<$3.Location>(
+        4, 'locationFilters', $pb.PbFieldType.PM, $3.Location.create)
     ..a<$core.int>(5, 'estimatedTotalSize', $pb.PbFieldType.O3)
     ..a<$core.int>(6, 'totalSize', $pb.PbFieldType.O3)
-    ..a<$2.ResponseMetadata>(7, 'metadata', $pb.PbFieldType.OM,
-        $2.ResponseMetadata.getDefault, $2.ResponseMetadata.create)
+    ..a<$3.ResponseMetadata>(7, 'metadata', $pb.PbFieldType.OM,
+        $3.ResponseMetadata.getDefault, $3.ResponseMetadata.create)
     ..a<$core.int>(8, 'broadenedQueryJobsCount', $pb.PbFieldType.O3)
-    ..a<$2.SpellingCorrection>(9, 'spellCorrection', $pb.PbFieldType.OM,
-        $2.SpellingCorrection.getDefault, $2.SpellingCorrection.create)
+    ..a<$3.SpellingCorrection>(9, 'spellCorrection', $pb.PbFieldType.OM,
+        $3.SpellingCorrection.getDefault, $3.SpellingCorrection.create)
     ..hasRequiredFields = false;
 
   SearchJobsResponse() : super();
@@ -741,7 +739,7 @@ class SearchJobsResponse extends $pb.GeneratedMessage {
 
   $core.List<SearchJobsResponse_MatchingJob> get matchingJobs => $_getList(0);
 
-  $core.List<$4.HistogramQueryResult> get histogramQueryResults => $_getList(1);
+  $core.List<$5.HistogramQueryResult> get histogramQueryResults => $_getList(1);
 
   $core.String get nextPageToken => $_getS(2, '');
   set nextPageToken($core.String v) {
@@ -751,7 +749,7 @@ class SearchJobsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(2);
   void clearNextPageToken() => clearField(3);
 
-  $core.List<$2.Location> get locationFilters => $_getList(3);
+  $core.List<$3.Location> get locationFilters => $_getList(3);
 
   $core.int get estimatedTotalSize => $_get(4, 0);
   set estimatedTotalSize($core.int v) {
@@ -769,8 +767,8 @@ class SearchJobsResponse extends $pb.GeneratedMessage {
   $core.bool hasTotalSize() => $_has(5);
   void clearTotalSize() => clearField(6);
 
-  $2.ResponseMetadata get metadata => $_getN(6);
-  set metadata($2.ResponseMetadata v) {
+  $3.ResponseMetadata get metadata => $_getN(6);
+  set metadata($3.ResponseMetadata v) {
     setField(7, v);
   }
 
@@ -785,71 +783,11 @@ class SearchJobsResponse extends $pb.GeneratedMessage {
   $core.bool hasBroadenedQueryJobsCount() => $_has(7);
   void clearBroadenedQueryJobsCount() => clearField(8);
 
-  $2.SpellingCorrection get spellCorrection => $_getN(8);
-  set spellCorrection($2.SpellingCorrection v) {
+  $3.SpellingCorrection get spellCorrection => $_getN(8);
+  set spellCorrection($3.SpellingCorrection v) {
     setField(9, v);
   }
 
   $core.bool hasSpellCorrection() => $_has(8);
   void clearSpellCorrection() => clearField(9);
-}
-
-class JobServiceApi {
-  $pb.RpcClient _client;
-  JobServiceApi(this._client);
-
-  $async.Future<$0.Job> createJob(
-      $pb.ClientContext ctx, CreateJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'JobService', 'CreateJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> getJob($pb.ClientContext ctx, GetJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'JobService', 'GetJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> updateJob(
-      $pb.ClientContext ctx, UpdateJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'JobService', 'UpdateJob', request, emptyResponse);
-  }
-
-  $async.Future<$6.Empty> deleteJob(
-      $pb.ClientContext ctx, DeleteJobRequest request) {
-    var emptyResponse = $6.Empty();
-    return _client.invoke<$6.Empty>(
-        ctx, 'JobService', 'DeleteJob', request, emptyResponse);
-  }
-
-  $async.Future<ListJobsResponse> listJobs(
-      $pb.ClientContext ctx, ListJobsRequest request) {
-    var emptyResponse = ListJobsResponse();
-    return _client.invoke<ListJobsResponse>(
-        ctx, 'JobService', 'ListJobs', request, emptyResponse);
-  }
-
-  $async.Future<$6.Empty> batchDeleteJobs(
-      $pb.ClientContext ctx, BatchDeleteJobsRequest request) {
-    var emptyResponse = $6.Empty();
-    return _client.invoke<$6.Empty>(
-        ctx, 'JobService', 'BatchDeleteJobs', request, emptyResponse);
-  }
-
-  $async.Future<SearchJobsResponse> searchJobs(
-      $pb.ClientContext ctx, SearchJobsRequest request) {
-    var emptyResponse = SearchJobsResponse();
-    return _client.invoke<SearchJobsResponse>(
-        ctx, 'JobService', 'SearchJobs', request, emptyResponse);
-  }
-
-  $async.Future<SearchJobsResponse> searchJobsForAlert(
-      $pb.ClientContext ctx, SearchJobsRequest request) {
-    var emptyResponse = SearchJobsResponse();
-    return _client.invoke<SearchJobsResponse>(
-        ctx, 'JobService', 'SearchJobsForAlert', request, emptyResponse);
-  }
 }

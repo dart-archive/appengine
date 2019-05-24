@@ -9,7 +9,7 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 import 'incidents.pbenum.dart';
 
@@ -130,8 +130,8 @@ class Signal extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'etag')
     ..aOS(3, 'incident')
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<User>(5, 'creator', $pb.PbFieldType.OM, User.getDefault, User.create)
     ..aOS(6, 'title')
     ..aOS(7, 'contentType')
@@ -143,10 +143,10 @@ class Signal extends $pb.GeneratedMessage {
         Signal_State.STATE_UNSPECIFIED,
         Signal_State.valueOf,
         Signal_State.values)
-    ..a<$0.Timestamp>(10, 'closeTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(15, 'detectTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(10, 'closeTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(15, 'detectTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..pc<Signal_SignalArtifact>(
         16, 'signalArtifacts', $pb.PbFieldType.PM, Signal_SignalArtifact.create)
     ..hasRequiredFields = false;
@@ -192,8 +192,8 @@ class Signal extends $pb.GeneratedMessage {
   $core.bool hasIncident() => $_has(2);
   void clearIncident() => clearField(3);
 
-  $0.Timestamp get createTime => $_getN(3);
-  set createTime($0.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -240,16 +240,16 @@ class Signal extends $pb.GeneratedMessage {
   $core.bool hasSignalState() => $_has(8);
   void clearSignalState() => clearField(9);
 
-  $0.Timestamp get closeTime => $_getN(9);
-  set closeTime($0.Timestamp v) {
+  $3.Timestamp get closeTime => $_getN(9);
+  set closeTime($3.Timestamp v) {
     setField(10, v);
   }
 
   $core.bool hasCloseTime() => $_has(9);
   void clearCloseTime() => clearField(10);
 
-  $0.Timestamp get detectTime => $_getN(10);
-  set detectTime($0.Timestamp v) {
+  $3.Timestamp get detectTime => $_getN(10);
+  set detectTime($3.Timestamp v) {
     setField(15, v);
   }
 
@@ -264,8 +264,8 @@ class Annotation extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'name')
     ..a<User>(2, 'author', $pb.PbFieldType.OM, User.getDefault, User.create)
-    ..a<$0.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..aOS(4, 'content')
     ..hasRequiredFields = false;
 
@@ -302,8 +302,8 @@ class Annotation extends $pb.GeneratedMessage {
   $core.bool hasAuthor() => $_has(1);
   void clearAuthor() => clearField(2);
 
-  $0.Timestamp get createTime => $_getN(2);
-  set createTime($0.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(2);
+  set createTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -365,8 +365,8 @@ class Synopsis extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
     ..aOS(1, 'contentType')
     ..aOS(2, 'content')
-    ..a<$0.Timestamp>(3, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<User>(4, 'author', $pb.PbFieldType.OM, User.getDefault, User.create)
     ..hasRequiredFields = false;
 
@@ -403,8 +403,8 @@ class Synopsis extends $pb.GeneratedMessage {
   $core.bool hasContent() => $_has(1);
   void clearContent() => clearField(2);
 
-  $0.Timestamp get updateTime => $_getN(2);
-  set updateTime($0.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(2);
+  set updateTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -509,8 +509,8 @@ class Incident extends $pb.GeneratedMessage {
         Incident_Stage.STAGE_UNSPECIFIED,
         Incident_Stage.valueOf,
         Incident_Stage.values)
-    ..a<$0.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<Synopsis>(
         8, 'synopsis', $pb.PbFieldType.OM, Synopsis.getDefault, Synopsis.create)
     ..aOS(9, 'duplicateIncident')
@@ -587,8 +587,8 @@ class Incident extends $pb.GeneratedMessage {
   $core.bool hasStage() => $_has(5);
   void clearStage() => clearField(6);
 
-  $0.Timestamp get startTime => $_getN(6);
-  set startTime($0.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(6);
+  set startTime($3.Timestamp v) {
     setField(7, v);
   }
 

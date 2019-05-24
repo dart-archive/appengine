@@ -9,8 +9,8 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../longrunning/operations.pb.dart' as $0;
-import '../../../../protobuf/duration.pb.dart' as $1;
+import '../../../../longrunning/operations.pb.dart' as $1;
+import '../../../../protobuf/duration.pb.dart' as $2;
 
 import 'bigtable_table_data.pbenum.dart';
 
@@ -20,8 +20,8 @@ class Table extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
     ..aOS(1, 'name')
-    ..a<$0.Operation>(2, 'currentOperation', $pb.PbFieldType.OM,
-        $0.Operation.getDefault, $0.Operation.create)
+    ..a<$1.Operation>(2, 'currentOperation', $pb.PbFieldType.OM,
+        $1.Operation.getDefault, $1.Operation.create)
     ..m<$core.String, ColumnFamily>(
         3,
         'columnFamilies',
@@ -66,8 +66,8 @@ class Table extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Operation get currentOperation => $_getN(1);
-  set currentOperation($0.Operation v) {
+  $1.Operation get currentOperation => $_getN(1);
+  set currentOperation($1.Operation v) {
     setField(2, v);
   }
 
@@ -205,8 +205,8 @@ class GcRule extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcRule',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
     ..a<$core.int>(1, 'maxNumVersions', $pb.PbFieldType.O3)
-    ..a<$1.Duration>(2, 'maxAge', $pb.PbFieldType.OM, $1.Duration.getDefault,
-        $1.Duration.create)
+    ..a<$2.Duration>(2, 'maxAge', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
     ..a<GcRule_Intersection>(3, 'intersection', $pb.PbFieldType.OM,
         GcRule_Intersection.getDefault, GcRule_Intersection.create)
     ..a<GcRule_Union>(4, 'union', $pb.PbFieldType.OM, GcRule_Union.getDefault,
@@ -242,8 +242,8 @@ class GcRule extends $pb.GeneratedMessage {
   $core.bool hasMaxNumVersions() => $_has(0);
   void clearMaxNumVersions() => clearField(1);
 
-  $1.Duration get maxAge => $_getN(1);
-  set maxAge($1.Duration v) {
+  $2.Duration get maxAge => $_getN(1);
+  set maxAge($2.Duration v) {
     setField(2, v);
   }
 

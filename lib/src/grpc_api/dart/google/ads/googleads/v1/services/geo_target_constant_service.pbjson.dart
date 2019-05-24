@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/geo_target_constant.pbjson.dart' as $1;
-import '../../../../protobuf/wrappers.pbjson.dart' as $0;
-
 const GetGeoTargetConstantRequest$json = {
   '1': 'GetGeoTargetConstantRequest',
   '2': [
@@ -149,42 +146,4 @@ const GeoTargetConstantSuggestion$json = {
       '10': 'geoTargetConstantParents'
     },
   ],
-};
-
-const GeoTargetConstantServiceBase$json = {
-  '1': 'GeoTargetConstantService',
-  '2': [
-    {
-      '1': 'GetGeoTargetConstant',
-      '2': '.google.ads.googleads.v1.services.GetGeoTargetConstantRequest',
-      '3': '.google.ads.googleads.v1.resources.GeoTargetConstant',
-      '4': {}
-    },
-    {
-      '1': 'SuggestGeoTargetConstants',
-      '2': '.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.SuggestGeoTargetConstantsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const GeoTargetConstantServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetGeoTargetConstantRequest':
-      GetGeoTargetConstantRequest$json,
-  '.google.ads.googleads.v1.resources.GeoTargetConstant':
-      $1.GeoTargetConstant$json,
-  '.google.protobuf.Int64Value': $0.Int64Value$json,
-  '.google.protobuf.StringValue': $0.StringValue$json,
-  '.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest':
-      SuggestGeoTargetConstantsRequest$json,
-  '.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames':
-      SuggestGeoTargetConstantsRequest_LocationNames$json,
-  '.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets':
-      SuggestGeoTargetConstantsRequest_GeoTargets$json,
-  '.google.ads.googleads.v1.services.SuggestGeoTargetConstantsResponse':
-      SuggestGeoTargetConstantsResponse$json,
-  '.google.ads.googleads.v1.services.GeoTargetConstantSuggestion':
-      GeoTargetConstantSuggestion$json,
 };

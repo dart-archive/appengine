@@ -4,16 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../type/latlng.pbjson.dart' as $1;
-import 'geometry.pbjson.dart' as $0;
-import '../../../type/color.pbjson.dart' as $2;
-import '../../../protobuf/wrappers.pbjson.dart' as $8;
-import '../../../rpc/status.pbjson.dart' as $3;
-import '../../../protobuf/any.pbjson.dart' as $9;
-import 'text_annotation.pbjson.dart' as $4;
-import 'web_detection.pbjson.dart' as $5;
-import '../../../longrunning/operations.pbjson.dart' as $7;
-
 const Likelihood$json = {
   '1': 'Likelihood',
   '2': [
@@ -863,96 +853,4 @@ const OperationMetadata_State$json = {
     {'1': 'DONE', '2': 3},
     {'1': 'CANCELLED', '2': 4},
   ],
-};
-
-const ImageAnnotatorServiceBase$json = {
-  '1': 'ImageAnnotator',
-  '2': [
-    {
-      '1': 'BatchAnnotateImages',
-      '2': '.google.cloud.vision.v1p2beta1.BatchAnnotateImagesRequest',
-      '3': '.google.cloud.vision.v1p2beta1.BatchAnnotateImagesResponse',
-      '4': {}
-    },
-    {
-      '1': 'AsyncBatchAnnotateFiles',
-      '2': '.google.cloud.vision.v1p2beta1.AsyncBatchAnnotateFilesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const ImageAnnotatorServiceBase$messageJson = {
-  '.google.cloud.vision.v1p2beta1.BatchAnnotateImagesRequest':
-      BatchAnnotateImagesRequest$json,
-  '.google.cloud.vision.v1p2beta1.AnnotateImageRequest':
-      AnnotateImageRequest$json,
-  '.google.cloud.vision.v1p2beta1.Image': Image$json,
-  '.google.cloud.vision.v1p2beta1.ImageSource': ImageSource$json,
-  '.google.cloud.vision.v1p2beta1.Feature': Feature$json,
-  '.google.cloud.vision.v1p2beta1.ImageContext': ImageContext$json,
-  '.google.cloud.vision.v1p2beta1.LatLongRect': LatLongRect$json,
-  '.google.type.LatLng': $1.LatLng$json,
-  '.google.cloud.vision.v1p2beta1.CropHintsParams': CropHintsParams$json,
-  '.google.cloud.vision.v1p2beta1.WebDetectionParams': WebDetectionParams$json,
-  '.google.cloud.vision.v1p2beta1.BatchAnnotateImagesResponse':
-      BatchAnnotateImagesResponse$json,
-  '.google.cloud.vision.v1p2beta1.AnnotateImageResponse':
-      AnnotateImageResponse$json,
-  '.google.cloud.vision.v1p2beta1.FaceAnnotation': FaceAnnotation$json,
-  '.google.cloud.vision.v1p2beta1.BoundingPoly': $0.BoundingPoly$json,
-  '.google.cloud.vision.v1p2beta1.Vertex': $0.Vertex$json,
-  '.google.cloud.vision.v1p2beta1.NormalizedVertex': $0.NormalizedVertex$json,
-  '.google.cloud.vision.v1p2beta1.FaceAnnotation.Landmark':
-      FaceAnnotation_Landmark$json,
-  '.google.cloud.vision.v1p2beta1.Position': $0.Position$json,
-  '.google.cloud.vision.v1p2beta1.EntityAnnotation': EntityAnnotation$json,
-  '.google.cloud.vision.v1p2beta1.LocationInfo': LocationInfo$json,
-  '.google.cloud.vision.v1p2beta1.Property': Property$json,
-  '.google.cloud.vision.v1p2beta1.SafeSearchAnnotation':
-      SafeSearchAnnotation$json,
-  '.google.cloud.vision.v1p2beta1.ImageProperties': ImageProperties$json,
-  '.google.cloud.vision.v1p2beta1.DominantColorsAnnotation':
-      DominantColorsAnnotation$json,
-  '.google.cloud.vision.v1p2beta1.ColorInfo': ColorInfo$json,
-  '.google.type.Color': $2.Color$json,
-  '.google.protobuf.FloatValue': $8.FloatValue$json,
-  '.google.rpc.Status': $3.Status$json,
-  '.google.protobuf.Any': $9.Any$json,
-  '.google.cloud.vision.v1p2beta1.CropHintsAnnotation':
-      CropHintsAnnotation$json,
-  '.google.cloud.vision.v1p2beta1.CropHint': CropHint$json,
-  '.google.cloud.vision.v1p2beta1.TextAnnotation': $4.TextAnnotation$json,
-  '.google.cloud.vision.v1p2beta1.Page': $4.Page$json,
-  '.google.cloud.vision.v1p2beta1.TextAnnotation.TextProperty':
-      $4.TextAnnotation_TextProperty$json,
-  '.google.cloud.vision.v1p2beta1.TextAnnotation.DetectedLanguage':
-      $4.TextAnnotation_DetectedLanguage$json,
-  '.google.cloud.vision.v1p2beta1.TextAnnotation.DetectedBreak':
-      $4.TextAnnotation_DetectedBreak$json,
-  '.google.cloud.vision.v1p2beta1.Block': $4.Block$json,
-  '.google.cloud.vision.v1p2beta1.Paragraph': $4.Paragraph$json,
-  '.google.cloud.vision.v1p2beta1.Word': $4.Word$json,
-  '.google.cloud.vision.v1p2beta1.Symbol': $4.Symbol$json,
-  '.google.cloud.vision.v1p2beta1.WebDetection': $5.WebDetection$json,
-  '.google.cloud.vision.v1p2beta1.WebDetection.WebEntity':
-      $5.WebDetection_WebEntity$json,
-  '.google.cloud.vision.v1p2beta1.WebDetection.WebImage':
-      $5.WebDetection_WebImage$json,
-  '.google.cloud.vision.v1p2beta1.WebDetection.WebPage':
-      $5.WebDetection_WebPage$json,
-  '.google.cloud.vision.v1p2beta1.WebDetection.WebLabel':
-      $5.WebDetection_WebLabel$json,
-  '.google.cloud.vision.v1p2beta1.ImageAnnotationContext':
-      ImageAnnotationContext$json,
-  '.google.cloud.vision.v1p2beta1.AsyncBatchAnnotateFilesRequest':
-      AsyncBatchAnnotateFilesRequest$json,
-  '.google.cloud.vision.v1p2beta1.AsyncAnnotateFileRequest':
-      AsyncAnnotateFileRequest$json,
-  '.google.cloud.vision.v1p2beta1.InputConfig': InputConfig$json,
-  '.google.cloud.vision.v1p2beta1.GcsSource': GcsSource$json,
-  '.google.cloud.vision.v1p2beta1.OutputConfig': OutputConfig$json,
-  '.google.cloud.vision.v1p2beta1.GcsDestination': GcsDestination$json,
-  '.google.longrunning.Operation': $7.Operation$json,
 };

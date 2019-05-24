@@ -4,18 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/field_mask.pb.dart' as $0;
-import '../../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../../longrunning/operations.pb.dart' as $2;
-import '../../../../protobuf/empty.pb.dart' as $3;
-import '../../../../iam/v1/iam_policy.pb.dart' as $4;
-import '../../../../iam/v1/policy.pb.dart' as $5;
+import '../../../../protobuf/field_mask.pb.dart' as $4;
+import '../../../../protobuf/timestamp.pb.dart' as $5;
 
 import 'spanner_instance_admin.pbenum.dart';
 
@@ -478,8 +473,8 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..a<Instance>(
         1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$0.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$4.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceRequest() : super();
@@ -511,8 +506,8 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
   $core.bool hasInstance() => $_has(0);
   void clearInstance() => clearField(1);
 
-  $0.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($0.FieldMask v) {
+  $4.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -561,12 +556,12 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..a<Instance>(
         1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$1.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$5.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $5.Timestamp.getDefault,
+        $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateInstanceMetadata() : super();
@@ -598,24 +593,24 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   $core.bool hasInstance() => $_has(0);
   void clearInstance() => clearField(1);
 
-  $1.Timestamp get startTime => $_getN(1);
-  set startTime($1.Timestamp v) {
+  $5.Timestamp get startTime => $_getN(1);
+  set startTime($5.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $1.Timestamp get cancelTime => $_getN(2);
-  set cancelTime($1.Timestamp v) {
+  $5.Timestamp get cancelTime => $_getN(2);
+  set cancelTime($5.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasCancelTime() => $_has(2);
   void clearCancelTime() => clearField(3);
 
-  $1.Timestamp get endTime => $_getN(3);
-  set endTime($1.Timestamp v) {
+  $5.Timestamp get endTime => $_getN(3);
+  set endTime($5.Timestamp v) {
     setField(4, v);
   }
 
@@ -628,12 +623,12 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..a<Instance>(
         1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$1.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$5.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $5.Timestamp.getDefault,
+        $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceMetadata() : super();
@@ -665,102 +660,27 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   $core.bool hasInstance() => $_has(0);
   void clearInstance() => clearField(1);
 
-  $1.Timestamp get startTime => $_getN(1);
-  set startTime($1.Timestamp v) {
+  $5.Timestamp get startTime => $_getN(1);
+  set startTime($5.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $1.Timestamp get cancelTime => $_getN(2);
-  set cancelTime($1.Timestamp v) {
+  $5.Timestamp get cancelTime => $_getN(2);
+  set cancelTime($5.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasCancelTime() => $_has(2);
   void clearCancelTime() => clearField(3);
 
-  $1.Timestamp get endTime => $_getN(3);
-  set endTime($1.Timestamp v) {
+  $5.Timestamp get endTime => $_getN(3);
+  set endTime($5.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasEndTime() => $_has(3);
   void clearEndTime() => clearField(4);
-}
-
-class InstanceAdminApi {
-  $pb.RpcClient _client;
-  InstanceAdminApi(this._client);
-
-  $async.Future<ListInstanceConfigsResponse> listInstanceConfigs(
-      $pb.ClientContext ctx, ListInstanceConfigsRequest request) {
-    var emptyResponse = ListInstanceConfigsResponse();
-    return _client.invoke<ListInstanceConfigsResponse>(
-        ctx, 'InstanceAdmin', 'ListInstanceConfigs', request, emptyResponse);
-  }
-
-  $async.Future<InstanceConfig> getInstanceConfig(
-      $pb.ClientContext ctx, GetInstanceConfigRequest request) {
-    var emptyResponse = InstanceConfig();
-    return _client.invoke<InstanceConfig>(
-        ctx, 'InstanceAdmin', 'GetInstanceConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListInstancesResponse> listInstances(
-      $pb.ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = ListInstancesResponse();
-    return _client.invoke<ListInstancesResponse>(
-        ctx, 'InstanceAdmin', 'ListInstances', request, emptyResponse);
-  }
-
-  $async.Future<Instance> getInstance(
-      $pb.ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = Instance();
-    return _client.invoke<Instance>(
-        ctx, 'InstanceAdmin', 'GetInstance', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> createInstance(
-      $pb.ClientContext ctx, CreateInstanceRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'InstanceAdmin', 'CreateInstance', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> updateInstance(
-      $pb.ClientContext ctx, UpdateInstanceRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'InstanceAdmin', 'UpdateInstance', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteInstance(
-      $pb.ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'InstanceAdmin', 'DeleteInstance', request, emptyResponse);
-  }
-
-  $async.Future<$5.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $4.SetIamPolicyRequest request) {
-    var emptyResponse = $5.Policy();
-    return _client.invoke<$5.Policy>(
-        ctx, 'InstanceAdmin', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$5.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $4.GetIamPolicyRequest request) {
-    var emptyResponse = $5.Policy();
-    return _client.invoke<$5.Policy>(
-        ctx, 'InstanceAdmin', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$4.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $4.TestIamPermissionsRequest request) {
-    var emptyResponse = $4.TestIamPermissionsResponse();
-    return _client.invoke<$4.TestIamPermissionsResponse>(
-        ctx, 'InstanceAdmin', 'TestIamPermissions', request, emptyResponse);
-  }
 }

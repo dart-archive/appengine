@@ -4,23 +4,21 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'data.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import 'data.pb.dart' as $1;
 
-import 'data.pbenum.dart' as $0;
+import 'data.pbenum.dart' as $1;
 
 class SetBreakpointRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetBreakpointRequest',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
     ..aOS(1, 'debuggeeId')
-    ..a<$0.Breakpoint>(2, 'breakpoint', $pb.PbFieldType.OM,
-        $0.Breakpoint.getDefault, $0.Breakpoint.create)
+    ..a<$1.Breakpoint>(2, 'breakpoint', $pb.PbFieldType.OM,
+        $1.Breakpoint.getDefault, $1.Breakpoint.create)
     ..aOS(4, 'clientVersion')
     ..hasRequiredFields = false;
 
@@ -52,8 +50,8 @@ class SetBreakpointRequest extends $pb.GeneratedMessage {
   $core.bool hasDebuggeeId() => $_has(0);
   void clearDebuggeeId() => clearField(1);
 
-  $0.Breakpoint get breakpoint => $_getN(1);
-  set breakpoint($0.Breakpoint v) {
+  $1.Breakpoint get breakpoint => $_getN(1);
+  set breakpoint($1.Breakpoint v) {
     setField(2, v);
   }
 
@@ -72,8 +70,8 @@ class SetBreakpointRequest extends $pb.GeneratedMessage {
 class SetBreakpointResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetBreakpointResponse',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..a<$0.Breakpoint>(1, 'breakpoint', $pb.PbFieldType.OM,
-        $0.Breakpoint.getDefault, $0.Breakpoint.create)
+    ..a<$1.Breakpoint>(1, 'breakpoint', $pb.PbFieldType.OM,
+        $1.Breakpoint.getDefault, $1.Breakpoint.create)
     ..hasRequiredFields = false;
 
   SetBreakpointResponse() : super();
@@ -97,8 +95,8 @@ class SetBreakpointResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SetBreakpointResponse _defaultInstance;
 
-  $0.Breakpoint get breakpoint => $_getN(0);
-  set breakpoint($0.Breakpoint v) {
+  $1.Breakpoint get breakpoint => $_getN(0);
+  set breakpoint($1.Breakpoint v) {
     setField(1, v);
   }
 
@@ -162,8 +160,8 @@ class GetBreakpointRequest extends $pb.GeneratedMessage {
 class GetBreakpointResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBreakpointResponse',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..a<$0.Breakpoint>(1, 'breakpoint', $pb.PbFieldType.OM,
-        $0.Breakpoint.getDefault, $0.Breakpoint.create)
+    ..a<$1.Breakpoint>(1, 'breakpoint', $pb.PbFieldType.OM,
+        $1.Breakpoint.getDefault, $1.Breakpoint.create)
     ..hasRequiredFields = false;
 
   GetBreakpointResponse() : super();
@@ -187,8 +185,8 @@ class GetBreakpointResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static GetBreakpointResponse _defaultInstance;
 
-  $0.Breakpoint get breakpoint => $_getN(0);
-  set breakpoint($0.Breakpoint v) {
+  $1.Breakpoint get breakpoint => $_getN(0);
+  set breakpoint($1.Breakpoint v) {
     setField(1, v);
   }
 
@@ -255,13 +253,13 @@ class ListBreakpointsRequest_BreakpointActionValue
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListBreakpointsRequest.BreakpointActionValue',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..e<$0.Breakpoint_Action>(
+    ..e<$1.Breakpoint_Action>(
         1,
         'value',
         $pb.PbFieldType.OE,
-        $0.Breakpoint_Action.CAPTURE,
-        $0.Breakpoint_Action.valueOf,
-        $0.Breakpoint_Action.values)
+        $1.Breakpoint_Action.CAPTURE,
+        $1.Breakpoint_Action.valueOf,
+        $1.Breakpoint_Action.values)
     ..hasRequiredFields = false;
 
   ListBreakpointsRequest_BreakpointActionValue() : super();
@@ -291,8 +289,8 @@ class ListBreakpointsRequest_BreakpointActionValue
       _defaultInstance ??= create()..freeze();
   static ListBreakpointsRequest_BreakpointActionValue _defaultInstance;
 
-  $0.Breakpoint_Action get value => $_getN(0);
-  set value($0.Breakpoint_Action v) {
+  $1.Breakpoint_Action get value => $_getN(0);
+  set value($1.Breakpoint_Action v) {
     setField(1, v);
   }
 
@@ -402,8 +400,8 @@ class ListBreakpointsRequest extends $pb.GeneratedMessage {
 class ListBreakpointsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBreakpointsResponse',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..pc<$0.Breakpoint>(
-        1, 'breakpoints', $pb.PbFieldType.PM, $0.Breakpoint.create)
+    ..pc<$1.Breakpoint>(
+        1, 'breakpoints', $pb.PbFieldType.PM, $1.Breakpoint.create)
     ..aOS(2, 'nextWaitToken')
     ..hasRequiredFields = false;
 
@@ -428,7 +426,7 @@ class ListBreakpointsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListBreakpointsResponse _defaultInstance;
 
-  $core.List<$0.Breakpoint> get breakpoints => $_getList(0);
+  $core.List<$1.Breakpoint> get breakpoints => $_getList(0);
 
   $core.String get nextWaitToken => $_getS(1, '');
   set nextWaitToken($core.String v) {
@@ -495,7 +493,7 @@ class ListDebuggeesRequest extends $pb.GeneratedMessage {
 class ListDebuggeesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDebuggeesResponse',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..pc<$0.Debuggee>(1, 'debuggees', $pb.PbFieldType.PM, $0.Debuggee.create)
+    ..pc<$1.Debuggee>(1, 'debuggees', $pb.PbFieldType.PM, $1.Debuggee.create)
     ..hasRequiredFields = false;
 
   ListDebuggeesResponse() : super();
@@ -519,45 +517,5 @@ class ListDebuggeesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDebuggeesResponse _defaultInstance;
 
-  $core.List<$0.Debuggee> get debuggees => $_getList(0);
-}
-
-class Debugger2Api {
-  $pb.RpcClient _client;
-  Debugger2Api(this._client);
-
-  $async.Future<SetBreakpointResponse> setBreakpoint(
-      $pb.ClientContext ctx, SetBreakpointRequest request) {
-    var emptyResponse = SetBreakpointResponse();
-    return _client.invoke<SetBreakpointResponse>(
-        ctx, 'Debugger2', 'SetBreakpoint', request, emptyResponse);
-  }
-
-  $async.Future<GetBreakpointResponse> getBreakpoint(
-      $pb.ClientContext ctx, GetBreakpointRequest request) {
-    var emptyResponse = GetBreakpointResponse();
-    return _client.invoke<GetBreakpointResponse>(
-        ctx, 'Debugger2', 'GetBreakpoint', request, emptyResponse);
-  }
-
-  $async.Future<$1.Empty> deleteBreakpoint(
-      $pb.ClientContext ctx, DeleteBreakpointRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(
-        ctx, 'Debugger2', 'DeleteBreakpoint', request, emptyResponse);
-  }
-
-  $async.Future<ListBreakpointsResponse> listBreakpoints(
-      $pb.ClientContext ctx, ListBreakpointsRequest request) {
-    var emptyResponse = ListBreakpointsResponse();
-    return _client.invoke<ListBreakpointsResponse>(
-        ctx, 'Debugger2', 'ListBreakpoints', request, emptyResponse);
-  }
-
-  $async.Future<ListDebuggeesResponse> listDebuggees(
-      $pb.ClientContext ctx, ListDebuggeesRequest request) {
-    var emptyResponse = ListDebuggeesResponse();
-    return _client.invoke<ListDebuggeesResponse>(
-        ctx, 'Debugger2', 'ListDebuggees', request, emptyResponse);
-  }
+  $core.List<$1.Debuggee> get debuggees => $_getList(0);
 }

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -277,31 +276,4 @@ class MutateKeywordPlanKeywordResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class KeywordPlanKeywordServiceApi {
-  $pb.RpcClient _client;
-  KeywordPlanKeywordServiceApi(this._client);
-
-  $async.Future<$0.KeywordPlanKeyword> getKeywordPlanKeyword(
-      $pb.ClientContext ctx, GetKeywordPlanKeywordRequest request) {
-    var emptyResponse = $0.KeywordPlanKeyword();
-    return _client.invoke<$0.KeywordPlanKeyword>(
-        ctx,
-        'KeywordPlanKeywordService',
-        'GetKeywordPlanKeyword',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateKeywordPlanKeywordsResponse> mutateKeywordPlanKeywords(
-      $pb.ClientContext ctx, MutateKeywordPlanKeywordsRequest request) {
-    var emptyResponse = MutateKeywordPlanKeywordsResponse();
-    return _client.invoke<MutateKeywordPlanKeywordsResponse>(
-        ctx,
-        'KeywordPlanKeywordService',
-        'MutateKeywordPlanKeywords',
-        request,
-        emptyResponse);
-  }
 }

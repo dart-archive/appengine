@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'group.pb.dart' as $0;
-import 'common.pb.dart' as $1;
-import '../../api/monitored_resource.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import 'common.pb.dart' as $2;
+import '../../api/monitored_resource.pb.dart' as $3;
 
 enum ListGroupsRequest_Filter {
   childrenOfGroup,
@@ -321,8 +319,8 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'filter')
-    ..a<$1.TimeInterval>(6, 'interval', $pb.PbFieldType.OM,
-        $1.TimeInterval.getDefault, $1.TimeInterval.create)
+    ..a<$2.TimeInterval>(6, 'interval', $pb.PbFieldType.OM,
+        $2.TimeInterval.getDefault, $2.TimeInterval.create)
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
@@ -371,8 +369,8 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(5);
 
-  $1.TimeInterval get interval => $_getN(3);
-  set interval($1.TimeInterval v) {
+  $2.TimeInterval get interval => $_getN(3);
+  set interval($2.TimeInterval v) {
     setField(6, v);
   }
 
@@ -391,8 +389,8 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
 class ListGroupMembersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupMembersResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$2.MonitoredResource>(
-        1, 'members', $pb.PbFieldType.PM, $2.MonitoredResource.create)
+    ..pc<$3.MonitoredResource>(
+        1, 'members', $pb.PbFieldType.PM, $3.MonitoredResource.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -418,7 +416,7 @@ class ListGroupMembersResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListGroupMembersResponse _defaultInstance;
 
-  $core.List<$2.MonitoredResource> get members => $_getList(0);
+  $core.List<$3.MonitoredResource> get members => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -435,51 +433,4 @@ class ListGroupMembersResponse extends $pb.GeneratedMessage {
 
   $core.bool hasTotalSize() => $_has(2);
   void clearTotalSize() => clearField(3);
-}
-
-class GroupServiceApi {
-  $pb.RpcClient _client;
-  GroupServiceApi(this._client);
-
-  $async.Future<ListGroupsResponse> listGroups(
-      $pb.ClientContext ctx, ListGroupsRequest request) {
-    var emptyResponse = ListGroupsResponse();
-    return _client.invoke<ListGroupsResponse>(
-        ctx, 'GroupService', 'ListGroups', request, emptyResponse);
-  }
-
-  $async.Future<$0.Group> getGroup(
-      $pb.ClientContext ctx, GetGroupRequest request) {
-    var emptyResponse = $0.Group();
-    return _client.invoke<$0.Group>(
-        ctx, 'GroupService', 'GetGroup', request, emptyResponse);
-  }
-
-  $async.Future<$0.Group> createGroup(
-      $pb.ClientContext ctx, CreateGroupRequest request) {
-    var emptyResponse = $0.Group();
-    return _client.invoke<$0.Group>(
-        ctx, 'GroupService', 'CreateGroup', request, emptyResponse);
-  }
-
-  $async.Future<$0.Group> updateGroup(
-      $pb.ClientContext ctx, UpdateGroupRequest request) {
-    var emptyResponse = $0.Group();
-    return _client.invoke<$0.Group>(
-        ctx, 'GroupService', 'UpdateGroup', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteGroup(
-      $pb.ClientContext ctx, DeleteGroupRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'GroupService', 'DeleteGroup', request, emptyResponse);
-  }
-
-  $async.Future<ListGroupMembersResponse> listGroupMembers(
-      $pb.ClientContext ctx, ListGroupMembersRequest request) {
-    var emptyResponse = ListGroupMembersResponse();
-    return _client.invoke<ListGroupMembersResponse>(
-        ctx, 'GroupService', 'ListGroupMembers', request, emptyResponse);
-  }
 }

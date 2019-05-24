@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign_draft.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
-import '../../../../longrunning/operations.pb.dart' as $3;
+import '../resources/campaign_draft.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $3;
+import '../../../../rpc/status.pb.dart' as $4;
 
 class GetCampaignDraftRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCampaignDraftRequest',
@@ -161,13 +159,13 @@ class CampaignDraftOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignDraftOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CampaignDraft>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.CampaignDraft.getDefault, $0.CampaignDraft.create)
-    ..a<$0.CampaignDraft>(2, 'update', $pb.PbFieldType.OM,
-        $0.CampaignDraft.getDefault, $0.CampaignDraft.create)
+    ..a<$1.CampaignDraft>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.CampaignDraft.getDefault, $1.CampaignDraft.create)
+    ..a<$1.CampaignDraft>(2, 'update', $pb.PbFieldType.OM,
+        $1.CampaignDraft.getDefault, $1.CampaignDraft.create)
     ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
@@ -196,16 +194,16 @@ class CampaignDraftOperation extends $pb.GeneratedMessage {
       _CampaignDraftOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CampaignDraft get create_1 => $_getN(0);
-  set create_1($0.CampaignDraft v) {
+  $1.CampaignDraft get create_1 => $_getN(0);
+  set create_1($1.CampaignDraft v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.CampaignDraft get update => $_getN(1);
-  set update($0.CampaignDraft v) {
+  $1.CampaignDraft get update => $_getN(1);
+  set update($1.CampaignDraft v) {
     setField(2, v);
   }
 
@@ -220,8 +218,8 @@ class CampaignDraftOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(3);
+  set updateMask($3.FieldMask v) {
     setField(4, v);
   }
 
@@ -235,8 +233,8 @@ class MutateCampaignDraftsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignDraftResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignDraftResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$4.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $4.Status.getDefault, $4.Status.create)
     ..hasRequiredFields = false;
 
   MutateCampaignDraftsResponse() : super();
@@ -264,8 +262,8 @@ class MutateCampaignDraftsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignDraftResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $4.Status get partialFailureError => $_getN(1);
+  set partialFailureError($4.Status v) {
     setField(3, v);
   }
 
@@ -371,7 +369,7 @@ class ListCampaignDraftAsyncErrorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCampaignDraftAsyncErrorsResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$2.Status>(1, 'errors', $pb.PbFieldType.PM, $2.Status.create)
+    ..pc<$4.Status>(1, 'errors', $pb.PbFieldType.PM, $4.Status.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -398,7 +396,7 @@ class ListCampaignDraftAsyncErrorsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListCampaignDraftAsyncErrorsResponse _defaultInstance;
 
-  $core.List<$2.Status> get errors => $_getList(0);
+  $core.List<$4.Status> get errors => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -407,42 +405,4 @@ class ListCampaignDraftAsyncErrorsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class CampaignDraftServiceApi {
-  $pb.RpcClient _client;
-  CampaignDraftServiceApi(this._client);
-
-  $async.Future<$0.CampaignDraft> getCampaignDraft(
-      $pb.ClientContext ctx, GetCampaignDraftRequest request) {
-    var emptyResponse = $0.CampaignDraft();
-    return _client.invoke<$0.CampaignDraft>(ctx, 'CampaignDraftService',
-        'GetCampaignDraft', request, emptyResponse);
-  }
-
-  $async.Future<MutateCampaignDraftsResponse> mutateCampaignDrafts(
-      $pb.ClientContext ctx, MutateCampaignDraftsRequest request) {
-    var emptyResponse = MutateCampaignDraftsResponse();
-    return _client.invoke<MutateCampaignDraftsResponse>(ctx,
-        'CampaignDraftService', 'MutateCampaignDrafts', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> promoteCampaignDraft(
-      $pb.ClientContext ctx, PromoteCampaignDraftRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(ctx, 'CampaignDraftService',
-        'PromoteCampaignDraft', request, emptyResponse);
-  }
-
-  $async.Future<ListCampaignDraftAsyncErrorsResponse>
-      listCampaignDraftAsyncErrors(
-          $pb.ClientContext ctx, ListCampaignDraftAsyncErrorsRequest request) {
-    var emptyResponse = ListCampaignDraftAsyncErrorsResponse();
-    return _client.invoke<ListCampaignDraftAsyncErrorsResponse>(
-        ctx,
-        'CampaignDraftService',
-        'ListCampaignDraftAsyncErrors',
-        request,
-        emptyResponse);
-  }
 }

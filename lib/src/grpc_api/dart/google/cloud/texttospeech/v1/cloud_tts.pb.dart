@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -417,23 +416,4 @@ class SynthesizeSpeechResponse extends $pb.GeneratedMessage {
 
   $core.bool hasAudioContent() => $_has(0);
   void clearAudioContent() => clearField(1);
-}
-
-class TextToSpeechApi {
-  $pb.RpcClient _client;
-  TextToSpeechApi(this._client);
-
-  $async.Future<ListVoicesResponse> listVoices(
-      $pb.ClientContext ctx, ListVoicesRequest request) {
-    var emptyResponse = ListVoicesResponse();
-    return _client.invoke<ListVoicesResponse>(
-        ctx, 'TextToSpeech', 'ListVoices', request, emptyResponse);
-  }
-
-  $async.Future<SynthesizeSpeechResponse> synthesizeSpeech(
-      $pb.ClientContext ctx, SynthesizeSpeechRequest request) {
-    var emptyResponse = SynthesizeSpeechResponse();
-    return _client.invoke<SynthesizeSpeechResponse>(
-        ctx, 'TextToSpeech', 'SynthesizeSpeech', request, emptyResponse);
-  }
 }

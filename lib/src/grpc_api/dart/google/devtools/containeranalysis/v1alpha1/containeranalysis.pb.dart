@@ -4,27 +4,23 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'package_vulnerability.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import 'image_basis.pb.dart' as $2;
-import 'bill_of_materials.pb.dart' as $3;
-import 'provenance.pb.dart' as $4;
-import '../../../longrunning/operations.pb.dart' as $5;
-import '../../../rpc/status.pb.dart' as $6;
-import '../../../protobuf/field_mask.pb.dart' as $7;
-import '../../../protobuf/empty.pb.dart' as $8;
-import '../../../iam/v1/iam_policy.pb.dart' as $9;
-import '../../../iam/v1/policy.pb.dart' as $10;
+import 'package_vulnerability.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $5;
+import 'image_basis.pb.dart' as $6;
+import 'bill_of_materials.pb.dart' as $7;
+import 'provenance.pb.dart' as $8;
+import '../../../longrunning/operations.pb.dart' as $3;
+import '../../../rpc/status.pb.dart' as $9;
+import '../../../protobuf/field_mask.pb.dart' as $10;
 
 import 'containeranalysis.pbenum.dart';
-import 'package_vulnerability.pbenum.dart' as $0;
+import 'package_vulnerability.pbenum.dart' as $4;
 
 export 'containeranalysis.pbenum.dart';
 
@@ -62,24 +58,24 @@ class Occurrence extends $pb.GeneratedMessage {
         Note_Kind.valueOf, Note_Kind.values)
     ..a<BuildDetails>(7, 'buildDetails', $pb.PbFieldType.OM,
         BuildDetails.getDefault, BuildDetails.create)
-    ..a<$0.VulnerabilityType_VulnerabilityDetails>(
+    ..a<$4.VulnerabilityType_VulnerabilityDetails>(
         8,
         'vulnerabilityDetails',
         $pb.PbFieldType.OM,
-        $0.VulnerabilityType_VulnerabilityDetails.getDefault,
-        $0.VulnerabilityType_VulnerabilityDetails.create)
-    ..a<$1.Timestamp>(9, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(10, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$2.DockerImage_Derived>(11, 'derivedImage', $pb.PbFieldType.OM,
-        $2.DockerImage_Derived.getDefault, $2.DockerImage_Derived.create)
-    ..a<$3.PackageManager_Installation>(
+        $4.VulnerabilityType_VulnerabilityDetails.getDefault,
+        $4.VulnerabilityType_VulnerabilityDetails.create)
+    ..a<$5.Timestamp>(9, 'createTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(10, 'updateTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$6.DockerImage_Derived>(11, 'derivedImage', $pb.PbFieldType.OM,
+        $6.DockerImage_Derived.getDefault, $6.DockerImage_Derived.create)
+    ..a<$7.PackageManager_Installation>(
         12,
         'installation',
         $pb.PbFieldType.OM,
-        $3.PackageManager_Installation.getDefault,
-        $3.PackageManager_Installation.create)
+        $7.PackageManager_Installation.getDefault,
+        $7.PackageManager_Installation.create)
     ..a<Deployable_Deployment>(14, 'deployment', $pb.PbFieldType.OM,
         Deployable_Deployment.getDefault, Deployable_Deployment.create)
     ..a<Discovery_Discovered>(15, 'discovered', $pb.PbFieldType.OM,
@@ -163,41 +159,41 @@ class Occurrence extends $pb.GeneratedMessage {
   $core.bool hasBuildDetails() => $_has(5);
   void clearBuildDetails() => clearField(7);
 
-  $0.VulnerabilityType_VulnerabilityDetails get vulnerabilityDetails =>
+  $4.VulnerabilityType_VulnerabilityDetails get vulnerabilityDetails =>
       $_getN(6);
-  set vulnerabilityDetails($0.VulnerabilityType_VulnerabilityDetails v) {
+  set vulnerabilityDetails($4.VulnerabilityType_VulnerabilityDetails v) {
     setField(8, v);
   }
 
   $core.bool hasVulnerabilityDetails() => $_has(6);
   void clearVulnerabilityDetails() => clearField(8);
 
-  $1.Timestamp get createTime => $_getN(7);
-  set createTime($1.Timestamp v) {
+  $5.Timestamp get createTime => $_getN(7);
+  set createTime($5.Timestamp v) {
     setField(9, v);
   }
 
   $core.bool hasCreateTime() => $_has(7);
   void clearCreateTime() => clearField(9);
 
-  $1.Timestamp get updateTime => $_getN(8);
-  set updateTime($1.Timestamp v) {
+  $5.Timestamp get updateTime => $_getN(8);
+  set updateTime($5.Timestamp v) {
     setField(10, v);
   }
 
   $core.bool hasUpdateTime() => $_has(8);
   void clearUpdateTime() => clearField(10);
 
-  $2.DockerImage_Derived get derivedImage => $_getN(9);
-  set derivedImage($2.DockerImage_Derived v) {
+  $6.DockerImage_Derived get derivedImage => $_getN(9);
+  set derivedImage($6.DockerImage_Derived v) {
     setField(11, v);
   }
 
   $core.bool hasDerivedImage() => $_has(9);
   void clearDerivedImage() => clearField(11);
 
-  $3.PackageManager_Installation get installation => $_getN(10);
-  set installation($3.PackageManager_Installation v) {
+  $7.PackageManager_Installation get installation => $_getN(10);
+  set installation($7.PackageManager_Installation v) {
     setField(12, v);
   }
 
@@ -243,8 +239,8 @@ class Resource extends $pb.GeneratedMessage {
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..a<$4.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $4.Hash.getDefault,
-        $4.Hash.create)
+    ..a<$8.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $8.Hash.getDefault,
+        $8.Hash.create)
     ..hasRequiredFields = false;
 
   Resource() : super();
@@ -280,8 +276,8 @@ class Resource extends $pb.GeneratedMessage {
   $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 
-  $4.Hash get contentHash => $_getN(2);
-  set contentHash($4.Hash v) {
+  $8.Hash get contentHash => $_getN(2);
+  set contentHash($8.Hash v) {
     setField(3, v);
   }
 
@@ -361,24 +357,24 @@ class Note extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(3, 'shortDescription')
     ..aOS(4, 'longDescription')
-    ..a<$0.VulnerabilityType>(6, 'vulnerabilityType', $pb.PbFieldType.OM,
-        $0.VulnerabilityType.getDefault, $0.VulnerabilityType.create)
+    ..a<$4.VulnerabilityType>(6, 'vulnerabilityType', $pb.PbFieldType.OM,
+        $4.VulnerabilityType.getDefault, $4.VulnerabilityType.create)
     ..pc<Note_RelatedUrl>(
         7, 'relatedUrl', $pb.PbFieldType.PM, Note_RelatedUrl.create)
     ..a<BuildType>(8, 'buildType', $pb.PbFieldType.OM, BuildType.getDefault,
         BuildType.create)
     ..e<Note_Kind>(9, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
         Note_Kind.valueOf, Note_Kind.values)
-    ..a<$1.Timestamp>(10, 'expirationTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(11, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(12, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$2.DockerImage_Basis>(13, 'baseImage', $pb.PbFieldType.OM,
-        $2.DockerImage_Basis.getDefault, $2.DockerImage_Basis.create)
-    ..a<$3.PackageManager_Package>(14, 'package', $pb.PbFieldType.OM,
-        $3.PackageManager_Package.getDefault, $3.PackageManager_Package.create)
+    ..a<$5.Timestamp>(10, 'expirationTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(11, 'createTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(12, 'updateTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$6.DockerImage_Basis>(13, 'baseImage', $pb.PbFieldType.OM,
+        $6.DockerImage_Basis.getDefault, $6.DockerImage_Basis.create)
+    ..a<$7.PackageManager_Package>(14, 'package', $pb.PbFieldType.OM,
+        $7.PackageManager_Package.getDefault, $7.PackageManager_Package.create)
     ..a<Deployable>(17, 'deployable', $pb.PbFieldType.OM, Deployable.getDefault,
         Deployable.create)
     ..a<Discovery>(18, 'discovery', $pb.PbFieldType.OM, Discovery.getDefault, Discovery.create)
@@ -430,8 +426,8 @@ class Note extends $pb.GeneratedMessage {
   $core.bool hasLongDescription() => $_has(2);
   void clearLongDescription() => clearField(4);
 
-  $0.VulnerabilityType get vulnerabilityType => $_getN(3);
-  set vulnerabilityType($0.VulnerabilityType v) {
+  $4.VulnerabilityType get vulnerabilityType => $_getN(3);
+  set vulnerabilityType($4.VulnerabilityType v) {
     setField(6, v);
   }
 
@@ -456,40 +452,40 @@ class Note extends $pb.GeneratedMessage {
   $core.bool hasKind() => $_has(6);
   void clearKind() => clearField(9);
 
-  $1.Timestamp get expirationTime => $_getN(7);
-  set expirationTime($1.Timestamp v) {
+  $5.Timestamp get expirationTime => $_getN(7);
+  set expirationTime($5.Timestamp v) {
     setField(10, v);
   }
 
   $core.bool hasExpirationTime() => $_has(7);
   void clearExpirationTime() => clearField(10);
 
-  $1.Timestamp get createTime => $_getN(8);
-  set createTime($1.Timestamp v) {
+  $5.Timestamp get createTime => $_getN(8);
+  set createTime($5.Timestamp v) {
     setField(11, v);
   }
 
   $core.bool hasCreateTime() => $_has(8);
   void clearCreateTime() => clearField(11);
 
-  $1.Timestamp get updateTime => $_getN(9);
-  set updateTime($1.Timestamp v) {
+  $5.Timestamp get updateTime => $_getN(9);
+  set updateTime($5.Timestamp v) {
     setField(12, v);
   }
 
   $core.bool hasUpdateTime() => $_has(9);
   void clearUpdateTime() => clearField(12);
 
-  $2.DockerImage_Basis get baseImage => $_getN(10);
-  set baseImage($2.DockerImage_Basis v) {
+  $6.DockerImage_Basis get baseImage => $_getN(10);
+  set baseImage($6.DockerImage_Basis v) {
     setField(13, v);
   }
 
   $core.bool hasBaseImage() => $_has(10);
   void clearBaseImage() => clearField(13);
 
-  $3.PackageManager_Package get package => $_getN(11);
-  set package($3.PackageManager_Package v) {
+  $7.PackageManager_Package get package => $_getN(11);
+  set package($7.PackageManager_Package v) {
     setField(14, v);
   }
 
@@ -526,10 +522,10 @@ class Deployable_Deployment extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'userEmail')
-    ..a<$1.Timestamp>(2, 'deployTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(3, 'undeployTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$5.Timestamp>(2, 'deployTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(3, 'undeployTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
     ..aOS(5, 'address')
     ..pPS(6, 'resourceUri')
     ..e<Deployable_Deployment_Platform>(
@@ -571,16 +567,16 @@ class Deployable_Deployment extends $pb.GeneratedMessage {
   $core.bool hasUserEmail() => $_has(0);
   void clearUserEmail() => clearField(1);
 
-  $1.Timestamp get deployTime => $_getN(1);
-  set deployTime($1.Timestamp v) {
+  $5.Timestamp get deployTime => $_getN(1);
+  set deployTime($5.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasDeployTime() => $_has(1);
   void clearDeployTime() => clearField(2);
 
-  $1.Timestamp get undeployTime => $_getN(2);
-  set undeployTime($1.Timestamp v) {
+  $5.Timestamp get undeployTime => $_getN(2);
+  set undeployTime($5.Timestamp v) {
     setField(3, v);
   }
 
@@ -645,8 +641,8 @@ class Discovery_Discovered extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Discovery.Discovered',
       package:
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<$5.Operation>(1, 'operation', $pb.PbFieldType.OM,
-        $5.Operation.getDefault, $5.Operation.create)
+    ..a<$3.Operation>(1, 'operation', $pb.PbFieldType.OM,
+        $3.Operation.getDefault, $3.Operation.create)
     ..e<Discovery_Discovered_AnalysisStatus>(
         5,
         'analysisStatus',
@@ -654,8 +650,8 @@ class Discovery_Discovered extends $pb.GeneratedMessage {
         Discovery_Discovered_AnalysisStatus.ANALYSIS_STATUS_UNSPECIFIED,
         Discovery_Discovered_AnalysisStatus.valueOf,
         Discovery_Discovered_AnalysisStatus.values)
-    ..a<$6.Status>(6, 'analysisStatusError', $pb.PbFieldType.OM,
-        $6.Status.getDefault, $6.Status.create)
+    ..a<$9.Status>(6, 'analysisStatusError', $pb.PbFieldType.OM,
+        $9.Status.getDefault, $9.Status.create)
     ..hasRequiredFields = false;
 
   Discovery_Discovered() : super();
@@ -678,8 +674,8 @@ class Discovery_Discovered extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static Discovery_Discovered _defaultInstance;
 
-  $5.Operation get operation => $_getN(0);
-  set operation($5.Operation v) {
+  $3.Operation get operation => $_getN(0);
+  set operation($3.Operation v) {
     setField(1, v);
   }
 
@@ -694,8 +690,8 @@ class Discovery_Discovered extends $pb.GeneratedMessage {
   $core.bool hasAnalysisStatus() => $_has(1);
   void clearAnalysisStatus() => clearField(5);
 
-  $6.Status get analysisStatusError => $_getN(2);
-  set analysisStatusError($6.Status v) {
+  $9.Status get analysisStatusError => $_getN(2);
+  set analysisStatusError($9.Status v) {
     setField(6, v);
   }
 
@@ -1062,8 +1058,8 @@ class BuildDetails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildDetails',
       package:
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<$4.BuildProvenance>(1, 'provenance', $pb.PbFieldType.OM,
-        $4.BuildProvenance.getDefault, $4.BuildProvenance.create)
+    ..a<$8.BuildProvenance>(1, 'provenance', $pb.PbFieldType.OM,
+        $8.BuildProvenance.getDefault, $8.BuildProvenance.create)
     ..aOS(2, 'provenanceBytes')
     ..hasRequiredFields = false;
 
@@ -1085,8 +1081,8 @@ class BuildDetails extends $pb.GeneratedMessage {
   static BuildDetails getDefault() => _defaultInstance ??= create()..freeze();
   static BuildDetails _defaultInstance;
 
-  $4.BuildProvenance get provenance => $_getN(0);
-  set provenance($4.BuildProvenance v) {
+  $8.BuildProvenance get provenance => $_getN(0);
+  set provenance($8.BuildProvenance v) {
     setField(1, v);
   }
 
@@ -1412,8 +1408,8 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault,
         Occurrence.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $10.FieldMask.getDefault, $10.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOccurrenceRequest() : super();
@@ -1453,8 +1449,8 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   $core.bool hasOccurrence() => $_has(1);
   void clearOccurrence() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $10.FieldMask get updateMask => $_getN(2);
+  set updateMask($10.FieldMask v) {
     setField(3, v);
   }
 
@@ -1745,8 +1741,8 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
     ..a<Note>(2, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $10.FieldMask.getDefault, $10.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateNoteRequest() : super();
@@ -1784,8 +1780,8 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   $core.bool hasNote() => $_has(1);
   void clearNote() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $10.FieldMask get updateMask => $_getN(2);
+  set updateMask($10.FieldMask v) {
     setField(3, v);
   }
 
@@ -1907,8 +1903,8 @@ class CreateOperationRequest extends $pb.GeneratedMessage {
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'operationId')
-    ..a<$5.Operation>(3, 'operation', $pb.PbFieldType.OM,
-        $5.Operation.getDefault, $5.Operation.create)
+    ..a<$3.Operation>(3, 'operation', $pb.PbFieldType.OM,
+        $3.Operation.getDefault, $3.Operation.create)
     ..hasRequiredFields = false;
 
   CreateOperationRequest() : super();
@@ -1948,8 +1944,8 @@ class CreateOperationRequest extends $pb.GeneratedMessage {
   $core.bool hasOperationId() => $_has(1);
   void clearOperationId() => clearField(2);
 
-  $5.Operation get operation => $_getN(2);
-  set operation($5.Operation v) {
+  $3.Operation get operation => $_getN(2);
+  set operation($3.Operation v) {
     setField(3, v);
   }
 
@@ -1962,10 +1958,10 @@ class UpdateOperationRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<$5.Operation>(3, 'operation', $pb.PbFieldType.OM,
-        $5.Operation.getDefault, $5.Operation.create)
-    ..a<$7.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$3.Operation>(3, 'operation', $pb.PbFieldType.OM,
+        $3.Operation.getDefault, $3.Operation.create)
+    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $10.FieldMask.getDefault, $10.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOperationRequest() : super();
@@ -1997,16 +1993,16 @@ class UpdateOperationRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $5.Operation get operation => $_getN(1);
-  set operation($5.Operation v) {
+  $3.Operation get operation => $_getN(1);
+  set operation($3.Operation v) {
     setField(3, v);
   }
 
   $core.bool hasOperation() => $_has(1);
   void clearOperation() => clearField(3);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $10.FieldMask get updateMask => $_getN(2);
+  set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
@@ -2018,10 +2014,10 @@ class OperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
       package:
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<$1.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$5.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $5.Timestamp.getDefault,
+        $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata() : super();
@@ -2043,16 +2039,16 @@ class OperationMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static OperationMetadata _defaultInstance;
 
-  $1.Timestamp get createTime => $_getN(0);
-  set createTime($1.Timestamp v) {
+  $5.Timestamp get createTime => $_getN(0);
+  set createTime($5.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasCreateTime() => $_has(0);
   void clearCreateTime() => clearField(1);
 
-  $1.Timestamp get endTime => $_getN(1);
-  set endTime($1.Timestamp v) {
+  $5.Timestamp get endTime => $_getN(1);
+  set endTime($5.Timestamp v) {
     setField(2, v);
   }
 
@@ -2115,13 +2111,13 @@ class GetVulnzOccurrencesSummaryResponse_SeverityCount
       'GetVulnzOccurrencesSummaryResponse.SeverityCount',
       package:
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..e<$0.VulnerabilityType_Severity>(
+    ..e<$4.VulnerabilityType_Severity>(
         1,
         'severity',
         $pb.PbFieldType.OE,
-        $0.VulnerabilityType_Severity.SEVERITY_UNSPECIFIED,
-        $0.VulnerabilityType_Severity.valueOf,
-        $0.VulnerabilityType_Severity.values)
+        $4.VulnerabilityType_Severity.SEVERITY_UNSPECIFIED,
+        $4.VulnerabilityType_Severity.valueOf,
+        $4.VulnerabilityType_Severity.values)
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
@@ -2153,8 +2149,8 @@ class GetVulnzOccurrencesSummaryResponse_SeverityCount
       _defaultInstance ??= create()..freeze();
   static GetVulnzOccurrencesSummaryResponse_SeverityCount _defaultInstance;
 
-  $0.VulnerabilityType_Severity get severity => $_getN(0);
-  set severity($0.VulnerabilityType_Severity v) {
+  $4.VulnerabilityType_Severity get severity => $_getN(0);
+  set severity($4.VulnerabilityType_Severity v) {
     setField(1, v);
   }
 
@@ -2356,8 +2352,8 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM, ScanConfig.getDefault,
         ScanConfig.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $10.FieldMask.getDefault, $10.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateScanConfigRequest() : super();
@@ -2397,166 +2393,11 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasScanConfig() => $_has(1);
   void clearScanConfig() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $10.FieldMask get updateMask => $_getN(2);
+  set updateMask($10.FieldMask v) {
     setField(3, v);
   }
 
   $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
-}
-
-class ContainerAnalysisApi {
-  $pb.RpcClient _client;
-  ContainerAnalysisApi(this._client);
-
-  $async.Future<Occurrence> getOccurrence(
-      $pb.ClientContext ctx, GetOccurrenceRequest request) {
-    var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'ContainerAnalysis', 'GetOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<ListOccurrencesResponse> listOccurrences(
-      $pb.ClientContext ctx, ListOccurrencesRequest request) {
-    var emptyResponse = ListOccurrencesResponse();
-    return _client.invoke<ListOccurrencesResponse>(
-        ctx, 'ContainerAnalysis', 'ListOccurrences', request, emptyResponse);
-  }
-
-  $async.Future<$8.Empty> deleteOccurrence(
-      $pb.ClientContext ctx, DeleteOccurrenceRequest request) {
-    var emptyResponse = $8.Empty();
-    return _client.invoke<$8.Empty>(
-        ctx, 'ContainerAnalysis', 'DeleteOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<Occurrence> createOccurrence(
-      $pb.ClientContext ctx, CreateOccurrenceRequest request) {
-    var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'ContainerAnalysis', 'CreateOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<Occurrence> updateOccurrence(
-      $pb.ClientContext ctx, UpdateOccurrenceRequest request) {
-    var emptyResponse = Occurrence();
-    return _client.invoke<Occurrence>(
-        ctx, 'ContainerAnalysis', 'UpdateOccurrence', request, emptyResponse);
-  }
-
-  $async.Future<Note> getOccurrenceNote(
-      $pb.ClientContext ctx, GetOccurrenceNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'GetOccurrenceNote', request, emptyResponse);
-  }
-
-  $async.Future<Note> getNote($pb.ClientContext ctx, GetNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'GetNote', request, emptyResponse);
-  }
-
-  $async.Future<ListNotesResponse> listNotes(
-      $pb.ClientContext ctx, ListNotesRequest request) {
-    var emptyResponse = ListNotesResponse();
-    return _client.invoke<ListNotesResponse>(
-        ctx, 'ContainerAnalysis', 'ListNotes', request, emptyResponse);
-  }
-
-  $async.Future<$8.Empty> deleteNote(
-      $pb.ClientContext ctx, DeleteNoteRequest request) {
-    var emptyResponse = $8.Empty();
-    return _client.invoke<$8.Empty>(
-        ctx, 'ContainerAnalysis', 'DeleteNote', request, emptyResponse);
-  }
-
-  $async.Future<Note> createNote(
-      $pb.ClientContext ctx, CreateNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'CreateNote', request, emptyResponse);
-  }
-
-  $async.Future<Note> updateNote(
-      $pb.ClientContext ctx, UpdateNoteRequest request) {
-    var emptyResponse = Note();
-    return _client.invoke<Note>(
-        ctx, 'ContainerAnalysis', 'UpdateNote', request, emptyResponse);
-  }
-
-  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences(
-      $pb.ClientContext ctx, ListNoteOccurrencesRequest request) {
-    var emptyResponse = ListNoteOccurrencesResponse();
-    return _client.invoke<ListNoteOccurrencesResponse>(ctx, 'ContainerAnalysis',
-        'ListNoteOccurrences', request, emptyResponse);
-  }
-
-  $async.Future<GetVulnzOccurrencesSummaryResponse> getVulnzOccurrencesSummary(
-      $pb.ClientContext ctx, GetVulnzOccurrencesSummaryRequest request) {
-    var emptyResponse = GetVulnzOccurrencesSummaryResponse();
-    return _client.invoke<GetVulnzOccurrencesSummaryResponse>(
-        ctx,
-        'ContainerAnalysis',
-        'GetVulnzOccurrencesSummary',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$10.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $9.SetIamPolicyRequest request) {
-    var emptyResponse = $10.Policy();
-    return _client.invoke<$10.Policy>(
-        ctx, 'ContainerAnalysis', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$10.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $9.GetIamPolicyRequest request) {
-    var emptyResponse = $10.Policy();
-    return _client.invoke<$10.Policy>(
-        ctx, 'ContainerAnalysis', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$9.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $9.TestIamPermissionsRequest request) {
-    var emptyResponse = $9.TestIamPermissionsResponse();
-    return _client.invoke<$9.TestIamPermissionsResponse>(
-        ctx, 'ContainerAnalysis', 'TestIamPermissions', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> createOperation(
-      $pb.ClientContext ctx, CreateOperationRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'ContainerAnalysis', 'CreateOperation', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> updateOperation(
-      $pb.ClientContext ctx, UpdateOperationRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'ContainerAnalysis', 'UpdateOperation', request, emptyResponse);
-  }
-
-  $async.Future<ScanConfig> getScanConfig(
-      $pb.ClientContext ctx, GetScanConfigRequest request) {
-    var emptyResponse = ScanConfig();
-    return _client.invoke<ScanConfig>(
-        ctx, 'ContainerAnalysis', 'GetScanConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListScanConfigsResponse> listScanConfigs(
-      $pb.ClientContext ctx, ListScanConfigsRequest request) {
-    var emptyResponse = ListScanConfigsResponse();
-    return _client.invoke<ListScanConfigsResponse>(
-        ctx, 'ContainerAnalysis', 'ListScanConfigs', request, emptyResponse);
-  }
-
-  $async.Future<ScanConfig> updateScanConfig(
-      $pb.ClientContext ctx, UpdateScanConfigRequest request) {
-    var emptyResponse = ScanConfig();
-    return _client.invoke<ScanConfig>(
-        ctx, 'ContainerAnalysis', 'UpdateScanConfig', request, emptyResponse);
-  }
 }

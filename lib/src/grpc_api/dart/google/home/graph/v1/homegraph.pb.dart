@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/struct.pb.dart' as $0;
-import 'device.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import '../../../protobuf/struct.pb.dart' as $1;
+import 'device.pb.dart' as $2;
 
 class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RequestSyncDevicesRequest',
@@ -255,10 +253,10 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ReportStateAndNotificationDevice',
       package: const $pb.PackageName('google.home.graph.v1'))
-    ..a<$0.Struct>(
-        1, 'states', $pb.PbFieldType.OM, $0.Struct.getDefault, $0.Struct.create)
-    ..a<$0.Struct>(2, 'notifications', $pb.PbFieldType.OM, $0.Struct.getDefault,
-        $0.Struct.create)
+    ..a<$1.Struct>(
+        1, 'states', $pb.PbFieldType.OM, $1.Struct.getDefault, $1.Struct.create)
+    ..a<$1.Struct>(2, 'notifications', $pb.PbFieldType.OM, $1.Struct.getDefault,
+        $1.Struct.create)
     ..hasRequiredFields = false;
 
   ReportStateAndNotificationDevice() : super();
@@ -284,16 +282,16 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ReportStateAndNotificationDevice _defaultInstance;
 
-  $0.Struct get states => $_getN(0);
-  set states($0.Struct v) {
+  $1.Struct get states => $_getN(0);
+  set states($1.Struct v) {
     setField(1, v);
   }
 
   $core.bool hasStates() => $_has(0);
   void clearStates() => clearField(1);
 
-  $0.Struct get notifications => $_getN(1);
-  set notifications($0.Struct v) {
+  $1.Struct get notifications => $_getN(1);
+  set notifications($1.Struct v) {
     setField(2, v);
   }
 
@@ -534,13 +532,13 @@ class QueryResponse extends $pb.GeneratedMessage {
 class QueryResponsePayload extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryResponsePayload',
       package: const $pb.PackageName('google.home.graph.v1'))
-    ..m<$core.String, $0.Struct>(
+    ..m<$core.String, $1.Struct>(
         1,
         'devices',
         'QueryResponsePayload.DevicesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $0.Struct.create,
+        $1.Struct.create,
         null,
         null,
         const $pb.PackageName('google.home.graph.v1'))
@@ -566,7 +564,7 @@ class QueryResponsePayload extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static QueryResponsePayload _defaultInstance;
 
-  $core.Map<$core.String, $0.Struct> get devices => $_getMap(0);
+  $core.Map<$core.String, $1.Struct> get devices => $_getMap(0);
 }
 
 class SyncRequest extends $pb.GeneratedMessage {
@@ -657,7 +655,7 @@ class SyncResponsePayload extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SyncResponsePayload',
       package: const $pb.PackageName('google.home.graph.v1'))
     ..aOS(1, 'agentUserId')
-    ..pc<$1.Device>(2, 'devices', $pb.PbFieldType.PM, $1.Device.create)
+    ..pc<$2.Device>(2, 'devices', $pb.PbFieldType.PM, $2.Device.create)
     ..hasRequiredFields = false;
 
   SyncResponsePayload() : super();
@@ -687,48 +685,5 @@ class SyncResponsePayload extends $pb.GeneratedMessage {
   $core.bool hasAgentUserId() => $_has(0);
   void clearAgentUserId() => clearField(1);
 
-  $core.List<$1.Device> get devices => $_getList(1);
-}
-
-class HomeGraphApiServiceApi {
-  $pb.RpcClient _client;
-  HomeGraphApiServiceApi(this._client);
-
-  $async.Future<RequestSyncDevicesResponse> requestSyncDevices(
-      $pb.ClientContext ctx, RequestSyncDevicesRequest request) {
-    var emptyResponse = RequestSyncDevicesResponse();
-    return _client.invoke<RequestSyncDevicesResponse>(ctx,
-        'HomeGraphApiService', 'RequestSyncDevices', request, emptyResponse);
-  }
-
-  $async.Future<ReportStateAndNotificationResponse> reportStateAndNotification(
-      $pb.ClientContext ctx, ReportStateAndNotificationRequest request) {
-    var emptyResponse = ReportStateAndNotificationResponse();
-    return _client.invoke<ReportStateAndNotificationResponse>(
-        ctx,
-        'HomeGraphApiService',
-        'ReportStateAndNotification',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteAgentUser(
-      $pb.ClientContext ctx, DeleteAgentUserRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'HomeGraphApiService', 'DeleteAgentUser', request, emptyResponse);
-  }
-
-  $async.Future<QueryResponse> query(
-      $pb.ClientContext ctx, QueryRequest request) {
-    var emptyResponse = QueryResponse();
-    return _client.invoke<QueryResponse>(
-        ctx, 'HomeGraphApiService', 'Query', request, emptyResponse);
-  }
-
-  $async.Future<SyncResponse> sync($pb.ClientContext ctx, SyncRequest request) {
-    var emptyResponse = SyncResponse();
-    return _client.invoke<SyncResponse>(
-        ctx, 'HomeGraphApiService', 'Sync', request, emptyResponse);
-  }
+  $core.List<$2.Device> get devices => $_getList(1);
 }

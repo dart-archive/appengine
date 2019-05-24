@@ -4,17 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/empty.pb.dart' as $2;
-import '../../iam/v1/iam_policy.pb.dart' as $3;
-import '../../iam/v1/policy.pb.dart' as $4;
+import '../../protobuf/timestamp.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $4;
 
 class Dataset extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
@@ -22,8 +18,8 @@ class Dataset extends $pb.GeneratedMessage {
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
     ..aOS(3, 'name')
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   Dataset() : super();
@@ -67,8 +63,8 @@ class Dataset extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  $0.Timestamp get createTime => $_getN(3);
-  set createTime($0.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -208,8 +204,8 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'datasetId')
     ..a<Dataset>(
         2, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDatasetRequest() : super();
@@ -248,8 +244,8 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
   $core.bool hasDataset() => $_has(1);
   void clearDataset() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -360,72 +356,4 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
 
   $core.bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
-}
-
-class DatasetServiceV1Api {
-  $pb.RpcClient _client;
-  DatasetServiceV1Api(this._client);
-
-  $async.Future<ListDatasetsResponse> listDatasets(
-      $pb.ClientContext ctx, ListDatasetsRequest request) {
-    var emptyResponse = ListDatasetsResponse();
-    return _client.invoke<ListDatasetsResponse>(
-        ctx, 'DatasetServiceV1', 'ListDatasets', request, emptyResponse);
-  }
-
-  $async.Future<Dataset> createDataset(
-      $pb.ClientContext ctx, CreateDatasetRequest request) {
-    var emptyResponse = Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'CreateDataset', request, emptyResponse);
-  }
-
-  $async.Future<Dataset> getDataset(
-      $pb.ClientContext ctx, GetDatasetRequest request) {
-    var emptyResponse = Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'GetDataset', request, emptyResponse);
-  }
-
-  $async.Future<Dataset> updateDataset(
-      $pb.ClientContext ctx, UpdateDatasetRequest request) {
-    var emptyResponse = Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'UpdateDataset', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteDataset(
-      $pb.ClientContext ctx, DeleteDatasetRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DatasetServiceV1', 'DeleteDataset', request, emptyResponse);
-  }
-
-  $async.Future<Dataset> undeleteDataset(
-      $pb.ClientContext ctx, UndeleteDatasetRequest request) {
-    var emptyResponse = Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'UndeleteDataset', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'DatasetServiceV1', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'DatasetServiceV1', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
-    var emptyResponse = $3.TestIamPermissionsResponse();
-    return _client.invoke<$3.TestIamPermissionsResponse>(
-        ctx, 'DatasetServiceV1', 'TestIamPermissions', request, emptyResponse);
-  }
 }

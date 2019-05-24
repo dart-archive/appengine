@@ -4,19 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart' as $0;
-import '../../protobuf/timestamp.pb.dart' as $1;
-import 'document.pb.dart' as $2;
-import 'write.pb.dart' as $3;
-import 'query.pb.dart' as $4;
-import '../../rpc/status.pb.dart' as $5;
-import '../../protobuf/empty.pb.dart' as $6;
+import 'common.pb.dart' as $2;
+import '../../protobuf/timestamp.pb.dart' as $3;
+import 'document.pb.dart' as $0;
+import 'write.pb.dart' as $4;
+import 'query.pb.dart' as $5;
+import '../../rpc/status.pb.dart' as $6;
 
 import 'firestore.pbenum.dart';
 
@@ -34,11 +32,11 @@ class GetDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDocumentRequest',
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.DocumentMask>(2, 'mask', $pb.PbFieldType.OM,
-        $0.DocumentMask.getDefault, $0.DocumentMask.create)
+    ..a<$2.DocumentMask>(2, 'mask', $pb.PbFieldType.OM,
+        $2.DocumentMask.getDefault, $2.DocumentMask.create)
     ..a<$core.List<$core.int>>(3, 'transaction', $pb.PbFieldType.OY)
-    ..a<$1.Timestamp>(5, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..oo(0, [3, 5])
     ..hasRequiredFields = false;
 
@@ -73,8 +71,8 @@ class GetDocumentRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.DocumentMask get mask => $_getN(1);
-  set mask($0.DocumentMask v) {
+  $2.DocumentMask get mask => $_getN(1);
+  set mask($2.DocumentMask v) {
     setField(2, v);
   }
 
@@ -89,8 +87,8 @@ class GetDocumentRequest extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(2);
   void clearTransaction() => clearField(3);
 
-  $1.Timestamp get readTime => $_getN(3);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(3);
+  set readTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -114,11 +112,11 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(6, 'orderBy')
-    ..a<$0.DocumentMask>(7, 'mask', $pb.PbFieldType.OM,
-        $0.DocumentMask.getDefault, $0.DocumentMask.create)
+    ..a<$2.DocumentMask>(7, 'mask', $pb.PbFieldType.OM,
+        $2.DocumentMask.getDefault, $2.DocumentMask.create)
     ..a<$core.List<$core.int>>(8, 'transaction', $pb.PbFieldType.OY)
-    ..a<$1.Timestamp>(10, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(10, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..aOB(12, 'showMissing')
     ..oo(0, [8, 10])
     ..hasRequiredFields = false;
@@ -187,8 +185,8 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
   $core.bool hasOrderBy() => $_has(4);
   void clearOrderBy() => clearField(6);
 
-  $0.DocumentMask get mask => $_getN(5);
-  set mask($0.DocumentMask v) {
+  $2.DocumentMask get mask => $_getN(5);
+  set mask($2.DocumentMask v) {
     setField(7, v);
   }
 
@@ -203,8 +201,8 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(6);
   void clearTransaction() => clearField(8);
 
-  $1.Timestamp get readTime => $_getN(7);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(7);
+  set readTime($3.Timestamp v) {
     setField(10, v);
   }
 
@@ -223,7 +221,7 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
 class ListDocumentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDocumentsResponse',
       package: const $pb.PackageName('google.firestore.v1beta1'))
-    ..pc<$2.Document>(1, 'documents', $pb.PbFieldType.PM, $2.Document.create)
+    ..pc<$0.Document>(1, 'documents', $pb.PbFieldType.PM, $0.Document.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -248,7 +246,7 @@ class ListDocumentsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDocumentsResponse _defaultInstance;
 
-  $core.List<$2.Document> get documents => $_getList(0);
+  $core.List<$0.Document> get documents => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -265,10 +263,10 @@ class CreateDocumentRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(2, 'collectionId')
     ..aOS(3, 'documentId')
-    ..a<$2.Document>(4, 'document', $pb.PbFieldType.OM, $2.Document.getDefault,
-        $2.Document.create)
-    ..a<$0.DocumentMask>(5, 'mask', $pb.PbFieldType.OM,
-        $0.DocumentMask.getDefault, $0.DocumentMask.create)
+    ..a<$0.Document>(4, 'document', $pb.PbFieldType.OM, $0.Document.getDefault,
+        $0.Document.create)
+    ..a<$2.DocumentMask>(5, 'mask', $pb.PbFieldType.OM,
+        $2.DocumentMask.getDefault, $2.DocumentMask.create)
     ..hasRequiredFields = false;
 
   CreateDocumentRequest() : super();
@@ -316,16 +314,16 @@ class CreateDocumentRequest extends $pb.GeneratedMessage {
   $core.bool hasDocumentId() => $_has(2);
   void clearDocumentId() => clearField(3);
 
-  $2.Document get document => $_getN(3);
-  set document($2.Document v) {
+  $0.Document get document => $_getN(3);
+  set document($0.Document v) {
     setField(4, v);
   }
 
   $core.bool hasDocument() => $_has(3);
   void clearDocument() => clearField(4);
 
-  $0.DocumentMask get mask => $_getN(4);
-  set mask($0.DocumentMask v) {
+  $2.DocumentMask get mask => $_getN(4);
+  set mask($2.DocumentMask v) {
     setField(5, v);
   }
 
@@ -336,14 +334,14 @@ class CreateDocumentRequest extends $pb.GeneratedMessage {
 class UpdateDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDocumentRequest',
       package: const $pb.PackageName('google.firestore.v1beta1'))
-    ..a<$2.Document>(1, 'document', $pb.PbFieldType.OM, $2.Document.getDefault,
-        $2.Document.create)
-    ..a<$0.DocumentMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $0.DocumentMask.getDefault, $0.DocumentMask.create)
-    ..a<$0.DocumentMask>(3, 'mask', $pb.PbFieldType.OM,
-        $0.DocumentMask.getDefault, $0.DocumentMask.create)
-    ..a<$0.Precondition>(4, 'currentDocument', $pb.PbFieldType.OM,
-        $0.Precondition.getDefault, $0.Precondition.create)
+    ..a<$0.Document>(1, 'document', $pb.PbFieldType.OM, $0.Document.getDefault,
+        $0.Document.create)
+    ..a<$2.DocumentMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.DocumentMask.getDefault, $2.DocumentMask.create)
+    ..a<$2.DocumentMask>(3, 'mask', $pb.PbFieldType.OM,
+        $2.DocumentMask.getDefault, $2.DocumentMask.create)
+    ..a<$2.Precondition>(4, 'currentDocument', $pb.PbFieldType.OM,
+        $2.Precondition.getDefault, $2.Precondition.create)
     ..hasRequiredFields = false;
 
   UpdateDocumentRequest() : super();
@@ -367,32 +365,32 @@ class UpdateDocumentRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateDocumentRequest _defaultInstance;
 
-  $2.Document get document => $_getN(0);
-  set document($2.Document v) {
+  $0.Document get document => $_getN(0);
+  set document($0.Document v) {
     setField(1, v);
   }
 
   $core.bool hasDocument() => $_has(0);
   void clearDocument() => clearField(1);
 
-  $0.DocumentMask get updateMask => $_getN(1);
-  set updateMask($0.DocumentMask v) {
+  $2.DocumentMask get updateMask => $_getN(1);
+  set updateMask($2.DocumentMask v) {
     setField(2, v);
   }
 
   $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 
-  $0.DocumentMask get mask => $_getN(2);
-  set mask($0.DocumentMask v) {
+  $2.DocumentMask get mask => $_getN(2);
+  set mask($2.DocumentMask v) {
     setField(3, v);
   }
 
   $core.bool hasMask() => $_has(2);
   void clearMask() => clearField(3);
 
-  $0.Precondition get currentDocument => $_getN(3);
-  set currentDocument($0.Precondition v) {
+  $2.Precondition get currentDocument => $_getN(3);
+  set currentDocument($2.Precondition v) {
     setField(4, v);
   }
 
@@ -404,8 +402,8 @@ class DeleteDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDocumentRequest',
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.Precondition>(2, 'currentDocument', $pb.PbFieldType.OM,
-        $0.Precondition.getDefault, $0.Precondition.create)
+    ..a<$2.Precondition>(2, 'currentDocument', $pb.PbFieldType.OM,
+        $2.Precondition.getDefault, $2.Precondition.create)
     ..hasRequiredFields = false;
 
   DeleteDocumentRequest() : super();
@@ -437,8 +435,8 @@ class DeleteDocumentRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Precondition get currentDocument => $_getN(1);
-  set currentDocument($0.Precondition v) {
+  $2.Precondition get currentDocument => $_getN(1);
+  set currentDocument($2.Precondition v) {
     setField(2, v);
   }
 
@@ -466,13 +464,13 @@ class BatchGetDocumentsRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'database')
     ..pPS(2, 'documents')
-    ..a<$0.DocumentMask>(3, 'mask', $pb.PbFieldType.OM,
-        $0.DocumentMask.getDefault, $0.DocumentMask.create)
+    ..a<$2.DocumentMask>(3, 'mask', $pb.PbFieldType.OM,
+        $2.DocumentMask.getDefault, $2.DocumentMask.create)
     ..a<$core.List<$core.int>>(4, 'transaction', $pb.PbFieldType.OY)
-    ..a<$0.TransactionOptions>(5, 'newTransaction', $pb.PbFieldType.OM,
-        $0.TransactionOptions.getDefault, $0.TransactionOptions.create)
-    ..a<$1.Timestamp>(7, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.TransactionOptions>(5, 'newTransaction', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
+    ..a<$3.Timestamp>(7, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..oo(0, [4, 5, 7])
     ..hasRequiredFields = false;
 
@@ -511,8 +509,8 @@ class BatchGetDocumentsRequest extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get documents => $_getList(1);
 
-  $0.DocumentMask get mask => $_getN(2);
-  set mask($0.DocumentMask v) {
+  $2.DocumentMask get mask => $_getN(2);
+  set mask($2.DocumentMask v) {
     setField(3, v);
   }
 
@@ -527,16 +525,16 @@ class BatchGetDocumentsRequest extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(3);
   void clearTransaction() => clearField(4);
 
-  $0.TransactionOptions get newTransaction => $_getN(4);
-  set newTransaction($0.TransactionOptions v) {
+  $2.TransactionOptions get newTransaction => $_getN(4);
+  set newTransaction($2.TransactionOptions v) {
     setField(5, v);
   }
 
   $core.bool hasNewTransaction() => $_has(4);
   void clearNewTransaction() => clearField(5);
 
-  $1.Timestamp get readTime => $_getN(5);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(5);
+  set readTime($3.Timestamp v) {
     setField(7, v);
   }
 
@@ -555,12 +553,12 @@ class BatchGetDocumentsResponse extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchGetDocumentsResponse',
       package: const $pb.PackageName('google.firestore.v1beta1'))
-    ..a<$2.Document>(1, 'found', $pb.PbFieldType.OM, $2.Document.getDefault,
-        $2.Document.create)
+    ..a<$0.Document>(1, 'found', $pb.PbFieldType.OM, $0.Document.getDefault,
+        $0.Document.create)
     ..aOS(2, 'missing')
     ..a<$core.List<$core.int>>(3, 'transaction', $pb.PbFieldType.OY)
-    ..a<$1.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
@@ -590,8 +588,8 @@ class BatchGetDocumentsResponse extends $pb.GeneratedMessage {
       _BatchGetDocumentsResponse_ResultByTag[$_whichOneof(0)];
   void clearResult() => clearField($_whichOneof(0));
 
-  $2.Document get found => $_getN(0);
-  set found($2.Document v) {
+  $0.Document get found => $_getN(0);
+  set found($0.Document v) {
     setField(1, v);
   }
 
@@ -614,8 +612,8 @@ class BatchGetDocumentsResponse extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(2);
   void clearTransaction() => clearField(3);
 
-  $1.Timestamp get readTime => $_getN(3);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(3);
+  set readTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -627,8 +625,8 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'database')
-    ..a<$0.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
-        $0.TransactionOptions.getDefault, $0.TransactionOptions.create)
+    ..a<$2.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest() : super();
@@ -660,8 +658,8 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   $core.bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 
-  $0.TransactionOptions get options => $_getN(1);
-  set options($0.TransactionOptions v) {
+  $2.TransactionOptions get options => $_getN(1);
+  set options($2.TransactionOptions v) {
     setField(2, v);
   }
 
@@ -709,7 +707,7 @@ class CommitRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'database')
-    ..pc<$3.Write>(2, 'writes', $pb.PbFieldType.PM, $3.Write.create)
+    ..pc<$4.Write>(2, 'writes', $pb.PbFieldType.PM, $4.Write.create)
     ..a<$core.List<$core.int>>(3, 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -739,7 +737,7 @@ class CommitRequest extends $pb.GeneratedMessage {
   $core.bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 
-  $core.List<$3.Write> get writes => $_getList(1);
+  $core.List<$4.Write> get writes => $_getList(1);
 
   $core.List<$core.int> get transaction => $_getN(2);
   set transaction($core.List<$core.int> v) {
@@ -753,10 +751,10 @@ class CommitRequest extends $pb.GeneratedMessage {
 class CommitResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
       package: const $pb.PackageName('google.firestore.v1beta1'))
-    ..pc<$3.WriteResult>(
-        1, 'writeResults', $pb.PbFieldType.PM, $3.WriteResult.create)
-    ..a<$1.Timestamp>(2, 'commitTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..pc<$4.WriteResult>(
+        1, 'writeResults', $pb.PbFieldType.PM, $4.WriteResult.create)
+    ..a<$3.Timestamp>(2, 'commitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   CommitResponse() : super();
@@ -777,10 +775,10 @@ class CommitResponse extends $pb.GeneratedMessage {
   static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
   static CommitResponse _defaultInstance;
 
-  $core.List<$3.WriteResult> get writeResults => $_getList(0);
+  $core.List<$4.WriteResult> get writeResults => $_getList(0);
 
-  $1.Timestamp get commitTime => $_getN(1);
-  set commitTime($1.Timestamp v) {
+  $3.Timestamp get commitTime => $_getN(1);
+  set commitTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -856,13 +854,13 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryRequest',
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$4.StructuredQuery>(2, 'structuredQuery', $pb.PbFieldType.OM,
-        $4.StructuredQuery.getDefault, $4.StructuredQuery.create)
+    ..a<$5.StructuredQuery>(2, 'structuredQuery', $pb.PbFieldType.OM,
+        $5.StructuredQuery.getDefault, $5.StructuredQuery.create)
     ..a<$core.List<$core.int>>(5, 'transaction', $pb.PbFieldType.OY)
-    ..a<$0.TransactionOptions>(6, 'newTransaction', $pb.PbFieldType.OM,
-        $0.TransactionOptions.getDefault, $0.TransactionOptions.create)
-    ..a<$1.Timestamp>(7, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.TransactionOptions>(6, 'newTransaction', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
+    ..a<$3.Timestamp>(7, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..oo(0, [2])
     ..oo(1, [5, 6, 7])
     ..hasRequiredFields = false;
@@ -902,8 +900,8 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $4.StructuredQuery get structuredQuery => $_getN(1);
-  set structuredQuery($4.StructuredQuery v) {
+  $5.StructuredQuery get structuredQuery => $_getN(1);
+  set structuredQuery($5.StructuredQuery v) {
     setField(2, v);
   }
 
@@ -918,16 +916,16 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(2);
   void clearTransaction() => clearField(5);
 
-  $0.TransactionOptions get newTransaction => $_getN(3);
-  set newTransaction($0.TransactionOptions v) {
+  $2.TransactionOptions get newTransaction => $_getN(3);
+  set newTransaction($2.TransactionOptions v) {
     setField(6, v);
   }
 
   $core.bool hasNewTransaction() => $_has(3);
   void clearNewTransaction() => clearField(6);
 
-  $1.Timestamp get readTime => $_getN(4);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(4);
+  set readTime($3.Timestamp v) {
     setField(7, v);
   }
 
@@ -938,11 +936,11 @@ class RunQueryRequest extends $pb.GeneratedMessage {
 class RunQueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryResponse',
       package: const $pb.PackageName('google.firestore.v1beta1'))
-    ..a<$2.Document>(1, 'document', $pb.PbFieldType.OM, $2.Document.getDefault,
-        $2.Document.create)
+    ..a<$0.Document>(1, 'document', $pb.PbFieldType.OM, $0.Document.getDefault,
+        $0.Document.create)
     ..a<$core.List<$core.int>>(2, 'transaction', $pb.PbFieldType.OY)
-    ..a<$1.Timestamp>(3, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<$core.int>(4, 'skippedResults', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -965,8 +963,8 @@ class RunQueryResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RunQueryResponse _defaultInstance;
 
-  $2.Document get document => $_getN(0);
-  set document($2.Document v) {
+  $0.Document get document => $_getN(0);
+  set document($0.Document v) {
     setField(1, v);
   }
 
@@ -981,8 +979,8 @@ class RunQueryResponse extends $pb.GeneratedMessage {
   $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 
-  $1.Timestamp get readTime => $_getN(2);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(2);
+  set readTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -1003,7 +1001,7 @@ class WriteRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'database')
     ..aOS(2, 'streamId')
-    ..pc<$3.Write>(3, 'writes', $pb.PbFieldType.PM, $3.Write.create)
+    ..pc<$4.Write>(3, 'writes', $pb.PbFieldType.PM, $4.Write.create)
     ..a<$core.List<$core.int>>(4, 'streamToken', $pb.PbFieldType.OY)
     ..m<$core.String, $core.String>(
         5,
@@ -1051,7 +1049,7 @@ class WriteRequest extends $pb.GeneratedMessage {
   $core.bool hasStreamId() => $_has(1);
   void clearStreamId() => clearField(2);
 
-  $core.List<$3.Write> get writes => $_getList(2);
+  $core.List<$4.Write> get writes => $_getList(2);
 
   $core.List<$core.int> get streamToken => $_getN(3);
   set streamToken($core.List<$core.int> v) {
@@ -1069,10 +1067,10 @@ class WriteResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'streamId')
     ..a<$core.List<$core.int>>(2, 'streamToken', $pb.PbFieldType.OY)
-    ..pc<$3.WriteResult>(
-        3, 'writeResults', $pb.PbFieldType.PM, $3.WriteResult.create)
-    ..a<$1.Timestamp>(4, 'commitTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..pc<$4.WriteResult>(
+        3, 'writeResults', $pb.PbFieldType.PM, $4.WriteResult.create)
+    ..a<$3.Timestamp>(4, 'commitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   WriteResponse() : super();
@@ -1109,10 +1107,10 @@ class WriteResponse extends $pb.GeneratedMessage {
   $core.bool hasStreamToken() => $_has(1);
   void clearStreamToken() => clearField(2);
 
-  $core.List<$3.WriteResult> get writeResults => $_getList(2);
+  $core.List<$4.WriteResult> get writeResults => $_getList(2);
 
-  $1.Timestamp get commitTime => $_getN(3);
-  set commitTime($1.Timestamp v) {
+  $3.Timestamp get commitTime => $_getN(3);
+  set commitTime($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -1220,14 +1218,14 @@ class ListenResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..a<TargetChange>(2, 'targetChange', $pb.PbFieldType.OM,
         TargetChange.getDefault, TargetChange.create)
-    ..a<$3.DocumentChange>(3, 'documentChange', $pb.PbFieldType.OM,
-        $3.DocumentChange.getDefault, $3.DocumentChange.create)
-    ..a<$3.DocumentDelete>(4, 'documentDelete', $pb.PbFieldType.OM,
-        $3.DocumentDelete.getDefault, $3.DocumentDelete.create)
-    ..a<$3.ExistenceFilter>(5, 'filter', $pb.PbFieldType.OM,
-        $3.ExistenceFilter.getDefault, $3.ExistenceFilter.create)
-    ..a<$3.DocumentRemove>(6, 'documentRemove', $pb.PbFieldType.OM,
-        $3.DocumentRemove.getDefault, $3.DocumentRemove.create)
+    ..a<$4.DocumentChange>(3, 'documentChange', $pb.PbFieldType.OM,
+        $4.DocumentChange.getDefault, $4.DocumentChange.create)
+    ..a<$4.DocumentDelete>(4, 'documentDelete', $pb.PbFieldType.OM,
+        $4.DocumentDelete.getDefault, $4.DocumentDelete.create)
+    ..a<$4.ExistenceFilter>(5, 'filter', $pb.PbFieldType.OM,
+        $4.ExistenceFilter.getDefault, $4.ExistenceFilter.create)
+    ..a<$4.DocumentRemove>(6, 'documentRemove', $pb.PbFieldType.OM,
+        $4.DocumentRemove.getDefault, $4.DocumentRemove.create)
     ..oo(0, [2, 3, 4, 5, 6])
     ..hasRequiredFields = false;
 
@@ -1261,32 +1259,32 @@ class ListenResponse extends $pb.GeneratedMessage {
   $core.bool hasTargetChange() => $_has(0);
   void clearTargetChange() => clearField(2);
 
-  $3.DocumentChange get documentChange => $_getN(1);
-  set documentChange($3.DocumentChange v) {
+  $4.DocumentChange get documentChange => $_getN(1);
+  set documentChange($4.DocumentChange v) {
     setField(3, v);
   }
 
   $core.bool hasDocumentChange() => $_has(1);
   void clearDocumentChange() => clearField(3);
 
-  $3.DocumentDelete get documentDelete => $_getN(2);
-  set documentDelete($3.DocumentDelete v) {
+  $4.DocumentDelete get documentDelete => $_getN(2);
+  set documentDelete($4.DocumentDelete v) {
     setField(4, v);
   }
 
   $core.bool hasDocumentDelete() => $_has(2);
   void clearDocumentDelete() => clearField(4);
 
-  $3.ExistenceFilter get filter => $_getN(3);
-  set filter($3.ExistenceFilter v) {
+  $4.ExistenceFilter get filter => $_getN(3);
+  set filter($4.ExistenceFilter v) {
     setField(5, v);
   }
 
   $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(5);
 
-  $3.DocumentRemove get documentRemove => $_getN(4);
-  set documentRemove($3.DocumentRemove v) {
+  $4.DocumentRemove get documentRemove => $_getN(4);
+  set documentRemove($4.DocumentRemove v) {
     setField(6, v);
   }
 
@@ -1335,8 +1333,8 @@ class Target_QueryTarget extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Target.QueryTarget',
       package: const $pb.PackageName('google.firestore.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$4.StructuredQuery>(2, 'structuredQuery', $pb.PbFieldType.OM,
-        $4.StructuredQuery.getDefault, $4.StructuredQuery.create)
+    ..a<$5.StructuredQuery>(2, 'structuredQuery', $pb.PbFieldType.OM,
+        $5.StructuredQuery.getDefault, $5.StructuredQuery.create)
     ..oo(0, [2])
     ..hasRequiredFields = false;
 
@@ -1371,8 +1369,8 @@ class Target_QueryTarget extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $4.StructuredQuery get structuredQuery => $_getN(1);
-  set structuredQuery($4.StructuredQuery v) {
+  $5.StructuredQuery get structuredQuery => $_getN(1);
+  set structuredQuery($5.StructuredQuery v) {
     setField(2, v);
   }
 
@@ -1406,8 +1404,8 @@ class Target extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, 'resumeToken', $pb.PbFieldType.OY)
     ..a<$core.int>(5, 'targetId', $pb.PbFieldType.O3)
     ..aOB(6, 'once')
-    ..a<$1.Timestamp>(11, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(11, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..oo(0, [2, 3])
     ..oo(1, [4, 11])
     ..hasRequiredFields = false;
@@ -1477,8 +1475,8 @@ class Target extends $pb.GeneratedMessage {
   $core.bool hasOnce() => $_has(4);
   void clearOnce() => clearField(6);
 
-  $1.Timestamp get readTime => $_getN(5);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(5);
+  set readTime($3.Timestamp v) {
     setField(11, v);
   }
 
@@ -1497,11 +1495,11 @@ class TargetChange extends $pb.GeneratedMessage {
         TargetChange_TargetChangeType.valueOf,
         TargetChange_TargetChangeType.values)
     ..p<$core.int>(2, 'targetIds', $pb.PbFieldType.P3)
-    ..a<$5.Status>(
-        3, 'cause', $pb.PbFieldType.OM, $5.Status.getDefault, $5.Status.create)
+    ..a<$6.Status>(
+        3, 'cause', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
     ..a<$core.List<$core.int>>(4, 'resumeToken', $pb.PbFieldType.OY)
-    ..a<$1.Timestamp>(6, 'readTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(6, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   TargetChange() : super();
@@ -1532,8 +1530,8 @@ class TargetChange extends $pb.GeneratedMessage {
 
   $core.List<$core.int> get targetIds => $_getList(1);
 
-  $5.Status get cause => $_getN(2);
-  set cause($5.Status v) {
+  $6.Status get cause => $_getN(2);
+  set cause($6.Status v) {
     setField(3, v);
   }
 
@@ -1548,8 +1546,8 @@ class TargetChange extends $pb.GeneratedMessage {
   $core.bool hasResumeToken() => $_has(3);
   void clearResumeToken() => clearField(4);
 
-  $1.Timestamp get readTime => $_getN(4);
-  set readTime($1.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(4);
+  set readTime($3.Timestamp v) {
     setField(6, v);
   }
 
@@ -1649,100 +1647,4 @@ class ListCollectionIdsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class FirestoreApi {
-  $pb.RpcClient _client;
-  FirestoreApi(this._client);
-
-  $async.Future<$2.Document> getDocument(
-      $pb.ClientContext ctx, GetDocumentRequest request) {
-    var emptyResponse = $2.Document();
-    return _client.invoke<$2.Document>(
-        ctx, 'Firestore', 'GetDocument', request, emptyResponse);
-  }
-
-  $async.Future<ListDocumentsResponse> listDocuments(
-      $pb.ClientContext ctx, ListDocumentsRequest request) {
-    var emptyResponse = ListDocumentsResponse();
-    return _client.invoke<ListDocumentsResponse>(
-        ctx, 'Firestore', 'ListDocuments', request, emptyResponse);
-  }
-
-  $async.Future<$2.Document> createDocument(
-      $pb.ClientContext ctx, CreateDocumentRequest request) {
-    var emptyResponse = $2.Document();
-    return _client.invoke<$2.Document>(
-        ctx, 'Firestore', 'CreateDocument', request, emptyResponse);
-  }
-
-  $async.Future<$2.Document> updateDocument(
-      $pb.ClientContext ctx, UpdateDocumentRequest request) {
-    var emptyResponse = $2.Document();
-    return _client.invoke<$2.Document>(
-        ctx, 'Firestore', 'UpdateDocument', request, emptyResponse);
-  }
-
-  $async.Future<$6.Empty> deleteDocument(
-      $pb.ClientContext ctx, DeleteDocumentRequest request) {
-    var emptyResponse = $6.Empty();
-    return _client.invoke<$6.Empty>(
-        ctx, 'Firestore', 'DeleteDocument', request, emptyResponse);
-  }
-
-  $async.Future<BatchGetDocumentsResponse> batchGetDocuments(
-      $pb.ClientContext ctx, BatchGetDocumentsRequest request) {
-    var emptyResponse = BatchGetDocumentsResponse();
-    return _client.invoke<BatchGetDocumentsResponse>(
-        ctx, 'Firestore', 'BatchGetDocuments', request, emptyResponse);
-  }
-
-  $async.Future<BeginTransactionResponse> beginTransaction(
-      $pb.ClientContext ctx, BeginTransactionRequest request) {
-    var emptyResponse = BeginTransactionResponse();
-    return _client.invoke<BeginTransactionResponse>(
-        ctx, 'Firestore', 'BeginTransaction', request, emptyResponse);
-  }
-
-  $async.Future<CommitResponse> commit(
-      $pb.ClientContext ctx, CommitRequest request) {
-    var emptyResponse = CommitResponse();
-    return _client.invoke<CommitResponse>(
-        ctx, 'Firestore', 'Commit', request, emptyResponse);
-  }
-
-  $async.Future<$6.Empty> rollback(
-      $pb.ClientContext ctx, RollbackRequest request) {
-    var emptyResponse = $6.Empty();
-    return _client.invoke<$6.Empty>(
-        ctx, 'Firestore', 'Rollback', request, emptyResponse);
-  }
-
-  $async.Future<RunQueryResponse> runQuery(
-      $pb.ClientContext ctx, RunQueryRequest request) {
-    var emptyResponse = RunQueryResponse();
-    return _client.invoke<RunQueryResponse>(
-        ctx, 'Firestore', 'RunQuery', request, emptyResponse);
-  }
-
-  $async.Future<WriteResponse> write(
-      $pb.ClientContext ctx, WriteRequest request) {
-    var emptyResponse = WriteResponse();
-    return _client.invoke<WriteResponse>(
-        ctx, 'Firestore', 'Write', request, emptyResponse);
-  }
-
-  $async.Future<ListenResponse> listen(
-      $pb.ClientContext ctx, ListenRequest request) {
-    var emptyResponse = ListenResponse();
-    return _client.invoke<ListenResponse>(
-        ctx, 'Firestore', 'Listen', request, emptyResponse);
-  }
-
-  $async.Future<ListCollectionIdsResponse> listCollectionIds(
-      $pb.ClientContext ctx, ListCollectionIdsRequest request) {
-    var emptyResponse = ListCollectionIdsResponse();
-    return _client.invoke<ListCollectionIdsResponse>(
-        ctx, 'Firestore', 'ListCollectionIds', request, emptyResponse);
-  }
 }

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -311,29 +310,4 @@ class AddTaskLogResponse extends $pb.GeneratedMessage {
 
   $core.bool hasHandle() => $_has(0);
   void clearHandle() => clearField(1);
-}
-
-class TasksApi {
-  $pb.RpcClient _client;
-  TasksApi(this._client);
-
-  $async.Future<Task> getTask($pb.ClientContext ctx, GetTaskRequest request) {
-    var emptyResponse = Task();
-    return _client.invoke<Task>(
-        ctx, 'Tasks', 'GetTask', request, emptyResponse);
-  }
-
-  $async.Future<TaskResult> updateTaskResult(
-      $pb.ClientContext ctx, UpdateTaskResultRequest request) {
-    var emptyResponse = TaskResult();
-    return _client.invoke<TaskResult>(
-        ctx, 'Tasks', 'UpdateTaskResult', request, emptyResponse);
-  }
-
-  $async.Future<AddTaskLogResponse> addTaskLog(
-      $pb.ClientContext ctx, AddTaskLogRequest request) {
-    var emptyResponse = AddTaskLogResponse();
-    return _client.invoke<AddTaskLogResponse>(
-        ctx, 'Tasks', 'AddTaskLog', request, emptyResponse);
-  }
 }

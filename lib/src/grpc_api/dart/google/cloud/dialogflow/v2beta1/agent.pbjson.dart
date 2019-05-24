@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../longrunning/operations.pbjson.dart' as $0;
-import '../../../protobuf/any.pbjson.dart' as $1;
-import '../../../rpc/status.pbjson.dart' as $2;
-
 const Agent$json = {
   '1': 'Agent',
   '2': [
@@ -159,65 +155,4 @@ const RestoreAgentRequest$json = {
   '8': [
     {'1': 'agent'},
   ],
-};
-
-const AgentsServiceBase$json = {
-  '1': 'Agents',
-  '2': [
-    {
-      '1': 'GetAgent',
-      '2': '.google.cloud.dialogflow.v2beta1.GetAgentRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.Agent',
-      '4': {}
-    },
-    {
-      '1': 'SearchAgents',
-      '2': '.google.cloud.dialogflow.v2beta1.SearchAgentsRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.SearchAgentsResponse',
-      '4': {}
-    },
-    {
-      '1': 'TrainAgent',
-      '2': '.google.cloud.dialogflow.v2beta1.TrainAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ExportAgent',
-      '2': '.google.cloud.dialogflow.v2beta1.ExportAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ImportAgent',
-      '2': '.google.cloud.dialogflow.v2beta1.ImportAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'RestoreAgent',
-      '2': '.google.cloud.dialogflow.v2beta1.RestoreAgentRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const AgentsServiceBase$messageJson = {
-  '.google.cloud.dialogflow.v2beta1.GetAgentRequest': GetAgentRequest$json,
-  '.google.cloud.dialogflow.v2beta1.Agent': Agent$json,
-  '.google.cloud.dialogflow.v2beta1.SearchAgentsRequest':
-      SearchAgentsRequest$json,
-  '.google.cloud.dialogflow.v2beta1.SearchAgentsResponse':
-      SearchAgentsResponse$json,
-  '.google.cloud.dialogflow.v2beta1.TrainAgentRequest': TrainAgentRequest$json,
-  '.google.longrunning.Operation': $0.Operation$json,
-  '.google.protobuf.Any': $1.Any$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.cloud.dialogflow.v2beta1.ExportAgentRequest':
-      ExportAgentRequest$json,
-  '.google.cloud.dialogflow.v2beta1.ImportAgentRequest':
-      ImportAgentRequest$json,
-  '.google.cloud.dialogflow.v2beta1.RestoreAgentRequest':
-      RestoreAgentRequest$json,
 };

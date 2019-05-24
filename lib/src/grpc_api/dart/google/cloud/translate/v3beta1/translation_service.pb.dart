@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../longrunning/operations.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 import 'translation_service.pbenum.dart';
 
@@ -811,8 +809,8 @@ class BatchTranslateMetadata extends $pb.GeneratedMessage {
     ..aInt64(2, 'translatedCharacters')
     ..aInt64(3, 'failedCharacters')
     ..aInt64(4, 'totalCharacters')
-    ..a<$0.Timestamp>(5, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   BatchTranslateMetadata() : super();
@@ -868,8 +866,8 @@ class BatchTranslateMetadata extends $pb.GeneratedMessage {
   $core.bool hasTotalCharacters() => $_has(3);
   void clearTotalCharacters() => clearField(4);
 
-  $0.Timestamp get submitTime => $_getN(4);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(4);
+  set submitTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -883,10 +881,10 @@ class BatchTranslateResponse extends $pb.GeneratedMessage {
     ..aInt64(1, 'totalCharacters')
     ..aInt64(2, 'translatedCharacters')
     ..aInt64(3, 'failedCharacters')
-    ..a<$0.Timestamp>(4, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   BatchTranslateResponse() : super();
@@ -934,16 +932,16 @@ class BatchTranslateResponse extends $pb.GeneratedMessage {
   $core.bool hasFailedCharacters() => $_has(2);
   void clearFailedCharacters() => clearField(3);
 
-  $0.Timestamp get submitTime => $_getN(3);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(3);
+  set submitTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasSubmitTime() => $_has(3);
   void clearSubmitTime() => clearField(4);
 
-  $0.Timestamp get endTime => $_getN(4);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(4);
+  set endTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -1094,10 +1092,10 @@ class Glossary extends $pb.GeneratedMessage {
     ..a<GlossaryInputConfig>(5, 'inputConfig', $pb.PbFieldType.OM,
         GlossaryInputConfig.getDefault, GlossaryInputConfig.create)
     ..a<$core.int>(6, 'entryCount', $pb.PbFieldType.O3)
-    ..a<$0.Timestamp>(7, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(7, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..oo(0, [3, 4])
     ..hasRequiredFields = false;
 
@@ -1162,16 +1160,16 @@ class Glossary extends $pb.GeneratedMessage {
   $core.bool hasEntryCount() => $_has(4);
   void clearEntryCount() => clearField(6);
 
-  $0.Timestamp get submitTime => $_getN(5);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(5);
+  set submitTime($2.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasSubmitTime() => $_has(5);
   void clearSubmitTime() => clearField(7);
 
-  $0.Timestamp get endTime => $_getN(6);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(6);
+  set endTime($2.Timestamp v) {
     setField(8, v);
   }
 
@@ -1408,8 +1406,8 @@ class CreateGlossaryMetadata extends $pb.GeneratedMessage {
         CreateGlossaryMetadata_State.STATE_UNSPECIFIED,
         CreateGlossaryMetadata_State.valueOf,
         CreateGlossaryMetadata_State.values)
-    ..a<$0.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateGlossaryMetadata() : super();
@@ -1449,8 +1447,8 @@ class CreateGlossaryMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(1);
   void clearState() => clearField(2);
 
-  $0.Timestamp get submitTime => $_getN(2);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(2);
+  set submitTime($2.Timestamp v) {
     setField(3, v);
   }
 
@@ -1469,8 +1467,8 @@ class DeleteGlossaryMetadata extends $pb.GeneratedMessage {
         DeleteGlossaryMetadata_State.STATE_UNSPECIFIED,
         DeleteGlossaryMetadata_State.valueOf,
         DeleteGlossaryMetadata_State.values)
-    ..a<$0.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   DeleteGlossaryMetadata() : super();
@@ -1510,8 +1508,8 @@ class DeleteGlossaryMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(1);
   void clearState() => clearField(2);
 
-  $0.Timestamp get submitTime => $_getN(2);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(2);
+  set submitTime($2.Timestamp v) {
     setField(3, v);
   }
 
@@ -1523,10 +1521,10 @@ class DeleteGlossaryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteGlossaryResponse',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
     ..aOS(1, 'name')
-    ..a<$0.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   DeleteGlossaryResponse() : super();
@@ -1558,80 +1556,19 @@ class DeleteGlossaryResponse extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Timestamp get submitTime => $_getN(1);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(1);
+  set submitTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasSubmitTime() => $_has(1);
   void clearSubmitTime() => clearField(2);
 
-  $0.Timestamp get endTime => $_getN(2);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(2);
+  set endTime($2.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
-}
-
-class TranslationServiceApi {
-  $pb.RpcClient _client;
-  TranslationServiceApi(this._client);
-
-  $async.Future<TranslateTextResponse> translateText(
-      $pb.ClientContext ctx, TranslateTextRequest request) {
-    var emptyResponse = TranslateTextResponse();
-    return _client.invoke<TranslateTextResponse>(
-        ctx, 'TranslationService', 'TranslateText', request, emptyResponse);
-  }
-
-  $async.Future<DetectLanguageResponse> detectLanguage(
-      $pb.ClientContext ctx, DetectLanguageRequest request) {
-    var emptyResponse = DetectLanguageResponse();
-    return _client.invoke<DetectLanguageResponse>(
-        ctx, 'TranslationService', 'DetectLanguage', request, emptyResponse);
-  }
-
-  $async.Future<SupportedLanguages> getSupportedLanguages(
-      $pb.ClientContext ctx, GetSupportedLanguagesRequest request) {
-    var emptyResponse = SupportedLanguages();
-    return _client.invoke<SupportedLanguages>(ctx, 'TranslationService',
-        'GetSupportedLanguages', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> batchTranslateText(
-      $pb.ClientContext ctx, BatchTranslateTextRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(ctx, 'TranslationService',
-        'BatchTranslateText', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> createGlossary(
-      $pb.ClientContext ctx, CreateGlossaryRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'TranslationService', 'CreateGlossary', request, emptyResponse);
-  }
-
-  $async.Future<ListGlossariesResponse> listGlossaries(
-      $pb.ClientContext ctx, ListGlossariesRequest request) {
-    var emptyResponse = ListGlossariesResponse();
-    return _client.invoke<ListGlossariesResponse>(
-        ctx, 'TranslationService', 'ListGlossaries', request, emptyResponse);
-  }
-
-  $async.Future<Glossary> getGlossary(
-      $pb.ClientContext ctx, GetGlossaryRequest request) {
-    var emptyResponse = Glossary();
-    return _client.invoke<Glossary>(
-        ctx, 'TranslationService', 'GetGlossary', request, emptyResponse);
-  }
-
-  $async.Future<$1.Operation> deleteGlossary(
-      $pb.ClientContext ctx, DeleteGlossaryRequest request) {
-    var emptyResponse = $1.Operation();
-    return _client.invoke<$1.Operation>(
-        ctx, 'TranslationService', 'DeleteGlossary', request, emptyResponse);
-  }
 }

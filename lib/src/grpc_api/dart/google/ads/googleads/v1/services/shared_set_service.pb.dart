@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -259,23 +258,4 @@ class MutateSharedSetResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class SharedSetServiceApi {
-  $pb.RpcClient _client;
-  SharedSetServiceApi(this._client);
-
-  $async.Future<$0.SharedSet> getSharedSet(
-      $pb.ClientContext ctx, GetSharedSetRequest request) {
-    var emptyResponse = $0.SharedSet();
-    return _client.invoke<$0.SharedSet>(
-        ctx, 'SharedSetService', 'GetSharedSet', request, emptyResponse);
-  }
-
-  $async.Future<MutateSharedSetsResponse> mutateSharedSets(
-      $pb.ClientContext ctx, MutateSharedSetsRequest request) {
-    var emptyResponse = MutateSharedSetsResponse();
-    return _client.invoke<MutateSharedSetsResponse>(
-        ctx, 'SharedSetService', 'MutateSharedSets', request, emptyResponse);
-  }
 }

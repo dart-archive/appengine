@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $4;
-import 'index.pbjson.dart' as $1;
-
 const OperationType$json = {
   '1': 'OperationType',
   '2': [
@@ -314,55 +309,4 @@ const IndexOperationMetadata$json = {
     },
     {'1': 'index_id', '3': 3, '4': 1, '5': 9, '10': 'indexId'},
   ],
-};
-
-const DatastoreAdminServiceBase$json = {
-  '1': 'DatastoreAdmin',
-  '2': [
-    {
-      '1': 'ExportEntities',
-      '2': '.google.datastore.admin.v1.ExportEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ImportEntities',
-      '2': '.google.datastore.admin.v1.ImportEntitiesRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'GetIndex',
-      '2': '.google.datastore.admin.v1.GetIndexRequest',
-      '3': '.google.datastore.admin.v1.Index',
-      '4': {}
-    },
-    {
-      '1': 'ListIndexes',
-      '2': '.google.datastore.admin.v1.ListIndexesRequest',
-      '3': '.google.datastore.admin.v1.ListIndexesResponse',
-      '4': {}
-    },
-  ],
-};
-
-const DatastoreAdminServiceBase$messageJson = {
-  '.google.datastore.admin.v1.ExportEntitiesRequest':
-      ExportEntitiesRequest$json,
-  '.google.datastore.admin.v1.ExportEntitiesRequest.LabelsEntry':
-      ExportEntitiesRequest_LabelsEntry$json,
-  '.google.datastore.admin.v1.EntityFilter': EntityFilter$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $4.Status$json,
-  '.google.datastore.admin.v1.ImportEntitiesRequest':
-      ImportEntitiesRequest$json,
-  '.google.datastore.admin.v1.ImportEntitiesRequest.LabelsEntry':
-      ImportEntitiesRequest_LabelsEntry$json,
-  '.google.datastore.admin.v1.GetIndexRequest': GetIndexRequest$json,
-  '.google.datastore.admin.v1.Index': $1.Index$json,
-  '.google.datastore.admin.v1.Index.IndexedProperty':
-      $1.Index_IndexedProperty$json,
-  '.google.datastore.admin.v1.ListIndexesRequest': ListIndexesRequest$json,
-  '.google.datastore.admin.v1.ListIndexesResponse': ListIndexesResponse$json,
 };

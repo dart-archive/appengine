@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -379,29 +378,4 @@ class IssueDetails extends $pb.GeneratedMessage {
 
   $core.bool hasId() => $_has(2);
   void clearId() => clearField(3);
-}
-
-class ConformanceServiceApi {
-  $pb.RpcClient _client;
-  ConformanceServiceApi(this._client);
-
-  $async.Future<ParseResponse> parse(
-      $pb.ClientContext ctx, ParseRequest request) {
-    var emptyResponse = ParseResponse();
-    return _client.invoke<ParseResponse>(
-        ctx, 'ConformanceService', 'Parse', request, emptyResponse);
-  }
-
-  $async.Future<CheckResponse> check_(
-      $pb.ClientContext ctx, CheckRequest request) {
-    var emptyResponse = CheckResponse();
-    return _client.invoke<CheckResponse>(
-        ctx, 'ConformanceService', 'Check', request, emptyResponse);
-  }
-
-  $async.Future<EvalResponse> eval($pb.ClientContext ctx, EvalRequest request) {
-    var emptyResponse = EvalResponse();
-    return _client.invoke<EvalResponse>(
-        ctx, 'ConformanceService', 'Eval', request, emptyResponse);
-  }
 }

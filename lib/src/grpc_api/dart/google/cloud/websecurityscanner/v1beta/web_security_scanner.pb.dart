@@ -4,19 +4,17 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'scan_config.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 import 'scan_run.pb.dart' as $2;
-import 'crawled_url.pb.dart' as $3;
-import 'finding.pb.dart' as $4;
-import 'finding_type_stats.pb.dart' as $5;
-import '../../../protobuf/empty.pb.dart' as $6;
+import 'crawled_url.pb.dart' as $5;
+import 'finding.pb.dart' as $3;
+import 'finding_type_stats.pb.dart' as $6;
 
 class CreateScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateScanConfigRequest',
@@ -194,8 +192,8 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'))
     ..a<$0.ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM,
         $0.ScanConfig.getDefault, $0.ScanConfig.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateScanConfigRequest() : super();
@@ -227,8 +225,8 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasScanConfig() => $_has(0);
   void clearScanConfig() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -525,8 +523,8 @@ class ListCrawledUrlsRequest extends $pb.GeneratedMessage {
 class ListCrawledUrlsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCrawledUrlsResponse',
       package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'))
-    ..pc<$3.CrawledUrl>(
-        1, 'crawledUrls', $pb.PbFieldType.PM, $3.CrawledUrl.create)
+    ..pc<$5.CrawledUrl>(
+        1, 'crawledUrls', $pb.PbFieldType.PM, $5.CrawledUrl.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -551,7 +549,7 @@ class ListCrawledUrlsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListCrawledUrlsResponse _defaultInstance;
 
-  $core.List<$3.CrawledUrl> get crawledUrls => $_getList(0);
+  $core.List<$5.CrawledUrl> get crawledUrls => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -660,7 +658,7 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
 class ListFindingsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFindingsResponse',
       package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'))
-    ..pc<$4.Finding>(1, 'findings', $pb.PbFieldType.PM, $4.Finding.create)
+    ..pc<$3.Finding>(1, 'findings', $pb.PbFieldType.PM, $3.Finding.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -684,7 +682,7 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListFindingsResponse _defaultInstance;
 
-  $core.List<$4.Finding> get findings => $_getList(0);
+  $core.List<$3.Finding> get findings => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -737,8 +735,8 @@ class ListFindingTypeStatsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListFindingTypeStatsResponse',
       package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'))
-    ..pc<$5.FindingTypeStats>(
-        1, 'findingTypeStats', $pb.PbFieldType.PM, $5.FindingTypeStats.create)
+    ..pc<$6.FindingTypeStats>(
+        1, 'findingTypeStats', $pb.PbFieldType.PM, $6.FindingTypeStats.create)
     ..hasRequiredFields = false;
 
   ListFindingTypeStatsResponse() : super();
@@ -764,101 +762,5 @@ class ListFindingTypeStatsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListFindingTypeStatsResponse _defaultInstance;
 
-  $core.List<$5.FindingTypeStats> get findingTypeStats => $_getList(0);
-}
-
-class WebSecurityScannerApi {
-  $pb.RpcClient _client;
-  WebSecurityScannerApi(this._client);
-
-  $async.Future<$0.ScanConfig> createScanConfig(
-      $pb.ClientContext ctx, CreateScanConfigRequest request) {
-    var emptyResponse = $0.ScanConfig();
-    return _client.invoke<$0.ScanConfig>(
-        ctx, 'WebSecurityScanner', 'CreateScanConfig', request, emptyResponse);
-  }
-
-  $async.Future<$6.Empty> deleteScanConfig(
-      $pb.ClientContext ctx, DeleteScanConfigRequest request) {
-    var emptyResponse = $6.Empty();
-    return _client.invoke<$6.Empty>(
-        ctx, 'WebSecurityScanner', 'DeleteScanConfig', request, emptyResponse);
-  }
-
-  $async.Future<$0.ScanConfig> getScanConfig(
-      $pb.ClientContext ctx, GetScanConfigRequest request) {
-    var emptyResponse = $0.ScanConfig();
-    return _client.invoke<$0.ScanConfig>(
-        ctx, 'WebSecurityScanner', 'GetScanConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListScanConfigsResponse> listScanConfigs(
-      $pb.ClientContext ctx, ListScanConfigsRequest request) {
-    var emptyResponse = ListScanConfigsResponse();
-    return _client.invoke<ListScanConfigsResponse>(
-        ctx, 'WebSecurityScanner', 'ListScanConfigs', request, emptyResponse);
-  }
-
-  $async.Future<$0.ScanConfig> updateScanConfig(
-      $pb.ClientContext ctx, UpdateScanConfigRequest request) {
-    var emptyResponse = $0.ScanConfig();
-    return _client.invoke<$0.ScanConfig>(
-        ctx, 'WebSecurityScanner', 'UpdateScanConfig', request, emptyResponse);
-  }
-
-  $async.Future<$2.ScanRun> startScanRun(
-      $pb.ClientContext ctx, StartScanRunRequest request) {
-    var emptyResponse = $2.ScanRun();
-    return _client.invoke<$2.ScanRun>(
-        ctx, 'WebSecurityScanner', 'StartScanRun', request, emptyResponse);
-  }
-
-  $async.Future<$2.ScanRun> getScanRun(
-      $pb.ClientContext ctx, GetScanRunRequest request) {
-    var emptyResponse = $2.ScanRun();
-    return _client.invoke<$2.ScanRun>(
-        ctx, 'WebSecurityScanner', 'GetScanRun', request, emptyResponse);
-  }
-
-  $async.Future<ListScanRunsResponse> listScanRuns(
-      $pb.ClientContext ctx, ListScanRunsRequest request) {
-    var emptyResponse = ListScanRunsResponse();
-    return _client.invoke<ListScanRunsResponse>(
-        ctx, 'WebSecurityScanner', 'ListScanRuns', request, emptyResponse);
-  }
-
-  $async.Future<$2.ScanRun> stopScanRun(
-      $pb.ClientContext ctx, StopScanRunRequest request) {
-    var emptyResponse = $2.ScanRun();
-    return _client.invoke<$2.ScanRun>(
-        ctx, 'WebSecurityScanner', 'StopScanRun', request, emptyResponse);
-  }
-
-  $async.Future<ListCrawledUrlsResponse> listCrawledUrls(
-      $pb.ClientContext ctx, ListCrawledUrlsRequest request) {
-    var emptyResponse = ListCrawledUrlsResponse();
-    return _client.invoke<ListCrawledUrlsResponse>(
-        ctx, 'WebSecurityScanner', 'ListCrawledUrls', request, emptyResponse);
-  }
-
-  $async.Future<$4.Finding> getFinding(
-      $pb.ClientContext ctx, GetFindingRequest request) {
-    var emptyResponse = $4.Finding();
-    return _client.invoke<$4.Finding>(
-        ctx, 'WebSecurityScanner', 'GetFinding', request, emptyResponse);
-  }
-
-  $async.Future<ListFindingsResponse> listFindings(
-      $pb.ClientContext ctx, ListFindingsRequest request) {
-    var emptyResponse = ListFindingsResponse();
-    return _client.invoke<ListFindingsResponse>(
-        ctx, 'WebSecurityScanner', 'ListFindings', request, emptyResponse);
-  }
-
-  $async.Future<ListFindingTypeStatsResponse> listFindingTypeStats(
-      $pb.ClientContext ctx, ListFindingTypeStatsRequest request) {
-    var emptyResponse = ListFindingTypeStatsResponse();
-    return _client.invoke<ListFindingTypeStatsResponse>(ctx,
-        'WebSecurityScanner', 'ListFindingTypeStats', request, emptyResponse);
-  }
+  $core.List<$6.FindingTypeStats> get findingTypeStats => $_getList(0);
 }

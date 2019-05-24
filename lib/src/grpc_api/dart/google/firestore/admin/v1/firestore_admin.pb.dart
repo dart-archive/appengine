@@ -4,24 +4,21 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'index.pb.dart' as $0;
-import 'field.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
-import '../../../protobuf/empty.pb.dart' as $4;
+import 'index.pb.dart' as $2;
+import 'field.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 class CreateIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIndexRequest',
       package: const $pb.PackageName('google.firestore.admin.v1'))
     ..aOS(1, 'parent')
-    ..a<$0.Index>(
-        2, 'index', $pb.PbFieldType.OM, $0.Index.getDefault, $0.Index.create)
+    ..a<$2.Index>(
+        2, 'index', $pb.PbFieldType.OM, $2.Index.getDefault, $2.Index.create)
     ..hasRequiredFields = false;
 
   CreateIndexRequest() : super();
@@ -51,8 +48,8 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Index get index => $_getN(1);
-  set index($0.Index v) {
+  $2.Index get index => $_getN(1);
+  set index($2.Index v) {
     setField(2, v);
   }
 
@@ -124,7 +121,7 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
 class ListIndexesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIndexesResponse',
       package: const $pb.PackageName('google.firestore.admin.v1'))
-    ..pc<$0.Index>(1, 'indexes', $pb.PbFieldType.PM, $0.Index.create)
+    ..pc<$2.Index>(1, 'indexes', $pb.PbFieldType.PM, $2.Index.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -147,7 +144,7 @@ class ListIndexesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListIndexesResponse _defaultInstance;
 
-  $core.List<$0.Index> get indexes => $_getList(0);
+  $core.List<$2.Index> get indexes => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -229,10 +226,10 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
 class UpdateFieldRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateFieldRequest',
       package: const $pb.PackageName('google.firestore.admin.v1'))
-    ..a<$1.Field>(
-        1, 'field_1', $pb.PbFieldType.OM, $1.Field.getDefault, $1.Field.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.Field>(
+        1, 'field_1', $pb.PbFieldType.OM, $3.Field.getDefault, $3.Field.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFieldRequest() : super();
@@ -254,16 +251,16 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateFieldRequest _defaultInstance;
 
-  $1.Field get field_1 => $_getN(0);
-  set field_1($1.Field v) {
+  $3.Field get field_1 => $_getN(0);
+  set field_1($3.Field v) {
     setField(1, v);
   }
 
   $core.bool hasField_1() => $_has(0);
   void clearField_1() => clearField(1);
 
-  $2.FieldMask get updateMask => $_getN(1);
-  set updateMask($2.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -369,7 +366,7 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
 class ListFieldsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFieldsResponse',
       package: const $pb.PackageName('google.firestore.admin.v1'))
-    ..pc<$1.Field>(1, 'fields', $pb.PbFieldType.PM, $1.Field.create)
+    ..pc<$3.Field>(1, 'fields', $pb.PbFieldType.PM, $3.Field.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -392,7 +389,7 @@ class ListFieldsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListFieldsResponse _defaultInstance;
 
-  $core.List<$1.Field> get fields => $_getList(0);
+  $core.List<$3.Field> get fields => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -497,72 +494,4 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
 
   $core.bool hasInputUriPrefix() => $_has(2);
   void clearInputUriPrefix() => clearField(3);
-}
-
-class FirestoreAdminApi {
-  $pb.RpcClient _client;
-  FirestoreAdminApi(this._client);
-
-  $async.Future<$3.Operation> createIndex(
-      $pb.ClientContext ctx, CreateIndexRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'FirestoreAdmin', 'CreateIndex', request, emptyResponse);
-  }
-
-  $async.Future<ListIndexesResponse> listIndexes(
-      $pb.ClientContext ctx, ListIndexesRequest request) {
-    var emptyResponse = ListIndexesResponse();
-    return _client.invoke<ListIndexesResponse>(
-        ctx, 'FirestoreAdmin', 'ListIndexes', request, emptyResponse);
-  }
-
-  $async.Future<$0.Index> getIndex(
-      $pb.ClientContext ctx, GetIndexRequest request) {
-    var emptyResponse = $0.Index();
-    return _client.invoke<$0.Index>(
-        ctx, 'FirestoreAdmin', 'GetIndex', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteIndex(
-      $pb.ClientContext ctx, DeleteIndexRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'FirestoreAdmin', 'DeleteIndex', request, emptyResponse);
-  }
-
-  $async.Future<$1.Field> getField_(
-      $pb.ClientContext ctx, GetFieldRequest request) {
-    var emptyResponse = $1.Field();
-    return _client.invoke<$1.Field>(
-        ctx, 'FirestoreAdmin', 'GetField', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> updateField(
-      $pb.ClientContext ctx, UpdateFieldRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'FirestoreAdmin', 'UpdateField', request, emptyResponse);
-  }
-
-  $async.Future<ListFieldsResponse> listFields(
-      $pb.ClientContext ctx, ListFieldsRequest request) {
-    var emptyResponse = ListFieldsResponse();
-    return _client.invoke<ListFieldsResponse>(
-        ctx, 'FirestoreAdmin', 'ListFields', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> exportDocuments(
-      $pb.ClientContext ctx, ExportDocumentsRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'FirestoreAdmin', 'ExportDocuments', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> importDocuments(
-      $pb.ClientContext ctx, ImportDocumentsRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'FirestoreAdmin', 'ImportDocuments', request, emptyResponse);
-  }
 }

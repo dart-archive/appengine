@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -192,23 +191,4 @@ class MutateAssetResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class AssetServiceApi {
-  $pb.RpcClient _client;
-  AssetServiceApi(this._client);
-
-  $async.Future<$0.Asset> getAsset(
-      $pb.ClientContext ctx, GetAssetRequest request) {
-    var emptyResponse = $0.Asset();
-    return _client.invoke<$0.Asset>(
-        ctx, 'AssetService', 'GetAsset', request, emptyResponse);
-  }
-
-  $async.Future<MutateAssetsResponse> mutateAssets(
-      $pb.ClientContext ctx, MutateAssetsRequest request) {
-    var emptyResponse = MutateAssetsResponse();
-    return _client.invoke<MutateAssetsResponse>(
-        ctx, 'AssetService', 'MutateAssets', request, emptyResponse);
-  }
 }

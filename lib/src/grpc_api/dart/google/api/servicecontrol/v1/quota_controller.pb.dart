@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -258,16 +257,4 @@ class QuotaError extends $pb.GeneratedMessage {
 
   $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
-}
-
-class QuotaControllerApi {
-  $pb.RpcClient _client;
-  QuotaControllerApi(this._client);
-
-  $async.Future<AllocateQuotaResponse> allocateQuota(
-      $pb.ClientContext ctx, AllocateQuotaRequest request) {
-    var emptyResponse = AllocateQuotaResponse();
-    return _client.invoke<AllocateQuotaResponse>(
-        ctx, 'QuotaController', 'AllocateQuota', request, emptyResponse);
-  }
 }

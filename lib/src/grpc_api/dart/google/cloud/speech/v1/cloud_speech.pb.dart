@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import '../../../protobuf/duration.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
+import '../../../protobuf/duration.pb.dart' as $4;
 
 import 'cloud_speech.pbenum.dart';
 
@@ -655,10 +653,10 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
       'LongRunningRecognizeMetadata',
       package: const $pb.PackageName('google.cloud.speech.v1'))
     ..a<$core.int>(1, 'progressPercent', $pb.PbFieldType.O3)
-    ..a<$0.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(3, 'lastUpdateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'lastUpdateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   LongRunningRecognizeMetadata() : super();
@@ -692,16 +690,16 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
   $core.bool hasProgressPercent() => $_has(0);
   void clearProgressPercent() => clearField(1);
 
-  $0.Timestamp get startTime => $_getN(1);
-  set startTime($0.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(1);
+  set startTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $0.Timestamp get lastUpdateTime => $_getN(2);
-  set lastUpdateTime($0.Timestamp v) {
+  $2.Timestamp get lastUpdateTime => $_getN(2);
+  set lastUpdateTime($2.Timestamp v) {
     setField(3, v);
   }
 
@@ -713,8 +711,8 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StreamingRecognizeResponse',
       package: const $pb.PackageName('google.cloud.speech.v1'))
-    ..a<$1.Status>(
-        1, 'error', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+    ..a<$3.Status>(
+        1, 'error', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
     ..pc<StreamingRecognitionResult>(
         2, 'results', $pb.PbFieldType.PM, StreamingRecognitionResult.create)
     ..e<StreamingRecognizeResponse_SpeechEventType>(
@@ -748,8 +746,8 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StreamingRecognizeResponse _defaultInstance;
 
-  $1.Status get error => $_getN(0);
-  set error($1.Status v) {
+  $3.Status get error => $_getN(0);
+  set error($3.Status v) {
     setField(1, v);
   }
 
@@ -775,8 +773,8 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
         SpeechRecognitionAlternative.create)
     ..aOB(2, 'isFinal')
     ..a<$core.double>(3, 'stability', $pb.PbFieldType.OF)
-    ..a<$2.Duration>(4, 'resultEndTime', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$4.Duration>(4, 'resultEndTime', $pb.PbFieldType.OM,
+        $4.Duration.getDefault, $4.Duration.create)
     ..a<$core.int>(5, 'channelTag', $pb.PbFieldType.O3)
     ..aOS(6, 'languageCode')
     ..hasRequiredFields = false;
@@ -821,8 +819,8 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
   $core.bool hasStability() => $_has(2);
   void clearStability() => clearField(3);
 
-  $2.Duration get resultEndTime => $_getN(3);
-  set resultEndTime($2.Duration v) {
+  $4.Duration get resultEndTime => $_getN(3);
+  set resultEndTime($4.Duration v) {
     setField(4, v);
   }
 
@@ -940,10 +938,10 @@ class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
 class WordInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WordInfo',
       package: const $pb.PackageName('google.cloud.speech.v1'))
-    ..a<$2.Duration>(1, 'startTime', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
-    ..a<$2.Duration>(2, 'endTime', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
+    ..a<$4.Duration>(1, 'startTime', $pb.PbFieldType.OM, $4.Duration.getDefault,
+        $4.Duration.create)
+    ..a<$4.Duration>(2, 'endTime', $pb.PbFieldType.OM, $4.Duration.getDefault,
+        $4.Duration.create)
     ..aOS(3, 'word')
     ..hasRequiredFields = false;
 
@@ -964,16 +962,16 @@ class WordInfo extends $pb.GeneratedMessage {
   static WordInfo getDefault() => _defaultInstance ??= create()..freeze();
   static WordInfo _defaultInstance;
 
-  $2.Duration get startTime => $_getN(0);
-  set startTime($2.Duration v) {
+  $4.Duration get startTime => $_getN(0);
+  set startTime($4.Duration v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $2.Duration get endTime => $_getN(1);
-  set endTime($2.Duration v) {
+  $4.Duration get endTime => $_getN(1);
+  set endTime($4.Duration v) {
     setField(2, v);
   }
 
@@ -987,30 +985,4 @@ class WordInfo extends $pb.GeneratedMessage {
 
   $core.bool hasWord() => $_has(2);
   void clearWord() => clearField(3);
-}
-
-class SpeechApi {
-  $pb.RpcClient _client;
-  SpeechApi(this._client);
-
-  $async.Future<RecognizeResponse> recognize(
-      $pb.ClientContext ctx, RecognizeRequest request) {
-    var emptyResponse = RecognizeResponse();
-    return _client.invoke<RecognizeResponse>(
-        ctx, 'Speech', 'Recognize', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> longRunningRecognize(
-      $pb.ClientContext ctx, LongRunningRecognizeRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'Speech', 'LongRunningRecognize', request, emptyResponse);
-  }
-
-  $async.Future<StreamingRecognizeResponse> streamingRecognize(
-      $pb.ClientContext ctx, StreamingRecognizeRequest request) {
-    var emptyResponse = StreamingRecognizeResponse();
-    return _client.invoke<StreamingRecognizeResponse>(
-        ctx, 'Speech', 'StreamingRecognize', request, emptyResponse);
-  }
 }

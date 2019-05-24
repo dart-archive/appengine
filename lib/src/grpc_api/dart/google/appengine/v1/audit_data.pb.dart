@@ -9,7 +9,7 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'appengine.pb.dart' as $0;
+import 'appengine.pb.dart' as $7;
 
 enum AuditData_Method { updateService, createVersion, notSet }
 
@@ -68,8 +68,8 @@ class AuditData extends $pb.GeneratedMessage {
 class UpdateServiceMethod extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateServiceMethod',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..a<$0.UpdateServiceRequest>(1, 'request', $pb.PbFieldType.OM,
-        $0.UpdateServiceRequest.getDefault, $0.UpdateServiceRequest.create)
+    ..a<$7.UpdateServiceRequest>(1, 'request', $pb.PbFieldType.OM,
+        $7.UpdateServiceRequest.getDefault, $7.UpdateServiceRequest.create)
     ..hasRequiredFields = false;
 
   UpdateServiceMethod() : super();
@@ -91,8 +91,8 @@ class UpdateServiceMethod extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateServiceMethod _defaultInstance;
 
-  $0.UpdateServiceRequest get request => $_getN(0);
-  set request($0.UpdateServiceRequest v) {
+  $7.UpdateServiceRequest get request => $_getN(0);
+  set request($7.UpdateServiceRequest v) {
     setField(1, v);
   }
 
@@ -103,8 +103,8 @@ class UpdateServiceMethod extends $pb.GeneratedMessage {
 class CreateVersionMethod extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionMethod',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..a<$0.CreateVersionRequest>(1, 'request', $pb.PbFieldType.OM,
-        $0.CreateVersionRequest.getDefault, $0.CreateVersionRequest.create)
+    ..a<$7.CreateVersionRequest>(1, 'request', $pb.PbFieldType.OM,
+        $7.CreateVersionRequest.getDefault, $7.CreateVersionRequest.create)
     ..hasRequiredFields = false;
 
   CreateVersionMethod() : super();
@@ -126,8 +126,8 @@ class CreateVersionMethod extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateVersionMethod _defaultInstance;
 
-  $0.CreateVersionRequest get request => $_getN(0);
-  set request($0.CreateVersionRequest v) {
+  $7.CreateVersionRequest get request => $_getN(0);
+  set request($7.CreateVersionRequest v) {
     setField(1, v);
   }
 

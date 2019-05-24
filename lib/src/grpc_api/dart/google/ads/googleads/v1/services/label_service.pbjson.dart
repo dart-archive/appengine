@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/label.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../common/text_label.pbjson.dart' as $4;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-
 const GetLabelRequest$json = {
   '1': 'GetLabelRequest',
   '2': [
@@ -98,39 +91,4 @@ const MutateLabelResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const LabelServiceBase$json = {
-  '1': 'LabelService',
-  '2': [
-    {
-      '1': 'GetLabel',
-      '2': '.google.ads.googleads.v1.services.GetLabelRequest',
-      '3': '.google.ads.googleads.v1.resources.Label',
-      '4': {}
-    },
-    {
-      '1': 'MutateLabels',
-      '2': '.google.ads.googleads.v1.services.MutateLabelsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateLabelsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const LabelServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetLabelRequest': GetLabelRequest$json,
-  '.google.ads.googleads.v1.resources.Label': $0.Label$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.common.TextLabel': $4.TextLabel$json,
-  '.google.ads.googleads.v1.services.MutateLabelsRequest':
-      MutateLabelsRequest$json,
-  '.google.ads.googleads.v1.services.LabelOperation': LabelOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateLabelsResponse':
-      MutateLabelsResponse$json,
-  '.google.ads.googleads.v1.services.MutateLabelResult': MutateLabelResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $5.Any$json,
 };

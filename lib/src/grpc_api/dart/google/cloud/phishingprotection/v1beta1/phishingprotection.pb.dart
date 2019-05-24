@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -80,20 +79,4 @@ class ReportPhishingResponse extends $pb.GeneratedMessage {
   static ReportPhishingResponse getDefault() =>
       _defaultInstance ??= create()..freeze();
   static ReportPhishingResponse _defaultInstance;
-}
-
-class PhishingProtectionServiceV1Beta1Api {
-  $pb.RpcClient _client;
-  PhishingProtectionServiceV1Beta1Api(this._client);
-
-  $async.Future<ReportPhishingResponse> reportPhishing(
-      $pb.ClientContext ctx, ReportPhishingRequest request) {
-    var emptyResponse = ReportPhishingResponse();
-    return _client.invoke<ReportPhishingResponse>(
-        ctx,
-        'PhishingProtectionServiceV1Beta1',
-        'ReportPhishing',
-        request,
-        emptyResponse);
-  }
 }

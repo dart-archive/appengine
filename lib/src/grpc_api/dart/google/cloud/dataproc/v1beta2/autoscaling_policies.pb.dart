@@ -4,14 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../protobuf/duration.pb.dart' as $2;
 
 enum AutoscalingPolicy_Algorithm { basicAlgorithm, notSet }
 
@@ -115,8 +113,8 @@ class BasicAutoscalingAlgorithm extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         BasicYarnAutoscalingConfig.getDefault,
         BasicYarnAutoscalingConfig.create)
-    ..a<$0.Duration>(2, 'cooldownPeriod', $pb.PbFieldType.OM,
-        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$2.Duration>(2, 'cooldownPeriod', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
     ..hasRequiredFields = false;
 
   BasicAutoscalingAlgorithm() : super();
@@ -149,8 +147,8 @@ class BasicAutoscalingAlgorithm extends $pb.GeneratedMessage {
   $core.bool hasYarnConfig() => $_has(0);
   void clearYarnConfig() => clearField(1);
 
-  $0.Duration get cooldownPeriod => $_getN(1);
-  set cooldownPeriod($0.Duration v) {
+  $2.Duration get cooldownPeriod => $_getN(1);
+  set cooldownPeriod($2.Duration v) {
     setField(2, v);
   }
 
@@ -166,8 +164,8 @@ class BasicYarnAutoscalingConfig extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'scaleDownFactor', $pb.PbFieldType.OD)
     ..a<$core.double>(3, 'scaleUpMinWorkerFraction', $pb.PbFieldType.OD)
     ..a<$core.double>(4, 'scaleDownMinWorkerFraction', $pb.PbFieldType.OD)
-    ..a<$0.Duration>(5, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
-        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$2.Duration>(5, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
     ..hasRequiredFields = false;
 
   BasicYarnAutoscalingConfig() : super();
@@ -224,8 +222,8 @@ class BasicYarnAutoscalingConfig extends $pb.GeneratedMessage {
   $core.bool hasScaleDownMinWorkerFraction() => $_has(3);
   void clearScaleDownMinWorkerFraction() => clearField(4);
 
-  $0.Duration get gracefulDecommissionTimeout => $_getN(4);
-  set gracefulDecommissionTimeout($0.Duration v) {
+  $2.Duration get gracefulDecommissionTimeout => $_getN(4);
+  set gracefulDecommissionTimeout($2.Duration v) {
     setField(5, v);
   }
 
@@ -554,48 +552,4 @@ class ListAutoscalingPoliciesResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class AutoscalingPolicyServiceApi {
-  $pb.RpcClient _client;
-  AutoscalingPolicyServiceApi(this._client);
-
-  $async.Future<AutoscalingPolicy> createAutoscalingPolicy(
-      $pb.ClientContext ctx, CreateAutoscalingPolicyRequest request) {
-    var emptyResponse = AutoscalingPolicy();
-    return _client.invoke<AutoscalingPolicy>(ctx, 'AutoscalingPolicyService',
-        'CreateAutoscalingPolicy', request, emptyResponse);
-  }
-
-  $async.Future<AutoscalingPolicy> updateAutoscalingPolicy(
-      $pb.ClientContext ctx, UpdateAutoscalingPolicyRequest request) {
-    var emptyResponse = AutoscalingPolicy();
-    return _client.invoke<AutoscalingPolicy>(ctx, 'AutoscalingPolicyService',
-        'UpdateAutoscalingPolicy', request, emptyResponse);
-  }
-
-  $async.Future<AutoscalingPolicy> getAutoscalingPolicy(
-      $pb.ClientContext ctx, GetAutoscalingPolicyRequest request) {
-    var emptyResponse = AutoscalingPolicy();
-    return _client.invoke<AutoscalingPolicy>(ctx, 'AutoscalingPolicyService',
-        'GetAutoscalingPolicy', request, emptyResponse);
-  }
-
-  $async.Future<ListAutoscalingPoliciesResponse> listAutoscalingPolicies(
-      $pb.ClientContext ctx, ListAutoscalingPoliciesRequest request) {
-    var emptyResponse = ListAutoscalingPoliciesResponse();
-    return _client.invoke<ListAutoscalingPoliciesResponse>(
-        ctx,
-        'AutoscalingPolicyService',
-        'ListAutoscalingPolicies',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$1.Empty> deleteAutoscalingPolicy(
-      $pb.ClientContext ctx, DeleteAutoscalingPolicyRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(ctx, 'AutoscalingPolicyService',
-        'DeleteAutoscalingPolicy', request, emptyResponse);
-  }
 }

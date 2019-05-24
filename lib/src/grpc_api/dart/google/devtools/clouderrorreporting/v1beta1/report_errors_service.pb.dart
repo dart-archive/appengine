@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -151,16 +150,4 @@ class ReportedErrorEvent extends $pb.GeneratedMessage {
 
   $core.bool hasContext() => $_has(3);
   void clearContext() => clearField(4);
-}
-
-class ReportErrorsServiceApi {
-  $pb.RpcClient _client;
-  ReportErrorsServiceApi(this._client);
-
-  $async.Future<ReportErrorEventResponse> reportErrorEvent(
-      $pb.ClientContext ctx, ReportErrorEventRequest request) {
-    var emptyResponse = ReportErrorEventResponse();
-    return _client.invoke<ReportErrorEventResponse>(
-        ctx, 'ReportErrorsService', 'ReportErrorEvent', request, emptyResponse);
-  }
 }

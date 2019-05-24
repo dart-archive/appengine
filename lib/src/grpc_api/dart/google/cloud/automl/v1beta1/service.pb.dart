@@ -4,28 +4,26 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'dataset.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import 'io.pb.dart' as $2;
+import 'dataset.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $7;
+import 'io.pb.dart' as $8;
 import 'table_spec.pb.dart' as $3;
 import 'column_spec.pb.dart' as $4;
 import 'model.pb.dart' as $5;
-import 'image.pb.dart' as $6;
-import 'model_evaluation.pb.dart' as $7;
-import '../../../longrunning/operations.pb.dart' as $8;
+import 'image.pb.dart' as $9;
+import 'model_evaluation.pb.dart' as $6;
 
 class CreateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDatasetRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $0.Dataset.getDefault,
-        $0.Dataset.create)
+    ..a<$1.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $1.Dataset.getDefault,
+        $1.Dataset.create)
     ..hasRequiredFields = false;
 
   CreateDatasetRequest() : super();
@@ -56,8 +54,8 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Dataset get dataset => $_getN(1);
-  set dataset($0.Dataset v) {
+  $1.Dataset get dataset => $_getN(1);
+  set dataset($1.Dataset v) {
     setField(2, v);
   }
 
@@ -163,7 +161,7 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
 class ListDatasetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$0.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $0.Dataset.create)
+    ..pc<$1.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $1.Dataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -187,7 +185,7 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDatasetsResponse _defaultInstance;
 
-  $core.List<$0.Dataset> get datasets => $_getList(0);
+  $core.List<$1.Dataset> get datasets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -201,10 +199,10 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
 class UpdateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDatasetRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$0.Dataset>(1, 'dataset', $pb.PbFieldType.OM, $0.Dataset.getDefault,
-        $0.Dataset.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$1.Dataset>(1, 'dataset', $pb.PbFieldType.OM, $1.Dataset.getDefault,
+        $1.Dataset.create)
+    ..a<$7.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDatasetRequest() : super();
@@ -227,16 +225,16 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateDatasetRequest _defaultInstance;
 
-  $0.Dataset get dataset => $_getN(0);
-  set dataset($0.Dataset v) {
+  $1.Dataset get dataset => $_getN(0);
+  set dataset($1.Dataset v) {
     setField(1, v);
   }
 
   $core.bool hasDataset() => $_has(0);
   void clearDataset() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $7.FieldMask get updateMask => $_getN(1);
+  set updateMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -283,8 +281,8 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDataRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$2.InputConfig>(3, 'inputConfig', $pb.PbFieldType.OM,
-        $2.InputConfig.getDefault, $2.InputConfig.create)
+    ..a<$8.InputConfig>(3, 'inputConfig', $pb.PbFieldType.OM,
+        $8.InputConfig.getDefault, $8.InputConfig.create)
     ..hasRequiredFields = false;
 
   ImportDataRequest() : super();
@@ -314,8 +312,8 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.InputConfig get inputConfig => $_getN(1);
-  set inputConfig($2.InputConfig v) {
+  $8.InputConfig get inputConfig => $_getN(1);
+  set inputConfig($8.InputConfig v) {
     setField(3, v);
   }
 
@@ -327,8 +325,8 @@ class ExportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportDataRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$2.OutputConfig>(3, 'outputConfig', $pb.PbFieldType.OM,
-        $2.OutputConfig.getDefault, $2.OutputConfig.create)
+    ..a<$8.OutputConfig>(3, 'outputConfig', $pb.PbFieldType.OM,
+        $8.OutputConfig.getDefault, $8.OutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportDataRequest() : super();
@@ -358,8 +356,8 @@ class ExportDataRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.OutputConfig get outputConfig => $_getN(1);
-  set outputConfig($2.OutputConfig v) {
+  $8.OutputConfig get outputConfig => $_getN(1);
+  set outputConfig($8.OutputConfig v) {
     setField(3, v);
   }
 
@@ -407,8 +405,8 @@ class GetTableSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTableSpecRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$1.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetTableSpecRequest() : super();
@@ -438,8 +436,8 @@ class GetTableSpecRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $1.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($1.FieldMask v) {
+  $7.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -451,8 +449,8 @@ class ListTableSpecsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTableSpecsRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -487,8 +485,8 @@ class ListTableSpecsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($1.FieldMask v) {
+  $7.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -564,8 +562,8 @@ class UpdateTableSpecRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..a<$3.TableSpec>(1, 'tableSpec', $pb.PbFieldType.OM,
         $3.TableSpec.getDefault, $3.TableSpec.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$7.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTableSpecRequest() : super();
@@ -597,8 +595,8 @@ class UpdateTableSpecRequest extends $pb.GeneratedMessage {
   $core.bool hasTableSpec() => $_has(0);
   void clearTableSpec() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $7.FieldMask get updateMask => $_getN(1);
+  set updateMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -610,8 +608,8 @@ class GetColumnSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetColumnSpecRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$1.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetColumnSpecRequest() : super();
@@ -642,8 +640,8 @@ class GetColumnSpecRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $1.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($1.FieldMask v) {
+  $7.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -655,8 +653,8 @@ class ListColumnSpecsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListColumnSpecsRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -691,8 +689,8 @@ class ListColumnSpecsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($1.FieldMask v) {
+  $7.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -769,8 +767,8 @@ class UpdateColumnSpecRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..a<$4.ColumnSpec>(1, 'columnSpec', $pb.PbFieldType.OM,
         $4.ColumnSpec.getDefault, $4.ColumnSpec.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$7.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateColumnSpecRequest() : super();
@@ -802,8 +800,8 @@ class UpdateColumnSpecRequest extends $pb.GeneratedMessage {
   $core.bool hasColumnSpec() => $_has(0);
   void clearColumnSpec() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $7.FieldMask get updateMask => $_getN(1);
+  set updateMask($7.FieldMask v) {
     setField(2, v);
   }
 
@@ -1036,12 +1034,12 @@ class DeployModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeployModelRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$6.ImageObjectDetectionModelDeploymentMetadata>(
+    ..a<$9.ImageObjectDetectionModelDeploymentMetadata>(
         2,
         'imageObjectDetectionModelDeploymentMetadata',
         $pb.PbFieldType.OM,
-        $6.ImageObjectDetectionModelDeploymentMetadata.getDefault,
-        $6.ImageObjectDetectionModelDeploymentMetadata.create)
+        $9.ImageObjectDetectionModelDeploymentMetadata.getDefault,
+        $9.ImageObjectDetectionModelDeploymentMetadata.create)
     ..oo(0, [2])
     ..hasRequiredFields = false;
 
@@ -1076,10 +1074,10 @@ class DeployModelRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $6.ImageObjectDetectionModelDeploymentMetadata
+  $9.ImageObjectDetectionModelDeploymentMetadata
       get imageObjectDetectionModelDeploymentMetadata => $_getN(1);
   set imageObjectDetectionModelDeploymentMetadata(
-      $6.ImageObjectDetectionModelDeploymentMetadata v) {
+      $9.ImageObjectDetectionModelDeploymentMetadata v) {
     setField(2, v);
   }
 
@@ -1126,12 +1124,12 @@ class ExportModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportModelRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$2.ModelExportOutputConfig>(
+    ..a<$8.ModelExportOutputConfig>(
         3,
         'outputConfig',
         $pb.PbFieldType.OM,
-        $2.ModelExportOutputConfig.getDefault,
-        $2.ModelExportOutputConfig.create)
+        $8.ModelExportOutputConfig.getDefault,
+        $8.ModelExportOutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportModelRequest() : super();
@@ -1161,8 +1159,8 @@ class ExportModelRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.ModelExportOutputConfig get outputConfig => $_getN(1);
-  set outputConfig($2.ModelExportOutputConfig v) {
+  $8.ModelExportOutputConfig get outputConfig => $_getN(1);
+  set outputConfig($8.ModelExportOutputConfig v) {
     setField(3, v);
   }
 
@@ -1175,12 +1173,12 @@ class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
       'ExportEvaluatedExamplesRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$2.ExportEvaluatedExamplesOutputConfig>(
+    ..a<$8.ExportEvaluatedExamplesOutputConfig>(
         3,
         'outputConfig',
         $pb.PbFieldType.OM,
-        $2.ExportEvaluatedExamplesOutputConfig.getDefault,
-        $2.ExportEvaluatedExamplesOutputConfig.create)
+        $8.ExportEvaluatedExamplesOutputConfig.getDefault,
+        $8.ExportEvaluatedExamplesOutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportEvaluatedExamplesRequest() : super();
@@ -1214,8 +1212,8 @@ class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.ExportEvaluatedExamplesOutputConfig get outputConfig => $_getN(1);
-  set outputConfig($2.ExportEvaluatedExamplesOutputConfig v) {
+  $8.ExportEvaluatedExamplesOutputConfig get outputConfig => $_getN(1);
+  set outputConfig($8.ExportEvaluatedExamplesOutputConfig v) {
     setField(3, v);
   }
 
@@ -1329,8 +1327,8 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListModelEvaluationsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$7.ModelEvaluation>(
-        1, 'modelEvaluation', $pb.PbFieldType.PM, $7.ModelEvaluation.create)
+    ..pc<$6.ModelEvaluation>(
+        1, 'modelEvaluation', $pb.PbFieldType.PM, $6.ModelEvaluation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1357,7 +1355,7 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListModelEvaluationsResponse _defaultInstance;
 
-  $core.List<$7.ModelEvaluation> get modelEvaluation => $_getList(0);
+  $core.List<$6.ModelEvaluation> get modelEvaluation => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1366,177 +1364,4 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class AutoMlApi {
-  $pb.RpcClient _client;
-  AutoMlApi(this._client);
-
-  $async.Future<$0.Dataset> createDataset(
-      $pb.ClientContext ctx, CreateDatasetRequest request) {
-    var emptyResponse = $0.Dataset();
-    return _client.invoke<$0.Dataset>(
-        ctx, 'AutoMl', 'CreateDataset', request, emptyResponse);
-  }
-
-  $async.Future<$0.Dataset> getDataset(
-      $pb.ClientContext ctx, GetDatasetRequest request) {
-    var emptyResponse = $0.Dataset();
-    return _client.invoke<$0.Dataset>(
-        ctx, 'AutoMl', 'GetDataset', request, emptyResponse);
-  }
-
-  $async.Future<ListDatasetsResponse> listDatasets(
-      $pb.ClientContext ctx, ListDatasetsRequest request) {
-    var emptyResponse = ListDatasetsResponse();
-    return _client.invoke<ListDatasetsResponse>(
-        ctx, 'AutoMl', 'ListDatasets', request, emptyResponse);
-  }
-
-  $async.Future<$0.Dataset> updateDataset(
-      $pb.ClientContext ctx, UpdateDatasetRequest request) {
-    var emptyResponse = $0.Dataset();
-    return _client.invoke<$0.Dataset>(
-        ctx, 'AutoMl', 'UpdateDataset', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> deleteDataset(
-      $pb.ClientContext ctx, DeleteDatasetRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'DeleteDataset', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> importData(
-      $pb.ClientContext ctx, ImportDataRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'ImportData', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> exportData(
-      $pb.ClientContext ctx, ExportDataRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'ExportData', request, emptyResponse);
-  }
-
-  $async.Future<$0.AnnotationSpec> getAnnotationSpec(
-      $pb.ClientContext ctx, GetAnnotationSpecRequest request) {
-    var emptyResponse = $0.AnnotationSpec();
-    return _client.invoke<$0.AnnotationSpec>(
-        ctx, 'AutoMl', 'GetAnnotationSpec', request, emptyResponse);
-  }
-
-  $async.Future<$3.TableSpec> getTableSpec(
-      $pb.ClientContext ctx, GetTableSpecRequest request) {
-    var emptyResponse = $3.TableSpec();
-    return _client.invoke<$3.TableSpec>(
-        ctx, 'AutoMl', 'GetTableSpec', request, emptyResponse);
-  }
-
-  $async.Future<ListTableSpecsResponse> listTableSpecs(
-      $pb.ClientContext ctx, ListTableSpecsRequest request) {
-    var emptyResponse = ListTableSpecsResponse();
-    return _client.invoke<ListTableSpecsResponse>(
-        ctx, 'AutoMl', 'ListTableSpecs', request, emptyResponse);
-  }
-
-  $async.Future<$3.TableSpec> updateTableSpec(
-      $pb.ClientContext ctx, UpdateTableSpecRequest request) {
-    var emptyResponse = $3.TableSpec();
-    return _client.invoke<$3.TableSpec>(
-        ctx, 'AutoMl', 'UpdateTableSpec', request, emptyResponse);
-  }
-
-  $async.Future<$4.ColumnSpec> getColumnSpec(
-      $pb.ClientContext ctx, GetColumnSpecRequest request) {
-    var emptyResponse = $4.ColumnSpec();
-    return _client.invoke<$4.ColumnSpec>(
-        ctx, 'AutoMl', 'GetColumnSpec', request, emptyResponse);
-  }
-
-  $async.Future<ListColumnSpecsResponse> listColumnSpecs(
-      $pb.ClientContext ctx, ListColumnSpecsRequest request) {
-    var emptyResponse = ListColumnSpecsResponse();
-    return _client.invoke<ListColumnSpecsResponse>(
-        ctx, 'AutoMl', 'ListColumnSpecs', request, emptyResponse);
-  }
-
-  $async.Future<$4.ColumnSpec> updateColumnSpec(
-      $pb.ClientContext ctx, UpdateColumnSpecRequest request) {
-    var emptyResponse = $4.ColumnSpec();
-    return _client.invoke<$4.ColumnSpec>(
-        ctx, 'AutoMl', 'UpdateColumnSpec', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> createModel(
-      $pb.ClientContext ctx, CreateModelRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'CreateModel', request, emptyResponse);
-  }
-
-  $async.Future<$5.Model> getModel(
-      $pb.ClientContext ctx, GetModelRequest request) {
-    var emptyResponse = $5.Model();
-    return _client.invoke<$5.Model>(
-        ctx, 'AutoMl', 'GetModel', request, emptyResponse);
-  }
-
-  $async.Future<ListModelsResponse> listModels(
-      $pb.ClientContext ctx, ListModelsRequest request) {
-    var emptyResponse = ListModelsResponse();
-    return _client.invoke<ListModelsResponse>(
-        ctx, 'AutoMl', 'ListModels', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> deleteModel(
-      $pb.ClientContext ctx, DeleteModelRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'DeleteModel', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> deployModel(
-      $pb.ClientContext ctx, DeployModelRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'DeployModel', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> undeployModel(
-      $pb.ClientContext ctx, UndeployModelRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'UndeployModel', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> exportModel(
-      $pb.ClientContext ctx, ExportModelRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'ExportModel', request, emptyResponse);
-  }
-
-  $async.Future<$8.Operation> exportEvaluatedExamples(
-      $pb.ClientContext ctx, ExportEvaluatedExamplesRequest request) {
-    var emptyResponse = $8.Operation();
-    return _client.invoke<$8.Operation>(
-        ctx, 'AutoMl', 'ExportEvaluatedExamples', request, emptyResponse);
-  }
-
-  $async.Future<$7.ModelEvaluation> getModelEvaluation(
-      $pb.ClientContext ctx, GetModelEvaluationRequest request) {
-    var emptyResponse = $7.ModelEvaluation();
-    return _client.invoke<$7.ModelEvaluation>(
-        ctx, 'AutoMl', 'GetModelEvaluation', request, emptyResponse);
-  }
-
-  $async.Future<ListModelEvaluationsResponse> listModelEvaluations(
-      $pb.ClientContext ctx, ListModelEvaluationsRequest request) {
-    var emptyResponse = ListModelEvaluationsResponse();
-    return _client.invoke<ListModelEvaluationsResponse>(
-        ctx, 'AutoMl', 'ListModelEvaluations', request, emptyResponse);
-  }
 }

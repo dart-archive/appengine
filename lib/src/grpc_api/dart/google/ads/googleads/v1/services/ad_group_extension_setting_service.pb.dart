@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -291,32 +290,4 @@ class MutateAdGroupExtensionSettingResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class AdGroupExtensionSettingServiceApi {
-  $pb.RpcClient _client;
-  AdGroupExtensionSettingServiceApi(this._client);
-
-  $async.Future<$0.AdGroupExtensionSetting> getAdGroupExtensionSetting(
-      $pb.ClientContext ctx, GetAdGroupExtensionSettingRequest request) {
-    var emptyResponse = $0.AdGroupExtensionSetting();
-    return _client.invoke<$0.AdGroupExtensionSetting>(
-        ctx,
-        'AdGroupExtensionSettingService',
-        'GetAdGroupExtensionSetting',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateAdGroupExtensionSettingsResponse>
-      mutateAdGroupExtensionSettings($pb.ClientContext ctx,
-          MutateAdGroupExtensionSettingsRequest request) {
-    var emptyResponse = MutateAdGroupExtensionSettingsResponse();
-    return _client.invoke<MutateAdGroupExtensionSettingsResponse>(
-        ctx,
-        'AdGroupExtensionSettingService',
-        'MutateAdGroupExtensionSettings',
-        request,
-        emptyResponse);
-  }
 }

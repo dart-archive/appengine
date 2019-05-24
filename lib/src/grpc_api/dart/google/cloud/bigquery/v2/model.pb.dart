@@ -4,18 +4,16 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'model_reference.pb.dart' as $0;
-import 'standard_sql.pb.dart' as $1;
-import '../../../protobuf/wrappers.pb.dart' as $2;
-import '../../../protobuf/timestamp.pb.dart' as $3;
-import '../../../protobuf/empty.pb.dart' as $4;
+import 'model_reference.pb.dart' as $1;
+import 'standard_sql.pb.dart' as $2;
+import '../../../protobuf/wrappers.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $4;
 
 import 'model.pbenum.dart';
 
@@ -24,16 +22,16 @@ export 'model.pbenum.dart';
 class Model_RegressionMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model.RegressionMetrics',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..a<$2.DoubleValue>(1, 'meanAbsoluteError', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(2, 'meanSquaredError', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(3, 'meanSquaredLogError', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(4, 'medianAbsoluteError', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(5, 'rSquared', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$3.DoubleValue>(1, 'meanAbsoluteError', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(2, 'meanSquaredError', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(3, 'meanSquaredLogError', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(4, 'medianAbsoluteError', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(5, 'rSquared', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
     ..hasRequiredFields = false;
 
   Model_RegressionMetrics() : super();
@@ -57,40 +55,40 @@ class Model_RegressionMetrics extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static Model_RegressionMetrics _defaultInstance;
 
-  $2.DoubleValue get meanAbsoluteError => $_getN(0);
-  set meanAbsoluteError($2.DoubleValue v) {
+  $3.DoubleValue get meanAbsoluteError => $_getN(0);
+  set meanAbsoluteError($3.DoubleValue v) {
     setField(1, v);
   }
 
   $core.bool hasMeanAbsoluteError() => $_has(0);
   void clearMeanAbsoluteError() => clearField(1);
 
-  $2.DoubleValue get meanSquaredError => $_getN(1);
-  set meanSquaredError($2.DoubleValue v) {
+  $3.DoubleValue get meanSquaredError => $_getN(1);
+  set meanSquaredError($3.DoubleValue v) {
     setField(2, v);
   }
 
   $core.bool hasMeanSquaredError() => $_has(1);
   void clearMeanSquaredError() => clearField(2);
 
-  $2.DoubleValue get meanSquaredLogError => $_getN(2);
-  set meanSquaredLogError($2.DoubleValue v) {
+  $3.DoubleValue get meanSquaredLogError => $_getN(2);
+  set meanSquaredLogError($3.DoubleValue v) {
     setField(3, v);
   }
 
   $core.bool hasMeanSquaredLogError() => $_has(2);
   void clearMeanSquaredLogError() => clearField(3);
 
-  $2.DoubleValue get medianAbsoluteError => $_getN(3);
-  set medianAbsoluteError($2.DoubleValue v) {
+  $3.DoubleValue get medianAbsoluteError => $_getN(3);
+  set medianAbsoluteError($3.DoubleValue v) {
     setField(4, v);
   }
 
   $core.bool hasMedianAbsoluteError() => $_has(3);
   void clearMedianAbsoluteError() => clearField(4);
 
-  $2.DoubleValue get rSquared => $_getN(4);
-  set rSquared($2.DoubleValue v) {
+  $3.DoubleValue get rSquared => $_getN(4);
+  set rSquared($3.DoubleValue v) {
     setField(5, v);
   }
 
@@ -102,20 +100,20 @@ class Model_AggregateClassificationMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Model.AggregateClassificationMetrics',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..a<$2.DoubleValue>(1, 'precision', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(2, 'recall', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(3, 'accuracy', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(4, 'threshold', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(5, 'f1Score', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(6, 'logLoss', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(7, 'rocAuc', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$3.DoubleValue>(1, 'precision', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(2, 'recall', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(3, 'accuracy', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(4, 'threshold', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(5, 'f1Score', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(6, 'logLoss', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(7, 'rocAuc', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
     ..hasRequiredFields = false;
 
   Model_AggregateClassificationMetrics() : super();
@@ -141,56 +139,56 @@ class Model_AggregateClassificationMetrics extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static Model_AggregateClassificationMetrics _defaultInstance;
 
-  $2.DoubleValue get precision => $_getN(0);
-  set precision($2.DoubleValue v) {
+  $3.DoubleValue get precision => $_getN(0);
+  set precision($3.DoubleValue v) {
     setField(1, v);
   }
 
   $core.bool hasPrecision() => $_has(0);
   void clearPrecision() => clearField(1);
 
-  $2.DoubleValue get recall => $_getN(1);
-  set recall($2.DoubleValue v) {
+  $3.DoubleValue get recall => $_getN(1);
+  set recall($3.DoubleValue v) {
     setField(2, v);
   }
 
   $core.bool hasRecall() => $_has(1);
   void clearRecall() => clearField(2);
 
-  $2.DoubleValue get accuracy => $_getN(2);
-  set accuracy($2.DoubleValue v) {
+  $3.DoubleValue get accuracy => $_getN(2);
+  set accuracy($3.DoubleValue v) {
     setField(3, v);
   }
 
   $core.bool hasAccuracy() => $_has(2);
   void clearAccuracy() => clearField(3);
 
-  $2.DoubleValue get threshold => $_getN(3);
-  set threshold($2.DoubleValue v) {
+  $3.DoubleValue get threshold => $_getN(3);
+  set threshold($3.DoubleValue v) {
     setField(4, v);
   }
 
   $core.bool hasThreshold() => $_has(3);
   void clearThreshold() => clearField(4);
 
-  $2.DoubleValue get f1Score => $_getN(4);
-  set f1Score($2.DoubleValue v) {
+  $3.DoubleValue get f1Score => $_getN(4);
+  set f1Score($3.DoubleValue v) {
     setField(5, v);
   }
 
   $core.bool hasF1Score() => $_has(4);
   void clearF1Score() => clearField(5);
 
-  $2.DoubleValue get logLoss => $_getN(5);
-  set logLoss($2.DoubleValue v) {
+  $3.DoubleValue get logLoss => $_getN(5);
+  set logLoss($3.DoubleValue v) {
     setField(6, v);
   }
 
   $core.bool hasLogLoss() => $_has(5);
   void clearLogLoss() => clearField(6);
 
-  $2.DoubleValue get rocAuc => $_getN(6);
-  set rocAuc($2.DoubleValue v) {
+  $3.DoubleValue get rocAuc => $_getN(6);
+  set rocAuc($3.DoubleValue v) {
     setField(7, v);
   }
 
@@ -203,20 +201,20 @@ class Model_BinaryClassificationMetrics_BinaryConfusionMatrix
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Model.BinaryClassificationMetrics.BinaryConfusionMatrix',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..a<$2.DoubleValue>(1, 'positiveClassThreshold', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.Int64Value>(2, 'truePositives', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
-    ..a<$2.Int64Value>(3, 'falsePositives', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
-    ..a<$2.Int64Value>(4, 'trueNegatives', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
-    ..a<$2.Int64Value>(5, 'falseNegatives', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
-    ..a<$2.DoubleValue>(6, 'precision', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(7, 'recall', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$3.DoubleValue>(1, 'positiveClassThreshold', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.Int64Value>(2, 'truePositives', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
+    ..a<$3.Int64Value>(3, 'falsePositives', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
+    ..a<$3.Int64Value>(4, 'trueNegatives', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
+    ..a<$3.Int64Value>(5, 'falseNegatives', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
+    ..a<$3.DoubleValue>(6, 'precision', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(7, 'recall', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
     ..hasRequiredFields = false;
 
   Model_BinaryClassificationMetrics_BinaryConfusionMatrix() : super();
@@ -249,56 +247,56 @@ class Model_BinaryClassificationMetrics_BinaryConfusionMatrix
   static Model_BinaryClassificationMetrics_BinaryConfusionMatrix
       _defaultInstance;
 
-  $2.DoubleValue get positiveClassThreshold => $_getN(0);
-  set positiveClassThreshold($2.DoubleValue v) {
+  $3.DoubleValue get positiveClassThreshold => $_getN(0);
+  set positiveClassThreshold($3.DoubleValue v) {
     setField(1, v);
   }
 
   $core.bool hasPositiveClassThreshold() => $_has(0);
   void clearPositiveClassThreshold() => clearField(1);
 
-  $2.Int64Value get truePositives => $_getN(1);
-  set truePositives($2.Int64Value v) {
+  $3.Int64Value get truePositives => $_getN(1);
+  set truePositives($3.Int64Value v) {
     setField(2, v);
   }
 
   $core.bool hasTruePositives() => $_has(1);
   void clearTruePositives() => clearField(2);
 
-  $2.Int64Value get falsePositives => $_getN(2);
-  set falsePositives($2.Int64Value v) {
+  $3.Int64Value get falsePositives => $_getN(2);
+  set falsePositives($3.Int64Value v) {
     setField(3, v);
   }
 
   $core.bool hasFalsePositives() => $_has(2);
   void clearFalsePositives() => clearField(3);
 
-  $2.Int64Value get trueNegatives => $_getN(3);
-  set trueNegatives($2.Int64Value v) {
+  $3.Int64Value get trueNegatives => $_getN(3);
+  set trueNegatives($3.Int64Value v) {
     setField(4, v);
   }
 
   $core.bool hasTrueNegatives() => $_has(3);
   void clearTrueNegatives() => clearField(4);
 
-  $2.Int64Value get falseNegatives => $_getN(4);
-  set falseNegatives($2.Int64Value v) {
+  $3.Int64Value get falseNegatives => $_getN(4);
+  set falseNegatives($3.Int64Value v) {
     setField(5, v);
   }
 
   $core.bool hasFalseNegatives() => $_has(4);
   void clearFalseNegatives() => clearField(5);
 
-  $2.DoubleValue get precision => $_getN(5);
-  set precision($2.DoubleValue v) {
+  $3.DoubleValue get precision => $_getN(5);
+  set precision($3.DoubleValue v) {
     setField(6, v);
   }
 
   $core.bool hasPrecision() => $_has(5);
   void clearPrecision() => clearField(6);
 
-  $2.DoubleValue get recall => $_getN(6);
-  set recall($2.DoubleValue v) {
+  $3.DoubleValue get recall => $_getN(6);
+  set recall($3.DoubleValue v) {
     setField(7, v);
   }
 
@@ -365,8 +363,8 @@ class Model_MultiClassClassificationMetrics_ConfusionMatrix_Entry
       'Model.MultiClassClassificationMetrics.ConfusionMatrix.Entry',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
     ..aOS(1, 'predictedLabel')
-    ..a<$2.Int64Value>(2, 'itemCount', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
+    ..a<$3.Int64Value>(2, 'itemCount', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
     ..hasRequiredFields = false;
 
   Model_MultiClassClassificationMetrics_ConfusionMatrix_Entry() : super();
@@ -408,8 +406,8 @@ class Model_MultiClassClassificationMetrics_ConfusionMatrix_Entry
   $core.bool hasPredictedLabel() => $_has(0);
   void clearPredictedLabel() => clearField(1);
 
-  $2.Int64Value get itemCount => $_getN(1);
-  set itemCount($2.Int64Value v) {
+  $3.Int64Value get itemCount => $_getN(1);
+  set itemCount($3.Int64Value v) {
     setField(2, v);
   }
 
@@ -478,8 +476,8 @@ class Model_MultiClassClassificationMetrics_ConfusionMatrix
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Model.MultiClassClassificationMetrics.ConfusionMatrix',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..a<$2.DoubleValue>(1, 'confidenceThreshold', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$3.DoubleValue>(1, 'confidenceThreshold', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
     ..pc<Model_MultiClassClassificationMetrics_ConfusionMatrix_Row>(
         2,
         'rows',
@@ -515,8 +513,8 @@ class Model_MultiClassClassificationMetrics_ConfusionMatrix
       _defaultInstance ??= create()..freeze();
   static Model_MultiClassClassificationMetrics_ConfusionMatrix _defaultInstance;
 
-  $2.DoubleValue get confidenceThreshold => $_getN(0);
-  set confidenceThreshold($2.DoubleValue v) {
+  $3.DoubleValue get confidenceThreshold => $_getN(0);
+  set confidenceThreshold($3.DoubleValue v) {
     setField(1, v);
   }
 
@@ -583,10 +581,10 @@ class Model_MultiClassClassificationMetrics extends $pb.GeneratedMessage {
 class Model_ClusteringMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model.ClusteringMetrics',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..a<$2.DoubleValue>(1, 'daviesBouldinIndex', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(2, 'meanSquaredDistance', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$3.DoubleValue>(1, 'daviesBouldinIndex', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(2, 'meanSquaredDistance', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
     ..hasRequiredFields = false;
 
   Model_ClusteringMetrics() : super();
@@ -610,16 +608,16 @@ class Model_ClusteringMetrics extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static Model_ClusteringMetrics _defaultInstance;
 
-  $2.DoubleValue get daviesBouldinIndex => $_getN(0);
-  set daviesBouldinIndex($2.DoubleValue v) {
+  $3.DoubleValue get daviesBouldinIndex => $_getN(0);
+  set daviesBouldinIndex($3.DoubleValue v) {
     setField(1, v);
   }
 
   $core.bool hasDaviesBouldinIndex() => $_has(0);
   void clearDaviesBouldinIndex() => clearField(1);
 
-  $2.DoubleValue get meanSquaredDistance => $_getN(1);
-  set meanSquaredDistance($2.DoubleValue v) {
+  $3.DoubleValue get meanSquaredDistance => $_getN(1);
+  set meanSquaredDistance($3.DoubleValue v) {
     setField(2, v);
   }
 
@@ -738,16 +736,16 @@ class Model_TrainingRun_TrainingOptions extends $pb.GeneratedMessage {
         Model_LossType.valueOf,
         Model_LossType.values)
     ..a<$core.double>(3, 'learnRate', $pb.PbFieldType.OD)
-    ..a<$2.DoubleValue>(4, 'l1Regularization', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(5, 'l2Regularization', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(6, 'minRelativeProgress', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.BoolValue>(7, 'warmStart', $pb.PbFieldType.OM,
-        $2.BoolValue.getDefault, $2.BoolValue.create)
-    ..a<$2.BoolValue>(8, 'earlyStop', $pb.PbFieldType.OM,
-        $2.BoolValue.getDefault, $2.BoolValue.create)
+    ..a<$3.DoubleValue>(4, 'l1Regularization', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(5, 'l2Regularization', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(6, 'minRelativeProgress', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.BoolValue>(7, 'warmStart', $pb.PbFieldType.OM,
+        $3.BoolValue.getDefault, $3.BoolValue.create)
+    ..a<$3.BoolValue>(8, 'earlyStop', $pb.PbFieldType.OM,
+        $3.BoolValue.getDefault, $3.BoolValue.create)
     ..pPS(9, 'inputLabelColumns')
     ..e<Model_DataSplitMethod>(
         10,
@@ -833,40 +831,40 @@ class Model_TrainingRun_TrainingOptions extends $pb.GeneratedMessage {
   $core.bool hasLearnRate() => $_has(2);
   void clearLearnRate() => clearField(3);
 
-  $2.DoubleValue get l1Regularization => $_getN(3);
-  set l1Regularization($2.DoubleValue v) {
+  $3.DoubleValue get l1Regularization => $_getN(3);
+  set l1Regularization($3.DoubleValue v) {
     setField(4, v);
   }
 
   $core.bool hasL1Regularization() => $_has(3);
   void clearL1Regularization() => clearField(4);
 
-  $2.DoubleValue get l2Regularization => $_getN(4);
-  set l2Regularization($2.DoubleValue v) {
+  $3.DoubleValue get l2Regularization => $_getN(4);
+  set l2Regularization($3.DoubleValue v) {
     setField(5, v);
   }
 
   $core.bool hasL2Regularization() => $_has(4);
   void clearL2Regularization() => clearField(5);
 
-  $2.DoubleValue get minRelativeProgress => $_getN(5);
-  set minRelativeProgress($2.DoubleValue v) {
+  $3.DoubleValue get minRelativeProgress => $_getN(5);
+  set minRelativeProgress($3.DoubleValue v) {
     setField(6, v);
   }
 
   $core.bool hasMinRelativeProgress() => $_has(5);
   void clearMinRelativeProgress() => clearField(6);
 
-  $2.BoolValue get warmStart => $_getN(6);
-  set warmStart($2.BoolValue v) {
+  $3.BoolValue get warmStart => $_getN(6);
+  set warmStart($3.BoolValue v) {
     setField(7, v);
   }
 
   $core.bool hasWarmStart() => $_has(6);
   void clearWarmStart() => clearField(7);
 
-  $2.BoolValue get earlyStop => $_getN(7);
-  set earlyStop($2.BoolValue v) {
+  $3.BoolValue get earlyStop => $_getN(7);
+  set earlyStop($3.BoolValue v) {
     setField(8, v);
   }
 
@@ -940,10 +938,10 @@ class Model_TrainingRun_IterationResult_ClusterInfo
       'Model.TrainingRun.IterationResult.ClusterInfo',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
     ..aInt64(1, 'centroidId')
-    ..a<$2.DoubleValue>(2, 'clusterRadius', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.Int64Value>(3, 'clusterSize', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
+    ..a<$3.DoubleValue>(2, 'clusterRadius', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.Int64Value>(3, 'clusterSize', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
     ..hasRequiredFields = false;
 
   Model_TrainingRun_IterationResult_ClusterInfo() : super();
@@ -981,16 +979,16 @@ class Model_TrainingRun_IterationResult_ClusterInfo
   $core.bool hasCentroidId() => $_has(0);
   void clearCentroidId() => clearField(1);
 
-  $2.DoubleValue get clusterRadius => $_getN(1);
-  set clusterRadius($2.DoubleValue v) {
+  $3.DoubleValue get clusterRadius => $_getN(1);
+  set clusterRadius($3.DoubleValue v) {
     setField(2, v);
   }
 
   $core.bool hasClusterRadius() => $_has(1);
   void clearClusterRadius() => clearField(2);
 
-  $2.Int64Value get clusterSize => $_getN(2);
-  set clusterSize($2.Int64Value v) {
+  $3.Int64Value get clusterSize => $_getN(2);
+  set clusterSize($3.Int64Value v) {
     setField(3, v);
   }
 
@@ -1002,14 +1000,14 @@ class Model_TrainingRun_IterationResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Model.TrainingRun.IterationResult',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..a<$2.Int32Value>(1, 'index', $pb.PbFieldType.OM, $2.Int32Value.getDefault,
-        $2.Int32Value.create)
-    ..a<$2.Int64Value>(4, 'durationMs', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
-    ..a<$2.DoubleValue>(5, 'trainingLoss', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
-    ..a<$2.DoubleValue>(6, 'evalLoss', $pb.PbFieldType.OM,
-        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$3.Int32Value>(1, 'index', $pb.PbFieldType.OM, $3.Int32Value.getDefault,
+        $3.Int32Value.create)
+    ..a<$3.Int64Value>(4, 'durationMs', $pb.PbFieldType.OM,
+        $3.Int64Value.getDefault, $3.Int64Value.create)
+    ..a<$3.DoubleValue>(5, 'trainingLoss', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
+    ..a<$3.DoubleValue>(6, 'evalLoss', $pb.PbFieldType.OM,
+        $3.DoubleValue.getDefault, $3.DoubleValue.create)
     ..a<$core.double>(7, 'learnRate', $pb.PbFieldType.OD)
     ..pc<Model_TrainingRun_IterationResult_ClusterInfo>(
         8,
@@ -1041,32 +1039,32 @@ class Model_TrainingRun_IterationResult extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static Model_TrainingRun_IterationResult _defaultInstance;
 
-  $2.Int32Value get index => $_getN(0);
-  set index($2.Int32Value v) {
+  $3.Int32Value get index => $_getN(0);
+  set index($3.Int32Value v) {
     setField(1, v);
   }
 
   $core.bool hasIndex() => $_has(0);
   void clearIndex() => clearField(1);
 
-  $2.Int64Value get durationMs => $_getN(1);
-  set durationMs($2.Int64Value v) {
+  $3.Int64Value get durationMs => $_getN(1);
+  set durationMs($3.Int64Value v) {
     setField(4, v);
   }
 
   $core.bool hasDurationMs() => $_has(1);
   void clearDurationMs() => clearField(4);
 
-  $2.DoubleValue get trainingLoss => $_getN(2);
-  set trainingLoss($2.DoubleValue v) {
+  $3.DoubleValue get trainingLoss => $_getN(2);
+  set trainingLoss($3.DoubleValue v) {
     setField(5, v);
   }
 
   $core.bool hasTrainingLoss() => $_has(2);
   void clearTrainingLoss() => clearField(5);
 
-  $2.DoubleValue get evalLoss => $_getN(3);
-  set evalLoss($2.DoubleValue v) {
+  $3.DoubleValue get evalLoss => $_getN(3);
+  set evalLoss($3.DoubleValue v) {
     setField(6, v);
   }
 
@@ -1098,8 +1096,8 @@ class Model_TrainingRun extends $pb.GeneratedMessage {
         Model_TrainingRun_IterationResult.create)
     ..a<Model_EvaluationMetrics>(7, 'evaluationMetrics', $pb.PbFieldType.OM,
         Model_EvaluationMetrics.getDefault, Model_EvaluationMetrics.create)
-    ..a<$3.Timestamp>(8, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$4.Timestamp>(8, 'startTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   Model_TrainingRun() : super();
@@ -1139,8 +1137,8 @@ class Model_TrainingRun extends $pb.GeneratedMessage {
   $core.bool hasEvaluationMetrics() => $_has(2);
   void clearEvaluationMetrics() => clearField(7);
 
-  $3.Timestamp get startTime => $_getN(3);
-  set startTime($3.Timestamp v) {
+  $4.Timestamp get startTime => $_getN(3);
+  set startTime($4.Timestamp v) {
     setField(8, v);
   }
 
@@ -1152,8 +1150,8 @@ class Model extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
     ..aOS(1, 'etag')
-    ..a<$0.ModelReference>(2, 'modelReference', $pb.PbFieldType.OM,
-        $0.ModelReference.getDefault, $0.ModelReference.create)
+    ..a<$1.ModelReference>(2, 'modelReference', $pb.PbFieldType.OM,
+        $1.ModelReference.getDefault, $1.ModelReference.create)
     ..aInt64(5, 'creationTime')
     ..aInt64(6, 'lastModifiedTime')
     ..e<Model_ModelType>(
@@ -1165,10 +1163,10 @@ class Model extends $pb.GeneratedMessage {
         Model_ModelType.values)
     ..pc<Model_TrainingRun>(
         9, 'trainingRuns', $pb.PbFieldType.PM, Model_TrainingRun.create)
-    ..pc<$1.StandardSqlField>(
-        10, 'featureColumns', $pb.PbFieldType.PM, $1.StandardSqlField.create)
-    ..pc<$1.StandardSqlField>(
-        11, 'labelColumns', $pb.PbFieldType.PM, $1.StandardSqlField.create)
+    ..pc<$2.StandardSqlField>(
+        10, 'featureColumns', $pb.PbFieldType.PM, $2.StandardSqlField.create)
+    ..pc<$2.StandardSqlField>(
+        11, 'labelColumns', $pb.PbFieldType.PM, $2.StandardSqlField.create)
     ..aOS(12, 'description')
     ..aOS(13, 'location')
     ..aOS(14, 'friendlyName')
@@ -1210,8 +1208,8 @@ class Model extends $pb.GeneratedMessage {
   $core.bool hasEtag() => $_has(0);
   void clearEtag() => clearField(1);
 
-  $0.ModelReference get modelReference => $_getN(1);
-  set modelReference($0.ModelReference v) {
+  $1.ModelReference get modelReference => $_getN(1);
+  set modelReference($1.ModelReference v) {
     setField(2, v);
   }
 
@@ -1244,9 +1242,9 @@ class Model extends $pb.GeneratedMessage {
 
   $core.List<Model_TrainingRun> get trainingRuns => $_getList(5);
 
-  $core.List<$1.StandardSqlField> get featureColumns => $_getList(6);
+  $core.List<$2.StandardSqlField> get featureColumns => $_getList(6);
 
-  $core.List<$1.StandardSqlField> get labelColumns => $_getList(7);
+  $core.List<$2.StandardSqlField> get labelColumns => $_getList(7);
 
   $core.String get description => $_getS(8, '');
   set description($core.String v) {
@@ -1453,8 +1451,8 @@ class ListModelsRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
-    ..a<$2.UInt32Value>(3, 'maxResults', $pb.PbFieldType.OM,
-        $2.UInt32Value.getDefault, $2.UInt32Value.create)
+    ..a<$3.UInt32Value>(3, 'maxResults', $pb.PbFieldType.OM,
+        $3.UInt32Value.getDefault, $3.UInt32Value.create)
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
@@ -1493,8 +1491,8 @@ class ListModelsRequest extends $pb.GeneratedMessage {
   $core.bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 
-  $2.UInt32Value get maxResults => $_getN(2);
-  set maxResults($2.UInt32Value v) {
+  $3.UInt32Value get maxResults => $_getN(2);
+  set maxResults($3.UInt32Value v) {
     setField(3, v);
   }
 
@@ -1545,37 +1543,4 @@ class ListModelsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class ModelServiceApi {
-  $pb.RpcClient _client;
-  ModelServiceApi(this._client);
-
-  $async.Future<Model> getModel(
-      $pb.ClientContext ctx, GetModelRequest request) {
-    var emptyResponse = Model();
-    return _client.invoke<Model>(
-        ctx, 'ModelService', 'GetModel', request, emptyResponse);
-  }
-
-  $async.Future<ListModelsResponse> listModels(
-      $pb.ClientContext ctx, ListModelsRequest request) {
-    var emptyResponse = ListModelsResponse();
-    return _client.invoke<ListModelsResponse>(
-        ctx, 'ModelService', 'ListModels', request, emptyResponse);
-  }
-
-  $async.Future<Model> patchModel(
-      $pb.ClientContext ctx, PatchModelRequest request) {
-    var emptyResponse = Model();
-    return _client.invoke<Model>(
-        ctx, 'ModelService', 'PatchModel', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteModel(
-      $pb.ClientContext ctx, DeleteModelRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'ModelService', 'DeleteModel', request, emptyResponse);
-  }
 }

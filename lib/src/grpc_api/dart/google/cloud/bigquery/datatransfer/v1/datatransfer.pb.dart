@@ -4,21 +4,19 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $0;
-import '../../../../protobuf/duration.pb.dart' as $1;
-import 'transfer.pb.dart' as $2;
-import '../../../../protobuf/field_mask.pb.dart' as $3;
-import '../../../../protobuf/timestamp.pb.dart' as $4;
-import '../../../../protobuf/empty.pb.dart' as $5;
+import '../../../../protobuf/wrappers.pb.dart' as $2;
+import '../../../../protobuf/duration.pb.dart' as $3;
+import 'transfer.pb.dart' as $0;
+import '../../../../protobuf/field_mask.pb.dart' as $4;
+import '../../../../protobuf/timestamp.pb.dart' as $5;
 
 import 'datatransfer.pbenum.dart';
-import 'transfer.pbenum.dart' as $2;
+import 'transfer.pbenum.dart' as $0;
 
 export 'datatransfer.pbenum.dart';
 
@@ -39,10 +37,10 @@ class DataSourceParameter extends $pb.GeneratedMessage {
     ..aOB(6, 'repeated')
     ..aOS(7, 'validationRegex')
     ..pPS(8, 'allowedValues')
-    ..a<$0.DoubleValue>(9, 'minValue', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
-    ..a<$0.DoubleValue>(10, 'maxValue', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
+    ..a<$2.DoubleValue>(9, 'minValue', $pb.PbFieldType.OM,
+        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$2.DoubleValue>(10, 'maxValue', $pb.PbFieldType.OM,
+        $2.DoubleValue.getDefault, $2.DoubleValue.create)
     ..pc<DataSourceParameter>(
         11, 'fields', $pb.PbFieldType.PM, DataSourceParameter.create)
     ..aOS(12, 'validationDescription')
@@ -128,16 +126,16 @@ class DataSourceParameter extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get allowedValues => $_getList(7);
 
-  $0.DoubleValue get minValue => $_getN(8);
-  set minValue($0.DoubleValue v) {
+  $2.DoubleValue get minValue => $_getN(8);
+  set minValue($2.DoubleValue v) {
     setField(9, v);
   }
 
   $core.bool hasMinValue() => $_has(8);
   void clearMinValue() => clearField(9);
 
-  $0.DoubleValue get maxValue => $_getN(9);
-  set maxValue($0.DoubleValue v) {
+  $2.DoubleValue get maxValue => $_getN(9);
+  set maxValue($2.DoubleValue v) {
     setField(10, v);
   }
 
@@ -188,13 +186,13 @@ class DataSource extends $pb.GeneratedMessage {
     ..aOS(4, 'description')
     ..aOS(5, 'clientId')
     ..pPS(6, 'scopes')
-    ..e<$2.TransferType>(
+    ..e<$0.TransferType>(
         7,
         'transferType',
         $pb.PbFieldType.OE,
-        $2.TransferType.TRANSFER_TYPE_UNSPECIFIED,
-        $2.TransferType.valueOf,
-        $2.TransferType.values)
+        $0.TransferType.TRANSFER_TYPE_UNSPECIFIED,
+        $0.TransferType.valueOf,
+        $0.TransferType.values)
     ..aOB(8, 'supportsMultipleTransfers')
     ..a<$core.int>(9, 'updateDeadlineSeconds', $pb.PbFieldType.O3)
     ..aOS(10, 'defaultSchedule')
@@ -218,8 +216,8 @@ class DataSource extends $pb.GeneratedMessage {
         DataSource_DataRefreshType.values)
     ..a<$core.int>(16, 'defaultDataRefreshWindowDays', $pb.PbFieldType.O3)
     ..aOB(17, 'manualRunsDisabled')
-    ..a<$1.Duration>(18, 'minimumScheduleInterval', $pb.PbFieldType.OM,
-        $1.Duration.getDefault, $1.Duration.create)
+    ..a<$3.Duration>(18, 'minimumScheduleInterval', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..hasRequiredFields = false;
 
   DataSource() : super();
@@ -281,8 +279,8 @@ class DataSource extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get scopes => $_getList(5);
 
-  $2.TransferType get transferType => $_getN(6);
-  set transferType($2.TransferType v) {
+  $0.TransferType get transferType => $_getN(6);
+  set transferType($0.TransferType v) {
     setField(7, v);
   }
 
@@ -363,8 +361,8 @@ class DataSource extends $pb.GeneratedMessage {
   $core.bool hasManualRunsDisabled() => $_has(16);
   void clearManualRunsDisabled() => clearField(17);
 
-  $1.Duration get minimumScheduleInterval => $_getN(17);
-  set minimumScheduleInterval($1.Duration v) {
+  $3.Duration get minimumScheduleInterval => $_getN(17);
+  set minimumScheduleInterval($3.Duration v) {
     setField(18, v);
   }
 
@@ -505,8 +503,8 @@ class CreateTransferConfigRequest extends $pb.GeneratedMessage {
       'CreateTransferConfigRequest',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
-    ..a<$2.TransferConfig>(2, 'transferConfig', $pb.PbFieldType.OM,
-        $2.TransferConfig.getDefault, $2.TransferConfig.create)
+    ..a<$0.TransferConfig>(2, 'transferConfig', $pb.PbFieldType.OM,
+        $0.TransferConfig.getDefault, $0.TransferConfig.create)
     ..aOS(3, 'authorizationCode')
     ..hasRequiredFields = false;
 
@@ -540,8 +538,8 @@ class CreateTransferConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.TransferConfig get transferConfig => $_getN(1);
-  set transferConfig($2.TransferConfig v) {
+  $0.TransferConfig get transferConfig => $_getN(1);
+  set transferConfig($0.TransferConfig v) {
     setField(2, v);
   }
 
@@ -561,11 +559,11 @@ class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateTransferConfigRequest',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..a<$2.TransferConfig>(1, 'transferConfig', $pb.PbFieldType.OM,
-        $2.TransferConfig.getDefault, $2.TransferConfig.create)
+    ..a<$0.TransferConfig>(1, 'transferConfig', $pb.PbFieldType.OM,
+        $0.TransferConfig.getDefault, $0.TransferConfig.create)
     ..aOS(3, 'authorizationCode')
-    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTransferConfigRequest() : super();
@@ -590,8 +588,8 @@ class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateTransferConfigRequest _defaultInstance;
 
-  $2.TransferConfig get transferConfig => $_getN(0);
-  set transferConfig($2.TransferConfig v) {
+  $0.TransferConfig get transferConfig => $_getN(0);
+  set transferConfig($0.TransferConfig v) {
     setField(1, v);
   }
 
@@ -606,8 +604,8 @@ class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasAuthorizationCode() => $_has(1);
   void clearAuthorizationCode() => clearField(3);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -824,8 +822,8 @@ class ListTransferConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListTransferConfigsResponse',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..pc<$2.TransferConfig>(
-        1, 'transferConfigs', $pb.PbFieldType.PM, $2.TransferConfig.create)
+    ..pc<$0.TransferConfig>(
+        1, 'transferConfigs', $pb.PbFieldType.PM, $0.TransferConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -851,7 +849,7 @@ class ListTransferConfigsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTransferConfigsResponse _defaultInstance;
 
-  $core.List<$2.TransferConfig> get transferConfigs => $_getList(0);
+  $core.List<$0.TransferConfig> get transferConfigs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -866,8 +864,8 @@ class ListTransferRunsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferRunsRequest',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
-    ..pc<$2.TransferState>(2, 'states', $pb.PbFieldType.PE, null,
-        $2.TransferState.valueOf, $2.TransferState.values)
+    ..pc<$0.TransferState>(2, 'states', $pb.PbFieldType.PE, null,
+        $0.TransferState.valueOf, $0.TransferState.values)
     ..aOS(3, 'pageToken')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..e<ListTransferRunsRequest_RunAttempt>(
@@ -908,7 +906,7 @@ class ListTransferRunsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $core.List<$2.TransferState> get states => $_getList(1);
+  $core.List<$0.TransferState> get states => $_getList(1);
 
   $core.String get pageToken => $_getS(2, '');
   set pageToken($core.String v) {
@@ -938,8 +936,8 @@ class ListTransferRunsRequest extends $pb.GeneratedMessage {
 class ListTransferRunsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferRunsResponse',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..pc<$2.TransferRun>(
-        1, 'transferRuns', $pb.PbFieldType.PM, $2.TransferRun.create)
+    ..pc<$0.TransferRun>(
+        1, 'transferRuns', $pb.PbFieldType.PM, $0.TransferRun.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -964,7 +962,7 @@ class ListTransferRunsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTransferRunsResponse _defaultInstance;
 
-  $core.List<$2.TransferRun> get transferRuns => $_getList(0);
+  $core.List<$0.TransferRun> get transferRuns => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -981,13 +979,13 @@ class ListTransferLogsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
-    ..pc<$2.TransferMessage_MessageSeverity>(
+    ..pc<$0.TransferMessage_MessageSeverity>(
         6,
         'messageTypes',
         $pb.PbFieldType.PE,
         null,
-        $2.TransferMessage_MessageSeverity.valueOf,
-        $2.TransferMessage_MessageSeverity.values)
+        $0.TransferMessage_MessageSeverity.valueOf,
+        $0.TransferMessage_MessageSeverity.values)
     ..hasRequiredFields = false;
 
   ListTransferLogsRequest() : super();
@@ -1035,15 +1033,15 @@ class ListTransferLogsRequest extends $pb.GeneratedMessage {
   $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(5);
 
-  $core.List<$2.TransferMessage_MessageSeverity> get messageTypes =>
+  $core.List<$0.TransferMessage_MessageSeverity> get messageTypes =>
       $_getList(3);
 }
 
 class ListTransferLogsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferLogsResponse',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..pc<$2.TransferMessage>(
-        1, 'transferMessages', $pb.PbFieldType.PM, $2.TransferMessage.create)
+    ..pc<$0.TransferMessage>(
+        1, 'transferMessages', $pb.PbFieldType.PM, $0.TransferMessage.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1068,7 +1066,7 @@ class ListTransferLogsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTransferLogsResponse _defaultInstance;
 
-  $core.List<$2.TransferMessage> get transferMessages => $_getList(0);
+  $core.List<$0.TransferMessage> get transferMessages => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -1156,10 +1154,10 @@ class ScheduleTransferRunsRequest extends $pb.GeneratedMessage {
       'ScheduleTransferRunsRequest',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'parent')
-    ..a<$4.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
-    ..a<$4.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $4.Timestamp.getDefault,
-        $4.Timestamp.create)
+    ..a<$5.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $5.Timestamp.getDefault,
+        $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   ScheduleTransferRunsRequest() : super();
@@ -1192,16 +1190,16 @@ class ScheduleTransferRunsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $4.Timestamp get startTime => $_getN(1);
-  set startTime($4.Timestamp v) {
+  $5.Timestamp get startTime => $_getN(1);
+  set startTime($5.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $4.Timestamp get endTime => $_getN(2);
-  set endTime($4.Timestamp v) {
+  $5.Timestamp get endTime => $_getN(2);
+  set endTime($5.Timestamp v) {
     setField(3, v);
   }
 
@@ -1213,7 +1211,7 @@ class ScheduleTransferRunsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ScheduleTransferRunsResponse',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..pc<$2.TransferRun>(1, 'runs', $pb.PbFieldType.PM, $2.TransferRun.create)
+    ..pc<$0.TransferRun>(1, 'runs', $pb.PbFieldType.PM, $0.TransferRun.create)
     ..hasRequiredFields = false;
 
   ScheduleTransferRunsResponse() : super();
@@ -1239,101 +1237,5 @@ class ScheduleTransferRunsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ScheduleTransferRunsResponse _defaultInstance;
 
-  $core.List<$2.TransferRun> get runs => $_getList(0);
-}
-
-class DataTransferServiceApi {
-  $pb.RpcClient _client;
-  DataTransferServiceApi(this._client);
-
-  $async.Future<DataSource> getDataSource(
-      $pb.ClientContext ctx, GetDataSourceRequest request) {
-    var emptyResponse = DataSource();
-    return _client.invoke<DataSource>(
-        ctx, 'DataTransferService', 'GetDataSource', request, emptyResponse);
-  }
-
-  $async.Future<ListDataSourcesResponse> listDataSources(
-      $pb.ClientContext ctx, ListDataSourcesRequest request) {
-    var emptyResponse = ListDataSourcesResponse();
-    return _client.invoke<ListDataSourcesResponse>(
-        ctx, 'DataTransferService', 'ListDataSources', request, emptyResponse);
-  }
-
-  $async.Future<$2.TransferConfig> createTransferConfig(
-      $pb.ClientContext ctx, CreateTransferConfigRequest request) {
-    var emptyResponse = $2.TransferConfig();
-    return _client.invoke<$2.TransferConfig>(ctx, 'DataTransferService',
-        'CreateTransferConfig', request, emptyResponse);
-  }
-
-  $async.Future<$2.TransferConfig> updateTransferConfig(
-      $pb.ClientContext ctx, UpdateTransferConfigRequest request) {
-    var emptyResponse = $2.TransferConfig();
-    return _client.invoke<$2.TransferConfig>(ctx, 'DataTransferService',
-        'UpdateTransferConfig', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteTransferConfig(
-      $pb.ClientContext ctx, DeleteTransferConfigRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(ctx, 'DataTransferService',
-        'DeleteTransferConfig', request, emptyResponse);
-  }
-
-  $async.Future<$2.TransferConfig> getTransferConfig(
-      $pb.ClientContext ctx, GetTransferConfigRequest request) {
-    var emptyResponse = $2.TransferConfig();
-    return _client.invoke<$2.TransferConfig>(ctx, 'DataTransferService',
-        'GetTransferConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListTransferConfigsResponse> listTransferConfigs(
-      $pb.ClientContext ctx, ListTransferConfigsRequest request) {
-    var emptyResponse = ListTransferConfigsResponse();
-    return _client.invoke<ListTransferConfigsResponse>(ctx,
-        'DataTransferService', 'ListTransferConfigs', request, emptyResponse);
-  }
-
-  $async.Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
-      $pb.ClientContext ctx, ScheduleTransferRunsRequest request) {
-    var emptyResponse = ScheduleTransferRunsResponse();
-    return _client.invoke<ScheduleTransferRunsResponse>(ctx,
-        'DataTransferService', 'ScheduleTransferRuns', request, emptyResponse);
-  }
-
-  $async.Future<$2.TransferRun> getTransferRun(
-      $pb.ClientContext ctx, GetTransferRunRequest request) {
-    var emptyResponse = $2.TransferRun();
-    return _client.invoke<$2.TransferRun>(
-        ctx, 'DataTransferService', 'GetTransferRun', request, emptyResponse);
-  }
-
-  $async.Future<$5.Empty> deleteTransferRun(
-      $pb.ClientContext ctx, DeleteTransferRunRequest request) {
-    var emptyResponse = $5.Empty();
-    return _client.invoke<$5.Empty>(ctx, 'DataTransferService',
-        'DeleteTransferRun', request, emptyResponse);
-  }
-
-  $async.Future<ListTransferRunsResponse> listTransferRuns(
-      $pb.ClientContext ctx, ListTransferRunsRequest request) {
-    var emptyResponse = ListTransferRunsResponse();
-    return _client.invoke<ListTransferRunsResponse>(
-        ctx, 'DataTransferService', 'ListTransferRuns', request, emptyResponse);
-  }
-
-  $async.Future<ListTransferLogsResponse> listTransferLogs(
-      $pb.ClientContext ctx, ListTransferLogsRequest request) {
-    var emptyResponse = ListTransferLogsResponse();
-    return _client.invoke<ListTransferLogsResponse>(
-        ctx, 'DataTransferService', 'ListTransferLogs', request, emptyResponse);
-  }
-
-  $async.Future<CheckValidCredsResponse> checkValidCreds(
-      $pb.ClientContext ctx, CheckValidCredsRequest request) {
-    var emptyResponse = CheckValidCredsResponse();
-    return _client.invoke<CheckValidCredsResponse>(
-        ctx, 'DataTransferService', 'CheckValidCreds', request, emptyResponse);
-  }
+  $core.List<$0.TransferRun> get runs => $_getList(0);
 }

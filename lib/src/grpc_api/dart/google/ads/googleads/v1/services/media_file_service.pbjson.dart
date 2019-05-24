@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/media_file.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../../../../rpc/status.pbjson.dart' as $1;
-import '../../../../protobuf/any.pbjson.dart' as $3;
-
 const GetMediaFileRequest$json = {
   '1': 'GetMediaFileRequest',
   '2': [
@@ -78,45 +73,4 @@ const MutateMediaFileResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const MediaFileServiceBase$json = {
-  '1': 'MediaFileService',
-  '2': [
-    {
-      '1': 'GetMediaFile',
-      '2': '.google.ads.googleads.v1.services.GetMediaFileRequest',
-      '3': '.google.ads.googleads.v1.resources.MediaFile',
-      '4': {}
-    },
-    {
-      '1': 'MutateMediaFiles',
-      '2': '.google.ads.googleads.v1.services.MutateMediaFilesRequest',
-      '3': '.google.ads.googleads.v1.services.MutateMediaFilesResponse',
-      '4': {}
-    },
-  ],
-};
-
-const MediaFileServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetMediaFileRequest':
-      GetMediaFileRequest$json,
-  '.google.ads.googleads.v1.resources.MediaFile': $0.MediaFile$json,
-  '.google.protobuf.Int64Value': $2.Int64Value$json,
-  '.google.ads.googleads.v1.resources.MediaImage': $0.MediaImage$json,
-  '.google.protobuf.BytesValue': $2.BytesValue$json,
-  '.google.ads.googleads.v1.resources.MediaBundle': $0.MediaBundle$json,
-  '.google.protobuf.StringValue': $2.StringValue$json,
-  '.google.ads.googleads.v1.resources.MediaAudio': $0.MediaAudio$json,
-  '.google.ads.googleads.v1.resources.MediaVideo': $0.MediaVideo$json,
-  '.google.ads.googleads.v1.services.MutateMediaFilesRequest':
-      MutateMediaFilesRequest$json,
-  '.google.ads.googleads.v1.services.MediaFileOperation':
-      MediaFileOperation$json,
-  '.google.ads.googleads.v1.services.MutateMediaFilesResponse':
-      MutateMediaFilesResponse$json,
-  '.google.ads.googleads.v1.services.MutateMediaFileResult':
-      MutateMediaFileResult$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
 };

@@ -4,31 +4,9 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/change_status.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $1;
-
 const GetChangeStatusRequest$json = {
   '1': 'GetChangeStatusRequest',
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const ChangeStatusServiceBase$json = {
-  '1': 'ChangeStatusService',
-  '2': [
-    {
-      '1': 'GetChangeStatus',
-      '2': '.google.ads.googleads.v1.services.GetChangeStatusRequest',
-      '3': '.google.ads.googleads.v1.resources.ChangeStatus',
-      '4': {}
-    },
-  ],
-};
-
-const ChangeStatusServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetChangeStatusRequest':
-      GetChangeStatusRequest$json,
-  '.google.ads.googleads.v1.resources.ChangeStatus': $0.ChangeStatus$json,
-  '.google.protobuf.StringValue': $1.StringValue$json,
 };

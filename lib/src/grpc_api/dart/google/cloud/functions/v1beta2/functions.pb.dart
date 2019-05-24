@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 import 'functions.pbenum.dart';
 
@@ -51,15 +49,15 @@ class CloudFunction extends $pb.GeneratedMessage {
         CloudFunctionStatus.values)
     ..aOS(8, 'latestOperation')
     ..aOS(9, 'entryPoint')
-    ..a<$0.Duration>(10, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault,
-        $0.Duration.create)
+    ..a<$2.Duration>(10, 'timeout', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
     ..a<$core.int>(11, 'availableMemoryMb', $pb.PbFieldType.O3)
     ..a<EventTrigger>(12, 'eventTrigger', $pb.PbFieldType.OM,
         EventTrigger.getDefault, EventTrigger.create)
     ..aOS(13, 'serviceAccount')
     ..aOS(14, 'sourceArchiveUrl')
-    ..a<$1.Timestamp>(15, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(15, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..oo(0, [3, 14])
     ..oo(1, [6, 12])
     ..hasRequiredFields = false;
@@ -138,8 +136,8 @@ class CloudFunction extends $pb.GeneratedMessage {
   $core.bool hasEntryPoint() => $_has(5);
   void clearEntryPoint() => clearField(9);
 
-  $0.Duration get timeout => $_getN(6);
-  set timeout($0.Duration v) {
+  $2.Duration get timeout => $_getN(6);
+  set timeout($2.Duration v) {
     setField(10, v);
   }
 
@@ -178,8 +176,8 @@ class CloudFunction extends $pb.GeneratedMessage {
   $core.bool hasSourceArchiveUrl() => $_has(10);
   void clearSourceArchiveUrl() => clearField(14);
 
-  $1.Timestamp get updateTime => $_getN(11);
-  set updateTime($1.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(11);
+  set updateTime($3.Timestamp v) {
     setField(15, v);
   }
 
@@ -704,51 +702,4 @@ class CallFunctionResponse extends $pb.GeneratedMessage {
 
   $core.bool hasError() => $_has(2);
   void clearError() => clearField(3);
-}
-
-class CloudFunctionsServiceApi {
-  $pb.RpcClient _client;
-  CloudFunctionsServiceApi(this._client);
-
-  $async.Future<ListFunctionsResponse> listFunctions(
-      $pb.ClientContext ctx, ListFunctionsRequest request) {
-    var emptyResponse = ListFunctionsResponse();
-    return _client.invoke<ListFunctionsResponse>(
-        ctx, 'CloudFunctionsService', 'ListFunctions', request, emptyResponse);
-  }
-
-  $async.Future<CloudFunction> getFunction(
-      $pb.ClientContext ctx, GetFunctionRequest request) {
-    var emptyResponse = CloudFunction();
-    return _client.invoke<CloudFunction>(
-        ctx, 'CloudFunctionsService', 'GetFunction', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> createFunction(
-      $pb.ClientContext ctx, CreateFunctionRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudFunctionsService', 'CreateFunction', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> updateFunction(
-      $pb.ClientContext ctx, UpdateFunctionRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudFunctionsService', 'UpdateFunction', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> deleteFunction(
-      $pb.ClientContext ctx, DeleteFunctionRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudFunctionsService', 'DeleteFunction', request, emptyResponse);
-  }
-
-  $async.Future<CallFunctionResponse> callFunction(
-      $pb.ClientContext ctx, CallFunctionRequest request) {
-    var emptyResponse = CallFunctionResponse();
-    return _client.invoke<CallFunctionResponse>(
-        ctx, 'CloudFunctionsService', 'CallFunction', request, emptyResponse);
-  }
 }

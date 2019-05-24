@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $0;
-
 const Feature$json = {
   '1': 'Feature',
   '2': [
@@ -374,26 +370,4 @@ const AnnotateVideoProgress$json = {
       '10': 'annotationProgress'
     },
   ],
-};
-
-const VideoIntelligenceServiceBase$json = {
-  '1': 'VideoIntelligenceService',
-  '2': [
-    {
-      '1': 'AnnotateVideo',
-      '2': '.google.cloud.videointelligence.v1beta1.AnnotateVideoRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const VideoIntelligenceServiceBase$messageJson = {
-  '.google.cloud.videointelligence.v1beta1.AnnotateVideoRequest':
-      AnnotateVideoRequest$json,
-  '.google.cloud.videointelligence.v1beta1.VideoContext': VideoContext$json,
-  '.google.cloud.videointelligence.v1beta1.VideoSegment': VideoSegment$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $0.Status$json,
 };

@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'job.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 class ListJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobsRequest',
@@ -183,8 +181,8 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateJobRequest',
       package: const $pb.PackageName('google.cloud.scheduler.v1beta1'))
     ..a<$0.Job>(1, 'job', $pb.PbFieldType.OM, $0.Job.getDefault, $0.Job.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateJobRequest() : super();
@@ -214,8 +212,8 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   $core.bool hasJob() => $_has(0);
   void clearJob() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -356,63 +354,4 @@ class RunJobRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class CloudSchedulerApi {
-  $pb.RpcClient _client;
-  CloudSchedulerApi(this._client);
-
-  $async.Future<ListJobsResponse> listJobs(
-      $pb.ClientContext ctx, ListJobsRequest request) {
-    var emptyResponse = ListJobsResponse();
-    return _client.invoke<ListJobsResponse>(
-        ctx, 'CloudScheduler', 'ListJobs', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> getJob($pb.ClientContext ctx, GetJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'CloudScheduler', 'GetJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> createJob(
-      $pb.ClientContext ctx, CreateJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'CloudScheduler', 'CreateJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> updateJob(
-      $pb.ClientContext ctx, UpdateJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'CloudScheduler', 'UpdateJob', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteJob(
-      $pb.ClientContext ctx, DeleteJobRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'CloudScheduler', 'DeleteJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> pauseJob(
-      $pb.ClientContext ctx, PauseJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'CloudScheduler', 'PauseJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> resumeJob(
-      $pb.ClientContext ctx, ResumeJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'CloudScheduler', 'ResumeJob', request, emptyResponse);
-  }
-
-  $async.Future<$0.Job> runJob($pb.ClientContext ctx, RunJobRequest request) {
-    var emptyResponse = $0.Job();
-    return _client.invoke<$0.Job>(
-        ctx, 'CloudScheduler', 'RunJob', request, emptyResponse);
-  }
 }

@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../longrunning/operations.pbjson.dart' as $2;
-import '../../../protobuf/any.pbjson.dart' as $3;
-import '../../../rpc/status.pbjson.dart' as $1;
-
 const Action$json = {
   '1': 'Action',
   '2': [
@@ -613,107 +608,4 @@ const RequestMetadata$json = {
       '10': 'correlatedInvocationsId'
     },
   ],
-};
-
-const ExecutionServiceBase$json = {
-  '1': 'Execution',
-  '2': [
-    {
-      '1': 'Execute',
-      '2': '.google.devtools.remoteexecution.v1test.ExecuteRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const ExecutionServiceBase$messageJson = {
-  '.google.devtools.remoteexecution.v1test.ExecuteRequest': ExecuteRequest$json,
-  '.google.devtools.remoteexecution.v1test.Action': Action$json,
-  '.google.devtools.remoteexecution.v1test.Digest': Digest$json,
-  '.google.devtools.remoteexecution.v1test.Platform': Platform$json,
-  '.google.devtools.remoteexecution.v1test.Platform.Property':
-      Platform_Property$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.longrunning.Operation': $2.Operation$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.rpc.Status': $1.Status$json,
-};
-
-const ActionCacheServiceBase$json = {
-  '1': 'ActionCache',
-  '2': [
-    {
-      '1': 'GetActionResult',
-      '2': '.google.devtools.remoteexecution.v1test.GetActionResultRequest',
-      '3': '.google.devtools.remoteexecution.v1test.ActionResult',
-      '4': {}
-    },
-    {
-      '1': 'UpdateActionResult',
-      '2': '.google.devtools.remoteexecution.v1test.UpdateActionResultRequest',
-      '3': '.google.devtools.remoteexecution.v1test.ActionResult',
-      '4': {}
-    },
-  ],
-};
-
-const ActionCacheServiceBase$messageJson = {
-  '.google.devtools.remoteexecution.v1test.GetActionResultRequest':
-      GetActionResultRequest$json,
-  '.google.devtools.remoteexecution.v1test.Digest': Digest$json,
-  '.google.devtools.remoteexecution.v1test.ActionResult': ActionResult$json,
-  '.google.devtools.remoteexecution.v1test.OutputFile': OutputFile$json,
-  '.google.devtools.remoteexecution.v1test.OutputDirectory':
-      OutputDirectory$json,
-  '.google.devtools.remoteexecution.v1test.UpdateActionResultRequest':
-      UpdateActionResultRequest$json,
-};
-
-const ContentAddressableStorageServiceBase$json = {
-  '1': 'ContentAddressableStorage',
-  '2': [
-    {
-      '1': 'FindMissingBlobs',
-      '2': '.google.devtools.remoteexecution.v1test.FindMissingBlobsRequest',
-      '3': '.google.devtools.remoteexecution.v1test.FindMissingBlobsResponse',
-      '4': {}
-    },
-    {
-      '1': 'BatchUpdateBlobs',
-      '2': '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsRequest',
-      '3': '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetTree',
-      '2': '.google.devtools.remoteexecution.v1test.GetTreeRequest',
-      '3': '.google.devtools.remoteexecution.v1test.GetTreeResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ContentAddressableStorageServiceBase$messageJson = {
-  '.google.devtools.remoteexecution.v1test.FindMissingBlobsRequest':
-      FindMissingBlobsRequest$json,
-  '.google.devtools.remoteexecution.v1test.Digest': Digest$json,
-  '.google.devtools.remoteexecution.v1test.FindMissingBlobsResponse':
-      FindMissingBlobsResponse$json,
-  '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsRequest':
-      BatchUpdateBlobsRequest$json,
-  '.google.devtools.remoteexecution.v1test.UpdateBlobRequest':
-      UpdateBlobRequest$json,
-  '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsResponse':
-      BatchUpdateBlobsResponse$json,
-  '.google.devtools.remoteexecution.v1test.BatchUpdateBlobsResponse.Response':
-      BatchUpdateBlobsResponse_Response$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
-  '.google.devtools.remoteexecution.v1test.GetTreeRequest': GetTreeRequest$json,
-  '.google.devtools.remoteexecution.v1test.GetTreeResponse':
-      GetTreeResponse$json,
-  '.google.devtools.remoteexecution.v1test.Directory': Directory$json,
-  '.google.devtools.remoteexecution.v1test.FileNode': FileNode$json,
-  '.google.devtools.remoteexecution.v1test.DirectoryNode': DirectoryNode$json,
 };

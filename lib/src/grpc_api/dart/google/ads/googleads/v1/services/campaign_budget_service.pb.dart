@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -271,27 +270,4 @@ class MutateCampaignBudgetResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class CampaignBudgetServiceApi {
-  $pb.RpcClient _client;
-  CampaignBudgetServiceApi(this._client);
-
-  $async.Future<$0.CampaignBudget> getCampaignBudget(
-      $pb.ClientContext ctx, GetCampaignBudgetRequest request) {
-    var emptyResponse = $0.CampaignBudget();
-    return _client.invoke<$0.CampaignBudget>(ctx, 'CampaignBudgetService',
-        'GetCampaignBudget', request, emptyResponse);
-  }
-
-  $async.Future<MutateCampaignBudgetsResponse> mutateCampaignBudgets(
-      $pb.ClientContext ctx, MutateCampaignBudgetsRequest request) {
-    var emptyResponse = MutateCampaignBudgetsResponse();
-    return _client.invoke<MutateCampaignBudgetsResponse>(
-        ctx,
-        'CampaignBudgetService',
-        'MutateCampaignBudgets',
-        request,
-        emptyResponse);
-  }
 }

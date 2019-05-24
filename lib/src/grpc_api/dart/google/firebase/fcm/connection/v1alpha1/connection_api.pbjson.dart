@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../../protobuf/timestamp.pbjson.dart' as $0;
-
 const UpstreamRequest$json = {
   '1': 'UpstreamRequest',
   '2': [
@@ -88,30 +86,4 @@ const Message_DataEntry$json = {
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
   '7': {'7': true},
-};
-
-const ConnectionApiServiceBase$json = {
-  '1': 'ConnectionApi',
-  '2': [
-    {
-      '1': 'Connect',
-      '2': '.google.firebase.fcm.connection.v1alpha1.UpstreamRequest',
-      '3': '.google.firebase.fcm.connection.v1alpha1.DownstreamResponse',
-      '4': {},
-      '5': true,
-      '6': true
-    },
-  ],
-};
-
-const ConnectionApiServiceBase$messageJson = {
-  '.google.firebase.fcm.connection.v1alpha1.UpstreamRequest':
-      UpstreamRequest$json,
-  '.google.firebase.fcm.connection.v1alpha1.Ack': Ack$json,
-  '.google.firebase.fcm.connection.v1alpha1.DownstreamResponse':
-      DownstreamResponse$json,
-  '.google.firebase.fcm.connection.v1alpha1.Message': Message$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.firebase.fcm.connection.v1alpha1.Message.DataEntry':
-      Message_DataEntry$json,
 };

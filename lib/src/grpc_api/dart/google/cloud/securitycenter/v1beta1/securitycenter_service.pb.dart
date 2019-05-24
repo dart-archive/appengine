@@ -4,28 +4,24 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'finding.pb.dart' as $0;
-import 'source.pb.dart' as $1;
-import '../../../protobuf/duration.pb.dart' as $2;
-import '../../../protobuf/timestamp.pb.dart' as $3;
-import '../../../protobuf/struct.pb.dart' as $4;
-import '../../../protobuf/field_mask.pb.dart' as $5;
-import 'asset.pb.dart' as $6;
-import 'organization_settings.pb.dart' as $7;
-import 'security_marks.pb.dart' as $8;
-import '../../../iam/v1/iam_policy.pb.dart' as $9;
-import '../../../iam/v1/policy.pb.dart' as $10;
-import '../../../longrunning/operations.pb.dart' as $11;
+import 'finding.pb.dart' as $3;
+import 'source.pb.dart' as $2;
+import '../../../protobuf/duration.pb.dart' as $8;
+import '../../../protobuf/timestamp.pb.dart' as $9;
+import '../../../protobuf/struct.pb.dart' as $10;
+import '../../../protobuf/field_mask.pb.dart' as $11;
+import 'asset.pb.dart' as $12;
+import 'organization_settings.pb.dart' as $5;
+import 'security_marks.pb.dart' as $7;
 
 import 'securitycenter_service.pbenum.dart';
-import 'finding.pbenum.dart' as $0;
+import 'finding.pbenum.dart' as $3;
 
 export 'securitycenter_service.pbenum.dart';
 
@@ -34,8 +30,8 @@ class CreateFindingRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'findingId')
-    ..a<$0.Finding>(3, 'finding', $pb.PbFieldType.OM, $0.Finding.getDefault,
-        $0.Finding.create)
+    ..a<$3.Finding>(3, 'finding', $pb.PbFieldType.OM, $3.Finding.getDefault,
+        $3.Finding.create)
     ..hasRequiredFields = false;
 
   CreateFindingRequest() : super();
@@ -74,8 +70,8 @@ class CreateFindingRequest extends $pb.GeneratedMessage {
   $core.bool hasFindingId() => $_has(1);
   void clearFindingId() => clearField(2);
 
-  $0.Finding get finding => $_getN(2);
-  set finding($0.Finding v) {
+  $3.Finding get finding => $_getN(2);
+  set finding($3.Finding v) {
     setField(3, v);
   }
 
@@ -87,8 +83,8 @@ class CreateSourceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSourceRequest',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.Source>(
-        2, 'source', $pb.PbFieldType.OM, $1.Source.getDefault, $1.Source.create)
+    ..a<$2.Source>(
+        2, 'source', $pb.PbFieldType.OM, $2.Source.getDefault, $2.Source.create)
     ..hasRequiredFields = false;
 
   CreateSourceRequest() : super();
@@ -118,8 +114,8 @@ class CreateSourceRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.Source get source => $_getN(1);
-  set source($1.Source v) {
+  $2.Source get source => $_getN(1);
+  set source($2.Source v) {
     setField(2, v);
   }
 
@@ -206,10 +202,10 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'groupBy')
-    ..a<$2.Duration>(4, 'compareDuration', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
-    ..a<$3.Timestamp>(5, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$8.Duration>(4, 'compareDuration', $pb.PbFieldType.OM,
+        $8.Duration.getDefault, $8.Duration.create)
+    ..a<$9.Timestamp>(5, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..aOS(7, 'pageToken')
     ..a<$core.int>(8, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -257,16 +253,16 @@ class GroupAssetsRequest extends $pb.GeneratedMessage {
   $core.bool hasGroupBy() => $_has(2);
   void clearGroupBy() => clearField(3);
 
-  $2.Duration get compareDuration => $_getN(3);
-  set compareDuration($2.Duration v) {
+  $8.Duration get compareDuration => $_getN(3);
+  set compareDuration($8.Duration v) {
     setField(4, v);
   }
 
   $core.bool hasCompareDuration() => $_has(3);
   void clearCompareDuration() => clearField(4);
 
-  $3.Timestamp get readTime => $_getN(4);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(4);
+  set readTime($9.Timestamp v) {
     setField(5, v);
   }
 
@@ -295,8 +291,8 @@ class GroupAssetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..pc<GroupResult>(
         1, 'groupByResults', $pb.PbFieldType.PM, GroupResult.create)
-    ..a<$3.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$9.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -321,8 +317,8 @@ class GroupAssetsResponse extends $pb.GeneratedMessage {
 
   $core.List<GroupResult> get groupByResults => $_getList(0);
 
-  $3.Timestamp get readTime => $_getN(1);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(1);
+  set readTime($9.Timestamp v) {
     setField(2, v);
   }
 
@@ -344,8 +340,8 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'groupBy')
-    ..a<$3.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$9.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..aOS(5, 'pageToken')
     ..a<$core.int>(6, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -394,8 +390,8 @@ class GroupFindingsRequest extends $pb.GeneratedMessage {
   $core.bool hasGroupBy() => $_has(2);
   void clearGroupBy() => clearField(3);
 
-  $3.Timestamp get readTime => $_getN(3);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(3);
+  set readTime($9.Timestamp v) {
     setField(4, v);
   }
 
@@ -424,8 +420,8 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..pc<GroupResult>(
         1, 'groupByResults', $pb.PbFieldType.PM, GroupResult.create)
-    ..a<$3.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$9.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -452,8 +448,8 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
 
   $core.List<GroupResult> get groupByResults => $_getList(0);
 
-  $3.Timestamp get readTime => $_getN(1);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(1);
+  set readTime($9.Timestamp v) {
     setField(2, v);
   }
 
@@ -472,13 +468,13 @@ class GroupFindingsResponse extends $pb.GeneratedMessage {
 class GroupResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GroupResult',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..m<$core.String, $4.Value>(
+    ..m<$core.String, $10.Value>(
         1,
         'properties',
         'GroupResult.PropertiesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $4.Value.create,
+        $10.Value.create,
         null,
         null,
         const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
@@ -502,7 +498,7 @@ class GroupResult extends $pb.GeneratedMessage {
   static GroupResult getDefault() => _defaultInstance ??= create()..freeze();
   static GroupResult _defaultInstance;
 
-  $core.Map<$core.String, $4.Value> get properties => $_getMap(0);
+  $core.Map<$core.String, $10.Value> get properties => $_getMap(0);
 
   Int64 get count => $_getI64(1);
   set count(Int64 v) {
@@ -568,7 +564,7 @@ class ListSourcesRequest extends $pb.GeneratedMessage {
 class ListSourcesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSourcesResponse',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..pc<$1.Source>(1, 'sources', $pb.PbFieldType.PM, $1.Source.create)
+    ..pc<$2.Source>(1, 'sources', $pb.PbFieldType.PM, $2.Source.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -591,7 +587,7 @@ class ListSourcesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListSourcesResponse _defaultInstance;
 
-  $core.List<$1.Source> get sources => $_getList(0);
+  $core.List<$2.Source> get sources => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -608,12 +604,12 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'orderBy')
-    ..a<$3.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$2.Duration>(5, 'compareDuration', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
-    ..a<$5.FieldMask>(7, 'fieldMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..a<$9.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
+    ..a<$8.Duration>(5, 'compareDuration', $pb.PbFieldType.OM,
+        $8.Duration.getDefault, $8.Duration.create)
+    ..a<$11.FieldMask>(7, 'fieldMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..aOS(8, 'pageToken')
     ..a<$core.int>(9, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -661,24 +657,24 @@ class ListAssetsRequest extends $pb.GeneratedMessage {
   $core.bool hasOrderBy() => $_has(2);
   void clearOrderBy() => clearField(3);
 
-  $3.Timestamp get readTime => $_getN(3);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(3);
+  set readTime($9.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasReadTime() => $_has(3);
   void clearReadTime() => clearField(4);
 
-  $2.Duration get compareDuration => $_getN(4);
-  set compareDuration($2.Duration v) {
+  $8.Duration get compareDuration => $_getN(4);
+  set compareDuration($8.Duration v) {
     setField(5, v);
   }
 
   $core.bool hasCompareDuration() => $_has(4);
   void clearCompareDuration() => clearField(5);
 
-  $5.FieldMask get fieldMask => $_getN(5);
-  set fieldMask($5.FieldMask v) {
+  $11.FieldMask get fieldMask => $_getN(5);
+  set fieldMask($11.FieldMask v) {
     setField(7, v);
   }
 
@@ -706,8 +702,8 @@ class ListAssetsResponse_ListAssetsResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListAssetsResponse.ListAssetsResult',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..a<$6.Asset>(
-        1, 'asset', $pb.PbFieldType.OM, $6.Asset.getDefault, $6.Asset.create)
+    ..a<$12.Asset>(
+        1, 'asset', $pb.PbFieldType.OM, $12.Asset.getDefault, $12.Asset.create)
     ..e<ListAssetsResponse_ListAssetsResult_State>(
         2,
         'state',
@@ -740,8 +736,8 @@ class ListAssetsResponse_ListAssetsResult extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListAssetsResponse_ListAssetsResult _defaultInstance;
 
-  $6.Asset get asset => $_getN(0);
-  set asset($6.Asset v) {
+  $12.Asset get asset => $_getN(0);
+  set asset($12.Asset v) {
     setField(1, v);
   }
 
@@ -762,8 +758,8 @@ class ListAssetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..pc<ListAssetsResponse_ListAssetsResult>(1, 'listAssetsResults',
         $pb.PbFieldType.PM, ListAssetsResponse_ListAssetsResult.create)
-    ..a<$3.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$9.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..aOS(3, 'nextPageToken')
     ..a<$core.int>(4, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -790,8 +786,8 @@ class ListAssetsResponse extends $pb.GeneratedMessage {
   $core.List<ListAssetsResponse_ListAssetsResult> get listAssetsResults =>
       $_getList(0);
 
-  $3.Timestamp get readTime => $_getN(1);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(1);
+  set readTime($9.Timestamp v) {
     setField(2, v);
   }
 
@@ -821,10 +817,10 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'orderBy')
-    ..a<$3.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$5.FieldMask>(5, 'fieldMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..a<$9.Timestamp>(4, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
+    ..a<$11.FieldMask>(5, 'fieldMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..aOS(6, 'pageToken')
     ..a<$core.int>(7, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -872,16 +868,16 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
   $core.bool hasOrderBy() => $_has(2);
   void clearOrderBy() => clearField(3);
 
-  $3.Timestamp get readTime => $_getN(3);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(3);
+  set readTime($9.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasReadTime() => $_has(3);
   void clearReadTime() => clearField(4);
 
-  $5.FieldMask get fieldMask => $_getN(4);
-  set fieldMask($5.FieldMask v) {
+  $11.FieldMask get fieldMask => $_getN(4);
+  set fieldMask($11.FieldMask v) {
     setField(5, v);
   }
 
@@ -908,9 +904,9 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
 class ListFindingsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFindingsResponse',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..pc<$0.Finding>(1, 'findings', $pb.PbFieldType.PM, $0.Finding.create)
-    ..a<$3.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..pc<$3.Finding>(1, 'findings', $pb.PbFieldType.PM, $3.Finding.create)
+    ..a<$9.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..aOS(3, 'nextPageToken')
     ..a<$core.int>(4, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -935,10 +931,10 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListFindingsResponse _defaultInstance;
 
-  $core.List<$0.Finding> get findings => $_getList(0);
+  $core.List<$3.Finding> get findings => $_getList(0);
 
-  $3.Timestamp get readTime => $_getN(1);
-  set readTime($3.Timestamp v) {
+  $9.Timestamp get readTime => $_getN(1);
+  set readTime($9.Timestamp v) {
     setField(2, v);
   }
 
@@ -966,15 +962,15 @@ class SetFindingStateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetFindingStateRequest',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..aOS(1, 'name')
-    ..e<$0.Finding_State>(
+    ..e<$3.Finding_State>(
         2,
         'state',
         $pb.PbFieldType.OE,
-        $0.Finding_State.STATE_UNSPECIFIED,
-        $0.Finding_State.valueOf,
-        $0.Finding_State.values)
-    ..a<$3.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+        $3.Finding_State.STATE_UNSPECIFIED,
+        $3.Finding_State.valueOf,
+        $3.Finding_State.values)
+    ..a<$9.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..hasRequiredFields = false;
 
   SetFindingStateRequest() : super();
@@ -1006,16 +1002,16 @@ class SetFindingStateRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Finding_State get state => $_getN(1);
-  set state($0.Finding_State v) {
+  $3.Finding_State get state => $_getN(1);
+  set state($3.Finding_State v) {
     setField(2, v);
   }
 
   $core.bool hasState() => $_has(1);
   void clearState() => clearField(2);
 
-  $3.Timestamp get startTime => $_getN(2);
-  set startTime($3.Timestamp v) {
+  $9.Timestamp get startTime => $_getN(2);
+  set startTime($9.Timestamp v) {
     setField(3, v);
   }
 
@@ -1062,10 +1058,10 @@ class RunAssetDiscoveryRequest extends $pb.GeneratedMessage {
 class UpdateFindingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateFindingRequest',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..a<$0.Finding>(1, 'finding', $pb.PbFieldType.OM, $0.Finding.getDefault,
-        $0.Finding.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..a<$3.Finding>(1, 'finding', $pb.PbFieldType.OM, $3.Finding.getDefault,
+        $3.Finding.create)
+    ..a<$11.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFindingRequest() : super();
@@ -1088,16 +1084,16 @@ class UpdateFindingRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateFindingRequest _defaultInstance;
 
-  $0.Finding get finding => $_getN(0);
-  set finding($0.Finding v) {
+  $3.Finding get finding => $_getN(0);
+  set finding($3.Finding v) {
     setField(1, v);
   }
 
   $core.bool hasFinding() => $_has(0);
   void clearFinding() => clearField(1);
 
-  $5.FieldMask get updateMask => $_getN(1);
-  set updateMask($5.FieldMask v) {
+  $11.FieldMask get updateMask => $_getN(1);
+  set updateMask($11.FieldMask v) {
     setField(2, v);
   }
 
@@ -1109,10 +1105,10 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateOrganizationSettingsRequest',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..a<$7.OrganizationSettings>(1, 'organizationSettings', $pb.PbFieldType.OM,
-        $7.OrganizationSettings.getDefault, $7.OrganizationSettings.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..a<$5.OrganizationSettings>(1, 'organizationSettings', $pb.PbFieldType.OM,
+        $5.OrganizationSettings.getDefault, $5.OrganizationSettings.create)
+    ..a<$11.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOrganizationSettingsRequest() : super();
@@ -1138,16 +1134,16 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateOrganizationSettingsRequest _defaultInstance;
 
-  $7.OrganizationSettings get organizationSettings => $_getN(0);
-  set organizationSettings($7.OrganizationSettings v) {
+  $5.OrganizationSettings get organizationSettings => $_getN(0);
+  set organizationSettings($5.OrganizationSettings v) {
     setField(1, v);
   }
 
   $core.bool hasOrganizationSettings() => $_has(0);
   void clearOrganizationSettings() => clearField(1);
 
-  $5.FieldMask get updateMask => $_getN(1);
-  set updateMask($5.FieldMask v) {
+  $11.FieldMask get updateMask => $_getN(1);
+  set updateMask($11.FieldMask v) {
     setField(2, v);
   }
 
@@ -1158,10 +1154,10 @@ class UpdateOrganizationSettingsRequest extends $pb.GeneratedMessage {
 class UpdateSourceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSourceRequest',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..a<$1.Source>(
-        1, 'source', $pb.PbFieldType.OM, $1.Source.getDefault, $1.Source.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..a<$2.Source>(
+        1, 'source', $pb.PbFieldType.OM, $2.Source.getDefault, $2.Source.create)
+    ..a<$11.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSourceRequest() : super();
@@ -1183,16 +1179,16 @@ class UpdateSourceRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateSourceRequest _defaultInstance;
 
-  $1.Source get source => $_getN(0);
-  set source($1.Source v) {
+  $2.Source get source => $_getN(0);
+  set source($2.Source v) {
     setField(1, v);
   }
 
   $core.bool hasSource() => $_has(0);
   void clearSource() => clearField(1);
 
-  $5.FieldMask get updateMask => $_getN(1);
-  set updateMask($5.FieldMask v) {
+  $11.FieldMask get updateMask => $_getN(1);
+  set updateMask($11.FieldMask v) {
     setField(2, v);
   }
 
@@ -1204,12 +1200,12 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateSecurityMarksRequest',
       package: const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
-    ..a<$8.SecurityMarks>(1, 'securityMarks', $pb.PbFieldType.OM,
-        $8.SecurityMarks.getDefault, $8.SecurityMarks.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
-    ..a<$3.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$7.SecurityMarks>(1, 'securityMarks', $pb.PbFieldType.OM,
+        $7.SecurityMarks.getDefault, $7.SecurityMarks.create)
+    ..a<$11.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..a<$9.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateSecurityMarksRequest() : super();
@@ -1234,158 +1230,27 @@ class UpdateSecurityMarksRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateSecurityMarksRequest _defaultInstance;
 
-  $8.SecurityMarks get securityMarks => $_getN(0);
-  set securityMarks($8.SecurityMarks v) {
+  $7.SecurityMarks get securityMarks => $_getN(0);
+  set securityMarks($7.SecurityMarks v) {
     setField(1, v);
   }
 
   $core.bool hasSecurityMarks() => $_has(0);
   void clearSecurityMarks() => clearField(1);
 
-  $5.FieldMask get updateMask => $_getN(1);
-  set updateMask($5.FieldMask v) {
+  $11.FieldMask get updateMask => $_getN(1);
+  set updateMask($11.FieldMask v) {
     setField(2, v);
   }
 
   $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 
-  $3.Timestamp get startTime => $_getN(2);
-  set startTime($3.Timestamp v) {
+  $9.Timestamp get startTime => $_getN(2);
+  set startTime($9.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasStartTime() => $_has(2);
   void clearStartTime() => clearField(3);
-}
-
-class SecurityCenterApi {
-  $pb.RpcClient _client;
-  SecurityCenterApi(this._client);
-
-  $async.Future<$1.Source> createSource(
-      $pb.ClientContext ctx, CreateSourceRequest request) {
-    var emptyResponse = $1.Source();
-    return _client.invoke<$1.Source>(
-        ctx, 'SecurityCenter', 'CreateSource', request, emptyResponse);
-  }
-
-  $async.Future<$0.Finding> createFinding(
-      $pb.ClientContext ctx, CreateFindingRequest request) {
-    var emptyResponse = $0.Finding();
-    return _client.invoke<$0.Finding>(
-        ctx, 'SecurityCenter', 'CreateFinding', request, emptyResponse);
-  }
-
-  $async.Future<$10.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $9.GetIamPolicyRequest request) {
-    var emptyResponse = $10.Policy();
-    return _client.invoke<$10.Policy>(
-        ctx, 'SecurityCenter', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$7.OrganizationSettings> getOrganizationSettings(
-      $pb.ClientContext ctx, GetOrganizationSettingsRequest request) {
-    var emptyResponse = $7.OrganizationSettings();
-    return _client.invoke<$7.OrganizationSettings>(ctx, 'SecurityCenter',
-        'GetOrganizationSettings', request, emptyResponse);
-  }
-
-  $async.Future<$1.Source> getSource(
-      $pb.ClientContext ctx, GetSourceRequest request) {
-    var emptyResponse = $1.Source();
-    return _client.invoke<$1.Source>(
-        ctx, 'SecurityCenter', 'GetSource', request, emptyResponse);
-  }
-
-  $async.Future<GroupAssetsResponse> groupAssets(
-      $pb.ClientContext ctx, GroupAssetsRequest request) {
-    var emptyResponse = GroupAssetsResponse();
-    return _client.invoke<GroupAssetsResponse>(
-        ctx, 'SecurityCenter', 'GroupAssets', request, emptyResponse);
-  }
-
-  $async.Future<GroupFindingsResponse> groupFindings(
-      $pb.ClientContext ctx, GroupFindingsRequest request) {
-    var emptyResponse = GroupFindingsResponse();
-    return _client.invoke<GroupFindingsResponse>(
-        ctx, 'SecurityCenter', 'GroupFindings', request, emptyResponse);
-  }
-
-  $async.Future<ListAssetsResponse> listAssets(
-      $pb.ClientContext ctx, ListAssetsRequest request) {
-    var emptyResponse = ListAssetsResponse();
-    return _client.invoke<ListAssetsResponse>(
-        ctx, 'SecurityCenter', 'ListAssets', request, emptyResponse);
-  }
-
-  $async.Future<ListFindingsResponse> listFindings(
-      $pb.ClientContext ctx, ListFindingsRequest request) {
-    var emptyResponse = ListFindingsResponse();
-    return _client.invoke<ListFindingsResponse>(
-        ctx, 'SecurityCenter', 'ListFindings', request, emptyResponse);
-  }
-
-  $async.Future<ListSourcesResponse> listSources(
-      $pb.ClientContext ctx, ListSourcesRequest request) {
-    var emptyResponse = ListSourcesResponse();
-    return _client.invoke<ListSourcesResponse>(
-        ctx, 'SecurityCenter', 'ListSources', request, emptyResponse);
-  }
-
-  $async.Future<$11.Operation> runAssetDiscovery(
-      $pb.ClientContext ctx, RunAssetDiscoveryRequest request) {
-    var emptyResponse = $11.Operation();
-    return _client.invoke<$11.Operation>(
-        ctx, 'SecurityCenter', 'RunAssetDiscovery', request, emptyResponse);
-  }
-
-  $async.Future<$0.Finding> setFindingState(
-      $pb.ClientContext ctx, SetFindingStateRequest request) {
-    var emptyResponse = $0.Finding();
-    return _client.invoke<$0.Finding>(
-        ctx, 'SecurityCenter', 'SetFindingState', request, emptyResponse);
-  }
-
-  $async.Future<$10.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $9.SetIamPolicyRequest request) {
-    var emptyResponse = $10.Policy();
-    return _client.invoke<$10.Policy>(
-        ctx, 'SecurityCenter', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$9.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $9.TestIamPermissionsRequest request) {
-    var emptyResponse = $9.TestIamPermissionsResponse();
-    return _client.invoke<$9.TestIamPermissionsResponse>(
-        ctx, 'SecurityCenter', 'TestIamPermissions', request, emptyResponse);
-  }
-
-  $async.Future<$0.Finding> updateFinding(
-      $pb.ClientContext ctx, UpdateFindingRequest request) {
-    var emptyResponse = $0.Finding();
-    return _client.invoke<$0.Finding>(
-        ctx, 'SecurityCenter', 'UpdateFinding', request, emptyResponse);
-  }
-
-  $async.Future<$7.OrganizationSettings> updateOrganizationSettings(
-      $pb.ClientContext ctx, UpdateOrganizationSettingsRequest request) {
-    var emptyResponse = $7.OrganizationSettings();
-    return _client.invoke<$7.OrganizationSettings>(ctx, 'SecurityCenter',
-        'UpdateOrganizationSettings', request, emptyResponse);
-  }
-
-  $async.Future<$1.Source> updateSource(
-      $pb.ClientContext ctx, UpdateSourceRequest request) {
-    var emptyResponse = $1.Source();
-    return _client.invoke<$1.Source>(
-        ctx, 'SecurityCenter', 'UpdateSource', request, emptyResponse);
-  }
-
-  $async.Future<$8.SecurityMarks> updateSecurityMarks(
-      $pb.ClientContext ctx, UpdateSecurityMarksRequest request) {
-    var emptyResponse = $8.SecurityMarks();
-    return _client.invoke<$8.SecurityMarks>(
-        ctx, 'SecurityCenter', 'UpdateSecurityMarks', request, emptyResponse);
-  }
 }

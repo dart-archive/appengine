@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../type/latlng.pbjson.dart' as $0;
-
 const AssistRequest$json = {
   '1': 'AssistRequest',
   '2': [
@@ -407,38 +405,4 @@ const DeviceLocation$json = {
   '8': [
     {'1': 'type'},
   ],
-};
-
-const EmbeddedAssistantServiceBase$json = {
-  '1': 'EmbeddedAssistant',
-  '2': [
-    {
-      '1': 'Assist',
-      '2': '.google.assistant.embedded.v1alpha2.AssistRequest',
-      '3': '.google.assistant.embedded.v1alpha2.AssistResponse',
-      '5': true,
-      '6': true
-    },
-  ],
-};
-
-const EmbeddedAssistantServiceBase$messageJson = {
-  '.google.assistant.embedded.v1alpha2.AssistRequest': AssistRequest$json,
-  '.google.assistant.embedded.v1alpha2.AssistConfig': AssistConfig$json,
-  '.google.assistant.embedded.v1alpha2.AudioInConfig': AudioInConfig$json,
-  '.google.assistant.embedded.v1alpha2.AudioOutConfig': AudioOutConfig$json,
-  '.google.assistant.embedded.v1alpha2.DialogStateIn': DialogStateIn$json,
-  '.google.assistant.embedded.v1alpha2.DeviceLocation': DeviceLocation$json,
-  '.google.type.LatLng': $0.LatLng$json,
-  '.google.assistant.embedded.v1alpha2.DeviceConfig': DeviceConfig$json,
-  '.google.assistant.embedded.v1alpha2.DebugConfig': DebugConfig$json,
-  '.google.assistant.embedded.v1alpha2.ScreenOutConfig': ScreenOutConfig$json,
-  '.google.assistant.embedded.v1alpha2.AssistResponse': AssistResponse$json,
-  '.google.assistant.embedded.v1alpha2.SpeechRecognitionResult':
-      SpeechRecognitionResult$json,
-  '.google.assistant.embedded.v1alpha2.AudioOut': AudioOut$json,
-  '.google.assistant.embedded.v1alpha2.ScreenOut': ScreenOut$json,
-  '.google.assistant.embedded.v1alpha2.DialogStateOut': DialogStateOut$json,
-  '.google.assistant.embedded.v1alpha2.DeviceAction': DeviceAction$json,
-  '.google.assistant.embedded.v1alpha2.DebugInfo': DebugInfo$json,
 };

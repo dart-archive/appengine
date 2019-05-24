@@ -4,16 +4,11 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../../../protobuf/empty.pb.dart' as $0;
-import '../../../iam/v1/iam_policy.pb.dart' as $1;
-import '../../../iam/v1/policy.pb.dart' as $2;
 
 class Repo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Repo',
@@ -323,57 +318,4 @@ class DeleteRepoRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class SourceRepoApi {
-  $pb.RpcClient _client;
-  SourceRepoApi(this._client);
-
-  $async.Future<ListReposResponse> listRepos(
-      $pb.ClientContext ctx, ListReposRequest request) {
-    var emptyResponse = ListReposResponse();
-    return _client.invoke<ListReposResponse>(
-        ctx, 'SourceRepo', 'ListRepos', request, emptyResponse);
-  }
-
-  $async.Future<Repo> getRepo($pb.ClientContext ctx, GetRepoRequest request) {
-    var emptyResponse = Repo();
-    return _client.invoke<Repo>(
-        ctx, 'SourceRepo', 'GetRepo', request, emptyResponse);
-  }
-
-  $async.Future<Repo> createRepo(
-      $pb.ClientContext ctx, CreateRepoRequest request) {
-    var emptyResponse = Repo();
-    return _client.invoke<Repo>(
-        ctx, 'SourceRepo', 'CreateRepo', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> deleteRepo(
-      $pb.ClientContext ctx, DeleteRepoRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'SourceRepo', 'DeleteRepo', request, emptyResponse);
-  }
-
-  $async.Future<$2.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $1.SetIamPolicyRequest request) {
-    var emptyResponse = $2.Policy();
-    return _client.invoke<$2.Policy>(
-        ctx, 'SourceRepo', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$2.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $1.GetIamPolicyRequest request) {
-    var emptyResponse = $2.Policy();
-    return _client.invoke<$2.Policy>(
-        ctx, 'SourceRepo', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$1.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $1.TestIamPermissionsRequest request) {
-    var emptyResponse = $1.TestIamPermissionsResponse();
-    return _client.invoke<$1.TestIamPermissionsResponse>(
-        ctx, 'SourceRepo', 'TestIamPermissions', request, emptyResponse);
-  }
 }

@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../api/httpbody.pbjson.dart' as $0;
-import '../../../protobuf/any.pbjson.dart' as $1;
-
 const PredictRequest$json = {
   '1': 'PredictRequest',
   '2': [
@@ -20,22 +17,4 @@ const PredictRequest$json = {
       '10': 'httpBody'
     },
   ],
-};
-
-const OnlinePredictionServiceBase$json = {
-  '1': 'OnlinePredictionService',
-  '2': [
-    {
-      '1': 'Predict',
-      '2': '.google.cloud.ml.v1.PredictRequest',
-      '3': '.google.api.HttpBody',
-      '4': {}
-    },
-  ],
-};
-
-const OnlinePredictionServiceBase$messageJson = {
-  '.google.cloud.ml.v1.PredictRequest': PredictRequest$json,
-  '.google.api.HttpBody': $0.HttpBody$json,
-  '.google.protobuf.Any': $1.Any$json,
 };

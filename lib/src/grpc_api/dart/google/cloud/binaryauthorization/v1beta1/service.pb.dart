@@ -4,14 +4,12 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'resources.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
 
 class GetPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetPolicyRequest',
@@ -342,62 +340,4 @@ class DeleteAttestorRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class BinauthzManagementServiceV1Beta1Api {
-  $pb.RpcClient _client;
-  BinauthzManagementServiceV1Beta1Api(this._client);
-
-  $async.Future<$0.Policy> getPolicy(
-      $pb.ClientContext ctx, GetPolicyRequest request) {
-    var emptyResponse = $0.Policy();
-    return _client.invoke<$0.Policy>(ctx, 'BinauthzManagementServiceV1Beta1',
-        'GetPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$0.Policy> updatePolicy(
-      $pb.ClientContext ctx, UpdatePolicyRequest request) {
-    var emptyResponse = $0.Policy();
-    return _client.invoke<$0.Policy>(ctx, 'BinauthzManagementServiceV1Beta1',
-        'UpdatePolicy', request, emptyResponse);
-  }
-
-  $async.Future<$0.Attestor> createAttestor(
-      $pb.ClientContext ctx, CreateAttestorRequest request) {
-    var emptyResponse = $0.Attestor();
-    return _client.invoke<$0.Attestor>(ctx, 'BinauthzManagementServiceV1Beta1',
-        'CreateAttestor', request, emptyResponse);
-  }
-
-  $async.Future<$0.Attestor> getAttestor(
-      $pb.ClientContext ctx, GetAttestorRequest request) {
-    var emptyResponse = $0.Attestor();
-    return _client.invoke<$0.Attestor>(ctx, 'BinauthzManagementServiceV1Beta1',
-        'GetAttestor', request, emptyResponse);
-  }
-
-  $async.Future<$0.Attestor> updateAttestor(
-      $pb.ClientContext ctx, UpdateAttestorRequest request) {
-    var emptyResponse = $0.Attestor();
-    return _client.invoke<$0.Attestor>(ctx, 'BinauthzManagementServiceV1Beta1',
-        'UpdateAttestor', request, emptyResponse);
-  }
-
-  $async.Future<ListAttestorsResponse> listAttestors(
-      $pb.ClientContext ctx, ListAttestorsRequest request) {
-    var emptyResponse = ListAttestorsResponse();
-    return _client.invoke<ListAttestorsResponse>(
-        ctx,
-        'BinauthzManagementServiceV1Beta1',
-        'ListAttestors',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$1.Empty> deleteAttestor(
-      $pb.ClientContext ctx, DeleteAttestorRequest request) {
-    var emptyResponse = $1.Empty();
-    return _client.invoke<$1.Empty>(ctx, 'BinauthzManagementServiceV1Beta1',
-        'DeleteAttestor', request, emptyResponse);
-  }
 }

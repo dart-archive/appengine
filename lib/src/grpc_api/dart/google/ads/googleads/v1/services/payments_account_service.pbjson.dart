@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/payments_account.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $1;
-
 const ListPaymentsAccountsRequest$json = {
   '1': 'ListPaymentsAccountsRequest',
   '2': [
@@ -26,25 +23,4 @@ const ListPaymentsAccountsResponse$json = {
       '10': 'paymentsAccounts'
     },
   ],
-};
-
-const PaymentsAccountServiceBase$json = {
-  '1': 'PaymentsAccountService',
-  '2': [
-    {
-      '1': 'ListPaymentsAccounts',
-      '2': '.google.ads.googleads.v1.services.ListPaymentsAccountsRequest',
-      '3': '.google.ads.googleads.v1.services.ListPaymentsAccountsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const PaymentsAccountServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.ListPaymentsAccountsRequest':
-      ListPaymentsAccountsRequest$json,
-  '.google.ads.googleads.v1.services.ListPaymentsAccountsResponse':
-      ListPaymentsAccountsResponse$json,
-  '.google.ads.googleads.v1.resources.PaymentsAccount': $0.PaymentsAccount$json,
-  '.google.protobuf.StringValue': $1.StringValue$json,
 };

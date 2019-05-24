@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -348,23 +347,4 @@ class ReportResponse extends $pb.GeneratedMessage {
 
   $core.bool hasServiceRolloutId() => $_has(2);
   void clearServiceRolloutId() => clearField(4);
-}
-
-class ServiceControllerApi {
-  $pb.RpcClient _client;
-  ServiceControllerApi(this._client);
-
-  $async.Future<CheckResponse> check_(
-      $pb.ClientContext ctx, CheckRequest request) {
-    var emptyResponse = CheckResponse();
-    return _client.invoke<CheckResponse>(
-        ctx, 'ServiceController', 'Check', request, emptyResponse);
-  }
-
-  $async.Future<ReportResponse> report(
-      $pb.ClientContext ctx, ReportRequest request) {
-    var emptyResponse = ReportResponse();
-    return _client.invoke<ReportResponse>(
-        ctx, 'ServiceController', 'Report', request, emptyResponse);
-  }
 }

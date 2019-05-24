@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../../../longrunning/operations.pb.dart' as $0;
 
 import 'agent.pbenum.dart';
 
@@ -514,51 +511,4 @@ class RestoreAgentRequest extends $pb.GeneratedMessage {
 
   $core.bool hasAgentContent() => $_has(2);
   void clearAgentContent() => clearField(3);
-}
-
-class AgentsApi {
-  $pb.RpcClient _client;
-  AgentsApi(this._client);
-
-  $async.Future<Agent> getAgent(
-      $pb.ClientContext ctx, GetAgentRequest request) {
-    var emptyResponse = Agent();
-    return _client.invoke<Agent>(
-        ctx, 'Agents', 'GetAgent', request, emptyResponse);
-  }
-
-  $async.Future<SearchAgentsResponse> searchAgents(
-      $pb.ClientContext ctx, SearchAgentsRequest request) {
-    var emptyResponse = SearchAgentsResponse();
-    return _client.invoke<SearchAgentsResponse>(
-        ctx, 'Agents', 'SearchAgents', request, emptyResponse);
-  }
-
-  $async.Future<$0.Operation> trainAgent(
-      $pb.ClientContext ctx, TrainAgentRequest request) {
-    var emptyResponse = $0.Operation();
-    return _client.invoke<$0.Operation>(
-        ctx, 'Agents', 'TrainAgent', request, emptyResponse);
-  }
-
-  $async.Future<$0.Operation> exportAgent(
-      $pb.ClientContext ctx, ExportAgentRequest request) {
-    var emptyResponse = $0.Operation();
-    return _client.invoke<$0.Operation>(
-        ctx, 'Agents', 'ExportAgent', request, emptyResponse);
-  }
-
-  $async.Future<$0.Operation> importAgent(
-      $pb.ClientContext ctx, ImportAgentRequest request) {
-    var emptyResponse = $0.Operation();
-    return _client.invoke<$0.Operation>(
-        ctx, 'Agents', 'ImportAgent', request, emptyResponse);
-  }
-
-  $async.Future<$0.Operation> restoreAgent(
-      $pb.ClientContext ctx, RestoreAgentRequest request) {
-    var emptyResponse = $0.Operation();
-    return _client.invoke<$0.Operation>(
-        ctx, 'Agents', 'RestoreAgent', request, emptyResponse);
-  }
 }

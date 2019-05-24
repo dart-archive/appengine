@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'model_reference.pbjson.dart' as $0;
-import '../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../../../protobuf/timestamp.pbjson.dart' as $3;
-import 'standard_sql.pbjson.dart' as $1;
-import '../../../protobuf/empty.pbjson.dart' as $4;
-
 const Model$json = {
   '1': 'Model',
   '2': [
@@ -802,85 +796,4 @@ const ListModelsResponse$json = {
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
-};
-
-const ModelServiceBase$json = {
-  '1': 'ModelService',
-  '2': [
-    {
-      '1': 'GetModel',
-      '2': '.google.cloud.bigquery.v2.GetModelRequest',
-      '3': '.google.cloud.bigquery.v2.Model',
-      '4': {}
-    },
-    {
-      '1': 'ListModels',
-      '2': '.google.cloud.bigquery.v2.ListModelsRequest',
-      '3': '.google.cloud.bigquery.v2.ListModelsResponse',
-      '4': {}
-    },
-    {
-      '1': 'PatchModel',
-      '2': '.google.cloud.bigquery.v2.PatchModelRequest',
-      '3': '.google.cloud.bigquery.v2.Model',
-      '4': {}
-    },
-    {
-      '1': 'DeleteModel',
-      '2': '.google.cloud.bigquery.v2.DeleteModelRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const ModelServiceBase$messageJson = {
-  '.google.cloud.bigquery.v2.GetModelRequest': GetModelRequest$json,
-  '.google.cloud.bigquery.v2.Model': Model$json,
-  '.google.cloud.bigquery.v2.ModelReference': $0.ModelReference$json,
-  '.google.cloud.bigquery.v2.Model.TrainingRun': Model_TrainingRun$json,
-  '.google.cloud.bigquery.v2.Model.TrainingRun.TrainingOptions':
-      Model_TrainingRun_TrainingOptions$json,
-  '.google.protobuf.DoubleValue': $2.DoubleValue$json,
-  '.google.protobuf.BoolValue': $2.BoolValue$json,
-  '.google.cloud.bigquery.v2.Model.TrainingRun.TrainingOptions.LabelClassWeightsEntry':
-      Model_TrainingRun_TrainingOptions_LabelClassWeightsEntry$json,
-  '.google.cloud.bigquery.v2.Model.TrainingRun.IterationResult':
-      Model_TrainingRun_IterationResult$json,
-  '.google.protobuf.Int32Value': $2.Int32Value$json,
-  '.google.protobuf.Int64Value': $2.Int64Value$json,
-  '.google.cloud.bigquery.v2.Model.TrainingRun.IterationResult.ClusterInfo':
-      Model_TrainingRun_IterationResult_ClusterInfo$json,
-  '.google.cloud.bigquery.v2.Model.EvaluationMetrics':
-      Model_EvaluationMetrics$json,
-  '.google.cloud.bigquery.v2.Model.RegressionMetrics':
-      Model_RegressionMetrics$json,
-  '.google.cloud.bigquery.v2.Model.BinaryClassificationMetrics':
-      Model_BinaryClassificationMetrics$json,
-  '.google.cloud.bigquery.v2.Model.AggregateClassificationMetrics':
-      Model_AggregateClassificationMetrics$json,
-  '.google.cloud.bigquery.v2.Model.BinaryClassificationMetrics.BinaryConfusionMatrix':
-      Model_BinaryClassificationMetrics_BinaryConfusionMatrix$json,
-  '.google.cloud.bigquery.v2.Model.MultiClassClassificationMetrics':
-      Model_MultiClassClassificationMetrics$json,
-  '.google.cloud.bigquery.v2.Model.MultiClassClassificationMetrics.ConfusionMatrix':
-      Model_MultiClassClassificationMetrics_ConfusionMatrix$json,
-  '.google.cloud.bigquery.v2.Model.MultiClassClassificationMetrics.ConfusionMatrix.Row':
-      Model_MultiClassClassificationMetrics_ConfusionMatrix_Row$json,
-  '.google.cloud.bigquery.v2.Model.MultiClassClassificationMetrics.ConfusionMatrix.Entry':
-      Model_MultiClassClassificationMetrics_ConfusionMatrix_Entry$json,
-  '.google.cloud.bigquery.v2.Model.ClusteringMetrics':
-      Model_ClusteringMetrics$json,
-  '.google.protobuf.Timestamp': $3.Timestamp$json,
-  '.google.cloud.bigquery.v2.StandardSqlField': $1.StandardSqlField$json,
-  '.google.cloud.bigquery.v2.StandardSqlDataType': $1.StandardSqlDataType$json,
-  '.google.cloud.bigquery.v2.StandardSqlStructType':
-      $1.StandardSqlStructType$json,
-  '.google.cloud.bigquery.v2.Model.LabelsEntry': Model_LabelsEntry$json,
-  '.google.cloud.bigquery.v2.ListModelsRequest': ListModelsRequest$json,
-  '.google.protobuf.UInt32Value': $2.UInt32Value$json,
-  '.google.cloud.bigquery.v2.ListModelsResponse': ListModelsResponse$json,
-  '.google.cloud.bigquery.v2.PatchModelRequest': PatchModelRequest$json,
-  '.google.cloud.bigquery.v2.DeleteModelRequest': DeleteModelRequest$json,
-  '.google.protobuf.Empty': $4.Empty$json,
 };

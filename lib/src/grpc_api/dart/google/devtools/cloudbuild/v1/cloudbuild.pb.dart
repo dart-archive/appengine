@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $3;
+import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 import 'cloudbuild.pbenum.dart';
 
@@ -379,8 +376,8 @@ class BuildStep extends $pb.GeneratedMessage {
     ..pc<Volume>(9, 'volumes', $pb.PbFieldType.PM, Volume.create)
     ..a<TimeSpan>(
         10, 'timing', $pb.PbFieldType.OM, TimeSpan.getDefault, TimeSpan.create)
-    ..a<$0.Duration>(11, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault,
-        $0.Duration.create)
+    ..a<$2.Duration>(11, 'timeout', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
     ..e<Build_Status>(12, 'status', $pb.PbFieldType.OE,
         Build_Status.STATUS_UNKNOWN, Build_Status.valueOf, Build_Status.values)
     ..a<TimeSpan>(13, 'pullTiming', $pb.PbFieldType.OM, TimeSpan.getDefault,
@@ -454,8 +451,8 @@ class BuildStep extends $pb.GeneratedMessage {
   $core.bool hasTiming() => $_has(9);
   void clearTiming() => clearField(10);
 
-  $0.Duration get timeout => $_getN(10);
-  set timeout($0.Duration v) {
+  $2.Duration get timeout => $_getN(10);
+  set timeout($2.Duration v) {
     setField(11, v);
   }
 
@@ -614,17 +611,17 @@ class Build extends $pb.GeneratedMessage {
         Build_Status.STATUS_UNKNOWN, Build_Status.valueOf, Build_Status.values)
     ..a<Source>(
         3, 'source', $pb.PbFieldType.OM, Source.getDefault, Source.create)
-    ..a<$1.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(8, 'finishTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(8, 'finishTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<Results>(
         10, 'results', $pb.PbFieldType.OM, Results.getDefault, Results.create)
     ..pc<BuildStep>(11, 'steps', $pb.PbFieldType.PM, BuildStep.create)
-    ..a<$0.Duration>(12, 'timeout', $pb.PbFieldType.OM, $0.Duration.getDefault,
-        $0.Duration.create)
+    ..a<$2.Duration>(12, 'timeout', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
     ..pPS(13, 'images')
     ..aOS(16, 'projectId')
     ..aOS(19, 'logsBucket')
@@ -701,24 +698,24 @@ class Build extends $pb.GeneratedMessage {
   $core.bool hasSource() => $_has(2);
   void clearSource() => clearField(3);
 
-  $1.Timestamp get createTime => $_getN(3);
-  set createTime($1.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(6);
 
-  $1.Timestamp get startTime => $_getN(4);
-  set startTime($1.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(4);
+  set startTime($3.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(7);
 
-  $1.Timestamp get finishTime => $_getN(5);
-  set finishTime($1.Timestamp v) {
+  $3.Timestamp get finishTime => $_getN(5);
+  set finishTime($3.Timestamp v) {
     setField(8, v);
   }
 
@@ -735,8 +732,8 @@ class Build extends $pb.GeneratedMessage {
 
   $core.List<BuildStep> get steps => $_getList(7);
 
-  $0.Duration get timeout => $_getN(8);
-  set timeout($0.Duration v) {
+  $2.Duration get timeout => $_getN(8);
+  set timeout($2.Duration v) {
     setField(12, v);
   }
 
@@ -907,10 +904,10 @@ class Artifacts extends $pb.GeneratedMessage {
 class TimeSpan extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeSpan',
       package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
-    ..a<$1.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   TimeSpan() : super();
@@ -930,16 +927,16 @@ class TimeSpan extends $pb.GeneratedMessage {
   static TimeSpan getDefault() => _defaultInstance ??= create()..freeze();
   static TimeSpan _defaultInstance;
 
-  $1.Timestamp get startTime => $_getN(0);
-  set startTime($1.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(0);
+  set startTime($3.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $1.Timestamp get endTime => $_getN(1);
-  set endTime($1.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(1);
+  set endTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -1392,8 +1389,8 @@ class BuildTrigger extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.devtools.cloudbuild.v1'))
     ..aOS(1, 'id')
     ..a<Build>(4, 'build', $pb.PbFieldType.OM, Build.getDefault, Build.create)
-    ..a<$1.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<RepoSource>(7, 'triggerTemplate', $pb.PbFieldType.OM,
         RepoSource.getDefault, RepoSource.create)
     ..aOS(8, 'filename')
@@ -1452,8 +1449,8 @@ class BuildTrigger extends $pb.GeneratedMessage {
   $core.bool hasBuild() => $_has(1);
   void clearBuild() => clearField(4);
 
-  $1.Timestamp get createTime => $_getN(2);
-  set createTime($1.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(2);
+  set createTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -1888,86 +1885,4 @@ class BuildOptions extends $pb.GeneratedMessage {
   $core.List<$core.String> get secretEnv => $_getList(9);
 
   $core.List<Volume> get volumes => $_getList(10);
-}
-
-class CloudBuildApi {
-  $pb.RpcClient _client;
-  CloudBuildApi(this._client);
-
-  $async.Future<$2.Operation> createBuild(
-      $pb.ClientContext ctx, CreateBuildRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudBuild', 'CreateBuild', request, emptyResponse);
-  }
-
-  $async.Future<Build> getBuild(
-      $pb.ClientContext ctx, GetBuildRequest request) {
-    var emptyResponse = Build();
-    return _client.invoke<Build>(
-        ctx, 'CloudBuild', 'GetBuild', request, emptyResponse);
-  }
-
-  $async.Future<ListBuildsResponse> listBuilds(
-      $pb.ClientContext ctx, ListBuildsRequest request) {
-    var emptyResponse = ListBuildsResponse();
-    return _client.invoke<ListBuildsResponse>(
-        ctx, 'CloudBuild', 'ListBuilds', request, emptyResponse);
-  }
-
-  $async.Future<Build> cancelBuild(
-      $pb.ClientContext ctx, CancelBuildRequest request) {
-    var emptyResponse = Build();
-    return _client.invoke<Build>(
-        ctx, 'CloudBuild', 'CancelBuild', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> retryBuild(
-      $pb.ClientContext ctx, RetryBuildRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudBuild', 'RetryBuild', request, emptyResponse);
-  }
-
-  $async.Future<BuildTrigger> createBuildTrigger(
-      $pb.ClientContext ctx, CreateBuildTriggerRequest request) {
-    var emptyResponse = BuildTrigger();
-    return _client.invoke<BuildTrigger>(
-        ctx, 'CloudBuild', 'CreateBuildTrigger', request, emptyResponse);
-  }
-
-  $async.Future<BuildTrigger> getBuildTrigger(
-      $pb.ClientContext ctx, GetBuildTriggerRequest request) {
-    var emptyResponse = BuildTrigger();
-    return _client.invoke<BuildTrigger>(
-        ctx, 'CloudBuild', 'GetBuildTrigger', request, emptyResponse);
-  }
-
-  $async.Future<ListBuildTriggersResponse> listBuildTriggers(
-      $pb.ClientContext ctx, ListBuildTriggersRequest request) {
-    var emptyResponse = ListBuildTriggersResponse();
-    return _client.invoke<ListBuildTriggersResponse>(
-        ctx, 'CloudBuild', 'ListBuildTriggers', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteBuildTrigger(
-      $pb.ClientContext ctx, DeleteBuildTriggerRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'CloudBuild', 'DeleteBuildTrigger', request, emptyResponse);
-  }
-
-  $async.Future<BuildTrigger> updateBuildTrigger(
-      $pb.ClientContext ctx, UpdateBuildTriggerRequest request) {
-    var emptyResponse = BuildTrigger();
-    return _client.invoke<BuildTrigger>(
-        ctx, 'CloudBuild', 'UpdateBuildTrigger', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> runBuildTrigger(
-      $pb.ClientContext ctx, RunBuildTriggerRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudBuild', 'RunBuildTrigger', request, emptyResponse);
-  }
 }

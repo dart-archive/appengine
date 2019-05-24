@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -267,32 +266,4 @@ class MutateAccountBudgetProposalResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class AccountBudgetProposalServiceApi {
-  $pb.RpcClient _client;
-  AccountBudgetProposalServiceApi(this._client);
-
-  $async.Future<$0.AccountBudgetProposal> getAccountBudgetProposal(
-      $pb.ClientContext ctx, GetAccountBudgetProposalRequest request) {
-    var emptyResponse = $0.AccountBudgetProposal();
-    return _client.invoke<$0.AccountBudgetProposal>(
-        ctx,
-        'AccountBudgetProposalService',
-        'GetAccountBudgetProposal',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<MutateAccountBudgetProposalResponse>
-      mutateAccountBudgetProposal(
-          $pb.ClientContext ctx, MutateAccountBudgetProposalRequest request) {
-    var emptyResponse = MutateAccountBudgetProposalResponse();
-    return _client.invoke<MutateAccountBudgetProposalResponse>(
-        ctx,
-        'AccountBudgetProposalService',
-        'MutateAccountBudgetProposal',
-        request,
-        emptyResponse);
-  }
 }

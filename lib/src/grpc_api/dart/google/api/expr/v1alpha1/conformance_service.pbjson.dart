@@ -4,16 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'syntax.pbjson.dart' as $0;
-import '../../../protobuf/duration.pbjson.dart' as $4;
-import '../../../protobuf/timestamp.pbjson.dart' as $5;
-import '../../../rpc/status.pbjson.dart' as $1;
-import '../../../protobuf/any.pbjson.dart' as $6;
-import 'checked.pbjson.dart' as $2;
-import '../../../protobuf/empty.pbjson.dart' as $7;
-import 'eval.pbjson.dart' as $3;
-import 'value.pbjson.dart' as $8;
-
 const ParseRequest$json = {
   '1': 'ParseRequest',
   '2': [
@@ -199,82 +189,4 @@ const IssueDetails_Severity$json = {
     {'1': 'WARNING', '2': 2},
     {'1': 'ERROR', '2': 3},
   ],
-};
-
-const ConformanceServiceBase$json = {
-  '1': 'ConformanceService',
-  '2': [
-    {
-      '1': 'Parse',
-      '2': '.google.api.expr.v1alpha1.ParseRequest',
-      '3': '.google.api.expr.v1alpha1.ParseResponse',
-      '4': {}
-    },
-    {
-      '1': 'Check',
-      '2': '.google.api.expr.v1alpha1.CheckRequest',
-      '3': '.google.api.expr.v1alpha1.CheckResponse',
-      '4': {}
-    },
-    {
-      '1': 'Eval',
-      '2': '.google.api.expr.v1alpha1.EvalRequest',
-      '3': '.google.api.expr.v1alpha1.EvalResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ConformanceServiceBase$messageJson = {
-  '.google.api.expr.v1alpha1.ParseRequest': ParseRequest$json,
-  '.google.api.expr.v1alpha1.ParseResponse': ParseResponse$json,
-  '.google.api.expr.v1alpha1.ParsedExpr': $0.ParsedExpr$json,
-  '.google.api.expr.v1alpha1.Expr': $0.Expr$json,
-  '.google.api.expr.v1alpha1.Constant': $0.Constant$json,
-  '.google.protobuf.Duration': $4.Duration$json,
-  '.google.protobuf.Timestamp': $5.Timestamp$json,
-  '.google.api.expr.v1alpha1.Expr.Ident': $0.Expr_Ident$json,
-  '.google.api.expr.v1alpha1.Expr.Select': $0.Expr_Select$json,
-  '.google.api.expr.v1alpha1.Expr.Call': $0.Expr_Call$json,
-  '.google.api.expr.v1alpha1.Expr.CreateList': $0.Expr_CreateList$json,
-  '.google.api.expr.v1alpha1.Expr.CreateStruct': $0.Expr_CreateStruct$json,
-  '.google.api.expr.v1alpha1.Expr.CreateStruct.Entry':
-      $0.Expr_CreateStruct_Entry$json,
-  '.google.api.expr.v1alpha1.Expr.Comprehension': $0.Expr_Comprehension$json,
-  '.google.api.expr.v1alpha1.SourceInfo': $0.SourceInfo$json,
-  '.google.api.expr.v1alpha1.SourceInfo.PositionsEntry':
-      $0.SourceInfo_PositionsEntry$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $6.Any$json,
-  '.google.api.expr.v1alpha1.CheckRequest': CheckRequest$json,
-  '.google.api.expr.v1alpha1.Decl': $2.Decl$json,
-  '.google.api.expr.v1alpha1.Decl.IdentDecl': $2.Decl_IdentDecl$json,
-  '.google.api.expr.v1alpha1.Type': $2.Type$json,
-  '.google.protobuf.Empty': $7.Empty$json,
-  '.google.api.expr.v1alpha1.Type.ListType': $2.Type_ListType$json,
-  '.google.api.expr.v1alpha1.Type.MapType': $2.Type_MapType$json,
-  '.google.api.expr.v1alpha1.Type.FunctionType': $2.Type_FunctionType$json,
-  '.google.api.expr.v1alpha1.Type.AbstractType': $2.Type_AbstractType$json,
-  '.google.api.expr.v1alpha1.Decl.FunctionDecl': $2.Decl_FunctionDecl$json,
-  '.google.api.expr.v1alpha1.Decl.FunctionDecl.Overload':
-      $2.Decl_FunctionDecl_Overload$json,
-  '.google.api.expr.v1alpha1.CheckResponse': CheckResponse$json,
-  '.google.api.expr.v1alpha1.CheckedExpr': $2.CheckedExpr$json,
-  '.google.api.expr.v1alpha1.CheckedExpr.ReferenceMapEntry':
-      $2.CheckedExpr_ReferenceMapEntry$json,
-  '.google.api.expr.v1alpha1.Reference': $2.Reference$json,
-  '.google.api.expr.v1alpha1.CheckedExpr.TypeMapEntry':
-      $2.CheckedExpr_TypeMapEntry$json,
-  '.google.api.expr.v1alpha1.EvalRequest': EvalRequest$json,
-  '.google.api.expr.v1alpha1.EvalRequest.BindingsEntry':
-      EvalRequest_BindingsEntry$json,
-  '.google.api.expr.v1alpha1.ExprValue': $3.ExprValue$json,
-  '.google.api.expr.v1alpha1.Value': $8.Value$json,
-  '.google.api.expr.v1alpha1.EnumValue': $8.EnumValue$json,
-  '.google.api.expr.v1alpha1.MapValue': $8.MapValue$json,
-  '.google.api.expr.v1alpha1.MapValue.Entry': $8.MapValue_Entry$json,
-  '.google.api.expr.v1alpha1.ListValue': $8.ListValue$json,
-  '.google.api.expr.v1alpha1.ErrorSet': $3.ErrorSet$json,
-  '.google.api.expr.v1alpha1.UnknownSet': $3.UnknownSet$json,
-  '.google.api.expr.v1alpha1.EvalResponse': EvalResponse$json,
 };

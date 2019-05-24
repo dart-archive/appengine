@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign_experiment.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
-import '../../../../longrunning/operations.pb.dart' as $3;
-import '../../../../protobuf/empty.pb.dart' as $4;
+import '../resources/campaign_experiment.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $3;
+import '../../../../rpc/status.pb.dart' as $4;
 
 class GetCampaignExperimentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -128,11 +125,11 @@ class CampaignExperimentOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CampaignExperimentOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CampaignExperiment>(1, 'update', $pb.PbFieldType.OM,
-        $0.CampaignExperiment.getDefault, $0.CampaignExperiment.create)
+    ..a<$1.CampaignExperiment>(1, 'update', $pb.PbFieldType.OM,
+        $1.CampaignExperiment.getDefault, $1.CampaignExperiment.create)
     ..aOS(2, 'remove')
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
@@ -162,8 +159,8 @@ class CampaignExperimentOperation extends $pb.GeneratedMessage {
       _CampaignExperimentOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CampaignExperiment get update => $_getN(0);
-  set update($0.CampaignExperiment v) {
+  $1.CampaignExperiment get update => $_getN(0);
+  set update($1.CampaignExperiment v) {
     setField(1, v);
   }
 
@@ -178,8 +175,8 @@ class CampaignExperimentOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(1);
   void clearRemove() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -193,8 +190,8 @@ class MutateCampaignExperimentsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignExperimentResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignExperimentResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$4.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $4.Status.getDefault, $4.Status.create)
     ..hasRequiredFields = false;
 
   MutateCampaignExperimentsResponse() : super();
@@ -222,8 +219,8 @@ class MutateCampaignExperimentsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignExperimentResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $4.Status get partialFailureError => $_getN(1);
+  set partialFailureError($4.Status v) {
     setField(3, v);
   }
 
@@ -275,8 +272,8 @@ class CreateCampaignExperimentRequest extends $pb.GeneratedMessage {
       'CreateCampaignExperimentRequest',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..aOS(1, 'customerId')
-    ..a<$0.CampaignExperiment>(2, 'campaignExperiment', $pb.PbFieldType.OM,
-        $0.CampaignExperiment.getDefault, $0.CampaignExperiment.create)
+    ..a<$1.CampaignExperiment>(2, 'campaignExperiment', $pb.PbFieldType.OM,
+        $1.CampaignExperiment.getDefault, $1.CampaignExperiment.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -311,8 +308,8 @@ class CreateCampaignExperimentRequest extends $pb.GeneratedMessage {
   $core.bool hasCustomerId() => $_has(0);
   void clearCustomerId() => clearField(1);
 
-  $0.CampaignExperiment get campaignExperiment => $_getN(1);
-  set campaignExperiment($0.CampaignExperiment v) {
+  $1.CampaignExperiment get campaignExperiment => $_getN(1);
+  set campaignExperiment($1.CampaignExperiment v) {
     setField(2, v);
   }
 
@@ -594,7 +591,7 @@ class ListCampaignExperimentAsyncErrorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCampaignExperimentAsyncErrorsResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$2.Status>(1, 'errors', $pb.PbFieldType.PM, $2.Status.create)
+    ..pc<$4.Status>(1, 'errors', $pb.PbFieldType.PM, $4.Status.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -622,7 +619,7 @@ class ListCampaignExperimentAsyncErrorsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListCampaignExperimentAsyncErrorsResponse _defaultInstance;
 
-  $core.List<$2.Status> get errors => $_getList(0);
+  $core.List<$4.Status> get errors => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -631,75 +628,4 @@ class ListCampaignExperimentAsyncErrorsResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class CampaignExperimentServiceApi {
-  $pb.RpcClient _client;
-  CampaignExperimentServiceApi(this._client);
-
-  $async.Future<$0.CampaignExperiment> getCampaignExperiment(
-      $pb.ClientContext ctx, GetCampaignExperimentRequest request) {
-    var emptyResponse = $0.CampaignExperiment();
-    return _client.invoke<$0.CampaignExperiment>(
-        ctx,
-        'CampaignExperimentService',
-        'GetCampaignExperiment',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$3.Operation> createCampaignExperiment(
-      $pb.ClientContext ctx, CreateCampaignExperimentRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(ctx, 'CampaignExperimentService',
-        'CreateCampaignExperiment', request, emptyResponse);
-  }
-
-  $async.Future<MutateCampaignExperimentsResponse> mutateCampaignExperiments(
-      $pb.ClientContext ctx, MutateCampaignExperimentsRequest request) {
-    var emptyResponse = MutateCampaignExperimentsResponse();
-    return _client.invoke<MutateCampaignExperimentsResponse>(
-        ctx,
-        'CampaignExperimentService',
-        'MutateCampaignExperiments',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<GraduateCampaignExperimentResponse> graduateCampaignExperiment(
-      $pb.ClientContext ctx, GraduateCampaignExperimentRequest request) {
-    var emptyResponse = GraduateCampaignExperimentResponse();
-    return _client.invoke<GraduateCampaignExperimentResponse>(
-        ctx,
-        'CampaignExperimentService',
-        'GraduateCampaignExperiment',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<$3.Operation> promoteCampaignExperiment(
-      $pb.ClientContext ctx, PromoteCampaignExperimentRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(ctx, 'CampaignExperimentService',
-        'PromoteCampaignExperiment', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> endCampaignExperiment(
-      $pb.ClientContext ctx, EndCampaignExperimentRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'CampaignExperimentService',
-        'EndCampaignExperiment', request, emptyResponse);
-  }
-
-  $async.Future<ListCampaignExperimentAsyncErrorsResponse>
-      listCampaignExperimentAsyncErrors($pb.ClientContext ctx,
-          ListCampaignExperimentAsyncErrorsRequest request) {
-    var emptyResponse = ListCampaignExperimentAsyncErrorsResponse();
-    return _client.invoke<ListCampaignExperimentAsyncErrorsResponse>(
-        ctx,
-        'CampaignExperimentService',
-        'ListCampaignExperimentAsyncErrors',
-        request,
-        emptyResponse);
-  }
 }

@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../resources/search_term_view.pb.dart' as $0;
 
 class GetSearchTermViewRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSearchTermViewRequest',
@@ -46,16 +43,4 @@ class GetSearchTermViewRequest extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class SearchTermViewServiceApi {
-  $pb.RpcClient _client;
-  SearchTermViewServiceApi(this._client);
-
-  $async.Future<$0.SearchTermView> getSearchTermView(
-      $pb.ClientContext ctx, GetSearchTermViewRequest request) {
-    var emptyResponse = $0.SearchTermView();
-    return _client.invoke<$0.SearchTermView>(ctx, 'SearchTermViewService',
-        'GetSearchTermView', request, emptyResponse);
-  }
 }

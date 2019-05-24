@@ -4,16 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
-import '../../../longrunning/operations.pb.dart' as $3;
+import 'resources.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 class ListConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListConfigsRequest',
@@ -70,8 +67,8 @@ class ListConfigsRequest extends $pb.GeneratedMessage {
 class ListConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListConfigsResponse',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
-    ..pc<$0.RuntimeConfig>(
-        1, 'configs', $pb.PbFieldType.PM, $0.RuntimeConfig.create)
+    ..pc<$1.RuntimeConfig>(
+        1, 'configs', $pb.PbFieldType.PM, $1.RuntimeConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -94,7 +91,7 @@ class ListConfigsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListConfigsResponse _defaultInstance;
 
-  $core.List<$0.RuntimeConfig> get configs => $_getList(0);
+  $core.List<$1.RuntimeConfig> get configs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -143,8 +140,8 @@ class CreateConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateConfigRequest',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.RuntimeConfig>(2, 'config', $pb.PbFieldType.OM,
-        $0.RuntimeConfig.getDefault, $0.RuntimeConfig.create)
+    ..a<$1.RuntimeConfig>(2, 'config', $pb.PbFieldType.OM,
+        $1.RuntimeConfig.getDefault, $1.RuntimeConfig.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -175,8 +172,8 @@ class CreateConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.RuntimeConfig get config => $_getN(1);
-  set config($0.RuntimeConfig v) {
+  $1.RuntimeConfig get config => $_getN(1);
+  set config($1.RuntimeConfig v) {
     setField(2, v);
   }
 
@@ -196,8 +193,8 @@ class UpdateConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateConfigRequest',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.RuntimeConfig>(2, 'config', $pb.PbFieldType.OM,
-        $0.RuntimeConfig.getDefault, $0.RuntimeConfig.create)
+    ..a<$1.RuntimeConfig>(2, 'config', $pb.PbFieldType.OM,
+        $1.RuntimeConfig.getDefault, $1.RuntimeConfig.create)
     ..hasRequiredFields = false;
 
   UpdateConfigRequest() : super();
@@ -227,8 +224,8 @@ class UpdateConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.RuntimeConfig get config => $_getN(1);
-  set config($0.RuntimeConfig v) {
+  $1.RuntimeConfig get config => $_getN(1);
+  set config($1.RuntimeConfig v) {
     setField(2, v);
   }
 
@@ -344,7 +341,7 @@ class ListVariablesRequest extends $pb.GeneratedMessage {
 class ListVariablesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVariablesResponse',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
-    ..pc<$0.Variable>(1, 'variables', $pb.PbFieldType.PM, $0.Variable.create)
+    ..pc<$1.Variable>(1, 'variables', $pb.PbFieldType.PM, $1.Variable.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -369,7 +366,7 @@ class ListVariablesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListVariablesResponse _defaultInstance;
 
-  $core.List<$0.Variable> get variables => $_getList(0);
+  $core.List<$1.Variable> get variables => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -384,8 +381,8 @@ class WatchVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WatchVariableRequest',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$1.Timestamp>(4, 'newerThan', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'newerThan', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   WatchVariableRequest() : super();
@@ -416,8 +413,8 @@ class WatchVariableRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $1.Timestamp get newerThan => $_getN(1);
-  set newerThan($1.Timestamp v) {
+  $3.Timestamp get newerThan => $_getN(1);
+  set newerThan($3.Timestamp v) {
     setField(4, v);
   }
 
@@ -463,8 +460,8 @@ class CreateVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVariableRequest',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Variable>(2, 'variable', $pb.PbFieldType.OM, $0.Variable.getDefault,
-        $0.Variable.create)
+    ..a<$1.Variable>(2, 'variable', $pb.PbFieldType.OM, $1.Variable.getDefault,
+        $1.Variable.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -497,8 +494,8 @@ class CreateVariableRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Variable get variable => $_getN(1);
-  set variable($0.Variable v) {
+  $1.Variable get variable => $_getN(1);
+  set variable($1.Variable v) {
     setField(2, v);
   }
 
@@ -518,8 +515,8 @@ class UpdateVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVariableRequest',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$0.Variable>(2, 'variable', $pb.PbFieldType.OM, $0.Variable.getDefault,
-        $0.Variable.create)
+    ..a<$1.Variable>(2, 'variable', $pb.PbFieldType.OM, $1.Variable.getDefault,
+        $1.Variable.create)
     ..hasRequiredFields = false;
 
   UpdateVariableRequest() : super();
@@ -551,8 +548,8 @@ class UpdateVariableRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Variable get variable => $_getN(1);
-  set variable($0.Variable v) {
+  $1.Variable get variable => $_getN(1);
+  set variable($1.Variable v) {
     setField(2, v);
   }
 
@@ -660,7 +657,7 @@ class ListWaitersRequest extends $pb.GeneratedMessage {
 class ListWaitersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListWaitersResponse',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
-    ..pc<$0.Waiter>(1, 'waiters', $pb.PbFieldType.PM, $0.Waiter.create)
+    ..pc<$1.Waiter>(1, 'waiters', $pb.PbFieldType.PM, $1.Waiter.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -683,7 +680,7 @@ class ListWaitersResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListWaitersResponse _defaultInstance;
 
-  $core.List<$0.Waiter> get waiters => $_getList(0);
+  $core.List<$1.Waiter> get waiters => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -732,8 +729,8 @@ class CreateWaiterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateWaiterRequest',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Waiter>(
-        2, 'waiter', $pb.PbFieldType.OM, $0.Waiter.getDefault, $0.Waiter.create)
+    ..a<$1.Waiter>(
+        2, 'waiter', $pb.PbFieldType.OM, $1.Waiter.getDefault, $1.Waiter.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -764,8 +761,8 @@ class CreateWaiterRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Waiter get waiter => $_getN(1);
-  set waiter($0.Waiter v) {
+  $1.Waiter get waiter => $_getN(1);
+  set waiter($1.Waiter v) {
     setField(2, v);
   }
 
@@ -813,114 +810,4 @@ class DeleteWaiterRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class RuntimeConfigManagerApi {
-  $pb.RpcClient _client;
-  RuntimeConfigManagerApi(this._client);
-
-  $async.Future<ListConfigsResponse> listConfigs(
-      $pb.ClientContext ctx, ListConfigsRequest request) {
-    var emptyResponse = ListConfigsResponse();
-    return _client.invoke<ListConfigsResponse>(
-        ctx, 'RuntimeConfigManager', 'ListConfigs', request, emptyResponse);
-  }
-
-  $async.Future<$0.RuntimeConfig> getConfig(
-      $pb.ClientContext ctx, GetConfigRequest request) {
-    var emptyResponse = $0.RuntimeConfig();
-    return _client.invoke<$0.RuntimeConfig>(
-        ctx, 'RuntimeConfigManager', 'GetConfig', request, emptyResponse);
-  }
-
-  $async.Future<$0.RuntimeConfig> createConfig(
-      $pb.ClientContext ctx, CreateConfigRequest request) {
-    var emptyResponse = $0.RuntimeConfig();
-    return _client.invoke<$0.RuntimeConfig>(
-        ctx, 'RuntimeConfigManager', 'CreateConfig', request, emptyResponse);
-  }
-
-  $async.Future<$0.RuntimeConfig> updateConfig(
-      $pb.ClientContext ctx, UpdateConfigRequest request) {
-    var emptyResponse = $0.RuntimeConfig();
-    return _client.invoke<$0.RuntimeConfig>(
-        ctx, 'RuntimeConfigManager', 'UpdateConfig', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteConfig(
-      $pb.ClientContext ctx, DeleteConfigRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'RuntimeConfigManager', 'DeleteConfig', request, emptyResponse);
-  }
-
-  $async.Future<ListVariablesResponse> listVariables(
-      $pb.ClientContext ctx, ListVariablesRequest request) {
-    var emptyResponse = ListVariablesResponse();
-    return _client.invoke<ListVariablesResponse>(
-        ctx, 'RuntimeConfigManager', 'ListVariables', request, emptyResponse);
-  }
-
-  $async.Future<$0.Variable> getVariable(
-      $pb.ClientContext ctx, GetVariableRequest request) {
-    var emptyResponse = $0.Variable();
-    return _client.invoke<$0.Variable>(
-        ctx, 'RuntimeConfigManager', 'GetVariable', request, emptyResponse);
-  }
-
-  $async.Future<$0.Variable> watchVariable(
-      $pb.ClientContext ctx, WatchVariableRequest request) {
-    var emptyResponse = $0.Variable();
-    return _client.invoke<$0.Variable>(
-        ctx, 'RuntimeConfigManager', 'WatchVariable', request, emptyResponse);
-  }
-
-  $async.Future<$0.Variable> createVariable(
-      $pb.ClientContext ctx, CreateVariableRequest request) {
-    var emptyResponse = $0.Variable();
-    return _client.invoke<$0.Variable>(
-        ctx, 'RuntimeConfigManager', 'CreateVariable', request, emptyResponse);
-  }
-
-  $async.Future<$0.Variable> updateVariable(
-      $pb.ClientContext ctx, UpdateVariableRequest request) {
-    var emptyResponse = $0.Variable();
-    return _client.invoke<$0.Variable>(
-        ctx, 'RuntimeConfigManager', 'UpdateVariable', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteVariable(
-      $pb.ClientContext ctx, DeleteVariableRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'RuntimeConfigManager', 'DeleteVariable', request, emptyResponse);
-  }
-
-  $async.Future<ListWaitersResponse> listWaiters(
-      $pb.ClientContext ctx, ListWaitersRequest request) {
-    var emptyResponse = ListWaitersResponse();
-    return _client.invoke<ListWaitersResponse>(
-        ctx, 'RuntimeConfigManager', 'ListWaiters', request, emptyResponse);
-  }
-
-  $async.Future<$0.Waiter> getWaiter(
-      $pb.ClientContext ctx, GetWaiterRequest request) {
-    var emptyResponse = $0.Waiter();
-    return _client.invoke<$0.Waiter>(
-        ctx, 'RuntimeConfigManager', 'GetWaiter', request, emptyResponse);
-  }
-
-  $async.Future<$3.Operation> createWaiter(
-      $pb.ClientContext ctx, CreateWaiterRequest request) {
-    var emptyResponse = $3.Operation();
-    return _client.invoke<$3.Operation>(
-        ctx, 'RuntimeConfigManager', 'CreateWaiter', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteWaiter(
-      $pb.ClientContext ctx, DeleteWaiterRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'RuntimeConfigManager', 'DeleteWaiter', request, emptyResponse);
-  }
 }

@@ -4,23 +4,21 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/struct.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import '../../../protobuf/struct.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 class Context extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Context',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'lifespanCount', $pb.PbFieldType.O3)
-    ..a<$0.Struct>(3, 'parameters', $pb.PbFieldType.OM, $0.Struct.getDefault,
-        $0.Struct.create)
+    ..a<$1.Struct>(3, 'parameters', $pb.PbFieldType.OM, $1.Struct.getDefault,
+        $1.Struct.create)
     ..hasRequiredFields = false;
 
   Context() : super();
@@ -56,8 +54,8 @@ class Context extends $pb.GeneratedMessage {
   $core.bool hasLifespanCount() => $_has(1);
   void clearLifespanCount() => clearField(2);
 
-  $0.Struct get parameters => $_getN(2);
-  set parameters($0.Struct v) {
+  $1.Struct get parameters => $_getN(2);
+  set parameters($1.Struct v) {
     setField(3, v);
   }
 
@@ -239,8 +237,8 @@ class UpdateContextRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..a<Context>(
         1, 'context', $pb.PbFieldType.OM, Context.getDefault, Context.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateContextRequest() : super();
@@ -271,8 +269,8 @@ class UpdateContextRequest extends $pb.GeneratedMessage {
   $core.bool hasContext() => $_has(0);
   void clearContext() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -349,51 +347,4 @@ class DeleteAllContextsRequest extends $pb.GeneratedMessage {
 
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
-}
-
-class ContextsApi {
-  $pb.RpcClient _client;
-  ContextsApi(this._client);
-
-  $async.Future<ListContextsResponse> listContexts(
-      $pb.ClientContext ctx, ListContextsRequest request) {
-    var emptyResponse = ListContextsResponse();
-    return _client.invoke<ListContextsResponse>(
-        ctx, 'Contexts', 'ListContexts', request, emptyResponse);
-  }
-
-  $async.Future<Context> getContext(
-      $pb.ClientContext ctx, GetContextRequest request) {
-    var emptyResponse = Context();
-    return _client.invoke<Context>(
-        ctx, 'Contexts', 'GetContext', request, emptyResponse);
-  }
-
-  $async.Future<Context> createContext(
-      $pb.ClientContext ctx, CreateContextRequest request) {
-    var emptyResponse = Context();
-    return _client.invoke<Context>(
-        ctx, 'Contexts', 'CreateContext', request, emptyResponse);
-  }
-
-  $async.Future<Context> updateContext(
-      $pb.ClientContext ctx, UpdateContextRequest request) {
-    var emptyResponse = Context();
-    return _client.invoke<Context>(
-        ctx, 'Contexts', 'UpdateContext', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteContext(
-      $pb.ClientContext ctx, DeleteContextRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'Contexts', 'DeleteContext', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteAllContexts(
-      $pb.ClientContext ctx, DeleteAllContextsRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'Contexts', 'DeleteAllContexts', request, emptyResponse);
-  }
 }

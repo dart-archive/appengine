@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -258,23 +257,4 @@ class MutateUserListResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class UserListServiceApi {
-  $pb.RpcClient _client;
-  UserListServiceApi(this._client);
-
-  $async.Future<$0.UserList> getUserList(
-      $pb.ClientContext ctx, GetUserListRequest request) {
-    var emptyResponse = $0.UserList();
-    return _client.invoke<$0.UserList>(
-        ctx, 'UserListService', 'GetUserList', request, emptyResponse);
-  }
-
-  $async.Future<MutateUserListsResponse> mutateUserLists(
-      $pb.ClientContext ctx, MutateUserListsRequest request) {
-    var emptyResponse = MutateUserListsResponse();
-    return _client.invoke<MutateUserListsResponse>(
-        ctx, 'UserListService', 'MutateUserLists', request, emptyResponse);
-  }
 }

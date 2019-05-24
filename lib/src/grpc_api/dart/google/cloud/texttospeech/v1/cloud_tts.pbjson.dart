@@ -156,35 +156,3 @@ const SynthesizeSpeechResponse$json = {
     {'1': 'audio_content', '3': 1, '4': 1, '5': 12, '10': 'audioContent'},
   ],
 };
-
-const TextToSpeechServiceBase$json = {
-  '1': 'TextToSpeech',
-  '2': [
-    {
-      '1': 'ListVoices',
-      '2': '.google.cloud.texttospeech.v1.ListVoicesRequest',
-      '3': '.google.cloud.texttospeech.v1.ListVoicesResponse',
-      '4': {}
-    },
-    {
-      '1': 'SynthesizeSpeech',
-      '2': '.google.cloud.texttospeech.v1.SynthesizeSpeechRequest',
-      '3': '.google.cloud.texttospeech.v1.SynthesizeSpeechResponse',
-      '4': {}
-    },
-  ],
-};
-
-const TextToSpeechServiceBase$messageJson = {
-  '.google.cloud.texttospeech.v1.ListVoicesRequest': ListVoicesRequest$json,
-  '.google.cloud.texttospeech.v1.ListVoicesResponse': ListVoicesResponse$json,
-  '.google.cloud.texttospeech.v1.Voice': Voice$json,
-  '.google.cloud.texttospeech.v1.SynthesizeSpeechRequest':
-      SynthesizeSpeechRequest$json,
-  '.google.cloud.texttospeech.v1.SynthesisInput': SynthesisInput$json,
-  '.google.cloud.texttospeech.v1.VoiceSelectionParams':
-      VoiceSelectionParams$json,
-  '.google.cloud.texttospeech.v1.AudioConfig': AudioConfig$json,
-  '.google.cloud.texttospeech.v1.SynthesizeSpeechResponse':
-      SynthesizeSpeechResponse$json,
-};

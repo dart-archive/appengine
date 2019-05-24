@@ -4,17 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import 'index.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import 'index.pb.dart' as $2;
 
 import 'firestore_admin.pbenum.dart';
 
@@ -23,10 +20,10 @@ export 'firestore_admin.pbenum.dart';
 class IndexOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('IndexOperationMetadata',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..a<$0.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..aOS(3, 'index')
     ..e<IndexOperationMetadata_OperationType>(
         4,
@@ -61,16 +58,16 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static IndexOperationMetadata _defaultInstance;
 
-  $0.Timestamp get startTime => $_getN(0);
-  set startTime($0.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(0);
+  set startTime($3.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $0.Timestamp get endTime => $_getN(1);
-  set endTime($0.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(1);
+  set endTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -155,8 +152,8 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIndexRequest',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.Index>(
-        2, 'index', $pb.PbFieldType.OM, $1.Index.getDefault, $1.Index.create)
+    ..a<$2.Index>(
+        2, 'index', $pb.PbFieldType.OM, $2.Index.getDefault, $2.Index.create)
     ..hasRequiredFields = false;
 
   CreateIndexRequest() : super();
@@ -186,8 +183,8 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.Index get index => $_getN(1);
-  set index($1.Index v) {
+  $2.Index get index => $_getN(1);
+  set index($2.Index v) {
     setField(2, v);
   }
 
@@ -327,7 +324,7 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
 class ListIndexesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIndexesResponse',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..pc<$1.Index>(1, 'indexes', $pb.PbFieldType.PM, $1.Index.create)
+    ..pc<$2.Index>(1, 'indexes', $pb.PbFieldType.PM, $2.Index.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -350,7 +347,7 @@ class ListIndexesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListIndexesResponse _defaultInstance;
 
-  $core.List<$1.Index> get indexes => $_getList(0);
+  $core.List<$2.Index> get indexes => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -496,10 +493,10 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
 class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportDocumentsMetadata',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..a<$0.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..e<OperationState>(
         3,
         'operationState',
@@ -536,16 +533,16 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExportDocumentsMetadata _defaultInstance;
 
-  $0.Timestamp get startTime => $_getN(0);
-  set startTime($0.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(0);
+  set startTime($3.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $0.Timestamp get endTime => $_getN(1);
-  set endTime($0.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(1);
+  set endTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -590,10 +587,10 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
 class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDocumentsMetadata',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..a<$0.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..e<OperationState>(
         3,
         'operationState',
@@ -630,16 +627,16 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ImportDocumentsMetadata _defaultInstance;
 
-  $0.Timestamp get startTime => $_getN(0);
-  set startTime($0.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(0);
+  set startTime($3.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $0.Timestamp get endTime => $_getN(1);
-  set endTime($0.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(1);
+  set endTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -679,51 +676,4 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
 
   $core.bool hasInputUriPrefix() => $_has(6);
   void clearInputUriPrefix() => clearField(7);
-}
-
-class FirestoreAdminApi {
-  $pb.RpcClient _client;
-  FirestoreAdminApi(this._client);
-
-  $async.Future<$2.Operation> createIndex(
-      $pb.ClientContext ctx, CreateIndexRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'FirestoreAdmin', 'CreateIndex', request, emptyResponse);
-  }
-
-  $async.Future<ListIndexesResponse> listIndexes(
-      $pb.ClientContext ctx, ListIndexesRequest request) {
-    var emptyResponse = ListIndexesResponse();
-    return _client.invoke<ListIndexesResponse>(
-        ctx, 'FirestoreAdmin', 'ListIndexes', request, emptyResponse);
-  }
-
-  $async.Future<$1.Index> getIndex(
-      $pb.ClientContext ctx, GetIndexRequest request) {
-    var emptyResponse = $1.Index();
-    return _client.invoke<$1.Index>(
-        ctx, 'FirestoreAdmin', 'GetIndex', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteIndex(
-      $pb.ClientContext ctx, DeleteIndexRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'FirestoreAdmin', 'DeleteIndex', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> exportDocuments(
-      $pb.ClientContext ctx, ExportDocumentsRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'FirestoreAdmin', 'ExportDocuments', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> importDocuments(
-      $pb.ClientContext ctx, ImportDocumentsRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'FirestoreAdmin', 'ImportDocuments', request, emptyResponse);
-  }
 }

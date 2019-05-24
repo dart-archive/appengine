@@ -4,14 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/keyword_plan.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../common/dates.pbjson.dart' as $5;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $6;
-import '../common/keyword_plan_common.pbjson.dart' as $4;
-
 const GetKeywordPlanRequest$json = {
   '1': 'GetKeywordPlanRequest',
   '2': [
@@ -292,77 +284,4 @@ const KeywordPlanKeywordHistoricalMetrics$json = {
       '10': 'keywordMetrics'
     },
   ],
-};
-
-const KeywordPlanServiceBase$json = {
-  '1': 'KeywordPlanService',
-  '2': [
-    {
-      '1': 'GetKeywordPlan',
-      '2': '.google.ads.googleads.v1.services.GetKeywordPlanRequest',
-      '3': '.google.ads.googleads.v1.resources.KeywordPlan',
-      '4': {}
-    },
-    {
-      '1': 'MutateKeywordPlans',
-      '2': '.google.ads.googleads.v1.services.MutateKeywordPlansRequest',
-      '3': '.google.ads.googleads.v1.services.MutateKeywordPlansResponse',
-      '4': {}
-    },
-    {
-      '1': 'GenerateForecastMetrics',
-      '2': '.google.ads.googleads.v1.services.GenerateForecastMetricsRequest',
-      '3': '.google.ads.googleads.v1.services.GenerateForecastMetricsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GenerateHistoricalMetrics',
-      '2': '.google.ads.googleads.v1.services.GenerateHistoricalMetricsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.GenerateHistoricalMetricsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const KeywordPlanServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetKeywordPlanRequest':
-      GetKeywordPlanRequest$json,
-  '.google.ads.googleads.v1.resources.KeywordPlan': $0.KeywordPlan$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.resources.KeywordPlanForecastPeriod':
-      $0.KeywordPlanForecastPeriod$json,
-  '.google.ads.googleads.v1.common.DateRange': $5.DateRange$json,
-  '.google.ads.googleads.v1.services.MutateKeywordPlansRequest':
-      MutateKeywordPlansRequest$json,
-  '.google.ads.googleads.v1.services.KeywordPlanOperation':
-      KeywordPlanOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateKeywordPlansResponse':
-      MutateKeywordPlansResponse$json,
-  '.google.ads.googleads.v1.services.MutateKeywordPlansResult':
-      MutateKeywordPlansResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $6.Any$json,
-  '.google.ads.googleads.v1.services.GenerateForecastMetricsRequest':
-      GenerateForecastMetricsRequest$json,
-  '.google.ads.googleads.v1.services.GenerateForecastMetricsResponse':
-      GenerateForecastMetricsResponse$json,
-  '.google.ads.googleads.v1.services.KeywordPlanCampaignForecast':
-      KeywordPlanCampaignForecast$json,
-  '.google.ads.googleads.v1.services.ForecastMetrics': ForecastMetrics$json,
-  '.google.protobuf.DoubleValue': $3.DoubleValue$json,
-  '.google.ads.googleads.v1.services.KeywordPlanAdGroupForecast':
-      KeywordPlanAdGroupForecast$json,
-  '.google.ads.googleads.v1.services.KeywordPlanKeywordForecast':
-      KeywordPlanKeywordForecast$json,
-  '.google.ads.googleads.v1.services.GenerateHistoricalMetricsRequest':
-      GenerateHistoricalMetricsRequest$json,
-  '.google.ads.googleads.v1.services.GenerateHistoricalMetricsResponse':
-      GenerateHistoricalMetricsResponse$json,
-  '.google.ads.googleads.v1.services.KeywordPlanKeywordHistoricalMetrics':
-      KeywordPlanKeywordHistoricalMetrics$json,
-  '.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics':
-      $4.KeywordPlanHistoricalMetrics$json,
 };

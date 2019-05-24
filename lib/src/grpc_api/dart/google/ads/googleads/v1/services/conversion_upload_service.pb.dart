@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -574,31 +573,4 @@ class CallConversionResult extends $pb.GeneratedMessage {
 
   $core.bool hasConversionDateTime() => $_has(3);
   void clearConversionDateTime() => clearField(4);
-}
-
-class ConversionUploadServiceApi {
-  $pb.RpcClient _client;
-  ConversionUploadServiceApi(this._client);
-
-  $async.Future<UploadClickConversionsResponse> uploadClickConversions(
-      $pb.ClientContext ctx, UploadClickConversionsRequest request) {
-    var emptyResponse = UploadClickConversionsResponse();
-    return _client.invoke<UploadClickConversionsResponse>(
-        ctx,
-        'ConversionUploadService',
-        'UploadClickConversions',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<UploadCallConversionsResponse> uploadCallConversions(
-      $pb.ClientContext ctx, UploadCallConversionsRequest request) {
-    var emptyResponse = UploadCallConversionsResponse();
-    return _client.invoke<UploadCallConversionsResponse>(
-        ctx,
-        'ConversionUploadService',
-        'UploadCallConversions',
-        request,
-        emptyResponse);
-  }
 }

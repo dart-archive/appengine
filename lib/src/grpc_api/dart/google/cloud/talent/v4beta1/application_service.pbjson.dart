@@ -4,14 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'application.pbjson.dart' as $0;
-import '../../../type/date.pbjson.dart' as $4;
-import 'common.pbjson.dart' as $2;
-import '../../../protobuf/wrappers.pbjson.dart' as $5;
-import '../../../protobuf/timestamp.pbjson.dart' as $6;
-import '../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../protobuf/empty.pbjson.dart' as $3;
-
 const CreateApplicationRequest$json = {
   '1': 'CreateApplicationRequest',
   '2': [
@@ -93,64 +85,4 @@ const ListApplicationsResponse$json = {
       '10': 'metadata'
     },
   ],
-};
-
-const ApplicationServiceBase$json = {
-  '1': 'ApplicationService',
-  '2': [
-    {
-      '1': 'CreateApplication',
-      '2': '.google.cloud.talent.v4beta1.CreateApplicationRequest',
-      '3': '.google.cloud.talent.v4beta1.Application',
-      '4': {}
-    },
-    {
-      '1': 'GetApplication',
-      '2': '.google.cloud.talent.v4beta1.GetApplicationRequest',
-      '3': '.google.cloud.talent.v4beta1.Application',
-      '4': {}
-    },
-    {
-      '1': 'UpdateApplication',
-      '2': '.google.cloud.talent.v4beta1.UpdateApplicationRequest',
-      '3': '.google.cloud.talent.v4beta1.Application',
-      '4': {}
-    },
-    {
-      '1': 'DeleteApplication',
-      '2': '.google.cloud.talent.v4beta1.DeleteApplicationRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'ListApplications',
-      '2': '.google.cloud.talent.v4beta1.ListApplicationsRequest',
-      '3': '.google.cloud.talent.v4beta1.ListApplicationsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ApplicationServiceBase$messageJson = {
-  '.google.cloud.talent.v4beta1.CreateApplicationRequest':
-      CreateApplicationRequest$json,
-  '.google.cloud.talent.v4beta1.Application': $0.Application$json,
-  '.google.type.Date': $4.Date$json,
-  '.google.cloud.talent.v4beta1.Interview': $2.Interview$json,
-  '.google.cloud.talent.v4beta1.Rating': $2.Rating$json,
-  '.google.protobuf.BoolValue': $5.BoolValue$json,
-  '.google.protobuf.Timestamp': $6.Timestamp$json,
-  '.google.cloud.talent.v4beta1.GetApplicationRequest':
-      GetApplicationRequest$json,
-  '.google.cloud.talent.v4beta1.UpdateApplicationRequest':
-      UpdateApplicationRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.cloud.talent.v4beta1.DeleteApplicationRequest':
-      DeleteApplicationRequest$json,
-  '.google.protobuf.Empty': $3.Empty$json,
-  '.google.cloud.talent.v4beta1.ListApplicationsRequest':
-      ListApplicationsRequest$json,
-  '.google.cloud.talent.v4beta1.ListApplicationsResponse':
-      ListApplicationsResponse$json,
-  '.google.cloud.talent.v4beta1.ResponseMetadata': $2.ResponseMetadata$json,
 };

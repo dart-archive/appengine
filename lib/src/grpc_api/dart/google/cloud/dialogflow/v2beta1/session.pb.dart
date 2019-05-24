@@ -4,19 +4,18 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'audio_config.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import '../../../type/latlng.pb.dart' as $2;
-import 'context.pb.dart' as $3;
-import 'session_entity_type.pb.dart' as $4;
-import '../../../protobuf/struct.pb.dart' as $5;
-import 'intent.pb.dart' as $6;
+import 'audio_config.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
+import '../../../type/latlng.pb.dart' as $4;
+import 'context.pb.dart' as $5;
+import 'session_entity_type.pb.dart' as $6;
+import '../../../protobuf/struct.pb.dart' as $7;
+import 'intent.pb.dart' as $8;
 
 import 'session.pbenum.dart';
 
@@ -30,8 +29,8 @@ class DetectIntentRequest extends $pb.GeneratedMessage {
         QueryParameters.getDefault, QueryParameters.create)
     ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
         QueryInput.create)
-    ..a<$0.OutputAudioConfig>(4, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
+    ..a<$2.OutputAudioConfig>(4, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
     ..a<$core.List<$core.int>>(5, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -78,8 +77,8 @@ class DetectIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasQueryInput() => $_has(2);
   void clearQueryInput() => clearField(3);
 
-  $0.OutputAudioConfig get outputAudioConfig => $_getN(3);
-  set outputAudioConfig($0.OutputAudioConfig v) {
+  $2.OutputAudioConfig get outputAudioConfig => $_getN(3);
+  set outputAudioConfig($2.OutputAudioConfig v) {
     setField(4, v);
   }
 
@@ -101,13 +100,13 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'responseId')
     ..a<QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
         QueryResult.getDefault, QueryResult.create)
-    ..a<$1.Status>(3, 'webhookStatus', $pb.PbFieldType.OM, $1.Status.getDefault,
-        $1.Status.create)
+    ..a<$3.Status>(3, 'webhookStatus', $pb.PbFieldType.OM, $3.Status.getDefault,
+        $3.Status.create)
     ..a<$core.List<$core.int>>(4, 'outputAudio', $pb.PbFieldType.OY)
     ..pc<QueryResult>(
         5, 'alternativeQueryResults', $pb.PbFieldType.PM, QueryResult.create)
-    ..a<$0.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
+    ..a<$2.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
   DetectIntentResponse() : super();
@@ -146,8 +145,8 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasQueryResult() => $_has(1);
   void clearQueryResult() => clearField(2);
 
-  $1.Status get webhookStatus => $_getN(2);
-  set webhookStatus($1.Status v) {
+  $3.Status get webhookStatus => $_getN(2);
+  set webhookStatus($3.Status v) {
     setField(3, v);
   }
 
@@ -164,8 +163,8 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
 
   $core.List<QueryResult> get alternativeQueryResults => $_getList(4);
 
-  $0.OutputAudioConfig get outputAudioConfig => $_getN(5);
-  set outputAudioConfig($0.OutputAudioConfig v) {
+  $2.OutputAudioConfig get outputAudioConfig => $_getN(5);
+  set outputAudioConfig($2.OutputAudioConfig v) {
     setField(6, v);
   }
 
@@ -177,14 +176,14 @@ class QueryParameters extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryParameters',
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'timeZone')
-    ..a<$2.LatLng>(2, 'geoLocation', $pb.PbFieldType.OM, $2.LatLng.getDefault,
-        $2.LatLng.create)
-    ..pc<$3.Context>(3, 'contexts', $pb.PbFieldType.PM, $3.Context.create)
+    ..a<$4.LatLng>(2, 'geoLocation', $pb.PbFieldType.OM, $4.LatLng.getDefault,
+        $4.LatLng.create)
+    ..pc<$5.Context>(3, 'contexts', $pb.PbFieldType.PM, $5.Context.create)
     ..aOB(4, 'resetContexts')
-    ..pc<$4.SessionEntityType>(5, 'sessionEntityTypes', $pb.PbFieldType.PM,
-        $4.SessionEntityType.create)
-    ..a<$5.Struct>(6, 'payload', $pb.PbFieldType.OM, $5.Struct.getDefault,
-        $5.Struct.create)
+    ..pc<$6.SessionEntityType>(5, 'sessionEntityTypes', $pb.PbFieldType.PM,
+        $6.SessionEntityType.create)
+    ..a<$7.Struct>(6, 'payload', $pb.PbFieldType.OM, $7.Struct.getDefault,
+        $7.Struct.create)
     ..a<SentimentAnalysisRequestConfig>(
         10,
         'sentimentAnalysisRequestConfig',
@@ -221,15 +220,15 @@ class QueryParameters extends $pb.GeneratedMessage {
   $core.bool hasTimeZone() => $_has(0);
   void clearTimeZone() => clearField(1);
 
-  $2.LatLng get geoLocation => $_getN(1);
-  set geoLocation($2.LatLng v) {
+  $4.LatLng get geoLocation => $_getN(1);
+  set geoLocation($4.LatLng v) {
     setField(2, v);
   }
 
   $core.bool hasGeoLocation() => $_has(1);
   void clearGeoLocation() => clearField(2);
 
-  $core.List<$3.Context> get contexts => $_getList(2);
+  $core.List<$5.Context> get contexts => $_getList(2);
 
   $core.bool get resetContexts => $_get(3, false);
   set resetContexts($core.bool v) {
@@ -239,10 +238,10 @@ class QueryParameters extends $pb.GeneratedMessage {
   $core.bool hasResetContexts() => $_has(3);
   void clearResetContexts() => clearField(4);
 
-  $core.List<$4.SessionEntityType> get sessionEntityTypes => $_getList(4);
+  $core.List<$6.SessionEntityType> get sessionEntityTypes => $_getList(4);
 
-  $5.Struct get payload => $_getN(5);
-  set payload($5.Struct v) {
+  $7.Struct get payload => $_getN(5);
+  set payload($7.Struct v) {
     setField(6, v);
   }
 
@@ -272,8 +271,8 @@ class QueryInput extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryInput',
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..a<$0.InputAudioConfig>(1, 'audioConfig', $pb.PbFieldType.OM,
-        $0.InputAudioConfig.getDefault, $0.InputAudioConfig.create)
+    ..a<$2.InputAudioConfig>(1, 'audioConfig', $pb.PbFieldType.OM,
+        $2.InputAudioConfig.getDefault, $2.InputAudioConfig.create)
     ..a<TextInput>(
         2, 'text', $pb.PbFieldType.OM, TextInput.getDefault, TextInput.create)
     ..a<EventInput>(3, 'event', $pb.PbFieldType.OM, EventInput.getDefault,
@@ -301,8 +300,8 @@ class QueryInput extends $pb.GeneratedMessage {
   QueryInput_Input whichInput() => _QueryInput_InputByTag[$_whichOneof(0)];
   void clearInput() => clearField($_whichOneof(0));
 
-  $0.InputAudioConfig get audioConfig => $_getN(0);
-  set audioConfig($0.InputAudioConfig v) {
+  $2.InputAudioConfig get audioConfig => $_getN(0);
+  set audioConfig($2.InputAudioConfig v) {
     setField(1, v);
   }
 
@@ -332,22 +331,22 @@ class QueryResult extends $pb.GeneratedMessage {
     ..aOS(1, 'queryText')
     ..a<$core.double>(2, 'speechRecognitionConfidence', $pb.PbFieldType.OF)
     ..aOS(3, 'action')
-    ..a<$5.Struct>(4, 'parameters', $pb.PbFieldType.OM, $5.Struct.getDefault,
-        $5.Struct.create)
+    ..a<$7.Struct>(4, 'parameters', $pb.PbFieldType.OM, $7.Struct.getDefault,
+        $7.Struct.create)
     ..aOB(5, 'allRequiredParamsPresent')
     ..aOS(6, 'fulfillmentText')
-    ..pc<$6.Intent_Message>(
-        7, 'fulfillmentMessages', $pb.PbFieldType.PM, $6.Intent_Message.create)
+    ..pc<$8.Intent_Message>(
+        7, 'fulfillmentMessages', $pb.PbFieldType.PM, $8.Intent_Message.create)
     ..aOS(8, 'webhookSource')
-    ..a<$5.Struct>(9, 'webhookPayload', $pb.PbFieldType.OM,
-        $5.Struct.getDefault, $5.Struct.create)
-    ..pc<$3.Context>(
-        10, 'outputContexts', $pb.PbFieldType.PM, $3.Context.create)
-    ..a<$6.Intent>(11, 'intent', $pb.PbFieldType.OM, $6.Intent.getDefault,
-        $6.Intent.create)
+    ..a<$7.Struct>(9, 'webhookPayload', $pb.PbFieldType.OM,
+        $7.Struct.getDefault, $7.Struct.create)
+    ..pc<$5.Context>(
+        10, 'outputContexts', $pb.PbFieldType.PM, $5.Context.create)
+    ..a<$8.Intent>(11, 'intent', $pb.PbFieldType.OM, $8.Intent.getDefault,
+        $8.Intent.create)
     ..a<$core.double>(12, 'intentDetectionConfidence', $pb.PbFieldType.OF)
-    ..a<$5.Struct>(14, 'diagnosticInfo', $pb.PbFieldType.OM,
-        $5.Struct.getDefault, $5.Struct.create)
+    ..a<$7.Struct>(14, 'diagnosticInfo', $pb.PbFieldType.OM,
+        $7.Struct.getDefault, $7.Struct.create)
     ..aOS(15, 'languageCode')
     ..a<SentimentAnalysisResult>(
         17,
@@ -400,8 +399,8 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasAction() => $_has(2);
   void clearAction() => clearField(3);
 
-  $5.Struct get parameters => $_getN(3);
-  set parameters($5.Struct v) {
+  $7.Struct get parameters => $_getN(3);
+  set parameters($7.Struct v) {
     setField(4, v);
   }
 
@@ -424,7 +423,7 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasFulfillmentText() => $_has(5);
   void clearFulfillmentText() => clearField(6);
 
-  $core.List<$6.Intent_Message> get fulfillmentMessages => $_getList(6);
+  $core.List<$8.Intent_Message> get fulfillmentMessages => $_getList(6);
 
   $core.String get webhookSource => $_getS(7, '');
   set webhookSource($core.String v) {
@@ -434,18 +433,18 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasWebhookSource() => $_has(7);
   void clearWebhookSource() => clearField(8);
 
-  $5.Struct get webhookPayload => $_getN(8);
-  set webhookPayload($5.Struct v) {
+  $7.Struct get webhookPayload => $_getN(8);
+  set webhookPayload($7.Struct v) {
     setField(9, v);
   }
 
   $core.bool hasWebhookPayload() => $_has(8);
   void clearWebhookPayload() => clearField(9);
 
-  $core.List<$3.Context> get outputContexts => $_getList(9);
+  $core.List<$5.Context> get outputContexts => $_getList(9);
 
-  $6.Intent get intent => $_getN(10);
-  set intent($6.Intent v) {
+  $8.Intent get intent => $_getN(10);
+  set intent($8.Intent v) {
     setField(11, v);
   }
 
@@ -460,8 +459,8 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasIntentDetectionConfidence() => $_has(11);
   void clearIntentDetectionConfidence() => clearField(12);
 
-  $5.Struct get diagnosticInfo => $_getN(12);
-  set diagnosticInfo($5.Struct v) {
+  $7.Struct get diagnosticInfo => $_getN(12);
+  set diagnosticInfo($7.Struct v) {
     setField(14, v);
   }
 
@@ -612,8 +611,8 @@ class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
     ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
         QueryInput.create)
     ..aOB(4, 'singleUtterance')
-    ..a<$0.OutputAudioConfig>(5, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
+    ..a<$2.OutputAudioConfig>(5, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
     ..a<$core.List<$core.int>>(6, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -672,8 +671,8 @@ class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasSingleUtterance() => $_has(3);
   void clearSingleUtterance() => clearField(4);
 
-  $0.OutputAudioConfig get outputAudioConfig => $_getN(4);
-  set outputAudioConfig($0.OutputAudioConfig v) {
+  $2.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  set outputAudioConfig($2.OutputAudioConfig v) {
     setField(5, v);
   }
 
@@ -702,11 +701,11 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
         StreamingRecognitionResult.create)
     ..a<QueryResult>(3, 'queryResult', $pb.PbFieldType.OM,
         QueryResult.getDefault, QueryResult.create)
-    ..a<$1.Status>(4, 'webhookStatus', $pb.PbFieldType.OM, $1.Status.getDefault,
-        $1.Status.create)
+    ..a<$3.Status>(4, 'webhookStatus', $pb.PbFieldType.OM, $3.Status.getDefault,
+        $3.Status.create)
     ..a<$core.List<$core.int>>(5, 'outputAudio', $pb.PbFieldType.OY)
-    ..a<$0.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $0.OutputAudioConfig.getDefault, $0.OutputAudioConfig.create)
+    ..a<$2.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
     ..pc<QueryResult>(
         7, 'alternativeQueryResults', $pb.PbFieldType.PM, QueryResult.create)
     ..hasRequiredFields = false;
@@ -758,8 +757,8 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasQueryResult() => $_has(2);
   void clearQueryResult() => clearField(3);
 
-  $1.Status get webhookStatus => $_getN(3);
-  set webhookStatus($1.Status v) {
+  $3.Status get webhookStatus => $_getN(3);
+  set webhookStatus($3.Status v) {
     setField(4, v);
   }
 
@@ -774,8 +773,8 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasOutputAudio() => $_has(4);
   void clearOutputAudio() => clearField(5);
 
-  $0.OutputAudioConfig get outputAudioConfig => $_getN(5);
-  set outputAudioConfig($0.OutputAudioConfig v) {
+  $2.OutputAudioConfig get outputAudioConfig => $_getN(5);
+  set outputAudioConfig($2.OutputAudioConfig v) {
     setField(6, v);
   }
 
@@ -901,8 +900,8 @@ class EventInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EventInput',
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..aOS(1, 'name')
-    ..a<$5.Struct>(2, 'parameters', $pb.PbFieldType.OM, $5.Struct.getDefault,
-        $5.Struct.create)
+    ..a<$7.Struct>(2, 'parameters', $pb.PbFieldType.OM, $7.Struct.getDefault,
+        $7.Struct.create)
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
@@ -931,8 +930,8 @@ class EventInput extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $5.Struct get parameters => $_getN(1);
-  set parameters($5.Struct v) {
+  $7.Struct get parameters => $_getN(1);
+  set parameters($7.Struct v) {
     setField(2, v);
   }
 
@@ -1063,23 +1062,4 @@ class Sentiment extends $pb.GeneratedMessage {
 
   $core.bool hasMagnitude() => $_has(1);
   void clearMagnitude() => clearField(2);
-}
-
-class SessionsApi {
-  $pb.RpcClient _client;
-  SessionsApi(this._client);
-
-  $async.Future<DetectIntentResponse> detectIntent(
-      $pb.ClientContext ctx, DetectIntentRequest request) {
-    var emptyResponse = DetectIntentResponse();
-    return _client.invoke<DetectIntentResponse>(
-        ctx, 'Sessions', 'DetectIntent', request, emptyResponse);
-  }
-
-  $async.Future<StreamingDetectIntentResponse> streamingDetectIntent(
-      $pb.ClientContext ctx, StreamingDetectIntentRequest request) {
-    var emptyResponse = StreamingDetectIntentResponse();
-    return _client.invoke<StreamingDetectIntentResponse>(
-        ctx, 'Sessions', 'StreamingDetectIntent', request, emptyResponse);
-  }
 }

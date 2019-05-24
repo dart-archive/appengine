@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/customer_label.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../../../../rpc/status.pbjson.dart' as $1;
-import '../../../../protobuf/any.pbjson.dart' as $3;
-
 const GetCustomerLabelRequest$json = {
   '1': 'GetCustomerLabelRequest',
   '2': [
@@ -79,39 +74,4 @@ const MutateCustomerLabelResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const CustomerLabelServiceBase$json = {
-  '1': 'CustomerLabelService',
-  '2': [
-    {
-      '1': 'GetCustomerLabel',
-      '2': '.google.ads.googleads.v1.services.GetCustomerLabelRequest',
-      '3': '.google.ads.googleads.v1.resources.CustomerLabel',
-      '4': {}
-    },
-    {
-      '1': 'MutateCustomerLabels',
-      '2': '.google.ads.googleads.v1.services.MutateCustomerLabelsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateCustomerLabelsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CustomerLabelServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetCustomerLabelRequest':
-      GetCustomerLabelRequest$json,
-  '.google.ads.googleads.v1.resources.CustomerLabel': $0.CustomerLabel$json,
-  '.google.protobuf.StringValue': $2.StringValue$json,
-  '.google.ads.googleads.v1.services.MutateCustomerLabelsRequest':
-      MutateCustomerLabelsRequest$json,
-  '.google.ads.googleads.v1.services.CustomerLabelOperation':
-      CustomerLabelOperation$json,
-  '.google.ads.googleads.v1.services.MutateCustomerLabelsResponse':
-      MutateCustomerLabelsResponse$json,
-  '.google.ads.googleads.v1.services.MutateCustomerLabelResult':
-      MutateCustomerLabelResult$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.Any': $3.Any$json,
 };

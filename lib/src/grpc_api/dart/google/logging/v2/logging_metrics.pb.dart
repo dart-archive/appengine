@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../api/metric.pb.dart' as $0;
-import '../../api/distribution.pb.dart' as $1;
-import '../../protobuf/empty.pb.dart' as $2;
+import '../../api/metric.pb.dart' as $1;
+import '../../api/distribution.pb.dart' as $2;
 
 import 'logging_metrics.pbenum.dart';
 
@@ -31,8 +29,8 @@ class LogMetric extends $pb.GeneratedMessage {
         LogMetric_ApiVersion.V2,
         LogMetric_ApiVersion.valueOf,
         LogMetric_ApiVersion.values)
-    ..a<$0.MetricDescriptor>(5, 'metricDescriptor', $pb.PbFieldType.OM,
-        $0.MetricDescriptor.getDefault, $0.MetricDescriptor.create)
+    ..a<$1.MetricDescriptor>(5, 'metricDescriptor', $pb.PbFieldType.OM,
+        $1.MetricDescriptor.getDefault, $1.MetricDescriptor.create)
     ..aOS(6, 'valueExtractor')
     ..m<$core.String, $core.String>(
         7,
@@ -44,12 +42,12 @@ class LogMetric extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.logging.v2'))
-    ..a<$1.Distribution_BucketOptions>(
+    ..a<$2.Distribution_BucketOptions>(
         8,
         'bucketOptions',
         $pb.PbFieldType.OM,
-        $1.Distribution_BucketOptions.getDefault,
-        $1.Distribution_BucketOptions.create)
+        $2.Distribution_BucketOptions.getDefault,
+        $2.Distribution_BucketOptions.create)
     ..hasRequiredFields = false;
 
   LogMetric() : super();
@@ -105,8 +103,8 @@ class LogMetric extends $pb.GeneratedMessage {
   @$core.Deprecated('This field is deprecated.')
   void clearVersion() => clearField(4);
 
-  $0.MetricDescriptor get metricDescriptor => $_getN(4);
-  set metricDescriptor($0.MetricDescriptor v) {
+  $1.MetricDescriptor get metricDescriptor => $_getN(4);
+  set metricDescriptor($1.MetricDescriptor v) {
     setField(5, v);
   }
 
@@ -123,8 +121,8 @@ class LogMetric extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labelExtractors => $_getMap(6);
 
-  $1.Distribution_BucketOptions get bucketOptions => $_getN(7);
-  set bucketOptions($1.Distribution_BucketOptions v) {
+  $2.Distribution_BucketOptions get bucketOptions => $_getN(7);
+  set bucketOptions($2.Distribution_BucketOptions v) {
     setField(8, v);
   }
 
@@ -385,44 +383,4 @@ class DeleteLogMetricRequest extends $pb.GeneratedMessage {
 
   $core.bool hasMetricName() => $_has(0);
   void clearMetricName() => clearField(1);
-}
-
-class MetricsServiceV2Api {
-  $pb.RpcClient _client;
-  MetricsServiceV2Api(this._client);
-
-  $async.Future<ListLogMetricsResponse> listLogMetrics(
-      $pb.ClientContext ctx, ListLogMetricsRequest request) {
-    var emptyResponse = ListLogMetricsResponse();
-    return _client.invoke<ListLogMetricsResponse>(
-        ctx, 'MetricsServiceV2', 'ListLogMetrics', request, emptyResponse);
-  }
-
-  $async.Future<LogMetric> getLogMetric(
-      $pb.ClientContext ctx, GetLogMetricRequest request) {
-    var emptyResponse = LogMetric();
-    return _client.invoke<LogMetric>(
-        ctx, 'MetricsServiceV2', 'GetLogMetric', request, emptyResponse);
-  }
-
-  $async.Future<LogMetric> createLogMetric(
-      $pb.ClientContext ctx, CreateLogMetricRequest request) {
-    var emptyResponse = LogMetric();
-    return _client.invoke<LogMetric>(
-        ctx, 'MetricsServiceV2', 'CreateLogMetric', request, emptyResponse);
-  }
-
-  $async.Future<LogMetric> updateLogMetric(
-      $pb.ClientContext ctx, UpdateLogMetricRequest request) {
-    var emptyResponse = LogMetric();
-    return _client.invoke<LogMetric>(
-        ctx, 'MetricsServiceV2', 'UpdateLogMetric', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteLogMetric(
-      $pb.ClientContext ctx, DeleteLogMetricRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'MetricsServiceV2', 'DeleteLogMetric', request, emptyResponse);
-  }
 }

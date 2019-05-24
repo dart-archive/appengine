@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import '../../protobuf/empty.pb.dart' as $2;
+import '../../protobuf/timestamp.pb.dart' as $1;
+import '../../protobuf/field_mask.pb.dart' as $2;
 
 import 'logging_config.pbenum.dart';
 
@@ -33,10 +31,10 @@ class LogSink extends $pb.GeneratedMessage {
         LogSink_VersionFormat.values)
     ..aOS(8, 'writerIdentity')
     ..aOB(9, 'includeChildren')
-    ..a<$0.Timestamp>(10, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(11, 'endTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(10, 'startTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(11, 'endTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   LogSink() : super();
@@ -109,9 +107,9 @@ class LogSink extends $pb.GeneratedMessage {
   void clearIncludeChildren() => clearField(9);
 
   @$core.Deprecated('This field is deprecated.')
-  $0.Timestamp get startTime => $_getN(6);
+  $1.Timestamp get startTime => $_getN(6);
   @$core.Deprecated('This field is deprecated.')
-  set startTime($0.Timestamp v) {
+  set startTime($1.Timestamp v) {
     setField(10, v);
   }
 
@@ -121,9 +119,9 @@ class LogSink extends $pb.GeneratedMessage {
   void clearStartTime() => clearField(10);
 
   @$core.Deprecated('This field is deprecated.')
-  $0.Timestamp get endTime => $_getN(7);
+  $1.Timestamp get endTime => $_getN(7);
   @$core.Deprecated('This field is deprecated.')
-  set endTime($0.Timestamp v) {
+  set endTime($1.Timestamp v) {
     setField(11, v);
   }
 
@@ -315,8 +313,8 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
     ..a<LogSink>(
         2, 'sink', $pb.PbFieldType.OM, LogSink.getDefault, LogSink.create)
     ..aOB(3, 'uniqueWriterIdentity')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSinkRequest() : super();
@@ -362,8 +360,8 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
   $core.bool hasUniqueWriterIdentity() => $_has(2);
   void clearUniqueWriterIdentity() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -644,8 +642,8 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<LogExclusion>(2, 'exclusion', $pb.PbFieldType.OM,
         LogExclusion.getDefault, LogExclusion.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateExclusionRequest() : super();
@@ -685,8 +683,8 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
   $core.bool hasExclusion() => $_has(1);
   void clearExclusion() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
@@ -728,79 +726,4 @@ class DeleteExclusionRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class ConfigServiceV2Api {
-  $pb.RpcClient _client;
-  ConfigServiceV2Api(this._client);
-
-  $async.Future<ListSinksResponse> listSinks(
-      $pb.ClientContext ctx, ListSinksRequest request) {
-    var emptyResponse = ListSinksResponse();
-    return _client.invoke<ListSinksResponse>(
-        ctx, 'ConfigServiceV2', 'ListSinks', request, emptyResponse);
-  }
-
-  $async.Future<LogSink> getSink(
-      $pb.ClientContext ctx, GetSinkRequest request) {
-    var emptyResponse = LogSink();
-    return _client.invoke<LogSink>(
-        ctx, 'ConfigServiceV2', 'GetSink', request, emptyResponse);
-  }
-
-  $async.Future<LogSink> createSink(
-      $pb.ClientContext ctx, CreateSinkRequest request) {
-    var emptyResponse = LogSink();
-    return _client.invoke<LogSink>(
-        ctx, 'ConfigServiceV2', 'CreateSink', request, emptyResponse);
-  }
-
-  $async.Future<LogSink> updateSink(
-      $pb.ClientContext ctx, UpdateSinkRequest request) {
-    var emptyResponse = LogSink();
-    return _client.invoke<LogSink>(
-        ctx, 'ConfigServiceV2', 'UpdateSink', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteSink(
-      $pb.ClientContext ctx, DeleteSinkRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'ConfigServiceV2', 'DeleteSink', request, emptyResponse);
-  }
-
-  $async.Future<ListExclusionsResponse> listExclusions(
-      $pb.ClientContext ctx, ListExclusionsRequest request) {
-    var emptyResponse = ListExclusionsResponse();
-    return _client.invoke<ListExclusionsResponse>(
-        ctx, 'ConfigServiceV2', 'ListExclusions', request, emptyResponse);
-  }
-
-  $async.Future<LogExclusion> getExclusion(
-      $pb.ClientContext ctx, GetExclusionRequest request) {
-    var emptyResponse = LogExclusion();
-    return _client.invoke<LogExclusion>(
-        ctx, 'ConfigServiceV2', 'GetExclusion', request, emptyResponse);
-  }
-
-  $async.Future<LogExclusion> createExclusion(
-      $pb.ClientContext ctx, CreateExclusionRequest request) {
-    var emptyResponse = LogExclusion();
-    return _client.invoke<LogExclusion>(
-        ctx, 'ConfigServiceV2', 'CreateExclusion', request, emptyResponse);
-  }
-
-  $async.Future<LogExclusion> updateExclusion(
-      $pb.ClientContext ctx, UpdateExclusionRequest request) {
-    var emptyResponse = LogExclusion();
-    return _client.invoke<LogExclusion>(
-        ctx, 'ConfigServiceV2', 'UpdateExclusion', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteExclusion(
-      $pb.ClientContext ctx, DeleteExclusionRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'ConfigServiceV2', 'DeleteExclusion', request, emptyResponse);
-  }
 }

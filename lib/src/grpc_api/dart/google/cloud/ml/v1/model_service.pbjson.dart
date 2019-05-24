@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../../longrunning/operations.pbjson.dart' as $1;
-import '../../../protobuf/any.pbjson.dart' as $2;
-import '../../../rpc/status.pbjson.dart' as $3;
-
 const Model$json = {
   '1': 'Model',
   '2': [
@@ -186,85 +181,4 @@ const SetDefaultVersionRequest$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
-};
-
-const ModelServiceBase$json = {
-  '1': 'ModelService',
-  '2': [
-    {
-      '1': 'CreateModel',
-      '2': '.google.cloud.ml.v1.CreateModelRequest',
-      '3': '.google.cloud.ml.v1.Model',
-      '4': {}
-    },
-    {
-      '1': 'ListModels',
-      '2': '.google.cloud.ml.v1.ListModelsRequest',
-      '3': '.google.cloud.ml.v1.ListModelsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetModel',
-      '2': '.google.cloud.ml.v1.GetModelRequest',
-      '3': '.google.cloud.ml.v1.Model',
-      '4': {}
-    },
-    {
-      '1': 'DeleteModel',
-      '2': '.google.cloud.ml.v1.DeleteModelRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'CreateVersion',
-      '2': '.google.cloud.ml.v1.CreateVersionRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'ListVersions',
-      '2': '.google.cloud.ml.v1.ListVersionsRequest',
-      '3': '.google.cloud.ml.v1.ListVersionsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetVersion',
-      '2': '.google.cloud.ml.v1.GetVersionRequest',
-      '3': '.google.cloud.ml.v1.Version',
-      '4': {}
-    },
-    {
-      '1': 'DeleteVersion',
-      '2': '.google.cloud.ml.v1.DeleteVersionRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-    {
-      '1': 'SetDefaultVersion',
-      '2': '.google.cloud.ml.v1.SetDefaultVersionRequest',
-      '3': '.google.cloud.ml.v1.Version',
-      '4': {}
-    },
-  ],
-};
-
-const ModelServiceBase$messageJson = {
-  '.google.cloud.ml.v1.CreateModelRequest': CreateModelRequest$json,
-  '.google.cloud.ml.v1.Model': Model$json,
-  '.google.cloud.ml.v1.Version': Version$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.ml.v1.ManualScaling': ManualScaling$json,
-  '.google.cloud.ml.v1.ListModelsRequest': ListModelsRequest$json,
-  '.google.cloud.ml.v1.ListModelsResponse': ListModelsResponse$json,
-  '.google.cloud.ml.v1.GetModelRequest': GetModelRequest$json,
-  '.google.cloud.ml.v1.DeleteModelRequest': DeleteModelRequest$json,
-  '.google.longrunning.Operation': $1.Operation$json,
-  '.google.protobuf.Any': $2.Any$json,
-  '.google.rpc.Status': $3.Status$json,
-  '.google.cloud.ml.v1.CreateVersionRequest': CreateVersionRequest$json,
-  '.google.cloud.ml.v1.ListVersionsRequest': ListVersionsRequest$json,
-  '.google.cloud.ml.v1.ListVersionsResponse': ListVersionsResponse$json,
-  '.google.cloud.ml.v1.GetVersionRequest': GetVersionRequest$json,
-  '.google.cloud.ml.v1.DeleteVersionRequest': DeleteVersionRequest$json,
-  '.google.cloud.ml.v1.SetDefaultVersionRequest': SetDefaultVersionRequest$json,
 };

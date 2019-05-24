@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/keyword_plan_keyword.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetKeywordPlanKeywordRequest$json = {
   '1': 'GetKeywordPlanKeywordRequest',
   '2': [
@@ -97,43 +91,4 @@ const MutateKeywordPlanKeywordResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const KeywordPlanKeywordServiceBase$json = {
-  '1': 'KeywordPlanKeywordService',
-  '2': [
-    {
-      '1': 'GetKeywordPlanKeyword',
-      '2': '.google.ads.googleads.v1.services.GetKeywordPlanKeywordRequest',
-      '3': '.google.ads.googleads.v1.resources.KeywordPlanKeyword',
-      '4': {}
-    },
-    {
-      '1': 'MutateKeywordPlanKeywords',
-      '2': '.google.ads.googleads.v1.services.MutateKeywordPlanKeywordsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.MutateKeywordPlanKeywordsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const KeywordPlanKeywordServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetKeywordPlanKeywordRequest':
-      GetKeywordPlanKeywordRequest$json,
-  '.google.ads.googleads.v1.resources.KeywordPlanKeyword':
-      $0.KeywordPlanKeyword$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.ads.googleads.v1.services.MutateKeywordPlanKeywordsRequest':
-      MutateKeywordPlanKeywordsRequest$json,
-  '.google.ads.googleads.v1.services.KeywordPlanKeywordOperation':
-      KeywordPlanKeywordOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateKeywordPlanKeywordsResponse':
-      MutateKeywordPlanKeywordsResponse$json,
-  '.google.ads.googleads.v1.services.MutateKeywordPlanKeywordResult':
-      MutateKeywordPlanKeywordResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

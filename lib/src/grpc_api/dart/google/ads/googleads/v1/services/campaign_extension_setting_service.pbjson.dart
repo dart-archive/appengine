@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/campaign_extension_setting.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetCampaignExtensionSettingRequest$json = {
   '1': 'GetCampaignExtensionSettingRequest',
   '2': [
@@ -99,44 +93,4 @@ const MutateCampaignExtensionSettingResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const CampaignExtensionSettingServiceBase$json = {
-  '1': 'CampaignExtensionSettingService',
-  '2': [
-    {
-      '1': 'GetCampaignExtensionSetting',
-      '2':
-          '.google.ads.googleads.v1.services.GetCampaignExtensionSettingRequest',
-      '3': '.google.ads.googleads.v1.resources.CampaignExtensionSetting',
-      '4': {}
-    },
-    {
-      '1': 'MutateCampaignExtensionSettings',
-      '2':
-          '.google.ads.googleads.v1.services.MutateCampaignExtensionSettingsRequest',
-      '3':
-          '.google.ads.googleads.v1.services.MutateCampaignExtensionSettingsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const CampaignExtensionSettingServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetCampaignExtensionSettingRequest':
-      GetCampaignExtensionSettingRequest$json,
-  '.google.ads.googleads.v1.resources.CampaignExtensionSetting':
-      $0.CampaignExtensionSetting$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.services.MutateCampaignExtensionSettingsRequest':
-      MutateCampaignExtensionSettingsRequest$json,
-  '.google.ads.googleads.v1.services.CampaignExtensionSettingOperation':
-      CampaignExtensionSettingOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateCampaignExtensionSettingsResponse':
-      MutateCampaignExtensionSettingsResponse$json,
-  '.google.ads.googleads.v1.services.MutateCampaignExtensionSettingResult':
-      MutateCampaignExtensionSettingResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

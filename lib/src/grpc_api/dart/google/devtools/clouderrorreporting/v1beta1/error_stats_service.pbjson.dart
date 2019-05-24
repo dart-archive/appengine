@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../protobuf/timestamp.pbjson.dart' as $1;
-import 'common.pbjson.dart' as $2;
-
 const TimedCountAlignment$json = {
   '1': 'TimedCountAlignment',
   '2': [
@@ -295,65 +291,4 @@ const DeleteEventsRequest$json = {
 
 const DeleteEventsResponse$json = {
   '1': 'DeleteEventsResponse',
-};
-
-const ErrorStatsServiceBase$json = {
-  '1': 'ErrorStatsService',
-  '2': [
-    {
-      '1': 'ListGroupStats',
-      '2': '.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest',
-      '3':
-          '.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse',
-      '4': {}
-    },
-    {
-      '1': 'ListEvents',
-      '2': '.google.devtools.clouderrorreporting.v1beta1.ListEventsRequest',
-      '3': '.google.devtools.clouderrorreporting.v1beta1.ListEventsResponse',
-      '4': {}
-    },
-    {
-      '1': 'DeleteEvents',
-      '2': '.google.devtools.clouderrorreporting.v1beta1.DeleteEventsRequest',
-      '3': '.google.devtools.clouderrorreporting.v1beta1.DeleteEventsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const ErrorStatsServiceBase$messageJson = {
-  '.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest':
-      ListGroupStatsRequest$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter':
-      ServiceContextFilter$json,
-  '.google.devtools.clouderrorreporting.v1beta1.QueryTimeRange':
-      QueryTimeRange$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.protobuf.Timestamp': $1.Timestamp$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse':
-      ListGroupStatsResponse$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats':
-      ErrorGroupStats$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ErrorGroup': $2.ErrorGroup$json,
-  '.google.devtools.clouderrorreporting.v1beta1.TrackingIssue':
-      $2.TrackingIssue$json,
-  '.google.devtools.clouderrorreporting.v1beta1.TimedCount': TimedCount$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ServiceContext':
-      $2.ServiceContext$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ErrorEvent': $2.ErrorEvent$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ErrorContext':
-      $2.ErrorContext$json,
-  '.google.devtools.clouderrorreporting.v1beta1.HttpRequestContext':
-      $2.HttpRequestContext$json,
-  '.google.devtools.clouderrorreporting.v1beta1.SourceLocation':
-      $2.SourceLocation$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ListEventsRequest':
-      ListEventsRequest$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ListEventsResponse':
-      ListEventsResponse$json,
-  '.google.devtools.clouderrorreporting.v1beta1.DeleteEventsRequest':
-      DeleteEventsRequest$json,
-  '.google.devtools.clouderrorreporting.v1beta1.DeleteEventsResponse':
-      DeleteEventsResponse$json,
 };

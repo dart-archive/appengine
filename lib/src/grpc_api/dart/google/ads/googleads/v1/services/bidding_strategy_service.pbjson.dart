@@ -4,13 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/bidding_strategy.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../common/bidding.pbjson.dart' as $4;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $5;
-
 const GetBiddingStrategyRequest$json = {
   '1': 'GetBiddingStrategyRequest',
   '2': [
@@ -98,53 +91,4 @@ const MutateBiddingStrategyResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const BiddingStrategyServiceBase$json = {
-  '1': 'BiddingStrategyService',
-  '2': [
-    {
-      '1': 'GetBiddingStrategy',
-      '2': '.google.ads.googleads.v1.services.GetBiddingStrategyRequest',
-      '3': '.google.ads.googleads.v1.resources.BiddingStrategy',
-      '4': {}
-    },
-    {
-      '1': 'MutateBiddingStrategies',
-      '2': '.google.ads.googleads.v1.services.MutateBiddingStrategiesRequest',
-      '3': '.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse',
-      '4': {}
-    },
-  ],
-};
-
-const BiddingStrategyServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetBiddingStrategyRequest':
-      GetBiddingStrategyRequest$json,
-  '.google.ads.googleads.v1.resources.BiddingStrategy': $0.BiddingStrategy$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.common.EnhancedCpc': $4.EnhancedCpc$json,
-  '.google.ads.googleads.v1.common.PageOnePromoted': $4.PageOnePromoted$json,
-  '.google.protobuf.DoubleValue': $3.DoubleValue$json,
-  '.google.protobuf.BoolValue': $3.BoolValue$json,
-  '.google.ads.googleads.v1.common.TargetCpa': $4.TargetCpa$json,
-  '.google.ads.googleads.v1.common.TargetOutrankShare':
-      $4.TargetOutrankShare$json,
-  '.google.protobuf.Int32Value': $3.Int32Value$json,
-  '.google.ads.googleads.v1.common.TargetRoas': $4.TargetRoas$json,
-  '.google.ads.googleads.v1.common.TargetSpend': $4.TargetSpend$json,
-  '.google.ads.googleads.v1.common.TargetImpressionShare':
-      $4.TargetImpressionShare$json,
-  '.google.ads.googleads.v1.services.MutateBiddingStrategiesRequest':
-      MutateBiddingStrategiesRequest$json,
-  '.google.ads.googleads.v1.services.BiddingStrategyOperation':
-      BiddingStrategyOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateBiddingStrategiesResponse':
-      MutateBiddingStrategiesResponse$json,
-  '.google.ads.googleads.v1.services.MutateBiddingStrategyResult':
-      MutateBiddingStrategyResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $5.Any$json,
 };

@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../api/monitored_resource.pb.dart' as $0;
-import 'log_entry.pb.dart' as $1;
-import '../../rpc/status.pb.dart' as $2;
-import '../../protobuf/empty.pb.dart' as $3;
+import '../../api/monitored_resource.pb.dart' as $1;
+import 'log_entry.pb.dart' as $2;
+import '../../rpc/status.pb.dart' as $3;
 
 class DeleteLogRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteLogRequest',
@@ -53,8 +51,8 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WriteLogEntriesRequest',
       package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'logName')
-    ..a<$0.MonitoredResource>(2, 'resource', $pb.PbFieldType.OM,
-        $0.MonitoredResource.getDefault, $0.MonitoredResource.create)
+    ..a<$1.MonitoredResource>(2, 'resource', $pb.PbFieldType.OM,
+        $1.MonitoredResource.getDefault, $1.MonitoredResource.create)
     ..m<$core.String, $core.String>(
         3,
         'labels',
@@ -65,7 +63,7 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.logging.v2'))
-    ..pc<$1.LogEntry>(4, 'entries', $pb.PbFieldType.PM, $1.LogEntry.create)
+    ..pc<$2.LogEntry>(4, 'entries', $pb.PbFieldType.PM, $2.LogEntry.create)
     ..aOB(5, 'partialSuccess')
     ..aOB(6, 'dryRun')
     ..hasRequiredFields = false;
@@ -99,8 +97,8 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
   $core.bool hasLogName() => $_has(0);
   void clearLogName() => clearField(1);
 
-  $0.MonitoredResource get resource => $_getN(1);
-  set resource($0.MonitoredResource v) {
+  $1.MonitoredResource get resource => $_getN(1);
+  set resource($1.MonitoredResource v) {
     setField(2, v);
   }
 
@@ -109,7 +107,7 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 
-  $core.List<$1.LogEntry> get entries => $_getList(3);
+  $core.List<$2.LogEntry> get entries => $_getList(3);
 
   $core.bool get partialSuccess => $_get(4, false);
   set partialSuccess($core.bool v) {
@@ -159,13 +157,13 @@ class WriteLogEntriesPartialErrors extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'WriteLogEntriesPartialErrors',
       package: const $pb.PackageName('google.logging.v2'))
-    ..m<$core.int, $2.Status>(
+    ..m<$core.int, $3.Status>(
         1,
         'logEntryErrors',
         'WriteLogEntriesPartialErrors.LogEntryErrorsEntry',
         $pb.PbFieldType.O3,
         $pb.PbFieldType.OM,
-        $2.Status.create,
+        $3.Status.create,
         null,
         null,
         const $pb.PackageName('google.logging.v2'))
@@ -194,7 +192,7 @@ class WriteLogEntriesPartialErrors extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static WriteLogEntriesPartialErrors _defaultInstance;
 
-  $core.Map<$core.int, $2.Status> get logEntryErrors => $_getMap(0);
+  $core.Map<$core.int, $3.Status> get logEntryErrors => $_getMap(0);
 }
 
 class ListLogEntriesRequest extends $pb.GeneratedMessage {
@@ -270,7 +268,7 @@ class ListLogEntriesRequest extends $pb.GeneratedMessage {
 class ListLogEntriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLogEntriesResponse',
       package: const $pb.PackageName('google.logging.v2'))
-    ..pc<$1.LogEntry>(1, 'entries', $pb.PbFieldType.PM, $1.LogEntry.create)
+    ..pc<$2.LogEntry>(1, 'entries', $pb.PbFieldType.PM, $2.LogEntry.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -295,7 +293,7 @@ class ListLogEntriesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListLogEntriesResponse _defaultInstance;
 
-  $core.List<$1.LogEntry> get entries => $_getList(0);
+  $core.List<$2.LogEntry> get entries => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -358,8 +356,8 @@ class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMonitoredResourceDescriptorsResponse',
       package: const $pb.PackageName('google.logging.v2'))
-    ..pc<$0.MonitoredResourceDescriptor>(1, 'resourceDescriptors',
-        $pb.PbFieldType.PM, $0.MonitoredResourceDescriptor.create)
+    ..pc<$1.MonitoredResourceDescriptor>(1, 'resourceDescriptors',
+        $pb.PbFieldType.PM, $1.MonitoredResourceDescriptor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -387,7 +385,7 @@ class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListMonitoredResourceDescriptorsResponse _defaultInstance;
 
-  $core.List<$0.MonitoredResourceDescriptor> get resourceDescriptors =>
+  $core.List<$1.MonitoredResourceDescriptor> get resourceDescriptors =>
       $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
@@ -486,49 +484,4 @@ class ListLogsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 
   $core.List<$core.String> get logNames => $_getList(1);
-}
-
-class LoggingServiceV2Api {
-  $pb.RpcClient _client;
-  LoggingServiceV2Api(this._client);
-
-  $async.Future<$3.Empty> deleteLog(
-      $pb.ClientContext ctx, DeleteLogRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'LoggingServiceV2', 'DeleteLog', request, emptyResponse);
-  }
-
-  $async.Future<WriteLogEntriesResponse> writeLogEntries(
-      $pb.ClientContext ctx, WriteLogEntriesRequest request) {
-    var emptyResponse = WriteLogEntriesResponse();
-    return _client.invoke<WriteLogEntriesResponse>(
-        ctx, 'LoggingServiceV2', 'WriteLogEntries', request, emptyResponse);
-  }
-
-  $async.Future<ListLogEntriesResponse> listLogEntries(
-      $pb.ClientContext ctx, ListLogEntriesRequest request) {
-    var emptyResponse = ListLogEntriesResponse();
-    return _client.invoke<ListLogEntriesResponse>(
-        ctx, 'LoggingServiceV2', 'ListLogEntries', request, emptyResponse);
-  }
-
-  $async.Future<ListMonitoredResourceDescriptorsResponse>
-      listMonitoredResourceDescriptors($pb.ClientContext ctx,
-          ListMonitoredResourceDescriptorsRequest request) {
-    var emptyResponse = ListMonitoredResourceDescriptorsResponse();
-    return _client.invoke<ListMonitoredResourceDescriptorsResponse>(
-        ctx,
-        'LoggingServiceV2',
-        'ListMonitoredResourceDescriptors',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<ListLogsResponse> listLogs(
-      $pb.ClientContext ctx, ListLogsRequest request) {
-    var emptyResponse = ListLogsResponse();
-    return _client.invoke<ListLogsResponse>(
-        ctx, 'LoggingServiceV2', 'ListLogs', request, emptyResponse);
-  }
 }

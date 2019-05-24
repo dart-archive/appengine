@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/shared_set.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $3;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../../../rpc/status.pbjson.dart' as $2;
-import '../../../../protobuf/any.pbjson.dart' as $4;
-
 const GetSharedSetRequest$json = {
   '1': 'GetSharedSetRequest',
   '2': [
@@ -97,41 +91,4 @@ const MutateSharedSetResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const SharedSetServiceBase$json = {
-  '1': 'SharedSetService',
-  '2': [
-    {
-      '1': 'GetSharedSet',
-      '2': '.google.ads.googleads.v1.services.GetSharedSetRequest',
-      '3': '.google.ads.googleads.v1.resources.SharedSet',
-      '4': {}
-    },
-    {
-      '1': 'MutateSharedSets',
-      '2': '.google.ads.googleads.v1.services.MutateSharedSetsRequest',
-      '3': '.google.ads.googleads.v1.services.MutateSharedSetsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const SharedSetServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetSharedSetRequest':
-      GetSharedSetRequest$json,
-  '.google.ads.googleads.v1.resources.SharedSet': $0.SharedSet$json,
-  '.google.protobuf.Int64Value': $3.Int64Value$json,
-  '.google.protobuf.StringValue': $3.StringValue$json,
-  '.google.ads.googleads.v1.services.MutateSharedSetsRequest':
-      MutateSharedSetsRequest$json,
-  '.google.ads.googleads.v1.services.SharedSetOperation':
-      SharedSetOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateSharedSetsResponse':
-      MutateSharedSetsResponse$json,
-  '.google.ads.googleads.v1.services.MutateSharedSetResult':
-      MutateSharedSetResult$json,
-  '.google.rpc.Status': $2.Status$json,
-  '.google.protobuf.Any': $4.Any$json,
 };

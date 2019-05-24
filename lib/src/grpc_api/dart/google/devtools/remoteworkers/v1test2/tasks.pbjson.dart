@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/any.pbjson.dart' as $0;
-import '../../../rpc/status.pbjson.dart' as $1;
-import '../../../protobuf/field_mask.pbjson.dart' as $2;
-
 const Task$json = {
   '1': 'Task',
   '2': [
@@ -117,44 +113,4 @@ const AddTaskLogResponse$json = {
   '2': [
     {'1': 'handle', '3': 1, '4': 1, '5': 9, '10': 'handle'},
   ],
-};
-
-const TasksServiceBase$json = {
-  '1': 'Tasks',
-  '2': [
-    {
-      '1': 'GetTask',
-      '2': '.google.devtools.remoteworkers.v1test2.GetTaskRequest',
-      '3': '.google.devtools.remoteworkers.v1test2.Task',
-      '4': {}
-    },
-    {
-      '1': 'UpdateTaskResult',
-      '2': '.google.devtools.remoteworkers.v1test2.UpdateTaskResultRequest',
-      '3': '.google.devtools.remoteworkers.v1test2.TaskResult',
-      '4': {}
-    },
-    {
-      '1': 'AddTaskLog',
-      '2': '.google.devtools.remoteworkers.v1test2.AddTaskLogRequest',
-      '3': '.google.devtools.remoteworkers.v1test2.AddTaskLogResponse',
-      '4': {}
-    },
-  ],
-};
-
-const TasksServiceBase$messageJson = {
-  '.google.devtools.remoteworkers.v1test2.GetTaskRequest': GetTaskRequest$json,
-  '.google.devtools.remoteworkers.v1test2.Task': Task$json,
-  '.google.protobuf.Any': $0.Any$json,
-  '.google.devtools.remoteworkers.v1test2.Task.LogsEntry': Task_LogsEntry$json,
-  '.google.devtools.remoteworkers.v1test2.UpdateTaskResultRequest':
-      UpdateTaskResultRequest$json,
-  '.google.devtools.remoteworkers.v1test2.TaskResult': TaskResult$json,
-  '.google.rpc.Status': $1.Status$json,
-  '.google.protobuf.FieldMask': $2.FieldMask$json,
-  '.google.devtools.remoteworkers.v1test2.AddTaskLogRequest':
-      AddTaskLogRequest$json,
-  '.google.devtools.remoteworkers.v1test2.AddTaskLogResponse':
-      AddTaskLogResponse$json,
 };

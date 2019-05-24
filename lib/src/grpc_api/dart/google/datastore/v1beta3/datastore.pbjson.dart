@@ -4,12 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'entity.pbjson.dart' as $0;
-import 'query.pbjson.dart' as $1;
-import '../../type/latlng.pbjson.dart' as $2;
-import '../../protobuf/timestamp.pbjson.dart' as $3;
-import '../../protobuf/wrappers.pbjson.dart' as $4;
-
 const LookupRequest$json = {
   '1': 'LookupRequest',
   '2': [
@@ -405,104 +399,4 @@ const TransactionOptions_ReadWrite$json = {
 
 const TransactionOptions_ReadOnly$json = {
   '1': 'ReadOnly',
-};
-
-const DatastoreServiceBase$json = {
-  '1': 'Datastore',
-  '2': [
-    {
-      '1': 'Lookup',
-      '2': '.google.datastore.v1beta3.LookupRequest',
-      '3': '.google.datastore.v1beta3.LookupResponse',
-      '4': {}
-    },
-    {
-      '1': 'RunQuery',
-      '2': '.google.datastore.v1beta3.RunQueryRequest',
-      '3': '.google.datastore.v1beta3.RunQueryResponse',
-      '4': {}
-    },
-    {
-      '1': 'BeginTransaction',
-      '2': '.google.datastore.v1beta3.BeginTransactionRequest',
-      '3': '.google.datastore.v1beta3.BeginTransactionResponse',
-      '4': {}
-    },
-    {
-      '1': 'Commit',
-      '2': '.google.datastore.v1beta3.CommitRequest',
-      '3': '.google.datastore.v1beta3.CommitResponse',
-      '4': {}
-    },
-    {
-      '1': 'Rollback',
-      '2': '.google.datastore.v1beta3.RollbackRequest',
-      '3': '.google.datastore.v1beta3.RollbackResponse',
-      '4': {}
-    },
-    {
-      '1': 'AllocateIds',
-      '2': '.google.datastore.v1beta3.AllocateIdsRequest',
-      '3': '.google.datastore.v1beta3.AllocateIdsResponse',
-      '4': {}
-    },
-    {
-      '1': 'ReserveIds',
-      '2': '.google.datastore.v1beta3.ReserveIdsRequest',
-      '3': '.google.datastore.v1beta3.ReserveIdsResponse',
-      '4': {}
-    },
-  ],
-};
-
-const DatastoreServiceBase$messageJson = {
-  '.google.datastore.v1beta3.LookupRequest': LookupRequest$json,
-  '.google.datastore.v1beta3.ReadOptions': ReadOptions$json,
-  '.google.datastore.v1beta3.Key': $0.Key$json,
-  '.google.datastore.v1beta3.PartitionId': $0.PartitionId$json,
-  '.google.datastore.v1beta3.Key.PathElement': $0.Key_PathElement$json,
-  '.google.datastore.v1beta3.LookupResponse': LookupResponse$json,
-  '.google.datastore.v1beta3.EntityResult': $1.EntityResult$json,
-  '.google.datastore.v1beta3.Entity': $0.Entity$json,
-  '.google.datastore.v1beta3.Entity.PropertiesEntry':
-      $0.Entity_PropertiesEntry$json,
-  '.google.datastore.v1beta3.Value': $0.Value$json,
-  '.google.type.LatLng': $2.LatLng$json,
-  '.google.datastore.v1beta3.ArrayValue': $0.ArrayValue$json,
-  '.google.protobuf.Timestamp': $3.Timestamp$json,
-  '.google.datastore.v1beta3.RunQueryRequest': RunQueryRequest$json,
-  '.google.datastore.v1beta3.Query': $1.Query$json,
-  '.google.datastore.v1beta3.Projection': $1.Projection$json,
-  '.google.datastore.v1beta3.PropertyReference': $1.PropertyReference$json,
-  '.google.datastore.v1beta3.KindExpression': $1.KindExpression$json,
-  '.google.datastore.v1beta3.Filter': $1.Filter$json,
-  '.google.datastore.v1beta3.CompositeFilter': $1.CompositeFilter$json,
-  '.google.datastore.v1beta3.PropertyFilter': $1.PropertyFilter$json,
-  '.google.datastore.v1beta3.PropertyOrder': $1.PropertyOrder$json,
-  '.google.protobuf.Int32Value': $4.Int32Value$json,
-  '.google.datastore.v1beta3.GqlQuery': $1.GqlQuery$json,
-  '.google.datastore.v1beta3.GqlQueryParameter': $1.GqlQueryParameter$json,
-  '.google.datastore.v1beta3.GqlQuery.NamedBindingsEntry':
-      $1.GqlQuery_NamedBindingsEntry$json,
-  '.google.datastore.v1beta3.RunQueryResponse': RunQueryResponse$json,
-  '.google.datastore.v1beta3.QueryResultBatch': $1.QueryResultBatch$json,
-  '.google.datastore.v1beta3.BeginTransactionRequest':
-      BeginTransactionRequest$json,
-  '.google.datastore.v1beta3.TransactionOptions': TransactionOptions$json,
-  '.google.datastore.v1beta3.TransactionOptions.ReadWrite':
-      TransactionOptions_ReadWrite$json,
-  '.google.datastore.v1beta3.TransactionOptions.ReadOnly':
-      TransactionOptions_ReadOnly$json,
-  '.google.datastore.v1beta3.BeginTransactionResponse':
-      BeginTransactionResponse$json,
-  '.google.datastore.v1beta3.CommitRequest': CommitRequest$json,
-  '.google.datastore.v1beta3.Mutation': Mutation$json,
-  '.google.datastore.v1beta3.CommitResponse': CommitResponse$json,
-  '.google.datastore.v1beta3.MutationResult': MutationResult$json,
-  '.google.datastore.v1beta3.RollbackRequest': RollbackRequest$json,
-  '.google.datastore.v1beta3.RollbackResponse': RollbackResponse$json,
-  '.google.datastore.v1beta3.AllocateIdsRequest': AllocateIdsRequest$json,
-  '.google.datastore.v1beta3.AllocateIdsResponse': AllocateIdsResponse$json,
-  '.google.datastore.v1beta3.ReserveIdsRequest': ReserveIdsRequest$json,
-  '.google.datastore.v1beta3.ReserveIdsResponse': ReserveIdsResponse$json,
 };

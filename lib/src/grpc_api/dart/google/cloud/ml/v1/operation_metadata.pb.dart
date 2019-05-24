@@ -9,8 +9,8 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import 'model_service.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import 'model_service.pb.dart' as $3;
 
 import 'operation_metadata.pbenum.dart';
 
@@ -19,12 +19,12 @@ export 'operation_metadata.pbenum.dart';
 class OperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
       package: const $pb.PackageName('google.cloud.ml.v1'))
-    ..a<$0.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..aOB(4, 'isCancellationRequested')
     ..e<OperationMetadata_OperationType>(
         5,
@@ -34,8 +34,8 @@ class OperationMetadata extends $pb.GeneratedMessage {
         OperationMetadata_OperationType.valueOf,
         OperationMetadata_OperationType.values)
     ..aOS(6, 'modelName')
-    ..a<$1.Version>(7, 'version', $pb.PbFieldType.OM, $1.Version.getDefault,
-        $1.Version.create)
+    ..a<$3.Version>(7, 'version', $pb.PbFieldType.OM, $3.Version.getDefault,
+        $3.Version.create)
     ..hasRequiredFields = false;
 
   OperationMetadata() : super();
@@ -57,24 +57,24 @@ class OperationMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static OperationMetadata _defaultInstance;
 
-  $0.Timestamp get createTime => $_getN(0);
-  set createTime($0.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(0);
+  set createTime($2.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasCreateTime() => $_has(0);
   void clearCreateTime() => clearField(1);
 
-  $0.Timestamp get startTime => $_getN(1);
-  set startTime($0.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(1);
+  set startTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $0.Timestamp get endTime => $_getN(2);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(2);
+  set endTime($2.Timestamp v) {
     setField(3, v);
   }
 
@@ -105,8 +105,8 @@ class OperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasModelName() => $_has(5);
   void clearModelName() => clearField(6);
 
-  $1.Version get version => $_getN(6);
-  set version($1.Version v) {
+  $3.Version get version => $_getN(6);
+  set version($3.Version v) {
     setField(7, v);
   }
 

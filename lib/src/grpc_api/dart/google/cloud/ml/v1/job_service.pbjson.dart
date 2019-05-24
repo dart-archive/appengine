@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../../protobuf/empty.pbjson.dart' as $1;
-
 const TrainingInput$json = {
   '1': 'TrainingInput',
   '2': [
@@ -440,56 +437,4 @@ const CancelJobRequest$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
-};
-
-const JobServiceBase$json = {
-  '1': 'JobService',
-  '2': [
-    {
-      '1': 'CreateJob',
-      '2': '.google.cloud.ml.v1.CreateJobRequest',
-      '3': '.google.cloud.ml.v1.Job',
-      '4': {}
-    },
-    {
-      '1': 'ListJobs',
-      '2': '.google.cloud.ml.v1.ListJobsRequest',
-      '3': '.google.cloud.ml.v1.ListJobsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetJob',
-      '2': '.google.cloud.ml.v1.GetJobRequest',
-      '3': '.google.cloud.ml.v1.Job',
-      '4': {}
-    },
-    {
-      '1': 'CancelJob',
-      '2': '.google.cloud.ml.v1.CancelJobRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const JobServiceBase$messageJson = {
-  '.google.cloud.ml.v1.CreateJobRequest': CreateJobRequest$json,
-  '.google.cloud.ml.v1.Job': Job$json,
-  '.google.cloud.ml.v1.TrainingInput': TrainingInput$json,
-  '.google.cloud.ml.v1.HyperparameterSpec': HyperparameterSpec$json,
-  '.google.cloud.ml.v1.ParameterSpec': ParameterSpec$json,
-  '.google.cloud.ml.v1.PredictionInput': PredictionInput$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.cloud.ml.v1.TrainingOutput': TrainingOutput$json,
-  '.google.cloud.ml.v1.HyperparameterOutput': HyperparameterOutput$json,
-  '.google.cloud.ml.v1.HyperparameterOutput.HyperparametersEntry':
-      HyperparameterOutput_HyperparametersEntry$json,
-  '.google.cloud.ml.v1.HyperparameterOutput.HyperparameterMetric':
-      HyperparameterOutput_HyperparameterMetric$json,
-  '.google.cloud.ml.v1.PredictionOutput': PredictionOutput$json,
-  '.google.cloud.ml.v1.ListJobsRequest': ListJobsRequest$json,
-  '.google.cloud.ml.v1.ListJobsResponse': ListJobsResponse$json,
-  '.google.cloud.ml.v1.GetJobRequest': GetJobRequest$json,
-  '.google.cloud.ml.v1.CancelJobRequest': CancelJobRequest$json,
-  '.google.protobuf.Empty': $1.Empty$json,
 };

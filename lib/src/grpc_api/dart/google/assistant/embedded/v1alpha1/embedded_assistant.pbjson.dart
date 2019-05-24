@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../rpc/status.pbjson.dart' as $0;
-import '../../../protobuf/any.pbjson.dart' as $1;
-
 const ConverseConfig$json = {
   '1': 'ConverseConfig',
   '2': [
@@ -238,30 +235,4 @@ const ConverseResponse_EventType$json = {
     {'1': 'EVENT_TYPE_UNSPECIFIED', '2': 0},
     {'1': 'END_OF_UTTERANCE', '2': 1},
   ],
-};
-
-const EmbeddedAssistantServiceBase$json = {
-  '1': 'EmbeddedAssistant',
-  '2': [
-    {
-      '1': 'Converse',
-      '2': '.google.assistant.embedded.v1alpha1.ConverseRequest',
-      '3': '.google.assistant.embedded.v1alpha1.ConverseResponse',
-      '5': true,
-      '6': true
-    },
-  ],
-};
-
-const EmbeddedAssistantServiceBase$messageJson = {
-  '.google.assistant.embedded.v1alpha1.ConverseRequest': ConverseRequest$json,
-  '.google.assistant.embedded.v1alpha1.ConverseConfig': ConverseConfig$json,
-  '.google.assistant.embedded.v1alpha1.AudioInConfig': AudioInConfig$json,
-  '.google.assistant.embedded.v1alpha1.AudioOutConfig': AudioOutConfig$json,
-  '.google.assistant.embedded.v1alpha1.ConverseState': ConverseState$json,
-  '.google.assistant.embedded.v1alpha1.ConverseResponse': ConverseResponse$json,
-  '.google.rpc.Status': $0.Status$json,
-  '.google.protobuf.Any': $1.Any$json,
-  '.google.assistant.embedded.v1alpha1.AudioOut': AudioOut$json,
-  '.google.assistant.embedded.v1alpha1.ConverseResult': ConverseResult$json,
 };

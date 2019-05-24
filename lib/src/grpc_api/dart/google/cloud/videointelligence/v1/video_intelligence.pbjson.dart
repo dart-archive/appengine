@@ -4,11 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/duration.pbjson.dart' as $0;
-import '../../../longrunning/operations.pbjson.dart' as $3;
-import '../../../protobuf/any.pbjson.dart' as $4;
-import '../../../rpc/status.pbjson.dart' as $1;
-
 const Feature$json = {
   '1': 'Feature',
   '2': [
@@ -780,40 +775,4 @@ const ObjectTrackingAnnotation$json = {
   '8': [
     {'1': 'track_info'},
   ],
-};
-
-const VideoIntelligenceServiceBase$json = {
-  '1': 'VideoIntelligenceService',
-  '2': [
-    {
-      '1': 'AnnotateVideo',
-      '2': '.google.cloud.videointelligence.v1.AnnotateVideoRequest',
-      '3': '.google.longrunning.Operation',
-      '4': {}
-    },
-  ],
-};
-
-const VideoIntelligenceServiceBase$messageJson = {
-  '.google.cloud.videointelligence.v1.AnnotateVideoRequest':
-      AnnotateVideoRequest$json,
-  '.google.cloud.videointelligence.v1.VideoContext': VideoContext$json,
-  '.google.cloud.videointelligence.v1.VideoSegment': VideoSegment$json,
-  '.google.protobuf.Duration': $0.Duration$json,
-  '.google.cloud.videointelligence.v1.LabelDetectionConfig':
-      LabelDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.ShotChangeDetectionConfig':
-      ShotChangeDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.ExplicitContentDetectionConfig':
-      ExplicitContentDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.FaceDetectionConfig':
-      FaceDetectionConfig$json,
-  '.google.cloud.videointelligence.v1.SpeechTranscriptionConfig':
-      SpeechTranscriptionConfig$json,
-  '.google.cloud.videointelligence.v1.SpeechContext': SpeechContext$json,
-  '.google.cloud.videointelligence.v1.TextDetectionConfig':
-      TextDetectionConfig$json,
-  '.google.longrunning.Operation': $3.Operation$json,
-  '.google.protobuf.Any': $4.Any$json,
-  '.google.rpc.Status': $1.Status$json,
 };

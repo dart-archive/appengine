@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -737,34 +736,4 @@ class RiceDeltaEncoding extends $pb.GeneratedMessage {
 
   $core.bool hasEncodedData() => $_has(3);
   void clearEncodedData() => clearField(4);
-}
-
-class WebRiskServiceV1Beta1Api {
-  $pb.RpcClient _client;
-  WebRiskServiceV1Beta1Api(this._client);
-
-  $async.Future<ComputeThreatListDiffResponse> computeThreatListDiff(
-      $pb.ClientContext ctx, ComputeThreatListDiffRequest request) {
-    var emptyResponse = ComputeThreatListDiffResponse();
-    return _client.invoke<ComputeThreatListDiffResponse>(
-        ctx,
-        'WebRiskServiceV1Beta1',
-        'ComputeThreatListDiff',
-        request,
-        emptyResponse);
-  }
-
-  $async.Future<SearchUrisResponse> searchUris(
-      $pb.ClientContext ctx, SearchUrisRequest request) {
-    var emptyResponse = SearchUrisResponse();
-    return _client.invoke<SearchUrisResponse>(
-        ctx, 'WebRiskServiceV1Beta1', 'SearchUris', request, emptyResponse);
-  }
-
-  $async.Future<SearchHashesResponse> searchHashes(
-      $pb.ClientContext ctx, SearchHashesRequest request) {
-    var emptyResponse = SearchHashesResponse();
-    return _client.invoke<SearchHashesResponse>(
-        ctx, 'WebRiskServiceV1Beta1', 'SearchHashes', request, emptyResponse);
-  }
 }

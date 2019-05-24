@@ -4,18 +4,15 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'service.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $1;
-import 'version.pb.dart' as $2;
-import 'instance.pb.dart' as $3;
-import '../../longrunning/operations.pb.dart' as $4;
-import 'application.pb.dart' as $5;
+import 'service.pb.dart' as $5;
+import '../../protobuf/field_mask.pb.dart' as $7;
+import 'version.pb.dart' as $4;
+import 'instance.pb.dart' as $2;
 
 import 'appengine.pbenum.dart';
 
@@ -148,7 +145,7 @@ class ListServicesRequest extends $pb.GeneratedMessage {
 class ListServicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesResponse',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$0.Service>(1, 'services', $pb.PbFieldType.PM, $0.Service.create)
+    ..pc<$5.Service>(1, 'services', $pb.PbFieldType.PM, $5.Service.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -172,7 +169,7 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListServicesResponse _defaultInstance;
 
-  $core.List<$0.Service> get services => $_getList(0);
+  $core.List<$5.Service> get services => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -221,10 +218,10 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateServiceRequest',
       package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'name')
-    ..a<$0.Service>(2, 'service', $pb.PbFieldType.OM, $0.Service.getDefault,
-        $0.Service.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$5.Service>(2, 'service', $pb.PbFieldType.OM, $5.Service.getDefault,
+        $5.Service.create)
+    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..aOB(4, 'migrateTraffic')
     ..hasRequiredFields = false;
 
@@ -256,16 +253,16 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Service get service => $_getN(1);
-  set service($0.Service v) {
+  $5.Service get service => $_getN(1);
+  set service($5.Service v) {
     setField(2, v);
   }
 
   $core.bool hasService() => $_has(1);
   void clearService() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $7.FieldMask get updateMask => $_getN(2);
+  set updateMask($7.FieldMask v) {
     setField(3, v);
   }
 
@@ -381,7 +378,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
 class ListVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsResponse',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$2.Version>(1, 'versions', $pb.PbFieldType.PM, $2.Version.create)
+    ..pc<$4.Version>(1, 'versions', $pb.PbFieldType.PM, $4.Version.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -405,7 +402,7 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListVersionsResponse _defaultInstance;
 
-  $core.List<$2.Version> get versions => $_getList(0);
+  $core.List<$4.Version> get versions => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -464,8 +461,8 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionRequest',
       package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'parent')
-    ..a<$2.Version>(2, 'version', $pb.PbFieldType.OM, $2.Version.getDefault,
-        $2.Version.create)
+    ..a<$4.Version>(2, 'version', $pb.PbFieldType.OM, $4.Version.getDefault,
+        $4.Version.create)
     ..hasRequiredFields = false;
 
   CreateVersionRequest() : super();
@@ -496,8 +493,8 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.Version get version => $_getN(1);
-  set version($2.Version v) {
+  $4.Version get version => $_getN(1);
+  set version($4.Version v) {
     setField(2, v);
   }
 
@@ -509,10 +506,10 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVersionRequest',
       package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'name')
-    ..a<$2.Version>(2, 'version', $pb.PbFieldType.OM, $2.Version.getDefault,
-        $2.Version.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$4.Version>(2, 'version', $pb.PbFieldType.OM, $4.Version.getDefault,
+        $4.Version.create)
+    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $7.FieldMask.getDefault, $7.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateVersionRequest() : super();
@@ -543,16 +540,16 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.Version get version => $_getN(1);
-  set version($2.Version v) {
+  $4.Version get version => $_getN(1);
+  set version($4.Version v) {
     setField(2, v);
   }
 
   $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $7.FieldMask get updateMask => $_getN(2);
+  set updateMask($7.FieldMask v) {
     setField(3, v);
   }
 
@@ -651,7 +648,7 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
 class ListInstancesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$3.Instance>(1, 'instances', $pb.PbFieldType.PM, $3.Instance.create)
+    ..pc<$2.Instance>(1, 'instances', $pb.PbFieldType.PM, $2.Instance.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -676,7 +673,7 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListInstancesResponse _defaultInstance;
 
-  $core.List<$3.Instance> get instances => $_getList(0);
+  $core.List<$2.Instance> get instances => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -790,129 +787,4 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class InstancesApi {
-  $pb.RpcClient _client;
-  InstancesApi(this._client);
-
-  $async.Future<ListInstancesResponse> listInstances(
-      $pb.ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = ListInstancesResponse();
-    return _client.invoke<ListInstancesResponse>(
-        ctx, 'Instances', 'ListInstances', request, emptyResponse);
-  }
-
-  $async.Future<$3.Instance> getInstance(
-      $pb.ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = $3.Instance();
-    return _client.invoke<$3.Instance>(
-        ctx, 'Instances', 'GetInstance', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> deleteInstance(
-      $pb.ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Instances', 'DeleteInstance', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> debugInstance(
-      $pb.ClientContext ctx, DebugInstanceRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Instances', 'DebugInstance', request, emptyResponse);
-  }
-}
-
-class VersionsApi {
-  $pb.RpcClient _client;
-  VersionsApi(this._client);
-
-  $async.Future<ListVersionsResponse> listVersions(
-      $pb.ClientContext ctx, ListVersionsRequest request) {
-    var emptyResponse = ListVersionsResponse();
-    return _client.invoke<ListVersionsResponse>(
-        ctx, 'Versions', 'ListVersions', request, emptyResponse);
-  }
-
-  $async.Future<$2.Version> getVersion(
-      $pb.ClientContext ctx, GetVersionRequest request) {
-    var emptyResponse = $2.Version();
-    return _client.invoke<$2.Version>(
-        ctx, 'Versions', 'GetVersion', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> createVersion(
-      $pb.ClientContext ctx, CreateVersionRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Versions', 'CreateVersion', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> updateVersion(
-      $pb.ClientContext ctx, UpdateVersionRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Versions', 'UpdateVersion', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> deleteVersion(
-      $pb.ClientContext ctx, DeleteVersionRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Versions', 'DeleteVersion', request, emptyResponse);
-  }
-}
-
-class ServicesApi {
-  $pb.RpcClient _client;
-  ServicesApi(this._client);
-
-  $async.Future<ListServicesResponse> listServices(
-      $pb.ClientContext ctx, ListServicesRequest request) {
-    var emptyResponse = ListServicesResponse();
-    return _client.invoke<ListServicesResponse>(
-        ctx, 'Services', 'ListServices', request, emptyResponse);
-  }
-
-  $async.Future<$0.Service> getService(
-      $pb.ClientContext ctx, GetServiceRequest request) {
-    var emptyResponse = $0.Service();
-    return _client.invoke<$0.Service>(
-        ctx, 'Services', 'GetService', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> updateService(
-      $pb.ClientContext ctx, UpdateServiceRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Services', 'UpdateService', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> deleteService(
-      $pb.ClientContext ctx, DeleteServiceRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Services', 'DeleteService', request, emptyResponse);
-  }
-}
-
-class ApplicationsApi {
-  $pb.RpcClient _client;
-  ApplicationsApi(this._client);
-
-  $async.Future<$5.Application> getApplication(
-      $pb.ClientContext ctx, GetApplicationRequest request) {
-    var emptyResponse = $5.Application();
-    return _client.invoke<$5.Application>(
-        ctx, 'Applications', 'GetApplication', request, emptyResponse);
-  }
-
-  $async.Future<$4.Operation> repairApplication(
-      $pb.ClientContext ctx, RepairApplicationRequest request) {
-    var emptyResponse = $4.Operation();
-    return _client.invoke<$4.Operation>(
-        ctx, 'Applications', 'RepairApplication', request, emptyResponse);
-  }
 }

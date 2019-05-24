@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -272,27 +271,4 @@ class MutateBiddingStrategyResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class BiddingStrategyServiceApi {
-  $pb.RpcClient _client;
-  BiddingStrategyServiceApi(this._client);
-
-  $async.Future<$0.BiddingStrategy> getBiddingStrategy(
-      $pb.ClientContext ctx, GetBiddingStrategyRequest request) {
-    var emptyResponse = $0.BiddingStrategy();
-    return _client.invoke<$0.BiddingStrategy>(ctx, 'BiddingStrategyService',
-        'GetBiddingStrategy', request, emptyResponse);
-  }
-
-  $async.Future<MutateBiddingStrategiesResponse> mutateBiddingStrategies(
-      $pb.ClientContext ctx, MutateBiddingStrategiesRequest request) {
-    var emptyResponse = MutateBiddingStrategiesResponse();
-    return _client.invoke<MutateBiddingStrategiesResponse>(
-        ctx,
-        'BiddingStrategyService',
-        'MutateBiddingStrategies',
-        request,
-        emptyResponse);
-  }
 }

@@ -4,15 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $3;
 
 import 'cloud_redis.pbenum.dart';
 
@@ -40,8 +38,8 @@ class Instance extends $pb.GeneratedMessage {
     ..aOS(10, 'host')
     ..a<$core.int>(11, 'port', $pb.PbFieldType.O3)
     ..aOS(12, 'currentLocationId')
-    ..a<$0.Timestamp>(13, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$2.Timestamp>(13, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..e<Instance_State>(
         14,
         'state',
@@ -162,8 +160,8 @@ class Instance extends $pb.GeneratedMessage {
   $core.bool hasCurrentLocationId() => $_has(9);
   void clearCurrentLocationId() => clearField(12);
 
-  $0.Timestamp get createTime => $_getN(10);
-  set createTime($0.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(10);
+  set createTime($2.Timestamp v) {
     setField(13, v);
   }
 
@@ -400,8 +398,8 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
 class UpdateInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceRequest',
       package: const $pb.PackageName('google.cloud.redis.v1'))
-    ..a<$1.FieldMask>(1, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$3.FieldMask>(1, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..a<Instance>(
         2, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
     ..hasRequiredFields = false;
@@ -427,8 +425,8 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateInstanceRequest _defaultInstance;
 
-  $1.FieldMask get updateMask => $_getN(0);
-  set updateMask($1.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(0);
+  set updateMask($3.FieldMask v) {
     setField(1, v);
   }
 
@@ -536,10 +534,10 @@ class FailoverInstanceRequest extends $pb.GeneratedMessage {
 class OperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
       package: const $pb.PackageName('google.cloud.redis.v1'))
-    ..a<$0.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..aOS(3, 'target')
     ..aOS(4, 'verb')
     ..aOS(5, 'statusDetail')
@@ -566,16 +564,16 @@ class OperationMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static OperationMetadata _defaultInstance;
 
-  $0.Timestamp get createTime => $_getN(0);
-  set createTime($0.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(0);
+  set createTime($2.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasCreateTime() => $_has(0);
   void clearCreateTime() => clearField(1);
 
-  $0.Timestamp get endTime => $_getN(1);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(1);
+  set endTime($2.Timestamp v) {
     setField(2, v);
   }
 
@@ -682,51 +680,4 @@ class ZoneMetadata extends $pb.GeneratedMessage {
       $pb.PbList<ZoneMetadata>();
   static ZoneMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static ZoneMetadata _defaultInstance;
-}
-
-class CloudRedisApi {
-  $pb.RpcClient _client;
-  CloudRedisApi(this._client);
-
-  $async.Future<ListInstancesResponse> listInstances(
-      $pb.ClientContext ctx, ListInstancesRequest request) {
-    var emptyResponse = ListInstancesResponse();
-    return _client.invoke<ListInstancesResponse>(
-        ctx, 'CloudRedis', 'ListInstances', request, emptyResponse);
-  }
-
-  $async.Future<Instance> getInstance(
-      $pb.ClientContext ctx, GetInstanceRequest request) {
-    var emptyResponse = Instance();
-    return _client.invoke<Instance>(
-        ctx, 'CloudRedis', 'GetInstance', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> createInstance(
-      $pb.ClientContext ctx, CreateInstanceRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudRedis', 'CreateInstance', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> updateInstance(
-      $pb.ClientContext ctx, UpdateInstanceRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudRedis', 'UpdateInstance', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> failoverInstance(
-      $pb.ClientContext ctx, FailoverInstanceRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudRedis', 'FailoverInstance', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> deleteInstance(
-      $pb.ClientContext ctx, DeleteInstanceRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'CloudRedis', 'DeleteInstance', request, emptyResponse);
-  }
 }

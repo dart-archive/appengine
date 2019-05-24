@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -272,30 +271,4 @@ class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
   static UpdateActiveBreakpointResponse getDefault() =>
       _defaultInstance ??= create()..freeze();
   static UpdateActiveBreakpointResponse _defaultInstance;
-}
-
-class Controller2Api {
-  $pb.RpcClient _client;
-  Controller2Api(this._client);
-
-  $async.Future<RegisterDebuggeeResponse> registerDebuggee(
-      $pb.ClientContext ctx, RegisterDebuggeeRequest request) {
-    var emptyResponse = RegisterDebuggeeResponse();
-    return _client.invoke<RegisterDebuggeeResponse>(
-        ctx, 'Controller2', 'RegisterDebuggee', request, emptyResponse);
-  }
-
-  $async.Future<ListActiveBreakpointsResponse> listActiveBreakpoints(
-      $pb.ClientContext ctx, ListActiveBreakpointsRequest request) {
-    var emptyResponse = ListActiveBreakpointsResponse();
-    return _client.invoke<ListActiveBreakpointsResponse>(
-        ctx, 'Controller2', 'ListActiveBreakpoints', request, emptyResponse);
-  }
-
-  $async.Future<UpdateActiveBreakpointResponse> updateActiveBreakpoint(
-      $pb.ClientContext ctx, UpdateActiveBreakpointRequest request) {
-    var emptyResponse = UpdateActiveBreakpointResponse();
-    return _client.invoke<UpdateActiveBreakpointResponse>(
-        ctx, 'Controller2', 'UpdateActiveBreakpoint', request, emptyResponse);
-  }
 }

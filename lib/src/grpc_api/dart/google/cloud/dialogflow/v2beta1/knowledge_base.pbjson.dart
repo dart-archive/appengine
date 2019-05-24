@@ -4,9 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../../protobuf/empty.pbjson.dart' as $1;
-import '../../../protobuf/field_mask.pbjson.dart' as $0;
-
 const KnowledgeBase$json = {
   '1': 'KnowledgeBase',
   '2': [
@@ -89,58 +86,4 @@ const UpdateKnowledgeBaseRequest$json = {
       '10': 'updateMask'
     },
   ],
-};
-
-const KnowledgeBasesServiceBase$json = {
-  '1': 'KnowledgeBases',
-  '2': [
-    {
-      '1': 'ListKnowledgeBases',
-      '2': '.google.cloud.dialogflow.v2beta1.ListKnowledgeBasesRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.ListKnowledgeBasesResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetKnowledgeBase',
-      '2': '.google.cloud.dialogflow.v2beta1.GetKnowledgeBaseRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.KnowledgeBase',
-      '4': {}
-    },
-    {
-      '1': 'CreateKnowledgeBase',
-      '2': '.google.cloud.dialogflow.v2beta1.CreateKnowledgeBaseRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.KnowledgeBase',
-      '4': {}
-    },
-    {
-      '1': 'DeleteKnowledgeBase',
-      '2': '.google.cloud.dialogflow.v2beta1.DeleteKnowledgeBaseRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'UpdateKnowledgeBase',
-      '2': '.google.cloud.dialogflow.v2beta1.UpdateKnowledgeBaseRequest',
-      '3': '.google.cloud.dialogflow.v2beta1.KnowledgeBase',
-      '4': {}
-    },
-  ],
-};
-
-const KnowledgeBasesServiceBase$messageJson = {
-  '.google.cloud.dialogflow.v2beta1.ListKnowledgeBasesRequest':
-      ListKnowledgeBasesRequest$json,
-  '.google.cloud.dialogflow.v2beta1.ListKnowledgeBasesResponse':
-      ListKnowledgeBasesResponse$json,
-  '.google.cloud.dialogflow.v2beta1.KnowledgeBase': KnowledgeBase$json,
-  '.google.cloud.dialogflow.v2beta1.GetKnowledgeBaseRequest':
-      GetKnowledgeBaseRequest$json,
-  '.google.cloud.dialogflow.v2beta1.CreateKnowledgeBaseRequest':
-      CreateKnowledgeBaseRequest$json,
-  '.google.cloud.dialogflow.v2beta1.DeleteKnowledgeBaseRequest':
-      DeleteKnowledgeBaseRequest$json,
-  '.google.protobuf.Empty': $1.Empty$json,
-  '.google.cloud.dialogflow.v2beta1.UpdateKnowledgeBaseRequest':
-      UpdateKnowledgeBaseRequest$json,
-  '.google.protobuf.FieldMask': $0.FieldMask$json,
 };

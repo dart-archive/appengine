@@ -9,9 +9,9 @@ import 'dart:core' as $core
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'geometry.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import 'product_search_service.pb.dart' as $2;
+import 'geometry.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import 'product_search_service.pb.dart' as $4;
 
 import 'product_search.pbenum.dart';
 
@@ -28,12 +28,12 @@ class ProductSearchParams extends $pb.GeneratedMessage {
         ProductSearchCategory.PRODUCT_SEARCH_CATEGORY_UNSPECIFIED,
         ProductSearchCategory.valueOf,
         ProductSearchCategory.values)
-    ..a<$0.NormalizedBoundingPoly>(
+    ..a<$2.NormalizedBoundingPoly>(
         3,
         'normalizedBoundingPoly',
         $pb.PbFieldType.OM,
-        $0.NormalizedBoundingPoly.getDefault,
-        $0.NormalizedBoundingPoly.create)
+        $2.NormalizedBoundingPoly.getDefault,
+        $2.NormalizedBoundingPoly.create)
     ..e<ProductSearchResultsView>(
         4,
         'view',
@@ -45,8 +45,8 @@ class ProductSearchParams extends $pb.GeneratedMessage {
     ..aOS(6, 'productSet')
     ..pPS(7, 'productCategories')
     ..aOS(8, 'filter')
-    ..a<$0.BoundingPoly>(9, 'boundingPoly', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(9, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
     ..hasRequiredFields = false;
 
   ProductSearchParams() : super();
@@ -84,8 +84,8 @@ class ProductSearchParams extends $pb.GeneratedMessage {
   $core.bool hasCategory() => $_has(1);
   void clearCategory() => clearField(2);
 
-  $0.NormalizedBoundingPoly get normalizedBoundingPoly => $_getN(2);
-  set normalizedBoundingPoly($0.NormalizedBoundingPoly v) {
+  $2.NormalizedBoundingPoly get normalizedBoundingPoly => $_getN(2);
+  set normalizedBoundingPoly($2.NormalizedBoundingPoly v) {
     setField(3, v);
   }
 
@@ -126,8 +126,8 @@ class ProductSearchParams extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(7);
   void clearFilter() => clearField(8);
 
-  $0.BoundingPoly get boundingPoly => $_getN(8);
-  set boundingPoly($0.BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(8);
+  set boundingPoly($2.BoundingPoly v) {
     setField(9, v);
   }
 
@@ -196,8 +196,8 @@ class ProductSearchResults_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.Result',
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
-    ..a<$2.Product>(1, 'product', $pb.PbFieldType.OM, $2.Product.getDefault,
-        $2.Product.create)
+    ..a<$4.Product>(1, 'product', $pb.PbFieldType.OM, $4.Product.getDefault,
+        $4.Product.create)
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..aOS(3, 'image')
     ..hasRequiredFields = false;
@@ -224,8 +224,8 @@ class ProductSearchResults_Result extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ProductSearchResults_Result _defaultInstance;
 
-  $2.Product get product => $_getN(0);
-  set product($2.Product v) {
+  $4.Product get product => $_getN(0);
+  set product($4.Product v) {
     setField(1, v);
   }
 
@@ -259,8 +259,8 @@ class ProductSearchResults extends $pb.GeneratedMessage {
         ProductSearchCategory.PRODUCT_SEARCH_CATEGORY_UNSPECIFIED,
         ProductSearchCategory.valueOf,
         ProductSearchCategory.values)
-    ..a<$1.Timestamp>(2, 'indexTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'indexTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..pc<ProductSearchResults_ProductInfo>(3, 'products', $pb.PbFieldType.PM,
         ProductSearchResults_ProductInfo.create)
     ..aOS(4, 'productCategory')
@@ -296,8 +296,8 @@ class ProductSearchResults extends $pb.GeneratedMessage {
   $core.bool hasCategory() => $_has(0);
   void clearCategory() => clearField(1);
 
-  $1.Timestamp get indexTime => $_getN(1);
-  set indexTime($1.Timestamp v) {
+  $3.Timestamp get indexTime => $_getN(1);
+  set indexTime($3.Timestamp v) {
     setField(2, v);
   }
 

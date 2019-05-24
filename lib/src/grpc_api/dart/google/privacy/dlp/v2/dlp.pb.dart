@@ -4,16 +4,15 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'storage.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $2;
+import 'storage.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $0;
 import '../../../type/timeofday.pb.dart' as $3;
 import '../../../type/date.pb.dart' as $4;
 import '../../../protobuf/duration.pb.dart' as $5;
@@ -21,7 +20,7 @@ import '../../../rpc/status.pb.dart' as $6;
 import '../../../protobuf/field_mask.pb.dart' as $7;
 
 import 'dlp.pbenum.dart';
-import 'storage.pbenum.dart' as $0;
+import 'storage.pbenum.dart' as $1;
 import '../../../type/dayofweek.pbenum.dart' as $8;
 
 export 'dlp.pbenum.dart';
@@ -29,7 +28,7 @@ export 'dlp.pbenum.dart';
 class ExcludeInfoTypes extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExcludeInfoTypes',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $0.InfoType.create)
+    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
     ..hasRequiredFields = false;
 
   ExcludeInfoTypes() : super();
@@ -51,7 +50,7 @@ class ExcludeInfoTypes extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExcludeInfoTypes _defaultInstance;
 
-  $core.List<$0.InfoType> get infoTypes => $_getList(0);
+  $core.List<$1.InfoType> get infoTypes => $_getList(0);
 }
 
 enum ExclusionRule_Type { dictionary, regex, excludeInfoTypes, notSet }
@@ -66,14 +65,14 @@ class ExclusionRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExclusionRule',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.CustomInfoType_Dictionary>(
+    ..a<$1.CustomInfoType_Dictionary>(
         1,
         'dictionary',
         $pb.PbFieldType.OM,
-        $0.CustomInfoType_Dictionary.getDefault,
-        $0.CustomInfoType_Dictionary.create)
-    ..a<$0.CustomInfoType_Regex>(2, 'regex', $pb.PbFieldType.OM,
-        $0.CustomInfoType_Regex.getDefault, $0.CustomInfoType_Regex.create)
+        $1.CustomInfoType_Dictionary.getDefault,
+        $1.CustomInfoType_Dictionary.create)
+    ..a<$1.CustomInfoType_Regex>(2, 'regex', $pb.PbFieldType.OM,
+        $1.CustomInfoType_Regex.getDefault, $1.CustomInfoType_Regex.create)
     ..a<ExcludeInfoTypes>(3, 'excludeInfoTypes', $pb.PbFieldType.OM,
         ExcludeInfoTypes.getDefault, ExcludeInfoTypes.create)
     ..e<MatchingType>(
@@ -107,16 +106,16 @@ class ExclusionRule extends $pb.GeneratedMessage {
   ExclusionRule_Type whichType() => _ExclusionRule_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $0.CustomInfoType_Dictionary get dictionary => $_getN(0);
-  set dictionary($0.CustomInfoType_Dictionary v) {
+  $1.CustomInfoType_Dictionary get dictionary => $_getN(0);
+  set dictionary($1.CustomInfoType_Dictionary v) {
     setField(1, v);
   }
 
   $core.bool hasDictionary() => $_has(0);
   void clearDictionary() => clearField(1);
 
-  $0.CustomInfoType_Regex get regex => $_getN(1);
-  set regex($0.CustomInfoType_Regex v) {
+  $1.CustomInfoType_Regex get regex => $_getN(1);
+  set regex($1.CustomInfoType_Regex v) {
     setField(2, v);
   }
 
@@ -151,12 +150,12 @@ class InspectionRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectionRule',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.CustomInfoType_DetectionRule_HotwordRule>(
+    ..a<$1.CustomInfoType_DetectionRule_HotwordRule>(
         1,
         'hotwordRule',
         $pb.PbFieldType.OM,
-        $0.CustomInfoType_DetectionRule_HotwordRule.getDefault,
-        $0.CustomInfoType_DetectionRule_HotwordRule.create)
+        $1.CustomInfoType_DetectionRule_HotwordRule.getDefault,
+        $1.CustomInfoType_DetectionRule_HotwordRule.create)
     ..a<ExclusionRule>(2, 'exclusionRule', $pb.PbFieldType.OM,
         ExclusionRule.getDefault, ExclusionRule.create)
     ..oo(0, [1, 2])
@@ -183,8 +182,8 @@ class InspectionRule extends $pb.GeneratedMessage {
   InspectionRule_Type whichType() => _InspectionRule_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $0.CustomInfoType_DetectionRule_HotwordRule get hotwordRule => $_getN(0);
-  set hotwordRule($0.CustomInfoType_DetectionRule_HotwordRule v) {
+  $1.CustomInfoType_DetectionRule_HotwordRule get hotwordRule => $_getN(0);
+  set hotwordRule($1.CustomInfoType_DetectionRule_HotwordRule v) {
     setField(1, v);
   }
 
@@ -203,7 +202,7 @@ class InspectionRule extends $pb.GeneratedMessage {
 class InspectionRuleSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectionRuleSet',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $0.InfoType.create)
+    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
     ..pc<InspectionRule>(2, 'rules', $pb.PbFieldType.PM, InspectionRule.create)
     ..hasRequiredFields = false;
 
@@ -226,7 +225,7 @@ class InspectionRuleSet extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static InspectionRuleSet _defaultInstance;
 
-  $core.List<$0.InfoType> get infoTypes => $_getList(0);
+  $core.List<$1.InfoType> get infoTypes => $_getList(0);
 
   $core.List<InspectionRule> get rules => $_getList(1);
 }
@@ -235,8 +234,8 @@ class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InspectConfig.FindingLimits.InfoTypeLimit',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
+    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
     ..a<$core.int>(2, 'maxFindings', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -264,8 +263,8 @@ class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static InspectConfig_FindingLimits_InfoTypeLimit _defaultInstance;
 
-  $0.InfoType get infoType => $_getN(0);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(0);
+  set infoType($1.InfoType v) {
     setField(1, v);
   }
 
@@ -336,14 +335,14 @@ class InspectConfig_FindingLimits extends $pb.GeneratedMessage {
 class InspectConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $0.InfoType.create)
-    ..e<$0.Likelihood>(
+    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
+    ..e<$1.Likelihood>(
         2,
         'minLikelihood',
         $pb.PbFieldType.OE,
-        $0.Likelihood.LIKELIHOOD_UNSPECIFIED,
-        $0.Likelihood.valueOf,
-        $0.Likelihood.values)
+        $1.Likelihood.LIKELIHOOD_UNSPECIFIED,
+        $1.Likelihood.valueOf,
+        $1.Likelihood.values)
     ..a<InspectConfig_FindingLimits>(
         3,
         'limits',
@@ -352,8 +351,8 @@ class InspectConfig extends $pb.GeneratedMessage {
         InspectConfig_FindingLimits.create)
     ..aOB(4, 'includeQuote')
     ..aOB(5, 'excludeInfoTypes')
-    ..pc<$0.CustomInfoType>(
-        6, 'customInfoTypes', $pb.PbFieldType.PM, $0.CustomInfoType.create)
+    ..pc<$1.CustomInfoType>(
+        6, 'customInfoTypes', $pb.PbFieldType.PM, $1.CustomInfoType.create)
     ..pc<ContentOption>(8, 'contentOptions', $pb.PbFieldType.PE, null,
         ContentOption.valueOf, ContentOption.values)
     ..pc<InspectionRuleSet>(
@@ -378,10 +377,10 @@ class InspectConfig extends $pb.GeneratedMessage {
   static InspectConfig getDefault() => _defaultInstance ??= create()..freeze();
   static InspectConfig _defaultInstance;
 
-  $core.List<$0.InfoType> get infoTypes => $_getList(0);
+  $core.List<$1.InfoType> get infoTypes => $_getList(0);
 
-  $0.Likelihood get minLikelihood => $_getN(1);
-  set minLikelihood($0.Likelihood v) {
+  $1.Likelihood get minLikelihood => $_getN(1);
+  set minLikelihood($1.Likelihood v) {
     setField(2, v);
   }
 
@@ -412,7 +411,7 @@ class InspectConfig extends $pb.GeneratedMessage {
   $core.bool hasExcludeInfoTypes() => $_has(4);
   void clearExcludeInfoTypes() => clearField(5);
 
-  $core.List<$0.CustomInfoType> get customInfoTypes => $_getList(5);
+  $core.List<$1.CustomInfoType> get customInfoTypes => $_getList(5);
 
   $core.List<ContentOption> get contentOptions => $_getList(6);
 
@@ -562,7 +561,7 @@ class Table_Row extends $pb.GeneratedMessage {
 class Table extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.FieldId>(1, 'headers', $pb.PbFieldType.PM, $0.FieldId.create)
+    ..pc<$1.FieldId>(1, 'headers', $pb.PbFieldType.PM, $1.FieldId.create)
     ..pc<Table_Row>(2, 'rows', $pb.PbFieldType.PM, Table_Row.create)
     ..hasRequiredFields = false;
 
@@ -583,7 +582,7 @@ class Table extends $pb.GeneratedMessage {
   static Table getDefault() => _defaultInstance ??= create()..freeze();
   static Table _defaultInstance;
 
-  $core.List<$0.FieldId> get headers => $_getList(0);
+  $core.List<$1.FieldId> get headers => $_getList(0);
 
   $core.List<Table_Row> get rows => $_getList(1);
 }
@@ -628,19 +627,19 @@ class Finding extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Finding',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..aOS(1, 'quote')
-    ..a<$0.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
-    ..e<$0.Likelihood>(
+    ..a<$1.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
+    ..e<$1.Likelihood>(
         3,
         'likelihood',
         $pb.PbFieldType.OE,
-        $0.Likelihood.LIKELIHOOD_UNSPECIFIED,
-        $0.Likelihood.valueOf,
-        $0.Likelihood.values)
+        $1.Likelihood.LIKELIHOOD_UNSPECIFIED,
+        $1.Likelihood.valueOf,
+        $1.Likelihood.values)
     ..a<Location>(
         4, 'location', $pb.PbFieldType.OM, Location.getDefault, Location.create)
-    ..a<$1.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..a<QuoteInfo>(7, 'quoteInfo', $pb.PbFieldType.OM, QuoteInfo.getDefault,
         QuoteInfo.create)
     ..hasRequiredFields = false;
@@ -670,16 +669,16 @@ class Finding extends $pb.GeneratedMessage {
   $core.bool hasQuote() => $_has(0);
   void clearQuote() => clearField(1);
 
-  $0.InfoType get infoType => $_getN(1);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(1);
+  set infoType($1.InfoType v) {
     setField(2, v);
   }
 
   $core.bool hasInfoType() => $_has(1);
   void clearInfoType() => clearField(2);
 
-  $0.Likelihood get likelihood => $_getN(2);
-  set likelihood($0.Likelihood v) {
+  $1.Likelihood get likelihood => $_getN(2);
+  set likelihood($1.Likelihood v) {
     setField(3, v);
   }
 
@@ -694,8 +693,8 @@ class Finding extends $pb.GeneratedMessage {
   $core.bool hasLocation() => $_has(3);
   void clearLocation() => clearField(4);
 
-  $1.Timestamp get createTime => $_getN(4);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(4);
+  set createTime($2.Timestamp v) {
     setField(6, v);
   }
 
@@ -782,8 +781,8 @@ class ContentLocation extends $pb.GeneratedMessage {
         ImageLocation.getDefault, ImageLocation.create)
     ..a<DocumentLocation>(5, 'documentLocation', $pb.PbFieldType.OM,
         DocumentLocation.getDefault, DocumentLocation.create)
-    ..a<$1.Timestamp>(6, 'containerTimestamp', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'containerTimestamp', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..aOS(7, 'containerVersion')
     ..oo(0, [2, 3, 5])
     ..hasRequiredFields = false;
@@ -843,8 +842,8 @@ class ContentLocation extends $pb.GeneratedMessage {
   $core.bool hasDocumentLocation() => $_has(3);
   void clearDocumentLocation() => clearField(5);
 
-  $1.Timestamp get containerTimestamp => $_getN(4);
-  set containerTimestamp($1.Timestamp v) {
+  $2.Timestamp get containerTimestamp => $_getN(4);
+  set containerTimestamp($2.Timestamp v) {
     setField(6, v);
   }
 
@@ -897,10 +896,10 @@ class DocumentLocation extends $pb.GeneratedMessage {
 class RecordLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordLocation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.RecordKey>(1, 'recordKey', $pb.PbFieldType.OM,
-        $0.RecordKey.getDefault, $0.RecordKey.create)
-    ..a<$0.FieldId>(2, 'fieldId', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.RecordKey>(1, 'recordKey', $pb.PbFieldType.OM,
+        $1.RecordKey.getDefault, $1.RecordKey.create)
+    ..a<$1.FieldId>(2, 'fieldId', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..a<TableLocation>(3, 'tableLocation', $pb.PbFieldType.OM,
         TableLocation.getDefault, TableLocation.create)
     ..hasRequiredFields = false;
@@ -923,16 +922,16 @@ class RecordLocation extends $pb.GeneratedMessage {
   static RecordLocation getDefault() => _defaultInstance ??= create()..freeze();
   static RecordLocation _defaultInstance;
 
-  $0.RecordKey get recordKey => $_getN(0);
-  set recordKey($0.RecordKey v) {
+  $1.RecordKey get recordKey => $_getN(0);
+  set recordKey($1.RecordKey v) {
     setField(1, v);
   }
 
   $core.bool hasRecordKey() => $_has(0);
   void clearRecordKey() => clearField(1);
 
-  $0.FieldId get fieldId => $_getN(1);
-  set fieldId($0.FieldId v) {
+  $1.FieldId get fieldId => $_getN(1);
+  set fieldId($1.FieldId v) {
     setField(2, v);
   }
 
@@ -1126,8 +1125,8 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RedactImageRequest.ImageRedactionConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
+    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
     ..aOB(2, 'redactAllText')
     ..a<Color>(
         3, 'redactionColor', $pb.PbFieldType.OM, Color.getDefault, Color.create)
@@ -1161,8 +1160,8 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
       _RedactImageRequest_ImageRedactionConfig_TargetByTag[$_whichOneof(0)];
   void clearTarget() => clearField($_whichOneof(0));
 
-  $0.InfoType get infoType => $_getN(0);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(0);
+  set infoType($1.InfoType v) {
     setField(1, v);
   }
 
@@ -1733,8 +1732,8 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputStorageConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.BigQueryTable>(1, 'table', $pb.PbFieldType.OM,
-        $0.BigQueryTable.getDefault, $0.BigQueryTable.create)
+    ..a<$1.BigQueryTable>(1, 'table', $pb.PbFieldType.OM,
+        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
     ..e<OutputStorageConfig_OutputSchema>(
         3,
         'outputSchema',
@@ -1768,8 +1767,8 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
       _OutputStorageConfig_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $0.BigQueryTable get table => $_getN(0);
-  set table($0.BigQueryTable v) {
+  $1.BigQueryTable get table => $_getN(0);
+  set table($1.BigQueryTable v) {
     setField(1, v);
   }
 
@@ -1788,8 +1787,8 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
 class InfoTypeStats extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InfoTypeStats',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
+    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
@@ -1811,8 +1810,8 @@ class InfoTypeStats extends $pb.GeneratedMessage {
   static InfoTypeStats getDefault() => _defaultInstance ??= create()..freeze();
   static InfoTypeStats _defaultInstance;
 
-  $0.InfoType get infoType => $_getN(0);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(0);
+  set infoType($1.InfoType v) {
     setField(1, v);
   }
 
@@ -2122,8 +2121,8 @@ class RiskAnalysisJobConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<PrivacyMetric>(1, 'privacyMetric', $pb.PbFieldType.OM,
         PrivacyMetric.getDefault, PrivacyMetric.create)
-    ..a<$0.BigQueryTable>(2, 'sourceTable', $pb.PbFieldType.OM,
-        $0.BigQueryTable.getDefault, $0.BigQueryTable.create)
+    ..a<$1.BigQueryTable>(2, 'sourceTable', $pb.PbFieldType.OM,
+        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
     ..pc<Action>(3, 'actions', $pb.PbFieldType.PM, Action.create)
     ..hasRequiredFields = false;
 
@@ -2156,8 +2155,8 @@ class RiskAnalysisJobConfig extends $pb.GeneratedMessage {
   $core.bool hasPrivacyMetric() => $_has(0);
   void clearPrivacyMetric() => clearField(1);
 
-  $0.BigQueryTable get sourceTable => $_getN(1);
-  set sourceTable($0.BigQueryTable v) {
+  $1.BigQueryTable get sourceTable => $_getN(1);
+  set sourceTable($1.BigQueryTable v) {
     setField(2, v);
   }
 
@@ -2178,13 +2177,13 @@ class QuasiId extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuasiId',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
-    ..a<$0.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
+    ..a<$1.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
     ..aOS(3, 'customTag')
-    ..a<$2.Empty>(
-        4, 'inferred', $pb.PbFieldType.OM, $2.Empty.getDefault, $2.Empty.create)
+    ..a<$0.Empty>(
+        4, 'inferred', $pb.PbFieldType.OM, $0.Empty.getDefault, $0.Empty.create)
     ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
@@ -2208,16 +2207,16 @@ class QuasiId extends $pb.GeneratedMessage {
   QuasiId_Tag whichTag() => _QuasiId_TagByTag[$_whichOneof(0)];
   void clearTag() => clearField($_whichOneof(0));
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
   $core.bool hasField_1() => $_has(0);
   void clearField_1() => clearField(1);
 
-  $0.InfoType get infoType => $_getN(1);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(1);
+  set infoType($1.InfoType v) {
     setField(2, v);
   }
 
@@ -2232,8 +2231,8 @@ class QuasiId extends $pb.GeneratedMessage {
   $core.bool hasCustomTag() => $_has(2);
   void clearCustomTag() => clearField(3);
 
-  $2.Empty get inferred => $_getN(3);
-  set inferred($2.Empty v) {
+  $0.Empty get inferred => $_getN(3);
+  set inferred($0.Empty v) {
     setField(4, v);
   }
 
@@ -2245,8 +2244,8 @@ class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StatisticalTable.QuasiIdentifierField',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..aOS(2, 'customTag')
     ..hasRequiredFields = false;
 
@@ -2273,8 +2272,8 @@ class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StatisticalTable_QuasiIdentifierField _defaultInstance;
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
@@ -2295,10 +2294,10 @@ class StatisticalTable extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..pc<StatisticalTable_QuasiIdentifierField>(1, 'quasiIds',
         $pb.PbFieldType.PM, StatisticalTable_QuasiIdentifierField.create)
-    ..a<$0.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
-        $0.FieldId.getDefault, $0.FieldId.create)
-    ..a<$0.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
-        $0.BigQueryTable.getDefault, $0.BigQueryTable.create)
+    ..a<$1.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
+        $1.FieldId.getDefault, $1.FieldId.create)
+    ..a<$1.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
+        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
     ..hasRequiredFields = false;
 
   StatisticalTable() : super();
@@ -2323,16 +2322,16 @@ class StatisticalTable extends $pb.GeneratedMessage {
   $core.List<StatisticalTable_QuasiIdentifierField> get quasiIds =>
       $_getList(0);
 
-  $0.FieldId get relativeFrequency => $_getN(1);
-  set relativeFrequency($0.FieldId v) {
+  $1.FieldId get relativeFrequency => $_getN(1);
+  set relativeFrequency($1.FieldId v) {
     setField(2, v);
   }
 
   $core.bool hasRelativeFrequency() => $_has(1);
   void clearRelativeFrequency() => clearField(2);
 
-  $0.BigQueryTable get table => $_getN(2);
-  set table($0.BigQueryTable v) {
+  $1.BigQueryTable get table => $_getN(2);
+  set table($1.BigQueryTable v) {
     setField(3, v);
   }
 
@@ -2344,8 +2343,8 @@ class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.NumericalStatsConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_NumericalStatsConfig() : super();
@@ -2371,8 +2370,8 @@ class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_NumericalStatsConfig _defaultInstance;
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
@@ -2384,8 +2383,8 @@ class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.CategoricalStatsConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_CategoricalStatsConfig() : super();
@@ -2411,8 +2410,8 @@ class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_CategoricalStatsConfig _defaultInstance;
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
@@ -2424,9 +2423,9 @@ class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KAnonymityConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $0.FieldId.create)
-    ..a<$0.EntityId>(2, 'entityId', $pb.PbFieldType.OM, $0.EntityId.getDefault,
-        $0.EntityId.create)
+    ..pc<$1.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $1.FieldId.create)
+    ..a<$1.EntityId>(2, 'entityId', $pb.PbFieldType.OM, $1.EntityId.getDefault,
+        $1.EntityId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_KAnonymityConfig() : super();
@@ -2452,10 +2451,10 @@ class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_KAnonymityConfig _defaultInstance;
 
-  $core.List<$0.FieldId> get quasiIds => $_getList(0);
+  $core.List<$1.FieldId> get quasiIds => $_getList(0);
 
-  $0.EntityId get entityId => $_getN(1);
-  set entityId($0.EntityId v) {
+  $1.EntityId get entityId => $_getN(1);
+  set entityId($1.EntityId v) {
     setField(2, v);
   }
 
@@ -2467,9 +2466,9 @@ class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.LDiversityConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $0.FieldId.create)
-    ..a<$0.FieldId>(2, 'sensitiveAttribute', $pb.PbFieldType.OM,
-        $0.FieldId.getDefault, $0.FieldId.create)
+    ..pc<$1.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $1.FieldId.create)
+    ..a<$1.FieldId>(2, 'sensitiveAttribute', $pb.PbFieldType.OM,
+        $1.FieldId.getDefault, $1.FieldId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_LDiversityConfig() : super();
@@ -2495,10 +2494,10 @@ class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_LDiversityConfig _defaultInstance;
 
-  $core.List<$0.FieldId> get quasiIds => $_getList(0);
+  $core.List<$1.FieldId> get quasiIds => $_getList(0);
 
-  $0.FieldId get sensitiveAttribute => $_getN(1);
-  set sensitiveAttribute($0.FieldId v) {
+  $1.FieldId get sensitiveAttribute => $_getN(1);
+  set sensitiveAttribute($1.FieldId v) {
     setField(2, v);
   }
 
@@ -2526,13 +2525,13 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.TaggedField',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
-    ..a<$0.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
+    ..a<$1.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
     ..aOS(3, 'customTag')
-    ..a<$2.Empty>(
-        4, 'inferred', $pb.PbFieldType.OM, $2.Empty.getDefault, $2.Empty.create)
+    ..a<$0.Empty>(
+        4, 'inferred', $pb.PbFieldType.OM, $0.Empty.getDefault, $0.Empty.create)
     ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
@@ -2567,16 +2566,16 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
       _PrivacyMetric_KMapEstimationConfig_TaggedField_TagByTag[$_whichOneof(0)];
   void clearTag() => clearField($_whichOneof(0));
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
   $core.bool hasField_1() => $_has(0);
   void clearField_1() => clearField(1);
 
-  $0.InfoType get infoType => $_getN(1);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(1);
+  set infoType($1.InfoType v) {
     setField(2, v);
   }
 
@@ -2591,8 +2590,8 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
   $core.bool hasCustomTag() => $_has(2);
   void clearCustomTag() => clearField(3);
 
-  $2.Empty get inferred => $_getN(3);
-  set inferred($2.Empty v) {
+  $0.Empty get inferred => $_getN(3);
+  set inferred($0.Empty v) {
     setField(4, v);
   }
 
@@ -2605,8 +2604,8 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.QuasiIdField',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..aOS(2, 'customTag')
     ..hasRequiredFields = false;
 
@@ -2643,8 +2642,8 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
       _defaultInstance;
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
@@ -2670,10 +2669,10 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
         'quasiIds',
         $pb.PbFieldType.PM,
         PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.create)
-    ..a<$0.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
-        $0.FieldId.getDefault, $0.FieldId.create)
-    ..a<$0.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
-        $0.BigQueryTable.getDefault, $0.BigQueryTable.create)
+    ..a<$1.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
+        $1.FieldId.getDefault, $1.FieldId.create)
+    ..a<$1.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
+        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable() : super();
@@ -2707,16 +2706,16 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
   $core.List<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>
       get quasiIds => $_getList(0);
 
-  $0.FieldId get relativeFrequency => $_getN(1);
-  set relativeFrequency($0.FieldId v) {
+  $1.FieldId get relativeFrequency => $_getN(1);
+  set relativeFrequency($1.FieldId v) {
     setField(2, v);
   }
 
   $core.bool hasRelativeFrequency() => $_has(1);
   void clearRelativeFrequency() => clearField(2);
 
-  $0.BigQueryTable get table => $_getN(2);
-  set table($0.BigQueryTable v) {
+  $1.BigQueryTable get table => $_getN(2);
+  set table($1.BigQueryTable v) {
     setField(3, v);
   }
 
@@ -3954,8 +3953,8 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<PrivacyMetric>(1, 'requestedPrivacyMetric', $pb.PbFieldType.OM,
         PrivacyMetric.getDefault, PrivacyMetric.create)
-    ..a<$0.BigQueryTable>(2, 'requestedSourceTable', $pb.PbFieldType.OM,
-        $0.BigQueryTable.getDefault, $0.BigQueryTable.create)
+    ..a<$1.BigQueryTable>(2, 'requestedSourceTable', $pb.PbFieldType.OM,
+        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
     ..a<AnalyzeDataSourceRiskDetails_NumericalStatsResult>(
         3,
         'numericalStatsResult',
@@ -4030,8 +4029,8 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
   $core.bool hasRequestedPrivacyMetric() => $_has(0);
   void clearRequestedPrivacyMetric() => clearField(1);
 
-  $0.BigQueryTable get requestedSourceTable => $_getN(1);
-  set requestedSourceTable($0.BigQueryTable v) {
+  $1.BigQueryTable get requestedSourceTable => $_getN(1);
+  set requestedSourceTable($1.BigQueryTable v) {
     setField(2, v);
   }
 
@@ -4169,8 +4168,8 @@ class Value extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'floatValue', $pb.PbFieldType.OD)
     ..aOS(3, 'stringValue')
     ..aOB(4, 'booleanValue')
-    ..a<$1.Timestamp>(5, 'timestampValue', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'timestampValue', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..a<$3.TimeOfDay>(6, 'timeValue', $pb.PbFieldType.OM,
         $3.TimeOfDay.getDefault, $3.TimeOfDay.create)
     ..a<$4.Date>(
@@ -4237,8 +4236,8 @@ class Value extends $pb.GeneratedMessage {
   $core.bool hasBooleanValue() => $_has(3);
   void clearBooleanValue() => clearField(4);
 
-  $1.Timestamp get timestampValue => $_getN(4);
-  set timestampValue($1.Timestamp v) {
+  $2.Timestamp get timestampValue => $_getN(4);
+  set timestampValue($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -4750,10 +4749,10 @@ class CryptoDeterministicConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
         CryptoKey.create)
-    ..a<$0.InfoType>(2, 'surrogateInfoType', $pb.PbFieldType.OM,
-        $0.InfoType.getDefault, $0.InfoType.create)
-    ..a<$0.FieldId>(3, 'context', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.InfoType>(2, 'surrogateInfoType', $pb.PbFieldType.OM,
+        $1.InfoType.getDefault, $1.InfoType.create)
+    ..a<$1.FieldId>(3, 'context', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..hasRequiredFields = false;
 
   CryptoDeterministicConfig() : super();
@@ -4786,16 +4785,16 @@ class CryptoDeterministicConfig extends $pb.GeneratedMessage {
   $core.bool hasCryptoKey() => $_has(0);
   void clearCryptoKey() => clearField(1);
 
-  $0.InfoType get surrogateInfoType => $_getN(1);
-  set surrogateInfoType($0.InfoType v) {
+  $1.InfoType get surrogateInfoType => $_getN(1);
+  set surrogateInfoType($1.InfoType v) {
     setField(2, v);
   }
 
   $core.bool hasSurrogateInfoType() => $_has(1);
   void clearSurrogateInfoType() => clearField(2);
 
-  $0.FieldId get context => $_getN(2);
-  set context($0.FieldId v) {
+  $1.FieldId get context => $_getN(2);
+  set context($1.FieldId v) {
     setField(3, v);
   }
 
@@ -5170,8 +5169,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
         CryptoKey.create)
-    ..a<$0.FieldId>(2, 'context', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(2, 'context', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..e<CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet>(
         4,
         'commonAlphabet',
@@ -5182,8 +5181,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
         CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet.values)
     ..aOS(5, 'customAlphabet')
     ..a<$core.int>(6, 'radix', $pb.PbFieldType.O3)
-    ..a<$0.InfoType>(8, 'surrogateInfoType', $pb.PbFieldType.OM,
-        $0.InfoType.getDefault, $0.InfoType.create)
+    ..a<$1.InfoType>(8, 'surrogateInfoType', $pb.PbFieldType.OM,
+        $1.InfoType.getDefault, $1.InfoType.create)
     ..oo(0, [4, 5, 6])
     ..hasRequiredFields = false;
 
@@ -5221,8 +5220,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
   $core.bool hasCryptoKey() => $_has(0);
   void clearCryptoKey() => clearField(1);
 
-  $0.FieldId get context => $_getN(1);
-  set context($0.FieldId v) {
+  $1.FieldId get context => $_getN(1);
+  set context($1.FieldId v) {
     setField(2, v);
   }
 
@@ -5254,8 +5253,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
   $core.bool hasRadix() => $_has(4);
   void clearRadix() => clearField(6);
 
-  $0.InfoType get surrogateInfoType => $_getN(5);
-  set surrogateInfoType($0.InfoType v) {
+  $1.InfoType get surrogateInfoType => $_getN(5);
+  set surrogateInfoType($1.InfoType v) {
     setField(8, v);
   }
 
@@ -5451,8 +5450,8 @@ class DateShiftConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<$core.int>(1, 'upperBoundDays', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'lowerBoundDays', $pb.PbFieldType.O3)
-    ..a<$0.FieldId>(3, 'context', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(3, 'context', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..a<CryptoKey>(4, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
         CryptoKey.create)
     ..oo(0, [4])
@@ -5497,8 +5496,8 @@ class DateShiftConfig extends $pb.GeneratedMessage {
   $core.bool hasLowerBoundDays() => $_has(1);
   void clearLowerBoundDays() => clearField(2);
 
-  $0.FieldId get context => $_getN(2);
-  set context($0.FieldId v) {
+  $1.FieldId get context => $_getN(2);
+  set context($1.FieldId v) {
     setField(3, v);
   }
 
@@ -5519,7 +5518,7 @@ class InfoTypeTransformations_InfoTypeTransformation
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InfoTypeTransformations.InfoTypeTransformation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $0.InfoType.create)
+    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
     ..a<PrimitiveTransformation>(
         2,
         'primitiveTransformation',
@@ -5555,7 +5554,7 @@ class InfoTypeTransformations_InfoTypeTransformation
       _defaultInstance ??= create()..freeze();
   static InfoTypeTransformations_InfoTypeTransformation _defaultInstance;
 
-  $core.List<$0.InfoType> get infoTypes => $_getList(0);
+  $core.List<$1.InfoType> get infoTypes => $_getList(0);
 
   PrimitiveTransformation get primitiveTransformation => $_getN(1);
   set primitiveTransformation(PrimitiveTransformation v) {
@@ -5616,7 +5615,7 @@ class FieldTransformation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FieldTransformation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$0.FieldId>(1, 'fields', $pb.PbFieldType.PM, $0.FieldId.create)
+    ..pc<$1.FieldId>(1, 'fields', $pb.PbFieldType.PM, $1.FieldId.create)
     ..a<RecordCondition>(3, 'condition', $pb.PbFieldType.OM,
         RecordCondition.getDefault, RecordCondition.create)
     ..a<PrimitiveTransformation>(
@@ -5657,7 +5656,7 @@ class FieldTransformation extends $pb.GeneratedMessage {
       _FieldTransformation_TransformationByTag[$_whichOneof(0)];
   void clearTransformation() => clearField($_whichOneof(0));
 
-  $core.List<$0.FieldId> get fields => $_getList(0);
+  $core.List<$1.FieldId> get fields => $_getList(0);
 
   RecordCondition get condition => $_getN(1);
   set condition(RecordCondition v) {
@@ -5757,8 +5756,8 @@ class RecordSuppression extends $pb.GeneratedMessage {
 class RecordCondition_Condition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordCondition.Condition',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..e<RelationalOperator>(
         3,
         'operator',
@@ -5791,8 +5790,8 @@ class RecordCondition_Condition extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RecordCondition_Condition _defaultInstance;
 
-  $0.FieldId get field_1 => $_getN(0);
-  set field_1($0.FieldId v) {
+  $1.FieldId get field_1 => $_getN(0);
+  set field_1($1.FieldId v) {
     setField(1, v);
   }
 
@@ -6066,10 +6065,10 @@ class TransformationSummary_SummaryResult extends $pb.GeneratedMessage {
 class TransformationSummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransformationSummary',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $0.InfoType.getDefault,
-        $0.InfoType.create)
-    ..a<$0.FieldId>(2, 'field_2', $pb.PbFieldType.OM, $0.FieldId.getDefault,
-        $0.FieldId.create)
+    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
+        $1.InfoType.create)
+    ..a<$1.FieldId>(2, 'field_2', $pb.PbFieldType.OM, $1.FieldId.getDefault,
+        $1.FieldId.create)
     ..a<PrimitiveTransformation>(3, 'transformation', $pb.PbFieldType.OM,
         PrimitiveTransformation.getDefault, PrimitiveTransformation.create)
     ..pc<TransformationSummary_SummaryResult>(4, 'results', $pb.PbFieldType.PM,
@@ -6102,16 +6101,16 @@ class TransformationSummary extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static TransformationSummary _defaultInstance;
 
-  $0.InfoType get infoType => $_getN(0);
-  set infoType($0.InfoType v) {
+  $1.InfoType get infoType => $_getN(0);
+  set infoType($1.InfoType v) {
     setField(1, v);
   }
 
   $core.bool hasInfoType() => $_has(0);
   void clearInfoType() => clearField(1);
 
-  $0.FieldId get field_2 => $_getN(1);
-  set field_2($0.FieldId v) {
+  $1.FieldId get field_2 => $_getN(1);
+  set field_2($1.FieldId v) {
     setField(2, v);
   }
 
@@ -6196,10 +6195,10 @@ class InspectTemplate extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<$1.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..a<InspectConfig>(6, 'inspectConfig', $pb.PbFieldType.OM,
         InspectConfig.getDefault, InspectConfig.create)
     ..hasRequiredFields = false;
@@ -6247,16 +6246,16 @@ class InspectTemplate extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  $1.Timestamp get createTime => $_getN(3);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(3);
+  set createTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $1.Timestamp get updateTime => $_getN(4);
-  set updateTime($1.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(4);
+  set updateTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -6278,10 +6277,10 @@ class DeidentifyTemplate extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<$1.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..a<DeidentifyConfig>(6, 'deidentifyConfig', $pb.PbFieldType.OM,
         DeidentifyConfig.getDefault, DeidentifyConfig.create)
     ..hasRequiredFields = false;
@@ -6329,16 +6328,16 @@ class DeidentifyTemplate extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  $1.Timestamp get createTime => $_getN(3);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(3);
+  set createTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $1.Timestamp get updateTime => $_getN(4);
-  set updateTime($1.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(4);
+  set updateTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -6359,7 +6358,7 @@ class Error extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<$6.Status>(1, 'details', $pb.PbFieldType.OM, $6.Status.getDefault,
         $6.Status.create)
-    ..pc<$1.Timestamp>(2, 'timestamps', $pb.PbFieldType.PM, $1.Timestamp.create)
+    ..pc<$2.Timestamp>(2, 'timestamps', $pb.PbFieldType.PM, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   Error() : super();
@@ -6387,7 +6386,7 @@ class Error extends $pb.GeneratedMessage {
   $core.bool hasDetails() => $_has(0);
   void clearDetails() => clearField(1);
 
-  $core.List<$1.Timestamp> get timestamps => $_getList(1);
+  $core.List<$2.Timestamp> get timestamps => $_getList(1);
 }
 
 enum JobTrigger_Trigger_Trigger { schedule, notSet }
@@ -6454,12 +6453,12 @@ class JobTrigger extends $pb.GeneratedMessage {
     ..pc<JobTrigger_Trigger>(
         5, 'triggers', $pb.PbFieldType.PM, JobTrigger_Trigger.create)
     ..pc<Error>(6, 'errors', $pb.PbFieldType.PM, Error.create)
-    ..a<$1.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(9, 'lastRunTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(9, 'lastRunTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..e<JobTrigger_Status>(
         10,
         'status',
@@ -6526,24 +6525,24 @@ class JobTrigger extends $pb.GeneratedMessage {
 
   $core.List<Error> get errors => $_getList(5);
 
-  $1.Timestamp get createTime => $_getN(6);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(6);
+  set createTime($2.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasCreateTime() => $_has(6);
   void clearCreateTime() => clearField(7);
 
-  $1.Timestamp get updateTime => $_getN(7);
-  set updateTime($1.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(7);
+  set updateTime($2.Timestamp v) {
     setField(8, v);
   }
 
   $core.bool hasUpdateTime() => $_has(7);
   void clearUpdateTime() => clearField(8);
 
-  $1.Timestamp get lastRunTime => $_getN(8);
-  set lastRunTime($1.Timestamp v) {
+  $2.Timestamp get lastRunTime => $_getN(8);
+  set lastRunTime($2.Timestamp v) {
     setField(9, v);
   }
 
@@ -7489,8 +7488,8 @@ class DeleteJobTriggerRequest extends $pb.GeneratedMessage {
 class InspectJobConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectJobConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.StorageConfig>(1, 'storageConfig', $pb.PbFieldType.OM,
-        $0.StorageConfig.getDefault, $0.StorageConfig.create)
+    ..a<$1.StorageConfig>(1, 'storageConfig', $pb.PbFieldType.OM,
+        $1.StorageConfig.getDefault, $1.StorageConfig.create)
     ..a<InspectConfig>(2, 'inspectConfig', $pb.PbFieldType.OM,
         InspectConfig.getDefault, InspectConfig.create)
     ..aOS(3, 'inspectTemplateName')
@@ -7516,8 +7515,8 @@ class InspectJobConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static InspectJobConfig _defaultInstance;
 
-  $0.StorageConfig get storageConfig => $_getN(0);
-  set storageConfig($0.StorageConfig v) {
+  $1.StorageConfig get storageConfig => $_getN(0);
+  set storageConfig($1.StorageConfig v) {
     setField(1, v);
   }
 
@@ -7576,12 +7575,12 @@ class DlpJob extends $pb.GeneratedMessage {
         AnalyzeDataSourceRiskDetails.create)
     ..a<InspectDataSourceDetails>(5, 'inspectDetails', $pb.PbFieldType.OM,
         InspectDataSourceDetails.getDefault, InspectDataSourceDetails.create)
-    ..a<$1.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..aOS(10, 'jobTriggerName')
     ..pc<Error>(11, 'errors', $pb.PbFieldType.PM, Error.create)
     ..oo(0, [4, 5])
@@ -7647,24 +7646,24 @@ class DlpJob extends $pb.GeneratedMessage {
   $core.bool hasInspectDetails() => $_has(4);
   void clearInspectDetails() => clearField(5);
 
-  $1.Timestamp get createTime => $_getN(5);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(5);
+  set createTime($2.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasCreateTime() => $_has(5);
   void clearCreateTime() => clearField(6);
 
-  $1.Timestamp get startTime => $_getN(6);
-  set startTime($1.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(6);
+  set startTime($2.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasStartTime() => $_has(6);
   void clearStartTime() => clearField(7);
 
-  $1.Timestamp get endTime => $_getN(7);
-  set endTime($1.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(7);
+  set endTime($2.Timestamp v) {
     setField(8, v);
   }
 
@@ -8226,12 +8225,12 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'LargeCustomDictionaryConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$0.CloudStoragePath>(1, 'outputPath', $pb.PbFieldType.OM,
-        $0.CloudStoragePath.getDefault, $0.CloudStoragePath.create)
-    ..a<$0.CloudStorageFileSet>(2, 'cloudStorageFileSet', $pb.PbFieldType.OM,
-        $0.CloudStorageFileSet.getDefault, $0.CloudStorageFileSet.create)
-    ..a<$0.BigQueryField>(3, 'bigQueryField', $pb.PbFieldType.OM,
-        $0.BigQueryField.getDefault, $0.BigQueryField.create)
+    ..a<$1.CloudStoragePath>(1, 'outputPath', $pb.PbFieldType.OM,
+        $1.CloudStoragePath.getDefault, $1.CloudStoragePath.create)
+    ..a<$1.CloudStorageFileSet>(2, 'cloudStorageFileSet', $pb.PbFieldType.OM,
+        $1.CloudStorageFileSet.getDefault, $1.CloudStorageFileSet.create)
+    ..a<$1.BigQueryField>(3, 'bigQueryField', $pb.PbFieldType.OM,
+        $1.BigQueryField.getDefault, $1.BigQueryField.create)
     ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
@@ -8261,24 +8260,24 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
       _LargeCustomDictionaryConfig_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
-  $0.CloudStoragePath get outputPath => $_getN(0);
-  set outputPath($0.CloudStoragePath v) {
+  $1.CloudStoragePath get outputPath => $_getN(0);
+  set outputPath($1.CloudStoragePath v) {
     setField(1, v);
   }
 
   $core.bool hasOutputPath() => $_has(0);
   void clearOutputPath() => clearField(1);
 
-  $0.CloudStorageFileSet get cloudStorageFileSet => $_getN(1);
-  set cloudStorageFileSet($0.CloudStorageFileSet v) {
+  $1.CloudStorageFileSet get cloudStorageFileSet => $_getN(1);
+  set cloudStorageFileSet($1.CloudStorageFileSet v) {
     setField(2, v);
   }
 
   $core.bool hasCloudStorageFileSet() => $_has(1);
   void clearCloudStorageFileSet() => clearField(2);
 
-  $0.BigQueryField get bigQueryField => $_getN(2);
-  set bigQueryField($0.BigQueryField v) {
+  $1.BigQueryField get bigQueryField => $_getN(2);
+  set bigQueryField($1.BigQueryField v) {
     setField(3, v);
   }
 
@@ -8361,8 +8360,8 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<StoredInfoTypeConfig>(1, 'config', $pb.PbFieldType.OM,
         StoredInfoTypeConfig.getDefault, StoredInfoTypeConfig.create)
-    ..a<$1.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..e<StoredInfoTypeState>(
         3,
         'state',
@@ -8402,8 +8401,8 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
   $core.bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  $1.Timestamp get createTime => $_getN(1);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(1);
+  set createTime($2.Timestamp v) {
     setField(2, v);
   }
 
@@ -8762,226 +8761,4 @@ class DeleteStoredInfoTypeRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class DlpServiceApi {
-  $pb.RpcClient _client;
-  DlpServiceApi(this._client);
-
-  $async.Future<InspectContentResponse> inspectContent(
-      $pb.ClientContext ctx, InspectContentRequest request) {
-    var emptyResponse = InspectContentResponse();
-    return _client.invoke<InspectContentResponse>(
-        ctx, 'DlpService', 'InspectContent', request, emptyResponse);
-  }
-
-  $async.Future<RedactImageResponse> redactImage(
-      $pb.ClientContext ctx, RedactImageRequest request) {
-    var emptyResponse = RedactImageResponse();
-    return _client.invoke<RedactImageResponse>(
-        ctx, 'DlpService', 'RedactImage', request, emptyResponse);
-  }
-
-  $async.Future<DeidentifyContentResponse> deidentifyContent(
-      $pb.ClientContext ctx, DeidentifyContentRequest request) {
-    var emptyResponse = DeidentifyContentResponse();
-    return _client.invoke<DeidentifyContentResponse>(
-        ctx, 'DlpService', 'DeidentifyContent', request, emptyResponse);
-  }
-
-  $async.Future<ReidentifyContentResponse> reidentifyContent(
-      $pb.ClientContext ctx, ReidentifyContentRequest request) {
-    var emptyResponse = ReidentifyContentResponse();
-    return _client.invoke<ReidentifyContentResponse>(
-        ctx, 'DlpService', 'ReidentifyContent', request, emptyResponse);
-  }
-
-  $async.Future<ListInfoTypesResponse> listInfoTypes(
-      $pb.ClientContext ctx, ListInfoTypesRequest request) {
-    var emptyResponse = ListInfoTypesResponse();
-    return _client.invoke<ListInfoTypesResponse>(
-        ctx, 'DlpService', 'ListInfoTypes', request, emptyResponse);
-  }
-
-  $async.Future<InspectTemplate> createInspectTemplate(
-      $pb.ClientContext ctx, CreateInspectTemplateRequest request) {
-    var emptyResponse = InspectTemplate();
-    return _client.invoke<InspectTemplate>(
-        ctx, 'DlpService', 'CreateInspectTemplate', request, emptyResponse);
-  }
-
-  $async.Future<InspectTemplate> updateInspectTemplate(
-      $pb.ClientContext ctx, UpdateInspectTemplateRequest request) {
-    var emptyResponse = InspectTemplate();
-    return _client.invoke<InspectTemplate>(
-        ctx, 'DlpService', 'UpdateInspectTemplate', request, emptyResponse);
-  }
-
-  $async.Future<InspectTemplate> getInspectTemplate(
-      $pb.ClientContext ctx, GetInspectTemplateRequest request) {
-    var emptyResponse = InspectTemplate();
-    return _client.invoke<InspectTemplate>(
-        ctx, 'DlpService', 'GetInspectTemplate', request, emptyResponse);
-  }
-
-  $async.Future<ListInspectTemplatesResponse> listInspectTemplates(
-      $pb.ClientContext ctx, ListInspectTemplatesRequest request) {
-    var emptyResponse = ListInspectTemplatesResponse();
-    return _client.invoke<ListInspectTemplatesResponse>(
-        ctx, 'DlpService', 'ListInspectTemplates', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteInspectTemplate(
-      $pb.ClientContext ctx, DeleteInspectTemplateRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DlpService', 'DeleteInspectTemplate', request, emptyResponse);
-  }
-
-  $async.Future<DeidentifyTemplate> createDeidentifyTemplate(
-      $pb.ClientContext ctx, CreateDeidentifyTemplateRequest request) {
-    var emptyResponse = DeidentifyTemplate();
-    return _client.invoke<DeidentifyTemplate>(
-        ctx, 'DlpService', 'CreateDeidentifyTemplate', request, emptyResponse);
-  }
-
-  $async.Future<DeidentifyTemplate> updateDeidentifyTemplate(
-      $pb.ClientContext ctx, UpdateDeidentifyTemplateRequest request) {
-    var emptyResponse = DeidentifyTemplate();
-    return _client.invoke<DeidentifyTemplate>(
-        ctx, 'DlpService', 'UpdateDeidentifyTemplate', request, emptyResponse);
-  }
-
-  $async.Future<DeidentifyTemplate> getDeidentifyTemplate(
-      $pb.ClientContext ctx, GetDeidentifyTemplateRequest request) {
-    var emptyResponse = DeidentifyTemplate();
-    return _client.invoke<DeidentifyTemplate>(
-        ctx, 'DlpService', 'GetDeidentifyTemplate', request, emptyResponse);
-  }
-
-  $async.Future<ListDeidentifyTemplatesResponse> listDeidentifyTemplates(
-      $pb.ClientContext ctx, ListDeidentifyTemplatesRequest request) {
-    var emptyResponse = ListDeidentifyTemplatesResponse();
-    return _client.invoke<ListDeidentifyTemplatesResponse>(
-        ctx, 'DlpService', 'ListDeidentifyTemplates', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteDeidentifyTemplate(
-      $pb.ClientContext ctx, DeleteDeidentifyTemplateRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DlpService', 'DeleteDeidentifyTemplate', request, emptyResponse);
-  }
-
-  $async.Future<JobTrigger> createJobTrigger(
-      $pb.ClientContext ctx, CreateJobTriggerRequest request) {
-    var emptyResponse = JobTrigger();
-    return _client.invoke<JobTrigger>(
-        ctx, 'DlpService', 'CreateJobTrigger', request, emptyResponse);
-  }
-
-  $async.Future<JobTrigger> updateJobTrigger(
-      $pb.ClientContext ctx, UpdateJobTriggerRequest request) {
-    var emptyResponse = JobTrigger();
-    return _client.invoke<JobTrigger>(
-        ctx, 'DlpService', 'UpdateJobTrigger', request, emptyResponse);
-  }
-
-  $async.Future<JobTrigger> getJobTrigger(
-      $pb.ClientContext ctx, GetJobTriggerRequest request) {
-    var emptyResponse = JobTrigger();
-    return _client.invoke<JobTrigger>(
-        ctx, 'DlpService', 'GetJobTrigger', request, emptyResponse);
-  }
-
-  $async.Future<ListJobTriggersResponse> listJobTriggers(
-      $pb.ClientContext ctx, ListJobTriggersRequest request) {
-    var emptyResponse = ListJobTriggersResponse();
-    return _client.invoke<ListJobTriggersResponse>(
-        ctx, 'DlpService', 'ListJobTriggers', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteJobTrigger(
-      $pb.ClientContext ctx, DeleteJobTriggerRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DlpService', 'DeleteJobTrigger', request, emptyResponse);
-  }
-
-  $async.Future<DlpJob> activateJobTrigger(
-      $pb.ClientContext ctx, ActivateJobTriggerRequest request) {
-    var emptyResponse = DlpJob();
-    return _client.invoke<DlpJob>(
-        ctx, 'DlpService', 'ActivateJobTrigger', request, emptyResponse);
-  }
-
-  $async.Future<DlpJob> createDlpJob(
-      $pb.ClientContext ctx, CreateDlpJobRequest request) {
-    var emptyResponse = DlpJob();
-    return _client.invoke<DlpJob>(
-        ctx, 'DlpService', 'CreateDlpJob', request, emptyResponse);
-  }
-
-  $async.Future<ListDlpJobsResponse> listDlpJobs(
-      $pb.ClientContext ctx, ListDlpJobsRequest request) {
-    var emptyResponse = ListDlpJobsResponse();
-    return _client.invoke<ListDlpJobsResponse>(
-        ctx, 'DlpService', 'ListDlpJobs', request, emptyResponse);
-  }
-
-  $async.Future<DlpJob> getDlpJob(
-      $pb.ClientContext ctx, GetDlpJobRequest request) {
-    var emptyResponse = DlpJob();
-    return _client.invoke<DlpJob>(
-        ctx, 'DlpService', 'GetDlpJob', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteDlpJob(
-      $pb.ClientContext ctx, DeleteDlpJobRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DlpService', 'DeleteDlpJob', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> cancelDlpJob(
-      $pb.ClientContext ctx, CancelDlpJobRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DlpService', 'CancelDlpJob', request, emptyResponse);
-  }
-
-  $async.Future<StoredInfoType> createStoredInfoType(
-      $pb.ClientContext ctx, CreateStoredInfoTypeRequest request) {
-    var emptyResponse = StoredInfoType();
-    return _client.invoke<StoredInfoType>(
-        ctx, 'DlpService', 'CreateStoredInfoType', request, emptyResponse);
-  }
-
-  $async.Future<StoredInfoType> updateStoredInfoType(
-      $pb.ClientContext ctx, UpdateStoredInfoTypeRequest request) {
-    var emptyResponse = StoredInfoType();
-    return _client.invoke<StoredInfoType>(
-        ctx, 'DlpService', 'UpdateStoredInfoType', request, emptyResponse);
-  }
-
-  $async.Future<StoredInfoType> getStoredInfoType(
-      $pb.ClientContext ctx, GetStoredInfoTypeRequest request) {
-    var emptyResponse = StoredInfoType();
-    return _client.invoke<StoredInfoType>(
-        ctx, 'DlpService', 'GetStoredInfoType', request, emptyResponse);
-  }
-
-  $async.Future<ListStoredInfoTypesResponse> listStoredInfoTypes(
-      $pb.ClientContext ctx, ListStoredInfoTypesRequest request) {
-    var emptyResponse = ListStoredInfoTypesResponse();
-    return _client.invoke<ListStoredInfoTypesResponse>(
-        ctx, 'DlpService', 'ListStoredInfoTypes', request, emptyResponse);
-  }
-
-  $async.Future<$2.Empty> deleteStoredInfoType(
-      $pb.ClientContext ctx, DeleteStoredInfoTypeRequest request) {
-    var emptyResponse = $2.Empty();
-    return _client.invoke<$2.Empty>(
-        ctx, 'DlpService', 'DeleteStoredInfoType', request, emptyResponse);
-  }
 }

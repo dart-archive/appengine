@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../resources/account_budget_proposal.pbjson.dart' as $0;
-import '../../../../protobuf/wrappers.pbjson.dart' as $2;
-import '../../../../protobuf/field_mask.pbjson.dart' as $1;
-
 const GetAccountBudgetProposalRequest$json = {
   '1': 'GetAccountBudgetProposalRequest',
   '2': [
@@ -78,42 +74,4 @@ const MutateAccountBudgetProposalResult$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
   ],
-};
-
-const AccountBudgetProposalServiceBase$json = {
-  '1': 'AccountBudgetProposalService',
-  '2': [
-    {
-      '1': 'GetAccountBudgetProposal',
-      '2': '.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest',
-      '3': '.google.ads.googleads.v1.resources.AccountBudgetProposal',
-      '4': {}
-    },
-    {
-      '1': 'MutateAccountBudgetProposal',
-      '2':
-          '.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest',
-      '3':
-          '.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse',
-      '4': {}
-    },
-  ],
-};
-
-const AccountBudgetProposalServiceBase$messageJson = {
-  '.google.ads.googleads.v1.services.GetAccountBudgetProposalRequest':
-      GetAccountBudgetProposalRequest$json,
-  '.google.ads.googleads.v1.resources.AccountBudgetProposal':
-      $0.AccountBudgetProposal$json,
-  '.google.protobuf.StringValue': $2.StringValue$json,
-  '.google.protobuf.Int64Value': $2.Int64Value$json,
-  '.google.ads.googleads.v1.services.MutateAccountBudgetProposalRequest':
-      MutateAccountBudgetProposalRequest$json,
-  '.google.ads.googleads.v1.services.AccountBudgetProposalOperation':
-      AccountBudgetProposalOperation$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.ads.googleads.v1.services.MutateAccountBudgetProposalResponse':
-      MutateAccountBudgetProposalResponse$json,
-  '.google.ads.googleads.v1.services.MutateAccountBudgetProposalResult':
-      MutateAccountBudgetProposalResult$json,
 };

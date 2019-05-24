@@ -4,17 +4,13 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../longrunning/operations.pb.dart' as $2;
-import '../../../iam/v1/iam_policy.pb.dart' as $3;
-import '../../../iam/v1/policy.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $4;
+import '../../../protobuf/field_mask.pb.dart' as $5;
 
 import 'folders.pbenum.dart';
 
@@ -33,10 +29,10 @@ class Folder extends $pb.GeneratedMessage {
         Folder_LifecycleState.LIFECYCLE_STATE_UNSPECIFIED,
         Folder_LifecycleState.valueOf,
         Folder_LifecycleState.values)
-    ..a<$0.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(6, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$4.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(6, 'updateTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   Folder() : super();
@@ -88,16 +84,16 @@ class Folder extends $pb.GeneratedMessage {
   $core.bool hasLifecycleState() => $_has(3);
   void clearLifecycleState() => clearField(4);
 
-  $0.Timestamp get createTime => $_getN(4);
-  set createTime($0.Timestamp v) {
+  $4.Timestamp get createTime => $_getN(4);
+  set createTime($4.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(5);
 
-  $0.Timestamp get updateTime => $_getN(5);
-  set updateTime($0.Timestamp v) {
+  $4.Timestamp get updateTime => $_getN(5);
+  set updateTime($4.Timestamp v) {
     setField(6, v);
   }
 
@@ -421,8 +417,8 @@ class UpdateFolderRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.resourcemanager.v2'))
     ..a<Folder>(
         1, 'folder', $pb.PbFieldType.OM, Folder.getDefault, Folder.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFolderRequest() : super();
@@ -452,8 +448,8 @@ class UpdateFolderRequest extends $pb.GeneratedMessage {
   $core.bool hasFolder() => $_has(0);
   void clearFolder() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(1);
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -605,86 +601,4 @@ class FolderOperation extends $pb.GeneratedMessage {
 
   $core.bool hasDestinationParent() => $_has(3);
   void clearDestinationParent() => clearField(4);
-}
-
-class FoldersApi {
-  $pb.RpcClient _client;
-  FoldersApi(this._client);
-
-  $async.Future<ListFoldersResponse> listFolders(
-      $pb.ClientContext ctx, ListFoldersRequest request) {
-    var emptyResponse = ListFoldersResponse();
-    return _client.invoke<ListFoldersResponse>(
-        ctx, 'Folders', 'ListFolders', request, emptyResponse);
-  }
-
-  $async.Future<SearchFoldersResponse> searchFolders(
-      $pb.ClientContext ctx, SearchFoldersRequest request) {
-    var emptyResponse = SearchFoldersResponse();
-    return _client.invoke<SearchFoldersResponse>(
-        ctx, 'Folders', 'SearchFolders', request, emptyResponse);
-  }
-
-  $async.Future<Folder> getFolder(
-      $pb.ClientContext ctx, GetFolderRequest request) {
-    var emptyResponse = Folder();
-    return _client.invoke<Folder>(
-        ctx, 'Folders', 'GetFolder', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> createFolder(
-      $pb.ClientContext ctx, CreateFolderRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'Folders', 'CreateFolder', request, emptyResponse);
-  }
-
-  $async.Future<Folder> updateFolder(
-      $pb.ClientContext ctx, UpdateFolderRequest request) {
-    var emptyResponse = Folder();
-    return _client.invoke<Folder>(
-        ctx, 'Folders', 'UpdateFolder', request, emptyResponse);
-  }
-
-  $async.Future<$2.Operation> moveFolder(
-      $pb.ClientContext ctx, MoveFolderRequest request) {
-    var emptyResponse = $2.Operation();
-    return _client.invoke<$2.Operation>(
-        ctx, 'Folders', 'MoveFolder', request, emptyResponse);
-  }
-
-  $async.Future<Folder> deleteFolder(
-      $pb.ClientContext ctx, DeleteFolderRequest request) {
-    var emptyResponse = Folder();
-    return _client.invoke<Folder>(
-        ctx, 'Folders', 'DeleteFolder', request, emptyResponse);
-  }
-
-  $async.Future<Folder> undeleteFolder(
-      $pb.ClientContext ctx, UndeleteFolderRequest request) {
-    var emptyResponse = Folder();
-    return _client.invoke<Folder>(
-        ctx, 'Folders', 'UndeleteFolder', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> getIamPolicy(
-      $pb.ClientContext ctx, $3.GetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'Folders', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$4.Policy> setIamPolicy(
-      $pb.ClientContext ctx, $3.SetIamPolicyRequest request) {
-    var emptyResponse = $4.Policy();
-    return _client.invoke<$4.Policy>(
-        ctx, 'Folders', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  $async.Future<$3.TestIamPermissionsResponse> testIamPermissions(
-      $pb.ClientContext ctx, $3.TestIamPermissionsRequest request) {
-    var emptyResponse = $3.TestIamPermissionsResponse();
-    return _client.invoke<$3.TestIamPermissionsResponse>(
-        ctx, 'Folders', 'TestIamPermissions', request, emptyResponse);
-  }
 }

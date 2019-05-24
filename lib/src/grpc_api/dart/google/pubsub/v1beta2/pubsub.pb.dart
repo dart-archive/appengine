@@ -4,13 +4,10 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
-
-import '../../protobuf/empty.pb.dart' as $0;
 
 class Topic extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Topic',
@@ -948,110 +945,4 @@ class AcknowledgeRequest extends $pb.GeneratedMessage {
   void clearSubscription() => clearField(1);
 
   $core.List<$core.String> get ackIds => $_getList(1);
-}
-
-class SubscriberApi {
-  $pb.RpcClient _client;
-  SubscriberApi(this._client);
-
-  $async.Future<Subscription> createSubscription(
-      $pb.ClientContext ctx, Subscription request) {
-    var emptyResponse = Subscription();
-    return _client.invoke<Subscription>(
-        ctx, 'Subscriber', 'CreateSubscription', request, emptyResponse);
-  }
-
-  $async.Future<Subscription> getSubscription(
-      $pb.ClientContext ctx, GetSubscriptionRequest request) {
-    var emptyResponse = Subscription();
-    return _client.invoke<Subscription>(
-        ctx, 'Subscriber', 'GetSubscription', request, emptyResponse);
-  }
-
-  $async.Future<ListSubscriptionsResponse> listSubscriptions(
-      $pb.ClientContext ctx, ListSubscriptionsRequest request) {
-    var emptyResponse = ListSubscriptionsResponse();
-    return _client.invoke<ListSubscriptionsResponse>(
-        ctx, 'Subscriber', 'ListSubscriptions', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> deleteSubscription(
-      $pb.ClientContext ctx, DeleteSubscriptionRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'Subscriber', 'DeleteSubscription', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> modifyAckDeadline(
-      $pb.ClientContext ctx, ModifyAckDeadlineRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'Subscriber', 'ModifyAckDeadline', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> acknowledge(
-      $pb.ClientContext ctx, AcknowledgeRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'Subscriber', 'Acknowledge', request, emptyResponse);
-  }
-
-  $async.Future<PullResponse> pull($pb.ClientContext ctx, PullRequest request) {
-    var emptyResponse = PullResponse();
-    return _client.invoke<PullResponse>(
-        ctx, 'Subscriber', 'Pull', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> modifyPushConfig(
-      $pb.ClientContext ctx, ModifyPushConfigRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'Subscriber', 'ModifyPushConfig', request, emptyResponse);
-  }
-}
-
-class PublisherApi {
-  $pb.RpcClient _client;
-  PublisherApi(this._client);
-
-  $async.Future<Topic> createTopic($pb.ClientContext ctx, Topic request) {
-    var emptyResponse = Topic();
-    return _client.invoke<Topic>(
-        ctx, 'Publisher', 'CreateTopic', request, emptyResponse);
-  }
-
-  $async.Future<PublishResponse> publish(
-      $pb.ClientContext ctx, PublishRequest request) {
-    var emptyResponse = PublishResponse();
-    return _client.invoke<PublishResponse>(
-        ctx, 'Publisher', 'Publish', request, emptyResponse);
-  }
-
-  $async.Future<Topic> getTopic(
-      $pb.ClientContext ctx, GetTopicRequest request) {
-    var emptyResponse = Topic();
-    return _client.invoke<Topic>(
-        ctx, 'Publisher', 'GetTopic', request, emptyResponse);
-  }
-
-  $async.Future<ListTopicsResponse> listTopics(
-      $pb.ClientContext ctx, ListTopicsRequest request) {
-    var emptyResponse = ListTopicsResponse();
-    return _client.invoke<ListTopicsResponse>(
-        ctx, 'Publisher', 'ListTopics', request, emptyResponse);
-  }
-
-  $async.Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
-      $pb.ClientContext ctx, ListTopicSubscriptionsRequest request) {
-    var emptyResponse = ListTopicSubscriptionsResponse();
-    return _client.invoke<ListTopicSubscriptionsResponse>(
-        ctx, 'Publisher', 'ListTopicSubscriptions', request, emptyResponse);
-  }
-
-  $async.Future<$0.Empty> deleteTopic(
-      $pb.ClientContext ctx, DeleteTopicRequest request) {
-    var emptyResponse = $0.Empty();
-    return _client.invoke<$0.Empty>(
-        ctx, 'Publisher', 'DeleteTopic', request, emptyResponse);
-  }
 }

@@ -4,18 +4,15 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import 'geometry.pb.dart' as $2;
-import '../../../protobuf/field_mask.pb.dart' as $3;
-import '../../../protobuf/empty.pb.dart' as $4;
-import '../../../longrunning/operations.pb.dart' as $5;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
+import 'geometry.pb.dart' as $4;
+import '../../../protobuf/field_mask.pb.dart' as $5;
 
 import 'product_search_service.pbenum.dart';
 
@@ -132,10 +129,10 @@ class ProductSet extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..a<$0.Timestamp>(3, 'indexTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$1.Status>(4, 'indexError', $pb.PbFieldType.OM, $1.Status.getDefault,
-        $1.Status.create)
+    ..a<$2.Timestamp>(3, 'indexTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Status>(4, 'indexError', $pb.PbFieldType.OM, $3.Status.getDefault,
+        $3.Status.create)
     ..hasRequiredFields = false;
 
   ProductSet() : super();
@@ -171,16 +168,16 @@ class ProductSet extends $pb.GeneratedMessage {
   $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  $0.Timestamp get indexTime => $_getN(2);
-  set indexTime($0.Timestamp v) {
+  $2.Timestamp get indexTime => $_getN(2);
+  set indexTime($2.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasIndexTime() => $_has(2);
   void clearIndexTime() => clearField(3);
 
-  $1.Status get indexError => $_getN(3);
-  set indexError($1.Status v) {
+  $3.Status get indexError => $_getN(3);
+  set indexError($3.Status v) {
     setField(4, v);
   }
 
@@ -193,8 +190,8 @@ class ReferenceImage extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..pc<$2.BoundingPoly>(
-        3, 'boundingPolys', $pb.PbFieldType.PM, $2.BoundingPoly.create)
+    ..pc<$4.BoundingPoly>(
+        3, 'boundingPolys', $pb.PbFieldType.PM, $4.BoundingPoly.create)
     ..hasRequiredFields = false;
 
   ReferenceImage() : super();
@@ -231,7 +228,7 @@ class ReferenceImage extends $pb.GeneratedMessage {
   $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 
-  $core.List<$2.BoundingPoly> get boundingPolys => $_getList(2);
+  $core.List<$4.BoundingPoly> get boundingPolys => $_getList(2);
 }
 
 class CreateProductRequest extends $pb.GeneratedMessage {
@@ -417,8 +414,8 @@ class UpdateProductRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
     ..a<Product>(
         1, 'product', $pb.PbFieldType.OM, Product.getDefault, Product.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProductRequest() : super();
@@ -449,8 +446,8 @@ class UpdateProductRequest extends $pb.GeneratedMessage {
   $core.bool hasProduct() => $_has(0);
   void clearProduct() => clearField(1);
 
-  $3.FieldMask get updateMask => $_getN(1);
-  set updateMask($3.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(1);
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -681,8 +678,8 @@ class UpdateProductSetRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
     ..a<ProductSet>(1, 'productSet', $pb.PbFieldType.OM, ProductSet.getDefault,
         ProductSet.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProductSetRequest() : super();
@@ -714,8 +711,8 @@ class UpdateProductSetRequest extends $pb.GeneratedMessage {
   $core.bool hasProductSet() => $_has(0);
   void clearProductSet() => clearField(1);
 
-  $3.FieldMask get updateMask => $_getN(1);
-  set updateMask($3.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(1);
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -1341,7 +1338,7 @@ class ImportProductSetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1p3beta1'))
     ..pc<ReferenceImage>(
         1, 'referenceImages', $pb.PbFieldType.PM, ReferenceImage.create)
-    ..pc<$1.Status>(2, 'statuses', $pb.PbFieldType.PM, $1.Status.create)
+    ..pc<$3.Status>(2, 'statuses', $pb.PbFieldType.PM, $3.Status.create)
     ..hasRequiredFields = false;
 
   ImportProductSetsResponse() : super();
@@ -1368,7 +1365,7 @@ class ImportProductSetsResponse extends $pb.GeneratedMessage {
 
   $core.List<ReferenceImage> get referenceImages => $_getList(0);
 
-  $core.List<$1.Status> get statuses => $_getList(1);
+  $core.List<$3.Status> get statuses => $_getList(1);
 }
 
 class BatchOperationMetadata extends $pb.GeneratedMessage {
@@ -1381,10 +1378,10 @@ class BatchOperationMetadata extends $pb.GeneratedMessage {
         BatchOperationMetadata_State.STATE_UNSPECIFIED,
         BatchOperationMetadata_State.valueOf,
         BatchOperationMetadata_State.values)
-    ..a<$0.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   BatchOperationMetadata() : super();
@@ -1416,150 +1413,19 @@ class BatchOperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(0);
   void clearState() => clearField(1);
 
-  $0.Timestamp get submitTime => $_getN(1);
-  set submitTime($0.Timestamp v) {
+  $2.Timestamp get submitTime => $_getN(1);
+  set submitTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasSubmitTime() => $_has(1);
   void clearSubmitTime() => clearField(2);
 
-  $0.Timestamp get endTime => $_getN(2);
-  set endTime($0.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(2);
+  set endTime($2.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
-}
-
-class ProductSearchApi {
-  $pb.RpcClient _client;
-  ProductSearchApi(this._client);
-
-  $async.Future<ProductSet> createProductSet(
-      $pb.ClientContext ctx, CreateProductSetRequest request) {
-    var emptyResponse = ProductSet();
-    return _client.invoke<ProductSet>(
-        ctx, 'ProductSearch', 'CreateProductSet', request, emptyResponse);
-  }
-
-  $async.Future<ListProductSetsResponse> listProductSets(
-      $pb.ClientContext ctx, ListProductSetsRequest request) {
-    var emptyResponse = ListProductSetsResponse();
-    return _client.invoke<ListProductSetsResponse>(
-        ctx, 'ProductSearch', 'ListProductSets', request, emptyResponse);
-  }
-
-  $async.Future<ProductSet> getProductSet(
-      $pb.ClientContext ctx, GetProductSetRequest request) {
-    var emptyResponse = ProductSet();
-    return _client.invoke<ProductSet>(
-        ctx, 'ProductSearch', 'GetProductSet', request, emptyResponse);
-  }
-
-  $async.Future<ProductSet> updateProductSet(
-      $pb.ClientContext ctx, UpdateProductSetRequest request) {
-    var emptyResponse = ProductSet();
-    return _client.invoke<ProductSet>(
-        ctx, 'ProductSearch', 'UpdateProductSet', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteProductSet(
-      $pb.ClientContext ctx, DeleteProductSetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'ProductSearch', 'DeleteProductSet', request, emptyResponse);
-  }
-
-  $async.Future<Product> createProduct(
-      $pb.ClientContext ctx, CreateProductRequest request) {
-    var emptyResponse = Product();
-    return _client.invoke<Product>(
-        ctx, 'ProductSearch', 'CreateProduct', request, emptyResponse);
-  }
-
-  $async.Future<ListProductsResponse> listProducts(
-      $pb.ClientContext ctx, ListProductsRequest request) {
-    var emptyResponse = ListProductsResponse();
-    return _client.invoke<ListProductsResponse>(
-        ctx, 'ProductSearch', 'ListProducts', request, emptyResponse);
-  }
-
-  $async.Future<Product> getProduct(
-      $pb.ClientContext ctx, GetProductRequest request) {
-    var emptyResponse = Product();
-    return _client.invoke<Product>(
-        ctx, 'ProductSearch', 'GetProduct', request, emptyResponse);
-  }
-
-  $async.Future<Product> updateProduct(
-      $pb.ClientContext ctx, UpdateProductRequest request) {
-    var emptyResponse = Product();
-    return _client.invoke<Product>(
-        ctx, 'ProductSearch', 'UpdateProduct', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteProduct(
-      $pb.ClientContext ctx, DeleteProductRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'ProductSearch', 'DeleteProduct', request, emptyResponse);
-  }
-
-  $async.Future<ReferenceImage> createReferenceImage(
-      $pb.ClientContext ctx, CreateReferenceImageRequest request) {
-    var emptyResponse = ReferenceImage();
-    return _client.invoke<ReferenceImage>(
-        ctx, 'ProductSearch', 'CreateReferenceImage', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> deleteReferenceImage(
-      $pb.ClientContext ctx, DeleteReferenceImageRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'ProductSearch', 'DeleteReferenceImage', request, emptyResponse);
-  }
-
-  $async.Future<ListReferenceImagesResponse> listReferenceImages(
-      $pb.ClientContext ctx, ListReferenceImagesRequest request) {
-    var emptyResponse = ListReferenceImagesResponse();
-    return _client.invoke<ListReferenceImagesResponse>(
-        ctx, 'ProductSearch', 'ListReferenceImages', request, emptyResponse);
-  }
-
-  $async.Future<ReferenceImage> getReferenceImage(
-      $pb.ClientContext ctx, GetReferenceImageRequest request) {
-    var emptyResponse = ReferenceImage();
-    return _client.invoke<ReferenceImage>(
-        ctx, 'ProductSearch', 'GetReferenceImage', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> addProductToProductSet(
-      $pb.ClientContext ctx, AddProductToProductSetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(
-        ctx, 'ProductSearch', 'AddProductToProductSet', request, emptyResponse);
-  }
-
-  $async.Future<$4.Empty> removeProductFromProductSet(
-      $pb.ClientContext ctx, RemoveProductFromProductSetRequest request) {
-    var emptyResponse = $4.Empty();
-    return _client.invoke<$4.Empty>(ctx, 'ProductSearch',
-        'RemoveProductFromProductSet', request, emptyResponse);
-  }
-
-  $async.Future<ListProductsInProductSetResponse> listProductsInProductSet(
-      $pb.ClientContext ctx, ListProductsInProductSetRequest request) {
-    var emptyResponse = ListProductsInProductSetResponse();
-    return _client.invoke<ListProductsInProductSetResponse>(ctx,
-        'ProductSearch', 'ListProductsInProductSet', request, emptyResponse);
-  }
-
-  $async.Future<$5.Operation> importProductSets(
-      $pb.ClientContext ctx, ImportProductSetsRequest request) {
-    var emptyResponse = $5.Operation();
-    return _client.invoke<$5.Operation>(
-        ctx, 'ProductSearch', 'ImportProductSets', request, emptyResponse);
-  }
 }

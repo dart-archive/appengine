@@ -4,10 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import '../../protobuf/timestamp.pbjson.dart' as $0;
-import '../../protobuf/field_mask.pbjson.dart' as $1;
-import '../../protobuf/empty.pbjson.dart' as $2;
-
 const LogSink$json = {
   '1': 'LogSink',
   '2': [
@@ -230,90 +226,4 @@ const DeleteExclusionRequest$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
-};
-
-const ConfigServiceV2ServiceBase$json = {
-  '1': 'ConfigServiceV2',
-  '2': [
-    {
-      '1': 'ListSinks',
-      '2': '.google.logging.v2.ListSinksRequest',
-      '3': '.google.logging.v2.ListSinksResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetSink',
-      '2': '.google.logging.v2.GetSinkRequest',
-      '3': '.google.logging.v2.LogSink',
-      '4': {}
-    },
-    {
-      '1': 'CreateSink',
-      '2': '.google.logging.v2.CreateSinkRequest',
-      '3': '.google.logging.v2.LogSink',
-      '4': {}
-    },
-    {
-      '1': 'UpdateSink',
-      '2': '.google.logging.v2.UpdateSinkRequest',
-      '3': '.google.logging.v2.LogSink',
-      '4': {}
-    },
-    {
-      '1': 'DeleteSink',
-      '2': '.google.logging.v2.DeleteSinkRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-    {
-      '1': 'ListExclusions',
-      '2': '.google.logging.v2.ListExclusionsRequest',
-      '3': '.google.logging.v2.ListExclusionsResponse',
-      '4': {}
-    },
-    {
-      '1': 'GetExclusion',
-      '2': '.google.logging.v2.GetExclusionRequest',
-      '3': '.google.logging.v2.LogExclusion',
-      '4': {}
-    },
-    {
-      '1': 'CreateExclusion',
-      '2': '.google.logging.v2.CreateExclusionRequest',
-      '3': '.google.logging.v2.LogExclusion',
-      '4': {}
-    },
-    {
-      '1': 'UpdateExclusion',
-      '2': '.google.logging.v2.UpdateExclusionRequest',
-      '3': '.google.logging.v2.LogExclusion',
-      '4': {}
-    },
-    {
-      '1': 'DeleteExclusion',
-      '2': '.google.logging.v2.DeleteExclusionRequest',
-      '3': '.google.protobuf.Empty',
-      '4': {}
-    },
-  ],
-};
-
-const ConfigServiceV2ServiceBase$messageJson = {
-  '.google.logging.v2.ListSinksRequest': ListSinksRequest$json,
-  '.google.logging.v2.ListSinksResponse': ListSinksResponse$json,
-  '.google.logging.v2.LogSink': LogSink$json,
-  '.google.protobuf.Timestamp': $0.Timestamp$json,
-  '.google.logging.v2.GetSinkRequest': GetSinkRequest$json,
-  '.google.logging.v2.CreateSinkRequest': CreateSinkRequest$json,
-  '.google.logging.v2.UpdateSinkRequest': UpdateSinkRequest$json,
-  '.google.protobuf.FieldMask': $1.FieldMask$json,
-  '.google.logging.v2.DeleteSinkRequest': DeleteSinkRequest$json,
-  '.google.protobuf.Empty': $2.Empty$json,
-  '.google.logging.v2.ListExclusionsRequest': ListExclusionsRequest$json,
-  '.google.logging.v2.ListExclusionsResponse': ListExclusionsResponse$json,
-  '.google.logging.v2.LogExclusion': LogExclusion$json,
-  '.google.logging.v2.GetExclusionRequest': GetExclusionRequest$json,
-  '.google.logging.v2.CreateExclusionRequest': CreateExclusionRequest$json,
-  '.google.logging.v2.UpdateExclusionRequest': UpdateExclusionRequest$json,
-  '.google.logging.v2.DeleteExclusionRequest': DeleteExclusionRequest$json,
 };

@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -568,44 +567,4 @@ class ListBasesResponse extends $pb.GeneratedMessage {
 
   $core.bool hasNextPageToken() => $_has(2);
   void clearNextPageToken() => clearField(3);
-}
-
-class ReferenceServiceV1Api {
-  $pb.RpcClient _client;
-  ReferenceServiceV1Api(this._client);
-
-  $async.Future<SearchReferenceSetsResponse> searchReferenceSets(
-      $pb.ClientContext ctx, SearchReferenceSetsRequest request) {
-    var emptyResponse = SearchReferenceSetsResponse();
-    return _client.invoke<SearchReferenceSetsResponse>(ctx,
-        'ReferenceServiceV1', 'SearchReferenceSets', request, emptyResponse);
-  }
-
-  $async.Future<ReferenceSet> getReferenceSet(
-      $pb.ClientContext ctx, GetReferenceSetRequest request) {
-    var emptyResponse = ReferenceSet();
-    return _client.invoke<ReferenceSet>(
-        ctx, 'ReferenceServiceV1', 'GetReferenceSet', request, emptyResponse);
-  }
-
-  $async.Future<SearchReferencesResponse> searchReferences(
-      $pb.ClientContext ctx, SearchReferencesRequest request) {
-    var emptyResponse = SearchReferencesResponse();
-    return _client.invoke<SearchReferencesResponse>(
-        ctx, 'ReferenceServiceV1', 'SearchReferences', request, emptyResponse);
-  }
-
-  $async.Future<Reference> getReference(
-      $pb.ClientContext ctx, GetReferenceRequest request) {
-    var emptyResponse = Reference();
-    return _client.invoke<Reference>(
-        ctx, 'ReferenceServiceV1', 'GetReference', request, emptyResponse);
-  }
-
-  $async.Future<ListBasesResponse> listBases(
-      $pb.ClientContext ctx, ListBasesRequest request) {
-    var emptyResponse = ListBasesResponse();
-    return _client.invoke<ListBasesResponse>(
-        ctx, 'ReferenceServiceV1', 'ListBases', request, emptyResponse);
-  }
 }

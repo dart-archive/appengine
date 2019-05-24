@@ -4,16 +4,14 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/any.pb.dart' as $0;
-import '../rpc/status.pb.dart' as $1;
-import '../protobuf/duration.pb.dart' as $2;
-import '../protobuf/empty.pb.dart' as $3;
+import '../protobuf/any.pb.dart' as $1;
+import '../rpc/status.pb.dart' as $2;
+import '../protobuf/duration.pb.dart' as $3;
 
 enum Operation_Result { error, response, notSet }
 
@@ -26,13 +24,13 @@ class Operation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operation',
       package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'name')
-    ..a<$0.Any>(
-        2, 'metadata', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
+    ..a<$1.Any>(
+        2, 'metadata', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..aOB(3, 'done')
-    ..a<$1.Status>(
-        4, 'error', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
-    ..a<$0.Any>(
-        5, 'response', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
+    ..a<$2.Status>(
+        4, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
+    ..a<$1.Any>(
+        5, 'response', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..oo(0, [4, 5])
     ..hasRequiredFields = false;
 
@@ -64,8 +62,8 @@ class Operation extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Any get metadata => $_getN(1);
-  set metadata($0.Any v) {
+  $1.Any get metadata => $_getN(1);
+  set metadata($1.Any v) {
     setField(2, v);
   }
 
@@ -80,16 +78,16 @@ class Operation extends $pb.GeneratedMessage {
   $core.bool hasDone() => $_has(2);
   void clearDone() => clearField(3);
 
-  $1.Status get error => $_getN(3);
-  set error($1.Status v) {
+  $2.Status get error => $_getN(3);
+  set error($2.Status v) {
     setField(4, v);
   }
 
   $core.bool hasError() => $_has(3);
   void clearError() => clearField(4);
 
-  $0.Any get response => $_getN(4);
-  set response($0.Any v) {
+  $1.Any get response => $_getN(4);
+  set response($1.Any v) {
     setField(5, v);
   }
 
@@ -309,8 +307,8 @@ class WaitOperationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WaitOperationRequest',
       package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'name')
-    ..a<$2.Duration>(2, 'timeout', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
+    ..a<$3.Duration>(2, 'timeout', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
     ..hasRequiredFields = false;
 
   WaitOperationRequest() : super();
@@ -341,8 +339,8 @@ class WaitOperationRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.Duration get timeout => $_getN(1);
-  set timeout($2.Duration v) {
+  $3.Duration get timeout => $_getN(1);
+  set timeout($3.Duration v) {
     setField(2, v);
   }
 
@@ -392,7 +390,7 @@ class OperationInfo extends $pb.GeneratedMessage {
   void clearMetadataType() => clearField(2);
 }
 
-class OperationsExt {
+class Operations {
   static final $pb.Extension operationInfo = $pb.Extension<OperationInfo>(
       'google.protobuf.MethodOptions',
       'operationInfo',
@@ -402,45 +400,5 @@ class OperationsExt {
       OperationInfo.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(operationInfo);
-  }
-}
-
-class OperationsApi {
-  $pb.RpcClient _client;
-  OperationsApi(this._client);
-
-  $async.Future<ListOperationsResponse> listOperations(
-      $pb.ClientContext ctx, ListOperationsRequest request) {
-    var emptyResponse = ListOperationsResponse();
-    return _client.invoke<ListOperationsResponse>(
-        ctx, 'Operations', 'ListOperations', request, emptyResponse);
-  }
-
-  $async.Future<Operation> getOperation(
-      $pb.ClientContext ctx, GetOperationRequest request) {
-    var emptyResponse = Operation();
-    return _client.invoke<Operation>(
-        ctx, 'Operations', 'GetOperation', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> deleteOperation(
-      $pb.ClientContext ctx, DeleteOperationRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Operations', 'DeleteOperation', request, emptyResponse);
-  }
-
-  $async.Future<$3.Empty> cancelOperation(
-      $pb.ClientContext ctx, CancelOperationRequest request) {
-    var emptyResponse = $3.Empty();
-    return _client.invoke<$3.Empty>(
-        ctx, 'Operations', 'CancelOperation', request, emptyResponse);
-  }
-
-  $async.Future<Operation> waitOperation(
-      $pb.ClientContext ctx, WaitOperationRequest request) {
-    var emptyResponse = Operation();
-    return _client.invoke<Operation>(
-        ctx, 'Operations', 'WaitOperation', request, emptyResponse);
   }
 }

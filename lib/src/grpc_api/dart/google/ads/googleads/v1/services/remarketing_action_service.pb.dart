@@ -4,7 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async' as $async;
 import 'dart:core' as $core
     show bool, Deprecated, double, int, List, Map, override, String;
 
@@ -266,27 +265,4 @@ class MutateRemarketingActionResult extends $pb.GeneratedMessage {
 
   $core.bool hasResourceName() => $_has(0);
   void clearResourceName() => clearField(1);
-}
-
-class RemarketingActionServiceApi {
-  $pb.RpcClient _client;
-  RemarketingActionServiceApi(this._client);
-
-  $async.Future<$0.RemarketingAction> getRemarketingAction(
-      $pb.ClientContext ctx, GetRemarketingActionRequest request) {
-    var emptyResponse = $0.RemarketingAction();
-    return _client.invoke<$0.RemarketingAction>(ctx, 'RemarketingActionService',
-        'GetRemarketingAction', request, emptyResponse);
-  }
-
-  $async.Future<MutateRemarketingActionsResponse> mutateRemarketingActions(
-      $pb.ClientContext ctx, MutateRemarketingActionsRequest request) {
-    var emptyResponse = MutateRemarketingActionsResponse();
-    return _client.invoke<MutateRemarketingActionsResponse>(
-        ctx,
-        'RemarketingActionService',
-        'MutateRemarketingActions',
-        request,
-        emptyResponse);
-  }
 }

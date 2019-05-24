@@ -4,8 +4,6 @@
 ///
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'common.pbjson.dart' as $0;
-
 const GetGroupRequest$json = {
   '1': 'GetGroupRequest',
   '2': [
@@ -25,32 +23,4 @@ const UpdateGroupRequest$json = {
       '10': 'group'
     },
   ],
-};
-
-const ErrorGroupServiceBase$json = {
-  '1': 'ErrorGroupService',
-  '2': [
-    {
-      '1': 'GetGroup',
-      '2': '.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest',
-      '3': '.google.devtools.clouderrorreporting.v1beta1.ErrorGroup',
-      '4': {}
-    },
-    {
-      '1': 'UpdateGroup',
-      '2': '.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest',
-      '3': '.google.devtools.clouderrorreporting.v1beta1.ErrorGroup',
-      '4': {}
-    },
-  ],
-};
-
-const ErrorGroupServiceBase$messageJson = {
-  '.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest':
-      GetGroupRequest$json,
-  '.google.devtools.clouderrorreporting.v1beta1.ErrorGroup': $0.ErrorGroup$json,
-  '.google.devtools.clouderrorreporting.v1beta1.TrackingIssue':
-      $0.TrackingIssue$json,
-  '.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest':
-      UpdateGroupRequest$json,
 };
