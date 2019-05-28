@@ -7,6 +7,7 @@ library grpc_api;
 export 'package:fixnum/fixnum.dart' show Int32, Int64;
 
 export '../grpc_api/dart/google/datastore/v1/datastore.pb.dart';
+export '../grpc_api/dart/google/datastore/v1/datastore.pbgrpc.dart';
 export '../grpc_api/dart/google/datastore/v1/entity.pb.dart';
 export '../grpc_api/dart/google/datastore/v1/query.pb.dart';
 export '../grpc_api/dart/google/protobuf/struct.pbenum.dart';

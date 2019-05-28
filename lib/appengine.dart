@@ -7,15 +7,15 @@ library appengine;
 import 'dart:async';
 import 'dart:io';
 
-export 'package:gcloud/http.dart';
 import 'package:gcloud/service_scope.dart' as ss;
 
 import 'src/appengine_internal.dart' as appengine_internal;
 import 'src/client_context.dart';
 
+export 'package:gcloud/http.dart';
+export 'src/client_context.dart';
 export 'src/errors.dart';
 export 'src/logging.dart';
-export 'src/client_context.dart';
 
 const Symbol _APPENGINE_CONTEXT = #appengine.context;
 
@@ -27,7 +27,8 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
 /// The [handler] will be executed inside a new request handler zone for every
 /// new request. This will isolate different requests from each other.
 /// Each [handler] has access to a [ClientContext] using the [context] getter
-/// in this library. It can be used to access appengine services, e.g. datastore.
+/// in this library. It can be used to access appengine services, e.g. 
+/// datastore.
 ///
 /// In case an uncaught error occurs inside the request handler, the request
 /// will be closed with an "500 Internal Server Error", if possible, and the

@@ -4,20 +4,19 @@
 
 library grpc_logging;
 
-import 'dart:io';
 import 'dart:async';
+import 'dart:io';
+import 'package:grpc/grpc.dart' as grpc;
 
-import '../logging.dart';
-
-import '../grpc_api/logging_api.dart' as api;
 import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
     as gae_log;
-import 'grpc.dart' as grpc;
+import '../grpc_api/logging_api.dart' as api;
+import '../logging.dart';
 import '../logging_impl.dart';
 
 const List<String> OAuth2Scopes = <String>[
-  "https://www.googleapis.com/auth/cloud-platform",
-  "https://www.googleapis.com/auth/logging.write",
+  'https://www.googleapis.com/auth/cloud-platform',
+  'https://www.googleapis.com/auth/logging.write',
 ];
 
 /// A [appengine.Logging] adapter which groups request-specific logging
@@ -62,8 +61,9 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
     _isFirst = true;
   }
 
+  @override
   void log(LogLevel level, String message, {DateTime timestamp}) {
-    api.LogSeverity severity = _severityFromLogLevel(level);
+    final api.LogSeverity severity = _severityFromLogLevel(level);
 
     // The severity of the combined log entry will be the highest severity
     // of the individual log lines.
@@ -99,6 +99,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   /// Flushes the so-far collected loglines to the underlying
   /// [SharedLoggingService]. There is no guarantee that it will immediately be
   /// sent to the server.
+  @override
   Future flush() async {
     if (_gaeLogLines.isNotEmpty) {
       _enqueue(finish: false);
@@ -107,6 +108,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
   /// Finishes the request-specific logs with the given HTTP [responseStatus]
   /// and [responseSize].
+  @override
   void finish(int responseStatus, int responseSize) {
     if (_gaeLogLines.isNotEmpty) {
       _enqueue(
@@ -180,10 +182,10 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
       final httpRequest = api.HttpRequest()..status = responseStatus;
 
-      logEntry..httpRequest = httpRequest;
+      logEntry.httpRequest = httpRequest;
     }
 
-    protoPayload..value = appengineRequestLog.writeToBuffer();
+    protoPayload.value = appengineRequestLog.writeToBuffer();
 
     _sharedLoggingService.enqueue(logEntry);
   }
@@ -203,8 +205,9 @@ class GrpcBackgroundLoggingImpl extends Logging {
 
   GrpcBackgroundLoggingImpl(this._sharedLoggingService);
 
+  @override
   void log(LogLevel level, String message, {DateTime timestamp}) {
-    api.LogSeverity severity = _severityFromLogLevel(level);
+    final api.LogSeverity severity = _severityFromLogLevel(level);
 
     final int now = DateTime.now().toUtc().millisecondsSinceEpoch;
     final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
@@ -223,6 +226,7 @@ class GrpcBackgroundLoggingImpl extends Logging {
     _sharedLoggingService.enqueue(logEntry);
   }
 
+  @override
   Future flush() => Future.value();
 }
 
@@ -232,7 +236,7 @@ class SharedLoggingService {
   static const Duration FLUSH_DURATION = Duration(seconds: 3);
   static const int MAX_LOGENTRIES = 25;
 
-  final api.LoggingServiceV2Api _clientStub;
+  final api.LoggingServiceV2Client _clientStub;
   final String projectId;
   final String versionId;
   final String instanceId;
@@ -247,12 +251,15 @@ class SharedLoggingService {
   Completer _closeCompleter;
   int _outstandingRequests = 0;
 
-  SharedLoggingService(grpc.Client client, String projectId, String serviceId,
-      String versionId, String zoneId, this._instanceName, this.instanceId)
-      : _clientStub =
-            api.LoggingServiceV2Api(grpc.Channel('google.logging.v2', client)),
-        projectId = projectId,
-        versionId = versionId,
+  SharedLoggingService(
+      grpc.ClientChannel clientChannel,
+      this.projectId,
+      String serviceId,
+      this.versionId,
+      String zoneId,
+      this._instanceName,
+      this.instanceId)
+      : _clientStub = api.LoggingServiceV2Client(clientChannel),
         resourceLabels = {
           'project_id': projectId,
           'version_id': versionId,
@@ -273,8 +280,8 @@ class SharedLoggingService {
     // order to avoid hitting the size limit for the RPC request.
     if (_entries.length > 25) {
       flush();
-    } else if (_timer == null) {
-      _timer = Timer(FLUSH_DURATION, flush);
+    } else {
+      _timer ??= Timer(FLUSH_DURATION, flush);
     }
   }
 
@@ -293,7 +300,7 @@ class SharedLoggingService {
       ..partialSuccess =
           false /* for now we want to get notified if something goes wrong */;
     _entries.clear();
-    _clientStub.writeLogEntries(null, request).catchError((error, stack) {
+    _clientStub.writeLogEntries(request).catchError((error, stack) {
       // In case the logging API failed, we'll write the error message to
       // stderr.  The logging daemon on the VM will make another attempt at
       // uploading stderr via the logging API.
@@ -328,7 +335,7 @@ class SharedLoggingService {
 }
 
 void _addLabel(api.LogEntry entry, String key, String value) {
-  entry..labels[key] = value;
+  entry.labels[key] = value;
 }
 
 api.Timestamp _protobufTimestampFromMilliseconds(int ms) {

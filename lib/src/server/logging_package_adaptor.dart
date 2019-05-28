@@ -33,7 +33,7 @@ void setupAppEngineLogging() {
       }
 
       if (logging != null) {
-        var level = _loggingLevel2AppengineLoggingLevel[record.level];
+        final level = _loggingLevel2AppengineLoggingLevel[record.level];
         if (level != null) {
           var message = record.message;
 

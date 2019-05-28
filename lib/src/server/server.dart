@@ -8,11 +8,11 @@ import 'dart:async';
 import 'dart:convert' show utf8;
 import 'dart:io';
 
-import 'context_registry.dart';
 import '../client_context.dart';
+import 'context_registry.dart';
 
 void _info(String message) {
-  var formattedMessage = "${DateTime.now()}: " + message;
+  final formattedMessage = '${DateTime.now()}: $message';
   stderr.writeln(formattedMessage);
 }
 
@@ -37,7 +37,7 @@ class AppEngineHttpServer {
   Future get done => _shutdownCompleter.future;
 
   void run(applicationHandler(HttpRequest request, ClientContext context)) {
-    var serviceHandlers = {
+    final serviceHandlers = {
       '/_ah/start': _start,
       '/_ah/health': _health,
       '/_ah/stop': _stop
@@ -52,8 +52,8 @@ class AppEngineHttpServer {
         var handler = applicationHandler;
 
         // Check if the request path is one of the service handlers.
-        String path = request.uri.path;
-        for (var pattern in serviceHandlers.keys) {
+        final String path = request.uri.path;
+        for (final pattern in serviceHandlers.keys) {
           if (path.startsWith(pattern)) {
             handler = serviceHandlers[pattern];
             break;
@@ -61,14 +61,14 @@ class AppEngineHttpServer {
         }
 
         _pendingRequests++;
-        var context = _contextRegistry.add(request);
+        final context = _contextRegistry.add(request);
         request.response.done.whenComplete(() {
           _contextRegistry.remove(request);
         });
 
         request.response.done.catchError((error) {
           if (!_contextRegistry.isDevelopmentEnvironment) {
-            _info("Error while handling response: $error");
+            _info('Error while handling response: $error');
           }
           _pendingRequests--;
           _checkShutdown();
@@ -81,13 +81,13 @@ class AppEngineHttpServer {
 
   void _start(HttpRequest request, _) {
     request.drain().then((_) {
-      _sendResponse(request.response, HttpStatus.ok, "ok");
+      _sendResponse(request.response, HttpStatus.ok, 'ok');
     });
   }
 
   void _health(HttpRequest request, _) {
     request.drain().then((_) {
-      _sendResponse(request.response, HttpStatus.ok, "ok");
+      _sendResponse(request.response, HttpStatus.ok, 'ok');
     });
   }
 
@@ -96,29 +96,30 @@ class AppEngineHttpServer {
       if (_httpServer != null) {
         _httpServer.close().then((_) {
           _httpServer = null;
-          _sendResponse(request.response, HttpStatus.ok, "ok");
+          _sendResponse(request.response, HttpStatus.ok, 'ok');
         });
       } else {
-        _sendResponse(request.response, HttpStatus.conflict, "fail");
+        _sendResponse(request.response, HttpStatus.conflict, 'fail');
       }
     });
   }
 
-  _checkShutdown() {
+  void _checkShutdown() {
     if (_pendingRequests == 0 && _httpServer == null) {
       _shutdownCompleter.complete();
     }
   }
 
   void _sendResponse(HttpResponse response, int statusCode, String message) {
-    var data = utf8.encode(message);
+    final data = utf8.encode(message);
     response.headers.contentType =
         ContentType('text', 'plain', charset: 'utf-8');
-    response.headers.set("Cache-Control", "no-cache");
-    response.headers.set("Server", _hostname);
-    response.contentLength = data.length;
-    response.statusCode = statusCode;
-    response.add(data);
-    response.close();
+    response.headers.set('Cache-Control', 'no-cache');
+    response.headers.set('Server', _hostname);
+    response
+      ..contentLength = data.length
+      ..statusCode = statusCode
+      ..add(data)
+      ..close();
   }
 }

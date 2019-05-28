@@ -9,23 +9,27 @@ import 'dart:io';
 class AppEngineError implements Exception {
   final String message;
 
-  AppEngineError(this.message);
+  const AppEngineError(this.message);
 
-  String toString() => "AppEngineException: $message";
+  @override
+  String toString() => 'AppEngineException: $message';
 }
 
 class NetworkError extends AppEngineError implements IOException {
   NetworkError(String message) : super(message);
 
-  String toString() => "NetworkError: $message";
+  @override
+  String toString() => 'NetworkError: $message';
 }
 
 class ProtocolError extends AppEngineError implements IOException {
-  static ProtocolError INVALID_RESPONSE = ProtocolError("Invalid response");
+  static const ProtocolError INVALID_RESPONSE =
+      ProtocolError('Invalid response');
 
-  ProtocolError(String message) : super(message);
+  const ProtocolError(String message) : super(message);
 
-  String toString() => "ProtocolError: $message";
+  @override
+  String toString() => 'ProtocolError: $message';
 }
 
 class ServiceError extends AppEngineError {
@@ -34,11 +38,13 @@ class ServiceError extends AppEngineError {
   ServiceError(String message, {this.serviceName = 'ServiceError'})
       : super(message);
 
-  String toString() => "$serviceName: $message";
+  @override
+  String toString() => '$serviceName: $message';
 }
 
 class ApplicationError extends AppEngineError {
   ApplicationError(String message) : super(message);
 
-  String toString() => "ApplicationError: $message";
+  @override
+  String toString() => 'ApplicationError: $message';
 }

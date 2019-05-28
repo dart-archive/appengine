@@ -4,8 +4,8 @@
 
 library stderr_logging;
 
-import 'dart:io' as io;
 import 'dart:async';
+import 'dart:io' as io;
 
 import '../logging.dart';
 import '../logging_impl.dart';
@@ -22,6 +22,7 @@ class StderrRequestLoggingImpl extends LoggingImpl {
     _resetState();
   }
 
+  @override
   void log(LogLevel level, String message, {DateTime timestamp}) {
     if (level.level > _currentLogLevel.level) {
       _currentLogLevel = level;
@@ -30,12 +31,14 @@ class StderrRequestLoggingImpl extends LoggingImpl {
         .add(_LogLine(level, message, timestamp ?? DateTime.now().toUtc()));
   }
 
+  @override
   Future flush() async {
     if (_gaeLogLines.isNotEmpty) {
       _enqueue(finish: false);
     }
   }
 
+  @override
   void finish(int responseStatus, int responseSize) {
     _enqueue(
         finish: true,
@@ -70,12 +73,14 @@ class StderrRequestLoggingImpl extends LoggingImpl {
 }
 
 class StderrBackgroundLoggingImpl extends Logging {
+  @override
   void log(LogLevel level, String message, {DateTime timestamp}) {
     final logLine =
         _LogLine(level, message, timestamp ?? DateTime.now().toUtc());
     io.stderr.writeln(logLine.format(null));
   }
 
+  @override
   Future flush() => Future.value();
 }
 

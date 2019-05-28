@@ -20,6 +20,7 @@ class LogLevel {
 
   const LogLevel._(this.name, this.level);
 
+  @override
   String toString() => name;
 }
 
@@ -46,7 +47,7 @@ abstract class Logging {
 
   void log(LogLevel level, String message, {DateTime timestamp});
 
-  Future flush();
+  Future<void> flush();
 }
 
 /// Register a new [Logging] object.

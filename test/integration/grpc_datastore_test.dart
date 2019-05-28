@@ -7,7 +7,7 @@ import 'dart:io';
 import 'package:test/test.dart' as test;
 
 import 'package:appengine/src/grpc_api_impl/auth_utils.dart';
-import 'package:appengine/src/grpc_api_impl/grpc.dart' as grpc;
+import 'package:grpc/grpc.dart' as grpc;
 import 'package:appengine/src/grpc_api_impl/datastore_impl.dart';
 import 'package:gcloud/db.dart' as db;
 import 'package:googleapis_auth/auth_io.dart';
@@ -18,7 +18,7 @@ import 'db/metamodel_tests.dart' as metamodel_tests;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
 
 main() async {
-  final endpoint = Uri.parse('https://datastore.googleapis.com');
+  final endpoint = 'https://datastore.googleapis.com';
   final scopes = <String>[
     'https://www.googleapis.com/auth/cloud-platform',
     'https://www.googleapis.com/auth/datastore',
@@ -30,14 +30,19 @@ main() async {
       (String project, ServiceAccountCredentials serviceAccount) async {
     final accessTokenProvider =
         ServiceAccountTokenProvider(serviceAccount, scopes);
-    final dialer = grpc.Dialer(endpoint);
-    final client = grpc.Client(dialer, accessTokenProvider, 10);
-    final datastore = GrpcDatastoreImpl(client, project);
+    final clientChannel = grpc.ClientChannel(
+      endpoint,
+      options: grpc.ChannelOptions(
+        // TODO(domesticmouse): Attach accessTokenProvider
+        credentials: grpc.ChannelCredentials.insecure(),
+      ),
+    );
+    final datastore = GrpcDatastoreImpl(clientChannel, project);
     final dbService = db.DatastoreDB(datastore);
 
     // Once all tests are done we'll close the resources.
     test.tearDownAll(() async {
-      await client.close();
+      await clientChannel.shutdown();
       await accessTokenProvider.close();
     });
 

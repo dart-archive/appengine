@@ -10,9 +10,9 @@ import 'dart:io';
 import 'package:gcloud/db.dart' as db;
 import 'package:gcloud/storage.dart' as storage;
 
-import '../logging.dart';
-import '../client_context.dart';
 import '../appengine_context.dart';
+import '../client_context.dart';
+import '../logging.dart';
 import '../logging_impl.dart';
 
 abstract class LoggerFactory {
@@ -91,7 +91,7 @@ class ContextRegistry {
         // To ensure only one value for IP is provided, we join all of the
         // `x-forwarded-for` headers into a single string, split on comma,
         // then use the first value.
-        ip = forwardedFor.join(",").split(",").first.trim();
+        ip = forwardedFor.join(',').split(',').first.trim();
       } else {
         ip = request.connectionInfo.remoteAddress.host;
       }
@@ -120,5 +120,6 @@ class _ClientContextImpl implements ClientContext {
   _ClientContextImpl(
       this.services, this.isDevelopmentEnvironment, this.traceId);
 
+  @override
   bool get isProductionEnvironment => !isDevelopmentEnvironment;
 }

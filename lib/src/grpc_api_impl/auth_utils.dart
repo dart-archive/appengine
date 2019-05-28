@@ -14,7 +14,7 @@ import 'package:http/http.dart' as http;
 /// Base class for a on-demand provider of oauth2 access tokens.
 abstract class AccessTokenProvider {
   Future<auth.AccessToken> obtainAccessToken();
-  Future close();
+  Future<void> close();
 }
 
 /// Provides oauth2 access tokens by using service account credentials from
@@ -28,13 +28,15 @@ abstract class AccessTokenProvider {
 class MetadataAccessTokenProvider implements AccessTokenProvider {
   final http.Client _httpClient = http.Client();
 
+  @override
   Future<auth.AccessToken> obtainAccessToken() async {
     final auth.AccessCredentials credentials =
         await auth.obtainAccessCredentialsViaMetadataServer(_httpClient);
     return credentials.accessToken;
   }
 
-  Future close() async {
+  @override
+  Future<void> close() async {
     _httpClient.close();
   }
 }
@@ -48,6 +50,7 @@ class ServiceAccountTokenProvider implements AccessTokenProvider {
 
   ServiceAccountTokenProvider(this._serviceAccount, this._scopes);
 
+  @override
   Future<auth.AccessToken> obtainAccessToken() async {
     final auth.AccessCredentials credentials =
         await auth.obtainAccessCredentialsViaServiceAccount(
@@ -55,7 +58,8 @@ class ServiceAccountTokenProvider implements AccessTokenProvider {
     return credentials.accessToken;
   }
 
-  Future close() async {
+  @override
+  Future<void> close() async {
     _httpClient.close();
   }
 }
@@ -73,6 +77,7 @@ class LimitOutstandingRequests implements AccessTokenProvider {
 
   LimitOutstandingRequests(this._provider);
 
+  @override
   Future<auth.AccessToken> obtainAccessToken() {
     if (_completer != null) return _completer.future;
 
@@ -88,5 +93,6 @@ class LimitOutstandingRequests implements AccessTokenProvider {
     return _completer.future;
   }
 
-  Future close() => _provider.close();
+  @override
+  Future<void> close() => _provider.close();
 }
