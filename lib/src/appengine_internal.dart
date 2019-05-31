@@ -21,7 +21,6 @@ import 'api_impl/stderr_logging_impl.dart' as stderr_logging_impl;
 import 'appengine_context.dart';
 import 'client_context.dart';
 import 'errors.dart' as errors;
-import 'grpc_api_impl/auth_utils.dart' as auth_utils;
 import 'grpc_api_impl/datastore_impl.dart' as grpc_datastore_impl;
 import 'grpc_api_impl/logging_impl.dart' as grpc_logging_impl;
 import 'logging.dart' as logging;
@@ -171,14 +170,12 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final context = AppengineContext(isDevEnvironment, projectId, versionId,
       serviceId, instance, instanceId, pubServeUrl);
 
-  final serviceAccount = _obtainServiceAccountCredentials(gcloudKey);
-  final loggerFactory =
-      await _obtainLoggerFactory(context, serviceAccount, zoneId);
+  final loggerFactory = await _obtainLoggerFactory(context, gcloudKey, zoneId);
   final storageService =
-      await _obtainStorageService(context.applicationID, serviceAccount);
+      await _obtainStorageService(context.applicationID, gcloudKey);
 
   final dbService = await _obtainDatastoreService(
-      context.applicationID, dbEmulatorHost, serviceAccount);
+      context.applicationID, dbEmulatorHost, gcloudKey);
 
   return ContextRegistry(loggerFactory, dbService, storageService, context);
 }
@@ -206,9 +203,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
 /// The returned [db.DatastoreDB] will be usable within the current service
 /// scope.
 Future<db.DatastoreDB> _obtainDatastoreService(
-    String projectId,
-    String dbEmulatorHost,
-    auth.ServiceAccountCredentials serviceAccount) async {
+    String projectId, String dbEmulatorHost, String gcloudKey) async {
   String endpoint = 'https://datastore.googleapis.com';
   bool needAuthorization = true;
   if (dbEmulatorHost != null && dbEmulatorHost.contains(':')) {
@@ -217,22 +212,19 @@ Future<db.DatastoreDB> _obtainDatastoreService(
     endpoint = 'http://$dbEmulatorHost';
     needAuthorization = false;
   }
-  final grpcClient = _getGrpcClientChannel(
-    serviceAccount,
-    endpoint,
-    grpc_datastore_impl.OAuth2Scopes,
-    needAuthorization,
-  );
-  ss.registerScopeExitCallback(grpcClient.shutdown);
-  final rawDatastore =
-      grpc_datastore_impl.GrpcDatastoreImpl(grpcClient, projectId);
+  final authenticator =
+      _obtainAuthenticator(gcloudKey, grpc_datastore_impl.OAuth2Scopes);
+  final grpcClient = _getGrpcClientChannel(endpoint, needAuthorization);
+  final rawDatastore = grpc_datastore_impl.GrpcDatastoreImpl(
+      grpcClient, authenticator, projectId);
   return db.DatastoreDB(rawDatastore, modelDB: db.ModelDBImpl());
 }
 
 /// Creates a storage service using the service account credentials (if given)
 /// or using the metadata to obtain access credentials.
 Future<storage.Storage> _obtainStorageService(
-    String projectId, auth.ServiceAccountCredentials serviceAccount) async {
+    String projectId, String gcloudKey) async {
+  final serviceAccount = _obtainServiceAccountCredentials(gcloudKey);
   final authClient =
       await _getAuthClient(serviceAccount, storage.Storage.SCOPES);
   return storage.Storage(authClient, projectId);
@@ -242,14 +234,16 @@ Future<storage.Storage> _obtainStorageService(
 ///
 /// The underlying logging implementation will be usable within the current
 /// service scope.
-Future<LoggerFactory> _obtainLoggerFactory(AppengineContext context,
-    auth.ServiceAccountCredentials serviceAccount, String zoneId) async {
+Future<LoggerFactory> _obtainLoggerFactory(
+    AppengineContext context, String gcloudKey, String zoneId) async {
   if (context.isDevelopmentEnvironment) {
     return StderrLoggerFactory();
   } else {
+    final authenticator =
+        _obtainAuthenticator(gcloudKey, grpc_logging_impl.OAuth2Scopes);
     final sharedLoggingService = grpc_logging_impl.SharedLoggingService(
-        _getGrpcClientChannel(serviceAccount, 'https://logging.googleapis.com',
-            grpc_logging_impl.OAuth2Scopes, true),
+        _getGrpcClientChannel('https://logging.googleapis.com', true),
+        authenticator,
         context.applicationID,
         context.module,
         context.version,
@@ -282,27 +276,14 @@ Future<auth.AuthClient> _getAuthClient(
 /// credentials for authorization.
 ///
 /// The returned [grpc.Client] will be usable within the current service scope.
-grpc.ClientChannel _getGrpcClientChannel(
-    auth.ServiceAccountCredentials serviceAccount,
-    String url,
-    List<String> scopes,
-    bool needAuthorization) {
-  // ignore: unused_local_variable
-  auth_utils.AccessTokenProvider accessTokenProvider;
-  if (needAuthorization) {
-    if (serviceAccount != null) {
-      accessTokenProvider =
-          auth_utils.ServiceAccountTokenProvider(serviceAccount, scopes);
-    } else {
-      accessTokenProvider = auth_utils.MetadataAccessTokenProvider();
-    }
-  }
+grpc.ClientChannel _getGrpcClientChannel(String url, bool needAuthorization) {
   final clientChannel = grpc.ClientChannel(
     url,
-    options: const grpc.ChannelOptions(
-      // TODO(domesticmouse): Attach accessTokenProvider
-      credentials: grpc.ChannelCredentials.insecure(),
-    ),
+    options: needAuthorization
+        ? grpc.ChannelOptions()
+        : grpc.ChannelOptions(
+            credentials: grpc.ChannelCredentials.insecure(),
+          ),
   );
   ss.registerScopeExitCallback(clientChannel.shutdown);
   return clientChannel;
@@ -322,6 +303,22 @@ auth.ServiceAccountCredentials _obtainServiceAccountCredentials(
     }
   }
   return null;
+}
+
+grpc.HttpBasedAuthenticator _obtainAuthenticator(
+    String gcloudKey, List<String> scopes) {
+  if (gcloudKey != null && gcloudKey != '') {
+    try {
+      final serviceAccountJson = File(gcloudKey).readAsStringSync();
+      return grpc.ServiceAccountAuthenticator(serviceAccountJson, scopes);
+    } catch (e) {
+      throw errors.AppEngineError(
+          'There was problem using the GCLOUD_KEY "$gcloudKey". '
+          'It might be an invalid service account key in json form.\n'
+          '$e');
+    }
+  }
+  return grpc.ComputeEngineAuthenticator();
 }
 
 Future<String> _getZoneInProduction() => _getMetadataValue('zone');

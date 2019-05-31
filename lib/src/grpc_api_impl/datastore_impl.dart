@@ -27,8 +27,14 @@ class GrpcDatastoreImpl implements raw.Datastore {
   final _Codec _codec;
   final String _projectId;
 
-  GrpcDatastoreImpl(grpc.ClientChannel clientChannel, String project)
-      : _clientRPCStub = DatastoreClient(clientChannel),
+  GrpcDatastoreImpl(
+    grpc.ClientChannel clientChannel,
+    grpc.HttpBasedAuthenticator authenticator,
+    String project,
+  )   : _clientRPCStub = DatastoreClient(
+          clientChannel,
+          options: authenticator.toCallOptions,
+        ),
         _codec = _Codec(project),
         _projectId = project;
 

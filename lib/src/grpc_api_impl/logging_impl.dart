@@ -253,13 +253,15 @@ class SharedLoggingService {
 
   SharedLoggingService(
       grpc.ClientChannel clientChannel,
+      grpc.HttpBasedAuthenticator authenticator,
       this.projectId,
       String serviceId,
       this.versionId,
       String zoneId,
       this._instanceName,
       this.instanceId)
-      : _clientStub = api.LoggingServiceV2Client(clientChannel),
+      : _clientStub = api.LoggingServiceV2Client(clientChannel,
+            options: authenticator.toCallOptions),
         resourceLabels = {
           'project_id': projectId,
           'version_id': versionId,
