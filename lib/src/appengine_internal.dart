@@ -278,7 +278,7 @@ Future<auth.AuthClient> _getAuthClient(
 /// The returned [grpc.Client] will be usable within the current service scope.
 grpc.ClientChannel _getGrpcClientChannel(String url, bool needAuthorization) {
   final clientChannel = grpc.ClientChannel(
-    url,
+    Uri.parse(url).host,
     options: needAuthorization
         ? grpc.ChannelOptions()
         : grpc.ChannelOptions(
