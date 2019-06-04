@@ -1,63 +1,60 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/websecurityscanner/v1alpha/crawled_url.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class CrawledUrl extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CrawledUrl')
+class CrawledUrl extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CrawledUrl',
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
     ..aOS(1, 'httpMethod')
     ..aOS(2, 'url')
     ..aOS(3, 'body')
     ..hasRequiredFields = false;
 
   CrawledUrl() : super();
-  CrawledUrl.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CrawledUrl.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CrawledUrl.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CrawledUrl.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CrawledUrl clone() => new CrawledUrl()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CrawledUrl create() => new CrawledUrl();
-  static PbList<CrawledUrl> createRepeated() => new PbList<CrawledUrl>();
-  static CrawledUrl getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCrawledUrl();
-    return _defaultInstance;
-  }
-
+  CrawledUrl clone() => CrawledUrl()..mergeFromMessage(this);
+  CrawledUrl copyWith(void Function(CrawledUrl) updates) =>
+      super.copyWith((message) => updates(message as CrawledUrl));
+  $pb.BuilderInfo get info_ => _i;
+  static CrawledUrl create() => CrawledUrl();
+  CrawledUrl createEmptyInstance() => create();
+  static $pb.PbList<CrawledUrl> createRepeated() => $pb.PbList<CrawledUrl>();
+  static CrawledUrl getDefault() => _defaultInstance ??= create()..freeze();
   static CrawledUrl _defaultInstance;
-  static void $checkItem(CrawledUrl v) {
-    if (v is! CrawledUrl) checkItemFailed(v, 'CrawledUrl');
-  }
 
-  String get httpMethod => $_getS(0, '');
-  set httpMethod(String v) {
+  $core.String get httpMethod => $_getS(0, '');
+  set httpMethod($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasHttpMethod() => $_has(0);
+  $core.bool hasHttpMethod() => $_has(0);
   void clearHttpMethod() => clearField(1);
 
-  String get url => $_getS(1, '');
-  set url(String v) {
+  $core.String get url => $_getS(1, '');
+  set url($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasUrl() => $_has(1);
+  $core.bool hasUrl() => $_has(1);
   void clearUrl() => clearField(2);
 
-  String get body => $_getS(2, '');
-  set body(String v) {
+  $core.String get body => $_getS(2, '');
+  set body($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasBody() => $_has(2);
+  $core.bool hasBody() => $_has(2);
   void clearBody() => clearField(3);
 }
-
-class _ReadonlyCrawledUrl extends CrawledUrl with ReadonlyMessageMixin {}

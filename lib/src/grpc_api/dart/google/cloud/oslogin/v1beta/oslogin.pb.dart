@@ -1,530 +1,369 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/oslogin/v1beta/oslogin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../common/common.pb.dart' as $google$cloud$oslogin$common;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../common/common.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
-class LoginProfile_SshPublicKeysEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('LoginProfile_SshPublicKeysEntry')
-        ..aOS(1, 'key')
-        ..a<$google$cloud$oslogin$common.SshPublicKey>(
-            2,
-            'value',
-            PbFieldType.OM,
-            $google$cloud$oslogin$common.SshPublicKey.getDefault,
-            $google$cloud$oslogin$common.SshPublicKey.create)
-        ..hasRequiredFields = false;
-
-  LoginProfile_SshPublicKeysEntry() : super();
-  LoginProfile_SshPublicKeysEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LoginProfile_SshPublicKeysEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  LoginProfile_SshPublicKeysEntry clone() =>
-      new LoginProfile_SshPublicKeysEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LoginProfile_SshPublicKeysEntry create() =>
-      new LoginProfile_SshPublicKeysEntry();
-  static PbList<LoginProfile_SshPublicKeysEntry> createRepeated() =>
-      new PbList<LoginProfile_SshPublicKeysEntry>();
-  static LoginProfile_SshPublicKeysEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLoginProfile_SshPublicKeysEntry();
-    return _defaultInstance;
-  }
-
-  static LoginProfile_SshPublicKeysEntry _defaultInstance;
-  static void $checkItem(LoginProfile_SshPublicKeysEntry v) {
-    if (v is! LoginProfile_SshPublicKeysEntry)
-      checkItemFailed(v, 'LoginProfile_SshPublicKeysEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$cloud$oslogin$common.SshPublicKey get value => $_getN(1);
-  set value($google$cloud$oslogin$common.SshPublicKey v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyLoginProfile_SshPublicKeysEntry
-    extends LoginProfile_SshPublicKeysEntry with ReadonlyMessageMixin {}
-
-class LoginProfile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LoginProfile')
+class LoginProfile extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LoginProfile',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'name')
-    ..pp<$google$cloud$oslogin$common.PosixAccount>(
-        2,
-        'posixAccounts',
-        PbFieldType.PM,
-        $google$cloud$oslogin$common.PosixAccount.$checkItem,
-        $google$cloud$oslogin$common.PosixAccount.create)
-    ..pp<LoginProfile_SshPublicKeysEntry>(
+    ..pc<$1.PosixAccount>(
+        2, 'posixAccounts', $pb.PbFieldType.PM, $1.PosixAccount.create)
+    ..m<$core.String, $1.SshPublicKey>(
         3,
         'sshPublicKeys',
-        PbFieldType.PM,
-        LoginProfile_SshPublicKeysEntry.$checkItem,
-        LoginProfile_SshPublicKeysEntry.create)
+        'LoginProfile.SshPublicKeysEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $1.SshPublicKey.create,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOB(4, 'suspended')
     ..hasRequiredFields = false;
 
   LoginProfile() : super();
-  LoginProfile.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LoginProfile.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LoginProfile.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LoginProfile.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LoginProfile clone() => new LoginProfile()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LoginProfile create() => new LoginProfile();
-  static PbList<LoginProfile> createRepeated() => new PbList<LoginProfile>();
-  static LoginProfile getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLoginProfile();
-    return _defaultInstance;
-  }
-
+  LoginProfile clone() => LoginProfile()..mergeFromMessage(this);
+  LoginProfile copyWith(void Function(LoginProfile) updates) =>
+      super.copyWith((message) => updates(message as LoginProfile));
+  $pb.BuilderInfo get info_ => _i;
+  static LoginProfile create() => LoginProfile();
+  LoginProfile createEmptyInstance() => create();
+  static $pb.PbList<LoginProfile> createRepeated() =>
+      $pb.PbList<LoginProfile>();
+  static LoginProfile getDefault() => _defaultInstance ??= create()..freeze();
   static LoginProfile _defaultInstance;
-  static void $checkItem(LoginProfile v) {
-    if (v is! LoginProfile) checkItemFailed(v, 'LoginProfile');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<$google$cloud$oslogin$common.PosixAccount> get posixAccounts =>
-      $_getList(1);
+  $core.List<$1.PosixAccount> get posixAccounts => $_getList(1);
 
-  List<LoginProfile_SshPublicKeysEntry> get sshPublicKeys => $_getList(2);
+  $core.Map<$core.String, $1.SshPublicKey> get sshPublicKeys => $_getMap(2);
 
-  bool get suspended => $_get(3, false);
-  set suspended(bool v) {
+  $core.bool get suspended => $_get(3, false);
+  set suspended($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasSuspended() => $_has(3);
+  $core.bool hasSuspended() => $_has(3);
   void clearSuspended() => clearField(4);
 }
 
-class _ReadonlyLoginProfile extends LoginProfile with ReadonlyMessageMixin {}
-
-class DeletePosixAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeletePosixAccountRequest')
+class DeletePosixAccountRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeletePosixAccountRequest',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeletePosixAccountRequest() : super();
-  DeletePosixAccountRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeletePosixAccountRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeletePosixAccountRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeletePosixAccountRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeletePosixAccountRequest clone() =>
-      new DeletePosixAccountRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeletePosixAccountRequest create() => new DeletePosixAccountRequest();
-  static PbList<DeletePosixAccountRequest> createRepeated() =>
-      new PbList<DeletePosixAccountRequest>();
-  static DeletePosixAccountRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeletePosixAccountRequest();
-    return _defaultInstance;
-  }
-
+      DeletePosixAccountRequest()..mergeFromMessage(this);
+  DeletePosixAccountRequest copyWith(
+          void Function(DeletePosixAccountRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as DeletePosixAccountRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeletePosixAccountRequest create() => DeletePosixAccountRequest();
+  DeletePosixAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<DeletePosixAccountRequest> createRepeated() =>
+      $pb.PbList<DeletePosixAccountRequest>();
+  static DeletePosixAccountRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeletePosixAccountRequest _defaultInstance;
-  static void $checkItem(DeletePosixAccountRequest v) {
-    if (v is! DeletePosixAccountRequest)
-      checkItemFailed(v, 'DeletePosixAccountRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeletePosixAccountRequest extends DeletePosixAccountRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSshPublicKeyRequest')
+class DeleteSshPublicKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSshPublicKeyRequest',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteSshPublicKeyRequest() : super();
-  DeleteSshPublicKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteSshPublicKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSshPublicKeyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSshPublicKeyRequest clone() =>
-      new DeleteSshPublicKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteSshPublicKeyRequest create() => new DeleteSshPublicKeyRequest();
-  static PbList<DeleteSshPublicKeyRequest> createRepeated() =>
-      new PbList<DeleteSshPublicKeyRequest>();
-  static DeleteSshPublicKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSshPublicKeyRequest();
-    return _defaultInstance;
-  }
-
+      DeleteSshPublicKeyRequest()..mergeFromMessage(this);
+  DeleteSshPublicKeyRequest copyWith(
+          void Function(DeleteSshPublicKeyRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as DeleteSshPublicKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteSshPublicKeyRequest create() => DeleteSshPublicKeyRequest();
+  DeleteSshPublicKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSshPublicKeyRequest> createRepeated() =>
+      $pb.PbList<DeleteSshPublicKeyRequest>();
+  static DeleteSshPublicKeyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteSshPublicKeyRequest _defaultInstance;
-  static void $checkItem(DeleteSshPublicKeyRequest v) {
-    if (v is! DeleteSshPublicKeyRequest)
-      checkItemFailed(v, 'DeleteSshPublicKeyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteSshPublicKeyRequest extends DeleteSshPublicKeyRequest
-    with ReadonlyMessageMixin {}
-
-class GetLoginProfileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetLoginProfileRequest')
+class GetLoginProfileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLoginProfileRequest',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetLoginProfileRequest() : super();
-  GetLoginProfileRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetLoginProfileRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetLoginProfileRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetLoginProfileRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetLoginProfileRequest clone() =>
-      new GetLoginProfileRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetLoginProfileRequest create() => new GetLoginProfileRequest();
-  static PbList<GetLoginProfileRequest> createRepeated() =>
-      new PbList<GetLoginProfileRequest>();
-  static GetLoginProfileRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetLoginProfileRequest();
-    return _defaultInstance;
-  }
-
+      GetLoginProfileRequest()..mergeFromMessage(this);
+  GetLoginProfileRequest copyWith(
+          void Function(GetLoginProfileRequest) updates) =>
+      super.copyWith((message) => updates(message as GetLoginProfileRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetLoginProfileRequest create() => GetLoginProfileRequest();
+  GetLoginProfileRequest createEmptyInstance() => create();
+  static $pb.PbList<GetLoginProfileRequest> createRepeated() =>
+      $pb.PbList<GetLoginProfileRequest>();
+  static GetLoginProfileRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetLoginProfileRequest _defaultInstance;
-  static void $checkItem(GetLoginProfileRequest v) {
-    if (v is! GetLoginProfileRequest)
-      checkItemFailed(v, 'GetLoginProfileRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetLoginProfileRequest extends GetLoginProfileRequest
-    with ReadonlyMessageMixin {}
-
-class GetSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSshPublicKeyRequest')
+class GetSshPublicKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSshPublicKeyRequest',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetSshPublicKeyRequest() : super();
-  GetSshPublicKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetSshPublicKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSshPublicKeyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetSshPublicKeyRequest clone() =>
-      new GetSshPublicKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetSshPublicKeyRequest create() => new GetSshPublicKeyRequest();
-  static PbList<GetSshPublicKeyRequest> createRepeated() =>
-      new PbList<GetSshPublicKeyRequest>();
-  static GetSshPublicKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSshPublicKeyRequest();
-    return _defaultInstance;
-  }
-
+      GetSshPublicKeyRequest()..mergeFromMessage(this);
+  GetSshPublicKeyRequest copyWith(
+          void Function(GetSshPublicKeyRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSshPublicKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetSshPublicKeyRequest create() => GetSshPublicKeyRequest();
+  GetSshPublicKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSshPublicKeyRequest> createRepeated() =>
+      $pb.PbList<GetSshPublicKeyRequest>();
+  static GetSshPublicKeyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetSshPublicKeyRequest _defaultInstance;
-  static void $checkItem(GetSshPublicKeyRequest v) {
-    if (v is! GetSshPublicKeyRequest)
-      checkItemFailed(v, 'GetSshPublicKeyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetSshPublicKeyRequest extends GetSshPublicKeyRequest
-    with ReadonlyMessageMixin {}
-
-class ImportSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportSshPublicKeyRequest')
+class ImportSshPublicKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportSshPublicKeyRequest',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'parent')
-    ..a<$google$cloud$oslogin$common.SshPublicKey>(
-        2,
-        'sshPublicKey',
-        PbFieldType.OM,
-        $google$cloud$oslogin$common.SshPublicKey.getDefault,
-        $google$cloud$oslogin$common.SshPublicKey.create)
+    ..a<$1.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
+        $1.SshPublicKey.getDefault, $1.SshPublicKey.create)
     ..aOS(3, 'projectId')
     ..hasRequiredFields = false;
 
   ImportSshPublicKeyRequest() : super();
-  ImportSshPublicKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImportSshPublicKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportSshPublicKeyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportSshPublicKeyRequest clone() =>
-      new ImportSshPublicKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportSshPublicKeyRequest create() => new ImportSshPublicKeyRequest();
-  static PbList<ImportSshPublicKeyRequest> createRepeated() =>
-      new PbList<ImportSshPublicKeyRequest>();
-  static ImportSshPublicKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportSshPublicKeyRequest();
-    return _defaultInstance;
-  }
-
+      ImportSshPublicKeyRequest()..mergeFromMessage(this);
+  ImportSshPublicKeyRequest copyWith(
+          void Function(ImportSshPublicKeyRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as ImportSshPublicKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportSshPublicKeyRequest create() => ImportSshPublicKeyRequest();
+  ImportSshPublicKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<ImportSshPublicKeyRequest> createRepeated() =>
+      $pb.PbList<ImportSshPublicKeyRequest>();
+  static ImportSshPublicKeyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImportSshPublicKeyRequest _defaultInstance;
-  static void $checkItem(ImportSshPublicKeyRequest v) {
-    if (v is! ImportSshPublicKeyRequest)
-      checkItemFailed(v, 'ImportSshPublicKeyRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $google$cloud$oslogin$common.SshPublicKey get sshPublicKey => $_getN(1);
-  set sshPublicKey($google$cloud$oslogin$common.SshPublicKey v) {
+  $1.SshPublicKey get sshPublicKey => $_getN(1);
+  set sshPublicKey($1.SshPublicKey v) {
     setField(2, v);
   }
 
-  bool hasSshPublicKey() => $_has(1);
+  $core.bool hasSshPublicKey() => $_has(1);
   void clearSshPublicKey() => clearField(2);
 
-  String get projectId => $_getS(2, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(2, '');
+  set projectId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasProjectId() => $_has(2);
+  $core.bool hasProjectId() => $_has(2);
   void clearProjectId() => clearField(3);
 }
 
-class _ReadonlyImportSshPublicKeyRequest extends ImportSshPublicKeyRequest
-    with ReadonlyMessageMixin {}
-
-class ImportSshPublicKeyResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportSshPublicKeyResponse')
-    ..a<LoginProfile>(1, 'loginProfile', PbFieldType.OM,
+class ImportSshPublicKeyResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ImportSshPublicKeyResponse',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
+    ..a<LoginProfile>(1, 'loginProfile', $pb.PbFieldType.OM,
         LoginProfile.getDefault, LoginProfile.create)
     ..hasRequiredFields = false;
 
   ImportSshPublicKeyResponse() : super();
-  ImportSshPublicKeyResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportSshPublicKeyResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImportSshPublicKeyResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportSshPublicKeyResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportSshPublicKeyResponse clone() =>
-      new ImportSshPublicKeyResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportSshPublicKeyResponse create() =>
-      new ImportSshPublicKeyResponse();
-  static PbList<ImportSshPublicKeyResponse> createRepeated() =>
-      new PbList<ImportSshPublicKeyResponse>();
-  static ImportSshPublicKeyResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportSshPublicKeyResponse();
-    return _defaultInstance;
-  }
-
+      ImportSshPublicKeyResponse()..mergeFromMessage(this);
+  ImportSshPublicKeyResponse copyWith(
+          void Function(ImportSshPublicKeyResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ImportSshPublicKeyResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportSshPublicKeyResponse create() => ImportSshPublicKeyResponse();
+  ImportSshPublicKeyResponse createEmptyInstance() => create();
+  static $pb.PbList<ImportSshPublicKeyResponse> createRepeated() =>
+      $pb.PbList<ImportSshPublicKeyResponse>();
+  static ImportSshPublicKeyResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImportSshPublicKeyResponse _defaultInstance;
-  static void $checkItem(ImportSshPublicKeyResponse v) {
-    if (v is! ImportSshPublicKeyResponse)
-      checkItemFailed(v, 'ImportSshPublicKeyResponse');
-  }
 
   LoginProfile get loginProfile => $_getN(0);
   set loginProfile(LoginProfile v) {
     setField(1, v);
   }
 
-  bool hasLoginProfile() => $_has(0);
+  $core.bool hasLoginProfile() => $_has(0);
   void clearLoginProfile() => clearField(1);
 }
 
-class _ReadonlyImportSshPublicKeyResponse extends ImportSshPublicKeyResponse
-    with ReadonlyMessageMixin {}
-
-class UpdateSshPublicKeyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateSshPublicKeyRequest')
+class UpdateSshPublicKeyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSshPublicKeyRequest',
+      package: const $pb.PackageName('google.cloud.oslogin.v1beta'))
     ..aOS(1, 'name')
-    ..a<$google$cloud$oslogin$common.SshPublicKey>(
-        2,
-        'sshPublicKey',
-        PbFieldType.OM,
-        $google$cloud$oslogin$common.SshPublicKey.getDefault,
-        $google$cloud$oslogin$common.SshPublicKey.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$1.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
+        $1.SshPublicKey.getDefault, $1.SshPublicKey.create)
+    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSshPublicKeyRequest() : super();
-  UpdateSshPublicKeyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateSshPublicKeyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateSshPublicKeyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateSshPublicKeyRequest clone() =>
-      new UpdateSshPublicKeyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateSshPublicKeyRequest create() => new UpdateSshPublicKeyRequest();
-  static PbList<UpdateSshPublicKeyRequest> createRepeated() =>
-      new PbList<UpdateSshPublicKeyRequest>();
-  static UpdateSshPublicKeyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateSshPublicKeyRequest();
-    return _defaultInstance;
-  }
-
+      UpdateSshPublicKeyRequest()..mergeFromMessage(this);
+  UpdateSshPublicKeyRequest copyWith(
+          void Function(UpdateSshPublicKeyRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as UpdateSshPublicKeyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateSshPublicKeyRequest create() => UpdateSshPublicKeyRequest();
+  UpdateSshPublicKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSshPublicKeyRequest> createRepeated() =>
+      $pb.PbList<UpdateSshPublicKeyRequest>();
+  static UpdateSshPublicKeyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateSshPublicKeyRequest _defaultInstance;
-  static void $checkItem(UpdateSshPublicKeyRequest v) {
-    if (v is! UpdateSshPublicKeyRequest)
-      checkItemFailed(v, 'UpdateSshPublicKeyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$cloud$oslogin$common.SshPublicKey get sshPublicKey => $_getN(1);
-  set sshPublicKey($google$cloud$oslogin$common.SshPublicKey v) {
+  $1.SshPublicKey get sshPublicKey => $_getN(1);
+  set sshPublicKey($1.SshPublicKey v) {
     setField(2, v);
   }
 
-  bool hasSshPublicKey() => $_has(1);
+  $core.bool hasSshPublicKey() => $_has(1);
   void clearSshPublicKey() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
-}
-
-class _ReadonlyUpdateSshPublicKeyRequest extends UpdateSshPublicKeyRequest
-    with ReadonlyMessageMixin {}
-
-class OsLoginServiceApi {
-  RpcClient _client;
-  OsLoginServiceApi(this._client);
-
-  Future<$google$protobuf.Empty> deletePosixAccount(
-      ClientContext ctx, DeletePosixAccountRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'OsLoginService', 'DeletePosixAccount', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteSshPublicKey(
-      ClientContext ctx, DeleteSshPublicKeyRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'OsLoginService', 'DeleteSshPublicKey', request, emptyResponse);
-  }
-
-  Future<LoginProfile> getLoginProfile(
-      ClientContext ctx, GetLoginProfileRequest request) {
-    var emptyResponse = new LoginProfile();
-    return _client.invoke<LoginProfile>(
-        ctx, 'OsLoginService', 'GetLoginProfile', request, emptyResponse);
-  }
-
-  Future<$google$cloud$oslogin$common.SshPublicKey> getSshPublicKey(
-      ClientContext ctx, GetSshPublicKeyRequest request) {
-    var emptyResponse = new $google$cloud$oslogin$common.SshPublicKey();
-    return _client.invoke<$google$cloud$oslogin$common.SshPublicKey>(
-        ctx, 'OsLoginService', 'GetSshPublicKey', request, emptyResponse);
-  }
-
-  Future<ImportSshPublicKeyResponse> importSshPublicKey(
-      ClientContext ctx, ImportSshPublicKeyRequest request) {
-    var emptyResponse = new ImportSshPublicKeyResponse();
-    return _client.invoke<ImportSshPublicKeyResponse>(
-        ctx, 'OsLoginService', 'ImportSshPublicKey', request, emptyResponse);
-  }
-
-  Future<$google$cloud$oslogin$common.SshPublicKey> updateSshPublicKey(
-      ClientContext ctx, UpdateSshPublicKeyRequest request) {
-    var emptyResponse = new $google$cloud$oslogin$common.SshPublicKey();
-    return _client.invoke<$google$cloud$oslogin$common.SshPublicKey>(
-        ctx, 'OsLoginService', 'UpdateSshPublicKey', request, emptyResponse);
-  }
 }

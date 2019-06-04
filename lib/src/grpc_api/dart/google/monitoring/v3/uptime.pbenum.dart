@@ -1,24 +1,24 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/monitoring/v3/uptime.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class UptimeCheckRegion extends ProtobufEnum {
+class UptimeCheckRegion extends $pb.ProtobufEnum {
   static const UptimeCheckRegion REGION_UNSPECIFIED =
-      const UptimeCheckRegion._(0, 'REGION_UNSPECIFIED');
-  static const UptimeCheckRegion USA = const UptimeCheckRegion._(1, 'USA');
-  static const UptimeCheckRegion EUROPE =
-      const UptimeCheckRegion._(2, 'EUROPE');
+      UptimeCheckRegion._(0, 'REGION_UNSPECIFIED');
+  static const UptimeCheckRegion USA = UptimeCheckRegion._(1, 'USA');
+  static const UptimeCheckRegion EUROPE = UptimeCheckRegion._(2, 'EUROPE');
   static const UptimeCheckRegion SOUTH_AMERICA =
-      const UptimeCheckRegion._(3, 'SOUTH_AMERICA');
+      UptimeCheckRegion._(3, 'SOUTH_AMERICA');
   static const UptimeCheckRegion ASIA_PACIFIC =
-      const UptimeCheckRegion._(4, 'ASIA_PACIFIC');
+      UptimeCheckRegion._(4, 'ASIA_PACIFIC');
 
-  static const List<UptimeCheckRegion> values = const <UptimeCheckRegion>[
+  static const $core.List<UptimeCheckRegion> values = <UptimeCheckRegion>[
     REGION_UNSPECIFIED,
     USA,
     EUROPE,
@@ -26,36 +26,29 @@ class UptimeCheckRegion extends ProtobufEnum {
     ASIA_PACIFIC,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static UptimeCheckRegion valueOf(int value) =>
-      _byValue[value] as UptimeCheckRegion;
-  static void $checkItem(UptimeCheckRegion v) {
-    if (v is! UptimeCheckRegion) checkItemFailed(v, 'UptimeCheckRegion');
-  }
+  static final $core.Map<$core.int, UptimeCheckRegion> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static UptimeCheckRegion valueOf($core.int value) => _byValue[value];
 
-  const UptimeCheckRegion._(int v, String n) : super(v, n);
+  const UptimeCheckRegion._($core.int v, $core.String n) : super(v, n);
 }
 
-class GroupResourceType extends ProtobufEnum {
+class GroupResourceType extends $pb.ProtobufEnum {
   static const GroupResourceType RESOURCE_TYPE_UNSPECIFIED =
-      const GroupResourceType._(0, 'RESOURCE_TYPE_UNSPECIFIED');
-  static const GroupResourceType INSTANCE =
-      const GroupResourceType._(1, 'INSTANCE');
+      GroupResourceType._(0, 'RESOURCE_TYPE_UNSPECIFIED');
+  static const GroupResourceType INSTANCE = GroupResourceType._(1, 'INSTANCE');
   static const GroupResourceType AWS_ELB_LOAD_BALANCER =
-      const GroupResourceType._(2, 'AWS_ELB_LOAD_BALANCER');
+      GroupResourceType._(2, 'AWS_ELB_LOAD_BALANCER');
 
-  static const List<GroupResourceType> values = const <GroupResourceType>[
+  static const $core.List<GroupResourceType> values = <GroupResourceType>[
     RESOURCE_TYPE_UNSPECIFIED,
     INSTANCE,
     AWS_ELB_LOAD_BALANCER,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static GroupResourceType valueOf(int value) =>
-      _byValue[value] as GroupResourceType;
-  static void $checkItem(GroupResourceType v) {
-    if (v is! GroupResourceType) checkItemFailed(v, 'GroupResourceType');
-  }
+  static final $core.Map<$core.int, GroupResourceType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static GroupResourceType valueOf($core.int value) => _byValue[value];
 
-  const GroupResourceType._(int v, String n) : super(v, n);
+  const GroupResourceType._($core.int v, $core.String n) : super(v, n);
 }

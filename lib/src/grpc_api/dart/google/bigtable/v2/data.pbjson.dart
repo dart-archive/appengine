@@ -1,13 +1,14 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/v2/data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const Row$json = const {
+const Row$json = {
   '1': 'Row',
-  '2': const [
-    const {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
-    const {
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 12, '10': 'key'},
+    {
       '1': 'families',
       '3': 2,
       '4': 3,
@@ -18,11 +19,11 @@ const Row$json = const {
   ],
 };
 
-const Family$json = const {
+const Family$json = {
   '1': 'Family',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
       '1': 'columns',
       '3': 2,
       '4': 3,
@@ -33,11 +34,11 @@ const Family$json = const {
   ],
 };
 
-const Column$json = const {
+const Column$json = {
   '1': 'Column',
-  '2': const [
-    const {'1': 'qualifier', '3': 1, '4': 1, '5': 12, '10': 'qualifier'},
-    const {
+  '2': [
+    {'1': 'qualifier', '3': 1, '4': 1, '5': 12, '10': 'qualifier'},
+    {
       '1': 'cells',
       '3': 2,
       '4': 3,
@@ -48,25 +49,19 @@ const Column$json = const {
   ],
 };
 
-const Cell$json = const {
+const Cell$json = {
   '1': 'Cell',
-  '2': const [
-    const {
-      '1': 'timestamp_micros',
-      '3': 1,
-      '4': 1,
-      '5': 3,
-      '10': 'timestampMicros'
-    },
-    const {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
-    const {'1': 'labels', '3': 3, '4': 3, '5': 9, '10': 'labels'},
+  '2': [
+    {'1': 'timestamp_micros', '3': 1, '4': 1, '5': 3, '10': 'timestampMicros'},
+    {'1': 'value', '3': 2, '4': 1, '5': 12, '10': 'value'},
+    {'1': 'labels', '3': 3, '4': 3, '5': 9, '10': 'labels'},
   ],
 };
 
-const RowRange$json = const {
+const RowRange$json = {
   '1': 'RowRange',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'start_key_closed',
       '3': 1,
       '4': 1,
@@ -74,7 +69,7 @@ const RowRange$json = const {
       '9': 0,
       '10': 'startKeyClosed'
     },
-    const {
+    {
       '1': 'start_key_open',
       '3': 2,
       '4': 1,
@@ -82,15 +77,8 @@ const RowRange$json = const {
       '9': 0,
       '10': 'startKeyOpen'
     },
-    const {
-      '1': 'end_key_open',
-      '3': 3,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'endKeyOpen'
-    },
-    const {
+    {'1': 'end_key_open', '3': 3, '4': 1, '5': 12, '9': 1, '10': 'endKeyOpen'},
+    {
       '1': 'end_key_closed',
       '3': 4,
       '4': 1,
@@ -99,17 +87,17 @@ const RowRange$json = const {
       '10': 'endKeyClosed'
     },
   ],
-  '8': const [
-    const {'1': 'start_key'},
-    const {'1': 'end_key'},
+  '8': [
+    {'1': 'start_key'},
+    {'1': 'end_key'},
   ],
 };
 
-const RowSet$json = const {
+const RowSet$json = {
   '1': 'RowSet',
-  '2': const [
-    const {'1': 'row_keys', '3': 1, '4': 3, '5': 12, '10': 'rowKeys'},
-    const {
+  '2': [
+    {'1': 'row_keys', '3': 1, '4': 3, '5': 12, '10': 'rowKeys'},
+    {
       '1': 'row_ranges',
       '3': 2,
       '4': 3,
@@ -120,11 +108,11 @@ const RowSet$json = const {
   ],
 };
 
-const ColumnRange$json = const {
+const ColumnRange$json = {
   '1': 'ColumnRange',
-  '2': const [
-    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    const {
+  '2': [
+    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    {
       '1': 'start_qualifier_closed',
       '3': 2,
       '4': 1,
@@ -132,7 +120,7 @@ const ColumnRange$json = const {
       '9': 0,
       '10': 'startQualifierClosed'
     },
-    const {
+    {
       '1': 'start_qualifier_open',
       '3': 3,
       '4': 1,
@@ -140,7 +128,7 @@ const ColumnRange$json = const {
       '9': 0,
       '10': 'startQualifierOpen'
     },
-    const {
+    {
       '1': 'end_qualifier_closed',
       '3': 4,
       '4': 1,
@@ -148,7 +136,7 @@ const ColumnRange$json = const {
       '9': 1,
       '10': 'endQualifierClosed'
     },
-    const {
+    {
       '1': 'end_qualifier_open',
       '3': 5,
       '4': 1,
@@ -157,23 +145,23 @@ const ColumnRange$json = const {
       '10': 'endQualifierOpen'
     },
   ],
-  '8': const [
-    const {'1': 'start_qualifier'},
-    const {'1': 'end_qualifier'},
+  '8': [
+    {'1': 'start_qualifier'},
+    {'1': 'end_qualifier'},
   ],
 };
 
-const TimestampRange$json = const {
+const TimestampRange$json = {
   '1': 'TimestampRange',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'start_timestamp_micros',
       '3': 1,
       '4': 1,
       '5': 3,
       '10': 'startTimestampMicros'
     },
-    const {
+    {
       '1': 'end_timestamp_micros',
       '3': 2,
       '4': 1,
@@ -183,10 +171,10 @@ const TimestampRange$json = const {
   ],
 };
 
-const ValueRange$json = const {
+const ValueRange$json = {
   '1': 'ValueRange',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'start_value_closed',
       '3': 1,
       '4': 1,
@@ -194,7 +182,7 @@ const ValueRange$json = const {
       '9': 0,
       '10': 'startValueClosed'
     },
-    const {
+    {
       '1': 'start_value_open',
       '3': 2,
       '4': 1,
@@ -202,7 +190,7 @@ const ValueRange$json = const {
       '9': 0,
       '10': 'startValueOpen'
     },
-    const {
+    {
       '1': 'end_value_closed',
       '3': 3,
       '4': 1,
@@ -210,7 +198,7 @@ const ValueRange$json = const {
       '9': 1,
       '10': 'endValueClosed'
     },
-    const {
+    {
       '1': 'end_value_open',
       '3': 4,
       '4': 1,
@@ -219,16 +207,16 @@ const ValueRange$json = const {
       '10': 'endValueOpen'
     },
   ],
-  '8': const [
-    const {'1': 'start_value'},
-    const {'1': 'end_value'},
+  '8': [
+    {'1': 'start_value'},
+    {'1': 'end_value'},
   ],
 };
 
-const RowFilter$json = const {
+const RowFilter$json = {
   '1': 'RowFilter',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'chain',
       '3': 1,
       '4': 1,
@@ -237,7 +225,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'chain'
     },
-    const {
+    {
       '1': 'interleave',
       '3': 2,
       '4': 1,
@@ -246,7 +234,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'interleave'
     },
-    const {
+    {
       '1': 'condition',
       '3': 3,
       '4': 1,
@@ -255,8 +243,8 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'condition'
     },
-    const {'1': 'sink', '3': 16, '4': 1, '5': 8, '9': 0, '10': 'sink'},
-    const {
+    {'1': 'sink', '3': 16, '4': 1, '5': 8, '9': 0, '10': 'sink'},
+    {
       '1': 'pass_all_filter',
       '3': 17,
       '4': 1,
@@ -264,7 +252,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'passAllFilter'
     },
-    const {
+    {
       '1': 'block_all_filter',
       '3': 18,
       '4': 1,
@@ -272,7 +260,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'blockAllFilter'
     },
-    const {
+    {
       '1': 'row_key_regex_filter',
       '3': 4,
       '4': 1,
@@ -280,7 +268,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'rowKeyRegexFilter'
     },
-    const {
+    {
       '1': 'row_sample_filter',
       '3': 14,
       '4': 1,
@@ -288,7 +276,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'rowSampleFilter'
     },
-    const {
+    {
       '1': 'family_name_regex_filter',
       '3': 5,
       '4': 1,
@@ -296,7 +284,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'familyNameRegexFilter'
     },
-    const {
+    {
       '1': 'column_qualifier_regex_filter',
       '3': 6,
       '4': 1,
@@ -304,7 +292,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'columnQualifierRegexFilter'
     },
-    const {
+    {
       '1': 'column_range_filter',
       '3': 7,
       '4': 1,
@@ -313,7 +301,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'columnRangeFilter'
     },
-    const {
+    {
       '1': 'timestamp_range_filter',
       '3': 8,
       '4': 1,
@@ -322,7 +310,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'timestampRangeFilter'
     },
-    const {
+    {
       '1': 'value_regex_filter',
       '3': 9,
       '4': 1,
@@ -330,7 +318,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'valueRegexFilter'
     },
-    const {
+    {
       '1': 'value_range_filter',
       '3': 15,
       '4': 1,
@@ -339,7 +327,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'valueRangeFilter'
     },
-    const {
+    {
       '1': 'cells_per_row_offset_filter',
       '3': 10,
       '4': 1,
@@ -347,7 +335,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'cellsPerRowOffsetFilter'
     },
-    const {
+    {
       '1': 'cells_per_row_limit_filter',
       '3': 11,
       '4': 1,
@@ -355,7 +343,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'cellsPerRowLimitFilter'
     },
-    const {
+    {
       '1': 'cells_per_column_limit_filter',
       '3': 12,
       '4': 1,
@@ -363,7 +351,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'cellsPerColumnLimitFilter'
     },
-    const {
+    {
       '1': 'strip_value_transformer',
       '3': 13,
       '4': 1,
@@ -371,7 +359,7 @@ const RowFilter$json = const {
       '9': 0,
       '10': 'stripValueTransformer'
     },
-    const {
+    {
       '1': 'apply_label_transformer',
       '3': 19,
       '4': 1,
@@ -380,20 +368,20 @@ const RowFilter$json = const {
       '10': 'applyLabelTransformer'
     },
   ],
-  '3': const [
+  '3': [
     RowFilter_Chain$json,
     RowFilter_Interleave$json,
     RowFilter_Condition$json
   ],
-  '8': const [
-    const {'1': 'filter'},
+  '8': [
+    {'1': 'filter'},
   ],
 };
 
-const RowFilter_Chain$json = const {
+const RowFilter_Chain$json = {
   '1': 'Chain',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'filters',
       '3': 1,
       '4': 3,
@@ -404,10 +392,10 @@ const RowFilter_Chain$json = const {
   ],
 };
 
-const RowFilter_Interleave$json = const {
+const RowFilter_Interleave$json = {
   '1': 'Interleave',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'filters',
       '3': 1,
       '4': 3,
@@ -418,10 +406,10 @@ const RowFilter_Interleave$json = const {
   ],
 };
 
-const RowFilter_Condition$json = const {
+const RowFilter_Condition$json = {
   '1': 'Condition',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'predicate_filter',
       '3': 1,
       '4': 1,
@@ -429,7 +417,7 @@ const RowFilter_Condition$json = const {
       '6': '.google.bigtable.v2.RowFilter',
       '10': 'predicateFilter'
     },
-    const {
+    {
       '1': 'true_filter',
       '3': 2,
       '4': 1,
@@ -437,7 +425,7 @@ const RowFilter_Condition$json = const {
       '6': '.google.bigtable.v2.RowFilter',
       '10': 'trueFilter'
     },
-    const {
+    {
       '1': 'false_filter',
       '3': 3,
       '4': 1,
@@ -448,10 +436,10 @@ const RowFilter_Condition$json = const {
   ],
 };
 
-const Mutation$json = const {
+const Mutation$json = {
   '1': 'Mutation',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'set_cell',
       '3': 1,
       '4': 1,
@@ -460,7 +448,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'setCell'
     },
-    const {
+    {
       '1': 'delete_from_column',
       '3': 2,
       '4': 1,
@@ -469,7 +457,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'deleteFromColumn'
     },
-    const {
+    {
       '1': 'delete_from_family',
       '3': 3,
       '4': 1,
@@ -478,7 +466,7 @@ const Mutation$json = const {
       '9': 0,
       '10': 'deleteFromFamily'
     },
-    const {
+    {
       '1': 'delete_from_row',
       '3': 4,
       '4': 1,
@@ -488,51 +476,33 @@ const Mutation$json = const {
       '10': 'deleteFromRow'
     },
   ],
-  '3': const [
+  '3': [
     Mutation_SetCell$json,
     Mutation_DeleteFromColumn$json,
     Mutation_DeleteFromFamily$json,
     Mutation_DeleteFromRow$json
   ],
-  '8': const [
-    const {'1': 'mutation'},
+  '8': [
+    {'1': 'mutation'},
   ],
 };
 
-const Mutation_SetCell$json = const {
+const Mutation_SetCell$json = {
   '1': 'SetCell',
-  '2': const [
-    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    const {
-      '1': 'column_qualifier',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '10': 'columnQualifier'
-    },
-    const {
-      '1': 'timestamp_micros',
-      '3': 3,
-      '4': 1,
-      '5': 3,
-      '10': 'timestampMicros'
-    },
-    const {'1': 'value', '3': 4, '4': 1, '5': 12, '10': 'value'},
+  '2': [
+    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
+    {'1': 'timestamp_micros', '3': 3, '4': 1, '5': 3, '10': 'timestampMicros'},
+    {'1': 'value', '3': 4, '4': 1, '5': 12, '10': 'value'},
   ],
 };
 
-const Mutation_DeleteFromColumn$json = const {
+const Mutation_DeleteFromColumn$json = {
   '1': 'DeleteFromColumn',
-  '2': const [
-    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    const {
-      '1': 'column_qualifier',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '10': 'columnQualifier'
-    },
-    const {
+  '2': [
+    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
+    {
       '1': 'time_range',
       '3': 3,
       '4': 1,
@@ -543,37 +513,24 @@ const Mutation_DeleteFromColumn$json = const {
   ],
 };
 
-const Mutation_DeleteFromFamily$json = const {
+const Mutation_DeleteFromFamily$json = {
   '1': 'DeleteFromFamily',
-  '2': const [
-    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+  '2': [
+    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
   ],
 };
 
-const Mutation_DeleteFromRow$json = const {
+const Mutation_DeleteFromRow$json = {
   '1': 'DeleteFromRow',
 };
 
-const ReadModifyWriteRule$json = const {
+const ReadModifyWriteRule$json = {
   '1': 'ReadModifyWriteRule',
-  '2': const [
-    const {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
-    const {
-      '1': 'column_qualifier',
-      '3': 2,
-      '4': 1,
-      '5': 12,
-      '10': 'columnQualifier'
-    },
-    const {
-      '1': 'append_value',
-      '3': 3,
-      '4': 1,
-      '5': 12,
-      '9': 0,
-      '10': 'appendValue'
-    },
-    const {
+  '2': [
+    {'1': 'family_name', '3': 1, '4': 1, '5': 9, '10': 'familyName'},
+    {'1': 'column_qualifier', '3': 2, '4': 1, '5': 12, '10': 'columnQualifier'},
+    {'1': 'append_value', '3': 3, '4': 1, '5': 12, '9': 0, '10': 'appendValue'},
+    {
       '1': 'increment_amount',
       '3': 4,
       '4': 1,
@@ -582,7 +539,7 @@ const ReadModifyWriteRule$json = const {
       '10': 'incrementAmount'
     },
   ],
-  '8': const [
-    const {'1': 'rule'},
+  '8': [
+    {'1': 'rule'},
   ],
 };

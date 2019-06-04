@@ -1,12 +1,13 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/audit_data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const AuditData$json = const {
+const AuditData$json = {
   '1': 'AuditData',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'update_service',
       '3': 1,
       '4': 1,
@@ -15,7 +16,7 @@ const AuditData$json = const {
       '9': 0,
       '10': 'updateService'
     },
-    const {
+    {
       '1': 'create_version',
       '3': 2,
       '4': 1,
@@ -25,15 +26,15 @@ const AuditData$json = const {
       '10': 'createVersion'
     },
   ],
-  '8': const [
-    const {'1': 'method'},
+  '8': [
+    {'1': 'method'},
   ],
 };
 
-const UpdateServiceMethod$json = const {
+const UpdateServiceMethod$json = {
   '1': 'UpdateServiceMethod',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'request',
       '3': 1,
       '4': 1,
@@ -44,10 +45,10 @@ const UpdateServiceMethod$json = const {
   ],
 };
 
-const CreateVersionMethod$json = const {
+const CreateVersionMethod$json = {
   '1': 'CreateVersionMethod',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'request',
       '3': 1,
       '4': 1,

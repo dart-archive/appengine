@@ -1,33 +1,34 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/version.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class InboundServiceType extends ProtobufEnum {
+class InboundServiceType extends $pb.ProtobufEnum {
   static const InboundServiceType INBOUND_SERVICE_UNSPECIFIED =
-      const InboundServiceType._(0, 'INBOUND_SERVICE_UNSPECIFIED');
+      InboundServiceType._(0, 'INBOUND_SERVICE_UNSPECIFIED');
   static const InboundServiceType INBOUND_SERVICE_MAIL =
-      const InboundServiceType._(1, 'INBOUND_SERVICE_MAIL');
+      InboundServiceType._(1, 'INBOUND_SERVICE_MAIL');
   static const InboundServiceType INBOUND_SERVICE_MAIL_BOUNCE =
-      const InboundServiceType._(2, 'INBOUND_SERVICE_MAIL_BOUNCE');
+      InboundServiceType._(2, 'INBOUND_SERVICE_MAIL_BOUNCE');
   static const InboundServiceType INBOUND_SERVICE_XMPP_ERROR =
-      const InboundServiceType._(3, 'INBOUND_SERVICE_XMPP_ERROR');
+      InboundServiceType._(3, 'INBOUND_SERVICE_XMPP_ERROR');
   static const InboundServiceType INBOUND_SERVICE_XMPP_MESSAGE =
-      const InboundServiceType._(4, 'INBOUND_SERVICE_XMPP_MESSAGE');
+      InboundServiceType._(4, 'INBOUND_SERVICE_XMPP_MESSAGE');
   static const InboundServiceType INBOUND_SERVICE_XMPP_SUBSCRIBE =
-      const InboundServiceType._(5, 'INBOUND_SERVICE_XMPP_SUBSCRIBE');
+      InboundServiceType._(5, 'INBOUND_SERVICE_XMPP_SUBSCRIBE');
   static const InboundServiceType INBOUND_SERVICE_XMPP_PRESENCE =
-      const InboundServiceType._(6, 'INBOUND_SERVICE_XMPP_PRESENCE');
+      InboundServiceType._(6, 'INBOUND_SERVICE_XMPP_PRESENCE');
   static const InboundServiceType INBOUND_SERVICE_CHANNEL_PRESENCE =
-      const InboundServiceType._(7, 'INBOUND_SERVICE_CHANNEL_PRESENCE');
+      InboundServiceType._(7, 'INBOUND_SERVICE_CHANNEL_PRESENCE');
   static const InboundServiceType INBOUND_SERVICE_WARMUP =
-      const InboundServiceType._(9, 'INBOUND_SERVICE_WARMUP');
+      InboundServiceType._(9, 'INBOUND_SERVICE_WARMUP');
 
-  static const List<InboundServiceType> values = const <InboundServiceType>[
+  static const $core.List<InboundServiceType> values = <InboundServiceType>[
     INBOUND_SERVICE_UNSPECIFIED,
     INBOUND_SERVICE_MAIL,
     INBOUND_SERVICE_MAIL_BOUNCE,
@@ -39,33 +40,28 @@ class InboundServiceType extends ProtobufEnum {
     INBOUND_SERVICE_WARMUP,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static InboundServiceType valueOf(int value) =>
-      _byValue[value] as InboundServiceType;
-  static void $checkItem(InboundServiceType v) {
-    if (v is! InboundServiceType) checkItemFailed(v, 'InboundServiceType');
-  }
+  static final $core.Map<$core.int, InboundServiceType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static InboundServiceType valueOf($core.int value) => _byValue[value];
 
-  const InboundServiceType._(int v, String n) : super(v, n);
+  const InboundServiceType._($core.int v, $core.String n) : super(v, n);
 }
 
-class ServingStatus extends ProtobufEnum {
+class ServingStatus extends $pb.ProtobufEnum {
   static const ServingStatus SERVING_STATUS_UNSPECIFIED =
-      const ServingStatus._(0, 'SERVING_STATUS_UNSPECIFIED');
-  static const ServingStatus SERVING = const ServingStatus._(1, 'SERVING');
-  static const ServingStatus STOPPED = const ServingStatus._(2, 'STOPPED');
+      ServingStatus._(0, 'SERVING_STATUS_UNSPECIFIED');
+  static const ServingStatus SERVING = ServingStatus._(1, 'SERVING');
+  static const ServingStatus STOPPED = ServingStatus._(2, 'STOPPED');
 
-  static const List<ServingStatus> values = const <ServingStatus>[
+  static const $core.List<ServingStatus> values = <ServingStatus>[
     SERVING_STATUS_UNSPECIFIED,
     SERVING,
     STOPPED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ServingStatus valueOf(int value) => _byValue[value] as ServingStatus;
-  static void $checkItem(ServingStatus v) {
-    if (v is! ServingStatus) checkItemFailed(v, 'ServingStatus');
-  }
+  static final $core.Map<$core.int, ServingStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ServingStatus valueOf($core.int value) => _byValue[value];
 
-  const ServingStatus._(int v, String n) : super(v, n);
+  const ServingStatus._($core.int v, $core.String n) : super(v, n);
 }

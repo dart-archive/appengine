@@ -1,1261 +1,1064 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/v2/bigtable_table_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'table.pb.dart';
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'table.pb.dart' as $1;
+import '../../../protobuf/duration.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $4;
 
-import 'table.pbenum.dart';
+import 'table.pbenum.dart' as $1;
 
-class CreateTableRequest_Split extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTableRequest_Split')
-    ..a<List<int>>(1, 'key', PbFieldType.OY)
+class CreateTableRequest_Split extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTableRequest.Split',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..a<$core.List<$core.int>>(1, 'key', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   CreateTableRequest_Split() : super();
-  CreateTableRequest_Split.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableRequest_Split.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTableRequest_Split.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableRequest_Split.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTableRequest_Split clone() =>
-      new CreateTableRequest_Split()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateTableRequest_Split create() => new CreateTableRequest_Split();
-  static PbList<CreateTableRequest_Split> createRepeated() =>
-      new PbList<CreateTableRequest_Split>();
-  static CreateTableRequest_Split getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableRequest_Split();
-    return _defaultInstance;
-  }
-
+      CreateTableRequest_Split()..mergeFromMessage(this);
+  CreateTableRequest_Split copyWith(
+          void Function(CreateTableRequest_Split) updates) =>
+      super.copyWith((message) => updates(message as CreateTableRequest_Split));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateTableRequest_Split create() => CreateTableRequest_Split();
+  CreateTableRequest_Split createEmptyInstance() => create();
+  static $pb.PbList<CreateTableRequest_Split> createRepeated() =>
+      $pb.PbList<CreateTableRequest_Split>();
+  static CreateTableRequest_Split getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTableRequest_Split _defaultInstance;
-  static void $checkItem(CreateTableRequest_Split v) {
-    if (v is! CreateTableRequest_Split)
-      checkItemFailed(v, 'CreateTableRequest_Split');
-  }
 
-  List<int> get key => $_getN(0);
-  set key(List<int> v) {
+  $core.List<$core.int> get key => $_getN(0);
+  set key($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasKey() => $_has(0);
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 }
 
-class _ReadonlyCreateTableRequest_Split extends CreateTableRequest_Split
-    with ReadonlyMessageMixin {}
-
-class CreateTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTableRequest')
+class CreateTableRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTableRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'tableId')
-    ..a<Table>(3, 'table', PbFieldType.OM, Table.getDefault, Table.create)
-    ..pp<CreateTableRequest_Split>(4, 'initialSplits', PbFieldType.PM,
-        CreateTableRequest_Split.$checkItem, CreateTableRequest_Split.create)
+    ..a<$1.Table>(
+        3, 'table', $pb.PbFieldType.OM, $1.Table.getDefault, $1.Table.create)
+    ..pc<CreateTableRequest_Split>(
+        4, 'initialSplits', $pb.PbFieldType.PM, CreateTableRequest_Split.create)
     ..hasRequiredFields = false;
 
   CreateTableRequest() : super();
-  CreateTableRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTableRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateTableRequest clone() =>
-      new CreateTableRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateTableRequest create() => new CreateTableRequest();
-  static PbList<CreateTableRequest> createRepeated() =>
-      new PbList<CreateTableRequest>();
-  static CreateTableRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableRequest();
-    return _defaultInstance;
-  }
-
+  CreateTableRequest clone() => CreateTableRequest()..mergeFromMessage(this);
+  CreateTableRequest copyWith(void Function(CreateTableRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateTableRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateTableRequest create() => CreateTableRequest();
+  CreateTableRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateTableRequest> createRepeated() =>
+      $pb.PbList<CreateTableRequest>();
+  static CreateTableRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTableRequest _defaultInstance;
-  static void $checkItem(CreateTableRequest v) {
-    if (v is! CreateTableRequest) checkItemFailed(v, 'CreateTableRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get tableId => $_getS(1, '');
-  set tableId(String v) {
+  $core.String get tableId => $_getS(1, '');
+  set tableId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTableId() => $_has(1);
+  $core.bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
-  Table get table => $_getN(2);
-  set table(Table v) {
+  $1.Table get table => $_getN(2);
+  set table($1.Table v) {
     setField(3, v);
   }
 
-  bool hasTable() => $_has(2);
+  $core.bool hasTable() => $_has(2);
   void clearTable() => clearField(3);
 
-  List<CreateTableRequest_Split> get initialSplits => $_getList(3);
+  $core.List<CreateTableRequest_Split> get initialSplits => $_getList(3);
 }
 
-class _ReadonlyCreateTableRequest extends CreateTableRequest
-    with ReadonlyMessageMixin {}
-
-class CreateTableFromSnapshotRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateTableFromSnapshotRequest')
-        ..aOS(1, 'parent')
-        ..aOS(2, 'tableId')
-        ..aOS(3, 'sourceSnapshot')
-        ..hasRequiredFields = false;
+class CreateTableFromSnapshotRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateTableFromSnapshotRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..aOS(1, 'parent')
+    ..aOS(2, 'tableId')
+    ..aOS(3, 'sourceSnapshot')
+    ..hasRequiredFields = false;
 
   CreateTableFromSnapshotRequest() : super();
-  CreateTableFromSnapshotRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableFromSnapshotRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTableFromSnapshotRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableFromSnapshotRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTableFromSnapshotRequest clone() =>
-      new CreateTableFromSnapshotRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      CreateTableFromSnapshotRequest()..mergeFromMessage(this);
+  CreateTableFromSnapshotRequest copyWith(
+          void Function(CreateTableFromSnapshotRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateTableFromSnapshotRequest));
+  $pb.BuilderInfo get info_ => _i;
   static CreateTableFromSnapshotRequest create() =>
-      new CreateTableFromSnapshotRequest();
-  static PbList<CreateTableFromSnapshotRequest> createRepeated() =>
-      new PbList<CreateTableFromSnapshotRequest>();
-  static CreateTableFromSnapshotRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableFromSnapshotRequest();
-    return _defaultInstance;
-  }
-
+      CreateTableFromSnapshotRequest();
+  CreateTableFromSnapshotRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateTableFromSnapshotRequest> createRepeated() =>
+      $pb.PbList<CreateTableFromSnapshotRequest>();
+  static CreateTableFromSnapshotRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTableFromSnapshotRequest _defaultInstance;
-  static void $checkItem(CreateTableFromSnapshotRequest v) {
-    if (v is! CreateTableFromSnapshotRequest)
-      checkItemFailed(v, 'CreateTableFromSnapshotRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get tableId => $_getS(1, '');
-  set tableId(String v) {
+  $core.String get tableId => $_getS(1, '');
+  set tableId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTableId() => $_has(1);
+  $core.bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
-  String get sourceSnapshot => $_getS(2, '');
-  set sourceSnapshot(String v) {
+  $core.String get sourceSnapshot => $_getS(2, '');
+  set sourceSnapshot($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSourceSnapshot() => $_has(2);
+  $core.bool hasSourceSnapshot() => $_has(2);
   void clearSourceSnapshot() => clearField(3);
 }
 
-class _ReadonlyCreateTableFromSnapshotRequest
-    extends CreateTableFromSnapshotRequest with ReadonlyMessageMixin {}
+enum DropRowRangeRequest_Target { rowKeyPrefix, deleteAllDataFromTable, notSet }
 
-class DropRowRangeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DropRowRangeRequest')
+class DropRowRangeRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DropRowRangeRequest_Target>
+      _DropRowRangeRequest_TargetByTag = {
+    2: DropRowRangeRequest_Target.rowKeyPrefix,
+    3: DropRowRangeRequest_Target.deleteAllDataFromTable,
+    0: DropRowRangeRequest_Target.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DropRowRangeRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
-    ..a<List<int>>(2, 'rowKeyPrefix', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'rowKeyPrefix', $pb.PbFieldType.OY)
     ..aOB(3, 'deleteAllDataFromTable')
+    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
   DropRowRangeRequest() : super();
-  DropRowRangeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DropRowRangeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DropRowRangeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DropRowRangeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DropRowRangeRequest clone() =>
-      new DropRowRangeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DropRowRangeRequest create() => new DropRowRangeRequest();
-  static PbList<DropRowRangeRequest> createRepeated() =>
-      new PbList<DropRowRangeRequest>();
-  static DropRowRangeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDropRowRangeRequest();
-    return _defaultInstance;
-  }
-
+  DropRowRangeRequest clone() => DropRowRangeRequest()..mergeFromMessage(this);
+  DropRowRangeRequest copyWith(void Function(DropRowRangeRequest) updates) =>
+      super.copyWith((message) => updates(message as DropRowRangeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DropRowRangeRequest create() => DropRowRangeRequest();
+  DropRowRangeRequest createEmptyInstance() => create();
+  static $pb.PbList<DropRowRangeRequest> createRepeated() =>
+      $pb.PbList<DropRowRangeRequest>();
+  static DropRowRangeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DropRowRangeRequest _defaultInstance;
-  static void $checkItem(DropRowRangeRequest v) {
-    if (v is! DropRowRangeRequest) checkItemFailed(v, 'DropRowRangeRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  DropRowRangeRequest_Target whichTarget() =>
+      _DropRowRangeRequest_TargetByTag[$_whichOneof(0)];
+  void clearTarget() => clearField($_whichOneof(0));
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<int> get rowKeyPrefix => $_getN(1);
-  set rowKeyPrefix(List<int> v) {
+  $core.List<$core.int> get rowKeyPrefix => $_getN(1);
+  set rowKeyPrefix($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasRowKeyPrefix() => $_has(1);
+  $core.bool hasRowKeyPrefix() => $_has(1);
   void clearRowKeyPrefix() => clearField(2);
 
-  bool get deleteAllDataFromTable => $_get(2, false);
-  set deleteAllDataFromTable(bool v) {
+  $core.bool get deleteAllDataFromTable => $_get(2, false);
+  set deleteAllDataFromTable($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasDeleteAllDataFromTable() => $_has(2);
+  $core.bool hasDeleteAllDataFromTable() => $_has(2);
   void clearDeleteAllDataFromTable() => clearField(3);
 }
 
-class _ReadonlyDropRowRangeRequest extends DropRowRangeRequest
-    with ReadonlyMessageMixin {}
-
-class ListTablesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTablesRequest')
+class ListTablesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'parent')
-    ..e<Table_View>(2, 'view', PbFieldType.OE, Table_View.VIEW_UNSPECIFIED,
-        Table_View.valueOf, Table_View.values)
+    ..e<$1.Table_View>(
+        2,
+        'view',
+        $pb.PbFieldType.OE,
+        $1.Table_View.VIEW_UNSPECIFIED,
+        $1.Table_View.valueOf,
+        $1.Table_View.values)
     ..aOS(3, 'pageToken')
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListTablesRequest() : super();
-  ListTablesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTablesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTablesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTablesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTablesRequest clone() => new ListTablesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTablesRequest create() => new ListTablesRequest();
-  static PbList<ListTablesRequest> createRepeated() =>
-      new PbList<ListTablesRequest>();
-  static ListTablesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTablesRequest();
-    return _defaultInstance;
-  }
-
+  ListTablesRequest clone() => ListTablesRequest()..mergeFromMessage(this);
+  ListTablesRequest copyWith(void Function(ListTablesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListTablesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTablesRequest create() => ListTablesRequest();
+  ListTablesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTablesRequest> createRepeated() =>
+      $pb.PbList<ListTablesRequest>();
+  static ListTablesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTablesRequest _defaultInstance;
-  static void $checkItem(ListTablesRequest v) {
-    if (v is! ListTablesRequest) checkItemFailed(v, 'ListTablesRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  Table_View get view => $_getN(1);
-  set view(Table_View v) {
+  $1.Table_View get view => $_getN(1);
+  set view($1.Table_View v) {
     setField(2, v);
   }
 
-  bool hasView() => $_has(1);
+  $core.bool hasView() => $_has(1);
   void clearView() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
+
+  $core.int get pageSize => $_get(3, 0);
+  set pageSize($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
+  $core.bool hasPageSize() => $_has(3);
+  void clearPageSize() => clearField(4);
 }
 
-class _ReadonlyListTablesRequest extends ListTablesRequest
-    with ReadonlyMessageMixin {}
-
-class ListTablesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTablesResponse')
-    ..pp<Table>(1, 'tables', PbFieldType.PM, Table.$checkItem, Table.create)
+class ListTablesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesResponse',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..pc<$1.Table>(1, 'tables', $pb.PbFieldType.PM, $1.Table.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListTablesResponse() : super();
-  ListTablesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTablesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTablesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTablesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListTablesResponse clone() =>
-      new ListTablesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTablesResponse create() => new ListTablesResponse();
-  static PbList<ListTablesResponse> createRepeated() =>
-      new PbList<ListTablesResponse>();
-  static ListTablesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTablesResponse();
-    return _defaultInstance;
-  }
-
+  ListTablesResponse clone() => ListTablesResponse()..mergeFromMessage(this);
+  ListTablesResponse copyWith(void Function(ListTablesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListTablesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTablesResponse create() => ListTablesResponse();
+  ListTablesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTablesResponse> createRepeated() =>
+      $pb.PbList<ListTablesResponse>();
+  static ListTablesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTablesResponse _defaultInstance;
-  static void $checkItem(ListTablesResponse v) {
-    if (v is! ListTablesResponse) checkItemFailed(v, 'ListTablesResponse');
-  }
 
-  List<Table> get tables => $_getList(0);
+  $core.List<$1.Table> get tables => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTablesResponse extends ListTablesResponse
-    with ReadonlyMessageMixin {}
-
-class GetTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTableRequest')
+class GetTableRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTableRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
-    ..e<Table_View>(2, 'view', PbFieldType.OE, Table_View.VIEW_UNSPECIFIED,
-        Table_View.valueOf, Table_View.values)
+    ..e<$1.Table_View>(
+        2,
+        'view',
+        $pb.PbFieldType.OE,
+        $1.Table_View.VIEW_UNSPECIFIED,
+        $1.Table_View.valueOf,
+        $1.Table_View.values)
     ..hasRequiredFields = false;
 
   GetTableRequest() : super();
-  GetTableRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTableRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetTableRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTableRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetTableRequest clone() => new GetTableRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetTableRequest create() => new GetTableRequest();
-  static PbList<GetTableRequest> createRepeated() =>
-      new PbList<GetTableRequest>();
-  static GetTableRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTableRequest();
-    return _defaultInstance;
-  }
-
+  GetTableRequest clone() => GetTableRequest()..mergeFromMessage(this);
+  GetTableRequest copyWith(void Function(GetTableRequest) updates) =>
+      super.copyWith((message) => updates(message as GetTableRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetTableRequest create() => GetTableRequest();
+  GetTableRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTableRequest> createRepeated() =>
+      $pb.PbList<GetTableRequest>();
+  static GetTableRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetTableRequest _defaultInstance;
-  static void $checkItem(GetTableRequest v) {
-    if (v is! GetTableRequest) checkItemFailed(v, 'GetTableRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  Table_View get view => $_getN(1);
-  set view(Table_View v) {
+  $1.Table_View get view => $_getN(1);
+  set view($1.Table_View v) {
     setField(2, v);
   }
 
-  bool hasView() => $_has(1);
+  $core.bool hasView() => $_has(1);
   void clearView() => clearField(2);
 }
 
-class _ReadonlyGetTableRequest extends GetTableRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteTableRequest')
+class DeleteTableRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTableRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteTableRequest() : super();
-  DeleteTableRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTableRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteTableRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteTableRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteTableRequest clone() =>
-      new DeleteTableRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteTableRequest create() => new DeleteTableRequest();
-  static PbList<DeleteTableRequest> createRepeated() =>
-      new PbList<DeleteTableRequest>();
-  static DeleteTableRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteTableRequest();
-    return _defaultInstance;
-  }
-
+  DeleteTableRequest clone() => DeleteTableRequest()..mergeFromMessage(this);
+  DeleteTableRequest copyWith(void Function(DeleteTableRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteTableRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteTableRequest create() => DeleteTableRequest();
+  DeleteTableRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteTableRequest> createRepeated() =>
+      $pb.PbList<DeleteTableRequest>();
+  static DeleteTableRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteTableRequest _defaultInstance;
-  static void $checkItem(DeleteTableRequest v) {
-    if (v is! DeleteTableRequest) checkItemFailed(v, 'DeleteTableRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteTableRequest extends DeleteTableRequest
-    with ReadonlyMessageMixin {}
+enum ModifyColumnFamiliesRequest_Modification_Mod {
+  create_2,
+  update,
+  drop,
+  notSet
+}
 
-class ModifyColumnFamiliesRequest_Modification extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ModifyColumnFamiliesRequest_Modification')
-        ..aOS(1, 'id')
-        ..a<ColumnFamily>(2, 'create_2', PbFieldType.OM,
-            ColumnFamily.getDefault, ColumnFamily.create)
-        ..a<ColumnFamily>(3, 'update', PbFieldType.OM, ColumnFamily.getDefault,
-            ColumnFamily.create)
-        ..aOB(4, 'drop')
-        ..hasRequiredFields = false;
+class ModifyColumnFamiliesRequest_Modification extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, ModifyColumnFamiliesRequest_Modification_Mod>
+      _ModifyColumnFamiliesRequest_Modification_ModByTag = {
+    2: ModifyColumnFamiliesRequest_Modification_Mod.create_2,
+    3: ModifyColumnFamiliesRequest_Modification_Mod.update,
+    4: ModifyColumnFamiliesRequest_Modification_Mod.drop,
+    0: ModifyColumnFamiliesRequest_Modification_Mod.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ModifyColumnFamiliesRequest.Modification',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..aOS(1, 'id')
+    ..a<$1.ColumnFamily>(2, 'create_2', $pb.PbFieldType.OM,
+        $1.ColumnFamily.getDefault, $1.ColumnFamily.create)
+    ..a<$1.ColumnFamily>(3, 'update', $pb.PbFieldType.OM,
+        $1.ColumnFamily.getDefault, $1.ColumnFamily.create)
+    ..aOB(4, 'drop')
+    ..oo(0, [2, 3, 4])
+    ..hasRequiredFields = false;
 
   ModifyColumnFamiliesRequest_Modification() : super();
-  ModifyColumnFamiliesRequest_Modification.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyColumnFamiliesRequest_Modification.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ModifyColumnFamiliesRequest_Modification.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyColumnFamiliesRequest_Modification.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyColumnFamiliesRequest_Modification clone() =>
-      new ModifyColumnFamiliesRequest_Modification()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ModifyColumnFamiliesRequest_Modification()..mergeFromMessage(this);
+  ModifyColumnFamiliesRequest_Modification copyWith(
+          void Function(ModifyColumnFamiliesRequest_Modification) updates) =>
+      super.copyWith((message) =>
+          updates(message as ModifyColumnFamiliesRequest_Modification));
+  $pb.BuilderInfo get info_ => _i;
   static ModifyColumnFamiliesRequest_Modification create() =>
-      new ModifyColumnFamiliesRequest_Modification();
-  static PbList<ModifyColumnFamiliesRequest_Modification> createRepeated() =>
-      new PbList<ModifyColumnFamiliesRequest_Modification>();
-  static ModifyColumnFamiliesRequest_Modification getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyModifyColumnFamiliesRequest_Modification();
-    return _defaultInstance;
-  }
-
+      ModifyColumnFamiliesRequest_Modification();
+  ModifyColumnFamiliesRequest_Modification createEmptyInstance() => create();
+  static $pb.PbList<ModifyColumnFamiliesRequest_Modification>
+      createRepeated() =>
+          $pb.PbList<ModifyColumnFamiliesRequest_Modification>();
+  static ModifyColumnFamiliesRequest_Modification getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ModifyColumnFamiliesRequest_Modification _defaultInstance;
-  static void $checkItem(ModifyColumnFamiliesRequest_Modification v) {
-    if (v is! ModifyColumnFamiliesRequest_Modification)
-      checkItemFailed(v, 'ModifyColumnFamiliesRequest_Modification');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  ModifyColumnFamiliesRequest_Modification_Mod whichMod() =>
+      _ModifyColumnFamiliesRequest_Modification_ModByTag[$_whichOneof(0)];
+  void clearMod() => clearField($_whichOneof(0));
+
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  ColumnFamily get create_2 => $_getN(1);
-  set create_2(ColumnFamily v) {
+  $1.ColumnFamily get create_2 => $_getN(1);
+  set create_2($1.ColumnFamily v) {
     setField(2, v);
   }
 
-  bool hasCreate_2() => $_has(1);
+  $core.bool hasCreate_2() => $_has(1);
   void clearCreate_2() => clearField(2);
 
-  ColumnFamily get update => $_getN(2);
-  set update(ColumnFamily v) {
+  $1.ColumnFamily get update => $_getN(2);
+  set update($1.ColumnFamily v) {
     setField(3, v);
   }
 
-  bool hasUpdate() => $_has(2);
+  $core.bool hasUpdate() => $_has(2);
   void clearUpdate() => clearField(3);
 
-  bool get drop => $_get(3, false);
-  set drop(bool v) {
+  $core.bool get drop => $_get(3, false);
+  set drop($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasDrop() => $_has(3);
+  $core.bool hasDrop() => $_has(3);
   void clearDrop() => clearField(4);
 }
 
-class _ReadonlyModifyColumnFamiliesRequest_Modification
-    extends ModifyColumnFamiliesRequest_Modification with ReadonlyMessageMixin {
-}
-
-class ModifyColumnFamiliesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ModifyColumnFamiliesRequest')
+class ModifyColumnFamiliesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ModifyColumnFamiliesRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
-    ..pp<ModifyColumnFamiliesRequest_Modification>(
-        2,
-        'modifications',
-        PbFieldType.PM,
-        ModifyColumnFamiliesRequest_Modification.$checkItem,
-        ModifyColumnFamiliesRequest_Modification.create)
+    ..pc<ModifyColumnFamiliesRequest_Modification>(2, 'modifications',
+        $pb.PbFieldType.PM, ModifyColumnFamiliesRequest_Modification.create)
     ..hasRequiredFields = false;
 
   ModifyColumnFamiliesRequest() : super();
-  ModifyColumnFamiliesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyColumnFamiliesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ModifyColumnFamiliesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ModifyColumnFamiliesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ModifyColumnFamiliesRequest clone() =>
-      new ModifyColumnFamiliesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ModifyColumnFamiliesRequest create() =>
-      new ModifyColumnFamiliesRequest();
-  static PbList<ModifyColumnFamiliesRequest> createRepeated() =>
-      new PbList<ModifyColumnFamiliesRequest>();
-  static ModifyColumnFamiliesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyModifyColumnFamiliesRequest();
-    return _defaultInstance;
-  }
-
+      ModifyColumnFamiliesRequest()..mergeFromMessage(this);
+  ModifyColumnFamiliesRequest copyWith(
+          void Function(ModifyColumnFamiliesRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ModifyColumnFamiliesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ModifyColumnFamiliesRequest create() => ModifyColumnFamiliesRequest();
+  ModifyColumnFamiliesRequest createEmptyInstance() => create();
+  static $pb.PbList<ModifyColumnFamiliesRequest> createRepeated() =>
+      $pb.PbList<ModifyColumnFamiliesRequest>();
+  static ModifyColumnFamiliesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ModifyColumnFamiliesRequest _defaultInstance;
-  static void $checkItem(ModifyColumnFamiliesRequest v) {
-    if (v is! ModifyColumnFamiliesRequest)
-      checkItemFailed(v, 'ModifyColumnFamiliesRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<ModifyColumnFamiliesRequest_Modification> get modifications =>
+  $core.List<ModifyColumnFamiliesRequest_Modification> get modifications =>
       $_getList(1);
 }
 
-class _ReadonlyModifyColumnFamiliesRequest extends ModifyColumnFamiliesRequest
-    with ReadonlyMessageMixin {}
-
-class GenerateConsistencyTokenRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GenerateConsistencyTokenRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+class GenerateConsistencyTokenRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GenerateConsistencyTokenRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   GenerateConsistencyTokenRequest() : super();
-  GenerateConsistencyTokenRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GenerateConsistencyTokenRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GenerateConsistencyTokenRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GenerateConsistencyTokenRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GenerateConsistencyTokenRequest clone() =>
-      new GenerateConsistencyTokenRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      GenerateConsistencyTokenRequest()..mergeFromMessage(this);
+  GenerateConsistencyTokenRequest copyWith(
+          void Function(GenerateConsistencyTokenRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as GenerateConsistencyTokenRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GenerateConsistencyTokenRequest create() =>
-      new GenerateConsistencyTokenRequest();
-  static PbList<GenerateConsistencyTokenRequest> createRepeated() =>
-      new PbList<GenerateConsistencyTokenRequest>();
-  static GenerateConsistencyTokenRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGenerateConsistencyTokenRequest();
-    return _defaultInstance;
-  }
-
+      GenerateConsistencyTokenRequest();
+  GenerateConsistencyTokenRequest createEmptyInstance() => create();
+  static $pb.PbList<GenerateConsistencyTokenRequest> createRepeated() =>
+      $pb.PbList<GenerateConsistencyTokenRequest>();
+  static GenerateConsistencyTokenRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GenerateConsistencyTokenRequest _defaultInstance;
-  static void $checkItem(GenerateConsistencyTokenRequest v) {
-    if (v is! GenerateConsistencyTokenRequest)
-      checkItemFailed(v, 'GenerateConsistencyTokenRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGenerateConsistencyTokenRequest
-    extends GenerateConsistencyTokenRequest with ReadonlyMessageMixin {}
-
-class GenerateConsistencyTokenResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GenerateConsistencyTokenResponse')
-        ..aOS(1, 'consistencyToken')
-        ..hasRequiredFields = false;
+class GenerateConsistencyTokenResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GenerateConsistencyTokenResponse',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..aOS(1, 'consistencyToken')
+    ..hasRequiredFields = false;
 
   GenerateConsistencyTokenResponse() : super();
-  GenerateConsistencyTokenResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GenerateConsistencyTokenResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GenerateConsistencyTokenResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GenerateConsistencyTokenResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GenerateConsistencyTokenResponse clone() =>
-      new GenerateConsistencyTokenResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      GenerateConsistencyTokenResponse()..mergeFromMessage(this);
+  GenerateConsistencyTokenResponse copyWith(
+          void Function(GenerateConsistencyTokenResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as GenerateConsistencyTokenResponse));
+  $pb.BuilderInfo get info_ => _i;
   static GenerateConsistencyTokenResponse create() =>
-      new GenerateConsistencyTokenResponse();
-  static PbList<GenerateConsistencyTokenResponse> createRepeated() =>
-      new PbList<GenerateConsistencyTokenResponse>();
-  static GenerateConsistencyTokenResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGenerateConsistencyTokenResponse();
-    return _defaultInstance;
-  }
-
+      GenerateConsistencyTokenResponse();
+  GenerateConsistencyTokenResponse createEmptyInstance() => create();
+  static $pb.PbList<GenerateConsistencyTokenResponse> createRepeated() =>
+      $pb.PbList<GenerateConsistencyTokenResponse>();
+  static GenerateConsistencyTokenResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GenerateConsistencyTokenResponse _defaultInstance;
-  static void $checkItem(GenerateConsistencyTokenResponse v) {
-    if (v is! GenerateConsistencyTokenResponse)
-      checkItemFailed(v, 'GenerateConsistencyTokenResponse');
-  }
 
-  String get consistencyToken => $_getS(0, '');
-  set consistencyToken(String v) {
+  $core.String get consistencyToken => $_getS(0, '');
+  set consistencyToken($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasConsistencyToken() => $_has(0);
+  $core.bool hasConsistencyToken() => $_has(0);
   void clearConsistencyToken() => clearField(1);
 }
 
-class _ReadonlyGenerateConsistencyTokenResponse
-    extends GenerateConsistencyTokenResponse with ReadonlyMessageMixin {}
-
-class CheckConsistencyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckConsistencyRequest')
+class CheckConsistencyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckConsistencyRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'consistencyToken')
     ..hasRequiredFields = false;
 
   CheckConsistencyRequest() : super();
-  CheckConsistencyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckConsistencyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CheckConsistencyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckConsistencyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckConsistencyRequest clone() =>
-      new CheckConsistencyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CheckConsistencyRequest create() => new CheckConsistencyRequest();
-  static PbList<CheckConsistencyRequest> createRepeated() =>
-      new PbList<CheckConsistencyRequest>();
-  static CheckConsistencyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckConsistencyRequest();
-    return _defaultInstance;
-  }
-
+      CheckConsistencyRequest()..mergeFromMessage(this);
+  CheckConsistencyRequest copyWith(
+          void Function(CheckConsistencyRequest) updates) =>
+      super.copyWith((message) => updates(message as CheckConsistencyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CheckConsistencyRequest create() => CheckConsistencyRequest();
+  CheckConsistencyRequest createEmptyInstance() => create();
+  static $pb.PbList<CheckConsistencyRequest> createRepeated() =>
+      $pb.PbList<CheckConsistencyRequest>();
+  static CheckConsistencyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CheckConsistencyRequest _defaultInstance;
-  static void $checkItem(CheckConsistencyRequest v) {
-    if (v is! CheckConsistencyRequest)
-      checkItemFailed(v, 'CheckConsistencyRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get consistencyToken => $_getS(1, '');
-  set consistencyToken(String v) {
+  $core.String get consistencyToken => $_getS(1, '');
+  set consistencyToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasConsistencyToken() => $_has(1);
+  $core.bool hasConsistencyToken() => $_has(1);
   void clearConsistencyToken() => clearField(2);
 }
 
-class _ReadonlyCheckConsistencyRequest extends CheckConsistencyRequest
-    with ReadonlyMessageMixin {}
-
-class CheckConsistencyResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CheckConsistencyResponse')
+class CheckConsistencyResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckConsistencyResponse',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOB(1, 'consistent')
     ..hasRequiredFields = false;
 
   CheckConsistencyResponse() : super();
-  CheckConsistencyResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckConsistencyResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CheckConsistencyResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CheckConsistencyResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CheckConsistencyResponse clone() =>
-      new CheckConsistencyResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CheckConsistencyResponse create() => new CheckConsistencyResponse();
-  static PbList<CheckConsistencyResponse> createRepeated() =>
-      new PbList<CheckConsistencyResponse>();
-  static CheckConsistencyResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCheckConsistencyResponse();
-    return _defaultInstance;
-  }
-
+      CheckConsistencyResponse()..mergeFromMessage(this);
+  CheckConsistencyResponse copyWith(
+          void Function(CheckConsistencyResponse) updates) =>
+      super.copyWith((message) => updates(message as CheckConsistencyResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static CheckConsistencyResponse create() => CheckConsistencyResponse();
+  CheckConsistencyResponse createEmptyInstance() => create();
+  static $pb.PbList<CheckConsistencyResponse> createRepeated() =>
+      $pb.PbList<CheckConsistencyResponse>();
+  static CheckConsistencyResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CheckConsistencyResponse _defaultInstance;
-  static void $checkItem(CheckConsistencyResponse v) {
-    if (v is! CheckConsistencyResponse)
-      checkItemFailed(v, 'CheckConsistencyResponse');
-  }
 
-  bool get consistent => $_get(0, false);
-  set consistent(bool v) {
+  $core.bool get consistent => $_get(0, false);
+  set consistent($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasConsistent() => $_has(0);
+  $core.bool hasConsistent() => $_has(0);
   void clearConsistent() => clearField(1);
 }
 
-class _ReadonlyCheckConsistencyResponse extends CheckConsistencyResponse
-    with ReadonlyMessageMixin {}
-
-class SnapshotTableRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SnapshotTableRequest')
+class SnapshotTableRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SnapshotTableRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'cluster')
     ..aOS(3, 'snapshotId')
-    ..a<$google$protobuf.Duration>(4, 'ttl', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+    ..a<$3.Duration>(4, 'ttl', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
     ..aOS(5, 'description')
     ..hasRequiredFields = false;
 
   SnapshotTableRequest() : super();
-  SnapshotTableRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SnapshotTableRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SnapshotTableRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SnapshotTableRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SnapshotTableRequest clone() =>
-      new SnapshotTableRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SnapshotTableRequest create() => new SnapshotTableRequest();
-  static PbList<SnapshotTableRequest> createRepeated() =>
-      new PbList<SnapshotTableRequest>();
-  static SnapshotTableRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySnapshotTableRequest();
-    return _defaultInstance;
-  }
-
+      SnapshotTableRequest()..mergeFromMessage(this);
+  SnapshotTableRequest copyWith(void Function(SnapshotTableRequest) updates) =>
+      super.copyWith((message) => updates(message as SnapshotTableRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SnapshotTableRequest create() => SnapshotTableRequest();
+  SnapshotTableRequest createEmptyInstance() => create();
+  static $pb.PbList<SnapshotTableRequest> createRepeated() =>
+      $pb.PbList<SnapshotTableRequest>();
+  static SnapshotTableRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SnapshotTableRequest _defaultInstance;
-  static void $checkItem(SnapshotTableRequest v) {
-    if (v is! SnapshotTableRequest) checkItemFailed(v, 'SnapshotTableRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get cluster => $_getS(1, '');
-  set cluster(String v) {
+  $core.String get cluster => $_getS(1, '');
+  set cluster($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasCluster() => $_has(1);
+  $core.bool hasCluster() => $_has(1);
   void clearCluster() => clearField(2);
 
-  String get snapshotId => $_getS(2, '');
-  set snapshotId(String v) {
+  $core.String get snapshotId => $_getS(2, '');
+  set snapshotId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSnapshotId() => $_has(2);
+  $core.bool hasSnapshotId() => $_has(2);
   void clearSnapshotId() => clearField(3);
 
-  $google$protobuf.Duration get ttl => $_getN(3);
-  set ttl($google$protobuf.Duration v) {
+  $3.Duration get ttl => $_getN(3);
+  set ttl($3.Duration v) {
     setField(4, v);
   }
 
-  bool hasTtl() => $_has(3);
+  $core.bool hasTtl() => $_has(3);
   void clearTtl() => clearField(4);
 
-  String get description => $_getS(4, '');
-  set description(String v) {
+  $core.String get description => $_getS(4, '');
+  set description($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasDescription() => $_has(4);
+  $core.bool hasDescription() => $_has(4);
   void clearDescription() => clearField(5);
 }
 
-class _ReadonlySnapshotTableRequest extends SnapshotTableRequest
-    with ReadonlyMessageMixin {}
-
-class GetSnapshotRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSnapshotRequest')
+class GetSnapshotRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSnapshotRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetSnapshotRequest() : super();
-  GetSnapshotRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSnapshotRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetSnapshotRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSnapshotRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetSnapshotRequest clone() =>
-      new GetSnapshotRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetSnapshotRequest create() => new GetSnapshotRequest();
-  static PbList<GetSnapshotRequest> createRepeated() =>
-      new PbList<GetSnapshotRequest>();
-  static GetSnapshotRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSnapshotRequest();
-    return _defaultInstance;
-  }
-
+  GetSnapshotRequest clone() => GetSnapshotRequest()..mergeFromMessage(this);
+  GetSnapshotRequest copyWith(void Function(GetSnapshotRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSnapshotRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetSnapshotRequest create() => GetSnapshotRequest();
+  GetSnapshotRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSnapshotRequest> createRepeated() =>
+      $pb.PbList<GetSnapshotRequest>();
+  static GetSnapshotRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetSnapshotRequest _defaultInstance;
-  static void $checkItem(GetSnapshotRequest v) {
-    if (v is! GetSnapshotRequest) checkItemFailed(v, 'GetSnapshotRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetSnapshotRequest extends GetSnapshotRequest
-    with ReadonlyMessageMixin {}
-
-class ListSnapshotsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSnapshotsRequest')
+class ListSnapshotsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSnapshotsRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'parent')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListSnapshotsRequest() : super();
-  ListSnapshotsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSnapshotsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSnapshotsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSnapshotsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSnapshotsRequest clone() =>
-      new ListSnapshotsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSnapshotsRequest create() => new ListSnapshotsRequest();
-  static PbList<ListSnapshotsRequest> createRepeated() =>
-      new PbList<ListSnapshotsRequest>();
-  static ListSnapshotsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSnapshotsRequest();
-    return _defaultInstance;
-  }
-
+      ListSnapshotsRequest()..mergeFromMessage(this);
+  ListSnapshotsRequest copyWith(void Function(ListSnapshotsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListSnapshotsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSnapshotsRequest create() => ListSnapshotsRequest();
+  ListSnapshotsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSnapshotsRequest> createRepeated() =>
+      $pb.PbList<ListSnapshotsRequest>();
+  static ListSnapshotsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSnapshotsRequest _defaultInstance;
-  static void $checkItem(ListSnapshotsRequest v) {
-    if (v is! ListSnapshotsRequest) checkItemFailed(v, 'ListSnapshotsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListSnapshotsRequest extends ListSnapshotsRequest
-    with ReadonlyMessageMixin {}
-
-class ListSnapshotsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSnapshotsResponse')
-    ..pp<Snapshot>(
-        1, 'snapshots', PbFieldType.PM, Snapshot.$checkItem, Snapshot.create)
+class ListSnapshotsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSnapshotsResponse',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..pc<$1.Snapshot>(1, 'snapshots', $pb.PbFieldType.PM, $1.Snapshot.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListSnapshotsResponse() : super();
-  ListSnapshotsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSnapshotsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSnapshotsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSnapshotsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSnapshotsResponse clone() =>
-      new ListSnapshotsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSnapshotsResponse create() => new ListSnapshotsResponse();
-  static PbList<ListSnapshotsResponse> createRepeated() =>
-      new PbList<ListSnapshotsResponse>();
-  static ListSnapshotsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSnapshotsResponse();
-    return _defaultInstance;
-  }
-
+      ListSnapshotsResponse()..mergeFromMessage(this);
+  ListSnapshotsResponse copyWith(
+          void Function(ListSnapshotsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListSnapshotsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSnapshotsResponse create() => ListSnapshotsResponse();
+  ListSnapshotsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSnapshotsResponse> createRepeated() =>
+      $pb.PbList<ListSnapshotsResponse>();
+  static ListSnapshotsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSnapshotsResponse _defaultInstance;
-  static void $checkItem(ListSnapshotsResponse v) {
-    if (v is! ListSnapshotsResponse)
-      checkItemFailed(v, 'ListSnapshotsResponse');
-  }
 
-  List<Snapshot> get snapshots => $_getList(0);
+  $core.List<$1.Snapshot> get snapshots => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListSnapshotsResponse extends ListSnapshotsResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteSnapshotRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSnapshotRequest')
+class DeleteSnapshotRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSnapshotRequest',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteSnapshotRequest() : super();
-  DeleteSnapshotRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSnapshotRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteSnapshotRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSnapshotRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSnapshotRequest clone() =>
-      new DeleteSnapshotRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteSnapshotRequest create() => new DeleteSnapshotRequest();
-  static PbList<DeleteSnapshotRequest> createRepeated() =>
-      new PbList<DeleteSnapshotRequest>();
-  static DeleteSnapshotRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSnapshotRequest();
-    return _defaultInstance;
-  }
-
+      DeleteSnapshotRequest()..mergeFromMessage(this);
+  DeleteSnapshotRequest copyWith(
+          void Function(DeleteSnapshotRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteSnapshotRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteSnapshotRequest create() => DeleteSnapshotRequest();
+  DeleteSnapshotRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSnapshotRequest> createRepeated() =>
+      $pb.PbList<DeleteSnapshotRequest>();
+  static DeleteSnapshotRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteSnapshotRequest _defaultInstance;
-  static void $checkItem(DeleteSnapshotRequest v) {
-    if (v is! DeleteSnapshotRequest)
-      checkItemFailed(v, 'DeleteSnapshotRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteSnapshotRequest extends DeleteSnapshotRequest
-    with ReadonlyMessageMixin {}
-
-class SnapshotTableMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SnapshotTableMetadata')
-    ..a<SnapshotTableRequest>(1, 'originalRequest', PbFieldType.OM,
+class SnapshotTableMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SnapshotTableMetadata',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..a<SnapshotTableRequest>(1, 'originalRequest', $pb.PbFieldType.OM,
         SnapshotTableRequest.getDefault, SnapshotTableRequest.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'requestTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'finishTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   SnapshotTableMetadata() : super();
-  SnapshotTableMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SnapshotTableMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SnapshotTableMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SnapshotTableMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SnapshotTableMetadata clone() =>
-      new SnapshotTableMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SnapshotTableMetadata create() => new SnapshotTableMetadata();
-  static PbList<SnapshotTableMetadata> createRepeated() =>
-      new PbList<SnapshotTableMetadata>();
-  static SnapshotTableMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySnapshotTableMetadata();
-    return _defaultInstance;
-  }
-
+      SnapshotTableMetadata()..mergeFromMessage(this);
+  SnapshotTableMetadata copyWith(
+          void Function(SnapshotTableMetadata) updates) =>
+      super.copyWith((message) => updates(message as SnapshotTableMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static SnapshotTableMetadata create() => SnapshotTableMetadata();
+  SnapshotTableMetadata createEmptyInstance() => create();
+  static $pb.PbList<SnapshotTableMetadata> createRepeated() =>
+      $pb.PbList<SnapshotTableMetadata>();
+  static SnapshotTableMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SnapshotTableMetadata _defaultInstance;
-  static void $checkItem(SnapshotTableMetadata v) {
-    if (v is! SnapshotTableMetadata)
-      checkItemFailed(v, 'SnapshotTableMetadata');
-  }
 
   SnapshotTableRequest get originalRequest => $_getN(0);
   set originalRequest(SnapshotTableRequest v) {
     setField(1, v);
   }
 
-  bool hasOriginalRequest() => $_has(0);
+  $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $google$protobuf.Timestamp get requestTime => $_getN(1);
-  set requestTime($google$protobuf.Timestamp v) {
+  $4.Timestamp get requestTime => $_getN(1);
+  set requestTime($4.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasRequestTime() => $_has(1);
+  $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(2);
-  set finishTime($google$protobuf.Timestamp v) {
+  $4.Timestamp get finishTime => $_getN(2);
+  set finishTime($4.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasFinishTime() => $_has(2);
+  $core.bool hasFinishTime() => $_has(2);
   void clearFinishTime() => clearField(3);
 }
 
-class _ReadonlySnapshotTableMetadata extends SnapshotTableMetadata
-    with ReadonlyMessageMixin {}
-
-class CreateTableFromSnapshotMetadata extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('CreateTableFromSnapshotMetadata')
-        ..a<CreateTableFromSnapshotRequest>(
-            1,
-            'originalRequest',
-            PbFieldType.OM,
-            CreateTableFromSnapshotRequest.getDefault,
-            CreateTableFromSnapshotRequest.create)
-        ..a<$google$protobuf.Timestamp>(
-            2,
-            'requestTime',
-            PbFieldType.OM,
-            $google$protobuf.Timestamp.getDefault,
-            $google$protobuf.Timestamp.create)
-        ..a<$google$protobuf.Timestamp>(
-            3,
-            'finishTime',
-            PbFieldType.OM,
-            $google$protobuf.Timestamp.getDefault,
-            $google$protobuf.Timestamp.create)
-        ..hasRequiredFields = false;
+class CreateTableFromSnapshotMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateTableFromSnapshotMetadata',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..a<CreateTableFromSnapshotRequest>(
+        1,
+        'originalRequest',
+        $pb.PbFieldType.OM,
+        CreateTableFromSnapshotRequest.getDefault,
+        CreateTableFromSnapshotRequest.create)
+    ..a<$4.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..hasRequiredFields = false;
 
   CreateTableFromSnapshotMetadata() : super();
-  CreateTableFromSnapshotMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableFromSnapshotMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTableFromSnapshotMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTableFromSnapshotMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTableFromSnapshotMetadata clone() =>
-      new CreateTableFromSnapshotMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      CreateTableFromSnapshotMetadata()..mergeFromMessage(this);
+  CreateTableFromSnapshotMetadata copyWith(
+          void Function(CreateTableFromSnapshotMetadata) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateTableFromSnapshotMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static CreateTableFromSnapshotMetadata create() =>
-      new CreateTableFromSnapshotMetadata();
-  static PbList<CreateTableFromSnapshotMetadata> createRepeated() =>
-      new PbList<CreateTableFromSnapshotMetadata>();
-  static CreateTableFromSnapshotMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTableFromSnapshotMetadata();
-    return _defaultInstance;
-  }
-
+      CreateTableFromSnapshotMetadata();
+  CreateTableFromSnapshotMetadata createEmptyInstance() => create();
+  static $pb.PbList<CreateTableFromSnapshotMetadata> createRepeated() =>
+      $pb.PbList<CreateTableFromSnapshotMetadata>();
+  static CreateTableFromSnapshotMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTableFromSnapshotMetadata _defaultInstance;
-  static void $checkItem(CreateTableFromSnapshotMetadata v) {
-    if (v is! CreateTableFromSnapshotMetadata)
-      checkItemFailed(v, 'CreateTableFromSnapshotMetadata');
-  }
 
   CreateTableFromSnapshotRequest get originalRequest => $_getN(0);
   set originalRequest(CreateTableFromSnapshotRequest v) {
     setField(1, v);
   }
 
-  bool hasOriginalRequest() => $_has(0);
+  $core.bool hasOriginalRequest() => $_has(0);
   void clearOriginalRequest() => clearField(1);
 
-  $google$protobuf.Timestamp get requestTime => $_getN(1);
-  set requestTime($google$protobuf.Timestamp v) {
+  $4.Timestamp get requestTime => $_getN(1);
+  set requestTime($4.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasRequestTime() => $_has(1);
+  $core.bool hasRequestTime() => $_has(1);
   void clearRequestTime() => clearField(2);
 
-  $google$protobuf.Timestamp get finishTime => $_getN(2);
-  set finishTime($google$protobuf.Timestamp v) {
+  $4.Timestamp get finishTime => $_getN(2);
+  set finishTime($4.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasFinishTime() => $_has(2);
+  $core.bool hasFinishTime() => $_has(2);
   void clearFinishTime() => clearField(3);
-}
-
-class _ReadonlyCreateTableFromSnapshotMetadata
-    extends CreateTableFromSnapshotMetadata with ReadonlyMessageMixin {}
-
-class BigtableTableAdminApi {
-  RpcClient _client;
-  BigtableTableAdminApi(this._client);
-
-  Future<Table> createTable(ClientContext ctx, CreateTableRequest request) {
-    var emptyResponse = new Table();
-    return _client.invoke<Table>(
-        ctx, 'BigtableTableAdmin', 'CreateTable', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> createTableFromSnapshot(
-      ClientContext ctx, CreateTableFromSnapshotRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx,
-        'BigtableTableAdmin',
-        'CreateTableFromSnapshot',
-        request,
-        emptyResponse);
-  }
-
-  Future<ListTablesResponse> listTables(
-      ClientContext ctx, ListTablesRequest request) {
-    var emptyResponse = new ListTablesResponse();
-    return _client.invoke<ListTablesResponse>(
-        ctx, 'BigtableTableAdmin', 'ListTables', request, emptyResponse);
-  }
-
-  Future<Table> getTable(ClientContext ctx, GetTableRequest request) {
-    var emptyResponse = new Table();
-    return _client.invoke<Table>(
-        ctx, 'BigtableTableAdmin', 'GetTable', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteTable(
-      ClientContext ctx, DeleteTableRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'BigtableTableAdmin', 'DeleteTable', request, emptyResponse);
-  }
-
-  Future<Table> modifyColumnFamilies(
-      ClientContext ctx, ModifyColumnFamiliesRequest request) {
-    var emptyResponse = new Table();
-    return _client.invoke<Table>(ctx, 'BigtableTableAdmin',
-        'ModifyColumnFamilies', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> dropRowRange(
-      ClientContext ctx, DropRowRangeRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'BigtableTableAdmin', 'DropRowRange', request, emptyResponse);
-  }
-
-  Future<GenerateConsistencyTokenResponse> generateConsistencyToken(
-      ClientContext ctx, GenerateConsistencyTokenRequest request) {
-    var emptyResponse = new GenerateConsistencyTokenResponse();
-    return _client.invoke<GenerateConsistencyTokenResponse>(
-        ctx,
-        'BigtableTableAdmin',
-        'GenerateConsistencyToken',
-        request,
-        emptyResponse);
-  }
-
-  Future<CheckConsistencyResponse> checkConsistency(
-      ClientContext ctx, CheckConsistencyRequest request) {
-    var emptyResponse = new CheckConsistencyResponse();
-    return _client.invoke<CheckConsistencyResponse>(
-        ctx, 'BigtableTableAdmin', 'CheckConsistency', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> snapshotTable(
-      ClientContext ctx, SnapshotTableRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'BigtableTableAdmin', 'SnapshotTable', request, emptyResponse);
-  }
-
-  Future<Snapshot> getSnapshot(ClientContext ctx, GetSnapshotRequest request) {
-    var emptyResponse = new Snapshot();
-    return _client.invoke<Snapshot>(
-        ctx, 'BigtableTableAdmin', 'GetSnapshot', request, emptyResponse);
-  }
-
-  Future<ListSnapshotsResponse> listSnapshots(
-      ClientContext ctx, ListSnapshotsRequest request) {
-    var emptyResponse = new ListSnapshotsResponse();
-    return _client.invoke<ListSnapshotsResponse>(
-        ctx, 'BigtableTableAdmin', 'ListSnapshots', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteSnapshot(
-      ClientContext ctx, DeleteSnapshotRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'BigtableTableAdmin', 'DeleteSnapshot', request, emptyResponse);
-  }
 }

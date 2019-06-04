@@ -8,6 +8,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:googleapis_auth/auth_io.dart' as auth;
+import 'package:grpc/grpc.dart' as grpc;
 
 // Environment variables for specifying the cloud project to use and the
 // location of the service account key for that project.
@@ -25,29 +26,50 @@ bool onBot() {
   return Platform.environment[name] == 'chrome-bot';
 }
 
-Future withServiceAccount(
+Future<dynamic> withServiceAccount(
     Future callback(
         String project, auth.ServiceAccountCredentials creds)) async {
   var project = Platform.environment[PROJECT_ENV];
   var serviceKeyLocation = Platform.environment[SERVICE_KEY_LOCATION_ENV];
 
   if (!onBot() && (project == null || serviceKeyLocation == null)) {
-    throw new Exception(
+    throw Exception(
         'Environment variables $PROJECT_ENV and $SERVICE_KEY_LOCATION_ENV '
         'required when not running on the package bot');
   }
 
-  project = project ?? DEFAULT_PROJECT;
-  serviceKeyLocation = serviceKeyLocation ?? DEFAULT_KEY_LOCATION;
+  project ??= DEFAULT_PROJECT;
+  serviceKeyLocation ??= DEFAULT_KEY_LOCATION;
 
   final keyJson = await _serviceKeyJson(serviceKeyLocation);
-  final creds = new auth.ServiceAccountCredentials.fromJson(keyJson);
+  final creds = auth.ServiceAccountCredentials.fromJson(keyJson);
   return callback(project, creds);
+}
+
+Future<dynamic> withAuthenticator(
+    List<String> scopes,
+    Future callback(
+        String project, grpc.HttpBasedAuthenticator authenticator)) async {
+  var project = Platform.environment[PROJECT_ENV];
+  var serviceKeyLocation = Platform.environment[SERVICE_KEY_LOCATION_ENV];
+
+  if (!onBot() && (project == null || serviceKeyLocation == null)) {
+    throw Exception(
+        'Environment variables $PROJECT_ENV and $SERVICE_KEY_LOCATION_ENV '
+        'required when not running on the package bot');
+  }
+
+  project ??= DEFAULT_PROJECT;
+  serviceKeyLocation ??= DEFAULT_KEY_LOCATION;
+
+  final keyJson = await _serviceKeyJson(serviceKeyLocation);
+  final authenticator = grpc.ServiceAccountAuthenticator(keyJson, scopes);
+  return callback(project, authenticator);
 }
 
 Future<String> _serviceKeyJson(String serviceKeyLocation) async {
   if (!serviceKeyLocation.startsWith('gs://')) {
-    return new File(serviceKeyLocation).readAsString();
+    return File(serviceKeyLocation).readAsString();
   } else {
     ProcessResult result;
     if (onBot()) {
@@ -63,7 +85,7 @@ Future<String> _serviceKeyJson(String serviceKeyLocation) async {
       result = await Process.run(gsutil, ['cat', serviceKeyLocation]);
     }
     if (result.exitCode != 0) {
-      throw new Exception('Failed to run gsutil, ${result.stderr}');
+      throw Exception('Failed to run gsutil, ${result.stderr}');
     }
     return result.stdout;
   }

@@ -1,100 +1,54 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/legacy/audit_data.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class AuditData_EventDataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData_EventDataEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  AuditData_EventDataEntry() : super();
-  AuditData_EventDataEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuditData_EventDataEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AuditData_EventDataEntry clone() =>
-      new AuditData_EventDataEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuditData_EventDataEntry create() => new AuditData_EventDataEntry();
-  static PbList<AuditData_EventDataEntry> createRepeated() =>
-      new PbList<AuditData_EventDataEntry>();
-  static AuditData_EventDataEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuditData_EventDataEntry();
-    return _defaultInstance;
-  }
-
-  static AuditData_EventDataEntry _defaultInstance;
-  static void $checkItem(AuditData_EventDataEntry v) {
-    if (v is! AuditData_EventDataEntry)
-      checkItemFailed(v, 'AuditData_EventDataEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyAuditData_EventDataEntry extends AuditData_EventDataEntry
-    with ReadonlyMessageMixin {}
-
-class AuditData extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuditData')
+class AuditData extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditData',
+      package: const $pb.PackageName('google.appengine.legacy'))
     ..aOS(1, 'eventMessage')
-    ..pp<AuditData_EventDataEntry>(2, 'eventData', PbFieldType.PM,
-        AuditData_EventDataEntry.$checkItem, AuditData_EventDataEntry.create)
+    ..m<$core.String, $core.String>(
+        2,
+        'eventData',
+        'AuditData.EventDataEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.appengine.legacy'))
     ..hasRequiredFields = false;
 
   AuditData() : super();
-  AuditData.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuditData.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AuditData.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuditData.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuditData clone() => new AuditData()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuditData create() => new AuditData();
-  static PbList<AuditData> createRepeated() => new PbList<AuditData>();
-  static AuditData getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAuditData();
-    return _defaultInstance;
-  }
-
+  AuditData clone() => AuditData()..mergeFromMessage(this);
+  AuditData copyWith(void Function(AuditData) updates) =>
+      super.copyWith((message) => updates(message as AuditData));
+  $pb.BuilderInfo get info_ => _i;
+  static AuditData create() => AuditData();
+  AuditData createEmptyInstance() => create();
+  static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
+  static AuditData getDefault() => _defaultInstance ??= create()..freeze();
   static AuditData _defaultInstance;
-  static void $checkItem(AuditData v) {
-    if (v is! AuditData) checkItemFailed(v, 'AuditData');
-  }
 
-  String get eventMessage => $_getS(0, '');
-  set eventMessage(String v) {
+  $core.String get eventMessage => $_getS(0, '');
+  set eventMessage($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasEventMessage() => $_has(0);
+  $core.bool hasEventMessage() => $_has(0);
   void clearEventMessage() => clearField(1);
 
-  List<AuditData_EventDataEntry> get eventData => $_getList(1);
+  $core.Map<$core.String, $core.String> get eventData => $_getMap(1);
 }
-
-class _ReadonlyAuditData extends AuditData with ReadonlyMessageMixin {}

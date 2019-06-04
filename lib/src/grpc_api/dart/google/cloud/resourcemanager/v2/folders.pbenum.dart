@@ -1,60 +1,55 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/resourcemanager/v2/folders.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Folder_LifecycleState extends ProtobufEnum {
+class Folder_LifecycleState extends $pb.ProtobufEnum {
   static const Folder_LifecycleState LIFECYCLE_STATE_UNSPECIFIED =
-      const Folder_LifecycleState._(0, 'LIFECYCLE_STATE_UNSPECIFIED');
+      Folder_LifecycleState._(0, 'LIFECYCLE_STATE_UNSPECIFIED');
   static const Folder_LifecycleState ACTIVE =
-      const Folder_LifecycleState._(1, 'ACTIVE');
+      Folder_LifecycleState._(1, 'ACTIVE');
   static const Folder_LifecycleState DELETE_REQUESTED =
-      const Folder_LifecycleState._(2, 'DELETE_REQUESTED');
+      Folder_LifecycleState._(2, 'DELETE_REQUESTED');
 
-  static const List<Folder_LifecycleState> values =
-      const <Folder_LifecycleState>[
+  static const $core.List<Folder_LifecycleState> values =
+      <Folder_LifecycleState>[
     LIFECYCLE_STATE_UNSPECIFIED,
     ACTIVE,
     DELETE_REQUESTED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Folder_LifecycleState valueOf(int value) =>
-      _byValue[value] as Folder_LifecycleState;
-  static void $checkItem(Folder_LifecycleState v) {
-    if (v is! Folder_LifecycleState)
-      checkItemFailed(v, 'Folder_LifecycleState');
-  }
+  static final $core.Map<$core.int, Folder_LifecycleState> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Folder_LifecycleState valueOf($core.int value) => _byValue[value];
 
-  const Folder_LifecycleState._(int v, String n) : super(v, n);
+  const Folder_LifecycleState._($core.int v, $core.String n) : super(v, n);
 }
 
-class FolderOperation_OperationType extends ProtobufEnum {
+class FolderOperation_OperationType extends $pb.ProtobufEnum {
   static const FolderOperation_OperationType OPERATION_TYPE_UNSPECIFIED =
-      const FolderOperation_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
+      FolderOperation_OperationType._(0, 'OPERATION_TYPE_UNSPECIFIED');
   static const FolderOperation_OperationType CREATE =
-      const FolderOperation_OperationType._(1, 'CREATE');
+      FolderOperation_OperationType._(1, 'CREATE');
   static const FolderOperation_OperationType MOVE =
-      const FolderOperation_OperationType._(2, 'MOVE');
+      FolderOperation_OperationType._(2, 'MOVE');
 
-  static const List<FolderOperation_OperationType> values =
-      const <FolderOperation_OperationType>[
+  static const $core.List<FolderOperation_OperationType> values =
+      <FolderOperation_OperationType>[
     OPERATION_TYPE_UNSPECIFIED,
     CREATE,
     MOVE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static FolderOperation_OperationType valueOf(int value) =>
-      _byValue[value] as FolderOperation_OperationType;
-  static void $checkItem(FolderOperation_OperationType v) {
-    if (v is! FolderOperation_OperationType)
-      checkItemFailed(v, 'FolderOperation_OperationType');
-  }
+  static final $core.Map<$core.int, FolderOperation_OperationType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static FolderOperation_OperationType valueOf($core.int value) =>
+      _byValue[value];
 
-  const FolderOperation_OperationType._(int v, String n) : super(v, n);
+  const FolderOperation_OperationType._($core.int v, $core.String n)
+      : super(v, n);
 }

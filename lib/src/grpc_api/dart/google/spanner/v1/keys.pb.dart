@@ -1,142 +1,139 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/v1/keys.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
+import '../../protobuf/struct.pb.dart' as $0;
 
-class KeyRange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KeyRange')
-    ..a<$google$protobuf.ListValue>(
-        1,
-        'startClosed',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'startOpen',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..a<$google$protobuf.ListValue>(
-        3,
-        'endClosed',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..a<$google$protobuf.ListValue>(
-        4,
-        'endOpen',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
+enum KeyRange_StartKeyType { startClosed, startOpen, notSet }
+
+enum KeyRange_EndKeyType { endClosed, endOpen, notSet }
+
+class KeyRange extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, KeyRange_StartKeyType>
+      _KeyRange_StartKeyTypeByTag = {
+    1: KeyRange_StartKeyType.startClosed,
+    2: KeyRange_StartKeyType.startOpen,
+    0: KeyRange_StartKeyType.notSet
+  };
+  static const $core.Map<$core.int, KeyRange_EndKeyType>
+      _KeyRange_EndKeyTypeByTag = {
+    3: KeyRange_EndKeyType.endClosed,
+    4: KeyRange_EndKeyType.endOpen,
+    0: KeyRange_EndKeyType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeyRange',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..a<$0.ListValue>(1, 'startClosed', $pb.PbFieldType.OM,
+        $0.ListValue.getDefault, $0.ListValue.create)
+    ..a<$0.ListValue>(2, 'startOpen', $pb.PbFieldType.OM,
+        $0.ListValue.getDefault, $0.ListValue.create)
+    ..a<$0.ListValue>(3, 'endClosed', $pb.PbFieldType.OM,
+        $0.ListValue.getDefault, $0.ListValue.create)
+    ..a<$0.ListValue>(4, 'endOpen', $pb.PbFieldType.OM, $0.ListValue.getDefault,
+        $0.ListValue.create)
+    ..oo(0, [1, 2])
+    ..oo(1, [3, 4])
     ..hasRequiredFields = false;
 
   KeyRange() : super();
-  KeyRange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  KeyRange.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  KeyRange.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  KeyRange.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KeyRange clone() => new KeyRange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static KeyRange create() => new KeyRange();
-  static PbList<KeyRange> createRepeated() => new PbList<KeyRange>();
-  static KeyRange getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyKeyRange();
-    return _defaultInstance;
-  }
-
+  KeyRange clone() => KeyRange()..mergeFromMessage(this);
+  KeyRange copyWith(void Function(KeyRange) updates) =>
+      super.copyWith((message) => updates(message as KeyRange));
+  $pb.BuilderInfo get info_ => _i;
+  static KeyRange create() => KeyRange();
+  KeyRange createEmptyInstance() => create();
+  static $pb.PbList<KeyRange> createRepeated() => $pb.PbList<KeyRange>();
+  static KeyRange getDefault() => _defaultInstance ??= create()..freeze();
   static KeyRange _defaultInstance;
-  static void $checkItem(KeyRange v) {
-    if (v is! KeyRange) checkItemFailed(v, 'KeyRange');
-  }
 
-  $google$protobuf.ListValue get startClosed => $_getN(0);
-  set startClosed($google$protobuf.ListValue v) {
+  KeyRange_StartKeyType whichStartKeyType() =>
+      _KeyRange_StartKeyTypeByTag[$_whichOneof(0)];
+  void clearStartKeyType() => clearField($_whichOneof(0));
+
+  KeyRange_EndKeyType whichEndKeyType() =>
+      _KeyRange_EndKeyTypeByTag[$_whichOneof(1)];
+  void clearEndKeyType() => clearField($_whichOneof(1));
+
+  $0.ListValue get startClosed => $_getN(0);
+  set startClosed($0.ListValue v) {
     setField(1, v);
   }
 
-  bool hasStartClosed() => $_has(0);
+  $core.bool hasStartClosed() => $_has(0);
   void clearStartClosed() => clearField(1);
 
-  $google$protobuf.ListValue get startOpen => $_getN(1);
-  set startOpen($google$protobuf.ListValue v) {
+  $0.ListValue get startOpen => $_getN(1);
+  set startOpen($0.ListValue v) {
     setField(2, v);
   }
 
-  bool hasStartOpen() => $_has(1);
+  $core.bool hasStartOpen() => $_has(1);
   void clearStartOpen() => clearField(2);
 
-  $google$protobuf.ListValue get endClosed => $_getN(2);
-  set endClosed($google$protobuf.ListValue v) {
+  $0.ListValue get endClosed => $_getN(2);
+  set endClosed($0.ListValue v) {
     setField(3, v);
   }
 
-  bool hasEndClosed() => $_has(2);
+  $core.bool hasEndClosed() => $_has(2);
   void clearEndClosed() => clearField(3);
 
-  $google$protobuf.ListValue get endOpen => $_getN(3);
-  set endOpen($google$protobuf.ListValue v) {
+  $0.ListValue get endOpen => $_getN(3);
+  set endOpen($0.ListValue v) {
     setField(4, v);
   }
 
-  bool hasEndOpen() => $_has(3);
+  $core.bool hasEndOpen() => $_has(3);
   void clearEndOpen() => clearField(4);
 }
 
-class _ReadonlyKeyRange extends KeyRange with ReadonlyMessageMixin {}
-
-class KeySet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('KeySet')
-    ..pp<$google$protobuf.ListValue>(
-        1,
-        'keys',
-        PbFieldType.PM,
-        $google$protobuf.ListValue.$checkItem,
-        $google$protobuf.ListValue.create)
-    ..pp<KeyRange>(
-        2, 'ranges', PbFieldType.PM, KeyRange.$checkItem, KeyRange.create)
+class KeySet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeySet',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..pc<$0.ListValue>(1, 'keys', $pb.PbFieldType.PM, $0.ListValue.create)
+    ..pc<KeyRange>(2, 'ranges', $pb.PbFieldType.PM, KeyRange.create)
     ..aOB(3, 'all')
     ..hasRequiredFields = false;
 
   KeySet() : super();
-  KeySet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  KeySet.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  KeySet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  KeySet.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  KeySet clone() => new KeySet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static KeySet create() => new KeySet();
-  static PbList<KeySet> createRepeated() => new PbList<KeySet>();
-  static KeySet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyKeySet();
-    return _defaultInstance;
-  }
-
+  KeySet clone() => KeySet()..mergeFromMessage(this);
+  KeySet copyWith(void Function(KeySet) updates) =>
+      super.copyWith((message) => updates(message as KeySet));
+  $pb.BuilderInfo get info_ => _i;
+  static KeySet create() => KeySet();
+  KeySet createEmptyInstance() => create();
+  static $pb.PbList<KeySet> createRepeated() => $pb.PbList<KeySet>();
+  static KeySet getDefault() => _defaultInstance ??= create()..freeze();
   static KeySet _defaultInstance;
-  static void $checkItem(KeySet v) {
-    if (v is! KeySet) checkItemFailed(v, 'KeySet');
-  }
 
-  List<$google$protobuf.ListValue> get keys => $_getList(0);
+  $core.List<$0.ListValue> get keys => $_getList(0);
 
-  List<KeyRange> get ranges => $_getList(1);
+  $core.List<KeyRange> get ranges => $_getList(1);
 
-  bool get all => $_get(2, false);
-  set all(bool v) {
+  $core.bool get all => $_get(2, false);
+  set all($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasAll() => $_has(2);
+  $core.bool hasAll() => $_has(2);
   void clearAll() => clearField(3);
 }
-
-class _ReadonlyKeySet extends KeySet with ReadonlyMessageMixin {}

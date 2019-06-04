@@ -15,12 +15,12 @@ import 'package:gcloud/db/metamodel.dart';
 
 List<Entity> buildEntitiesWithDifferentNamespaces(String uniquePostfix) {
   newKey(String namespace, String kind, int id) {
-    final partition = new Partition(namespace);
-    return new Key([new KeyElement(kind, id)], partition: partition);
+    final partition = Partition(namespace);
+    return Key([KeyElement(kind, id)], partition: partition);
   }
 
-  newEntity(String namespace, String kind, {int id: 1}) {
-    return new Entity(newKey(namespace, kind, id), {'ping': 'pong'});
+  newEntity(String namespace, String kind, {int id = 1}) {
+    return Entity(newKey(namespace, kind, id), {'ping': 'pong'});
   }
 
   return [
@@ -48,7 +48,7 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
       final keys = entities.map((e) => e.key).toList();
 
       await datastore.commit(inserts: entities);
-      await new Future.delayed(const Duration(seconds: 10));
+      await Future.delayed(const Duration(seconds: 10));
 
       final namespaceQuery = store.query<Namespace>();
       final List<Namespace> namespaces =

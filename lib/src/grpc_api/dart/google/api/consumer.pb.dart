@@ -1,91 +1,83 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/consumer.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'consumer.pbenum.dart';
 
 export 'consumer.pbenum.dart';
 
-class ProjectProperties extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ProjectProperties')
-    ..pp<Property>(
-        1, 'properties', PbFieldType.PM, Property.$checkItem, Property.create)
+class ProjectProperties extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProjectProperties',
+      package: const $pb.PackageName('google.api'))
+    ..pc<Property>(1, 'properties', $pb.PbFieldType.PM, Property.create)
     ..hasRequiredFields = false;
 
   ProjectProperties() : super();
-  ProjectProperties.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ProjectProperties.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ProjectProperties.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ProjectProperties.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ProjectProperties clone() => new ProjectProperties()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ProjectProperties create() => new ProjectProperties();
-  static PbList<ProjectProperties> createRepeated() =>
-      new PbList<ProjectProperties>();
-  static ProjectProperties getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyProjectProperties();
-    return _defaultInstance;
-  }
-
+  ProjectProperties clone() => ProjectProperties()..mergeFromMessage(this);
+  ProjectProperties copyWith(void Function(ProjectProperties) updates) =>
+      super.copyWith((message) => updates(message as ProjectProperties));
+  $pb.BuilderInfo get info_ => _i;
+  static ProjectProperties create() => ProjectProperties();
+  ProjectProperties createEmptyInstance() => create();
+  static $pb.PbList<ProjectProperties> createRepeated() =>
+      $pb.PbList<ProjectProperties>();
+  static ProjectProperties getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ProjectProperties _defaultInstance;
-  static void $checkItem(ProjectProperties v) {
-    if (v is! ProjectProperties) checkItemFailed(v, 'ProjectProperties');
-  }
 
-  List<Property> get properties => $_getList(0);
+  $core.List<Property> get properties => $_getList(0);
 }
 
-class _ReadonlyProjectProperties extends ProjectProperties
-    with ReadonlyMessageMixin {}
-
-class Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Property')
-    ..aOS(1, 'name')
-    ..e<Property_PropertyType>(
-        2,
-        'type',
-        PbFieldType.OE,
-        Property_PropertyType.UNSPECIFIED,
-        Property_PropertyType.valueOf,
-        Property_PropertyType.values)
-    ..aOS(3, 'description')
-    ..hasRequiredFields = false;
+class Property extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Property', package: const $pb.PackageName('google.api'))
+        ..aOS(1, 'name')
+        ..e<Property_PropertyType>(
+            2,
+            'type',
+            $pb.PbFieldType.OE,
+            Property_PropertyType.UNSPECIFIED,
+            Property_PropertyType.valueOf,
+            Property_PropertyType.values)
+        ..aOS(3, 'description')
+        ..hasRequiredFields = false;
 
   Property() : super();
-  Property.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Property.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Property.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Property.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Property clone() => new Property()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Property create() => new Property();
-  static PbList<Property> createRepeated() => new PbList<Property>();
-  static Property getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProperty();
-    return _defaultInstance;
-  }
-
+  Property clone() => Property()..mergeFromMessage(this);
+  Property copyWith(void Function(Property) updates) =>
+      super.copyWith((message) => updates(message as Property));
+  $pb.BuilderInfo get info_ => _i;
+  static Property create() => Property();
+  Property createEmptyInstance() => create();
+  static $pb.PbList<Property> createRepeated() => $pb.PbList<Property>();
+  static Property getDefault() => _defaultInstance ??= create()..freeze();
   static Property _defaultInstance;
-  static void $checkItem(Property v) {
-    if (v is! Property) checkItemFailed(v, 'Property');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Property_PropertyType get type => $_getN(1);
@@ -93,16 +85,14 @@ class Property extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasType() => $_has(1);
+  $core.bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 }
-
-class _ReadonlyProperty extends Property with ReadonlyMessageMixin {}

@@ -17,9 +17,6 @@ language_settings:
   nodejs:
     package_name: debugger.v2
     domain_layer_location: google-cloud
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.devtools.clouddebugger.v2.Debugger2
   collections: []
@@ -51,7 +48,6 @@ interfaces:
         - debuggee_id
         - breakpoint
         - client_version
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -66,7 +62,6 @@ interfaces:
         - debuggee_id
         - breakpoint_id
         - client_version
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -81,7 +76,6 @@ interfaces:
         - debuggee_id
         - breakpoint_id
         - client_version
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -94,7 +88,6 @@ interfaces:
       - parameters:
         - debuggee_id
         - client_version
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -107,7 +100,6 @@ interfaces:
       - parameters:
         - project
         - client_version
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -137,7 +129,6 @@ interfaces:
       groups:
       - parameters:
         - debuggee
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -148,7 +139,6 @@ interfaces:
       groups:
       - parameters:
         - debuggee_id
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -161,7 +151,6 @@ interfaces:
       - parameters:
         - debuggee_id
         - breakpoint
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000

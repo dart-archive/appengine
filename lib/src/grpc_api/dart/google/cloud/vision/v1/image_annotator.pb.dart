@@ -1,161 +1,156 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/vision/v1/image_annotator.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'geometry.pb.dart';
-import '../../../type/latlng.pb.dart' as $google$type;
-import '../../../type/color.pb.dart' as $google$type;
-import '../../../rpc/status.pb.dart' as $google$rpc;
-import 'text_annotation.pb.dart';
-import 'web_detection.pb.dart';
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import 'geometry.pb.dart' as $2;
+import '../../../type/latlng.pb.dart' as $3;
+import '../../../type/color.pb.dart' as $4;
+import 'product_search.pb.dart' as $5;
+import '../../../rpc/status.pb.dart' as $6;
+import 'text_annotation.pb.dart' as $7;
+import 'web_detection.pb.dart' as $8;
+import '../../../protobuf/timestamp.pb.dart' as $9;
 
 import 'image_annotator.pbenum.dart';
 
 export 'image_annotator.pbenum.dart';
 
-class Feature extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Feature')
-    ..e<Feature_Type>(1, 'type', PbFieldType.OE, Feature_Type.TYPE_UNSPECIFIED,
-        Feature_Type.valueOf, Feature_Type.values)
-    ..a<int>(2, 'maxResults', PbFieldType.O3)
+class Feature extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Feature',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..e<Feature_Type>(
+        1,
+        'type',
+        $pb.PbFieldType.OE,
+        Feature_Type.TYPE_UNSPECIFIED,
+        Feature_Type.valueOf,
+        Feature_Type.values)
+    ..a<$core.int>(2, 'maxResults', $pb.PbFieldType.O3)
     ..aOS(3, 'model')
     ..hasRequiredFields = false;
 
   Feature() : super();
-  Feature.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Feature.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Feature.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Feature.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Feature clone() => new Feature()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Feature create() => new Feature();
-  static PbList<Feature> createRepeated() => new PbList<Feature>();
-  static Feature getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyFeature();
-    return _defaultInstance;
-  }
-
+  Feature clone() => Feature()..mergeFromMessage(this);
+  Feature copyWith(void Function(Feature) updates) =>
+      super.copyWith((message) => updates(message as Feature));
+  $pb.BuilderInfo get info_ => _i;
+  static Feature create() => Feature();
+  Feature createEmptyInstance() => create();
+  static $pb.PbList<Feature> createRepeated() => $pb.PbList<Feature>();
+  static Feature getDefault() => _defaultInstance ??= create()..freeze();
   static Feature _defaultInstance;
-  static void $checkItem(Feature v) {
-    if (v is! Feature) checkItemFailed(v, 'Feature');
-  }
 
   Feature_Type get type => $_getN(0);
   set type(Feature_Type v) {
     setField(1, v);
   }
 
-  bool hasType() => $_has(0);
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  int get maxResults => $_get(1, 0);
-  set maxResults(int v) {
+  $core.int get maxResults => $_get(1, 0);
+  set maxResults($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasMaxResults() => $_has(1);
+  $core.bool hasMaxResults() => $_has(1);
   void clearMaxResults() => clearField(2);
 
-  String get model => $_getS(2, '');
-  set model(String v) {
+  $core.String get model => $_getS(2, '');
+  set model($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasModel() => $_has(2);
+  $core.bool hasModel() => $_has(2);
   void clearModel() => clearField(3);
 }
 
-class _ReadonlyFeature extends Feature with ReadonlyMessageMixin {}
-
-class ImageSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageSource')
+class ImageSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImageSource',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOS(1, 'gcsImageUri')
     ..aOS(2, 'imageUri')
     ..hasRequiredFields = false;
 
   ImageSource() : super();
-  ImageSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageSource.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImageSource.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageSource.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImageSource clone() => new ImageSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImageSource create() => new ImageSource();
-  static PbList<ImageSource> createRepeated() => new PbList<ImageSource>();
-  static ImageSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyImageSource();
-    return _defaultInstance;
-  }
-
+  ImageSource clone() => ImageSource()..mergeFromMessage(this);
+  ImageSource copyWith(void Function(ImageSource) updates) =>
+      super.copyWith((message) => updates(message as ImageSource));
+  $pb.BuilderInfo get info_ => _i;
+  static ImageSource create() => ImageSource();
+  ImageSource createEmptyInstance() => create();
+  static $pb.PbList<ImageSource> createRepeated() => $pb.PbList<ImageSource>();
+  static ImageSource getDefault() => _defaultInstance ??= create()..freeze();
   static ImageSource _defaultInstance;
-  static void $checkItem(ImageSource v) {
-    if (v is! ImageSource) checkItemFailed(v, 'ImageSource');
-  }
 
-  String get gcsImageUri => $_getS(0, '');
-  set gcsImageUri(String v) {
+  $core.String get gcsImageUri => $_getS(0, '');
+  set gcsImageUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasGcsImageUri() => $_has(0);
+  $core.bool hasGcsImageUri() => $_has(0);
   void clearGcsImageUri() => clearField(1);
 
-  String get imageUri => $_getS(1, '');
-  set imageUri(String v) {
+  $core.String get imageUri => $_getS(1, '');
+  set imageUri($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasImageUri() => $_has(1);
+  $core.bool hasImageUri() => $_has(1);
   void clearImageUri() => clearField(2);
 }
 
-class _ReadonlyImageSource extends ImageSource with ReadonlyMessageMixin {}
-
-class Image extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Image')
-    ..a<List<int>>(1, 'content', PbFieldType.OY)
-    ..a<ImageSource>(
-        2, 'source', PbFieldType.OM, ImageSource.getDefault, ImageSource.create)
+class Image extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Image',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<$core.List<$core.int>>(1, 'content', $pb.PbFieldType.OY)
+    ..a<ImageSource>(2, 'source', $pb.PbFieldType.OM, ImageSource.getDefault,
+        ImageSource.create)
     ..hasRequiredFields = false;
 
   Image() : super();
-  Image.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Image.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Image.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Image.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Image clone() => new Image()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Image create() => new Image();
-  static PbList<Image> createRepeated() => new PbList<Image>();
-  static Image getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyImage();
-    return _defaultInstance;
-  }
-
+  Image clone() => Image()..mergeFromMessage(this);
+  Image copyWith(void Function(Image) updates) =>
+      super.copyWith((message) => updates(message as Image));
+  $pb.BuilderInfo get info_ => _i;
+  static Image create() => Image();
+  Image createEmptyInstance() => create();
+  static $pb.PbList<Image> createRepeated() => $pb.PbList<Image>();
+  static Image getDefault() => _defaultInstance ??= create()..freeze();
   static Image _defaultInstance;
-  static void $checkItem(Image v) {
-    if (v is! Image) checkItemFailed(v, 'Image');
-  }
 
-  List<int> get content => $_getN(0);
-  set content(List<int> v) {
+  $core.List<$core.int> get content => $_getN(0);
+  set content($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasContent() => $_has(0);
+  $core.bool hasContent() => $_has(0);
   void clearContent() => clearField(1);
 
   ImageSource get source => $_getN(1);
@@ -163,178 +158,166 @@ class Image extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasSource() => $_has(1);
+  $core.bool hasSource() => $_has(1);
   void clearSource() => clearField(2);
 }
 
-class _ReadonlyImage extends Image with ReadonlyMessageMixin {}
-
-class FaceAnnotation_Landmark extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceAnnotation_Landmark')
+class FaceAnnotation_Landmark extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceAnnotation.Landmark',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..e<FaceAnnotation_Landmark_Type>(
         3,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         FaceAnnotation_Landmark_Type.UNKNOWN_LANDMARK,
         FaceAnnotation_Landmark_Type.valueOf,
         FaceAnnotation_Landmark_Type.values)
-    ..a<Position>(
-        4, 'position', PbFieldType.OM, Position.getDefault, Position.create)
+    ..a<$2.Position>(4, 'position', $pb.PbFieldType.OM, $2.Position.getDefault,
+        $2.Position.create)
     ..hasRequiredFields = false;
 
   FaceAnnotation_Landmark() : super();
-  FaceAnnotation_Landmark.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceAnnotation_Landmark.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FaceAnnotation_Landmark.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceAnnotation_Landmark.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   FaceAnnotation_Landmark clone() =>
-      new FaceAnnotation_Landmark()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FaceAnnotation_Landmark create() => new FaceAnnotation_Landmark();
-  static PbList<FaceAnnotation_Landmark> createRepeated() =>
-      new PbList<FaceAnnotation_Landmark>();
-  static FaceAnnotation_Landmark getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceAnnotation_Landmark();
-    return _defaultInstance;
-  }
-
+      FaceAnnotation_Landmark()..mergeFromMessage(this);
+  FaceAnnotation_Landmark copyWith(
+          void Function(FaceAnnotation_Landmark) updates) =>
+      super.copyWith((message) => updates(message as FaceAnnotation_Landmark));
+  $pb.BuilderInfo get info_ => _i;
+  static FaceAnnotation_Landmark create() => FaceAnnotation_Landmark();
+  FaceAnnotation_Landmark createEmptyInstance() => create();
+  static $pb.PbList<FaceAnnotation_Landmark> createRepeated() =>
+      $pb.PbList<FaceAnnotation_Landmark>();
+  static FaceAnnotation_Landmark getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static FaceAnnotation_Landmark _defaultInstance;
-  static void $checkItem(FaceAnnotation_Landmark v) {
-    if (v is! FaceAnnotation_Landmark)
-      checkItemFailed(v, 'FaceAnnotation_Landmark');
-  }
 
   FaceAnnotation_Landmark_Type get type => $_getN(0);
   set type(FaceAnnotation_Landmark_Type v) {
     setField(3, v);
   }
 
-  bool hasType() => $_has(0);
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(3);
 
-  Position get position => $_getN(1);
-  set position(Position v) {
+  $2.Position get position => $_getN(1);
+  set position($2.Position v) {
     setField(4, v);
   }
 
-  bool hasPosition() => $_has(1);
+  $core.bool hasPosition() => $_has(1);
   void clearPosition() => clearField(4);
 }
 
-class _ReadonlyFaceAnnotation_Landmark extends FaceAnnotation_Landmark
-    with ReadonlyMessageMixin {}
-
-class FaceAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('FaceAnnotation')
-    ..a<BoundingPoly>(1, 'boundingPoly', PbFieldType.OM,
-        BoundingPoly.getDefault, BoundingPoly.create)
-    ..a<BoundingPoly>(2, 'fdBoundingPoly', PbFieldType.OM,
-        BoundingPoly.getDefault, BoundingPoly.create)
-    ..pp<FaceAnnotation_Landmark>(3, 'landmarks', PbFieldType.PM,
-        FaceAnnotation_Landmark.$checkItem, FaceAnnotation_Landmark.create)
-    ..a<double>(4, 'rollAngle', PbFieldType.OF)
-    ..a<double>(5, 'panAngle', PbFieldType.OF)
-    ..a<double>(6, 'tiltAngle', PbFieldType.OF)
-    ..a<double>(7, 'detectionConfidence', PbFieldType.OF)
-    ..a<double>(8, 'landmarkingConfidence', PbFieldType.OF)
-    ..e<Likelihood>(9, 'joyLikelihood', PbFieldType.OE, Likelihood.UNKNOWN,
+class FaceAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FaceAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<$2.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
+    ..a<$2.BoundingPoly>(2, 'fdBoundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
+    ..pc<FaceAnnotation_Landmark>(
+        3, 'landmarks', $pb.PbFieldType.PM, FaceAnnotation_Landmark.create)
+    ..a<$core.double>(4, 'rollAngle', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, 'panAngle', $pb.PbFieldType.OF)
+    ..a<$core.double>(6, 'tiltAngle', $pb.PbFieldType.OF)
+    ..a<$core.double>(7, 'detectionConfidence', $pb.PbFieldType.OF)
+    ..a<$core.double>(8, 'landmarkingConfidence', $pb.PbFieldType.OF)
+    ..e<Likelihood>(9, 'joyLikelihood', $pb.PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(10, 'sorrowLikelihood', PbFieldType.OE, Likelihood.UNKNOWN,
-        Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(11, 'angerLikelihood', PbFieldType.OE, Likelihood.UNKNOWN,
-        Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(12, 'surpriseLikelihood', PbFieldType.OE,
+    ..e<Likelihood>(10, 'sorrowLikelihood', $pb.PbFieldType.OE,
         Likelihood.UNKNOWN, Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(13, 'underExposedLikelihood', PbFieldType.OE,
+    ..e<Likelihood>(11, 'angerLikelihood', $pb.PbFieldType.OE,
         Likelihood.UNKNOWN, Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(14, 'blurredLikelihood', PbFieldType.OE, Likelihood.UNKNOWN,
-        Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(15, 'headwearLikelihood', PbFieldType.OE,
+    ..e<Likelihood>(12, 'surpriseLikelihood', $pb.PbFieldType.OE,
+        Likelihood.UNKNOWN, Likelihood.valueOf, Likelihood.values)
+    ..e<Likelihood>(13, 'underExposedLikelihood', $pb.PbFieldType.OE,
+        Likelihood.UNKNOWN, Likelihood.valueOf, Likelihood.values)
+    ..e<Likelihood>(14, 'blurredLikelihood', $pb.PbFieldType.OE,
+        Likelihood.UNKNOWN, Likelihood.valueOf, Likelihood.values)
+    ..e<Likelihood>(15, 'headwearLikelihood', $pb.PbFieldType.OE,
         Likelihood.UNKNOWN, Likelihood.valueOf, Likelihood.values)
     ..hasRequiredFields = false;
 
   FaceAnnotation() : super();
-  FaceAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  FaceAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  FaceAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  FaceAnnotation clone() => new FaceAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static FaceAnnotation create() => new FaceAnnotation();
-  static PbList<FaceAnnotation> createRepeated() =>
-      new PbList<FaceAnnotation>();
-  static FaceAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyFaceAnnotation();
-    return _defaultInstance;
-  }
-
+  FaceAnnotation clone() => FaceAnnotation()..mergeFromMessage(this);
+  FaceAnnotation copyWith(void Function(FaceAnnotation) updates) =>
+      super.copyWith((message) => updates(message as FaceAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static FaceAnnotation create() => FaceAnnotation();
+  FaceAnnotation createEmptyInstance() => create();
+  static $pb.PbList<FaceAnnotation> createRepeated() =>
+      $pb.PbList<FaceAnnotation>();
+  static FaceAnnotation getDefault() => _defaultInstance ??= create()..freeze();
   static FaceAnnotation _defaultInstance;
-  static void $checkItem(FaceAnnotation v) {
-    if (v is! FaceAnnotation) checkItemFailed(v, 'FaceAnnotation');
-  }
 
-  BoundingPoly get boundingPoly => $_getN(0);
-  set boundingPoly(BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(0);
+  set boundingPoly($2.BoundingPoly v) {
     setField(1, v);
   }
 
-  bool hasBoundingPoly() => $_has(0);
+  $core.bool hasBoundingPoly() => $_has(0);
   void clearBoundingPoly() => clearField(1);
 
-  BoundingPoly get fdBoundingPoly => $_getN(1);
-  set fdBoundingPoly(BoundingPoly v) {
+  $2.BoundingPoly get fdBoundingPoly => $_getN(1);
+  set fdBoundingPoly($2.BoundingPoly v) {
     setField(2, v);
   }
 
-  bool hasFdBoundingPoly() => $_has(1);
+  $core.bool hasFdBoundingPoly() => $_has(1);
   void clearFdBoundingPoly() => clearField(2);
 
-  List<FaceAnnotation_Landmark> get landmarks => $_getList(2);
+  $core.List<FaceAnnotation_Landmark> get landmarks => $_getList(2);
 
-  double get rollAngle => $_getN(3);
-  set rollAngle(double v) {
+  $core.double get rollAngle => $_getN(3);
+  set rollAngle($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasRollAngle() => $_has(3);
+  $core.bool hasRollAngle() => $_has(3);
   void clearRollAngle() => clearField(4);
 
-  double get panAngle => $_getN(4);
-  set panAngle(double v) {
+  $core.double get panAngle => $_getN(4);
+  set panAngle($core.double v) {
     $_setFloat(4, v);
   }
 
-  bool hasPanAngle() => $_has(4);
+  $core.bool hasPanAngle() => $_has(4);
   void clearPanAngle() => clearField(5);
 
-  double get tiltAngle => $_getN(5);
-  set tiltAngle(double v) {
+  $core.double get tiltAngle => $_getN(5);
+  set tiltAngle($core.double v) {
     $_setFloat(5, v);
   }
 
-  bool hasTiltAngle() => $_has(5);
+  $core.bool hasTiltAngle() => $_has(5);
   void clearTiltAngle() => clearField(6);
 
-  double get detectionConfidence => $_getN(6);
-  set detectionConfidence(double v) {
+  $core.double get detectionConfidence => $_getN(6);
+  set detectionConfidence($core.double v) {
     $_setFloat(6, v);
   }
 
-  bool hasDetectionConfidence() => $_has(6);
+  $core.bool hasDetectionConfidence() => $_has(6);
   void clearDetectionConfidence() => clearField(7);
 
-  double get landmarkingConfidence => $_getN(7);
-  set landmarkingConfidence(double v) {
+  $core.double get landmarkingConfidence => $_getN(7);
+  set landmarkingConfidence($core.double v) {
     $_setFloat(7, v);
   }
 
-  bool hasLandmarkingConfidence() => $_has(7);
+  $core.bool hasLandmarkingConfidence() => $_has(7);
   void clearLandmarkingConfidence() => clearField(8);
 
   Likelihood get joyLikelihood => $_getN(8);
@@ -342,7 +325,7 @@ class FaceAnnotation extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasJoyLikelihood() => $_has(8);
+  $core.bool hasJoyLikelihood() => $_has(8);
   void clearJoyLikelihood() => clearField(9);
 
   Likelihood get sorrowLikelihood => $_getN(9);
@@ -350,7 +333,7 @@ class FaceAnnotation extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasSorrowLikelihood() => $_has(9);
+  $core.bool hasSorrowLikelihood() => $_has(9);
   void clearSorrowLikelihood() => clearField(10);
 
   Likelihood get angerLikelihood => $_getN(10);
@@ -358,7 +341,7 @@ class FaceAnnotation extends GeneratedMessage {
     setField(11, v);
   }
 
-  bool hasAngerLikelihood() => $_has(10);
+  $core.bool hasAngerLikelihood() => $_has(10);
   void clearAngerLikelihood() => clearField(11);
 
   Likelihood get surpriseLikelihood => $_getN(11);
@@ -366,7 +349,7 @@ class FaceAnnotation extends GeneratedMessage {
     setField(12, v);
   }
 
-  bool hasSurpriseLikelihood() => $_has(11);
+  $core.bool hasSurpriseLikelihood() => $_has(11);
   void clearSurpriseLikelihood() => clearField(12);
 
   Likelihood get underExposedLikelihood => $_getN(12);
@@ -374,7 +357,7 @@ class FaceAnnotation extends GeneratedMessage {
     setField(13, v);
   }
 
-  bool hasUnderExposedLikelihood() => $_has(12);
+  $core.bool hasUnderExposedLikelihood() => $_has(12);
   void clearUnderExposedLikelihood() => clearField(13);
 
   Likelihood get blurredLikelihood => $_getN(13);
@@ -382,7 +365,7 @@ class FaceAnnotation extends GeneratedMessage {
     setField(14, v);
   }
 
-  bool hasBlurredLikelihood() => $_has(13);
+  $core.bool hasBlurredLikelihood() => $_has(13);
   void clearBlurredLikelihood() => clearField(14);
 
   Likelihood get headwearLikelihood => $_getN(14);
@@ -390,93 +373,83 @@ class FaceAnnotation extends GeneratedMessage {
     setField(15, v);
   }
 
-  bool hasHeadwearLikelihood() => $_has(14);
+  $core.bool hasHeadwearLikelihood() => $_has(14);
   void clearHeadwearLikelihood() => clearField(15);
 }
 
-class _ReadonlyFaceAnnotation extends FaceAnnotation with ReadonlyMessageMixin {
-}
-
-class LocationInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocationInfo')
-    ..a<$google$type.LatLng>(1, 'latLng', PbFieldType.OM,
-        $google$type.LatLng.getDefault, $google$type.LatLng.create)
+class LocationInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationInfo',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<$3.LatLng>(
+        1, 'latLng', $pb.PbFieldType.OM, $3.LatLng.getDefault, $3.LatLng.create)
     ..hasRequiredFields = false;
 
   LocationInfo() : super();
-  LocationInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LocationInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LocationInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LocationInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationInfo clone() => new LocationInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LocationInfo create() => new LocationInfo();
-  static PbList<LocationInfo> createRepeated() => new PbList<LocationInfo>();
-  static LocationInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationInfo();
-    return _defaultInstance;
-  }
-
+  LocationInfo clone() => LocationInfo()..mergeFromMessage(this);
+  LocationInfo copyWith(void Function(LocationInfo) updates) =>
+      super.copyWith((message) => updates(message as LocationInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static LocationInfo create() => LocationInfo();
+  LocationInfo createEmptyInstance() => create();
+  static $pb.PbList<LocationInfo> createRepeated() =>
+      $pb.PbList<LocationInfo>();
+  static LocationInfo getDefault() => _defaultInstance ??= create()..freeze();
   static LocationInfo _defaultInstance;
-  static void $checkItem(LocationInfo v) {
-    if (v is! LocationInfo) checkItemFailed(v, 'LocationInfo');
-  }
 
-  $google$type.LatLng get latLng => $_getN(0);
-  set latLng($google$type.LatLng v) {
+  $3.LatLng get latLng => $_getN(0);
+  set latLng($3.LatLng v) {
     setField(1, v);
   }
 
-  bool hasLatLng() => $_has(0);
+  $core.bool hasLatLng() => $_has(0);
   void clearLatLng() => clearField(1);
 }
 
-class _ReadonlyLocationInfo extends LocationInfo with ReadonlyMessageMixin {}
-
-class Property extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Property')
+class Property extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Property',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'value')
-    ..a<Int64>(3, 'uint64Value', PbFieldType.OU6, Int64.ZERO)
+    ..a<Int64>(3, 'uint64Value', $pb.PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
 
   Property() : super();
-  Property.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Property.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Property.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Property.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Property clone() => new Property()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Property create() => new Property();
-  static PbList<Property> createRepeated() => new PbList<Property>();
-  static Property getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProperty();
-    return _defaultInstance;
-  }
-
+  Property clone() => Property()..mergeFromMessage(this);
+  Property copyWith(void Function(Property) updates) =>
+      super.copyWith((message) => updates(message as Property));
+  $pb.BuilderInfo get info_ => _i;
+  static Property create() => Property();
+  Property createEmptyInstance() => create();
+  static $pb.PbList<Property> createRepeated() => $pb.PbList<Property>();
+  static Property getDefault() => _defaultInstance ??= create()..freeze();
   static Property _defaultInstance;
-  static void $checkItem(Property v) {
-    if (v is! Property) checkItemFailed(v, 'Property');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get value => $_getS(1, '');
-  set value(String v) {
+  $core.String get value => $_getS(1, '');
+  set value($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasValue() => $_has(1);
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
   Int64 get uint64Value => $_getI64(2);
@@ -484,159 +457,224 @@ class Property extends GeneratedMessage {
     $_setInt64(2, v);
   }
 
-  bool hasUint64Value() => $_has(2);
+  $core.bool hasUint64Value() => $_has(2);
   void clearUint64Value() => clearField(3);
 }
 
-class _ReadonlyProperty extends Property with ReadonlyMessageMixin {}
-
-class EntityAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityAnnotation')
+class EntityAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOS(1, 'mid')
     ..aOS(2, 'locale')
     ..aOS(3, 'description')
-    ..a<double>(4, 'score', PbFieldType.OF)
-    ..a<double>(5, 'confidence', PbFieldType.OF)
-    ..a<double>(6, 'topicality', PbFieldType.OF)
-    ..a<BoundingPoly>(7, 'boundingPoly', PbFieldType.OM,
-        BoundingPoly.getDefault, BoundingPoly.create)
-    ..pp<LocationInfo>(8, 'locations', PbFieldType.PM, LocationInfo.$checkItem,
-        LocationInfo.create)
-    ..pp<Property>(
-        9, 'properties', PbFieldType.PM, Property.$checkItem, Property.create)
+    ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, 'confidence', $pb.PbFieldType.OF)
+    ..a<$core.double>(6, 'topicality', $pb.PbFieldType.OF)
+    ..a<$2.BoundingPoly>(7, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
+    ..pc<LocationInfo>(8, 'locations', $pb.PbFieldType.PM, LocationInfo.create)
+    ..pc<Property>(9, 'properties', $pb.PbFieldType.PM, Property.create)
     ..hasRequiredFields = false;
 
   EntityAnnotation() : super();
-  EntityAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EntityAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  EntityAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EntityAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityAnnotation clone() => new EntityAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EntityAnnotation create() => new EntityAnnotation();
-  static PbList<EntityAnnotation> createRepeated() =>
-      new PbList<EntityAnnotation>();
-  static EntityAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityAnnotation();
-    return _defaultInstance;
-  }
-
+  EntityAnnotation clone() => EntityAnnotation()..mergeFromMessage(this);
+  EntityAnnotation copyWith(void Function(EntityAnnotation) updates) =>
+      super.copyWith((message) => updates(message as EntityAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static EntityAnnotation create() => EntityAnnotation();
+  EntityAnnotation createEmptyInstance() => create();
+  static $pb.PbList<EntityAnnotation> createRepeated() =>
+      $pb.PbList<EntityAnnotation>();
+  static EntityAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static EntityAnnotation _defaultInstance;
-  static void $checkItem(EntityAnnotation v) {
-    if (v is! EntityAnnotation) checkItemFailed(v, 'EntityAnnotation');
-  }
 
-  String get mid => $_getS(0, '');
-  set mid(String v) {
+  $core.String get mid => $_getS(0, '');
+  set mid($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasMid() => $_has(0);
+  $core.bool hasMid() => $_has(0);
   void clearMid() => clearField(1);
 
-  String get locale => $_getS(1, '');
-  set locale(String v) {
+  $core.String get locale => $_getS(1, '');
+  set locale($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLocale() => $_has(1);
+  $core.bool hasLocale() => $_has(1);
   void clearLocale() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  double get score => $_getN(3);
-  set score(double v) {
+  $core.double get score => $_getN(3);
+  set score($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasScore() => $_has(3);
+  $core.bool hasScore() => $_has(3);
   void clearScore() => clearField(4);
 
-  double get confidence => $_getN(4);
-  set confidence(double v) {
+  @$core.Deprecated('This field is deprecated.')
+  $core.double get confidence => $_getN(4);
+  @$core.Deprecated('This field is deprecated.')
+  set confidence($core.double v) {
     $_setFloat(4, v);
   }
 
-  bool hasConfidence() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasConfidence() => $_has(4);
+  @$core.Deprecated('This field is deprecated.')
   void clearConfidence() => clearField(5);
 
-  double get topicality => $_getN(5);
-  set topicality(double v) {
+  $core.double get topicality => $_getN(5);
+  set topicality($core.double v) {
     $_setFloat(5, v);
   }
 
-  bool hasTopicality() => $_has(5);
+  $core.bool hasTopicality() => $_has(5);
   void clearTopicality() => clearField(6);
 
-  BoundingPoly get boundingPoly => $_getN(6);
-  set boundingPoly(BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(6);
+  set boundingPoly($2.BoundingPoly v) {
     setField(7, v);
   }
 
-  bool hasBoundingPoly() => $_has(6);
+  $core.bool hasBoundingPoly() => $_has(6);
   void clearBoundingPoly() => clearField(7);
 
-  List<LocationInfo> get locations => $_getList(7);
+  $core.List<LocationInfo> get locations => $_getList(7);
 
-  List<Property> get properties => $_getList(8);
+  $core.List<Property> get properties => $_getList(8);
 }
 
-class _ReadonlyEntityAnnotation extends EntityAnnotation
-    with ReadonlyMessageMixin {}
+class LocalizedObjectAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocalizedObjectAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..aOS(1, 'mid')
+    ..aOS(2, 'languageCode')
+    ..aOS(3, 'name')
+    ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
+    ..a<$2.BoundingPoly>(5, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
+    ..hasRequiredFields = false;
 
-class SafeSearchAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SafeSearchAnnotation')
-    ..e<Likelihood>(1, 'adult', PbFieldType.OE, Likelihood.UNKNOWN,
+  LocalizedObjectAnnotation() : super();
+  LocalizedObjectAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  LocalizedObjectAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  LocalizedObjectAnnotation clone() =>
+      LocalizedObjectAnnotation()..mergeFromMessage(this);
+  LocalizedObjectAnnotation copyWith(
+          void Function(LocalizedObjectAnnotation) updates) =>
+      super
+          .copyWith((message) => updates(message as LocalizedObjectAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static LocalizedObjectAnnotation create() => LocalizedObjectAnnotation();
+  LocalizedObjectAnnotation createEmptyInstance() => create();
+  static $pb.PbList<LocalizedObjectAnnotation> createRepeated() =>
+      $pb.PbList<LocalizedObjectAnnotation>();
+  static LocalizedObjectAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static LocalizedObjectAnnotation _defaultInstance;
+
+  $core.String get mid => $_getS(0, '');
+  set mid($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasMid() => $_has(0);
+  void clearMid() => clearField(1);
+
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(1);
+  void clearLanguageCode() => clearField(2);
+
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasName() => $_has(2);
+  void clearName() => clearField(3);
+
+  $core.double get score => $_getN(3);
+  set score($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasScore() => $_has(3);
+  void clearScore() => clearField(4);
+
+  $2.BoundingPoly get boundingPoly => $_getN(4);
+  set boundingPoly($2.BoundingPoly v) {
+    setField(5, v);
+  }
+
+  $core.bool hasBoundingPoly() => $_has(4);
+  void clearBoundingPoly() => clearField(5);
+}
+
+class SafeSearchAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SafeSearchAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..e<Likelihood>(1, 'adult', $pb.PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(2, 'spoof', PbFieldType.OE, Likelihood.UNKNOWN,
+    ..e<Likelihood>(2, 'spoof', $pb.PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(3, 'medical', PbFieldType.OE, Likelihood.UNKNOWN,
+    ..e<Likelihood>(3, 'medical', $pb.PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(4, 'violence', PbFieldType.OE, Likelihood.UNKNOWN,
+    ..e<Likelihood>(4, 'violence', $pb.PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
-    ..e<Likelihood>(9, 'racy', PbFieldType.OE, Likelihood.UNKNOWN,
+    ..e<Likelihood>(9, 'racy', $pb.PbFieldType.OE, Likelihood.UNKNOWN,
         Likelihood.valueOf, Likelihood.values)
     ..hasRequiredFields = false;
 
   SafeSearchAnnotation() : super();
-  SafeSearchAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SafeSearchAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SafeSearchAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SafeSearchAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SafeSearchAnnotation clone() =>
-      new SafeSearchAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SafeSearchAnnotation create() => new SafeSearchAnnotation();
-  static PbList<SafeSearchAnnotation> createRepeated() =>
-      new PbList<SafeSearchAnnotation>();
-  static SafeSearchAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySafeSearchAnnotation();
-    return _defaultInstance;
-  }
-
+      SafeSearchAnnotation()..mergeFromMessage(this);
+  SafeSearchAnnotation copyWith(void Function(SafeSearchAnnotation) updates) =>
+      super.copyWith((message) => updates(message as SafeSearchAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static SafeSearchAnnotation create() => SafeSearchAnnotation();
+  SafeSearchAnnotation createEmptyInstance() => create();
+  static $pb.PbList<SafeSearchAnnotation> createRepeated() =>
+      $pb.PbList<SafeSearchAnnotation>();
+  static SafeSearchAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SafeSearchAnnotation _defaultInstance;
-  static void $checkItem(SafeSearchAnnotation v) {
-    if (v is! SafeSearchAnnotation) checkItemFailed(v, 'SafeSearchAnnotation');
-  }
 
   Likelihood get adult => $_getN(0);
   set adult(Likelihood v) {
     setField(1, v);
   }
 
-  bool hasAdult() => $_has(0);
+  $core.bool hasAdult() => $_has(0);
   void clearAdult() => clearField(1);
 
   Likelihood get spoof => $_getN(1);
@@ -644,7 +682,7 @@ class SafeSearchAnnotation extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasSpoof() => $_has(1);
+  $core.bool hasSpoof() => $_has(1);
   void clearSpoof() => clearField(2);
 
   Likelihood get medical => $_getN(2);
@@ -652,7 +690,7 @@ class SafeSearchAnnotation extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasMedical() => $_has(2);
+  $core.bool hasMedical() => $_has(2);
   void clearMedical() => clearField(3);
 
   Likelihood get violence => $_getN(3);
@@ -660,7 +698,7 @@ class SafeSearchAnnotation extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasViolence() => $_has(3);
+  $core.bool hasViolence() => $_has(3);
   void clearViolence() => clearField(4);
 
   Likelihood get racy => $_getN(4);
@@ -668,597 +706,538 @@ class SafeSearchAnnotation extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasRacy() => $_has(4);
+  $core.bool hasRacy() => $_has(4);
   void clearRacy() => clearField(9);
 }
 
-class _ReadonlySafeSearchAnnotation extends SafeSearchAnnotation
-    with ReadonlyMessageMixin {}
-
-class LatLongRect extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LatLongRect')
-    ..a<$google$type.LatLng>(1, 'minLatLng', PbFieldType.OM,
-        $google$type.LatLng.getDefault, $google$type.LatLng.create)
-    ..a<$google$type.LatLng>(2, 'maxLatLng', PbFieldType.OM,
-        $google$type.LatLng.getDefault, $google$type.LatLng.create)
+class LatLongRect extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LatLongRect',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<$3.LatLng>(1, 'minLatLng', $pb.PbFieldType.OM, $3.LatLng.getDefault,
+        $3.LatLng.create)
+    ..a<$3.LatLng>(2, 'maxLatLng', $pb.PbFieldType.OM, $3.LatLng.getDefault,
+        $3.LatLng.create)
     ..hasRequiredFields = false;
 
   LatLongRect() : super();
-  LatLongRect.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LatLongRect.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LatLongRect.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LatLongRect.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LatLongRect clone() => new LatLongRect()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LatLongRect create() => new LatLongRect();
-  static PbList<LatLongRect> createRepeated() => new PbList<LatLongRect>();
-  static LatLongRect getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLatLongRect();
-    return _defaultInstance;
-  }
-
+  LatLongRect clone() => LatLongRect()..mergeFromMessage(this);
+  LatLongRect copyWith(void Function(LatLongRect) updates) =>
+      super.copyWith((message) => updates(message as LatLongRect));
+  $pb.BuilderInfo get info_ => _i;
+  static LatLongRect create() => LatLongRect();
+  LatLongRect createEmptyInstance() => create();
+  static $pb.PbList<LatLongRect> createRepeated() => $pb.PbList<LatLongRect>();
+  static LatLongRect getDefault() => _defaultInstance ??= create()..freeze();
   static LatLongRect _defaultInstance;
-  static void $checkItem(LatLongRect v) {
-    if (v is! LatLongRect) checkItemFailed(v, 'LatLongRect');
-  }
 
-  $google$type.LatLng get minLatLng => $_getN(0);
-  set minLatLng($google$type.LatLng v) {
+  $3.LatLng get minLatLng => $_getN(0);
+  set minLatLng($3.LatLng v) {
     setField(1, v);
   }
 
-  bool hasMinLatLng() => $_has(0);
+  $core.bool hasMinLatLng() => $_has(0);
   void clearMinLatLng() => clearField(1);
 
-  $google$type.LatLng get maxLatLng => $_getN(1);
-  set maxLatLng($google$type.LatLng v) {
+  $3.LatLng get maxLatLng => $_getN(1);
+  set maxLatLng($3.LatLng v) {
     setField(2, v);
   }
 
-  bool hasMaxLatLng() => $_has(1);
+  $core.bool hasMaxLatLng() => $_has(1);
   void clearMaxLatLng() => clearField(2);
 }
 
-class _ReadonlyLatLongRect extends LatLongRect with ReadonlyMessageMixin {}
-
-class ColorInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ColorInfo')
-    ..a<$google$type.Color>(1, 'color', PbFieldType.OM,
-        $google$type.Color.getDefault, $google$type.Color.create)
-    ..a<double>(2, 'score', PbFieldType.OF)
-    ..a<double>(3, 'pixelFraction', PbFieldType.OF)
+class ColorInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ColorInfo',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<$4.Color>(
+        1, 'color', $pb.PbFieldType.OM, $4.Color.getDefault, $4.Color.create)
+    ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, 'pixelFraction', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   ColorInfo() : super();
-  ColorInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ColorInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ColorInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ColorInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ColorInfo clone() => new ColorInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ColorInfo create() => new ColorInfo();
-  static PbList<ColorInfo> createRepeated() => new PbList<ColorInfo>();
-  static ColorInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyColorInfo();
-    return _defaultInstance;
-  }
-
+  ColorInfo clone() => ColorInfo()..mergeFromMessage(this);
+  ColorInfo copyWith(void Function(ColorInfo) updates) =>
+      super.copyWith((message) => updates(message as ColorInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static ColorInfo create() => ColorInfo();
+  ColorInfo createEmptyInstance() => create();
+  static $pb.PbList<ColorInfo> createRepeated() => $pb.PbList<ColorInfo>();
+  static ColorInfo getDefault() => _defaultInstance ??= create()..freeze();
   static ColorInfo _defaultInstance;
-  static void $checkItem(ColorInfo v) {
-    if (v is! ColorInfo) checkItemFailed(v, 'ColorInfo');
-  }
 
-  $google$type.Color get color => $_getN(0);
-  set color($google$type.Color v) {
+  $4.Color get color => $_getN(0);
+  set color($4.Color v) {
     setField(1, v);
   }
 
-  bool hasColor() => $_has(0);
+  $core.bool hasColor() => $_has(0);
   void clearColor() => clearField(1);
 
-  double get score => $_getN(1);
-  set score(double v) {
+  $core.double get score => $_getN(1);
+  set score($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasScore() => $_has(1);
+  $core.bool hasScore() => $_has(1);
   void clearScore() => clearField(2);
 
-  double get pixelFraction => $_getN(2);
-  set pixelFraction(double v) {
+  $core.double get pixelFraction => $_getN(2);
+  set pixelFraction($core.double v) {
     $_setFloat(2, v);
   }
 
-  bool hasPixelFraction() => $_has(2);
+  $core.bool hasPixelFraction() => $_has(2);
   void clearPixelFraction() => clearField(3);
 }
 
-class _ReadonlyColorInfo extends ColorInfo with ReadonlyMessageMixin {}
-
-class DominantColorsAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DominantColorsAnnotation')
-    ..pp<ColorInfo>(
-        1, 'colors', PbFieldType.PM, ColorInfo.$checkItem, ColorInfo.create)
+class DominantColorsAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DominantColorsAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<ColorInfo>(1, 'colors', $pb.PbFieldType.PM, ColorInfo.create)
     ..hasRequiredFields = false;
 
   DominantColorsAnnotation() : super();
-  DominantColorsAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DominantColorsAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DominantColorsAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DominantColorsAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DominantColorsAnnotation clone() =>
-      new DominantColorsAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DominantColorsAnnotation create() => new DominantColorsAnnotation();
-  static PbList<DominantColorsAnnotation> createRepeated() =>
-      new PbList<DominantColorsAnnotation>();
-  static DominantColorsAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDominantColorsAnnotation();
-    return _defaultInstance;
-  }
-
+      DominantColorsAnnotation()..mergeFromMessage(this);
+  DominantColorsAnnotation copyWith(
+          void Function(DominantColorsAnnotation) updates) =>
+      super.copyWith((message) => updates(message as DominantColorsAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static DominantColorsAnnotation create() => DominantColorsAnnotation();
+  DominantColorsAnnotation createEmptyInstance() => create();
+  static $pb.PbList<DominantColorsAnnotation> createRepeated() =>
+      $pb.PbList<DominantColorsAnnotation>();
+  static DominantColorsAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DominantColorsAnnotation _defaultInstance;
-  static void $checkItem(DominantColorsAnnotation v) {
-    if (v is! DominantColorsAnnotation)
-      checkItemFailed(v, 'DominantColorsAnnotation');
-  }
 
-  List<ColorInfo> get colors => $_getList(0);
+  $core.List<ColorInfo> get colors => $_getList(0);
 }
 
-class _ReadonlyDominantColorsAnnotation extends DominantColorsAnnotation
-    with ReadonlyMessageMixin {}
-
-class ImageProperties extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageProperties')
-    ..a<DominantColorsAnnotation>(1, 'dominantColors', PbFieldType.OM,
+class ImageProperties extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImageProperties',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<DominantColorsAnnotation>(1, 'dominantColors', $pb.PbFieldType.OM,
         DominantColorsAnnotation.getDefault, DominantColorsAnnotation.create)
     ..hasRequiredFields = false;
 
   ImageProperties() : super();
-  ImageProperties.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageProperties.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImageProperties.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageProperties.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImageProperties clone() => new ImageProperties()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImageProperties create() => new ImageProperties();
-  static PbList<ImageProperties> createRepeated() =>
-      new PbList<ImageProperties>();
-  static ImageProperties getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImageProperties();
-    return _defaultInstance;
-  }
-
+  ImageProperties clone() => ImageProperties()..mergeFromMessage(this);
+  ImageProperties copyWith(void Function(ImageProperties) updates) =>
+      super.copyWith((message) => updates(message as ImageProperties));
+  $pb.BuilderInfo get info_ => _i;
+  static ImageProperties create() => ImageProperties();
+  ImageProperties createEmptyInstance() => create();
+  static $pb.PbList<ImageProperties> createRepeated() =>
+      $pb.PbList<ImageProperties>();
+  static ImageProperties getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImageProperties _defaultInstance;
-  static void $checkItem(ImageProperties v) {
-    if (v is! ImageProperties) checkItemFailed(v, 'ImageProperties');
-  }
 
   DominantColorsAnnotation get dominantColors => $_getN(0);
   set dominantColors(DominantColorsAnnotation v) {
     setField(1, v);
   }
 
-  bool hasDominantColors() => $_has(0);
+  $core.bool hasDominantColors() => $_has(0);
   void clearDominantColors() => clearField(1);
 }
 
-class _ReadonlyImageProperties extends ImageProperties
-    with ReadonlyMessageMixin {}
-
-class CropHint extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CropHint')
-    ..a<BoundingPoly>(1, 'boundingPoly', PbFieldType.OM,
-        BoundingPoly.getDefault, BoundingPoly.create)
-    ..a<double>(2, 'confidence', PbFieldType.OF)
-    ..a<double>(3, 'importanceFraction', PbFieldType.OF)
+class CropHint extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CropHint',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<$2.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
+        $2.BoundingPoly.getDefault, $2.BoundingPoly.create)
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, 'importanceFraction', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   CropHint() : super();
-  CropHint.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CropHint.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CropHint.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CropHint.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CropHint clone() => new CropHint()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CropHint create() => new CropHint();
-  static PbList<CropHint> createRepeated() => new PbList<CropHint>();
-  static CropHint getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCropHint();
-    return _defaultInstance;
-  }
-
+  CropHint clone() => CropHint()..mergeFromMessage(this);
+  CropHint copyWith(void Function(CropHint) updates) =>
+      super.copyWith((message) => updates(message as CropHint));
+  $pb.BuilderInfo get info_ => _i;
+  static CropHint create() => CropHint();
+  CropHint createEmptyInstance() => create();
+  static $pb.PbList<CropHint> createRepeated() => $pb.PbList<CropHint>();
+  static CropHint getDefault() => _defaultInstance ??= create()..freeze();
   static CropHint _defaultInstance;
-  static void $checkItem(CropHint v) {
-    if (v is! CropHint) checkItemFailed(v, 'CropHint');
-  }
 
-  BoundingPoly get boundingPoly => $_getN(0);
-  set boundingPoly(BoundingPoly v) {
+  $2.BoundingPoly get boundingPoly => $_getN(0);
+  set boundingPoly($2.BoundingPoly v) {
     setField(1, v);
   }
 
-  bool hasBoundingPoly() => $_has(0);
+  $core.bool hasBoundingPoly() => $_has(0);
   void clearBoundingPoly() => clearField(1);
 
-  double get confidence => $_getN(1);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasConfidence() => $_has(1);
+  $core.bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 
-  double get importanceFraction => $_getN(2);
-  set importanceFraction(double v) {
+  $core.double get importanceFraction => $_getN(2);
+  set importanceFraction($core.double v) {
     $_setFloat(2, v);
   }
 
-  bool hasImportanceFraction() => $_has(2);
+  $core.bool hasImportanceFraction() => $_has(2);
   void clearImportanceFraction() => clearField(3);
 }
 
-class _ReadonlyCropHint extends CropHint with ReadonlyMessageMixin {}
-
-class CropHintsAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CropHintsAnnotation')
-    ..pp<CropHint>(
-        1, 'cropHints', PbFieldType.PM, CropHint.$checkItem, CropHint.create)
+class CropHintsAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CropHintsAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<CropHint>(1, 'cropHints', $pb.PbFieldType.PM, CropHint.create)
     ..hasRequiredFields = false;
 
   CropHintsAnnotation() : super();
-  CropHintsAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CropHintsAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CropHintsAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CropHintsAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CropHintsAnnotation clone() =>
-      new CropHintsAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CropHintsAnnotation create() => new CropHintsAnnotation();
-  static PbList<CropHintsAnnotation> createRepeated() =>
-      new PbList<CropHintsAnnotation>();
-  static CropHintsAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCropHintsAnnotation();
-    return _defaultInstance;
-  }
-
+  CropHintsAnnotation clone() => CropHintsAnnotation()..mergeFromMessage(this);
+  CropHintsAnnotation copyWith(void Function(CropHintsAnnotation) updates) =>
+      super.copyWith((message) => updates(message as CropHintsAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static CropHintsAnnotation create() => CropHintsAnnotation();
+  CropHintsAnnotation createEmptyInstance() => create();
+  static $pb.PbList<CropHintsAnnotation> createRepeated() =>
+      $pb.PbList<CropHintsAnnotation>();
+  static CropHintsAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CropHintsAnnotation _defaultInstance;
-  static void $checkItem(CropHintsAnnotation v) {
-    if (v is! CropHintsAnnotation) checkItemFailed(v, 'CropHintsAnnotation');
-  }
 
-  List<CropHint> get cropHints => $_getList(0);
+  $core.List<CropHint> get cropHints => $_getList(0);
 }
 
-class _ReadonlyCropHintsAnnotation extends CropHintsAnnotation
-    with ReadonlyMessageMixin {}
-
-class CropHintsParams extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CropHintsParams')
-    ..p<double>(1, 'aspectRatios', PbFieldType.PF)
+class CropHintsParams extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CropHintsParams',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..p<$core.double>(1, 'aspectRatios', $pb.PbFieldType.PF)
     ..hasRequiredFields = false;
 
   CropHintsParams() : super();
-  CropHintsParams.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CropHintsParams.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CropHintsParams.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CropHintsParams.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CropHintsParams clone() => new CropHintsParams()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CropHintsParams create() => new CropHintsParams();
-  static PbList<CropHintsParams> createRepeated() =>
-      new PbList<CropHintsParams>();
-  static CropHintsParams getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCropHintsParams();
-    return _defaultInstance;
-  }
-
+  CropHintsParams clone() => CropHintsParams()..mergeFromMessage(this);
+  CropHintsParams copyWith(void Function(CropHintsParams) updates) =>
+      super.copyWith((message) => updates(message as CropHintsParams));
+  $pb.BuilderInfo get info_ => _i;
+  static CropHintsParams create() => CropHintsParams();
+  CropHintsParams createEmptyInstance() => create();
+  static $pb.PbList<CropHintsParams> createRepeated() =>
+      $pb.PbList<CropHintsParams>();
+  static CropHintsParams getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CropHintsParams _defaultInstance;
-  static void $checkItem(CropHintsParams v) {
-    if (v is! CropHintsParams) checkItemFailed(v, 'CropHintsParams');
-  }
 
-  List<double> get aspectRatios => $_getList(0);
+  $core.List<$core.double> get aspectRatios => $_getList(0);
 }
 
-class _ReadonlyCropHintsParams extends CropHintsParams
-    with ReadonlyMessageMixin {}
-
-class WebDetectionParams extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WebDetectionParams')
+class WebDetectionParams extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetectionParams',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOB(2, 'includeGeoResults')
     ..hasRequiredFields = false;
 
   WebDetectionParams() : super();
-  WebDetectionParams.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  WebDetectionParams.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  WebDetectionParams.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  WebDetectionParams.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WebDetectionParams clone() =>
-      new WebDetectionParams()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static WebDetectionParams create() => new WebDetectionParams();
-  static PbList<WebDetectionParams> createRepeated() =>
-      new PbList<WebDetectionParams>();
-  static WebDetectionParams getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyWebDetectionParams();
-    return _defaultInstance;
-  }
-
+  WebDetectionParams clone() => WebDetectionParams()..mergeFromMessage(this);
+  WebDetectionParams copyWith(void Function(WebDetectionParams) updates) =>
+      super.copyWith((message) => updates(message as WebDetectionParams));
+  $pb.BuilderInfo get info_ => _i;
+  static WebDetectionParams create() => WebDetectionParams();
+  WebDetectionParams createEmptyInstance() => create();
+  static $pb.PbList<WebDetectionParams> createRepeated() =>
+      $pb.PbList<WebDetectionParams>();
+  static WebDetectionParams getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static WebDetectionParams _defaultInstance;
-  static void $checkItem(WebDetectionParams v) {
-    if (v is! WebDetectionParams) checkItemFailed(v, 'WebDetectionParams');
-  }
 
-  bool get includeGeoResults => $_get(0, false);
-  set includeGeoResults(bool v) {
+  $core.bool get includeGeoResults => $_get(0, false);
+  set includeGeoResults($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasIncludeGeoResults() => $_has(0);
+  $core.bool hasIncludeGeoResults() => $_has(0);
   void clearIncludeGeoResults() => clearField(2);
 }
 
-class _ReadonlyWebDetectionParams extends WebDetectionParams
-    with ReadonlyMessageMixin {}
-
-class ImageContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageContext')
-    ..a<LatLongRect>(1, 'latLongRect', PbFieldType.OM, LatLongRect.getDefault,
-        LatLongRect.create)
+class ImageContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImageContext',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<LatLongRect>(1, 'latLongRect', $pb.PbFieldType.OM,
+        LatLongRect.getDefault, LatLongRect.create)
     ..pPS(2, 'languageHints')
-    ..a<CropHintsParams>(4, 'cropHintsParams', PbFieldType.OM,
+    ..a<CropHintsParams>(4, 'cropHintsParams', $pb.PbFieldType.OM,
         CropHintsParams.getDefault, CropHintsParams.create)
-    ..a<WebDetectionParams>(6, 'webDetectionParams', PbFieldType.OM,
+    ..a<$5.ProductSearchParams>(5, 'productSearchParams', $pb.PbFieldType.OM,
+        $5.ProductSearchParams.getDefault, $5.ProductSearchParams.create)
+    ..a<WebDetectionParams>(6, 'webDetectionParams', $pb.PbFieldType.OM,
         WebDetectionParams.getDefault, WebDetectionParams.create)
     ..hasRequiredFields = false;
 
   ImageContext() : super();
-  ImageContext.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageContext.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImageContext.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageContext.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ImageContext clone() => new ImageContext()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImageContext create() => new ImageContext();
-  static PbList<ImageContext> createRepeated() => new PbList<ImageContext>();
-  static ImageContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImageContext();
-    return _defaultInstance;
-  }
-
+  ImageContext clone() => ImageContext()..mergeFromMessage(this);
+  ImageContext copyWith(void Function(ImageContext) updates) =>
+      super.copyWith((message) => updates(message as ImageContext));
+  $pb.BuilderInfo get info_ => _i;
+  static ImageContext create() => ImageContext();
+  ImageContext createEmptyInstance() => create();
+  static $pb.PbList<ImageContext> createRepeated() =>
+      $pb.PbList<ImageContext>();
+  static ImageContext getDefault() => _defaultInstance ??= create()..freeze();
   static ImageContext _defaultInstance;
-  static void $checkItem(ImageContext v) {
-    if (v is! ImageContext) checkItemFailed(v, 'ImageContext');
-  }
 
   LatLongRect get latLongRect => $_getN(0);
   set latLongRect(LatLongRect v) {
     setField(1, v);
   }
 
-  bool hasLatLongRect() => $_has(0);
+  $core.bool hasLatLongRect() => $_has(0);
   void clearLatLongRect() => clearField(1);
 
-  List<String> get languageHints => $_getList(1);
+  $core.List<$core.String> get languageHints => $_getList(1);
 
   CropHintsParams get cropHintsParams => $_getN(2);
   set cropHintsParams(CropHintsParams v) {
     setField(4, v);
   }
 
-  bool hasCropHintsParams() => $_has(2);
+  $core.bool hasCropHintsParams() => $_has(2);
   void clearCropHintsParams() => clearField(4);
 
-  WebDetectionParams get webDetectionParams => $_getN(3);
+  $5.ProductSearchParams get productSearchParams => $_getN(3);
+  set productSearchParams($5.ProductSearchParams v) {
+    setField(5, v);
+  }
+
+  $core.bool hasProductSearchParams() => $_has(3);
+  void clearProductSearchParams() => clearField(5);
+
+  WebDetectionParams get webDetectionParams => $_getN(4);
   set webDetectionParams(WebDetectionParams v) {
     setField(6, v);
   }
 
-  bool hasWebDetectionParams() => $_has(3);
+  $core.bool hasWebDetectionParams() => $_has(4);
   void clearWebDetectionParams() => clearField(6);
 }
 
-class _ReadonlyImageContext extends ImageContext with ReadonlyMessageMixin {}
-
-class AnnotateImageRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateImageRequest')
-    ..a<Image>(1, 'image', PbFieldType.OM, Image.getDefault, Image.create)
-    ..pp<Feature>(
-        2, 'features', PbFieldType.PM, Feature.$checkItem, Feature.create)
-    ..a<ImageContext>(3, 'imageContext', PbFieldType.OM,
+class AnnotateImageRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateImageRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<Image>(1, 'image', $pb.PbFieldType.OM, Image.getDefault, Image.create)
+    ..pc<Feature>(2, 'features', $pb.PbFieldType.PM, Feature.create)
+    ..a<ImageContext>(3, 'imageContext', $pb.PbFieldType.OM,
         ImageContext.getDefault, ImageContext.create)
     ..hasRequiredFields = false;
 
   AnnotateImageRequest() : super();
-  AnnotateImageRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateImageRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotateImageRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateImageRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateImageRequest clone() =>
-      new AnnotateImageRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateImageRequest create() => new AnnotateImageRequest();
-  static PbList<AnnotateImageRequest> createRepeated() =>
-      new PbList<AnnotateImageRequest>();
-  static AnnotateImageRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateImageRequest();
-    return _defaultInstance;
-  }
-
+      AnnotateImageRequest()..mergeFromMessage(this);
+  AnnotateImageRequest copyWith(void Function(AnnotateImageRequest) updates) =>
+      super.copyWith((message) => updates(message as AnnotateImageRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateImageRequest create() => AnnotateImageRequest();
+  AnnotateImageRequest createEmptyInstance() => create();
+  static $pb.PbList<AnnotateImageRequest> createRepeated() =>
+      $pb.PbList<AnnotateImageRequest>();
+  static AnnotateImageRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AnnotateImageRequest _defaultInstance;
-  static void $checkItem(AnnotateImageRequest v) {
-    if (v is! AnnotateImageRequest) checkItemFailed(v, 'AnnotateImageRequest');
-  }
 
   Image get image => $_getN(0);
   set image(Image v) {
     setField(1, v);
   }
 
-  bool hasImage() => $_has(0);
+  $core.bool hasImage() => $_has(0);
   void clearImage() => clearField(1);
 
-  List<Feature> get features => $_getList(1);
+  $core.List<Feature> get features => $_getList(1);
 
   ImageContext get imageContext => $_getN(2);
   set imageContext(ImageContext v) {
     setField(3, v);
   }
 
-  bool hasImageContext() => $_has(2);
+  $core.bool hasImageContext() => $_has(2);
   void clearImageContext() => clearField(3);
 }
 
-class _ReadonlyAnnotateImageRequest extends AnnotateImageRequest
-    with ReadonlyMessageMixin {}
-
-class ImageAnnotationContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImageAnnotationContext')
+class ImageAnnotationContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImageAnnotationContext',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOS(1, 'uri')
-    ..a<int>(2, 'pageNumber', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageNumber', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ImageAnnotationContext() : super();
-  ImageAnnotationContext.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageAnnotationContext.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImageAnnotationContext.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImageAnnotationContext.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImageAnnotationContext clone() =>
-      new ImageAnnotationContext()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImageAnnotationContext create() => new ImageAnnotationContext();
-  static PbList<ImageAnnotationContext> createRepeated() =>
-      new PbList<ImageAnnotationContext>();
-  static ImageAnnotationContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImageAnnotationContext();
-    return _defaultInstance;
-  }
-
+      ImageAnnotationContext()..mergeFromMessage(this);
+  ImageAnnotationContext copyWith(
+          void Function(ImageAnnotationContext) updates) =>
+      super.copyWith((message) => updates(message as ImageAnnotationContext));
+  $pb.BuilderInfo get info_ => _i;
+  static ImageAnnotationContext create() => ImageAnnotationContext();
+  ImageAnnotationContext createEmptyInstance() => create();
+  static $pb.PbList<ImageAnnotationContext> createRepeated() =>
+      $pb.PbList<ImageAnnotationContext>();
+  static ImageAnnotationContext getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImageAnnotationContext _defaultInstance;
-  static void $checkItem(ImageAnnotationContext v) {
-    if (v is! ImageAnnotationContext)
-      checkItemFailed(v, 'ImageAnnotationContext');
-  }
 
-  String get uri => $_getS(0, '');
-  set uri(String v) {
+  $core.String get uri => $_getS(0, '');
+  set uri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasUri() => $_has(0);
+  $core.bool hasUri() => $_has(0);
   void clearUri() => clearField(1);
 
-  int get pageNumber => $_get(1, 0);
-  set pageNumber(int v) {
+  $core.int get pageNumber => $_get(1, 0);
+  set pageNumber($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageNumber() => $_has(1);
+  $core.bool hasPageNumber() => $_has(1);
   void clearPageNumber() => clearField(2);
 }
 
-class _ReadonlyImageAnnotationContext extends ImageAnnotationContext
-    with ReadonlyMessageMixin {}
-
-class AnnotateImageResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateImageResponse')
-    ..pp<FaceAnnotation>(1, 'faceAnnotations', PbFieldType.PM,
-        FaceAnnotation.$checkItem, FaceAnnotation.create)
-    ..pp<EntityAnnotation>(2, 'landmarkAnnotations', PbFieldType.PM,
-        EntityAnnotation.$checkItem, EntityAnnotation.create)
-    ..pp<EntityAnnotation>(3, 'logoAnnotations', PbFieldType.PM,
-        EntityAnnotation.$checkItem, EntityAnnotation.create)
-    ..pp<EntityAnnotation>(4, 'labelAnnotations', PbFieldType.PM,
-        EntityAnnotation.$checkItem, EntityAnnotation.create)
-    ..pp<EntityAnnotation>(5, 'textAnnotations', PbFieldType.PM,
-        EntityAnnotation.$checkItem, EntityAnnotation.create)
-    ..a<SafeSearchAnnotation>(6, 'safeSearchAnnotation', PbFieldType.OM,
+class AnnotateImageResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateImageResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<FaceAnnotation>(
+        1, 'faceAnnotations', $pb.PbFieldType.PM, FaceAnnotation.create)
+    ..pc<EntityAnnotation>(
+        2, 'landmarkAnnotations', $pb.PbFieldType.PM, EntityAnnotation.create)
+    ..pc<EntityAnnotation>(
+        3, 'logoAnnotations', $pb.PbFieldType.PM, EntityAnnotation.create)
+    ..pc<EntityAnnotation>(
+        4, 'labelAnnotations', $pb.PbFieldType.PM, EntityAnnotation.create)
+    ..pc<EntityAnnotation>(
+        5, 'textAnnotations', $pb.PbFieldType.PM, EntityAnnotation.create)
+    ..a<SafeSearchAnnotation>(6, 'safeSearchAnnotation', $pb.PbFieldType.OM,
         SafeSearchAnnotation.getDefault, SafeSearchAnnotation.create)
-    ..a<ImageProperties>(8, 'imagePropertiesAnnotation', PbFieldType.OM,
+    ..a<ImageProperties>(8, 'imagePropertiesAnnotation', $pb.PbFieldType.OM,
         ImageProperties.getDefault, ImageProperties.create)
-    ..a<$google$rpc.Status>(9, 'error', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..a<CropHintsAnnotation>(11, 'cropHintsAnnotation', PbFieldType.OM,
+    ..a<$6.Status>(
+        9, 'error', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
+    ..a<CropHintsAnnotation>(11, 'cropHintsAnnotation', $pb.PbFieldType.OM,
         CropHintsAnnotation.getDefault, CropHintsAnnotation.create)
-    ..a<TextAnnotation>(12, 'fullTextAnnotation', PbFieldType.OM,
-        TextAnnotation.getDefault, TextAnnotation.create)
-    ..a<WebDetection>(13, 'webDetection', PbFieldType.OM,
-        WebDetection.getDefault, WebDetection.create)
-    ..a<ImageAnnotationContext>(21, 'context', PbFieldType.OM,
-        ImageAnnotationContext.getDefault, ImageAnnotationContext.create)
+    ..a<$7.TextAnnotation>(12, 'fullTextAnnotation', $pb.PbFieldType.OM,
+        $7.TextAnnotation.getDefault, $7.TextAnnotation.create)
+    ..a<$8.WebDetection>(13, 'webDetection', $pb.PbFieldType.OM,
+        $8.WebDetection.getDefault, $8.WebDetection.create)
+    ..a<$5.ProductSearchResults>(14, 'productSearchResults', $pb.PbFieldType.OM,
+        $5.ProductSearchResults.getDefault, $5.ProductSearchResults.create)
+    ..a<ImageAnnotationContext>(21, 'context', $pb.PbFieldType.OM, ImageAnnotationContext.getDefault, ImageAnnotationContext.create)
+    ..pc<LocalizedObjectAnnotation>(22, 'localizedObjectAnnotations', $pb.PbFieldType.PM, LocalizedObjectAnnotation.create)
     ..hasRequiredFields = false;
 
   AnnotateImageResponse() : super();
-  AnnotateImageResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateImageResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotateImageResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateImageResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateImageResponse clone() =>
-      new AnnotateImageResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateImageResponse create() => new AnnotateImageResponse();
-  static PbList<AnnotateImageResponse> createRepeated() =>
-      new PbList<AnnotateImageResponse>();
-  static AnnotateImageResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateImageResponse();
-    return _defaultInstance;
-  }
-
+      AnnotateImageResponse()..mergeFromMessage(this);
+  AnnotateImageResponse copyWith(
+          void Function(AnnotateImageResponse) updates) =>
+      super.copyWith((message) => updates(message as AnnotateImageResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateImageResponse create() => AnnotateImageResponse();
+  AnnotateImageResponse createEmptyInstance() => create();
+  static $pb.PbList<AnnotateImageResponse> createRepeated() =>
+      $pb.PbList<AnnotateImageResponse>();
+  static AnnotateImageResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AnnotateImageResponse _defaultInstance;
-  static void $checkItem(AnnotateImageResponse v) {
-    if (v is! AnnotateImageResponse)
-      checkItemFailed(v, 'AnnotateImageResponse');
-  }
 
-  List<FaceAnnotation> get faceAnnotations => $_getList(0);
+  $core.List<FaceAnnotation> get faceAnnotations => $_getList(0);
 
-  List<EntityAnnotation> get landmarkAnnotations => $_getList(1);
+  $core.List<EntityAnnotation> get landmarkAnnotations => $_getList(1);
 
-  List<EntityAnnotation> get logoAnnotations => $_getList(2);
+  $core.List<EntityAnnotation> get logoAnnotations => $_getList(2);
 
-  List<EntityAnnotation> get labelAnnotations => $_getList(3);
+  $core.List<EntityAnnotation> get labelAnnotations => $_getList(3);
 
-  List<EntityAnnotation> get textAnnotations => $_getList(4);
+  $core.List<EntityAnnotation> get textAnnotations => $_getList(4);
 
   SafeSearchAnnotation get safeSearchAnnotation => $_getN(5);
   set safeSearchAnnotation(SafeSearchAnnotation v) {
     setField(6, v);
   }
 
-  bool hasSafeSearchAnnotation() => $_has(5);
+  $core.bool hasSafeSearchAnnotation() => $_has(5);
   void clearSafeSearchAnnotation() => clearField(6);
 
   ImageProperties get imagePropertiesAnnotation => $_getN(6);
@@ -1266,15 +1245,15 @@ class AnnotateImageResponse extends GeneratedMessage {
     setField(8, v);
   }
 
-  bool hasImagePropertiesAnnotation() => $_has(6);
+  $core.bool hasImagePropertiesAnnotation() => $_has(6);
   void clearImagePropertiesAnnotation() => clearField(8);
 
-  $google$rpc.Status get error => $_getN(7);
-  set error($google$rpc.Status v) {
+  $6.Status get error => $_getN(7);
+  set error($6.Status v) {
     setField(9, v);
   }
 
-  bool hasError() => $_has(7);
+  $core.bool hasError() => $_has(7);
   void clearError() => clearField(9);
 
   CropHintsAnnotation get cropHintsAnnotation => $_getN(8);
@@ -1282,212 +1261,325 @@ class AnnotateImageResponse extends GeneratedMessage {
     setField(11, v);
   }
 
-  bool hasCropHintsAnnotation() => $_has(8);
+  $core.bool hasCropHintsAnnotation() => $_has(8);
   void clearCropHintsAnnotation() => clearField(11);
 
-  TextAnnotation get fullTextAnnotation => $_getN(9);
-  set fullTextAnnotation(TextAnnotation v) {
+  $7.TextAnnotation get fullTextAnnotation => $_getN(9);
+  set fullTextAnnotation($7.TextAnnotation v) {
     setField(12, v);
   }
 
-  bool hasFullTextAnnotation() => $_has(9);
+  $core.bool hasFullTextAnnotation() => $_has(9);
   void clearFullTextAnnotation() => clearField(12);
 
-  WebDetection get webDetection => $_getN(10);
-  set webDetection(WebDetection v) {
+  $8.WebDetection get webDetection => $_getN(10);
+  set webDetection($8.WebDetection v) {
     setField(13, v);
   }
 
-  bool hasWebDetection() => $_has(10);
+  $core.bool hasWebDetection() => $_has(10);
   void clearWebDetection() => clearField(13);
 
-  ImageAnnotationContext get context => $_getN(11);
+  $5.ProductSearchResults get productSearchResults => $_getN(11);
+  set productSearchResults($5.ProductSearchResults v) {
+    setField(14, v);
+  }
+
+  $core.bool hasProductSearchResults() => $_has(11);
+  void clearProductSearchResults() => clearField(14);
+
+  ImageAnnotationContext get context => $_getN(12);
   set context(ImageAnnotationContext v) {
     setField(21, v);
   }
 
-  bool hasContext() => $_has(11);
+  $core.bool hasContext() => $_has(12);
   void clearContext() => clearField(21);
+
+  $core.List<LocalizedObjectAnnotation> get localizedObjectAnnotations =>
+      $_getList(13);
 }
 
-class _ReadonlyAnnotateImageResponse extends AnnotateImageResponse
-    with ReadonlyMessageMixin {}
-
-class AnnotateFileResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotateFileResponse')
-    ..a<InputConfig>(1, 'inputConfig', PbFieldType.OM, InputConfig.getDefault,
-        InputConfig.create)
-    ..pp<AnnotateImageResponse>(2, 'responses', PbFieldType.PM,
-        AnnotateImageResponse.$checkItem, AnnotateImageResponse.create)
+class AnnotateFileResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateFileResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<InputConfig>(1, 'inputConfig', $pb.PbFieldType.OM,
+        InputConfig.getDefault, InputConfig.create)
+    ..pc<AnnotateImageResponse>(
+        2, 'responses', $pb.PbFieldType.PM, AnnotateImageResponse.create)
+    ..a<$core.int>(3, 'totalPages', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   AnnotateFileResponse() : super();
-  AnnotateFileResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateFileResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotateFileResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateFileResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AnnotateFileResponse clone() =>
-      new AnnotateFileResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotateFileResponse create() => new AnnotateFileResponse();
-  static PbList<AnnotateFileResponse> createRepeated() =>
-      new PbList<AnnotateFileResponse>();
-  static AnnotateFileResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotateFileResponse();
-    return _defaultInstance;
-  }
-
+      AnnotateFileResponse()..mergeFromMessage(this);
+  AnnotateFileResponse copyWith(void Function(AnnotateFileResponse) updates) =>
+      super.copyWith((message) => updates(message as AnnotateFileResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateFileResponse create() => AnnotateFileResponse();
+  AnnotateFileResponse createEmptyInstance() => create();
+  static $pb.PbList<AnnotateFileResponse> createRepeated() =>
+      $pb.PbList<AnnotateFileResponse>();
+  static AnnotateFileResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AnnotateFileResponse _defaultInstance;
-  static void $checkItem(AnnotateFileResponse v) {
-    if (v is! AnnotateFileResponse) checkItemFailed(v, 'AnnotateFileResponse');
-  }
 
   InputConfig get inputConfig => $_getN(0);
   set inputConfig(InputConfig v) {
     setField(1, v);
   }
 
-  bool hasInputConfig() => $_has(0);
+  $core.bool hasInputConfig() => $_has(0);
   void clearInputConfig() => clearField(1);
 
-  List<AnnotateImageResponse> get responses => $_getList(1);
+  $core.List<AnnotateImageResponse> get responses => $_getList(1);
+
+  $core.int get totalPages => $_get(2, 0);
+  set totalPages($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  $core.bool hasTotalPages() => $_has(2);
+  void clearTotalPages() => clearField(3);
 }
 
-class _ReadonlyAnnotateFileResponse extends AnnotateFileResponse
-    with ReadonlyMessageMixin {}
-
-class BatchAnnotateImagesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchAnnotateImagesRequest')
-    ..pp<AnnotateImageRequest>(1, 'requests', PbFieldType.PM,
-        AnnotateImageRequest.$checkItem, AnnotateImageRequest.create)
+class BatchAnnotateImagesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchAnnotateImagesRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AnnotateImageRequest>(
+        1, 'requests', $pb.PbFieldType.PM, AnnotateImageRequest.create)
     ..hasRequiredFields = false;
 
   BatchAnnotateImagesRequest() : super();
-  BatchAnnotateImagesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchAnnotateImagesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchAnnotateImagesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchAnnotateImagesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchAnnotateImagesRequest clone() =>
-      new BatchAnnotateImagesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchAnnotateImagesRequest create() =>
-      new BatchAnnotateImagesRequest();
-  static PbList<BatchAnnotateImagesRequest> createRepeated() =>
-      new PbList<BatchAnnotateImagesRequest>();
-  static BatchAnnotateImagesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchAnnotateImagesRequest();
-    return _defaultInstance;
-  }
-
+      BatchAnnotateImagesRequest()..mergeFromMessage(this);
+  BatchAnnotateImagesRequest copyWith(
+          void Function(BatchAnnotateImagesRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchAnnotateImagesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchAnnotateImagesRequest create() => BatchAnnotateImagesRequest();
+  BatchAnnotateImagesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchAnnotateImagesRequest> createRepeated() =>
+      $pb.PbList<BatchAnnotateImagesRequest>();
+  static BatchAnnotateImagesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchAnnotateImagesRequest _defaultInstance;
-  static void $checkItem(BatchAnnotateImagesRequest v) {
-    if (v is! BatchAnnotateImagesRequest)
-      checkItemFailed(v, 'BatchAnnotateImagesRequest');
-  }
 
-  List<AnnotateImageRequest> get requests => $_getList(0);
+  $core.List<AnnotateImageRequest> get requests => $_getList(0);
 }
 
-class _ReadonlyBatchAnnotateImagesRequest extends BatchAnnotateImagesRequest
-    with ReadonlyMessageMixin {}
-
-class BatchAnnotateImagesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchAnnotateImagesResponse')
-    ..pp<AnnotateImageResponse>(1, 'responses', PbFieldType.PM,
-        AnnotateImageResponse.$checkItem, AnnotateImageResponse.create)
+class BatchAnnotateImagesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchAnnotateImagesResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AnnotateImageResponse>(
+        1, 'responses', $pb.PbFieldType.PM, AnnotateImageResponse.create)
     ..hasRequiredFields = false;
 
   BatchAnnotateImagesResponse() : super();
-  BatchAnnotateImagesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchAnnotateImagesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchAnnotateImagesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchAnnotateImagesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchAnnotateImagesResponse clone() =>
-      new BatchAnnotateImagesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchAnnotateImagesResponse create() =>
-      new BatchAnnotateImagesResponse();
-  static PbList<BatchAnnotateImagesResponse> createRepeated() =>
-      new PbList<BatchAnnotateImagesResponse>();
-  static BatchAnnotateImagesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchAnnotateImagesResponse();
-    return _defaultInstance;
-  }
-
+      BatchAnnotateImagesResponse()..mergeFromMessage(this);
+  BatchAnnotateImagesResponse copyWith(
+          void Function(BatchAnnotateImagesResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchAnnotateImagesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchAnnotateImagesResponse create() => BatchAnnotateImagesResponse();
+  BatchAnnotateImagesResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchAnnotateImagesResponse> createRepeated() =>
+      $pb.PbList<BatchAnnotateImagesResponse>();
+  static BatchAnnotateImagesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchAnnotateImagesResponse _defaultInstance;
-  static void $checkItem(BatchAnnotateImagesResponse v) {
-    if (v is! BatchAnnotateImagesResponse)
-      checkItemFailed(v, 'BatchAnnotateImagesResponse');
-  }
 
-  List<AnnotateImageResponse> get responses => $_getList(0);
+  $core.List<AnnotateImageResponse> get responses => $_getList(0);
 }
 
-class _ReadonlyBatchAnnotateImagesResponse extends BatchAnnotateImagesResponse
-    with ReadonlyMessageMixin {}
-
-class AsyncAnnotateFileRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AsyncAnnotateFileRequest')
-    ..a<InputConfig>(1, 'inputConfig', PbFieldType.OM, InputConfig.getDefault,
-        InputConfig.create)
-    ..pp<Feature>(
-        2, 'features', PbFieldType.PM, Feature.$checkItem, Feature.create)
-    ..a<ImageContext>(3, 'imageContext', PbFieldType.OM,
+class AnnotateFileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateFileRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<InputConfig>(1, 'inputConfig', $pb.PbFieldType.OM,
+        InputConfig.getDefault, InputConfig.create)
+    ..pc<Feature>(2, 'features', $pb.PbFieldType.PM, Feature.create)
+    ..a<ImageContext>(3, 'imageContext', $pb.PbFieldType.OM,
         ImageContext.getDefault, ImageContext.create)
-    ..a<OutputConfig>(4, 'outputConfig', PbFieldType.OM,
-        OutputConfig.getDefault, OutputConfig.create)
+    ..p<$core.int>(4, 'pages', $pb.PbFieldType.P3)
     ..hasRequiredFields = false;
 
-  AsyncAnnotateFileRequest() : super();
-  AsyncAnnotateFileRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateFileRequest() : super();
+  AnnotateFileRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AsyncAnnotateFileRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotateFileRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AsyncAnnotateFileRequest clone() =>
-      new AsyncAnnotateFileRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AsyncAnnotateFileRequest create() => new AsyncAnnotateFileRequest();
-  static PbList<AsyncAnnotateFileRequest> createRepeated() =>
-      new PbList<AsyncAnnotateFileRequest>();
-  static AsyncAnnotateFileRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncAnnotateFileRequest();
-    return _defaultInstance;
-  }
-
-  static AsyncAnnotateFileRequest _defaultInstance;
-  static void $checkItem(AsyncAnnotateFileRequest v) {
-    if (v is! AsyncAnnotateFileRequest)
-      checkItemFailed(v, 'AsyncAnnotateFileRequest');
-  }
+  AnnotateFileRequest clone() => AnnotateFileRequest()..mergeFromMessage(this);
+  AnnotateFileRequest copyWith(void Function(AnnotateFileRequest) updates) =>
+      super.copyWith((message) => updates(message as AnnotateFileRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotateFileRequest create() => AnnotateFileRequest();
+  AnnotateFileRequest createEmptyInstance() => create();
+  static $pb.PbList<AnnotateFileRequest> createRepeated() =>
+      $pb.PbList<AnnotateFileRequest>();
+  static AnnotateFileRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static AnnotateFileRequest _defaultInstance;
 
   InputConfig get inputConfig => $_getN(0);
   set inputConfig(InputConfig v) {
     setField(1, v);
   }
 
-  bool hasInputConfig() => $_has(0);
+  $core.bool hasInputConfig() => $_has(0);
   void clearInputConfig() => clearField(1);
 
-  List<Feature> get features => $_getList(1);
+  $core.List<Feature> get features => $_getList(1);
 
   ImageContext get imageContext => $_getN(2);
   set imageContext(ImageContext v) {
     setField(3, v);
   }
 
-  bool hasImageContext() => $_has(2);
+  $core.bool hasImageContext() => $_has(2);
+  void clearImageContext() => clearField(3);
+
+  $core.List<$core.int> get pages => $_getList(3);
+}
+
+class BatchAnnotateFilesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchAnnotateFilesRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AnnotateFileRequest>(
+        1, 'requests', $pb.PbFieldType.PM, AnnotateFileRequest.create)
+    ..hasRequiredFields = false;
+
+  BatchAnnotateFilesRequest() : super();
+  BatchAnnotateFilesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  BatchAnnotateFilesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  BatchAnnotateFilesRequest clone() =>
+      BatchAnnotateFilesRequest()..mergeFromMessage(this);
+  BatchAnnotateFilesRequest copyWith(
+          void Function(BatchAnnotateFilesRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as BatchAnnotateFilesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchAnnotateFilesRequest create() => BatchAnnotateFilesRequest();
+  BatchAnnotateFilesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchAnnotateFilesRequest> createRepeated() =>
+      $pb.PbList<BatchAnnotateFilesRequest>();
+  static BatchAnnotateFilesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static BatchAnnotateFilesRequest _defaultInstance;
+
+  $core.List<AnnotateFileRequest> get requests => $_getList(0);
+}
+
+class BatchAnnotateFilesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchAnnotateFilesResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AnnotateFileResponse>(
+        1, 'responses', $pb.PbFieldType.PM, AnnotateFileResponse.create)
+    ..hasRequiredFields = false;
+
+  BatchAnnotateFilesResponse() : super();
+  BatchAnnotateFilesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  BatchAnnotateFilesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  BatchAnnotateFilesResponse clone() =>
+      BatchAnnotateFilesResponse()..mergeFromMessage(this);
+  BatchAnnotateFilesResponse copyWith(
+          void Function(BatchAnnotateFilesResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchAnnotateFilesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchAnnotateFilesResponse create() => BatchAnnotateFilesResponse();
+  BatchAnnotateFilesResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchAnnotateFilesResponse> createRepeated() =>
+      $pb.PbList<BatchAnnotateFilesResponse>();
+  static BatchAnnotateFilesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static BatchAnnotateFilesResponse _defaultInstance;
+
+  $core.List<AnnotateFileResponse> get responses => $_getList(0);
+}
+
+class AsyncAnnotateFileRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AsyncAnnotateFileRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<InputConfig>(1, 'inputConfig', $pb.PbFieldType.OM,
+        InputConfig.getDefault, InputConfig.create)
+    ..pc<Feature>(2, 'features', $pb.PbFieldType.PM, Feature.create)
+    ..a<ImageContext>(3, 'imageContext', $pb.PbFieldType.OM,
+        ImageContext.getDefault, ImageContext.create)
+    ..a<OutputConfig>(4, 'outputConfig', $pb.PbFieldType.OM,
+        OutputConfig.getDefault, OutputConfig.create)
+    ..hasRequiredFields = false;
+
+  AsyncAnnotateFileRequest() : super();
+  AsyncAnnotateFileRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  AsyncAnnotateFileRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  AsyncAnnotateFileRequest clone() =>
+      AsyncAnnotateFileRequest()..mergeFromMessage(this);
+  AsyncAnnotateFileRequest copyWith(
+          void Function(AsyncAnnotateFileRequest) updates) =>
+      super.copyWith((message) => updates(message as AsyncAnnotateFileRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AsyncAnnotateFileRequest create() => AsyncAnnotateFileRequest();
+  AsyncAnnotateFileRequest createEmptyInstance() => create();
+  static $pb.PbList<AsyncAnnotateFileRequest> createRepeated() =>
+      $pb.PbList<AsyncAnnotateFileRequest>();
+  static AsyncAnnotateFileRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static AsyncAnnotateFileRequest _defaultInstance;
+
+  InputConfig get inputConfig => $_getN(0);
+  set inputConfig(InputConfig v) {
+    setField(1, v);
+  }
+
+  $core.bool hasInputConfig() => $_has(0);
+  void clearInputConfig() => clearField(1);
+
+  $core.List<Feature> get features => $_getList(1);
+
+  ImageContext get imageContext => $_getN(2);
+  set imageContext(ImageContext v) {
+    setField(3, v);
+  }
+
+  $core.bool hasImageContext() => $_has(2);
   void clearImageContext() => clearField(3);
 
   OutputConfig get outputConfig => $_getN(3);
@@ -1495,402 +1587,415 @@ class AsyncAnnotateFileRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasOutputConfig() => $_has(3);
+  $core.bool hasOutputConfig() => $_has(3);
   void clearOutputConfig() => clearField(4);
 }
 
-class _ReadonlyAsyncAnnotateFileRequest extends AsyncAnnotateFileRequest
-    with ReadonlyMessageMixin {}
-
-class AsyncAnnotateFileResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AsyncAnnotateFileResponse')
-    ..a<OutputConfig>(1, 'outputConfig', PbFieldType.OM,
+class AsyncAnnotateFileResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AsyncAnnotateFileResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<OutputConfig>(1, 'outputConfig', $pb.PbFieldType.OM,
         OutputConfig.getDefault, OutputConfig.create)
     ..hasRequiredFields = false;
 
   AsyncAnnotateFileResponse() : super();
-  AsyncAnnotateFileResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AsyncAnnotateFileResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AsyncAnnotateFileResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AsyncAnnotateFileResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncAnnotateFileResponse clone() =>
-      new AsyncAnnotateFileResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AsyncAnnotateFileResponse create() => new AsyncAnnotateFileResponse();
-  static PbList<AsyncAnnotateFileResponse> createRepeated() =>
-      new PbList<AsyncAnnotateFileResponse>();
-  static AsyncAnnotateFileResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncAnnotateFileResponse();
-    return _defaultInstance;
-  }
-
+      AsyncAnnotateFileResponse()..mergeFromMessage(this);
+  AsyncAnnotateFileResponse copyWith(
+          void Function(AsyncAnnotateFileResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as AsyncAnnotateFileResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AsyncAnnotateFileResponse create() => AsyncAnnotateFileResponse();
+  AsyncAnnotateFileResponse createEmptyInstance() => create();
+  static $pb.PbList<AsyncAnnotateFileResponse> createRepeated() =>
+      $pb.PbList<AsyncAnnotateFileResponse>();
+  static AsyncAnnotateFileResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AsyncAnnotateFileResponse _defaultInstance;
-  static void $checkItem(AsyncAnnotateFileResponse v) {
-    if (v is! AsyncAnnotateFileResponse)
-      checkItemFailed(v, 'AsyncAnnotateFileResponse');
-  }
 
   OutputConfig get outputConfig => $_getN(0);
   set outputConfig(OutputConfig v) {
     setField(1, v);
   }
 
-  bool hasOutputConfig() => $_has(0);
+  $core.bool hasOutputConfig() => $_has(0);
   void clearOutputConfig() => clearField(1);
 }
 
-class _ReadonlyAsyncAnnotateFileResponse extends AsyncAnnotateFileResponse
-    with ReadonlyMessageMixin {}
+class AsyncBatchAnnotateImagesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'AsyncBatchAnnotateImagesRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AnnotateImageRequest>(
+        1, 'requests', $pb.PbFieldType.PM, AnnotateImageRequest.create)
+    ..a<OutputConfig>(2, 'outputConfig', $pb.PbFieldType.OM,
+        OutputConfig.getDefault, OutputConfig.create)
+    ..hasRequiredFields = false;
 
-class AsyncBatchAnnotateFilesRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AsyncBatchAnnotateFilesRequest')
-        ..pp<AsyncAnnotateFileRequest>(
-            1,
-            'requests',
-            PbFieldType.PM,
-            AsyncAnnotateFileRequest.$checkItem,
-            AsyncAnnotateFileRequest.create)
-        ..hasRequiredFields = false;
+  AsyncBatchAnnotateImagesRequest() : super();
+  AsyncBatchAnnotateImagesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  AsyncBatchAnnotateImagesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  AsyncBatchAnnotateImagesRequest clone() =>
+      AsyncBatchAnnotateImagesRequest()..mergeFromMessage(this);
+  AsyncBatchAnnotateImagesRequest copyWith(
+          void Function(AsyncBatchAnnotateImagesRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as AsyncBatchAnnotateImagesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AsyncBatchAnnotateImagesRequest create() =>
+      AsyncBatchAnnotateImagesRequest();
+  AsyncBatchAnnotateImagesRequest createEmptyInstance() => create();
+  static $pb.PbList<AsyncBatchAnnotateImagesRequest> createRepeated() =>
+      $pb.PbList<AsyncBatchAnnotateImagesRequest>();
+  static AsyncBatchAnnotateImagesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static AsyncBatchAnnotateImagesRequest _defaultInstance;
+
+  $core.List<AnnotateImageRequest> get requests => $_getList(0);
+
+  OutputConfig get outputConfig => $_getN(1);
+  set outputConfig(OutputConfig v) {
+    setField(2, v);
+  }
+
+  $core.bool hasOutputConfig() => $_has(1);
+  void clearOutputConfig() => clearField(2);
+}
+
+class AsyncBatchAnnotateImagesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'AsyncBatchAnnotateImagesResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<OutputConfig>(1, 'outputConfig', $pb.PbFieldType.OM,
+        OutputConfig.getDefault, OutputConfig.create)
+    ..hasRequiredFields = false;
+
+  AsyncBatchAnnotateImagesResponse() : super();
+  AsyncBatchAnnotateImagesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  AsyncBatchAnnotateImagesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  AsyncBatchAnnotateImagesResponse clone() =>
+      AsyncBatchAnnotateImagesResponse()..mergeFromMessage(this);
+  AsyncBatchAnnotateImagesResponse copyWith(
+          void Function(AsyncBatchAnnotateImagesResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as AsyncBatchAnnotateImagesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AsyncBatchAnnotateImagesResponse create() =>
+      AsyncBatchAnnotateImagesResponse();
+  AsyncBatchAnnotateImagesResponse createEmptyInstance() => create();
+  static $pb.PbList<AsyncBatchAnnotateImagesResponse> createRepeated() =>
+      $pb.PbList<AsyncBatchAnnotateImagesResponse>();
+  static AsyncBatchAnnotateImagesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static AsyncBatchAnnotateImagesResponse _defaultInstance;
+
+  OutputConfig get outputConfig => $_getN(0);
+  set outputConfig(OutputConfig v) {
+    setField(1, v);
+  }
+
+  $core.bool hasOutputConfig() => $_has(0);
+  void clearOutputConfig() => clearField(1);
+}
+
+class AsyncBatchAnnotateFilesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'AsyncBatchAnnotateFilesRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AsyncAnnotateFileRequest>(
+        1, 'requests', $pb.PbFieldType.PM, AsyncAnnotateFileRequest.create)
+    ..hasRequiredFields = false;
 
   AsyncBatchAnnotateFilesRequest() : super();
-  AsyncBatchAnnotateFilesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AsyncBatchAnnotateFilesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AsyncBatchAnnotateFilesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AsyncBatchAnnotateFilesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncBatchAnnotateFilesRequest clone() =>
-      new AsyncBatchAnnotateFilesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      AsyncBatchAnnotateFilesRequest()..mergeFromMessage(this);
+  AsyncBatchAnnotateFilesRequest copyWith(
+          void Function(AsyncBatchAnnotateFilesRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as AsyncBatchAnnotateFilesRequest));
+  $pb.BuilderInfo get info_ => _i;
   static AsyncBatchAnnotateFilesRequest create() =>
-      new AsyncBatchAnnotateFilesRequest();
-  static PbList<AsyncBatchAnnotateFilesRequest> createRepeated() =>
-      new PbList<AsyncBatchAnnotateFilesRequest>();
-  static AsyncBatchAnnotateFilesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncBatchAnnotateFilesRequest();
-    return _defaultInstance;
-  }
-
+      AsyncBatchAnnotateFilesRequest();
+  AsyncBatchAnnotateFilesRequest createEmptyInstance() => create();
+  static $pb.PbList<AsyncBatchAnnotateFilesRequest> createRepeated() =>
+      $pb.PbList<AsyncBatchAnnotateFilesRequest>();
+  static AsyncBatchAnnotateFilesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AsyncBatchAnnotateFilesRequest _defaultInstance;
-  static void $checkItem(AsyncBatchAnnotateFilesRequest v) {
-    if (v is! AsyncBatchAnnotateFilesRequest)
-      checkItemFailed(v, 'AsyncBatchAnnotateFilesRequest');
-  }
 
-  List<AsyncAnnotateFileRequest> get requests => $_getList(0);
+  $core.List<AsyncAnnotateFileRequest> get requests => $_getList(0);
 }
 
-class _ReadonlyAsyncBatchAnnotateFilesRequest
-    extends AsyncBatchAnnotateFilesRequest with ReadonlyMessageMixin {}
-
-class AsyncBatchAnnotateFilesResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AsyncBatchAnnotateFilesResponse')
-        ..pp<AsyncAnnotateFileResponse>(
-            1,
-            'responses',
-            PbFieldType.PM,
-            AsyncAnnotateFileResponse.$checkItem,
-            AsyncAnnotateFileResponse.create)
-        ..hasRequiredFields = false;
+class AsyncBatchAnnotateFilesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'AsyncBatchAnnotateFilesResponse',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..pc<AsyncAnnotateFileResponse>(
+        1, 'responses', $pb.PbFieldType.PM, AsyncAnnotateFileResponse.create)
+    ..hasRequiredFields = false;
 
   AsyncBatchAnnotateFilesResponse() : super();
-  AsyncBatchAnnotateFilesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AsyncBatchAnnotateFilesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AsyncBatchAnnotateFilesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AsyncBatchAnnotateFilesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AsyncBatchAnnotateFilesResponse clone() =>
-      new AsyncBatchAnnotateFilesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      AsyncBatchAnnotateFilesResponse()..mergeFromMessage(this);
+  AsyncBatchAnnotateFilesResponse copyWith(
+          void Function(AsyncBatchAnnotateFilesResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as AsyncBatchAnnotateFilesResponse));
+  $pb.BuilderInfo get info_ => _i;
   static AsyncBatchAnnotateFilesResponse create() =>
-      new AsyncBatchAnnotateFilesResponse();
-  static PbList<AsyncBatchAnnotateFilesResponse> createRepeated() =>
-      new PbList<AsyncBatchAnnotateFilesResponse>();
-  static AsyncBatchAnnotateFilesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAsyncBatchAnnotateFilesResponse();
-    return _defaultInstance;
-  }
-
+      AsyncBatchAnnotateFilesResponse();
+  AsyncBatchAnnotateFilesResponse createEmptyInstance() => create();
+  static $pb.PbList<AsyncBatchAnnotateFilesResponse> createRepeated() =>
+      $pb.PbList<AsyncBatchAnnotateFilesResponse>();
+  static AsyncBatchAnnotateFilesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AsyncBatchAnnotateFilesResponse _defaultInstance;
-  static void $checkItem(AsyncBatchAnnotateFilesResponse v) {
-    if (v is! AsyncBatchAnnotateFilesResponse)
-      checkItemFailed(v, 'AsyncBatchAnnotateFilesResponse');
-  }
 
-  List<AsyncAnnotateFileResponse> get responses => $_getList(0);
+  $core.List<AsyncAnnotateFileResponse> get responses => $_getList(0);
 }
 
-class _ReadonlyAsyncBatchAnnotateFilesResponse
-    extends AsyncBatchAnnotateFilesResponse with ReadonlyMessageMixin {}
-
-class InputConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('InputConfig')
-    ..a<GcsSource>(
-        1, 'gcsSource', PbFieldType.OM, GcsSource.getDefault, GcsSource.create)
+class InputConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('InputConfig',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
+        GcsSource.create)
     ..aOS(2, 'mimeType')
+    ..a<$core.List<$core.int>>(3, 'content', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   InputConfig() : super();
-  InputConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  InputConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  InputConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  InputConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  InputConfig clone() => new InputConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static InputConfig create() => new InputConfig();
-  static PbList<InputConfig> createRepeated() => new PbList<InputConfig>();
-  static InputConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInputConfig();
-    return _defaultInstance;
-  }
-
+  InputConfig clone() => InputConfig()..mergeFromMessage(this);
+  InputConfig copyWith(void Function(InputConfig) updates) =>
+      super.copyWith((message) => updates(message as InputConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static InputConfig create() => InputConfig();
+  InputConfig createEmptyInstance() => create();
+  static $pb.PbList<InputConfig> createRepeated() => $pb.PbList<InputConfig>();
+  static InputConfig getDefault() => _defaultInstance ??= create()..freeze();
   static InputConfig _defaultInstance;
-  static void $checkItem(InputConfig v) {
-    if (v is! InputConfig) checkItemFailed(v, 'InputConfig');
-  }
 
   GcsSource get gcsSource => $_getN(0);
   set gcsSource(GcsSource v) {
     setField(1, v);
   }
 
-  bool hasGcsSource() => $_has(0);
+  $core.bool hasGcsSource() => $_has(0);
   void clearGcsSource() => clearField(1);
 
-  String get mimeType => $_getS(1, '');
-  set mimeType(String v) {
+  $core.String get mimeType => $_getS(1, '');
+  set mimeType($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasMimeType() => $_has(1);
+  $core.bool hasMimeType() => $_has(1);
   void clearMimeType() => clearField(2);
+
+  $core.List<$core.int> get content => $_getN(2);
+  set content($core.List<$core.int> v) {
+    $_setBytes(2, v);
+  }
+
+  $core.bool hasContent() => $_has(2);
+  void clearContent() => clearField(3);
 }
 
-class _ReadonlyInputConfig extends InputConfig with ReadonlyMessageMixin {}
-
-class OutputConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OutputConfig')
-    ..a<GcsDestination>(1, 'gcsDestination', PbFieldType.OM,
+class OutputConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputConfig',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
-    ..a<int>(2, 'batchSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'batchSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   OutputConfig() : super();
-  OutputConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OutputConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  OutputConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OutputConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OutputConfig clone() => new OutputConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static OutputConfig create() => new OutputConfig();
-  static PbList<OutputConfig> createRepeated() => new PbList<OutputConfig>();
-  static OutputConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOutputConfig();
-    return _defaultInstance;
-  }
-
+  OutputConfig clone() => OutputConfig()..mergeFromMessage(this);
+  OutputConfig copyWith(void Function(OutputConfig) updates) =>
+      super.copyWith((message) => updates(message as OutputConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static OutputConfig create() => OutputConfig();
+  OutputConfig createEmptyInstance() => create();
+  static $pb.PbList<OutputConfig> createRepeated() =>
+      $pb.PbList<OutputConfig>();
+  static OutputConfig getDefault() => _defaultInstance ??= create()..freeze();
   static OutputConfig _defaultInstance;
-  static void $checkItem(OutputConfig v) {
-    if (v is! OutputConfig) checkItemFailed(v, 'OutputConfig');
-  }
 
   GcsDestination get gcsDestination => $_getN(0);
   set gcsDestination(GcsDestination v) {
     setField(1, v);
   }
 
-  bool hasGcsDestination() => $_has(0);
+  $core.bool hasGcsDestination() => $_has(0);
   void clearGcsDestination() => clearField(1);
 
-  int get batchSize => $_get(1, 0);
-  set batchSize(int v) {
+  $core.int get batchSize => $_get(1, 0);
+  set batchSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasBatchSize() => $_has(1);
+  $core.bool hasBatchSize() => $_has(1);
   void clearBatchSize() => clearField(2);
 }
 
-class _ReadonlyOutputConfig extends OutputConfig with ReadonlyMessageMixin {}
-
-class GcsSource extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcsSource')
+class GcsSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsSource',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOS(1, 'uri')
     ..hasRequiredFields = false;
 
   GcsSource() : super();
-  GcsSource.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GcsSource.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GcsSource.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GcsSource.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcsSource clone() => new GcsSource()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GcsSource create() => new GcsSource();
-  static PbList<GcsSource> createRepeated() => new PbList<GcsSource>();
-  static GcsSource getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyGcsSource();
-    return _defaultInstance;
-  }
-
+  GcsSource clone() => GcsSource()..mergeFromMessage(this);
+  GcsSource copyWith(void Function(GcsSource) updates) =>
+      super.copyWith((message) => updates(message as GcsSource));
+  $pb.BuilderInfo get info_ => _i;
+  static GcsSource create() => GcsSource();
+  GcsSource createEmptyInstance() => create();
+  static $pb.PbList<GcsSource> createRepeated() => $pb.PbList<GcsSource>();
+  static GcsSource getDefault() => _defaultInstance ??= create()..freeze();
   static GcsSource _defaultInstance;
-  static void $checkItem(GcsSource v) {
-    if (v is! GcsSource) checkItemFailed(v, 'GcsSource');
-  }
 
-  String get uri => $_getS(0, '');
-  set uri(String v) {
+  $core.String get uri => $_getS(0, '');
+  set uri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasUri() => $_has(0);
+  $core.bool hasUri() => $_has(0);
   void clearUri() => clearField(1);
 }
 
-class _ReadonlyGcsSource extends GcsSource with ReadonlyMessageMixin {}
-
-class GcsDestination extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GcsDestination')
+class GcsDestination extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsDestination',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..aOS(1, 'uri')
     ..hasRequiredFields = false;
 
   GcsDestination() : super();
-  GcsDestination.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GcsDestination.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GcsDestination.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GcsDestination.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GcsDestination clone() => new GcsDestination()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GcsDestination create() => new GcsDestination();
-  static PbList<GcsDestination> createRepeated() =>
-      new PbList<GcsDestination>();
-  static GcsDestination getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGcsDestination();
-    return _defaultInstance;
-  }
-
+  GcsDestination clone() => GcsDestination()..mergeFromMessage(this);
+  GcsDestination copyWith(void Function(GcsDestination) updates) =>
+      super.copyWith((message) => updates(message as GcsDestination));
+  $pb.BuilderInfo get info_ => _i;
+  static GcsDestination create() => GcsDestination();
+  GcsDestination createEmptyInstance() => create();
+  static $pb.PbList<GcsDestination> createRepeated() =>
+      $pb.PbList<GcsDestination>();
+  static GcsDestination getDefault() => _defaultInstance ??= create()..freeze();
   static GcsDestination _defaultInstance;
-  static void $checkItem(GcsDestination v) {
-    if (v is! GcsDestination) checkItemFailed(v, 'GcsDestination');
-  }
 
-  String get uri => $_getS(0, '');
-  set uri(String v) {
+  $core.String get uri => $_getS(0, '');
+  set uri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasUri() => $_has(0);
+  $core.bool hasUri() => $_has(0);
   void clearUri() => clearField(1);
 }
 
-class _ReadonlyGcsDestination extends GcsDestination with ReadonlyMessageMixin {
-}
-
-class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
+class OperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
     ..e<OperationMetadata_State>(
         1,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         OperationMetadata_State.STATE_UNSPECIFIED,
         OperationMetadata_State.valueOf,
         OperationMetadata_State.values)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$9.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
+    ..a<$9.Timestamp>(6, 'updateTime', $pb.PbFieldType.OM,
+        $9.Timestamp.getDefault, $9.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata() : super();
-  OperationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OperationMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  OperationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OperationMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadata clone() => new OperationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static OperationMetadata create() => new OperationMetadata();
-  static PbList<OperationMetadata> createRepeated() =>
-      new PbList<OperationMetadata>();
-  static OperationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata();
-    return _defaultInstance;
-  }
-
+  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
+  OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
+      super.copyWith((message) => updates(message as OperationMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static OperationMetadata create() => OperationMetadata();
+  OperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<OperationMetadata> createRepeated() =>
+      $pb.PbList<OperationMetadata>();
+  static OperationMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static OperationMetadata _defaultInstance;
-  static void $checkItem(OperationMetadata v) {
-    if (v is! OperationMetadata) checkItemFailed(v, 'OperationMetadata');
-  }
 
   OperationMetadata_State get state => $_getN(0);
   set state(OperationMetadata_State v) {
     setField(1, v);
   }
 
-  bool hasState() => $_has(0);
+  $core.bool hasState() => $_has(0);
   void clearState() => clearField(1);
 
-  $google$protobuf.Timestamp get createTime => $_getN(1);
-  set createTime($google$protobuf.Timestamp v) {
+  $9.Timestamp get createTime => $_getN(1);
+  set createTime($9.Timestamp v) {
     setField(5, v);
   }
 
-  bool hasCreateTime() => $_has(1);
+  $core.bool hasCreateTime() => $_has(1);
   void clearCreateTime() => clearField(5);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(2);
-  set updateTime($google$protobuf.Timestamp v) {
+  $9.Timestamp get updateTime => $_getN(2);
+  set updateTime($9.Timestamp v) {
     setField(6, v);
   }
 
-  bool hasUpdateTime() => $_has(2);
+  $core.bool hasUpdateTime() => $_has(2);
   void clearUpdateTime() => clearField(6);
-}
-
-class _ReadonlyOperationMetadata extends OperationMetadata
-    with ReadonlyMessageMixin {}
-
-class ImageAnnotatorApi {
-  RpcClient _client;
-  ImageAnnotatorApi(this._client);
-
-  Future<BatchAnnotateImagesResponse> batchAnnotateImages(
-      ClientContext ctx, BatchAnnotateImagesRequest request) {
-    var emptyResponse = new BatchAnnotateImagesResponse();
-    return _client.invoke<BatchAnnotateImagesResponse>(
-        ctx, 'ImageAnnotator', 'BatchAnnotateImages', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> asyncBatchAnnotateFiles(
-      ClientContext ctx, AsyncBatchAnnotateFilesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(ctx, 'ImageAnnotator',
-        'AsyncBatchAnnotateFiles', request, emptyResponse);
-  }
 }

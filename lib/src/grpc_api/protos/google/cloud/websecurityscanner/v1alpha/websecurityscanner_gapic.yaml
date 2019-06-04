@@ -16,12 +16,6 @@ language_settings:
     package_name: Google\Cloud\Websecurityscanner\V1alpha
   nodejs:
     package_name: websecurityscanner.v1alpha
-# The configuration for the license header to put on generated files.
-license_header:
-  # The file containing the copyright line(s).
-  copyright_file: copyright-google.txt
-  # The file containing the raw license header without any copyright line(s).
-  license_file: license-header-apache-2.0.txt
 # A list of API interface configurations.
 interfaces:
   # The fully qualified name of the API interface.
@@ -82,10 +76,6 @@ interfaces:
   #   required_fields - Fields that are always required for a request to be
   #   valid.
   #
-  #   request_object_method - Turns on or off the generation of a method whose
-  #   sole parameter is a request object. Not all languages will generate this
-  #   method.
-  #
   #   resource_name_treatment - An enum that specifies how to treat the resource
   #   name formats defined in the field_name_patterns and
   #   response_field_name_patterns fields.
@@ -134,12 +124,12 @@ interfaces:
     required_fields:
     - parent
     - scan_config
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       parent: project
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: DeleteScanConfig
     flattening:
       groups:
@@ -147,12 +137,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: scan_config
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: GetScanConfig
     flattening:
       groups:
@@ -160,12 +150,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: scan_config
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: ListScanConfigs
     flattening:
       groups:
@@ -173,7 +163,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -186,6 +175,7 @@ interfaces:
     field_name_patterns:
       parent: project
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: UpdateScanConfig
     flattening:
       groups:
@@ -195,7 +185,6 @@ interfaces:
     required_fields:
     - scan_config
     - update_mask
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -208,12 +197,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       name: scan_config
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: GetScanRun
     flattening:
       groups:
@@ -221,12 +210,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: scan_run
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: ListScanRuns
     flattening:
       groups:
@@ -234,7 +223,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -247,6 +235,7 @@ interfaces:
     field_name_patterns:
       parent: scan_config
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: StopScanRun
     flattening:
       groups:
@@ -254,12 +243,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       name: scan_run
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: ListCrawledUrls
     flattening:
       groups:
@@ -267,7 +256,6 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -280,6 +268,7 @@ interfaces:
     field_name_patterns:
       parent: scan_run
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: GetFinding
     flattening:
       groups:
@@ -287,12 +276,12 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: finding
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: ListFindings
     flattening:
       groups:
@@ -302,7 +291,6 @@ interfaces:
     required_fields:
     - parent
     - filter
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -315,6 +303,7 @@ interfaces:
     field_name_patterns:
       parent: scan_run
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
   - name: ListFindingTypeStats
     flattening:
       groups:
@@ -322,9 +311,46 @@ interfaces:
         - parent
     required_fields:
     - parent
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       parent: scan_run
     timeout_millis: 60000
+    resource_name_treatment: STATIC_TYPES
+resource_name_generation:
+- message_name: CreateScanConfigRequest
+  field_entity_map:
+    parent: project
+- message_name: DeleteScanConfigRequest
+  field_entity_map:
+    name: scan_config
+- message_name: GetScanConfigRequest
+  field_entity_map:
+    name: scan_config
+- message_name: ListScanConfigsRequest
+  field_entity_map:
+    parent: project
+- message_name: StartScanRunRequest
+  field_entity_map:
+    name: scan_config
+- message_name: GetScanRunRequest
+  field_entity_map:
+    name: scan_run
+- message_name: ListScanRunsRequest
+  field_entity_map:
+    parent: scan_config
+- message_name: StopScanRunRequest
+  field_entity_map:
+    name: scan_run
+- message_name: ListCrawledUrlsRequest
+  field_entity_map:
+    parent: scan_run
+- message_name: GetFindingRequest
+  field_entity_map:
+    name: finding
+- message_name: ListFindingsRequest
+  field_entity_map:
+    parent: scan_run
+- message_name: ListFindingTypeStatsRequest
+  field_entity_map:
+    parent: scan_run

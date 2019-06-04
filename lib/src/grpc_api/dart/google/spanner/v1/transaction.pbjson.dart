@@ -1,12 +1,13 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/v1/transaction.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const TransactionOptions$json = const {
+const TransactionOptions$json = {
   '1': 'TransactionOptions',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'read_write',
       '3': 1,
       '4': 1,
@@ -15,7 +16,16 @@ const TransactionOptions$json = const {
       '9': 0,
       '10': 'readWrite'
     },
-    const {
+    {
+      '1': 'partitioned_dml',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.TransactionOptions.PartitionedDml',
+      '9': 0,
+      '10': 'partitionedDml'
+    },
+    {
       '1': 'read_only',
       '3': 2,
       '4': 1,
@@ -25,24 +35,29 @@ const TransactionOptions$json = const {
       '10': 'readOnly'
     },
   ],
-  '3': const [
+  '3': [
     TransactionOptions_ReadWrite$json,
+    TransactionOptions_PartitionedDml$json,
     TransactionOptions_ReadOnly$json
   ],
-  '8': const [
-    const {'1': 'mode'},
+  '8': [
+    {'1': 'mode'},
   ],
 };
 
-const TransactionOptions_ReadWrite$json = const {
+const TransactionOptions_ReadWrite$json = {
   '1': 'ReadWrite',
 };
 
-const TransactionOptions_ReadOnly$json = const {
+const TransactionOptions_PartitionedDml$json = {
+  '1': 'PartitionedDml',
+};
+
+const TransactionOptions_ReadOnly$json = {
   '1': 'ReadOnly',
-  '2': const [
-    const {'1': 'strong', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'strong'},
-    const {
+  '2': [
+    {'1': 'strong', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'strong'},
+    {
       '1': 'min_read_timestamp',
       '3': 2,
       '4': 1,
@@ -51,7 +66,7 @@ const TransactionOptions_ReadOnly$json = const {
       '9': 0,
       '10': 'minReadTimestamp'
     },
-    const {
+    {
       '1': 'max_staleness',
       '3': 3,
       '4': 1,
@@ -60,7 +75,7 @@ const TransactionOptions_ReadOnly$json = const {
       '9': 0,
       '10': 'maxStaleness'
     },
-    const {
+    {
       '1': 'read_timestamp',
       '3': 4,
       '4': 1,
@@ -69,7 +84,7 @@ const TransactionOptions_ReadOnly$json = const {
       '9': 0,
       '10': 'readTimestamp'
     },
-    const {
+    {
       '1': 'exact_staleness',
       '3': 5,
       '4': 1,
@@ -78,7 +93,7 @@ const TransactionOptions_ReadOnly$json = const {
       '9': 0,
       '10': 'exactStaleness'
     },
-    const {
+    {
       '1': 'return_read_timestamp',
       '3': 6,
       '4': 1,
@@ -86,16 +101,16 @@ const TransactionOptions_ReadOnly$json = const {
       '10': 'returnReadTimestamp'
     },
   ],
-  '8': const [
-    const {'1': 'timestamp_bound'},
+  '8': [
+    {'1': 'timestamp_bound'},
   ],
 };
 
-const Transaction$json = const {
+const Transaction$json = {
   '1': 'Transaction',
-  '2': const [
-    const {'1': 'id', '3': 1, '4': 1, '5': 12, '10': 'id'},
-    const {
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 12, '10': 'id'},
+    {
       '1': 'read_timestamp',
       '3': 2,
       '4': 1,
@@ -106,10 +121,10 @@ const Transaction$json = const {
   ],
 };
 
-const TransactionSelector$json = const {
+const TransactionSelector$json = {
   '1': 'TransactionSelector',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'single_use',
       '3': 1,
       '4': 1,
@@ -118,8 +133,8 @@ const TransactionSelector$json = const {
       '9': 0,
       '10': 'singleUse'
     },
-    const {'1': 'id', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'id'},
-    const {
+    {'1': 'id', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'id'},
+    {
       '1': 'begin',
       '3': 3,
       '4': 1,
@@ -129,7 +144,7 @@ const TransactionSelector$json = const {
       '10': 'begin'
     },
   ],
-  '8': const [
-    const {'1': 'selector'},
+  '8': [
+    {'1': 'selector'},
   ],
 };

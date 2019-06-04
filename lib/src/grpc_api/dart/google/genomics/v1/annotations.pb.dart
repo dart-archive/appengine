@@ -1,83 +1,27 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/annotations.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
-import '../../protobuf/wrappers.pb.dart' as $google$protobuf;
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../rpc/status.pb.dart' as $google$rpc;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/struct.pb.dart' as $1;
+import '../../protobuf/wrappers.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
+import '../../rpc/status.pb.dart' as $4;
 
 import 'annotations.pbenum.dart';
 
 export 'annotations.pbenum.dart';
 
-class AnnotationSet_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotationSet_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  AnnotationSet_InfoEntry() : super();
-  AnnotationSet_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotationSet_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnnotationSet_InfoEntry clone() =>
-      new AnnotationSet_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotationSet_InfoEntry create() => new AnnotationSet_InfoEntry();
-  static PbList<AnnotationSet_InfoEntry> createRepeated() =>
-      new PbList<AnnotationSet_InfoEntry>();
-  static AnnotationSet_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotationSet_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static AnnotationSet_InfoEntry _defaultInstance;
-  static void $checkItem(AnnotationSet_InfoEntry v) {
-    if (v is! AnnotationSet_InfoEntry)
-      checkItemFailed(v, 'AnnotationSet_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyAnnotationSet_InfoEntry extends AnnotationSet_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class AnnotationSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AnnotationSet')
+class AnnotationSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotationSet',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'referenceSetId')
@@ -86,74 +30,78 @@ class AnnotationSet extends GeneratedMessage {
     ..e<AnnotationType>(
         6,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
         AnnotationType.valueOf,
         AnnotationType.values)
-    ..pp<AnnotationSet_InfoEntry>(17, 'info', PbFieldType.PM,
-        AnnotationSet_InfoEntry.$checkItem, AnnotationSet_InfoEntry.create)
+    ..m<$core.String, $1.ListValue>(
+        17,
+        'info',
+        'AnnotationSet.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $1.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
   AnnotationSet() : super();
-  AnnotationSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotationSet.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AnnotationSet.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AnnotationSet.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AnnotationSet clone() => new AnnotationSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AnnotationSet create() => new AnnotationSet();
-  static PbList<AnnotationSet> createRepeated() => new PbList<AnnotationSet>();
-  static AnnotationSet getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotationSet();
-    return _defaultInstance;
-  }
-
+  AnnotationSet clone() => AnnotationSet()..mergeFromMessage(this);
+  AnnotationSet copyWith(void Function(AnnotationSet) updates) =>
+      super.copyWith((message) => updates(message as AnnotationSet));
+  $pb.BuilderInfo get info_ => _i;
+  static AnnotationSet create() => AnnotationSet();
+  AnnotationSet createEmptyInstance() => create();
+  static $pb.PbList<AnnotationSet> createRepeated() =>
+      $pb.PbList<AnnotationSet>();
+  static AnnotationSet getDefault() => _defaultInstance ??= create()..freeze();
   static AnnotationSet _defaultInstance;
-  static void $checkItem(AnnotationSet v) {
-    if (v is! AnnotationSet) checkItemFailed(v, 'AnnotationSet');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get datasetId => $_getS(1, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(1, '');
+  set datasetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDatasetId() => $_has(1);
+  $core.bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 
-  String get referenceSetId => $_getS(2, '');
-  set referenceSetId(String v) {
+  $core.String get referenceSetId => $_getS(2, '');
+  set referenceSetId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasReferenceSetId() => $_has(2);
+  $core.bool hasReferenceSetId() => $_has(2);
   void clearReferenceSetId() => clearField(3);
 
-  String get name => $_getS(3, '');
-  set name(String v) {
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasName() => $_has(3);
+  $core.bool hasName() => $_has(3);
   void clearName() => clearField(4);
 
-  String get sourceUri => $_getS(4, '');
-  set sourceUri(String v) {
+  $core.String get sourceUri => $_getS(4, '');
+  set sourceUri($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasSourceUri() => $_has(4);
+  $core.bool hasSourceUri() => $_has(4);
   void clearSourceUri() => clearField(5);
 
   AnnotationType get type => $_getN(5);
@@ -161,71 +109,22 @@ class AnnotationSet extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasType() => $_has(5);
+  $core.bool hasType() => $_has(5);
   void clearType() => clearField(6);
 
-  List<AnnotationSet_InfoEntry> get info => $_getList(6);
+  $core.Map<$core.String, $1.ListValue> get info => $_getMap(6);
 }
 
-class _ReadonlyAnnotationSet extends AnnotationSet with ReadonlyMessageMixin {}
+enum Annotation_Value { variant, transcript, notSet }
 
-class Annotation_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Annotation_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  Annotation_InfoEntry() : super();
-  Annotation_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Annotation_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Annotation_InfoEntry clone() =>
-      new Annotation_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Annotation_InfoEntry create() => new Annotation_InfoEntry();
-  static PbList<Annotation_InfoEntry> createRepeated() =>
-      new PbList<Annotation_InfoEntry>();
-  static Annotation_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAnnotation_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static Annotation_InfoEntry _defaultInstance;
-  static void $checkItem(Annotation_InfoEntry v) {
-    if (v is! Annotation_InfoEntry) checkItemFailed(v, 'Annotation_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyAnnotation_InfoEntry extends Annotation_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class Annotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Annotation')
+class Annotation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Annotation_Value> _Annotation_ValueByTag = {
+    10: Annotation_Value.variant,
+    11: Annotation_Value.transcript,
+    0: Annotation_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Annotation',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'annotationSetId')
     ..aOS(3, 'name')
@@ -237,76 +136,85 @@ class Annotation extends GeneratedMessage {
     ..e<AnnotationType>(
         9,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
         AnnotationType.valueOf,
         AnnotationType.values)
-    ..a<VariantAnnotation>(10, 'variant', PbFieldType.OM,
+    ..a<VariantAnnotation>(10, 'variant', $pb.PbFieldType.OM,
         VariantAnnotation.getDefault, VariantAnnotation.create)
-    ..a<Transcript>(11, 'transcript', PbFieldType.OM, Transcript.getDefault,
+    ..a<Transcript>(11, 'transcript', $pb.PbFieldType.OM, Transcript.getDefault,
         Transcript.create)
-    ..pp<Annotation_InfoEntry>(12, 'info', PbFieldType.PM,
-        Annotation_InfoEntry.$checkItem, Annotation_InfoEntry.create)
+    ..m<$core.String, $1.ListValue>(
+        12,
+        'info',
+        'Annotation.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $1.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
+    ..oo(0, [10, 11])
     ..hasRequiredFields = false;
 
   Annotation() : super();
-  Annotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Annotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Annotation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Annotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Annotation clone() => new Annotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Annotation create() => new Annotation();
-  static PbList<Annotation> createRepeated() => new PbList<Annotation>();
-  static Annotation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAnnotation();
-    return _defaultInstance;
-  }
-
+  Annotation clone() => Annotation()..mergeFromMessage(this);
+  Annotation copyWith(void Function(Annotation) updates) =>
+      super.copyWith((message) => updates(message as Annotation));
+  $pb.BuilderInfo get info_ => _i;
+  static Annotation create() => Annotation();
+  Annotation createEmptyInstance() => create();
+  static $pb.PbList<Annotation> createRepeated() => $pb.PbList<Annotation>();
+  static Annotation getDefault() => _defaultInstance ??= create()..freeze();
   static Annotation _defaultInstance;
-  static void $checkItem(Annotation v) {
-    if (v is! Annotation) checkItemFailed(v, 'Annotation');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  Annotation_Value whichValue() => _Annotation_ValueByTag[$_whichOneof(0)];
+  void clearValue() => clearField($_whichOneof(0));
+
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get annotationSetId => $_getS(1, '');
-  set annotationSetId(String v) {
+  $core.String get annotationSetId => $_getS(1, '');
+  set annotationSetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAnnotationSetId() => $_has(1);
+  $core.bool hasAnnotationSetId() => $_has(1);
   void clearAnnotationSetId() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasName() => $_has(2);
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  String get referenceId => $_getS(3, '');
-  set referenceId(String v) {
+  $core.String get referenceId => $_getS(3, '');
+  set referenceId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasReferenceId() => $_has(3);
+  $core.bool hasReferenceId() => $_has(3);
   void clearReferenceId() => clearField(4);
 
-  String get referenceName => $_getS(4, '');
-  set referenceName(String v) {
+  $core.String get referenceName => $_getS(4, '');
+  set referenceName($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasReferenceName() => $_has(4);
+  $core.bool hasReferenceName() => $_has(4);
   void clearReferenceName() => clearField(5);
 
   Int64 get start => $_getI64(5);
@@ -314,7 +222,7 @@ class Annotation extends GeneratedMessage {
     $_setInt64(5, v);
   }
 
-  bool hasStart() => $_has(5);
+  $core.bool hasStart() => $_has(5);
   void clearStart() => clearField(6);
 
   Int64 get end => $_getI64(6);
@@ -322,15 +230,15 @@ class Annotation extends GeneratedMessage {
     $_setInt64(6, v);
   }
 
-  bool hasEnd() => $_has(6);
+  $core.bool hasEnd() => $_has(6);
   void clearEnd() => clearField(7);
 
-  bool get reverseStrand => $_get(7, false);
-  set reverseStrand(bool v) {
+  $core.bool get reverseStrand => $_get(7, false);
+  set reverseStrand($core.bool v) {
     $_setBool(7, v);
   }
 
-  bool hasReverseStrand() => $_has(7);
+  $core.bool hasReverseStrand() => $_has(7);
   void clearReverseStrand() => clearField(8);
 
   AnnotationType get type => $_getN(8);
@@ -338,7 +246,7 @@ class Annotation extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasType() => $_has(8);
+  $core.bool hasType() => $_has(8);
   void clearType() => clearField(9);
 
   VariantAnnotation get variant => $_getN(9);
@@ -346,7 +254,7 @@ class Annotation extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasVariant() => $_has(9);
+  $core.bool hasVariant() => $_has(9);
   void clearVariant() => clearField(10);
 
   Transcript get transcript => $_getN(10);
@@ -354,103 +262,92 @@ class Annotation extends GeneratedMessage {
     setField(11, v);
   }
 
-  bool hasTranscript() => $_has(10);
+  $core.bool hasTranscript() => $_has(10);
   void clearTranscript() => clearField(11);
 
-  List<Annotation_InfoEntry> get info => $_getList(11);
+  $core.Map<$core.String, $1.ListValue> get info => $_getMap(11);
 }
 
-class _ReadonlyAnnotation extends Annotation with ReadonlyMessageMixin {}
-
-class VariantAnnotation_ClinicalCondition extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('VariantAnnotation_ClinicalCondition')
-        ..pPS(1, 'names')
-        ..pp<ExternalId>(2, 'externalIds', PbFieldType.PM,
-            ExternalId.$checkItem, ExternalId.create)
-        ..aOS(3, 'conceptId')
-        ..aOS(4, 'omimId')
-        ..hasRequiredFields = false;
+class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'VariantAnnotation.ClinicalCondition',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pPS(1, 'names')
+    ..pc<ExternalId>(2, 'externalIds', $pb.PbFieldType.PM, ExternalId.create)
+    ..aOS(3, 'conceptId')
+    ..aOS(4, 'omimId')
+    ..hasRequiredFields = false;
 
   VariantAnnotation_ClinicalCondition() : super();
-  VariantAnnotation_ClinicalCondition.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantAnnotation_ClinicalCondition.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VariantAnnotation_ClinicalCondition.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantAnnotation_ClinicalCondition.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VariantAnnotation_ClinicalCondition clone() =>
-      new VariantAnnotation_ClinicalCondition()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      VariantAnnotation_ClinicalCondition()..mergeFromMessage(this);
+  VariantAnnotation_ClinicalCondition copyWith(
+          void Function(VariantAnnotation_ClinicalCondition) updates) =>
+      super.copyWith(
+          (message) => updates(message as VariantAnnotation_ClinicalCondition));
+  $pb.BuilderInfo get info_ => _i;
   static VariantAnnotation_ClinicalCondition create() =>
-      new VariantAnnotation_ClinicalCondition();
-  static PbList<VariantAnnotation_ClinicalCondition> createRepeated() =>
-      new PbList<VariantAnnotation_ClinicalCondition>();
-  static VariantAnnotation_ClinicalCondition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantAnnotation_ClinicalCondition();
-    return _defaultInstance;
-  }
-
+      VariantAnnotation_ClinicalCondition();
+  VariantAnnotation_ClinicalCondition createEmptyInstance() => create();
+  static $pb.PbList<VariantAnnotation_ClinicalCondition> createRepeated() =>
+      $pb.PbList<VariantAnnotation_ClinicalCondition>();
+  static VariantAnnotation_ClinicalCondition getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static VariantAnnotation_ClinicalCondition _defaultInstance;
-  static void $checkItem(VariantAnnotation_ClinicalCondition v) {
-    if (v is! VariantAnnotation_ClinicalCondition)
-      checkItemFailed(v, 'VariantAnnotation_ClinicalCondition');
-  }
 
-  List<String> get names => $_getList(0);
+  $core.List<$core.String> get names => $_getList(0);
 
-  List<ExternalId> get externalIds => $_getList(1);
+  $core.List<ExternalId> get externalIds => $_getList(1);
 
-  String get conceptId => $_getS(2, '');
-  set conceptId(String v) {
+  $core.String get conceptId => $_getS(2, '');
+  set conceptId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasConceptId() => $_has(2);
+  $core.bool hasConceptId() => $_has(2);
   void clearConceptId() => clearField(3);
 
-  String get omimId => $_getS(3, '');
-  set omimId(String v) {
+  $core.String get omimId => $_getS(3, '');
+  set omimId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasOmimId() => $_has(3);
+  $core.bool hasOmimId() => $_has(3);
   void clearOmimId() => clearField(4);
 }
 
-class _ReadonlyVariantAnnotation_ClinicalCondition
-    extends VariantAnnotation_ClinicalCondition with ReadonlyMessageMixin {}
-
-class VariantAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantAnnotation')
+class VariantAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VariantAnnotation',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..e<VariantAnnotation_Type>(
         1,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         VariantAnnotation_Type.TYPE_UNSPECIFIED,
         VariantAnnotation_Type.valueOf,
         VariantAnnotation_Type.values)
     ..e<VariantAnnotation_Effect>(
         2,
         'effect',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         VariantAnnotation_Effect.EFFECT_UNSPECIFIED,
         VariantAnnotation_Effect.valueOf,
         VariantAnnotation_Effect.values)
     ..aOS(3, 'alternateBases')
     ..aOS(4, 'geneId')
     ..pPS(5, 'transcriptIds')
-    ..pp<VariantAnnotation_ClinicalCondition>(
-        6,
-        'conditions',
-        PbFieldType.PM,
-        VariantAnnotation_ClinicalCondition.$checkItem,
-        VariantAnnotation_ClinicalCondition.create)
+    ..pc<VariantAnnotation_ClinicalCondition>(6, 'conditions',
+        $pb.PbFieldType.PM, VariantAnnotation_ClinicalCondition.create)
     ..e<VariantAnnotation_ClinicalSignificance>(
         7,
         'clinicalSignificance',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         VariantAnnotation_ClinicalSignificance
             .CLINICAL_SIGNIFICANCE_UNSPECIFIED,
         VariantAnnotation_ClinicalSignificance.valueOf,
@@ -458,34 +355,30 @@ class VariantAnnotation extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   VariantAnnotation() : super();
-  VariantAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VariantAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantAnnotation clone() => new VariantAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VariantAnnotation create() => new VariantAnnotation();
-  static PbList<VariantAnnotation> createRepeated() =>
-      new PbList<VariantAnnotation>();
-  static VariantAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantAnnotation();
-    return _defaultInstance;
-  }
-
+  VariantAnnotation clone() => VariantAnnotation()..mergeFromMessage(this);
+  VariantAnnotation copyWith(void Function(VariantAnnotation) updates) =>
+      super.copyWith((message) => updates(message as VariantAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static VariantAnnotation create() => VariantAnnotation();
+  VariantAnnotation createEmptyInstance() => create();
+  static $pb.PbList<VariantAnnotation> createRepeated() =>
+      $pb.PbList<VariantAnnotation>();
+  static VariantAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static VariantAnnotation _defaultInstance;
-  static void $checkItem(VariantAnnotation v) {
-    if (v is! VariantAnnotation) checkItemFailed(v, 'VariantAnnotation');
-  }
 
   VariantAnnotation_Type get type => $_getN(0);
   set type(VariantAnnotation_Type v) {
     setField(1, v);
   }
 
-  bool hasType() => $_has(0);
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
   VariantAnnotation_Effect get effect => $_getN(1);
@@ -493,82 +386,73 @@ class VariantAnnotation extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasEffect() => $_has(1);
+  $core.bool hasEffect() => $_has(1);
   void clearEffect() => clearField(2);
 
-  String get alternateBases => $_getS(2, '');
-  set alternateBases(String v) {
+  $core.String get alternateBases => $_getS(2, '');
+  set alternateBases($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasAlternateBases() => $_has(2);
+  $core.bool hasAlternateBases() => $_has(2);
   void clearAlternateBases() => clearField(3);
 
-  String get geneId => $_getS(3, '');
-  set geneId(String v) {
+  $core.String get geneId => $_getS(3, '');
+  set geneId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasGeneId() => $_has(3);
+  $core.bool hasGeneId() => $_has(3);
   void clearGeneId() => clearField(4);
 
-  List<String> get transcriptIds => $_getList(4);
+  $core.List<$core.String> get transcriptIds => $_getList(4);
 
-  List<VariantAnnotation_ClinicalCondition> get conditions => $_getList(5);
+  $core.List<VariantAnnotation_ClinicalCondition> get conditions =>
+      $_getList(5);
 
   VariantAnnotation_ClinicalSignificance get clinicalSignificance => $_getN(6);
   set clinicalSignificance(VariantAnnotation_ClinicalSignificance v) {
     setField(7, v);
   }
 
-  bool hasClinicalSignificance() => $_has(6);
+  $core.bool hasClinicalSignificance() => $_has(6);
   void clearClinicalSignificance() => clearField(7);
 }
 
-class _ReadonlyVariantAnnotation extends VariantAnnotation
-    with ReadonlyMessageMixin {}
-
-class Transcript_Exon extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transcript_Exon')
+class Transcript_Exon extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transcript.Exon',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
-    ..a<$google$protobuf.Int32Value>(
-        3,
-        'frame',
-        PbFieldType.OM,
-        $google$protobuf.Int32Value.getDefault,
-        $google$protobuf.Int32Value.create)
+    ..a<$2.Int32Value>(3, 'frame', $pb.PbFieldType.OM, $2.Int32Value.getDefault,
+        $2.Int32Value.create)
     ..hasRequiredFields = false;
 
   Transcript_Exon() : super();
-  Transcript_Exon.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Transcript_Exon.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Transcript_Exon.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Transcript_Exon.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Transcript_Exon clone() => new Transcript_Exon()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Transcript_Exon create() => new Transcript_Exon();
-  static PbList<Transcript_Exon> createRepeated() =>
-      new PbList<Transcript_Exon>();
-  static Transcript_Exon getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTranscript_Exon();
-    return _defaultInstance;
-  }
-
+  Transcript_Exon clone() => Transcript_Exon()..mergeFromMessage(this);
+  Transcript_Exon copyWith(void Function(Transcript_Exon) updates) =>
+      super.copyWith((message) => updates(message as Transcript_Exon));
+  $pb.BuilderInfo get info_ => _i;
+  static Transcript_Exon create() => Transcript_Exon();
+  Transcript_Exon createEmptyInstance() => create();
+  static $pb.PbList<Transcript_Exon> createRepeated() =>
+      $pb.PbList<Transcript_Exon>();
+  static Transcript_Exon getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Transcript_Exon _defaultInstance;
-  static void $checkItem(Transcript_Exon v) {
-    if (v is! Transcript_Exon) checkItemFailed(v, 'Transcript_Exon');
-  }
 
   Int64 get start => $_getI64(0);
   set start(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasStart() => $_has(0);
+  $core.bool hasStart() => $_has(0);
   void clearStart() => clearField(1);
 
   Int64 get end => $_getI64(1);
@@ -576,58 +460,53 @@ class Transcript_Exon extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasEnd() => $_has(1);
+  $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 
-  $google$protobuf.Int32Value get frame => $_getN(2);
-  set frame($google$protobuf.Int32Value v) {
+  $2.Int32Value get frame => $_getN(2);
+  set frame($2.Int32Value v) {
     setField(3, v);
   }
 
-  bool hasFrame() => $_has(2);
+  $core.bool hasFrame() => $_has(2);
   void clearFrame() => clearField(3);
 }
 
-class _ReadonlyTranscript_Exon extends Transcript_Exon
-    with ReadonlyMessageMixin {}
-
-class Transcript_CodingSequence extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transcript_CodingSequence')
+class Transcript_CodingSequence extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transcript.CodingSequence',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
     ..hasRequiredFields = false;
 
   Transcript_CodingSequence() : super();
-  Transcript_CodingSequence.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Transcript_CodingSequence.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Transcript_CodingSequence.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Transcript_CodingSequence.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Transcript_CodingSequence clone() =>
-      new Transcript_CodingSequence()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Transcript_CodingSequence create() => new Transcript_CodingSequence();
-  static PbList<Transcript_CodingSequence> createRepeated() =>
-      new PbList<Transcript_CodingSequence>();
-  static Transcript_CodingSequence getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTranscript_CodingSequence();
-    return _defaultInstance;
-  }
-
+      Transcript_CodingSequence()..mergeFromMessage(this);
+  Transcript_CodingSequence copyWith(
+          void Function(Transcript_CodingSequence) updates) =>
+      super
+          .copyWith((message) => updates(message as Transcript_CodingSequence));
+  $pb.BuilderInfo get info_ => _i;
+  static Transcript_CodingSequence create() => Transcript_CodingSequence();
+  Transcript_CodingSequence createEmptyInstance() => create();
+  static $pb.PbList<Transcript_CodingSequence> createRepeated() =>
+      $pb.PbList<Transcript_CodingSequence>();
+  static Transcript_CodingSequence getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Transcript_CodingSequence _defaultInstance;
-  static void $checkItem(Transcript_CodingSequence v) {
-    if (v is! Transcript_CodingSequence)
-      checkItemFailed(v, 'Transcript_CodingSequence');
-  }
 
   Int64 get start => $_getI64(0);
   set start(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasStart() => $_has(0);
+  $core.bool hasStart() => $_has(0);
   void clearStart() => clearField(1);
 
   Int64 get end => $_getI64(1);
@@ -635,239 +514,211 @@ class Transcript_CodingSequence extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasEnd() => $_has(1);
+  $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 }
 
-class _ReadonlyTranscript_CodingSequence extends Transcript_CodingSequence
-    with ReadonlyMessageMixin {}
-
-class Transcript extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Transcript')
+class Transcript extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transcript',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'geneId')
-    ..pp<Transcript_Exon>(2, 'exons', PbFieldType.PM,
-        Transcript_Exon.$checkItem, Transcript_Exon.create)
-    ..a<Transcript_CodingSequence>(3, 'codingSequence', PbFieldType.OM,
+    ..pc<Transcript_Exon>(
+        2, 'exons', $pb.PbFieldType.PM, Transcript_Exon.create)
+    ..a<Transcript_CodingSequence>(3, 'codingSequence', $pb.PbFieldType.OM,
         Transcript_CodingSequence.getDefault, Transcript_CodingSequence.create)
     ..hasRequiredFields = false;
 
   Transcript() : super();
-  Transcript.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Transcript.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Transcript.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Transcript.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Transcript clone() => new Transcript()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Transcript create() => new Transcript();
-  static PbList<Transcript> createRepeated() => new PbList<Transcript>();
-  static Transcript getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTranscript();
-    return _defaultInstance;
-  }
-
+  Transcript clone() => Transcript()..mergeFromMessage(this);
+  Transcript copyWith(void Function(Transcript) updates) =>
+      super.copyWith((message) => updates(message as Transcript));
+  $pb.BuilderInfo get info_ => _i;
+  static Transcript create() => Transcript();
+  Transcript createEmptyInstance() => create();
+  static $pb.PbList<Transcript> createRepeated() => $pb.PbList<Transcript>();
+  static Transcript getDefault() => _defaultInstance ??= create()..freeze();
   static Transcript _defaultInstance;
-  static void $checkItem(Transcript v) {
-    if (v is! Transcript) checkItemFailed(v, 'Transcript');
-  }
 
-  String get geneId => $_getS(0, '');
-  set geneId(String v) {
+  $core.String get geneId => $_getS(0, '');
+  set geneId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasGeneId() => $_has(0);
+  $core.bool hasGeneId() => $_has(0);
   void clearGeneId() => clearField(1);
 
-  List<Transcript_Exon> get exons => $_getList(1);
+  $core.List<Transcript_Exon> get exons => $_getList(1);
 
   Transcript_CodingSequence get codingSequence => $_getN(2);
   set codingSequence(Transcript_CodingSequence v) {
     setField(3, v);
   }
 
-  bool hasCodingSequence() => $_has(2);
+  $core.bool hasCodingSequence() => $_has(2);
   void clearCodingSequence() => clearField(3);
 }
 
-class _ReadonlyTranscript extends Transcript with ReadonlyMessageMixin {}
-
-class ExternalId extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExternalId')
+class ExternalId extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExternalId',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'sourceName')
     ..aOS(2, 'id')
     ..hasRequiredFields = false;
 
   ExternalId() : super();
-  ExternalId.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExternalId.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExternalId.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExternalId.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExternalId clone() => new ExternalId()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExternalId create() => new ExternalId();
-  static PbList<ExternalId> createRepeated() => new PbList<ExternalId>();
-  static ExternalId getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyExternalId();
-    return _defaultInstance;
-  }
-
+  ExternalId clone() => ExternalId()..mergeFromMessage(this);
+  ExternalId copyWith(void Function(ExternalId) updates) =>
+      super.copyWith((message) => updates(message as ExternalId));
+  $pb.BuilderInfo get info_ => _i;
+  static ExternalId create() => ExternalId();
+  ExternalId createEmptyInstance() => create();
+  static $pb.PbList<ExternalId> createRepeated() => $pb.PbList<ExternalId>();
+  static ExternalId getDefault() => _defaultInstance ??= create()..freeze();
   static ExternalId _defaultInstance;
-  static void $checkItem(ExternalId v) {
-    if (v is! ExternalId) checkItemFailed(v, 'ExternalId');
-  }
 
-  String get sourceName => $_getS(0, '');
-  set sourceName(String v) {
+  $core.String get sourceName => $_getS(0, '');
+  set sourceName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSourceName() => $_has(0);
+  $core.bool hasSourceName() => $_has(0);
   void clearSourceName() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasId() => $_has(1);
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 }
 
-class _ReadonlyExternalId extends ExternalId with ReadonlyMessageMixin {}
-
-class CreateAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateAnnotationSetRequest')
-    ..a<AnnotationSet>(1, 'annotationSet', PbFieldType.OM,
+class CreateAnnotationSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CreateAnnotationSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..a<AnnotationSet>(1, 'annotationSet', $pb.PbFieldType.OM,
         AnnotationSet.getDefault, AnnotationSet.create)
     ..hasRequiredFields = false;
 
   CreateAnnotationSetRequest() : super();
-  CreateAnnotationSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateAnnotationSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateAnnotationSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateAnnotationSetRequest clone() =>
-      new CreateAnnotationSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateAnnotationSetRequest create() =>
-      new CreateAnnotationSetRequest();
-  static PbList<CreateAnnotationSetRequest> createRepeated() =>
-      new PbList<CreateAnnotationSetRequest>();
-  static CreateAnnotationSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateAnnotationSetRequest();
-    return _defaultInstance;
-  }
-
+      CreateAnnotationSetRequest()..mergeFromMessage(this);
+  CreateAnnotationSetRequest copyWith(
+          void Function(CreateAnnotationSetRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as CreateAnnotationSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateAnnotationSetRequest create() => CreateAnnotationSetRequest();
+  CreateAnnotationSetRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAnnotationSetRequest> createRepeated() =>
+      $pb.PbList<CreateAnnotationSetRequest>();
+  static CreateAnnotationSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateAnnotationSetRequest _defaultInstance;
-  static void $checkItem(CreateAnnotationSetRequest v) {
-    if (v is! CreateAnnotationSetRequest)
-      checkItemFailed(v, 'CreateAnnotationSetRequest');
-  }
 
   AnnotationSet get annotationSet => $_getN(0);
   set annotationSet(AnnotationSet v) {
     setField(1, v);
   }
 
-  bool hasAnnotationSet() => $_has(0);
+  $core.bool hasAnnotationSet() => $_has(0);
   void clearAnnotationSet() => clearField(1);
 }
 
-class _ReadonlyCreateAnnotationSetRequest extends CreateAnnotationSetRequest
-    with ReadonlyMessageMixin {}
-
-class GetAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAnnotationSetRequest')
+class GetAnnotationSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAnnotationSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'annotationSetId')
     ..hasRequiredFields = false;
 
   GetAnnotationSetRequest() : super();
-  GetAnnotationSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetAnnotationSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetAnnotationSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetAnnotationSetRequest clone() =>
-      new GetAnnotationSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetAnnotationSetRequest create() => new GetAnnotationSetRequest();
-  static PbList<GetAnnotationSetRequest> createRepeated() =>
-      new PbList<GetAnnotationSetRequest>();
-  static GetAnnotationSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAnnotationSetRequest();
-    return _defaultInstance;
-  }
-
+      GetAnnotationSetRequest()..mergeFromMessage(this);
+  GetAnnotationSetRequest copyWith(
+          void Function(GetAnnotationSetRequest) updates) =>
+      super.copyWith((message) => updates(message as GetAnnotationSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetAnnotationSetRequest create() => GetAnnotationSetRequest();
+  GetAnnotationSetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAnnotationSetRequest> createRepeated() =>
+      $pb.PbList<GetAnnotationSetRequest>();
+  static GetAnnotationSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetAnnotationSetRequest _defaultInstance;
-  static void $checkItem(GetAnnotationSetRequest v) {
-    if (v is! GetAnnotationSetRequest)
-      checkItemFailed(v, 'GetAnnotationSetRequest');
-  }
 
-  String get annotationSetId => $_getS(0, '');
-  set annotationSetId(String v) {
+  $core.String get annotationSetId => $_getS(0, '');
+  set annotationSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAnnotationSetId() => $_has(0);
+  $core.bool hasAnnotationSetId() => $_has(0);
   void clearAnnotationSetId() => clearField(1);
 }
 
-class _ReadonlyGetAnnotationSetRequest extends GetAnnotationSetRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAnnotationSetRequest')
+class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'UpdateAnnotationSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'annotationSetId')
-    ..a<AnnotationSet>(2, 'annotationSet', PbFieldType.OM,
+    ..a<AnnotationSet>(2, 'annotationSet', $pb.PbFieldType.OM,
         AnnotationSet.getDefault, AnnotationSet.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateAnnotationSetRequest() : super();
-  UpdateAnnotationSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateAnnotationSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateAnnotationSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAnnotationSetRequest clone() =>
-      new UpdateAnnotationSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateAnnotationSetRequest create() =>
-      new UpdateAnnotationSetRequest();
-  static PbList<UpdateAnnotationSetRequest> createRepeated() =>
-      new PbList<UpdateAnnotationSetRequest>();
-  static UpdateAnnotationSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAnnotationSetRequest();
-    return _defaultInstance;
-  }
-
+      UpdateAnnotationSetRequest()..mergeFromMessage(this);
+  UpdateAnnotationSetRequest copyWith(
+          void Function(UpdateAnnotationSetRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as UpdateAnnotationSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateAnnotationSetRequest create() => UpdateAnnotationSetRequest();
+  UpdateAnnotationSetRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAnnotationSetRequest> createRepeated() =>
+      $pb.PbList<UpdateAnnotationSetRequest>();
+  static UpdateAnnotationSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateAnnotationSetRequest _defaultInstance;
-  static void $checkItem(UpdateAnnotationSetRequest v) {
-    if (v is! UpdateAnnotationSetRequest)
-      checkItemFailed(v, 'UpdateAnnotationSetRequest');
-  }
 
-  String get annotationSetId => $_getS(0, '');
-  set annotationSetId(String v) {
+  $core.String get annotationSetId => $_getS(0, '');
+  set annotationSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAnnotationSetId() => $_has(0);
+  $core.bool hasAnnotationSetId() => $_has(0);
   void clearAnnotationSetId() => clearField(1);
 
   AnnotationSet get annotationSet => $_getN(1);
@@ -875,319 +726,289 @@ class UpdateAnnotationSetRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAnnotationSet() => $_has(1);
+  $core.bool hasAnnotationSet() => $_has(1);
   void clearAnnotationSet() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateAnnotationSetRequest extends UpdateAnnotationSetRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteAnnotationSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAnnotationSetRequest')
+class DeleteAnnotationSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'DeleteAnnotationSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'annotationSetId')
     ..hasRequiredFields = false;
 
   DeleteAnnotationSetRequest() : super();
-  DeleteAnnotationSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteAnnotationSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteAnnotationSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAnnotationSetRequest clone() =>
-      new DeleteAnnotationSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteAnnotationSetRequest create() =>
-      new DeleteAnnotationSetRequest();
-  static PbList<DeleteAnnotationSetRequest> createRepeated() =>
-      new PbList<DeleteAnnotationSetRequest>();
-  static DeleteAnnotationSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAnnotationSetRequest();
-    return _defaultInstance;
-  }
-
+      DeleteAnnotationSetRequest()..mergeFromMessage(this);
+  DeleteAnnotationSetRequest copyWith(
+          void Function(DeleteAnnotationSetRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as DeleteAnnotationSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteAnnotationSetRequest create() => DeleteAnnotationSetRequest();
+  DeleteAnnotationSetRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteAnnotationSetRequest> createRepeated() =>
+      $pb.PbList<DeleteAnnotationSetRequest>();
+  static DeleteAnnotationSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteAnnotationSetRequest _defaultInstance;
-  static void $checkItem(DeleteAnnotationSetRequest v) {
-    if (v is! DeleteAnnotationSetRequest)
-      checkItemFailed(v, 'DeleteAnnotationSetRequest');
-  }
 
-  String get annotationSetId => $_getS(0, '');
-  set annotationSetId(String v) {
+  $core.String get annotationSetId => $_getS(0, '');
+  set annotationSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAnnotationSetId() => $_has(0);
+  $core.bool hasAnnotationSetId() => $_has(0);
   void clearAnnotationSetId() => clearField(1);
 }
 
-class _ReadonlyDeleteAnnotationSetRequest extends DeleteAnnotationSetRequest
-    with ReadonlyMessageMixin {}
-
-class SearchAnnotationSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationSetsRequest')
+class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SearchAnnotationSetsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..pPS(1, 'datasetIds')
     ..aOS(2, 'referenceSetId')
     ..aOS(3, 'name')
-    ..pp<AnnotationType>(4, 'types', PbFieldType.PE, AnnotationType.$checkItem,
-        null, AnnotationType.valueOf, AnnotationType.values)
+    ..pc<AnnotationType>(4, 'types', $pb.PbFieldType.PE, null,
+        AnnotationType.valueOf, AnnotationType.values)
     ..aOS(5, 'pageToken')
-    ..a<int>(6, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(6, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   SearchAnnotationSetsRequest() : super();
-  SearchAnnotationSetsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationSetsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchAnnotationSetsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationSetsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationSetsRequest clone() =>
-      new SearchAnnotationSetsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchAnnotationSetsRequest create() =>
-      new SearchAnnotationSetsRequest();
-  static PbList<SearchAnnotationSetsRequest> createRepeated() =>
-      new PbList<SearchAnnotationSetsRequest>();
-  static SearchAnnotationSetsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationSetsRequest();
-    return _defaultInstance;
-  }
-
+      SearchAnnotationSetsRequest()..mergeFromMessage(this);
+  SearchAnnotationSetsRequest copyWith(
+          void Function(SearchAnnotationSetsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as SearchAnnotationSetsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchAnnotationSetsRequest create() => SearchAnnotationSetsRequest();
+  SearchAnnotationSetsRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchAnnotationSetsRequest> createRepeated() =>
+      $pb.PbList<SearchAnnotationSetsRequest>();
+  static SearchAnnotationSetsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchAnnotationSetsRequest _defaultInstance;
-  static void $checkItem(SearchAnnotationSetsRequest v) {
-    if (v is! SearchAnnotationSetsRequest)
-      checkItemFailed(v, 'SearchAnnotationSetsRequest');
-  }
 
-  List<String> get datasetIds => $_getList(0);
+  $core.List<$core.String> get datasetIds => $_getList(0);
 
-  String get referenceSetId => $_getS(1, '');
-  set referenceSetId(String v) {
+  $core.String get referenceSetId => $_getS(1, '');
+  set referenceSetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasReferenceSetId() => $_has(1);
+  $core.bool hasReferenceSetId() => $_has(1);
   void clearReferenceSetId() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasName() => $_has(2);
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  List<AnnotationType> get types => $_getList(3);
+  $core.List<AnnotationType> get types => $_getList(3);
 
-  String get pageToken => $_getS(4, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(4, '');
+  set pageToken($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasPageToken() => $_has(4);
+  $core.bool hasPageToken() => $_has(4);
   void clearPageToken() => clearField(5);
 
-  int get pageSize => $_get(5, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(5, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(5, v);
   }
 
-  bool hasPageSize() => $_has(5);
+  $core.bool hasPageSize() => $_has(5);
   void clearPageSize() => clearField(6);
 }
 
-class _ReadonlySearchAnnotationSetsRequest extends SearchAnnotationSetsRequest
-    with ReadonlyMessageMixin {}
-
-class SearchAnnotationSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationSetsResponse')
-    ..pp<AnnotationSet>(1, 'annotationSets', PbFieldType.PM,
-        AnnotationSet.$checkItem, AnnotationSet.create)
+class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SearchAnnotationSetsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<AnnotationSet>(
+        1, 'annotationSets', $pb.PbFieldType.PM, AnnotationSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   SearchAnnotationSetsResponse() : super();
-  SearchAnnotationSetsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationSetsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchAnnotationSetsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationSetsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationSetsResponse clone() =>
-      new SearchAnnotationSetsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      SearchAnnotationSetsResponse()..mergeFromMessage(this);
+  SearchAnnotationSetsResponse copyWith(
+          void Function(SearchAnnotationSetsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as SearchAnnotationSetsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static SearchAnnotationSetsResponse create() =>
-      new SearchAnnotationSetsResponse();
-  static PbList<SearchAnnotationSetsResponse> createRepeated() =>
-      new PbList<SearchAnnotationSetsResponse>();
-  static SearchAnnotationSetsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationSetsResponse();
-    return _defaultInstance;
-  }
-
+      SearchAnnotationSetsResponse();
+  SearchAnnotationSetsResponse createEmptyInstance() => create();
+  static $pb.PbList<SearchAnnotationSetsResponse> createRepeated() =>
+      $pb.PbList<SearchAnnotationSetsResponse>();
+  static SearchAnnotationSetsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchAnnotationSetsResponse _defaultInstance;
-  static void $checkItem(SearchAnnotationSetsResponse v) {
-    if (v is! SearchAnnotationSetsResponse)
-      checkItemFailed(v, 'SearchAnnotationSetsResponse');
-  }
 
-  List<AnnotationSet> get annotationSets => $_getList(0);
+  $core.List<AnnotationSet> get annotationSets => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlySearchAnnotationSetsResponse extends SearchAnnotationSetsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateAnnotationRequest')
-    ..a<Annotation>(1, 'annotation', PbFieldType.OM, Annotation.getDefault,
+class CreateAnnotationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAnnotationRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..a<Annotation>(1, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
     ..hasRequiredFields = false;
 
   CreateAnnotationRequest() : super();
-  CreateAnnotationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateAnnotationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateAnnotationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateAnnotationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateAnnotationRequest clone() =>
-      new CreateAnnotationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateAnnotationRequest create() => new CreateAnnotationRequest();
-  static PbList<CreateAnnotationRequest> createRepeated() =>
-      new PbList<CreateAnnotationRequest>();
-  static CreateAnnotationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateAnnotationRequest();
-    return _defaultInstance;
-  }
-
+      CreateAnnotationRequest()..mergeFromMessage(this);
+  CreateAnnotationRequest copyWith(
+          void Function(CreateAnnotationRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateAnnotationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateAnnotationRequest create() => CreateAnnotationRequest();
+  CreateAnnotationRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAnnotationRequest> createRepeated() =>
+      $pb.PbList<CreateAnnotationRequest>();
+  static CreateAnnotationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateAnnotationRequest _defaultInstance;
-  static void $checkItem(CreateAnnotationRequest v) {
-    if (v is! CreateAnnotationRequest)
-      checkItemFailed(v, 'CreateAnnotationRequest');
-  }
 
   Annotation get annotation => $_getN(0);
   set annotation(Annotation v) {
     setField(1, v);
   }
 
-  bool hasAnnotation() => $_has(0);
+  $core.bool hasAnnotation() => $_has(0);
   void clearAnnotation() => clearField(1);
 }
 
-class _ReadonlyCreateAnnotationRequest extends CreateAnnotationRequest
-    with ReadonlyMessageMixin {}
-
-class BatchCreateAnnotationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchCreateAnnotationsRequest')
-    ..pp<Annotation>(1, 'annotations', PbFieldType.PM, Annotation.$checkItem,
-        Annotation.create)
+class BatchCreateAnnotationsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchCreateAnnotationsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<Annotation>(1, 'annotations', $pb.PbFieldType.PM, Annotation.create)
     ..aOS(2, 'requestId')
     ..hasRequiredFields = false;
 
   BatchCreateAnnotationsRequest() : super();
-  BatchCreateAnnotationsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchCreateAnnotationsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchCreateAnnotationsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchCreateAnnotationsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateAnnotationsRequest clone() =>
-      new BatchCreateAnnotationsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      BatchCreateAnnotationsRequest()..mergeFromMessage(this);
+  BatchCreateAnnotationsRequest copyWith(
+          void Function(BatchCreateAnnotationsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchCreateAnnotationsRequest));
+  $pb.BuilderInfo get info_ => _i;
   static BatchCreateAnnotationsRequest create() =>
-      new BatchCreateAnnotationsRequest();
-  static PbList<BatchCreateAnnotationsRequest> createRepeated() =>
-      new PbList<BatchCreateAnnotationsRequest>();
-  static BatchCreateAnnotationsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateAnnotationsRequest();
-    return _defaultInstance;
-  }
-
+      BatchCreateAnnotationsRequest();
+  BatchCreateAnnotationsRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateAnnotationsRequest> createRepeated() =>
+      $pb.PbList<BatchCreateAnnotationsRequest>();
+  static BatchCreateAnnotationsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchCreateAnnotationsRequest _defaultInstance;
-  static void $checkItem(BatchCreateAnnotationsRequest v) {
-    if (v is! BatchCreateAnnotationsRequest)
-      checkItemFailed(v, 'BatchCreateAnnotationsRequest');
-  }
 
-  List<Annotation> get annotations => $_getList(0);
+  $core.List<Annotation> get annotations => $_getList(0);
 
-  String get requestId => $_getS(1, '');
-  set requestId(String v) {
+  $core.String get requestId => $_getS(1, '');
+  set requestId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasRequestId() => $_has(1);
+  $core.bool hasRequestId() => $_has(1);
   void clearRequestId() => clearField(2);
 }
 
-class _ReadonlyBatchCreateAnnotationsRequest
-    extends BatchCreateAnnotationsRequest with ReadonlyMessageMixin {}
-
-class BatchCreateAnnotationsResponse_Entry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('BatchCreateAnnotationsResponse_Entry')
-        ..a<$google$rpc.Status>(1, 'status', PbFieldType.OM,
-            $google$rpc.Status.getDefault, $google$rpc.Status.create)
-        ..a<Annotation>(2, 'annotation', PbFieldType.OM, Annotation.getDefault,
-            Annotation.create)
-        ..hasRequiredFields = false;
+class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchCreateAnnotationsResponse.Entry',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..a<$4.Status>(
+        1, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
+    ..a<Annotation>(2, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
+        Annotation.create)
+    ..hasRequiredFields = false;
 
   BatchCreateAnnotationsResponse_Entry() : super();
-  BatchCreateAnnotationsResponse_Entry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchCreateAnnotationsResponse_Entry.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchCreateAnnotationsResponse_Entry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchCreateAnnotationsResponse_Entry.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateAnnotationsResponse_Entry clone() =>
-      new BatchCreateAnnotationsResponse_Entry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      BatchCreateAnnotationsResponse_Entry()..mergeFromMessage(this);
+  BatchCreateAnnotationsResponse_Entry copyWith(
+          void Function(BatchCreateAnnotationsResponse_Entry) updates) =>
+      super.copyWith((message) =>
+          updates(message as BatchCreateAnnotationsResponse_Entry));
+  $pb.BuilderInfo get info_ => _i;
   static BatchCreateAnnotationsResponse_Entry create() =>
-      new BatchCreateAnnotationsResponse_Entry();
-  static PbList<BatchCreateAnnotationsResponse_Entry> createRepeated() =>
-      new PbList<BatchCreateAnnotationsResponse_Entry>();
-  static BatchCreateAnnotationsResponse_Entry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateAnnotationsResponse_Entry();
-    return _defaultInstance;
-  }
-
+      BatchCreateAnnotationsResponse_Entry();
+  BatchCreateAnnotationsResponse_Entry createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateAnnotationsResponse_Entry> createRepeated() =>
+      $pb.PbList<BatchCreateAnnotationsResponse_Entry>();
+  static BatchCreateAnnotationsResponse_Entry getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchCreateAnnotationsResponse_Entry _defaultInstance;
-  static void $checkItem(BatchCreateAnnotationsResponse_Entry v) {
-    if (v is! BatchCreateAnnotationsResponse_Entry)
-      checkItemFailed(v, 'BatchCreateAnnotationsResponse_Entry');
-  }
 
-  $google$rpc.Status get status => $_getN(0);
-  set status($google$rpc.Status v) {
+  $4.Status get status => $_getN(0);
+  set status($4.Status v) {
     setField(1, v);
   }
 
-  bool hasStatus() => $_has(0);
+  $core.bool hasStatus() => $_has(0);
   void clearStatus() => clearField(1);
 
   Annotation get annotation => $_getN(1);
@@ -1195,141 +1016,116 @@ class BatchCreateAnnotationsResponse_Entry extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAnnotation() => $_has(1);
+  $core.bool hasAnnotation() => $_has(1);
   void clearAnnotation() => clearField(2);
 }
 
-class _ReadonlyBatchCreateAnnotationsResponse_Entry
-    extends BatchCreateAnnotationsResponse_Entry with ReadonlyMessageMixin {}
-
-class BatchCreateAnnotationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('BatchCreateAnnotationsResponse')
-        ..pp<BatchCreateAnnotationsResponse_Entry>(
-            1,
-            'entries',
-            PbFieldType.PM,
-            BatchCreateAnnotationsResponse_Entry.$checkItem,
-            BatchCreateAnnotationsResponse_Entry.create)
-        ..hasRequiredFields = false;
+class BatchCreateAnnotationsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchCreateAnnotationsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<BatchCreateAnnotationsResponse_Entry>(1, 'entries', $pb.PbFieldType.PM,
+        BatchCreateAnnotationsResponse_Entry.create)
+    ..hasRequiredFields = false;
 
   BatchCreateAnnotationsResponse() : super();
-  BatchCreateAnnotationsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchCreateAnnotationsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchCreateAnnotationsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchCreateAnnotationsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchCreateAnnotationsResponse clone() =>
-      new BatchCreateAnnotationsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      BatchCreateAnnotationsResponse()..mergeFromMessage(this);
+  BatchCreateAnnotationsResponse copyWith(
+          void Function(BatchCreateAnnotationsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchCreateAnnotationsResponse));
+  $pb.BuilderInfo get info_ => _i;
   static BatchCreateAnnotationsResponse create() =>
-      new BatchCreateAnnotationsResponse();
-  static PbList<BatchCreateAnnotationsResponse> createRepeated() =>
-      new PbList<BatchCreateAnnotationsResponse>();
-  static BatchCreateAnnotationsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchCreateAnnotationsResponse();
-    return _defaultInstance;
-  }
-
+      BatchCreateAnnotationsResponse();
+  BatchCreateAnnotationsResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateAnnotationsResponse> createRepeated() =>
+      $pb.PbList<BatchCreateAnnotationsResponse>();
+  static BatchCreateAnnotationsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchCreateAnnotationsResponse _defaultInstance;
-  static void $checkItem(BatchCreateAnnotationsResponse v) {
-    if (v is! BatchCreateAnnotationsResponse)
-      checkItemFailed(v, 'BatchCreateAnnotationsResponse');
-  }
 
-  List<BatchCreateAnnotationsResponse_Entry> get entries => $_getList(0);
+  $core.List<BatchCreateAnnotationsResponse_Entry> get entries => $_getList(0);
 }
 
-class _ReadonlyBatchCreateAnnotationsResponse
-    extends BatchCreateAnnotationsResponse with ReadonlyMessageMixin {}
-
-class GetAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetAnnotationRequest')
+class GetAnnotationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAnnotationRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'annotationId')
     ..hasRequiredFields = false;
 
   GetAnnotationRequest() : super();
-  GetAnnotationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetAnnotationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetAnnotationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetAnnotationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetAnnotationRequest clone() =>
-      new GetAnnotationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetAnnotationRequest create() => new GetAnnotationRequest();
-  static PbList<GetAnnotationRequest> createRepeated() =>
-      new PbList<GetAnnotationRequest>();
-  static GetAnnotationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetAnnotationRequest();
-    return _defaultInstance;
-  }
-
+      GetAnnotationRequest()..mergeFromMessage(this);
+  GetAnnotationRequest copyWith(void Function(GetAnnotationRequest) updates) =>
+      super.copyWith((message) => updates(message as GetAnnotationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetAnnotationRequest create() => GetAnnotationRequest();
+  GetAnnotationRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAnnotationRequest> createRepeated() =>
+      $pb.PbList<GetAnnotationRequest>();
+  static GetAnnotationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetAnnotationRequest _defaultInstance;
-  static void $checkItem(GetAnnotationRequest v) {
-    if (v is! GetAnnotationRequest) checkItemFailed(v, 'GetAnnotationRequest');
-  }
 
-  String get annotationId => $_getS(0, '');
-  set annotationId(String v) {
+  $core.String get annotationId => $_getS(0, '');
+  set annotationId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAnnotationId() => $_has(0);
+  $core.bool hasAnnotationId() => $_has(0);
   void clearAnnotationId() => clearField(1);
 }
 
-class _ReadonlyGetAnnotationRequest extends GetAnnotationRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateAnnotationRequest')
+class UpdateAnnotationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAnnotationRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'annotationId')
-    ..a<Annotation>(2, 'annotation', PbFieldType.OM, Annotation.getDefault,
+    ..a<Annotation>(2, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateAnnotationRequest() : super();
-  UpdateAnnotationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateAnnotationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateAnnotationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateAnnotationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateAnnotationRequest clone() =>
-      new UpdateAnnotationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateAnnotationRequest create() => new UpdateAnnotationRequest();
-  static PbList<UpdateAnnotationRequest> createRepeated() =>
-      new PbList<UpdateAnnotationRequest>();
-  static UpdateAnnotationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateAnnotationRequest();
-    return _defaultInstance;
-  }
-
+      UpdateAnnotationRequest()..mergeFromMessage(this);
+  UpdateAnnotationRequest copyWith(
+          void Function(UpdateAnnotationRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateAnnotationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateAnnotationRequest create() => UpdateAnnotationRequest();
+  UpdateAnnotationRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAnnotationRequest> createRepeated() =>
+      $pb.PbList<UpdateAnnotationRequest>();
+  static UpdateAnnotationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateAnnotationRequest _defaultInstance;
-  static void $checkItem(UpdateAnnotationRequest v) {
-    if (v is! UpdateAnnotationRequest)
-      checkItemFailed(v, 'UpdateAnnotationRequest');
-  }
 
-  String get annotationId => $_getS(0, '');
-  set annotationId(String v) {
+  $core.String get annotationId => $_getS(0, '');
+  set annotationId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAnnotationId() => $_has(0);
+  $core.bool hasAnnotationId() => $_has(0);
   void clearAnnotationId() => clearField(1);
 
   Annotation get annotation => $_getN(1);
@@ -1337,115 +1133,116 @@ class UpdateAnnotationRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAnnotation() => $_has(1);
+  $core.bool hasAnnotation() => $_has(1);
   void clearAnnotation() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateAnnotationRequest extends UpdateAnnotationRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteAnnotationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteAnnotationRequest')
+class DeleteAnnotationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAnnotationRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'annotationId')
     ..hasRequiredFields = false;
 
   DeleteAnnotationRequest() : super();
-  DeleteAnnotationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteAnnotationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteAnnotationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteAnnotationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteAnnotationRequest clone() =>
-      new DeleteAnnotationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteAnnotationRequest create() => new DeleteAnnotationRequest();
-  static PbList<DeleteAnnotationRequest> createRepeated() =>
-      new PbList<DeleteAnnotationRequest>();
-  static DeleteAnnotationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteAnnotationRequest();
-    return _defaultInstance;
-  }
-
+      DeleteAnnotationRequest()..mergeFromMessage(this);
+  DeleteAnnotationRequest copyWith(
+          void Function(DeleteAnnotationRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteAnnotationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteAnnotationRequest create() => DeleteAnnotationRequest();
+  DeleteAnnotationRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteAnnotationRequest> createRepeated() =>
+      $pb.PbList<DeleteAnnotationRequest>();
+  static DeleteAnnotationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteAnnotationRequest _defaultInstance;
-  static void $checkItem(DeleteAnnotationRequest v) {
-    if (v is! DeleteAnnotationRequest)
-      checkItemFailed(v, 'DeleteAnnotationRequest');
-  }
 
-  String get annotationId => $_getS(0, '');
-  set annotationId(String v) {
+  $core.String get annotationId => $_getS(0, '');
+  set annotationId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasAnnotationId() => $_has(0);
+  $core.bool hasAnnotationId() => $_has(0);
   void clearAnnotationId() => clearField(1);
 }
 
-class _ReadonlyDeleteAnnotationRequest extends DeleteAnnotationRequest
-    with ReadonlyMessageMixin {}
+enum SearchAnnotationsRequest_Reference { referenceId, referenceName, notSet }
 
-class SearchAnnotationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationsRequest')
+class SearchAnnotationsRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, SearchAnnotationsRequest_Reference>
+      _SearchAnnotationsRequest_ReferenceByTag = {
+    2: SearchAnnotationsRequest_Reference.referenceId,
+    3: SearchAnnotationsRequest_Reference.referenceName,
+    0: SearchAnnotationsRequest_Reference.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchAnnotationsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..pPS(1, 'annotationSetIds')
     ..aOS(2, 'referenceId')
     ..aOS(3, 'referenceName')
     ..aInt64(4, 'start')
     ..aInt64(5, 'end')
     ..aOS(6, 'pageToken')
-    ..a<int>(7, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(7, 'pageSize', $pb.PbFieldType.O3)
+    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
   SearchAnnotationsRequest() : super();
-  SearchAnnotationsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchAnnotationsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationsRequest clone() =>
-      new SearchAnnotationsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchAnnotationsRequest create() => new SearchAnnotationsRequest();
-  static PbList<SearchAnnotationsRequest> createRepeated() =>
-      new PbList<SearchAnnotationsRequest>();
-  static SearchAnnotationsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationsRequest();
-    return _defaultInstance;
-  }
-
+      SearchAnnotationsRequest()..mergeFromMessage(this);
+  SearchAnnotationsRequest copyWith(
+          void Function(SearchAnnotationsRequest) updates) =>
+      super.copyWith((message) => updates(message as SearchAnnotationsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchAnnotationsRequest create() => SearchAnnotationsRequest();
+  SearchAnnotationsRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchAnnotationsRequest> createRepeated() =>
+      $pb.PbList<SearchAnnotationsRequest>();
+  static SearchAnnotationsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchAnnotationsRequest _defaultInstance;
-  static void $checkItem(SearchAnnotationsRequest v) {
-    if (v is! SearchAnnotationsRequest)
-      checkItemFailed(v, 'SearchAnnotationsRequest');
-  }
 
-  List<String> get annotationSetIds => $_getList(0);
+  SearchAnnotationsRequest_Reference whichReference() =>
+      _SearchAnnotationsRequest_ReferenceByTag[$_whichOneof(0)];
+  void clearReference() => clearField($_whichOneof(0));
 
-  String get referenceId => $_getS(1, '');
-  set referenceId(String v) {
+  $core.List<$core.String> get annotationSetIds => $_getList(0);
+
+  $core.String get referenceId => $_getS(1, '');
+  set referenceId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasReferenceId() => $_has(1);
+  $core.bool hasReferenceId() => $_has(1);
   void clearReferenceId() => clearField(2);
 
-  String get referenceName => $_getS(2, '');
-  set referenceName(String v) {
+  $core.String get referenceName => $_getS(2, '');
+  set referenceName($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasReferenceName() => $_has(2);
+  $core.bool hasReferenceName() => $_has(2);
   void clearReferenceName() => clearField(3);
 
   Int64 get start => $_getI64(3);
@@ -1453,7 +1250,7 @@ class SearchAnnotationsRequest extends GeneratedMessage {
     $_setInt64(3, v);
   }
 
-  bool hasStart() => $_has(3);
+  $core.bool hasStart() => $_has(3);
   void clearStart() => clearField(4);
 
   Int64 get end => $_getI64(4);
@@ -1461,157 +1258,62 @@ class SearchAnnotationsRequest extends GeneratedMessage {
     $_setInt64(4, v);
   }
 
-  bool hasEnd() => $_has(4);
+  $core.bool hasEnd() => $_has(4);
   void clearEnd() => clearField(5);
 
-  String get pageToken => $_getS(5, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(5, '');
+  set pageToken($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasPageToken() => $_has(5);
+  $core.bool hasPageToken() => $_has(5);
   void clearPageToken() => clearField(6);
 
-  int get pageSize => $_get(6, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(6, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(6, v);
   }
 
-  bool hasPageSize() => $_has(6);
+  $core.bool hasPageSize() => $_has(6);
   void clearPageSize() => clearField(7);
 }
 
-class _ReadonlySearchAnnotationsRequest extends SearchAnnotationsRequest
-    with ReadonlyMessageMixin {}
-
-class SearchAnnotationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchAnnotationsResponse')
-    ..pp<Annotation>(1, 'annotations', PbFieldType.PM, Annotation.$checkItem,
-        Annotation.create)
+class SearchAnnotationsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchAnnotationsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<Annotation>(1, 'annotations', $pb.PbFieldType.PM, Annotation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   SearchAnnotationsResponse() : super();
-  SearchAnnotationsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchAnnotationsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchAnnotationsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchAnnotationsResponse clone() =>
-      new SearchAnnotationsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchAnnotationsResponse create() => new SearchAnnotationsResponse();
-  static PbList<SearchAnnotationsResponse> createRepeated() =>
-      new PbList<SearchAnnotationsResponse>();
-  static SearchAnnotationsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchAnnotationsResponse();
-    return _defaultInstance;
-  }
-
+      SearchAnnotationsResponse()..mergeFromMessage(this);
+  SearchAnnotationsResponse copyWith(
+          void Function(SearchAnnotationsResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as SearchAnnotationsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchAnnotationsResponse create() => SearchAnnotationsResponse();
+  SearchAnnotationsResponse createEmptyInstance() => create();
+  static $pb.PbList<SearchAnnotationsResponse> createRepeated() =>
+      $pb.PbList<SearchAnnotationsResponse>();
+  static SearchAnnotationsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchAnnotationsResponse _defaultInstance;
-  static void $checkItem(SearchAnnotationsResponse v) {
-    if (v is! SearchAnnotationsResponse)
-      checkItemFailed(v, 'SearchAnnotationsResponse');
-  }
 
-  List<Annotation> get annotations => $_getList(0);
+  $core.List<Annotation> get annotations => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
-}
-
-class _ReadonlySearchAnnotationsResponse extends SearchAnnotationsResponse
-    with ReadonlyMessageMixin {}
-
-class AnnotationServiceV1Api {
-  RpcClient _client;
-  AnnotationServiceV1Api(this._client);
-
-  Future<AnnotationSet> createAnnotationSet(
-      ClientContext ctx, CreateAnnotationSetRequest request) {
-    var emptyResponse = new AnnotationSet();
-    return _client.invoke<AnnotationSet>(ctx, 'AnnotationServiceV1',
-        'CreateAnnotationSet', request, emptyResponse);
-  }
-
-  Future<AnnotationSet> getAnnotationSet(
-      ClientContext ctx, GetAnnotationSetRequest request) {
-    var emptyResponse = new AnnotationSet();
-    return _client.invoke<AnnotationSet>(
-        ctx, 'AnnotationServiceV1', 'GetAnnotationSet', request, emptyResponse);
-  }
-
-  Future<AnnotationSet> updateAnnotationSet(
-      ClientContext ctx, UpdateAnnotationSetRequest request) {
-    var emptyResponse = new AnnotationSet();
-    return _client.invoke<AnnotationSet>(ctx, 'AnnotationServiceV1',
-        'UpdateAnnotationSet', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteAnnotationSet(
-      ClientContext ctx, DeleteAnnotationSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'AnnotationServiceV1',
-        'DeleteAnnotationSet', request, emptyResponse);
-  }
-
-  Future<SearchAnnotationSetsResponse> searchAnnotationSets(
-      ClientContext ctx, SearchAnnotationSetsRequest request) {
-    var emptyResponse = new SearchAnnotationSetsResponse();
-    return _client.invoke<SearchAnnotationSetsResponse>(ctx,
-        'AnnotationServiceV1', 'SearchAnnotationSets', request, emptyResponse);
-  }
-
-  Future<Annotation> createAnnotation(
-      ClientContext ctx, CreateAnnotationRequest request) {
-    var emptyResponse = new Annotation();
-    return _client.invoke<Annotation>(
-        ctx, 'AnnotationServiceV1', 'CreateAnnotation', request, emptyResponse);
-  }
-
-  Future<BatchCreateAnnotationsResponse> batchCreateAnnotations(
-      ClientContext ctx, BatchCreateAnnotationsRequest request) {
-    var emptyResponse = new BatchCreateAnnotationsResponse();
-    return _client.invoke<BatchCreateAnnotationsResponse>(
-        ctx,
-        'AnnotationServiceV1',
-        'BatchCreateAnnotations',
-        request,
-        emptyResponse);
-  }
-
-  Future<Annotation> getAnnotation(
-      ClientContext ctx, GetAnnotationRequest request) {
-    var emptyResponse = new Annotation();
-    return _client.invoke<Annotation>(
-        ctx, 'AnnotationServiceV1', 'GetAnnotation', request, emptyResponse);
-  }
-
-  Future<Annotation> updateAnnotation(
-      ClientContext ctx, UpdateAnnotationRequest request) {
-    var emptyResponse = new Annotation();
-    return _client.invoke<Annotation>(
-        ctx, 'AnnotationServiceV1', 'UpdateAnnotation', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteAnnotation(
-      ClientContext ctx, DeleteAnnotationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'AnnotationServiceV1', 'DeleteAnnotation', request, emptyResponse);
-  }
-
-  Future<SearchAnnotationsResponse> searchAnnotations(
-      ClientContext ctx, SearchAnnotationsRequest request) {
-    var emptyResponse = new SearchAnnotationsResponse();
-    return _client.invoke<SearchAnnotationsResponse>(ctx, 'AnnotationServiceV1',
-        'SearchAnnotations', request, emptyResponse);
-  }
 }

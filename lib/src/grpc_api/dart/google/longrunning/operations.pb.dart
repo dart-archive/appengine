@@ -1,362 +1,404 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/longrunning/operations.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/any.pb.dart' as $google$protobuf;
-import '../rpc/status.pb.dart' as $google$rpc;
-import '../protobuf/empty.pb.dart' as $google$protobuf;
+import '../protobuf/any.pb.dart' as $1;
+import '../rpc/status.pb.dart' as $2;
+import '../protobuf/duration.pb.dart' as $3;
 
-class Operation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Operation')
+enum Operation_Result { error, response, notSet }
+
+class Operation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Operation_Result> _Operation_ResultByTag = {
+    4: Operation_Result.error,
+    5: Operation_Result.response,
+    0: Operation_Result.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operation',
+      package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'name')
-    ..a<$google$protobuf.Any>(2, 'metadata', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
+    ..a<$1.Any>(
+        2, 'metadata', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..aOB(3, 'done')
-    ..a<$google$rpc.Status>(4, 'error', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..a<$google$protobuf.Any>(5, 'response', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
+    ..a<$2.Status>(
+        4, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
+    ..a<$1.Any>(
+        5, 'response', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
+    ..oo(0, [4, 5])
     ..hasRequiredFields = false;
 
   Operation() : super();
-  Operation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Operation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Operation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Operation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Operation clone() => new Operation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Operation create() => new Operation();
-  static PbList<Operation> createRepeated() => new PbList<Operation>();
-  static Operation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyOperation();
-    return _defaultInstance;
-  }
-
+  Operation clone() => Operation()..mergeFromMessage(this);
+  Operation copyWith(void Function(Operation) updates) =>
+      super.copyWith((message) => updates(message as Operation));
+  $pb.BuilderInfo get info_ => _i;
+  static Operation create() => Operation();
+  Operation createEmptyInstance() => create();
+  static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
+  static Operation getDefault() => _defaultInstance ??= create()..freeze();
   static Operation _defaultInstance;
-  static void $checkItem(Operation v) {
-    if (v is! Operation) checkItemFailed(v, 'Operation');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  Operation_Result whichResult() => _Operation_ResultByTag[$_whichOneof(0)];
+  void clearResult() => clearField($_whichOneof(0));
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$protobuf.Any get metadata => $_getN(1);
-  set metadata($google$protobuf.Any v) {
+  $1.Any get metadata => $_getN(1);
+  set metadata($1.Any v) {
     setField(2, v);
   }
 
-  bool hasMetadata() => $_has(1);
+  $core.bool hasMetadata() => $_has(1);
   void clearMetadata() => clearField(2);
 
-  bool get done => $_get(2, false);
-  set done(bool v) {
+  $core.bool get done => $_get(2, false);
+  set done($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasDone() => $_has(2);
+  $core.bool hasDone() => $_has(2);
   void clearDone() => clearField(3);
 
-  $google$rpc.Status get error => $_getN(3);
-  set error($google$rpc.Status v) {
+  $2.Status get error => $_getN(3);
+  set error($2.Status v) {
     setField(4, v);
   }
 
-  bool hasError() => $_has(3);
+  $core.bool hasError() => $_has(3);
   void clearError() => clearField(4);
 
-  $google$protobuf.Any get response => $_getN(4);
-  set response($google$protobuf.Any v) {
+  $1.Any get response => $_getN(4);
+  set response($1.Any v) {
     setField(5, v);
   }
 
-  bool hasResponse() => $_has(4);
+  $core.bool hasResponse() => $_has(4);
   void clearResponse() => clearField(5);
 }
 
-class _ReadonlyOperation extends Operation with ReadonlyMessageMixin {}
-
-class GetOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetOperationRequest')
+class GetOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetOperationRequest',
+      package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetOperationRequest() : super();
-  GetOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetOperationRequest clone() =>
-      new GetOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetOperationRequest create() => new GetOperationRequest();
-  static PbList<GetOperationRequest> createRepeated() =>
-      new PbList<GetOperationRequest>();
-  static GetOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetOperationRequest();
-    return _defaultInstance;
-  }
-
+  GetOperationRequest clone() => GetOperationRequest()..mergeFromMessage(this);
+  GetOperationRequest copyWith(void Function(GetOperationRequest) updates) =>
+      super.copyWith((message) => updates(message as GetOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetOperationRequest create() => GetOperationRequest();
+  GetOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<GetOperationRequest> createRepeated() =>
+      $pb.PbList<GetOperationRequest>();
+  static GetOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetOperationRequest _defaultInstance;
-  static void $checkItem(GetOperationRequest v) {
-    if (v is! GetOperationRequest) checkItemFailed(v, 'GetOperationRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetOperationRequest extends GetOperationRequest
-    with ReadonlyMessageMixin {}
-
-class ListOperationsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListOperationsRequest')
+class ListOperationsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOperationsRequest',
+      package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'filter')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
   ListOperationsRequest() : super();
-  ListOperationsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListOperationsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListOperationsRequest clone() =>
-      new ListOperationsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListOperationsRequest create() => new ListOperationsRequest();
-  static PbList<ListOperationsRequest> createRepeated() =>
-      new PbList<ListOperationsRequest>();
-  static ListOperationsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListOperationsRequest();
-    return _defaultInstance;
-  }
-
+      ListOperationsRequest()..mergeFromMessage(this);
+  ListOperationsRequest copyWith(
+          void Function(ListOperationsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListOperationsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListOperationsRequest create() => ListOperationsRequest();
+  ListOperationsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListOperationsRequest> createRepeated() =>
+      $pb.PbList<ListOperationsRequest>();
+  static ListOperationsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListOperationsRequest _defaultInstance;
-  static void $checkItem(ListOperationsRequest v) {
-    if (v is! ListOperationsRequest)
-      checkItemFailed(v, 'ListOperationsRequest');
-  }
 
-  String get filter => $_getS(0, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(0, '');
+  set filter($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFilter() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  String get name => $_getS(3, '');
-  set name(String v) {
+  $core.String get name => $_getS(3, '');
+  set name($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasName() => $_has(3);
+  $core.bool hasName() => $_has(3);
   void clearName() => clearField(4);
 }
 
-class _ReadonlyListOperationsRequest extends ListOperationsRequest
-    with ReadonlyMessageMixin {}
-
-class ListOperationsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListOperationsResponse')
-    ..pp<Operation>(
-        1, 'operations', PbFieldType.PM, Operation.$checkItem, Operation.create)
+class ListOperationsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOperationsResponse',
+      package: const $pb.PackageName('google.longrunning'))
+    ..pc<Operation>(1, 'operations', $pb.PbFieldType.PM, Operation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListOperationsResponse() : super();
-  ListOperationsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListOperationsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListOperationsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListOperationsResponse clone() =>
-      new ListOperationsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListOperationsResponse create() => new ListOperationsResponse();
-  static PbList<ListOperationsResponse> createRepeated() =>
-      new PbList<ListOperationsResponse>();
-  static ListOperationsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListOperationsResponse();
-    return _defaultInstance;
-  }
-
+      ListOperationsResponse()..mergeFromMessage(this);
+  ListOperationsResponse copyWith(
+          void Function(ListOperationsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListOperationsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListOperationsResponse create() => ListOperationsResponse();
+  ListOperationsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListOperationsResponse> createRepeated() =>
+      $pb.PbList<ListOperationsResponse>();
+  static ListOperationsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListOperationsResponse _defaultInstance;
-  static void $checkItem(ListOperationsResponse v) {
-    if (v is! ListOperationsResponse)
-      checkItemFailed(v, 'ListOperationsResponse');
-  }
 
-  List<Operation> get operations => $_getList(0);
+  $core.List<Operation> get operations => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListOperationsResponse extends ListOperationsResponse
-    with ReadonlyMessageMixin {}
-
-class CancelOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CancelOperationRequest')
+class CancelOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelOperationRequest',
+      package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   CancelOperationRequest() : super();
-  CancelOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CancelOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CancelOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CancelOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CancelOperationRequest clone() =>
-      new CancelOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CancelOperationRequest create() => new CancelOperationRequest();
-  static PbList<CancelOperationRequest> createRepeated() =>
-      new PbList<CancelOperationRequest>();
-  static CancelOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCancelOperationRequest();
-    return _defaultInstance;
-  }
-
+      CancelOperationRequest()..mergeFromMessage(this);
+  CancelOperationRequest copyWith(
+          void Function(CancelOperationRequest) updates) =>
+      super.copyWith((message) => updates(message as CancelOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CancelOperationRequest create() => CancelOperationRequest();
+  CancelOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<CancelOperationRequest> createRepeated() =>
+      $pb.PbList<CancelOperationRequest>();
+  static CancelOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CancelOperationRequest _defaultInstance;
-  static void $checkItem(CancelOperationRequest v) {
-    if (v is! CancelOperationRequest)
-      checkItemFailed(v, 'CancelOperationRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyCancelOperationRequest extends CancelOperationRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteOperationRequest')
+class DeleteOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteOperationRequest',
+      package: const $pb.PackageName('google.longrunning'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteOperationRequest() : super();
-  DeleteOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteOperationRequest clone() =>
-      new DeleteOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteOperationRequest create() => new DeleteOperationRequest();
-  static PbList<DeleteOperationRequest> createRepeated() =>
-      new PbList<DeleteOperationRequest>();
-  static DeleteOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteOperationRequest();
-    return _defaultInstance;
-  }
-
+      DeleteOperationRequest()..mergeFromMessage(this);
+  DeleteOperationRequest copyWith(
+          void Function(DeleteOperationRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteOperationRequest create() => DeleteOperationRequest();
+  DeleteOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteOperationRequest> createRepeated() =>
+      $pb.PbList<DeleteOperationRequest>();
+  static DeleteOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteOperationRequest _defaultInstance;
-  static void $checkItem(DeleteOperationRequest v) {
-    if (v is! DeleteOperationRequest)
-      checkItemFailed(v, 'DeleteOperationRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteOperationRequest extends DeleteOperationRequest
-    with ReadonlyMessageMixin {}
+class WaitOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WaitOperationRequest',
+      package: const $pb.PackageName('google.longrunning'))
+    ..aOS(1, 'name')
+    ..a<$3.Duration>(2, 'timeout', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
+    ..hasRequiredFields = false;
 
-class OperationsApi {
-  RpcClient _client;
-  OperationsApi(this._client);
+  WaitOperationRequest() : super();
+  WaitOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  WaitOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  WaitOperationRequest clone() =>
+      WaitOperationRequest()..mergeFromMessage(this);
+  WaitOperationRequest copyWith(void Function(WaitOperationRequest) updates) =>
+      super.copyWith((message) => updates(message as WaitOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static WaitOperationRequest create() => WaitOperationRequest();
+  WaitOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<WaitOperationRequest> createRepeated() =>
+      $pb.PbList<WaitOperationRequest>();
+  static WaitOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static WaitOperationRequest _defaultInstance;
 
-  Future<ListOperationsResponse> listOperations(
-      ClientContext ctx, ListOperationsRequest request) {
-    var emptyResponse = new ListOperationsResponse();
-    return _client.invoke<ListOperationsResponse>(
-        ctx, 'Operations', 'ListOperations', request, emptyResponse);
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
   }
 
-  Future<Operation> getOperation(
-      ClientContext ctx, GetOperationRequest request) {
-    var emptyResponse = new Operation();
-    return _client.invoke<Operation>(
-        ctx, 'Operations', 'GetOperation', request, emptyResponse);
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+
+  $3.Duration get timeout => $_getN(1);
+  set timeout($3.Duration v) {
+    setField(2, v);
   }
 
-  Future<$google$protobuf.Empty> deleteOperation(
-      ClientContext ctx, DeleteOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'Operations', 'DeleteOperation', request, emptyResponse);
+  $core.bool hasTimeout() => $_has(1);
+  void clearTimeout() => clearField(2);
+}
+
+class OperationInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationInfo',
+      package: const $pb.PackageName('google.longrunning'))
+    ..aOS(1, 'responseType')
+    ..aOS(2, 'metadataType')
+    ..hasRequiredFields = false;
+
+  OperationInfo() : super();
+  OperationInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  OperationInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  OperationInfo clone() => OperationInfo()..mergeFromMessage(this);
+  OperationInfo copyWith(void Function(OperationInfo) updates) =>
+      super.copyWith((message) => updates(message as OperationInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static OperationInfo create() => OperationInfo();
+  OperationInfo createEmptyInstance() => create();
+  static $pb.PbList<OperationInfo> createRepeated() =>
+      $pb.PbList<OperationInfo>();
+  static OperationInfo getDefault() => _defaultInstance ??= create()..freeze();
+  static OperationInfo _defaultInstance;
+
+  $core.String get responseType => $_getS(0, '');
+  set responseType($core.String v) {
+    $_setString(0, v);
   }
 
-  Future<$google$protobuf.Empty> cancelOperation(
-      ClientContext ctx, CancelOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'Operations', 'CancelOperation', request, emptyResponse);
+  $core.bool hasResponseType() => $_has(0);
+  void clearResponseType() => clearField(1);
+
+  $core.String get metadataType => $_getS(1, '');
+  set metadataType($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasMetadataType() => $_has(1);
+  void clearMetadataType() => clearField(2);
+}
+
+class Operations {
+  static final $pb.Extension operationInfo = $pb.Extension<OperationInfo>(
+      'google.protobuf.MethodOptions',
+      'operationInfo',
+      1049,
+      $pb.PbFieldType.OM,
+      OperationInfo.getDefault,
+      OperationInfo.create);
+  static void registerAllExtensions($pb.ExtensionRegistry registry) {
+    registry.add(operationInfo);
   }
 }

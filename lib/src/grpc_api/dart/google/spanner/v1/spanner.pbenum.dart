@@ -1,34 +1,33 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/v1/spanner.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class ExecuteSqlRequest_QueryMode extends ProtobufEnum {
+class ExecuteSqlRequest_QueryMode extends $pb.ProtobufEnum {
   static const ExecuteSqlRequest_QueryMode NORMAL =
-      const ExecuteSqlRequest_QueryMode._(0, 'NORMAL');
+      ExecuteSqlRequest_QueryMode._(0, 'NORMAL');
   static const ExecuteSqlRequest_QueryMode PLAN =
-      const ExecuteSqlRequest_QueryMode._(1, 'PLAN');
+      ExecuteSqlRequest_QueryMode._(1, 'PLAN');
   static const ExecuteSqlRequest_QueryMode PROFILE =
-      const ExecuteSqlRequest_QueryMode._(2, 'PROFILE');
+      ExecuteSqlRequest_QueryMode._(2, 'PROFILE');
 
-  static const List<ExecuteSqlRequest_QueryMode> values =
-      const <ExecuteSqlRequest_QueryMode>[
+  static const $core.List<ExecuteSqlRequest_QueryMode> values =
+      <ExecuteSqlRequest_QueryMode>[
     NORMAL,
     PLAN,
     PROFILE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ExecuteSqlRequest_QueryMode valueOf(int value) =>
-      _byValue[value] as ExecuteSqlRequest_QueryMode;
-  static void $checkItem(ExecuteSqlRequest_QueryMode v) {
-    if (v is! ExecuteSqlRequest_QueryMode)
-      checkItemFailed(v, 'ExecuteSqlRequest_QueryMode');
-  }
+  static final $core.Map<$core.int, ExecuteSqlRequest_QueryMode> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ExecuteSqlRequest_QueryMode valueOf($core.int value) =>
+      _byValue[value];
 
-  const ExecuteSqlRequest_QueryMode._(int v, String n) : super(v, n);
+  const ExecuteSqlRequest_QueryMode._($core.int v, $core.String n)
+      : super(v, n);
 }

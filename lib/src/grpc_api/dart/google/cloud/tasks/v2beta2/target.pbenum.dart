@@ -1,22 +1,23 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/tasks/v2beta2/target.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class HttpMethod extends ProtobufEnum {
+class HttpMethod extends $pb.ProtobufEnum {
   static const HttpMethod HTTP_METHOD_UNSPECIFIED =
-      const HttpMethod._(0, 'HTTP_METHOD_UNSPECIFIED');
-  static const HttpMethod POST = const HttpMethod._(1, 'POST');
-  static const HttpMethod GET = const HttpMethod._(2, 'GET');
-  static const HttpMethod HEAD = const HttpMethod._(3, 'HEAD');
-  static const HttpMethod PUT = const HttpMethod._(4, 'PUT');
-  static const HttpMethod DELETE = const HttpMethod._(5, 'DELETE');
+      HttpMethod._(0, 'HTTP_METHOD_UNSPECIFIED');
+  static const HttpMethod POST = HttpMethod._(1, 'POST');
+  static const HttpMethod GET = HttpMethod._(2, 'GET');
+  static const HttpMethod HEAD = HttpMethod._(3, 'HEAD');
+  static const HttpMethod PUT = HttpMethod._(4, 'PUT');
+  static const HttpMethod DELETE = HttpMethod._(5, 'DELETE');
 
-  static const List<HttpMethod> values = const <HttpMethod>[
+  static const $core.List<HttpMethod> values = <HttpMethod>[
     HTTP_METHOD_UNSPECIFIED,
     POST,
     GET,
@@ -25,11 +26,9 @@ class HttpMethod extends ProtobufEnum {
     DELETE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static HttpMethod valueOf(int value) => _byValue[value] as HttpMethod;
-  static void $checkItem(HttpMethod v) {
-    if (v is! HttpMethod) checkItemFailed(v, 'HttpMethod');
-  }
+  static final $core.Map<$core.int, HttpMethod> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static HttpMethod valueOf($core.int value) => _byValue[value];
 
-  const HttpMethod._(int v, String n) : super(v, n);
+  const HttpMethod._($core.int v, $core.String n) : super(v, n);
 }

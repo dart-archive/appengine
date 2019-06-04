@@ -1,76 +1,74 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/config_change.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'config_change.pbenum.dart';
 
 export 'config_change.pbenum.dart';
 
-class ConfigChange extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ConfigChange')
+class ConfigChange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConfigChange',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'element')
     ..aOS(2, 'oldValue')
     ..aOS(3, 'newValue')
     ..e<ChangeType>(
         4,
         'changeType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ChangeType.CHANGE_TYPE_UNSPECIFIED,
         ChangeType.valueOf,
         ChangeType.values)
-    ..pp<Advice>(5, 'advices', PbFieldType.PM, Advice.$checkItem, Advice.create)
+    ..pc<Advice>(5, 'advices', $pb.PbFieldType.PM, Advice.create)
     ..hasRequiredFields = false;
 
   ConfigChange() : super();
-  ConfigChange.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ConfigChange.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ConfigChange.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ConfigChange.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ConfigChange clone() => new ConfigChange()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ConfigChange create() => new ConfigChange();
-  static PbList<ConfigChange> createRepeated() => new PbList<ConfigChange>();
-  static ConfigChange getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyConfigChange();
-    return _defaultInstance;
-  }
-
+  ConfigChange clone() => ConfigChange()..mergeFromMessage(this);
+  ConfigChange copyWith(void Function(ConfigChange) updates) =>
+      super.copyWith((message) => updates(message as ConfigChange));
+  $pb.BuilderInfo get info_ => _i;
+  static ConfigChange create() => ConfigChange();
+  ConfigChange createEmptyInstance() => create();
+  static $pb.PbList<ConfigChange> createRepeated() =>
+      $pb.PbList<ConfigChange>();
+  static ConfigChange getDefault() => _defaultInstance ??= create()..freeze();
   static ConfigChange _defaultInstance;
-  static void $checkItem(ConfigChange v) {
-    if (v is! ConfigChange) checkItemFailed(v, 'ConfigChange');
-  }
 
-  String get element => $_getS(0, '');
-  set element(String v) {
+  $core.String get element => $_getS(0, '');
+  set element($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasElement() => $_has(0);
+  $core.bool hasElement() => $_has(0);
   void clearElement() => clearField(1);
 
-  String get oldValue => $_getS(1, '');
-  set oldValue(String v) {
+  $core.String get oldValue => $_getS(1, '');
+  set oldValue($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasOldValue() => $_has(1);
+  $core.bool hasOldValue() => $_has(1);
   void clearOldValue() => clearField(2);
 
-  String get newValue => $_getS(2, '');
-  set newValue(String v) {
+  $core.String get newValue => $_getS(2, '');
+  set newValue($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasNewValue() => $_has(2);
+  $core.bool hasNewValue() => $_has(2);
   void clearNewValue() => clearField(3);
 
   ChangeType get changeType => $_getN(3);
@@ -78,46 +76,40 @@ class ConfigChange extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasChangeType() => $_has(3);
+  $core.bool hasChangeType() => $_has(3);
   void clearChangeType() => clearField(4);
 
-  List<Advice> get advices => $_getList(4);
+  $core.List<Advice> get advices => $_getList(4);
 }
 
-class _ReadonlyConfigChange extends ConfigChange with ReadonlyMessageMixin {}
-
-class Advice extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Advice')
-    ..aOS(2, 'description')
-    ..hasRequiredFields = false;
+class Advice extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo('Advice', package: const $pb.PackageName('google.api'))
+        ..aOS(2, 'description')
+        ..hasRequiredFields = false;
 
   Advice() : super();
-  Advice.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Advice.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Advice.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Advice.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Advice clone() => new Advice()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Advice create() => new Advice();
-  static PbList<Advice> createRepeated() => new PbList<Advice>();
-  static Advice getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAdvice();
-    return _defaultInstance;
-  }
-
+  Advice clone() => Advice()..mergeFromMessage(this);
+  Advice copyWith(void Function(Advice) updates) =>
+      super.copyWith((message) => updates(message as Advice));
+  $pb.BuilderInfo get info_ => _i;
+  static Advice create() => Advice();
+  Advice createEmptyInstance() => create();
+  static $pb.PbList<Advice> createRepeated() => $pb.PbList<Advice>();
+  static Advice getDefault() => _defaultInstance ??= create()..freeze();
   static Advice _defaultInstance;
-  static void $checkItem(Advice v) {
-    if (v is! Advice) checkItemFailed(v, 'Advice');
-  }
 
-  String get description => $_getS(0, '');
-  set description(String v) {
+  $core.String get description => $_getS(0, '');
+  set description($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDescription() => $_has(0);
+  $core.bool hasDescription() => $_has(0);
   void clearDescription() => clearField(2);
 }
-
-class _ReadonlyAdvice extends Advice with ReadonlyMessageMixin {}

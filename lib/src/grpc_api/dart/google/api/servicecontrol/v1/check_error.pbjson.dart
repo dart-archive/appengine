@@ -1,12 +1,13 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/servicecontrol/v1/check_error.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const CheckError$json = const {
+const CheckError$json = {
   '1': 'CheckError',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'code',
       '3': 1,
       '4': 1,
@@ -14,30 +15,31 @@ const CheckError$json = const {
       '6': '.google.api.servicecontrol.v1.CheckError.Code',
       '10': 'code'
     },
-    const {'1': 'detail', '3': 2, '4': 1, '5': 9, '10': 'detail'},
+    {'1': 'detail', '3': 2, '4': 1, '5': 9, '10': 'detail'},
   ],
-  '4': const [CheckError_Code$json],
+  '4': [CheckError_Code$json],
 };
 
-const CheckError_Code$json = const {
+const CheckError_Code$json = {
   '1': 'Code',
-  '2': const [
-    const {'1': 'ERROR_CODE_UNSPECIFIED', '2': 0},
-    const {'1': 'NOT_FOUND', '2': 5},
-    const {'1': 'PERMISSION_DENIED', '2': 7},
-    const {'1': 'RESOURCE_EXHAUSTED', '2': 8},
-    const {'1': 'SERVICE_NOT_ACTIVATED', '2': 104},
-    const {'1': 'BILLING_DISABLED', '2': 107},
-    const {'1': 'PROJECT_DELETED', '2': 108},
-    const {'1': 'PROJECT_INVALID', '2': 114},
-    const {'1': 'IP_ADDRESS_BLOCKED', '2': 109},
-    const {'1': 'REFERER_BLOCKED', '2': 110},
-    const {'1': 'CLIENT_APP_BLOCKED', '2': 111},
-    const {'1': 'API_KEY_INVALID', '2': 105},
-    const {'1': 'API_KEY_EXPIRED', '2': 112},
-    const {'1': 'API_KEY_NOT_FOUND', '2': 113},
-    const {'1': 'NAMESPACE_LOOKUP_UNAVAILABLE', '2': 300},
-    const {'1': 'SERVICE_STATUS_UNAVAILABLE', '2': 301},
-    const {'1': 'BILLING_STATUS_UNAVAILABLE', '2': 302},
+  '2': [
+    {'1': 'ERROR_CODE_UNSPECIFIED', '2': 0},
+    {'1': 'NOT_FOUND', '2': 5},
+    {'1': 'PERMISSION_DENIED', '2': 7},
+    {'1': 'RESOURCE_EXHAUSTED', '2': 8},
+    {'1': 'SERVICE_NOT_ACTIVATED', '2': 104},
+    {'1': 'BILLING_DISABLED', '2': 107},
+    {'1': 'PROJECT_DELETED', '2': 108},
+    {'1': 'PROJECT_INVALID', '2': 114},
+    {'1': 'IP_ADDRESS_BLOCKED', '2': 109},
+    {'1': 'REFERER_BLOCKED', '2': 110},
+    {'1': 'CLIENT_APP_BLOCKED', '2': 111},
+    {'1': 'API_TARGET_BLOCKED', '2': 122},
+    {'1': 'API_KEY_INVALID', '2': 105},
+    {'1': 'API_KEY_EXPIRED', '2': 112},
+    {'1': 'API_KEY_NOT_FOUND', '2': 113},
+    {'1': 'NAMESPACE_LOOKUP_UNAVAILABLE', '2': 300},
+    {'1': 'SERVICE_STATUS_UNAVAILABLE', '2': 301},
+    {'1': 'BILLING_STATUS_UNAVAILABLE', '2': 302},
   ],
 };

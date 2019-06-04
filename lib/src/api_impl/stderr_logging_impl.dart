@@ -4,8 +4,8 @@
 
 library stderr_logging;
 
-import 'dart:io' as io;
 import 'dart:async';
+import 'dart:io' as io;
 
 import '../logging.dart';
 import '../logging_impl.dart';
@@ -13,7 +13,7 @@ import '../logging_impl.dart';
 class StderrRequestLoggingImpl extends LoggingImpl {
   final String _httpMethod;
   final String _httpResource;
-  final DateTime _startTimestamp = new DateTime.now().toUtc();
+  final DateTime _startTimestamp = DateTime.now().toUtc();
   final List<_LogLine> _gaeLogLines = <_LogLine>[];
 
   LogLevel _currentLogLevel;
@@ -22,20 +22,23 @@ class StderrRequestLoggingImpl extends LoggingImpl {
     _resetState();
   }
 
+  @override
   void log(LogLevel level, String message, {DateTime timestamp}) {
     if (level.level > _currentLogLevel.level) {
       _currentLogLevel = level;
     }
-    _gaeLogLines.add(
-        new _LogLine(level, message, timestamp ?? new DateTime.now().toUtc()));
+    _gaeLogLines
+        .add(_LogLine(level, message, timestamp ?? DateTime.now().toUtc()));
   }
 
+  @override
   Future flush() async {
-    if (_gaeLogLines.length > 0) {
+    if (_gaeLogLines.isNotEmpty) {
       _enqueue(finish: false);
     }
   }
 
+  @override
   void finish(int responseStatus, int responseSize) {
     _enqueue(
         finish: true,
@@ -43,9 +46,9 @@ class StderrRequestLoggingImpl extends LoggingImpl {
         responseSize: responseSize);
   }
 
-  void _enqueue({bool finish: false, int responseStatus, int responseSize}) {
-    final now = new DateTime.now().toUtc();
-    final buffer = new StringBuffer();
+  void _enqueue({bool finish = false, int responseStatus, int responseSize}) {
+    final now = DateTime.now().toUtc();
+    final buffer = StringBuffer();
 
     if (finish) {
       buffer.writeln('$now $_httpMethod $responseStatus '
@@ -70,13 +73,15 @@ class StderrRequestLoggingImpl extends LoggingImpl {
 }
 
 class StderrBackgroundLoggingImpl extends Logging {
+  @override
   void log(LogLevel level, String message, {DateTime timestamp}) {
     final logLine =
-        new _LogLine(level, message, timestamp ?? new DateTime.now().toUtc());
+        _LogLine(level, message, timestamp ?? DateTime.now().toUtc());
     io.stderr.writeln(logLine.format(null));
   }
 
-  Future flush() => new Future.value();
+  @override
+  Future flush() => Future.value();
 }
 
 class _LogLine {

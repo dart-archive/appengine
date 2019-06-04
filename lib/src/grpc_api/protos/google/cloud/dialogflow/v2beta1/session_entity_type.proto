@@ -1,4 +1,4 @@
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 
 syntax = "proto3";
 
@@ -29,7 +30,6 @@ option java_outer_classname = "SessionEntityTypeProto";
 option java_package = "com.google.cloud.dialogflow.v2beta1";
 option objc_class_prefix = "DF";
 
-
 // Entities are extracted from user input and represent parameters that are
 // meaningful to your application. For example, a date range, a proper name
 // such as a geographic location or landmark, and so on. Entities represent
@@ -41,7 +41,8 @@ option objc_class_prefix = "DF";
 // entity type at the session level.
 //
 // For more information about entity types, see the
-// [Dialogflow documentation](https://dialogflow.com/docs/entities).
+// [Dialogflow
+// documentation](https://cloud.google.com/dialogflow-enterprise/docs/entities-overview).
 service SessionEntityTypes {
   // Returns the list of all session entity types in the specified session.
   rpc ListSessionEntityTypes(ListSessionEntityTypesRequest) returns (ListSessionEntityTypesResponse) {
@@ -64,6 +65,9 @@ service SessionEntityTypes {
   }
 
   // Creates a session entity type.
+  //
+  // If the specified session entity type already exists, overrides the
+  // session entity type.
   rpc CreateSessionEntityType(CreateSessionEntityTypeRequest) returns (SessionEntityType) {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent/sessions/*}/entityTypes"
@@ -117,10 +121,13 @@ message SessionEntityType {
 
     // The collection of session entities extends the collection of entities in
     // the corresponding developer entity type.
-    // Calls to `ListSessionEntityTypes`, `GetSessionEntityType`,
-    // `CreateSessionEntityType` and `UpdateSessionEntityType` return the full
-    // collection of entities from the developer entity type in the agent's
-    // default language and the session entity type.
+    //
+    // Note: Even in this override mode calls to `ListSessionEntityTypes`,
+    // `GetSessionEntityType`, `CreateSessionEntityType` and
+    // `UpdateSessionEntityType` only return the additional entities added in
+    // this session entity type. If you want to get the supplemented list,
+    // please call [EntityTypes.GetEntityType][google.cloud.dialogflow.v2beta1.EntityTypes.GetEntityType] on the developer entity type
+    // and merge.
     ENTITY_OVERRIDE_MODE_SUPPLEMENT = 2;
   }
 
@@ -128,11 +135,12 @@ message SessionEntityType {
   // `projects/<Project ID>/agent/sessions/<Session ID>/entityTypes/<Entity Type
   // Display Name>`, or
   // `projects/<Project ID>/agent/environments/<Environment ID>/users/<User
-  // ID>/sessions
-  // /<Session ID>/entityTypes/<Entity Type Display Name>`.
-  // Note: Environments and users are under construction and will be available
-  // soon. If <Environment ID> is not specified, we assume default 'draft'
-  // environment. If <User ID> is not specified, we assume default '-' user.
+  // ID>/sessions/<Session ID>/entityTypes/<Entity Type Display Name>`.
+  // If `Environment ID` is not specified, we assume default 'draft'
+  // environment. If `User ID` is not specified, we assume default '-' user.
+  //
+  // `<Entity Type Display Name>` must be the display name of an existing entity
+  // type in the same agent that will be overridden or supplemented.
   string name = 1;
 
   // Required. Indicates whether the additional data should override or
@@ -150,9 +158,8 @@ message ListSessionEntityTypesRequest {
   // Format: `projects/<Project ID>/agent/sessions/<Session ID>` or
   // `projects/<Project ID>/agent/environments/<Environment ID>/users/<User ID>/
   // sessions/<Session ID>`.
-  // Note: Environments and users are under construction and will be available
-  // soon. If <Environment ID> is not specified, we assume default 'draft'
-  // environment. If <User ID> is not specified, we assume default '-' user.
+  // If `Environment ID` is not specified, we assume default 'draft'
+  // environment. If `User ID` is not specified, we assume default '-' user.
   string parent = 1;
 
   // Optional. The maximum number of items to return in a single page. By
@@ -179,11 +186,9 @@ message GetSessionEntityTypeRequest {
   // Required. The name of the session entity type. Format:
   // `projects/<Project ID>/agent/sessions/<Session ID>/entityTypes/<Entity Type
   // Display Name>` or `projects/<Project ID>/agent/environments/<Environment
-  // ID>/users/<User ID>/sessions/<Session ID>/
-  // entityTypes/<Entity Type Display Name>`.
-  // Note: Environments and users re under construction and will be available
-  // soon. If <Environment ID> is not specified, we assume default 'draft'
-  // environment. If <User ID> is not specified, we assume default '-' user.
+  // ID>/users/<User ID>/sessions/<Session ID>/entityTypes/<Entity Type Display
+  // Name>`. If `Environment ID` is not specified, we assume default 'draft'
+  // environment. If `User ID` is not specified, we assume default '-' user.
   string name = 1;
 }
 
@@ -192,10 +197,9 @@ message CreateSessionEntityTypeRequest {
   // Required. The session to create a session entity type for.
   // Format: `projects/<Project ID>/agent/sessions/<Session ID>` or
   // `projects/<Project ID>/agent/environments/<Environment ID>/users/<User ID>/
-  // sessions/<Session ID>`.
-  // Note: Environments and users are under construction and will be available
-  // soon. If <Environment ID> is not specified, we assume default 'draft'
-  // environment. If <User ID> is not specified, we assume default '-' user.
+  // sessions/<Session ID>`. If `Environment ID` is not specified, we assume
+  // default 'draft' environment. If `User ID` is not specified, we assume
+  // default '-' user.
   string parent = 1;
 
   // Required. The session entity type to create.
@@ -208,10 +212,8 @@ message UpdateSessionEntityTypeRequest {
   // `projects/<Project ID>/agent/sessions/<Session ID>/entityTypes/<Entity Type
   // Display Name>` or `projects/<Project ID>/agent/environments/<Environment
   // ID>/users/<User ID>/sessions/<Session ID>/entityTypes/<Entity Type Display
-  // Name>`.
-  // Note: Environments and users are under construction and will be available
-  // soon. If <Environment ID> is not specified, we assume default 'draft'
-  // environment. If <User ID> is not specified, we assume default '-' user.
+  // Name>`. If `Environment ID` is not specified, we assume default 'draft'
+  // environment. If `User ID` is not specified, we assume default '-' user.
   SessionEntityType session_entity_type = 1;
 
   // Optional. The mask to control which fields get updated.
@@ -224,9 +226,7 @@ message DeleteSessionEntityTypeRequest {
   // `projects/<Project ID>/agent/sessions/<Session ID>/entityTypes/<Entity Type
   // Display Name>` or `projects/<Project ID>/agent/environments/<Environment
   // ID>/users/<User ID>/sessions/<Session ID>/entityTypes/<Entity Type Display
-  // Name>`.
-  // Note: Environments and users are under construction and will be available
-  // soon. If <Environment ID> is not specified, we assume default 'draft'
-  // environment. If <User ID> is not specified, we assume default '-' user.
+  // Name>`. If `Environment ID` is not specified, we assume default 'draft'
+  // environment. If `User ID` is not specified, we assume default '-' user.
   string name = 1;
 }

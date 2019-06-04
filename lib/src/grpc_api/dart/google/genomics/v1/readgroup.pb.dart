@@ -1,17 +1,19 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/readgroup.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
+import '../../protobuf/struct.pb.dart' as $0;
 
-class ReadGroup_Experiment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup_Experiment')
+class ReadGroup_Experiment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadGroup.Experiment',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'libraryId')
     ..aOS(2, 'platformUnit')
     ..aOS(3, 'sequencingCenter')
@@ -19,67 +21,61 @@ class ReadGroup_Experiment extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ReadGroup_Experiment() : super();
-  ReadGroup_Experiment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadGroup_Experiment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadGroup_Experiment.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadGroup_Experiment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ReadGroup_Experiment clone() =>
-      new ReadGroup_Experiment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadGroup_Experiment create() => new ReadGroup_Experiment();
-  static PbList<ReadGroup_Experiment> createRepeated() =>
-      new PbList<ReadGroup_Experiment>();
-  static ReadGroup_Experiment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroup_Experiment();
-    return _defaultInstance;
-  }
-
+      ReadGroup_Experiment()..mergeFromMessage(this);
+  ReadGroup_Experiment copyWith(void Function(ReadGroup_Experiment) updates) =>
+      super.copyWith((message) => updates(message as ReadGroup_Experiment));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadGroup_Experiment create() => ReadGroup_Experiment();
+  ReadGroup_Experiment createEmptyInstance() => create();
+  static $pb.PbList<ReadGroup_Experiment> createRepeated() =>
+      $pb.PbList<ReadGroup_Experiment>();
+  static ReadGroup_Experiment getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadGroup_Experiment _defaultInstance;
-  static void $checkItem(ReadGroup_Experiment v) {
-    if (v is! ReadGroup_Experiment) checkItemFailed(v, 'ReadGroup_Experiment');
-  }
 
-  String get libraryId => $_getS(0, '');
-  set libraryId(String v) {
+  $core.String get libraryId => $_getS(0, '');
+  set libraryId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasLibraryId() => $_has(0);
+  $core.bool hasLibraryId() => $_has(0);
   void clearLibraryId() => clearField(1);
 
-  String get platformUnit => $_getS(1, '');
-  set platformUnit(String v) {
+  $core.String get platformUnit => $_getS(1, '');
+  set platformUnit($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPlatformUnit() => $_has(1);
+  $core.bool hasPlatformUnit() => $_has(1);
   void clearPlatformUnit() => clearField(2);
 
-  String get sequencingCenter => $_getS(2, '');
-  set sequencingCenter(String v) {
+  $core.String get sequencingCenter => $_getS(2, '');
+  set sequencingCenter($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSequencingCenter() => $_has(2);
+  $core.bool hasSequencingCenter() => $_has(2);
   void clearSequencingCenter() => clearField(3);
 
-  String get instrumentModel => $_getS(3, '');
-  set instrumentModel(String v) {
+  $core.String get instrumentModel => $_getS(3, '');
+  set instrumentModel($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasInstrumentModel() => $_has(3);
+  $core.bool hasInstrumentModel() => $_has(3);
   void clearInstrumentModel() => clearField(4);
 }
 
-class _ReadonlyReadGroup_Experiment extends ReadGroup_Experiment
-    with ReadonlyMessageMixin {}
-
-class ReadGroup_Program extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup_Program')
+class ReadGroup_Program extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadGroup.Program',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'commandLine')
     ..aOS(2, 'id')
     ..aOS(3, 'name')
@@ -88,202 +84,146 @@ class ReadGroup_Program extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ReadGroup_Program() : super();
-  ReadGroup_Program.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadGroup_Program.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadGroup_Program.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadGroup_Program.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadGroup_Program clone() => new ReadGroup_Program()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadGroup_Program create() => new ReadGroup_Program();
-  static PbList<ReadGroup_Program> createRepeated() =>
-      new PbList<ReadGroup_Program>();
-  static ReadGroup_Program getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroup_Program();
-    return _defaultInstance;
-  }
-
+  ReadGroup_Program clone() => ReadGroup_Program()..mergeFromMessage(this);
+  ReadGroup_Program copyWith(void Function(ReadGroup_Program) updates) =>
+      super.copyWith((message) => updates(message as ReadGroup_Program));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadGroup_Program create() => ReadGroup_Program();
+  ReadGroup_Program createEmptyInstance() => create();
+  static $pb.PbList<ReadGroup_Program> createRepeated() =>
+      $pb.PbList<ReadGroup_Program>();
+  static ReadGroup_Program getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReadGroup_Program _defaultInstance;
-  static void $checkItem(ReadGroup_Program v) {
-    if (v is! ReadGroup_Program) checkItemFailed(v, 'ReadGroup_Program');
-  }
 
-  String get commandLine => $_getS(0, '');
-  set commandLine(String v) {
+  $core.String get commandLine => $_getS(0, '');
+  set commandLine($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCommandLine() => $_has(0);
+  $core.bool hasCommandLine() => $_has(0);
   void clearCommandLine() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasId() => $_has(1);
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasName() => $_has(2);
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  String get prevProgramId => $_getS(3, '');
-  set prevProgramId(String v) {
+  $core.String get prevProgramId => $_getS(3, '');
+  set prevProgramId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasPrevProgramId() => $_has(3);
+  $core.bool hasPrevProgramId() => $_has(3);
   void clearPrevProgramId() => clearField(4);
 
-  String get version => $_getS(4, '');
-  set version(String v) {
+  $core.String get version => $_getS(4, '');
+  set version($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasVersion() => $_has(4);
+  $core.bool hasVersion() => $_has(4);
   void clearVersion() => clearField(5);
 }
 
-class _ReadonlyReadGroup_Program extends ReadGroup_Program
-    with ReadonlyMessageMixin {}
-
-class ReadGroup_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  ReadGroup_InfoEntry() : super();
-  ReadGroup_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroup_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ReadGroup_InfoEntry clone() =>
-      new ReadGroup_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadGroup_InfoEntry create() => new ReadGroup_InfoEntry();
-  static PbList<ReadGroup_InfoEntry> createRepeated() =>
-      new PbList<ReadGroup_InfoEntry>();
-  static ReadGroup_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReadGroup_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static ReadGroup_InfoEntry _defaultInstance;
-  static void $checkItem(ReadGroup_InfoEntry v) {
-    if (v is! ReadGroup_InfoEntry) checkItemFailed(v, 'ReadGroup_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyReadGroup_InfoEntry extends ReadGroup_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class ReadGroup extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadGroup')
+class ReadGroup extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadGroup',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'name')
     ..aOS(4, 'description')
     ..aOS(5, 'sampleId')
-    ..a<ReadGroup_Experiment>(6, 'experiment', PbFieldType.OM,
+    ..a<ReadGroup_Experiment>(6, 'experiment', $pb.PbFieldType.OM,
         ReadGroup_Experiment.getDefault, ReadGroup_Experiment.create)
-    ..a<int>(7, 'predictedInsertSize', PbFieldType.O3)
-    ..pp<ReadGroup_Program>(10, 'programs', PbFieldType.PM,
-        ReadGroup_Program.$checkItem, ReadGroup_Program.create)
+    ..a<$core.int>(7, 'predictedInsertSize', $pb.PbFieldType.O3)
+    ..pc<ReadGroup_Program>(
+        10, 'programs', $pb.PbFieldType.PM, ReadGroup_Program.create)
     ..aOS(11, 'referenceSetId')
-    ..pp<ReadGroup_InfoEntry>(12, 'info', PbFieldType.PM,
-        ReadGroup_InfoEntry.$checkItem, ReadGroup_InfoEntry.create)
+    ..m<$core.String, $0.ListValue>(
+        12,
+        'info',
+        'ReadGroup.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $0.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
   ReadGroup() : super();
-  ReadGroup.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadGroup.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadGroup.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadGroup.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadGroup clone() => new ReadGroup()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadGroup create() => new ReadGroup();
-  static PbList<ReadGroup> createRepeated() => new PbList<ReadGroup>();
-  static ReadGroup getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReadGroup();
-    return _defaultInstance;
-  }
-
+  ReadGroup clone() => ReadGroup()..mergeFromMessage(this);
+  ReadGroup copyWith(void Function(ReadGroup) updates) =>
+      super.copyWith((message) => updates(message as ReadGroup));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadGroup create() => ReadGroup();
+  ReadGroup createEmptyInstance() => create();
+  static $pb.PbList<ReadGroup> createRepeated() => $pb.PbList<ReadGroup>();
+  static ReadGroup getDefault() => _defaultInstance ??= create()..freeze();
   static ReadGroup _defaultInstance;
-  static void $checkItem(ReadGroup v) {
-    if (v is! ReadGroup) checkItemFailed(v, 'ReadGroup');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get datasetId => $_getS(1, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(1, '');
+  set datasetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDatasetId() => $_has(1);
+  $core.bool hasDatasetId() => $_has(1);
   void clearDatasetId() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasName() => $_has(2);
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  String get description => $_getS(3, '');
-  set description(String v) {
+  $core.String get description => $_getS(3, '');
+  set description($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDescription() => $_has(3);
+  $core.bool hasDescription() => $_has(3);
   void clearDescription() => clearField(4);
 
-  String get sampleId => $_getS(4, '');
-  set sampleId(String v) {
+  $core.String get sampleId => $_getS(4, '');
+  set sampleId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasSampleId() => $_has(4);
+  $core.bool hasSampleId() => $_has(4);
   void clearSampleId() => clearField(5);
 
   ReadGroup_Experiment get experiment => $_getN(5);
@@ -291,28 +231,26 @@ class ReadGroup extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasExperiment() => $_has(5);
+  $core.bool hasExperiment() => $_has(5);
   void clearExperiment() => clearField(6);
 
-  int get predictedInsertSize => $_get(6, 0);
-  set predictedInsertSize(int v) {
+  $core.int get predictedInsertSize => $_get(6, 0);
+  set predictedInsertSize($core.int v) {
     $_setSignedInt32(6, v);
   }
 
-  bool hasPredictedInsertSize() => $_has(6);
+  $core.bool hasPredictedInsertSize() => $_has(6);
   void clearPredictedInsertSize() => clearField(7);
 
-  List<ReadGroup_Program> get programs => $_getList(7);
+  $core.List<ReadGroup_Program> get programs => $_getList(7);
 
-  String get referenceSetId => $_getS(8, '');
-  set referenceSetId(String v) {
+  $core.String get referenceSetId => $_getS(8, '');
+  set referenceSetId($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasReferenceSetId() => $_has(8);
+  $core.bool hasReferenceSetId() => $_has(8);
   void clearReferenceSetId() => clearField(11);
 
-  List<ReadGroup_InfoEntry> get info => $_getList(9);
+  $core.Map<$core.String, $0.ListValue> get info => $_getMap(9);
 }
-
-class _ReadonlyReadGroup extends ReadGroup with ReadonlyMessageMixin {}

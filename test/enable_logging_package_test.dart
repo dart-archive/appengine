@@ -25,7 +25,7 @@ class LoggingMock extends Logging {
 
   void expectNoCall() {
     _logFunctionMock = (_, __, ___) {
-      throw new StateError('Unexpected log() call');
+      throw StateError('Unexpected log() call');
     };
   }
 
@@ -42,20 +42,20 @@ void main() {
   group('enable_logging_package_test', () {
     test('not_registered', () {
       fork(expectAsync0(() async {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
+        var logger = Logger('a.b');
+        var mock = LoggingMock();
 
         mock.expectNoCall();
         logger.info('abc');
 
-        return new Future.value();
+        return Future.value();
       }));
     });
 
     test('logging_adaptor_not_enabled', () {
       fork(expectAsync0(() async {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
+        var logger = Logger('a.b');
+        var mock = LoggingMock();
         registerLoggingService(mock);
 
         mock.expectNoCall();
@@ -72,7 +72,7 @@ void main() {
 
       test('root logger', () {
         var logger = Logger.root;
-        var mock = new LoggingMock();
+        var mock = LoggingMock();
 
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
@@ -89,8 +89,8 @@ void main() {
       });
 
       test('different_zone', () {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
+        var logger = Logger('a.b');
+        var mock = LoggingMock();
 
         var testZone = Zone.current;
         fork(expectAsync0(() async {
@@ -104,8 +104,8 @@ void main() {
       });
 
       test('test_level', () {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
+        var logger = Logger('a.b');
+        var mock = LoggingMock();
 
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
@@ -139,8 +139,8 @@ void main() {
       });
 
       test('test_error', () {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
+        var logger = Logger('a.b');
+        var mock = LoggingMock();
 
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
@@ -153,8 +153,8 @@ void main() {
       });
 
       test('test_error_stack', () {
-        var logger = new Logger('a.b');
-        var mock = new LoggingMock();
+        var logger = Logger('a.b');
+        var mock = LoggingMock();
 
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
@@ -166,7 +166,7 @@ void main() {
                     'Error:\n    error\n\n'
                     'Stack:\n    custom-stack-trace'));
           });
-          logger.log(Level.INFO, 'abc', 'error', new CustomStackTrace());
+          logger.log(Level.INFO, 'abc', 'error', CustomStackTrace());
         }));
       });
     });

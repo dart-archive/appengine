@@ -1,147 +1,86 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/datastore/admin/v1beta1/datastore_admin.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 import 'datastore_admin.pbenum.dart';
 
 export 'datastore_admin.pbenum.dart';
 
-class CommonMetadata_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommonMetadata_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  CommonMetadata_LabelsEntry() : super();
-  CommonMetadata_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommonMetadata_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CommonMetadata_LabelsEntry clone() =>
-      new CommonMetadata_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommonMetadata_LabelsEntry create() =>
-      new CommonMetadata_LabelsEntry();
-  static PbList<CommonMetadata_LabelsEntry> createRepeated() =>
-      new PbList<CommonMetadata_LabelsEntry>();
-  static CommonMetadata_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommonMetadata_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static CommonMetadata_LabelsEntry _defaultInstance;
-  static void $checkItem(CommonMetadata_LabelsEntry v) {
-    if (v is! CommonMetadata_LabelsEntry)
-      checkItemFailed(v, 'CommonMetadata_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyCommonMetadata_LabelsEntry extends CommonMetadata_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class CommonMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommonMetadata')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class CommonMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommonMetadata',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
+    ..a<$2.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..e<OperationType>(
         3,
         'operationType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         OperationType.OPERATION_TYPE_UNSPECIFIED,
         OperationType.valueOf,
         OperationType.values)
-    ..pp<CommonMetadata_LabelsEntry>(
+    ..m<$core.String, $core.String>(
         4,
         'labels',
-        PbFieldType.PM,
-        CommonMetadata_LabelsEntry.$checkItem,
-        CommonMetadata_LabelsEntry.create)
+        'CommonMetadata.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..e<CommonMetadata_State>(
         5,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         CommonMetadata_State.STATE_UNSPECIFIED,
         CommonMetadata_State.valueOf,
         CommonMetadata_State.values)
     ..hasRequiredFields = false;
 
   CommonMetadata() : super();
-  CommonMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommonMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CommonMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommonMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommonMetadata clone() => new CommonMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommonMetadata create() => new CommonMetadata();
-  static PbList<CommonMetadata> createRepeated() =>
-      new PbList<CommonMetadata>();
-  static CommonMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommonMetadata();
-    return _defaultInstance;
-  }
-
+  CommonMetadata clone() => CommonMetadata()..mergeFromMessage(this);
+  CommonMetadata copyWith(void Function(CommonMetadata) updates) =>
+      super.copyWith((message) => updates(message as CommonMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static CommonMetadata create() => CommonMetadata();
+  CommonMetadata createEmptyInstance() => create();
+  static $pb.PbList<CommonMetadata> createRepeated() =>
+      $pb.PbList<CommonMetadata>();
+  static CommonMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static CommonMetadata _defaultInstance;
-  static void $checkItem(CommonMetadata v) {
-    if (v is! CommonMetadata) checkItemFailed(v, 'CommonMetadata');
-  }
 
-  $google$protobuf.Timestamp get startTime => $_getN(0);
-  set startTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(0);
+  set startTime($2.Timestamp v) {
     setField(1, v);
   }
 
-  bool hasStartTime() => $_has(0);
+  $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $google$protobuf.Timestamp get endTime => $_getN(1);
-  set endTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(1);
+  set endTime($2.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasEndTime() => $_has(1);
+  $core.bool hasEndTime() => $_has(1);
   void clearEndTime() => clearField(2);
 
   OperationType get operationType => $_getN(2);
@@ -149,55 +88,50 @@ class CommonMetadata extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasOperationType() => $_has(2);
+  $core.bool hasOperationType() => $_has(2);
   void clearOperationType() => clearField(3);
 
-  List<CommonMetadata_LabelsEntry> get labels => $_getList(3);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 
   CommonMetadata_State get state => $_getN(4);
   set state(CommonMetadata_State v) {
     setField(5, v);
   }
 
-  bool hasState() => $_has(4);
+  $core.bool hasState() => $_has(4);
   void clearState() => clearField(5);
 }
 
-class _ReadonlyCommonMetadata extends CommonMetadata with ReadonlyMessageMixin {
-}
-
-class Progress extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Progress')
+class Progress extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Progress',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..aInt64(1, 'workCompleted')
     ..aInt64(2, 'workEstimated')
     ..hasRequiredFields = false;
 
   Progress() : super();
-  Progress.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Progress.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Progress.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Progress.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Progress clone() => new Progress()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Progress create() => new Progress();
-  static PbList<Progress> createRepeated() => new PbList<Progress>();
-  static Progress getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyProgress();
-    return _defaultInstance;
-  }
-
+  Progress clone() => Progress()..mergeFromMessage(this);
+  Progress copyWith(void Function(Progress) updates) =>
+      super.copyWith((message) => updates(message as Progress));
+  $pb.BuilderInfo get info_ => _i;
+  static Progress create() => Progress();
+  Progress createEmptyInstance() => create();
+  static $pb.PbList<Progress> createRepeated() => $pb.PbList<Progress>();
+  static Progress getDefault() => _defaultInstance ??= create()..freeze();
   static Progress _defaultInstance;
-  static void $checkItem(Progress v) {
-    if (v is! Progress) checkItemFailed(v, 'Progress');
-  }
 
   Int64 get workCompleted => $_getI64(0);
   set workCompleted(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasWorkCompleted() => $_has(0);
+  $core.bool hasWorkCompleted() => $_has(0);
   void clearWorkCompleted() => clearField(1);
 
   Int64 get workEstimated => $_getI64(1);
@@ -205,242 +139,133 @@ class Progress extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasWorkEstimated() => $_has(1);
+  $core.bool hasWorkEstimated() => $_has(1);
   void clearWorkEstimated() => clearField(2);
 }
 
-class _ReadonlyProgress extends Progress with ReadonlyMessageMixin {}
-
-class ExportEntitiesRequest_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ExportEntitiesRequest_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  ExportEntitiesRequest_LabelsEntry() : super();
-  ExportEntitiesRequest_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEntitiesRequest_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ExportEntitiesRequest_LabelsEntry clone() =>
-      new ExportEntitiesRequest_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExportEntitiesRequest_LabelsEntry create() =>
-      new ExportEntitiesRequest_LabelsEntry();
-  static PbList<ExportEntitiesRequest_LabelsEntry> createRepeated() =>
-      new PbList<ExportEntitiesRequest_LabelsEntry>();
-  static ExportEntitiesRequest_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesRequest_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static ExportEntitiesRequest_LabelsEntry _defaultInstance;
-  static void $checkItem(ExportEntitiesRequest_LabelsEntry v) {
-    if (v is! ExportEntitiesRequest_LabelsEntry)
-      checkItemFailed(v, 'ExportEntitiesRequest_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyExportEntitiesRequest_LabelsEntry
-    extends ExportEntitiesRequest_LabelsEntry with ReadonlyMessageMixin {}
-
-class ExportEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportEntitiesRequest')
+class ExportEntitiesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportEntitiesRequest',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..aOS(1, 'projectId')
-    ..pp<ExportEntitiesRequest_LabelsEntry>(
+    ..m<$core.String, $core.String>(
         2,
         'labels',
-        PbFieldType.PM,
-        ExportEntitiesRequest_LabelsEntry.$checkItem,
-        ExportEntitiesRequest_LabelsEntry.create)
-    ..a<EntityFilter>(3, 'entityFilter', PbFieldType.OM,
+        'ExportEntitiesRequest.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.datastore.admin.v1beta1'))
+    ..a<EntityFilter>(3, 'entityFilter', $pb.PbFieldType.OM,
         EntityFilter.getDefault, EntityFilter.create)
     ..aOS(4, 'outputUrlPrefix')
     ..hasRequiredFields = false;
 
   ExportEntitiesRequest() : super();
-  ExportEntitiesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportEntitiesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExportEntitiesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportEntitiesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesRequest clone() =>
-      new ExportEntitiesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExportEntitiesRequest create() => new ExportEntitiesRequest();
-  static PbList<ExportEntitiesRequest> createRepeated() =>
-      new PbList<ExportEntitiesRequest>();
-  static ExportEntitiesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesRequest();
-    return _defaultInstance;
-  }
-
+      ExportEntitiesRequest()..mergeFromMessage(this);
+  ExportEntitiesRequest copyWith(
+          void Function(ExportEntitiesRequest) updates) =>
+      super.copyWith((message) => updates(message as ExportEntitiesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ExportEntitiesRequest create() => ExportEntitiesRequest();
+  ExportEntitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<ExportEntitiesRequest> createRepeated() =>
+      $pb.PbList<ExportEntitiesRequest>();
+  static ExportEntitiesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExportEntitiesRequest _defaultInstance;
-  static void $checkItem(ExportEntitiesRequest v) {
-    if (v is! ExportEntitiesRequest)
-      checkItemFailed(v, 'ExportEntitiesRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  List<ExportEntitiesRequest_LabelsEntry> get labels => $_getList(1);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
   EntityFilter get entityFilter => $_getN(2);
   set entityFilter(EntityFilter v) {
     setField(3, v);
   }
 
-  bool hasEntityFilter() => $_has(2);
+  $core.bool hasEntityFilter() => $_has(2);
   void clearEntityFilter() => clearField(3);
 
-  String get outputUrlPrefix => $_getS(3, '');
-  set outputUrlPrefix(String v) {
+  $core.String get outputUrlPrefix => $_getS(3, '');
+  set outputUrlPrefix($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasOutputUrlPrefix() => $_has(3);
+  $core.bool hasOutputUrlPrefix() => $_has(3);
   void clearOutputUrlPrefix() => clearField(4);
 }
 
-class _ReadonlyExportEntitiesRequest extends ExportEntitiesRequest
-    with ReadonlyMessageMixin {}
-
-class ImportEntitiesRequest_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ImportEntitiesRequest_LabelsEntry')
-        ..aOS(1, 'key')
-        ..aOS(2, 'value')
-        ..hasRequiredFields = false;
-
-  ImportEntitiesRequest_LabelsEntry() : super();
-  ImportEntitiesRequest_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportEntitiesRequest_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ImportEntitiesRequest_LabelsEntry clone() =>
-      new ImportEntitiesRequest_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportEntitiesRequest_LabelsEntry create() =>
-      new ImportEntitiesRequest_LabelsEntry();
-  static PbList<ImportEntitiesRequest_LabelsEntry> createRepeated() =>
-      new PbList<ImportEntitiesRequest_LabelsEntry>();
-  static ImportEntitiesRequest_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportEntitiesRequest_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static ImportEntitiesRequest_LabelsEntry _defaultInstance;
-  static void $checkItem(ImportEntitiesRequest_LabelsEntry v) {
-    if (v is! ImportEntitiesRequest_LabelsEntry)
-      checkItemFailed(v, 'ImportEntitiesRequest_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyImportEntitiesRequest_LabelsEntry
-    extends ImportEntitiesRequest_LabelsEntry with ReadonlyMessageMixin {}
-
-class ImportEntitiesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportEntitiesRequest')
+class ImportEntitiesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportEntitiesRequest',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..aOS(1, 'projectId')
-    ..pp<ImportEntitiesRequest_LabelsEntry>(
+    ..m<$core.String, $core.String>(
         2,
         'labels',
-        PbFieldType.PM,
-        ImportEntitiesRequest_LabelsEntry.$checkItem,
-        ImportEntitiesRequest_LabelsEntry.create)
+        'ImportEntitiesRequest.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..aOS(3, 'inputUrl')
-    ..a<EntityFilter>(4, 'entityFilter', PbFieldType.OM,
+    ..a<EntityFilter>(4, 'entityFilter', $pb.PbFieldType.OM,
         EntityFilter.getDefault, EntityFilter.create)
     ..hasRequiredFields = false;
 
   ImportEntitiesRequest() : super();
-  ImportEntitiesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportEntitiesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImportEntitiesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportEntitiesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportEntitiesRequest clone() =>
-      new ImportEntitiesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportEntitiesRequest create() => new ImportEntitiesRequest();
-  static PbList<ImportEntitiesRequest> createRepeated() =>
-      new PbList<ImportEntitiesRequest>();
-  static ImportEntitiesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportEntitiesRequest();
-    return _defaultInstance;
-  }
-
+      ImportEntitiesRequest()..mergeFromMessage(this);
+  ImportEntitiesRequest copyWith(
+          void Function(ImportEntitiesRequest) updates) =>
+      super.copyWith((message) => updates(message as ImportEntitiesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportEntitiesRequest create() => ImportEntitiesRequest();
+  ImportEntitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<ImportEntitiesRequest> createRepeated() =>
+      $pb.PbList<ImportEntitiesRequest>();
+  static ImportEntitiesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImportEntitiesRequest _defaultInstance;
-  static void $checkItem(ImportEntitiesRequest v) {
-    if (v is! ImportEntitiesRequest)
-      checkItemFailed(v, 'ImportEntitiesRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  List<ImportEntitiesRequest_LabelsEntry> get labels => $_getList(1);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
-  String get inputUrl => $_getS(2, '');
-  set inputUrl(String v) {
+  $core.String get inputUrl => $_getS(2, '');
+  set inputUrl($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasInputUrl() => $_has(2);
+  $core.bool hasInputUrl() => $_has(2);
   void clearInputUrl() => clearField(3);
 
   EntityFilter get entityFilter => $_getN(3);
@@ -448,99 +273,87 @@ class ImportEntitiesRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasEntityFilter() => $_has(3);
+  $core.bool hasEntityFilter() => $_has(3);
   void clearEntityFilter() => clearField(4);
 }
 
-class _ReadonlyImportEntitiesRequest extends ImportEntitiesRequest
-    with ReadonlyMessageMixin {}
-
-class ExportEntitiesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportEntitiesResponse')
+class ExportEntitiesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportEntitiesResponse',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..aOS(1, 'outputUrl')
     ..hasRequiredFields = false;
 
   ExportEntitiesResponse() : super();
-  ExportEntitiesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportEntitiesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExportEntitiesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportEntitiesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesResponse clone() =>
-      new ExportEntitiesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExportEntitiesResponse create() => new ExportEntitiesResponse();
-  static PbList<ExportEntitiesResponse> createRepeated() =>
-      new PbList<ExportEntitiesResponse>();
-  static ExportEntitiesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesResponse();
-    return _defaultInstance;
-  }
-
+      ExportEntitiesResponse()..mergeFromMessage(this);
+  ExportEntitiesResponse copyWith(
+          void Function(ExportEntitiesResponse) updates) =>
+      super.copyWith((message) => updates(message as ExportEntitiesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ExportEntitiesResponse create() => ExportEntitiesResponse();
+  ExportEntitiesResponse createEmptyInstance() => create();
+  static $pb.PbList<ExportEntitiesResponse> createRepeated() =>
+      $pb.PbList<ExportEntitiesResponse>();
+  static ExportEntitiesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExportEntitiesResponse _defaultInstance;
-  static void $checkItem(ExportEntitiesResponse v) {
-    if (v is! ExportEntitiesResponse)
-      checkItemFailed(v, 'ExportEntitiesResponse');
-  }
 
-  String get outputUrl => $_getS(0, '');
-  set outputUrl(String v) {
+  $core.String get outputUrl => $_getS(0, '');
+  set outputUrl($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasOutputUrl() => $_has(0);
+  $core.bool hasOutputUrl() => $_has(0);
   void clearOutputUrl() => clearField(1);
 }
 
-class _ReadonlyExportEntitiesResponse extends ExportEntitiesResponse
-    with ReadonlyMessageMixin {}
-
-class ExportEntitiesMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportEntitiesMetadata')
-    ..a<CommonMetadata>(1, 'common', PbFieldType.OM, CommonMetadata.getDefault,
-        CommonMetadata.create)
-    ..a<Progress>(2, 'progressEntities', PbFieldType.OM, Progress.getDefault,
+class ExportEntitiesMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportEntitiesMetadata',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
+    ..a<CommonMetadata>(1, 'common', $pb.PbFieldType.OM,
+        CommonMetadata.getDefault, CommonMetadata.create)
+    ..a<Progress>(2, 'progressEntities', $pb.PbFieldType.OM,
+        Progress.getDefault, Progress.create)
+    ..a<Progress>(3, 'progressBytes', $pb.PbFieldType.OM, Progress.getDefault,
         Progress.create)
-    ..a<Progress>(3, 'progressBytes', PbFieldType.OM, Progress.getDefault,
-        Progress.create)
-    ..a<EntityFilter>(4, 'entityFilter', PbFieldType.OM,
+    ..a<EntityFilter>(4, 'entityFilter', $pb.PbFieldType.OM,
         EntityFilter.getDefault, EntityFilter.create)
     ..aOS(5, 'outputUrlPrefix')
     ..hasRequiredFields = false;
 
   ExportEntitiesMetadata() : super();
-  ExportEntitiesMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportEntitiesMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExportEntitiesMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportEntitiesMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportEntitiesMetadata clone() =>
-      new ExportEntitiesMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExportEntitiesMetadata create() => new ExportEntitiesMetadata();
-  static PbList<ExportEntitiesMetadata> createRepeated() =>
-      new PbList<ExportEntitiesMetadata>();
-  static ExportEntitiesMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportEntitiesMetadata();
-    return _defaultInstance;
-  }
-
+      ExportEntitiesMetadata()..mergeFromMessage(this);
+  ExportEntitiesMetadata copyWith(
+          void Function(ExportEntitiesMetadata) updates) =>
+      super.copyWith((message) => updates(message as ExportEntitiesMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static ExportEntitiesMetadata create() => ExportEntitiesMetadata();
+  ExportEntitiesMetadata createEmptyInstance() => create();
+  static $pb.PbList<ExportEntitiesMetadata> createRepeated() =>
+      $pb.PbList<ExportEntitiesMetadata>();
+  static ExportEntitiesMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExportEntitiesMetadata _defaultInstance;
-  static void $checkItem(ExportEntitiesMetadata v) {
-    if (v is! ExportEntitiesMetadata)
-      checkItemFailed(v, 'ExportEntitiesMetadata');
-  }
 
   CommonMetadata get common => $_getN(0);
   set common(CommonMetadata v) {
     setField(1, v);
   }
 
-  bool hasCommon() => $_has(0);
+  $core.bool hasCommon() => $_has(0);
   void clearCommon() => clearField(1);
 
   Progress get progressEntities => $_getN(1);
@@ -548,7 +361,7 @@ class ExportEntitiesMetadata extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasProgressEntities() => $_has(1);
+  $core.bool hasProgressEntities() => $_has(1);
   void clearProgressEntities() => clearField(2);
 
   Progress get progressBytes => $_getN(2);
@@ -556,7 +369,7 @@ class ExportEntitiesMetadata extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasProgressBytes() => $_has(2);
+  $core.bool hasProgressBytes() => $_has(2);
   void clearProgressBytes() => clearField(3);
 
   EntityFilter get entityFilter => $_getN(3);
@@ -564,65 +377,59 @@ class ExportEntitiesMetadata extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasEntityFilter() => $_has(3);
+  $core.bool hasEntityFilter() => $_has(3);
   void clearEntityFilter() => clearField(4);
 
-  String get outputUrlPrefix => $_getS(4, '');
-  set outputUrlPrefix(String v) {
+  $core.String get outputUrlPrefix => $_getS(4, '');
+  set outputUrlPrefix($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasOutputUrlPrefix() => $_has(4);
+  $core.bool hasOutputUrlPrefix() => $_has(4);
   void clearOutputUrlPrefix() => clearField(5);
 }
 
-class _ReadonlyExportEntitiesMetadata extends ExportEntitiesMetadata
-    with ReadonlyMessageMixin {}
-
-class ImportEntitiesMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportEntitiesMetadata')
-    ..a<CommonMetadata>(1, 'common', PbFieldType.OM, CommonMetadata.getDefault,
-        CommonMetadata.create)
-    ..a<Progress>(2, 'progressEntities', PbFieldType.OM, Progress.getDefault,
+class ImportEntitiesMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportEntitiesMetadata',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
+    ..a<CommonMetadata>(1, 'common', $pb.PbFieldType.OM,
+        CommonMetadata.getDefault, CommonMetadata.create)
+    ..a<Progress>(2, 'progressEntities', $pb.PbFieldType.OM,
+        Progress.getDefault, Progress.create)
+    ..a<Progress>(3, 'progressBytes', $pb.PbFieldType.OM, Progress.getDefault,
         Progress.create)
-    ..a<Progress>(3, 'progressBytes', PbFieldType.OM, Progress.getDefault,
-        Progress.create)
-    ..a<EntityFilter>(4, 'entityFilter', PbFieldType.OM,
+    ..a<EntityFilter>(4, 'entityFilter', $pb.PbFieldType.OM,
         EntityFilter.getDefault, EntityFilter.create)
     ..aOS(5, 'inputUrl')
     ..hasRequiredFields = false;
 
   ImportEntitiesMetadata() : super();
-  ImportEntitiesMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportEntitiesMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImportEntitiesMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportEntitiesMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportEntitiesMetadata clone() =>
-      new ImportEntitiesMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportEntitiesMetadata create() => new ImportEntitiesMetadata();
-  static PbList<ImportEntitiesMetadata> createRepeated() =>
-      new PbList<ImportEntitiesMetadata>();
-  static ImportEntitiesMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportEntitiesMetadata();
-    return _defaultInstance;
-  }
-
+      ImportEntitiesMetadata()..mergeFromMessage(this);
+  ImportEntitiesMetadata copyWith(
+          void Function(ImportEntitiesMetadata) updates) =>
+      super.copyWith((message) => updates(message as ImportEntitiesMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportEntitiesMetadata create() => ImportEntitiesMetadata();
+  ImportEntitiesMetadata createEmptyInstance() => create();
+  static $pb.PbList<ImportEntitiesMetadata> createRepeated() =>
+      $pb.PbList<ImportEntitiesMetadata>();
+  static ImportEntitiesMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImportEntitiesMetadata _defaultInstance;
-  static void $checkItem(ImportEntitiesMetadata v) {
-    if (v is! ImportEntitiesMetadata)
-      checkItemFailed(v, 'ImportEntitiesMetadata');
-  }
 
   CommonMetadata get common => $_getN(0);
   set common(CommonMetadata v) {
     setField(1, v);
   }
 
-  bool hasCommon() => $_has(0);
+  $core.bool hasCommon() => $_has(0);
   void clearCommon() => clearField(1);
 
   Progress get progressEntities => $_getN(1);
@@ -630,7 +437,7 @@ class ImportEntitiesMetadata extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasProgressEntities() => $_has(1);
+  $core.bool hasProgressEntities() => $_has(1);
   void clearProgressEntities() => clearField(2);
 
   Progress get progressBytes => $_getN(2);
@@ -638,7 +445,7 @@ class ImportEntitiesMetadata extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasProgressBytes() => $_has(2);
+  $core.bool hasProgressBytes() => $_has(2);
   void clearProgressBytes() => clearField(3);
 
   EntityFilter get entityFilter => $_getN(3);
@@ -646,71 +453,44 @@ class ImportEntitiesMetadata extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasEntityFilter() => $_has(3);
+  $core.bool hasEntityFilter() => $_has(3);
   void clearEntityFilter() => clearField(4);
 
-  String get inputUrl => $_getS(4, '');
-  set inputUrl(String v) {
+  $core.String get inputUrl => $_getS(4, '');
+  set inputUrl($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasInputUrl() => $_has(4);
+  $core.bool hasInputUrl() => $_has(4);
   void clearInputUrl() => clearField(5);
 }
 
-class _ReadonlyImportEntitiesMetadata extends ImportEntitiesMetadata
-    with ReadonlyMessageMixin {}
-
-class EntityFilter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EntityFilter')
+class EntityFilter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityFilter',
+      package: const $pb.PackageName('google.datastore.admin.v1beta1'))
     ..pPS(1, 'kinds')
     ..pPS(2, 'namespaceIds')
     ..hasRequiredFields = false;
 
   EntityFilter() : super();
-  EntityFilter.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EntityFilter.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  EntityFilter.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EntityFilter.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EntityFilter clone() => new EntityFilter()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EntityFilter create() => new EntityFilter();
-  static PbList<EntityFilter> createRepeated() => new PbList<EntityFilter>();
-  static EntityFilter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEntityFilter();
-    return _defaultInstance;
-  }
-
+  EntityFilter clone() => EntityFilter()..mergeFromMessage(this);
+  EntityFilter copyWith(void Function(EntityFilter) updates) =>
+      super.copyWith((message) => updates(message as EntityFilter));
+  $pb.BuilderInfo get info_ => _i;
+  static EntityFilter create() => EntityFilter();
+  EntityFilter createEmptyInstance() => create();
+  static $pb.PbList<EntityFilter> createRepeated() =>
+      $pb.PbList<EntityFilter>();
+  static EntityFilter getDefault() => _defaultInstance ??= create()..freeze();
   static EntityFilter _defaultInstance;
-  static void $checkItem(EntityFilter v) {
-    if (v is! EntityFilter) checkItemFailed(v, 'EntityFilter');
-  }
 
-  List<String> get kinds => $_getList(0);
+  $core.List<$core.String> get kinds => $_getList(0);
 
-  List<String> get namespaceIds => $_getList(1);
-}
-
-class _ReadonlyEntityFilter extends EntityFilter with ReadonlyMessageMixin {}
-
-class DatastoreAdminApi {
-  RpcClient _client;
-  DatastoreAdminApi(this._client);
-
-  Future<$google$longrunning.Operation> exportEntities(
-      ClientContext ctx, ExportEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'DatastoreAdmin', 'ExportEntities', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> importEntities(
-      ClientContext ctx, ImportEntitiesRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'DatastoreAdmin', 'ImportEntities', request, emptyResponse);
-  }
+  $core.List<$core.String> get namespaceIds => $_getList(1);
 }

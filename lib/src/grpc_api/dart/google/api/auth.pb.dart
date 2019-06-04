@@ -1,92 +1,81 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/auth.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Authentication extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Authentication')
-    ..pp<AuthenticationRule>(3, 'rules', PbFieldType.PM,
-        AuthenticationRule.$checkItem, AuthenticationRule.create)
-    ..pp<AuthProvider>(4, 'providers', PbFieldType.PM, AuthProvider.$checkItem,
-        AuthProvider.create)
+class Authentication extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Authentication',
+      package: const $pb.PackageName('google.api'))
+    ..pc<AuthenticationRule>(
+        3, 'rules', $pb.PbFieldType.PM, AuthenticationRule.create)
+    ..pc<AuthProvider>(4, 'providers', $pb.PbFieldType.PM, AuthProvider.create)
     ..hasRequiredFields = false;
 
   Authentication() : super();
-  Authentication.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Authentication.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Authentication.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Authentication.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Authentication clone() => new Authentication()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Authentication create() => new Authentication();
-  static PbList<Authentication> createRepeated() =>
-      new PbList<Authentication>();
-  static Authentication getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthentication();
-    return _defaultInstance;
-  }
-
+  Authentication clone() => Authentication()..mergeFromMessage(this);
+  Authentication copyWith(void Function(Authentication) updates) =>
+      super.copyWith((message) => updates(message as Authentication));
+  $pb.BuilderInfo get info_ => _i;
+  static Authentication create() => Authentication();
+  Authentication createEmptyInstance() => create();
+  static $pb.PbList<Authentication> createRepeated() =>
+      $pb.PbList<Authentication>();
+  static Authentication getDefault() => _defaultInstance ??= create()..freeze();
   static Authentication _defaultInstance;
-  static void $checkItem(Authentication v) {
-    if (v is! Authentication) checkItemFailed(v, 'Authentication');
-  }
 
-  List<AuthenticationRule> get rules => $_getList(0);
+  $core.List<AuthenticationRule> get rules => $_getList(0);
 
-  List<AuthProvider> get providers => $_getList(1);
+  $core.List<AuthProvider> get providers => $_getList(1);
 }
 
-class _ReadonlyAuthentication extends Authentication with ReadonlyMessageMixin {
-}
-
-class AuthenticationRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthenticationRule')
+class AuthenticationRule extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuthenticationRule',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'selector')
-    ..a<OAuthRequirements>(2, 'oauth', PbFieldType.OM,
+    ..a<OAuthRequirements>(2, 'oauth', $pb.PbFieldType.OM,
         OAuthRequirements.getDefault, OAuthRequirements.create)
     ..aOB(5, 'allowWithoutCredential')
-    ..pp<AuthRequirement>(7, 'requirements', PbFieldType.PM,
-        AuthRequirement.$checkItem, AuthRequirement.create)
+    ..pc<AuthRequirement>(
+        7, 'requirements', $pb.PbFieldType.PM, AuthRequirement.create)
     ..hasRequiredFields = false;
 
   AuthenticationRule() : super();
-  AuthenticationRule.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthenticationRule.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AuthenticationRule.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthenticationRule.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthenticationRule clone() =>
-      new AuthenticationRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuthenticationRule create() => new AuthenticationRule();
-  static PbList<AuthenticationRule> createRepeated() =>
-      new PbList<AuthenticationRule>();
-  static AuthenticationRule getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthenticationRule();
-    return _defaultInstance;
-  }
-
+  AuthenticationRule clone() => AuthenticationRule()..mergeFromMessage(this);
+  AuthenticationRule copyWith(void Function(AuthenticationRule) updates) =>
+      super.copyWith((message) => updates(message as AuthenticationRule));
+  $pb.BuilderInfo get info_ => _i;
+  static AuthenticationRule create() => AuthenticationRule();
+  AuthenticationRule createEmptyInstance() => create();
+  static $pb.PbList<AuthenticationRule> createRepeated() =>
+      $pb.PbList<AuthenticationRule>();
+  static AuthenticationRule getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AuthenticationRule _defaultInstance;
-  static void $checkItem(AuthenticationRule v) {
-    if (v is! AuthenticationRule) checkItemFailed(v, 'AuthenticationRule');
-  }
 
-  String get selector => $_getS(0, '');
-  set selector(String v) {
+  $core.String get selector => $_getS(0, '');
+  set selector($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSelector() => $_has(0);
+  $core.bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
   OAuthRequirements get oauth => $_getN(1);
@@ -94,25 +83,23 @@ class AuthenticationRule extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasOauth() => $_has(1);
+  $core.bool hasOauth() => $_has(1);
   void clearOauth() => clearField(2);
 
-  bool get allowWithoutCredential => $_get(2, false);
-  set allowWithoutCredential(bool v) {
+  $core.bool get allowWithoutCredential => $_get(2, false);
+  set allowWithoutCredential($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasAllowWithoutCredential() => $_has(2);
+  $core.bool hasAllowWithoutCredential() => $_has(2);
   void clearAllowWithoutCredential() => clearField(5);
 
-  List<AuthRequirement> get requirements => $_getList(3);
+  $core.List<AuthRequirement> get requirements => $_getList(3);
 }
 
-class _ReadonlyAuthenticationRule extends AuthenticationRule
-    with ReadonlyMessageMixin {}
-
-class AuthProvider extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthProvider')
+class AuthProvider extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuthProvider',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'id')
     ..aOS(2, 'issuer')
     ..aOS(3, 'jwksUri')
@@ -121,155 +108,137 @@ class AuthProvider extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   AuthProvider() : super();
-  AuthProvider.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthProvider.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AuthProvider.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthProvider.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthProvider clone() => new AuthProvider()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuthProvider create() => new AuthProvider();
-  static PbList<AuthProvider> createRepeated() => new PbList<AuthProvider>();
-  static AuthProvider getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthProvider();
-    return _defaultInstance;
-  }
-
+  AuthProvider clone() => AuthProvider()..mergeFromMessage(this);
+  AuthProvider copyWith(void Function(AuthProvider) updates) =>
+      super.copyWith((message) => updates(message as AuthProvider));
+  $pb.BuilderInfo get info_ => _i;
+  static AuthProvider create() => AuthProvider();
+  AuthProvider createEmptyInstance() => create();
+  static $pb.PbList<AuthProvider> createRepeated() =>
+      $pb.PbList<AuthProvider>();
+  static AuthProvider getDefault() => _defaultInstance ??= create()..freeze();
   static AuthProvider _defaultInstance;
-  static void $checkItem(AuthProvider v) {
-    if (v is! AuthProvider) checkItemFailed(v, 'AuthProvider');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get issuer => $_getS(1, '');
-  set issuer(String v) {
+  $core.String get issuer => $_getS(1, '');
+  set issuer($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasIssuer() => $_has(1);
+  $core.bool hasIssuer() => $_has(1);
   void clearIssuer() => clearField(2);
 
-  String get jwksUri => $_getS(2, '');
-  set jwksUri(String v) {
+  $core.String get jwksUri => $_getS(2, '');
+  set jwksUri($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasJwksUri() => $_has(2);
+  $core.bool hasJwksUri() => $_has(2);
   void clearJwksUri() => clearField(3);
 
-  String get audiences => $_getS(3, '');
-  set audiences(String v) {
+  $core.String get audiences => $_getS(3, '');
+  set audiences($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasAudiences() => $_has(3);
+  $core.bool hasAudiences() => $_has(3);
   void clearAudiences() => clearField(4);
 
-  String get authorizationUrl => $_getS(4, '');
-  set authorizationUrl(String v) {
+  $core.String get authorizationUrl => $_getS(4, '');
+  set authorizationUrl($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasAuthorizationUrl() => $_has(4);
+  $core.bool hasAuthorizationUrl() => $_has(4);
   void clearAuthorizationUrl() => clearField(5);
 }
 
-class _ReadonlyAuthProvider extends AuthProvider with ReadonlyMessageMixin {}
-
-class OAuthRequirements extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OAuthRequirements')
+class OAuthRequirements extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OAuthRequirements',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'canonicalScopes')
     ..hasRequiredFields = false;
 
   OAuthRequirements() : super();
-  OAuthRequirements.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OAuthRequirements.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  OAuthRequirements.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OAuthRequirements.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OAuthRequirements clone() => new OAuthRequirements()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static OAuthRequirements create() => new OAuthRequirements();
-  static PbList<OAuthRequirements> createRepeated() =>
-      new PbList<OAuthRequirements>();
-  static OAuthRequirements getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOAuthRequirements();
-    return _defaultInstance;
-  }
-
+  OAuthRequirements clone() => OAuthRequirements()..mergeFromMessage(this);
+  OAuthRequirements copyWith(void Function(OAuthRequirements) updates) =>
+      super.copyWith((message) => updates(message as OAuthRequirements));
+  $pb.BuilderInfo get info_ => _i;
+  static OAuthRequirements create() => OAuthRequirements();
+  OAuthRequirements createEmptyInstance() => create();
+  static $pb.PbList<OAuthRequirements> createRepeated() =>
+      $pb.PbList<OAuthRequirements>();
+  static OAuthRequirements getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static OAuthRequirements _defaultInstance;
-  static void $checkItem(OAuthRequirements v) {
-    if (v is! OAuthRequirements) checkItemFailed(v, 'OAuthRequirements');
-  }
 
-  String get canonicalScopes => $_getS(0, '');
-  set canonicalScopes(String v) {
+  $core.String get canonicalScopes => $_getS(0, '');
+  set canonicalScopes($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCanonicalScopes() => $_has(0);
+  $core.bool hasCanonicalScopes() => $_has(0);
   void clearCanonicalScopes() => clearField(1);
 }
 
-class _ReadonlyOAuthRequirements extends OAuthRequirements
-    with ReadonlyMessageMixin {}
-
-class AuthRequirement extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AuthRequirement')
+class AuthRequirement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuthRequirement',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'providerId')
     ..aOS(2, 'audiences')
     ..hasRequiredFields = false;
 
   AuthRequirement() : super();
-  AuthRequirement.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthRequirement.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AuthRequirement.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AuthRequirement.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AuthRequirement clone() => new AuthRequirement()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AuthRequirement create() => new AuthRequirement();
-  static PbList<AuthRequirement> createRepeated() =>
-      new PbList<AuthRequirement>();
-  static AuthRequirement getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAuthRequirement();
-    return _defaultInstance;
-  }
-
+  AuthRequirement clone() => AuthRequirement()..mergeFromMessage(this);
+  AuthRequirement copyWith(void Function(AuthRequirement) updates) =>
+      super.copyWith((message) => updates(message as AuthRequirement));
+  $pb.BuilderInfo get info_ => _i;
+  static AuthRequirement create() => AuthRequirement();
+  AuthRequirement createEmptyInstance() => create();
+  static $pb.PbList<AuthRequirement> createRepeated() =>
+      $pb.PbList<AuthRequirement>();
+  static AuthRequirement getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AuthRequirement _defaultInstance;
-  static void $checkItem(AuthRequirement v) {
-    if (v is! AuthRequirement) checkItemFailed(v, 'AuthRequirement');
-  }
 
-  String get providerId => $_getS(0, '');
-  set providerId(String v) {
+  $core.String get providerId => $_getS(0, '');
+  set providerId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProviderId() => $_has(0);
+  $core.bool hasProviderId() => $_has(0);
   void clearProviderId() => clearField(1);
 
-  String get audiences => $_getS(1, '');
-  set audiences(String v) {
+  $core.String get audiences => $_getS(1, '');
+  set audiences($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAudiences() => $_has(1);
+  $core.bool hasAudiences() => $_has(1);
   void clearAudiences() => clearField(2);
 }
-
-class _ReadonlyAuthRequirement extends AuthRequirement
-    with ReadonlyMessageMixin {}

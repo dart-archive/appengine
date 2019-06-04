@@ -1,124 +1,81 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/v2/instance.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'instance.pbenum.dart';
-import 'common.pbenum.dart';
+import 'common.pbenum.dart' as $0;
 
 export 'instance.pbenum.dart';
 
-class Instance_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Instance_LabelsEntry() : super();
-  Instance_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Instance_LabelsEntry clone() =>
-      new Instance_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance_LabelsEntry create() => new Instance_LabelsEntry();
-  static PbList<Instance_LabelsEntry> createRepeated() =>
-      new PbList<Instance_LabelsEntry>();
-  static Instance_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyInstance_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Instance_LabelsEntry _defaultInstance;
-  static void $checkItem(Instance_LabelsEntry v) {
-    if (v is! Instance_LabelsEntry) checkItemFailed(v, 'Instance_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyInstance_LabelsEntry extends Instance_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Instance extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Instance')
+class Instance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Instance',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..e<Instance_State>(
         3,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Instance_State.STATE_NOT_KNOWN,
         Instance_State.valueOf,
         Instance_State.values)
     ..e<Instance_Type>(
         4,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Instance_Type.TYPE_UNSPECIFIED,
         Instance_Type.valueOf,
         Instance_Type.values)
-    ..pp<Instance_LabelsEntry>(5, 'labels', PbFieldType.PM,
-        Instance_LabelsEntry.$checkItem, Instance_LabelsEntry.create)
+    ..m<$core.String, $core.String>(
+        5,
+        'labels',
+        'Instance.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.bigtable.admin.v2'))
     ..hasRequiredFields = false;
 
   Instance() : super();
-  Instance.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Instance.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Instance.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Instance.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Instance clone() => new Instance()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Instance create() => new Instance();
-  static PbList<Instance> createRepeated() => new PbList<Instance>();
-  static Instance getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyInstance();
-    return _defaultInstance;
-  }
-
+  Instance clone() => Instance()..mergeFromMessage(this);
+  Instance copyWith(void Function(Instance) updates) =>
+      super.copyWith((message) => updates(message as Instance));
+  $pb.BuilderInfo get info_ => _i;
+  static Instance create() => Instance();
+  Instance createEmptyInstance() => create();
+  static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
+  static Instance getDefault() => _defaultInstance ??= create()..freeze();
   static Instance _defaultInstance;
-  static void $checkItem(Instance v) {
-    if (v is! Instance) checkItemFailed(v, 'Instance');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDisplayName() => $_has(1);
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
   Instance_State get state => $_getN(2);
@@ -126,7 +83,7 @@ class Instance extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasState() => $_has(2);
+  $core.bool hasState() => $_has(2);
   void clearState() => clearField(3);
 
   Instance_Type get type => $_getN(3);
@@ -134,69 +91,65 @@ class Instance extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasType() => $_has(3);
+  $core.bool hasType() => $_has(3);
   void clearType() => clearField(4);
 
-  List<Instance_LabelsEntry> get labels => $_getList(4);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(4);
 }
 
-class _ReadonlyInstance extends Instance with ReadonlyMessageMixin {}
-
-class Cluster extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Cluster')
+class Cluster extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'location')
     ..e<Cluster_State>(
         3,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Cluster_State.STATE_NOT_KNOWN,
         Cluster_State.valueOf,
         Cluster_State.values)
-    ..a<int>(4, 'serveNodes', PbFieldType.O3)
-    ..e<StorageType>(
+    ..a<$core.int>(4, 'serveNodes', $pb.PbFieldType.O3)
+    ..e<$0.StorageType>(
         5,
         'defaultStorageType',
-        PbFieldType.OE,
-        StorageType.STORAGE_TYPE_UNSPECIFIED,
-        StorageType.valueOf,
-        StorageType.values)
+        $pb.PbFieldType.OE,
+        $0.StorageType.STORAGE_TYPE_UNSPECIFIED,
+        $0.StorageType.valueOf,
+        $0.StorageType.values)
     ..hasRequiredFields = false;
 
   Cluster() : super();
-  Cluster.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Cluster.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Cluster.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Cluster.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Cluster clone() => new Cluster()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Cluster create() => new Cluster();
-  static PbList<Cluster> createRepeated() => new PbList<Cluster>();
-  static Cluster getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCluster();
-    return _defaultInstance;
-  }
-
+  Cluster clone() => Cluster()..mergeFromMessage(this);
+  Cluster copyWith(void Function(Cluster) updates) =>
+      super.copyWith((message) => updates(message as Cluster));
+  $pb.BuilderInfo get info_ => _i;
+  static Cluster create() => Cluster();
+  Cluster createEmptyInstance() => create();
+  static $pb.PbList<Cluster> createRepeated() => $pb.PbList<Cluster>();
+  static Cluster getDefault() => _defaultInstance ??= create()..freeze();
   static Cluster _defaultInstance;
-  static void $checkItem(Cluster v) {
-    if (v is! Cluster) checkItemFailed(v, 'Cluster');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get location => $_getS(1, '');
-  set location(String v) {
+  $core.String get location => $_getS(1, '');
+  set location($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLocation() => $_has(1);
+  $core.bool hasLocation() => $_has(1);
   void clearLocation() => clearField(2);
 
   Cluster_State get state => $_getN(2);
@@ -204,177 +157,180 @@ class Cluster extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasState() => $_has(2);
+  $core.bool hasState() => $_has(2);
   void clearState() => clearField(3);
 
-  int get serveNodes => $_get(3, 0);
-  set serveNodes(int v) {
+  $core.int get serveNodes => $_get(3, 0);
+  set serveNodes($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasServeNodes() => $_has(3);
+  $core.bool hasServeNodes() => $_has(3);
   void clearServeNodes() => clearField(4);
 
-  StorageType get defaultStorageType => $_getN(4);
-  set defaultStorageType(StorageType v) {
+  $0.StorageType get defaultStorageType => $_getN(4);
+  set defaultStorageType($0.StorageType v) {
     setField(5, v);
   }
 
-  bool hasDefaultStorageType() => $_has(4);
+  $core.bool hasDefaultStorageType() => $_has(4);
   void clearDefaultStorageType() => clearField(5);
 }
 
-class _ReadonlyCluster extends Cluster with ReadonlyMessageMixin {}
-
-class AppProfile_MultiClusterRoutingUseAny extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AppProfile_MultiClusterRoutingUseAny')
-        ..hasRequiredFields = false;
+class AppProfile_MultiClusterRoutingUseAny extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'AppProfile.MultiClusterRoutingUseAny',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..hasRequiredFields = false;
 
   AppProfile_MultiClusterRoutingUseAny() : super();
-  AppProfile_MultiClusterRoutingUseAny.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppProfile_MultiClusterRoutingUseAny.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AppProfile_MultiClusterRoutingUseAny.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppProfile_MultiClusterRoutingUseAny.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppProfile_MultiClusterRoutingUseAny clone() =>
-      new AppProfile_MultiClusterRoutingUseAny()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      AppProfile_MultiClusterRoutingUseAny()..mergeFromMessage(this);
+  AppProfile_MultiClusterRoutingUseAny copyWith(
+          void Function(AppProfile_MultiClusterRoutingUseAny) updates) =>
+      super.copyWith((message) =>
+          updates(message as AppProfile_MultiClusterRoutingUseAny));
+  $pb.BuilderInfo get info_ => _i;
   static AppProfile_MultiClusterRoutingUseAny create() =>
-      new AppProfile_MultiClusterRoutingUseAny();
-  static PbList<AppProfile_MultiClusterRoutingUseAny> createRepeated() =>
-      new PbList<AppProfile_MultiClusterRoutingUseAny>();
-  static AppProfile_MultiClusterRoutingUseAny getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppProfile_MultiClusterRoutingUseAny();
-    return _defaultInstance;
-  }
-
+      AppProfile_MultiClusterRoutingUseAny();
+  AppProfile_MultiClusterRoutingUseAny createEmptyInstance() => create();
+  static $pb.PbList<AppProfile_MultiClusterRoutingUseAny> createRepeated() =>
+      $pb.PbList<AppProfile_MultiClusterRoutingUseAny>();
+  static AppProfile_MultiClusterRoutingUseAny getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AppProfile_MultiClusterRoutingUseAny _defaultInstance;
-  static void $checkItem(AppProfile_MultiClusterRoutingUseAny v) {
-    if (v is! AppProfile_MultiClusterRoutingUseAny)
-      checkItemFailed(v, 'AppProfile_MultiClusterRoutingUseAny');
-  }
 }
 
-class _ReadonlyAppProfile_MultiClusterRoutingUseAny
-    extends AppProfile_MultiClusterRoutingUseAny with ReadonlyMessageMixin {}
-
-class AppProfile_SingleClusterRouting extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('AppProfile_SingleClusterRouting')
-        ..aOS(1, 'clusterId')
-        ..aOB(2, 'allowTransactionalWrites')
-        ..hasRequiredFields = false;
+class AppProfile_SingleClusterRouting extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'AppProfile.SingleClusterRouting',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..aOS(1, 'clusterId')
+    ..aOB(2, 'allowTransactionalWrites')
+    ..hasRequiredFields = false;
 
   AppProfile_SingleClusterRouting() : super();
-  AppProfile_SingleClusterRouting.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppProfile_SingleClusterRouting.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AppProfile_SingleClusterRouting.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppProfile_SingleClusterRouting.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   AppProfile_SingleClusterRouting clone() =>
-      new AppProfile_SingleClusterRouting()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      AppProfile_SingleClusterRouting()..mergeFromMessage(this);
+  AppProfile_SingleClusterRouting copyWith(
+          void Function(AppProfile_SingleClusterRouting) updates) =>
+      super.copyWith(
+          (message) => updates(message as AppProfile_SingleClusterRouting));
+  $pb.BuilderInfo get info_ => _i;
   static AppProfile_SingleClusterRouting create() =>
-      new AppProfile_SingleClusterRouting();
-  static PbList<AppProfile_SingleClusterRouting> createRepeated() =>
-      new PbList<AppProfile_SingleClusterRouting>();
-  static AppProfile_SingleClusterRouting getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAppProfile_SingleClusterRouting();
-    return _defaultInstance;
-  }
-
+      AppProfile_SingleClusterRouting();
+  AppProfile_SingleClusterRouting createEmptyInstance() => create();
+  static $pb.PbList<AppProfile_SingleClusterRouting> createRepeated() =>
+      $pb.PbList<AppProfile_SingleClusterRouting>();
+  static AppProfile_SingleClusterRouting getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AppProfile_SingleClusterRouting _defaultInstance;
-  static void $checkItem(AppProfile_SingleClusterRouting v) {
-    if (v is! AppProfile_SingleClusterRouting)
-      checkItemFailed(v, 'AppProfile_SingleClusterRouting');
-  }
 
-  String get clusterId => $_getS(0, '');
-  set clusterId(String v) {
+  $core.String get clusterId => $_getS(0, '');
+  set clusterId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasClusterId() => $_has(0);
+  $core.bool hasClusterId() => $_has(0);
   void clearClusterId() => clearField(1);
 
-  bool get allowTransactionalWrites => $_get(1, false);
-  set allowTransactionalWrites(bool v) {
+  $core.bool get allowTransactionalWrites => $_get(1, false);
+  set allowTransactionalWrites($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasAllowTransactionalWrites() => $_has(1);
+  $core.bool hasAllowTransactionalWrites() => $_has(1);
   void clearAllowTransactionalWrites() => clearField(2);
 }
 
-class _ReadonlyAppProfile_SingleClusterRouting
-    extends AppProfile_SingleClusterRouting with ReadonlyMessageMixin {}
+enum AppProfile_RoutingPolicy {
+  multiClusterRoutingUseAny,
+  singleClusterRouting,
+  notSet
+}
 
-class AppProfile extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AppProfile')
+class AppProfile extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, AppProfile_RoutingPolicy>
+      _AppProfile_RoutingPolicyByTag = {
+    5: AppProfile_RoutingPolicy.multiClusterRoutingUseAny,
+    6: AppProfile_RoutingPolicy.singleClusterRouting,
+    0: AppProfile_RoutingPolicy.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppProfile',
+      package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'etag')
     ..aOS(3, 'description')
     ..a<AppProfile_MultiClusterRoutingUseAny>(
         5,
         'multiClusterRoutingUseAny',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         AppProfile_MultiClusterRoutingUseAny.getDefault,
         AppProfile_MultiClusterRoutingUseAny.create)
     ..a<AppProfile_SingleClusterRouting>(
         6,
         'singleClusterRouting',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         AppProfile_SingleClusterRouting.getDefault,
         AppProfile_SingleClusterRouting.create)
+    ..oo(0, [5, 6])
     ..hasRequiredFields = false;
 
   AppProfile() : super();
-  AppProfile.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppProfile.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AppProfile.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AppProfile.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AppProfile clone() => new AppProfile()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AppProfile create() => new AppProfile();
-  static PbList<AppProfile> createRepeated() => new PbList<AppProfile>();
-  static AppProfile getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAppProfile();
-    return _defaultInstance;
-  }
-
+  AppProfile clone() => AppProfile()..mergeFromMessage(this);
+  AppProfile copyWith(void Function(AppProfile) updates) =>
+      super.copyWith((message) => updates(message as AppProfile));
+  $pb.BuilderInfo get info_ => _i;
+  static AppProfile create() => AppProfile();
+  AppProfile createEmptyInstance() => create();
+  static $pb.PbList<AppProfile> createRepeated() => $pb.PbList<AppProfile>();
+  static AppProfile getDefault() => _defaultInstance ??= create()..freeze();
   static AppProfile _defaultInstance;
-  static void $checkItem(AppProfile v) {
-    if (v is! AppProfile) checkItemFailed(v, 'AppProfile');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  AppProfile_RoutingPolicy whichRoutingPolicy() =>
+      _AppProfile_RoutingPolicyByTag[$_whichOneof(0)];
+  void clearRoutingPolicy() => clearField($_whichOneof(0));
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get etag => $_getS(1, '');
-  set etag(String v) {
+  $core.String get etag => $_getS(1, '');
+  set etag($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasEtag() => $_has(1);
+  $core.bool hasEtag() => $_has(1);
   void clearEtag() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
   AppProfile_MultiClusterRoutingUseAny get multiClusterRoutingUseAny =>
@@ -383,7 +339,7 @@ class AppProfile extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasMultiClusterRoutingUseAny() => $_has(3);
+  $core.bool hasMultiClusterRoutingUseAny() => $_has(3);
   void clearMultiClusterRoutingUseAny() => clearField(5);
 
   AppProfile_SingleClusterRouting get singleClusterRouting => $_getN(4);
@@ -391,8 +347,6 @@ class AppProfile extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasSingleClusterRouting() => $_has(4);
+  $core.bool hasSingleClusterRouting() => $_has(4);
   void clearSingleClusterRouting() => clearField(6);
 }
-
-class _ReadonlyAppProfile extends AppProfile with ReadonlyMessageMixin {}

@@ -1,4 +1,4 @@
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 
 syntax = "proto3";
 
@@ -19,6 +20,7 @@ package google.cloud.dialogflow.v2beta1;
 import "google/api/annotations.proto";
 import "google/cloud/dialogflow/v2beta1/context.proto";
 import "google/longrunning/operations.proto";
+import "google/protobuf/duration.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/field_mask.proto";
 import "google/protobuf/struct.proto";
@@ -30,7 +32,6 @@ option java_multiple_files = true;
 option java_outer_classname = "IntentProto";
 option java_package = "com.google.cloud.dialogflow.v2beta1";
 option objc_class_prefix = "DF";
-
 
 // An intent represents a mapping between input from a user and an action to
 // be taken by your application. When you pass user input to the
@@ -46,7 +47,7 @@ option objc_class_prefix = "DF";
 // *   **Contexts** - provide additional context for intent analysis. For
 //     example, if an intent is related to an object in your application that
 //     plays music, you can provide a context to determine when to match the
-//     intent if the user input is “turn it off”.  You can include a context
+//     intent if the user input is "turn it off". You can include a context
 //     that matches the intent when there is previous user input of
 //     "play music", and not when there is previous user input of
 //     "turn on the light".
@@ -62,7 +63,8 @@ option objc_class_prefix = "DF";
 //     Dialogflow API agent to better match intents.
 //
 // For more information about intents, see the
-// [Dialogflow documentation](https://dialogflow.com/docs/intents).
+// [Dialogflow
+// documentation](https://cloud.google.com/dialogflow-enterprise/docs/intents-overview).
 service Intents {
   // Returns the list of all intents in the specified agent.
   rpc ListIntents(ListIntentsRequest) returns (ListIntentsResponse) {
@@ -94,7 +96,7 @@ service Intents {
     };
   }
 
-  // Deletes the specified intent.
+  // Deletes the specified intent and its direct or indirect followup intents.
   rpc DeleteIntent(DeleteIntentRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2beta1/{name=projects/*/agent/intents/*}"
@@ -126,26 +128,26 @@ service Intents {
 // Intents convert a number of user expressions or patterns into an action. An
 // action is an extraction of a user command or sentence semantics.
 message Intent {
-  // Represents an example or template that the agent is trained on.
+  // Represents an example that the agent is trained on.
   message TrainingPhrase {
     // Represents a part of a training phrase.
     message Part {
-      // Required. The text corresponding to the example or template,
-      // if there are no annotations. For
-      // annotated examples, it is the text for one of the example's parts.
+      // Required. The text for this part.
       string text = 1;
 
-      // Optional. The entity type name prefixed with `@`. This field is
-      // required for the annotated part of the text and applies only to
-      // examples.
+      // Optional. The entity type name prefixed with `@`.
+      // This field is required for annotated parts of the training phrase.
       string entity_type = 2;
 
       // Optional. The parameter name for the value extracted from the
       // annotated part of the example.
+      // This field is required for annotated parts of the training phrase.
       string alias = 3;
 
-      // Optional. Indicates whether the text was manually annotated by the
-      // developer.
+      // Optional. Indicates whether the text was manually annotated.
+      // This field is set to true when the Dialogflow Console is used to
+      // manually annotate the part. When creating an annotated part with the
+      // API, you must set this to true.
       bool user_defined = 4;
     }
 
@@ -160,21 +162,41 @@ message Intent {
 
       // Templates are not annotated with entity types, but they can contain
       // @-prefixed entity type names as substrings.
-      TEMPLATE = 2;
+      // Template mode has been deprecated. Example mode is the only supported
+      // way to create new training phrases. If you have existing training
+      // phrases that you've created in template mode, those will continue to
+      // work.
+      TEMPLATE = 2 [deprecated = true];
     }
 
-    // Required. The unique identifier of this training phrase.
+    // Output only. The unique identifier of this training phrase.
     string name = 1;
 
     // Required. The type of the training phrase.
     Type type = 2;
 
-    // Required. The collection of training phrase parts (can be annotated).
-    // Fields: `entity_type`, `alias` and `user_defined` should be populated
-    // only for the annotated parts of the training phrase.
+    // Required. The ordered list of training phrase parts.
+    // The parts are concatenated in order to form the training phrase.
+    //
+    // Note: The API does not automatically annotate training phrases like the
+    // Dialogflow Console does.
+    //
+    // Note: Do not forget to include whitespace at part boundaries,
+    // so the training phrase is well formatted when the parts are concatenated.
+    //
+    // If the training phrase does not need to be annotated with parameters,
+    // you just need a single part with only the [Part.text][google.cloud.dialogflow.v2beta1.Intent.TrainingPhrase.Part.text] field set.
+    //
+    // If you want to annotate the training phrase, you must create multiple
+    // parts, where the fields of each part are populated in one of two ways:
+    //
+    // -   `Part.text` is set to a part of the phrase that has no parameters.
+    // -   `Part.text` is set to a part of the phrase that you want to annotate,
+    //     and the `entity_type`, `alias`, and `user_defined` fields are all
+    //     set.
     repeated Part parts = 3;
 
-    // Optional. Indicates how many times this example or template was added to
+    // Optional. Indicates how many times this example was added to
     // the intent. Each time a developer adds an existing sample by editing an
     // intent or training, this counter is increased.
     int32 times_added_count = 4;
@@ -233,8 +255,8 @@ message Intent {
       // Optional. The public URI to an image file.
       string image_uri = 1;
 
-      // Optional. A text description of the image to be used for accessibility,
-      // e.g., screen readers.
+      // A text description of the image to be used for accessibility,
+      // e.g., screen readers. Required if image_uri is set for CarouselSelect.
       string accessibility_text = 2;
     }
 
@@ -410,6 +432,51 @@ message Intent {
       repeated string synonyms = 2;
     }
 
+    // Plays audio from a file in Telephony Gateway.
+    message TelephonyPlayAudio {
+      // Required. URI to a Google Cloud Storage object containing the audio to
+      // play, e.g., "gs://bucket/object". The object must contain a single
+      // channel (mono) of linear PCM audio (2 bytes / sample) at 8kHz.
+      //
+      // This object must be readable by the `service-<Project
+      // Number>@gcp-sa-dialogflow.iam.gserviceaccount.com` service account
+      // where <Project Number> is the number of the Telephony Gateway project
+      // (usually the same as the Dialogflow agent project). If the Google Cloud
+      // Storage bucket is in the Telephony Gateway project, this permission is
+      // added by default when enabling the Dialogflow V2 API.
+      //
+      // For audio from other sources, consider using the
+      // `TelephonySynthesizeSpeech` message with SSML.
+      string audio_uri = 1;
+    }
+
+    // Synthesizes speech and plays back the synthesized audio to the caller in
+    // Telephony Gateway.
+    //
+    // Telephony Gateway takes the synthesizer settings from
+    // `DetectIntentResponse.output_audio_config` which can either be set
+    // at request-level or can come from the agent-level synthesizer config.
+    message TelephonySynthesizeSpeech {
+      // Required. The source to be synthesized.
+      oneof source {
+        // The raw text to be synthesized.
+        string text = 1;
+
+        // The SSML to be synthesized. For more information, see
+        // [SSML](https://developers.google.com/actions/reference/ssml).
+        string ssml = 2;
+      }
+    }
+
+    // Transfers the call in Telephony Gateway.
+    message TelephonyTransferCall {
+      // Required. The phone number to transfer the call to
+      // in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+      //
+      // We currently only allow transferring to US numbers (+1xxxyyyzzzz).
+      string phone_number = 1;
+    }
+
     // Represents different platforms that a rich message can be intended for.
     enum Platform {
       // Not specified.
@@ -498,6 +565,12 @@ message Intent {
       //   }
       // }</pre>
       ACTIONS_ON_GOOGLE = 8;
+
+      // Telephony Gateway.
+      TELEPHONY = 10;
+
+      // Google Hangouts.
+      GOOGLE_HANGOUTS = 11;
     }
 
     // Required. The rich response message.
@@ -536,6 +609,15 @@ message Intent {
 
       // Displays a carousel card for Actions on Google.
       CarouselSelect carousel_select = 12;
+
+      // Plays audio from a file in Telephony Gateway.
+      TelephonyPlayAudio telephony_play_audio = 13;
+
+      // Synthesizes speech in Telephony Gateway.
+      TelephonySynthesizeSpeech telephony_synthesize_speech = 14;
+
+      // Transfers the call in Telephony Gateway.
+      TelephonyTransferCall telephony_transfer_call = 15;
     }
 
     // Optional. The platform that this message is intended for.
@@ -548,7 +630,7 @@ message Intent {
     // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
     string followup_intent_name = 1;
 
-    // The unique identifier of the followup intent parent.
+    // The unique identifier of the followup intent's parent.
     // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
     string parent_followup_intent_name = 2;
   }
@@ -566,20 +648,23 @@ message Intent {
     WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING = 2;
   }
 
-  // Required for all methods except `create` (`create` populates the name
-  // automatically.
   // The unique identifier of this intent.
+  // Required for [Intents.UpdateIntent][google.cloud.dialogflow.v2beta1.Intents.UpdateIntent] and [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2beta1.Intents.BatchUpdateIntents]
+  // methods.
   // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
   string name = 1;
 
   // Required. The name of this intent.
   string display_name = 2;
 
-  // Required. Indicates whether webhooks are enabled for the intent.
+  // Optional. Indicates whether webhooks are enabled for the intent.
   WebhookState webhook_state = 6;
 
   // Optional. The priority of this intent. Higher numbers represent higher
-  // priorities. Zero or negative numbers mean that the intent is disabled.
+  // priorities. If this is zero or unspecified, we use the default
+  // priority 500000.
+  //
+  // Negative numbers mean that the intent is disabled.
   int32 priority = 3;
 
   // Optional. Indicates whether this is a fallback intent.
@@ -590,19 +675,24 @@ message Intent {
   // taken into account during inference in `ML ONLY` match mode. Also,
   // auto-markup in the UI is turned off.
   // DEPRECATED! Please use `ml_disabled` field instead.
-  // NOTE: If neither `ml_enabled` nor `ml_disabled` field is set, then the
-  // default value is determined as follows:
+  // NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false,
+  // then the default value is determined as follows:
   // - Before April 15th, 2018 the default is:
   //   ml_enabled = false / ml_disabled = true.
   // - After April 15th, 2018 the default is:
   //   ml_enabled = true / ml_disabled = false.
-  bool ml_enabled = 5;
+  bool ml_enabled = 5 [deprecated = true];
 
   // Optional. Indicates whether Machine Learning is disabled for the intent.
   // Note: If `ml_disabled` setting is set to true, then this intent is not
   // taken into account during inference in `ML ONLY` match mode. Also,
   // auto-markup in the UI is turned off.
   bool ml_disabled = 19;
+
+  // Optional. Indicates that this intent ends an interaction. Some integrations
+  // (e.g., Actions on Google or Dialogflow phone gateway) use this information
+  // to close interaction with an end user. Default is false.
+  bool end_interaction = 21;
 
   // Optional. The list of context names required for this intent to be
   // triggered.
@@ -614,11 +704,12 @@ message Intent {
   // be present in the active user session for an event to trigger this intent.
   repeated string events = 8;
 
-  // Optional. The collection of examples/templates that the agent is
+  // Optional. The collection of examples that the agent is
   // trained on.
   repeated TrainingPhrase training_phrases = 9;
 
   // Optional. The name of the action associated with the intent.
+  // Note: The action name must not contain whitespaces.
   string action = 10;
 
   // Optional. The collection of contexts that are activated when the intent
@@ -639,23 +730,28 @@ message Intent {
   // `Response` field in the Dialogflow console.
   repeated Message messages = 14;
 
-  // Optional. The list of platforms for which the first response will be
-  // taken from among the messages assigned to the DEFAULT_PLATFORM.
+  // Optional. The list of platforms for which the first responses will be
+  // copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
   repeated Message.Platform default_response_platforms = 15;
 
-  // The unique identifier of the root intent in the chain of followup intents.
-  // It identifies the correct followup intents chain for this intent.
+  // Read-only. The unique identifier of the root intent in the chain of
+  // followup intents. It identifies the correct followup intents chain for
+  // this intent. We populate this field only in the output.
+  //
   // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
   string root_followup_intent_name = 16;
 
-  // The unique identifier of the parent intent in the chain of followup
-  // intents.
+  // Read-only after creation. The unique identifier of the parent intent in the
+  // chain of followup intents. You can set this field when creating an intent,
+  // for example with [CreateIntent][] or [BatchUpdateIntents][], in order to
+  // make this intent a followup intent.
+  //
   // It identifies the parent followup intent.
   // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
   string parent_followup_intent_name = 17;
 
-  // Optional. Collection of information about all followup intents that have
-  // name of this intent as a root_name.
+  // Read-only. Information about all followup intents that have this intent as
+  // a direct or indirect parent. We populate this field only in the output.
   repeated FollowupIntentInfo followup_intent_info = 18;
 }
 
@@ -667,9 +763,10 @@ message ListIntentsRequest {
 
   // Optional. The language to list training phrases, parameters and rich
   // messages for. If not specified, the agent's default language is used.
-  // [More than a dozen
-  // languages](https://dialogflow.com/docs/reference/language) are supported.
-  // Note: languages must be enabled in the agent before they can be used.
+  // [Many
+  // languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+  // are supported. Note: languages must be enabled in the agent before they can
+  // be used.
   string language_code = 2;
 
   // Optional. The resource view to apply to the returned intent.
@@ -702,9 +799,10 @@ message GetIntentRequest {
 
   // Optional. The language to retrieve training phrases, parameters and rich
   // messages for. If not specified, the agent's default language is used.
-  // [More than a dozen
-  // languages](https://dialogflow.com/docs/reference/language) are supported.
-  // Note: languages must be enabled in the agent, before they can be used.
+  // [Many
+  // languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+  // are supported. Note: languages must be enabled in the agent before they can
+  // be used.
   string language_code = 2;
 
   // Optional. The resource view to apply to the returned intent.
@@ -722,9 +820,10 @@ message CreateIntentRequest {
 
   // Optional. The language of training phrases, parameters and rich messages
   // defined in `intent`. If not specified, the agent's default language is
-  // used. [More than a dozen
-  // languages](https://dialogflow.com/docs/reference/language) are supported.
-  // Note: languages must be enabled in the agent, before they can be used.
+  // used. [Many
+  // languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+  // are supported. Note: languages must be enabled in the agent before they can
+  // be used.
   string language_code = 3;
 
   // Optional. The resource view to apply to the returned intent.
@@ -734,14 +833,14 @@ message CreateIntentRequest {
 // The request message for [Intents.UpdateIntent][google.cloud.dialogflow.v2beta1.Intents.UpdateIntent].
 message UpdateIntentRequest {
   // Required. The intent to update.
-  // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
   Intent intent = 1;
 
   // Optional. The language of training phrases, parameters and rich messages
   // defined in `intent`. If not specified, the agent's default language is
-  // used. [More than a dozen
-  // languages](https://dialogflow.com/docs/reference/language) are supported.
-  // Note: languages must be enabled in the agent, before they can be used.
+  // used. [Many
+  // languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+  // are supported. Note: languages must be enabled in the agent before they can
+  // be used.
   string language_code = 2;
 
   // Optional. The mask to control which fields get updated.
@@ -753,7 +852,9 @@ message UpdateIntentRequest {
 
 // The request message for [Intents.DeleteIntent][google.cloud.dialogflow.v2beta1.Intents.DeleteIntent].
 message DeleteIntentRequest {
-  // Required. The name of the intent to delete.
+  // Required. The name of the intent to delete. If this intent has direct or
+  // indirect followup intents, we also delete them.
+  //
   // Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
   string name = 1;
 }
@@ -777,9 +878,10 @@ message BatchUpdateIntentsRequest {
 
   // Optional. The language of training phrases, parameters and rich messages
   // defined in `intents`. If not specified, the agent's default language is
-  // used. [More than a dozen
-  // languages](https://dialogflow.com/docs/reference/language) are supported.
-  // Note: languages must be enabled in the agent, before they can be used.
+  // used. [Many
+  // languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+  // are supported. Note: languages must be enabled in the agent before they can
+  // be used.
   string language_code = 4;
 
   // Optional. The mask to control which fields get updated.

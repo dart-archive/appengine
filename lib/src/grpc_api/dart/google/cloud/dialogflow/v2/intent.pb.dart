@@ -1,26 +1,26 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/dialogflow/v2/intent.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'context.pb.dart';
-import '../../../protobuf/struct.pb.dart' as $google$protobuf;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import 'context.pb.dart' as $2;
+import '../../../protobuf/struct.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'intent.pbenum.dart';
 
 export 'intent.pbenum.dart';
 
-class Intent_TrainingPhrase_Part extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_TrainingPhrase_Part')
+class Intent_TrainingPhrase_Part extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.TrainingPhrase.Part',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'text')
     ..aOS(2, 'entityType')
     ..aOS(3, 'alias')
@@ -28,117 +28,103 @@ class Intent_TrainingPhrase_Part extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   Intent_TrainingPhrase_Part() : super();
-  Intent_TrainingPhrase_Part.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_TrainingPhrase_Part.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_TrainingPhrase_Part.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_TrainingPhrase_Part.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_TrainingPhrase_Part clone() =>
-      new Intent_TrainingPhrase_Part()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_TrainingPhrase_Part create() =>
-      new Intent_TrainingPhrase_Part();
-  static PbList<Intent_TrainingPhrase_Part> createRepeated() =>
-      new PbList<Intent_TrainingPhrase_Part>();
-  static Intent_TrainingPhrase_Part getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_TrainingPhrase_Part();
-    return _defaultInstance;
-  }
-
+      Intent_TrainingPhrase_Part()..mergeFromMessage(this);
+  Intent_TrainingPhrase_Part copyWith(
+          void Function(Intent_TrainingPhrase_Part) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_TrainingPhrase_Part));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_TrainingPhrase_Part create() => Intent_TrainingPhrase_Part();
+  Intent_TrainingPhrase_Part createEmptyInstance() => create();
+  static $pb.PbList<Intent_TrainingPhrase_Part> createRepeated() =>
+      $pb.PbList<Intent_TrainingPhrase_Part>();
+  static Intent_TrainingPhrase_Part getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_TrainingPhrase_Part _defaultInstance;
-  static void $checkItem(Intent_TrainingPhrase_Part v) {
-    if (v is! Intent_TrainingPhrase_Part)
-      checkItemFailed(v, 'Intent_TrainingPhrase_Part');
-  }
 
-  String get text => $_getS(0, '');
-  set text(String v) {
+  $core.String get text => $_getS(0, '');
+  set text($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasText() => $_has(0);
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
-  String get entityType => $_getS(1, '');
-  set entityType(String v) {
+  $core.String get entityType => $_getS(1, '');
+  set entityType($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasEntityType() => $_has(1);
+  $core.bool hasEntityType() => $_has(1);
   void clearEntityType() => clearField(2);
 
-  String get alias => $_getS(2, '');
-  set alias(String v) {
+  $core.String get alias => $_getS(2, '');
+  set alias($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasAlias() => $_has(2);
+  $core.bool hasAlias() => $_has(2);
   void clearAlias() => clearField(3);
 
-  bool get userDefined => $_get(3, false);
-  set userDefined(bool v) {
+  $core.bool get userDefined => $_get(3, false);
+  set userDefined($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasUserDefined() => $_has(3);
+  $core.bool hasUserDefined() => $_has(3);
   void clearUserDefined() => clearField(4);
 }
 
-class _ReadonlyIntent_TrainingPhrase_Part extends Intent_TrainingPhrase_Part
-    with ReadonlyMessageMixin {}
-
-class Intent_TrainingPhrase extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_TrainingPhrase')
+class Intent_TrainingPhrase extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.TrainingPhrase',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..e<Intent_TrainingPhrase_Type>(
         2,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Intent_TrainingPhrase_Type.TYPE_UNSPECIFIED,
         Intent_TrainingPhrase_Type.valueOf,
         Intent_TrainingPhrase_Type.values)
-    ..pp<Intent_TrainingPhrase_Part>(
-        3,
-        'parts',
-        PbFieldType.PM,
-        Intent_TrainingPhrase_Part.$checkItem,
-        Intent_TrainingPhrase_Part.create)
-    ..a<int>(4, 'timesAddedCount', PbFieldType.O3)
+    ..pc<Intent_TrainingPhrase_Part>(
+        3, 'parts', $pb.PbFieldType.PM, Intent_TrainingPhrase_Part.create)
+    ..a<$core.int>(4, 'timesAddedCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   Intent_TrainingPhrase() : super();
-  Intent_TrainingPhrase.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_TrainingPhrase.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_TrainingPhrase.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_TrainingPhrase.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_TrainingPhrase clone() =>
-      new Intent_TrainingPhrase()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_TrainingPhrase create() => new Intent_TrainingPhrase();
-  static PbList<Intent_TrainingPhrase> createRepeated() =>
-      new PbList<Intent_TrainingPhrase>();
-  static Intent_TrainingPhrase getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_TrainingPhrase();
-    return _defaultInstance;
-  }
-
+      Intent_TrainingPhrase()..mergeFromMessage(this);
+  Intent_TrainingPhrase copyWith(
+          void Function(Intent_TrainingPhrase) updates) =>
+      super.copyWith((message) => updates(message as Intent_TrainingPhrase));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_TrainingPhrase create() => Intent_TrainingPhrase();
+  Intent_TrainingPhrase createEmptyInstance() => create();
+  static $pb.PbList<Intent_TrainingPhrase> createRepeated() =>
+      $pb.PbList<Intent_TrainingPhrase>();
+  static Intent_TrainingPhrase getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_TrainingPhrase _defaultInstance;
-  static void $checkItem(Intent_TrainingPhrase v) {
-    if (v is! Intent_TrainingPhrase)
-      checkItemFailed(v, 'Intent_TrainingPhrase');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   Intent_TrainingPhrase_Type get type => $_getN(1);
@@ -146,25 +132,23 @@ class Intent_TrainingPhrase extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasType() => $_has(1);
+  $core.bool hasType() => $_has(1);
   void clearType() => clearField(2);
 
-  List<Intent_TrainingPhrase_Part> get parts => $_getList(2);
+  $core.List<Intent_TrainingPhrase_Part> get parts => $_getList(2);
 
-  int get timesAddedCount => $_get(3, 0);
-  set timesAddedCount(int v) {
+  $core.int get timesAddedCount => $_get(3, 0);
+  set timesAddedCount($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasTimesAddedCount() => $_has(3);
+  $core.bool hasTimesAddedCount() => $_has(3);
   void clearTimesAddedCount() => clearField(4);
 }
 
-class _ReadonlyIntent_TrainingPhrase extends Intent_TrainingPhrase
-    with ReadonlyMessageMixin {}
-
-class Intent_Parameter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Parameter')
+class Intent_Parameter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Parameter',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'value')
@@ -176,536 +160,476 @@ class Intent_Parameter extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   Intent_Parameter() : super();
-  Intent_Parameter.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Parameter.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Parameter.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Parameter.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Parameter clone() => new Intent_Parameter()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Parameter create() => new Intent_Parameter();
-  static PbList<Intent_Parameter> createRepeated() =>
-      new PbList<Intent_Parameter>();
-  static Intent_Parameter getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Parameter();
-    return _defaultInstance;
-  }
-
+  Intent_Parameter clone() => Intent_Parameter()..mergeFromMessage(this);
+  Intent_Parameter copyWith(void Function(Intent_Parameter) updates) =>
+      super.copyWith((message) => updates(message as Intent_Parameter));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Parameter create() => Intent_Parameter();
+  Intent_Parameter createEmptyInstance() => create();
+  static $pb.PbList<Intent_Parameter> createRepeated() =>
+      $pb.PbList<Intent_Parameter>();
+  static Intent_Parameter getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Parameter _defaultInstance;
-  static void $checkItem(Intent_Parameter v) {
-    if (v is! Intent_Parameter) checkItemFailed(v, 'Intent_Parameter');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDisplayName() => $_has(1);
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  String get value => $_getS(2, '');
-  set value(String v) {
+  $core.String get value => $_getS(2, '');
+  set value($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasValue() => $_has(2);
+  $core.bool hasValue() => $_has(2);
   void clearValue() => clearField(3);
 
-  String get defaultValue => $_getS(3, '');
-  set defaultValue(String v) {
+  $core.String get defaultValue => $_getS(3, '');
+  set defaultValue($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDefaultValue() => $_has(3);
+  $core.bool hasDefaultValue() => $_has(3);
   void clearDefaultValue() => clearField(4);
 
-  String get entityTypeDisplayName => $_getS(4, '');
-  set entityTypeDisplayName(String v) {
+  $core.String get entityTypeDisplayName => $_getS(4, '');
+  set entityTypeDisplayName($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasEntityTypeDisplayName() => $_has(4);
+  $core.bool hasEntityTypeDisplayName() => $_has(4);
   void clearEntityTypeDisplayName() => clearField(5);
 
-  bool get mandatory => $_get(5, false);
-  set mandatory(bool v) {
+  $core.bool get mandatory => $_get(5, false);
+  set mandatory($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasMandatory() => $_has(5);
+  $core.bool hasMandatory() => $_has(5);
   void clearMandatory() => clearField(6);
 
-  List<String> get prompts => $_getList(6);
+  $core.List<$core.String> get prompts => $_getList(6);
 
-  bool get isList => $_get(7, false);
-  set isList(bool v) {
+  $core.bool get isList => $_get(7, false);
+  set isList($core.bool v) {
     $_setBool(7, v);
   }
 
-  bool hasIsList() => $_has(7);
+  $core.bool hasIsList() => $_has(7);
   void clearIsList() => clearField(8);
 }
 
-class _ReadonlyIntent_Parameter extends Intent_Parameter
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_Text extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Text')
+class Intent_Message_Text extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message.Text',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..pPS(1, 'text')
     ..hasRequiredFields = false;
 
   Intent_Message_Text() : super();
-  Intent_Message_Text.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Text.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_Text.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Text.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Message_Text clone() =>
-      new Intent_Message_Text()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_Text create() => new Intent_Message_Text();
-  static PbList<Intent_Message_Text> createRepeated() =>
-      new PbList<Intent_Message_Text>();
-  static Intent_Message_Text getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Text();
-    return _defaultInstance;
-  }
-
+  Intent_Message_Text clone() => Intent_Message_Text()..mergeFromMessage(this);
+  Intent_Message_Text copyWith(void Function(Intent_Message_Text) updates) =>
+      super.copyWith((message) => updates(message as Intent_Message_Text));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_Text create() => Intent_Message_Text();
+  Intent_Message_Text createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_Text> createRepeated() =>
+      $pb.PbList<Intent_Message_Text>();
+  static Intent_Message_Text getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_Text _defaultInstance;
-  static void $checkItem(Intent_Message_Text v) {
-    if (v is! Intent_Message_Text) checkItemFailed(v, 'Intent_Message_Text');
-  }
 
-  List<String> get text => $_getList(0);
+  $core.List<$core.String> get text => $_getList(0);
 }
 
-class _ReadonlyIntent_Message_Text extends Intent_Message_Text
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_Image extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Image')
+class Intent_Message_Image extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message.Image',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'imageUri')
     ..aOS(2, 'accessibilityText')
     ..hasRequiredFields = false;
 
   Intent_Message_Image() : super();
-  Intent_Message_Image.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Image.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_Image.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Image.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Image clone() =>
-      new Intent_Message_Image()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_Image create() => new Intent_Message_Image();
-  static PbList<Intent_Message_Image> createRepeated() =>
-      new PbList<Intent_Message_Image>();
-  static Intent_Message_Image getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Image();
-    return _defaultInstance;
-  }
-
+      Intent_Message_Image()..mergeFromMessage(this);
+  Intent_Message_Image copyWith(void Function(Intent_Message_Image) updates) =>
+      super.copyWith((message) => updates(message as Intent_Message_Image));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_Image create() => Intent_Message_Image();
+  Intent_Message_Image createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_Image> createRepeated() =>
+      $pb.PbList<Intent_Message_Image>();
+  static Intent_Message_Image getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_Image _defaultInstance;
-  static void $checkItem(Intent_Message_Image v) {
-    if (v is! Intent_Message_Image) checkItemFailed(v, 'Intent_Message_Image');
-  }
 
-  String get imageUri => $_getS(0, '');
-  set imageUri(String v) {
+  $core.String get imageUri => $_getS(0, '');
+  set imageUri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasImageUri() => $_has(0);
+  $core.bool hasImageUri() => $_has(0);
   void clearImageUri() => clearField(1);
 
-  String get accessibilityText => $_getS(1, '');
-  set accessibilityText(String v) {
+  $core.String get accessibilityText => $_getS(1, '');
+  set accessibilityText($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasAccessibilityText() => $_has(1);
+  $core.bool hasAccessibilityText() => $_has(1);
   void clearAccessibilityText() => clearField(2);
 }
 
-class _ReadonlyIntent_Message_Image extends Intent_Message_Image
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_QuickReplies extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_QuickReplies')
+class Intent_Message_QuickReplies extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.QuickReplies',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'title')
     ..pPS(2, 'quickReplies')
     ..hasRequiredFields = false;
 
   Intent_Message_QuickReplies() : super();
-  Intent_Message_QuickReplies.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_QuickReplies.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_QuickReplies.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_QuickReplies.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_QuickReplies clone() =>
-      new Intent_Message_QuickReplies()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_QuickReplies create() =>
-      new Intent_Message_QuickReplies();
-  static PbList<Intent_Message_QuickReplies> createRepeated() =>
-      new PbList<Intent_Message_QuickReplies>();
-  static Intent_Message_QuickReplies getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_QuickReplies();
-    return _defaultInstance;
-  }
-
+      Intent_Message_QuickReplies()..mergeFromMessage(this);
+  Intent_Message_QuickReplies copyWith(
+          void Function(Intent_Message_QuickReplies) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_QuickReplies));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_QuickReplies create() => Intent_Message_QuickReplies();
+  Intent_Message_QuickReplies createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_QuickReplies> createRepeated() =>
+      $pb.PbList<Intent_Message_QuickReplies>();
+  static Intent_Message_QuickReplies getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_QuickReplies _defaultInstance;
-  static void $checkItem(Intent_Message_QuickReplies v) {
-    if (v is! Intent_Message_QuickReplies)
-      checkItemFailed(v, 'Intent_Message_QuickReplies');
-  }
 
-  String get title => $_getS(0, '');
-  set title(String v) {
+  $core.String get title => $_getS(0, '');
+  set title($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTitle() => $_has(0);
+  $core.bool hasTitle() => $_has(0);
   void clearTitle() => clearField(1);
 
-  List<String> get quickReplies => $_getList(1);
+  $core.List<$core.String> get quickReplies => $_getList(1);
 }
 
-class _ReadonlyIntent_Message_QuickReplies extends Intent_Message_QuickReplies
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_Card_Button extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Card_Button')
+class Intent_Message_Card_Button extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.Card.Button',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'text')
     ..aOS(2, 'postback')
     ..hasRequiredFields = false;
 
   Intent_Message_Card_Button() : super();
-  Intent_Message_Card_Button.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Card_Button.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_Card_Button.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Card_Button.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Card_Button clone() =>
-      new Intent_Message_Card_Button()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_Card_Button create() =>
-      new Intent_Message_Card_Button();
-  static PbList<Intent_Message_Card_Button> createRepeated() =>
-      new PbList<Intent_Message_Card_Button>();
-  static Intent_Message_Card_Button getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Card_Button();
-    return _defaultInstance;
-  }
-
+      Intent_Message_Card_Button()..mergeFromMessage(this);
+  Intent_Message_Card_Button copyWith(
+          void Function(Intent_Message_Card_Button) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_Card_Button));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_Card_Button create() => Intent_Message_Card_Button();
+  Intent_Message_Card_Button createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_Card_Button> createRepeated() =>
+      $pb.PbList<Intent_Message_Card_Button>();
+  static Intent_Message_Card_Button getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_Card_Button _defaultInstance;
-  static void $checkItem(Intent_Message_Card_Button v) {
-    if (v is! Intent_Message_Card_Button)
-      checkItemFailed(v, 'Intent_Message_Card_Button');
-  }
 
-  String get text => $_getS(0, '');
-  set text(String v) {
+  $core.String get text => $_getS(0, '');
+  set text($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasText() => $_has(0);
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
-  String get postback => $_getS(1, '');
-  set postback(String v) {
+  $core.String get postback => $_getS(1, '');
+  set postback($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPostback() => $_has(1);
+  $core.bool hasPostback() => $_has(1);
   void clearPostback() => clearField(2);
 }
 
-class _ReadonlyIntent_Message_Card_Button extends Intent_Message_Card_Button
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_Card extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Card')
+class Intent_Message_Card extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message.Card',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'title')
     ..aOS(2, 'subtitle')
     ..aOS(3, 'imageUri')
-    ..pp<Intent_Message_Card_Button>(
-        4,
-        'buttons',
-        PbFieldType.PM,
-        Intent_Message_Card_Button.$checkItem,
-        Intent_Message_Card_Button.create)
+    ..pc<Intent_Message_Card_Button>(
+        4, 'buttons', $pb.PbFieldType.PM, Intent_Message_Card_Button.create)
     ..hasRequiredFields = false;
 
   Intent_Message_Card() : super();
-  Intent_Message_Card.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Card.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_Card.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Card.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Message_Card clone() =>
-      new Intent_Message_Card()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_Card create() => new Intent_Message_Card();
-  static PbList<Intent_Message_Card> createRepeated() =>
-      new PbList<Intent_Message_Card>();
-  static Intent_Message_Card getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Card();
-    return _defaultInstance;
-  }
-
+  Intent_Message_Card clone() => Intent_Message_Card()..mergeFromMessage(this);
+  Intent_Message_Card copyWith(void Function(Intent_Message_Card) updates) =>
+      super.copyWith((message) => updates(message as Intent_Message_Card));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_Card create() => Intent_Message_Card();
+  Intent_Message_Card createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_Card> createRepeated() =>
+      $pb.PbList<Intent_Message_Card>();
+  static Intent_Message_Card getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_Card _defaultInstance;
-  static void $checkItem(Intent_Message_Card v) {
-    if (v is! Intent_Message_Card) checkItemFailed(v, 'Intent_Message_Card');
-  }
 
-  String get title => $_getS(0, '');
-  set title(String v) {
+  $core.String get title => $_getS(0, '');
+  set title($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTitle() => $_has(0);
+  $core.bool hasTitle() => $_has(0);
   void clearTitle() => clearField(1);
 
-  String get subtitle => $_getS(1, '');
-  set subtitle(String v) {
+  $core.String get subtitle => $_getS(1, '');
+  set subtitle($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasSubtitle() => $_has(1);
+  $core.bool hasSubtitle() => $_has(1);
   void clearSubtitle() => clearField(2);
 
-  String get imageUri => $_getS(2, '');
-  set imageUri(String v) {
+  $core.String get imageUri => $_getS(2, '');
+  set imageUri($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasImageUri() => $_has(2);
+  $core.bool hasImageUri() => $_has(2);
   void clearImageUri() => clearField(3);
 
-  List<Intent_Message_Card_Button> get buttons => $_getList(3);
+  $core.List<Intent_Message_Card_Button> get buttons => $_getList(3);
 }
 
-class _ReadonlyIntent_Message_Card extends Intent_Message_Card
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_SimpleResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_SimpleResponse')
+class Intent_Message_SimpleResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.SimpleResponse',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'textToSpeech')
     ..aOS(2, 'ssml')
     ..aOS(3, 'displayText')
     ..hasRequiredFields = false;
 
   Intent_Message_SimpleResponse() : super();
-  Intent_Message_SimpleResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_SimpleResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_SimpleResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_SimpleResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_SimpleResponse clone() =>
-      new Intent_Message_SimpleResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_SimpleResponse()..mergeFromMessage(this);
+  Intent_Message_SimpleResponse copyWith(
+          void Function(Intent_Message_SimpleResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_SimpleResponse));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_SimpleResponse create() =>
-      new Intent_Message_SimpleResponse();
-  static PbList<Intent_Message_SimpleResponse> createRepeated() =>
-      new PbList<Intent_Message_SimpleResponse>();
-  static Intent_Message_SimpleResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_SimpleResponse();
-    return _defaultInstance;
-  }
-
+      Intent_Message_SimpleResponse();
+  Intent_Message_SimpleResponse createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_SimpleResponse> createRepeated() =>
+      $pb.PbList<Intent_Message_SimpleResponse>();
+  static Intent_Message_SimpleResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_SimpleResponse _defaultInstance;
-  static void $checkItem(Intent_Message_SimpleResponse v) {
-    if (v is! Intent_Message_SimpleResponse)
-      checkItemFailed(v, 'Intent_Message_SimpleResponse');
-  }
 
-  String get textToSpeech => $_getS(0, '');
-  set textToSpeech(String v) {
+  $core.String get textToSpeech => $_getS(0, '');
+  set textToSpeech($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTextToSpeech() => $_has(0);
+  $core.bool hasTextToSpeech() => $_has(0);
   void clearTextToSpeech() => clearField(1);
 
-  String get ssml => $_getS(1, '');
-  set ssml(String v) {
+  $core.String get ssml => $_getS(1, '');
+  set ssml($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasSsml() => $_has(1);
+  $core.bool hasSsml() => $_has(1);
   void clearSsml() => clearField(2);
 
-  String get displayText => $_getS(2, '');
-  set displayText(String v) {
+  $core.String get displayText => $_getS(2, '');
+  set displayText($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDisplayText() => $_has(2);
+  $core.bool hasDisplayText() => $_has(2);
   void clearDisplayText() => clearField(3);
 }
 
-class _ReadonlyIntent_Message_SimpleResponse
-    extends Intent_Message_SimpleResponse with ReadonlyMessageMixin {}
-
-class Intent_Message_SimpleResponses extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_SimpleResponses')
-        ..pp<Intent_Message_SimpleResponse>(
-            1,
-            'simpleResponses',
-            PbFieldType.PM,
-            Intent_Message_SimpleResponse.$checkItem,
-            Intent_Message_SimpleResponse.create)
-        ..hasRequiredFields = false;
+class Intent_Message_SimpleResponses extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.SimpleResponses',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<Intent_Message_SimpleResponse>(1, 'simpleResponses',
+        $pb.PbFieldType.PM, Intent_Message_SimpleResponse.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_SimpleResponses() : super();
-  Intent_Message_SimpleResponses.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_SimpleResponses.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_SimpleResponses.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_SimpleResponses.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_SimpleResponses clone() =>
-      new Intent_Message_SimpleResponses()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_SimpleResponses()..mergeFromMessage(this);
+  Intent_Message_SimpleResponses copyWith(
+          void Function(Intent_Message_SimpleResponses) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_SimpleResponses));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_SimpleResponses create() =>
-      new Intent_Message_SimpleResponses();
-  static PbList<Intent_Message_SimpleResponses> createRepeated() =>
-      new PbList<Intent_Message_SimpleResponses>();
-  static Intent_Message_SimpleResponses getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_SimpleResponses();
-    return _defaultInstance;
-  }
-
+      Intent_Message_SimpleResponses();
+  Intent_Message_SimpleResponses createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_SimpleResponses> createRepeated() =>
+      $pb.PbList<Intent_Message_SimpleResponses>();
+  static Intent_Message_SimpleResponses getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_SimpleResponses _defaultInstance;
-  static void $checkItem(Intent_Message_SimpleResponses v) {
-    if (v is! Intent_Message_SimpleResponses)
-      checkItemFailed(v, 'Intent_Message_SimpleResponses');
-  }
 
-  List<Intent_Message_SimpleResponse> get simpleResponses => $_getList(0);
+  $core.List<Intent_Message_SimpleResponse> get simpleResponses => $_getList(0);
 }
 
-class _ReadonlyIntent_Message_SimpleResponses
-    extends Intent_Message_SimpleResponses with ReadonlyMessageMixin {}
-
-class Intent_Message_BasicCard_Button_OpenUriAction extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_BasicCard_Button_OpenUriAction')
-        ..aOS(1, 'uri')
-        ..hasRequiredFields = false;
+class Intent_Message_BasicCard_Button_OpenUriAction
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.BasicCard.Button.OpenUriAction',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOS(1, 'uri')
+    ..hasRequiredFields = false;
 
   Intent_Message_BasicCard_Button_OpenUriAction() : super();
-  Intent_Message_BasicCard_Button_OpenUriAction.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_BasicCard_Button_OpenUriAction.fromBuffer(
+      $core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_BasicCard_Button_OpenUriAction.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_BasicCard_Button_OpenUriAction.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_BasicCard_Button_OpenUriAction clone() =>
-      new Intent_Message_BasicCard_Button_OpenUriAction()
-        ..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_BasicCard_Button_OpenUriAction()..mergeFromMessage(this);
+  Intent_Message_BasicCard_Button_OpenUriAction copyWith(
+          void Function(Intent_Message_BasicCard_Button_OpenUriAction)
+              updates) =>
+      super.copyWith((message) =>
+          updates(message as Intent_Message_BasicCard_Button_OpenUriAction));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_BasicCard_Button_OpenUriAction create() =>
-      new Intent_Message_BasicCard_Button_OpenUriAction();
-  static PbList<Intent_Message_BasicCard_Button_OpenUriAction>
+      Intent_Message_BasicCard_Button_OpenUriAction();
+  Intent_Message_BasicCard_Button_OpenUriAction createEmptyInstance() =>
+      create();
+  static $pb.PbList<Intent_Message_BasicCard_Button_OpenUriAction>
       createRepeated() =>
-          new PbList<Intent_Message_BasicCard_Button_OpenUriAction>();
-  static Intent_Message_BasicCard_Button_OpenUriAction getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyIntent_Message_BasicCard_Button_OpenUriAction();
-    return _defaultInstance;
-  }
-
+          $pb.PbList<Intent_Message_BasicCard_Button_OpenUriAction>();
+  static Intent_Message_BasicCard_Button_OpenUriAction getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_BasicCard_Button_OpenUriAction _defaultInstance;
-  static void $checkItem(Intent_Message_BasicCard_Button_OpenUriAction v) {
-    if (v is! Intent_Message_BasicCard_Button_OpenUriAction)
-      checkItemFailed(v, 'Intent_Message_BasicCard_Button_OpenUriAction');
-  }
 
-  String get uri => $_getS(0, '');
-  set uri(String v) {
+  $core.String get uri => $_getS(0, '');
+  set uri($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasUri() => $_has(0);
+  $core.bool hasUri() => $_has(0);
   void clearUri() => clearField(1);
 }
 
-class _ReadonlyIntent_Message_BasicCard_Button_OpenUriAction
-    extends Intent_Message_BasicCard_Button_OpenUriAction
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_BasicCard_Button extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_BasicCard_Button')
-        ..aOS(1, 'title')
-        ..a<Intent_Message_BasicCard_Button_OpenUriAction>(
-            2,
-            'openUriAction',
-            PbFieldType.OM,
-            Intent_Message_BasicCard_Button_OpenUriAction.getDefault,
-            Intent_Message_BasicCard_Button_OpenUriAction.create)
-        ..hasRequiredFields = false;
+class Intent_Message_BasicCard_Button extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.BasicCard.Button',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOS(1, 'title')
+    ..a<Intent_Message_BasicCard_Button_OpenUriAction>(
+        2,
+        'openUriAction',
+        $pb.PbFieldType.OM,
+        Intent_Message_BasicCard_Button_OpenUriAction.getDefault,
+        Intent_Message_BasicCard_Button_OpenUriAction.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_BasicCard_Button() : super();
-  Intent_Message_BasicCard_Button.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_BasicCard_Button.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_BasicCard_Button.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_BasicCard_Button.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_BasicCard_Button clone() =>
-      new Intent_Message_BasicCard_Button()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_BasicCard_Button()..mergeFromMessage(this);
+  Intent_Message_BasicCard_Button copyWith(
+          void Function(Intent_Message_BasicCard_Button) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_BasicCard_Button));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_BasicCard_Button create() =>
-      new Intent_Message_BasicCard_Button();
-  static PbList<Intent_Message_BasicCard_Button> createRepeated() =>
-      new PbList<Intent_Message_BasicCard_Button>();
-  static Intent_Message_BasicCard_Button getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_BasicCard_Button();
-    return _defaultInstance;
-  }
-
+      Intent_Message_BasicCard_Button();
+  Intent_Message_BasicCard_Button createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_BasicCard_Button> createRepeated() =>
+      $pb.PbList<Intent_Message_BasicCard_Button>();
+  static Intent_Message_BasicCard_Button getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_BasicCard_Button _defaultInstance;
-  static void $checkItem(Intent_Message_BasicCard_Button v) {
-    if (v is! Intent_Message_BasicCard_Button)
-      checkItemFailed(v, 'Intent_Message_BasicCard_Button');
-  }
 
-  String get title => $_getS(0, '');
-  set title(String v) {
+  $core.String get title => $_getS(0, '');
+  set title($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTitle() => $_has(0);
+  $core.bool hasTitle() => $_has(0);
   void clearTitle() => clearField(1);
 
   Intent_Message_BasicCard_Button_OpenUriAction get openUriAction => $_getN(1);
@@ -713,75 +637,65 @@ class Intent_Message_BasicCard_Button extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasOpenUriAction() => $_has(1);
+  $core.bool hasOpenUriAction() => $_has(1);
   void clearOpenUriAction() => clearField(2);
 }
 
-class _ReadonlyIntent_Message_BasicCard_Button
-    extends Intent_Message_BasicCard_Button with ReadonlyMessageMixin {}
-
-class Intent_Message_BasicCard extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_BasicCard')
+class Intent_Message_BasicCard extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message.BasicCard',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'title')
     ..aOS(2, 'subtitle')
     ..aOS(3, 'formattedText')
-    ..a<Intent_Message_Image>(4, 'image', PbFieldType.OM,
+    ..a<Intent_Message_Image>(4, 'image', $pb.PbFieldType.OM,
         Intent_Message_Image.getDefault, Intent_Message_Image.create)
-    ..pp<Intent_Message_BasicCard_Button>(
-        5,
-        'buttons',
-        PbFieldType.PM,
-        Intent_Message_BasicCard_Button.$checkItem,
+    ..pc<Intent_Message_BasicCard_Button>(5, 'buttons', $pb.PbFieldType.PM,
         Intent_Message_BasicCard_Button.create)
     ..hasRequiredFields = false;
 
   Intent_Message_BasicCard() : super();
-  Intent_Message_BasicCard.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_BasicCard.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_BasicCard.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_BasicCard.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_BasicCard clone() =>
-      new Intent_Message_BasicCard()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_BasicCard create() => new Intent_Message_BasicCard();
-  static PbList<Intent_Message_BasicCard> createRepeated() =>
-      new PbList<Intent_Message_BasicCard>();
-  static Intent_Message_BasicCard getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_BasicCard();
-    return _defaultInstance;
-  }
-
+      Intent_Message_BasicCard()..mergeFromMessage(this);
+  Intent_Message_BasicCard copyWith(
+          void Function(Intent_Message_BasicCard) updates) =>
+      super.copyWith((message) => updates(message as Intent_Message_BasicCard));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_BasicCard create() => Intent_Message_BasicCard();
+  Intent_Message_BasicCard createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_BasicCard> createRepeated() =>
+      $pb.PbList<Intent_Message_BasicCard>();
+  static Intent_Message_BasicCard getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_BasicCard _defaultInstance;
-  static void $checkItem(Intent_Message_BasicCard v) {
-    if (v is! Intent_Message_BasicCard)
-      checkItemFailed(v, 'Intent_Message_BasicCard');
-  }
 
-  String get title => $_getS(0, '');
-  set title(String v) {
+  $core.String get title => $_getS(0, '');
+  set title($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTitle() => $_has(0);
+  $core.bool hasTitle() => $_has(0);
   void clearTitle() => clearField(1);
 
-  String get subtitle => $_getS(1, '');
-  set subtitle(String v) {
+  $core.String get subtitle => $_getS(1, '');
+  set subtitle($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasSubtitle() => $_has(1);
+  $core.bool hasSubtitle() => $_has(1);
   void clearSubtitle() => clearField(2);
 
-  String get formattedText => $_getS(2, '');
-  set formattedText(String v) {
+  $core.String get formattedText => $_getS(2, '');
+  set formattedText($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasFormattedText() => $_has(2);
+  $core.bool hasFormattedText() => $_has(2);
   void clearFormattedText() => clearField(3);
 
   Intent_Message_Image get image => $_getN(3);
@@ -789,211 +703,191 @@ class Intent_Message_BasicCard extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasImage() => $_has(3);
+  $core.bool hasImage() => $_has(3);
   void clearImage() => clearField(4);
 
-  List<Intent_Message_BasicCard_Button> get buttons => $_getList(4);
+  $core.List<Intent_Message_BasicCard_Button> get buttons => $_getList(4);
 }
 
-class _ReadonlyIntent_Message_BasicCard extends Intent_Message_BasicCard
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_Suggestion extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Suggestion')
+class Intent_Message_Suggestion extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message.Suggestion',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'title')
     ..hasRequiredFields = false;
 
   Intent_Message_Suggestion() : super();
-  Intent_Message_Suggestion.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Suggestion.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_Suggestion.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Suggestion.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Suggestion clone() =>
-      new Intent_Message_Suggestion()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_Suggestion create() => new Intent_Message_Suggestion();
-  static PbList<Intent_Message_Suggestion> createRepeated() =>
-      new PbList<Intent_Message_Suggestion>();
-  static Intent_Message_Suggestion getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Suggestion();
-    return _defaultInstance;
-  }
-
+      Intent_Message_Suggestion()..mergeFromMessage(this);
+  Intent_Message_Suggestion copyWith(
+          void Function(Intent_Message_Suggestion) updates) =>
+      super
+          .copyWith((message) => updates(message as Intent_Message_Suggestion));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_Suggestion create() => Intent_Message_Suggestion();
+  Intent_Message_Suggestion createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_Suggestion> createRepeated() =>
+      $pb.PbList<Intent_Message_Suggestion>();
+  static Intent_Message_Suggestion getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_Suggestion _defaultInstance;
-  static void $checkItem(Intent_Message_Suggestion v) {
-    if (v is! Intent_Message_Suggestion)
-      checkItemFailed(v, 'Intent_Message_Suggestion');
-  }
 
-  String get title => $_getS(0, '');
-  set title(String v) {
+  $core.String get title => $_getS(0, '');
+  set title($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTitle() => $_has(0);
+  $core.bool hasTitle() => $_has(0);
   void clearTitle() => clearField(1);
 }
 
-class _ReadonlyIntent_Message_Suggestion extends Intent_Message_Suggestion
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_Suggestions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_Suggestions')
-    ..pp<Intent_Message_Suggestion>(1, 'suggestions', PbFieldType.PM,
-        Intent_Message_Suggestion.$checkItem, Intent_Message_Suggestion.create)
+class Intent_Message_Suggestions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.Suggestions',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<Intent_Message_Suggestion>(
+        1, 'suggestions', $pb.PbFieldType.PM, Intent_Message_Suggestion.create)
     ..hasRequiredFields = false;
 
   Intent_Message_Suggestions() : super();
-  Intent_Message_Suggestions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Suggestions.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_Suggestions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_Suggestions.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_Suggestions clone() =>
-      new Intent_Message_Suggestions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_Suggestions create() =>
-      new Intent_Message_Suggestions();
-  static PbList<Intent_Message_Suggestions> createRepeated() =>
-      new PbList<Intent_Message_Suggestions>();
-  static Intent_Message_Suggestions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_Suggestions();
-    return _defaultInstance;
-  }
-
+      Intent_Message_Suggestions()..mergeFromMessage(this);
+  Intent_Message_Suggestions copyWith(
+          void Function(Intent_Message_Suggestions) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_Suggestions));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_Suggestions create() => Intent_Message_Suggestions();
+  Intent_Message_Suggestions createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_Suggestions> createRepeated() =>
+      $pb.PbList<Intent_Message_Suggestions>();
+  static Intent_Message_Suggestions getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_Suggestions _defaultInstance;
-  static void $checkItem(Intent_Message_Suggestions v) {
-    if (v is! Intent_Message_Suggestions)
-      checkItemFailed(v, 'Intent_Message_Suggestions');
-  }
 
-  List<Intent_Message_Suggestion> get suggestions => $_getList(0);
+  $core.List<Intent_Message_Suggestion> get suggestions => $_getList(0);
 }
 
-class _ReadonlyIntent_Message_Suggestions extends Intent_Message_Suggestions
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_LinkOutSuggestion extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_LinkOutSuggestion')
-        ..aOS(1, 'destinationName')
-        ..aOS(2, 'uri')
-        ..hasRequiredFields = false;
+class Intent_Message_LinkOutSuggestion extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.LinkOutSuggestion',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..aOS(1, 'destinationName')
+    ..aOS(2, 'uri')
+    ..hasRequiredFields = false;
 
   Intent_Message_LinkOutSuggestion() : super();
-  Intent_Message_LinkOutSuggestion.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_LinkOutSuggestion.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_LinkOutSuggestion.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_LinkOutSuggestion.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_LinkOutSuggestion clone() =>
-      new Intent_Message_LinkOutSuggestion()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_LinkOutSuggestion()..mergeFromMessage(this);
+  Intent_Message_LinkOutSuggestion copyWith(
+          void Function(Intent_Message_LinkOutSuggestion) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_LinkOutSuggestion));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_LinkOutSuggestion create() =>
-      new Intent_Message_LinkOutSuggestion();
-  static PbList<Intent_Message_LinkOutSuggestion> createRepeated() =>
-      new PbList<Intent_Message_LinkOutSuggestion>();
-  static Intent_Message_LinkOutSuggestion getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_LinkOutSuggestion();
-    return _defaultInstance;
-  }
-
+      Intent_Message_LinkOutSuggestion();
+  Intent_Message_LinkOutSuggestion createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_LinkOutSuggestion> createRepeated() =>
+      $pb.PbList<Intent_Message_LinkOutSuggestion>();
+  static Intent_Message_LinkOutSuggestion getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_LinkOutSuggestion _defaultInstance;
-  static void $checkItem(Intent_Message_LinkOutSuggestion v) {
-    if (v is! Intent_Message_LinkOutSuggestion)
-      checkItemFailed(v, 'Intent_Message_LinkOutSuggestion');
-  }
 
-  String get destinationName => $_getS(0, '');
-  set destinationName(String v) {
+  $core.String get destinationName => $_getS(0, '');
+  set destinationName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDestinationName() => $_has(0);
+  $core.bool hasDestinationName() => $_has(0);
   void clearDestinationName() => clearField(1);
 
-  String get uri => $_getS(1, '');
-  set uri(String v) {
+  $core.String get uri => $_getS(1, '');
+  set uri($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasUri() => $_has(1);
+  $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 }
 
-class _ReadonlyIntent_Message_LinkOutSuggestion
-    extends Intent_Message_LinkOutSuggestion with ReadonlyMessageMixin {}
-
-class Intent_Message_ListSelect_Item extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_ListSelect_Item')
-        ..a<Intent_Message_SelectItemInfo>(
-            1,
-            'info',
-            PbFieldType.OM,
-            Intent_Message_SelectItemInfo.getDefault,
-            Intent_Message_SelectItemInfo.create)
-        ..aOS(2, 'title')
-        ..aOS(3, 'description')
-        ..a<Intent_Message_Image>(4, 'image', PbFieldType.OM,
-            Intent_Message_Image.getDefault, Intent_Message_Image.create)
-        ..hasRequiredFields = false;
+class Intent_Message_ListSelect_Item extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.ListSelect.Item',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<Intent_Message_SelectItemInfo>(
+        1,
+        'info',
+        $pb.PbFieldType.OM,
+        Intent_Message_SelectItemInfo.getDefault,
+        Intent_Message_SelectItemInfo.create)
+    ..aOS(2, 'title')
+    ..aOS(3, 'description')
+    ..a<Intent_Message_Image>(4, 'image', $pb.PbFieldType.OM,
+        Intent_Message_Image.getDefault, Intent_Message_Image.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_ListSelect_Item() : super();
-  Intent_Message_ListSelect_Item.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_ListSelect_Item.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_ListSelect_Item.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_ListSelect_Item.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_ListSelect_Item clone() =>
-      new Intent_Message_ListSelect_Item()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_ListSelect_Item()..mergeFromMessage(this);
+  Intent_Message_ListSelect_Item copyWith(
+          void Function(Intent_Message_ListSelect_Item) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_ListSelect_Item));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_ListSelect_Item create() =>
-      new Intent_Message_ListSelect_Item();
-  static PbList<Intent_Message_ListSelect_Item> createRepeated() =>
-      new PbList<Intent_Message_ListSelect_Item>();
-  static Intent_Message_ListSelect_Item getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_ListSelect_Item();
-    return _defaultInstance;
-  }
-
+      Intent_Message_ListSelect_Item();
+  Intent_Message_ListSelect_Item createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_ListSelect_Item> createRepeated() =>
+      $pb.PbList<Intent_Message_ListSelect_Item>();
+  static Intent_Message_ListSelect_Item getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_ListSelect_Item _defaultInstance;
-  static void $checkItem(Intent_Message_ListSelect_Item v) {
-    if (v is! Intent_Message_ListSelect_Item)
-      checkItemFailed(v, 'Intent_Message_ListSelect_Item');
-  }
 
   Intent_Message_SelectItemInfo get info => $_getN(0);
   set info(Intent_Message_SelectItemInfo v) {
     setField(1, v);
   }
 
-  bool hasInfo() => $_has(0);
+  $core.bool hasInfo() => $_has(0);
   void clearInfo() => clearField(1);
 
-  String get title => $_getS(1, '');
-  set title(String v) {
+  $core.String get title => $_getS(1, '');
+  set title($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTitle() => $_has(1);
+  $core.bool hasTitle() => $_has(1);
   void clearTitle() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
   Intent_Message_Image get image => $_getN(3);
@@ -1001,126 +895,112 @@ class Intent_Message_ListSelect_Item extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasImage() => $_has(3);
+  $core.bool hasImage() => $_has(3);
   void clearImage() => clearField(4);
 }
 
-class _ReadonlyIntent_Message_ListSelect_Item
-    extends Intent_Message_ListSelect_Item with ReadonlyMessageMixin {}
-
-class Intent_Message_ListSelect extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_ListSelect')
+class Intent_Message_ListSelect extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message.ListSelect',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'title')
-    ..pp<Intent_Message_ListSelect_Item>(
-        2,
-        'items',
-        PbFieldType.PM,
-        Intent_Message_ListSelect_Item.$checkItem,
-        Intent_Message_ListSelect_Item.create)
+    ..pc<Intent_Message_ListSelect_Item>(
+        2, 'items', $pb.PbFieldType.PM, Intent_Message_ListSelect_Item.create)
     ..hasRequiredFields = false;
 
   Intent_Message_ListSelect() : super();
-  Intent_Message_ListSelect.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_ListSelect.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_ListSelect.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_ListSelect.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_ListSelect clone() =>
-      new Intent_Message_ListSelect()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message_ListSelect create() => new Intent_Message_ListSelect();
-  static PbList<Intent_Message_ListSelect> createRepeated() =>
-      new PbList<Intent_Message_ListSelect>();
-  static Intent_Message_ListSelect getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_ListSelect();
-    return _defaultInstance;
-  }
-
+      Intent_Message_ListSelect()..mergeFromMessage(this);
+  Intent_Message_ListSelect copyWith(
+          void Function(Intent_Message_ListSelect) updates) =>
+      super
+          .copyWith((message) => updates(message as Intent_Message_ListSelect));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message_ListSelect create() => Intent_Message_ListSelect();
+  Intent_Message_ListSelect createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_ListSelect> createRepeated() =>
+      $pb.PbList<Intent_Message_ListSelect>();
+  static Intent_Message_ListSelect getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_ListSelect _defaultInstance;
-  static void $checkItem(Intent_Message_ListSelect v) {
-    if (v is! Intent_Message_ListSelect)
-      checkItemFailed(v, 'Intent_Message_ListSelect');
-  }
 
-  String get title => $_getS(0, '');
-  set title(String v) {
+  $core.String get title => $_getS(0, '');
+  set title($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTitle() => $_has(0);
+  $core.bool hasTitle() => $_has(0);
   void clearTitle() => clearField(1);
 
-  List<Intent_Message_ListSelect_Item> get items => $_getList(1);
+  $core.List<Intent_Message_ListSelect_Item> get items => $_getList(1);
 }
 
-class _ReadonlyIntent_Message_ListSelect extends Intent_Message_ListSelect
-    with ReadonlyMessageMixin {}
-
-class Intent_Message_CarouselSelect_Item extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('Intent_Message_CarouselSelect_Item')
-        ..a<Intent_Message_SelectItemInfo>(
-            1,
-            'info',
-            PbFieldType.OM,
-            Intent_Message_SelectItemInfo.getDefault,
-            Intent_Message_SelectItemInfo.create)
-        ..aOS(2, 'title')
-        ..aOS(3, 'description')
-        ..a<Intent_Message_Image>(4, 'image', PbFieldType.OM,
-            Intent_Message_Image.getDefault, Intent_Message_Image.create)
-        ..hasRequiredFields = false;
+class Intent_Message_CarouselSelect_Item extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.CarouselSelect.Item',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<Intent_Message_SelectItemInfo>(
+        1,
+        'info',
+        $pb.PbFieldType.OM,
+        Intent_Message_SelectItemInfo.getDefault,
+        Intent_Message_SelectItemInfo.create)
+    ..aOS(2, 'title')
+    ..aOS(3, 'description')
+    ..a<Intent_Message_Image>(4, 'image', $pb.PbFieldType.OM,
+        Intent_Message_Image.getDefault, Intent_Message_Image.create)
+    ..hasRequiredFields = false;
 
   Intent_Message_CarouselSelect_Item() : super();
-  Intent_Message_CarouselSelect_Item.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_CarouselSelect_Item.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_CarouselSelect_Item.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_CarouselSelect_Item.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_CarouselSelect_Item clone() =>
-      new Intent_Message_CarouselSelect_Item()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_CarouselSelect_Item()..mergeFromMessage(this);
+  Intent_Message_CarouselSelect_Item copyWith(
+          void Function(Intent_Message_CarouselSelect_Item) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_CarouselSelect_Item));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_CarouselSelect_Item create() =>
-      new Intent_Message_CarouselSelect_Item();
-  static PbList<Intent_Message_CarouselSelect_Item> createRepeated() =>
-      new PbList<Intent_Message_CarouselSelect_Item>();
-  static Intent_Message_CarouselSelect_Item getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_CarouselSelect_Item();
-    return _defaultInstance;
-  }
-
+      Intent_Message_CarouselSelect_Item();
+  Intent_Message_CarouselSelect_Item createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_CarouselSelect_Item> createRepeated() =>
+      $pb.PbList<Intent_Message_CarouselSelect_Item>();
+  static Intent_Message_CarouselSelect_Item getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_CarouselSelect_Item _defaultInstance;
-  static void $checkItem(Intent_Message_CarouselSelect_Item v) {
-    if (v is! Intent_Message_CarouselSelect_Item)
-      checkItemFailed(v, 'Intent_Message_CarouselSelect_Item');
-  }
 
   Intent_Message_SelectItemInfo get info => $_getN(0);
   set info(Intent_Message_SelectItemInfo v) {
     setField(1, v);
   }
 
-  bool hasInfo() => $_has(0);
+  $core.bool hasInfo() => $_has(0);
   void clearInfo() => clearField(1);
 
-  String get title => $_getS(1, '');
-  set title(String v) {
+  $core.String get title => $_getS(1, '');
+  set title($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasTitle() => $_has(1);
+  $core.bool hasTitle() => $_has(1);
   void clearTitle() => clearField(2);
 
-  String get description => $_getS(2, '');
-  set description(String v) {
+  $core.String get description => $_getS(2, '');
+  set description($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDescription() => $_has(2);
+  $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
   Intent_Message_Image get image => $_getN(3);
@@ -1128,183 +1008,199 @@ class Intent_Message_CarouselSelect_Item extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasImage() => $_has(3);
+  $core.bool hasImage() => $_has(3);
   void clearImage() => clearField(4);
 }
 
-class _ReadonlyIntent_Message_CarouselSelect_Item
-    extends Intent_Message_CarouselSelect_Item with ReadonlyMessageMixin {}
-
-class Intent_Message_CarouselSelect extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_CarouselSelect')
-    ..pp<Intent_Message_CarouselSelect_Item>(
-        1,
-        'items',
-        PbFieldType.PM,
-        Intent_Message_CarouselSelect_Item.$checkItem,
+class Intent_Message_CarouselSelect extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.CarouselSelect',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<Intent_Message_CarouselSelect_Item>(1, 'items', $pb.PbFieldType.PM,
         Intent_Message_CarouselSelect_Item.create)
     ..hasRequiredFields = false;
 
   Intent_Message_CarouselSelect() : super();
-  Intent_Message_CarouselSelect.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_CarouselSelect.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_CarouselSelect.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_CarouselSelect.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_CarouselSelect clone() =>
-      new Intent_Message_CarouselSelect()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_CarouselSelect()..mergeFromMessage(this);
+  Intent_Message_CarouselSelect copyWith(
+          void Function(Intent_Message_CarouselSelect) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_CarouselSelect));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_CarouselSelect create() =>
-      new Intent_Message_CarouselSelect();
-  static PbList<Intent_Message_CarouselSelect> createRepeated() =>
-      new PbList<Intent_Message_CarouselSelect>();
-  static Intent_Message_CarouselSelect getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_CarouselSelect();
-    return _defaultInstance;
-  }
-
+      Intent_Message_CarouselSelect();
+  Intent_Message_CarouselSelect createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_CarouselSelect> createRepeated() =>
+      $pb.PbList<Intent_Message_CarouselSelect>();
+  static Intent_Message_CarouselSelect getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_CarouselSelect _defaultInstance;
-  static void $checkItem(Intent_Message_CarouselSelect v) {
-    if (v is! Intent_Message_CarouselSelect)
-      checkItemFailed(v, 'Intent_Message_CarouselSelect');
-  }
 
-  List<Intent_Message_CarouselSelect_Item> get items => $_getList(0);
+  $core.List<Intent_Message_CarouselSelect_Item> get items => $_getList(0);
 }
 
-class _ReadonlyIntent_Message_CarouselSelect
-    extends Intent_Message_CarouselSelect with ReadonlyMessageMixin {}
-
-class Intent_Message_SelectItemInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message_SelectItemInfo')
+class Intent_Message_SelectItemInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Intent.Message.SelectItemInfo',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'key')
     ..pPS(2, 'synonyms')
     ..hasRequiredFields = false;
 
   Intent_Message_SelectItemInfo() : super();
-  Intent_Message_SelectItemInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_SelectItemInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message_SelectItemInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message_SelectItemInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_Message_SelectItemInfo clone() =>
-      new Intent_Message_SelectItemInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      Intent_Message_SelectItemInfo()..mergeFromMessage(this);
+  Intent_Message_SelectItemInfo copyWith(
+          void Function(Intent_Message_SelectItemInfo) updates) =>
+      super.copyWith(
+          (message) => updates(message as Intent_Message_SelectItemInfo));
+  $pb.BuilderInfo get info_ => _i;
   static Intent_Message_SelectItemInfo create() =>
-      new Intent_Message_SelectItemInfo();
-  static PbList<Intent_Message_SelectItemInfo> createRepeated() =>
-      new PbList<Intent_Message_SelectItemInfo>();
-  static Intent_Message_SelectItemInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message_SelectItemInfo();
-    return _defaultInstance;
-  }
-
+      Intent_Message_SelectItemInfo();
+  Intent_Message_SelectItemInfo createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message_SelectItemInfo> createRepeated() =>
+      $pb.PbList<Intent_Message_SelectItemInfo>();
+  static Intent_Message_SelectItemInfo getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_Message_SelectItemInfo _defaultInstance;
-  static void $checkItem(Intent_Message_SelectItemInfo v) {
-    if (v is! Intent_Message_SelectItemInfo)
-      checkItemFailed(v, 'Intent_Message_SelectItemInfo');
-  }
 
-  String get key => $_getS(0, '');
-  set key(String v) {
+  $core.String get key => $_getS(0, '');
+  set key($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasKey() => $_has(0);
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  List<String> get synonyms => $_getList(1);
+  $core.List<$core.String> get synonyms => $_getList(1);
 }
 
-class _ReadonlyIntent_Message_SelectItemInfo
-    extends Intent_Message_SelectItemInfo with ReadonlyMessageMixin {}
+enum Intent_Message_Message {
+  text,
+  image,
+  quickReplies,
+  card,
+  payload,
+  simpleResponses,
+  basicCard,
+  suggestions,
+  linkOutSuggestion,
+  listSelect,
+  carouselSelect,
+  notSet
+}
 
-class Intent_Message extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_Message')
-    ..a<Intent_Message_Text>(1, 'text', PbFieldType.OM,
+class Intent_Message extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Intent_Message_Message>
+      _Intent_Message_MessageByTag = {
+    1: Intent_Message_Message.text,
+    2: Intent_Message_Message.image,
+    3: Intent_Message_Message.quickReplies,
+    4: Intent_Message_Message.card,
+    5: Intent_Message_Message.payload,
+    7: Intent_Message_Message.simpleResponses,
+    8: Intent_Message_Message.basicCard,
+    9: Intent_Message_Message.suggestions,
+    10: Intent_Message_Message.linkOutSuggestion,
+    11: Intent_Message_Message.listSelect,
+    12: Intent_Message_Message.carouselSelect,
+    0: Intent_Message_Message.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<Intent_Message_Text>(1, 'text', $pb.PbFieldType.OM,
         Intent_Message_Text.getDefault, Intent_Message_Text.create)
-    ..a<Intent_Message_Image>(2, 'image', PbFieldType.OM,
+    ..a<Intent_Message_Image>(2, 'image', $pb.PbFieldType.OM,
         Intent_Message_Image.getDefault, Intent_Message_Image.create)
     ..a<Intent_Message_QuickReplies>(
         3,
         'quickReplies',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         Intent_Message_QuickReplies.getDefault,
         Intent_Message_QuickReplies.create)
-    ..a<Intent_Message_Card>(4, 'card', PbFieldType.OM,
+    ..a<Intent_Message_Card>(4, 'card', $pb.PbFieldType.OM,
         Intent_Message_Card.getDefault, Intent_Message_Card.create)
-    ..a<$google$protobuf.Struct>(5, 'payload', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
+    ..a<$3.Struct>(5, 'payload', $pb.PbFieldType.OM, $3.Struct.getDefault,
+        $3.Struct.create)
     ..e<Intent_Message_Platform>(
         6,
         'platform',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Intent_Message_Platform.PLATFORM_UNSPECIFIED,
         Intent_Message_Platform.valueOf,
         Intent_Message_Platform.values)
     ..a<Intent_Message_SimpleResponses>(
         7,
         'simpleResponses',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         Intent_Message_SimpleResponses.getDefault,
         Intent_Message_SimpleResponses.create)
-    ..a<Intent_Message_BasicCard>(8, 'basicCard', PbFieldType.OM,
+    ..a<Intent_Message_BasicCard>(8, 'basicCard', $pb.PbFieldType.OM,
         Intent_Message_BasicCard.getDefault, Intent_Message_BasicCard.create)
     ..a<Intent_Message_Suggestions>(
         9,
         'suggestions',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         Intent_Message_Suggestions.getDefault,
         Intent_Message_Suggestions.create)
     ..a<Intent_Message_LinkOutSuggestion>(
         10,
         'linkOutSuggestion',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         Intent_Message_LinkOutSuggestion.getDefault,
         Intent_Message_LinkOutSuggestion.create)
-    ..a<Intent_Message_ListSelect>(11, 'listSelect', PbFieldType.OM,
+    ..a<Intent_Message_ListSelect>(11, 'listSelect', $pb.PbFieldType.OM,
         Intent_Message_ListSelect.getDefault, Intent_Message_ListSelect.create)
     ..a<Intent_Message_CarouselSelect>(
         12,
         'carouselSelect',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         Intent_Message_CarouselSelect.getDefault,
         Intent_Message_CarouselSelect.create)
+    ..oo(0, [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12])
     ..hasRequiredFields = false;
 
   Intent_Message() : super();
-  Intent_Message.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_Message.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_Message.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent_Message clone() => new Intent_Message()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_Message create() => new Intent_Message();
-  static PbList<Intent_Message> createRepeated() =>
-      new PbList<Intent_Message>();
-  static Intent_Message getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_Message();
-    return _defaultInstance;
-  }
-
+  Intent_Message clone() => Intent_Message()..mergeFromMessage(this);
+  Intent_Message copyWith(void Function(Intent_Message) updates) =>
+      super.copyWith((message) => updates(message as Intent_Message));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_Message create() => Intent_Message();
+  Intent_Message createEmptyInstance() => create();
+  static $pb.PbList<Intent_Message> createRepeated() =>
+      $pb.PbList<Intent_Message>();
+  static Intent_Message getDefault() => _defaultInstance ??= create()..freeze();
   static Intent_Message _defaultInstance;
-  static void $checkItem(Intent_Message v) {
-    if (v is! Intent_Message) checkItemFailed(v, 'Intent_Message');
-  }
+
+  Intent_Message_Message whichMessage() =>
+      _Intent_Message_MessageByTag[$_whichOneof(0)];
+  void clearMessage() => clearField($_whichOneof(0));
 
   Intent_Message_Text get text => $_getN(0);
   set text(Intent_Message_Text v) {
     setField(1, v);
   }
 
-  bool hasText() => $_has(0);
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
   Intent_Message_Image get image => $_getN(1);
@@ -1312,7 +1208,7 @@ class Intent_Message extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasImage() => $_has(1);
+  $core.bool hasImage() => $_has(1);
   void clearImage() => clearField(2);
 
   Intent_Message_QuickReplies get quickReplies => $_getN(2);
@@ -1320,7 +1216,7 @@ class Intent_Message extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasQuickReplies() => $_has(2);
+  $core.bool hasQuickReplies() => $_has(2);
   void clearQuickReplies() => clearField(3);
 
   Intent_Message_Card get card => $_getN(3);
@@ -1328,15 +1224,15 @@ class Intent_Message extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasCard() => $_has(3);
+  $core.bool hasCard() => $_has(3);
   void clearCard() => clearField(4);
 
-  $google$protobuf.Struct get payload => $_getN(4);
-  set payload($google$protobuf.Struct v) {
+  $3.Struct get payload => $_getN(4);
+  set payload($3.Struct v) {
     setField(5, v);
   }
 
-  bool hasPayload() => $_has(4);
+  $core.bool hasPayload() => $_has(4);
   void clearPayload() => clearField(5);
 
   Intent_Message_Platform get platform => $_getN(5);
@@ -1344,7 +1240,7 @@ class Intent_Message extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasPlatform() => $_has(5);
+  $core.bool hasPlatform() => $_has(5);
   void clearPlatform() => clearField(6);
 
   Intent_Message_SimpleResponses get simpleResponses => $_getN(6);
@@ -1352,7 +1248,7 @@ class Intent_Message extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasSimpleResponses() => $_has(6);
+  $core.bool hasSimpleResponses() => $_has(6);
   void clearSimpleResponses() => clearField(7);
 
   Intent_Message_BasicCard get basicCard => $_getN(7);
@@ -1360,7 +1256,7 @@ class Intent_Message extends GeneratedMessage {
     setField(8, v);
   }
 
-  bool hasBasicCard() => $_has(7);
+  $core.bool hasBasicCard() => $_has(7);
   void clearBasicCard() => clearField(8);
 
   Intent_Message_Suggestions get suggestions => $_getN(8);
@@ -1368,7 +1264,7 @@ class Intent_Message extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasSuggestions() => $_has(8);
+  $core.bool hasSuggestions() => $_has(8);
   void clearSuggestions() => clearField(9);
 
   Intent_Message_LinkOutSuggestion get linkOutSuggestion => $_getN(9);
@@ -1376,7 +1272,7 @@ class Intent_Message extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasLinkOutSuggestion() => $_has(9);
+  $core.bool hasLinkOutSuggestion() => $_has(9);
   void clearLinkOutSuggestion() => clearField(10);
 
   Intent_Message_ListSelect get listSelect => $_getN(10);
@@ -1384,7 +1280,7 @@ class Intent_Message extends GeneratedMessage {
     setField(11, v);
   }
 
-  bool hasListSelect() => $_has(10);
+  $core.bool hasListSelect() => $_has(10);
   void clearListSelect() => clearField(11);
 
   Intent_Message_CarouselSelect get carouselSelect => $_getN(11);
@@ -1392,154 +1288,143 @@ class Intent_Message extends GeneratedMessage {
     setField(12, v);
   }
 
-  bool hasCarouselSelect() => $_has(11);
+  $core.bool hasCarouselSelect() => $_has(11);
   void clearCarouselSelect() => clearField(12);
 }
 
-class _ReadonlyIntent_Message extends Intent_Message with ReadonlyMessageMixin {
-}
-
-class Intent_FollowupIntentInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent_FollowupIntentInfo')
+class Intent_FollowupIntentInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.FollowupIntentInfo',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'followupIntentName')
     ..aOS(2, 'parentFollowupIntentName')
     ..hasRequiredFields = false;
 
   Intent_FollowupIntentInfo() : super();
-  Intent_FollowupIntentInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_FollowupIntentInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent_FollowupIntentInfo.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent_FollowupIntentInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   Intent_FollowupIntentInfo clone() =>
-      new Intent_FollowupIntentInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent_FollowupIntentInfo create() => new Intent_FollowupIntentInfo();
-  static PbList<Intent_FollowupIntentInfo> createRepeated() =>
-      new PbList<Intent_FollowupIntentInfo>();
-  static Intent_FollowupIntentInfo getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyIntent_FollowupIntentInfo();
-    return _defaultInstance;
-  }
-
+      Intent_FollowupIntentInfo()..mergeFromMessage(this);
+  Intent_FollowupIntentInfo copyWith(
+          void Function(Intent_FollowupIntentInfo) updates) =>
+      super
+          .copyWith((message) => updates(message as Intent_FollowupIntentInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent_FollowupIntentInfo create() => Intent_FollowupIntentInfo();
+  Intent_FollowupIntentInfo createEmptyInstance() => create();
+  static $pb.PbList<Intent_FollowupIntentInfo> createRepeated() =>
+      $pb.PbList<Intent_FollowupIntentInfo>();
+  static Intent_FollowupIntentInfo getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static Intent_FollowupIntentInfo _defaultInstance;
-  static void $checkItem(Intent_FollowupIntentInfo v) {
-    if (v is! Intent_FollowupIntentInfo)
-      checkItemFailed(v, 'Intent_FollowupIntentInfo');
-  }
 
-  String get followupIntentName => $_getS(0, '');
-  set followupIntentName(String v) {
+  $core.String get followupIntentName => $_getS(0, '');
+  set followupIntentName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFollowupIntentName() => $_has(0);
+  $core.bool hasFollowupIntentName() => $_has(0);
   void clearFollowupIntentName() => clearField(1);
 
-  String get parentFollowupIntentName => $_getS(1, '');
-  set parentFollowupIntentName(String v) {
+  $core.String get parentFollowupIntentName => $_getS(1, '');
+  set parentFollowupIntentName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasParentFollowupIntentName() => $_has(1);
+  $core.bool hasParentFollowupIntentName() => $_has(1);
   void clearParentFollowupIntentName() => clearField(2);
 }
 
-class _ReadonlyIntent_FollowupIntentInfo extends Intent_FollowupIntentInfo
-    with ReadonlyMessageMixin {}
-
-class Intent extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Intent')
+class Intent extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..a<int>(3, 'priority', PbFieldType.O3)
+    ..a<$core.int>(3, 'priority', $pb.PbFieldType.O3)
     ..aOB(4, 'isFallback')
     ..e<Intent_WebhookState>(
         6,
         'webhookState',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Intent_WebhookState.WEBHOOK_STATE_UNSPECIFIED,
         Intent_WebhookState.valueOf,
         Intent_WebhookState.values)
     ..pPS(7, 'inputContextNames')
     ..pPS(8, 'events')
-    ..pp<Intent_TrainingPhrase>(9, 'trainingPhrases', PbFieldType.PM,
-        Intent_TrainingPhrase.$checkItem, Intent_TrainingPhrase.create)
+    ..pc<Intent_TrainingPhrase>(
+        9, 'trainingPhrases', $pb.PbFieldType.PM, Intent_TrainingPhrase.create)
     ..aOS(10, 'action')
-    ..pp<Context>(11, 'outputContexts', PbFieldType.PM, Context.$checkItem,
-        Context.create)
+    ..pc<$2.Context>(
+        11, 'outputContexts', $pb.PbFieldType.PM, $2.Context.create)
     ..aOB(12, 'resetContexts')
-    ..pp<Intent_Parameter>(13, 'parameters', PbFieldType.PM,
-        Intent_Parameter.$checkItem, Intent_Parameter.create)
-    ..pp<Intent_Message>(14, 'messages', PbFieldType.PM,
-        Intent_Message.$checkItem, Intent_Message.create)
-    ..pp<Intent_Message_Platform>(
+    ..pc<Intent_Parameter>(
+        13, 'parameters', $pb.PbFieldType.PM, Intent_Parameter.create)
+    ..pc<Intent_Message>(
+        14, 'messages', $pb.PbFieldType.PM, Intent_Message.create)
+    ..pc<Intent_Message_Platform>(
         15,
         'defaultResponsePlatforms',
-        PbFieldType.PE,
-        Intent_Message_Platform.$checkItem,
+        $pb.PbFieldType.PE,
         null,
         Intent_Message_Platform.valueOf,
         Intent_Message_Platform.values)
     ..aOS(16, 'rootFollowupIntentName')
     ..aOS(17, 'parentFollowupIntentName')
-    ..pp<Intent_FollowupIntentInfo>(18, 'followupIntentInfo', PbFieldType.PM,
-        Intent_FollowupIntentInfo.$checkItem, Intent_FollowupIntentInfo.create)
+    ..pc<Intent_FollowupIntentInfo>(18, 'followupIntentInfo',
+        $pb.PbFieldType.PM, Intent_FollowupIntentInfo.create)
     ..aOB(19, 'mlDisabled')
     ..hasRequiredFields = false;
 
   Intent() : super();
-  Intent.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Intent.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Intent.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Intent clone() => new Intent()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Intent create() => new Intent();
-  static PbList<Intent> createRepeated() => new PbList<Intent>();
-  static Intent getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyIntent();
-    return _defaultInstance;
-  }
-
+  Intent clone() => Intent()..mergeFromMessage(this);
+  Intent copyWith(void Function(Intent) updates) =>
+      super.copyWith((message) => updates(message as Intent));
+  $pb.BuilderInfo get info_ => _i;
+  static Intent create() => Intent();
+  Intent createEmptyInstance() => create();
+  static $pb.PbList<Intent> createRepeated() => $pb.PbList<Intent>();
+  static Intent getDefault() => _defaultInstance ??= create()..freeze();
   static Intent _defaultInstance;
-  static void $checkItem(Intent v) {
-    if (v is! Intent) checkItemFailed(v, 'Intent');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get displayName => $_getS(1, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(1, '');
+  set displayName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDisplayName() => $_has(1);
+  $core.bool hasDisplayName() => $_has(1);
   void clearDisplayName() => clearField(2);
 
-  int get priority => $_get(2, 0);
-  set priority(int v) {
+  $core.int get priority => $_get(2, 0);
+  set priority($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPriority() => $_has(2);
+  $core.bool hasPriority() => $_has(2);
   void clearPriority() => clearField(3);
 
-  bool get isFallback => $_get(3, false);
-  set isFallback(bool v) {
+  $core.bool get isFallback => $_get(3, false);
+  set isFallback($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasIsFallback() => $_has(3);
+  $core.bool hasIsFallback() => $_has(3);
   void clearIsFallback() => clearField(4);
 
   Intent_WebhookState get webhookState => $_getN(4);
@@ -1547,121 +1432,116 @@ class Intent extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasWebhookState() => $_has(4);
+  $core.bool hasWebhookState() => $_has(4);
   void clearWebhookState() => clearField(6);
 
-  List<String> get inputContextNames => $_getList(5);
+  $core.List<$core.String> get inputContextNames => $_getList(5);
 
-  List<String> get events => $_getList(6);
+  $core.List<$core.String> get events => $_getList(6);
 
-  List<Intent_TrainingPhrase> get trainingPhrases => $_getList(7);
+  $core.List<Intent_TrainingPhrase> get trainingPhrases => $_getList(7);
 
-  String get action => $_getS(8, '');
-  set action(String v) {
+  $core.String get action => $_getS(8, '');
+  set action($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasAction() => $_has(8);
+  $core.bool hasAction() => $_has(8);
   void clearAction() => clearField(10);
 
-  List<Context> get outputContexts => $_getList(9);
+  $core.List<$2.Context> get outputContexts => $_getList(9);
 
-  bool get resetContexts => $_get(10, false);
-  set resetContexts(bool v) {
+  $core.bool get resetContexts => $_get(10, false);
+  set resetContexts($core.bool v) {
     $_setBool(10, v);
   }
 
-  bool hasResetContexts() => $_has(10);
+  $core.bool hasResetContexts() => $_has(10);
   void clearResetContexts() => clearField(12);
 
-  List<Intent_Parameter> get parameters => $_getList(11);
+  $core.List<Intent_Parameter> get parameters => $_getList(11);
 
-  List<Intent_Message> get messages => $_getList(12);
+  $core.List<Intent_Message> get messages => $_getList(12);
 
-  List<Intent_Message_Platform> get defaultResponsePlatforms => $_getList(13);
+  $core.List<Intent_Message_Platform> get defaultResponsePlatforms =>
+      $_getList(13);
 
-  String get rootFollowupIntentName => $_getS(14, '');
-  set rootFollowupIntentName(String v) {
+  $core.String get rootFollowupIntentName => $_getS(14, '');
+  set rootFollowupIntentName($core.String v) {
     $_setString(14, v);
   }
 
-  bool hasRootFollowupIntentName() => $_has(14);
+  $core.bool hasRootFollowupIntentName() => $_has(14);
   void clearRootFollowupIntentName() => clearField(16);
 
-  String get parentFollowupIntentName => $_getS(15, '');
-  set parentFollowupIntentName(String v) {
+  $core.String get parentFollowupIntentName => $_getS(15, '');
+  set parentFollowupIntentName($core.String v) {
     $_setString(15, v);
   }
 
-  bool hasParentFollowupIntentName() => $_has(15);
+  $core.bool hasParentFollowupIntentName() => $_has(15);
   void clearParentFollowupIntentName() => clearField(17);
 
-  List<Intent_FollowupIntentInfo> get followupIntentInfo => $_getList(16);
+  $core.List<Intent_FollowupIntentInfo> get followupIntentInfo => $_getList(16);
 
-  bool get mlDisabled => $_get(17, false);
-  set mlDisabled(bool v) {
+  $core.bool get mlDisabled => $_get(17, false);
+  set mlDisabled($core.bool v) {
     $_setBool(17, v);
   }
 
-  bool hasMlDisabled() => $_has(17);
+  $core.bool hasMlDisabled() => $_has(17);
   void clearMlDisabled() => clearField(19);
 }
 
-class _ReadonlyIntent extends Intent with ReadonlyMessageMixin {}
-
-class ListIntentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListIntentsRequest')
+class ListIntentsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIntentsRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'languageCode')
     ..e<IntentView>(
         3,
         'intentView',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         IntentView.INTENT_VIEW_UNSPECIFIED,
         IntentView.valueOf,
         IntentView.values)
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
     ..hasRequiredFields = false;
 
   ListIntentsRequest() : super();
-  ListIntentsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListIntentsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListIntentsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListIntentsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListIntentsRequest clone() =>
-      new ListIntentsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListIntentsRequest create() => new ListIntentsRequest();
-  static PbList<ListIntentsRequest> createRepeated() =>
-      new PbList<ListIntentsRequest>();
-  static ListIntentsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListIntentsRequest();
-    return _defaultInstance;
-  }
-
+  ListIntentsRequest clone() => ListIntentsRequest()..mergeFromMessage(this);
+  ListIntentsRequest copyWith(void Function(ListIntentsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListIntentsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListIntentsRequest create() => ListIntentsRequest();
+  ListIntentsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListIntentsRequest> createRepeated() =>
+      $pb.PbList<ListIntentsRequest>();
+  static ListIntentsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListIntentsRequest _defaultInstance;
-  static void $checkItem(ListIntentsRequest v) {
-    if (v is! ListIntentsRequest) checkItemFailed(v, 'ListIntentsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLanguageCode() => $_has(1);
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
   IntentView get intentView => $_getN(2);
@@ -1669,123 +1549,110 @@ class ListIntentsRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasIntentView() => $_has(2);
+  $core.bool hasIntentView() => $_has(2);
   void clearIntentView() => clearField(3);
 
-  int get pageSize => $_get(3, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(3, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasPageSize() => $_has(3);
+  $core.bool hasPageSize() => $_has(3);
   void clearPageSize() => clearField(4);
 
-  String get pageToken => $_getS(4, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(4, '');
+  set pageToken($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasPageToken() => $_has(4);
+  $core.bool hasPageToken() => $_has(4);
   void clearPageToken() => clearField(5);
 }
 
-class _ReadonlyListIntentsRequest extends ListIntentsRequest
-    with ReadonlyMessageMixin {}
-
-class ListIntentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListIntentsResponse')
-    ..pp<Intent>(1, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
+class ListIntentsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIntentsResponse',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<Intent>(1, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListIntentsResponse() : super();
-  ListIntentsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListIntentsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListIntentsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListIntentsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListIntentsResponse clone() =>
-      new ListIntentsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListIntentsResponse create() => new ListIntentsResponse();
-  static PbList<ListIntentsResponse> createRepeated() =>
-      new PbList<ListIntentsResponse>();
-  static ListIntentsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListIntentsResponse();
-    return _defaultInstance;
-  }
-
+  ListIntentsResponse clone() => ListIntentsResponse()..mergeFromMessage(this);
+  ListIntentsResponse copyWith(void Function(ListIntentsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListIntentsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListIntentsResponse create() => ListIntentsResponse();
+  ListIntentsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListIntentsResponse> createRepeated() =>
+      $pb.PbList<ListIntentsResponse>();
+  static ListIntentsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListIntentsResponse _defaultInstance;
-  static void $checkItem(ListIntentsResponse v) {
-    if (v is! ListIntentsResponse) checkItemFailed(v, 'ListIntentsResponse');
-  }
 
-  List<Intent> get intents => $_getList(0);
+  $core.List<Intent> get intents => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListIntentsResponse extends ListIntentsResponse
-    with ReadonlyMessageMixin {}
-
-class GetIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIntentRequest')
+class GetIntentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIntentRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'languageCode')
     ..e<IntentView>(
         3,
         'intentView',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         IntentView.INTENT_VIEW_UNSPECIFIED,
         IntentView.valueOf,
         IntentView.values)
     ..hasRequiredFields = false;
 
   GetIntentRequest() : super();
-  GetIntentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetIntentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetIntentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetIntentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetIntentRequest clone() => new GetIntentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetIntentRequest create() => new GetIntentRequest();
-  static PbList<GetIntentRequest> createRepeated() =>
-      new PbList<GetIntentRequest>();
-  static GetIntentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIntentRequest();
-    return _defaultInstance;
-  }
-
+  GetIntentRequest clone() => GetIntentRequest()..mergeFromMessage(this);
+  GetIntentRequest copyWith(void Function(GetIntentRequest) updates) =>
+      super.copyWith((message) => updates(message as GetIntentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetIntentRequest create() => GetIntentRequest();
+  GetIntentRequest createEmptyInstance() => create();
+  static $pb.PbList<GetIntentRequest> createRepeated() =>
+      $pb.PbList<GetIntentRequest>();
+  static GetIntentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetIntentRequest _defaultInstance;
-  static void $checkItem(GetIntentRequest v) {
-    if (v is! GetIntentRequest) checkItemFailed(v, 'GetIntentRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLanguageCode() => $_has(1);
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
   IntentView get intentView => $_getN(2);
@@ -1793,57 +1660,51 @@ class GetIntentRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasIntentView() => $_has(2);
+  $core.bool hasIntentView() => $_has(2);
   void clearIntentView() => clearField(3);
 }
 
-class _ReadonlyGetIntentRequest extends GetIntentRequest
-    with ReadonlyMessageMixin {}
-
-class CreateIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateIntentRequest')
+class CreateIntentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIntentRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
-    ..a<Intent>(2, 'intent', PbFieldType.OM, Intent.getDefault, Intent.create)
+    ..a<Intent>(
+        2, 'intent', $pb.PbFieldType.OM, Intent.getDefault, Intent.create)
     ..aOS(3, 'languageCode')
     ..e<IntentView>(
         4,
         'intentView',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         IntentView.INTENT_VIEW_UNSPECIFIED,
         IntentView.valueOf,
         IntentView.values)
     ..hasRequiredFields = false;
 
   CreateIntentRequest() : super();
-  CreateIntentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateIntentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateIntentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateIntentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateIntentRequest clone() =>
-      new CreateIntentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateIntentRequest create() => new CreateIntentRequest();
-  static PbList<CreateIntentRequest> createRepeated() =>
-      new PbList<CreateIntentRequest>();
-  static CreateIntentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateIntentRequest();
-    return _defaultInstance;
-  }
-
+  CreateIntentRequest clone() => CreateIntentRequest()..mergeFromMessage(this);
+  CreateIntentRequest copyWith(void Function(CreateIntentRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateIntentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateIntentRequest create() => CreateIntentRequest();
+  CreateIntentRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateIntentRequest> createRepeated() =>
+      $pb.PbList<CreateIntentRequest>();
+  static CreateIntentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateIntentRequest _defaultInstance;
-  static void $checkItem(CreateIntentRequest v) {
-    if (v is! CreateIntentRequest) checkItemFailed(v, 'CreateIntentRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   Intent get intent => $_getN(1);
@@ -1851,15 +1712,15 @@ class CreateIntentRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasIntent() => $_has(1);
+  $core.bool hasIntent() => $_has(1);
   void clearIntent() => clearField(2);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasLanguageCode() => $_has(2);
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 
   IntentView get intentView => $_getN(3);
@@ -1867,78 +1728,68 @@ class CreateIntentRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasIntentView() => $_has(3);
+  $core.bool hasIntentView() => $_has(3);
   void clearIntentView() => clearField(4);
 }
 
-class _ReadonlyCreateIntentRequest extends CreateIntentRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateIntentRequest')
-    ..a<Intent>(1, 'intent', PbFieldType.OM, Intent.getDefault, Intent.create)
+class UpdateIntentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateIntentRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..a<Intent>(
+        1, 'intent', $pb.PbFieldType.OM, Intent.getDefault, Intent.create)
     ..aOS(2, 'languageCode')
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..e<IntentView>(
         4,
         'intentView',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         IntentView.INTENT_VIEW_UNSPECIFIED,
         IntentView.valueOf,
         IntentView.values)
     ..hasRequiredFields = false;
 
   UpdateIntentRequest() : super();
-  UpdateIntentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateIntentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateIntentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateIntentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateIntentRequest clone() =>
-      new UpdateIntentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateIntentRequest create() => new UpdateIntentRequest();
-  static PbList<UpdateIntentRequest> createRepeated() =>
-      new PbList<UpdateIntentRequest>();
-  static UpdateIntentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateIntentRequest();
-    return _defaultInstance;
-  }
-
+  UpdateIntentRequest clone() => UpdateIntentRequest()..mergeFromMessage(this);
+  UpdateIntentRequest copyWith(void Function(UpdateIntentRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateIntentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateIntentRequest create() => UpdateIntentRequest();
+  UpdateIntentRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateIntentRequest> createRepeated() =>
+      $pb.PbList<UpdateIntentRequest>();
+  static UpdateIntentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateIntentRequest _defaultInstance;
-  static void $checkItem(UpdateIntentRequest v) {
-    if (v is! UpdateIntentRequest) checkItemFailed(v, 'UpdateIntentRequest');
-  }
 
   Intent get intent => $_getN(0);
   set intent(Intent v) {
     setField(1, v);
   }
 
-  bool hasIntent() => $_has(0);
+  $core.bool hasIntent() => $_has(0);
   void clearIntent() => clearField(1);
 
-  String get languageCode => $_getS(1, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasLanguageCode() => $_has(1);
+  $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 
   IntentView get intentView => $_getN(3);
@@ -1946,115 +1797,116 @@ class UpdateIntentRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasIntentView() => $_has(3);
+  $core.bool hasIntentView() => $_has(3);
   void clearIntentView() => clearField(4);
 }
 
-class _ReadonlyUpdateIntentRequest extends UpdateIntentRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteIntentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteIntentRequest')
+class DeleteIntentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteIntentRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteIntentRequest() : super();
-  DeleteIntentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteIntentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteIntentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteIntentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteIntentRequest clone() =>
-      new DeleteIntentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteIntentRequest create() => new DeleteIntentRequest();
-  static PbList<DeleteIntentRequest> createRepeated() =>
-      new PbList<DeleteIntentRequest>();
-  static DeleteIntentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteIntentRequest();
-    return _defaultInstance;
-  }
-
+  DeleteIntentRequest clone() => DeleteIntentRequest()..mergeFromMessage(this);
+  DeleteIntentRequest copyWith(void Function(DeleteIntentRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteIntentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteIntentRequest create() => DeleteIntentRequest();
+  DeleteIntentRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteIntentRequest> createRepeated() =>
+      $pb.PbList<DeleteIntentRequest>();
+  static DeleteIntentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteIntentRequest _defaultInstance;
-  static void $checkItem(DeleteIntentRequest v) {
-    if (v is! DeleteIntentRequest) checkItemFailed(v, 'DeleteIntentRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteIntentRequest extends DeleteIntentRequest
-    with ReadonlyMessageMixin {}
+enum BatchUpdateIntentsRequest_IntentBatch {
+  intentBatchUri,
+  intentBatchInline,
+  notSet
+}
 
-class BatchUpdateIntentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateIntentsRequest')
+class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, BatchUpdateIntentsRequest_IntentBatch>
+      _BatchUpdateIntentsRequest_IntentBatchByTag = {
+    2: BatchUpdateIntentsRequest_IntentBatch.intentBatchUri,
+    3: BatchUpdateIntentsRequest_IntentBatch.intentBatchInline,
+    0: BatchUpdateIntentsRequest_IntentBatch.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateIntentsRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'intentBatchUri')
-    ..a<IntentBatch>(3, 'intentBatchInline', PbFieldType.OM,
+    ..a<IntentBatch>(3, 'intentBatchInline', $pb.PbFieldType.OM,
         IntentBatch.getDefault, IntentBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$google$protobuf.FieldMask>(
-        5,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$4.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..e<IntentView>(
         6,
         'intentView',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         IntentView.INTENT_VIEW_UNSPECIFIED,
         IntentView.valueOf,
         IntentView.values)
+    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
   BatchUpdateIntentsRequest() : super();
-  BatchUpdateIntentsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdateIntentsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchUpdateIntentsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdateIntentsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateIntentsRequest clone() =>
-      new BatchUpdateIntentsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchUpdateIntentsRequest create() => new BatchUpdateIntentsRequest();
-  static PbList<BatchUpdateIntentsRequest> createRepeated() =>
-      new PbList<BatchUpdateIntentsRequest>();
-  static BatchUpdateIntentsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateIntentsRequest();
-    return _defaultInstance;
-  }
-
+      BatchUpdateIntentsRequest()..mergeFromMessage(this);
+  BatchUpdateIntentsRequest copyWith(
+          void Function(BatchUpdateIntentsRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as BatchUpdateIntentsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchUpdateIntentsRequest create() => BatchUpdateIntentsRequest();
+  BatchUpdateIntentsRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdateIntentsRequest> createRepeated() =>
+      $pb.PbList<BatchUpdateIntentsRequest>();
+  static BatchUpdateIntentsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchUpdateIntentsRequest _defaultInstance;
-  static void $checkItem(BatchUpdateIntentsRequest v) {
-    if (v is! BatchUpdateIntentsRequest)
-      checkItemFailed(v, 'BatchUpdateIntentsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  BatchUpdateIntentsRequest_IntentBatch whichIntentBatch() =>
+      _BatchUpdateIntentsRequest_IntentBatchByTag[$_whichOneof(0)];
+  void clearIntentBatch() => clearField($_whichOneof(0));
+
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get intentBatchUri => $_getS(1, '');
-  set intentBatchUri(String v) {
+  $core.String get intentBatchUri => $_getS(1, '');
+  set intentBatchUri($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasIntentBatchUri() => $_has(1);
+  $core.bool hasIntentBatchUri() => $_has(1);
   void clearIntentBatchUri() => clearField(2);
 
   IntentBatch get intentBatchInline => $_getN(2);
@@ -2062,23 +1914,23 @@ class BatchUpdateIntentsRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasIntentBatchInline() => $_has(2);
+  $core.bool hasIntentBatchInline() => $_has(2);
   void clearIntentBatchInline() => clearField(3);
 
-  String get languageCode => $_getS(3, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(3, '');
+  set languageCode($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasLanguageCode() => $_has(3);
+  $core.bool hasLanguageCode() => $_has(3);
   void clearLanguageCode() => clearField(4);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(4);
-  set updateMask($google$protobuf.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(4);
+  set updateMask($4.FieldMask v) {
     setField(5, v);
   }
 
-  bool hasUpdateMask() => $_has(4);
+  $core.bool hasUpdateMask() => $_has(4);
   void clearUpdateMask() => clearField(5);
 
   IntentView get intentView => $_getN(5);
@@ -2086,173 +1938,104 @@ class BatchUpdateIntentsRequest extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasIntentView() => $_has(5);
+  $core.bool hasIntentView() => $_has(5);
   void clearIntentView() => clearField(6);
 }
 
-class _ReadonlyBatchUpdateIntentsRequest extends BatchUpdateIntentsRequest
-    with ReadonlyMessageMixin {}
-
-class BatchUpdateIntentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdateIntentsResponse')
-    ..pp<Intent>(1, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
+class BatchUpdateIntentsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchUpdateIntentsResponse',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<Intent>(1, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..hasRequiredFields = false;
 
   BatchUpdateIntentsResponse() : super();
-  BatchUpdateIntentsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdateIntentsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchUpdateIntentsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdateIntentsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdateIntentsResponse clone() =>
-      new BatchUpdateIntentsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchUpdateIntentsResponse create() =>
-      new BatchUpdateIntentsResponse();
-  static PbList<BatchUpdateIntentsResponse> createRepeated() =>
-      new PbList<BatchUpdateIntentsResponse>();
-  static BatchUpdateIntentsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdateIntentsResponse();
-    return _defaultInstance;
-  }
-
+      BatchUpdateIntentsResponse()..mergeFromMessage(this);
+  BatchUpdateIntentsResponse copyWith(
+          void Function(BatchUpdateIntentsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchUpdateIntentsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchUpdateIntentsResponse create() => BatchUpdateIntentsResponse();
+  BatchUpdateIntentsResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdateIntentsResponse> createRepeated() =>
+      $pb.PbList<BatchUpdateIntentsResponse>();
+  static BatchUpdateIntentsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchUpdateIntentsResponse _defaultInstance;
-  static void $checkItem(BatchUpdateIntentsResponse v) {
-    if (v is! BatchUpdateIntentsResponse)
-      checkItemFailed(v, 'BatchUpdateIntentsResponse');
-  }
 
-  List<Intent> get intents => $_getList(0);
+  $core.List<Intent> get intents => $_getList(0);
 }
 
-class _ReadonlyBatchUpdateIntentsResponse extends BatchUpdateIntentsResponse
-    with ReadonlyMessageMixin {}
-
-class BatchDeleteIntentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchDeleteIntentsRequest')
+class BatchDeleteIntentsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchDeleteIntentsRequest',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'parent')
-    ..pp<Intent>(2, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
+    ..pc<Intent>(2, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..hasRequiredFields = false;
 
   BatchDeleteIntentsRequest() : super();
-  BatchDeleteIntentsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchDeleteIntentsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchDeleteIntentsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchDeleteIntentsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchDeleteIntentsRequest clone() =>
-      new BatchDeleteIntentsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchDeleteIntentsRequest create() => new BatchDeleteIntentsRequest();
-  static PbList<BatchDeleteIntentsRequest> createRepeated() =>
-      new PbList<BatchDeleteIntentsRequest>();
-  static BatchDeleteIntentsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchDeleteIntentsRequest();
-    return _defaultInstance;
-  }
-
+      BatchDeleteIntentsRequest()..mergeFromMessage(this);
+  BatchDeleteIntentsRequest copyWith(
+          void Function(BatchDeleteIntentsRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as BatchDeleteIntentsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchDeleteIntentsRequest create() => BatchDeleteIntentsRequest();
+  BatchDeleteIntentsRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchDeleteIntentsRequest> createRepeated() =>
+      $pb.PbList<BatchDeleteIntentsRequest>();
+  static BatchDeleteIntentsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchDeleteIntentsRequest _defaultInstance;
-  static void $checkItem(BatchDeleteIntentsRequest v) {
-    if (v is! BatchDeleteIntentsRequest)
-      checkItemFailed(v, 'BatchDeleteIntentsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  List<Intent> get intents => $_getList(1);
+  $core.List<Intent> get intents => $_getList(1);
 }
 
-class _ReadonlyBatchDeleteIntentsRequest extends BatchDeleteIntentsRequest
-    with ReadonlyMessageMixin {}
-
-class IntentBatch extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('IntentBatch')
-    ..pp<Intent>(1, 'intents', PbFieldType.PM, Intent.$checkItem, Intent.create)
+class IntentBatch extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('IntentBatch',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..pc<Intent>(1, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..hasRequiredFields = false;
 
   IntentBatch() : super();
-  IntentBatch.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  IntentBatch.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  IntentBatch.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  IntentBatch.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  IntentBatch clone() => new IntentBatch()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static IntentBatch create() => new IntentBatch();
-  static PbList<IntentBatch> createRepeated() => new PbList<IntentBatch>();
-  static IntentBatch getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyIntentBatch();
-    return _defaultInstance;
-  }
-
+  IntentBatch clone() => IntentBatch()..mergeFromMessage(this);
+  IntentBatch copyWith(void Function(IntentBatch) updates) =>
+      super.copyWith((message) => updates(message as IntentBatch));
+  $pb.BuilderInfo get info_ => _i;
+  static IntentBatch create() => IntentBatch();
+  IntentBatch createEmptyInstance() => create();
+  static $pb.PbList<IntentBatch> createRepeated() => $pb.PbList<IntentBatch>();
+  static IntentBatch getDefault() => _defaultInstance ??= create()..freeze();
   static IntentBatch _defaultInstance;
-  static void $checkItem(IntentBatch v) {
-    if (v is! IntentBatch) checkItemFailed(v, 'IntentBatch');
-  }
 
-  List<Intent> get intents => $_getList(0);
-}
-
-class _ReadonlyIntentBatch extends IntentBatch with ReadonlyMessageMixin {}
-
-class IntentsApi {
-  RpcClient _client;
-  IntentsApi(this._client);
-
-  Future<ListIntentsResponse> listIntents(
-      ClientContext ctx, ListIntentsRequest request) {
-    var emptyResponse = new ListIntentsResponse();
-    return _client.invoke<ListIntentsResponse>(
-        ctx, 'Intents', 'ListIntents', request, emptyResponse);
-  }
-
-  Future<Intent> getIntent(ClientContext ctx, GetIntentRequest request) {
-    var emptyResponse = new Intent();
-    return _client.invoke<Intent>(
-        ctx, 'Intents', 'GetIntent', request, emptyResponse);
-  }
-
-  Future<Intent> createIntent(ClientContext ctx, CreateIntentRequest request) {
-    var emptyResponse = new Intent();
-    return _client.invoke<Intent>(
-        ctx, 'Intents', 'CreateIntent', request, emptyResponse);
-  }
-
-  Future<Intent> updateIntent(ClientContext ctx, UpdateIntentRequest request) {
-    var emptyResponse = new Intent();
-    return _client.invoke<Intent>(
-        ctx, 'Intents', 'UpdateIntent', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteIntent(
-      ClientContext ctx, DeleteIntentRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'Intents', 'DeleteIntent', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> batchUpdateIntents(
-      ClientContext ctx, BatchUpdateIntentsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'Intents', 'BatchUpdateIntents', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> batchDeleteIntents(
-      ClientContext ctx, BatchDeleteIntentsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'Intents', 'BatchDeleteIntents', request, emptyResponse);
-  }
+  $core.List<Intent> get intents => $_getList(0);
 }

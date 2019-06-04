@@ -1,246 +1,193 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/readalignment.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'position.pb.dart';
-import 'cigar.pb.dart';
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
+import 'position.pb.dart' as $0;
+import 'cigar.pb.dart' as $1;
+import '../../protobuf/struct.pb.dart' as $2;
 
-class LinearAlignment extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LinearAlignment')
-    ..a<Position>(
-        1, 'position', PbFieldType.OM, Position.getDefault, Position.create)
-    ..a<int>(2, 'mappingQuality', PbFieldType.O3)
-    ..pp<CigarUnit>(
-        3, 'cigar', PbFieldType.PM, CigarUnit.$checkItem, CigarUnit.create)
+class LinearAlignment extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LinearAlignment',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..a<$0.Position>(1, 'position', $pb.PbFieldType.OM, $0.Position.getDefault,
+        $0.Position.create)
+    ..a<$core.int>(2, 'mappingQuality', $pb.PbFieldType.O3)
+    ..pc<$1.CigarUnit>(3, 'cigar', $pb.PbFieldType.PM, $1.CigarUnit.create)
     ..hasRequiredFields = false;
 
   LinearAlignment() : super();
-  LinearAlignment.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LinearAlignment.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LinearAlignment.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LinearAlignment.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LinearAlignment clone() => new LinearAlignment()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LinearAlignment create() => new LinearAlignment();
-  static PbList<LinearAlignment> createRepeated() =>
-      new PbList<LinearAlignment>();
-  static LinearAlignment getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLinearAlignment();
-    return _defaultInstance;
-  }
-
+  LinearAlignment clone() => LinearAlignment()..mergeFromMessage(this);
+  LinearAlignment copyWith(void Function(LinearAlignment) updates) =>
+      super.copyWith((message) => updates(message as LinearAlignment));
+  $pb.BuilderInfo get info_ => _i;
+  static LinearAlignment create() => LinearAlignment();
+  LinearAlignment createEmptyInstance() => create();
+  static $pb.PbList<LinearAlignment> createRepeated() =>
+      $pb.PbList<LinearAlignment>();
+  static LinearAlignment getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LinearAlignment _defaultInstance;
-  static void $checkItem(LinearAlignment v) {
-    if (v is! LinearAlignment) checkItemFailed(v, 'LinearAlignment');
-  }
 
-  Position get position => $_getN(0);
-  set position(Position v) {
+  $0.Position get position => $_getN(0);
+  set position($0.Position v) {
     setField(1, v);
   }
 
-  bool hasPosition() => $_has(0);
+  $core.bool hasPosition() => $_has(0);
   void clearPosition() => clearField(1);
 
-  int get mappingQuality => $_get(1, 0);
-  set mappingQuality(int v) {
+  $core.int get mappingQuality => $_get(1, 0);
+  set mappingQuality($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasMappingQuality() => $_has(1);
+  $core.bool hasMappingQuality() => $_has(1);
   void clearMappingQuality() => clearField(2);
 
-  List<CigarUnit> get cigar => $_getList(2);
+  $core.List<$1.CigarUnit> get cigar => $_getList(2);
 }
 
-class _ReadonlyLinearAlignment extends LinearAlignment
-    with ReadonlyMessageMixin {}
-
-class Read_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Read_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  Read_InfoEntry() : super();
-  Read_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Read_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Read_InfoEntry clone() => new Read_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Read_InfoEntry create() => new Read_InfoEntry();
-  static PbList<Read_InfoEntry> createRepeated() =>
-      new PbList<Read_InfoEntry>();
-  static Read_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRead_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static Read_InfoEntry _defaultInstance;
-  static void $checkItem(Read_InfoEntry v) {
-    if (v is! Read_InfoEntry) checkItemFailed(v, 'Read_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyRead_InfoEntry extends Read_InfoEntry with ReadonlyMessageMixin {
-}
-
-class Read extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Read')
+class Read extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Read',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'readGroupId')
     ..aOS(3, 'readGroupSetId')
     ..aOS(4, 'fragmentName')
     ..aOB(5, 'properPlacement')
     ..aOB(6, 'duplicateFragment')
-    ..a<int>(7, 'fragmentLength', PbFieldType.O3)
-    ..a<int>(8, 'readNumber', PbFieldType.O3)
-    ..a<int>(9, 'numberReads', PbFieldType.O3)
+    ..a<$core.int>(7, 'fragmentLength', $pb.PbFieldType.O3)
+    ..a<$core.int>(8, 'readNumber', $pb.PbFieldType.O3)
+    ..a<$core.int>(9, 'numberReads', $pb.PbFieldType.O3)
     ..aOB(10, 'failedVendorQualityChecks')
-    ..a<LinearAlignment>(11, 'alignment', PbFieldType.OM,
+    ..a<LinearAlignment>(11, 'alignment', $pb.PbFieldType.OM,
         LinearAlignment.getDefault, LinearAlignment.create)
     ..aOB(12, 'secondaryAlignment')
     ..aOB(13, 'supplementaryAlignment')
     ..aOS(14, 'alignedSequence')
-    ..p<int>(15, 'alignedQuality', PbFieldType.P3)
-    ..a<Position>(16, 'nextMatePosition', PbFieldType.OM, Position.getDefault,
-        Position.create)
-    ..pp<Read_InfoEntry>(17, 'info', PbFieldType.PM, Read_InfoEntry.$checkItem,
-        Read_InfoEntry.create)
+    ..p<$core.int>(15, 'alignedQuality', $pb.PbFieldType.P3)
+    ..a<$0.Position>(16, 'nextMatePosition', $pb.PbFieldType.OM,
+        $0.Position.getDefault, $0.Position.create)
+    ..m<$core.String, $2.ListValue>(
+        17,
+        'info',
+        'Read.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $2.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
   Read() : super();
-  Read.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Read.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Read.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Read.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Read clone() => new Read()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Read create() => new Read();
-  static PbList<Read> createRepeated() => new PbList<Read>();
-  static Read getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyRead();
-    return _defaultInstance;
-  }
-
+  Read clone() => Read()..mergeFromMessage(this);
+  Read copyWith(void Function(Read) updates) =>
+      super.copyWith((message) => updates(message as Read));
+  $pb.BuilderInfo get info_ => _i;
+  static Read create() => Read();
+  Read createEmptyInstance() => create();
+  static $pb.PbList<Read> createRepeated() => $pb.PbList<Read>();
+  static Read getDefault() => _defaultInstance ??= create()..freeze();
   static Read _defaultInstance;
-  static void $checkItem(Read v) {
-    if (v is! Read) checkItemFailed(v, 'Read');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get readGroupId => $_getS(1, '');
-  set readGroupId(String v) {
+  $core.String get readGroupId => $_getS(1, '');
+  set readGroupId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasReadGroupId() => $_has(1);
+  $core.bool hasReadGroupId() => $_has(1);
   void clearReadGroupId() => clearField(2);
 
-  String get readGroupSetId => $_getS(2, '');
-  set readGroupSetId(String v) {
+  $core.String get readGroupSetId => $_getS(2, '');
+  set readGroupSetId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasReadGroupSetId() => $_has(2);
+  $core.bool hasReadGroupSetId() => $_has(2);
   void clearReadGroupSetId() => clearField(3);
 
-  String get fragmentName => $_getS(3, '');
-  set fragmentName(String v) {
+  $core.String get fragmentName => $_getS(3, '');
+  set fragmentName($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasFragmentName() => $_has(3);
+  $core.bool hasFragmentName() => $_has(3);
   void clearFragmentName() => clearField(4);
 
-  bool get properPlacement => $_get(4, false);
-  set properPlacement(bool v) {
+  $core.bool get properPlacement => $_get(4, false);
+  set properPlacement($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasProperPlacement() => $_has(4);
+  $core.bool hasProperPlacement() => $_has(4);
   void clearProperPlacement() => clearField(5);
 
-  bool get duplicateFragment => $_get(5, false);
-  set duplicateFragment(bool v) {
+  $core.bool get duplicateFragment => $_get(5, false);
+  set duplicateFragment($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasDuplicateFragment() => $_has(5);
+  $core.bool hasDuplicateFragment() => $_has(5);
   void clearDuplicateFragment() => clearField(6);
 
-  int get fragmentLength => $_get(6, 0);
-  set fragmentLength(int v) {
+  $core.int get fragmentLength => $_get(6, 0);
+  set fragmentLength($core.int v) {
     $_setSignedInt32(6, v);
   }
 
-  bool hasFragmentLength() => $_has(6);
+  $core.bool hasFragmentLength() => $_has(6);
   void clearFragmentLength() => clearField(7);
 
-  int get readNumber => $_get(7, 0);
-  set readNumber(int v) {
+  $core.int get readNumber => $_get(7, 0);
+  set readNumber($core.int v) {
     $_setSignedInt32(7, v);
   }
 
-  bool hasReadNumber() => $_has(7);
+  $core.bool hasReadNumber() => $_has(7);
   void clearReadNumber() => clearField(8);
 
-  int get numberReads => $_get(8, 0);
-  set numberReads(int v) {
+  $core.int get numberReads => $_get(8, 0);
+  set numberReads($core.int v) {
     $_setSignedInt32(8, v);
   }
 
-  bool hasNumberReads() => $_has(8);
+  $core.bool hasNumberReads() => $_has(8);
   void clearNumberReads() => clearField(9);
 
-  bool get failedVendorQualityChecks => $_get(9, false);
-  set failedVendorQualityChecks(bool v) {
+  $core.bool get failedVendorQualityChecks => $_get(9, false);
+  set failedVendorQualityChecks($core.bool v) {
     $_setBool(9, v);
   }
 
-  bool hasFailedVendorQualityChecks() => $_has(9);
+  $core.bool hasFailedVendorQualityChecks() => $_has(9);
   void clearFailedVendorQualityChecks() => clearField(10);
 
   LinearAlignment get alignment => $_getN(10);
@@ -248,44 +195,42 @@ class Read extends GeneratedMessage {
     setField(11, v);
   }
 
-  bool hasAlignment() => $_has(10);
+  $core.bool hasAlignment() => $_has(10);
   void clearAlignment() => clearField(11);
 
-  bool get secondaryAlignment => $_get(11, false);
-  set secondaryAlignment(bool v) {
+  $core.bool get secondaryAlignment => $_get(11, false);
+  set secondaryAlignment($core.bool v) {
     $_setBool(11, v);
   }
 
-  bool hasSecondaryAlignment() => $_has(11);
+  $core.bool hasSecondaryAlignment() => $_has(11);
   void clearSecondaryAlignment() => clearField(12);
 
-  bool get supplementaryAlignment => $_get(12, false);
-  set supplementaryAlignment(bool v) {
+  $core.bool get supplementaryAlignment => $_get(12, false);
+  set supplementaryAlignment($core.bool v) {
     $_setBool(12, v);
   }
 
-  bool hasSupplementaryAlignment() => $_has(12);
+  $core.bool hasSupplementaryAlignment() => $_has(12);
   void clearSupplementaryAlignment() => clearField(13);
 
-  String get alignedSequence => $_getS(13, '');
-  set alignedSequence(String v) {
+  $core.String get alignedSequence => $_getS(13, '');
+  set alignedSequence($core.String v) {
     $_setString(13, v);
   }
 
-  bool hasAlignedSequence() => $_has(13);
+  $core.bool hasAlignedSequence() => $_has(13);
   void clearAlignedSequence() => clearField(14);
 
-  List<int> get alignedQuality => $_getList(14);
+  $core.List<$core.int> get alignedQuality => $_getList(14);
 
-  Position get nextMatePosition => $_getN(15);
-  set nextMatePosition(Position v) {
+  $0.Position get nextMatePosition => $_getN(15);
+  set nextMatePosition($0.Position v) {
     setField(16, v);
   }
 
-  bool hasNextMatePosition() => $_has(15);
+  $core.bool hasNextMatePosition() => $_has(15);
   void clearNextMatePosition() => clearField(16);
 
-  List<Read_InfoEntry> get info => $_getList(16);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(16);
 }
-
-class _ReadonlyRead extends Read with ReadonlyMessageMixin {}

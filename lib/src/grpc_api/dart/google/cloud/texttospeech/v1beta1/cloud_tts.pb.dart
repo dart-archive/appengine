@@ -1,134 +1,120 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/texttospeech/v1beta1/cloud_tts.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'cloud_tts.pbenum.dart';
 
 export 'cloud_tts.pbenum.dart';
 
-class ListVoicesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVoicesRequest')
+class ListVoicesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVoicesRequest',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
     ..aOS(1, 'languageCode')
     ..hasRequiredFields = false;
 
   ListVoicesRequest() : super();
-  ListVoicesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVoicesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListVoicesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVoicesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVoicesRequest clone() => new ListVoicesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListVoicesRequest create() => new ListVoicesRequest();
-  static PbList<ListVoicesRequest> createRepeated() =>
-      new PbList<ListVoicesRequest>();
-  static ListVoicesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVoicesRequest();
-    return _defaultInstance;
-  }
-
+  ListVoicesRequest clone() => ListVoicesRequest()..mergeFromMessage(this);
+  ListVoicesRequest copyWith(void Function(ListVoicesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListVoicesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListVoicesRequest create() => ListVoicesRequest();
+  ListVoicesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListVoicesRequest> createRepeated() =>
+      $pb.PbList<ListVoicesRequest>();
+  static ListVoicesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListVoicesRequest _defaultInstance;
-  static void $checkItem(ListVoicesRequest v) {
-    if (v is! ListVoicesRequest) checkItemFailed(v, 'ListVoicesRequest');
-  }
 
-  String get languageCode => $_getS(0, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(0, '');
+  set languageCode($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasLanguageCode() => $_has(0);
+  $core.bool hasLanguageCode() => $_has(0);
   void clearLanguageCode() => clearField(1);
 }
 
-class _ReadonlyListVoicesRequest extends ListVoicesRequest
-    with ReadonlyMessageMixin {}
-
-class ListVoicesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVoicesResponse')
-    ..pp<Voice>(1, 'voices', PbFieldType.PM, Voice.$checkItem, Voice.create)
+class ListVoicesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVoicesResponse',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
+    ..pc<Voice>(1, 'voices', $pb.PbFieldType.PM, Voice.create)
     ..hasRequiredFields = false;
 
   ListVoicesResponse() : super();
-  ListVoicesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVoicesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListVoicesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVoicesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVoicesResponse clone() =>
-      new ListVoicesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListVoicesResponse create() => new ListVoicesResponse();
-  static PbList<ListVoicesResponse> createRepeated() =>
-      new PbList<ListVoicesResponse>();
-  static ListVoicesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVoicesResponse();
-    return _defaultInstance;
-  }
-
+  ListVoicesResponse clone() => ListVoicesResponse()..mergeFromMessage(this);
+  ListVoicesResponse copyWith(void Function(ListVoicesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListVoicesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListVoicesResponse create() => ListVoicesResponse();
+  ListVoicesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListVoicesResponse> createRepeated() =>
+      $pb.PbList<ListVoicesResponse>();
+  static ListVoicesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListVoicesResponse _defaultInstance;
-  static void $checkItem(ListVoicesResponse v) {
-    if (v is! ListVoicesResponse) checkItemFailed(v, 'ListVoicesResponse');
-  }
 
-  List<Voice> get voices => $_getList(0);
+  $core.List<Voice> get voices => $_getList(0);
 }
 
-class _ReadonlyListVoicesResponse extends ListVoicesResponse
-    with ReadonlyMessageMixin {}
-
-class Voice extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Voice')
+class Voice extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Voice',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
     ..pPS(1, 'languageCodes')
     ..aOS(2, 'name')
     ..e<SsmlVoiceGender>(
         3,
         'ssmlGender',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         SsmlVoiceGender.SSML_VOICE_GENDER_UNSPECIFIED,
         SsmlVoiceGender.valueOf,
         SsmlVoiceGender.values)
-    ..a<int>(4, 'naturalSampleRateHertz', PbFieldType.O3)
+    ..a<$core.int>(4, 'naturalSampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   Voice() : super();
-  Voice.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Voice.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Voice.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Voice.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Voice clone() => new Voice()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Voice create() => new Voice();
-  static PbList<Voice> createRepeated() => new PbList<Voice>();
-  static Voice getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVoice();
-    return _defaultInstance;
-  }
-
+  Voice clone() => Voice()..mergeFromMessage(this);
+  Voice copyWith(void Function(Voice) updates) =>
+      super.copyWith((message) => updates(message as Voice));
+  $pb.BuilderInfo get info_ => _i;
+  static Voice create() => Voice();
+  Voice createEmptyInstance() => create();
+  static $pb.PbList<Voice> createRepeated() => $pb.PbList<Voice>();
+  static Voice getDefault() => _defaultInstance ??= create()..freeze();
   static Voice _defaultInstance;
-  static void $checkItem(Voice v) {
-    if (v is! Voice) checkItemFailed(v, 'Voice');
-  }
 
-  List<String> get languageCodes => $_getList(0);
+  $core.List<$core.String> get languageCodes => $_getList(0);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
   SsmlVoiceGender get ssmlGender => $_getN(2);
@@ -136,61 +122,56 @@ class Voice extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasSsmlGender() => $_has(2);
+  $core.bool hasSsmlGender() => $_has(2);
   void clearSsmlGender() => clearField(3);
 
-  int get naturalSampleRateHertz => $_get(3, 0);
-  set naturalSampleRateHertz(int v) {
+  $core.int get naturalSampleRateHertz => $_get(3, 0);
+  set naturalSampleRateHertz($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasNaturalSampleRateHertz() => $_has(3);
+  $core.bool hasNaturalSampleRateHertz() => $_has(3);
   void clearNaturalSampleRateHertz() => clearField(4);
 }
 
-class _ReadonlyVoice extends Voice with ReadonlyMessageMixin {}
-
-class SynthesizeSpeechRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SynthesizeSpeechRequest')
-    ..a<SynthesisInput>(1, 'input', PbFieldType.OM, SynthesisInput.getDefault,
-        SynthesisInput.create)
-    ..a<VoiceSelectionParams>(2, 'voice', PbFieldType.OM,
+class SynthesizeSpeechRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SynthesizeSpeechRequest',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
+    ..a<SynthesisInput>(1, 'input', $pb.PbFieldType.OM,
+        SynthesisInput.getDefault, SynthesisInput.create)
+    ..a<VoiceSelectionParams>(2, 'voice', $pb.PbFieldType.OM,
         VoiceSelectionParams.getDefault, VoiceSelectionParams.create)
-    ..a<AudioConfig>(3, 'audioConfig', PbFieldType.OM, AudioConfig.getDefault,
-        AudioConfig.create)
+    ..a<AudioConfig>(3, 'audioConfig', $pb.PbFieldType.OM,
+        AudioConfig.getDefault, AudioConfig.create)
     ..hasRequiredFields = false;
 
   SynthesizeSpeechRequest() : super();
-  SynthesizeSpeechRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SynthesizeSpeechRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SynthesizeSpeechRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SynthesizeSpeechRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SynthesizeSpeechRequest clone() =>
-      new SynthesizeSpeechRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SynthesizeSpeechRequest create() => new SynthesizeSpeechRequest();
-  static PbList<SynthesizeSpeechRequest> createRepeated() =>
-      new PbList<SynthesizeSpeechRequest>();
-  static SynthesizeSpeechRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySynthesizeSpeechRequest();
-    return _defaultInstance;
-  }
-
+      SynthesizeSpeechRequest()..mergeFromMessage(this);
+  SynthesizeSpeechRequest copyWith(
+          void Function(SynthesizeSpeechRequest) updates) =>
+      super.copyWith((message) => updates(message as SynthesizeSpeechRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SynthesizeSpeechRequest create() => SynthesizeSpeechRequest();
+  SynthesizeSpeechRequest createEmptyInstance() => create();
+  static $pb.PbList<SynthesizeSpeechRequest> createRepeated() =>
+      $pb.PbList<SynthesizeSpeechRequest>();
+  static SynthesizeSpeechRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SynthesizeSpeechRequest _defaultInstance;
-  static void $checkItem(SynthesizeSpeechRequest v) {
-    if (v is! SynthesizeSpeechRequest)
-      checkItemFailed(v, 'SynthesizeSpeechRequest');
-  }
 
   SynthesisInput get input => $_getN(0);
   set input(SynthesisInput v) {
     setField(1, v);
   }
 
-  bool hasInput() => $_has(0);
+  $core.bool hasInput() => $_has(0);
   void clearInput() => clearField(1);
 
   VoiceSelectionParams get voice => $_getN(1);
@@ -198,7 +179,7 @@ class SynthesizeSpeechRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasVoice() => $_has(1);
+  $core.bool hasVoice() => $_has(1);
   void clearVoice() => clearField(2);
 
   AudioConfig get audioConfig => $_getN(2);
@@ -206,113 +187,113 @@ class SynthesizeSpeechRequest extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasAudioConfig() => $_has(2);
+  $core.bool hasAudioConfig() => $_has(2);
   void clearAudioConfig() => clearField(3);
 }
 
-class _ReadonlySynthesizeSpeechRequest extends SynthesizeSpeechRequest
-    with ReadonlyMessageMixin {}
+enum SynthesisInput_InputSource { text, ssml, notSet }
 
-class SynthesisInput extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SynthesisInput')
+class SynthesisInput extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, SynthesisInput_InputSource>
+      _SynthesisInput_InputSourceByTag = {
+    1: SynthesisInput_InputSource.text,
+    2: SynthesisInput_InputSource.ssml,
+    0: SynthesisInput_InputSource.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SynthesisInput',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
     ..aOS(1, 'text')
     ..aOS(2, 'ssml')
+    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
   SynthesisInput() : super();
-  SynthesisInput.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SynthesisInput.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SynthesisInput.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SynthesisInput.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SynthesisInput clone() => new SynthesisInput()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SynthesisInput create() => new SynthesisInput();
-  static PbList<SynthesisInput> createRepeated() =>
-      new PbList<SynthesisInput>();
-  static SynthesisInput getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySynthesisInput();
-    return _defaultInstance;
-  }
-
+  SynthesisInput clone() => SynthesisInput()..mergeFromMessage(this);
+  SynthesisInput copyWith(void Function(SynthesisInput) updates) =>
+      super.copyWith((message) => updates(message as SynthesisInput));
+  $pb.BuilderInfo get info_ => _i;
+  static SynthesisInput create() => SynthesisInput();
+  SynthesisInput createEmptyInstance() => create();
+  static $pb.PbList<SynthesisInput> createRepeated() =>
+      $pb.PbList<SynthesisInput>();
+  static SynthesisInput getDefault() => _defaultInstance ??= create()..freeze();
   static SynthesisInput _defaultInstance;
-  static void $checkItem(SynthesisInput v) {
-    if (v is! SynthesisInput) checkItemFailed(v, 'SynthesisInput');
-  }
 
-  String get text => $_getS(0, '');
-  set text(String v) {
+  SynthesisInput_InputSource whichInputSource() =>
+      _SynthesisInput_InputSourceByTag[$_whichOneof(0)];
+  void clearInputSource() => clearField($_whichOneof(0));
+
+  $core.String get text => $_getS(0, '');
+  set text($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasText() => $_has(0);
+  $core.bool hasText() => $_has(0);
   void clearText() => clearField(1);
 
-  String get ssml => $_getS(1, '');
-  set ssml(String v) {
+  $core.String get ssml => $_getS(1, '');
+  set ssml($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasSsml() => $_has(1);
+  $core.bool hasSsml() => $_has(1);
   void clearSsml() => clearField(2);
 }
 
-class _ReadonlySynthesisInput extends SynthesisInput with ReadonlyMessageMixin {
-}
-
-class VoiceSelectionParams extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VoiceSelectionParams')
+class VoiceSelectionParams extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VoiceSelectionParams',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
     ..aOS(1, 'languageCode')
     ..aOS(2, 'name')
     ..e<SsmlVoiceGender>(
         3,
         'ssmlGender',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         SsmlVoiceGender.SSML_VOICE_GENDER_UNSPECIFIED,
         SsmlVoiceGender.valueOf,
         SsmlVoiceGender.values)
     ..hasRequiredFields = false;
 
   VoiceSelectionParams() : super();
-  VoiceSelectionParams.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VoiceSelectionParams.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VoiceSelectionParams.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VoiceSelectionParams.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   VoiceSelectionParams clone() =>
-      new VoiceSelectionParams()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VoiceSelectionParams create() => new VoiceSelectionParams();
-  static PbList<VoiceSelectionParams> createRepeated() =>
-      new PbList<VoiceSelectionParams>();
-  static VoiceSelectionParams getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVoiceSelectionParams();
-    return _defaultInstance;
-  }
-
+      VoiceSelectionParams()..mergeFromMessage(this);
+  VoiceSelectionParams copyWith(void Function(VoiceSelectionParams) updates) =>
+      super.copyWith((message) => updates(message as VoiceSelectionParams));
+  $pb.BuilderInfo get info_ => _i;
+  static VoiceSelectionParams create() => VoiceSelectionParams();
+  VoiceSelectionParams createEmptyInstance() => create();
+  static $pb.PbList<VoiceSelectionParams> createRepeated() =>
+      $pb.PbList<VoiceSelectionParams>();
+  static VoiceSelectionParams getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static VoiceSelectionParams _defaultInstance;
-  static void $checkItem(VoiceSelectionParams v) {
-    if (v is! VoiceSelectionParams) checkItemFailed(v, 'VoiceSelectionParams');
-  }
 
-  String get languageCode => $_getS(0, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(0, '');
+  set languageCode($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasLanguageCode() => $_has(0);
+  $core.bool hasLanguageCode() => $_has(0);
   void clearLanguageCode() => clearField(1);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
   SsmlVoiceGender get ssmlGender => $_getN(2);
@@ -320,149 +301,119 @@ class VoiceSelectionParams extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasSsmlGender() => $_has(2);
+  $core.bool hasSsmlGender() => $_has(2);
   void clearSsmlGender() => clearField(3);
 }
 
-class _ReadonlyVoiceSelectionParams extends VoiceSelectionParams
-    with ReadonlyMessageMixin {}
-
-class AudioConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AudioConfig')
+class AudioConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioConfig',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
     ..e<AudioEncoding>(
         1,
         'audioEncoding',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         AudioEncoding.AUDIO_ENCODING_UNSPECIFIED,
         AudioEncoding.valueOf,
         AudioEncoding.values)
-    ..a<double>(2, 'speakingRate', PbFieldType.OD)
-    ..a<double>(3, 'pitch', PbFieldType.OD)
-    ..a<double>(4, 'volumeGainDb', PbFieldType.OD)
-    ..a<int>(5, 'sampleRateHertz', PbFieldType.O3)
+    ..a<$core.double>(2, 'speakingRate', $pb.PbFieldType.OD)
+    ..a<$core.double>(3, 'pitch', $pb.PbFieldType.OD)
+    ..a<$core.double>(4, 'volumeGainDb', $pb.PbFieldType.OD)
+    ..a<$core.int>(5, 'sampleRateHertz', $pb.PbFieldType.O3)
+    ..pPS(6, 'effectsProfileId')
     ..hasRequiredFields = false;
 
   AudioConfig() : super();
-  AudioConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AudioConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AudioConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AudioConfig clone() => new AudioConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AudioConfig create() => new AudioConfig();
-  static PbList<AudioConfig> createRepeated() => new PbList<AudioConfig>();
-  static AudioConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyAudioConfig();
-    return _defaultInstance;
-  }
-
+  AudioConfig clone() => AudioConfig()..mergeFromMessage(this);
+  AudioConfig copyWith(void Function(AudioConfig) updates) =>
+      super.copyWith((message) => updates(message as AudioConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static AudioConfig create() => AudioConfig();
+  AudioConfig createEmptyInstance() => create();
+  static $pb.PbList<AudioConfig> createRepeated() => $pb.PbList<AudioConfig>();
+  static AudioConfig getDefault() => _defaultInstance ??= create()..freeze();
   static AudioConfig _defaultInstance;
-  static void $checkItem(AudioConfig v) {
-    if (v is! AudioConfig) checkItemFailed(v, 'AudioConfig');
-  }
 
   AudioEncoding get audioEncoding => $_getN(0);
   set audioEncoding(AudioEncoding v) {
     setField(1, v);
   }
 
-  bool hasAudioEncoding() => $_has(0);
+  $core.bool hasAudioEncoding() => $_has(0);
   void clearAudioEncoding() => clearField(1);
 
-  double get speakingRate => $_getN(1);
-  set speakingRate(double v) {
+  $core.double get speakingRate => $_getN(1);
+  set speakingRate($core.double v) {
     $_setDouble(1, v);
   }
 
-  bool hasSpeakingRate() => $_has(1);
+  $core.bool hasSpeakingRate() => $_has(1);
   void clearSpeakingRate() => clearField(2);
 
-  double get pitch => $_getN(2);
-  set pitch(double v) {
+  $core.double get pitch => $_getN(2);
+  set pitch($core.double v) {
     $_setDouble(2, v);
   }
 
-  bool hasPitch() => $_has(2);
+  $core.bool hasPitch() => $_has(2);
   void clearPitch() => clearField(3);
 
-  double get volumeGainDb => $_getN(3);
-  set volumeGainDb(double v) {
+  $core.double get volumeGainDb => $_getN(3);
+  set volumeGainDb($core.double v) {
     $_setDouble(3, v);
   }
 
-  bool hasVolumeGainDb() => $_has(3);
+  $core.bool hasVolumeGainDb() => $_has(3);
   void clearVolumeGainDb() => clearField(4);
 
-  int get sampleRateHertz => $_get(4, 0);
-  set sampleRateHertz(int v) {
+  $core.int get sampleRateHertz => $_get(4, 0);
+  set sampleRateHertz($core.int v) {
     $_setSignedInt32(4, v);
   }
 
-  bool hasSampleRateHertz() => $_has(4);
+  $core.bool hasSampleRateHertz() => $_has(4);
   void clearSampleRateHertz() => clearField(5);
+
+  $core.List<$core.String> get effectsProfileId => $_getList(5);
 }
 
-class _ReadonlyAudioConfig extends AudioConfig with ReadonlyMessageMixin {}
-
-class SynthesizeSpeechResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SynthesizeSpeechResponse')
-    ..a<List<int>>(1, 'audioContent', PbFieldType.OY)
+class SynthesizeSpeechResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SynthesizeSpeechResponse',
+      package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
+    ..a<$core.List<$core.int>>(1, 'audioContent', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   SynthesizeSpeechResponse() : super();
-  SynthesizeSpeechResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SynthesizeSpeechResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SynthesizeSpeechResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SynthesizeSpeechResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SynthesizeSpeechResponse clone() =>
-      new SynthesizeSpeechResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SynthesizeSpeechResponse create() => new SynthesizeSpeechResponse();
-  static PbList<SynthesizeSpeechResponse> createRepeated() =>
-      new PbList<SynthesizeSpeechResponse>();
-  static SynthesizeSpeechResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySynthesizeSpeechResponse();
-    return _defaultInstance;
-  }
-
+      SynthesizeSpeechResponse()..mergeFromMessage(this);
+  SynthesizeSpeechResponse copyWith(
+          void Function(SynthesizeSpeechResponse) updates) =>
+      super.copyWith((message) => updates(message as SynthesizeSpeechResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SynthesizeSpeechResponse create() => SynthesizeSpeechResponse();
+  SynthesizeSpeechResponse createEmptyInstance() => create();
+  static $pb.PbList<SynthesizeSpeechResponse> createRepeated() =>
+      $pb.PbList<SynthesizeSpeechResponse>();
+  static SynthesizeSpeechResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SynthesizeSpeechResponse _defaultInstance;
-  static void $checkItem(SynthesizeSpeechResponse v) {
-    if (v is! SynthesizeSpeechResponse)
-      checkItemFailed(v, 'SynthesizeSpeechResponse');
-  }
 
-  List<int> get audioContent => $_getN(0);
-  set audioContent(List<int> v) {
+  $core.List<$core.int> get audioContent => $_getN(0);
+  set audioContent($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasAudioContent() => $_has(0);
+  $core.bool hasAudioContent() => $_has(0);
   void clearAudioContent() => clearField(1);
-}
-
-class _ReadonlySynthesizeSpeechResponse extends SynthesizeSpeechResponse
-    with ReadonlyMessageMixin {}
-
-class TextToSpeechApi {
-  RpcClient _client;
-  TextToSpeechApi(this._client);
-
-  Future<ListVoicesResponse> listVoices(
-      ClientContext ctx, ListVoicesRequest request) {
-    var emptyResponse = new ListVoicesResponse();
-    return _client.invoke<ListVoicesResponse>(
-        ctx, 'TextToSpeech', 'ListVoices', request, emptyResponse);
-  }
-
-  Future<SynthesizeSpeechResponse> synthesizeSpeech(
-      ClientContext ctx, SynthesizeSpeechRequest request) {
-    var emptyResponse = new SynthesizeSpeechResponse();
-    return _client.invoke<SynthesizeSpeechResponse>(
-        ctx, 'TextToSpeech', 'SynthesizeSpeech', request, emptyResponse);
-  }
 }

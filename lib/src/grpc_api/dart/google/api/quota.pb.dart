@@ -1,197 +1,91 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/api/quota.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Quota extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Quota')
-    ..pp<QuotaLimit>(
-        3, 'limits', PbFieldType.PM, QuotaLimit.$checkItem, QuotaLimit.create)
-    ..pp<MetricRule>(4, 'metricRules', PbFieldType.PM, MetricRule.$checkItem,
-        MetricRule.create)
+class Quota extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Quota',
+      package: const $pb.PackageName('google.api'))
+    ..pc<QuotaLimit>(3, 'limits', $pb.PbFieldType.PM, QuotaLimit.create)
+    ..pc<MetricRule>(4, 'metricRules', $pb.PbFieldType.PM, MetricRule.create)
     ..hasRequiredFields = false;
 
   Quota() : super();
-  Quota.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Quota.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Quota.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Quota.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Quota clone() => new Quota()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Quota create() => new Quota();
-  static PbList<Quota> createRepeated() => new PbList<Quota>();
-  static Quota getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQuota();
-    return _defaultInstance;
-  }
-
+  Quota clone() => Quota()..mergeFromMessage(this);
+  Quota copyWith(void Function(Quota) updates) =>
+      super.copyWith((message) => updates(message as Quota));
+  $pb.BuilderInfo get info_ => _i;
+  static Quota create() => Quota();
+  Quota createEmptyInstance() => create();
+  static $pb.PbList<Quota> createRepeated() => $pb.PbList<Quota>();
+  static Quota getDefault() => _defaultInstance ??= create()..freeze();
   static Quota _defaultInstance;
-  static void $checkItem(Quota v) {
-    if (v is! Quota) checkItemFailed(v, 'Quota');
-  }
 
-  List<QuotaLimit> get limits => $_getList(0);
+  $core.List<QuotaLimit> get limits => $_getList(0);
 
-  List<MetricRule> get metricRules => $_getList(1);
+  $core.List<MetricRule> get metricRules => $_getList(1);
 }
 
-class _ReadonlyQuota extends Quota with ReadonlyMessageMixin {}
-
-class MetricRule_MetricCostsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricRule_MetricCostsEntry')
-    ..aOS(1, 'key')
-    ..aInt64(2, 'value')
-    ..hasRequiredFields = false;
-
-  MetricRule_MetricCostsEntry() : super();
-  MetricRule_MetricCostsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MetricRule_MetricCostsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  MetricRule_MetricCostsEntry clone() =>
-      new MetricRule_MetricCostsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MetricRule_MetricCostsEntry create() =>
-      new MetricRule_MetricCostsEntry();
-  static PbList<MetricRule_MetricCostsEntry> createRepeated() =>
-      new PbList<MetricRule_MetricCostsEntry>();
-  static MetricRule_MetricCostsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMetricRule_MetricCostsEntry();
-    return _defaultInstance;
-  }
-
-  static MetricRule_MetricCostsEntry _defaultInstance;
-  static void $checkItem(MetricRule_MetricCostsEntry v) {
-    if (v is! MetricRule_MetricCostsEntry)
-      checkItemFailed(v, 'MetricRule_MetricCostsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Int64 get value => $_getI64(1);
-  set value(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyMetricRule_MetricCostsEntry extends MetricRule_MetricCostsEntry
-    with ReadonlyMessageMixin {}
-
-class MetricRule extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MetricRule')
+class MetricRule extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricRule',
+      package: const $pb.PackageName('google.api'))
     ..aOS(1, 'selector')
-    ..pp<MetricRule_MetricCostsEntry>(
+    ..m<$core.String, Int64>(
         2,
         'metricCosts',
-        PbFieldType.PM,
-        MetricRule_MetricCostsEntry.$checkItem,
-        MetricRule_MetricCostsEntry.create)
+        'MetricRule.MetricCostsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.O6,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.api'))
     ..hasRequiredFields = false;
 
   MetricRule() : super();
-  MetricRule.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MetricRule.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MetricRule.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MetricRule.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MetricRule clone() => new MetricRule()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MetricRule create() => new MetricRule();
-  static PbList<MetricRule> createRepeated() => new PbList<MetricRule>();
-  static MetricRule getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMetricRule();
-    return _defaultInstance;
-  }
-
+  MetricRule clone() => MetricRule()..mergeFromMessage(this);
+  MetricRule copyWith(void Function(MetricRule) updates) =>
+      super.copyWith((message) => updates(message as MetricRule));
+  $pb.BuilderInfo get info_ => _i;
+  static MetricRule create() => MetricRule();
+  MetricRule createEmptyInstance() => create();
+  static $pb.PbList<MetricRule> createRepeated() => $pb.PbList<MetricRule>();
+  static MetricRule getDefault() => _defaultInstance ??= create()..freeze();
   static MetricRule _defaultInstance;
-  static void $checkItem(MetricRule v) {
-    if (v is! MetricRule) checkItemFailed(v, 'MetricRule');
-  }
 
-  String get selector => $_getS(0, '');
-  set selector(String v) {
+  $core.String get selector => $_getS(0, '');
+  set selector($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSelector() => $_has(0);
+  $core.bool hasSelector() => $_has(0);
   void clearSelector() => clearField(1);
 
-  List<MetricRule_MetricCostsEntry> get metricCosts => $_getList(1);
+  $core.Map<$core.String, Int64> get metricCosts => $_getMap(1);
 }
 
-class _ReadonlyMetricRule extends MetricRule with ReadonlyMessageMixin {}
-
-class QuotaLimit_ValuesEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaLimit_ValuesEntry')
-    ..aOS(1, 'key')
-    ..aInt64(2, 'value')
-    ..hasRequiredFields = false;
-
-  QuotaLimit_ValuesEntry() : super();
-  QuotaLimit_ValuesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaLimit_ValuesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  QuotaLimit_ValuesEntry clone() =>
-      new QuotaLimit_ValuesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QuotaLimit_ValuesEntry create() => new QuotaLimit_ValuesEntry();
-  static PbList<QuotaLimit_ValuesEntry> createRepeated() =>
-      new PbList<QuotaLimit_ValuesEntry>();
-  static QuotaLimit_ValuesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyQuotaLimit_ValuesEntry();
-    return _defaultInstance;
-  }
-
-  static QuotaLimit_ValuesEntry _defaultInstance;
-  static void $checkItem(QuotaLimit_ValuesEntry v) {
-    if (v is! QuotaLimit_ValuesEntry)
-      checkItemFailed(v, 'QuotaLimit_ValuesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Int64 get value => $_getI64(1);
-  set value(Int64 v) {
-    $_setInt64(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyQuotaLimit_ValuesEntry extends QuotaLimit_ValuesEntry
-    with ReadonlyMessageMixin {}
-
-class QuotaLimit extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('QuotaLimit')
+class QuotaLimit extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuotaLimit',
+      package: const $pb.PackageName('google.api'))
     ..aOS(2, 'description')
     ..aInt64(3, 'defaultLimit')
     ..aInt64(4, 'maxLimit')
@@ -200,37 +94,42 @@ class QuotaLimit extends GeneratedMessage {
     ..aInt64(7, 'freeTier')
     ..aOS(8, 'metric')
     ..aOS(9, 'unit')
-    ..pp<QuotaLimit_ValuesEntry>(10, 'values', PbFieldType.PM,
-        QuotaLimit_ValuesEntry.$checkItem, QuotaLimit_ValuesEntry.create)
+    ..m<$core.String, Int64>(
+        10,
+        'values',
+        'QuotaLimit.ValuesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.O6,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.api'))
     ..aOS(12, 'displayName')
     ..hasRequiredFields = false;
 
   QuotaLimit() : super();
-  QuotaLimit.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  QuotaLimit.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  QuotaLimit.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  QuotaLimit.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  QuotaLimit clone() => new QuotaLimit()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static QuotaLimit create() => new QuotaLimit();
-  static PbList<QuotaLimit> createRepeated() => new PbList<QuotaLimit>();
-  static QuotaLimit getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyQuotaLimit();
-    return _defaultInstance;
-  }
-
+  QuotaLimit clone() => QuotaLimit()..mergeFromMessage(this);
+  QuotaLimit copyWith(void Function(QuotaLimit) updates) =>
+      super.copyWith((message) => updates(message as QuotaLimit));
+  $pb.BuilderInfo get info_ => _i;
+  static QuotaLimit create() => QuotaLimit();
+  QuotaLimit createEmptyInstance() => create();
+  static $pb.PbList<QuotaLimit> createRepeated() => $pb.PbList<QuotaLimit>();
+  static QuotaLimit getDefault() => _defaultInstance ??= create()..freeze();
   static QuotaLimit _defaultInstance;
-  static void $checkItem(QuotaLimit v) {
-    if (v is! QuotaLimit) checkItemFailed(v, 'QuotaLimit');
-  }
 
-  String get description => $_getS(0, '');
-  set description(String v) {
+  $core.String get description => $_getS(0, '');
+  set description($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDescription() => $_has(0);
+  $core.bool hasDescription() => $_has(0);
   void clearDescription() => clearField(2);
 
   Int64 get defaultLimit => $_getI64(1);
@@ -238,7 +137,7 @@ class QuotaLimit extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasDefaultLimit() => $_has(1);
+  $core.bool hasDefaultLimit() => $_has(1);
   void clearDefaultLimit() => clearField(3);
 
   Int64 get maxLimit => $_getI64(2);
@@ -246,23 +145,23 @@ class QuotaLimit extends GeneratedMessage {
     $_setInt64(2, v);
   }
 
-  bool hasMaxLimit() => $_has(2);
+  $core.bool hasMaxLimit() => $_has(2);
   void clearMaxLimit() => clearField(4);
 
-  String get duration => $_getS(3, '');
-  set duration(String v) {
+  $core.String get duration => $_getS(3, '');
+  set duration($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDuration() => $_has(3);
+  $core.bool hasDuration() => $_has(3);
   void clearDuration() => clearField(5);
 
-  String get name => $_getS(4, '');
-  set name(String v) {
+  $core.String get name => $_getS(4, '');
+  set name($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasName() => $_has(4);
+  $core.bool hasName() => $_has(4);
   void clearName() => clearField(6);
 
   Int64 get freeTier => $_getI64(5);
@@ -270,34 +169,32 @@ class QuotaLimit extends GeneratedMessage {
     $_setInt64(5, v);
   }
 
-  bool hasFreeTier() => $_has(5);
+  $core.bool hasFreeTier() => $_has(5);
   void clearFreeTier() => clearField(7);
 
-  String get metric => $_getS(6, '');
-  set metric(String v) {
+  $core.String get metric => $_getS(6, '');
+  set metric($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasMetric() => $_has(6);
+  $core.bool hasMetric() => $_has(6);
   void clearMetric() => clearField(8);
 
-  String get unit => $_getS(7, '');
-  set unit(String v) {
+  $core.String get unit => $_getS(7, '');
+  set unit($core.String v) {
     $_setString(7, v);
   }
 
-  bool hasUnit() => $_has(7);
+  $core.bool hasUnit() => $_has(7);
   void clearUnit() => clearField(9);
 
-  List<QuotaLimit_ValuesEntry> get values => $_getList(8);
+  $core.Map<$core.String, Int64> get values => $_getMap(8);
 
-  String get displayName => $_getS(9, '');
-  set displayName(String v) {
+  $core.String get displayName => $_getS(9, '');
+  set displayName($core.String v) {
     $_setString(9, v);
   }
 
-  bool hasDisplayName() => $_has(9);
+  $core.bool hasDisplayName() => $_has(9);
   void clearDisplayName() => clearField(12);
 }
-
-class _ReadonlyQuotaLimit extends QuotaLimit with ReadonlyMessageMixin {}

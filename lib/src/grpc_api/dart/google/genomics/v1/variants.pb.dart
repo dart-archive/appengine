@@ -1,96 +1,42 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/variants.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../longrunning/operations.pb.dart' as $google$longrunning;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/struct.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
 
 import 'variants.pbenum.dart';
 
 export 'variants.pbenum.dart';
 
-class VariantSetMetadata_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantSetMetadata_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  VariantSetMetadata_InfoEntry() : super();
-  VariantSetMetadata_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantSetMetadata_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  VariantSetMetadata_InfoEntry clone() =>
-      new VariantSetMetadata_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VariantSetMetadata_InfoEntry create() =>
-      new VariantSetMetadata_InfoEntry();
-  static PbList<VariantSetMetadata_InfoEntry> createRepeated() =>
-      new PbList<VariantSetMetadata_InfoEntry>();
-  static VariantSetMetadata_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantSetMetadata_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static VariantSetMetadata_InfoEntry _defaultInstance;
-  static void $checkItem(VariantSetMetadata_InfoEntry v) {
-    if (v is! VariantSetMetadata_InfoEntry)
-      checkItemFailed(v, 'VariantSetMetadata_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyVariantSetMetadata_InfoEntry extends VariantSetMetadata_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class VariantSetMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantSetMetadata')
+class VariantSetMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VariantSetMetadata',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'key')
     ..aOS(2, 'value')
-    ..pp<VariantSetMetadata_InfoEntry>(
+    ..m<$core.String, $2.ListValue>(
         3,
         'info',
-        PbFieldType.PM,
-        VariantSetMetadata_InfoEntry.$checkItem,
-        VariantSetMetadata_InfoEntry.create)
+        'VariantSetMetadata.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $2.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
     ..aOS(4, 'id')
     ..e<VariantSetMetadata_Type>(
         5,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         VariantSetMetadata_Type.TYPE_UNSPECIFIED,
         VariantSetMetadata_Type.valueOf,
         VariantSetMetadata_Type.values)
@@ -99,53 +45,48 @@ class VariantSetMetadata extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   VariantSetMetadata() : super();
-  VariantSetMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantSetMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VariantSetMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantSetMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantSetMetadata clone() =>
-      new VariantSetMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VariantSetMetadata create() => new VariantSetMetadata();
-  static PbList<VariantSetMetadata> createRepeated() =>
-      new PbList<VariantSetMetadata>();
-  static VariantSetMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantSetMetadata();
-    return _defaultInstance;
-  }
-
+  VariantSetMetadata clone() => VariantSetMetadata()..mergeFromMessage(this);
+  VariantSetMetadata copyWith(void Function(VariantSetMetadata) updates) =>
+      super.copyWith((message) => updates(message as VariantSetMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static VariantSetMetadata create() => VariantSetMetadata();
+  VariantSetMetadata createEmptyInstance() => create();
+  static $pb.PbList<VariantSetMetadata> createRepeated() =>
+      $pb.PbList<VariantSetMetadata>();
+  static VariantSetMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static VariantSetMetadata _defaultInstance;
-  static void $checkItem(VariantSetMetadata v) {
-    if (v is! VariantSetMetadata) checkItemFailed(v, 'VariantSetMetadata');
-  }
 
-  String get key => $_getS(0, '');
-  set key(String v) {
+  $core.String get key => $_getS(0, '');
+  set key($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasKey() => $_has(0);
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  String get value => $_getS(1, '');
-  set value(String v) {
+  $core.String get value => $_getS(1, '');
+  set value($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasValue() => $_has(1);
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
-  List<VariantSetMetadata_InfoEntry> get info => $_getList(2);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(2);
 
-  String get id => $_getS(3, '');
-  set id(String v) {
+  $core.String get id => $_getS(3, '');
+  set id($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasId() => $_has(3);
+  $core.bool hasId() => $_has(3);
   void clearId() => clearField(4);
 
   VariantSetMetadata_Type get type => $_getN(4);
@@ -153,175 +94,122 @@ class VariantSetMetadata extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasType() => $_has(4);
+  $core.bool hasType() => $_has(4);
   void clearType() => clearField(5);
 
-  String get description => $_getS(5, '');
-  set description(String v) {
+  $core.String get description => $_getS(5, '');
+  set description($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasDescription() => $_has(5);
+  $core.bool hasDescription() => $_has(5);
   void clearDescription() => clearField(7);
 
-  String get number => $_getS(6, '');
-  set number(String v) {
+  $core.String get number => $_getS(6, '');
+  set number($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasNumber() => $_has(6);
+  $core.bool hasNumber() => $_has(6);
   void clearNumber() => clearField(8);
 }
 
-class _ReadonlyVariantSetMetadata extends VariantSetMetadata
-    with ReadonlyMessageMixin {}
-
-class VariantSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantSet')
+class VariantSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VariantSet',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'datasetId')
     ..aOS(2, 'id')
-    ..pp<VariantSetMetadata>(4, 'metadata', PbFieldType.PM,
-        VariantSetMetadata.$checkItem, VariantSetMetadata.create)
-    ..pp<ReferenceBound>(5, 'referenceBounds', PbFieldType.PM,
-        ReferenceBound.$checkItem, ReferenceBound.create)
+    ..pc<VariantSetMetadata>(
+        4, 'metadata', $pb.PbFieldType.PM, VariantSetMetadata.create)
+    ..pc<ReferenceBound>(
+        5, 'referenceBounds', $pb.PbFieldType.PM, ReferenceBound.create)
     ..aOS(6, 'referenceSetId')
     ..aOS(7, 'name')
     ..aOS(8, 'description')
     ..hasRequiredFields = false;
 
   VariantSet() : super();
-  VariantSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantSet.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VariantSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantSet.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantSet clone() => new VariantSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VariantSet create() => new VariantSet();
-  static PbList<VariantSet> createRepeated() => new PbList<VariantSet>();
-  static VariantSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariantSet();
-    return _defaultInstance;
-  }
-
+  VariantSet clone() => VariantSet()..mergeFromMessage(this);
+  VariantSet copyWith(void Function(VariantSet) updates) =>
+      super.copyWith((message) => updates(message as VariantSet));
+  $pb.BuilderInfo get info_ => _i;
+  static VariantSet create() => VariantSet();
+  VariantSet createEmptyInstance() => create();
+  static $pb.PbList<VariantSet> createRepeated() => $pb.PbList<VariantSet>();
+  static VariantSet getDefault() => _defaultInstance ??= create()..freeze();
   static VariantSet _defaultInstance;
-  static void $checkItem(VariantSet v) {
-    if (v is! VariantSet) checkItemFailed(v, 'VariantSet');
-  }
 
-  String get datasetId => $_getS(0, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(0, '');
+  set datasetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatasetId() => $_has(0);
+  $core.bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 
-  String get id => $_getS(1, '');
-  set id(String v) {
+  $core.String get id => $_getS(1, '');
+  set id($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasId() => $_has(1);
+  $core.bool hasId() => $_has(1);
   void clearId() => clearField(2);
 
-  List<VariantSetMetadata> get metadata => $_getList(2);
+  $core.List<VariantSetMetadata> get metadata => $_getList(2);
 
-  List<ReferenceBound> get referenceBounds => $_getList(3);
+  $core.List<ReferenceBound> get referenceBounds => $_getList(3);
 
-  String get referenceSetId => $_getS(4, '');
-  set referenceSetId(String v) {
+  $core.String get referenceSetId => $_getS(4, '');
+  set referenceSetId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasReferenceSetId() => $_has(4);
+  $core.bool hasReferenceSetId() => $_has(4);
   void clearReferenceSetId() => clearField(6);
 
-  String get name => $_getS(5, '');
-  set name(String v) {
+  $core.String get name => $_getS(5, '');
+  set name($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasName() => $_has(5);
+  $core.bool hasName() => $_has(5);
   void clearName() => clearField(7);
 
-  String get description => $_getS(6, '');
-  set description(String v) {
+  $core.String get description => $_getS(6, '');
+  set description($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasDescription() => $_has(6);
+  $core.bool hasDescription() => $_has(6);
   void clearDescription() => clearField(8);
 }
 
-class _ReadonlyVariantSet extends VariantSet with ReadonlyMessageMixin {}
-
-class Variant_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variant_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  Variant_InfoEntry() : super();
-  Variant_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Variant_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Variant_InfoEntry clone() => new Variant_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Variant_InfoEntry create() => new Variant_InfoEntry();
-  static PbList<Variant_InfoEntry> createRepeated() =>
-      new PbList<Variant_InfoEntry>();
-  static Variant_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariant_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static Variant_InfoEntry _defaultInstance;
-  static void $checkItem(Variant_InfoEntry v) {
-    if (v is! Variant_InfoEntry) checkItemFailed(v, 'Variant_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyVariant_InfoEntry extends Variant_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class Variant extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variant')
+class Variant extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Variant',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(2, 'id')
     ..pPS(3, 'names')
     ..aOS(6, 'referenceBases')
     ..pPS(7, 'alternateBases')
-    ..a<double>(8, 'quality', PbFieldType.OD)
+    ..a<$core.double>(8, 'quality', $pb.PbFieldType.OD)
     ..pPS(9, 'filter')
-    ..pp<Variant_InfoEntry>(10, 'info', PbFieldType.PM,
-        Variant_InfoEntry.$checkItem, Variant_InfoEntry.create)
-    ..pp<VariantCall>(
-        11, 'calls', PbFieldType.PM, VariantCall.$checkItem, VariantCall.create)
+    ..m<$core.String, $2.ListValue>(
+        10,
+        'info',
+        'Variant.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $2.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
+    ..pc<VariantCall>(11, 'calls', $pb.PbFieldType.PM, VariantCall.create)
     ..aInt64(12, 'created')
     ..aInt64(13, 'end')
     ..aOS(14, 'referenceName')
@@ -330,65 +218,62 @@ class Variant extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   Variant() : super();
-  Variant.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Variant.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Variant.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Variant.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Variant clone() => new Variant()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Variant create() => new Variant();
-  static PbList<Variant> createRepeated() => new PbList<Variant>();
-  static Variant getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariant();
-    return _defaultInstance;
-  }
-
+  Variant clone() => Variant()..mergeFromMessage(this);
+  Variant copyWith(void Function(Variant) updates) =>
+      super.copyWith((message) => updates(message as Variant));
+  $pb.BuilderInfo get info_ => _i;
+  static Variant create() => Variant();
+  Variant createEmptyInstance() => create();
+  static $pb.PbList<Variant> createRepeated() => $pb.PbList<Variant>();
+  static Variant getDefault() => _defaultInstance ??= create()..freeze();
   static Variant _defaultInstance;
-  static void $checkItem(Variant v) {
-    if (v is! Variant) checkItemFailed(v, 'Variant');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(2);
 
-  List<String> get names => $_getList(1);
+  $core.List<$core.String> get names => $_getList(1);
 
-  String get referenceBases => $_getS(2, '');
-  set referenceBases(String v) {
+  $core.String get referenceBases => $_getS(2, '');
+  set referenceBases($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasReferenceBases() => $_has(2);
+  $core.bool hasReferenceBases() => $_has(2);
   void clearReferenceBases() => clearField(6);
 
-  List<String> get alternateBases => $_getList(3);
+  $core.List<$core.String> get alternateBases => $_getList(3);
 
-  double get quality => $_getN(4);
-  set quality(double v) {
+  $core.double get quality => $_getN(4);
+  set quality($core.double v) {
     $_setDouble(4, v);
   }
 
-  bool hasQuality() => $_has(4);
+  $core.bool hasQuality() => $_has(4);
   void clearQuality() => clearField(8);
 
-  List<String> get filter => $_getList(5);
+  $core.List<$core.String> get filter => $_getList(5);
 
-  List<Variant_InfoEntry> get info => $_getList(6);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(6);
 
-  List<VariantCall> get calls => $_getList(7);
+  $core.List<VariantCall> get calls => $_getList(7);
 
   Int64 get created => $_getI64(8);
   set created(Int64 v) {
     $_setInt64(8, v);
   }
 
-  bool hasCreated() => $_has(8);
+  $core.bool hasCreated() => $_has(8);
   void clearCreated() => clearField(12);
 
   Int64 get end => $_getI64(9);
@@ -396,23 +281,23 @@ class Variant extends GeneratedMessage {
     $_setInt64(9, v);
   }
 
-  bool hasEnd() => $_has(9);
+  $core.bool hasEnd() => $_has(9);
   void clearEnd() => clearField(13);
 
-  String get referenceName => $_getS(10, '');
-  set referenceName(String v) {
+  $core.String get referenceName => $_getS(10, '');
+  set referenceName($core.String v) {
     $_setString(10, v);
   }
 
-  bool hasReferenceName() => $_has(10);
+  $core.bool hasReferenceName() => $_has(10);
   void clearReferenceName() => clearField(14);
 
-  String get variantSetId => $_getS(11, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(11, '');
+  set variantSetId($core.String v) {
     $_setString(11, v);
   }
 
-  bool hasVariantSetId() => $_has(11);
+  $core.bool hasVariantSetId() => $_has(11);
   void clearVariantSetId() => clearField(15);
 
   Int64 get start => $_getI64(12);
@@ -420,292 +305,183 @@ class Variant extends GeneratedMessage {
     $_setInt64(12, v);
   }
 
-  bool hasStart() => $_has(12);
+  $core.bool hasStart() => $_has(12);
   void clearStart() => clearField(16);
 }
 
-class _ReadonlyVariant extends Variant with ReadonlyMessageMixin {}
-
-class VariantCall_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantCall_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
+class VariantCall extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VariantCall',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..m<$core.String, $2.ListValue>(
         2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  VariantCall_InfoEntry() : super();
-  VariantCall_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantCall_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  VariantCall_InfoEntry clone() =>
-      new VariantCall_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VariantCall_InfoEntry create() => new VariantCall_InfoEntry();
-  static PbList<VariantCall_InfoEntry> createRepeated() =>
-      new PbList<VariantCall_InfoEntry>();
-  static VariantCall_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyVariantCall_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static VariantCall_InfoEntry _defaultInstance;
-  static void $checkItem(VariantCall_InfoEntry v) {
-    if (v is! VariantCall_InfoEntry)
-      checkItemFailed(v, 'VariantCall_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyVariantCall_InfoEntry extends VariantCall_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class VariantCall extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('VariantCall')
-    ..pp<VariantCall_InfoEntry>(2, 'info', PbFieldType.PM,
-        VariantCall_InfoEntry.$checkItem, VariantCall_InfoEntry.create)
+        'info',
+        'VariantCall.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $2.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
     ..aOS(5, 'phaseset')
-    ..p<double>(6, 'genotypeLikelihood', PbFieldType.PD)
-    ..p<int>(7, 'genotype', PbFieldType.P3)
+    ..p<$core.double>(6, 'genotypeLikelihood', $pb.PbFieldType.PD)
+    ..p<$core.int>(7, 'genotype', $pb.PbFieldType.P3)
     ..aOS(8, 'callSetId')
     ..aOS(9, 'callSetName')
     ..hasRequiredFields = false;
 
   VariantCall() : super();
-  VariantCall.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantCall.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  VariantCall.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  VariantCall.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  VariantCall clone() => new VariantCall()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static VariantCall create() => new VariantCall();
-  static PbList<VariantCall> createRepeated() => new PbList<VariantCall>();
-  static VariantCall getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariantCall();
-    return _defaultInstance;
-  }
-
+  VariantCall clone() => VariantCall()..mergeFromMessage(this);
+  VariantCall copyWith(void Function(VariantCall) updates) =>
+      super.copyWith((message) => updates(message as VariantCall));
+  $pb.BuilderInfo get info_ => _i;
+  static VariantCall create() => VariantCall();
+  VariantCall createEmptyInstance() => create();
+  static $pb.PbList<VariantCall> createRepeated() => $pb.PbList<VariantCall>();
+  static VariantCall getDefault() => _defaultInstance ??= create()..freeze();
   static VariantCall _defaultInstance;
-  static void $checkItem(VariantCall v) {
-    if (v is! VariantCall) checkItemFailed(v, 'VariantCall');
-  }
 
-  List<VariantCall_InfoEntry> get info => $_getList(0);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(0);
 
-  String get phaseset => $_getS(1, '');
-  set phaseset(String v) {
+  $core.String get phaseset => $_getS(1, '');
+  set phaseset($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPhaseset() => $_has(1);
+  $core.bool hasPhaseset() => $_has(1);
   void clearPhaseset() => clearField(5);
 
-  List<double> get genotypeLikelihood => $_getList(2);
+  $core.List<$core.double> get genotypeLikelihood => $_getList(2);
 
-  List<int> get genotype => $_getList(3);
+  $core.List<$core.int> get genotype => $_getList(3);
 
-  String get callSetId => $_getS(4, '');
-  set callSetId(String v) {
+  $core.String get callSetId => $_getS(4, '');
+  set callSetId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasCallSetId() => $_has(4);
+  $core.bool hasCallSetId() => $_has(4);
   void clearCallSetId() => clearField(8);
 
-  String get callSetName => $_getS(5, '');
-  set callSetName(String v) {
+  $core.String get callSetName => $_getS(5, '');
+  set callSetName($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasCallSetName() => $_has(5);
+  $core.bool hasCallSetName() => $_has(5);
   void clearCallSetName() => clearField(9);
 }
 
-class _ReadonlyVariantCall extends VariantCall with ReadonlyMessageMixin {}
-
-class CallSet_InfoEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CallSet_InfoEntry')
-    ..aOS(1, 'key')
-    ..a<$google$protobuf.ListValue>(
-        2,
-        'value',
-        PbFieldType.OM,
-        $google$protobuf.ListValue.getDefault,
-        $google$protobuf.ListValue.create)
-    ..hasRequiredFields = false;
-
-  CallSet_InfoEntry() : super();
-  CallSet_InfoEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CallSet_InfoEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  CallSet_InfoEntry clone() => new CallSet_InfoEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CallSet_InfoEntry create() => new CallSet_InfoEntry();
-  static PbList<CallSet_InfoEntry> createRepeated() =>
-      new PbList<CallSet_InfoEntry>();
-  static CallSet_InfoEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCallSet_InfoEntry();
-    return _defaultInstance;
-  }
-
-  static CallSet_InfoEntry _defaultInstance;
-  static void $checkItem(CallSet_InfoEntry v) {
-    if (v is! CallSet_InfoEntry) checkItemFailed(v, 'CallSet_InfoEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  $google$protobuf.ListValue get value => $_getN(1);
-  set value($google$protobuf.ListValue v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyCallSet_InfoEntry extends CallSet_InfoEntry
-    with ReadonlyMessageMixin {}
-
-class CallSet extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CallSet')
+class CallSet extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CallSet',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'name')
-    ..pp<CallSet_InfoEntry>(4, 'info', PbFieldType.PM,
-        CallSet_InfoEntry.$checkItem, CallSet_InfoEntry.create)
+    ..m<$core.String, $2.ListValue>(
+        4,
+        'info',
+        'CallSet.InfoEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $2.ListValue.create,
+        null,
+        null,
+        const $pb.PackageName('google.genomics.v1'))
     ..aInt64(5, 'created')
     ..pPS(6, 'variantSetIds')
     ..aOS(7, 'sampleId')
     ..hasRequiredFields = false;
 
   CallSet() : super();
-  CallSet.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CallSet.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CallSet.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CallSet.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CallSet clone() => new CallSet()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CallSet create() => new CallSet();
-  static PbList<CallSet> createRepeated() => new PbList<CallSet>();
-  static CallSet getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyCallSet();
-    return _defaultInstance;
-  }
-
+  CallSet clone() => CallSet()..mergeFromMessage(this);
+  CallSet copyWith(void Function(CallSet) updates) =>
+      super.copyWith((message) => updates(message as CallSet));
+  $pb.BuilderInfo get info_ => _i;
+  static CallSet create() => CallSet();
+  CallSet createEmptyInstance() => create();
+  static $pb.PbList<CallSet> createRepeated() => $pb.PbList<CallSet>();
+  static CallSet getDefault() => _defaultInstance ??= create()..freeze();
   static CallSet _defaultInstance;
-  static void $checkItem(CallSet v) {
-    if (v is! CallSet) checkItemFailed(v, 'CallSet');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
-  List<CallSet_InfoEntry> get info => $_getList(2);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(2);
 
   Int64 get created => $_getI64(3);
   set created(Int64 v) {
     $_setInt64(3, v);
   }
 
-  bool hasCreated() => $_has(3);
+  $core.bool hasCreated() => $_has(3);
   void clearCreated() => clearField(5);
 
-  List<String> get variantSetIds => $_getList(4);
+  $core.List<$core.String> get variantSetIds => $_getList(4);
 
-  String get sampleId => $_getS(5, '');
-  set sampleId(String v) {
+  $core.String get sampleId => $_getS(5, '');
+  set sampleId($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasSampleId() => $_has(5);
+  $core.bool hasSampleId() => $_has(5);
   void clearSampleId() => clearField(7);
 }
 
-class _ReadonlyCallSet extends CallSet with ReadonlyMessageMixin {}
-
-class ReferenceBound extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReferenceBound')
+class ReferenceBound extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReferenceBound',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'referenceName')
     ..aInt64(2, 'upperBound')
     ..hasRequiredFields = false;
 
   ReferenceBound() : super();
-  ReferenceBound.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReferenceBound.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReferenceBound.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReferenceBound.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReferenceBound clone() => new ReferenceBound()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReferenceBound create() => new ReferenceBound();
-  static PbList<ReferenceBound> createRepeated() =>
-      new PbList<ReferenceBound>();
-  static ReferenceBound getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReferenceBound();
-    return _defaultInstance;
-  }
-
+  ReferenceBound clone() => ReferenceBound()..mergeFromMessage(this);
+  ReferenceBound copyWith(void Function(ReferenceBound) updates) =>
+      super.copyWith((message) => updates(message as ReferenceBound));
+  $pb.BuilderInfo get info_ => _i;
+  static ReferenceBound create() => ReferenceBound();
+  ReferenceBound createEmptyInstance() => create();
+  static $pb.PbList<ReferenceBound> createRepeated() =>
+      $pb.PbList<ReferenceBound>();
+  static ReferenceBound getDefault() => _defaultInstance ??= create()..freeze();
   static ReferenceBound _defaultInstance;
-  static void $checkItem(ReferenceBound v) {
-    if (v is! ReferenceBound) checkItemFailed(v, 'ReferenceBound');
-  }
 
-  String get referenceName => $_getS(0, '');
-  set referenceName(String v) {
+  $core.String get referenceName => $_getS(0, '');
+  set referenceName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasReferenceName() => $_has(0);
+  $core.bool hasReferenceName() => $_has(0);
   void clearReferenceName() => clearField(1);
 
   Int64 get upperBound => $_getI64(1);
@@ -713,240 +489,163 @@ class ReferenceBound extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasUpperBound() => $_has(1);
+  $core.bool hasUpperBound() => $_has(1);
   void clearUpperBound() => clearField(2);
 }
 
-class _ReadonlyReferenceBound extends ReferenceBound with ReadonlyMessageMixin {
-}
-
-class ImportVariantsRequest_InfoMergeConfigEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ImportVariantsRequest_InfoMergeConfigEntry')
-        ..aOS(1, 'key')
-        ..e<InfoMergeOperation>(
-            2,
-            'value',
-            PbFieldType.OE,
-            InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
-            InfoMergeOperation.valueOf,
-            InfoMergeOperation.values)
-        ..hasRequiredFields = false;
-
-  ImportVariantsRequest_InfoMergeConfigEntry() : super();
-  ImportVariantsRequest_InfoMergeConfigEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportVariantsRequest_InfoMergeConfigEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ImportVariantsRequest_InfoMergeConfigEntry clone() =>
-      new ImportVariantsRequest_InfoMergeConfigEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportVariantsRequest_InfoMergeConfigEntry create() =>
-      new ImportVariantsRequest_InfoMergeConfigEntry();
-  static PbList<ImportVariantsRequest_InfoMergeConfigEntry> createRepeated() =>
-      new PbList<ImportVariantsRequest_InfoMergeConfigEntry>();
-  static ImportVariantsRequest_InfoMergeConfigEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyImportVariantsRequest_InfoMergeConfigEntry();
-    return _defaultInstance;
-  }
-
-  static ImportVariantsRequest_InfoMergeConfigEntry _defaultInstance;
-  static void $checkItem(ImportVariantsRequest_InfoMergeConfigEntry v) {
-    if (v is! ImportVariantsRequest_InfoMergeConfigEntry)
-      checkItemFailed(v, 'ImportVariantsRequest_InfoMergeConfigEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  InfoMergeOperation get value => $_getN(1);
-  set value(InfoMergeOperation v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyImportVariantsRequest_InfoMergeConfigEntry
-    extends ImportVariantsRequest_InfoMergeConfigEntry
-    with ReadonlyMessageMixin {}
-
-class ImportVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportVariantsRequest')
+class ImportVariantsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportVariantsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantSetId')
     ..pPS(2, 'sourceUris')
     ..e<ImportVariantsRequest_Format>(
         3,
         'format',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ImportVariantsRequest_Format.FORMAT_UNSPECIFIED,
         ImportVariantsRequest_Format.valueOf,
         ImportVariantsRequest_Format.values)
     ..aOB(5, 'normalizeReferenceNames')
-    ..pp<ImportVariantsRequest_InfoMergeConfigEntry>(
+    ..m<$core.String, InfoMergeOperation>(
         6,
         'infoMergeConfig',
-        PbFieldType.PM,
-        ImportVariantsRequest_InfoMergeConfigEntry.$checkItem,
-        ImportVariantsRequest_InfoMergeConfigEntry.create)
+        'ImportVariantsRequest.InfoMergeConfigEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OE,
+        null,
+        InfoMergeOperation.valueOf,
+        InfoMergeOperation.values,
+        const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
   ImportVariantsRequest() : super();
-  ImportVariantsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportVariantsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImportVariantsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportVariantsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportVariantsRequest clone() =>
-      new ImportVariantsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportVariantsRequest create() => new ImportVariantsRequest();
-  static PbList<ImportVariantsRequest> createRepeated() =>
-      new PbList<ImportVariantsRequest>();
-  static ImportVariantsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportVariantsRequest();
-    return _defaultInstance;
-  }
-
+      ImportVariantsRequest()..mergeFromMessage(this);
+  ImportVariantsRequest copyWith(
+          void Function(ImportVariantsRequest) updates) =>
+      super.copyWith((message) => updates(message as ImportVariantsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportVariantsRequest create() => ImportVariantsRequest();
+  ImportVariantsRequest createEmptyInstance() => create();
+  static $pb.PbList<ImportVariantsRequest> createRepeated() =>
+      $pb.PbList<ImportVariantsRequest>();
+  static ImportVariantsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImportVariantsRequest _defaultInstance;
-  static void $checkItem(ImportVariantsRequest v) {
-    if (v is! ImportVariantsRequest)
-      checkItemFailed(v, 'ImportVariantsRequest');
-  }
 
-  String get variantSetId => $_getS(0, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(0, '');
+  set variantSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantSetId() => $_has(0);
+  $core.bool hasVariantSetId() => $_has(0);
   void clearVariantSetId() => clearField(1);
 
-  List<String> get sourceUris => $_getList(1);
+  $core.List<$core.String> get sourceUris => $_getList(1);
 
   ImportVariantsRequest_Format get format => $_getN(2);
   set format(ImportVariantsRequest_Format v) {
     setField(3, v);
   }
 
-  bool hasFormat() => $_has(2);
+  $core.bool hasFormat() => $_has(2);
   void clearFormat() => clearField(3);
 
-  bool get normalizeReferenceNames => $_get(3, false);
-  set normalizeReferenceNames(bool v) {
+  $core.bool get normalizeReferenceNames => $_get(3, false);
+  set normalizeReferenceNames($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasNormalizeReferenceNames() => $_has(3);
+  $core.bool hasNormalizeReferenceNames() => $_has(3);
   void clearNormalizeReferenceNames() => clearField(5);
 
-  List<ImportVariantsRequest_InfoMergeConfigEntry> get infoMergeConfig =>
-      $_getList(4);
+  $core.Map<$core.String, InfoMergeOperation> get infoMergeConfig =>
+      $_getMap(4);
 }
 
-class _ReadonlyImportVariantsRequest extends ImportVariantsRequest
-    with ReadonlyMessageMixin {}
-
-class ImportVariantsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ImportVariantsResponse')
+class ImportVariantsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportVariantsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..pPS(1, 'callSetIds')
     ..hasRequiredFields = false;
 
   ImportVariantsResponse() : super();
-  ImportVariantsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportVariantsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ImportVariantsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ImportVariantsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ImportVariantsResponse clone() =>
-      new ImportVariantsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ImportVariantsResponse create() => new ImportVariantsResponse();
-  static PbList<ImportVariantsResponse> createRepeated() =>
-      new PbList<ImportVariantsResponse>();
-  static ImportVariantsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyImportVariantsResponse();
-    return _defaultInstance;
-  }
-
+      ImportVariantsResponse()..mergeFromMessage(this);
+  ImportVariantsResponse copyWith(
+          void Function(ImportVariantsResponse) updates) =>
+      super.copyWith((message) => updates(message as ImportVariantsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportVariantsResponse create() => ImportVariantsResponse();
+  ImportVariantsResponse createEmptyInstance() => create();
+  static $pb.PbList<ImportVariantsResponse> createRepeated() =>
+      $pb.PbList<ImportVariantsResponse>();
+  static ImportVariantsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ImportVariantsResponse _defaultInstance;
-  static void $checkItem(ImportVariantsResponse v) {
-    if (v is! ImportVariantsResponse)
-      checkItemFailed(v, 'ImportVariantsResponse');
-  }
 
-  List<String> get callSetIds => $_getList(0);
+  $core.List<$core.String> get callSetIds => $_getList(0);
 }
 
-class _ReadonlyImportVariantsResponse extends ImportVariantsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVariantSetRequest')
-    ..a<VariantSet>(1, 'variantSet', PbFieldType.OM, VariantSet.getDefault,
+class CreateVariantSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVariantSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..a<VariantSet>(1, 'variantSet', $pb.PbFieldType.OM, VariantSet.getDefault,
         VariantSet.create)
     ..hasRequiredFields = false;
 
   CreateVariantSetRequest() : super();
-  CreateVariantSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateVariantSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateVariantSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateVariantSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVariantSetRequest clone() =>
-      new CreateVariantSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateVariantSetRequest create() => new CreateVariantSetRequest();
-  static PbList<CreateVariantSetRequest> createRepeated() =>
-      new PbList<CreateVariantSetRequest>();
-  static CreateVariantSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVariantSetRequest();
-    return _defaultInstance;
-  }
-
+      CreateVariantSetRequest()..mergeFromMessage(this);
+  CreateVariantSetRequest copyWith(
+          void Function(CreateVariantSetRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateVariantSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateVariantSetRequest create() => CreateVariantSetRequest();
+  CreateVariantSetRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateVariantSetRequest> createRepeated() =>
+      $pb.PbList<CreateVariantSetRequest>();
+  static CreateVariantSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateVariantSetRequest _defaultInstance;
-  static void $checkItem(CreateVariantSetRequest v) {
-    if (v is! CreateVariantSetRequest)
-      checkItemFailed(v, 'CreateVariantSetRequest');
-  }
 
   VariantSet get variantSet => $_getN(0);
   set variantSet(VariantSet v) {
     setField(1, v);
   }
 
-  bool hasVariantSet() => $_has(0);
+  $core.bool hasVariantSet() => $_has(0);
   void clearVariantSet() => clearField(1);
 }
 
-class _ReadonlyCreateVariantSetRequest extends CreateVariantSetRequest
-    with ReadonlyMessageMixin {}
-
-class ExportVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExportVariantSetRequest')
+class ExportVariantSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportVariantSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantSetId')
     ..pPS(2, 'callSetIds')
     ..aOS(3, 'projectId')
     ..e<ExportVariantSetRequest_Format>(
         4,
         'format',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ExportVariantSetRequest_Format.FORMAT_UNSPECIFIED,
         ExportVariantSetRequest_Format.valueOf,
         ExportVariantSetRequest_Format.values)
@@ -955,46 +654,42 @@ class ExportVariantSetRequest extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ExportVariantSetRequest() : super();
-  ExportVariantSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportVariantSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExportVariantSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExportVariantSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ExportVariantSetRequest clone() =>
-      new ExportVariantSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExportVariantSetRequest create() => new ExportVariantSetRequest();
-  static PbList<ExportVariantSetRequest> createRepeated() =>
-      new PbList<ExportVariantSetRequest>();
-  static ExportVariantSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExportVariantSetRequest();
-    return _defaultInstance;
-  }
-
+      ExportVariantSetRequest()..mergeFromMessage(this);
+  ExportVariantSetRequest copyWith(
+          void Function(ExportVariantSetRequest) updates) =>
+      super.copyWith((message) => updates(message as ExportVariantSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ExportVariantSetRequest create() => ExportVariantSetRequest();
+  ExportVariantSetRequest createEmptyInstance() => create();
+  static $pb.PbList<ExportVariantSetRequest> createRepeated() =>
+      $pb.PbList<ExportVariantSetRequest>();
+  static ExportVariantSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExportVariantSetRequest _defaultInstance;
-  static void $checkItem(ExportVariantSetRequest v) {
-    if (v is! ExportVariantSetRequest)
-      checkItemFailed(v, 'ExportVariantSetRequest');
-  }
 
-  String get variantSetId => $_getS(0, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(0, '');
+  set variantSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantSetId() => $_has(0);
+  $core.bool hasVariantSetId() => $_has(0);
   void clearVariantSetId() => clearField(1);
 
-  List<String> get callSetIds => $_getList(1);
+  $core.List<$core.String> get callSetIds => $_getList(1);
 
-  String get projectId => $_getS(2, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(2, '');
+  set projectId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasProjectId() => $_has(2);
+  $core.bool hasProjectId() => $_has(2);
   void clearProjectId() => clearField(3);
 
   ExportVariantSetRequest_Format get format => $_getN(3);
@@ -1002,256 +697,222 @@ class ExportVariantSetRequest extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasFormat() => $_has(3);
+  $core.bool hasFormat() => $_has(3);
   void clearFormat() => clearField(4);
 
-  String get bigqueryDataset => $_getS(4, '');
-  set bigqueryDataset(String v) {
+  $core.String get bigqueryDataset => $_getS(4, '');
+  set bigqueryDataset($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasBigqueryDataset() => $_has(4);
+  $core.bool hasBigqueryDataset() => $_has(4);
   void clearBigqueryDataset() => clearField(5);
 
-  String get bigqueryTable => $_getS(5, '');
-  set bigqueryTable(String v) {
+  $core.String get bigqueryTable => $_getS(5, '');
+  set bigqueryTable($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasBigqueryTable() => $_has(5);
+  $core.bool hasBigqueryTable() => $_has(5);
   void clearBigqueryTable() => clearField(6);
 }
 
-class _ReadonlyExportVariantSetRequest extends ExportVariantSetRequest
-    with ReadonlyMessageMixin {}
-
-class GetVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVariantSetRequest')
+class GetVariantSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVariantSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantSetId')
     ..hasRequiredFields = false;
 
   GetVariantSetRequest() : super();
-  GetVariantSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetVariantSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetVariantSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetVariantSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetVariantSetRequest clone() =>
-      new GetVariantSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetVariantSetRequest create() => new GetVariantSetRequest();
-  static PbList<GetVariantSetRequest> createRepeated() =>
-      new PbList<GetVariantSetRequest>();
-  static GetVariantSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVariantSetRequest();
-    return _defaultInstance;
-  }
-
+      GetVariantSetRequest()..mergeFromMessage(this);
+  GetVariantSetRequest copyWith(void Function(GetVariantSetRequest) updates) =>
+      super.copyWith((message) => updates(message as GetVariantSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetVariantSetRequest create() => GetVariantSetRequest();
+  GetVariantSetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetVariantSetRequest> createRepeated() =>
+      $pb.PbList<GetVariantSetRequest>();
+  static GetVariantSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetVariantSetRequest _defaultInstance;
-  static void $checkItem(GetVariantSetRequest v) {
-    if (v is! GetVariantSetRequest) checkItemFailed(v, 'GetVariantSetRequest');
-  }
 
-  String get variantSetId => $_getS(0, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(0, '');
+  set variantSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantSetId() => $_has(0);
+  $core.bool hasVariantSetId() => $_has(0);
   void clearVariantSetId() => clearField(1);
 }
 
-class _ReadonlyGetVariantSetRequest extends GetVariantSetRequest
-    with ReadonlyMessageMixin {}
-
-class SearchVariantSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantSetsRequest')
+class SearchVariantSetsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchVariantSetsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..pPS(1, 'datasetIds')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   SearchVariantSetsRequest() : super();
-  SearchVariantSetsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantSetsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchVariantSetsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantSetsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantSetsRequest clone() =>
-      new SearchVariantSetsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchVariantSetsRequest create() => new SearchVariantSetsRequest();
-  static PbList<SearchVariantSetsRequest> createRepeated() =>
-      new PbList<SearchVariantSetsRequest>();
-  static SearchVariantSetsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantSetsRequest();
-    return _defaultInstance;
-  }
-
+      SearchVariantSetsRequest()..mergeFromMessage(this);
+  SearchVariantSetsRequest copyWith(
+          void Function(SearchVariantSetsRequest) updates) =>
+      super.copyWith((message) => updates(message as SearchVariantSetsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchVariantSetsRequest create() => SearchVariantSetsRequest();
+  SearchVariantSetsRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchVariantSetsRequest> createRepeated() =>
+      $pb.PbList<SearchVariantSetsRequest>();
+  static SearchVariantSetsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchVariantSetsRequest _defaultInstance;
-  static void $checkItem(SearchVariantSetsRequest v) {
-    if (v is! SearchVariantSetsRequest)
-      checkItemFailed(v, 'SearchVariantSetsRequest');
-  }
 
-  List<String> get datasetIds => $_getList(0);
+  $core.List<$core.String> get datasetIds => $_getList(0);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlySearchVariantSetsRequest extends SearchVariantSetsRequest
-    with ReadonlyMessageMixin {}
-
-class SearchVariantSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantSetsResponse')
-    ..pp<VariantSet>(1, 'variantSets', PbFieldType.PM, VariantSet.$checkItem,
-        VariantSet.create)
+class SearchVariantSetsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchVariantSetsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<VariantSet>(1, 'variantSets', $pb.PbFieldType.PM, VariantSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   SearchVariantSetsResponse() : super();
-  SearchVariantSetsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantSetsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchVariantSetsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantSetsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantSetsResponse clone() =>
-      new SearchVariantSetsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchVariantSetsResponse create() => new SearchVariantSetsResponse();
-  static PbList<SearchVariantSetsResponse> createRepeated() =>
-      new PbList<SearchVariantSetsResponse>();
-  static SearchVariantSetsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantSetsResponse();
-    return _defaultInstance;
-  }
-
+      SearchVariantSetsResponse()..mergeFromMessage(this);
+  SearchVariantSetsResponse copyWith(
+          void Function(SearchVariantSetsResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as SearchVariantSetsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchVariantSetsResponse create() => SearchVariantSetsResponse();
+  SearchVariantSetsResponse createEmptyInstance() => create();
+  static $pb.PbList<SearchVariantSetsResponse> createRepeated() =>
+      $pb.PbList<SearchVariantSetsResponse>();
+  static SearchVariantSetsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchVariantSetsResponse _defaultInstance;
-  static void $checkItem(SearchVariantSetsResponse v) {
-    if (v is! SearchVariantSetsResponse)
-      checkItemFailed(v, 'SearchVariantSetsResponse');
-  }
 
-  List<VariantSet> get variantSets => $_getList(0);
+  $core.List<VariantSet> get variantSets => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlySearchVariantSetsResponse extends SearchVariantSetsResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVariantSetRequest')
+class DeleteVariantSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteVariantSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantSetId')
     ..hasRequiredFields = false;
 
   DeleteVariantSetRequest() : super();
-  DeleteVariantSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteVariantSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteVariantSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteVariantSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVariantSetRequest clone() =>
-      new DeleteVariantSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteVariantSetRequest create() => new DeleteVariantSetRequest();
-  static PbList<DeleteVariantSetRequest> createRepeated() =>
-      new PbList<DeleteVariantSetRequest>();
-  static DeleteVariantSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVariantSetRequest();
-    return _defaultInstance;
-  }
-
+      DeleteVariantSetRequest()..mergeFromMessage(this);
+  DeleteVariantSetRequest copyWith(
+          void Function(DeleteVariantSetRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteVariantSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteVariantSetRequest create() => DeleteVariantSetRequest();
+  DeleteVariantSetRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteVariantSetRequest> createRepeated() =>
+      $pb.PbList<DeleteVariantSetRequest>();
+  static DeleteVariantSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteVariantSetRequest _defaultInstance;
-  static void $checkItem(DeleteVariantSetRequest v) {
-    if (v is! DeleteVariantSetRequest)
-      checkItemFailed(v, 'DeleteVariantSetRequest');
-  }
 
-  String get variantSetId => $_getS(0, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(0, '');
+  set variantSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantSetId() => $_has(0);
+  $core.bool hasVariantSetId() => $_has(0);
   void clearVariantSetId() => clearField(1);
 }
 
-class _ReadonlyDeleteVariantSetRequest extends DeleteVariantSetRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateVariantSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateVariantSetRequest')
+class UpdateVariantSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVariantSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantSetId')
-    ..a<VariantSet>(2, 'variantSet', PbFieldType.OM, VariantSet.getDefault,
+    ..a<VariantSet>(2, 'variantSet', $pb.PbFieldType.OM, VariantSet.getDefault,
         VariantSet.create)
-    ..a<$google$protobuf.FieldMask>(
-        5,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$3.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateVariantSetRequest() : super();
-  UpdateVariantSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateVariantSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateVariantSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateVariantSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateVariantSetRequest clone() =>
-      new UpdateVariantSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateVariantSetRequest create() => new UpdateVariantSetRequest();
-  static PbList<UpdateVariantSetRequest> createRepeated() =>
-      new PbList<UpdateVariantSetRequest>();
-  static UpdateVariantSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateVariantSetRequest();
-    return _defaultInstance;
-  }
-
+      UpdateVariantSetRequest()..mergeFromMessage(this);
+  UpdateVariantSetRequest copyWith(
+          void Function(UpdateVariantSetRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateVariantSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateVariantSetRequest create() => UpdateVariantSetRequest();
+  UpdateVariantSetRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateVariantSetRequest> createRepeated() =>
+      $pb.PbList<UpdateVariantSetRequest>();
+  static UpdateVariantSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateVariantSetRequest _defaultInstance;
-  static void $checkItem(UpdateVariantSetRequest v) {
-    if (v is! UpdateVariantSetRequest)
-      checkItemFailed(v, 'UpdateVariantSetRequest');
-  }
 
-  String get variantSetId => $_getS(0, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(0, '');
+  set variantSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantSetId() => $_has(0);
+  $core.bool hasVariantSetId() => $_has(0);
   void clearVariantSetId() => clearField(1);
 
   VariantSet get variantSet => $_getN(1);
@@ -1259,23 +920,21 @@ class UpdateVariantSetRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasVariantSet() => $_has(1);
+  $core.bool hasVariantSet() => $_has(1);
   void clearVariantSet() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(5, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(5);
 }
 
-class _ReadonlyUpdateVariantSetRequest extends UpdateVariantSetRequest
-    with ReadonlyMessageMixin {}
-
-class SearchVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantsRequest')
+class SearchVariantsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchVariantsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..pPS(1, 'variantSetIds')
     ..aOS(2, 'variantName')
     ..pPS(3, 'callSetIds')
@@ -1283,53 +942,49 @@ class SearchVariantsRequest extends GeneratedMessage {
     ..aInt64(5, 'start')
     ..aInt64(6, 'end')
     ..aOS(7, 'pageToken')
-    ..a<int>(8, 'pageSize', PbFieldType.O3)
-    ..a<int>(9, 'maxCalls', PbFieldType.O3)
+    ..a<$core.int>(8, 'pageSize', $pb.PbFieldType.O3)
+    ..a<$core.int>(9, 'maxCalls', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   SearchVariantsRequest() : super();
-  SearchVariantsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchVariantsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantsRequest clone() =>
-      new SearchVariantsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchVariantsRequest create() => new SearchVariantsRequest();
-  static PbList<SearchVariantsRequest> createRepeated() =>
-      new PbList<SearchVariantsRequest>();
-  static SearchVariantsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantsRequest();
-    return _defaultInstance;
-  }
-
+      SearchVariantsRequest()..mergeFromMessage(this);
+  SearchVariantsRequest copyWith(
+          void Function(SearchVariantsRequest) updates) =>
+      super.copyWith((message) => updates(message as SearchVariantsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchVariantsRequest create() => SearchVariantsRequest();
+  SearchVariantsRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchVariantsRequest> createRepeated() =>
+      $pb.PbList<SearchVariantsRequest>();
+  static SearchVariantsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchVariantsRequest _defaultInstance;
-  static void $checkItem(SearchVariantsRequest v) {
-    if (v is! SearchVariantsRequest)
-      checkItemFailed(v, 'SearchVariantsRequest');
-  }
 
-  List<String> get variantSetIds => $_getList(0);
+  $core.List<$core.String> get variantSetIds => $_getList(0);
 
-  String get variantName => $_getS(1, '');
-  set variantName(String v) {
+  $core.String get variantName => $_getS(1, '');
+  set variantName($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasVariantName() => $_has(1);
+  $core.bool hasVariantName() => $_has(1);
   void clearVariantName() => clearField(2);
 
-  List<String> get callSetIds => $_getList(2);
+  $core.List<$core.String> get callSetIds => $_getList(2);
 
-  String get referenceName => $_getS(3, '');
-  set referenceName(String v) {
+  $core.String get referenceName => $_getS(3, '');
+  set referenceName($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasReferenceName() => $_has(3);
+  $core.bool hasReferenceName() => $_has(3);
   void clearReferenceName() => clearField(4);
 
   Int64 get start => $_getI64(4);
@@ -1337,7 +992,7 @@ class SearchVariantsRequest extends GeneratedMessage {
     $_setInt64(4, v);
   }
 
-  bool hasStart() => $_has(4);
+  $core.bool hasStart() => $_has(4);
   void clearStart() => clearField(5);
 
   Int64 get end => $_getI64(5);
@@ -1345,168 +1000,145 @@ class SearchVariantsRequest extends GeneratedMessage {
     $_setInt64(5, v);
   }
 
-  bool hasEnd() => $_has(5);
+  $core.bool hasEnd() => $_has(5);
   void clearEnd() => clearField(6);
 
-  String get pageToken => $_getS(6, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(6, '');
+  set pageToken($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasPageToken() => $_has(6);
+  $core.bool hasPageToken() => $_has(6);
   void clearPageToken() => clearField(7);
 
-  int get pageSize => $_get(7, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(7, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(7, v);
   }
 
-  bool hasPageSize() => $_has(7);
+  $core.bool hasPageSize() => $_has(7);
   void clearPageSize() => clearField(8);
 
-  int get maxCalls => $_get(8, 0);
-  set maxCalls(int v) {
+  $core.int get maxCalls => $_get(8, 0);
+  set maxCalls($core.int v) {
     $_setSignedInt32(8, v);
   }
 
-  bool hasMaxCalls() => $_has(8);
+  $core.bool hasMaxCalls() => $_has(8);
   void clearMaxCalls() => clearField(9);
 }
 
-class _ReadonlySearchVariantsRequest extends SearchVariantsRequest
-    with ReadonlyMessageMixin {}
-
-class SearchVariantsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchVariantsResponse')
-    ..pp<Variant>(
-        1, 'variants', PbFieldType.PM, Variant.$checkItem, Variant.create)
+class SearchVariantsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchVariantsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<Variant>(1, 'variants', $pb.PbFieldType.PM, Variant.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   SearchVariantsResponse() : super();
-  SearchVariantsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchVariantsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchVariantsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchVariantsResponse clone() =>
-      new SearchVariantsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchVariantsResponse create() => new SearchVariantsResponse();
-  static PbList<SearchVariantsResponse> createRepeated() =>
-      new PbList<SearchVariantsResponse>();
-  static SearchVariantsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchVariantsResponse();
-    return _defaultInstance;
-  }
-
+      SearchVariantsResponse()..mergeFromMessage(this);
+  SearchVariantsResponse copyWith(
+          void Function(SearchVariantsResponse) updates) =>
+      super.copyWith((message) => updates(message as SearchVariantsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchVariantsResponse create() => SearchVariantsResponse();
+  SearchVariantsResponse createEmptyInstance() => create();
+  static $pb.PbList<SearchVariantsResponse> createRepeated() =>
+      $pb.PbList<SearchVariantsResponse>();
+  static SearchVariantsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchVariantsResponse _defaultInstance;
-  static void $checkItem(SearchVariantsResponse v) {
-    if (v is! SearchVariantsResponse)
-      checkItemFailed(v, 'SearchVariantsResponse');
-  }
 
-  List<Variant> get variants => $_getList(0);
+  $core.List<Variant> get variants => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlySearchVariantsResponse extends SearchVariantsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVariantRequest')
+class CreateVariantRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVariantRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..a<Variant>(
-        1, 'variant', PbFieldType.OM, Variant.getDefault, Variant.create)
+        1, 'variant', $pb.PbFieldType.OM, Variant.getDefault, Variant.create)
     ..hasRequiredFields = false;
 
   CreateVariantRequest() : super();
-  CreateVariantRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateVariantRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateVariantRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateVariantRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVariantRequest clone() =>
-      new CreateVariantRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateVariantRequest create() => new CreateVariantRequest();
-  static PbList<CreateVariantRequest> createRepeated() =>
-      new PbList<CreateVariantRequest>();
-  static CreateVariantRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVariantRequest();
-    return _defaultInstance;
-  }
-
+      CreateVariantRequest()..mergeFromMessage(this);
+  CreateVariantRequest copyWith(void Function(CreateVariantRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateVariantRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateVariantRequest create() => CreateVariantRequest();
+  CreateVariantRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateVariantRequest> createRepeated() =>
+      $pb.PbList<CreateVariantRequest>();
+  static CreateVariantRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateVariantRequest _defaultInstance;
-  static void $checkItem(CreateVariantRequest v) {
-    if (v is! CreateVariantRequest) checkItemFailed(v, 'CreateVariantRequest');
-  }
 
   Variant get variant => $_getN(0);
   set variant(Variant v) {
     setField(1, v);
   }
 
-  bool hasVariant() => $_has(0);
+  $core.bool hasVariant() => $_has(0);
   void clearVariant() => clearField(1);
 }
 
-class _ReadonlyCreateVariantRequest extends CreateVariantRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateVariantRequest')
+class UpdateVariantRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVariantRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantId')
     ..a<Variant>(
-        2, 'variant', PbFieldType.OM, Variant.getDefault, Variant.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+        2, 'variant', $pb.PbFieldType.OM, Variant.getDefault, Variant.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateVariantRequest() : super();
-  UpdateVariantRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateVariantRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateVariantRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateVariantRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateVariantRequest clone() =>
-      new UpdateVariantRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateVariantRequest create() => new UpdateVariantRequest();
-  static PbList<UpdateVariantRequest> createRepeated() =>
-      new PbList<UpdateVariantRequest>();
-  static UpdateVariantRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateVariantRequest();
-    return _defaultInstance;
-  }
-
+      UpdateVariantRequest()..mergeFromMessage(this);
+  UpdateVariantRequest copyWith(void Function(UpdateVariantRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateVariantRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateVariantRequest create() => UpdateVariantRequest();
+  UpdateVariantRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateVariantRequest> createRepeated() =>
+      $pb.PbList<UpdateVariantRequest>();
+  static UpdateVariantRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateVariantRequest _defaultInstance;
-  static void $checkItem(UpdateVariantRequest v) {
-    if (v is! UpdateVariantRequest) checkItemFailed(v, 'UpdateVariantRequest');
-  }
 
-  String get variantId => $_getS(0, '');
-  set variantId(String v) {
+  $core.String get variantId => $_getS(0, '');
+  set variantId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantId() => $_has(0);
+  $core.bool hasVariantId() => $_has(0);
   void clearVariantId() => clearField(1);
 
   Variant get variant => $_getN(1);
@@ -1514,411 +1146,306 @@ class UpdateVariantRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasVariant() => $_has(1);
+  $core.bool hasVariant() => $_has(1);
   void clearVariant() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateVariantRequest extends UpdateVariantRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVariantRequest')
+class DeleteVariantRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteVariantRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantId')
     ..hasRequiredFields = false;
 
   DeleteVariantRequest() : super();
-  DeleteVariantRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteVariantRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteVariantRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteVariantRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVariantRequest clone() =>
-      new DeleteVariantRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteVariantRequest create() => new DeleteVariantRequest();
-  static PbList<DeleteVariantRequest> createRepeated() =>
-      new PbList<DeleteVariantRequest>();
-  static DeleteVariantRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVariantRequest();
-    return _defaultInstance;
-  }
-
+      DeleteVariantRequest()..mergeFromMessage(this);
+  DeleteVariantRequest copyWith(void Function(DeleteVariantRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteVariantRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteVariantRequest create() => DeleteVariantRequest();
+  DeleteVariantRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteVariantRequest> createRepeated() =>
+      $pb.PbList<DeleteVariantRequest>();
+  static DeleteVariantRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteVariantRequest _defaultInstance;
-  static void $checkItem(DeleteVariantRequest v) {
-    if (v is! DeleteVariantRequest) checkItemFailed(v, 'DeleteVariantRequest');
-  }
 
-  String get variantId => $_getS(0, '');
-  set variantId(String v) {
+  $core.String get variantId => $_getS(0, '');
+  set variantId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantId() => $_has(0);
+  $core.bool hasVariantId() => $_has(0);
   void clearVariantId() => clearField(1);
 }
 
-class _ReadonlyDeleteVariantRequest extends DeleteVariantRequest
-    with ReadonlyMessageMixin {}
-
-class GetVariantRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVariantRequest')
+class GetVariantRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVariantRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantId')
     ..hasRequiredFields = false;
 
   GetVariantRequest() : super();
-  GetVariantRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetVariantRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetVariantRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetVariantRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetVariantRequest clone() => new GetVariantRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetVariantRequest create() => new GetVariantRequest();
-  static PbList<GetVariantRequest> createRepeated() =>
-      new PbList<GetVariantRequest>();
-  static GetVariantRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVariantRequest();
-    return _defaultInstance;
-  }
-
+  GetVariantRequest clone() => GetVariantRequest()..mergeFromMessage(this);
+  GetVariantRequest copyWith(void Function(GetVariantRequest) updates) =>
+      super.copyWith((message) => updates(message as GetVariantRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetVariantRequest create() => GetVariantRequest();
+  GetVariantRequest createEmptyInstance() => create();
+  static $pb.PbList<GetVariantRequest> createRepeated() =>
+      $pb.PbList<GetVariantRequest>();
+  static GetVariantRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetVariantRequest _defaultInstance;
-  static void $checkItem(GetVariantRequest v) {
-    if (v is! GetVariantRequest) checkItemFailed(v, 'GetVariantRequest');
-  }
 
-  String get variantId => $_getS(0, '');
-  set variantId(String v) {
+  $core.String get variantId => $_getS(0, '');
+  set variantId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantId() => $_has(0);
+  $core.bool hasVariantId() => $_has(0);
   void clearVariantId() => clearField(1);
 }
 
-class _ReadonlyGetVariantRequest extends GetVariantRequest
-    with ReadonlyMessageMixin {}
-
-class MergeVariantsRequest_InfoMergeConfigEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('MergeVariantsRequest_InfoMergeConfigEntry')
-        ..aOS(1, 'key')
-        ..e<InfoMergeOperation>(
-            2,
-            'value',
-            PbFieldType.OE,
-            InfoMergeOperation.INFO_MERGE_OPERATION_UNSPECIFIED,
-            InfoMergeOperation.valueOf,
-            InfoMergeOperation.values)
-        ..hasRequiredFields = false;
-
-  MergeVariantsRequest_InfoMergeConfigEntry() : super();
-  MergeVariantsRequest_InfoMergeConfigEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MergeVariantsRequest_InfoMergeConfigEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  MergeVariantsRequest_InfoMergeConfigEntry clone() =>
-      new MergeVariantsRequest_InfoMergeConfigEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MergeVariantsRequest_InfoMergeConfigEntry create() =>
-      new MergeVariantsRequest_InfoMergeConfigEntry();
-  static PbList<MergeVariantsRequest_InfoMergeConfigEntry> createRepeated() =>
-      new PbList<MergeVariantsRequest_InfoMergeConfigEntry>();
-  static MergeVariantsRequest_InfoMergeConfigEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance =
-          new _ReadonlyMergeVariantsRequest_InfoMergeConfigEntry();
-    return _defaultInstance;
-  }
-
-  static MergeVariantsRequest_InfoMergeConfigEntry _defaultInstance;
-  static void $checkItem(MergeVariantsRequest_InfoMergeConfigEntry v) {
-    if (v is! MergeVariantsRequest_InfoMergeConfigEntry)
-      checkItemFailed(v, 'MergeVariantsRequest_InfoMergeConfigEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  InfoMergeOperation get value => $_getN(1);
-  set value(InfoMergeOperation v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyMergeVariantsRequest_InfoMergeConfigEntry
-    extends MergeVariantsRequest_InfoMergeConfigEntry
-    with ReadonlyMessageMixin {}
-
-class MergeVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MergeVariantsRequest')
+class MergeVariantsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MergeVariantsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'variantSetId')
-    ..pp<Variant>(
-        2, 'variants', PbFieldType.PM, Variant.$checkItem, Variant.create)
-    ..pp<MergeVariantsRequest_InfoMergeConfigEntry>(
+    ..pc<Variant>(2, 'variants', $pb.PbFieldType.PM, Variant.create)
+    ..m<$core.String, InfoMergeOperation>(
         3,
         'infoMergeConfig',
-        PbFieldType.PM,
-        MergeVariantsRequest_InfoMergeConfigEntry.$checkItem,
-        MergeVariantsRequest_InfoMergeConfigEntry.create)
+        'MergeVariantsRequest.InfoMergeConfigEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OE,
+        null,
+        InfoMergeOperation.valueOf,
+        InfoMergeOperation.values,
+        const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
   MergeVariantsRequest() : super();
-  MergeVariantsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MergeVariantsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MergeVariantsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MergeVariantsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   MergeVariantsRequest clone() =>
-      new MergeVariantsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MergeVariantsRequest create() => new MergeVariantsRequest();
-  static PbList<MergeVariantsRequest> createRepeated() =>
-      new PbList<MergeVariantsRequest>();
-  static MergeVariantsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMergeVariantsRequest();
-    return _defaultInstance;
-  }
-
+      MergeVariantsRequest()..mergeFromMessage(this);
+  MergeVariantsRequest copyWith(void Function(MergeVariantsRequest) updates) =>
+      super.copyWith((message) => updates(message as MergeVariantsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static MergeVariantsRequest create() => MergeVariantsRequest();
+  MergeVariantsRequest createEmptyInstance() => create();
+  static $pb.PbList<MergeVariantsRequest> createRepeated() =>
+      $pb.PbList<MergeVariantsRequest>();
+  static MergeVariantsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static MergeVariantsRequest _defaultInstance;
-  static void $checkItem(MergeVariantsRequest v) {
-    if (v is! MergeVariantsRequest) checkItemFailed(v, 'MergeVariantsRequest');
-  }
 
-  String get variantSetId => $_getS(0, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(0, '');
+  set variantSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasVariantSetId() => $_has(0);
+  $core.bool hasVariantSetId() => $_has(0);
   void clearVariantSetId() => clearField(1);
 
-  List<Variant> get variants => $_getList(1);
+  $core.List<Variant> get variants => $_getList(1);
 
-  List<MergeVariantsRequest_InfoMergeConfigEntry> get infoMergeConfig =>
-      $_getList(2);
+  $core.Map<$core.String, InfoMergeOperation> get infoMergeConfig =>
+      $_getMap(2);
 }
 
-class _ReadonlyMergeVariantsRequest extends MergeVariantsRequest
-    with ReadonlyMessageMixin {}
-
-class SearchCallSetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchCallSetsRequest')
+class SearchCallSetsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchCallSetsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..pPS(1, 'variantSetIds')
     ..aOS(2, 'name')
     ..aOS(3, 'pageToken')
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   SearchCallSetsRequest() : super();
-  SearchCallSetsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchCallSetsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchCallSetsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchCallSetsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchCallSetsRequest clone() =>
-      new SearchCallSetsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchCallSetsRequest create() => new SearchCallSetsRequest();
-  static PbList<SearchCallSetsRequest> createRepeated() =>
-      new PbList<SearchCallSetsRequest>();
-  static SearchCallSetsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchCallSetsRequest();
-    return _defaultInstance;
-  }
-
+      SearchCallSetsRequest()..mergeFromMessage(this);
+  SearchCallSetsRequest copyWith(
+          void Function(SearchCallSetsRequest) updates) =>
+      super.copyWith((message) => updates(message as SearchCallSetsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchCallSetsRequest create() => SearchCallSetsRequest();
+  SearchCallSetsRequest createEmptyInstance() => create();
+  static $pb.PbList<SearchCallSetsRequest> createRepeated() =>
+      $pb.PbList<SearchCallSetsRequest>();
+  static SearchCallSetsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchCallSetsRequest _defaultInstance;
-  static void $checkItem(SearchCallSetsRequest v) {
-    if (v is! SearchCallSetsRequest)
-      checkItemFailed(v, 'SearchCallSetsRequest');
-  }
 
-  List<String> get variantSetIds => $_getList(0);
+  $core.List<$core.String> get variantSetIds => $_getList(0);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  int get pageSize => $_get(3, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(3, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasPageSize() => $_has(3);
+  $core.bool hasPageSize() => $_has(3);
   void clearPageSize() => clearField(4);
 }
 
-class _ReadonlySearchCallSetsRequest extends SearchCallSetsRequest
-    with ReadonlyMessageMixin {}
-
-class SearchCallSetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SearchCallSetsResponse')
-    ..pp<CallSet>(
-        1, 'callSets', PbFieldType.PM, CallSet.$checkItem, CallSet.create)
+class SearchCallSetsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchCallSetsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<CallSet>(1, 'callSets', $pb.PbFieldType.PM, CallSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   SearchCallSetsResponse() : super();
-  SearchCallSetsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchCallSetsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SearchCallSetsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SearchCallSetsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SearchCallSetsResponse clone() =>
-      new SearchCallSetsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SearchCallSetsResponse create() => new SearchCallSetsResponse();
-  static PbList<SearchCallSetsResponse> createRepeated() =>
-      new PbList<SearchCallSetsResponse>();
-  static SearchCallSetsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySearchCallSetsResponse();
-    return _defaultInstance;
-  }
-
+      SearchCallSetsResponse()..mergeFromMessage(this);
+  SearchCallSetsResponse copyWith(
+          void Function(SearchCallSetsResponse) updates) =>
+      super.copyWith((message) => updates(message as SearchCallSetsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static SearchCallSetsResponse create() => SearchCallSetsResponse();
+  SearchCallSetsResponse createEmptyInstance() => create();
+  static $pb.PbList<SearchCallSetsResponse> createRepeated() =>
+      $pb.PbList<SearchCallSetsResponse>();
+  static SearchCallSetsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SearchCallSetsResponse _defaultInstance;
-  static void $checkItem(SearchCallSetsResponse v) {
-    if (v is! SearchCallSetsResponse)
-      checkItemFailed(v, 'SearchCallSetsResponse');
-  }
 
-  List<CallSet> get callSets => $_getList(0);
+  $core.List<CallSet> get callSets => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlySearchCallSetsResponse extends SearchCallSetsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateCallSetRequest')
+class CreateCallSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCallSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..a<CallSet>(
-        1, 'callSet', PbFieldType.OM, CallSet.getDefault, CallSet.create)
+        1, 'callSet', $pb.PbFieldType.OM, CallSet.getDefault, CallSet.create)
     ..hasRequiredFields = false;
 
   CreateCallSetRequest() : super();
-  CreateCallSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateCallSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateCallSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateCallSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateCallSetRequest clone() =>
-      new CreateCallSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateCallSetRequest create() => new CreateCallSetRequest();
-  static PbList<CreateCallSetRequest> createRepeated() =>
-      new PbList<CreateCallSetRequest>();
-  static CreateCallSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateCallSetRequest();
-    return _defaultInstance;
-  }
-
+      CreateCallSetRequest()..mergeFromMessage(this);
+  CreateCallSetRequest copyWith(void Function(CreateCallSetRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateCallSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateCallSetRequest create() => CreateCallSetRequest();
+  CreateCallSetRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateCallSetRequest> createRepeated() =>
+      $pb.PbList<CreateCallSetRequest>();
+  static CreateCallSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateCallSetRequest _defaultInstance;
-  static void $checkItem(CreateCallSetRequest v) {
-    if (v is! CreateCallSetRequest) checkItemFailed(v, 'CreateCallSetRequest');
-  }
 
   CallSet get callSet => $_getN(0);
   set callSet(CallSet v) {
     setField(1, v);
   }
 
-  bool hasCallSet() => $_has(0);
+  $core.bool hasCallSet() => $_has(0);
   void clearCallSet() => clearField(1);
 }
 
-class _ReadonlyCreateCallSetRequest extends CreateCallSetRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateCallSetRequest')
+class UpdateCallSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateCallSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'callSetId')
     ..a<CallSet>(
-        2, 'callSet', PbFieldType.OM, CallSet.getDefault, CallSet.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+        2, 'callSet', $pb.PbFieldType.OM, CallSet.getDefault, CallSet.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCallSetRequest() : super();
-  UpdateCallSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateCallSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateCallSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateCallSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateCallSetRequest clone() =>
-      new UpdateCallSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateCallSetRequest create() => new UpdateCallSetRequest();
-  static PbList<UpdateCallSetRequest> createRepeated() =>
-      new PbList<UpdateCallSetRequest>();
-  static UpdateCallSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateCallSetRequest();
-    return _defaultInstance;
-  }
-
+      UpdateCallSetRequest()..mergeFromMessage(this);
+  UpdateCallSetRequest copyWith(void Function(UpdateCallSetRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateCallSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateCallSetRequest create() => UpdateCallSetRequest();
+  UpdateCallSetRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateCallSetRequest> createRepeated() =>
+      $pb.PbList<UpdateCallSetRequest>();
+  static UpdateCallSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateCallSetRequest _defaultInstance;
-  static void $checkItem(UpdateCallSetRequest v) {
-    if (v is! UpdateCallSetRequest) checkItemFailed(v, 'UpdateCallSetRequest');
-  }
 
-  String get callSetId => $_getS(0, '');
-  set callSetId(String v) {
+  $core.String get callSetId => $_getS(0, '');
+  set callSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCallSetId() => $_has(0);
+  $core.bool hasCallSetId() => $_has(0);
   void clearCallSetId() => clearField(1);
 
   CallSet get callSet => $_getN(1);
@@ -1926,104 +1453,90 @@ class UpdateCallSetRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasCallSet() => $_has(1);
+  $core.bool hasCallSet() => $_has(1);
   void clearCallSet() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateCallSetRequest extends UpdateCallSetRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteCallSetRequest')
+class DeleteCallSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteCallSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'callSetId')
     ..hasRequiredFields = false;
 
   DeleteCallSetRequest() : super();
-  DeleteCallSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteCallSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteCallSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteCallSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteCallSetRequest clone() =>
-      new DeleteCallSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteCallSetRequest create() => new DeleteCallSetRequest();
-  static PbList<DeleteCallSetRequest> createRepeated() =>
-      new PbList<DeleteCallSetRequest>();
-  static DeleteCallSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteCallSetRequest();
-    return _defaultInstance;
-  }
-
+      DeleteCallSetRequest()..mergeFromMessage(this);
+  DeleteCallSetRequest copyWith(void Function(DeleteCallSetRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteCallSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteCallSetRequest create() => DeleteCallSetRequest();
+  DeleteCallSetRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteCallSetRequest> createRepeated() =>
+      $pb.PbList<DeleteCallSetRequest>();
+  static DeleteCallSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteCallSetRequest _defaultInstance;
-  static void $checkItem(DeleteCallSetRequest v) {
-    if (v is! DeleteCallSetRequest) checkItemFailed(v, 'DeleteCallSetRequest');
-  }
 
-  String get callSetId => $_getS(0, '');
-  set callSetId(String v) {
+  $core.String get callSetId => $_getS(0, '');
+  set callSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCallSetId() => $_has(0);
+  $core.bool hasCallSetId() => $_has(0);
   void clearCallSetId() => clearField(1);
 }
 
-class _ReadonlyDeleteCallSetRequest extends DeleteCallSetRequest
-    with ReadonlyMessageMixin {}
-
-class GetCallSetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetCallSetRequest')
+class GetCallSetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCallSetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'callSetId')
     ..hasRequiredFields = false;
 
   GetCallSetRequest() : super();
-  GetCallSetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetCallSetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetCallSetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetCallSetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetCallSetRequest clone() => new GetCallSetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetCallSetRequest create() => new GetCallSetRequest();
-  static PbList<GetCallSetRequest> createRepeated() =>
-      new PbList<GetCallSetRequest>();
-  static GetCallSetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetCallSetRequest();
-    return _defaultInstance;
-  }
-
+  GetCallSetRequest clone() => GetCallSetRequest()..mergeFromMessage(this);
+  GetCallSetRequest copyWith(void Function(GetCallSetRequest) updates) =>
+      super.copyWith((message) => updates(message as GetCallSetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetCallSetRequest create() => GetCallSetRequest();
+  GetCallSetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetCallSetRequest> createRepeated() =>
+      $pb.PbList<GetCallSetRequest>();
+  static GetCallSetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetCallSetRequest _defaultInstance;
-  static void $checkItem(GetCallSetRequest v) {
-    if (v is! GetCallSetRequest) checkItemFailed(v, 'GetCallSetRequest');
-  }
 
-  String get callSetId => $_getS(0, '');
-  set callSetId(String v) {
+  $core.String get callSetId => $_getS(0, '');
+  set callSetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasCallSetId() => $_has(0);
+  $core.bool hasCallSetId() => $_has(0);
   void clearCallSetId() => clearField(1);
 }
 
-class _ReadonlyGetCallSetRequest extends GetCallSetRequest
-    with ReadonlyMessageMixin {}
-
-class StreamVariantsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamVariantsRequest')
+class StreamVariantsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamVariantsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'projectId')
     ..aOS(2, 'variantSetId')
     ..pPS(3, 'callSetIds')
@@ -2033,54 +1546,50 @@ class StreamVariantsRequest extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   StreamVariantsRequest() : super();
-  StreamVariantsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamVariantsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamVariantsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamVariantsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamVariantsRequest clone() =>
-      new StreamVariantsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamVariantsRequest create() => new StreamVariantsRequest();
-  static PbList<StreamVariantsRequest> createRepeated() =>
-      new PbList<StreamVariantsRequest>();
-  static StreamVariantsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamVariantsRequest();
-    return _defaultInstance;
-  }
-
+      StreamVariantsRequest()..mergeFromMessage(this);
+  StreamVariantsRequest copyWith(
+          void Function(StreamVariantsRequest) updates) =>
+      super.copyWith((message) => updates(message as StreamVariantsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamVariantsRequest create() => StreamVariantsRequest();
+  StreamVariantsRequest createEmptyInstance() => create();
+  static $pb.PbList<StreamVariantsRequest> createRepeated() =>
+      $pb.PbList<StreamVariantsRequest>();
+  static StreamVariantsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamVariantsRequest _defaultInstance;
-  static void $checkItem(StreamVariantsRequest v) {
-    if (v is! StreamVariantsRequest)
-      checkItemFailed(v, 'StreamVariantsRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  String get variantSetId => $_getS(1, '');
-  set variantSetId(String v) {
+  $core.String get variantSetId => $_getS(1, '');
+  set variantSetId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasVariantSetId() => $_has(1);
+  $core.bool hasVariantSetId() => $_has(1);
   void clearVariantSetId() => clearField(2);
 
-  List<String> get callSetIds => $_getList(2);
+  $core.List<$core.String> get callSetIds => $_getList(2);
 
-  String get referenceName => $_getS(3, '');
-  set referenceName(String v) {
+  $core.String get referenceName => $_getS(3, '');
+  set referenceName($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasReferenceName() => $_has(3);
+  $core.bool hasReferenceName() => $_has(3);
   void clearReferenceName() => clearField(4);
 
   Int64 get start => $_getI64(4);
@@ -2088,7 +1597,7 @@ class StreamVariantsRequest extends GeneratedMessage {
     $_setInt64(4, v);
   }
 
-  bool hasStart() => $_has(4);
+  $core.bool hasStart() => $_has(4);
   void clearStart() => clearField(5);
 
   Int64 get end => $_getI64(5);
@@ -2096,187 +1605,36 @@ class StreamVariantsRequest extends GeneratedMessage {
     $_setInt64(5, v);
   }
 
-  bool hasEnd() => $_has(5);
+  $core.bool hasEnd() => $_has(5);
   void clearEnd() => clearField(6);
 }
 
-class _ReadonlyStreamVariantsRequest extends StreamVariantsRequest
-    with ReadonlyMessageMixin {}
-
-class StreamVariantsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamVariantsResponse')
-    ..pp<Variant>(
-        1, 'variants', PbFieldType.PM, Variant.$checkItem, Variant.create)
+class StreamVariantsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamVariantsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<Variant>(1, 'variants', $pb.PbFieldType.PM, Variant.create)
     ..hasRequiredFields = false;
 
   StreamVariantsResponse() : super();
-  StreamVariantsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamVariantsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamVariantsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamVariantsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamVariantsResponse clone() =>
-      new StreamVariantsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamVariantsResponse create() => new StreamVariantsResponse();
-  static PbList<StreamVariantsResponse> createRepeated() =>
-      new PbList<StreamVariantsResponse>();
-  static StreamVariantsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamVariantsResponse();
-    return _defaultInstance;
-  }
-
+      StreamVariantsResponse()..mergeFromMessage(this);
+  StreamVariantsResponse copyWith(
+          void Function(StreamVariantsResponse) updates) =>
+      super.copyWith((message) => updates(message as StreamVariantsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamVariantsResponse create() => StreamVariantsResponse();
+  StreamVariantsResponse createEmptyInstance() => create();
+  static $pb.PbList<StreamVariantsResponse> createRepeated() =>
+      $pb.PbList<StreamVariantsResponse>();
+  static StreamVariantsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamVariantsResponse _defaultInstance;
-  static void $checkItem(StreamVariantsResponse v) {
-    if (v is! StreamVariantsResponse)
-      checkItemFailed(v, 'StreamVariantsResponse');
-  }
 
-  List<Variant> get variants => $_getList(0);
-}
-
-class _ReadonlyStreamVariantsResponse extends StreamVariantsResponse
-    with ReadonlyMessageMixin {}
-
-class StreamingVariantServiceApi {
-  RpcClient _client;
-  StreamingVariantServiceApi(this._client);
-
-  Future<StreamVariantsResponse> streamVariants(
-      ClientContext ctx, StreamVariantsRequest request) {
-    var emptyResponse = new StreamVariantsResponse();
-    return _client.invoke<StreamVariantsResponse>(ctx,
-        'StreamingVariantService', 'StreamVariants', request, emptyResponse);
-  }
-}
-
-class VariantServiceV1Api {
-  RpcClient _client;
-  VariantServiceV1Api(this._client);
-
-  Future<$google$longrunning.Operation> importVariants(
-      ClientContext ctx, ImportVariantsRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'VariantServiceV1', 'ImportVariants', request, emptyResponse);
-  }
-
-  Future<VariantSet> createVariantSet(
-      ClientContext ctx, CreateVariantSetRequest request) {
-    var emptyResponse = new VariantSet();
-    return _client.invoke<VariantSet>(
-        ctx, 'VariantServiceV1', 'CreateVariantSet', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> exportVariantSet(
-      ClientContext ctx, ExportVariantSetRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'VariantServiceV1', 'ExportVariantSet', request, emptyResponse);
-  }
-
-  Future<VariantSet> getVariantSet(
-      ClientContext ctx, GetVariantSetRequest request) {
-    var emptyResponse = new VariantSet();
-    return _client.invoke<VariantSet>(
-        ctx, 'VariantServiceV1', 'GetVariantSet', request, emptyResponse);
-  }
-
-  Future<SearchVariantSetsResponse> searchVariantSets(
-      ClientContext ctx, SearchVariantSetsRequest request) {
-    var emptyResponse = new SearchVariantSetsResponse();
-    return _client.invoke<SearchVariantSetsResponse>(
-        ctx, 'VariantServiceV1', 'SearchVariantSets', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteVariantSet(
-      ClientContext ctx, DeleteVariantSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'VariantServiceV1', 'DeleteVariantSet', request, emptyResponse);
-  }
-
-  Future<VariantSet> updateVariantSet(
-      ClientContext ctx, UpdateVariantSetRequest request) {
-    var emptyResponse = new VariantSet();
-    return _client.invoke<VariantSet>(
-        ctx, 'VariantServiceV1', 'UpdateVariantSet', request, emptyResponse);
-  }
-
-  Future<SearchVariantsResponse> searchVariants(
-      ClientContext ctx, SearchVariantsRequest request) {
-    var emptyResponse = new SearchVariantsResponse();
-    return _client.invoke<SearchVariantsResponse>(
-        ctx, 'VariantServiceV1', 'SearchVariants', request, emptyResponse);
-  }
-
-  Future<Variant> createVariant(
-      ClientContext ctx, CreateVariantRequest request) {
-    var emptyResponse = new Variant();
-    return _client.invoke<Variant>(
-        ctx, 'VariantServiceV1', 'CreateVariant', request, emptyResponse);
-  }
-
-  Future<Variant> updateVariant(
-      ClientContext ctx, UpdateVariantRequest request) {
-    var emptyResponse = new Variant();
-    return _client.invoke<Variant>(
-        ctx, 'VariantServiceV1', 'UpdateVariant', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteVariant(
-      ClientContext ctx, DeleteVariantRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'VariantServiceV1', 'DeleteVariant', request, emptyResponse);
-  }
-
-  Future<Variant> getVariant(ClientContext ctx, GetVariantRequest request) {
-    var emptyResponse = new Variant();
-    return _client.invoke<Variant>(
-        ctx, 'VariantServiceV1', 'GetVariant', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> mergeVariants(
-      ClientContext ctx, MergeVariantsRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'VariantServiceV1', 'MergeVariants', request, emptyResponse);
-  }
-
-  Future<SearchCallSetsResponse> searchCallSets(
-      ClientContext ctx, SearchCallSetsRequest request) {
-    var emptyResponse = new SearchCallSetsResponse();
-    return _client.invoke<SearchCallSetsResponse>(
-        ctx, 'VariantServiceV1', 'SearchCallSets', request, emptyResponse);
-  }
-
-  Future<CallSet> createCallSet(
-      ClientContext ctx, CreateCallSetRequest request) {
-    var emptyResponse = new CallSet();
-    return _client.invoke<CallSet>(
-        ctx, 'VariantServiceV1', 'CreateCallSet', request, emptyResponse);
-  }
-
-  Future<CallSet> updateCallSet(
-      ClientContext ctx, UpdateCallSetRequest request) {
-    var emptyResponse = new CallSet();
-    return _client.invoke<CallSet>(
-        ctx, 'VariantServiceV1', 'UpdateCallSet', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteCallSet(
-      ClientContext ctx, DeleteCallSetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'VariantServiceV1', 'DeleteCallSet', request, emptyResponse);
-  }
-
-  Future<CallSet> getCallSet(ClientContext ctx, GetCallSetRequest request) {
-    var emptyResponse = new CallSet();
-    return _client.invoke<CallSet>(
-        ctx, 'VariantServiceV1', 'GetCallSet', request, emptyResponse);
-  }
+  $core.List<Variant> get variants => $_getList(0);
 }

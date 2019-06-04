@@ -1,80 +1,8 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/table/v1/bigtable_table_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
-
-import 'package:protobuf/protobuf.dart';
-
-import 'bigtable_table_service_messages.pb.dart';
-import 'bigtable_table_data.pb.dart';
-import '../../../../protobuf/empty.pb.dart' as $google$protobuf;
-
-class BigtableTableServiceApi {
-  RpcClient _client;
-  BigtableTableServiceApi(this._client);
-
-  Future<Table> createTable(ClientContext ctx, CreateTableRequest request) {
-    var emptyResponse = new Table();
-    return _client.invoke<Table>(
-        ctx, 'BigtableTableService', 'CreateTable', request, emptyResponse);
-  }
-
-  Future<ListTablesResponse> listTables(
-      ClientContext ctx, ListTablesRequest request) {
-    var emptyResponse = new ListTablesResponse();
-    return _client.invoke<ListTablesResponse>(
-        ctx, 'BigtableTableService', 'ListTables', request, emptyResponse);
-  }
-
-  Future<Table> getTable(ClientContext ctx, GetTableRequest request) {
-    var emptyResponse = new Table();
-    return _client.invoke<Table>(
-        ctx, 'BigtableTableService', 'GetTable', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteTable(
-      ClientContext ctx, DeleteTableRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'BigtableTableService', 'DeleteTable', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> renameTable(
-      ClientContext ctx, RenameTableRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'BigtableTableService', 'RenameTable', request, emptyResponse);
-  }
-
-  Future<ColumnFamily> createColumnFamily(
-      ClientContext ctx, CreateColumnFamilyRequest request) {
-    var emptyResponse = new ColumnFamily();
-    return _client.invoke<ColumnFamily>(ctx, 'BigtableTableService',
-        'CreateColumnFamily', request, emptyResponse);
-  }
-
-  Future<ColumnFamily> updateColumnFamily(
-      ClientContext ctx, ColumnFamily request) {
-    var emptyResponse = new ColumnFamily();
-    return _client.invoke<ColumnFamily>(ctx, 'BigtableTableService',
-        'UpdateColumnFamily', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteColumnFamily(
-      ClientContext ctx, DeleteColumnFamilyRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'BigtableTableService',
-        'DeleteColumnFamily', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> bulkDeleteRows(
-      ClientContext ctx, BulkDeleteRowsRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'BigtableTableService', 'BulkDeleteRows', request, emptyResponse);
-  }
-}
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;

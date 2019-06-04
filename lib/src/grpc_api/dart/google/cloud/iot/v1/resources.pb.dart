@@ -1,159 +1,94 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/iot/v1/resources.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../rpc/status.pb.dart' as $google$rpc;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../rpc/status.pb.dart' as $1;
 
 import 'resources.pbenum.dart';
 
 export 'resources.pbenum.dart';
 
-class Device_MetadataEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Device_MetadataEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Device_MetadataEntry() : super();
-  Device_MetadataEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Device_MetadataEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Device_MetadataEntry clone() =>
-      new Device_MetadataEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Device_MetadataEntry create() => new Device_MetadataEntry();
-  static PbList<Device_MetadataEntry> createRepeated() =>
-      new PbList<Device_MetadataEntry>();
-  static Device_MetadataEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDevice_MetadataEntry();
-    return _defaultInstance;
-  }
-
-  static Device_MetadataEntry _defaultInstance;
-  static void $checkItem(Device_MetadataEntry v) {
-    if (v is! Device_MetadataEntry) checkItemFailed(v, 'Device_MetadataEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyDevice_MetadataEntry extends Device_MetadataEntry
-    with ReadonlyMessageMixin {}
-
-class Device extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Device')
+class Device extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Device',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'name')
-    ..a<Int64>(3, 'numId', PbFieldType.OU6, Int64.ZERO)
-    ..a<$google$protobuf.Timestamp>(
-        7,
-        'lastHeartbeatTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        8,
-        'lastEventTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        10,
-        'lastErrorTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$rpc.Status>(11, 'lastErrorStatus', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..pp<DeviceCredential>(12, 'credentials', PbFieldType.PM,
-        DeviceCredential.$checkItem, DeviceCredential.create)
-    ..a<DeviceConfig>(13, 'config', PbFieldType.OM, DeviceConfig.getDefault,
+    ..a<Int64>(3, 'numId', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<$0.Timestamp>(7, 'lastHeartbeatTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(8, 'lastEventTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(10, 'lastErrorTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Status>(11, 'lastErrorStatus', $pb.PbFieldType.OM,
+        $1.Status.getDefault, $1.Status.create)
+    ..pc<DeviceCredential>(
+        12, 'credentials', $pb.PbFieldType.PM, DeviceCredential.create)
+    ..a<DeviceConfig>(13, 'config', $pb.PbFieldType.OM, DeviceConfig.getDefault,
         DeviceConfig.create)
-    ..a<$google$protobuf.Timestamp>(
-        14,
-        'lastConfigAckTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<DeviceState>(
-        16, 'state', PbFieldType.OM, DeviceState.getDefault, DeviceState.create)
-    ..pp<Device_MetadataEntry>(17, 'metadata', PbFieldType.PM,
-        Device_MetadataEntry.$checkItem, Device_MetadataEntry.create)
-    ..a<$google$protobuf.Timestamp>(
-        18,
-        'lastConfigSendTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(14, 'lastConfigAckTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<DeviceState>(16, 'state', $pb.PbFieldType.OM, DeviceState.getDefault,
+        DeviceState.create)
+    ..m<$core.String, $core.String>(
+        17,
+        'metadata',
+        'Device.MetadataEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.iot.v1'))
+    ..a<$0.Timestamp>(18, 'lastConfigSendTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOB(19, 'blocked')
-    ..a<$google$protobuf.Timestamp>(
-        20,
-        'lastStateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(
+        20, 'lastStateTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..e<LogLevel>(21, 'logLevel', $pb.PbFieldType.OE, LogLevel.LOG_LEVEL_UNSPECIFIED, LogLevel.valueOf, LogLevel.values)
+    ..a<GatewayConfig>(24, 'gatewayConfig', $pb.PbFieldType.OM, GatewayConfig.getDefault, GatewayConfig.create)
     ..hasRequiredFields = false;
 
   Device() : super();
-  Device.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Device.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Device.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Device.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Device clone() => new Device()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Device create() => new Device();
-  static PbList<Device> createRepeated() => new PbList<Device>();
-  static Device getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDevice();
-    return _defaultInstance;
-  }
-
+  Device clone() => Device()..mergeFromMessage(this);
+  Device copyWith(void Function(Device) updates) =>
+      super.copyWith((message) => updates(message as Device));
+  $pb.BuilderInfo get info_ => _i;
+  static Device create() => Device();
+  Device createEmptyInstance() => create();
+  static $pb.PbList<Device> createRepeated() => $pb.PbList<Device>();
+  static Device getDefault() => _defaultInstance ??= create()..freeze();
   static Device _defaultInstance;
-  static void $checkItem(Device v) {
-    if (v is! Device) checkItemFailed(v, 'Device');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
   Int64 get numId => $_getI64(2);
@@ -161,57 +96,57 @@ class Device extends GeneratedMessage {
     $_setInt64(2, v);
   }
 
-  bool hasNumId() => $_has(2);
+  $core.bool hasNumId() => $_has(2);
   void clearNumId() => clearField(3);
 
-  $google$protobuf.Timestamp get lastHeartbeatTime => $_getN(3);
-  set lastHeartbeatTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get lastHeartbeatTime => $_getN(3);
+  set lastHeartbeatTime($0.Timestamp v) {
     setField(7, v);
   }
 
-  bool hasLastHeartbeatTime() => $_has(3);
+  $core.bool hasLastHeartbeatTime() => $_has(3);
   void clearLastHeartbeatTime() => clearField(7);
 
-  $google$protobuf.Timestamp get lastEventTime => $_getN(4);
-  set lastEventTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get lastEventTime => $_getN(4);
+  set lastEventTime($0.Timestamp v) {
     setField(8, v);
   }
 
-  bool hasLastEventTime() => $_has(4);
+  $core.bool hasLastEventTime() => $_has(4);
   void clearLastEventTime() => clearField(8);
 
-  $google$protobuf.Timestamp get lastErrorTime => $_getN(5);
-  set lastErrorTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get lastErrorTime => $_getN(5);
+  set lastErrorTime($0.Timestamp v) {
     setField(10, v);
   }
 
-  bool hasLastErrorTime() => $_has(5);
+  $core.bool hasLastErrorTime() => $_has(5);
   void clearLastErrorTime() => clearField(10);
 
-  $google$rpc.Status get lastErrorStatus => $_getN(6);
-  set lastErrorStatus($google$rpc.Status v) {
+  $1.Status get lastErrorStatus => $_getN(6);
+  set lastErrorStatus($1.Status v) {
     setField(11, v);
   }
 
-  bool hasLastErrorStatus() => $_has(6);
+  $core.bool hasLastErrorStatus() => $_has(6);
   void clearLastErrorStatus() => clearField(11);
 
-  List<DeviceCredential> get credentials => $_getList(7);
+  $core.List<DeviceCredential> get credentials => $_getList(7);
 
   DeviceConfig get config => $_getN(8);
   set config(DeviceConfig v) {
     setField(13, v);
   }
 
-  bool hasConfig() => $_has(8);
+  $core.bool hasConfig() => $_has(8);
   void clearConfig() => clearField(13);
 
-  $google$protobuf.Timestamp get lastConfigAckTime => $_getN(9);
-  set lastConfigAckTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get lastConfigAckTime => $_getN(9);
+  set lastConfigAckTime($0.Timestamp v) {
     setField(14, v);
   }
 
-  bool hasLastConfigAckTime() => $_has(9);
+  $core.bool hasLastConfigAckTime() => $_has(9);
   void clearLastConfigAckTime() => clearField(14);
 
   DeviceState get state => $_getN(10);
@@ -219,95 +154,180 @@ class Device extends GeneratedMessage {
     setField(16, v);
   }
 
-  bool hasState() => $_has(10);
+  $core.bool hasState() => $_has(10);
   void clearState() => clearField(16);
 
-  List<Device_MetadataEntry> get metadata => $_getList(11);
+  $core.Map<$core.String, $core.String> get metadata => $_getMap(11);
 
-  $google$protobuf.Timestamp get lastConfigSendTime => $_getN(12);
-  set lastConfigSendTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get lastConfigSendTime => $_getN(12);
+  set lastConfigSendTime($0.Timestamp v) {
     setField(18, v);
   }
 
-  bool hasLastConfigSendTime() => $_has(12);
+  $core.bool hasLastConfigSendTime() => $_has(12);
   void clearLastConfigSendTime() => clearField(18);
 
-  bool get blocked => $_get(13, false);
-  set blocked(bool v) {
+  $core.bool get blocked => $_get(13, false);
+  set blocked($core.bool v) {
     $_setBool(13, v);
   }
 
-  bool hasBlocked() => $_has(13);
+  $core.bool hasBlocked() => $_has(13);
   void clearBlocked() => clearField(19);
 
-  $google$protobuf.Timestamp get lastStateTime => $_getN(14);
-  set lastStateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get lastStateTime => $_getN(14);
+  set lastStateTime($0.Timestamp v) {
     setField(20, v);
   }
 
-  bool hasLastStateTime() => $_has(14);
+  $core.bool hasLastStateTime() => $_has(14);
   void clearLastStateTime() => clearField(20);
+
+  LogLevel get logLevel => $_getN(15);
+  set logLevel(LogLevel v) {
+    setField(21, v);
+  }
+
+  $core.bool hasLogLevel() => $_has(15);
+  void clearLogLevel() => clearField(21);
+
+  GatewayConfig get gatewayConfig => $_getN(16);
+  set gatewayConfig(GatewayConfig v) {
+    setField(24, v);
+  }
+
+  $core.bool hasGatewayConfig() => $_has(16);
+  void clearGatewayConfig() => clearField(24);
 }
 
-class _ReadonlyDevice extends Device with ReadonlyMessageMixin {}
+class GatewayConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GatewayConfig',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..e<GatewayType>(
+        1,
+        'gatewayType',
+        $pb.PbFieldType.OE,
+        GatewayType.GATEWAY_TYPE_UNSPECIFIED,
+        GatewayType.valueOf,
+        GatewayType.values)
+    ..e<GatewayAuthMethod>(
+        2,
+        'gatewayAuthMethod',
+        $pb.PbFieldType.OE,
+        GatewayAuthMethod.GATEWAY_AUTH_METHOD_UNSPECIFIED,
+        GatewayAuthMethod.valueOf,
+        GatewayAuthMethod.values)
+    ..aOS(3, 'lastAccessedGatewayId')
+    ..a<$0.Timestamp>(4, 'lastAccessedGatewayTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..hasRequiredFields = false;
 
-class DeviceRegistry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceRegistry')
+  GatewayConfig() : super();
+  GatewayConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GatewayConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GatewayConfig clone() => GatewayConfig()..mergeFromMessage(this);
+  GatewayConfig copyWith(void Function(GatewayConfig) updates) =>
+      super.copyWith((message) => updates(message as GatewayConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static GatewayConfig create() => GatewayConfig();
+  GatewayConfig createEmptyInstance() => create();
+  static $pb.PbList<GatewayConfig> createRepeated() =>
+      $pb.PbList<GatewayConfig>();
+  static GatewayConfig getDefault() => _defaultInstance ??= create()..freeze();
+  static GatewayConfig _defaultInstance;
+
+  GatewayType get gatewayType => $_getN(0);
+  set gatewayType(GatewayType v) {
+    setField(1, v);
+  }
+
+  $core.bool hasGatewayType() => $_has(0);
+  void clearGatewayType() => clearField(1);
+
+  GatewayAuthMethod get gatewayAuthMethod => $_getN(1);
+  set gatewayAuthMethod(GatewayAuthMethod v) {
+    setField(2, v);
+  }
+
+  $core.bool hasGatewayAuthMethod() => $_has(1);
+  void clearGatewayAuthMethod() => clearField(2);
+
+  $core.String get lastAccessedGatewayId => $_getS(2, '');
+  set lastAccessedGatewayId($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasLastAccessedGatewayId() => $_has(2);
+  void clearLastAccessedGatewayId() => clearField(3);
+
+  $0.Timestamp get lastAccessedGatewayTime => $_getN(3);
+  set lastAccessedGatewayTime($0.Timestamp v) {
+    setField(4, v);
+  }
+
+  $core.bool hasLastAccessedGatewayTime() => $_has(3);
+  void clearLastAccessedGatewayTime() => clearField(4);
+}
+
+class DeviceRegistry extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceRegistry',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'name')
-    ..a<MqttConfig>(4, 'mqttConfig', PbFieldType.OM, MqttConfig.getDefault,
+    ..a<MqttConfig>(4, 'mqttConfig', $pb.PbFieldType.OM, MqttConfig.getDefault,
         MqttConfig.create)
-    ..a<StateNotificationConfig>(7, 'stateNotificationConfig', PbFieldType.OM,
-        StateNotificationConfig.getDefault, StateNotificationConfig.create)
-    ..pp<RegistryCredential>(8, 'credentials', PbFieldType.PM,
-        RegistryCredential.$checkItem, RegistryCredential.create)
-    ..a<HttpConfig>(9, 'httpConfig', PbFieldType.OM, HttpConfig.getDefault,
+    ..a<StateNotificationConfig>(
+        7,
+        'stateNotificationConfig',
+        $pb.PbFieldType.OM,
+        StateNotificationConfig.getDefault,
+        StateNotificationConfig.create)
+    ..pc<RegistryCredential>(
+        8, 'credentials', $pb.PbFieldType.PM, RegistryCredential.create)
+    ..a<HttpConfig>(9, 'httpConfig', $pb.PbFieldType.OM, HttpConfig.getDefault,
         HttpConfig.create)
-    ..pp<EventNotificationConfig>(
-        10,
-        'eventNotificationConfigs',
-        PbFieldType.PM,
-        EventNotificationConfig.$checkItem,
-        EventNotificationConfig.create)
+    ..pc<EventNotificationConfig>(10, 'eventNotificationConfigs',
+        $pb.PbFieldType.PM, EventNotificationConfig.create)
+    ..e<LogLevel>(11, 'logLevel', $pb.PbFieldType.OE,
+        LogLevel.LOG_LEVEL_UNSPECIFIED, LogLevel.valueOf, LogLevel.values)
     ..hasRequiredFields = false;
 
   DeviceRegistry() : super();
-  DeviceRegistry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceRegistry.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceRegistry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceRegistry.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceRegistry clone() => new DeviceRegistry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceRegistry create() => new DeviceRegistry();
-  static PbList<DeviceRegistry> createRepeated() =>
-      new PbList<DeviceRegistry>();
-  static DeviceRegistry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceRegistry();
-    return _defaultInstance;
-  }
-
+  DeviceRegistry clone() => DeviceRegistry()..mergeFromMessage(this);
+  DeviceRegistry copyWith(void Function(DeviceRegistry) updates) =>
+      super.copyWith((message) => updates(message as DeviceRegistry));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceRegistry create() => DeviceRegistry();
+  DeviceRegistry createEmptyInstance() => create();
+  static $pb.PbList<DeviceRegistry> createRepeated() =>
+      $pb.PbList<DeviceRegistry>();
+  static DeviceRegistry getDefault() => _defaultInstance ??= create()..freeze();
   static DeviceRegistry _defaultInstance;
-  static void $checkItem(DeviceRegistry v) {
-    if (v is! DeviceRegistry) checkItemFailed(v, 'DeviceRegistry');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get name => $_getS(1, '');
-  set name(String v) {
+  $core.String get name => $_getS(1, '');
+  set name($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasName() => $_has(1);
+  $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
   MqttConfig get mqttConfig => $_getN(2);
@@ -315,7 +335,7 @@ class DeviceRegistry extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasMqttConfig() => $_has(2);
+  $core.bool hasMqttConfig() => $_has(2);
   void clearMqttConfig() => clearField(4);
 
   StateNotificationConfig get stateNotificationConfig => $_getN(3);
@@ -323,383 +343,357 @@ class DeviceRegistry extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasStateNotificationConfig() => $_has(3);
+  $core.bool hasStateNotificationConfig() => $_has(3);
   void clearStateNotificationConfig() => clearField(7);
 
-  List<RegistryCredential> get credentials => $_getList(4);
+  $core.List<RegistryCredential> get credentials => $_getList(4);
 
   HttpConfig get httpConfig => $_getN(5);
   set httpConfig(HttpConfig v) {
     setField(9, v);
   }
 
-  bool hasHttpConfig() => $_has(5);
+  $core.bool hasHttpConfig() => $_has(5);
   void clearHttpConfig() => clearField(9);
 
-  List<EventNotificationConfig> get eventNotificationConfigs => $_getList(6);
+  $core.List<EventNotificationConfig> get eventNotificationConfigs =>
+      $_getList(6);
+
+  LogLevel get logLevel => $_getN(7);
+  set logLevel(LogLevel v) {
+    setField(11, v);
+  }
+
+  $core.bool hasLogLevel() => $_has(7);
+  void clearLogLevel() => clearField(11);
 }
 
-class _ReadonlyDeviceRegistry extends DeviceRegistry with ReadonlyMessageMixin {
-}
-
-class MqttConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MqttConfig')
-    ..e<MqttState>(1, 'mqttEnabledState', PbFieldType.OE,
+class MqttConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MqttConfig',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..e<MqttState>(1, 'mqttEnabledState', $pb.PbFieldType.OE,
         MqttState.MQTT_STATE_UNSPECIFIED, MqttState.valueOf, MqttState.values)
     ..hasRequiredFields = false;
 
   MqttConfig() : super();
-  MqttConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MqttConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MqttConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MqttConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MqttConfig clone() => new MqttConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MqttConfig create() => new MqttConfig();
-  static PbList<MqttConfig> createRepeated() => new PbList<MqttConfig>();
-  static MqttConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMqttConfig();
-    return _defaultInstance;
-  }
-
+  MqttConfig clone() => MqttConfig()..mergeFromMessage(this);
+  MqttConfig copyWith(void Function(MqttConfig) updates) =>
+      super.copyWith((message) => updates(message as MqttConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static MqttConfig create() => MqttConfig();
+  MqttConfig createEmptyInstance() => create();
+  static $pb.PbList<MqttConfig> createRepeated() => $pb.PbList<MqttConfig>();
+  static MqttConfig getDefault() => _defaultInstance ??= create()..freeze();
   static MqttConfig _defaultInstance;
-  static void $checkItem(MqttConfig v) {
-    if (v is! MqttConfig) checkItemFailed(v, 'MqttConfig');
-  }
 
   MqttState get mqttEnabledState => $_getN(0);
   set mqttEnabledState(MqttState v) {
     setField(1, v);
   }
 
-  bool hasMqttEnabledState() => $_has(0);
+  $core.bool hasMqttEnabledState() => $_has(0);
   void clearMqttEnabledState() => clearField(1);
 }
 
-class _ReadonlyMqttConfig extends MqttConfig with ReadonlyMessageMixin {}
-
-class HttpConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('HttpConfig')
-    ..e<HttpState>(1, 'httpEnabledState', PbFieldType.OE,
+class HttpConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HttpConfig',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..e<HttpState>(1, 'httpEnabledState', $pb.PbFieldType.OE,
         HttpState.HTTP_STATE_UNSPECIFIED, HttpState.valueOf, HttpState.values)
     ..hasRequiredFields = false;
 
   HttpConfig() : super();
-  HttpConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HttpConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  HttpConfig.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  HttpConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  HttpConfig clone() => new HttpConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static HttpConfig create() => new HttpConfig();
-  static PbList<HttpConfig> createRepeated() => new PbList<HttpConfig>();
-  static HttpConfig getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyHttpConfig();
-    return _defaultInstance;
-  }
-
+  HttpConfig clone() => HttpConfig()..mergeFromMessage(this);
+  HttpConfig copyWith(void Function(HttpConfig) updates) =>
+      super.copyWith((message) => updates(message as HttpConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static HttpConfig create() => HttpConfig();
+  HttpConfig createEmptyInstance() => create();
+  static $pb.PbList<HttpConfig> createRepeated() => $pb.PbList<HttpConfig>();
+  static HttpConfig getDefault() => _defaultInstance ??= create()..freeze();
   static HttpConfig _defaultInstance;
-  static void $checkItem(HttpConfig v) {
-    if (v is! HttpConfig) checkItemFailed(v, 'HttpConfig');
-  }
 
   HttpState get httpEnabledState => $_getN(0);
   set httpEnabledState(HttpState v) {
     setField(1, v);
   }
 
-  bool hasHttpEnabledState() => $_has(0);
+  $core.bool hasHttpEnabledState() => $_has(0);
   void clearHttpEnabledState() => clearField(1);
 }
 
-class _ReadonlyHttpConfig extends HttpConfig with ReadonlyMessageMixin {}
-
-class EventNotificationConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EventNotificationConfig')
+class EventNotificationConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EventNotificationConfig',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'pubsubTopicName')
     ..aOS(2, 'subfolderMatches')
     ..hasRequiredFields = false;
 
   EventNotificationConfig() : super();
-  EventNotificationConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EventNotificationConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  EventNotificationConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EventNotificationConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EventNotificationConfig clone() =>
-      new EventNotificationConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EventNotificationConfig create() => new EventNotificationConfig();
-  static PbList<EventNotificationConfig> createRepeated() =>
-      new PbList<EventNotificationConfig>();
-  static EventNotificationConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEventNotificationConfig();
-    return _defaultInstance;
-  }
-
+      EventNotificationConfig()..mergeFromMessage(this);
+  EventNotificationConfig copyWith(
+          void Function(EventNotificationConfig) updates) =>
+      super.copyWith((message) => updates(message as EventNotificationConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static EventNotificationConfig create() => EventNotificationConfig();
+  EventNotificationConfig createEmptyInstance() => create();
+  static $pb.PbList<EventNotificationConfig> createRepeated() =>
+      $pb.PbList<EventNotificationConfig>();
+  static EventNotificationConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static EventNotificationConfig _defaultInstance;
-  static void $checkItem(EventNotificationConfig v) {
-    if (v is! EventNotificationConfig)
-      checkItemFailed(v, 'EventNotificationConfig');
-  }
 
-  String get pubsubTopicName => $_getS(0, '');
-  set pubsubTopicName(String v) {
+  $core.String get pubsubTopicName => $_getS(0, '');
+  set pubsubTopicName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPubsubTopicName() => $_has(0);
+  $core.bool hasPubsubTopicName() => $_has(0);
   void clearPubsubTopicName() => clearField(1);
 
-  String get subfolderMatches => $_getS(1, '');
-  set subfolderMatches(String v) {
+  $core.String get subfolderMatches => $_getS(1, '');
+  set subfolderMatches($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasSubfolderMatches() => $_has(1);
+  $core.bool hasSubfolderMatches() => $_has(1);
   void clearSubfolderMatches() => clearField(2);
 }
 
-class _ReadonlyEventNotificationConfig extends EventNotificationConfig
-    with ReadonlyMessageMixin {}
-
-class StateNotificationConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StateNotificationConfig')
+class StateNotificationConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StateNotificationConfig',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'pubsubTopicName')
     ..hasRequiredFields = false;
 
   StateNotificationConfig() : super();
-  StateNotificationConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StateNotificationConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StateNotificationConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StateNotificationConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StateNotificationConfig clone() =>
-      new StateNotificationConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StateNotificationConfig create() => new StateNotificationConfig();
-  static PbList<StateNotificationConfig> createRepeated() =>
-      new PbList<StateNotificationConfig>();
-  static StateNotificationConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStateNotificationConfig();
-    return _defaultInstance;
-  }
-
+      StateNotificationConfig()..mergeFromMessage(this);
+  StateNotificationConfig copyWith(
+          void Function(StateNotificationConfig) updates) =>
+      super.copyWith((message) => updates(message as StateNotificationConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static StateNotificationConfig create() => StateNotificationConfig();
+  StateNotificationConfig createEmptyInstance() => create();
+  static $pb.PbList<StateNotificationConfig> createRepeated() =>
+      $pb.PbList<StateNotificationConfig>();
+  static StateNotificationConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StateNotificationConfig _defaultInstance;
-  static void $checkItem(StateNotificationConfig v) {
-    if (v is! StateNotificationConfig)
-      checkItemFailed(v, 'StateNotificationConfig');
-  }
 
-  String get pubsubTopicName => $_getS(0, '');
-  set pubsubTopicName(String v) {
+  $core.String get pubsubTopicName => $_getS(0, '');
+  set pubsubTopicName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPubsubTopicName() => $_has(0);
+  $core.bool hasPubsubTopicName() => $_has(0);
   void clearPubsubTopicName() => clearField(1);
 }
 
-class _ReadonlyStateNotificationConfig extends StateNotificationConfig
-    with ReadonlyMessageMixin {}
+enum RegistryCredential_Credential { publicKeyCertificate, notSet }
 
-class RegistryCredential extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RegistryCredential')
-    ..a<PublicKeyCertificate>(1, 'publicKeyCertificate', PbFieldType.OM,
+class RegistryCredential extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RegistryCredential_Credential>
+      _RegistryCredential_CredentialByTag = {
+    1: RegistryCredential_Credential.publicKeyCertificate,
+    0: RegistryCredential_Credential.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegistryCredential',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..a<PublicKeyCertificate>(1, 'publicKeyCertificate', $pb.PbFieldType.OM,
         PublicKeyCertificate.getDefault, PublicKeyCertificate.create)
+    ..oo(0, [1])
     ..hasRequiredFields = false;
 
   RegistryCredential() : super();
-  RegistryCredential.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RegistryCredential.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RegistryCredential.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RegistryCredential.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RegistryCredential clone() =>
-      new RegistryCredential()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RegistryCredential create() => new RegistryCredential();
-  static PbList<RegistryCredential> createRepeated() =>
-      new PbList<RegistryCredential>();
-  static RegistryCredential getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRegistryCredential();
-    return _defaultInstance;
-  }
-
+  RegistryCredential clone() => RegistryCredential()..mergeFromMessage(this);
+  RegistryCredential copyWith(void Function(RegistryCredential) updates) =>
+      super.copyWith((message) => updates(message as RegistryCredential));
+  $pb.BuilderInfo get info_ => _i;
+  static RegistryCredential create() => RegistryCredential();
+  RegistryCredential createEmptyInstance() => create();
+  static $pb.PbList<RegistryCredential> createRepeated() =>
+      $pb.PbList<RegistryCredential>();
+  static RegistryCredential getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RegistryCredential _defaultInstance;
-  static void $checkItem(RegistryCredential v) {
-    if (v is! RegistryCredential) checkItemFailed(v, 'RegistryCredential');
-  }
+
+  RegistryCredential_Credential whichCredential() =>
+      _RegistryCredential_CredentialByTag[$_whichOneof(0)];
+  void clearCredential() => clearField($_whichOneof(0));
 
   PublicKeyCertificate get publicKeyCertificate => $_getN(0);
   set publicKeyCertificate(PublicKeyCertificate v) {
     setField(1, v);
   }
 
-  bool hasPublicKeyCertificate() => $_has(0);
+  $core.bool hasPublicKeyCertificate() => $_has(0);
   void clearPublicKeyCertificate() => clearField(1);
 }
 
-class _ReadonlyRegistryCredential extends RegistryCredential
-    with ReadonlyMessageMixin {}
-
-class X509CertificateDetails extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('X509CertificateDetails')
+class X509CertificateDetails extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('X509CertificateDetails',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aOS(1, 'issuer')
     ..aOS(2, 'subject')
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'expiryTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(4, 'expiryTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOS(5, 'signatureAlgorithm')
     ..aOS(6, 'publicKeyType')
     ..hasRequiredFields = false;
 
   X509CertificateDetails() : super();
-  X509CertificateDetails.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  X509CertificateDetails.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  X509CertificateDetails.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  X509CertificateDetails.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   X509CertificateDetails clone() =>
-      new X509CertificateDetails()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static X509CertificateDetails create() => new X509CertificateDetails();
-  static PbList<X509CertificateDetails> createRepeated() =>
-      new PbList<X509CertificateDetails>();
-  static X509CertificateDetails getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyX509CertificateDetails();
-    return _defaultInstance;
-  }
-
+      X509CertificateDetails()..mergeFromMessage(this);
+  X509CertificateDetails copyWith(
+          void Function(X509CertificateDetails) updates) =>
+      super.copyWith((message) => updates(message as X509CertificateDetails));
+  $pb.BuilderInfo get info_ => _i;
+  static X509CertificateDetails create() => X509CertificateDetails();
+  X509CertificateDetails createEmptyInstance() => create();
+  static $pb.PbList<X509CertificateDetails> createRepeated() =>
+      $pb.PbList<X509CertificateDetails>();
+  static X509CertificateDetails getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static X509CertificateDetails _defaultInstance;
-  static void $checkItem(X509CertificateDetails v) {
-    if (v is! X509CertificateDetails)
-      checkItemFailed(v, 'X509CertificateDetails');
-  }
 
-  String get issuer => $_getS(0, '');
-  set issuer(String v) {
+  $core.String get issuer => $_getS(0, '');
+  set issuer($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasIssuer() => $_has(0);
+  $core.bool hasIssuer() => $_has(0);
   void clearIssuer() => clearField(1);
 
-  String get subject => $_getS(1, '');
-  set subject(String v) {
+  $core.String get subject => $_getS(1, '');
+  set subject($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasSubject() => $_has(1);
+  $core.bool hasSubject() => $_has(1);
   void clearSubject() => clearField(2);
 
-  $google$protobuf.Timestamp get startTime => $_getN(2);
-  set startTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get startTime => $_getN(2);
+  set startTime($0.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasStartTime() => $_has(2);
+  $core.bool hasStartTime() => $_has(2);
   void clearStartTime() => clearField(3);
 
-  $google$protobuf.Timestamp get expiryTime => $_getN(3);
-  set expiryTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get expiryTime => $_getN(3);
+  set expiryTime($0.Timestamp v) {
     setField(4, v);
   }
 
-  bool hasExpiryTime() => $_has(3);
+  $core.bool hasExpiryTime() => $_has(3);
   void clearExpiryTime() => clearField(4);
 
-  String get signatureAlgorithm => $_getS(4, '');
-  set signatureAlgorithm(String v) {
+  $core.String get signatureAlgorithm => $_getS(4, '');
+  set signatureAlgorithm($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasSignatureAlgorithm() => $_has(4);
+  $core.bool hasSignatureAlgorithm() => $_has(4);
   void clearSignatureAlgorithm() => clearField(5);
 
-  String get publicKeyType => $_getS(5, '');
-  set publicKeyType(String v) {
+  $core.String get publicKeyType => $_getS(5, '');
+  set publicKeyType($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasPublicKeyType() => $_has(5);
+  $core.bool hasPublicKeyType() => $_has(5);
   void clearPublicKeyType() => clearField(6);
 }
 
-class _ReadonlyX509CertificateDetails extends X509CertificateDetails
-    with ReadonlyMessageMixin {}
-
-class PublicKeyCertificate extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublicKeyCertificate')
+class PublicKeyCertificate extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PublicKeyCertificate',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..e<PublicKeyCertificateFormat>(
         1,
         'format',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         PublicKeyCertificateFormat.UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT,
         PublicKeyCertificateFormat.valueOf,
         PublicKeyCertificateFormat.values)
     ..aOS(2, 'certificate')
-    ..a<X509CertificateDetails>(3, 'x509Details', PbFieldType.OM,
+    ..a<X509CertificateDetails>(3, 'x509Details', $pb.PbFieldType.OM,
         X509CertificateDetails.getDefault, X509CertificateDetails.create)
     ..hasRequiredFields = false;
 
   PublicKeyCertificate() : super();
-  PublicKeyCertificate.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublicKeyCertificate.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PublicKeyCertificate.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublicKeyCertificate.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PublicKeyCertificate clone() =>
-      new PublicKeyCertificate()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PublicKeyCertificate create() => new PublicKeyCertificate();
-  static PbList<PublicKeyCertificate> createRepeated() =>
-      new PbList<PublicKeyCertificate>();
-  static PublicKeyCertificate getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublicKeyCertificate();
-    return _defaultInstance;
-  }
-
+      PublicKeyCertificate()..mergeFromMessage(this);
+  PublicKeyCertificate copyWith(void Function(PublicKeyCertificate) updates) =>
+      super.copyWith((message) => updates(message as PublicKeyCertificate));
+  $pb.BuilderInfo get info_ => _i;
+  static PublicKeyCertificate create() => PublicKeyCertificate();
+  PublicKeyCertificate createEmptyInstance() => create();
+  static $pb.PbList<PublicKeyCertificate> createRepeated() =>
+      $pb.PbList<PublicKeyCertificate>();
+  static PublicKeyCertificate getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PublicKeyCertificate _defaultInstance;
-  static void $checkItem(PublicKeyCertificate v) {
-    if (v is! PublicKeyCertificate) checkItemFailed(v, 'PublicKeyCertificate');
-  }
 
   PublicKeyCertificateFormat get format => $_getN(0);
   set format(PublicKeyCertificateFormat v) {
     setField(1, v);
   }
 
-  bool hasFormat() => $_has(0);
+  $core.bool hasFormat() => $_has(0);
   void clearFormat() => clearField(1);
 
-  String get certificate => $_getS(1, '');
-  set certificate(String v) {
+  $core.String get certificate => $_getS(1, '');
+  set certificate($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasCertificate() => $_has(1);
+  $core.bool hasCertificate() => $_has(1);
   void clearCertificate() => clearField(2);
 
   X509CertificateDetails get x509Details => $_getN(2);
@@ -707,74 +701,74 @@ class PublicKeyCertificate extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasX509Details() => $_has(2);
+  $core.bool hasX509Details() => $_has(2);
   void clearX509Details() => clearField(3);
 }
 
-class _ReadonlyPublicKeyCertificate extends PublicKeyCertificate
-    with ReadonlyMessageMixin {}
+enum DeviceCredential_Credential { publicKey, notSet }
 
-class DeviceCredential extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceCredential')
-    ..a<PublicKeyCredential>(2, 'publicKey', PbFieldType.OM,
+class DeviceCredential extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, DeviceCredential_Credential>
+      _DeviceCredential_CredentialByTag = {
+    2: DeviceCredential_Credential.publicKey,
+    0: DeviceCredential_Credential.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceCredential',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..a<PublicKeyCredential>(2, 'publicKey', $pb.PbFieldType.OM,
         PublicKeyCredential.getDefault, PublicKeyCredential.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'expirationTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(6, 'expirationTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..oo(0, [2])
     ..hasRequiredFields = false;
 
   DeviceCredential() : super();
-  DeviceCredential.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceCredential.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceCredential.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceCredential.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceCredential clone() => new DeviceCredential()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceCredential create() => new DeviceCredential();
-  static PbList<DeviceCredential> createRepeated() =>
-      new PbList<DeviceCredential>();
-  static DeviceCredential getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceCredential();
-    return _defaultInstance;
-  }
-
+  DeviceCredential clone() => DeviceCredential()..mergeFromMessage(this);
+  DeviceCredential copyWith(void Function(DeviceCredential) updates) =>
+      super.copyWith((message) => updates(message as DeviceCredential));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceCredential create() => DeviceCredential();
+  DeviceCredential createEmptyInstance() => create();
+  static $pb.PbList<DeviceCredential> createRepeated() =>
+      $pb.PbList<DeviceCredential>();
+  static DeviceCredential getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeviceCredential _defaultInstance;
-  static void $checkItem(DeviceCredential v) {
-    if (v is! DeviceCredential) checkItemFailed(v, 'DeviceCredential');
-  }
+
+  DeviceCredential_Credential whichCredential() =>
+      _DeviceCredential_CredentialByTag[$_whichOneof(0)];
+  void clearCredential() => clearField($_whichOneof(0));
 
   PublicKeyCredential get publicKey => $_getN(0);
   set publicKey(PublicKeyCredential v) {
     setField(2, v);
   }
 
-  bool hasPublicKey() => $_has(0);
+  $core.bool hasPublicKey() => $_has(0);
   void clearPublicKey() => clearField(2);
 
-  $google$protobuf.Timestamp get expirationTime => $_getN(1);
-  set expirationTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get expirationTime => $_getN(1);
+  set expirationTime($0.Timestamp v) {
     setField(6, v);
   }
 
-  bool hasExpirationTime() => $_has(1);
+  $core.bool hasExpirationTime() => $_has(1);
   void clearExpirationTime() => clearField(6);
 }
 
-class _ReadonlyDeviceCredential extends DeviceCredential
-    with ReadonlyMessageMixin {}
-
-class PublicKeyCredential extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PublicKeyCredential')
+class PublicKeyCredential extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PublicKeyCredential',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..e<PublicKeyFormat>(
         1,
         'format',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         PublicKeyFormat.UNSPECIFIED_PUBLIC_KEY_FORMAT,
         PublicKeyFormat.valueOf,
         PublicKeyFormat.values)
@@ -782,171 +776,141 @@ class PublicKeyCredential extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   PublicKeyCredential() : super();
-  PublicKeyCredential.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublicKeyCredential.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PublicKeyCredential.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PublicKeyCredential.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PublicKeyCredential clone() =>
-      new PublicKeyCredential()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PublicKeyCredential create() => new PublicKeyCredential();
-  static PbList<PublicKeyCredential> createRepeated() =>
-      new PbList<PublicKeyCredential>();
-  static PublicKeyCredential getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPublicKeyCredential();
-    return _defaultInstance;
-  }
-
+  PublicKeyCredential clone() => PublicKeyCredential()..mergeFromMessage(this);
+  PublicKeyCredential copyWith(void Function(PublicKeyCredential) updates) =>
+      super.copyWith((message) => updates(message as PublicKeyCredential));
+  $pb.BuilderInfo get info_ => _i;
+  static PublicKeyCredential create() => PublicKeyCredential();
+  PublicKeyCredential createEmptyInstance() => create();
+  static $pb.PbList<PublicKeyCredential> createRepeated() =>
+      $pb.PbList<PublicKeyCredential>();
+  static PublicKeyCredential getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PublicKeyCredential _defaultInstance;
-  static void $checkItem(PublicKeyCredential v) {
-    if (v is! PublicKeyCredential) checkItemFailed(v, 'PublicKeyCredential');
-  }
 
   PublicKeyFormat get format => $_getN(0);
   set format(PublicKeyFormat v) {
     setField(1, v);
   }
 
-  bool hasFormat() => $_has(0);
+  $core.bool hasFormat() => $_has(0);
   void clearFormat() => clearField(1);
 
-  String get key => $_getS(1, '');
-  set key(String v) {
+  $core.String get key => $_getS(1, '');
+  set key($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasKey() => $_has(1);
+  $core.bool hasKey() => $_has(1);
   void clearKey() => clearField(2);
 }
 
-class _ReadonlyPublicKeyCredential extends PublicKeyCredential
-    with ReadonlyMessageMixin {}
-
-class DeviceConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceConfig')
+class DeviceConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceConfig',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
     ..aInt64(1, 'version')
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'cloudUpdateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'deviceAckTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<List<int>>(4, 'binaryData', PbFieldType.OY)
+    ..a<$0.Timestamp>(2, 'cloudUpdateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(3, 'deviceAckTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$core.List<$core.int>>(4, 'binaryData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   DeviceConfig() : super();
-  DeviceConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceConfig clone() => new DeviceConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceConfig create() => new DeviceConfig();
-  static PbList<DeviceConfig> createRepeated() => new PbList<DeviceConfig>();
-  static DeviceConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeviceConfig();
-    return _defaultInstance;
-  }
-
+  DeviceConfig clone() => DeviceConfig()..mergeFromMessage(this);
+  DeviceConfig copyWith(void Function(DeviceConfig) updates) =>
+      super.copyWith((message) => updates(message as DeviceConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceConfig create() => DeviceConfig();
+  DeviceConfig createEmptyInstance() => create();
+  static $pb.PbList<DeviceConfig> createRepeated() =>
+      $pb.PbList<DeviceConfig>();
+  static DeviceConfig getDefault() => _defaultInstance ??= create()..freeze();
   static DeviceConfig _defaultInstance;
-  static void $checkItem(DeviceConfig v) {
-    if (v is! DeviceConfig) checkItemFailed(v, 'DeviceConfig');
-  }
 
   Int64 get version => $_getI64(0);
   set version(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasVersion() => $_has(0);
+  $core.bool hasVersion() => $_has(0);
   void clearVersion() => clearField(1);
 
-  $google$protobuf.Timestamp get cloudUpdateTime => $_getN(1);
-  set cloudUpdateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get cloudUpdateTime => $_getN(1);
+  set cloudUpdateTime($0.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasCloudUpdateTime() => $_has(1);
+  $core.bool hasCloudUpdateTime() => $_has(1);
   void clearCloudUpdateTime() => clearField(2);
 
-  $google$protobuf.Timestamp get deviceAckTime => $_getN(2);
-  set deviceAckTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get deviceAckTime => $_getN(2);
+  set deviceAckTime($0.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasDeviceAckTime() => $_has(2);
+  $core.bool hasDeviceAckTime() => $_has(2);
   void clearDeviceAckTime() => clearField(3);
 
-  List<int> get binaryData => $_getN(3);
-  set binaryData(List<int> v) {
+  $core.List<$core.int> get binaryData => $_getN(3);
+  set binaryData($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
-  bool hasBinaryData() => $_has(3);
+  $core.bool hasBinaryData() => $_has(3);
   void clearBinaryData() => clearField(4);
 }
 
-class _ReadonlyDeviceConfig extends DeviceConfig with ReadonlyMessageMixin {}
-
-class DeviceState extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeviceState')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<List<int>>(2, 'binaryData', PbFieldType.OY)
+class DeviceState extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceState',
+      package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..a<$0.Timestamp>(1, 'updateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$core.List<$core.int>>(2, 'binaryData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   DeviceState() : super();
-  DeviceState.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceState.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeviceState.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeviceState.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeviceState clone() => new DeviceState()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeviceState create() => new DeviceState();
-  static PbList<DeviceState> createRepeated() => new PbList<DeviceState>();
-  static DeviceState getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDeviceState();
-    return _defaultInstance;
-  }
-
+  DeviceState clone() => DeviceState()..mergeFromMessage(this);
+  DeviceState copyWith(void Function(DeviceState) updates) =>
+      super.copyWith((message) => updates(message as DeviceState));
+  $pb.BuilderInfo get info_ => _i;
+  static DeviceState create() => DeviceState();
+  DeviceState createEmptyInstance() => create();
+  static $pb.PbList<DeviceState> createRepeated() => $pb.PbList<DeviceState>();
+  static DeviceState getDefault() => _defaultInstance ??= create()..freeze();
   static DeviceState _defaultInstance;
-  static void $checkItem(DeviceState v) {
-    if (v is! DeviceState) checkItemFailed(v, 'DeviceState');
-  }
 
-  $google$protobuf.Timestamp get updateTime => $_getN(0);
-  set updateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get updateTime => $_getN(0);
+  set updateTime($0.Timestamp v) {
     setField(1, v);
   }
 
-  bool hasUpdateTime() => $_has(0);
+  $core.bool hasUpdateTime() => $_has(0);
   void clearUpdateTime() => clearField(1);
 
-  List<int> get binaryData => $_getN(1);
-  set binaryData(List<int> v) {
+  $core.List<$core.int> get binaryData => $_getN(1);
+  set binaryData($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasBinaryData() => $_has(1);
+  $core.bool hasBinaryData() => $_has(1);
   void clearBinaryData() => clearField(2);
 }
-
-class _ReadonlyDeviceState extends DeviceState with ReadonlyMessageMixin {}

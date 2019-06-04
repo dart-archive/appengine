@@ -1,34 +1,34 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/firestore/v1beta1/write.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class DocumentTransform_FieldTransform_ServerValue extends ProtobufEnum {
+class DocumentTransform_FieldTransform_ServerValue extends $pb.ProtobufEnum {
   static const DocumentTransform_FieldTransform_ServerValue
-      SERVER_VALUE_UNSPECIFIED =
-      const DocumentTransform_FieldTransform_ServerValue._(
+      SERVER_VALUE_UNSPECIFIED = DocumentTransform_FieldTransform_ServerValue._(
           0, 'SERVER_VALUE_UNSPECIFIED');
   static const DocumentTransform_FieldTransform_ServerValue REQUEST_TIME =
-      const DocumentTransform_FieldTransform_ServerValue._(1, 'REQUEST_TIME');
+      DocumentTransform_FieldTransform_ServerValue._(1, 'REQUEST_TIME');
 
-  static const List<DocumentTransform_FieldTransform_ServerValue> values =
-      const <DocumentTransform_FieldTransform_ServerValue>[
+  static const $core.List<DocumentTransform_FieldTransform_ServerValue> values =
+      <DocumentTransform_FieldTransform_ServerValue>[
     SERVER_VALUE_UNSPECIFIED,
     REQUEST_TIME,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static DocumentTransform_FieldTransform_ServerValue valueOf(int value) =>
-      _byValue[value] as DocumentTransform_FieldTransform_ServerValue;
-  static void $checkItem(DocumentTransform_FieldTransform_ServerValue v) {
-    if (v is! DocumentTransform_FieldTransform_ServerValue)
-      checkItemFailed(v, 'DocumentTransform_FieldTransform_ServerValue');
-  }
+  static final $core
+          .Map<$core.int, DocumentTransform_FieldTransform_ServerValue>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DocumentTransform_FieldTransform_ServerValue valueOf(
+          $core.int value) =>
+      _byValue[value];
 
-  const DocumentTransform_FieldTransform_ServerValue._(int v, String n)
+  const DocumentTransform_FieldTransform_ServerValue._(
+      $core.int v, $core.String n)
       : super(v, n);
 }

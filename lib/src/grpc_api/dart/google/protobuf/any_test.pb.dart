@@ -1,61 +1,57 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/protobuf/any_test.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'any.pb.dart' as $google$protobuf;
+import 'any.pb.dart' as $0;
 
-class TestAny extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestAny')
-    ..a<int>(1, 'int32Value', PbFieldType.O3)
-    ..a<$google$protobuf.Any>(2, 'anyValue', PbFieldType.OM,
-        $google$protobuf.Any.getDefault, $google$protobuf.Any.create)
-    ..pp<$google$protobuf.Any>(3, 'repeatedAnyValue', PbFieldType.PM,
-        $google$protobuf.Any.$checkItem, $google$protobuf.Any.create)
+class TestAny extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestAny',
+      package: const $pb.PackageName('protobuf_unittest'))
+    ..a<$core.int>(1, 'int32Value', $pb.PbFieldType.O3)
+    ..a<$0.Any>(
+        2, 'anyValue', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
+    ..pc<$0.Any>(3, 'repeatedAnyValue', $pb.PbFieldType.PM, $0.Any.create)
     ..hasRequiredFields = false;
 
   TestAny() : super();
-  TestAny.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TestAny.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TestAny.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TestAny.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TestAny clone() => new TestAny()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TestAny create() => new TestAny();
-  static PbList<TestAny> createRepeated() => new PbList<TestAny>();
-  static TestAny getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyTestAny();
-    return _defaultInstance;
-  }
-
+  TestAny clone() => TestAny()..mergeFromMessage(this);
+  TestAny copyWith(void Function(TestAny) updates) =>
+      super.copyWith((message) => updates(message as TestAny));
+  $pb.BuilderInfo get info_ => _i;
+  static TestAny create() => TestAny();
+  TestAny createEmptyInstance() => create();
+  static $pb.PbList<TestAny> createRepeated() => $pb.PbList<TestAny>();
+  static TestAny getDefault() => _defaultInstance ??= create()..freeze();
   static TestAny _defaultInstance;
-  static void $checkItem(TestAny v) {
-    if (v is! TestAny) checkItemFailed(v, 'TestAny');
-  }
 
-  int get int32Value => $_get(0, 0);
-  set int32Value(int v) {
+  $core.int get int32Value => $_get(0, 0);
+  set int32Value($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasInt32Value() => $_has(0);
+  $core.bool hasInt32Value() => $_has(0);
   void clearInt32Value() => clearField(1);
 
-  $google$protobuf.Any get anyValue => $_getN(1);
-  set anyValue($google$protobuf.Any v) {
+  $0.Any get anyValue => $_getN(1);
+  set anyValue($0.Any v) {
     setField(2, v);
   }
 
-  bool hasAnyValue() => $_has(1);
+  $core.bool hasAnyValue() => $_has(1);
   void clearAnyValue() => clearField(2);
 
-  List<$google$protobuf.Any> get repeatedAnyValue => $_getList(2);
+  $core.List<$0.Any> get repeatedAnyValue => $_getList(2);
 }
-
-class _ReadonlyTestAny extends TestAny with ReadonlyMessageMixin {}

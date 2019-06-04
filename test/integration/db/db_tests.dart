@@ -102,8 +102,9 @@ class User extends Person {
   List<String> hobbies = const [];
 
   sameAs(Object other) {
-    if (!(super.sameAs(other) && other is User && nickname == other.nickname))
+    if (!(super.sameAs(other) && other is User && nickname == other.nickname)) {
       return false;
+    }
 
     User user = other;
     return areStringListsEqual(languages, user?.languages) &&
@@ -140,13 +141,13 @@ class ExpandoPerson extends db.ExpandoModel {
   }
 }
 
-Future sleep(Duration duration) => new Future.delayed(duration);
+Future sleep(Duration duration) => Future.delayed(duration);
 
 runTests(db.DatastoreDB store, String namespace) {
   var partition = store.newPartition(namespace);
 
   void compareModels(List<db.Model> expectedModels, List<db.Model> models,
-      {bool anyOrder: false}) {
+      {bool anyOrder = false}) {
     expect(models.length, equals(expectedModels.length));
     if (anyOrder) {
       // Do expensive O(n^2) search.
@@ -168,7 +169,7 @@ runTests(db.DatastoreDB store, String namespace) {
   }
 
   Future testInsertLookupDelete(List<db.Model> objects,
-      {bool transactional: false}) {
+      {bool transactional = false}) {
     var keys = objects.map((db.Model obj) => obj.key).toList();
 
     if (transactional) {
@@ -221,7 +222,7 @@ runTests(db.DatastoreDB store, String namespace) {
         var root = partition.emptyKey;
         var persons = <Person>[];
         for (var i = 1; i <= 10; i++) {
-          persons.add(new Person()
+          persons.add(Person()
             ..id = i
             ..parentKey = root
             ..age = 42 + i
@@ -234,7 +235,7 @@ runTests(db.DatastoreDB store, String namespace) {
         var root = partition.emptyKey;
         var users = <User>[];
         for (var i = 1; i <= 10; i++) {
-          users.add(new User()
+          users.add(User()
             ..id = i
             ..parentKey = root
             ..age = 42 + i
@@ -247,7 +248,7 @@ runTests(db.DatastoreDB store, String namespace) {
         var root = partition.emptyKey;
         var expandoPersons = <ExpandoPerson>[];
         for (var i = 1; i <= 10; i++) {
-          dynamic expandoPerson = new ExpandoPerson()
+          dynamic expandoPerson = ExpandoPerson()
             ..parentKey = root
             ..id = i
             ..name = 'user$i';
@@ -263,18 +264,18 @@ runTests(db.DatastoreDB store, String namespace) {
         var root = partition.emptyKey;
         var models = <db.Model>[];
 
-        models.add(new Person()
+        models.add(Person()
           ..id = 1
           ..parentKey = root
           ..age = 1
           ..name = 'user1');
-        models.add(new User()
+        models.add(User()
           ..id = 2
           ..parentKey = root
           ..age = 2
           ..name = 'user2'
           ..nickname = 'nickname2');
-        dynamic expandoPerson = new ExpandoPerson()
+        dynamic expandoPerson = ExpandoPerson()
           ..parentKey = root
           ..id = 3
           ..name = 'user1';
@@ -288,7 +289,7 @@ runTests(db.DatastoreDB store, String namespace) {
         var root = partition.emptyKey;
         var users = <db.Model>[];
         for (var i = 333; i <= 334; i++) {
-          users.add(new User()
+          users.add(User()
             ..id = i
             ..parentKey = root
             ..age = 42 + i
@@ -297,7 +298,7 @@ runTests(db.DatastoreDB store, String namespace) {
         }
         var persons = <db.Model>[];
         for (var i = 335; i <= 336; i++) {
-          persons.add(new Person()
+          persons.add(Person()
             ..id = i
             ..parentKey = root
             ..age = 42 + i
@@ -316,23 +317,23 @@ runTests(db.DatastoreDB store, String namespace) {
       test('auto_ids', () {
         var root = partition.emptyKey;
         var persons = <Person>[];
-        persons.add(new Person()
+        persons.add(Person()
           ..id = 42
           ..parentKey = root
           ..age = 80
           ..name = 'user80');
         // Auto id person with parentKey
-        persons.add(new Person()
+        persons.add(Person()
           ..parentKey = root
           ..age = 81
           ..name = 'user81');
         // Auto id person with non-root parentKey
         var fatherKey = persons.first.parentKey;
-        persons.add(new Person()
+        persons.add(Person()
           ..parentKey = fatherKey
           ..age = 82
           ..name = 'user82');
-        persons.add(new Person()
+        persons.add(Person()
           ..id = 43
           ..parentKey = root
           ..age = 83
@@ -395,7 +396,7 @@ runTests(db.DatastoreDB store, String namespace) {
         } else if (i == 10) {
           languages = ['foo', 'bar'];
         }
-        users.add(new User()
+        users.add(User()
           ..id = i
           ..parentKey = root
           ..wife = root.append(User, id: 42 + i)
@@ -408,7 +409,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
       var expandoPersons = <ExpandoPerson>[];
       for (var i = 1; i <= 3; i++) {
-        dynamic expandoPerson = new ExpandoPerson()
+        dynamic expandoPerson = ExpandoPerson()
           ..parentKey = root
           ..id = i
           ..name = 'user$i'
@@ -422,14 +423,14 @@ runTests(db.DatastoreDB store, String namespace) {
 
       var LOWER_BOUND = 'user2';
 
-      var usersSortedNameDescNicknameAsc = new List<User>.from(users);
+      var usersSortedNameDescNicknameAsc = List<User>.from(users);
       usersSortedNameDescNicknameAsc.sort((User a, User b) {
         var result = b.name.compareTo(a.name);
         if (result == 0) return a.nickname.compareTo(b.nickname);
         return result;
       });
 
-      var usersSortedNameDescNicknameDesc = new List<User>.from(users);
+      var usersSortedNameDescNicknameDesc = List<User>.from(users);
       usersSortedNameDescNicknameDesc.sort((User a, User b) {
         var result = b.name.compareTo(a.name);
         if (result == 0) return b.nickname.compareTo(a.nickname);
@@ -637,7 +638,7 @@ runTests(db.DatastoreDB store, String namespace) {
             }),
       ];
       return Future.forEach(tests, (f) => f());
-    }, timeout: new Timeout(new Duration(minutes: 5)));
+    }, timeout: Timeout(Duration(minutes: 5)));
   });
 }
 
@@ -646,7 +647,7 @@ Future<List<db.Model>> runQueryWithExponentialBackoff(
   for (int i = 0; i <= 6; i++) {
     if (i > 0) {
       // Wait for 0.1s, 0.2s, ..., 12.8s
-      var duration = new Duration(milliseconds: 100 * (2 << i));
+      var duration = Duration(milliseconds: 100 * (2 << i));
       print("Running query did return less results than expected."
           "Using exponential backoff: Sleeping for $duration.");
       await sleep(duration);
@@ -658,7 +659,7 @@ Future<List<db.Model>> runQueryWithExponentialBackoff(
     }
   }
 
-  throw new Exception(
+  throw Exception(
       "Tried running a query with exponential backoff, giving up now.");
 }
 

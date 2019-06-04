@@ -9,17 +9,18 @@ import 'dart:async';
 import 'package:gcloud/service_scope.dart' as ss;
 
 class LogLevel {
-  static const LogLevel CRITICAL = const LogLevel._('Critical', 4);
-  static const LogLevel ERROR = const LogLevel._('Error', 3);
-  static const LogLevel WARNING = const LogLevel._('Warning', 2);
-  static const LogLevel INFO = const LogLevel._('Info', 1);
-  static const LogLevel DEBUG = const LogLevel._('Debug', 0);
+  static const LogLevel CRITICAL = LogLevel._('Critical', 4);
+  static const LogLevel ERROR = LogLevel._('Error', 3);
+  static const LogLevel WARNING = LogLevel._('Warning', 2);
+  static const LogLevel INFO = LogLevel._('Info', 1);
+  static const LogLevel DEBUG = LogLevel._('Debug', 0);
 
   final String name;
   final int level;
 
   const LogLevel._(this.name, this.level);
 
+  @override
   String toString() => name;
 }
 
@@ -46,25 +47,21 @@ abstract class Logging {
 
   void log(LogLevel level, String message, {DateTime timestamp});
 
-  Future flush();
+  Future<void> flush();
 }
 
-/**
- * Register a new [Logging] object.
- *
- * Calling this outside of a service scope or calling it more than once inside
- * the same service scope will result in an error.
- *
- * See the `package:gcloud/service_scope.dart` library for more information.
- */
+/// Register a new [Logging] object.
+///
+/// Calling this outside of a service scope or calling it more than once inside
+/// the same service scope will result in an error.
+///
+/// See the `package:gcloud/service_scope.dart` library for more information.
 void registerLoggingService(Logging service) {
   ss.register(#appengine.logging, service);
 }
 
-/**
- * The logging service.
- *
- * Request handlers will be run inside a service scope which contains the
- * modules service.
- */
+/// The logging service.
+///
+/// Request handlers will be run inside a service scope which contains the
+/// modules service.
 Logging get loggingService => ss.lookup(#appengine.logging);

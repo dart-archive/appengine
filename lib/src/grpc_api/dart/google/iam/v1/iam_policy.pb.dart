@@ -1,209 +1,162 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/iam/v1/iam_policy.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'policy.pb.dart';
+import 'policy.pb.dart' as $0;
 
-class SetIamPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetIamPolicyRequest')
+class SetIamPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetIamPolicyRequest',
+      package: const $pb.PackageName('google.iam.v1'))
     ..aOS(1, 'resource')
-    ..a<Policy>(2, 'policy', PbFieldType.OM, Policy.getDefault, Policy.create)
+    ..a<$0.Policy>(
+        2, 'policy', $pb.PbFieldType.OM, $0.Policy.getDefault, $0.Policy.create)
     ..hasRequiredFields = false;
 
   SetIamPolicyRequest() : super();
-  SetIamPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetIamPolicyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetIamPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetIamPolicyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SetIamPolicyRequest clone() =>
-      new SetIamPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetIamPolicyRequest create() => new SetIamPolicyRequest();
-  static PbList<SetIamPolicyRequest> createRepeated() =>
-      new PbList<SetIamPolicyRequest>();
-  static SetIamPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetIamPolicyRequest();
-    return _defaultInstance;
-  }
-
+  SetIamPolicyRequest clone() => SetIamPolicyRequest()..mergeFromMessage(this);
+  SetIamPolicyRequest copyWith(void Function(SetIamPolicyRequest) updates) =>
+      super.copyWith((message) => updates(message as SetIamPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetIamPolicyRequest create() => SetIamPolicyRequest();
+  SetIamPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<SetIamPolicyRequest> createRepeated() =>
+      $pb.PbList<SetIamPolicyRequest>();
+  static SetIamPolicyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetIamPolicyRequest _defaultInstance;
-  static void $checkItem(SetIamPolicyRequest v) {
-    if (v is! SetIamPolicyRequest) checkItemFailed(v, 'SetIamPolicyRequest');
-  }
 
-  String get resource => $_getS(0, '');
-  set resource(String v) {
+  $core.String get resource => $_getS(0, '');
+  set resource($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  Policy get policy => $_getN(1);
-  set policy(Policy v) {
+  $0.Policy get policy => $_getN(1);
+  set policy($0.Policy v) {
     setField(2, v);
   }
 
-  bool hasPolicy() => $_has(1);
+  $core.bool hasPolicy() => $_has(1);
   void clearPolicy() => clearField(2);
 }
 
-class _ReadonlySetIamPolicyRequest extends SetIamPolicyRequest
-    with ReadonlyMessageMixin {}
-
-class GetIamPolicyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIamPolicyRequest')
+class GetIamPolicyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIamPolicyRequest',
+      package: const $pb.PackageName('google.iam.v1'))
     ..aOS(1, 'resource')
     ..hasRequiredFields = false;
 
   GetIamPolicyRequest() : super();
-  GetIamPolicyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetIamPolicyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetIamPolicyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetIamPolicyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetIamPolicyRequest clone() =>
-      new GetIamPolicyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetIamPolicyRequest create() => new GetIamPolicyRequest();
-  static PbList<GetIamPolicyRequest> createRepeated() =>
-      new PbList<GetIamPolicyRequest>();
-  static GetIamPolicyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIamPolicyRequest();
-    return _defaultInstance;
-  }
-
+  GetIamPolicyRequest clone() => GetIamPolicyRequest()..mergeFromMessage(this);
+  GetIamPolicyRequest copyWith(void Function(GetIamPolicyRequest) updates) =>
+      super.copyWith((message) => updates(message as GetIamPolicyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetIamPolicyRequest create() => GetIamPolicyRequest();
+  GetIamPolicyRequest createEmptyInstance() => create();
+  static $pb.PbList<GetIamPolicyRequest> createRepeated() =>
+      $pb.PbList<GetIamPolicyRequest>();
+  static GetIamPolicyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetIamPolicyRequest _defaultInstance;
-  static void $checkItem(GetIamPolicyRequest v) {
-    if (v is! GetIamPolicyRequest) checkItemFailed(v, 'GetIamPolicyRequest');
-  }
 
-  String get resource => $_getS(0, '');
-  set resource(String v) {
+  $core.String get resource => $_getS(0, '');
+  set resource($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 }
 
-class _ReadonlyGetIamPolicyRequest extends GetIamPolicyRequest
-    with ReadonlyMessageMixin {}
-
-class TestIamPermissionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestIamPermissionsRequest')
+class TestIamPermissionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestIamPermissionsRequest',
+      package: const $pb.PackageName('google.iam.v1'))
     ..aOS(1, 'resource')
     ..pPS(2, 'permissions')
     ..hasRequiredFields = false;
 
   TestIamPermissionsRequest() : super();
-  TestIamPermissionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TestIamPermissionsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TestIamPermissionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TestIamPermissionsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestIamPermissionsRequest clone() =>
-      new TestIamPermissionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TestIamPermissionsRequest create() => new TestIamPermissionsRequest();
-  static PbList<TestIamPermissionsRequest> createRepeated() =>
-      new PbList<TestIamPermissionsRequest>();
-  static TestIamPermissionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestIamPermissionsRequest();
-    return _defaultInstance;
-  }
-
+      TestIamPermissionsRequest()..mergeFromMessage(this);
+  TestIamPermissionsRequest copyWith(
+          void Function(TestIamPermissionsRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as TestIamPermissionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static TestIamPermissionsRequest create() => TestIamPermissionsRequest();
+  TestIamPermissionsRequest createEmptyInstance() => create();
+  static $pb.PbList<TestIamPermissionsRequest> createRepeated() =>
+      $pb.PbList<TestIamPermissionsRequest>();
+  static TestIamPermissionsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TestIamPermissionsRequest _defaultInstance;
-  static void $checkItem(TestIamPermissionsRequest v) {
-    if (v is! TestIamPermissionsRequest)
-      checkItemFailed(v, 'TestIamPermissionsRequest');
-  }
 
-  String get resource => $_getS(0, '');
-  set resource(String v) {
+  $core.String get resource => $_getS(0, '');
+  set resource($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasResource() => $_has(0);
+  $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  List<String> get permissions => $_getList(1);
+  $core.List<$core.String> get permissions => $_getList(1);
 }
 
-class _ReadonlyTestIamPermissionsRequest extends TestIamPermissionsRequest
-    with ReadonlyMessageMixin {}
-
-class TestIamPermissionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TestIamPermissionsResponse')
+class TestIamPermissionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'TestIamPermissionsResponse',
+      package: const $pb.PackageName('google.iam.v1'))
     ..pPS(1, 'permissions')
     ..hasRequiredFields = false;
 
   TestIamPermissionsResponse() : super();
-  TestIamPermissionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TestIamPermissionsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TestIamPermissionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TestIamPermissionsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TestIamPermissionsResponse clone() =>
-      new TestIamPermissionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TestIamPermissionsResponse create() =>
-      new TestIamPermissionsResponse();
-  static PbList<TestIamPermissionsResponse> createRepeated() =>
-      new PbList<TestIamPermissionsResponse>();
-  static TestIamPermissionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTestIamPermissionsResponse();
-    return _defaultInstance;
-  }
-
+      TestIamPermissionsResponse()..mergeFromMessage(this);
+  TestIamPermissionsResponse copyWith(
+          void Function(TestIamPermissionsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as TestIamPermissionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static TestIamPermissionsResponse create() => TestIamPermissionsResponse();
+  TestIamPermissionsResponse createEmptyInstance() => create();
+  static $pb.PbList<TestIamPermissionsResponse> createRepeated() =>
+      $pb.PbList<TestIamPermissionsResponse>();
+  static TestIamPermissionsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TestIamPermissionsResponse _defaultInstance;
-  static void $checkItem(TestIamPermissionsResponse v) {
-    if (v is! TestIamPermissionsResponse)
-      checkItemFailed(v, 'TestIamPermissionsResponse');
-  }
 
-  List<String> get permissions => $_getList(0);
-}
-
-class _ReadonlyTestIamPermissionsResponse extends TestIamPermissionsResponse
-    with ReadonlyMessageMixin {}
-
-class IAMPolicyApi {
-  RpcClient _client;
-  IAMPolicyApi(this._client);
-
-  Future<Policy> setIamPolicy(ClientContext ctx, SetIamPolicyRequest request) {
-    var emptyResponse = new Policy();
-    return _client.invoke<Policy>(
-        ctx, 'IAMPolicy', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  Future<Policy> getIamPolicy(ClientContext ctx, GetIamPolicyRequest request) {
-    var emptyResponse = new Policy();
-    return _client.invoke<Policy>(
-        ctx, 'IAMPolicy', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  Future<TestIamPermissionsResponse> testIamPermissions(
-      ClientContext ctx, TestIamPermissionsRequest request) {
-    var emptyResponse = new TestIamPermissionsResponse();
-    return _client.invoke<TestIamPermissionsResponse>(
-        ctx, 'IAMPolicy', 'TestIamPermissions', request, emptyResponse);
-  }
+  $core.List<$core.String> get permissions => $_getList(0);
 }

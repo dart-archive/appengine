@@ -43,7 +43,7 @@ run rm -rf $DIR/dart
 run mkdir -p $DIR/dart
 for file in $(find $DIR/protos -name '*proto' | grep -v unittest); do
   echo -e "\nCompiling $file"
-  run protoc -I$DIR/protos --dart_out=$DIR/dart $file
+  run protoc -I$DIR/protos --dart_out=grpc:$DIR/dart $file
   echo
 done
 

@@ -1,106 +1,92 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/ml/v1/operation_metadata.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import 'model_service.pb.dart';
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import 'model_service.pb.dart' as $3;
 
 import 'operation_metadata.pbenum.dart';
 
 export 'operation_metadata.pbenum.dart';
 
-class OperationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('OperationMetadata')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class OperationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
+    ..a<$2.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..aOB(4, 'isCancellationRequested')
     ..e<OperationMetadata_OperationType>(
         5,
         'operationType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         OperationMetadata_OperationType.OPERATION_TYPE_UNSPECIFIED,
         OperationMetadata_OperationType.valueOf,
         OperationMetadata_OperationType.values)
     ..aOS(6, 'modelName')
-    ..a<Version>(
-        7, 'version', PbFieldType.OM, Version.getDefault, Version.create)
+    ..a<$3.Version>(7, 'version', $pb.PbFieldType.OM, $3.Version.getDefault,
+        $3.Version.create)
     ..hasRequiredFields = false;
 
   OperationMetadata() : super();
-  OperationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OperationMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  OperationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  OperationMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  OperationMetadata clone() => new OperationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static OperationMetadata create() => new OperationMetadata();
-  static PbList<OperationMetadata> createRepeated() =>
-      new PbList<OperationMetadata>();
-  static OperationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyOperationMetadata();
-    return _defaultInstance;
-  }
-
+  OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
+  OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
+      super.copyWith((message) => updates(message as OperationMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static OperationMetadata create() => OperationMetadata();
+  OperationMetadata createEmptyInstance() => create();
+  static $pb.PbList<OperationMetadata> createRepeated() =>
+      $pb.PbList<OperationMetadata>();
+  static OperationMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static OperationMetadata _defaultInstance;
-  static void $checkItem(OperationMetadata v) {
-    if (v is! OperationMetadata) checkItemFailed(v, 'OperationMetadata');
-  }
 
-  $google$protobuf.Timestamp get createTime => $_getN(0);
-  set createTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(0);
+  set createTime($2.Timestamp v) {
     setField(1, v);
   }
 
-  bool hasCreateTime() => $_has(0);
+  $core.bool hasCreateTime() => $_has(0);
   void clearCreateTime() => clearField(1);
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(1);
+  set startTime($2.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasStartTime() => $_has(1);
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get endTime => $_getN(2);
-  set endTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(2);
+  set endTime($2.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasEndTime() => $_has(2);
+  $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
 
-  bool get isCancellationRequested => $_get(3, false);
-  set isCancellationRequested(bool v) {
+  $core.bool get isCancellationRequested => $_get(3, false);
+  set isCancellationRequested($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasIsCancellationRequested() => $_has(3);
+  $core.bool hasIsCancellationRequested() => $_has(3);
   void clearIsCancellationRequested() => clearField(4);
 
   OperationMetadata_OperationType get operationType => $_getN(4);
@@ -108,25 +94,22 @@ class OperationMetadata extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasOperationType() => $_has(4);
+  $core.bool hasOperationType() => $_has(4);
   void clearOperationType() => clearField(5);
 
-  String get modelName => $_getS(5, '');
-  set modelName(String v) {
+  $core.String get modelName => $_getS(5, '');
+  set modelName($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasModelName() => $_has(5);
+  $core.bool hasModelName() => $_has(5);
   void clearModelName() => clearField(6);
 
-  Version get version => $_getN(6);
-  set version(Version v) {
+  $3.Version get version => $_getN(6);
+  set version($3.Version v) {
     setField(7, v);
   }
 
-  bool hasVersion() => $_has(6);
+  $core.bool hasVersion() => $_has(6);
   void clearVersion() => clearField(7);
 }
-
-class _ReadonlyOperationMetadata extends OperationMetadata
-    with ReadonlyMessageMixin {}

@@ -1,277 +1,239 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/genomics/v1/datasets.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
-import '../../iam/v1/iam_policy.pb.dart' as $google$iam$v1;
-import '../../iam/v1/policy.pb.dart' as $google$iam$v1;
+import '../../protobuf/timestamp.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $4;
 
-class Dataset extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Dataset')
+class Dataset extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
     ..aOS(3, 'name')
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   Dataset() : super();
-  Dataset.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Dataset.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Dataset.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Dataset.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Dataset clone() => new Dataset()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Dataset create() => new Dataset();
-  static PbList<Dataset> createRepeated() => new PbList<Dataset>();
-  static Dataset getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyDataset();
-    return _defaultInstance;
-  }
-
+  Dataset clone() => Dataset()..mergeFromMessage(this);
+  Dataset copyWith(void Function(Dataset) updates) =>
+      super.copyWith((message) => updates(message as Dataset));
+  $pb.BuilderInfo get info_ => _i;
+  static Dataset create() => Dataset();
+  Dataset createEmptyInstance() => create();
+  static $pb.PbList<Dataset> createRepeated() => $pb.PbList<Dataset>();
+  static Dataset getDefault() => _defaultInstance ??= create()..freeze();
   static Dataset _defaultInstance;
-  static void $checkItem(Dataset v) {
-    if (v is! Dataset) checkItemFailed(v, 'Dataset');
-  }
 
-  String get id => $_getS(0, '');
-  set id(String v) {
+  $core.String get id => $_getS(0, '');
+  set id($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasId() => $_has(0);
+  $core.bool hasId() => $_has(0);
   void clearId() => clearField(1);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasProjectId() => $_has(1);
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  String get name => $_getS(2, '');
-  set name(String v) {
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasName() => $_has(2);
+  $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  $google$protobuf.Timestamp get createTime => $_getN(3);
-  set createTime($google$protobuf.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
-  bool hasCreateTime() => $_has(3);
+  $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 }
 
-class _ReadonlyDataset extends Dataset with ReadonlyMessageMixin {}
-
-class ListDatasetsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDatasetsRequest')
+class ListDatasetsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'projectId')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListDatasetsRequest() : super();
-  ListDatasetsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDatasetsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListDatasetsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDatasetsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListDatasetsRequest clone() =>
-      new ListDatasetsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListDatasetsRequest create() => new ListDatasetsRequest();
-  static PbList<ListDatasetsRequest> createRepeated() =>
-      new PbList<ListDatasetsRequest>();
-  static ListDatasetsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDatasetsRequest();
-    return _defaultInstance;
-  }
-
+  ListDatasetsRequest clone() => ListDatasetsRequest()..mergeFromMessage(this);
+  ListDatasetsRequest copyWith(void Function(ListDatasetsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListDatasetsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListDatasetsRequest create() => ListDatasetsRequest();
+  ListDatasetsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListDatasetsRequest> createRepeated() =>
+      $pb.PbList<ListDatasetsRequest>();
+  static ListDatasetsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListDatasetsRequest _defaultInstance;
-  static void $checkItem(ListDatasetsRequest v) {
-    if (v is! ListDatasetsRequest) checkItemFailed(v, 'ListDatasetsRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListDatasetsRequest extends ListDatasetsRequest
-    with ReadonlyMessageMixin {}
-
-class ListDatasetsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListDatasetsResponse')
-    ..pp<Dataset>(
-        1, 'datasets', PbFieldType.PM, Dataset.$checkItem, Dataset.create)
+class ListDatasetsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsResponse',
+      package: const $pb.PackageName('google.genomics.v1'))
+    ..pc<Dataset>(1, 'datasets', $pb.PbFieldType.PM, Dataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListDatasetsResponse() : super();
-  ListDatasetsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDatasetsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListDatasetsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListDatasetsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListDatasetsResponse clone() =>
-      new ListDatasetsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListDatasetsResponse create() => new ListDatasetsResponse();
-  static PbList<ListDatasetsResponse> createRepeated() =>
-      new PbList<ListDatasetsResponse>();
-  static ListDatasetsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListDatasetsResponse();
-    return _defaultInstance;
-  }
-
+      ListDatasetsResponse()..mergeFromMessage(this);
+  ListDatasetsResponse copyWith(void Function(ListDatasetsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListDatasetsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListDatasetsResponse create() => ListDatasetsResponse();
+  ListDatasetsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListDatasetsResponse> createRepeated() =>
+      $pb.PbList<ListDatasetsResponse>();
+  static ListDatasetsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListDatasetsResponse _defaultInstance;
-  static void $checkItem(ListDatasetsResponse v) {
-    if (v is! ListDatasetsResponse) checkItemFailed(v, 'ListDatasetsResponse');
-  }
 
-  List<Dataset> get datasets => $_getList(0);
+  $core.List<Dataset> get datasets => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListDatasetsResponse extends ListDatasetsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateDatasetRequest')
+class CreateDatasetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDatasetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..a<Dataset>(
-        1, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
+        1, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
 
   CreateDatasetRequest() : super();
-  CreateDatasetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateDatasetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateDatasetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateDatasetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateDatasetRequest clone() =>
-      new CreateDatasetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateDatasetRequest create() => new CreateDatasetRequest();
-  static PbList<CreateDatasetRequest> createRepeated() =>
-      new PbList<CreateDatasetRequest>();
-  static CreateDatasetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateDatasetRequest();
-    return _defaultInstance;
-  }
-
+      CreateDatasetRequest()..mergeFromMessage(this);
+  CreateDatasetRequest copyWith(void Function(CreateDatasetRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateDatasetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateDatasetRequest create() => CreateDatasetRequest();
+  CreateDatasetRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateDatasetRequest> createRepeated() =>
+      $pb.PbList<CreateDatasetRequest>();
+  static CreateDatasetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateDatasetRequest _defaultInstance;
-  static void $checkItem(CreateDatasetRequest v) {
-    if (v is! CreateDatasetRequest) checkItemFailed(v, 'CreateDatasetRequest');
-  }
 
   Dataset get dataset => $_getN(0);
   set dataset(Dataset v) {
     setField(1, v);
   }
 
-  bool hasDataset() => $_has(0);
+  $core.bool hasDataset() => $_has(0);
   void clearDataset() => clearField(1);
 }
 
-class _ReadonlyCreateDatasetRequest extends CreateDatasetRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateDatasetRequest')
+class UpdateDatasetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDatasetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'datasetId')
     ..a<Dataset>(
-        2, 'dataset', PbFieldType.OM, Dataset.getDefault, Dataset.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+        2, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDatasetRequest() : super();
-  UpdateDatasetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateDatasetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateDatasetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateDatasetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateDatasetRequest clone() =>
-      new UpdateDatasetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateDatasetRequest create() => new UpdateDatasetRequest();
-  static PbList<UpdateDatasetRequest> createRepeated() =>
-      new PbList<UpdateDatasetRequest>();
-  static UpdateDatasetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateDatasetRequest();
-    return _defaultInstance;
-  }
-
+      UpdateDatasetRequest()..mergeFromMessage(this);
+  UpdateDatasetRequest copyWith(void Function(UpdateDatasetRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateDatasetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateDatasetRequest create() => UpdateDatasetRequest();
+  UpdateDatasetRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateDatasetRequest> createRepeated() =>
+      $pb.PbList<UpdateDatasetRequest>();
+  static UpdateDatasetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateDatasetRequest _defaultInstance;
-  static void $checkItem(UpdateDatasetRequest v) {
-    if (v is! UpdateDatasetRequest) checkItemFailed(v, 'UpdateDatasetRequest');
-  }
 
-  String get datasetId => $_getS(0, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(0, '');
+  set datasetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatasetId() => $_has(0);
+  $core.bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 
   Dataset get dataset => $_getN(1);
@@ -279,207 +241,119 @@ class UpdateDatasetRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasDataset() => $_has(1);
+  $core.bool hasDataset() => $_has(1);
   void clearDataset() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateDatasetRequest extends UpdateDatasetRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteDatasetRequest')
+class DeleteDatasetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDatasetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
   DeleteDatasetRequest() : super();
-  DeleteDatasetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteDatasetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteDatasetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteDatasetRequest clone() =>
-      new DeleteDatasetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteDatasetRequest create() => new DeleteDatasetRequest();
-  static PbList<DeleteDatasetRequest> createRepeated() =>
-      new PbList<DeleteDatasetRequest>();
-  static DeleteDatasetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteDatasetRequest();
-    return _defaultInstance;
-  }
-
+      DeleteDatasetRequest()..mergeFromMessage(this);
+  DeleteDatasetRequest copyWith(void Function(DeleteDatasetRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteDatasetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteDatasetRequest create() => DeleteDatasetRequest();
+  DeleteDatasetRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteDatasetRequest> createRepeated() =>
+      $pb.PbList<DeleteDatasetRequest>();
+  static DeleteDatasetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteDatasetRequest _defaultInstance;
-  static void $checkItem(DeleteDatasetRequest v) {
-    if (v is! DeleteDatasetRequest) checkItemFailed(v, 'DeleteDatasetRequest');
-  }
 
-  String get datasetId => $_getS(0, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(0, '');
+  set datasetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatasetId() => $_has(0);
+  $core.bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 }
 
-class _ReadonlyDeleteDatasetRequest extends DeleteDatasetRequest
-    with ReadonlyMessageMixin {}
-
-class UndeleteDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UndeleteDatasetRequest')
+class UndeleteDatasetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteDatasetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
   UndeleteDatasetRequest() : super();
-  UndeleteDatasetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UndeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UndeleteDatasetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UndeleteDatasetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UndeleteDatasetRequest clone() =>
-      new UndeleteDatasetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UndeleteDatasetRequest create() => new UndeleteDatasetRequest();
-  static PbList<UndeleteDatasetRequest> createRepeated() =>
-      new PbList<UndeleteDatasetRequest>();
-  static UndeleteDatasetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUndeleteDatasetRequest();
-    return _defaultInstance;
-  }
-
+      UndeleteDatasetRequest()..mergeFromMessage(this);
+  UndeleteDatasetRequest copyWith(
+          void Function(UndeleteDatasetRequest) updates) =>
+      super.copyWith((message) => updates(message as UndeleteDatasetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UndeleteDatasetRequest create() => UndeleteDatasetRequest();
+  UndeleteDatasetRequest createEmptyInstance() => create();
+  static $pb.PbList<UndeleteDatasetRequest> createRepeated() =>
+      $pb.PbList<UndeleteDatasetRequest>();
+  static UndeleteDatasetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UndeleteDatasetRequest _defaultInstance;
-  static void $checkItem(UndeleteDatasetRequest v) {
-    if (v is! UndeleteDatasetRequest)
-      checkItemFailed(v, 'UndeleteDatasetRequest');
-  }
 
-  String get datasetId => $_getS(0, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(0, '');
+  set datasetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatasetId() => $_has(0);
+  $core.bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
 }
 
-class _ReadonlyUndeleteDatasetRequest extends UndeleteDatasetRequest
-    with ReadonlyMessageMixin {}
-
-class GetDatasetRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetDatasetRequest')
+class GetDatasetRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDatasetRequest',
+      package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
   GetDatasetRequest() : super();
-  GetDatasetRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetDatasetRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetDatasetRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetDatasetRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetDatasetRequest clone() => new GetDatasetRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetDatasetRequest create() => new GetDatasetRequest();
-  static PbList<GetDatasetRequest> createRepeated() =>
-      new PbList<GetDatasetRequest>();
-  static GetDatasetRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetDatasetRequest();
-    return _defaultInstance;
-  }
-
+  GetDatasetRequest clone() => GetDatasetRequest()..mergeFromMessage(this);
+  GetDatasetRequest copyWith(void Function(GetDatasetRequest) updates) =>
+      super.copyWith((message) => updates(message as GetDatasetRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetDatasetRequest create() => GetDatasetRequest();
+  GetDatasetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDatasetRequest> createRepeated() =>
+      $pb.PbList<GetDatasetRequest>();
+  static GetDatasetRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetDatasetRequest _defaultInstance;
-  static void $checkItem(GetDatasetRequest v) {
-    if (v is! GetDatasetRequest) checkItemFailed(v, 'GetDatasetRequest');
-  }
 
-  String get datasetId => $_getS(0, '');
-  set datasetId(String v) {
+  $core.String get datasetId => $_getS(0, '');
+  set datasetId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatasetId() => $_has(0);
+  $core.bool hasDatasetId() => $_has(0);
   void clearDatasetId() => clearField(1);
-}
-
-class _ReadonlyGetDatasetRequest extends GetDatasetRequest
-    with ReadonlyMessageMixin {}
-
-class DatasetServiceV1Api {
-  RpcClient _client;
-  DatasetServiceV1Api(this._client);
-
-  Future<ListDatasetsResponse> listDatasets(
-      ClientContext ctx, ListDatasetsRequest request) {
-    var emptyResponse = new ListDatasetsResponse();
-    return _client.invoke<ListDatasetsResponse>(
-        ctx, 'DatasetServiceV1', 'ListDatasets', request, emptyResponse);
-  }
-
-  Future<Dataset> createDataset(
-      ClientContext ctx, CreateDatasetRequest request) {
-    var emptyResponse = new Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'CreateDataset', request, emptyResponse);
-  }
-
-  Future<Dataset> getDataset(ClientContext ctx, GetDatasetRequest request) {
-    var emptyResponse = new Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'GetDataset', request, emptyResponse);
-  }
-
-  Future<Dataset> updateDataset(
-      ClientContext ctx, UpdateDatasetRequest request) {
-    var emptyResponse = new Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'UpdateDataset', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteDataset(
-      ClientContext ctx, DeleteDatasetRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'DatasetServiceV1', 'DeleteDataset', request, emptyResponse);
-  }
-
-  Future<Dataset> undeleteDataset(
-      ClientContext ctx, UndeleteDatasetRequest request) {
-    var emptyResponse = new Dataset();
-    return _client.invoke<Dataset>(
-        ctx, 'DatasetServiceV1', 'UndeleteDataset', request, emptyResponse);
-  }
-
-  Future<$google$iam$v1.Policy> setIamPolicy(
-      ClientContext ctx, $google$iam$v1.SetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'DatasetServiceV1', 'SetIamPolicy', request, emptyResponse);
-  }
-
-  Future<$google$iam$v1.Policy> getIamPolicy(
-      ClientContext ctx, $google$iam$v1.GetIamPolicyRequest request) {
-    var emptyResponse = new $google$iam$v1.Policy();
-    return _client.invoke<$google$iam$v1.Policy>(
-        ctx, 'DatasetServiceV1', 'GetIamPolicy', request, emptyResponse);
-  }
-
-  Future<$google$iam$v1.TestIamPermissionsResponse> testIamPermissions(
-      ClientContext ctx, $google$iam$v1.TestIamPermissionsRequest request) {
-    var emptyResponse = new $google$iam$v1.TestIamPermissionsResponse();
-    return _client.invoke<$google$iam$v1.TestIamPermissionsResponse>(
-        ctx, 'DatasetServiceV1', 'TestIamPermissions', request, emptyResponse);
-  }
 }

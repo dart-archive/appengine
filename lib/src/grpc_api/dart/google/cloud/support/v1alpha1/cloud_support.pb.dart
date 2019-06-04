@@ -1,99 +1,91 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/support/v1alpha1/cloud_support.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../common.pb.dart' as $google$cloud$support$common;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
+import '../common.pb.dart' as $0;
+import '../../../protobuf/field_mask.pb.dart' as $1;
 
-class GetSupportAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSupportAccountRequest')
+class GetSupportAccountRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSupportAccountRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetSupportAccountRequest() : super();
-  GetSupportAccountRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSupportAccountRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetSupportAccountRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSupportAccountRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetSupportAccountRequest clone() =>
-      new GetSupportAccountRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetSupportAccountRequest create() => new GetSupportAccountRequest();
-  static PbList<GetSupportAccountRequest> createRepeated() =>
-      new PbList<GetSupportAccountRequest>();
-  static GetSupportAccountRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSupportAccountRequest();
-    return _defaultInstance;
-  }
-
+      GetSupportAccountRequest()..mergeFromMessage(this);
+  GetSupportAccountRequest copyWith(
+          void Function(GetSupportAccountRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSupportAccountRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetSupportAccountRequest create() => GetSupportAccountRequest();
+  GetSupportAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSupportAccountRequest> createRepeated() =>
+      $pb.PbList<GetSupportAccountRequest>();
+  static GetSupportAccountRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetSupportAccountRequest _defaultInstance;
-  static void $checkItem(GetSupportAccountRequest v) {
-    if (v is! GetSupportAccountRequest)
-      checkItemFailed(v, 'GetSupportAccountRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetSupportAccountRequest extends GetSupportAccountRequest
-    with ReadonlyMessageMixin {}
-
-class ListSupportAccountsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSupportAccountsRequest')
+class ListSupportAccountsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListSupportAccountsRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'filter')
     ..aInt64(2, 'pageSize')
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
   ListSupportAccountsRequest() : super();
-  ListSupportAccountsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSupportAccountsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSupportAccountsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSupportAccountsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSupportAccountsRequest clone() =>
-      new ListSupportAccountsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSupportAccountsRequest create() =>
-      new ListSupportAccountsRequest();
-  static PbList<ListSupportAccountsRequest> createRepeated() =>
-      new PbList<ListSupportAccountsRequest>();
-  static ListSupportAccountsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSupportAccountsRequest();
-    return _defaultInstance;
-  }
-
+      ListSupportAccountsRequest()..mergeFromMessage(this);
+  ListSupportAccountsRequest copyWith(
+          void Function(ListSupportAccountsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListSupportAccountsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSupportAccountsRequest create() => ListSupportAccountsRequest();
+  ListSupportAccountsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSupportAccountsRequest> createRepeated() =>
+      $pb.PbList<ListSupportAccountsRequest>();
+  static ListSupportAccountsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSupportAccountsRequest _defaultInstance;
-  static void $checkItem(ListSupportAccountsRequest v) {
-    if (v is! ListSupportAccountsRequest)
-      checkItemFailed(v, 'ListSupportAccountsRequest');
-  }
 
-  String get filter => $_getS(0, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(0, '');
+  set filter($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFilter() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(1);
 
   Int64 get pageSize => $_getI64(1);
@@ -101,115 +93,96 @@ class ListSupportAccountsRequest extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 }
 
-class _ReadonlyListSupportAccountsRequest extends ListSupportAccountsRequest
-    with ReadonlyMessageMixin {}
-
-class ListSupportAccountsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSupportAccountsResponse')
-    ..pp<$google$cloud$support$common.SupportAccount>(
-        1,
-        'accounts',
-        PbFieldType.PM,
-        $google$cloud$support$common.SupportAccount.$checkItem,
-        $google$cloud$support$common.SupportAccount.create)
+class ListSupportAccountsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ListSupportAccountsResponse',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+    ..pc<$0.SupportAccount>(
+        1, 'accounts', $pb.PbFieldType.PM, $0.SupportAccount.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListSupportAccountsResponse() : super();
-  ListSupportAccountsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSupportAccountsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSupportAccountsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSupportAccountsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSupportAccountsResponse clone() =>
-      new ListSupportAccountsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSupportAccountsResponse create() =>
-      new ListSupportAccountsResponse();
-  static PbList<ListSupportAccountsResponse> createRepeated() =>
-      new PbList<ListSupportAccountsResponse>();
-  static ListSupportAccountsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSupportAccountsResponse();
-    return _defaultInstance;
-  }
-
+      ListSupportAccountsResponse()..mergeFromMessage(this);
+  ListSupportAccountsResponse copyWith(
+          void Function(ListSupportAccountsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as ListSupportAccountsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSupportAccountsResponse create() => ListSupportAccountsResponse();
+  ListSupportAccountsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSupportAccountsResponse> createRepeated() =>
+      $pb.PbList<ListSupportAccountsResponse>();
+  static ListSupportAccountsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSupportAccountsResponse _defaultInstance;
-  static void $checkItem(ListSupportAccountsResponse v) {
-    if (v is! ListSupportAccountsResponse)
-      checkItemFailed(v, 'ListSupportAccountsResponse');
-  }
 
-  List<$google$cloud$support$common.SupportAccount> get accounts =>
-      $_getList(0);
+  $core.List<$0.SupportAccount> get accounts => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListSupportAccountsResponse extends ListSupportAccountsResponse
-    with ReadonlyMessageMixin {}
-
-class GetCaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetCaseRequest')
+class GetCaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCaseRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetCaseRequest() : super();
-  GetCaseRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetCaseRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetCaseRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetCaseRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetCaseRequest clone() => new GetCaseRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetCaseRequest create() => new GetCaseRequest();
-  static PbList<GetCaseRequest> createRepeated() =>
-      new PbList<GetCaseRequest>();
-  static GetCaseRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetCaseRequest();
-    return _defaultInstance;
-  }
-
+  GetCaseRequest clone() => GetCaseRequest()..mergeFromMessage(this);
+  GetCaseRequest copyWith(void Function(GetCaseRequest) updates) =>
+      super.copyWith((message) => updates(message as GetCaseRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetCaseRequest create() => GetCaseRequest();
+  GetCaseRequest createEmptyInstance() => create();
+  static $pb.PbList<GetCaseRequest> createRepeated() =>
+      $pb.PbList<GetCaseRequest>();
+  static GetCaseRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetCaseRequest _defaultInstance;
-  static void $checkItem(GetCaseRequest v) {
-    if (v is! GetCaseRequest) checkItemFailed(v, 'GetCaseRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetCaseRequest extends GetCaseRequest with ReadonlyMessageMixin {
-}
-
-class ListCasesRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCasesRequest')
+class ListCasesRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCasesRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..aInt64(3, 'pageSize')
@@ -217,42 +190,38 @@ class ListCasesRequest extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   ListCasesRequest() : super();
-  ListCasesRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCasesRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListCasesRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCasesRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListCasesRequest clone() => new ListCasesRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListCasesRequest create() => new ListCasesRequest();
-  static PbList<ListCasesRequest> createRepeated() =>
-      new PbList<ListCasesRequest>();
-  static ListCasesRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCasesRequest();
-    return _defaultInstance;
-  }
-
+  ListCasesRequest clone() => ListCasesRequest()..mergeFromMessage(this);
+  ListCasesRequest copyWith(void Function(ListCasesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListCasesRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListCasesRequest create() => ListCasesRequest();
+  ListCasesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListCasesRequest> createRepeated() =>
+      $pb.PbList<ListCasesRequest>();
+  static ListCasesRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListCasesRequest _defaultInstance;
-  static void $checkItem(ListCasesRequest v) {
-    if (v is! ListCasesRequest) checkItemFailed(v, 'ListCasesRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get filter => $_getS(1, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(1, '');
+  set filter($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasFilter() => $_has(1);
+  $core.bool hasFilter() => $_has(1);
   void clearFilter() => clearField(2);
 
   Int64 get pageSize => $_getI64(2);
@@ -260,415 +229,275 @@ class ListCasesRequest extends GeneratedMessage {
     $_setInt64(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 
-  String get pageToken => $_getS(3, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(3, '');
+  set pageToken($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasPageToken() => $_has(3);
+  $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 }
 
-class _ReadonlyListCasesRequest extends ListCasesRequest
-    with ReadonlyMessageMixin {}
-
-class ListCasesResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCasesResponse')
-    ..pp<$google$cloud$support$common.Case>(
-        1,
-        'cases',
-        PbFieldType.PM,
-        $google$cloud$support$common.Case.$checkItem,
-        $google$cloud$support$common.Case.create)
+class ListCasesResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCasesResponse',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+    ..pc<$0.Case>(1, 'cases', $pb.PbFieldType.PM, $0.Case.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListCasesResponse() : super();
-  ListCasesResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCasesResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListCasesResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCasesResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListCasesResponse clone() => new ListCasesResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListCasesResponse create() => new ListCasesResponse();
-  static PbList<ListCasesResponse> createRepeated() =>
-      new PbList<ListCasesResponse>();
-  static ListCasesResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCasesResponse();
-    return _defaultInstance;
-  }
-
+  ListCasesResponse clone() => ListCasesResponse()..mergeFromMessage(this);
+  ListCasesResponse copyWith(void Function(ListCasesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListCasesResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListCasesResponse create() => ListCasesResponse();
+  ListCasesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListCasesResponse> createRepeated() =>
+      $pb.PbList<ListCasesResponse>();
+  static ListCasesResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListCasesResponse _defaultInstance;
-  static void $checkItem(ListCasesResponse v) {
-    if (v is! ListCasesResponse) checkItemFailed(v, 'ListCasesResponse');
-  }
 
-  List<$google$cloud$support$common.Case> get cases => $_getList(0);
+  $core.List<$0.Case> get cases => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListCasesResponse extends ListCasesResponse
-    with ReadonlyMessageMixin {}
-
-class ListCommentsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCommentsRequest')
+class ListCommentsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCommentsRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   ListCommentsRequest() : super();
-  ListCommentsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCommentsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListCommentsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCommentsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListCommentsRequest clone() =>
-      new ListCommentsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListCommentsRequest create() => new ListCommentsRequest();
-  static PbList<ListCommentsRequest> createRepeated() =>
-      new PbList<ListCommentsRequest>();
-  static ListCommentsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCommentsRequest();
-    return _defaultInstance;
-  }
-
+  ListCommentsRequest clone() => ListCommentsRequest()..mergeFromMessage(this);
+  ListCommentsRequest copyWith(void Function(ListCommentsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListCommentsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListCommentsRequest create() => ListCommentsRequest();
+  ListCommentsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListCommentsRequest> createRepeated() =>
+      $pb.PbList<ListCommentsRequest>();
+  static ListCommentsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListCommentsRequest _defaultInstance;
-  static void $checkItem(ListCommentsRequest v) {
-    if (v is! ListCommentsRequest) checkItemFailed(v, 'ListCommentsRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyListCommentsRequest extends ListCommentsRequest
-    with ReadonlyMessageMixin {}
-
-class ListCommentsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListCommentsResponse')
-    ..pp<$google$cloud$support$common.Comment>(
-        1,
-        'comments',
-        PbFieldType.PM,
-        $google$cloud$support$common.Comment.$checkItem,
-        $google$cloud$support$common.Comment.create)
+class ListCommentsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCommentsResponse',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+    ..pc<$0.Comment>(1, 'comments', $pb.PbFieldType.PM, $0.Comment.create)
     ..hasRequiredFields = false;
 
   ListCommentsResponse() : super();
-  ListCommentsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCommentsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListCommentsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListCommentsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListCommentsResponse clone() =>
-      new ListCommentsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListCommentsResponse create() => new ListCommentsResponse();
-  static PbList<ListCommentsResponse> createRepeated() =>
-      new PbList<ListCommentsResponse>();
-  static ListCommentsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListCommentsResponse();
-    return _defaultInstance;
-  }
-
+      ListCommentsResponse()..mergeFromMessage(this);
+  ListCommentsResponse copyWith(void Function(ListCommentsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListCommentsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListCommentsResponse create() => ListCommentsResponse();
+  ListCommentsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListCommentsResponse> createRepeated() =>
+      $pb.PbList<ListCommentsResponse>();
+  static ListCommentsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListCommentsResponse _defaultInstance;
-  static void $checkItem(ListCommentsResponse v) {
-    if (v is! ListCommentsResponse) checkItemFailed(v, 'ListCommentsResponse');
-  }
 
-  List<$google$cloud$support$common.Comment> get comments => $_getList(0);
+  $core.List<$0.Comment> get comments => $_getList(0);
 }
 
-class _ReadonlyListCommentsResponse extends ListCommentsResponse
-    with ReadonlyMessageMixin {}
-
-class CreateCaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateCaseRequest')
+class CreateCaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCaseRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'parent')
-    ..a<$google$cloud$support$common.Case>(
-        2,
-        'case_2',
-        PbFieldType.OM,
-        $google$cloud$support$common.Case.getDefault,
-        $google$cloud$support$common.Case.create)
+    ..a<$0.Case>(
+        2, 'case_2', $pb.PbFieldType.OM, $0.Case.getDefault, $0.Case.create)
     ..hasRequiredFields = false;
 
   CreateCaseRequest() : super();
-  CreateCaseRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateCaseRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateCaseRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateCaseRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateCaseRequest clone() => new CreateCaseRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateCaseRequest create() => new CreateCaseRequest();
-  static PbList<CreateCaseRequest> createRepeated() =>
-      new PbList<CreateCaseRequest>();
-  static CreateCaseRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateCaseRequest();
-    return _defaultInstance;
-  }
-
+  CreateCaseRequest clone() => CreateCaseRequest()..mergeFromMessage(this);
+  CreateCaseRequest copyWith(void Function(CreateCaseRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateCaseRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateCaseRequest create() => CreateCaseRequest();
+  CreateCaseRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateCaseRequest> createRepeated() =>
+      $pb.PbList<CreateCaseRequest>();
+  static CreateCaseRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateCaseRequest _defaultInstance;
-  static void $checkItem(CreateCaseRequest v) {
-    if (v is! CreateCaseRequest) checkItemFailed(v, 'CreateCaseRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $google$cloud$support$common.Case get case_2 => $_getN(1);
-  set case_2($google$cloud$support$common.Case v) {
+  $0.Case get case_2 => $_getN(1);
+  set case_2($0.Case v) {
     setField(2, v);
   }
 
-  bool hasCase_2() => $_has(1);
+  $core.bool hasCase_2() => $_has(1);
   void clearCase_2() => clearField(2);
 }
 
-class _ReadonlyCreateCaseRequest extends CreateCaseRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateCaseRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateCaseRequest')
-    ..a<$google$cloud$support$common.Case>(
-        1,
-        'case_1',
-        PbFieldType.OM,
-        $google$cloud$support$common.Case.getDefault,
-        $google$cloud$support$common.Case.create)
-    ..a<$google$protobuf.FieldMask>(
-        2,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+class UpdateCaseRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateCaseRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+    ..a<$0.Case>(
+        1, 'case_1', $pb.PbFieldType.OM, $0.Case.getDefault, $0.Case.create)
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCaseRequest() : super();
-  UpdateCaseRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateCaseRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateCaseRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateCaseRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateCaseRequest clone() => new UpdateCaseRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateCaseRequest create() => new UpdateCaseRequest();
-  static PbList<UpdateCaseRequest> createRepeated() =>
-      new PbList<UpdateCaseRequest>();
-  static UpdateCaseRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateCaseRequest();
-    return _defaultInstance;
-  }
-
+  UpdateCaseRequest clone() => UpdateCaseRequest()..mergeFromMessage(this);
+  UpdateCaseRequest copyWith(void Function(UpdateCaseRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateCaseRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateCaseRequest create() => UpdateCaseRequest();
+  UpdateCaseRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateCaseRequest> createRepeated() =>
+      $pb.PbList<UpdateCaseRequest>();
+  static UpdateCaseRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateCaseRequest _defaultInstance;
-  static void $checkItem(UpdateCaseRequest v) {
-    if (v is! UpdateCaseRequest) checkItemFailed(v, 'UpdateCaseRequest');
-  }
 
-  $google$cloud$support$common.Case get case_1 => $_getN(0);
-  set case_1($google$cloud$support$common.Case v) {
+  $0.Case get case_1 => $_getN(0);
+  set case_1($0.Case v) {
     setField(1, v);
   }
 
-  bool hasCase_1() => $_has(0);
+  $core.bool hasCase_1() => $_has(0);
   void clearCase_1() => clearField(1);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(1);
-  set updateMask($google$protobuf.FieldMask v) {
+  $1.FieldMask get updateMask => $_getN(1);
+  set updateMask($1.FieldMask v) {
     setField(2, v);
   }
 
-  bool hasUpdateMask() => $_has(1);
+  $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 }
 
-class _ReadonlyUpdateCaseRequest extends UpdateCaseRequest
-    with ReadonlyMessageMixin {}
-
-class CreateCommentRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateCommentRequest')
+class CreateCommentRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCommentRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..aOS(1, 'name')
-    ..a<$google$cloud$support$common.Comment>(
-        2,
-        'comment',
-        PbFieldType.OM,
-        $google$cloud$support$common.Comment.getDefault,
-        $google$cloud$support$common.Comment.create)
+    ..a<$0.Comment>(2, 'comment', $pb.PbFieldType.OM, $0.Comment.getDefault,
+        $0.Comment.create)
     ..hasRequiredFields = false;
 
   CreateCommentRequest() : super();
-  CreateCommentRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateCommentRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateCommentRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateCommentRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateCommentRequest clone() =>
-      new CreateCommentRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateCommentRequest create() => new CreateCommentRequest();
-  static PbList<CreateCommentRequest> createRepeated() =>
-      new PbList<CreateCommentRequest>();
-  static CreateCommentRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateCommentRequest();
-    return _defaultInstance;
-  }
-
+      CreateCommentRequest()..mergeFromMessage(this);
+  CreateCommentRequest copyWith(void Function(CreateCommentRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateCommentRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateCommentRequest create() => CreateCommentRequest();
+  CreateCommentRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateCommentRequest> createRepeated() =>
+      $pb.PbList<CreateCommentRequest>();
+  static CreateCommentRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateCommentRequest _defaultInstance;
-  static void $checkItem(CreateCommentRequest v) {
-    if (v is! CreateCommentRequest) checkItemFailed(v, 'CreateCommentRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$cloud$support$common.Comment get comment => $_getN(1);
-  set comment($google$cloud$support$common.Comment v) {
+  $0.Comment get comment => $_getN(1);
+  set comment($0.Comment v) {
     setField(2, v);
   }
 
-  bool hasComment() => $_has(1);
+  $core.bool hasComment() => $_has(1);
   void clearComment() => clearField(2);
 }
 
-class _ReadonlyCreateCommentRequest extends CreateCommentRequest
-    with ReadonlyMessageMixin {}
-
-class GetIssueTaxonomyRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetIssueTaxonomyRequest')
+class GetIssueTaxonomyRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIssueTaxonomyRequest',
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
     ..hasRequiredFields = false;
 
   GetIssueTaxonomyRequest() : super();
-  GetIssueTaxonomyRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetIssueTaxonomyRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetIssueTaxonomyRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetIssueTaxonomyRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetIssueTaxonomyRequest clone() =>
-      new GetIssueTaxonomyRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetIssueTaxonomyRequest create() => new GetIssueTaxonomyRequest();
-  static PbList<GetIssueTaxonomyRequest> createRepeated() =>
-      new PbList<GetIssueTaxonomyRequest>();
-  static GetIssueTaxonomyRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetIssueTaxonomyRequest();
-    return _defaultInstance;
-  }
-
+      GetIssueTaxonomyRequest()..mergeFromMessage(this);
+  GetIssueTaxonomyRequest copyWith(
+          void Function(GetIssueTaxonomyRequest) updates) =>
+      super.copyWith((message) => updates(message as GetIssueTaxonomyRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetIssueTaxonomyRequest create() => GetIssueTaxonomyRequest();
+  GetIssueTaxonomyRequest createEmptyInstance() => create();
+  static $pb.PbList<GetIssueTaxonomyRequest> createRepeated() =>
+      $pb.PbList<GetIssueTaxonomyRequest>();
+  static GetIssueTaxonomyRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetIssueTaxonomyRequest _defaultInstance;
-  static void $checkItem(GetIssueTaxonomyRequest v) {
-    if (v is! GetIssueTaxonomyRequest)
-      checkItemFailed(v, 'GetIssueTaxonomyRequest');
-  }
-}
-
-class _ReadonlyGetIssueTaxonomyRequest extends GetIssueTaxonomyRequest
-    with ReadonlyMessageMixin {}
-
-class CloudSupportApi {
-  RpcClient _client;
-  CloudSupportApi(this._client);
-
-  Future<$google$cloud$support$common.SupportAccount> getSupportAccount(
-      ClientContext ctx, GetSupportAccountRequest request) {
-    var emptyResponse = new $google$cloud$support$common.SupportAccount();
-    return _client.invoke<$google$cloud$support$common.SupportAccount>(
-        ctx, 'CloudSupport', 'GetSupportAccount', request, emptyResponse);
-  }
-
-  Future<ListSupportAccountsResponse> listSupportAccounts(
-      ClientContext ctx, ListSupportAccountsRequest request) {
-    var emptyResponse = new ListSupportAccountsResponse();
-    return _client.invoke<ListSupportAccountsResponse>(
-        ctx, 'CloudSupport', 'ListSupportAccounts', request, emptyResponse);
-  }
-
-  Future<$google$cloud$support$common.Case> getCase(
-      ClientContext ctx, GetCaseRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Case();
-    return _client.invoke<$google$cloud$support$common.Case>(
-        ctx, 'CloudSupport', 'GetCase', request, emptyResponse);
-  }
-
-  Future<ListCasesResponse> listCases(
-      ClientContext ctx, ListCasesRequest request) {
-    var emptyResponse = new ListCasesResponse();
-    return _client.invoke<ListCasesResponse>(
-        ctx, 'CloudSupport', 'ListCases', request, emptyResponse);
-  }
-
-  Future<ListCommentsResponse> listComments(
-      ClientContext ctx, ListCommentsRequest request) {
-    var emptyResponse = new ListCommentsResponse();
-    return _client.invoke<ListCommentsResponse>(
-        ctx, 'CloudSupport', 'ListComments', request, emptyResponse);
-  }
-
-  Future<$google$cloud$support$common.Case> createCase(
-      ClientContext ctx, CreateCaseRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Case();
-    return _client.invoke<$google$cloud$support$common.Case>(
-        ctx, 'CloudSupport', 'CreateCase', request, emptyResponse);
-  }
-
-  Future<$google$cloud$support$common.Case> updateCase(
-      ClientContext ctx, UpdateCaseRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Case();
-    return _client.invoke<$google$cloud$support$common.Case>(
-        ctx, 'CloudSupport', 'UpdateCase', request, emptyResponse);
-  }
-
-  Future<$google$cloud$support$common.Comment> createComment(
-      ClientContext ctx, CreateCommentRequest request) {
-    var emptyResponse = new $google$cloud$support$common.Comment();
-    return _client.invoke<$google$cloud$support$common.Comment>(
-        ctx, 'CloudSupport', 'CreateComment', request, emptyResponse);
-  }
-
-  Future<$google$cloud$support$common.IssueTaxonomy> getIssueTaxonomy(
-      ClientContext ctx, GetIssueTaxonomyRequest request) {
-    var emptyResponse = new $google$cloud$support$common.IssueTaxonomy();
-    return _client.invoke<$google$cloud$support$common.IssueTaxonomy>(
-        ctx, 'CloudSupport', 'GetIssueTaxonomy', request, emptyResponse);
-  }
 }

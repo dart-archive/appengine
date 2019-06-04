@@ -1,282 +1,270 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/datastore/v1/datastore.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity.pb.dart';
-import 'query.pb.dart';
+import 'entity.pb.dart' as $0;
+import 'query.pb.dart' as $1;
 
 import 'datastore.pbenum.dart';
 
 export 'datastore.pbenum.dart';
 
-class LookupRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LookupRequest')
-    ..a<ReadOptions>(1, 'readOptions', PbFieldType.OM, ReadOptions.getDefault,
-        ReadOptions.create)
-    ..pp<Key>(3, 'keys', PbFieldType.PM, Key.$checkItem, Key.create)
+class LookupRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<ReadOptions>(1, 'readOptions', $pb.PbFieldType.OM,
+        ReadOptions.getDefault, ReadOptions.create)
+    ..pc<$0.Key>(3, 'keys', $pb.PbFieldType.PM, $0.Key.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
   LookupRequest() : super();
-  LookupRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LookupRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LookupRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LookupRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LookupRequest clone() => new LookupRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LookupRequest create() => new LookupRequest();
-  static PbList<LookupRequest> createRepeated() => new PbList<LookupRequest>();
-  static LookupRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLookupRequest();
-    return _defaultInstance;
-  }
-
+  LookupRequest clone() => LookupRequest()..mergeFromMessage(this);
+  LookupRequest copyWith(void Function(LookupRequest) updates) =>
+      super.copyWith((message) => updates(message as LookupRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static LookupRequest create() => LookupRequest();
+  LookupRequest createEmptyInstance() => create();
+  static $pb.PbList<LookupRequest> createRepeated() =>
+      $pb.PbList<LookupRequest>();
+  static LookupRequest getDefault() => _defaultInstance ??= create()..freeze();
   static LookupRequest _defaultInstance;
-  static void $checkItem(LookupRequest v) {
-    if (v is! LookupRequest) checkItemFailed(v, 'LookupRequest');
-  }
 
   ReadOptions get readOptions => $_getN(0);
   set readOptions(ReadOptions v) {
     setField(1, v);
   }
 
-  bool hasReadOptions() => $_has(0);
+  $core.bool hasReadOptions() => $_has(0);
   void clearReadOptions() => clearField(1);
 
-  List<Key> get keys => $_getList(1);
+  $core.List<$0.Key> get keys => $_getList(1);
 
-  String get projectId => $_getS(2, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(2, '');
+  set projectId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasProjectId() => $_has(2);
+  $core.bool hasProjectId() => $_has(2);
   void clearProjectId() => clearField(8);
 }
 
-class _ReadonlyLookupRequest extends LookupRequest with ReadonlyMessageMixin {}
-
-class LookupResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LookupResponse')
-    ..pp<EntityResult>(1, 'found', PbFieldType.PM, EntityResult.$checkItem,
-        EntityResult.create)
-    ..pp<EntityResult>(2, 'missing', PbFieldType.PM, EntityResult.$checkItem,
-        EntityResult.create)
-    ..pp<Key>(3, 'deferred', PbFieldType.PM, Key.$checkItem, Key.create)
+class LookupResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..pc<$1.EntityResult>(
+        1, 'found', $pb.PbFieldType.PM, $1.EntityResult.create)
+    ..pc<$1.EntityResult>(
+        2, 'missing', $pb.PbFieldType.PM, $1.EntityResult.create)
+    ..pc<$0.Key>(3, 'deferred', $pb.PbFieldType.PM, $0.Key.create)
     ..hasRequiredFields = false;
 
   LookupResponse() : super();
-  LookupResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LookupResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LookupResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LookupResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LookupResponse clone() => new LookupResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LookupResponse create() => new LookupResponse();
-  static PbList<LookupResponse> createRepeated() =>
-      new PbList<LookupResponse>();
-  static LookupResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLookupResponse();
-    return _defaultInstance;
-  }
-
+  LookupResponse clone() => LookupResponse()..mergeFromMessage(this);
+  LookupResponse copyWith(void Function(LookupResponse) updates) =>
+      super.copyWith((message) => updates(message as LookupResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static LookupResponse create() => LookupResponse();
+  LookupResponse createEmptyInstance() => create();
+  static $pb.PbList<LookupResponse> createRepeated() =>
+      $pb.PbList<LookupResponse>();
+  static LookupResponse getDefault() => _defaultInstance ??= create()..freeze();
   static LookupResponse _defaultInstance;
-  static void $checkItem(LookupResponse v) {
-    if (v is! LookupResponse) checkItemFailed(v, 'LookupResponse');
-  }
 
-  List<EntityResult> get found => $_getList(0);
+  $core.List<$1.EntityResult> get found => $_getList(0);
 
-  List<EntityResult> get missing => $_getList(1);
+  $core.List<$1.EntityResult> get missing => $_getList(1);
 
-  List<Key> get deferred => $_getList(2);
+  $core.List<$0.Key> get deferred => $_getList(2);
 }
 
-class _ReadonlyLookupResponse extends LookupResponse with ReadonlyMessageMixin {
-}
+enum RunQueryRequest_QueryType { query, gqlQuery, notSet }
 
-class RunQueryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunQueryRequest')
-    ..a<ReadOptions>(1, 'readOptions', PbFieldType.OM, ReadOptions.getDefault,
-        ReadOptions.create)
-    ..a<PartitionId>(2, 'partitionId', PbFieldType.OM, PartitionId.getDefault,
-        PartitionId.create)
-    ..a<Query>(3, 'query', PbFieldType.OM, Query.getDefault, Query.create)
-    ..a<GqlQuery>(
-        7, 'gqlQuery', PbFieldType.OM, GqlQuery.getDefault, GqlQuery.create)
+class RunQueryRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RunQueryRequest_QueryType>
+      _RunQueryRequest_QueryTypeByTag = {
+    3: RunQueryRequest_QueryType.query,
+    7: RunQueryRequest_QueryType.gqlQuery,
+    0: RunQueryRequest_QueryType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<ReadOptions>(1, 'readOptions', $pb.PbFieldType.OM,
+        ReadOptions.getDefault, ReadOptions.create)
+    ..a<$0.PartitionId>(2, 'partitionId', $pb.PbFieldType.OM,
+        $0.PartitionId.getDefault, $0.PartitionId.create)
+    ..a<$1.Query>(
+        3, 'query', $pb.PbFieldType.OM, $1.Query.getDefault, $1.Query.create)
+    ..a<$1.GqlQuery>(7, 'gqlQuery', $pb.PbFieldType.OM, $1.GqlQuery.getDefault,
+        $1.GqlQuery.create)
     ..aOS(8, 'projectId')
+    ..oo(0, [3, 7])
     ..hasRequiredFields = false;
 
   RunQueryRequest() : super();
-  RunQueryRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RunQueryRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RunQueryRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RunQueryRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RunQueryRequest clone() => new RunQueryRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RunQueryRequest create() => new RunQueryRequest();
-  static PbList<RunQueryRequest> createRepeated() =>
-      new PbList<RunQueryRequest>();
-  static RunQueryRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunQueryRequest();
-    return _defaultInstance;
-  }
-
+  RunQueryRequest clone() => RunQueryRequest()..mergeFromMessage(this);
+  RunQueryRequest copyWith(void Function(RunQueryRequest) updates) =>
+      super.copyWith((message) => updates(message as RunQueryRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static RunQueryRequest create() => RunQueryRequest();
+  RunQueryRequest createEmptyInstance() => create();
+  static $pb.PbList<RunQueryRequest> createRepeated() =>
+      $pb.PbList<RunQueryRequest>();
+  static RunQueryRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RunQueryRequest _defaultInstance;
-  static void $checkItem(RunQueryRequest v) {
-    if (v is! RunQueryRequest) checkItemFailed(v, 'RunQueryRequest');
-  }
+
+  RunQueryRequest_QueryType whichQueryType() =>
+      _RunQueryRequest_QueryTypeByTag[$_whichOneof(0)];
+  void clearQueryType() => clearField($_whichOneof(0));
 
   ReadOptions get readOptions => $_getN(0);
   set readOptions(ReadOptions v) {
     setField(1, v);
   }
 
-  bool hasReadOptions() => $_has(0);
+  $core.bool hasReadOptions() => $_has(0);
   void clearReadOptions() => clearField(1);
 
-  PartitionId get partitionId => $_getN(1);
-  set partitionId(PartitionId v) {
+  $0.PartitionId get partitionId => $_getN(1);
+  set partitionId($0.PartitionId v) {
     setField(2, v);
   }
 
-  bool hasPartitionId() => $_has(1);
+  $core.bool hasPartitionId() => $_has(1);
   void clearPartitionId() => clearField(2);
 
-  Query get query => $_getN(2);
-  set query(Query v) {
+  $1.Query get query => $_getN(2);
+  set query($1.Query v) {
     setField(3, v);
   }
 
-  bool hasQuery() => $_has(2);
+  $core.bool hasQuery() => $_has(2);
   void clearQuery() => clearField(3);
 
-  GqlQuery get gqlQuery => $_getN(3);
-  set gqlQuery(GqlQuery v) {
+  $1.GqlQuery get gqlQuery => $_getN(3);
+  set gqlQuery($1.GqlQuery v) {
     setField(7, v);
   }
 
-  bool hasGqlQuery() => $_has(3);
+  $core.bool hasGqlQuery() => $_has(3);
   void clearGqlQuery() => clearField(7);
 
-  String get projectId => $_getS(4, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(4, '');
+  set projectId($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasProjectId() => $_has(4);
+  $core.bool hasProjectId() => $_has(4);
   void clearProjectId() => clearField(8);
 }
 
-class _ReadonlyRunQueryRequest extends RunQueryRequest
-    with ReadonlyMessageMixin {}
-
-class RunQueryResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RunQueryResponse')
-    ..a<QueryResultBatch>(1, 'batch', PbFieldType.OM,
-        QueryResultBatch.getDefault, QueryResultBatch.create)
-    ..a<Query>(2, 'query', PbFieldType.OM, Query.getDefault, Query.create)
+class RunQueryResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$1.QueryResultBatch>(1, 'batch', $pb.PbFieldType.OM,
+        $1.QueryResultBatch.getDefault, $1.QueryResultBatch.create)
+    ..a<$1.Query>(
+        2, 'query', $pb.PbFieldType.OM, $1.Query.getDefault, $1.Query.create)
     ..hasRequiredFields = false;
 
   RunQueryResponse() : super();
-  RunQueryResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RunQueryResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RunQueryResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RunQueryResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RunQueryResponse clone() => new RunQueryResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RunQueryResponse create() => new RunQueryResponse();
-  static PbList<RunQueryResponse> createRepeated() =>
-      new PbList<RunQueryResponse>();
-  static RunQueryResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRunQueryResponse();
-    return _defaultInstance;
-  }
-
+  RunQueryResponse clone() => RunQueryResponse()..mergeFromMessage(this);
+  RunQueryResponse copyWith(void Function(RunQueryResponse) updates) =>
+      super.copyWith((message) => updates(message as RunQueryResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static RunQueryResponse create() => RunQueryResponse();
+  RunQueryResponse createEmptyInstance() => create();
+  static $pb.PbList<RunQueryResponse> createRepeated() =>
+      $pb.PbList<RunQueryResponse>();
+  static RunQueryResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RunQueryResponse _defaultInstance;
-  static void $checkItem(RunQueryResponse v) {
-    if (v is! RunQueryResponse) checkItemFailed(v, 'RunQueryResponse');
-  }
 
-  QueryResultBatch get batch => $_getN(0);
-  set batch(QueryResultBatch v) {
+  $1.QueryResultBatch get batch => $_getN(0);
+  set batch($1.QueryResultBatch v) {
     setField(1, v);
   }
 
-  bool hasBatch() => $_has(0);
+  $core.bool hasBatch() => $_has(0);
   void clearBatch() => clearField(1);
 
-  Query get query => $_getN(1);
-  set query(Query v) {
+  $1.Query get query => $_getN(1);
+  set query($1.Query v) {
     setField(2, v);
   }
 
-  bool hasQuery() => $_has(1);
+  $core.bool hasQuery() => $_has(1);
   void clearQuery() => clearField(2);
 }
 
-class _ReadonlyRunQueryResponse extends RunQueryResponse
-    with ReadonlyMessageMixin {}
-
-class BeginTransactionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BeginTransactionRequest')
+class BeginTransactionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
     ..aOS(8, 'projectId')
-    ..a<TransactionOptions>(10, 'transactionOptions', PbFieldType.OM,
+    ..a<TransactionOptions>(10, 'transactionOptions', $pb.PbFieldType.OM,
         TransactionOptions.getDefault, TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest() : super();
-  BeginTransactionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BeginTransactionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BeginTransactionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BeginTransactionRequest clone() =>
-      new BeginTransactionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BeginTransactionRequest create() => new BeginTransactionRequest();
-  static PbList<BeginTransactionRequest> createRepeated() =>
-      new PbList<BeginTransactionRequest>();
-  static BeginTransactionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBeginTransactionRequest();
-    return _defaultInstance;
-  }
-
+      BeginTransactionRequest()..mergeFromMessage(this);
+  BeginTransactionRequest copyWith(
+          void Function(BeginTransactionRequest) updates) =>
+      super.copyWith((message) => updates(message as BeginTransactionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BeginTransactionRequest create() => BeginTransactionRequest();
+  BeginTransactionRequest createEmptyInstance() => create();
+  static $pb.PbList<BeginTransactionRequest> createRepeated() =>
+      $pb.PbList<BeginTransactionRequest>();
+  static BeginTransactionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BeginTransactionRequest _defaultInstance;
-  static void $checkItem(BeginTransactionRequest v) {
-    if (v is! BeginTransactionRequest)
-      checkItemFailed(v, 'BeginTransactionRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(8);
 
   TransactionOptions get transactionOptions => $_getN(1);
@@ -284,178 +272,165 @@ class BeginTransactionRequest extends GeneratedMessage {
     setField(10, v);
   }
 
-  bool hasTransactionOptions() => $_has(1);
+  $core.bool hasTransactionOptions() => $_has(1);
   void clearTransactionOptions() => clearField(10);
 }
 
-class _ReadonlyBeginTransactionRequest extends BeginTransactionRequest
-    with ReadonlyMessageMixin {}
-
-class BeginTransactionResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BeginTransactionResponse')
-    ..a<List<int>>(1, 'transaction', PbFieldType.OY)
+class BeginTransactionResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   BeginTransactionResponse() : super();
-  BeginTransactionResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BeginTransactionResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BeginTransactionResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BeginTransactionResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BeginTransactionResponse clone() =>
-      new BeginTransactionResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BeginTransactionResponse create() => new BeginTransactionResponse();
-  static PbList<BeginTransactionResponse> createRepeated() =>
-      new PbList<BeginTransactionResponse>();
-  static BeginTransactionResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBeginTransactionResponse();
-    return _defaultInstance;
-  }
-
+      BeginTransactionResponse()..mergeFromMessage(this);
+  BeginTransactionResponse copyWith(
+          void Function(BeginTransactionResponse) updates) =>
+      super.copyWith((message) => updates(message as BeginTransactionResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BeginTransactionResponse create() => BeginTransactionResponse();
+  BeginTransactionResponse createEmptyInstance() => create();
+  static $pb.PbList<BeginTransactionResponse> createRepeated() =>
+      $pb.PbList<BeginTransactionResponse>();
+  static BeginTransactionResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BeginTransactionResponse _defaultInstance;
-  static void $checkItem(BeginTransactionResponse v) {
-    if (v is! BeginTransactionResponse)
-      checkItemFailed(v, 'BeginTransactionResponse');
-  }
 
-  List<int> get transaction => $_getN(0);
-  set transaction(List<int> v) {
+  $core.List<$core.int> get transaction => $_getN(0);
+  set transaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasTransaction() => $_has(0);
+  $core.bool hasTransaction() => $_has(0);
   void clearTransaction() => clearField(1);
 }
 
-class _ReadonlyBeginTransactionResponse extends BeginTransactionResponse
-    with ReadonlyMessageMixin {}
-
-class RollbackRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RollbackRequest')
-    ..a<List<int>>(1, 'transaction', PbFieldType.OY)
+class RollbackRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
   RollbackRequest() : super();
-  RollbackRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RollbackRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RollbackRequest clone() => new RollbackRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RollbackRequest create() => new RollbackRequest();
-  static PbList<RollbackRequest> createRepeated() =>
-      new PbList<RollbackRequest>();
-  static RollbackRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollbackRequest();
-    return _defaultInstance;
-  }
-
+  RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
+  RollbackRequest copyWith(void Function(RollbackRequest) updates) =>
+      super.copyWith((message) => updates(message as RollbackRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static RollbackRequest create() => RollbackRequest();
+  RollbackRequest createEmptyInstance() => create();
+  static $pb.PbList<RollbackRequest> createRepeated() =>
+      $pb.PbList<RollbackRequest>();
+  static RollbackRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RollbackRequest _defaultInstance;
-  static void $checkItem(RollbackRequest v) {
-    if (v is! RollbackRequest) checkItemFailed(v, 'RollbackRequest');
-  }
 
-  List<int> get transaction => $_getN(0);
-  set transaction(List<int> v) {
+  $core.List<$core.int> get transaction => $_getN(0);
+  set transaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasTransaction() => $_has(0);
+  $core.bool hasTransaction() => $_has(0);
   void clearTransaction() => clearField(1);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasProjectId() => $_has(1);
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(8);
 }
 
-class _ReadonlyRollbackRequest extends RollbackRequest
-    with ReadonlyMessageMixin {}
-
-class RollbackResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RollbackResponse')
+class RollbackResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
     ..hasRequiredFields = false;
 
   RollbackResponse() : super();
-  RollbackResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RollbackResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RollbackResponse clone() => new RollbackResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RollbackResponse create() => new RollbackResponse();
-  static PbList<RollbackResponse> createRepeated() =>
-      new PbList<RollbackResponse>();
-  static RollbackResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollbackResponse();
-    return _defaultInstance;
-  }
-
+  RollbackResponse clone() => RollbackResponse()..mergeFromMessage(this);
+  RollbackResponse copyWith(void Function(RollbackResponse) updates) =>
+      super.copyWith((message) => updates(message as RollbackResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static RollbackResponse create() => RollbackResponse();
+  RollbackResponse createEmptyInstance() => create();
+  static $pb.PbList<RollbackResponse> createRepeated() =>
+      $pb.PbList<RollbackResponse>();
+  static RollbackResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RollbackResponse _defaultInstance;
-  static void $checkItem(RollbackResponse v) {
-    if (v is! RollbackResponse) checkItemFailed(v, 'RollbackResponse');
-  }
 }
 
-class _ReadonlyRollbackResponse extends RollbackResponse
-    with ReadonlyMessageMixin {}
+enum CommitRequest_TransactionSelector { transaction, notSet }
 
-class CommitRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommitRequest')
-    ..a<List<int>>(1, 'transaction', PbFieldType.OY)
+class CommitRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, CommitRequest_TransactionSelector>
+      _CommitRequest_TransactionSelectorByTag = {
+    1: CommitRequest_TransactionSelector.transaction,
+    0: CommitRequest_TransactionSelector.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..e<CommitRequest_Mode>(
         5,
         'mode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         CommitRequest_Mode.MODE_UNSPECIFIED,
         CommitRequest_Mode.valueOf,
         CommitRequest_Mode.values)
-    ..pp<Mutation>(
-        6, 'mutations', PbFieldType.PM, Mutation.$checkItem, Mutation.create)
+    ..pc<Mutation>(6, 'mutations', $pb.PbFieldType.PM, Mutation.create)
     ..aOS(8, 'projectId')
+    ..oo(0, [1])
     ..hasRequiredFields = false;
 
   CommitRequest() : super();
-  CommitRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CommitRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommitRequest clone() => new CommitRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommitRequest create() => new CommitRequest();
-  static PbList<CommitRequest> createRepeated() => new PbList<CommitRequest>();
-  static CommitRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommitRequest();
-    return _defaultInstance;
-  }
-
+  CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
+  CommitRequest copyWith(void Function(CommitRequest) updates) =>
+      super.copyWith((message) => updates(message as CommitRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CommitRequest create() => CommitRequest();
+  CommitRequest createEmptyInstance() => create();
+  static $pb.PbList<CommitRequest> createRepeated() =>
+      $pb.PbList<CommitRequest>();
+  static CommitRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CommitRequest _defaultInstance;
-  static void $checkItem(CommitRequest v) {
-    if (v is! CommitRequest) checkItemFailed(v, 'CommitRequest');
-  }
 
-  List<int> get transaction => $_getN(0);
-  set transaction(List<int> v) {
+  CommitRequest_TransactionSelector whichTransactionSelector() =>
+      _CommitRequest_TransactionSelectorByTag[$_whichOneof(0)];
+  void clearTransactionSelector() => clearField($_whichOneof(0));
+
+  $core.List<$core.int> get transaction => $_getN(0);
+  set transaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasTransaction() => $_has(0);
+  $core.bool hasTransaction() => $_has(0);
   void clearTransaction() => clearField(1);
 
   CommitRequest_Mode get mode => $_getN(1);
@@ -463,288 +438,281 @@ class CommitRequest extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasMode() => $_has(1);
+  $core.bool hasMode() => $_has(1);
   void clearMode() => clearField(5);
 
-  List<Mutation> get mutations => $_getList(2);
+  $core.List<Mutation> get mutations => $_getList(2);
 
-  String get projectId => $_getS(3, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(3, '');
+  set projectId($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasProjectId() => $_has(3);
+  $core.bool hasProjectId() => $_has(3);
   void clearProjectId() => clearField(8);
 }
 
-class _ReadonlyCommitRequest extends CommitRequest with ReadonlyMessageMixin {}
-
-class CommitResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommitResponse')
-    ..pp<MutationResult>(3, 'mutationResults', PbFieldType.PM,
-        MutationResult.$checkItem, MutationResult.create)
-    ..a<int>(4, 'indexUpdates', PbFieldType.O3)
+class CommitResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..pc<MutationResult>(
+        3, 'mutationResults', $pb.PbFieldType.PM, MutationResult.create)
+    ..a<$core.int>(4, 'indexUpdates', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   CommitResponse() : super();
-  CommitResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CommitResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommitResponse clone() => new CommitResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommitResponse create() => new CommitResponse();
-  static PbList<CommitResponse> createRepeated() =>
-      new PbList<CommitResponse>();
-  static CommitResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommitResponse();
-    return _defaultInstance;
-  }
-
+  CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
+  CommitResponse copyWith(void Function(CommitResponse) updates) =>
+      super.copyWith((message) => updates(message as CommitResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static CommitResponse create() => CommitResponse();
+  CommitResponse createEmptyInstance() => create();
+  static $pb.PbList<CommitResponse> createRepeated() =>
+      $pb.PbList<CommitResponse>();
+  static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
   static CommitResponse _defaultInstance;
-  static void $checkItem(CommitResponse v) {
-    if (v is! CommitResponse) checkItemFailed(v, 'CommitResponse');
-  }
 
-  List<MutationResult> get mutationResults => $_getList(0);
+  $core.List<MutationResult> get mutationResults => $_getList(0);
 
-  int get indexUpdates => $_get(1, 0);
-  set indexUpdates(int v) {
+  $core.int get indexUpdates => $_get(1, 0);
+  set indexUpdates($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasIndexUpdates() => $_has(1);
+  $core.bool hasIndexUpdates() => $_has(1);
   void clearIndexUpdates() => clearField(4);
 }
 
-class _ReadonlyCommitResponse extends CommitResponse with ReadonlyMessageMixin {
-}
-
-class AllocateIdsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AllocateIdsRequest')
-    ..pp<Key>(1, 'keys', PbFieldType.PM, Key.$checkItem, Key.create)
+class AllocateIdsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..pc<$0.Key>(1, 'keys', $pb.PbFieldType.PM, $0.Key.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
   AllocateIdsRequest() : super();
-  AllocateIdsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AllocateIdsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AllocateIdsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AllocateIdsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AllocateIdsRequest clone() =>
-      new AllocateIdsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AllocateIdsRequest create() => new AllocateIdsRequest();
-  static PbList<AllocateIdsRequest> createRepeated() =>
-      new PbList<AllocateIdsRequest>();
-  static AllocateIdsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAllocateIdsRequest();
-    return _defaultInstance;
-  }
-
+  AllocateIdsRequest clone() => AllocateIdsRequest()..mergeFromMessage(this);
+  AllocateIdsRequest copyWith(void Function(AllocateIdsRequest) updates) =>
+      super.copyWith((message) => updates(message as AllocateIdsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static AllocateIdsRequest create() => AllocateIdsRequest();
+  AllocateIdsRequest createEmptyInstance() => create();
+  static $pb.PbList<AllocateIdsRequest> createRepeated() =>
+      $pb.PbList<AllocateIdsRequest>();
+  static AllocateIdsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AllocateIdsRequest _defaultInstance;
-  static void $checkItem(AllocateIdsRequest v) {
-    if (v is! AllocateIdsRequest) checkItemFailed(v, 'AllocateIdsRequest');
-  }
 
-  List<Key> get keys => $_getList(0);
+  $core.List<$0.Key> get keys => $_getList(0);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasProjectId() => $_has(1);
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(8);
 }
 
-class _ReadonlyAllocateIdsRequest extends AllocateIdsRequest
-    with ReadonlyMessageMixin {}
-
-class AllocateIdsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('AllocateIdsResponse')
-    ..pp<Key>(1, 'keys', PbFieldType.PM, Key.$checkItem, Key.create)
+class AllocateIdsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..pc<$0.Key>(1, 'keys', $pb.PbFieldType.PM, $0.Key.create)
     ..hasRequiredFields = false;
 
   AllocateIdsResponse() : super();
-  AllocateIdsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AllocateIdsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  AllocateIdsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  AllocateIdsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  AllocateIdsResponse clone() =>
-      new AllocateIdsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static AllocateIdsResponse create() => new AllocateIdsResponse();
-  static PbList<AllocateIdsResponse> createRepeated() =>
-      new PbList<AllocateIdsResponse>();
-  static AllocateIdsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyAllocateIdsResponse();
-    return _defaultInstance;
-  }
-
+  AllocateIdsResponse clone() => AllocateIdsResponse()..mergeFromMessage(this);
+  AllocateIdsResponse copyWith(void Function(AllocateIdsResponse) updates) =>
+      super.copyWith((message) => updates(message as AllocateIdsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static AllocateIdsResponse create() => AllocateIdsResponse();
+  AllocateIdsResponse createEmptyInstance() => create();
+  static $pb.PbList<AllocateIdsResponse> createRepeated() =>
+      $pb.PbList<AllocateIdsResponse>();
+  static AllocateIdsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static AllocateIdsResponse _defaultInstance;
-  static void $checkItem(AllocateIdsResponse v) {
-    if (v is! AllocateIdsResponse) checkItemFailed(v, 'AllocateIdsResponse');
-  }
 
-  List<Key> get keys => $_getList(0);
+  $core.List<$0.Key> get keys => $_getList(0);
 }
 
-class _ReadonlyAllocateIdsResponse extends AllocateIdsResponse
-    with ReadonlyMessageMixin {}
-
-class ReserveIdsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReserveIdsRequest')
-    ..pp<Key>(1, 'keys', PbFieldType.PM, Key.$checkItem, Key.create)
+class ReserveIdsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsRequest',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..pc<$0.Key>(1, 'keys', $pb.PbFieldType.PM, $0.Key.create)
     ..aOS(8, 'projectId')
     ..aOS(9, 'databaseId')
     ..hasRequiredFields = false;
 
   ReserveIdsRequest() : super();
-  ReserveIdsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReserveIdsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReserveIdsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReserveIdsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReserveIdsRequest clone() => new ReserveIdsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReserveIdsRequest create() => new ReserveIdsRequest();
-  static PbList<ReserveIdsRequest> createRepeated() =>
-      new PbList<ReserveIdsRequest>();
-  static ReserveIdsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReserveIdsRequest();
-    return _defaultInstance;
-  }
-
+  ReserveIdsRequest clone() => ReserveIdsRequest()..mergeFromMessage(this);
+  ReserveIdsRequest copyWith(void Function(ReserveIdsRequest) updates) =>
+      super.copyWith((message) => updates(message as ReserveIdsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ReserveIdsRequest create() => ReserveIdsRequest();
+  ReserveIdsRequest createEmptyInstance() => create();
+  static $pb.PbList<ReserveIdsRequest> createRepeated() =>
+      $pb.PbList<ReserveIdsRequest>();
+  static ReserveIdsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReserveIdsRequest _defaultInstance;
-  static void $checkItem(ReserveIdsRequest v) {
-    if (v is! ReserveIdsRequest) checkItemFailed(v, 'ReserveIdsRequest');
-  }
 
-  List<Key> get keys => $_getList(0);
+  $core.List<$0.Key> get keys => $_getList(0);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasProjectId() => $_has(1);
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(8);
 
-  String get databaseId => $_getS(2, '');
-  set databaseId(String v) {
+  $core.String get databaseId => $_getS(2, '');
+  set databaseId($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasDatabaseId() => $_has(2);
+  $core.bool hasDatabaseId() => $_has(2);
   void clearDatabaseId() => clearField(9);
 }
 
-class _ReadonlyReserveIdsRequest extends ReserveIdsRequest
-    with ReadonlyMessageMixin {}
-
-class ReserveIdsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReserveIdsResponse')
+class ReserveIdsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsResponse',
+      package: const $pb.PackageName('google.datastore.v1'))
     ..hasRequiredFields = false;
 
   ReserveIdsResponse() : super();
-  ReserveIdsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReserveIdsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReserveIdsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReserveIdsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReserveIdsResponse clone() =>
-      new ReserveIdsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReserveIdsResponse create() => new ReserveIdsResponse();
-  static PbList<ReserveIdsResponse> createRepeated() =>
-      new PbList<ReserveIdsResponse>();
-  static ReserveIdsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyReserveIdsResponse();
-    return _defaultInstance;
-  }
-
+  ReserveIdsResponse clone() => ReserveIdsResponse()..mergeFromMessage(this);
+  ReserveIdsResponse copyWith(void Function(ReserveIdsResponse) updates) =>
+      super.copyWith((message) => updates(message as ReserveIdsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ReserveIdsResponse create() => ReserveIdsResponse();
+  ReserveIdsResponse createEmptyInstance() => create();
+  static $pb.PbList<ReserveIdsResponse> createRepeated() =>
+      $pb.PbList<ReserveIdsResponse>();
+  static ReserveIdsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ReserveIdsResponse _defaultInstance;
-  static void $checkItem(ReserveIdsResponse v) {
-    if (v is! ReserveIdsResponse) checkItemFailed(v, 'ReserveIdsResponse');
-  }
 }
 
-class _ReadonlyReserveIdsResponse extends ReserveIdsResponse
-    with ReadonlyMessageMixin {}
+enum Mutation_Operation { insert, update, upsert, delete, notSet }
 
-class Mutation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Mutation')
-    ..a<Entity>(4, 'insert', PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..a<Entity>(5, 'update', PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..a<Entity>(6, 'upsert', PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..a<Key>(7, 'delete', PbFieldType.OM, Key.getDefault, Key.create)
+enum Mutation_ConflictDetectionStrategy { baseVersion, notSet }
+
+class Mutation extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Mutation_Operation>
+      _Mutation_OperationByTag = {
+    4: Mutation_Operation.insert,
+    5: Mutation_Operation.update,
+    6: Mutation_Operation.upsert,
+    7: Mutation_Operation.delete,
+    0: Mutation_Operation.notSet
+  };
+  static const $core.Map<$core.int, Mutation_ConflictDetectionStrategy>
+      _Mutation_ConflictDetectionStrategyByTag = {
+    8: Mutation_ConflictDetectionStrategy.baseVersion,
+    0: Mutation_ConflictDetectionStrategy.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$0.Entity>(
+        4, 'insert', $pb.PbFieldType.OM, $0.Entity.getDefault, $0.Entity.create)
+    ..a<$0.Entity>(
+        5, 'update', $pb.PbFieldType.OM, $0.Entity.getDefault, $0.Entity.create)
+    ..a<$0.Entity>(
+        6, 'upsert', $pb.PbFieldType.OM, $0.Entity.getDefault, $0.Entity.create)
+    ..a<$0.Key>(
+        7, 'delete', $pb.PbFieldType.OM, $0.Key.getDefault, $0.Key.create)
     ..aInt64(8, 'baseVersion')
+    ..oo(0, [4, 5, 6, 7])
+    ..oo(1, [8])
     ..hasRequiredFields = false;
 
   Mutation() : super();
-  Mutation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Mutation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Mutation.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Mutation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Mutation clone() => new Mutation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Mutation create() => new Mutation();
-  static PbList<Mutation> createRepeated() => new PbList<Mutation>();
-  static Mutation getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyMutation();
-    return _defaultInstance;
-  }
-
+  Mutation clone() => Mutation()..mergeFromMessage(this);
+  Mutation copyWith(void Function(Mutation) updates) =>
+      super.copyWith((message) => updates(message as Mutation));
+  $pb.BuilderInfo get info_ => _i;
+  static Mutation create() => Mutation();
+  Mutation createEmptyInstance() => create();
+  static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
+  static Mutation getDefault() => _defaultInstance ??= create()..freeze();
   static Mutation _defaultInstance;
-  static void $checkItem(Mutation v) {
-    if (v is! Mutation) checkItemFailed(v, 'Mutation');
-  }
 
-  Entity get insert => $_getN(0);
-  set insert(Entity v) {
+  Mutation_Operation whichOperation() =>
+      _Mutation_OperationByTag[$_whichOneof(0)];
+  void clearOperation() => clearField($_whichOneof(0));
+
+  Mutation_ConflictDetectionStrategy whichConflictDetectionStrategy() =>
+      _Mutation_ConflictDetectionStrategyByTag[$_whichOneof(1)];
+  void clearConflictDetectionStrategy() => clearField($_whichOneof(1));
+
+  $0.Entity get insert => $_getN(0);
+  set insert($0.Entity v) {
     setField(4, v);
   }
 
-  bool hasInsert() => $_has(0);
+  $core.bool hasInsert() => $_has(0);
   void clearInsert() => clearField(4);
 
-  Entity get update => $_getN(1);
-  set update(Entity v) {
+  $0.Entity get update => $_getN(1);
+  set update($0.Entity v) {
     setField(5, v);
   }
 
-  bool hasUpdate() => $_has(1);
+  $core.bool hasUpdate() => $_has(1);
   void clearUpdate() => clearField(5);
 
-  Entity get upsert => $_getN(2);
-  set upsert(Entity v) {
+  $0.Entity get upsert => $_getN(2);
+  set upsert($0.Entity v) {
     setField(6, v);
   }
 
-  bool hasUpsert() => $_has(2);
+  $core.bool hasUpsert() => $_has(2);
   void clearUpsert() => clearField(6);
 
-  Key get delete => $_getN(3);
-  set delete(Key v) {
+  $0.Key get delete => $_getN(3);
+  set delete($0.Key v) {
     setField(7, v);
   }
 
-  bool hasDelete() => $_has(3);
+  $core.bool hasDelete() => $_has(3);
   void clearDelete() => clearField(7);
 
   Int64 get baseVersion => $_getI64(4);
@@ -752,48 +720,42 @@ class Mutation extends GeneratedMessage {
     $_setInt64(4, v);
   }
 
-  bool hasBaseVersion() => $_has(4);
+  $core.bool hasBaseVersion() => $_has(4);
   void clearBaseVersion() => clearField(8);
 }
 
-class _ReadonlyMutation extends Mutation with ReadonlyMessageMixin {}
-
-class MutationResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('MutationResult')
-    ..a<Key>(3, 'key', PbFieldType.OM, Key.getDefault, Key.create)
+class MutationResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutationResult',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$0.Key>(3, 'key', $pb.PbFieldType.OM, $0.Key.getDefault, $0.Key.create)
     ..aInt64(4, 'version')
     ..aOB(5, 'conflictDetected')
     ..hasRequiredFields = false;
 
   MutationResult() : super();
-  MutationResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutationResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  MutationResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  MutationResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  MutationResult clone() => new MutationResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static MutationResult create() => new MutationResult();
-  static PbList<MutationResult> createRepeated() =>
-      new PbList<MutationResult>();
-  static MutationResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyMutationResult();
-    return _defaultInstance;
-  }
-
+  MutationResult clone() => MutationResult()..mergeFromMessage(this);
+  MutationResult copyWith(void Function(MutationResult) updates) =>
+      super.copyWith((message) => updates(message as MutationResult));
+  $pb.BuilderInfo get info_ => _i;
+  static MutationResult create() => MutationResult();
+  MutationResult createEmptyInstance() => create();
+  static $pb.PbList<MutationResult> createRepeated() =>
+      $pb.PbList<MutationResult>();
+  static MutationResult getDefault() => _defaultInstance ??= create()..freeze();
   static MutationResult _defaultInstance;
-  static void $checkItem(MutationResult v) {
-    if (v is! MutationResult) checkItemFailed(v, 'MutationResult');
-  }
 
-  Key get key => $_getN(0);
-  set key(Key v) {
+  $0.Key get key => $_getN(0);
+  set key($0.Key v) {
     setField(3, v);
   }
 
-  bool hasKey() => $_has(0);
+  $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(3);
 
   Int64 get version => $_getI64(1);
@@ -801,196 +763,201 @@ class MutationResult extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasVersion() => $_has(1);
+  $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(4);
 
-  bool get conflictDetected => $_get(2, false);
-  set conflictDetected(bool v) {
+  $core.bool get conflictDetected => $_get(2, false);
+  set conflictDetected($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasConflictDetected() => $_has(2);
+  $core.bool hasConflictDetected() => $_has(2);
   void clearConflictDetected() => clearField(5);
 }
 
-class _ReadonlyMutationResult extends MutationResult with ReadonlyMessageMixin {
-}
+enum ReadOptions_ConsistencyType { readConsistency, transaction, notSet }
 
-class ReadOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadOptions')
+class ReadOptions extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ReadOptions_ConsistencyType>
+      _ReadOptions_ConsistencyTypeByTag = {
+    1: ReadOptions_ConsistencyType.readConsistency,
+    2: ReadOptions_ConsistencyType.transaction,
+    0: ReadOptions_ConsistencyType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadOptions',
+      package: const $pb.PackageName('google.datastore.v1'))
     ..e<ReadOptions_ReadConsistency>(
         1,
         'readConsistency',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ReadOptions_ReadConsistency.READ_CONSISTENCY_UNSPECIFIED,
         ReadOptions_ReadConsistency.valueOf,
         ReadOptions_ReadConsistency.values)
-    ..a<List<int>>(2, 'transaction', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'transaction', $pb.PbFieldType.OY)
+    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
   ReadOptions() : super();
-  ReadOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadOptions.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadOptions.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadOptions clone() => new ReadOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadOptions create() => new ReadOptions();
-  static PbList<ReadOptions> createRepeated() => new PbList<ReadOptions>();
-  static ReadOptions getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReadOptions();
-    return _defaultInstance;
-  }
-
+  ReadOptions clone() => ReadOptions()..mergeFromMessage(this);
+  ReadOptions copyWith(void Function(ReadOptions) updates) =>
+      super.copyWith((message) => updates(message as ReadOptions));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadOptions create() => ReadOptions();
+  ReadOptions createEmptyInstance() => create();
+  static $pb.PbList<ReadOptions> createRepeated() => $pb.PbList<ReadOptions>();
+  static ReadOptions getDefault() => _defaultInstance ??= create()..freeze();
   static ReadOptions _defaultInstance;
-  static void $checkItem(ReadOptions v) {
-    if (v is! ReadOptions) checkItemFailed(v, 'ReadOptions');
-  }
+
+  ReadOptions_ConsistencyType whichConsistencyType() =>
+      _ReadOptions_ConsistencyTypeByTag[$_whichOneof(0)];
+  void clearConsistencyType() => clearField($_whichOneof(0));
 
   ReadOptions_ReadConsistency get readConsistency => $_getN(0);
   set readConsistency(ReadOptions_ReadConsistency v) {
     setField(1, v);
   }
 
-  bool hasReadConsistency() => $_has(0);
+  $core.bool hasReadConsistency() => $_has(0);
   void clearReadConsistency() => clearField(1);
 
-  List<int> get transaction => $_getN(1);
-  set transaction(List<int> v) {
+  $core.List<$core.int> get transaction => $_getN(1);
+  set transaction($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasTransaction() => $_has(1);
+  $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 }
 
-class _ReadonlyReadOptions extends ReadOptions with ReadonlyMessageMixin {}
-
-class TransactionOptions_ReadWrite extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionOptions_ReadWrite')
-    ..a<List<int>>(1, 'previousTransaction', PbFieldType.OY)
+class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'TransactionOptions.ReadWrite',
+      package: const $pb.PackageName('google.datastore.v1'))
+    ..a<$core.List<$core.int>>(1, 'previousTransaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadWrite() : super();
-  TransactionOptions_ReadWrite.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TransactionOptions_ReadWrite.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TransactionOptions_ReadWrite.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TransactionOptions_ReadWrite clone() =>
-      new TransactionOptions_ReadWrite()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      TransactionOptions_ReadWrite()..mergeFromMessage(this);
+  TransactionOptions_ReadWrite copyWith(
+          void Function(TransactionOptions_ReadWrite) updates) =>
+      super.copyWith(
+          (message) => updates(message as TransactionOptions_ReadWrite));
+  $pb.BuilderInfo get info_ => _i;
   static TransactionOptions_ReadWrite create() =>
-      new TransactionOptions_ReadWrite();
-  static PbList<TransactionOptions_ReadWrite> createRepeated() =>
-      new PbList<TransactionOptions_ReadWrite>();
-  static TransactionOptions_ReadWrite getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionOptions_ReadWrite();
-    return _defaultInstance;
-  }
-
+      TransactionOptions_ReadWrite();
+  TransactionOptions_ReadWrite createEmptyInstance() => create();
+  static $pb.PbList<TransactionOptions_ReadWrite> createRepeated() =>
+      $pb.PbList<TransactionOptions_ReadWrite>();
+  static TransactionOptions_ReadWrite getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TransactionOptions_ReadWrite _defaultInstance;
-  static void $checkItem(TransactionOptions_ReadWrite v) {
-    if (v is! TransactionOptions_ReadWrite)
-      checkItemFailed(v, 'TransactionOptions_ReadWrite');
-  }
 
-  List<int> get previousTransaction => $_getN(0);
-  set previousTransaction(List<int> v) {
+  $core.List<$core.int> get previousTransaction => $_getN(0);
+  set previousTransaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasPreviousTransaction() => $_has(0);
+  $core.bool hasPreviousTransaction() => $_has(0);
   void clearPreviousTransaction() => clearField(1);
 }
 
-class _ReadonlyTransactionOptions_ReadWrite extends TransactionOptions_ReadWrite
-    with ReadonlyMessageMixin {}
-
-class TransactionOptions_ReadOnly extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionOptions_ReadOnly')
+class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'TransactionOptions.ReadOnly',
+      package: const $pb.PackageName('google.datastore.v1'))
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadOnly() : super();
-  TransactionOptions_ReadOnly.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TransactionOptions_ReadOnly.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TransactionOptions_ReadOnly.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TransactionOptions_ReadOnly clone() =>
-      new TransactionOptions_ReadOnly()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TransactionOptions_ReadOnly create() =>
-      new TransactionOptions_ReadOnly();
-  static PbList<TransactionOptions_ReadOnly> createRepeated() =>
-      new PbList<TransactionOptions_ReadOnly>();
-  static TransactionOptions_ReadOnly getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionOptions_ReadOnly();
-    return _defaultInstance;
-  }
-
+      TransactionOptions_ReadOnly()..mergeFromMessage(this);
+  TransactionOptions_ReadOnly copyWith(
+          void Function(TransactionOptions_ReadOnly) updates) =>
+      super.copyWith(
+          (message) => updates(message as TransactionOptions_ReadOnly));
+  $pb.BuilderInfo get info_ => _i;
+  static TransactionOptions_ReadOnly create() => TransactionOptions_ReadOnly();
+  TransactionOptions_ReadOnly createEmptyInstance() => create();
+  static $pb.PbList<TransactionOptions_ReadOnly> createRepeated() =>
+      $pb.PbList<TransactionOptions_ReadOnly>();
+  static TransactionOptions_ReadOnly getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TransactionOptions_ReadOnly _defaultInstance;
-  static void $checkItem(TransactionOptions_ReadOnly v) {
-    if (v is! TransactionOptions_ReadOnly)
-      checkItemFailed(v, 'TransactionOptions_ReadOnly');
-  }
 }
 
-class _ReadonlyTransactionOptions_ReadOnly extends TransactionOptions_ReadOnly
-    with ReadonlyMessageMixin {}
+enum TransactionOptions_Mode { readWrite, readOnly, notSet }
 
-class TransactionOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TransactionOptions')
+class TransactionOptions extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, TransactionOptions_Mode>
+      _TransactionOptions_ModeByTag = {
+    1: TransactionOptions_Mode.readWrite,
+    2: TransactionOptions_Mode.readOnly,
+    0: TransactionOptions_Mode.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
+      package: const $pb.PackageName('google.datastore.v1'))
     ..a<TransactionOptions_ReadWrite>(
         1,
         'readWrite',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TransactionOptions_ReadWrite.getDefault,
         TransactionOptions_ReadWrite.create)
     ..a<TransactionOptions_ReadOnly>(
         2,
         'readOnly',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TransactionOptions_ReadOnly.getDefault,
         TransactionOptions_ReadOnly.create)
+    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
   TransactionOptions() : super();
-  TransactionOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TransactionOptions.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TransactionOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TransactionOptions.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TransactionOptions clone() =>
-      new TransactionOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TransactionOptions create() => new TransactionOptions();
-  static PbList<TransactionOptions> createRepeated() =>
-      new PbList<TransactionOptions>();
-  static TransactionOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTransactionOptions();
-    return _defaultInstance;
-  }
-
+  TransactionOptions clone() => TransactionOptions()..mergeFromMessage(this);
+  TransactionOptions copyWith(void Function(TransactionOptions) updates) =>
+      super.copyWith((message) => updates(message as TransactionOptions));
+  $pb.BuilderInfo get info_ => _i;
+  static TransactionOptions create() => TransactionOptions();
+  TransactionOptions createEmptyInstance() => create();
+  static $pb.PbList<TransactionOptions> createRepeated() =>
+      $pb.PbList<TransactionOptions>();
+  static TransactionOptions getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TransactionOptions _defaultInstance;
-  static void $checkItem(TransactionOptions v) {
-    if (v is! TransactionOptions) checkItemFailed(v, 'TransactionOptions');
-  }
+
+  TransactionOptions_Mode whichMode() =>
+      _TransactionOptions_ModeByTag[$_whichOneof(0)];
+  void clearMode() => clearField($_whichOneof(0));
 
   TransactionOptions_ReadWrite get readWrite => $_getN(0);
   set readWrite(TransactionOptions_ReadWrite v) {
     setField(1, v);
   }
 
-  bool hasReadWrite() => $_has(0);
+  $core.bool hasReadWrite() => $_has(0);
   void clearReadWrite() => clearField(1);
 
   TransactionOptions_ReadOnly get readOnly => $_getN(1);
@@ -998,61 +965,6 @@ class TransactionOptions extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasReadOnly() => $_has(1);
+  $core.bool hasReadOnly() => $_has(1);
   void clearReadOnly() => clearField(2);
-}
-
-class _ReadonlyTransactionOptions extends TransactionOptions
-    with ReadonlyMessageMixin {}
-
-class DatastoreApi {
-  RpcClient _client;
-  DatastoreApi(this._client);
-
-  Future<LookupResponse> lookup(ClientContext ctx, LookupRequest request) {
-    var emptyResponse = new LookupResponse();
-    return _client.invoke<LookupResponse>(
-        ctx, 'Datastore', 'Lookup', request, emptyResponse);
-  }
-
-  Future<RunQueryResponse> runQuery(
-      ClientContext ctx, RunQueryRequest request) {
-    var emptyResponse = new RunQueryResponse();
-    return _client.invoke<RunQueryResponse>(
-        ctx, 'Datastore', 'RunQuery', request, emptyResponse);
-  }
-
-  Future<BeginTransactionResponse> beginTransaction(
-      ClientContext ctx, BeginTransactionRequest request) {
-    var emptyResponse = new BeginTransactionResponse();
-    return _client.invoke<BeginTransactionResponse>(
-        ctx, 'Datastore', 'BeginTransaction', request, emptyResponse);
-  }
-
-  Future<CommitResponse> commit(ClientContext ctx, CommitRequest request) {
-    var emptyResponse = new CommitResponse();
-    return _client.invoke<CommitResponse>(
-        ctx, 'Datastore', 'Commit', request, emptyResponse);
-  }
-
-  Future<RollbackResponse> rollback(
-      ClientContext ctx, RollbackRequest request) {
-    var emptyResponse = new RollbackResponse();
-    return _client.invoke<RollbackResponse>(
-        ctx, 'Datastore', 'Rollback', request, emptyResponse);
-  }
-
-  Future<AllocateIdsResponse> allocateIds(
-      ClientContext ctx, AllocateIdsRequest request) {
-    var emptyResponse = new AllocateIdsResponse();
-    return _client.invoke<AllocateIdsResponse>(
-        ctx, 'Datastore', 'AllocateIds', request, emptyResponse);
-  }
-
-  Future<ReserveIdsResponse> reserveIds(
-      ClientContext ctx, ReserveIdsRequest request) {
-    var emptyResponse = new ReserveIdsResponse();
-    return _client.invoke<ReserveIdsResponse>(
-        ctx, 'Datastore', 'ReserveIds', request, emptyResponse);
-  }
 }

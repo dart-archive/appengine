@@ -1,141 +1,128 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/vision/v1p1beta1/geometry.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class Vertex extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Vertex')
-    ..a<int>(1, 'x', PbFieldType.O3)
-    ..a<int>(2, 'y', PbFieldType.O3)
+class Vertex extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Vertex',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
+    ..a<$core.int>(1, 'x', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'y', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   Vertex() : super();
-  Vertex.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Vertex.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Vertex.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Vertex.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Vertex clone() => new Vertex()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Vertex create() => new Vertex();
-  static PbList<Vertex> createRepeated() => new PbList<Vertex>();
-  static Vertex getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVertex();
-    return _defaultInstance;
-  }
-
+  Vertex clone() => Vertex()..mergeFromMessage(this);
+  Vertex copyWith(void Function(Vertex) updates) =>
+      super.copyWith((message) => updates(message as Vertex));
+  $pb.BuilderInfo get info_ => _i;
+  static Vertex create() => Vertex();
+  Vertex createEmptyInstance() => create();
+  static $pb.PbList<Vertex> createRepeated() => $pb.PbList<Vertex>();
+  static Vertex getDefault() => _defaultInstance ??= create()..freeze();
   static Vertex _defaultInstance;
-  static void $checkItem(Vertex v) {
-    if (v is! Vertex) checkItemFailed(v, 'Vertex');
-  }
 
-  int get x => $_get(0, 0);
-  set x(int v) {
+  $core.int get x => $_get(0, 0);
+  set x($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasX() => $_has(0);
+  $core.bool hasX() => $_has(0);
   void clearX() => clearField(1);
 
-  int get y => $_get(1, 0);
-  set y(int v) {
+  $core.int get y => $_get(1, 0);
+  set y($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasY() => $_has(1);
+  $core.bool hasY() => $_has(1);
   void clearY() => clearField(2);
 }
 
-class _ReadonlyVertex extends Vertex with ReadonlyMessageMixin {}
-
-class BoundingPoly extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BoundingPoly')
-    ..pp<Vertex>(
-        1, 'vertices', PbFieldType.PM, Vertex.$checkItem, Vertex.create)
+class BoundingPoly extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BoundingPoly',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
+    ..pc<Vertex>(1, 'vertices', $pb.PbFieldType.PM, Vertex.create)
     ..hasRequiredFields = false;
 
   BoundingPoly() : super();
-  BoundingPoly.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BoundingPoly.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BoundingPoly.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BoundingPoly.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  BoundingPoly clone() => new BoundingPoly()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BoundingPoly create() => new BoundingPoly();
-  static PbList<BoundingPoly> createRepeated() => new PbList<BoundingPoly>();
-  static BoundingPoly getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBoundingPoly();
-    return _defaultInstance;
-  }
-
+  BoundingPoly clone() => BoundingPoly()..mergeFromMessage(this);
+  BoundingPoly copyWith(void Function(BoundingPoly) updates) =>
+      super.copyWith((message) => updates(message as BoundingPoly));
+  $pb.BuilderInfo get info_ => _i;
+  static BoundingPoly create() => BoundingPoly();
+  BoundingPoly createEmptyInstance() => create();
+  static $pb.PbList<BoundingPoly> createRepeated() =>
+      $pb.PbList<BoundingPoly>();
+  static BoundingPoly getDefault() => _defaultInstance ??= create()..freeze();
   static BoundingPoly _defaultInstance;
-  static void $checkItem(BoundingPoly v) {
-    if (v is! BoundingPoly) checkItemFailed(v, 'BoundingPoly');
-  }
 
-  List<Vertex> get vertices => $_getList(0);
+  $core.List<Vertex> get vertices => $_getList(0);
 }
 
-class _ReadonlyBoundingPoly extends BoundingPoly with ReadonlyMessageMixin {}
-
-class Position extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Position')
-    ..a<double>(1, 'x', PbFieldType.OF)
-    ..a<double>(2, 'y', PbFieldType.OF)
-    ..a<double>(3, 'z', PbFieldType.OF)
+class Position extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Position',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
+    ..a<$core.double>(1, 'x', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, 'y', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, 'z', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   Position() : super();
-  Position.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Position.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Position.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Position.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Position clone() => new Position()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Position create() => new Position();
-  static PbList<Position> createRepeated() => new PbList<Position>();
-  static Position getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPosition();
-    return _defaultInstance;
-  }
-
+  Position clone() => Position()..mergeFromMessage(this);
+  Position copyWith(void Function(Position) updates) =>
+      super.copyWith((message) => updates(message as Position));
+  $pb.BuilderInfo get info_ => _i;
+  static Position create() => Position();
+  Position createEmptyInstance() => create();
+  static $pb.PbList<Position> createRepeated() => $pb.PbList<Position>();
+  static Position getDefault() => _defaultInstance ??= create()..freeze();
   static Position _defaultInstance;
-  static void $checkItem(Position v) {
-    if (v is! Position) checkItemFailed(v, 'Position');
-  }
 
-  double get x => $_getN(0);
-  set x(double v) {
+  $core.double get x => $_getN(0);
+  set x($core.double v) {
     $_setFloat(0, v);
   }
 
-  bool hasX() => $_has(0);
+  $core.bool hasX() => $_has(0);
   void clearX() => clearField(1);
 
-  double get y => $_getN(1);
-  set y(double v) {
+  $core.double get y => $_getN(1);
+  set y($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasY() => $_has(1);
+  $core.bool hasY() => $_has(1);
   void clearY() => clearField(2);
 
-  double get z => $_getN(2);
-  set z(double v) {
+  $core.double get z => $_getN(2);
+  set z($core.double v) {
     $_setFloat(2, v);
   }
 
-  bool hasZ() => $_has(2);
+  $core.bool hasZ() => $_has(2);
   void clearZ() => clearField(3);
 }
-
-class _ReadonlyPosition extends Position with ReadonlyMessageMixin {}

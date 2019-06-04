@@ -14,7 +14,7 @@ import 'package:http/http.dart' as http;
 /// Base class for a on-demand provider of oauth2 access tokens.
 abstract class AccessTokenProvider {
   Future<auth.AccessToken> obtainAccessToken();
-  Future close();
+  Future<void> close();
 }
 
 /// Provides oauth2 access tokens by using service account credentials from
@@ -26,15 +26,17 @@ abstract class AccessTokenProvider {
 ///   https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances
 ///
 class MetadataAccessTokenProvider implements AccessTokenProvider {
-  final http.Client _httpClient = new http.Client();
+  final http.Client _httpClient = http.Client();
 
+  @override
   Future<auth.AccessToken> obtainAccessToken() async {
     final auth.AccessCredentials credentials =
         await auth.obtainAccessCredentialsViaMetadataServer(_httpClient);
     return credentials.accessToken;
   }
 
-  Future close() async {
+  @override
+  Future<void> close() async {
     _httpClient.close();
   }
 }
@@ -42,12 +44,13 @@ class MetadataAccessTokenProvider implements AccessTokenProvider {
 /// Provides oauth2 access tokens by using the provided service account
 /// credentials.
 class ServiceAccountTokenProvider implements AccessTokenProvider {
-  final http.Client _httpClient = new http.Client();
+  final http.Client _httpClient = http.Client();
   final auth.ServiceAccountCredentials _serviceAccount;
   final List<String> _scopes;
 
   ServiceAccountTokenProvider(this._serviceAccount, this._scopes);
 
+  @override
   Future<auth.AccessToken> obtainAccessToken() async {
     final auth.AccessCredentials credentials =
         await auth.obtainAccessCredentialsViaServiceAccount(
@@ -55,7 +58,8 @@ class ServiceAccountTokenProvider implements AccessTokenProvider {
     return credentials.accessToken;
   }
 
-  Future close() async {
+  @override
+  Future<void> close() async {
     _httpClient.close();
   }
 }
@@ -73,10 +77,11 @@ class LimitOutstandingRequests implements AccessTokenProvider {
 
   LimitOutstandingRequests(this._provider);
 
+  @override
   Future<auth.AccessToken> obtainAccessToken() {
     if (_completer != null) return _completer.future;
 
-    _completer = new Completer<auth.AccessToken>();
+    _completer = Completer<auth.AccessToken>();
     _provider.obtainAccessToken().then((auth.AccessToken token) {
       _completer.complete(token);
       _completer = null;
@@ -88,5 +93,6 @@ class LimitOutstandingRequests implements AccessTokenProvider {
     return _completer.future;
   }
 
-  Future close() => _provider.close();
+  @override
+  Future<void> close() => _provider.close();
 }

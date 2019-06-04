@@ -1,474 +1,371 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/storagetransfer/v1/transfer.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'transfer_types.pb.dart';
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import 'transfer_types.pb.dart' as $0;
+import '../../protobuf/field_mask.pb.dart' as $2;
 
-class GetGoogleServiceAccountRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('GetGoogleServiceAccountRequest')
-        ..aOS(1, 'projectId')
-        ..hasRequiredFields = false;
+class GetGoogleServiceAccountRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'GetGoogleServiceAccountRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
+    ..aOS(1, 'projectId')
+    ..hasRequiredFields = false;
 
   GetGoogleServiceAccountRequest() : super();
-  GetGoogleServiceAccountRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetGoogleServiceAccountRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetGoogleServiceAccountRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetGoogleServiceAccountRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetGoogleServiceAccountRequest clone() =>
-      new GetGoogleServiceAccountRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      GetGoogleServiceAccountRequest()..mergeFromMessage(this);
+  GetGoogleServiceAccountRequest copyWith(
+          void Function(GetGoogleServiceAccountRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as GetGoogleServiceAccountRequest));
+  $pb.BuilderInfo get info_ => _i;
   static GetGoogleServiceAccountRequest create() =>
-      new GetGoogleServiceAccountRequest();
-  static PbList<GetGoogleServiceAccountRequest> createRepeated() =>
-      new PbList<GetGoogleServiceAccountRequest>();
-  static GetGoogleServiceAccountRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetGoogleServiceAccountRequest();
-    return _defaultInstance;
-  }
-
+      GetGoogleServiceAccountRequest();
+  GetGoogleServiceAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<GetGoogleServiceAccountRequest> createRepeated() =>
+      $pb.PbList<GetGoogleServiceAccountRequest>();
+  static GetGoogleServiceAccountRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetGoogleServiceAccountRequest _defaultInstance;
-  static void $checkItem(GetGoogleServiceAccountRequest v) {
-    if (v is! GetGoogleServiceAccountRequest)
-      checkItemFailed(v, 'GetGoogleServiceAccountRequest');
-  }
 
-  String get projectId => $_getS(0, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(0, '');
+  set projectId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasProjectId() => $_has(0);
+  $core.bool hasProjectId() => $_has(0);
   void clearProjectId() => clearField(1);
 }
 
-class _ReadonlyGetGoogleServiceAccountRequest
-    extends GetGoogleServiceAccountRequest with ReadonlyMessageMixin {}
-
-class CreateTransferJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateTransferJobRequest')
-    ..a<TransferJob>(1, 'transferJob', PbFieldType.OM, TransferJob.getDefault,
-        TransferJob.create)
+class CreateTransferJobRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTransferJobRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
+    ..a<$0.TransferJob>(1, 'transferJob', $pb.PbFieldType.OM,
+        $0.TransferJob.getDefault, $0.TransferJob.create)
     ..hasRequiredFields = false;
 
   CreateTransferJobRequest() : super();
-  CreateTransferJobRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTransferJobRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateTransferJobRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateTransferJobRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateTransferJobRequest clone() =>
-      new CreateTransferJobRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateTransferJobRequest create() => new CreateTransferJobRequest();
-  static PbList<CreateTransferJobRequest> createRepeated() =>
-      new PbList<CreateTransferJobRequest>();
-  static CreateTransferJobRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateTransferJobRequest();
-    return _defaultInstance;
-  }
-
+      CreateTransferJobRequest()..mergeFromMessage(this);
+  CreateTransferJobRequest copyWith(
+          void Function(CreateTransferJobRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateTransferJobRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateTransferJobRequest create() => CreateTransferJobRequest();
+  CreateTransferJobRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateTransferJobRequest> createRepeated() =>
+      $pb.PbList<CreateTransferJobRequest>();
+  static CreateTransferJobRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateTransferJobRequest _defaultInstance;
-  static void $checkItem(CreateTransferJobRequest v) {
-    if (v is! CreateTransferJobRequest)
-      checkItemFailed(v, 'CreateTransferJobRequest');
-  }
 
-  TransferJob get transferJob => $_getN(0);
-  set transferJob(TransferJob v) {
+  $0.TransferJob get transferJob => $_getN(0);
+  set transferJob($0.TransferJob v) {
     setField(1, v);
   }
 
-  bool hasTransferJob() => $_has(0);
+  $core.bool hasTransferJob() => $_has(0);
   void clearTransferJob() => clearField(1);
 }
 
-class _ReadonlyCreateTransferJobRequest extends CreateTransferJobRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateTransferJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateTransferJobRequest')
+class UpdateTransferJobRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTransferJobRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
     ..aOS(1, 'jobName')
     ..aOS(2, 'projectId')
-    ..a<TransferJob>(3, 'transferJob', PbFieldType.OM, TransferJob.getDefault,
-        TransferJob.create)
-    ..a<$google$protobuf.FieldMask>(
-        4,
-        'updateTransferJobFieldMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$0.TransferJob>(3, 'transferJob', $pb.PbFieldType.OM,
+        $0.TransferJob.getDefault, $0.TransferJob.create)
+    ..a<$2.FieldMask>(4, 'updateTransferJobFieldMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTransferJobRequest() : super();
-  UpdateTransferJobRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateTransferJobRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateTransferJobRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateTransferJobRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateTransferJobRequest clone() =>
-      new UpdateTransferJobRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateTransferJobRequest create() => new UpdateTransferJobRequest();
-  static PbList<UpdateTransferJobRequest> createRepeated() =>
-      new PbList<UpdateTransferJobRequest>();
-  static UpdateTransferJobRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateTransferJobRequest();
-    return _defaultInstance;
-  }
-
+      UpdateTransferJobRequest()..mergeFromMessage(this);
+  UpdateTransferJobRequest copyWith(
+          void Function(UpdateTransferJobRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateTransferJobRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateTransferJobRequest create() => UpdateTransferJobRequest();
+  UpdateTransferJobRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateTransferJobRequest> createRepeated() =>
+      $pb.PbList<UpdateTransferJobRequest>();
+  static UpdateTransferJobRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateTransferJobRequest _defaultInstance;
-  static void $checkItem(UpdateTransferJobRequest v) {
-    if (v is! UpdateTransferJobRequest)
-      checkItemFailed(v, 'UpdateTransferJobRequest');
-  }
 
-  String get jobName => $_getS(0, '');
-  set jobName(String v) {
+  $core.String get jobName => $_getS(0, '');
+  set jobName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasJobName() => $_has(0);
+  $core.bool hasJobName() => $_has(0);
   void clearJobName() => clearField(1);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasProjectId() => $_has(1);
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 
-  TransferJob get transferJob => $_getN(2);
-  set transferJob(TransferJob v) {
+  $0.TransferJob get transferJob => $_getN(2);
+  set transferJob($0.TransferJob v) {
     setField(3, v);
   }
 
-  bool hasTransferJob() => $_has(2);
+  $core.bool hasTransferJob() => $_has(2);
   void clearTransferJob() => clearField(3);
 
-  $google$protobuf.FieldMask get updateTransferJobFieldMask => $_getN(3);
-  set updateTransferJobFieldMask($google$protobuf.FieldMask v) {
+  $2.FieldMask get updateTransferJobFieldMask => $_getN(3);
+  set updateTransferJobFieldMask($2.FieldMask v) {
     setField(4, v);
   }
 
-  bool hasUpdateTransferJobFieldMask() => $_has(3);
+  $core.bool hasUpdateTransferJobFieldMask() => $_has(3);
   void clearUpdateTransferJobFieldMask() => clearField(4);
 }
 
-class _ReadonlyUpdateTransferJobRequest extends UpdateTransferJobRequest
-    with ReadonlyMessageMixin {}
-
-class GetTransferJobRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetTransferJobRequest')
+class GetTransferJobRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTransferJobRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
     ..aOS(1, 'jobName')
     ..aOS(2, 'projectId')
     ..hasRequiredFields = false;
 
   GetTransferJobRequest() : super();
-  GetTransferJobRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTransferJobRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetTransferJobRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetTransferJobRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   GetTransferJobRequest clone() =>
-      new GetTransferJobRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetTransferJobRequest create() => new GetTransferJobRequest();
-  static PbList<GetTransferJobRequest> createRepeated() =>
-      new PbList<GetTransferJobRequest>();
-  static GetTransferJobRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetTransferJobRequest();
-    return _defaultInstance;
-  }
-
+      GetTransferJobRequest()..mergeFromMessage(this);
+  GetTransferJobRequest copyWith(
+          void Function(GetTransferJobRequest) updates) =>
+      super.copyWith((message) => updates(message as GetTransferJobRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetTransferJobRequest create() => GetTransferJobRequest();
+  GetTransferJobRequest createEmptyInstance() => create();
+  static $pb.PbList<GetTransferJobRequest> createRepeated() =>
+      $pb.PbList<GetTransferJobRequest>();
+  static GetTransferJobRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetTransferJobRequest _defaultInstance;
-  static void $checkItem(GetTransferJobRequest v) {
-    if (v is! GetTransferJobRequest)
-      checkItemFailed(v, 'GetTransferJobRequest');
-  }
 
-  String get jobName => $_getS(0, '');
-  set jobName(String v) {
+  $core.String get jobName => $_getS(0, '');
+  set jobName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasJobName() => $_has(0);
+  $core.bool hasJobName() => $_has(0);
   void clearJobName() => clearField(1);
 
-  String get projectId => $_getS(1, '');
-  set projectId(String v) {
+  $core.String get projectId => $_getS(1, '');
+  set projectId($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasProjectId() => $_has(1);
+  $core.bool hasProjectId() => $_has(1);
   void clearProjectId() => clearField(2);
 }
 
-class _ReadonlyGetTransferJobRequest extends GetTransferJobRequest
-    with ReadonlyMessageMixin {}
-
-class ListTransferJobsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferJobsRequest')
+class ListTransferJobsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferJobsRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
     ..aOS(1, 'filter')
-    ..a<int>(4, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
     ..hasRequiredFields = false;
 
   ListTransferJobsRequest() : super();
-  ListTransferJobsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferJobsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferJobsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferJobsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferJobsRequest clone() =>
-      new ListTransferJobsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferJobsRequest create() => new ListTransferJobsRequest();
-  static PbList<ListTransferJobsRequest> createRepeated() =>
-      new PbList<ListTransferJobsRequest>();
-  static ListTransferJobsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferJobsRequest();
-    return _defaultInstance;
-  }
-
+      ListTransferJobsRequest()..mergeFromMessage(this);
+  ListTransferJobsRequest copyWith(
+          void Function(ListTransferJobsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListTransferJobsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferJobsRequest create() => ListTransferJobsRequest();
+  ListTransferJobsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListTransferJobsRequest> createRepeated() =>
+      $pb.PbList<ListTransferJobsRequest>();
+  static ListTransferJobsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferJobsRequest _defaultInstance;
-  static void $checkItem(ListTransferJobsRequest v) {
-    if (v is! ListTransferJobsRequest)
-      checkItemFailed(v, 'ListTransferJobsRequest');
-  }
 
-  String get filter => $_getS(0, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(0, '');
+  set filter($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasFilter() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   void clearFilter() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(4);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(5);
 }
 
-class _ReadonlyListTransferJobsRequest extends ListTransferJobsRequest
-    with ReadonlyMessageMixin {}
-
-class ListTransferJobsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListTransferJobsResponse')
-    ..pp<TransferJob>(1, 'transferJobs', PbFieldType.PM, TransferJob.$checkItem,
-        TransferJob.create)
+class ListTransferJobsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferJobsResponse',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
+    ..pc<$0.TransferJob>(
+        1, 'transferJobs', $pb.PbFieldType.PM, $0.TransferJob.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListTransferJobsResponse() : super();
-  ListTransferJobsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferJobsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListTransferJobsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListTransferJobsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListTransferJobsResponse clone() =>
-      new ListTransferJobsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListTransferJobsResponse create() => new ListTransferJobsResponse();
-  static PbList<ListTransferJobsResponse> createRepeated() =>
-      new PbList<ListTransferJobsResponse>();
-  static ListTransferJobsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListTransferJobsResponse();
-    return _defaultInstance;
-  }
-
+      ListTransferJobsResponse()..mergeFromMessage(this);
+  ListTransferJobsResponse copyWith(
+          void Function(ListTransferJobsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListTransferJobsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListTransferJobsResponse create() => ListTransferJobsResponse();
+  ListTransferJobsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListTransferJobsResponse> createRepeated() =>
+      $pb.PbList<ListTransferJobsResponse>();
+  static ListTransferJobsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListTransferJobsResponse _defaultInstance;
-  static void $checkItem(ListTransferJobsResponse v) {
-    if (v is! ListTransferJobsResponse)
-      checkItemFailed(v, 'ListTransferJobsResponse');
-  }
 
-  List<TransferJob> get transferJobs => $_getList(0);
+  $core.List<$0.TransferJob> get transferJobs => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListTransferJobsResponse extends ListTransferJobsResponse
-    with ReadonlyMessageMixin {}
-
-class PauseTransferOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PauseTransferOperationRequest')
+class PauseTransferOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'PauseTransferOperationRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   PauseTransferOperationRequest() : super();
-  PauseTransferOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PauseTransferOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PauseTransferOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PauseTransferOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PauseTransferOperationRequest clone() =>
-      new PauseTransferOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      PauseTransferOperationRequest()..mergeFromMessage(this);
+  PauseTransferOperationRequest copyWith(
+          void Function(PauseTransferOperationRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as PauseTransferOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
   static PauseTransferOperationRequest create() =>
-      new PauseTransferOperationRequest();
-  static PbList<PauseTransferOperationRequest> createRepeated() =>
-      new PbList<PauseTransferOperationRequest>();
-  static PauseTransferOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPauseTransferOperationRequest();
-    return _defaultInstance;
-  }
-
+      PauseTransferOperationRequest();
+  PauseTransferOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<PauseTransferOperationRequest> createRepeated() =>
+      $pb.PbList<PauseTransferOperationRequest>();
+  static PauseTransferOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PauseTransferOperationRequest _defaultInstance;
-  static void $checkItem(PauseTransferOperationRequest v) {
-    if (v is! PauseTransferOperationRequest)
-      checkItemFailed(v, 'PauseTransferOperationRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyPauseTransferOperationRequest
-    extends PauseTransferOperationRequest with ReadonlyMessageMixin {}
-
-class ResumeTransferOperationRequest extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ResumeTransferOperationRequest')
-        ..aOS(1, 'name')
-        ..hasRequiredFields = false;
+class ResumeTransferOperationRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ResumeTransferOperationRequest',
+      package: const $pb.PackageName('google.storagetransfer.v1'))
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
 
   ResumeTransferOperationRequest() : super();
-  ResumeTransferOperationRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ResumeTransferOperationRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ResumeTransferOperationRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ResumeTransferOperationRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ResumeTransferOperationRequest clone() =>
-      new ResumeTransferOperationRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      ResumeTransferOperationRequest()..mergeFromMessage(this);
+  ResumeTransferOperationRequest copyWith(
+          void Function(ResumeTransferOperationRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as ResumeTransferOperationRequest));
+  $pb.BuilderInfo get info_ => _i;
   static ResumeTransferOperationRequest create() =>
-      new ResumeTransferOperationRequest();
-  static PbList<ResumeTransferOperationRequest> createRepeated() =>
-      new PbList<ResumeTransferOperationRequest>();
-  static ResumeTransferOperationRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyResumeTransferOperationRequest();
-    return _defaultInstance;
-  }
-
+      ResumeTransferOperationRequest();
+  ResumeTransferOperationRequest createEmptyInstance() => create();
+  static $pb.PbList<ResumeTransferOperationRequest> createRepeated() =>
+      $pb.PbList<ResumeTransferOperationRequest>();
+  static ResumeTransferOperationRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ResumeTransferOperationRequest _defaultInstance;
-  static void $checkItem(ResumeTransferOperationRequest v) {
-    if (v is! ResumeTransferOperationRequest)
-      checkItemFailed(v, 'ResumeTransferOperationRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class _ReadonlyResumeTransferOperationRequest
-    extends ResumeTransferOperationRequest with ReadonlyMessageMixin {}
-
-class StorageTransferServiceApi {
-  RpcClient _client;
-  StorageTransferServiceApi(this._client);
-
-  Future<GoogleServiceAccount> getGoogleServiceAccount(
-      ClientContext ctx, GetGoogleServiceAccountRequest request) {
-    var emptyResponse = new GoogleServiceAccount();
-    return _client.invoke<GoogleServiceAccount>(ctx, 'StorageTransferService',
-        'GetGoogleServiceAccount', request, emptyResponse);
-  }
-
-  Future<TransferJob> createTransferJob(
-      ClientContext ctx, CreateTransferJobRequest request) {
-    var emptyResponse = new TransferJob();
-    return _client.invoke<TransferJob>(ctx, 'StorageTransferService',
-        'CreateTransferJob', request, emptyResponse);
-  }
-
-  Future<TransferJob> updateTransferJob(
-      ClientContext ctx, UpdateTransferJobRequest request) {
-    var emptyResponse = new TransferJob();
-    return _client.invoke<TransferJob>(ctx, 'StorageTransferService',
-        'UpdateTransferJob', request, emptyResponse);
-  }
-
-  Future<TransferJob> getTransferJob(
-      ClientContext ctx, GetTransferJobRequest request) {
-    var emptyResponse = new TransferJob();
-    return _client.invoke<TransferJob>(ctx, 'StorageTransferService',
-        'GetTransferJob', request, emptyResponse);
-  }
-
-  Future<ListTransferJobsResponse> listTransferJobs(
-      ClientContext ctx, ListTransferJobsRequest request) {
-    var emptyResponse = new ListTransferJobsResponse();
-    return _client.invoke<ListTransferJobsResponse>(ctx,
-        'StorageTransferService', 'ListTransferJobs', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> pauseTransferOperation(
-      ClientContext ctx, PauseTransferOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'StorageTransferService',
-        'PauseTransferOperation', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> resumeTransferOperation(
-      ClientContext ctx, ResumeTransferOperationRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(ctx, 'StorageTransferService',
-        'ResumeTransferOperation', request, emptyResponse);
-  }
 }

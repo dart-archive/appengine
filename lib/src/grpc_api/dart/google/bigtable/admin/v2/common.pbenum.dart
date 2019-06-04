@@ -1,29 +1,28 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/v2/common.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class StorageType extends ProtobufEnum {
+class StorageType extends $pb.ProtobufEnum {
   static const StorageType STORAGE_TYPE_UNSPECIFIED =
-      const StorageType._(0, 'STORAGE_TYPE_UNSPECIFIED');
-  static const StorageType SSD = const StorageType._(1, 'SSD');
-  static const StorageType HDD = const StorageType._(2, 'HDD');
+      StorageType._(0, 'STORAGE_TYPE_UNSPECIFIED');
+  static const StorageType SSD = StorageType._(1, 'SSD');
+  static const StorageType HDD = StorageType._(2, 'HDD');
 
-  static const List<StorageType> values = const <StorageType>[
+  static const $core.List<StorageType> values = <StorageType>[
     STORAGE_TYPE_UNSPECIFIED,
     SSD,
     HDD,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static StorageType valueOf(int value) => _byValue[value] as StorageType;
-  static void $checkItem(StorageType v) {
-    if (v is! StorageType) checkItemFailed(v, 'StorageType');
-  }
+  static final $core.Map<$core.int, StorageType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static StorageType valueOf($core.int value) => _byValue[value];
 
-  const StorageType._(int v, String n) : super(v, n);
+  const StorageType._($core.int v, $core.String n) : super(v, n);
 }

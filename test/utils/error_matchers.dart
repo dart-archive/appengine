@@ -9,17 +9,16 @@ import 'package:test/test.dart';
 import 'package:appengine/src/errors.dart';
 import 'package:gcloud/datastore.dart' as datastore;
 
-const isNetworkError = const TypeMatcher<NetworkError>();
-const isProtocolError = const TypeMatcher<ProtocolError>();
-const isServiceError = const TypeMatcher<ServiceError>();
-const isApplicationError = const TypeMatcher<AppEngineError>();
-const isAppEngineApplicationError = const TypeMatcher<ApplicationError>();
+const isNetworkError = TypeMatcher<NetworkError>();
+const isProtocolError = TypeMatcher<ProtocolError>();
+const isServiceError = TypeMatcher<ServiceError>();
+const isApplicationError = TypeMatcher<AppEngineError>();
+const isAppEngineApplicationError = TypeMatcher<ApplicationError>();
 
-const isDatastoreApplicationError =
-    const TypeMatcher<datastore.ApplicationError>();
+const isDatastoreApplicationError = TypeMatcher<datastore.ApplicationError>();
 const isTransactionAbortedError =
-    const TypeMatcher<datastore.TransactionAbortedError>();
-const isNeedIndexError = const TypeMatcher<datastore.NeedIndexError>();
-const isTimeoutError = const TypeMatcher<datastore.TimeoutError>();
+    TypeMatcher<datastore.TransactionAbortedError>();
+const isNeedIndexError = TypeMatcher<datastore.NeedIndexError>();
+const isTimeoutError = TypeMatcher<datastore.TimeoutError>();
 
-const isInt = const TypeMatcher<int>();
+const isInt = TypeMatcher<int>();

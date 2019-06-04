@@ -1,78 +1,76 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/vision/v1p1beta1/text_annotation.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'geometry.pb.dart';
+import 'geometry.pb.dart' as $0;
 
 import 'text_annotation.pbenum.dart';
 
 export 'text_annotation.pbenum.dart';
 
-class TextAnnotation_DetectedLanguage extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('TextAnnotation_DetectedLanguage')
-        ..aOS(1, 'languageCode')
-        ..a<double>(2, 'confidence', PbFieldType.OF)
-        ..hasRequiredFields = false;
+class TextAnnotation_DetectedLanguage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'TextAnnotation.DetectedLanguage',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
+    ..aOS(1, 'languageCode')
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
 
   TextAnnotation_DetectedLanguage() : super();
-  TextAnnotation_DetectedLanguage.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation_DetectedLanguage.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TextAnnotation_DetectedLanguage.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation_DetectedLanguage.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TextAnnotation_DetectedLanguage clone() =>
-      new TextAnnotation_DetectedLanguage()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      TextAnnotation_DetectedLanguage()..mergeFromMessage(this);
+  TextAnnotation_DetectedLanguage copyWith(
+          void Function(TextAnnotation_DetectedLanguage) updates) =>
+      super.copyWith(
+          (message) => updates(message as TextAnnotation_DetectedLanguage));
+  $pb.BuilderInfo get info_ => _i;
   static TextAnnotation_DetectedLanguage create() =>
-      new TextAnnotation_DetectedLanguage();
-  static PbList<TextAnnotation_DetectedLanguage> createRepeated() =>
-      new PbList<TextAnnotation_DetectedLanguage>();
-  static TextAnnotation_DetectedLanguage getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation_DetectedLanguage();
-    return _defaultInstance;
-  }
-
+      TextAnnotation_DetectedLanguage();
+  TextAnnotation_DetectedLanguage createEmptyInstance() => create();
+  static $pb.PbList<TextAnnotation_DetectedLanguage> createRepeated() =>
+      $pb.PbList<TextAnnotation_DetectedLanguage>();
+  static TextAnnotation_DetectedLanguage getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TextAnnotation_DetectedLanguage _defaultInstance;
-  static void $checkItem(TextAnnotation_DetectedLanguage v) {
-    if (v is! TextAnnotation_DetectedLanguage)
-      checkItemFailed(v, 'TextAnnotation_DetectedLanguage');
-  }
 
-  String get languageCode => $_getS(0, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(0, '');
+  set languageCode($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasLanguageCode() => $_has(0);
+  $core.bool hasLanguageCode() => $_has(0);
   void clearLanguageCode() => clearField(1);
 
-  double get confidence => $_getN(1);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasConfidence() => $_has(1);
+  $core.bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 }
 
-class _ReadonlyTextAnnotation_DetectedLanguage
-    extends TextAnnotation_DetectedLanguage with ReadonlyMessageMixin {}
-
-class TextAnnotation_DetectedBreak extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextAnnotation_DetectedBreak')
+class TextAnnotation_DetectedBreak extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'TextAnnotation.DetectedBreak',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
     ..e<TextAnnotation_DetectedBreak_BreakType>(
         1,
         'type',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         TextAnnotation_DetectedBreak_BreakType.UNKNOWN,
         TextAnnotation_DetectedBreak_BreakType.valueOf,
         TextAnnotation_DetectedBreak_BreakType.values)
@@ -80,488 +78,449 @@ class TextAnnotation_DetectedBreak extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   TextAnnotation_DetectedBreak() : super();
-  TextAnnotation_DetectedBreak.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation_DetectedBreak.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TextAnnotation_DetectedBreak.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation_DetectedBreak.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TextAnnotation_DetectedBreak clone() =>
-      new TextAnnotation_DetectedBreak()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      TextAnnotation_DetectedBreak()..mergeFromMessage(this);
+  TextAnnotation_DetectedBreak copyWith(
+          void Function(TextAnnotation_DetectedBreak) updates) =>
+      super.copyWith(
+          (message) => updates(message as TextAnnotation_DetectedBreak));
+  $pb.BuilderInfo get info_ => _i;
   static TextAnnotation_DetectedBreak create() =>
-      new TextAnnotation_DetectedBreak();
-  static PbList<TextAnnotation_DetectedBreak> createRepeated() =>
-      new PbList<TextAnnotation_DetectedBreak>();
-  static TextAnnotation_DetectedBreak getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation_DetectedBreak();
-    return _defaultInstance;
-  }
-
+      TextAnnotation_DetectedBreak();
+  TextAnnotation_DetectedBreak createEmptyInstance() => create();
+  static $pb.PbList<TextAnnotation_DetectedBreak> createRepeated() =>
+      $pb.PbList<TextAnnotation_DetectedBreak>();
+  static TextAnnotation_DetectedBreak getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TextAnnotation_DetectedBreak _defaultInstance;
-  static void $checkItem(TextAnnotation_DetectedBreak v) {
-    if (v is! TextAnnotation_DetectedBreak)
-      checkItemFailed(v, 'TextAnnotation_DetectedBreak');
-  }
 
   TextAnnotation_DetectedBreak_BreakType get type => $_getN(0);
   set type(TextAnnotation_DetectedBreak_BreakType v) {
     setField(1, v);
   }
 
-  bool hasType() => $_has(0);
+  $core.bool hasType() => $_has(0);
   void clearType() => clearField(1);
 
-  bool get isPrefix => $_get(1, false);
-  set isPrefix(bool v) {
+  $core.bool get isPrefix => $_get(1, false);
+  set isPrefix($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasIsPrefix() => $_has(1);
+  $core.bool hasIsPrefix() => $_has(1);
   void clearIsPrefix() => clearField(2);
 }
 
-class _ReadonlyTextAnnotation_DetectedBreak extends TextAnnotation_DetectedBreak
-    with ReadonlyMessageMixin {}
-
-class TextAnnotation_TextProperty extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextAnnotation_TextProperty')
-    ..pp<TextAnnotation_DetectedLanguage>(
-        1,
-        'detectedLanguages',
-        PbFieldType.PM,
-        TextAnnotation_DetectedLanguage.$checkItem,
-        TextAnnotation_DetectedLanguage.create)
+class TextAnnotation_TextProperty extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'TextAnnotation.TextProperty',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
+    ..pc<TextAnnotation_DetectedLanguage>(1, 'detectedLanguages',
+        $pb.PbFieldType.PM, TextAnnotation_DetectedLanguage.create)
     ..a<TextAnnotation_DetectedBreak>(
         2,
         'detectedBreak',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TextAnnotation_DetectedBreak.getDefault,
         TextAnnotation_DetectedBreak.create)
     ..hasRequiredFields = false;
 
   TextAnnotation_TextProperty() : super();
-  TextAnnotation_TextProperty.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation_TextProperty.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TextAnnotation_TextProperty.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation_TextProperty.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   TextAnnotation_TextProperty clone() =>
-      new TextAnnotation_TextProperty()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TextAnnotation_TextProperty create() =>
-      new TextAnnotation_TextProperty();
-  static PbList<TextAnnotation_TextProperty> createRepeated() =>
-      new PbList<TextAnnotation_TextProperty>();
-  static TextAnnotation_TextProperty getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation_TextProperty();
-    return _defaultInstance;
-  }
-
+      TextAnnotation_TextProperty()..mergeFromMessage(this);
+  TextAnnotation_TextProperty copyWith(
+          void Function(TextAnnotation_TextProperty) updates) =>
+      super.copyWith(
+          (message) => updates(message as TextAnnotation_TextProperty));
+  $pb.BuilderInfo get info_ => _i;
+  static TextAnnotation_TextProperty create() => TextAnnotation_TextProperty();
+  TextAnnotation_TextProperty createEmptyInstance() => create();
+  static $pb.PbList<TextAnnotation_TextProperty> createRepeated() =>
+      $pb.PbList<TextAnnotation_TextProperty>();
+  static TextAnnotation_TextProperty getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static TextAnnotation_TextProperty _defaultInstance;
-  static void $checkItem(TextAnnotation_TextProperty v) {
-    if (v is! TextAnnotation_TextProperty)
-      checkItemFailed(v, 'TextAnnotation_TextProperty');
-  }
 
-  List<TextAnnotation_DetectedLanguage> get detectedLanguages => $_getList(0);
+  $core.List<TextAnnotation_DetectedLanguage> get detectedLanguages =>
+      $_getList(0);
 
   TextAnnotation_DetectedBreak get detectedBreak => $_getN(1);
   set detectedBreak(TextAnnotation_DetectedBreak v) {
     setField(2, v);
   }
 
-  bool hasDetectedBreak() => $_has(1);
+  $core.bool hasDetectedBreak() => $_has(1);
   void clearDetectedBreak() => clearField(2);
 }
 
-class _ReadonlyTextAnnotation_TextProperty extends TextAnnotation_TextProperty
-    with ReadonlyMessageMixin {}
-
-class TextAnnotation extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('TextAnnotation')
-    ..pp<Page>(1, 'pages', PbFieldType.PM, Page.$checkItem, Page.create)
+class TextAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
+    ..pc<Page>(1, 'pages', $pb.PbFieldType.PM, Page.create)
     ..aOS(2, 'text')
     ..hasRequiredFields = false;
 
   TextAnnotation() : super();
-  TextAnnotation.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  TextAnnotation.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  TextAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  TextAnnotation clone() => new TextAnnotation()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static TextAnnotation create() => new TextAnnotation();
-  static PbList<TextAnnotation> createRepeated() =>
-      new PbList<TextAnnotation>();
-  static TextAnnotation getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyTextAnnotation();
-    return _defaultInstance;
-  }
-
+  TextAnnotation clone() => TextAnnotation()..mergeFromMessage(this);
+  TextAnnotation copyWith(void Function(TextAnnotation) updates) =>
+      super.copyWith((message) => updates(message as TextAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static TextAnnotation create() => TextAnnotation();
+  TextAnnotation createEmptyInstance() => create();
+  static $pb.PbList<TextAnnotation> createRepeated() =>
+      $pb.PbList<TextAnnotation>();
+  static TextAnnotation getDefault() => _defaultInstance ??= create()..freeze();
   static TextAnnotation _defaultInstance;
-  static void $checkItem(TextAnnotation v) {
-    if (v is! TextAnnotation) checkItemFailed(v, 'TextAnnotation');
-  }
 
-  List<Page> get pages => $_getList(0);
+  $core.List<Page> get pages => $_getList(0);
 
-  String get text => $_getS(1, '');
-  set text(String v) {
+  $core.String get text => $_getS(1, '');
+  set text($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasText() => $_has(1);
+  $core.bool hasText() => $_has(1);
   void clearText() => clearField(2);
 }
 
-class _ReadonlyTextAnnotation extends TextAnnotation with ReadonlyMessageMixin {
-}
-
-class Page extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Page')
+class Page extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Page',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TextAnnotation_TextProperty.getDefault,
         TextAnnotation_TextProperty.create)
-    ..a<int>(2, 'width', PbFieldType.O3)
-    ..a<int>(3, 'height', PbFieldType.O3)
-    ..pp<Block>(4, 'blocks', PbFieldType.PM, Block.$checkItem, Block.create)
-    ..a<double>(5, 'confidence', PbFieldType.OF)
+    ..a<$core.int>(2, 'width', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'height', $pb.PbFieldType.O3)
+    ..pc<Block>(4, 'blocks', $pb.PbFieldType.PM, Block.create)
+    ..a<$core.double>(5, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   Page() : super();
-  Page.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Page.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Page.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Page.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Page clone() => new Page()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Page create() => new Page();
-  static PbList<Page> createRepeated() => new PbList<Page>();
-  static Page getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPage();
-    return _defaultInstance;
-  }
-
+  Page clone() => Page()..mergeFromMessage(this);
+  Page copyWith(void Function(Page) updates) =>
+      super.copyWith((message) => updates(message as Page));
+  $pb.BuilderInfo get info_ => _i;
+  static Page create() => Page();
+  Page createEmptyInstance() => create();
+  static $pb.PbList<Page> createRepeated() => $pb.PbList<Page>();
+  static Page getDefault() => _defaultInstance ??= create()..freeze();
   static Page _defaultInstance;
-  static void $checkItem(Page v) {
-    if (v is! Page) checkItemFailed(v, 'Page');
-  }
 
   TextAnnotation_TextProperty get property => $_getN(0);
   set property(TextAnnotation_TextProperty v) {
     setField(1, v);
   }
 
-  bool hasProperty() => $_has(0);
+  $core.bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  int get width => $_get(1, 0);
-  set width(int v) {
+  $core.int get width => $_get(1, 0);
+  set width($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasWidth() => $_has(1);
+  $core.bool hasWidth() => $_has(1);
   void clearWidth() => clearField(2);
 
-  int get height => $_get(2, 0);
-  set height(int v) {
+  $core.int get height => $_get(2, 0);
+  set height($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasHeight() => $_has(2);
+  $core.bool hasHeight() => $_has(2);
   void clearHeight() => clearField(3);
 
-  List<Block> get blocks => $_getList(3);
+  $core.List<Block> get blocks => $_getList(3);
 
-  double get confidence => $_getN(4);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(4);
+  set confidence($core.double v) {
     $_setFloat(4, v);
   }
 
-  bool hasConfidence() => $_has(4);
+  $core.bool hasConfidence() => $_has(4);
   void clearConfidence() => clearField(5);
 }
 
-class _ReadonlyPage extends Page with ReadonlyMessageMixin {}
-
-class Block extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Block')
+class Block extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Block',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TextAnnotation_TextProperty.getDefault,
         TextAnnotation_TextProperty.create)
-    ..a<BoundingPoly>(2, 'boundingBox', PbFieldType.OM, BoundingPoly.getDefault,
-        BoundingPoly.create)
-    ..pp<Paragraph>(
-        3, 'paragraphs', PbFieldType.PM, Paragraph.$checkItem, Paragraph.create)
+    ..a<$0.BoundingPoly>(2, 'boundingBox', $pb.PbFieldType.OM,
+        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..pc<Paragraph>(3, 'paragraphs', $pb.PbFieldType.PM, Paragraph.create)
     ..e<Block_BlockType>(
         4,
         'blockType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         Block_BlockType.UNKNOWN,
         Block_BlockType.valueOf,
         Block_BlockType.values)
-    ..a<double>(5, 'confidence', PbFieldType.OF)
+    ..a<$core.double>(5, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   Block() : super();
-  Block.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Block.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Block.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Block.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Block clone() => new Block()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Block create() => new Block();
-  static PbList<Block> createRepeated() => new PbList<Block>();
-  static Block getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyBlock();
-    return _defaultInstance;
-  }
-
+  Block clone() => Block()..mergeFromMessage(this);
+  Block copyWith(void Function(Block) updates) =>
+      super.copyWith((message) => updates(message as Block));
+  $pb.BuilderInfo get info_ => _i;
+  static Block create() => Block();
+  Block createEmptyInstance() => create();
+  static $pb.PbList<Block> createRepeated() => $pb.PbList<Block>();
+  static Block getDefault() => _defaultInstance ??= create()..freeze();
   static Block _defaultInstance;
-  static void $checkItem(Block v) {
-    if (v is! Block) checkItemFailed(v, 'Block');
-  }
 
   TextAnnotation_TextProperty get property => $_getN(0);
   set property(TextAnnotation_TextProperty v) {
     setField(1, v);
   }
 
-  bool hasProperty() => $_has(0);
+  $core.bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  BoundingPoly get boundingBox => $_getN(1);
-  set boundingBox(BoundingPoly v) {
+  $0.BoundingPoly get boundingBox => $_getN(1);
+  set boundingBox($0.BoundingPoly v) {
     setField(2, v);
   }
 
-  bool hasBoundingBox() => $_has(1);
+  $core.bool hasBoundingBox() => $_has(1);
   void clearBoundingBox() => clearField(2);
 
-  List<Paragraph> get paragraphs => $_getList(2);
+  $core.List<Paragraph> get paragraphs => $_getList(2);
 
   Block_BlockType get blockType => $_getN(3);
   set blockType(Block_BlockType v) {
     setField(4, v);
   }
 
-  bool hasBlockType() => $_has(3);
+  $core.bool hasBlockType() => $_has(3);
   void clearBlockType() => clearField(4);
 
-  double get confidence => $_getN(4);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(4);
+  set confidence($core.double v) {
     $_setFloat(4, v);
   }
 
-  bool hasConfidence() => $_has(4);
+  $core.bool hasConfidence() => $_has(4);
   void clearConfidence() => clearField(5);
 }
 
-class _ReadonlyBlock extends Block with ReadonlyMessageMixin {}
-
-class Paragraph extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Paragraph')
+class Paragraph extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Paragraph',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TextAnnotation_TextProperty.getDefault,
         TextAnnotation_TextProperty.create)
-    ..a<BoundingPoly>(2, 'boundingBox', PbFieldType.OM, BoundingPoly.getDefault,
-        BoundingPoly.create)
-    ..pp<Word>(3, 'words', PbFieldType.PM, Word.$checkItem, Word.create)
-    ..a<double>(4, 'confidence', PbFieldType.OF)
+    ..a<$0.BoundingPoly>(2, 'boundingBox', $pb.PbFieldType.OM,
+        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..pc<Word>(3, 'words', $pb.PbFieldType.PM, Word.create)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   Paragraph() : super();
-  Paragraph.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Paragraph.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Paragraph.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Paragraph.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Paragraph clone() => new Paragraph()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Paragraph create() => new Paragraph();
-  static PbList<Paragraph> createRepeated() => new PbList<Paragraph>();
-  static Paragraph getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyParagraph();
-    return _defaultInstance;
-  }
-
+  Paragraph clone() => Paragraph()..mergeFromMessage(this);
+  Paragraph copyWith(void Function(Paragraph) updates) =>
+      super.copyWith((message) => updates(message as Paragraph));
+  $pb.BuilderInfo get info_ => _i;
+  static Paragraph create() => Paragraph();
+  Paragraph createEmptyInstance() => create();
+  static $pb.PbList<Paragraph> createRepeated() => $pb.PbList<Paragraph>();
+  static Paragraph getDefault() => _defaultInstance ??= create()..freeze();
   static Paragraph _defaultInstance;
-  static void $checkItem(Paragraph v) {
-    if (v is! Paragraph) checkItemFailed(v, 'Paragraph');
-  }
 
   TextAnnotation_TextProperty get property => $_getN(0);
   set property(TextAnnotation_TextProperty v) {
     setField(1, v);
   }
 
-  bool hasProperty() => $_has(0);
+  $core.bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  BoundingPoly get boundingBox => $_getN(1);
-  set boundingBox(BoundingPoly v) {
+  $0.BoundingPoly get boundingBox => $_getN(1);
+  set boundingBox($0.BoundingPoly v) {
     setField(2, v);
   }
 
-  bool hasBoundingBox() => $_has(1);
+  $core.bool hasBoundingBox() => $_has(1);
   void clearBoundingBox() => clearField(2);
 
-  List<Word> get words => $_getList(2);
+  $core.List<Word> get words => $_getList(2);
 
-  double get confidence => $_getN(3);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasConfidence() => $_has(3);
+  $core.bool hasConfidence() => $_has(3);
   void clearConfidence() => clearField(4);
 }
 
-class _ReadonlyParagraph extends Paragraph with ReadonlyMessageMixin {}
-
-class Word extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Word')
+class Word extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Word',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TextAnnotation_TextProperty.getDefault,
         TextAnnotation_TextProperty.create)
-    ..a<BoundingPoly>(2, 'boundingBox', PbFieldType.OM, BoundingPoly.getDefault,
-        BoundingPoly.create)
-    ..pp<Symbol>(3, 'symbols', PbFieldType.PM, Symbol.$checkItem, Symbol.create)
-    ..a<double>(4, 'confidence', PbFieldType.OF)
+    ..a<$0.BoundingPoly>(2, 'boundingBox', $pb.PbFieldType.OM,
+        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..pc<Symbol>(3, 'symbols', $pb.PbFieldType.PM, Symbol.create)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   Word() : super();
-  Word.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Word.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Word.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Word.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Word clone() => new Word()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Word create() => new Word();
-  static PbList<Word> createRepeated() => new PbList<Word>();
-  static Word getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWord();
-    return _defaultInstance;
-  }
-
+  Word clone() => Word()..mergeFromMessage(this);
+  Word copyWith(void Function(Word) updates) =>
+      super.copyWith((message) => updates(message as Word));
+  $pb.BuilderInfo get info_ => _i;
+  static Word create() => Word();
+  Word createEmptyInstance() => create();
+  static $pb.PbList<Word> createRepeated() => $pb.PbList<Word>();
+  static Word getDefault() => _defaultInstance ??= create()..freeze();
   static Word _defaultInstance;
-  static void $checkItem(Word v) {
-    if (v is! Word) checkItemFailed(v, 'Word');
-  }
 
   TextAnnotation_TextProperty get property => $_getN(0);
   set property(TextAnnotation_TextProperty v) {
     setField(1, v);
   }
 
-  bool hasProperty() => $_has(0);
+  $core.bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  BoundingPoly get boundingBox => $_getN(1);
-  set boundingBox(BoundingPoly v) {
+  $0.BoundingPoly get boundingBox => $_getN(1);
+  set boundingBox($0.BoundingPoly v) {
     setField(2, v);
   }
 
-  bool hasBoundingBox() => $_has(1);
+  $core.bool hasBoundingBox() => $_has(1);
   void clearBoundingBox() => clearField(2);
 
-  List<Symbol> get symbols => $_getList(2);
+  $core.List<Symbol> get symbols => $_getList(2);
 
-  double get confidence => $_getN(3);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasConfidence() => $_has(3);
+  $core.bool hasConfidence() => $_has(3);
   void clearConfidence() => clearField(4);
 }
 
-class _ReadonlyWord extends Word with ReadonlyMessageMixin {}
-
-class Symbol extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Symbol')
+class Symbol extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Symbol',
+      package: const $pb.PackageName('google.cloud.vision.v1p1beta1'))
     ..a<TextAnnotation_TextProperty>(
         1,
         'property',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         TextAnnotation_TextProperty.getDefault,
         TextAnnotation_TextProperty.create)
-    ..a<BoundingPoly>(2, 'boundingBox', PbFieldType.OM, BoundingPoly.getDefault,
-        BoundingPoly.create)
+    ..a<$0.BoundingPoly>(2, 'boundingBox', $pb.PbFieldType.OM,
+        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
     ..aOS(3, 'text')
-    ..a<double>(4, 'confidence', PbFieldType.OF)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   Symbol() : super();
-  Symbol.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Symbol.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Symbol.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Symbol.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Symbol clone() => new Symbol()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Symbol create() => new Symbol();
-  static PbList<Symbol> createRepeated() => new PbList<Symbol>();
-  static Symbol getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySymbol();
-    return _defaultInstance;
-  }
-
+  Symbol clone() => Symbol()..mergeFromMessage(this);
+  Symbol copyWith(void Function(Symbol) updates) =>
+      super.copyWith((message) => updates(message as Symbol));
+  $pb.BuilderInfo get info_ => _i;
+  static Symbol create() => Symbol();
+  Symbol createEmptyInstance() => create();
+  static $pb.PbList<Symbol> createRepeated() => $pb.PbList<Symbol>();
+  static Symbol getDefault() => _defaultInstance ??= create()..freeze();
   static Symbol _defaultInstance;
-  static void $checkItem(Symbol v) {
-    if (v is! Symbol) checkItemFailed(v, 'Symbol');
-  }
 
   TextAnnotation_TextProperty get property => $_getN(0);
   set property(TextAnnotation_TextProperty v) {
     setField(1, v);
   }
 
-  bool hasProperty() => $_has(0);
+  $core.bool hasProperty() => $_has(0);
   void clearProperty() => clearField(1);
 
-  BoundingPoly get boundingBox => $_getN(1);
-  set boundingBox(BoundingPoly v) {
+  $0.BoundingPoly get boundingBox => $_getN(1);
+  set boundingBox($0.BoundingPoly v) {
     setField(2, v);
   }
 
-  bool hasBoundingBox() => $_has(1);
+  $core.bool hasBoundingBox() => $_has(1);
   void clearBoundingBox() => clearField(2);
 
-  String get text => $_getS(2, '');
-  set text(String v) {
+  $core.String get text => $_getS(2, '');
+  set text($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasText() => $_has(2);
+  $core.bool hasText() => $_has(2);
   void clearText() => clearField(3);
 
-  double get confidence => $_getN(3);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasConfidence() => $_has(3);
+  $core.bool hasConfidence() => $_has(3);
   void clearConfidence() => clearField(4);
 }
-
-class _ReadonlySymbol extends Symbol with ReadonlyMessageMixin {}

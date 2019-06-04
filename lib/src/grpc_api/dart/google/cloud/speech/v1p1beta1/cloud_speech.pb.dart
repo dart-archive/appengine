@@ -1,61 +1,57 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/speech/v1p1beta1/cloud_speech.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../rpc/status.pb.dart' as $google$rpc;
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
+import '../../../protobuf/duration.pb.dart' as $4;
 
 import 'cloud_speech.pbenum.dart';
 
 export 'cloud_speech.pbenum.dart';
 
-class RecognizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognizeRequest')
-    ..a<RecognitionConfig>(1, 'config', PbFieldType.OM,
+class RecognizeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecognizeRequest',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<RecognitionConfig>(1, 'config', $pb.PbFieldType.OM,
         RecognitionConfig.getDefault, RecognitionConfig.create)
-    ..a<RecognitionAudio>(2, 'audio', PbFieldType.OM,
+    ..a<RecognitionAudio>(2, 'audio', $pb.PbFieldType.OM,
         RecognitionAudio.getDefault, RecognitionAudio.create)
     ..hasRequiredFields = false;
 
   RecognizeRequest() : super();
-  RecognizeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognizeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RecognizeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognizeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognizeRequest clone() => new RecognizeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RecognizeRequest create() => new RecognizeRequest();
-  static PbList<RecognizeRequest> createRepeated() =>
-      new PbList<RecognizeRequest>();
-  static RecognizeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognizeRequest();
-    return _defaultInstance;
-  }
-
+  RecognizeRequest clone() => RecognizeRequest()..mergeFromMessage(this);
+  RecognizeRequest copyWith(void Function(RecognizeRequest) updates) =>
+      super.copyWith((message) => updates(message as RecognizeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static RecognizeRequest create() => RecognizeRequest();
+  RecognizeRequest createEmptyInstance() => create();
+  static $pb.PbList<RecognizeRequest> createRepeated() =>
+      $pb.PbList<RecognizeRequest>();
+  static RecognizeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RecognizeRequest _defaultInstance;
-  static void $checkItem(RecognizeRequest v) {
-    if (v is! RecognizeRequest) checkItemFailed(v, 'RecognizeRequest');
-  }
 
   RecognitionConfig get config => $_getN(0);
   set config(RecognitionConfig v) {
     setField(1, v);
   }
 
-  bool hasConfig() => $_has(0);
+  $core.bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
   RecognitionAudio get audio => $_getN(1);
@@ -63,53 +59,48 @@ class RecognizeRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAudio() => $_has(1);
+  $core.bool hasAudio() => $_has(1);
   void clearAudio() => clearField(2);
 }
 
-class _ReadonlyRecognizeRequest extends RecognizeRequest
-    with ReadonlyMessageMixin {}
-
-class LongRunningRecognizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LongRunningRecognizeRequest')
-    ..a<RecognitionConfig>(1, 'config', PbFieldType.OM,
+class LongRunningRecognizeRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'LongRunningRecognizeRequest',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<RecognitionConfig>(1, 'config', $pb.PbFieldType.OM,
         RecognitionConfig.getDefault, RecognitionConfig.create)
-    ..a<RecognitionAudio>(2, 'audio', PbFieldType.OM,
+    ..a<RecognitionAudio>(2, 'audio', $pb.PbFieldType.OM,
         RecognitionAudio.getDefault, RecognitionAudio.create)
     ..hasRequiredFields = false;
 
   LongRunningRecognizeRequest() : super();
-  LongRunningRecognizeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LongRunningRecognizeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LongRunningRecognizeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LongRunningRecognizeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LongRunningRecognizeRequest clone() =>
-      new LongRunningRecognizeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LongRunningRecognizeRequest create() =>
-      new LongRunningRecognizeRequest();
-  static PbList<LongRunningRecognizeRequest> createRepeated() =>
-      new PbList<LongRunningRecognizeRequest>();
-  static LongRunningRecognizeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLongRunningRecognizeRequest();
-    return _defaultInstance;
-  }
-
+      LongRunningRecognizeRequest()..mergeFromMessage(this);
+  LongRunningRecognizeRequest copyWith(
+          void Function(LongRunningRecognizeRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as LongRunningRecognizeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static LongRunningRecognizeRequest create() => LongRunningRecognizeRequest();
+  LongRunningRecognizeRequest createEmptyInstance() => create();
+  static $pb.PbList<LongRunningRecognizeRequest> createRepeated() =>
+      $pb.PbList<LongRunningRecognizeRequest>();
+  static LongRunningRecognizeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LongRunningRecognizeRequest _defaultInstance;
-  static void $checkItem(LongRunningRecognizeRequest v) {
-    if (v is! LongRunningRecognizeRequest)
-      checkItemFailed(v, 'LongRunningRecognizeRequest');
-  }
 
   RecognitionConfig get config => $_getN(0);
   set config(RecognitionConfig v) {
     setField(1, v);
   }
 
-  bool hasConfig() => $_has(0);
+  $core.bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
   RecognitionAudio get audio => $_getN(1);
@@ -117,149 +108,154 @@ class LongRunningRecognizeRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasAudio() => $_has(1);
+  $core.bool hasAudio() => $_has(1);
   void clearAudio() => clearField(2);
 }
 
-class _ReadonlyLongRunningRecognizeRequest extends LongRunningRecognizeRequest
-    with ReadonlyMessageMixin {}
+enum StreamingRecognizeRequest_StreamingRequest {
+  streamingConfig,
+  audioContent,
+  notSet
+}
 
-class StreamingRecognizeRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognizeRequest')
+class StreamingRecognizeRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, StreamingRecognizeRequest_StreamingRequest>
+      _StreamingRecognizeRequest_StreamingRequestByTag = {
+    1: StreamingRecognizeRequest_StreamingRequest.streamingConfig,
+    2: StreamingRecognizeRequest_StreamingRequest.audioContent,
+    0: StreamingRecognizeRequest_StreamingRequest.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingRecognizeRequest',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
     ..a<StreamingRecognitionConfig>(
         1,
         'streamingConfig',
-        PbFieldType.OM,
+        $pb.PbFieldType.OM,
         StreamingRecognitionConfig.getDefault,
         StreamingRecognitionConfig.create)
-    ..a<List<int>>(2, 'audioContent', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'audioContent', $pb.PbFieldType.OY)
+    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
   StreamingRecognizeRequest() : super();
-  StreamingRecognizeRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognizeRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingRecognizeRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognizeRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognizeRequest clone() =>
-      new StreamingRecognizeRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamingRecognizeRequest create() => new StreamingRecognizeRequest();
-  static PbList<StreamingRecognizeRequest> createRepeated() =>
-      new PbList<StreamingRecognizeRequest>();
-  static StreamingRecognizeRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognizeRequest();
-    return _defaultInstance;
-  }
-
+      StreamingRecognizeRequest()..mergeFromMessage(this);
+  StreamingRecognizeRequest copyWith(
+          void Function(StreamingRecognizeRequest) updates) =>
+      super
+          .copyWith((message) => updates(message as StreamingRecognizeRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamingRecognizeRequest create() => StreamingRecognizeRequest();
+  StreamingRecognizeRequest createEmptyInstance() => create();
+  static $pb.PbList<StreamingRecognizeRequest> createRepeated() =>
+      $pb.PbList<StreamingRecognizeRequest>();
+  static StreamingRecognizeRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingRecognizeRequest _defaultInstance;
-  static void $checkItem(StreamingRecognizeRequest v) {
-    if (v is! StreamingRecognizeRequest)
-      checkItemFailed(v, 'StreamingRecognizeRequest');
-  }
+
+  StreamingRecognizeRequest_StreamingRequest whichStreamingRequest() =>
+      _StreamingRecognizeRequest_StreamingRequestByTag[$_whichOneof(0)];
+  void clearStreamingRequest() => clearField($_whichOneof(0));
 
   StreamingRecognitionConfig get streamingConfig => $_getN(0);
   set streamingConfig(StreamingRecognitionConfig v) {
     setField(1, v);
   }
 
-  bool hasStreamingConfig() => $_has(0);
+  $core.bool hasStreamingConfig() => $_has(0);
   void clearStreamingConfig() => clearField(1);
 
-  List<int> get audioContent => $_getN(1);
-  set audioContent(List<int> v) {
+  $core.List<$core.int> get audioContent => $_getN(1);
+  set audioContent($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasAudioContent() => $_has(1);
+  $core.bool hasAudioContent() => $_has(1);
   void clearAudioContent() => clearField(2);
 }
 
-class _ReadonlyStreamingRecognizeRequest extends StreamingRecognizeRequest
-    with ReadonlyMessageMixin {}
-
-class StreamingRecognitionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionConfig')
-    ..a<RecognitionConfig>(1, 'config', PbFieldType.OM,
+class StreamingRecognitionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingRecognitionConfig',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<RecognitionConfig>(1, 'config', $pb.PbFieldType.OM,
         RecognitionConfig.getDefault, RecognitionConfig.create)
     ..aOB(2, 'singleUtterance')
     ..aOB(3, 'interimResults')
     ..hasRequiredFields = false;
 
   StreamingRecognitionConfig() : super();
-  StreamingRecognitionConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognitionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingRecognitionConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognitionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognitionConfig clone() =>
-      new StreamingRecognitionConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamingRecognitionConfig create() =>
-      new StreamingRecognitionConfig();
-  static PbList<StreamingRecognitionConfig> createRepeated() =>
-      new PbList<StreamingRecognitionConfig>();
-  static StreamingRecognitionConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognitionConfig();
-    return _defaultInstance;
-  }
-
+      StreamingRecognitionConfig()..mergeFromMessage(this);
+  StreamingRecognitionConfig copyWith(
+          void Function(StreamingRecognitionConfig) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingRecognitionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamingRecognitionConfig create() => StreamingRecognitionConfig();
+  StreamingRecognitionConfig createEmptyInstance() => create();
+  static $pb.PbList<StreamingRecognitionConfig> createRepeated() =>
+      $pb.PbList<StreamingRecognitionConfig>();
+  static StreamingRecognitionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingRecognitionConfig _defaultInstance;
-  static void $checkItem(StreamingRecognitionConfig v) {
-    if (v is! StreamingRecognitionConfig)
-      checkItemFailed(v, 'StreamingRecognitionConfig');
-  }
 
   RecognitionConfig get config => $_getN(0);
   set config(RecognitionConfig v) {
     setField(1, v);
   }
 
-  bool hasConfig() => $_has(0);
+  $core.bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  bool get singleUtterance => $_get(1, false);
-  set singleUtterance(bool v) {
+  $core.bool get singleUtterance => $_get(1, false);
+  set singleUtterance($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasSingleUtterance() => $_has(1);
+  $core.bool hasSingleUtterance() => $_has(1);
   void clearSingleUtterance() => clearField(2);
 
-  bool get interimResults => $_get(2, false);
-  set interimResults(bool v) {
+  $core.bool get interimResults => $_get(2, false);
+  set interimResults($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasInterimResults() => $_has(2);
+  $core.bool hasInterimResults() => $_has(2);
   void clearInterimResults() => clearField(3);
 }
 
-class _ReadonlyStreamingRecognitionConfig extends StreamingRecognitionConfig
-    with ReadonlyMessageMixin {}
-
-class RecognitionConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognitionConfig')
+class RecognitionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecognitionConfig',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
     ..e<RecognitionConfig_AudioEncoding>(
         1,
         'encoding',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         RecognitionConfig_AudioEncoding.ENCODING_UNSPECIFIED,
         RecognitionConfig_AudioEncoding.valueOf,
         RecognitionConfig_AudioEncoding.values)
-    ..a<int>(2, 'sampleRateHertz', PbFieldType.O3)
+    ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..aOS(3, 'languageCode')
-    ..a<int>(4, 'maxAlternatives', PbFieldType.O3)
+    ..a<$core.int>(4, 'maxAlternatives', $pb.PbFieldType.O3)
     ..aOB(5, 'profanityFilter')
-    ..pp<SpeechContext>(6, 'speechContexts', PbFieldType.PM,
-        SpeechContext.$checkItem, SpeechContext.create)
-    ..a<int>(7, 'audioChannelCount', PbFieldType.O3)
+    ..pc<SpeechContext>(
+        6, 'speechContexts', $pb.PbFieldType.PM, SpeechContext.create)
+    ..a<$core.int>(7, 'audioChannelCount', $pb.PbFieldType.O3)
     ..aOB(8, 'enableWordTimeOffsets')
-    ..a<RecognitionMetadata>(9, 'metadata', PbFieldType.OM,
+    ..a<RecognitionMetadata>(9, 'metadata', $pb.PbFieldType.OM,
         RecognitionMetadata.getDefault, RecognitionMetadata.create)
     ..aOB(11, 'enableAutomaticPunctuation')
     ..aOB(12, 'enableSeparateRecognitionPerChannel')
@@ -267,89 +263,85 @@ class RecognitionConfig extends GeneratedMessage {
     ..aOB(14, 'useEnhanced')
     ..aOB(15, 'enableWordConfidence')
     ..aOB(16, 'enableSpeakerDiarization')
-    ..a<int>(17, 'diarizationSpeakerCount', PbFieldType.O3)
+    ..a<$core.int>(17, 'diarizationSpeakerCount', $pb.PbFieldType.O3)
     ..pPS(18, 'alternativeLanguageCodes')
     ..hasRequiredFields = false;
 
   RecognitionConfig() : super();
-  RecognitionConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognitionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RecognitionConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognitionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognitionConfig clone() => new RecognitionConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RecognitionConfig create() => new RecognitionConfig();
-  static PbList<RecognitionConfig> createRepeated() =>
-      new PbList<RecognitionConfig>();
-  static RecognitionConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognitionConfig();
-    return _defaultInstance;
-  }
-
+  RecognitionConfig clone() => RecognitionConfig()..mergeFromMessage(this);
+  RecognitionConfig copyWith(void Function(RecognitionConfig) updates) =>
+      super.copyWith((message) => updates(message as RecognitionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static RecognitionConfig create() => RecognitionConfig();
+  RecognitionConfig createEmptyInstance() => create();
+  static $pb.PbList<RecognitionConfig> createRepeated() =>
+      $pb.PbList<RecognitionConfig>();
+  static RecognitionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RecognitionConfig _defaultInstance;
-  static void $checkItem(RecognitionConfig v) {
-    if (v is! RecognitionConfig) checkItemFailed(v, 'RecognitionConfig');
-  }
 
   RecognitionConfig_AudioEncoding get encoding => $_getN(0);
   set encoding(RecognitionConfig_AudioEncoding v) {
     setField(1, v);
   }
 
-  bool hasEncoding() => $_has(0);
+  $core.bool hasEncoding() => $_has(0);
   void clearEncoding() => clearField(1);
 
-  int get sampleRateHertz => $_get(1, 0);
-  set sampleRateHertz(int v) {
+  $core.int get sampleRateHertz => $_get(1, 0);
+  set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasSampleRateHertz() => $_has(1);
+  $core.bool hasSampleRateHertz() => $_has(1);
   void clearSampleRateHertz() => clearField(2);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasLanguageCode() => $_has(2);
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 
-  int get maxAlternatives => $_get(3, 0);
-  set maxAlternatives(int v) {
+  $core.int get maxAlternatives => $_get(3, 0);
+  set maxAlternatives($core.int v) {
     $_setSignedInt32(3, v);
   }
 
-  bool hasMaxAlternatives() => $_has(3);
+  $core.bool hasMaxAlternatives() => $_has(3);
   void clearMaxAlternatives() => clearField(4);
 
-  bool get profanityFilter => $_get(4, false);
-  set profanityFilter(bool v) {
+  $core.bool get profanityFilter => $_get(4, false);
+  set profanityFilter($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasProfanityFilter() => $_has(4);
+  $core.bool hasProfanityFilter() => $_has(4);
   void clearProfanityFilter() => clearField(5);
 
-  List<SpeechContext> get speechContexts => $_getList(5);
+  $core.List<SpeechContext> get speechContexts => $_getList(5);
 
-  int get audioChannelCount => $_get(6, 0);
-  set audioChannelCount(int v) {
+  $core.int get audioChannelCount => $_get(6, 0);
+  set audioChannelCount($core.int v) {
     $_setSignedInt32(6, v);
   }
 
-  bool hasAudioChannelCount() => $_has(6);
+  $core.bool hasAudioChannelCount() => $_has(6);
   void clearAudioChannelCount() => clearField(7);
 
-  bool get enableWordTimeOffsets => $_get(7, false);
-  set enableWordTimeOffsets(bool v) {
+  $core.bool get enableWordTimeOffsets => $_get(7, false);
+  set enableWordTimeOffsets($core.bool v) {
     $_setBool(7, v);
   }
 
-  bool hasEnableWordTimeOffsets() => $_has(7);
+  $core.bool hasEnableWordTimeOffsets() => $_has(7);
   void clearEnableWordTimeOffsets() => clearField(8);
 
   RecognitionMetadata get metadata => $_getN(8);
@@ -357,99 +349,97 @@ class RecognitionConfig extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasMetadata() => $_has(8);
+  $core.bool hasMetadata() => $_has(8);
   void clearMetadata() => clearField(9);
 
-  bool get enableAutomaticPunctuation => $_get(9, false);
-  set enableAutomaticPunctuation(bool v) {
+  $core.bool get enableAutomaticPunctuation => $_get(9, false);
+  set enableAutomaticPunctuation($core.bool v) {
     $_setBool(9, v);
   }
 
-  bool hasEnableAutomaticPunctuation() => $_has(9);
+  $core.bool hasEnableAutomaticPunctuation() => $_has(9);
   void clearEnableAutomaticPunctuation() => clearField(11);
 
-  bool get enableSeparateRecognitionPerChannel => $_get(10, false);
-  set enableSeparateRecognitionPerChannel(bool v) {
+  $core.bool get enableSeparateRecognitionPerChannel => $_get(10, false);
+  set enableSeparateRecognitionPerChannel($core.bool v) {
     $_setBool(10, v);
   }
 
-  bool hasEnableSeparateRecognitionPerChannel() => $_has(10);
+  $core.bool hasEnableSeparateRecognitionPerChannel() => $_has(10);
   void clearEnableSeparateRecognitionPerChannel() => clearField(12);
 
-  String get model => $_getS(11, '');
-  set model(String v) {
+  $core.String get model => $_getS(11, '');
+  set model($core.String v) {
     $_setString(11, v);
   }
 
-  bool hasModel() => $_has(11);
+  $core.bool hasModel() => $_has(11);
   void clearModel() => clearField(13);
 
-  bool get useEnhanced => $_get(12, false);
-  set useEnhanced(bool v) {
+  $core.bool get useEnhanced => $_get(12, false);
+  set useEnhanced($core.bool v) {
     $_setBool(12, v);
   }
 
-  bool hasUseEnhanced() => $_has(12);
+  $core.bool hasUseEnhanced() => $_has(12);
   void clearUseEnhanced() => clearField(14);
 
-  bool get enableWordConfidence => $_get(13, false);
-  set enableWordConfidence(bool v) {
+  $core.bool get enableWordConfidence => $_get(13, false);
+  set enableWordConfidence($core.bool v) {
     $_setBool(13, v);
   }
 
-  bool hasEnableWordConfidence() => $_has(13);
+  $core.bool hasEnableWordConfidence() => $_has(13);
   void clearEnableWordConfidence() => clearField(15);
 
-  bool get enableSpeakerDiarization => $_get(14, false);
-  set enableSpeakerDiarization(bool v) {
+  $core.bool get enableSpeakerDiarization => $_get(14, false);
+  set enableSpeakerDiarization($core.bool v) {
     $_setBool(14, v);
   }
 
-  bool hasEnableSpeakerDiarization() => $_has(14);
+  $core.bool hasEnableSpeakerDiarization() => $_has(14);
   void clearEnableSpeakerDiarization() => clearField(16);
 
-  int get diarizationSpeakerCount => $_get(15, 0);
-  set diarizationSpeakerCount(int v) {
+  $core.int get diarizationSpeakerCount => $_get(15, 0);
+  set diarizationSpeakerCount($core.int v) {
     $_setSignedInt32(15, v);
   }
 
-  bool hasDiarizationSpeakerCount() => $_has(15);
+  $core.bool hasDiarizationSpeakerCount() => $_has(15);
   void clearDiarizationSpeakerCount() => clearField(17);
 
-  List<String> get alternativeLanguageCodes => $_getList(16);
+  $core.List<$core.String> get alternativeLanguageCodes => $_getList(16);
 }
 
-class _ReadonlyRecognitionConfig extends RecognitionConfig
-    with ReadonlyMessageMixin {}
-
-class RecognitionMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognitionMetadata')
+class RecognitionMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecognitionMetadata',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
     ..e<RecognitionMetadata_InteractionType>(
         1,
         'interactionType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         RecognitionMetadata_InteractionType.INTERACTION_TYPE_UNSPECIFIED,
         RecognitionMetadata_InteractionType.valueOf,
         RecognitionMetadata_InteractionType.values)
-    ..a<int>(3, 'industryNaicsCodeOfAudio', PbFieldType.OU3)
+    ..a<$core.int>(3, 'industryNaicsCodeOfAudio', $pb.PbFieldType.OU3)
     ..e<RecognitionMetadata_MicrophoneDistance>(
         4,
         'microphoneDistance',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         RecognitionMetadata_MicrophoneDistance.MICROPHONE_DISTANCE_UNSPECIFIED,
         RecognitionMetadata_MicrophoneDistance.valueOf,
         RecognitionMetadata_MicrophoneDistance.values)
     ..e<RecognitionMetadata_OriginalMediaType>(
         5,
         'originalMediaType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         RecognitionMetadata_OriginalMediaType.ORIGINAL_MEDIA_TYPE_UNSPECIFIED,
         RecognitionMetadata_OriginalMediaType.valueOf,
         RecognitionMetadata_OriginalMediaType.values)
     ..e<RecognitionMetadata_RecordingDeviceType>(
         6,
         'recordingDeviceType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         RecognitionMetadata_RecordingDeviceType
             .RECORDING_DEVICE_TYPE_UNSPECIFIED,
         RecognitionMetadata_RecordingDeviceType.valueOf,
@@ -461,43 +451,38 @@ class RecognitionMetadata extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   RecognitionMetadata() : super();
-  RecognitionMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognitionMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RecognitionMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognitionMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognitionMetadata clone() =>
-      new RecognitionMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RecognitionMetadata create() => new RecognitionMetadata();
-  static PbList<RecognitionMetadata> createRepeated() =>
-      new PbList<RecognitionMetadata>();
-  static RecognitionMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognitionMetadata();
-    return _defaultInstance;
-  }
-
+  RecognitionMetadata clone() => RecognitionMetadata()..mergeFromMessage(this);
+  RecognitionMetadata copyWith(void Function(RecognitionMetadata) updates) =>
+      super.copyWith((message) => updates(message as RecognitionMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static RecognitionMetadata create() => RecognitionMetadata();
+  RecognitionMetadata createEmptyInstance() => create();
+  static $pb.PbList<RecognitionMetadata> createRepeated() =>
+      $pb.PbList<RecognitionMetadata>();
+  static RecognitionMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RecognitionMetadata _defaultInstance;
-  static void $checkItem(RecognitionMetadata v) {
-    if (v is! RecognitionMetadata) checkItemFailed(v, 'RecognitionMetadata');
-  }
 
   RecognitionMetadata_InteractionType get interactionType => $_getN(0);
   set interactionType(RecognitionMetadata_InteractionType v) {
     setField(1, v);
   }
 
-  bool hasInteractionType() => $_has(0);
+  $core.bool hasInteractionType() => $_has(0);
   void clearInteractionType() => clearField(1);
 
-  int get industryNaicsCodeOfAudio => $_get(1, 0);
-  set industryNaicsCodeOfAudio(int v) {
+  $core.int get industryNaicsCodeOfAudio => $_get(1, 0);
+  set industryNaicsCodeOfAudio($core.int v) {
     $_setUnsignedInt32(1, v);
   }
 
-  bool hasIndustryNaicsCodeOfAudio() => $_has(1);
+  $core.bool hasIndustryNaicsCodeOfAudio() => $_has(1);
   void clearIndustryNaicsCodeOfAudio() => clearField(3);
 
   RecognitionMetadata_MicrophoneDistance get microphoneDistance => $_getN(2);
@@ -505,7 +490,7 @@ class RecognitionMetadata extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasMicrophoneDistance() => $_has(2);
+  $core.bool hasMicrophoneDistance() => $_has(2);
   void clearMicrophoneDistance() => clearField(4);
 
   RecognitionMetadata_OriginalMediaType get originalMediaType => $_getN(3);
@@ -513,7 +498,7 @@ class RecognitionMetadata extends GeneratedMessage {
     setField(5, v);
   }
 
-  bool hasOriginalMediaType() => $_has(3);
+  $core.bool hasOriginalMediaType() => $_has(3);
   void clearOriginalMediaType() => clearField(5);
 
   RecognitionMetadata_RecordingDeviceType get recordingDeviceType => $_getN(4);
@@ -521,23 +506,23 @@ class RecognitionMetadata extends GeneratedMessage {
     setField(6, v);
   }
 
-  bool hasRecordingDeviceType() => $_has(4);
+  $core.bool hasRecordingDeviceType() => $_has(4);
   void clearRecordingDeviceType() => clearField(6);
 
-  String get recordingDeviceName => $_getS(5, '');
-  set recordingDeviceName(String v) {
+  $core.String get recordingDeviceName => $_getS(5, '');
+  set recordingDeviceName($core.String v) {
     $_setString(5, v);
   }
 
-  bool hasRecordingDeviceName() => $_has(5);
+  $core.bool hasRecordingDeviceName() => $_has(5);
   void clearRecordingDeviceName() => clearField(7);
 
-  String get originalMimeType => $_getS(6, '');
-  set originalMimeType(String v) {
+  $core.String get originalMimeType => $_getS(6, '');
+  set originalMimeType($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasOriginalMimeType() => $_has(6);
+  $core.bool hasOriginalMimeType() => $_has(6);
   void clearOriginalMimeType() => clearField(8);
 
   Int64 get obfuscatedId => $_getI64(7);
@@ -545,602 +530,535 @@ class RecognitionMetadata extends GeneratedMessage {
     $_setInt64(7, v);
   }
 
-  bool hasObfuscatedId() => $_has(7);
+  $core.bool hasObfuscatedId() => $_has(7);
   void clearObfuscatedId() => clearField(9);
 
-  String get audioTopic => $_getS(8, '');
-  set audioTopic(String v) {
+  $core.String get audioTopic => $_getS(8, '');
+  set audioTopic($core.String v) {
     $_setString(8, v);
   }
 
-  bool hasAudioTopic() => $_has(8);
+  $core.bool hasAudioTopic() => $_has(8);
   void clearAudioTopic() => clearField(10);
 }
 
-class _ReadonlyRecognitionMetadata extends RecognitionMetadata
-    with ReadonlyMessageMixin {}
-
-class SpeechContext extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechContext')
+class SpeechContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechContext',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
     ..pPS(1, 'phrases')
+    ..a<$core.double>(4, 'boost', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   SpeechContext() : super();
-  SpeechContext.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechContext.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SpeechContext.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechContext.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  SpeechContext clone() => new SpeechContext()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SpeechContext create() => new SpeechContext();
-  static PbList<SpeechContext> createRepeated() => new PbList<SpeechContext>();
-  static SpeechContext getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechContext();
-    return _defaultInstance;
-  }
-
+  SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
+  SpeechContext copyWith(void Function(SpeechContext) updates) =>
+      super.copyWith((message) => updates(message as SpeechContext));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechContext create() => SpeechContext();
+  SpeechContext createEmptyInstance() => create();
+  static $pb.PbList<SpeechContext> createRepeated() =>
+      $pb.PbList<SpeechContext>();
+  static SpeechContext getDefault() => _defaultInstance ??= create()..freeze();
   static SpeechContext _defaultInstance;
-  static void $checkItem(SpeechContext v) {
-    if (v is! SpeechContext) checkItemFailed(v, 'SpeechContext');
+
+  $core.List<$core.String> get phrases => $_getList(0);
+
+  $core.double get boost => $_getN(1);
+  set boost($core.double v) {
+    $_setFloat(1, v);
   }
 
-  List<String> get phrases => $_getList(0);
+  $core.bool hasBoost() => $_has(1);
+  void clearBoost() => clearField(4);
 }
 
-class _ReadonlySpeechContext extends SpeechContext with ReadonlyMessageMixin {}
+enum RecognitionAudio_AudioSource { content, uri, notSet }
 
-class RecognitionAudio extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognitionAudio')
-    ..a<List<int>>(1, 'content', PbFieldType.OY)
+class RecognitionAudio extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, RecognitionAudio_AudioSource>
+      _RecognitionAudio_AudioSourceByTag = {
+    1: RecognitionAudio_AudioSource.content,
+    2: RecognitionAudio_AudioSource.uri,
+    0: RecognitionAudio_AudioSource.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecognitionAudio',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<$core.List<$core.int>>(1, 'content', $pb.PbFieldType.OY)
     ..aOS(2, 'uri')
+    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
   RecognitionAudio() : super();
-  RecognitionAudio.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognitionAudio.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RecognitionAudio.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognitionAudio.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognitionAudio clone() => new RecognitionAudio()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RecognitionAudio create() => new RecognitionAudio();
-  static PbList<RecognitionAudio> createRepeated() =>
-      new PbList<RecognitionAudio>();
-  static RecognitionAudio getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognitionAudio();
-    return _defaultInstance;
-  }
-
+  RecognitionAudio clone() => RecognitionAudio()..mergeFromMessage(this);
+  RecognitionAudio copyWith(void Function(RecognitionAudio) updates) =>
+      super.copyWith((message) => updates(message as RecognitionAudio));
+  $pb.BuilderInfo get info_ => _i;
+  static RecognitionAudio create() => RecognitionAudio();
+  RecognitionAudio createEmptyInstance() => create();
+  static $pb.PbList<RecognitionAudio> createRepeated() =>
+      $pb.PbList<RecognitionAudio>();
+  static RecognitionAudio getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RecognitionAudio _defaultInstance;
-  static void $checkItem(RecognitionAudio v) {
-    if (v is! RecognitionAudio) checkItemFailed(v, 'RecognitionAudio');
-  }
 
-  List<int> get content => $_getN(0);
-  set content(List<int> v) {
+  RecognitionAudio_AudioSource whichAudioSource() =>
+      _RecognitionAudio_AudioSourceByTag[$_whichOneof(0)];
+  void clearAudioSource() => clearField($_whichOneof(0));
+
+  $core.List<$core.int> get content => $_getN(0);
+  set content($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasContent() => $_has(0);
+  $core.bool hasContent() => $_has(0);
   void clearContent() => clearField(1);
 
-  String get uri => $_getS(1, '');
-  set uri(String v) {
+  $core.String get uri => $_getS(1, '');
+  set uri($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasUri() => $_has(1);
+  $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 }
 
-class _ReadonlyRecognitionAudio extends RecognitionAudio
-    with ReadonlyMessageMixin {}
-
-class RecognizeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RecognizeResponse')
-    ..pp<SpeechRecognitionResult>(2, 'results', PbFieldType.PM,
-        SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
+class RecognizeResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecognizeResponse',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..pc<SpeechRecognitionResult>(
+        2, 'results', $pb.PbFieldType.PM, SpeechRecognitionResult.create)
     ..hasRequiredFields = false;
 
   RecognizeResponse() : super();
-  RecognizeResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognizeResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RecognizeResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RecognizeResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RecognizeResponse clone() => new RecognizeResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RecognizeResponse create() => new RecognizeResponse();
-  static PbList<RecognizeResponse> createRepeated() =>
-      new PbList<RecognizeResponse>();
-  static RecognizeResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRecognizeResponse();
-    return _defaultInstance;
-  }
-
+  RecognizeResponse clone() => RecognizeResponse()..mergeFromMessage(this);
+  RecognizeResponse copyWith(void Function(RecognizeResponse) updates) =>
+      super.copyWith((message) => updates(message as RecognizeResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static RecognizeResponse create() => RecognizeResponse();
+  RecognizeResponse createEmptyInstance() => create();
+  static $pb.PbList<RecognizeResponse> createRepeated() =>
+      $pb.PbList<RecognizeResponse>();
+  static RecognizeResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RecognizeResponse _defaultInstance;
-  static void $checkItem(RecognizeResponse v) {
-    if (v is! RecognizeResponse) checkItemFailed(v, 'RecognizeResponse');
-  }
 
-  List<SpeechRecognitionResult> get results => $_getList(0);
+  $core.List<SpeechRecognitionResult> get results => $_getList(0);
 }
 
-class _ReadonlyRecognizeResponse extends RecognizeResponse
-    with ReadonlyMessageMixin {}
-
-class LongRunningRecognizeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LongRunningRecognizeResponse')
-    ..pp<SpeechRecognitionResult>(2, 'results', PbFieldType.PM,
-        SpeechRecognitionResult.$checkItem, SpeechRecognitionResult.create)
+class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'LongRunningRecognizeResponse',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..pc<SpeechRecognitionResult>(
+        2, 'results', $pb.PbFieldType.PM, SpeechRecognitionResult.create)
     ..hasRequiredFields = false;
 
   LongRunningRecognizeResponse() : super();
-  LongRunningRecognizeResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LongRunningRecognizeResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LongRunningRecognizeResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LongRunningRecognizeResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LongRunningRecognizeResponse clone() =>
-      new LongRunningRecognizeResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      LongRunningRecognizeResponse()..mergeFromMessage(this);
+  LongRunningRecognizeResponse copyWith(
+          void Function(LongRunningRecognizeResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as LongRunningRecognizeResponse));
+  $pb.BuilderInfo get info_ => _i;
   static LongRunningRecognizeResponse create() =>
-      new LongRunningRecognizeResponse();
-  static PbList<LongRunningRecognizeResponse> createRepeated() =>
-      new PbList<LongRunningRecognizeResponse>();
-  static LongRunningRecognizeResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLongRunningRecognizeResponse();
-    return _defaultInstance;
-  }
-
+      LongRunningRecognizeResponse();
+  LongRunningRecognizeResponse createEmptyInstance() => create();
+  static $pb.PbList<LongRunningRecognizeResponse> createRepeated() =>
+      $pb.PbList<LongRunningRecognizeResponse>();
+  static LongRunningRecognizeResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LongRunningRecognizeResponse _defaultInstance;
-  static void $checkItem(LongRunningRecognizeResponse v) {
-    if (v is! LongRunningRecognizeResponse)
-      checkItemFailed(v, 'LongRunningRecognizeResponse');
-  }
 
-  List<SpeechRecognitionResult> get results => $_getList(0);
+  $core.List<SpeechRecognitionResult> get results => $_getList(0);
 }
 
-class _ReadonlyLongRunningRecognizeResponse extends LongRunningRecognizeResponse
-    with ReadonlyMessageMixin {}
-
-class LongRunningRecognizeMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LongRunningRecognizeMetadata')
-    ..a<int>(1, 'progressPercent', PbFieldType.O3)
-    ..a<$google$protobuf.Timestamp>(
-        2,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'lastUpdateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'LongRunningRecognizeMetadata',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<$core.int>(1, 'progressPercent', $pb.PbFieldType.O3)
+    ..a<$2.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'lastUpdateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   LongRunningRecognizeMetadata() : super();
-  LongRunningRecognizeMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LongRunningRecognizeMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LongRunningRecognizeMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LongRunningRecognizeMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   LongRunningRecognizeMetadata clone() =>
-      new LongRunningRecognizeMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      LongRunningRecognizeMetadata()..mergeFromMessage(this);
+  LongRunningRecognizeMetadata copyWith(
+          void Function(LongRunningRecognizeMetadata) updates) =>
+      super.copyWith(
+          (message) => updates(message as LongRunningRecognizeMetadata));
+  $pb.BuilderInfo get info_ => _i;
   static LongRunningRecognizeMetadata create() =>
-      new LongRunningRecognizeMetadata();
-  static PbList<LongRunningRecognizeMetadata> createRepeated() =>
-      new PbList<LongRunningRecognizeMetadata>();
-  static LongRunningRecognizeMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLongRunningRecognizeMetadata();
-    return _defaultInstance;
-  }
-
+      LongRunningRecognizeMetadata();
+  LongRunningRecognizeMetadata createEmptyInstance() => create();
+  static $pb.PbList<LongRunningRecognizeMetadata> createRepeated() =>
+      $pb.PbList<LongRunningRecognizeMetadata>();
+  static LongRunningRecognizeMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LongRunningRecognizeMetadata _defaultInstance;
-  static void $checkItem(LongRunningRecognizeMetadata v) {
-    if (v is! LongRunningRecognizeMetadata)
-      checkItemFailed(v, 'LongRunningRecognizeMetadata');
-  }
 
-  int get progressPercent => $_get(0, 0);
-  set progressPercent(int v) {
+  $core.int get progressPercent => $_get(0, 0);
+  set progressPercent($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasProgressPercent() => $_has(0);
+  $core.bool hasProgressPercent() => $_has(0);
   void clearProgressPercent() => clearField(1);
 
-  $google$protobuf.Timestamp get startTime => $_getN(1);
-  set startTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(1);
+  set startTime($2.Timestamp v) {
     setField(2, v);
   }
 
-  bool hasStartTime() => $_has(1);
+  $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $google$protobuf.Timestamp get lastUpdateTime => $_getN(2);
-  set lastUpdateTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get lastUpdateTime => $_getN(2);
+  set lastUpdateTime($2.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasLastUpdateTime() => $_has(2);
+  $core.bool hasLastUpdateTime() => $_has(2);
   void clearLastUpdateTime() => clearField(3);
 }
 
-class _ReadonlyLongRunningRecognizeMetadata extends LongRunningRecognizeMetadata
-    with ReadonlyMessageMixin {}
-
-class StreamingRecognizeResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognizeResponse')
-    ..a<$google$rpc.Status>(1, 'error', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..pp<StreamingRecognitionResult>(
-        2,
-        'results',
-        PbFieldType.PM,
-        StreamingRecognitionResult.$checkItem,
-        StreamingRecognitionResult.create)
+class StreamingRecognizeResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingRecognizeResponse',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<$3.Status>(
+        1, 'error', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..pc<StreamingRecognitionResult>(
+        2, 'results', $pb.PbFieldType.PM, StreamingRecognitionResult.create)
     ..e<StreamingRecognizeResponse_SpeechEventType>(
         4,
         'speechEventType',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         StreamingRecognizeResponse_SpeechEventType.SPEECH_EVENT_UNSPECIFIED,
         StreamingRecognizeResponse_SpeechEventType.valueOf,
         StreamingRecognizeResponse_SpeechEventType.values)
     ..hasRequiredFields = false;
 
   StreamingRecognizeResponse() : super();
-  StreamingRecognizeResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognizeResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingRecognizeResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognizeResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognizeResponse clone() =>
-      new StreamingRecognizeResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamingRecognizeResponse create() =>
-      new StreamingRecognizeResponse();
-  static PbList<StreamingRecognizeResponse> createRepeated() =>
-      new PbList<StreamingRecognizeResponse>();
-  static StreamingRecognizeResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognizeResponse();
-    return _defaultInstance;
-  }
-
+      StreamingRecognizeResponse()..mergeFromMessage(this);
+  StreamingRecognizeResponse copyWith(
+          void Function(StreamingRecognizeResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingRecognizeResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamingRecognizeResponse create() => StreamingRecognizeResponse();
+  StreamingRecognizeResponse createEmptyInstance() => create();
+  static $pb.PbList<StreamingRecognizeResponse> createRepeated() =>
+      $pb.PbList<StreamingRecognizeResponse>();
+  static StreamingRecognizeResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingRecognizeResponse _defaultInstance;
-  static void $checkItem(StreamingRecognizeResponse v) {
-    if (v is! StreamingRecognizeResponse)
-      checkItemFailed(v, 'StreamingRecognizeResponse');
-  }
 
-  $google$rpc.Status get error => $_getN(0);
-  set error($google$rpc.Status v) {
+  $3.Status get error => $_getN(0);
+  set error($3.Status v) {
     setField(1, v);
   }
 
-  bool hasError() => $_has(0);
+  $core.bool hasError() => $_has(0);
   void clearError() => clearField(1);
 
-  List<StreamingRecognitionResult> get results => $_getList(1);
+  $core.List<StreamingRecognitionResult> get results => $_getList(1);
 
   StreamingRecognizeResponse_SpeechEventType get speechEventType => $_getN(2);
   set speechEventType(StreamingRecognizeResponse_SpeechEventType v) {
     setField(4, v);
   }
 
-  bool hasSpeechEventType() => $_has(2);
+  $core.bool hasSpeechEventType() => $_has(2);
   void clearSpeechEventType() => clearField(4);
 }
 
-class _ReadonlyStreamingRecognizeResponse extends StreamingRecognizeResponse
-    with ReadonlyMessageMixin {}
-
-class StreamingRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('StreamingRecognitionResult')
-    ..pp<SpeechRecognitionAlternative>(
-        1,
-        'alternatives',
-        PbFieldType.PM,
-        SpeechRecognitionAlternative.$checkItem,
+class StreamingRecognitionResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingRecognitionResult',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..pc<SpeechRecognitionAlternative>(1, 'alternatives', $pb.PbFieldType.PM,
         SpeechRecognitionAlternative.create)
     ..aOB(2, 'isFinal')
-    ..a<double>(3, 'stability', PbFieldType.OF)
-    ..a<int>(5, 'channelTag', PbFieldType.O3)
+    ..a<$core.double>(3, 'stability', $pb.PbFieldType.OF)
+    ..a<$4.Duration>(4, 'resultEndTime', $pb.PbFieldType.OM,
+        $4.Duration.getDefault, $4.Duration.create)
+    ..a<$core.int>(5, 'channelTag', $pb.PbFieldType.O3)
     ..aOS(6, 'languageCode')
     ..hasRequiredFields = false;
 
   StreamingRecognitionResult() : super();
-  StreamingRecognitionResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognitionResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  StreamingRecognitionResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  StreamingRecognitionResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   StreamingRecognitionResult clone() =>
-      new StreamingRecognitionResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static StreamingRecognitionResult create() =>
-      new StreamingRecognitionResult();
-  static PbList<StreamingRecognitionResult> createRepeated() =>
-      new PbList<StreamingRecognitionResult>();
-  static StreamingRecognitionResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyStreamingRecognitionResult();
-    return _defaultInstance;
-  }
-
+      StreamingRecognitionResult()..mergeFromMessage(this);
+  StreamingRecognitionResult copyWith(
+          void Function(StreamingRecognitionResult) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingRecognitionResult));
+  $pb.BuilderInfo get info_ => _i;
+  static StreamingRecognitionResult create() => StreamingRecognitionResult();
+  StreamingRecognitionResult createEmptyInstance() => create();
+  static $pb.PbList<StreamingRecognitionResult> createRepeated() =>
+      $pb.PbList<StreamingRecognitionResult>();
+  static StreamingRecognitionResult getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static StreamingRecognitionResult _defaultInstance;
-  static void $checkItem(StreamingRecognitionResult v) {
-    if (v is! StreamingRecognitionResult)
-      checkItemFailed(v, 'StreamingRecognitionResult');
-  }
 
-  List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
+  $core.List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
 
-  bool get isFinal => $_get(1, false);
-  set isFinal(bool v) {
+  $core.bool get isFinal => $_get(1, false);
+  set isFinal($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasIsFinal() => $_has(1);
+  $core.bool hasIsFinal() => $_has(1);
   void clearIsFinal() => clearField(2);
 
-  double get stability => $_getN(2);
-  set stability(double v) {
+  $core.double get stability => $_getN(2);
+  set stability($core.double v) {
     $_setFloat(2, v);
   }
 
-  bool hasStability() => $_has(2);
+  $core.bool hasStability() => $_has(2);
   void clearStability() => clearField(3);
 
-  int get channelTag => $_get(3, 0);
-  set channelTag(int v) {
-    $_setSignedInt32(3, v);
+  $4.Duration get resultEndTime => $_getN(3);
+  set resultEndTime($4.Duration v) {
+    setField(4, v);
   }
 
-  bool hasChannelTag() => $_has(3);
+  $core.bool hasResultEndTime() => $_has(3);
+  void clearResultEndTime() => clearField(4);
+
+  $core.int get channelTag => $_get(4, 0);
+  set channelTag($core.int v) {
+    $_setSignedInt32(4, v);
+  }
+
+  $core.bool hasChannelTag() => $_has(4);
   void clearChannelTag() => clearField(5);
 
-  String get languageCode => $_getS(4, '');
-  set languageCode(String v) {
-    $_setString(4, v);
+  $core.String get languageCode => $_getS(5, '');
+  set languageCode($core.String v) {
+    $_setString(5, v);
   }
 
-  bool hasLanguageCode() => $_has(4);
+  $core.bool hasLanguageCode() => $_has(5);
   void clearLanguageCode() => clearField(6);
 }
 
-class _ReadonlyStreamingRecognitionResult extends StreamingRecognitionResult
-    with ReadonlyMessageMixin {}
-
-class SpeechRecognitionResult extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionResult')
-    ..pp<SpeechRecognitionAlternative>(
-        1,
-        'alternatives',
-        PbFieldType.PM,
-        SpeechRecognitionAlternative.$checkItem,
+class SpeechRecognitionResult extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechRecognitionResult',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..pc<SpeechRecognitionAlternative>(1, 'alternatives', $pb.PbFieldType.PM,
         SpeechRecognitionAlternative.create)
-    ..a<int>(2, 'channelTag', PbFieldType.O3)
+    ..a<$core.int>(2, 'channelTag', $pb.PbFieldType.O3)
     ..aOS(5, 'languageCode')
     ..hasRequiredFields = false;
 
   SpeechRecognitionResult() : super();
-  SpeechRecognitionResult.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechRecognitionResult.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SpeechRecognitionResult.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechRecognitionResult.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SpeechRecognitionResult clone() =>
-      new SpeechRecognitionResult()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SpeechRecognitionResult create() => new SpeechRecognitionResult();
-  static PbList<SpeechRecognitionResult> createRepeated() =>
-      new PbList<SpeechRecognitionResult>();
-  static SpeechRecognitionResult getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechRecognitionResult();
-    return _defaultInstance;
-  }
-
+      SpeechRecognitionResult()..mergeFromMessage(this);
+  SpeechRecognitionResult copyWith(
+          void Function(SpeechRecognitionResult) updates) =>
+      super.copyWith((message) => updates(message as SpeechRecognitionResult));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechRecognitionResult create() => SpeechRecognitionResult();
+  SpeechRecognitionResult createEmptyInstance() => create();
+  static $pb.PbList<SpeechRecognitionResult> createRepeated() =>
+      $pb.PbList<SpeechRecognitionResult>();
+  static SpeechRecognitionResult getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SpeechRecognitionResult _defaultInstance;
-  static void $checkItem(SpeechRecognitionResult v) {
-    if (v is! SpeechRecognitionResult)
-      checkItemFailed(v, 'SpeechRecognitionResult');
-  }
 
-  List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
+  $core.List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
 
-  int get channelTag => $_get(1, 0);
-  set channelTag(int v) {
+  $core.int get channelTag => $_get(1, 0);
+  set channelTag($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasChannelTag() => $_has(1);
+  $core.bool hasChannelTag() => $_has(1);
   void clearChannelTag() => clearField(2);
 
-  String get languageCode => $_getS(2, '');
-  set languageCode(String v) {
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasLanguageCode() => $_has(2);
+  $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(5);
 }
 
-class _ReadonlySpeechRecognitionResult extends SpeechRecognitionResult
-    with ReadonlyMessageMixin {}
-
-class SpeechRecognitionAlternative extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SpeechRecognitionAlternative')
+class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SpeechRecognitionAlternative',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
     ..aOS(1, 'transcript')
-    ..a<double>(2, 'confidence', PbFieldType.OF)
-    ..pp<WordInfo>(
-        3, 'words', PbFieldType.PM, WordInfo.$checkItem, WordInfo.create)
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..pc<WordInfo>(3, 'words', $pb.PbFieldType.PM, WordInfo.create)
     ..hasRequiredFields = false;
 
   SpeechRecognitionAlternative() : super();
-  SpeechRecognitionAlternative.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SpeechRecognitionAlternative.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SpeechRecognitionAlternative.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SpeechRecognitionAlternative clone() =>
-      new SpeechRecognitionAlternative()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
+      SpeechRecognitionAlternative()..mergeFromMessage(this);
+  SpeechRecognitionAlternative copyWith(
+          void Function(SpeechRecognitionAlternative) updates) =>
+      super.copyWith(
+          (message) => updates(message as SpeechRecognitionAlternative));
+  $pb.BuilderInfo get info_ => _i;
   static SpeechRecognitionAlternative create() =>
-      new SpeechRecognitionAlternative();
-  static PbList<SpeechRecognitionAlternative> createRepeated() =>
-      new PbList<SpeechRecognitionAlternative>();
-  static SpeechRecognitionAlternative getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySpeechRecognitionAlternative();
-    return _defaultInstance;
-  }
-
+      SpeechRecognitionAlternative();
+  SpeechRecognitionAlternative createEmptyInstance() => create();
+  static $pb.PbList<SpeechRecognitionAlternative> createRepeated() =>
+      $pb.PbList<SpeechRecognitionAlternative>();
+  static SpeechRecognitionAlternative getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SpeechRecognitionAlternative _defaultInstance;
-  static void $checkItem(SpeechRecognitionAlternative v) {
-    if (v is! SpeechRecognitionAlternative)
-      checkItemFailed(v, 'SpeechRecognitionAlternative');
-  }
 
-  String get transcript => $_getS(0, '');
-  set transcript(String v) {
+  $core.String get transcript => $_getS(0, '');
+  set transcript($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasTranscript() => $_has(0);
+  $core.bool hasTranscript() => $_has(0);
   void clearTranscript() => clearField(1);
 
-  double get confidence => $_getN(1);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
-  bool hasConfidence() => $_has(1);
+  $core.bool hasConfidence() => $_has(1);
   void clearConfidence() => clearField(2);
 
-  List<WordInfo> get words => $_getList(2);
+  $core.List<WordInfo> get words => $_getList(2);
 }
 
-class _ReadonlySpeechRecognitionAlternative extends SpeechRecognitionAlternative
-    with ReadonlyMessageMixin {}
-
-class WordInfo extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('WordInfo')
-    ..a<$google$protobuf.Duration>(1, 'startTime', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<$google$protobuf.Duration>(2, 'endTime', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
+class WordInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WordInfo',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..a<$4.Duration>(1, 'startTime', $pb.PbFieldType.OM, $4.Duration.getDefault,
+        $4.Duration.create)
+    ..a<$4.Duration>(2, 'endTime', $pb.PbFieldType.OM, $4.Duration.getDefault,
+        $4.Duration.create)
     ..aOS(3, 'word')
-    ..a<double>(4, 'confidence', PbFieldType.OF)
-    ..a<int>(5, 'speakerTag', PbFieldType.O3)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
+    ..a<$core.int>(5, 'speakerTag', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   WordInfo() : super();
-  WordInfo.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  WordInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  WordInfo.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  WordInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  WordInfo clone() => new WordInfo()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static WordInfo create() => new WordInfo();
-  static PbList<WordInfo> createRepeated() => new PbList<WordInfo>();
-  static WordInfo getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWordInfo();
-    return _defaultInstance;
-  }
-
+  WordInfo clone() => WordInfo()..mergeFromMessage(this);
+  WordInfo copyWith(void Function(WordInfo) updates) =>
+      super.copyWith((message) => updates(message as WordInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static WordInfo create() => WordInfo();
+  WordInfo createEmptyInstance() => create();
+  static $pb.PbList<WordInfo> createRepeated() => $pb.PbList<WordInfo>();
+  static WordInfo getDefault() => _defaultInstance ??= create()..freeze();
   static WordInfo _defaultInstance;
-  static void $checkItem(WordInfo v) {
-    if (v is! WordInfo) checkItemFailed(v, 'WordInfo');
-  }
 
-  $google$protobuf.Duration get startTime => $_getN(0);
-  set startTime($google$protobuf.Duration v) {
+  $4.Duration get startTime => $_getN(0);
+  set startTime($4.Duration v) {
     setField(1, v);
   }
 
-  bool hasStartTime() => $_has(0);
+  $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $google$protobuf.Duration get endTime => $_getN(1);
-  set endTime($google$protobuf.Duration v) {
+  $4.Duration get endTime => $_getN(1);
+  set endTime($4.Duration v) {
     setField(2, v);
   }
 
-  bool hasEndTime() => $_has(1);
+  $core.bool hasEndTime() => $_has(1);
   void clearEndTime() => clearField(2);
 
-  String get word => $_getS(2, '');
-  set word(String v) {
+  $core.String get word => $_getS(2, '');
+  set word($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasWord() => $_has(2);
+  $core.bool hasWord() => $_has(2);
   void clearWord() => clearField(3);
 
-  double get confidence => $_getN(3);
-  set confidence(double v) {
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
-  bool hasConfidence() => $_has(3);
+  $core.bool hasConfidence() => $_has(3);
   void clearConfidence() => clearField(4);
 
-  int get speakerTag => $_get(4, 0);
-  set speakerTag(int v) {
+  $core.int get speakerTag => $_get(4, 0);
+  set speakerTag($core.int v) {
     $_setSignedInt32(4, v);
   }
 
-  bool hasSpeakerTag() => $_has(4);
+  $core.bool hasSpeakerTag() => $_has(4);
   void clearSpeakerTag() => clearField(5);
-}
-
-class _ReadonlyWordInfo extends WordInfo with ReadonlyMessageMixin {}
-
-class SpeechApi {
-  RpcClient _client;
-  SpeechApi(this._client);
-
-  Future<RecognizeResponse> recognize(
-      ClientContext ctx, RecognizeRequest request) {
-    var emptyResponse = new RecognizeResponse();
-    return _client.invoke<RecognizeResponse>(
-        ctx, 'Speech', 'Recognize', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> longRunningRecognize(
-      ClientContext ctx, LongRunningRecognizeRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'Speech', 'LongRunningRecognize', request, emptyResponse);
-  }
-
-  Future<StreamingRecognizeResponse> streamingRecognize(
-      ClientContext ctx, StreamingRecognizeRequest request) {
-    var emptyResponse = new StreamingRecognizeResponse();
-    return _client.invoke<StreamingRecognizeResponse>(
-        ctx, 'Speech', 'StreamingRecognize', request, emptyResponse);
-  }
 }

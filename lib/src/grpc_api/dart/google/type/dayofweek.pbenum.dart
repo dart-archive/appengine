@@ -1,24 +1,25 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/type/dayofweek.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class DayOfWeek extends ProtobufEnum {
+class DayOfWeek extends $pb.ProtobufEnum {
   static const DayOfWeek DAY_OF_WEEK_UNSPECIFIED =
-      const DayOfWeek._(0, 'DAY_OF_WEEK_UNSPECIFIED');
-  static const DayOfWeek MONDAY = const DayOfWeek._(1, 'MONDAY');
-  static const DayOfWeek TUESDAY = const DayOfWeek._(2, 'TUESDAY');
-  static const DayOfWeek WEDNESDAY = const DayOfWeek._(3, 'WEDNESDAY');
-  static const DayOfWeek THURSDAY = const DayOfWeek._(4, 'THURSDAY');
-  static const DayOfWeek FRIDAY = const DayOfWeek._(5, 'FRIDAY');
-  static const DayOfWeek SATURDAY = const DayOfWeek._(6, 'SATURDAY');
-  static const DayOfWeek SUNDAY = const DayOfWeek._(7, 'SUNDAY');
+      DayOfWeek._(0, 'DAY_OF_WEEK_UNSPECIFIED');
+  static const DayOfWeek MONDAY = DayOfWeek._(1, 'MONDAY');
+  static const DayOfWeek TUESDAY = DayOfWeek._(2, 'TUESDAY');
+  static const DayOfWeek WEDNESDAY = DayOfWeek._(3, 'WEDNESDAY');
+  static const DayOfWeek THURSDAY = DayOfWeek._(4, 'THURSDAY');
+  static const DayOfWeek FRIDAY = DayOfWeek._(5, 'FRIDAY');
+  static const DayOfWeek SATURDAY = DayOfWeek._(6, 'SATURDAY');
+  static const DayOfWeek SUNDAY = DayOfWeek._(7, 'SUNDAY');
 
-  static const List<DayOfWeek> values = const <DayOfWeek>[
+  static const $core.List<DayOfWeek> values = <DayOfWeek>[
     DAY_OF_WEEK_UNSPECIFIED,
     MONDAY,
     TUESDAY,
@@ -29,11 +30,9 @@ class DayOfWeek extends ProtobufEnum {
     SUNDAY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static DayOfWeek valueOf(int value) => _byValue[value] as DayOfWeek;
-  static void $checkItem(DayOfWeek v) {
-    if (v is! DayOfWeek) checkItemFailed(v, 'DayOfWeek');
-  }
+  static final $core.Map<$core.int, DayOfWeek> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DayOfWeek valueOf($core.int value) => _byValue[value];
 
-  const DayOfWeek._(int v, String n) : super(v, n);
+  const DayOfWeek._($core.int v, $core.String n) : super(v, n);
 }

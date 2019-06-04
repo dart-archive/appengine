@@ -1,148 +1,134 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/iam/admin/v1/iam.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' show int, dynamic, String, List, Map;
-import 'package:protobuf/protobuf.dart';
+import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class ServiceAccountKeyAlgorithm extends ProtobufEnum {
+class ServiceAccountKeyAlgorithm extends $pb.ProtobufEnum {
   static const ServiceAccountKeyAlgorithm KEY_ALG_UNSPECIFIED =
-      const ServiceAccountKeyAlgorithm._(0, 'KEY_ALG_UNSPECIFIED');
+      ServiceAccountKeyAlgorithm._(0, 'KEY_ALG_UNSPECIFIED');
   static const ServiceAccountKeyAlgorithm KEY_ALG_RSA_1024 =
-      const ServiceAccountKeyAlgorithm._(1, 'KEY_ALG_RSA_1024');
+      ServiceAccountKeyAlgorithm._(1, 'KEY_ALG_RSA_1024');
   static const ServiceAccountKeyAlgorithm KEY_ALG_RSA_2048 =
-      const ServiceAccountKeyAlgorithm._(2, 'KEY_ALG_RSA_2048');
+      ServiceAccountKeyAlgorithm._(2, 'KEY_ALG_RSA_2048');
 
-  static const List<ServiceAccountKeyAlgorithm> values =
-      const <ServiceAccountKeyAlgorithm>[
+  static const $core.List<ServiceAccountKeyAlgorithm> values =
+      <ServiceAccountKeyAlgorithm>[
     KEY_ALG_UNSPECIFIED,
     KEY_ALG_RSA_1024,
     KEY_ALG_RSA_2048,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ServiceAccountKeyAlgorithm valueOf(int value) =>
-      _byValue[value] as ServiceAccountKeyAlgorithm;
-  static void $checkItem(ServiceAccountKeyAlgorithm v) {
-    if (v is! ServiceAccountKeyAlgorithm)
-      checkItemFailed(v, 'ServiceAccountKeyAlgorithm');
-  }
+  static final $core.Map<$core.int, ServiceAccountKeyAlgorithm> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ServiceAccountKeyAlgorithm valueOf($core.int value) => _byValue[value];
 
-  const ServiceAccountKeyAlgorithm._(int v, String n) : super(v, n);
+  const ServiceAccountKeyAlgorithm._($core.int v, $core.String n) : super(v, n);
 }
 
-class ServiceAccountPrivateKeyType extends ProtobufEnum {
+class ServiceAccountPrivateKeyType extends $pb.ProtobufEnum {
   static const ServiceAccountPrivateKeyType TYPE_UNSPECIFIED =
-      const ServiceAccountPrivateKeyType._(0, 'TYPE_UNSPECIFIED');
+      ServiceAccountPrivateKeyType._(0, 'TYPE_UNSPECIFIED');
   static const ServiceAccountPrivateKeyType TYPE_PKCS12_FILE =
-      const ServiceAccountPrivateKeyType._(1, 'TYPE_PKCS12_FILE');
+      ServiceAccountPrivateKeyType._(1, 'TYPE_PKCS12_FILE');
   static const ServiceAccountPrivateKeyType TYPE_GOOGLE_CREDENTIALS_FILE =
-      const ServiceAccountPrivateKeyType._(2, 'TYPE_GOOGLE_CREDENTIALS_FILE');
+      ServiceAccountPrivateKeyType._(2, 'TYPE_GOOGLE_CREDENTIALS_FILE');
 
-  static const List<ServiceAccountPrivateKeyType> values =
-      const <ServiceAccountPrivateKeyType>[
+  static const $core.List<ServiceAccountPrivateKeyType> values =
+      <ServiceAccountPrivateKeyType>[
     TYPE_UNSPECIFIED,
     TYPE_PKCS12_FILE,
     TYPE_GOOGLE_CREDENTIALS_FILE,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ServiceAccountPrivateKeyType valueOf(int value) =>
-      _byValue[value] as ServiceAccountPrivateKeyType;
-  static void $checkItem(ServiceAccountPrivateKeyType v) {
-    if (v is! ServiceAccountPrivateKeyType)
-      checkItemFailed(v, 'ServiceAccountPrivateKeyType');
-  }
+  static final $core.Map<$core.int, ServiceAccountPrivateKeyType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ServiceAccountPrivateKeyType valueOf($core.int value) =>
+      _byValue[value];
 
-  const ServiceAccountPrivateKeyType._(int v, String n) : super(v, n);
+  const ServiceAccountPrivateKeyType._($core.int v, $core.String n)
+      : super(v, n);
 }
 
-class ServiceAccountPublicKeyType extends ProtobufEnum {
+class ServiceAccountPublicKeyType extends $pb.ProtobufEnum {
   static const ServiceAccountPublicKeyType TYPE_NONE =
-      const ServiceAccountPublicKeyType._(0, 'TYPE_NONE');
+      ServiceAccountPublicKeyType._(0, 'TYPE_NONE');
   static const ServiceAccountPublicKeyType TYPE_X509_PEM_FILE =
-      const ServiceAccountPublicKeyType._(1, 'TYPE_X509_PEM_FILE');
+      ServiceAccountPublicKeyType._(1, 'TYPE_X509_PEM_FILE');
   static const ServiceAccountPublicKeyType TYPE_RAW_PUBLIC_KEY =
-      const ServiceAccountPublicKeyType._(2, 'TYPE_RAW_PUBLIC_KEY');
+      ServiceAccountPublicKeyType._(2, 'TYPE_RAW_PUBLIC_KEY');
 
-  static const List<ServiceAccountPublicKeyType> values =
-      const <ServiceAccountPublicKeyType>[
+  static const $core.List<ServiceAccountPublicKeyType> values =
+      <ServiceAccountPublicKeyType>[
     TYPE_NONE,
     TYPE_X509_PEM_FILE,
     TYPE_RAW_PUBLIC_KEY,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ServiceAccountPublicKeyType valueOf(int value) =>
-      _byValue[value] as ServiceAccountPublicKeyType;
-  static void $checkItem(ServiceAccountPublicKeyType v) {
-    if (v is! ServiceAccountPublicKeyType)
-      checkItemFailed(v, 'ServiceAccountPublicKeyType');
-  }
+  static final $core.Map<$core.int, ServiceAccountPublicKeyType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ServiceAccountPublicKeyType valueOf($core.int value) =>
+      _byValue[value];
 
-  const ServiceAccountPublicKeyType._(int v, String n) : super(v, n);
+  const ServiceAccountPublicKeyType._($core.int v, $core.String n)
+      : super(v, n);
 }
 
-class RoleView extends ProtobufEnum {
-  static const RoleView BASIC = const RoleView._(0, 'BASIC');
-  static const RoleView FULL = const RoleView._(1, 'FULL');
+class RoleView extends $pb.ProtobufEnum {
+  static const RoleView BASIC = RoleView._(0, 'BASIC');
+  static const RoleView FULL = RoleView._(1, 'FULL');
 
-  static const List<RoleView> values = const <RoleView>[
+  static const $core.List<RoleView> values = <RoleView>[
     BASIC,
     FULL,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static RoleView valueOf(int value) => _byValue[value] as RoleView;
-  static void $checkItem(RoleView v) {
-    if (v is! RoleView) checkItemFailed(v, 'RoleView');
-  }
+  static final $core.Map<$core.int, RoleView> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static RoleView valueOf($core.int value) => _byValue[value];
 
-  const RoleView._(int v, String n) : super(v, n);
+  const RoleView._($core.int v, $core.String n) : super(v, n);
 }
 
-class ListServiceAccountKeysRequest_KeyType extends ProtobufEnum {
+class ListServiceAccountKeysRequest_KeyType extends $pb.ProtobufEnum {
   static const ListServiceAccountKeysRequest_KeyType KEY_TYPE_UNSPECIFIED =
-      const ListServiceAccountKeysRequest_KeyType._(0, 'KEY_TYPE_UNSPECIFIED');
+      ListServiceAccountKeysRequest_KeyType._(0, 'KEY_TYPE_UNSPECIFIED');
   static const ListServiceAccountKeysRequest_KeyType USER_MANAGED =
-      const ListServiceAccountKeysRequest_KeyType._(1, 'USER_MANAGED');
+      ListServiceAccountKeysRequest_KeyType._(1, 'USER_MANAGED');
   static const ListServiceAccountKeysRequest_KeyType SYSTEM_MANAGED =
-      const ListServiceAccountKeysRequest_KeyType._(2, 'SYSTEM_MANAGED');
+      ListServiceAccountKeysRequest_KeyType._(2, 'SYSTEM_MANAGED');
 
-  static const List<ListServiceAccountKeysRequest_KeyType> values =
-      const <ListServiceAccountKeysRequest_KeyType>[
+  static const $core.List<ListServiceAccountKeysRequest_KeyType> values =
+      <ListServiceAccountKeysRequest_KeyType>[
     KEY_TYPE_UNSPECIFIED,
     USER_MANAGED,
     SYSTEM_MANAGED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static ListServiceAccountKeysRequest_KeyType valueOf(int value) =>
-      _byValue[value] as ListServiceAccountKeysRequest_KeyType;
-  static void $checkItem(ListServiceAccountKeysRequest_KeyType v) {
-    if (v is! ListServiceAccountKeysRequest_KeyType)
-      checkItemFailed(v, 'ListServiceAccountKeysRequest_KeyType');
-  }
+  static final $core.Map<$core.int, ListServiceAccountKeysRequest_KeyType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ListServiceAccountKeysRequest_KeyType valueOf($core.int value) =>
+      _byValue[value];
 
-  const ListServiceAccountKeysRequest_KeyType._(int v, String n) : super(v, n);
+  const ListServiceAccountKeysRequest_KeyType._($core.int v, $core.String n)
+      : super(v, n);
 }
 
-class Role_RoleLaunchStage extends ProtobufEnum {
-  static const Role_RoleLaunchStage ALPHA =
-      const Role_RoleLaunchStage._(0, 'ALPHA');
-  static const Role_RoleLaunchStage BETA =
-      const Role_RoleLaunchStage._(1, 'BETA');
-  static const Role_RoleLaunchStage GA = const Role_RoleLaunchStage._(2, 'GA');
+class Role_RoleLaunchStage extends $pb.ProtobufEnum {
+  static const Role_RoleLaunchStage ALPHA = Role_RoleLaunchStage._(0, 'ALPHA');
+  static const Role_RoleLaunchStage BETA = Role_RoleLaunchStage._(1, 'BETA');
+  static const Role_RoleLaunchStage GA = Role_RoleLaunchStage._(2, 'GA');
   static const Role_RoleLaunchStage DEPRECATED =
-      const Role_RoleLaunchStage._(4, 'DEPRECATED');
+      Role_RoleLaunchStage._(4, 'DEPRECATED');
   static const Role_RoleLaunchStage DISABLED =
-      const Role_RoleLaunchStage._(5, 'DISABLED');
-  static const Role_RoleLaunchStage EAP =
-      const Role_RoleLaunchStage._(6, 'EAP');
+      Role_RoleLaunchStage._(5, 'DISABLED');
+  static const Role_RoleLaunchStage EAP = Role_RoleLaunchStage._(6, 'EAP');
 
-  static const List<Role_RoleLaunchStage> values = const <Role_RoleLaunchStage>[
+  static const $core.List<Role_RoleLaunchStage> values = <Role_RoleLaunchStage>[
     ALPHA,
     BETA,
     GA,
@@ -151,67 +137,60 @@ class Role_RoleLaunchStage extends ProtobufEnum {
     EAP,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Role_RoleLaunchStage valueOf(int value) =>
-      _byValue[value] as Role_RoleLaunchStage;
-  static void $checkItem(Role_RoleLaunchStage v) {
-    if (v is! Role_RoleLaunchStage) checkItemFailed(v, 'Role_RoleLaunchStage');
-  }
+  static final $core.Map<$core.int, Role_RoleLaunchStage> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Role_RoleLaunchStage valueOf($core.int value) => _byValue[value];
 
-  const Role_RoleLaunchStage._(int v, String n) : super(v, n);
+  const Role_RoleLaunchStage._($core.int v, $core.String n) : super(v, n);
 }
 
-class Permission_PermissionLaunchStage extends ProtobufEnum {
+class Permission_PermissionLaunchStage extends $pb.ProtobufEnum {
   static const Permission_PermissionLaunchStage ALPHA =
-      const Permission_PermissionLaunchStage._(0, 'ALPHA');
+      Permission_PermissionLaunchStage._(0, 'ALPHA');
   static const Permission_PermissionLaunchStage BETA =
-      const Permission_PermissionLaunchStage._(1, 'BETA');
+      Permission_PermissionLaunchStage._(1, 'BETA');
   static const Permission_PermissionLaunchStage GA =
-      const Permission_PermissionLaunchStage._(2, 'GA');
+      Permission_PermissionLaunchStage._(2, 'GA');
   static const Permission_PermissionLaunchStage DEPRECATED =
-      const Permission_PermissionLaunchStage._(3, 'DEPRECATED');
+      Permission_PermissionLaunchStage._(3, 'DEPRECATED');
 
-  static const List<Permission_PermissionLaunchStage> values =
-      const <Permission_PermissionLaunchStage>[
+  static const $core.List<Permission_PermissionLaunchStage> values =
+      <Permission_PermissionLaunchStage>[
     ALPHA,
     BETA,
     GA,
     DEPRECATED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Permission_PermissionLaunchStage valueOf(int value) =>
-      _byValue[value] as Permission_PermissionLaunchStage;
-  static void $checkItem(Permission_PermissionLaunchStage v) {
-    if (v is! Permission_PermissionLaunchStage)
-      checkItemFailed(v, 'Permission_PermissionLaunchStage');
-  }
+  static final $core.Map<$core.int, Permission_PermissionLaunchStage> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Permission_PermissionLaunchStage valueOf($core.int value) =>
+      _byValue[value];
 
-  const Permission_PermissionLaunchStage._(int v, String n) : super(v, n);
+  const Permission_PermissionLaunchStage._($core.int v, $core.String n)
+      : super(v, n);
 }
 
-class Permission_CustomRolesSupportLevel extends ProtobufEnum {
+class Permission_CustomRolesSupportLevel extends $pb.ProtobufEnum {
   static const Permission_CustomRolesSupportLevel SUPPORTED =
-      const Permission_CustomRolesSupportLevel._(0, 'SUPPORTED');
+      Permission_CustomRolesSupportLevel._(0, 'SUPPORTED');
   static const Permission_CustomRolesSupportLevel TESTING =
-      const Permission_CustomRolesSupportLevel._(1, 'TESTING');
+      Permission_CustomRolesSupportLevel._(1, 'TESTING');
   static const Permission_CustomRolesSupportLevel NOT_SUPPORTED =
-      const Permission_CustomRolesSupportLevel._(2, 'NOT_SUPPORTED');
+      Permission_CustomRolesSupportLevel._(2, 'NOT_SUPPORTED');
 
-  static const List<Permission_CustomRolesSupportLevel> values =
-      const <Permission_CustomRolesSupportLevel>[
+  static const $core.List<Permission_CustomRolesSupportLevel> values =
+      <Permission_CustomRolesSupportLevel>[
     SUPPORTED,
     TESTING,
     NOT_SUPPORTED,
   ];
 
-  static final Map<int, dynamic> _byValue = ProtobufEnum.initByValue(values);
-  static Permission_CustomRolesSupportLevel valueOf(int value) =>
-      _byValue[value] as Permission_CustomRolesSupportLevel;
-  static void $checkItem(Permission_CustomRolesSupportLevel v) {
-    if (v is! Permission_CustomRolesSupportLevel)
-      checkItemFailed(v, 'Permission_CustomRolesSupportLevel');
-  }
+  static final $core.Map<$core.int, Permission_CustomRolesSupportLevel>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Permission_CustomRolesSupportLevel valueOf($core.int value) =>
+      _byValue[value];
 
-  const Permission_CustomRolesSupportLevel._(int v, String n) : super(v, n);
+  const Permission_CustomRolesSupportLevel._($core.int v, $core.String n)
+      : super(v, n);
 }

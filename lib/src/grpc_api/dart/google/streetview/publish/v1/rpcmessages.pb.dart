@@ -1,98 +1,91 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/streetview/publish/v1/rpcmessages.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart';
-import '../../../rpc/status.pb.dart' as $google$rpc;
-import '../../../protobuf/field_mask.pb.dart' as $google$protobuf;
+import 'resources.pb.dart' as $0;
+import '../../../rpc/status.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 import 'rpcmessages.pbenum.dart';
 
 export 'rpcmessages.pbenum.dart';
 
-class CreatePhotoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreatePhotoRequest')
-    ..a<Photo>(1, 'photo', PbFieldType.OM, Photo.getDefault, Photo.create)
+class CreatePhotoRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreatePhotoRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..a<$0.Photo>(
+        1, 'photo', $pb.PbFieldType.OM, $0.Photo.getDefault, $0.Photo.create)
     ..hasRequiredFields = false;
 
   CreatePhotoRequest() : super();
-  CreatePhotoRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreatePhotoRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreatePhotoRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreatePhotoRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreatePhotoRequest clone() =>
-      new CreatePhotoRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreatePhotoRequest create() => new CreatePhotoRequest();
-  static PbList<CreatePhotoRequest> createRepeated() =>
-      new PbList<CreatePhotoRequest>();
-  static CreatePhotoRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreatePhotoRequest();
-    return _defaultInstance;
-  }
-
+  CreatePhotoRequest clone() => CreatePhotoRequest()..mergeFromMessage(this);
+  CreatePhotoRequest copyWith(void Function(CreatePhotoRequest) updates) =>
+      super.copyWith((message) => updates(message as CreatePhotoRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreatePhotoRequest create() => CreatePhotoRequest();
+  CreatePhotoRequest createEmptyInstance() => create();
+  static $pb.PbList<CreatePhotoRequest> createRepeated() =>
+      $pb.PbList<CreatePhotoRequest>();
+  static CreatePhotoRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreatePhotoRequest _defaultInstance;
-  static void $checkItem(CreatePhotoRequest v) {
-    if (v is! CreatePhotoRequest) checkItemFailed(v, 'CreatePhotoRequest');
-  }
 
-  Photo get photo => $_getN(0);
-  set photo(Photo v) {
+  $0.Photo get photo => $_getN(0);
+  set photo($0.Photo v) {
     setField(1, v);
   }
 
-  bool hasPhoto() => $_has(0);
+  $core.bool hasPhoto() => $_has(0);
   void clearPhoto() => clearField(1);
 }
 
-class _ReadonlyCreatePhotoRequest extends CreatePhotoRequest
-    with ReadonlyMessageMixin {}
-
-class GetPhotoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetPhotoRequest')
+class GetPhotoRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetPhotoRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
     ..aOS(1, 'photoId')
-    ..e<PhotoView>(2, 'view', PbFieldType.OE, PhotoView.BASIC,
+    ..e<PhotoView>(2, 'view', $pb.PbFieldType.OE, PhotoView.BASIC,
         PhotoView.valueOf, PhotoView.values)
+    ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
   GetPhotoRequest() : super();
-  GetPhotoRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetPhotoRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetPhotoRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetPhotoRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetPhotoRequest clone() => new GetPhotoRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetPhotoRequest create() => new GetPhotoRequest();
-  static PbList<GetPhotoRequest> createRepeated() =>
-      new PbList<GetPhotoRequest>();
-  static GetPhotoRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetPhotoRequest();
-    return _defaultInstance;
-  }
-
+  GetPhotoRequest clone() => GetPhotoRequest()..mergeFromMessage(this);
+  GetPhotoRequest copyWith(void Function(GetPhotoRequest) updates) =>
+      super.copyWith((message) => updates(message as GetPhotoRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetPhotoRequest create() => GetPhotoRequest();
+  GetPhotoRequest createEmptyInstance() => create();
+  static $pb.PbList<GetPhotoRequest> createRepeated() =>
+      $pb.PbList<GetPhotoRequest>();
+  static GetPhotoRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetPhotoRequest _defaultInstance;
-  static void $checkItem(GetPhotoRequest v) {
-    if (v is! GetPhotoRequest) checkItemFailed(v, 'GetPhotoRequest');
-  }
 
-  String get photoId => $_getS(0, '');
-  set photoId(String v) {
+  $core.String get photoId => $_getS(0, '');
+  set photoId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPhotoId() => $_has(0);
+  $core.bool hasPhotoId() => $_has(0);
   void clearPhotoId() => clearField(1);
 
   PhotoView get view => $_getN(1);
@@ -100,495 +93,447 @@ class GetPhotoRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasView() => $_has(1);
+  $core.bool hasView() => $_has(1);
   void clearView() => clearField(2);
+
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(2);
+  void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyGetPhotoRequest extends GetPhotoRequest
-    with ReadonlyMessageMixin {}
-
-class BatchGetPhotosRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchGetPhotosRequest')
+class BatchGetPhotosRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchGetPhotosRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
     ..pPS(1, 'photoIds')
-    ..e<PhotoView>(2, 'view', PbFieldType.OE, PhotoView.BASIC,
+    ..e<PhotoView>(2, 'view', $pb.PbFieldType.OE, PhotoView.BASIC,
         PhotoView.valueOf, PhotoView.values)
+    ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
   BatchGetPhotosRequest() : super();
-  BatchGetPhotosRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchGetPhotosRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchGetPhotosRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchGetPhotosRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchGetPhotosRequest clone() =>
-      new BatchGetPhotosRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchGetPhotosRequest create() => new BatchGetPhotosRequest();
-  static PbList<BatchGetPhotosRequest> createRepeated() =>
-      new PbList<BatchGetPhotosRequest>();
-  static BatchGetPhotosRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchGetPhotosRequest();
-    return _defaultInstance;
-  }
-
+      BatchGetPhotosRequest()..mergeFromMessage(this);
+  BatchGetPhotosRequest copyWith(
+          void Function(BatchGetPhotosRequest) updates) =>
+      super.copyWith((message) => updates(message as BatchGetPhotosRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchGetPhotosRequest create() => BatchGetPhotosRequest();
+  BatchGetPhotosRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchGetPhotosRequest> createRepeated() =>
+      $pb.PbList<BatchGetPhotosRequest>();
+  static BatchGetPhotosRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchGetPhotosRequest _defaultInstance;
-  static void $checkItem(BatchGetPhotosRequest v) {
-    if (v is! BatchGetPhotosRequest)
-      checkItemFailed(v, 'BatchGetPhotosRequest');
-  }
 
-  List<String> get photoIds => $_getList(0);
+  $core.List<$core.String> get photoIds => $_getList(0);
 
   PhotoView get view => $_getN(1);
   set view(PhotoView v) {
     setField(2, v);
   }
 
-  bool hasView() => $_has(1);
+  $core.bool hasView() => $_has(1);
   void clearView() => clearField(2);
+
+  $core.String get languageCode => $_getS(2, '');
+  set languageCode($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(2);
+  void clearLanguageCode() => clearField(3);
 }
 
-class _ReadonlyBatchGetPhotosRequest extends BatchGetPhotosRequest
-    with ReadonlyMessageMixin {}
-
-class BatchGetPhotosResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchGetPhotosResponse')
-    ..pp<PhotoResponse>(1, 'results', PbFieldType.PM, PhotoResponse.$checkItem,
-        PhotoResponse.create)
+class BatchGetPhotosResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchGetPhotosResponse',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..pc<PhotoResponse>(1, 'results', $pb.PbFieldType.PM, PhotoResponse.create)
     ..hasRequiredFields = false;
 
   BatchGetPhotosResponse() : super();
-  BatchGetPhotosResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchGetPhotosResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchGetPhotosResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchGetPhotosResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchGetPhotosResponse clone() =>
-      new BatchGetPhotosResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchGetPhotosResponse create() => new BatchGetPhotosResponse();
-  static PbList<BatchGetPhotosResponse> createRepeated() =>
-      new PbList<BatchGetPhotosResponse>();
-  static BatchGetPhotosResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchGetPhotosResponse();
-    return _defaultInstance;
-  }
-
+      BatchGetPhotosResponse()..mergeFromMessage(this);
+  BatchGetPhotosResponse copyWith(
+          void Function(BatchGetPhotosResponse) updates) =>
+      super.copyWith((message) => updates(message as BatchGetPhotosResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchGetPhotosResponse create() => BatchGetPhotosResponse();
+  BatchGetPhotosResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchGetPhotosResponse> createRepeated() =>
+      $pb.PbList<BatchGetPhotosResponse>();
+  static BatchGetPhotosResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchGetPhotosResponse _defaultInstance;
-  static void $checkItem(BatchGetPhotosResponse v) {
-    if (v is! BatchGetPhotosResponse)
-      checkItemFailed(v, 'BatchGetPhotosResponse');
-  }
 
-  List<PhotoResponse> get results => $_getList(0);
+  $core.List<PhotoResponse> get results => $_getList(0);
 }
 
-class _ReadonlyBatchGetPhotosResponse extends BatchGetPhotosResponse
-    with ReadonlyMessageMixin {}
-
-class PhotoResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PhotoResponse')
-    ..a<$google$rpc.Status>(1, 'status', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
-    ..a<Photo>(2, 'photo', PbFieldType.OM, Photo.getDefault, Photo.create)
+class PhotoResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PhotoResponse',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..a<$1.Status>(
+        1, 'status', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
+    ..a<$0.Photo>(
+        2, 'photo', $pb.PbFieldType.OM, $0.Photo.getDefault, $0.Photo.create)
     ..hasRequiredFields = false;
 
   PhotoResponse() : super();
-  PhotoResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PhotoResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PhotoResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PhotoResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PhotoResponse clone() => new PhotoResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PhotoResponse create() => new PhotoResponse();
-  static PbList<PhotoResponse> createRepeated() => new PbList<PhotoResponse>();
-  static PhotoResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPhotoResponse();
-    return _defaultInstance;
-  }
-
+  PhotoResponse clone() => PhotoResponse()..mergeFromMessage(this);
+  PhotoResponse copyWith(void Function(PhotoResponse) updates) =>
+      super.copyWith((message) => updates(message as PhotoResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static PhotoResponse create() => PhotoResponse();
+  PhotoResponse createEmptyInstance() => create();
+  static $pb.PbList<PhotoResponse> createRepeated() =>
+      $pb.PbList<PhotoResponse>();
+  static PhotoResponse getDefault() => _defaultInstance ??= create()..freeze();
   static PhotoResponse _defaultInstance;
-  static void $checkItem(PhotoResponse v) {
-    if (v is! PhotoResponse) checkItemFailed(v, 'PhotoResponse');
-  }
 
-  $google$rpc.Status get status => $_getN(0);
-  set status($google$rpc.Status v) {
+  $1.Status get status => $_getN(0);
+  set status($1.Status v) {
     setField(1, v);
   }
 
-  bool hasStatus() => $_has(0);
+  $core.bool hasStatus() => $_has(0);
   void clearStatus() => clearField(1);
 
-  Photo get photo => $_getN(1);
-  set photo(Photo v) {
+  $0.Photo get photo => $_getN(1);
+  set photo($0.Photo v) {
     setField(2, v);
   }
 
-  bool hasPhoto() => $_has(1);
+  $core.bool hasPhoto() => $_has(1);
   void clearPhoto() => clearField(2);
 }
 
-class _ReadonlyPhotoResponse extends PhotoResponse with ReadonlyMessageMixin {}
-
-class ListPhotosRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListPhotosRequest')
-    ..e<PhotoView>(1, 'view', PbFieldType.OE, PhotoView.BASIC,
+class ListPhotosRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListPhotosRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..e<PhotoView>(1, 'view', $pb.PbFieldType.OE, PhotoView.BASIC,
         PhotoView.valueOf, PhotoView.values)
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'filter')
+    ..aOS(5, 'languageCode')
     ..hasRequiredFields = false;
 
   ListPhotosRequest() : super();
-  ListPhotosRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListPhotosRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListPhotosRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListPhotosRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListPhotosRequest clone() => new ListPhotosRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListPhotosRequest create() => new ListPhotosRequest();
-  static PbList<ListPhotosRequest> createRepeated() =>
-      new PbList<ListPhotosRequest>();
-  static ListPhotosRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListPhotosRequest();
-    return _defaultInstance;
-  }
-
+  ListPhotosRequest clone() => ListPhotosRequest()..mergeFromMessage(this);
+  ListPhotosRequest copyWith(void Function(ListPhotosRequest) updates) =>
+      super.copyWith((message) => updates(message as ListPhotosRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListPhotosRequest create() => ListPhotosRequest();
+  ListPhotosRequest createEmptyInstance() => create();
+  static $pb.PbList<ListPhotosRequest> createRepeated() =>
+      $pb.PbList<ListPhotosRequest>();
+  static ListPhotosRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListPhotosRequest _defaultInstance;
-  static void $checkItem(ListPhotosRequest v) {
-    if (v is! ListPhotosRequest) checkItemFailed(v, 'ListPhotosRequest');
-  }
 
   PhotoView get view => $_getN(0);
   set view(PhotoView v) {
     setField(1, v);
   }
 
-  bool hasView() => $_has(0);
+  $core.bool hasView() => $_has(0);
   void clearView() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasFilter() => $_has(3);
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(4);
+
+  $core.String get languageCode => $_getS(4, '');
+  set languageCode($core.String v) {
+    $_setString(4, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(4);
+  void clearLanguageCode() => clearField(5);
 }
 
-class _ReadonlyListPhotosRequest extends ListPhotosRequest
-    with ReadonlyMessageMixin {}
-
-class ListPhotosResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListPhotosResponse')
-    ..pp<Photo>(1, 'photos', PbFieldType.PM, Photo.$checkItem, Photo.create)
+class ListPhotosResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListPhotosResponse',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..pc<$0.Photo>(1, 'photos', $pb.PbFieldType.PM, $0.Photo.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListPhotosResponse() : super();
-  ListPhotosResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListPhotosResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListPhotosResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListPhotosResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListPhotosResponse clone() =>
-      new ListPhotosResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListPhotosResponse create() => new ListPhotosResponse();
-  static PbList<ListPhotosResponse> createRepeated() =>
-      new PbList<ListPhotosResponse>();
-  static ListPhotosResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListPhotosResponse();
-    return _defaultInstance;
-  }
-
+  ListPhotosResponse clone() => ListPhotosResponse()..mergeFromMessage(this);
+  ListPhotosResponse copyWith(void Function(ListPhotosResponse) updates) =>
+      super.copyWith((message) => updates(message as ListPhotosResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListPhotosResponse create() => ListPhotosResponse();
+  ListPhotosResponse createEmptyInstance() => create();
+  static $pb.PbList<ListPhotosResponse> createRepeated() =>
+      $pb.PbList<ListPhotosResponse>();
+  static ListPhotosResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListPhotosResponse _defaultInstance;
-  static void $checkItem(ListPhotosResponse v) {
-    if (v is! ListPhotosResponse) checkItemFailed(v, 'ListPhotosResponse');
-  }
 
-  List<Photo> get photos => $_getList(0);
+  $core.List<$0.Photo> get photos => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListPhotosResponse extends ListPhotosResponse
-    with ReadonlyMessageMixin {}
-
-class UpdatePhotoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdatePhotoRequest')
-    ..a<Photo>(1, 'photo', PbFieldType.OM, Photo.getDefault, Photo.create)
-    ..a<$google$protobuf.FieldMask>(
-        2,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+class UpdatePhotoRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdatePhotoRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..a<$0.Photo>(
+        1, 'photo', $pb.PbFieldType.OM, $0.Photo.getDefault, $0.Photo.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdatePhotoRequest() : super();
-  UpdatePhotoRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdatePhotoRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdatePhotoRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdatePhotoRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdatePhotoRequest clone() =>
-      new UpdatePhotoRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdatePhotoRequest create() => new UpdatePhotoRequest();
-  static PbList<UpdatePhotoRequest> createRepeated() =>
-      new PbList<UpdatePhotoRequest>();
-  static UpdatePhotoRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdatePhotoRequest();
-    return _defaultInstance;
-  }
-
+  UpdatePhotoRequest clone() => UpdatePhotoRequest()..mergeFromMessage(this);
+  UpdatePhotoRequest copyWith(void Function(UpdatePhotoRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdatePhotoRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdatePhotoRequest create() => UpdatePhotoRequest();
+  UpdatePhotoRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdatePhotoRequest> createRepeated() =>
+      $pb.PbList<UpdatePhotoRequest>();
+  static UpdatePhotoRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdatePhotoRequest _defaultInstance;
-  static void $checkItem(UpdatePhotoRequest v) {
-    if (v is! UpdatePhotoRequest) checkItemFailed(v, 'UpdatePhotoRequest');
-  }
 
-  Photo get photo => $_getN(0);
-  set photo(Photo v) {
+  $0.Photo get photo => $_getN(0);
+  set photo($0.Photo v) {
     setField(1, v);
   }
 
-  bool hasPhoto() => $_has(0);
+  $core.bool hasPhoto() => $_has(0);
   void clearPhoto() => clearField(1);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(1);
-  set updateMask($google$protobuf.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
-  bool hasUpdateMask() => $_has(1);
+  $core.bool hasUpdateMask() => $_has(1);
   void clearUpdateMask() => clearField(2);
 }
 
-class _ReadonlyUpdatePhotoRequest extends UpdatePhotoRequest
-    with ReadonlyMessageMixin {}
-
-class BatchUpdatePhotosRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdatePhotosRequest')
-    ..pp<UpdatePhotoRequest>(1, 'updatePhotoRequests', PbFieldType.PM,
-        UpdatePhotoRequest.$checkItem, UpdatePhotoRequest.create)
+class BatchUpdatePhotosRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdatePhotosRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..pc<UpdatePhotoRequest>(
+        1, 'updatePhotoRequests', $pb.PbFieldType.PM, UpdatePhotoRequest.create)
     ..hasRequiredFields = false;
 
   BatchUpdatePhotosRequest() : super();
-  BatchUpdatePhotosRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdatePhotosRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchUpdatePhotosRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdatePhotosRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdatePhotosRequest clone() =>
-      new BatchUpdatePhotosRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchUpdatePhotosRequest create() => new BatchUpdatePhotosRequest();
-  static PbList<BatchUpdatePhotosRequest> createRepeated() =>
-      new PbList<BatchUpdatePhotosRequest>();
-  static BatchUpdatePhotosRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdatePhotosRequest();
-    return _defaultInstance;
-  }
-
+      BatchUpdatePhotosRequest()..mergeFromMessage(this);
+  BatchUpdatePhotosRequest copyWith(
+          void Function(BatchUpdatePhotosRequest) updates) =>
+      super.copyWith((message) => updates(message as BatchUpdatePhotosRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchUpdatePhotosRequest create() => BatchUpdatePhotosRequest();
+  BatchUpdatePhotosRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdatePhotosRequest> createRepeated() =>
+      $pb.PbList<BatchUpdatePhotosRequest>();
+  static BatchUpdatePhotosRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchUpdatePhotosRequest _defaultInstance;
-  static void $checkItem(BatchUpdatePhotosRequest v) {
-    if (v is! BatchUpdatePhotosRequest)
-      checkItemFailed(v, 'BatchUpdatePhotosRequest');
-  }
 
-  List<UpdatePhotoRequest> get updatePhotoRequests => $_getList(0);
+  $core.List<UpdatePhotoRequest> get updatePhotoRequests => $_getList(0);
 }
 
-class _ReadonlyBatchUpdatePhotosRequest extends BatchUpdatePhotosRequest
-    with ReadonlyMessageMixin {}
-
-class BatchUpdatePhotosResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchUpdatePhotosResponse')
-    ..pp<PhotoResponse>(1, 'results', PbFieldType.PM, PhotoResponse.$checkItem,
-        PhotoResponse.create)
+class BatchUpdatePhotosResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdatePhotosResponse',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..pc<PhotoResponse>(1, 'results', $pb.PbFieldType.PM, PhotoResponse.create)
     ..hasRequiredFields = false;
 
   BatchUpdatePhotosResponse() : super();
-  BatchUpdatePhotosResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdatePhotosResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchUpdatePhotosResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchUpdatePhotosResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchUpdatePhotosResponse clone() =>
-      new BatchUpdatePhotosResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchUpdatePhotosResponse create() => new BatchUpdatePhotosResponse();
-  static PbList<BatchUpdatePhotosResponse> createRepeated() =>
-      new PbList<BatchUpdatePhotosResponse>();
-  static BatchUpdatePhotosResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchUpdatePhotosResponse();
-    return _defaultInstance;
-  }
-
+      BatchUpdatePhotosResponse()..mergeFromMessage(this);
+  BatchUpdatePhotosResponse copyWith(
+          void Function(BatchUpdatePhotosResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as BatchUpdatePhotosResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchUpdatePhotosResponse create() => BatchUpdatePhotosResponse();
+  BatchUpdatePhotosResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchUpdatePhotosResponse> createRepeated() =>
+      $pb.PbList<BatchUpdatePhotosResponse>();
+  static BatchUpdatePhotosResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchUpdatePhotosResponse _defaultInstance;
-  static void $checkItem(BatchUpdatePhotosResponse v) {
-    if (v is! BatchUpdatePhotosResponse)
-      checkItemFailed(v, 'BatchUpdatePhotosResponse');
-  }
 
-  List<PhotoResponse> get results => $_getList(0);
+  $core.List<PhotoResponse> get results => $_getList(0);
 }
 
-class _ReadonlyBatchUpdatePhotosResponse extends BatchUpdatePhotosResponse
-    with ReadonlyMessageMixin {}
-
-class DeletePhotoRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeletePhotoRequest')
+class DeletePhotoRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeletePhotoRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
     ..aOS(1, 'photoId')
     ..hasRequiredFields = false;
 
   DeletePhotoRequest() : super();
-  DeletePhotoRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeletePhotoRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeletePhotoRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeletePhotoRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeletePhotoRequest clone() =>
-      new DeletePhotoRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeletePhotoRequest create() => new DeletePhotoRequest();
-  static PbList<DeletePhotoRequest> createRepeated() =>
-      new PbList<DeletePhotoRequest>();
-  static DeletePhotoRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeletePhotoRequest();
-    return _defaultInstance;
-  }
-
+  DeletePhotoRequest clone() => DeletePhotoRequest()..mergeFromMessage(this);
+  DeletePhotoRequest copyWith(void Function(DeletePhotoRequest) updates) =>
+      super.copyWith((message) => updates(message as DeletePhotoRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeletePhotoRequest create() => DeletePhotoRequest();
+  DeletePhotoRequest createEmptyInstance() => create();
+  static $pb.PbList<DeletePhotoRequest> createRepeated() =>
+      $pb.PbList<DeletePhotoRequest>();
+  static DeletePhotoRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeletePhotoRequest _defaultInstance;
-  static void $checkItem(DeletePhotoRequest v) {
-    if (v is! DeletePhotoRequest) checkItemFailed(v, 'DeletePhotoRequest');
-  }
 
-  String get photoId => $_getS(0, '');
-  set photoId(String v) {
+  $core.String get photoId => $_getS(0, '');
+  set photoId($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPhotoId() => $_has(0);
+  $core.bool hasPhotoId() => $_has(0);
   void clearPhotoId() => clearField(1);
 }
 
-class _ReadonlyDeletePhotoRequest extends DeletePhotoRequest
-    with ReadonlyMessageMixin {}
-
-class BatchDeletePhotosRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchDeletePhotosRequest')
+class BatchDeletePhotosRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchDeletePhotosRequest',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
     ..pPS(1, 'photoIds')
     ..hasRequiredFields = false;
 
   BatchDeletePhotosRequest() : super();
-  BatchDeletePhotosRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchDeletePhotosRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchDeletePhotosRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchDeletePhotosRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchDeletePhotosRequest clone() =>
-      new BatchDeletePhotosRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchDeletePhotosRequest create() => new BatchDeletePhotosRequest();
-  static PbList<BatchDeletePhotosRequest> createRepeated() =>
-      new PbList<BatchDeletePhotosRequest>();
-  static BatchDeletePhotosRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchDeletePhotosRequest();
-    return _defaultInstance;
-  }
-
+      BatchDeletePhotosRequest()..mergeFromMessage(this);
+  BatchDeletePhotosRequest copyWith(
+          void Function(BatchDeletePhotosRequest) updates) =>
+      super.copyWith((message) => updates(message as BatchDeletePhotosRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchDeletePhotosRequest create() => BatchDeletePhotosRequest();
+  BatchDeletePhotosRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchDeletePhotosRequest> createRepeated() =>
+      $pb.PbList<BatchDeletePhotosRequest>();
+  static BatchDeletePhotosRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchDeletePhotosRequest _defaultInstance;
-  static void $checkItem(BatchDeletePhotosRequest v) {
-    if (v is! BatchDeletePhotosRequest)
-      checkItemFailed(v, 'BatchDeletePhotosRequest');
-  }
 
-  List<String> get photoIds => $_getList(0);
+  $core.List<$core.String> get photoIds => $_getList(0);
 }
 
-class _ReadonlyBatchDeletePhotosRequest extends BatchDeletePhotosRequest
-    with ReadonlyMessageMixin {}
-
-class BatchDeletePhotosResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BatchDeletePhotosResponse')
-    ..pp<$google$rpc.Status>(1, 'status', PbFieldType.PM,
-        $google$rpc.Status.$checkItem, $google$rpc.Status.create)
+class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchDeletePhotosResponse',
+      package: const $pb.PackageName('google.streetview.publish.v1'))
+    ..pc<$1.Status>(1, 'status', $pb.PbFieldType.PM, $1.Status.create)
     ..hasRequiredFields = false;
 
   BatchDeletePhotosResponse() : super();
-  BatchDeletePhotosResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchDeletePhotosResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BatchDeletePhotosResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BatchDeletePhotosResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BatchDeletePhotosResponse clone() =>
-      new BatchDeletePhotosResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BatchDeletePhotosResponse create() => new BatchDeletePhotosResponse();
-  static PbList<BatchDeletePhotosResponse> createRepeated() =>
-      new PbList<BatchDeletePhotosResponse>();
-  static BatchDeletePhotosResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBatchDeletePhotosResponse();
-    return _defaultInstance;
-  }
-
+      BatchDeletePhotosResponse()..mergeFromMessage(this);
+  BatchDeletePhotosResponse copyWith(
+          void Function(BatchDeletePhotosResponse) updates) =>
+      super
+          .copyWith((message) => updates(message as BatchDeletePhotosResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static BatchDeletePhotosResponse create() => BatchDeletePhotosResponse();
+  BatchDeletePhotosResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchDeletePhotosResponse> createRepeated() =>
+      $pb.PbList<BatchDeletePhotosResponse>();
+  static BatchDeletePhotosResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BatchDeletePhotosResponse _defaultInstance;
-  static void $checkItem(BatchDeletePhotosResponse v) {
-    if (v is! BatchDeletePhotosResponse)
-      checkItemFailed(v, 'BatchDeletePhotosResponse');
-  }
 
-  List<$google$rpc.Status> get status => $_getList(0);
+  $core.List<$1.Status> get status => $_getList(0);
 }
-
-class _ReadonlyBatchDeletePhotosResponse extends BatchDeletePhotosResponse
-    with ReadonlyMessageMixin {}

@@ -1,130 +1,132 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/runtimeconfig/v1beta1/resources.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../protobuf/duration.pb.dart' as $google$protobuf;
-import '../../../rpc/status.pb.dart' as $google$rpc;
+import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/duration.pb.dart' as $1;
+import '../../../rpc/status.pb.dart' as $2;
 
 import 'resources.pbenum.dart';
 
 export 'resources.pbenum.dart';
 
-class RuntimeConfig extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RuntimeConfig')
+class RuntimeConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RuntimeConfig',
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
   RuntimeConfig() : super();
-  RuntimeConfig.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RuntimeConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RuntimeConfig.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RuntimeConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RuntimeConfig clone() => new RuntimeConfig()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RuntimeConfig create() => new RuntimeConfig();
-  static PbList<RuntimeConfig> createRepeated() => new PbList<RuntimeConfig>();
-  static RuntimeConfig getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRuntimeConfig();
-    return _defaultInstance;
-  }
-
+  RuntimeConfig clone() => RuntimeConfig()..mergeFromMessage(this);
+  RuntimeConfig copyWith(void Function(RuntimeConfig) updates) =>
+      super.copyWith((message) => updates(message as RuntimeConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static RuntimeConfig create() => RuntimeConfig();
+  RuntimeConfig createEmptyInstance() => create();
+  static $pb.PbList<RuntimeConfig> createRepeated() =>
+      $pb.PbList<RuntimeConfig>();
+  static RuntimeConfig getDefault() => _defaultInstance ??= create()..freeze();
   static RuntimeConfig _defaultInstance;
-  static void $checkItem(RuntimeConfig v) {
-    if (v is! RuntimeConfig) checkItemFailed(v, 'RuntimeConfig');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 }
 
-class _ReadonlyRuntimeConfig extends RuntimeConfig with ReadonlyMessageMixin {}
+enum Variable_Contents { value, text, notSet }
 
-class Variable extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Variable')
+class Variable extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, Variable_Contents> _Variable_ContentsByTag =
+      {
+    2: Variable_Contents.value,
+    5: Variable_Contents.text,
+    0: Variable_Contents.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Variable',
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'name')
-    ..a<List<int>>(2, 'value', PbFieldType.OY)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'updateTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
+    ..a<$0.Timestamp>(3, 'updateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..e<VariableState>(
         4,
         'state',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         VariableState.VARIABLE_STATE_UNSPECIFIED,
         VariableState.valueOf,
         VariableState.values)
     ..aOS(5, 'text')
+    ..oo(0, [2, 5])
     ..hasRequiredFields = false;
 
   Variable() : super();
-  Variable.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Variable.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Variable.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Variable.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Variable clone() => new Variable()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Variable create() => new Variable();
-  static PbList<Variable> createRepeated() => new PbList<Variable>();
-  static Variable getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVariable();
-    return _defaultInstance;
-  }
-
+  Variable clone() => Variable()..mergeFromMessage(this);
+  Variable copyWith(void Function(Variable) updates) =>
+      super.copyWith((message) => updates(message as Variable));
+  $pb.BuilderInfo get info_ => _i;
+  static Variable create() => Variable();
+  Variable createEmptyInstance() => create();
+  static $pb.PbList<Variable> createRepeated() => $pb.PbList<Variable>();
+  static Variable getDefault() => _defaultInstance ??= create()..freeze();
   static Variable _defaultInstance;
-  static void $checkItem(Variable v) {
-    if (v is! Variable) checkItemFailed(v, 'Variable');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  Variable_Contents whichContents() => _Variable_ContentsByTag[$_whichOneof(0)];
+  void clearContents() => clearField($_whichOneof(0));
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<int> get value => $_getN(1);
-  set value(List<int> v) {
+  $core.List<$core.int> get value => $_getN(1);
+  set value($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasValue() => $_has(1);
+  $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
-  $google$protobuf.Timestamp get updateTime => $_getN(2);
-  set updateTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get updateTime => $_getN(2);
+  set updateTime($0.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasUpdateTime() => $_has(2);
+  $core.bool hasUpdateTime() => $_has(2);
   void clearUpdateTime() => clearField(3);
 
   VariableState get state => $_getN(3);
@@ -132,164 +134,157 @@ class Variable extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasState() => $_has(3);
+  $core.bool hasState() => $_has(3);
   void clearState() => clearField(4);
 
-  String get text => $_getS(4, '');
-  set text(String v) {
+  $core.String get text => $_getS(4, '');
+  set text($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasText() => $_has(4);
+  $core.bool hasText() => $_has(4);
   void clearText() => clearField(5);
 }
 
-class _ReadonlyVariable extends Variable with ReadonlyMessageMixin {}
-
-class EndCondition_Cardinality extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EndCondition_Cardinality')
+class EndCondition_Cardinality extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EndCondition.Cardinality',
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'path')
-    ..a<int>(2, 'number', PbFieldType.O3)
+    ..a<$core.int>(2, 'number', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   EndCondition_Cardinality() : super();
-  EndCondition_Cardinality.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EndCondition_Cardinality.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  EndCondition_Cardinality.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EndCondition_Cardinality.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   EndCondition_Cardinality clone() =>
-      new EndCondition_Cardinality()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EndCondition_Cardinality create() => new EndCondition_Cardinality();
-  static PbList<EndCondition_Cardinality> createRepeated() =>
-      new PbList<EndCondition_Cardinality>();
-  static EndCondition_Cardinality getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEndCondition_Cardinality();
-    return _defaultInstance;
-  }
-
+      EndCondition_Cardinality()..mergeFromMessage(this);
+  EndCondition_Cardinality copyWith(
+          void Function(EndCondition_Cardinality) updates) =>
+      super.copyWith((message) => updates(message as EndCondition_Cardinality));
+  $pb.BuilderInfo get info_ => _i;
+  static EndCondition_Cardinality create() => EndCondition_Cardinality();
+  EndCondition_Cardinality createEmptyInstance() => create();
+  static $pb.PbList<EndCondition_Cardinality> createRepeated() =>
+      $pb.PbList<EndCondition_Cardinality>();
+  static EndCondition_Cardinality getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static EndCondition_Cardinality _defaultInstance;
-  static void $checkItem(EndCondition_Cardinality v) {
-    if (v is! EndCondition_Cardinality)
-      checkItemFailed(v, 'EndCondition_Cardinality');
-  }
 
-  String get path => $_getS(0, '');
-  set path(String v) {
+  $core.String get path => $_getS(0, '');
+  set path($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasPath() => $_has(0);
+  $core.bool hasPath() => $_has(0);
   void clearPath() => clearField(1);
 
-  int get number => $_get(1, 0);
-  set number(int v) {
+  $core.int get number => $_get(1, 0);
+  set number($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasNumber() => $_has(1);
+  $core.bool hasNumber() => $_has(1);
   void clearNumber() => clearField(2);
 }
 
-class _ReadonlyEndCondition_Cardinality extends EndCondition_Cardinality
-    with ReadonlyMessageMixin {}
+enum EndCondition_Condition { cardinality, notSet }
 
-class EndCondition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('EndCondition')
-    ..a<EndCondition_Cardinality>(1, 'cardinality', PbFieldType.OM,
+class EndCondition extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, EndCondition_Condition>
+      _EndCondition_ConditionByTag = {
+    1: EndCondition_Condition.cardinality,
+    0: EndCondition_Condition.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EndCondition',
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+    ..a<EndCondition_Cardinality>(1, 'cardinality', $pb.PbFieldType.OM,
         EndCondition_Cardinality.getDefault, EndCondition_Cardinality.create)
+    ..oo(0, [1])
     ..hasRequiredFields = false;
 
   EndCondition() : super();
-  EndCondition.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EndCondition.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  EndCondition.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  EndCondition.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  EndCondition clone() => new EndCondition()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static EndCondition create() => new EndCondition();
-  static PbList<EndCondition> createRepeated() => new PbList<EndCondition>();
-  static EndCondition getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyEndCondition();
-    return _defaultInstance;
-  }
-
+  EndCondition clone() => EndCondition()..mergeFromMessage(this);
+  EndCondition copyWith(void Function(EndCondition) updates) =>
+      super.copyWith((message) => updates(message as EndCondition));
+  $pb.BuilderInfo get info_ => _i;
+  static EndCondition create() => EndCondition();
+  EndCondition createEmptyInstance() => create();
+  static $pb.PbList<EndCondition> createRepeated() =>
+      $pb.PbList<EndCondition>();
+  static EndCondition getDefault() => _defaultInstance ??= create()..freeze();
   static EndCondition _defaultInstance;
-  static void $checkItem(EndCondition v) {
-    if (v is! EndCondition) checkItemFailed(v, 'EndCondition');
-  }
+
+  EndCondition_Condition whichCondition() =>
+      _EndCondition_ConditionByTag[$_whichOneof(0)];
+  void clearCondition() => clearField($_whichOneof(0));
 
   EndCondition_Cardinality get cardinality => $_getN(0);
   set cardinality(EndCondition_Cardinality v) {
     setField(1, v);
   }
 
-  bool hasCardinality() => $_has(0);
+  $core.bool hasCardinality() => $_has(0);
   void clearCardinality() => clearField(1);
 }
 
-class _ReadonlyEndCondition extends EndCondition with ReadonlyMessageMixin {}
-
-class Waiter extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Waiter')
+class Waiter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Waiter',
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$google$protobuf.Duration>(2, 'timeout', PbFieldType.OM,
-        $google$protobuf.Duration.getDefault, $google$protobuf.Duration.create)
-    ..a<EndCondition>(3, 'failure', PbFieldType.OM, EndCondition.getDefault,
+    ..a<$1.Duration>(2, 'timeout', $pb.PbFieldType.OM, $1.Duration.getDefault,
+        $1.Duration.create)
+    ..a<EndCondition>(3, 'failure', $pb.PbFieldType.OM, EndCondition.getDefault,
         EndCondition.create)
-    ..a<EndCondition>(4, 'success', PbFieldType.OM, EndCondition.getDefault,
+    ..a<EndCondition>(4, 'success', $pb.PbFieldType.OM, EndCondition.getDefault,
         EndCondition.create)
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOB(6, 'done')
-    ..a<$google$rpc.Status>(7, 'error', PbFieldType.OM,
-        $google$rpc.Status.getDefault, $google$rpc.Status.create)
+    ..a<$2.Status>(
+        7, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
   Waiter() : super();
-  Waiter.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Waiter.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Waiter.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Waiter.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Waiter clone() => new Waiter()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Waiter create() => new Waiter();
-  static PbList<Waiter> createRepeated() => new PbList<Waiter>();
-  static Waiter getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyWaiter();
-    return _defaultInstance;
-  }
-
+  Waiter clone() => Waiter()..mergeFromMessage(this);
+  Waiter copyWith(void Function(Waiter) updates) =>
+      super.copyWith((message) => updates(message as Waiter));
+  $pb.BuilderInfo get info_ => _i;
+  static Waiter create() => Waiter();
+  Waiter createEmptyInstance() => create();
+  static $pb.PbList<Waiter> createRepeated() => $pb.PbList<Waiter>();
+  static Waiter getDefault() => _defaultInstance ??= create()..freeze();
   static Waiter _defaultInstance;
-  static void $checkItem(Waiter v) {
-    if (v is! Waiter) checkItemFailed(v, 'Waiter');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $google$protobuf.Duration get timeout => $_getN(1);
-  set timeout($google$protobuf.Duration v) {
+  $1.Duration get timeout => $_getN(1);
+  set timeout($1.Duration v) {
     setField(2, v);
   }
 
-  bool hasTimeout() => $_has(1);
+  $core.bool hasTimeout() => $_has(1);
   void clearTimeout() => clearField(2);
 
   EndCondition get failure => $_getN(2);
@@ -297,7 +292,7 @@ class Waiter extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasFailure() => $_has(2);
+  $core.bool hasFailure() => $_has(2);
   void clearFailure() => clearField(3);
 
   EndCondition get success => $_getN(3);
@@ -305,32 +300,30 @@ class Waiter extends GeneratedMessage {
     setField(4, v);
   }
 
-  bool hasSuccess() => $_has(3);
+  $core.bool hasSuccess() => $_has(3);
   void clearSuccess() => clearField(4);
 
-  $google$protobuf.Timestamp get createTime => $_getN(4);
-  set createTime($google$protobuf.Timestamp v) {
+  $0.Timestamp get createTime => $_getN(4);
+  set createTime($0.Timestamp v) {
     setField(5, v);
   }
 
-  bool hasCreateTime() => $_has(4);
+  $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(5);
 
-  bool get done => $_get(5, false);
-  set done(bool v) {
+  $core.bool get done => $_get(5, false);
+  set done($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasDone() => $_has(5);
+  $core.bool hasDone() => $_has(5);
   void clearDone() => clearField(6);
 
-  $google$rpc.Status get error => $_getN(6);
-  set error($google$rpc.Status v) {
+  $2.Status get error => $_getN(6);
+  set error($2.Status v) {
     setField(7, v);
   }
 
-  bool hasError() => $_has(6);
+  $core.bool hasError() => $_has(6);
   void clearError() => clearField(7);
 }
-
-class _ReadonlyWaiter extends Waiter with ReadonlyMessageMixin {}

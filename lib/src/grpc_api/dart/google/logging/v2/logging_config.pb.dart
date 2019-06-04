@@ -1,315 +1,292 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/logging/v2/logging_config.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../protobuf/field_mask.pb.dart' as $google$protobuf;
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
+import '../../protobuf/timestamp.pb.dart' as $1;
+import '../../protobuf/field_mask.pb.dart' as $2;
 
 import 'logging_config.pbenum.dart';
 
 export 'logging_config.pbenum.dart';
 
-class LogSink extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogSink')
+class LogSink extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogSink',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'name')
     ..aOS(3, 'destination')
     ..aOS(5, 'filter')
     ..e<LogSink_VersionFormat>(
         6,
         'outputVersionFormat',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         LogSink_VersionFormat.VERSION_FORMAT_UNSPECIFIED,
         LogSink_VersionFormat.valueOf,
         LogSink_VersionFormat.values)
     ..aOS(8, 'writerIdentity')
     ..aOB(9, 'includeChildren')
-    ..a<$google$protobuf.Timestamp>(
-        10,
-        'startTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        11,
-        'endTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$1.Timestamp>(10, 'startTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$1.Timestamp>(11, 'endTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
   LogSink() : super();
-  LogSink.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LogSink.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LogSink.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LogSink.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogSink clone() => new LogSink()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LogSink create() => new LogSink();
-  static PbList<LogSink> createRepeated() => new PbList<LogSink>();
-  static LogSink getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyLogSink();
-    return _defaultInstance;
-  }
-
+  LogSink clone() => LogSink()..mergeFromMessage(this);
+  LogSink copyWith(void Function(LogSink) updates) =>
+      super.copyWith((message) => updates(message as LogSink));
+  $pb.BuilderInfo get info_ => _i;
+  static LogSink create() => LogSink();
+  LogSink createEmptyInstance() => create();
+  static $pb.PbList<LogSink> createRepeated() => $pb.PbList<LogSink>();
+  static LogSink getDefault() => _defaultInstance ??= create()..freeze();
   static LogSink _defaultInstance;
-  static void $checkItem(LogSink v) {
-    if (v is! LogSink) checkItemFailed(v, 'LogSink');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get destination => $_getS(1, '');
-  set destination(String v) {
+  $core.String get destination => $_getS(1, '');
+  set destination($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDestination() => $_has(1);
+  $core.bool hasDestination() => $_has(1);
   void clearDestination() => clearField(3);
 
-  String get filter => $_getS(2, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(2, '');
+  set filter($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasFilter() => $_has(2);
+  $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(5);
 
+  @$core.Deprecated('This field is deprecated.')
   LogSink_VersionFormat get outputVersionFormat => $_getN(3);
+  @$core.Deprecated('This field is deprecated.')
   set outputVersionFormat(LogSink_VersionFormat v) {
     setField(6, v);
   }
 
-  bool hasOutputVersionFormat() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasOutputVersionFormat() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearOutputVersionFormat() => clearField(6);
 
-  String get writerIdentity => $_getS(4, '');
-  set writerIdentity(String v) {
+  $core.String get writerIdentity => $_getS(4, '');
+  set writerIdentity($core.String v) {
     $_setString(4, v);
   }
 
-  bool hasWriterIdentity() => $_has(4);
+  $core.bool hasWriterIdentity() => $_has(4);
   void clearWriterIdentity() => clearField(8);
 
-  bool get includeChildren => $_get(5, false);
-  set includeChildren(bool v) {
+  $core.bool get includeChildren => $_get(5, false);
+  set includeChildren($core.bool v) {
     $_setBool(5, v);
   }
 
-  bool hasIncludeChildren() => $_has(5);
+  $core.bool hasIncludeChildren() => $_has(5);
   void clearIncludeChildren() => clearField(9);
 
-  $google$protobuf.Timestamp get startTime => $_getN(6);
-  set startTime($google$protobuf.Timestamp v) {
+  @$core.Deprecated('This field is deprecated.')
+  $1.Timestamp get startTime => $_getN(6);
+  @$core.Deprecated('This field is deprecated.')
+  set startTime($1.Timestamp v) {
     setField(10, v);
   }
 
-  bool hasStartTime() => $_has(6);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasStartTime() => $_has(6);
+  @$core.Deprecated('This field is deprecated.')
   void clearStartTime() => clearField(10);
 
-  $google$protobuf.Timestamp get endTime => $_getN(7);
-  set endTime($google$protobuf.Timestamp v) {
+  @$core.Deprecated('This field is deprecated.')
+  $1.Timestamp get endTime => $_getN(7);
+  @$core.Deprecated('This field is deprecated.')
+  set endTime($1.Timestamp v) {
     setField(11, v);
   }
 
-  bool hasEndTime() => $_has(7);
+  @$core.Deprecated('This field is deprecated.')
+  $core.bool hasEndTime() => $_has(7);
+  @$core.Deprecated('This field is deprecated.')
   void clearEndTime() => clearField(11);
 }
 
-class _ReadonlyLogSink extends LogSink with ReadonlyMessageMixin {}
-
-class ListSinksRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSinksRequest')
+class ListSinksRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSinksRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListSinksRequest() : super();
-  ListSinksRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSinksRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSinksRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSinksRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListSinksRequest clone() => new ListSinksRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSinksRequest create() => new ListSinksRequest();
-  static PbList<ListSinksRequest> createRepeated() =>
-      new PbList<ListSinksRequest>();
-  static ListSinksRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSinksRequest();
-    return _defaultInstance;
-  }
-
+  ListSinksRequest clone() => ListSinksRequest()..mergeFromMessage(this);
+  ListSinksRequest copyWith(void Function(ListSinksRequest) updates) =>
+      super.copyWith((message) => updates(message as ListSinksRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSinksRequest create() => ListSinksRequest();
+  ListSinksRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSinksRequest> createRepeated() =>
+      $pb.PbList<ListSinksRequest>();
+  static ListSinksRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSinksRequest _defaultInstance;
-  static void $checkItem(ListSinksRequest v) {
-    if (v is! ListSinksRequest) checkItemFailed(v, 'ListSinksRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListSinksRequest extends ListSinksRequest
-    with ReadonlyMessageMixin {}
-
-class ListSinksResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSinksResponse')
-    ..pp<LogSink>(
-        1, 'sinks', PbFieldType.PM, LogSink.$checkItem, LogSink.create)
+class ListSinksResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSinksResponse',
+      package: const $pb.PackageName('google.logging.v2'))
+    ..pc<LogSink>(1, 'sinks', $pb.PbFieldType.PM, LogSink.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListSinksResponse() : super();
-  ListSinksResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSinksResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSinksResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSinksResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListSinksResponse clone() => new ListSinksResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSinksResponse create() => new ListSinksResponse();
-  static PbList<ListSinksResponse> createRepeated() =>
-      new PbList<ListSinksResponse>();
-  static ListSinksResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSinksResponse();
-    return _defaultInstance;
-  }
-
+  ListSinksResponse clone() => ListSinksResponse()..mergeFromMessage(this);
+  ListSinksResponse copyWith(void Function(ListSinksResponse) updates) =>
+      super.copyWith((message) => updates(message as ListSinksResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSinksResponse create() => ListSinksResponse();
+  ListSinksResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSinksResponse> createRepeated() =>
+      $pb.PbList<ListSinksResponse>();
+  static ListSinksResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSinksResponse _defaultInstance;
-  static void $checkItem(ListSinksResponse v) {
-    if (v is! ListSinksResponse) checkItemFailed(v, 'ListSinksResponse');
-  }
 
-  List<LogSink> get sinks => $_getList(0);
+  $core.List<LogSink> get sinks => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListSinksResponse extends ListSinksResponse
-    with ReadonlyMessageMixin {}
-
-class GetSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSinkRequest')
+class GetSinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSinkRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'sinkName')
     ..hasRequiredFields = false;
 
   GetSinkRequest() : super();
-  GetSinkRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSinkRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetSinkRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSinkRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetSinkRequest clone() => new GetSinkRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetSinkRequest create() => new GetSinkRequest();
-  static PbList<GetSinkRequest> createRepeated() =>
-      new PbList<GetSinkRequest>();
-  static GetSinkRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSinkRequest();
-    return _defaultInstance;
-  }
-
+  GetSinkRequest clone() => GetSinkRequest()..mergeFromMessage(this);
+  GetSinkRequest copyWith(void Function(GetSinkRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSinkRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetSinkRequest create() => GetSinkRequest();
+  GetSinkRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSinkRequest> createRepeated() =>
+      $pb.PbList<GetSinkRequest>();
+  static GetSinkRequest getDefault() => _defaultInstance ??= create()..freeze();
   static GetSinkRequest _defaultInstance;
-  static void $checkItem(GetSinkRequest v) {
-    if (v is! GetSinkRequest) checkItemFailed(v, 'GetSinkRequest');
-  }
 
-  String get sinkName => $_getS(0, '');
-  set sinkName(String v) {
+  $core.String get sinkName => $_getS(0, '');
+  set sinkName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSinkName() => $_has(0);
+  $core.bool hasSinkName() => $_has(0);
   void clearSinkName() => clearField(1);
 }
 
-class _ReadonlyGetSinkRequest extends GetSinkRequest with ReadonlyMessageMixin {
-}
-
-class CreateSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateSinkRequest')
+class CreateSinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSinkRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'parent')
-    ..a<LogSink>(2, 'sink', PbFieldType.OM, LogSink.getDefault, LogSink.create)
+    ..a<LogSink>(
+        2, 'sink', $pb.PbFieldType.OM, LogSink.getDefault, LogSink.create)
     ..aOB(3, 'uniqueWriterIdentity')
     ..hasRequiredFields = false;
 
   CreateSinkRequest() : super();
-  CreateSinkRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateSinkRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateSinkRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateSinkRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateSinkRequest clone() => new CreateSinkRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateSinkRequest create() => new CreateSinkRequest();
-  static PbList<CreateSinkRequest> createRepeated() =>
-      new PbList<CreateSinkRequest>();
-  static CreateSinkRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateSinkRequest();
-    return _defaultInstance;
-  }
-
+  CreateSinkRequest clone() => CreateSinkRequest()..mergeFromMessage(this);
+  CreateSinkRequest copyWith(void Function(CreateSinkRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateSinkRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateSinkRequest create() => CreateSinkRequest();
+  CreateSinkRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSinkRequest> createRepeated() =>
+      $pb.PbList<CreateSinkRequest>();
+  static CreateSinkRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateSinkRequest _defaultInstance;
-  static void $checkItem(CreateSinkRequest v) {
-    if (v is! CreateSinkRequest) checkItemFailed(v, 'CreateSinkRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   LogSink get sink => $_getN(1);
@@ -317,63 +294,54 @@ class CreateSinkRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasSink() => $_has(1);
+  $core.bool hasSink() => $_has(1);
   void clearSink() => clearField(2);
 
-  bool get uniqueWriterIdentity => $_get(2, false);
-  set uniqueWriterIdentity(bool v) {
+  $core.bool get uniqueWriterIdentity => $_get(2, false);
+  set uniqueWriterIdentity($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasUniqueWriterIdentity() => $_has(2);
+  $core.bool hasUniqueWriterIdentity() => $_has(2);
   void clearUniqueWriterIdentity() => clearField(3);
 }
 
-class _ReadonlyCreateSinkRequest extends CreateSinkRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateSinkRequest')
+class UpdateSinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSinkRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'sinkName')
-    ..a<LogSink>(2, 'sink', PbFieldType.OM, LogSink.getDefault, LogSink.create)
+    ..a<LogSink>(
+        2, 'sink', $pb.PbFieldType.OM, LogSink.getDefault, LogSink.create)
     ..aOB(3, 'uniqueWriterIdentity')
-    ..a<$google$protobuf.FieldMask>(
-        4,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSinkRequest() : super();
-  UpdateSinkRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateSinkRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateSinkRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateSinkRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  UpdateSinkRequest clone() => new UpdateSinkRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateSinkRequest create() => new UpdateSinkRequest();
-  static PbList<UpdateSinkRequest> createRepeated() =>
-      new PbList<UpdateSinkRequest>();
-  static UpdateSinkRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateSinkRequest();
-    return _defaultInstance;
-  }
-
+  UpdateSinkRequest clone() => UpdateSinkRequest()..mergeFromMessage(this);
+  UpdateSinkRequest copyWith(void Function(UpdateSinkRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateSinkRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateSinkRequest create() => UpdateSinkRequest();
+  UpdateSinkRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSinkRequest> createRepeated() =>
+      $pb.PbList<UpdateSinkRequest>();
+  static UpdateSinkRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateSinkRequest _defaultInstance;
-  static void $checkItem(UpdateSinkRequest v) {
-    if (v is! UpdateSinkRequest) checkItemFailed(v, 'UpdateSinkRequest');
-  }
 
-  String get sinkName => $_getS(0, '');
-  set sinkName(String v) {
+  $core.String get sinkName => $_getS(0, '');
+  set sinkName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSinkName() => $_has(0);
+  $core.bool hasSinkName() => $_has(0);
   void clearSinkName() => clearField(1);
 
   LogSink get sink => $_getN(1);
@@ -381,71 +349,63 @@ class UpdateSinkRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasSink() => $_has(1);
+  $core.bool hasSink() => $_has(1);
   void clearSink() => clearField(2);
 
-  bool get uniqueWriterIdentity => $_get(2, false);
-  set uniqueWriterIdentity(bool v) {
+  $core.bool get uniqueWriterIdentity => $_get(2, false);
+  set uniqueWriterIdentity($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasUniqueWriterIdentity() => $_has(2);
+  $core.bool hasUniqueWriterIdentity() => $_has(2);
   void clearUniqueWriterIdentity() => clearField(3);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(3);
-  set updateMask($google$protobuf.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
-  bool hasUpdateMask() => $_has(3);
+  $core.bool hasUpdateMask() => $_has(3);
   void clearUpdateMask() => clearField(4);
 }
 
-class _ReadonlyUpdateSinkRequest extends UpdateSinkRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteSinkRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSinkRequest')
+class DeleteSinkRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSinkRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'sinkName')
     ..hasRequiredFields = false;
 
   DeleteSinkRequest() : super();
-  DeleteSinkRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSinkRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteSinkRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSinkRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteSinkRequest clone() => new DeleteSinkRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteSinkRequest create() => new DeleteSinkRequest();
-  static PbList<DeleteSinkRequest> createRepeated() =>
-      new PbList<DeleteSinkRequest>();
-  static DeleteSinkRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSinkRequest();
-    return _defaultInstance;
-  }
-
+  DeleteSinkRequest clone() => DeleteSinkRequest()..mergeFromMessage(this);
+  DeleteSinkRequest copyWith(void Function(DeleteSinkRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteSinkRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteSinkRequest create() => DeleteSinkRequest();
+  DeleteSinkRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSinkRequest> createRepeated() =>
+      $pb.PbList<DeleteSinkRequest>();
+  static DeleteSinkRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteSinkRequest _defaultInstance;
-  static void $checkItem(DeleteSinkRequest v) {
-    if (v is! DeleteSinkRequest) checkItemFailed(v, 'DeleteSinkRequest');
-  }
 
-  String get sinkName => $_getS(0, '');
-  set sinkName(String v) {
+  $core.String get sinkName => $_getS(0, '');
+  set sinkName($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSinkName() => $_has(0);
+  $core.bool hasSinkName() => $_has(0);
   void clearSinkName() => clearField(1);
 }
 
-class _ReadonlyDeleteSinkRequest extends DeleteSinkRequest
-    with ReadonlyMessageMixin {}
-
-class LogExclusion extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LogExclusion')
+class LogExclusion extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogExclusion',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(3, 'filter')
@@ -453,247 +413,218 @@ class LogExclusion extends GeneratedMessage {
     ..hasRequiredFields = false;
 
   LogExclusion() : super();
-  LogExclusion.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LogExclusion.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LogExclusion.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LogExclusion.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LogExclusion clone() => new LogExclusion()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LogExclusion create() => new LogExclusion();
-  static PbList<LogExclusion> createRepeated() => new PbList<LogExclusion>();
-  static LogExclusion getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLogExclusion();
-    return _defaultInstance;
-  }
-
+  LogExclusion clone() => LogExclusion()..mergeFromMessage(this);
+  LogExclusion copyWith(void Function(LogExclusion) updates) =>
+      super.copyWith((message) => updates(message as LogExclusion));
+  $pb.BuilderInfo get info_ => _i;
+  static LogExclusion create() => LogExclusion();
+  LogExclusion createEmptyInstance() => create();
+  static $pb.PbList<LogExclusion> createRepeated() =>
+      $pb.PbList<LogExclusion>();
+  static LogExclusion getDefault() => _defaultInstance ??= create()..freeze();
   static LogExclusion _defaultInstance;
-  static void $checkItem(LogExclusion v) {
-    if (v is! LogExclusion) checkItemFailed(v, 'LogExclusion');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  String get filter => $_getS(2, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(2, '');
+  set filter($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasFilter() => $_has(2);
+  $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(3);
 
-  bool get disabled => $_get(3, false);
-  set disabled(bool v) {
+  $core.bool get disabled => $_get(3, false);
+  set disabled($core.bool v) {
     $_setBool(3, v);
   }
 
-  bool hasDisabled() => $_has(3);
+  $core.bool hasDisabled() => $_has(3);
   void clearDisabled() => clearField(4);
 }
 
-class _ReadonlyLogExclusion extends LogExclusion with ReadonlyMessageMixin {}
-
-class ListExclusionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListExclusionsRequest')
+class ListExclusionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListExclusionsRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
-    ..a<int>(3, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListExclusionsRequest() : super();
-  ListExclusionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListExclusionsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListExclusionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListExclusionsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListExclusionsRequest clone() =>
-      new ListExclusionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListExclusionsRequest create() => new ListExclusionsRequest();
-  static PbList<ListExclusionsRequest> createRepeated() =>
-      new PbList<ListExclusionsRequest>();
-  static ListExclusionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListExclusionsRequest();
-    return _defaultInstance;
-  }
-
+      ListExclusionsRequest()..mergeFromMessage(this);
+  ListExclusionsRequest copyWith(
+          void Function(ListExclusionsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListExclusionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListExclusionsRequest create() => ListExclusionsRequest();
+  ListExclusionsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListExclusionsRequest> createRepeated() =>
+      $pb.PbList<ListExclusionsRequest>();
+  static ListExclusionsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListExclusionsRequest _defaultInstance;
-  static void $checkItem(ListExclusionsRequest v) {
-    if (v is! ListExclusionsRequest)
-      checkItemFailed(v, 'ListExclusionsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(2);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(3);
 }
 
-class _ReadonlyListExclusionsRequest extends ListExclusionsRequest
-    with ReadonlyMessageMixin {}
-
-class ListExclusionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListExclusionsResponse')
-    ..pp<LogExclusion>(1, 'exclusions', PbFieldType.PM, LogExclusion.$checkItem,
-        LogExclusion.create)
+class ListExclusionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListExclusionsResponse',
+      package: const $pb.PackageName('google.logging.v2'))
+    ..pc<LogExclusion>(1, 'exclusions', $pb.PbFieldType.PM, LogExclusion.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListExclusionsResponse() : super();
-  ListExclusionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListExclusionsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListExclusionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListExclusionsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListExclusionsResponse clone() =>
-      new ListExclusionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListExclusionsResponse create() => new ListExclusionsResponse();
-  static PbList<ListExclusionsResponse> createRepeated() =>
-      new PbList<ListExclusionsResponse>();
-  static ListExclusionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListExclusionsResponse();
-    return _defaultInstance;
-  }
-
+      ListExclusionsResponse()..mergeFromMessage(this);
+  ListExclusionsResponse copyWith(
+          void Function(ListExclusionsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListExclusionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListExclusionsResponse create() => ListExclusionsResponse();
+  ListExclusionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListExclusionsResponse> createRepeated() =>
+      $pb.PbList<ListExclusionsResponse>();
+  static ListExclusionsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListExclusionsResponse _defaultInstance;
-  static void $checkItem(ListExclusionsResponse v) {
-    if (v is! ListExclusionsResponse)
-      checkItemFailed(v, 'ListExclusionsResponse');
-  }
 
-  List<LogExclusion> get exclusions => $_getList(0);
+  $core.List<LogExclusion> get exclusions => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListExclusionsResponse extends ListExclusionsResponse
-    with ReadonlyMessageMixin {}
-
-class GetExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetExclusionRequest')
+class GetExclusionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetExclusionRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetExclusionRequest() : super();
-  GetExclusionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetExclusionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetExclusionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetExclusionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetExclusionRequest clone() =>
-      new GetExclusionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetExclusionRequest create() => new GetExclusionRequest();
-  static PbList<GetExclusionRequest> createRepeated() =>
-      new PbList<GetExclusionRequest>();
-  static GetExclusionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetExclusionRequest();
-    return _defaultInstance;
-  }
-
+  GetExclusionRequest clone() => GetExclusionRequest()..mergeFromMessage(this);
+  GetExclusionRequest copyWith(void Function(GetExclusionRequest) updates) =>
+      super.copyWith((message) => updates(message as GetExclusionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetExclusionRequest create() => GetExclusionRequest();
+  GetExclusionRequest createEmptyInstance() => create();
+  static $pb.PbList<GetExclusionRequest> createRepeated() =>
+      $pb.PbList<GetExclusionRequest>();
+  static GetExclusionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetExclusionRequest _defaultInstance;
-  static void $checkItem(GetExclusionRequest v) {
-    if (v is! GetExclusionRequest) checkItemFailed(v, 'GetExclusionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetExclusionRequest extends GetExclusionRequest
-    with ReadonlyMessageMixin {}
-
-class CreateExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateExclusionRequest')
+class CreateExclusionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateExclusionRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'parent')
-    ..a<LogExclusion>(2, 'exclusion', PbFieldType.OM, LogExclusion.getDefault,
-        LogExclusion.create)
+    ..a<LogExclusion>(2, 'exclusion', $pb.PbFieldType.OM,
+        LogExclusion.getDefault, LogExclusion.create)
     ..hasRequiredFields = false;
 
   CreateExclusionRequest() : super();
-  CreateExclusionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateExclusionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateExclusionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateExclusionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateExclusionRequest clone() =>
-      new CreateExclusionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateExclusionRequest create() => new CreateExclusionRequest();
-  static PbList<CreateExclusionRequest> createRepeated() =>
-      new PbList<CreateExclusionRequest>();
-  static CreateExclusionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateExclusionRequest();
-    return _defaultInstance;
-  }
-
+      CreateExclusionRequest()..mergeFromMessage(this);
+  CreateExclusionRequest copyWith(
+          void Function(CreateExclusionRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateExclusionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateExclusionRequest create() => CreateExclusionRequest();
+  CreateExclusionRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateExclusionRequest> createRepeated() =>
+      $pb.PbList<CreateExclusionRequest>();
+  static CreateExclusionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateExclusionRequest _defaultInstance;
-  static void $checkItem(CreateExclusionRequest v) {
-    if (v is! CreateExclusionRequest)
-      checkItemFailed(v, 'CreateExclusionRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   LogExclusion get exclusion => $_getN(1);
@@ -701,57 +632,47 @@ class CreateExclusionRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasExclusion() => $_has(1);
+  $core.bool hasExclusion() => $_has(1);
   void clearExclusion() => clearField(2);
 }
 
-class _ReadonlyCreateExclusionRequest extends CreateExclusionRequest
-    with ReadonlyMessageMixin {}
-
-class UpdateExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('UpdateExclusionRequest')
+class UpdateExclusionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateExclusionRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'name')
-    ..a<LogExclusion>(2, 'exclusion', PbFieldType.OM, LogExclusion.getDefault,
-        LogExclusion.create)
-    ..a<$google$protobuf.FieldMask>(
-        3,
-        'updateMask',
-        PbFieldType.OM,
-        $google$protobuf.FieldMask.getDefault,
-        $google$protobuf.FieldMask.create)
+    ..a<LogExclusion>(2, 'exclusion', $pb.PbFieldType.OM,
+        LogExclusion.getDefault, LogExclusion.create)
+    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateExclusionRequest() : super();
-  UpdateExclusionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateExclusionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  UpdateExclusionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  UpdateExclusionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   UpdateExclusionRequest clone() =>
-      new UpdateExclusionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static UpdateExclusionRequest create() => new UpdateExclusionRequest();
-  static PbList<UpdateExclusionRequest> createRepeated() =>
-      new PbList<UpdateExclusionRequest>();
-  static UpdateExclusionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyUpdateExclusionRequest();
-    return _defaultInstance;
-  }
-
+      UpdateExclusionRequest()..mergeFromMessage(this);
+  UpdateExclusionRequest copyWith(
+          void Function(UpdateExclusionRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateExclusionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static UpdateExclusionRequest create() => UpdateExclusionRequest();
+  UpdateExclusionRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateExclusionRequest> createRepeated() =>
+      $pb.PbList<UpdateExclusionRequest>();
+  static UpdateExclusionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static UpdateExclusionRequest _defaultInstance;
-  static void $checkItem(UpdateExclusionRequest v) {
-    if (v is! UpdateExclusionRequest)
-      checkItemFailed(v, 'UpdateExclusionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
   LogExclusion get exclusion => $_getN(1);
@@ -759,131 +680,50 @@ class UpdateExclusionRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasExclusion() => $_has(1);
+  $core.bool hasExclusion() => $_has(1);
   void clearExclusion() => clearField(2);
 
-  $google$protobuf.FieldMask get updateMask => $_getN(2);
-  set updateMask($google$protobuf.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
-  bool hasUpdateMask() => $_has(2);
+  $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(3);
 }
 
-class _ReadonlyUpdateExclusionRequest extends UpdateExclusionRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteExclusionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteExclusionRequest')
+class DeleteExclusionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteExclusionRequest',
+      package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteExclusionRequest() : super();
-  DeleteExclusionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteExclusionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteExclusionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteExclusionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteExclusionRequest clone() =>
-      new DeleteExclusionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteExclusionRequest create() => new DeleteExclusionRequest();
-  static PbList<DeleteExclusionRequest> createRepeated() =>
-      new PbList<DeleteExclusionRequest>();
-  static DeleteExclusionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteExclusionRequest();
-    return _defaultInstance;
-  }
-
+      DeleteExclusionRequest()..mergeFromMessage(this);
+  DeleteExclusionRequest copyWith(
+          void Function(DeleteExclusionRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteExclusionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteExclusionRequest create() => DeleteExclusionRequest();
+  DeleteExclusionRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteExclusionRequest> createRepeated() =>
+      $pb.PbList<DeleteExclusionRequest>();
+  static DeleteExclusionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteExclusionRequest _defaultInstance;
-  static void $checkItem(DeleteExclusionRequest v) {
-    if (v is! DeleteExclusionRequest)
-      checkItemFailed(v, 'DeleteExclusionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class _ReadonlyDeleteExclusionRequest extends DeleteExclusionRequest
-    with ReadonlyMessageMixin {}
-
-class ConfigServiceV2Api {
-  RpcClient _client;
-  ConfigServiceV2Api(this._client);
-
-  Future<ListSinksResponse> listSinks(
-      ClientContext ctx, ListSinksRequest request) {
-    var emptyResponse = new ListSinksResponse();
-    return _client.invoke<ListSinksResponse>(
-        ctx, 'ConfigServiceV2', 'ListSinks', request, emptyResponse);
-  }
-
-  Future<LogSink> getSink(ClientContext ctx, GetSinkRequest request) {
-    var emptyResponse = new LogSink();
-    return _client.invoke<LogSink>(
-        ctx, 'ConfigServiceV2', 'GetSink', request, emptyResponse);
-  }
-
-  Future<LogSink> createSink(ClientContext ctx, CreateSinkRequest request) {
-    var emptyResponse = new LogSink();
-    return _client.invoke<LogSink>(
-        ctx, 'ConfigServiceV2', 'CreateSink', request, emptyResponse);
-  }
-
-  Future<LogSink> updateSink(ClientContext ctx, UpdateSinkRequest request) {
-    var emptyResponse = new LogSink();
-    return _client.invoke<LogSink>(
-        ctx, 'ConfigServiceV2', 'UpdateSink', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteSink(
-      ClientContext ctx, DeleteSinkRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'ConfigServiceV2', 'DeleteSink', request, emptyResponse);
-  }
-
-  Future<ListExclusionsResponse> listExclusions(
-      ClientContext ctx, ListExclusionsRequest request) {
-    var emptyResponse = new ListExclusionsResponse();
-    return _client.invoke<ListExclusionsResponse>(
-        ctx, 'ConfigServiceV2', 'ListExclusions', request, emptyResponse);
-  }
-
-  Future<LogExclusion> getExclusion(
-      ClientContext ctx, GetExclusionRequest request) {
-    var emptyResponse = new LogExclusion();
-    return _client.invoke<LogExclusion>(
-        ctx, 'ConfigServiceV2', 'GetExclusion', request, emptyResponse);
-  }
-
-  Future<LogExclusion> createExclusion(
-      ClientContext ctx, CreateExclusionRequest request) {
-    var emptyResponse = new LogExclusion();
-    return _client.invoke<LogExclusion>(
-        ctx, 'ConfigServiceV2', 'CreateExclusion', request, emptyResponse);
-  }
-
-  Future<LogExclusion> updateExclusion(
-      ClientContext ctx, UpdateExclusionRequest request) {
-    var emptyResponse = new LogExclusion();
-    return _client.invoke<LogExclusion>(
-        ctx, 'ConfigServiceV2', 'UpdateExclusion', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteExclusion(
-      ClientContext ctx, DeleteExclusionRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'ConfigServiceV2', 'DeleteExclusion', request, emptyResponse);
-  }
 }

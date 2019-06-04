@@ -17,9 +17,6 @@ language_settings:
     package_name: Google\Streetview\Publish\V1
   nodejs:
     package_name: google.streetview.publish.v1
-license_header:
-  copyright_file: copyright-google.txt
-  license_file: license-header-apache-2.0.txt
 interfaces:
 - name: google.streetview.publish.v1.StreetViewPublishService
   smoke_test:
@@ -43,7 +40,6 @@ interfaces:
     total_timeout_millis: 600000
   methods:
   - name: StartUpload
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -54,7 +50,6 @@ interfaces:
         - photo
     required_fields:
     - photo
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -67,7 +62,6 @@ interfaces:
     required_fields:
     - photo_id
     - view
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -80,7 +74,6 @@ interfaces:
     required_fields:
     - photo_ids
     - view
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -93,7 +86,6 @@ interfaces:
     required_fields:
     - view
     - filter
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -113,7 +105,6 @@ interfaces:
     required_fields:
     - photo
     - update_mask
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -124,7 +115,6 @@ interfaces:
         - update_photo_requests
     required_fields:
     - update_photo_requests
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -135,7 +125,6 @@ interfaces:
         - photo_id
     required_fields:
     - photo_id
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -146,7 +135,6 @@ interfaces:
         - photo_ids
     required_fields:
     - photo_ids
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000

@@ -1,65 +1,62 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/spanner/v1/spanner.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
 import 'package:fixnum/fixnum.dart';
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import 'transaction.pb.dart';
-import '../../protobuf/struct.pb.dart' as $google$protobuf;
-import 'type.pb.dart';
-import 'keys.pb.dart';
-import 'mutation.pb.dart';
-import '../../protobuf/empty.pb.dart' as $google$protobuf;
-import 'result_set.pb.dart';
+import '../../protobuf/timestamp.pb.dart' as $3;
+import 'transaction.pb.dart' as $2;
+import '../../protobuf/struct.pb.dart' as $4;
+import 'type.pb.dart' as $5;
+import 'result_set.pb.dart' as $1;
+import '../../rpc/status.pb.dart' as $6;
+import 'keys.pb.dart' as $7;
+import 'mutation.pb.dart' as $8;
 
 import 'spanner.pbenum.dart';
 
 export 'spanner.pbenum.dart';
 
-class CreateSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateSessionRequest')
+class CreateSessionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSessionRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'database')
     ..a<Session>(
-        2, 'session', PbFieldType.OM, Session.getDefault, Session.create)
+        2, 'session', $pb.PbFieldType.OM, Session.getDefault, Session.create)
     ..hasRequiredFields = false;
 
   CreateSessionRequest() : super();
-  CreateSessionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateSessionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateSessionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateSessionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateSessionRequest clone() =>
-      new CreateSessionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateSessionRequest create() => new CreateSessionRequest();
-  static PbList<CreateSessionRequest> createRepeated() =>
-      new PbList<CreateSessionRequest>();
-  static CreateSessionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateSessionRequest();
-    return _defaultInstance;
-  }
-
+      CreateSessionRequest()..mergeFromMessage(this);
+  CreateSessionRequest copyWith(void Function(CreateSessionRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateSessionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateSessionRequest create() => CreateSessionRequest();
+  CreateSessionRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSessionRequest> createRepeated() =>
+      $pb.PbList<CreateSessionRequest>();
+  static CreateSessionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateSessionRequest _defaultInstance;
-  static void $checkItem(CreateSessionRequest v) {
-    if (v is! CreateSessionRequest) checkItemFailed(v, 'CreateSessionRequest');
-  }
 
-  String get database => $_getS(0, '');
-  set database(String v) {
+  $core.String get database => $_getS(0, '');
+  set database($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatabase() => $_has(0);
+  $core.bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 
   Session get session => $_getN(1);
@@ -67,466 +64,332 @@ class CreateSessionRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasSession() => $_has(1);
+  $core.bool hasSession() => $_has(1);
   void clearSession() => clearField(2);
 }
 
-class _ReadonlyCreateSessionRequest extends CreateSessionRequest
-    with ReadonlyMessageMixin {}
-
-class Session_LabelsEntry extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Session_LabelsEntry')
-    ..aOS(1, 'key')
-    ..aOS(2, 'value')
-    ..hasRequiredFields = false;
-
-  Session_LabelsEntry() : super();
-  Session_LabelsEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Session_LabelsEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  Session_LabelsEntry clone() =>
-      new Session_LabelsEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Session_LabelsEntry create() => new Session_LabelsEntry();
-  static PbList<Session_LabelsEntry> createRepeated() =>
-      new PbList<Session_LabelsEntry>();
-  static Session_LabelsEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySession_LabelsEntry();
-    return _defaultInstance;
-  }
-
-  static Session_LabelsEntry _defaultInstance;
-  static void $checkItem(Session_LabelsEntry v) {
-    if (v is! Session_LabelsEntry) checkItemFailed(v, 'Session_LabelsEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  String get value => $_getS(1, '');
-  set value(String v) {
-    $_setString(1, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlySession_LabelsEntry extends Session_LabelsEntry
-    with ReadonlyMessageMixin {}
-
-class Session extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Session')
+class Session extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Session',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'name')
-    ..pp<Session_LabelsEntry>(2, 'labels', PbFieldType.PM,
-        Session_LabelsEntry.$checkItem, Session_LabelsEntry.create)
-    ..a<$google$protobuf.Timestamp>(
-        3,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        4,
-        'approximateLastUseTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..m<$core.String, $core.String>(
+        2,
+        'labels',
+        'Session.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.spanner.v1'))
+    ..a<$3.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'approximateLastUseTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   Session() : super();
-  Session.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Session.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Session.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Session.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Session clone() => new Session()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Session create() => new Session();
-  static PbList<Session> createRepeated() => new PbList<Session>();
-  static Session getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlySession();
-    return _defaultInstance;
-  }
-
+  Session clone() => Session()..mergeFromMessage(this);
+  Session copyWith(void Function(Session) updates) =>
+      super.copyWith((message) => updates(message as Session));
+  $pb.BuilderInfo get info_ => _i;
+  static Session create() => Session();
+  Session createEmptyInstance() => create();
+  static $pb.PbList<Session> createRepeated() => $pb.PbList<Session>();
+  static Session getDefault() => _defaultInstance ??= create()..freeze();
   static Session _defaultInstance;
-  static void $checkItem(Session v) {
-    if (v is! Session) checkItemFailed(v, 'Session');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  List<Session_LabelsEntry> get labels => $_getList(1);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
-  $google$protobuf.Timestamp get createTime => $_getN(2);
-  set createTime($google$protobuf.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(2);
+  set createTime($3.Timestamp v) {
     setField(3, v);
   }
 
-  bool hasCreateTime() => $_has(2);
+  $core.bool hasCreateTime() => $_has(2);
   void clearCreateTime() => clearField(3);
 
-  $google$protobuf.Timestamp get approximateLastUseTime => $_getN(3);
-  set approximateLastUseTime($google$protobuf.Timestamp v) {
+  $3.Timestamp get approximateLastUseTime => $_getN(3);
+  set approximateLastUseTime($3.Timestamp v) {
     setField(4, v);
   }
 
-  bool hasApproximateLastUseTime() => $_has(3);
+  $core.bool hasApproximateLastUseTime() => $_has(3);
   void clearApproximateLastUseTime() => clearField(4);
 }
 
-class _ReadonlySession extends Session with ReadonlyMessageMixin {}
-
-class GetSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetSessionRequest')
+class GetSessionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSessionRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetSessionRequest() : super();
-  GetSessionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSessionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetSessionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetSessionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetSessionRequest clone() => new GetSessionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetSessionRequest create() => new GetSessionRequest();
-  static PbList<GetSessionRequest> createRepeated() =>
-      new PbList<GetSessionRequest>();
-  static GetSessionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetSessionRequest();
-    return _defaultInstance;
-  }
-
+  GetSessionRequest clone() => GetSessionRequest()..mergeFromMessage(this);
+  GetSessionRequest copyWith(void Function(GetSessionRequest) updates) =>
+      super.copyWith((message) => updates(message as GetSessionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetSessionRequest create() => GetSessionRequest();
+  GetSessionRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSessionRequest> createRepeated() =>
+      $pb.PbList<GetSessionRequest>();
+  static GetSessionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetSessionRequest _defaultInstance;
-  static void $checkItem(GetSessionRequest v) {
-    if (v is! GetSessionRequest) checkItemFailed(v, 'GetSessionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetSessionRequest extends GetSessionRequest
-    with ReadonlyMessageMixin {}
-
-class ListSessionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSessionsRequest')
+class ListSessionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionsRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'database')
-    ..a<int>(2, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'filter')
     ..hasRequiredFields = false;
 
   ListSessionsRequest() : super();
-  ListSessionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSessionsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSessionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSessionsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListSessionsRequest clone() =>
-      new ListSessionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSessionsRequest create() => new ListSessionsRequest();
-  static PbList<ListSessionsRequest> createRepeated() =>
-      new PbList<ListSessionsRequest>();
-  static ListSessionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSessionsRequest();
-    return _defaultInstance;
-  }
-
+  ListSessionsRequest clone() => ListSessionsRequest()..mergeFromMessage(this);
+  ListSessionsRequest copyWith(void Function(ListSessionsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListSessionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSessionsRequest create() => ListSessionsRequest();
+  ListSessionsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListSessionsRequest> createRepeated() =>
+      $pb.PbList<ListSessionsRequest>();
+  static ListSessionsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSessionsRequest _defaultInstance;
-  static void $checkItem(ListSessionsRequest v) {
-    if (v is! ListSessionsRequest) checkItemFailed(v, 'ListSessionsRequest');
-  }
 
-  String get database => $_getS(0, '');
-  set database(String v) {
+  $core.String get database => $_getS(0, '');
+  set database($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasDatabase() => $_has(0);
+  $core.bool hasDatabase() => $_has(0);
   void clearDatabase() => clearField(1);
 
-  int get pageSize => $_get(1, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(1, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
-  bool hasPageSize() => $_has(1);
+  $core.bool hasPageSize() => $_has(1);
   void clearPageSize() => clearField(2);
 
-  String get pageToken => $_getS(2, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(2, '');
+  set pageToken($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasPageToken() => $_has(2);
+  $core.bool hasPageToken() => $_has(2);
   void clearPageToken() => clearField(3);
 
-  String get filter => $_getS(3, '');
-  set filter(String v) {
+  $core.String get filter => $_getS(3, '');
+  set filter($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasFilter() => $_has(3);
+  $core.bool hasFilter() => $_has(3);
   void clearFilter() => clearField(4);
 }
 
-class _ReadonlyListSessionsRequest extends ListSessionsRequest
-    with ReadonlyMessageMixin {}
-
-class ListSessionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListSessionsResponse')
-    ..pp<Session>(
-        1, 'sessions', PbFieldType.PM, Session.$checkItem, Session.create)
+class ListSessionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionsResponse',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..pc<Session>(1, 'sessions', $pb.PbFieldType.PM, Session.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListSessionsResponse() : super();
-  ListSessionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSessionsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListSessionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListSessionsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListSessionsResponse clone() =>
-      new ListSessionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListSessionsResponse create() => new ListSessionsResponse();
-  static PbList<ListSessionsResponse> createRepeated() =>
-      new PbList<ListSessionsResponse>();
-  static ListSessionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListSessionsResponse();
-    return _defaultInstance;
-  }
-
+      ListSessionsResponse()..mergeFromMessage(this);
+  ListSessionsResponse copyWith(void Function(ListSessionsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListSessionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListSessionsResponse create() => ListSessionsResponse();
+  ListSessionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListSessionsResponse> createRepeated() =>
+      $pb.PbList<ListSessionsResponse>();
+  static ListSessionsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListSessionsResponse _defaultInstance;
-  static void $checkItem(ListSessionsResponse v) {
-    if (v is! ListSessionsResponse) checkItemFailed(v, 'ListSessionsResponse');
-  }
 
-  List<Session> get sessions => $_getList(0);
+  $core.List<Session> get sessions => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListSessionsResponse extends ListSessionsResponse
-    with ReadonlyMessageMixin {}
-
-class DeleteSessionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteSessionRequest')
+class DeleteSessionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSessionRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteSessionRequest() : super();
-  DeleteSessionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSessionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteSessionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteSessionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteSessionRequest clone() =>
-      new DeleteSessionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteSessionRequest create() => new DeleteSessionRequest();
-  static PbList<DeleteSessionRequest> createRepeated() =>
-      new PbList<DeleteSessionRequest>();
-  static DeleteSessionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteSessionRequest();
-    return _defaultInstance;
-  }
-
+      DeleteSessionRequest()..mergeFromMessage(this);
+  DeleteSessionRequest copyWith(void Function(DeleteSessionRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteSessionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteSessionRequest create() => DeleteSessionRequest();
+  DeleteSessionRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSessionRequest> createRepeated() =>
+      $pb.PbList<DeleteSessionRequest>();
+  static DeleteSessionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteSessionRequest _defaultInstance;
-  static void $checkItem(DeleteSessionRequest v) {
-    if (v is! DeleteSessionRequest) checkItemFailed(v, 'DeleteSessionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteSessionRequest extends DeleteSessionRequest
-    with ReadonlyMessageMixin {}
-
-class ExecuteSqlRequest_ParamTypesEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('ExecuteSqlRequest_ParamTypesEntry')
-        ..aOS(1, 'key')
-        ..a<Type>(2, 'value', PbFieldType.OM, Type.getDefault, Type.create)
-        ..hasRequiredFields = false;
-
-  ExecuteSqlRequest_ParamTypesEntry() : super();
-  ExecuteSqlRequest_ParamTypesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExecuteSqlRequest_ParamTypesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  ExecuteSqlRequest_ParamTypesEntry clone() =>
-      new ExecuteSqlRequest_ParamTypesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExecuteSqlRequest_ParamTypesEntry create() =>
-      new ExecuteSqlRequest_ParamTypesEntry();
-  static PbList<ExecuteSqlRequest_ParamTypesEntry> createRepeated() =>
-      new PbList<ExecuteSqlRequest_ParamTypesEntry>();
-  static ExecuteSqlRequest_ParamTypesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteSqlRequest_ParamTypesEntry();
-    return _defaultInstance;
-  }
-
-  static ExecuteSqlRequest_ParamTypesEntry _defaultInstance;
-  static void $checkItem(ExecuteSqlRequest_ParamTypesEntry v) {
-    if (v is! ExecuteSqlRequest_ParamTypesEntry)
-      checkItemFailed(v, 'ExecuteSqlRequest_ParamTypesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Type get value => $_getN(1);
-  set value(Type v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyExecuteSqlRequest_ParamTypesEntry
-    extends ExecuteSqlRequest_ParamTypesEntry with ReadonlyMessageMixin {}
-
-class ExecuteSqlRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ExecuteSqlRequest')
+class ExecuteSqlRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteSqlRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
-        TransactionSelector.getDefault, TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$google$protobuf.Struct>(4, 'params', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-    ..pp<ExecuteSqlRequest_ParamTypesEntry>(
+    ..a<$4.Struct>(
+        4, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
+    ..m<$core.String, $5.Type>(
         5,
         'paramTypes',
-        PbFieldType.PM,
-        ExecuteSqlRequest_ParamTypesEntry.$checkItem,
-        ExecuteSqlRequest_ParamTypesEntry.create)
-    ..a<List<int>>(6, 'resumeToken', PbFieldType.OY)
+        'ExecuteSqlRequest.ParamTypesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $5.Type.create,
+        null,
+        null,
+        const $pb.PackageName('google.spanner.v1'))
+    ..a<$core.List<$core.int>>(6, 'resumeToken', $pb.PbFieldType.OY)
     ..e<ExecuteSqlRequest_QueryMode>(
         7,
         'queryMode',
-        PbFieldType.OE,
+        $pb.PbFieldType.OE,
         ExecuteSqlRequest_QueryMode.NORMAL,
         ExecuteSqlRequest_QueryMode.valueOf,
         ExecuteSqlRequest_QueryMode.values)
-    ..a<List<int>>(8, 'partitionToken', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(8, 'partitionToken', $pb.PbFieldType.OY)
+    ..aInt64(9, 'seqno')
     ..hasRequiredFields = false;
 
   ExecuteSqlRequest() : super();
-  ExecuteSqlRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExecuteSqlRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ExecuteSqlRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ExecuteSqlRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ExecuteSqlRequest clone() => new ExecuteSqlRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ExecuteSqlRequest create() => new ExecuteSqlRequest();
-  static PbList<ExecuteSqlRequest> createRepeated() =>
-      new PbList<ExecuteSqlRequest>();
-  static ExecuteSqlRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyExecuteSqlRequest();
-    return _defaultInstance;
-  }
-
+  ExecuteSqlRequest clone() => ExecuteSqlRequest()..mergeFromMessage(this);
+  ExecuteSqlRequest copyWith(void Function(ExecuteSqlRequest) updates) =>
+      super.copyWith((message) => updates(message as ExecuteSqlRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ExecuteSqlRequest create() => ExecuteSqlRequest();
+  ExecuteSqlRequest createEmptyInstance() => create();
+  static $pb.PbList<ExecuteSqlRequest> createRepeated() =>
+      $pb.PbList<ExecuteSqlRequest>();
+  static ExecuteSqlRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ExecuteSqlRequest _defaultInstance;
-  static void $checkItem(ExecuteSqlRequest v) {
-    if (v is! ExecuteSqlRequest) checkItemFailed(v, 'ExecuteSqlRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  TransactionSelector get transaction => $_getN(1);
-  set transaction(TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
-  bool hasTransaction() => $_has(1);
+  $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 
-  String get sql => $_getS(2, '');
-  set sql(String v) {
+  $core.String get sql => $_getS(2, '');
+  set sql($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSql() => $_has(2);
+  $core.bool hasSql() => $_has(2);
   void clearSql() => clearField(3);
 
-  $google$protobuf.Struct get params => $_getN(3);
-  set params($google$protobuf.Struct v) {
+  $4.Struct get params => $_getN(3);
+  set params($4.Struct v) {
     setField(4, v);
   }
 
-  bool hasParams() => $_has(3);
+  $core.bool hasParams() => $_has(3);
   void clearParams() => clearField(4);
 
-  List<ExecuteSqlRequest_ParamTypesEntry> get paramTypes => $_getList(4);
+  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(4);
 
-  List<int> get resumeToken => $_getN(5);
-  set resumeToken(List<int> v) {
+  $core.List<$core.int> get resumeToken => $_getN(5);
+  set resumeToken($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
-  bool hasResumeToken() => $_has(5);
+  $core.bool hasResumeToken() => $_has(5);
   void clearResumeToken() => clearField(6);
 
   ExecuteSqlRequest_QueryMode get queryMode => $_getN(6);
@@ -534,56 +397,218 @@ class ExecuteSqlRequest extends GeneratedMessage {
     setField(7, v);
   }
 
-  bool hasQueryMode() => $_has(6);
+  $core.bool hasQueryMode() => $_has(6);
   void clearQueryMode() => clearField(7);
 
-  List<int> get partitionToken => $_getN(7);
-  set partitionToken(List<int> v) {
+  $core.List<$core.int> get partitionToken => $_getN(7);
+  set partitionToken($core.List<$core.int> v) {
     $_setBytes(7, v);
   }
 
-  bool hasPartitionToken() => $_has(7);
+  $core.bool hasPartitionToken() => $_has(7);
   void clearPartitionToken() => clearField(8);
+
+  Int64 get seqno => $_getI64(8);
+  set seqno(Int64 v) {
+    $_setInt64(8, v);
+  }
+
+  $core.bool hasSeqno() => $_has(8);
+  void clearSeqno() => clearField(9);
 }
 
-class _ReadonlyExecuteSqlRequest extends ExecuteSqlRequest
-    with ReadonlyMessageMixin {}
+class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ExecuteBatchDmlRequest.Statement',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..aOS(1, 'sql')
+    ..a<$4.Struct>(
+        2, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
+    ..m<$core.String, $5.Type>(
+        3,
+        'paramTypes',
+        'ExecuteBatchDmlRequest.Statement.ParamTypesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $5.Type.create,
+        null,
+        null,
+        const $pb.PackageName('google.spanner.v1'))
+    ..hasRequiredFields = false;
 
-class PartitionOptions extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionOptions')
+  ExecuteBatchDmlRequest_Statement() : super();
+  ExecuteBatchDmlRequest_Statement.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExecuteBatchDmlRequest_Statement.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ExecuteBatchDmlRequest_Statement clone() =>
+      ExecuteBatchDmlRequest_Statement()..mergeFromMessage(this);
+  ExecuteBatchDmlRequest_Statement copyWith(
+          void Function(ExecuteBatchDmlRequest_Statement) updates) =>
+      super.copyWith(
+          (message) => updates(message as ExecuteBatchDmlRequest_Statement));
+  $pb.BuilderInfo get info_ => _i;
+  static ExecuteBatchDmlRequest_Statement create() =>
+      ExecuteBatchDmlRequest_Statement();
+  ExecuteBatchDmlRequest_Statement createEmptyInstance() => create();
+  static $pb.PbList<ExecuteBatchDmlRequest_Statement> createRepeated() =>
+      $pb.PbList<ExecuteBatchDmlRequest_Statement>();
+  static ExecuteBatchDmlRequest_Statement getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ExecuteBatchDmlRequest_Statement _defaultInstance;
+
+  $core.String get sql => $_getS(0, '');
+  set sql($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasSql() => $_has(0);
+  void clearSql() => clearField(1);
+
+  $4.Struct get params => $_getN(1);
+  set params($4.Struct v) {
+    setField(2, v);
+  }
+
+  $core.bool hasParams() => $_has(1);
+  void clearParams() => clearField(2);
+
+  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(2);
+}
+
+class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..aOS(1, 'session')
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
+    ..pc<ExecuteBatchDmlRequest_Statement>(3, 'statements', $pb.PbFieldType.PM,
+        ExecuteBatchDmlRequest_Statement.create)
+    ..aInt64(4, 'seqno')
+    ..hasRequiredFields = false;
+
+  ExecuteBatchDmlRequest() : super();
+  ExecuteBatchDmlRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExecuteBatchDmlRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ExecuteBatchDmlRequest clone() =>
+      ExecuteBatchDmlRequest()..mergeFromMessage(this);
+  ExecuteBatchDmlRequest copyWith(
+          void Function(ExecuteBatchDmlRequest) updates) =>
+      super.copyWith((message) => updates(message as ExecuteBatchDmlRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ExecuteBatchDmlRequest create() => ExecuteBatchDmlRequest();
+  ExecuteBatchDmlRequest createEmptyInstance() => create();
+  static $pb.PbList<ExecuteBatchDmlRequest> createRepeated() =>
+      $pb.PbList<ExecuteBatchDmlRequest>();
+  static ExecuteBatchDmlRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ExecuteBatchDmlRequest _defaultInstance;
+
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasSession() => $_has(0);
+  void clearSession() => clearField(1);
+
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
+    setField(2, v);
+  }
+
+  $core.bool hasTransaction() => $_has(1);
+  void clearTransaction() => clearField(2);
+
+  $core.List<ExecuteBatchDmlRequest_Statement> get statements => $_getList(2);
+
+  Int64 get seqno => $_getI64(3);
+  set seqno(Int64 v) {
+    $_setInt64(3, v);
+  }
+
+  $core.bool hasSeqno() => $_has(3);
+  void clearSeqno() => clearField(4);
+}
+
+class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlResponse',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..pc<$1.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM, $1.ResultSet.create)
+    ..a<$6.Status>(
+        2, 'status', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
+    ..hasRequiredFields = false;
+
+  ExecuteBatchDmlResponse() : super();
+  ExecuteBatchDmlResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExecuteBatchDmlResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ExecuteBatchDmlResponse clone() =>
+      ExecuteBatchDmlResponse()..mergeFromMessage(this);
+  ExecuteBatchDmlResponse copyWith(
+          void Function(ExecuteBatchDmlResponse) updates) =>
+      super.copyWith((message) => updates(message as ExecuteBatchDmlResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ExecuteBatchDmlResponse create() => ExecuteBatchDmlResponse();
+  ExecuteBatchDmlResponse createEmptyInstance() => create();
+  static $pb.PbList<ExecuteBatchDmlResponse> createRepeated() =>
+      $pb.PbList<ExecuteBatchDmlResponse>();
+  static ExecuteBatchDmlResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ExecuteBatchDmlResponse _defaultInstance;
+
+  $core.List<$1.ResultSet> get resultSets => $_getList(0);
+
+  $6.Status get status => $_getN(1);
+  set status($6.Status v) {
+    setField(2, v);
+  }
+
+  $core.bool hasStatus() => $_has(1);
+  void clearStatus() => clearField(2);
+}
+
+class PartitionOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionOptions',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aInt64(1, 'partitionSizeBytes')
     ..aInt64(2, 'maxPartitions')
     ..hasRequiredFields = false;
 
   PartitionOptions() : super();
-  PartitionOptions.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionOptions.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PartitionOptions.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionOptions.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartitionOptions clone() => new PartitionOptions()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PartitionOptions create() => new PartitionOptions();
-  static PbList<PartitionOptions> createRepeated() =>
-      new PbList<PartitionOptions>();
-  static PartitionOptions getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionOptions();
-    return _defaultInstance;
-  }
-
+  PartitionOptions clone() => PartitionOptions()..mergeFromMessage(this);
+  PartitionOptions copyWith(void Function(PartitionOptions) updates) =>
+      super.copyWith((message) => updates(message as PartitionOptions));
+  $pb.BuilderInfo get info_ => _i;
+  static PartitionOptions create() => PartitionOptions();
+  PartitionOptions createEmptyInstance() => create();
+  static $pb.PbList<PartitionOptions> createRepeated() =>
+      $pb.PbList<PartitionOptions>();
+  static PartitionOptions getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PartitionOptions _defaultInstance;
-  static void $checkItem(PartitionOptions v) {
-    if (v is! PartitionOptions) checkItemFailed(v, 'PartitionOptions');
-  }
 
   Int64 get partitionSizeBytes => $_getI64(0);
   set partitionSizeBytes(Int64 v) {
     $_setInt64(0, v);
   }
 
-  bool hasPartitionSizeBytes() => $_has(0);
+  $core.bool hasPartitionSizeBytes() => $_has(0);
   void clearPartitionSizeBytes() => clearField(1);
 
   Int64 get maxPartitions => $_getI64(1);
@@ -591,232 +616,172 @@ class PartitionOptions extends GeneratedMessage {
     $_setInt64(1, v);
   }
 
-  bool hasMaxPartitions() => $_has(1);
+  $core.bool hasMaxPartitions() => $_has(1);
   void clearMaxPartitions() => clearField(2);
 }
 
-class _ReadonlyPartitionOptions extends PartitionOptions
-    with ReadonlyMessageMixin {}
-
-class PartitionQueryRequest_ParamTypesEntry extends GeneratedMessage {
-  static final BuilderInfo _i =
-      new BuilderInfo('PartitionQueryRequest_ParamTypesEntry')
-        ..aOS(1, 'key')
-        ..a<Type>(2, 'value', PbFieldType.OM, Type.getDefault, Type.create)
-        ..hasRequiredFields = false;
-
-  PartitionQueryRequest_ParamTypesEntry() : super();
-  PartitionQueryRequest_ParamTypesEntry.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionQueryRequest_ParamTypesEntry.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  PartitionQueryRequest_ParamTypesEntry clone() =>
-      new PartitionQueryRequest_ParamTypesEntry()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PartitionQueryRequest_ParamTypesEntry create() =>
-      new PartitionQueryRequest_ParamTypesEntry();
-  static PbList<PartitionQueryRequest_ParamTypesEntry> createRepeated() =>
-      new PbList<PartitionQueryRequest_ParamTypesEntry>();
-  static PartitionQueryRequest_ParamTypesEntry getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionQueryRequest_ParamTypesEntry();
-    return _defaultInstance;
-  }
-
-  static PartitionQueryRequest_ParamTypesEntry _defaultInstance;
-  static void $checkItem(PartitionQueryRequest_ParamTypesEntry v) {
-    if (v is! PartitionQueryRequest_ParamTypesEntry)
-      checkItemFailed(v, 'PartitionQueryRequest_ParamTypesEntry');
-  }
-
-  String get key => $_getS(0, '');
-  set key(String v) {
-    $_setString(0, v);
-  }
-
-  bool hasKey() => $_has(0);
-  void clearKey() => clearField(1);
-
-  Type get value => $_getN(1);
-  set value(Type v) {
-    setField(2, v);
-  }
-
-  bool hasValue() => $_has(1);
-  void clearValue() => clearField(2);
-}
-
-class _ReadonlyPartitionQueryRequest_ParamTypesEntry
-    extends PartitionQueryRequest_ParamTypesEntry with ReadonlyMessageMixin {}
-
-class PartitionQueryRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionQueryRequest')
+class PartitionQueryRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionQueryRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
-        TransactionSelector.getDefault, TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$google$protobuf.Struct>(4, 'params', PbFieldType.OM,
-        $google$protobuf.Struct.getDefault, $google$protobuf.Struct.create)
-    ..pp<PartitionQueryRequest_ParamTypesEntry>(
+    ..a<$4.Struct>(
+        4, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
+    ..m<$core.String, $5.Type>(
         5,
         'paramTypes',
-        PbFieldType.PM,
-        PartitionQueryRequest_ParamTypesEntry.$checkItem,
-        PartitionQueryRequest_ParamTypesEntry.create)
-    ..a<PartitionOptions>(6, 'partitionOptions', PbFieldType.OM,
+        'PartitionQueryRequest.ParamTypesEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OM,
+        $5.Type.create,
+        null,
+        null,
+        const $pb.PackageName('google.spanner.v1'))
+    ..a<PartitionOptions>(6, 'partitionOptions', $pb.PbFieldType.OM,
         PartitionOptions.getDefault, PartitionOptions.create)
     ..hasRequiredFields = false;
 
   PartitionQueryRequest() : super();
-  PartitionQueryRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionQueryRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PartitionQueryRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionQueryRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PartitionQueryRequest clone() =>
-      new PartitionQueryRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PartitionQueryRequest create() => new PartitionQueryRequest();
-  static PbList<PartitionQueryRequest> createRepeated() =>
-      new PbList<PartitionQueryRequest>();
-  static PartitionQueryRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionQueryRequest();
-    return _defaultInstance;
-  }
-
+      PartitionQueryRequest()..mergeFromMessage(this);
+  PartitionQueryRequest copyWith(
+          void Function(PartitionQueryRequest) updates) =>
+      super.copyWith((message) => updates(message as PartitionQueryRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static PartitionQueryRequest create() => PartitionQueryRequest();
+  PartitionQueryRequest createEmptyInstance() => create();
+  static $pb.PbList<PartitionQueryRequest> createRepeated() =>
+      $pb.PbList<PartitionQueryRequest>();
+  static PartitionQueryRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PartitionQueryRequest _defaultInstance;
-  static void $checkItem(PartitionQueryRequest v) {
-    if (v is! PartitionQueryRequest)
-      checkItemFailed(v, 'PartitionQueryRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  TransactionSelector get transaction => $_getN(1);
-  set transaction(TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
-  bool hasTransaction() => $_has(1);
+  $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 
-  String get sql => $_getS(2, '');
-  set sql(String v) {
+  $core.String get sql => $_getS(2, '');
+  set sql($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasSql() => $_has(2);
+  $core.bool hasSql() => $_has(2);
   void clearSql() => clearField(3);
 
-  $google$protobuf.Struct get params => $_getN(3);
-  set params($google$protobuf.Struct v) {
+  $4.Struct get params => $_getN(3);
+  set params($4.Struct v) {
     setField(4, v);
   }
 
-  bool hasParams() => $_has(3);
+  $core.bool hasParams() => $_has(3);
   void clearParams() => clearField(4);
 
-  List<PartitionQueryRequest_ParamTypesEntry> get paramTypes => $_getList(4);
+  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(4);
 
   PartitionOptions get partitionOptions => $_getN(5);
   set partitionOptions(PartitionOptions v) {
     setField(6, v);
   }
 
-  bool hasPartitionOptions() => $_has(5);
+  $core.bool hasPartitionOptions() => $_has(5);
   void clearPartitionOptions() => clearField(6);
 }
 
-class _ReadonlyPartitionQueryRequest extends PartitionQueryRequest
-    with ReadonlyMessageMixin {}
-
-class PartitionReadRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionReadRequest')
+class PartitionReadRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionReadRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
-        TransactionSelector.getDefault, TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<KeySet>(6, 'keySet', PbFieldType.OM, KeySet.getDefault, KeySet.create)
-    ..a<PartitionOptions>(9, 'partitionOptions', PbFieldType.OM,
+    ..a<$7.KeySet>(
+        6, 'keySet', $pb.PbFieldType.OM, $7.KeySet.getDefault, $7.KeySet.create)
+    ..a<PartitionOptions>(9, 'partitionOptions', $pb.PbFieldType.OM,
         PartitionOptions.getDefault, PartitionOptions.create)
     ..hasRequiredFields = false;
 
   PartitionReadRequest() : super();
-  PartitionReadRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionReadRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PartitionReadRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionReadRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   PartitionReadRequest clone() =>
-      new PartitionReadRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PartitionReadRequest create() => new PartitionReadRequest();
-  static PbList<PartitionReadRequest> createRepeated() =>
-      new PbList<PartitionReadRequest>();
-  static PartitionReadRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionReadRequest();
-    return _defaultInstance;
-  }
-
+      PartitionReadRequest()..mergeFromMessage(this);
+  PartitionReadRequest copyWith(void Function(PartitionReadRequest) updates) =>
+      super.copyWith((message) => updates(message as PartitionReadRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static PartitionReadRequest create() => PartitionReadRequest();
+  PartitionReadRequest createEmptyInstance() => create();
+  static $pb.PbList<PartitionReadRequest> createRepeated() =>
+      $pb.PbList<PartitionReadRequest>();
+  static PartitionReadRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PartitionReadRequest _defaultInstance;
-  static void $checkItem(PartitionReadRequest v) {
-    if (v is! PartitionReadRequest) checkItemFailed(v, 'PartitionReadRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  TransactionSelector get transaction => $_getN(1);
-  set transaction(TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
-  bool hasTransaction() => $_has(1);
+  $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 
-  String get table => $_getS(2, '');
-  set table(String v) {
+  $core.String get table => $_getS(2, '');
+  set table($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasTable() => $_has(2);
+  $core.bool hasTable() => $_has(2);
   void clearTable() => clearField(3);
 
-  String get index => $_getS(3, '');
-  set index(String v) {
+  $core.String get index => $_getS(3, '');
+  set index($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasIndex() => $_has(3);
+  $core.bool hasIndex() => $_has(3);
   void clearIndex() => clearField(4);
 
-  List<String> get columns => $_getList(4);
+  $core.List<$core.String> get columns => $_getList(4);
 
-  KeySet get keySet => $_getN(5);
-  set keySet(KeySet v) {
+  $7.KeySet get keySet => $_getN(5);
+  set keySet($7.KeySet v) {
     setField(6, v);
   }
 
-  bool hasKeySet() => $_has(5);
+  $core.bool hasKeySet() => $_has(5);
   void clearKeySet() => clearField(6);
 
   PartitionOptions get partitionOptions => $_getN(6);
@@ -824,169 +789,153 @@ class PartitionReadRequest extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasPartitionOptions() => $_has(6);
+  $core.bool hasPartitionOptions() => $_has(6);
   void clearPartitionOptions() => clearField(9);
 }
 
-class _ReadonlyPartitionReadRequest extends PartitionReadRequest
-    with ReadonlyMessageMixin {}
-
-class Partition extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Partition')
-    ..a<List<int>>(1, 'partitionToken', PbFieldType.OY)
+class Partition extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Partition',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..a<$core.List<$core.int>>(1, 'partitionToken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   Partition() : super();
-  Partition.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Partition.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Partition.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Partition.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Partition clone() => new Partition()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Partition create() => new Partition();
-  static PbList<Partition> createRepeated() => new PbList<Partition>();
-  static Partition getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyPartition();
-    return _defaultInstance;
-  }
-
+  Partition clone() => Partition()..mergeFromMessage(this);
+  Partition copyWith(void Function(Partition) updates) =>
+      super.copyWith((message) => updates(message as Partition));
+  $pb.BuilderInfo get info_ => _i;
+  static Partition create() => Partition();
+  Partition createEmptyInstance() => create();
+  static $pb.PbList<Partition> createRepeated() => $pb.PbList<Partition>();
+  static Partition getDefault() => _defaultInstance ??= create()..freeze();
   static Partition _defaultInstance;
-  static void $checkItem(Partition v) {
-    if (v is! Partition) checkItemFailed(v, 'Partition');
-  }
 
-  List<int> get partitionToken => $_getN(0);
-  set partitionToken(List<int> v) {
+  $core.List<$core.int> get partitionToken => $_getN(0);
+  set partitionToken($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
-  bool hasPartitionToken() => $_has(0);
+  $core.bool hasPartitionToken() => $_has(0);
   void clearPartitionToken() => clearField(1);
 }
 
-class _ReadonlyPartition extends Partition with ReadonlyMessageMixin {}
-
-class PartitionResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('PartitionResponse')
-    ..pp<Partition>(
-        1, 'partitions', PbFieldType.PM, Partition.$checkItem, Partition.create)
-    ..a<Transaction>(2, 'transaction', PbFieldType.OM, Transaction.getDefault,
-        Transaction.create)
+class PartitionResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionResponse',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..pc<Partition>(1, 'partitions', $pb.PbFieldType.PM, Partition.create)
+    ..a<$2.Transaction>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.Transaction.getDefault, $2.Transaction.create)
     ..hasRequiredFields = false;
 
   PartitionResponse() : super();
-  PartitionResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  PartitionResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  PartitionResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  PartitionResponse clone() => new PartitionResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static PartitionResponse create() => new PartitionResponse();
-  static PbList<PartitionResponse> createRepeated() =>
-      new PbList<PartitionResponse>();
-  static PartitionResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyPartitionResponse();
-    return _defaultInstance;
-  }
-
+  PartitionResponse clone() => PartitionResponse()..mergeFromMessage(this);
+  PartitionResponse copyWith(void Function(PartitionResponse) updates) =>
+      super.copyWith((message) => updates(message as PartitionResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static PartitionResponse create() => PartitionResponse();
+  PartitionResponse createEmptyInstance() => create();
+  static $pb.PbList<PartitionResponse> createRepeated() =>
+      $pb.PbList<PartitionResponse>();
+  static PartitionResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static PartitionResponse _defaultInstance;
-  static void $checkItem(PartitionResponse v) {
-    if (v is! PartitionResponse) checkItemFailed(v, 'PartitionResponse');
-  }
 
-  List<Partition> get partitions => $_getList(0);
+  $core.List<Partition> get partitions => $_getList(0);
 
-  Transaction get transaction => $_getN(1);
-  set transaction(Transaction v) {
+  $2.Transaction get transaction => $_getN(1);
+  set transaction($2.Transaction v) {
     setField(2, v);
   }
 
-  bool hasTransaction() => $_has(1);
+  $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 }
 
-class _ReadonlyPartitionResponse extends PartitionResponse
-    with ReadonlyMessageMixin {}
-
-class ReadRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ReadRequest')
+class ReadRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<TransactionSelector>(2, 'transaction', PbFieldType.OM,
-        TransactionSelector.getDefault, TransactionSelector.create)
+    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<KeySet>(6, 'keySet', PbFieldType.OM, KeySet.getDefault, KeySet.create)
+    ..a<$7.KeySet>(
+        6, 'keySet', $pb.PbFieldType.OM, $7.KeySet.getDefault, $7.KeySet.create)
     ..aInt64(8, 'limit')
-    ..a<List<int>>(9, 'resumeToken', PbFieldType.OY)
-    ..a<List<int>>(10, 'partitionToken', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(9, 'resumeToken', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(10, 'partitionToken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   ReadRequest() : super();
-  ReadRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ReadRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ReadRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ReadRequest clone() => new ReadRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ReadRequest create() => new ReadRequest();
-  static PbList<ReadRequest> createRepeated() => new PbList<ReadRequest>();
-  static ReadRequest getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyReadRequest();
-    return _defaultInstance;
-  }
-
+  ReadRequest clone() => ReadRequest()..mergeFromMessage(this);
+  ReadRequest copyWith(void Function(ReadRequest) updates) =>
+      super.copyWith((message) => updates(message as ReadRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ReadRequest create() => ReadRequest();
+  ReadRequest createEmptyInstance() => create();
+  static $pb.PbList<ReadRequest> createRepeated() => $pb.PbList<ReadRequest>();
+  static ReadRequest getDefault() => _defaultInstance ??= create()..freeze();
   static ReadRequest _defaultInstance;
-  static void $checkItem(ReadRequest v) {
-    if (v is! ReadRequest) checkItemFailed(v, 'ReadRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  TransactionSelector get transaction => $_getN(1);
-  set transaction(TransactionSelector v) {
+  $2.TransactionSelector get transaction => $_getN(1);
+  set transaction($2.TransactionSelector v) {
     setField(2, v);
   }
 
-  bool hasTransaction() => $_has(1);
+  $core.bool hasTransaction() => $_has(1);
   void clearTransaction() => clearField(2);
 
-  String get table => $_getS(2, '');
-  set table(String v) {
+  $core.String get table => $_getS(2, '');
+  set table($core.String v) {
     $_setString(2, v);
   }
 
-  bool hasTable() => $_has(2);
+  $core.bool hasTable() => $_has(2);
   void clearTable() => clearField(3);
 
-  String get index => $_getS(3, '');
-  set index(String v) {
+  $core.String get index => $_getS(3, '');
+  set index($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasIndex() => $_has(3);
+  $core.bool hasIndex() => $_has(3);
   void clearIndex() => clearField(4);
 
-  List<String> get columns => $_getList(4);
+  $core.List<$core.String> get columns => $_getList(4);
 
-  KeySet get keySet => $_getN(5);
-  set keySet(KeySet v) {
+  $7.KeySet get keySet => $_getN(5);
+  set keySet($7.KeySet v) {
     setField(6, v);
   }
 
-  bool hasKeySet() => $_has(5);
+  $core.bool hasKeySet() => $_has(5);
   void clearKeySet() => clearField(6);
 
   Int64 get limit => $_getI64(6);
@@ -994,323 +943,213 @@ class ReadRequest extends GeneratedMessage {
     $_setInt64(6, v);
   }
 
-  bool hasLimit() => $_has(6);
+  $core.bool hasLimit() => $_has(6);
   void clearLimit() => clearField(8);
 
-  List<int> get resumeToken => $_getN(7);
-  set resumeToken(List<int> v) {
+  $core.List<$core.int> get resumeToken => $_getN(7);
+  set resumeToken($core.List<$core.int> v) {
     $_setBytes(7, v);
   }
 
-  bool hasResumeToken() => $_has(7);
+  $core.bool hasResumeToken() => $_has(7);
   void clearResumeToken() => clearField(9);
 
-  List<int> get partitionToken => $_getN(8);
-  set partitionToken(List<int> v) {
+  $core.List<$core.int> get partitionToken => $_getN(8);
+  set partitionToken($core.List<$core.int> v) {
     $_setBytes(8, v);
   }
 
-  bool hasPartitionToken() => $_has(8);
+  $core.bool hasPartitionToken() => $_has(8);
   void clearPartitionToken() => clearField(10);
 }
 
-class _ReadonlyReadRequest extends ReadRequest with ReadonlyMessageMixin {}
-
-class BeginTransactionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('BeginTransactionRequest')
+class BeginTransactionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<TransactionOptions>(2, 'options', PbFieldType.OM,
-        TransactionOptions.getDefault, TransactionOptions.create)
+    ..a<$2.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest() : super();
-  BeginTransactionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  BeginTransactionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  BeginTransactionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   BeginTransactionRequest clone() =>
-      new BeginTransactionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static BeginTransactionRequest create() => new BeginTransactionRequest();
-  static PbList<BeginTransactionRequest> createRepeated() =>
-      new PbList<BeginTransactionRequest>();
-  static BeginTransactionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyBeginTransactionRequest();
-    return _defaultInstance;
-  }
-
+      BeginTransactionRequest()..mergeFromMessage(this);
+  BeginTransactionRequest copyWith(
+          void Function(BeginTransactionRequest) updates) =>
+      super.copyWith((message) => updates(message as BeginTransactionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static BeginTransactionRequest create() => BeginTransactionRequest();
+  BeginTransactionRequest createEmptyInstance() => create();
+  static $pb.PbList<BeginTransactionRequest> createRepeated() =>
+      $pb.PbList<BeginTransactionRequest>();
+  static BeginTransactionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static BeginTransactionRequest _defaultInstance;
-  static void $checkItem(BeginTransactionRequest v) {
-    if (v is! BeginTransactionRequest)
-      checkItemFailed(v, 'BeginTransactionRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  TransactionOptions get options => $_getN(1);
-  set options(TransactionOptions v) {
+  $2.TransactionOptions get options => $_getN(1);
+  set options($2.TransactionOptions v) {
     setField(2, v);
   }
 
-  bool hasOptions() => $_has(1);
+  $core.bool hasOptions() => $_has(1);
   void clearOptions() => clearField(2);
 }
 
-class _ReadonlyBeginTransactionRequest extends BeginTransactionRequest
-    with ReadonlyMessageMixin {}
+enum CommitRequest_Transaction { transactionId, singleUseTransaction, notSet }
 
-class CommitRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommitRequest')
+class CommitRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, CommitRequest_Transaction>
+      _CommitRequest_TransactionByTag = {
+    2: CommitRequest_Transaction.transactionId,
+    3: CommitRequest_Transaction.singleUseTransaction,
+    0: CommitRequest_Transaction.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<List<int>>(2, 'transactionId', PbFieldType.OY)
-    ..a<TransactionOptions>(3, 'singleUseTransaction', PbFieldType.OM,
-        TransactionOptions.getDefault, TransactionOptions.create)
-    ..pp<Mutation>(
-        4, 'mutations', PbFieldType.PM, Mutation.$checkItem, Mutation.create)
+    ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
+    ..a<$2.TransactionOptions>(3, 'singleUseTransaction', $pb.PbFieldType.OM,
+        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
+    ..pc<$8.Mutation>(4, 'mutations', $pb.PbFieldType.PM, $8.Mutation.create)
+    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
   CommitRequest() : super();
-  CommitRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CommitRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommitRequest clone() => new CommitRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommitRequest create() => new CommitRequest();
-  static PbList<CommitRequest> createRepeated() => new PbList<CommitRequest>();
-  static CommitRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommitRequest();
-    return _defaultInstance;
-  }
-
+  CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
+  CommitRequest copyWith(void Function(CommitRequest) updates) =>
+      super.copyWith((message) => updates(message as CommitRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CommitRequest create() => CommitRequest();
+  CommitRequest createEmptyInstance() => create();
+  static $pb.PbList<CommitRequest> createRepeated() =>
+      $pb.PbList<CommitRequest>();
+  static CommitRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CommitRequest _defaultInstance;
-  static void $checkItem(CommitRequest v) {
-    if (v is! CommitRequest) checkItemFailed(v, 'CommitRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  CommitRequest_Transaction whichTransaction() =>
+      _CommitRequest_TransactionByTag[$_whichOneof(0)];
+  void clearTransaction() => clearField($_whichOneof(0));
+
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  List<int> get transactionId => $_getN(1);
-  set transactionId(List<int> v) {
+  $core.List<$core.int> get transactionId => $_getN(1);
+  set transactionId($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasTransactionId() => $_has(1);
+  $core.bool hasTransactionId() => $_has(1);
   void clearTransactionId() => clearField(2);
 
-  TransactionOptions get singleUseTransaction => $_getN(2);
-  set singleUseTransaction(TransactionOptions v) {
+  $2.TransactionOptions get singleUseTransaction => $_getN(2);
+  set singleUseTransaction($2.TransactionOptions v) {
     setField(3, v);
   }
 
-  bool hasSingleUseTransaction() => $_has(2);
+  $core.bool hasSingleUseTransaction() => $_has(2);
   void clearSingleUseTransaction() => clearField(3);
 
-  List<Mutation> get mutations => $_getList(3);
+  $core.List<$8.Mutation> get mutations => $_getList(3);
 }
 
-class _ReadonlyCommitRequest extends CommitRequest with ReadonlyMessageMixin {}
-
-class CommitResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CommitResponse')
-    ..a<$google$protobuf.Timestamp>(
-        1,
-        'commitTimestamp',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+class CommitResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
+      package: const $pb.PackageName('google.spanner.v1'))
+    ..a<$3.Timestamp>(1, 'commitTimestamp', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   CommitResponse() : super();
-  CommitResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CommitResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CommitResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CommitResponse clone() => new CommitResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CommitResponse create() => new CommitResponse();
-  static PbList<CommitResponse> createRepeated() =>
-      new PbList<CommitResponse>();
-  static CommitResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCommitResponse();
-    return _defaultInstance;
-  }
-
+  CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
+  CommitResponse copyWith(void Function(CommitResponse) updates) =>
+      super.copyWith((message) => updates(message as CommitResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static CommitResponse create() => CommitResponse();
+  CommitResponse createEmptyInstance() => create();
+  static $pb.PbList<CommitResponse> createRepeated() =>
+      $pb.PbList<CommitResponse>();
+  static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
   static CommitResponse _defaultInstance;
-  static void $checkItem(CommitResponse v) {
-    if (v is! CommitResponse) checkItemFailed(v, 'CommitResponse');
-  }
 
-  $google$protobuf.Timestamp get commitTimestamp => $_getN(0);
-  set commitTimestamp($google$protobuf.Timestamp v) {
+  $3.Timestamp get commitTimestamp => $_getN(0);
+  set commitTimestamp($3.Timestamp v) {
     setField(1, v);
   }
 
-  bool hasCommitTimestamp() => $_has(0);
+  $core.bool hasCommitTimestamp() => $_has(0);
   void clearCommitTimestamp() => clearField(1);
 }
 
-class _ReadonlyCommitResponse extends CommitResponse with ReadonlyMessageMixin {
-}
-
-class RollbackRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('RollbackRequest')
+class RollbackRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackRequest',
+      package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<List<int>>(2, 'transactionId', PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   RollbackRequest() : super();
-  RollbackRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  RollbackRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  RollbackRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  RollbackRequest clone() => new RollbackRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static RollbackRequest create() => new RollbackRequest();
-  static PbList<RollbackRequest> createRepeated() =>
-      new PbList<RollbackRequest>();
-  static RollbackRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyRollbackRequest();
-    return _defaultInstance;
-  }
-
+  RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
+  RollbackRequest copyWith(void Function(RollbackRequest) updates) =>
+      super.copyWith((message) => updates(message as RollbackRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static RollbackRequest create() => RollbackRequest();
+  RollbackRequest createEmptyInstance() => create();
+  static $pb.PbList<RollbackRequest> createRepeated() =>
+      $pb.PbList<RollbackRequest>();
+  static RollbackRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static RollbackRequest _defaultInstance;
-  static void $checkItem(RollbackRequest v) {
-    if (v is! RollbackRequest) checkItemFailed(v, 'RollbackRequest');
-  }
 
-  String get session => $_getS(0, '');
-  set session(String v) {
+  $core.String get session => $_getS(0, '');
+  set session($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasSession() => $_has(0);
+  $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  List<int> get transactionId => $_getN(1);
-  set transactionId(List<int> v) {
+  $core.List<$core.int> get transactionId => $_getN(1);
+  set transactionId($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
-  bool hasTransactionId() => $_has(1);
+  $core.bool hasTransactionId() => $_has(1);
   void clearTransactionId() => clearField(2);
-}
-
-class _ReadonlyRollbackRequest extends RollbackRequest
-    with ReadonlyMessageMixin {}
-
-class SpannerApi {
-  RpcClient _client;
-  SpannerApi(this._client);
-
-  Future<Session> createSession(
-      ClientContext ctx, CreateSessionRequest request) {
-    var emptyResponse = new Session();
-    return _client.invoke<Session>(
-        ctx, 'Spanner', 'CreateSession', request, emptyResponse);
-  }
-
-  Future<Session> getSession(ClientContext ctx, GetSessionRequest request) {
-    var emptyResponse = new Session();
-    return _client.invoke<Session>(
-        ctx, 'Spanner', 'GetSession', request, emptyResponse);
-  }
-
-  Future<ListSessionsResponse> listSessions(
-      ClientContext ctx, ListSessionsRequest request) {
-    var emptyResponse = new ListSessionsResponse();
-    return _client.invoke<ListSessionsResponse>(
-        ctx, 'Spanner', 'ListSessions', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> deleteSession(
-      ClientContext ctx, DeleteSessionRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'Spanner', 'DeleteSession', request, emptyResponse);
-  }
-
-  Future<ResultSet> executeSql(ClientContext ctx, ExecuteSqlRequest request) {
-    var emptyResponse = new ResultSet();
-    return _client.invoke<ResultSet>(
-        ctx, 'Spanner', 'ExecuteSql', request, emptyResponse);
-  }
-
-  Future<PartialResultSet> executeStreamingSql(
-      ClientContext ctx, ExecuteSqlRequest request) {
-    var emptyResponse = new PartialResultSet();
-    return _client.invoke<PartialResultSet>(
-        ctx, 'Spanner', 'ExecuteStreamingSql', request, emptyResponse);
-  }
-
-  Future<ResultSet> read(ClientContext ctx, ReadRequest request) {
-    var emptyResponse = new ResultSet();
-    return _client.invoke<ResultSet>(
-        ctx, 'Spanner', 'Read', request, emptyResponse);
-  }
-
-  Future<PartialResultSet> streamingRead(
-      ClientContext ctx, ReadRequest request) {
-    var emptyResponse = new PartialResultSet();
-    return _client.invoke<PartialResultSet>(
-        ctx, 'Spanner', 'StreamingRead', request, emptyResponse);
-  }
-
-  Future<Transaction> beginTransaction(
-      ClientContext ctx, BeginTransactionRequest request) {
-    var emptyResponse = new Transaction();
-    return _client.invoke<Transaction>(
-        ctx, 'Spanner', 'BeginTransaction', request, emptyResponse);
-  }
-
-  Future<CommitResponse> commit(ClientContext ctx, CommitRequest request) {
-    var emptyResponse = new CommitResponse();
-    return _client.invoke<CommitResponse>(
-        ctx, 'Spanner', 'Commit', request, emptyResponse);
-  }
-
-  Future<$google$protobuf.Empty> rollback(
-      ClientContext ctx, RollbackRequest request) {
-    var emptyResponse = new $google$protobuf.Empty();
-    return _client.invoke<$google$protobuf.Empty>(
-        ctx, 'Spanner', 'Rollback', request, emptyResponse);
-  }
-
-  Future<PartitionResponse> partitionQuery(
-      ClientContext ctx, PartitionQueryRequest request) {
-    var emptyResponse = new PartitionResponse();
-    return _client.invoke<PartitionResponse>(
-        ctx, 'Spanner', 'PartitionQuery', request, emptyResponse);
-  }
-
-  Future<PartitionResponse> partitionRead(
-      ClientContext ctx, PartitionReadRequest request) {
-    var emptyResponse = new PartitionResponse();
-    return _client.invoke<PartitionResponse>(
-        ctx, 'Spanner', 'PartitionRead', request, emptyResponse);
-  }
 }

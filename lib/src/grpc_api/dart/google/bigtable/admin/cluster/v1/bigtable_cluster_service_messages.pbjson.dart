@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/bigtable/admin/cluster/v1/bigtable_cluster_service_messages.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-const ListZonesRequest$json = const {
+const ListZonesRequest$json = {
   '1': 'ListZonesRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListZonesResponse$json = const {
+const ListZonesResponse$json = {
   '1': 'ListZonesResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'zones',
       '3': 1,
       '4': 3,
@@ -24,24 +25,24 @@ const ListZonesResponse$json = const {
   ],
 };
 
-const GetClusterRequest$json = const {
+const GetClusterRequest$json = {
   '1': 'GetClusterRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListClustersRequest$json = const {
+const ListClustersRequest$json = {
   '1': 'ListClustersRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const ListClustersResponse$json = const {
+const ListClustersResponse$json = {
   '1': 'ListClustersResponse',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'clusters',
       '3': 1,
       '4': 3,
@@ -49,7 +50,7 @@ const ListClustersResponse$json = const {
       '6': '.google.bigtable.admin.cluster.v1.Cluster',
       '10': 'clusters'
     },
-    const {
+    {
       '1': 'failed_zones',
       '3': 2,
       '4': 3,
@@ -60,12 +61,12 @@ const ListClustersResponse$json = const {
   ],
 };
 
-const CreateClusterRequest$json = const {
+const CreateClusterRequest$json = {
   '1': 'CreateClusterRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    const {'1': 'cluster_id', '3': 2, '4': 1, '5': 9, '10': 'clusterId'},
-    const {
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'cluster_id', '3': 2, '4': 1, '5': 9, '10': 'clusterId'},
+    {
       '1': 'cluster',
       '3': 3,
       '4': 1,
@@ -76,10 +77,10 @@ const CreateClusterRequest$json = const {
   ],
 };
 
-const CreateClusterMetadata$json = const {
+const CreateClusterMetadata$json = {
   '1': 'CreateClusterMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'original_request',
       '3': 1,
       '4': 1,
@@ -87,7 +88,7 @@ const CreateClusterMetadata$json = const {
       '6': '.google.bigtable.admin.cluster.v1.CreateClusterRequest',
       '10': 'originalRequest'
     },
-    const {
+    {
       '1': 'request_time',
       '3': 2,
       '4': 1,
@@ -95,7 +96,7 @@ const CreateClusterMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'requestTime'
     },
-    const {
+    {
       '1': 'finish_time',
       '3': 3,
       '4': 1,
@@ -106,10 +107,10 @@ const CreateClusterMetadata$json = const {
   ],
 };
 
-const UpdateClusterMetadata$json = const {
+const UpdateClusterMetadata$json = {
   '1': 'UpdateClusterMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'original_request',
       '3': 1,
       '4': 1,
@@ -117,7 +118,7 @@ const UpdateClusterMetadata$json = const {
       '6': '.google.bigtable.admin.cluster.v1.Cluster',
       '10': 'originalRequest'
     },
-    const {
+    {
       '1': 'request_time',
       '3': 2,
       '4': 1,
@@ -125,7 +126,7 @@ const UpdateClusterMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'requestTime'
     },
-    const {
+    {
       '1': 'cancel_time',
       '3': 3,
       '4': 1,
@@ -133,7 +134,7 @@ const UpdateClusterMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'cancelTime'
     },
-    const {
+    {
       '1': 'finish_time',
       '3': 4,
       '4': 1,
@@ -144,24 +145,24 @@ const UpdateClusterMetadata$json = const {
   ],
 };
 
-const DeleteClusterRequest$json = const {
+const DeleteClusterRequest$json = {
   '1': 'DeleteClusterRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const UndeleteClusterRequest$json = const {
+const UndeleteClusterRequest$json = {
   '1': 'UndeleteClusterRequest',
-  '2': const [
-    const {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
-const UndeleteClusterMetadata$json = const {
+const UndeleteClusterMetadata$json = {
   '1': 'UndeleteClusterMetadata',
-  '2': const [
-    const {
+  '2': [
+    {
       '1': 'request_time',
       '3': 1,
       '4': 1,
@@ -169,7 +170,7 @@ const UndeleteClusterMetadata$json = const {
       '6': '.google.protobuf.Timestamp',
       '10': 'requestTime'
     },
-    const {
+    {
       '1': 'finish_time',
       '3': 2,
       '4': 1,
@@ -180,6 +181,6 @@ const UndeleteClusterMetadata$json = const {
   ],
 };
 
-const V2OperationMetadata$json = const {
+const V2OperationMetadata$json = {
   '1': 'V2OperationMetadata',
 };

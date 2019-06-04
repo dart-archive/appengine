@@ -1,0 +1,151 @@
+# This is an API workspace, having public visibility by default makes perfect sense.
+package(default_visibility = ["//visibility:public"])
+
+##############################################################################
+# Common
+##############################################################################
+load("@com_google_googleapis_imports//:imports.bzl", "proto_library_with_info")
+
+proto_library(
+    name = "pubsub_proto",
+    srcs = ["pubsub.proto"],
+    deps = [
+        "//google/api:annotations_proto",
+        "//google/api:resource_proto",
+        "@com_google_protobuf//:duration_proto",
+        "@com_google_protobuf//:empty_proto",
+        "@com_google_protobuf//:field_mask_proto",
+        "@com_google_protobuf//:timestamp_proto",
+    ],
+)
+
+proto_library_with_info(
+    name = "pubsub_proto_with_info",
+    deps = [
+        ":pubsub_proto",
+        "//google/iam/v1:iam_policy_proto",
+        "//google/iam/v1:policy_proto",
+    ],
+)
+
+##############################################################################
+# Java
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "java_grpc_library",
+    "java_gapic_library",
+    "java_gapic_assembly_gradle_pkg",
+    "java_proto_library",
+    "java_resource_name_proto_library",
+    "java_test",
+)
+
+_JAVA_GRPC_DEPS = [
+    "@com_google_api_grpc_proto_google_common_protos//jar",
+    "@com_google_api_grpc_proto_google_iam_v1//jar",
+]
+
+java_proto_library(
+    name = "pubsub_java_proto",
+    deps = [":pubsub_proto"],
+)
+
+java_grpc_library(
+    name = "pubsub_java_grpc",
+    srcs = [":pubsub_proto"],
+    deps = [":pubsub_java_proto"] + _JAVA_GRPC_DEPS,
+)
+
+java_resource_name_proto_library(
+    name = "pubsub_resource_name_java_proto",
+    gapic_yaml = "pubsub_gapic.yaml",
+    deps = [":pubsub_proto"],
+)
+
+java_gapic_library(
+    name = "pubsub_java_gapic",
+    src = ":pubsub_proto_with_info",
+    gapic_yaml = "pubsub_gapic.yaml",
+    service_yaml = "//google/pubsub:pubsub.yaml",
+    test_deps = [
+        ":pubsub_java_grpc",
+        "@com_google_api_grpc_grpc_google_iam_v1//jar",
+    ],
+    deps = [
+        ":pubsub_java_proto",
+        ":pubsub_resource_name_java_proto",
+    ] + _JAVA_GRPC_DEPS,
+)
+
+[java_test(
+    name = test_name,
+    test_class = test_name,
+    runtime_deps = [":pubsub_java_gapic_test"],
+) for test_name in [
+    "com.google.cloud.pubsub.v1.SubscriptionAdminClientTest",
+    "com.google.cloud.pubsub.v1.TopicAdminClientTest",
+]]
+
+# Opensource Packages
+java_gapic_assembly_gradle_pkg(
+    name = "google-cloud-pubsub-v1-java",
+    client_deps = [":pubsub_java_gapic"],
+    client_group = "com.google.cloud",
+    client_test_deps = [":pubsub_java_gapic_test"],
+    grpc_deps = [":pubsub_java_grpc"],
+    grpc_group = "com.google.api.grpc",
+    proto_deps = [
+        ":pubsub_java_proto",
+        ":pubsub_proto",
+        ":pubsub_resource_name_java_proto",
+    ] + _JAVA_GRPC_DEPS,
+    version = "0.0.0-SNAPSHOT",
+)
+
+##############################################################################
+# Go
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "go_proto_library",
+    "go_test",
+    "go_gapic_library",
+    "go_gapic_assembly_pkg",
+)
+
+go_proto_library(
+    name = "pubsub_go_proto",
+    compilers = ["@io_bazel_rules_go//proto:go_grpc"],
+    importpath = "google.golang.org/genproto/googleapis/pubsub/v1",
+    protos = [":pubsub_proto"],
+    deps = ["//google/api:annotations_go_proto"],
+)
+
+go_gapic_library(
+    name = "pubsub_go_gapic",
+    src = ":pubsub_proto_with_info",
+    gapic_yaml = "pubsub_gapic.yaml",
+    importpath = "cloud.google.com/go/pubsub/apiv1",
+    service_yaml = "//google/pubsub:pubsub.yaml",
+    deps = [":pubsub_go_proto"],
+)
+
+go_test(
+    name = "pubsub_go_gapic_test",
+    srcs = [":pubsub_go_gapic_srcjar_test"],
+    embed = [":pubsub_go_gapic"],
+    importpath = "cloud.google.com/go/pubsub/apiv1",
+    deps = ["//google/iam/v1:iam_go_proto"],
+)
+
+# Opensource Packages
+go_gapic_assembly_pkg(
+    name = "gapi-cloud-pubsub-v1-go",
+    deps = [
+        ":pubsub_go_gapic",
+        ":pubsub_go_gapic_srcjar-smoke-test.srcjar",
+        ":pubsub_go_gapic_srcjar-test.srcjar",
+        ":pubsub_go_proto",
+    ],
+)

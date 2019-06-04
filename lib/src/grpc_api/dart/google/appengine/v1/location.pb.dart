@@ -1,58 +1,53 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/appengine/v1/location.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-class LocationMetadata extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('LocationMetadata')
+class LocationMetadata extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationMetadata',
+      package: const $pb.PackageName('google.appengine.v1'))
     ..aOB(2, 'standardEnvironmentAvailable')
     ..aOB(4, 'flexibleEnvironmentAvailable')
     ..hasRequiredFields = false;
 
   LocationMetadata() : super();
-  LocationMetadata.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LocationMetadata.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  LocationMetadata.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  LocationMetadata.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  LocationMetadata clone() => new LocationMetadata()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static LocationMetadata create() => new LocationMetadata();
-  static PbList<LocationMetadata> createRepeated() =>
-      new PbList<LocationMetadata>();
-  static LocationMetadata getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyLocationMetadata();
-    return _defaultInstance;
-  }
-
+  LocationMetadata clone() => LocationMetadata()..mergeFromMessage(this);
+  LocationMetadata copyWith(void Function(LocationMetadata) updates) =>
+      super.copyWith((message) => updates(message as LocationMetadata));
+  $pb.BuilderInfo get info_ => _i;
+  static LocationMetadata create() => LocationMetadata();
+  LocationMetadata createEmptyInstance() => create();
+  static $pb.PbList<LocationMetadata> createRepeated() =>
+      $pb.PbList<LocationMetadata>();
+  static LocationMetadata getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static LocationMetadata _defaultInstance;
-  static void $checkItem(LocationMetadata v) {
-    if (v is! LocationMetadata) checkItemFailed(v, 'LocationMetadata');
-  }
 
-  bool get standardEnvironmentAvailable => $_get(0, false);
-  set standardEnvironmentAvailable(bool v) {
+  $core.bool get standardEnvironmentAvailable => $_get(0, false);
+  set standardEnvironmentAvailable($core.bool v) {
     $_setBool(0, v);
   }
 
-  bool hasStandardEnvironmentAvailable() => $_has(0);
+  $core.bool hasStandardEnvironmentAvailable() => $_has(0);
   void clearStandardEnvironmentAvailable() => clearField(2);
 
-  bool get flexibleEnvironmentAvailable => $_get(1, false);
-  set flexibleEnvironmentAvailable(bool v) {
+  $core.bool get flexibleEnvironmentAvailable => $_get(1, false);
+  set flexibleEnvironmentAvailable($core.bool v) {
     $_setBool(1, v);
   }
 
-  bool hasFlexibleEnvironmentAvailable() => $_has(1);
+  $core.bool hasFlexibleEnvironmentAvailable() => $_has(1);
   void clearFlexibleEnvironmentAvailable() => clearField(4);
 }
-
-class _ReadonlyLocationMetadata extends LocationMetadata
-    with ReadonlyMessageMixin {}

@@ -1,60 +1,58 @@
 ///
 //  Generated code. Do not modify.
+//  source: google/cloud/ml/v1/model_service.proto
 ///
-// ignore_for_file: non_constant_identifier_names,library_prefixes
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
 
-import 'dart:async';
-// ignore: UNUSED_SHOWN_NAME
-import 'dart:core' show int, bool, double, String, List, override;
+import 'dart:core' as $core
+    show bool, Deprecated, double, int, List, Map, override, String;
 
-import 'package:protobuf/protobuf.dart';
+import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $google$protobuf;
-import '../../../longrunning/operations.pb.dart' as $google$longrunning;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
-class Model extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Model')
+class Model extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
-    ..a<Version>(
-        3, 'defaultVersion', PbFieldType.OM, Version.getDefault, Version.create)
+    ..a<Version>(3, 'defaultVersion', $pb.PbFieldType.OM, Version.getDefault,
+        Version.create)
     ..pPS(4, 'regions')
     ..aOB(5, 'onlinePredictionLogging')
     ..hasRequiredFields = false;
 
   Model() : super();
-  Model.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Model.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Model.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Model.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Model clone() => new Model()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Model create() => new Model();
-  static PbList<Model> createRepeated() => new PbList<Model>();
-  static Model getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyModel();
-    return _defaultInstance;
-  }
-
+  Model clone() => Model()..mergeFromMessage(this);
+  Model copyWith(void Function(Model) updates) =>
+      super.copyWith((message) => updates(message as Model));
+  $pb.BuilderInfo get info_ => _i;
+  static Model create() => Model();
+  Model createEmptyInstance() => create();
+  static $pb.PbList<Model> createRepeated() => $pb.PbList<Model>();
+  static Model getDefault() => _defaultInstance ??= create()..freeze();
   static Model _defaultInstance;
-  static void $checkItem(Model v) {
-    if (v is! Model) checkItemFailed(v, 'Model');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
   Version get defaultVersion => $_getN(2);
@@ -62,119 +60,107 @@ class Model extends GeneratedMessage {
     setField(3, v);
   }
 
-  bool hasDefaultVersion() => $_has(2);
+  $core.bool hasDefaultVersion() => $_has(2);
   void clearDefaultVersion() => clearField(3);
 
-  List<String> get regions => $_getList(3);
+  $core.List<$core.String> get regions => $_getList(3);
 
-  bool get onlinePredictionLogging => $_get(4, false);
-  set onlinePredictionLogging(bool v) {
+  $core.bool get onlinePredictionLogging => $_get(4, false);
+  set onlinePredictionLogging($core.bool v) {
     $_setBool(4, v);
   }
 
-  bool hasOnlinePredictionLogging() => $_has(4);
+  $core.bool hasOnlinePredictionLogging() => $_has(4);
   void clearOnlinePredictionLogging() => clearField(5);
 }
 
-class _ReadonlyModel extends Model with ReadonlyMessageMixin {}
-
-class Version extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('Version')
+class Version extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Version',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'isDefault')
     ..aOS(4, 'deploymentUri')
-    ..a<$google$protobuf.Timestamp>(
-        5,
-        'createTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
-    ..a<$google$protobuf.Timestamp>(
-        6,
-        'lastUseTime',
-        PbFieldType.OM,
-        $google$protobuf.Timestamp.getDefault,
-        $google$protobuf.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'lastUseTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..aOS(8, 'runtimeVersion')
-    ..a<ManualScaling>(9, 'manualScaling', PbFieldType.OM,
+    ..a<ManualScaling>(9, 'manualScaling', $pb.PbFieldType.OM,
         ManualScaling.getDefault, ManualScaling.create)
     ..hasRequiredFields = false;
 
   Version() : super();
-  Version.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Version.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  Version.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  Version.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  Version clone() => new Version()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static Version create() => new Version();
-  static PbList<Version> createRepeated() => new PbList<Version>();
-  static Version getDefault() {
-    if (_defaultInstance == null) _defaultInstance = new _ReadonlyVersion();
-    return _defaultInstance;
-  }
-
+  Version clone() => Version()..mergeFromMessage(this);
+  Version copyWith(void Function(Version) updates) =>
+      super.copyWith((message) => updates(message as Version));
+  $pb.BuilderInfo get info_ => _i;
+  static Version create() => Version();
+  Version createEmptyInstance() => create();
+  static $pb.PbList<Version> createRepeated() => $pb.PbList<Version>();
+  static Version getDefault() => _defaultInstance ??= create()..freeze();
   static Version _defaultInstance;
-  static void $checkItem(Version v) {
-    if (v is! Version) checkItemFailed(v, 'Version');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  String get description => $_getS(1, '');
-  set description(String v) {
+  $core.String get description => $_getS(1, '');
+  set description($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasDescription() => $_has(1);
+  $core.bool hasDescription() => $_has(1);
   void clearDescription() => clearField(2);
 
-  bool get isDefault => $_get(2, false);
-  set isDefault(bool v) {
+  $core.bool get isDefault => $_get(2, false);
+  set isDefault($core.bool v) {
     $_setBool(2, v);
   }
 
-  bool hasIsDefault() => $_has(2);
+  $core.bool hasIsDefault() => $_has(2);
   void clearIsDefault() => clearField(3);
 
-  String get deploymentUri => $_getS(3, '');
-  set deploymentUri(String v) {
+  $core.String get deploymentUri => $_getS(3, '');
+  set deploymentUri($core.String v) {
     $_setString(3, v);
   }
 
-  bool hasDeploymentUri() => $_has(3);
+  $core.bool hasDeploymentUri() => $_has(3);
   void clearDeploymentUri() => clearField(4);
 
-  $google$protobuf.Timestamp get createTime => $_getN(4);
-  set createTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(4);
+  set createTime($2.Timestamp v) {
     setField(5, v);
   }
 
-  bool hasCreateTime() => $_has(4);
+  $core.bool hasCreateTime() => $_has(4);
   void clearCreateTime() => clearField(5);
 
-  $google$protobuf.Timestamp get lastUseTime => $_getN(5);
-  set lastUseTime($google$protobuf.Timestamp v) {
+  $2.Timestamp get lastUseTime => $_getN(5);
+  set lastUseTime($2.Timestamp v) {
     setField(6, v);
   }
 
-  bool hasLastUseTime() => $_has(5);
+  $core.bool hasLastUseTime() => $_has(5);
   void clearLastUseTime() => clearField(6);
 
-  String get runtimeVersion => $_getS(6, '');
-  set runtimeVersion(String v) {
+  $core.String get runtimeVersion => $_getS(6, '');
+  set runtimeVersion($core.String v) {
     $_setString(6, v);
   }
 
-  bool hasRuntimeVersion() => $_has(6);
+  $core.bool hasRuntimeVersion() => $_has(6);
   void clearRuntimeVersion() => clearField(8);
 
   ManualScaling get manualScaling => $_getN(7);
@@ -182,86 +168,75 @@ class Version extends GeneratedMessage {
     setField(9, v);
   }
 
-  bool hasManualScaling() => $_has(7);
+  $core.bool hasManualScaling() => $_has(7);
   void clearManualScaling() => clearField(9);
 }
 
-class _ReadonlyVersion extends Version with ReadonlyMessageMixin {}
-
-class ManualScaling extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ManualScaling')
-    ..a<int>(1, 'nodes', PbFieldType.O3)
+class ManualScaling extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManualScaling',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
+    ..a<$core.int>(1, 'nodes', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ManualScaling() : super();
-  ManualScaling.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ManualScaling.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ManualScaling.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ManualScaling.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ManualScaling clone() => new ManualScaling()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ManualScaling create() => new ManualScaling();
-  static PbList<ManualScaling> createRepeated() => new PbList<ManualScaling>();
-  static ManualScaling getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyManualScaling();
-    return _defaultInstance;
-  }
-
+  ManualScaling clone() => ManualScaling()..mergeFromMessage(this);
+  ManualScaling copyWith(void Function(ManualScaling) updates) =>
+      super.copyWith((message) => updates(message as ManualScaling));
+  $pb.BuilderInfo get info_ => _i;
+  static ManualScaling create() => ManualScaling();
+  ManualScaling createEmptyInstance() => create();
+  static $pb.PbList<ManualScaling> createRepeated() =>
+      $pb.PbList<ManualScaling>();
+  static ManualScaling getDefault() => _defaultInstance ??= create()..freeze();
   static ManualScaling _defaultInstance;
-  static void $checkItem(ManualScaling v) {
-    if (v is! ManualScaling) checkItemFailed(v, 'ManualScaling');
-  }
 
-  int get nodes => $_get(0, 0);
-  set nodes(int v) {
+  $core.int get nodes => $_get(0, 0);
+  set nodes($core.int v) {
     $_setSignedInt32(0, v);
   }
 
-  bool hasNodes() => $_has(0);
+  $core.bool hasNodes() => $_has(0);
   void clearNodes() => clearField(1);
 }
 
-class _ReadonlyManualScaling extends ManualScaling with ReadonlyMessageMixin {}
-
-class CreateModelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateModelRequest')
+class CreateModelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateModelRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'parent')
-    ..a<Model>(2, 'model', PbFieldType.OM, Model.getDefault, Model.create)
+    ..a<Model>(2, 'model', $pb.PbFieldType.OM, Model.getDefault, Model.create)
     ..hasRequiredFields = false;
 
   CreateModelRequest() : super();
-  CreateModelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateModelRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateModelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateModelRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  CreateModelRequest clone() =>
-      new CreateModelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateModelRequest create() => new CreateModelRequest();
-  static PbList<CreateModelRequest> createRepeated() =>
-      new PbList<CreateModelRequest>();
-  static CreateModelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateModelRequest();
-    return _defaultInstance;
-  }
-
+  CreateModelRequest clone() => CreateModelRequest()..mergeFromMessage(this);
+  CreateModelRequest copyWith(void Function(CreateModelRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateModelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateModelRequest create() => CreateModelRequest();
+  CreateModelRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateModelRequest> createRepeated() =>
+      $pb.PbList<CreateModelRequest>();
+  static CreateModelRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateModelRequest _defaultInstance;
-  static void $checkItem(CreateModelRequest v) {
-    if (v is! CreateModelRequest) checkItemFailed(v, 'CreateModelRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   Model get model => $_getN(1);
@@ -269,233 +244,201 @@ class CreateModelRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasModel() => $_has(1);
+  $core.bool hasModel() => $_has(1);
   void clearModel() => clearField(2);
 }
 
-class _ReadonlyCreateModelRequest extends CreateModelRequest
-    with ReadonlyMessageMixin {}
-
-class ListModelsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListModelsRequest')
+class ListModelsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
-    ..a<int>(5, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListModelsRequest() : super();
-  ListModelsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListModelsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListModelsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListModelsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListModelsRequest clone() => new ListModelsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListModelsRequest create() => new ListModelsRequest();
-  static PbList<ListModelsRequest> createRepeated() =>
-      new PbList<ListModelsRequest>();
-  static ListModelsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListModelsRequest();
-    return _defaultInstance;
-  }
-
+  ListModelsRequest clone() => ListModelsRequest()..mergeFromMessage(this);
+  ListModelsRequest copyWith(void Function(ListModelsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListModelsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListModelsRequest create() => ListModelsRequest();
+  ListModelsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListModelsRequest> createRepeated() =>
+      $pb.PbList<ListModelsRequest>();
+  static ListModelsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListModelsRequest _defaultInstance;
-  static void $checkItem(ListModelsRequest v) {
-    if (v is! ListModelsRequest) checkItemFailed(v, 'ListModelsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(4);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(5);
 }
 
-class _ReadonlyListModelsRequest extends ListModelsRequest
-    with ReadonlyMessageMixin {}
-
-class ListModelsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListModelsResponse')
-    ..pp<Model>(1, 'models', PbFieldType.PM, Model.$checkItem, Model.create)
+class ListModelsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsResponse',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
+    ..pc<Model>(1, 'models', $pb.PbFieldType.PM, Model.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListModelsResponse() : super();
-  ListModelsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListModelsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListModelsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListModelsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListModelsResponse clone() =>
-      new ListModelsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListModelsResponse create() => new ListModelsResponse();
-  static PbList<ListModelsResponse> createRepeated() =>
-      new PbList<ListModelsResponse>();
-  static ListModelsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListModelsResponse();
-    return _defaultInstance;
-  }
-
+  ListModelsResponse clone() => ListModelsResponse()..mergeFromMessage(this);
+  ListModelsResponse copyWith(void Function(ListModelsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListModelsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListModelsResponse create() => ListModelsResponse();
+  ListModelsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListModelsResponse> createRepeated() =>
+      $pb.PbList<ListModelsResponse>();
+  static ListModelsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListModelsResponse _defaultInstance;
-  static void $checkItem(ListModelsResponse v) {
-    if (v is! ListModelsResponse) checkItemFailed(v, 'ListModelsResponse');
-  }
 
-  List<Model> get models => $_getList(0);
+  $core.List<Model> get models => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListModelsResponse extends ListModelsResponse
-    with ReadonlyMessageMixin {}
-
-class GetModelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetModelRequest')
+class GetModelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetModelRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetModelRequest() : super();
-  GetModelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetModelRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetModelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetModelRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetModelRequest clone() => new GetModelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetModelRequest create() => new GetModelRequest();
-  static PbList<GetModelRequest> createRepeated() =>
-      new PbList<GetModelRequest>();
-  static GetModelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetModelRequest();
-    return _defaultInstance;
-  }
-
+  GetModelRequest clone() => GetModelRequest()..mergeFromMessage(this);
+  GetModelRequest copyWith(void Function(GetModelRequest) updates) =>
+      super.copyWith((message) => updates(message as GetModelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetModelRequest create() => GetModelRequest();
+  GetModelRequest createEmptyInstance() => create();
+  static $pb.PbList<GetModelRequest> createRepeated() =>
+      $pb.PbList<GetModelRequest>();
+  static GetModelRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetModelRequest _defaultInstance;
-  static void $checkItem(GetModelRequest v) {
-    if (v is! GetModelRequest) checkItemFailed(v, 'GetModelRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetModelRequest extends GetModelRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteModelRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteModelRequest')
+class DeleteModelRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteModelRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteModelRequest() : super();
-  DeleteModelRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteModelRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteModelRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteModelRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  DeleteModelRequest clone() =>
-      new DeleteModelRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteModelRequest create() => new DeleteModelRequest();
-  static PbList<DeleteModelRequest> createRepeated() =>
-      new PbList<DeleteModelRequest>();
-  static DeleteModelRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteModelRequest();
-    return _defaultInstance;
-  }
-
+  DeleteModelRequest clone() => DeleteModelRequest()..mergeFromMessage(this);
+  DeleteModelRequest copyWith(void Function(DeleteModelRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteModelRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteModelRequest create() => DeleteModelRequest();
+  DeleteModelRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteModelRequest> createRepeated() =>
+      $pb.PbList<DeleteModelRequest>();
+  static DeleteModelRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteModelRequest _defaultInstance;
-  static void $checkItem(DeleteModelRequest v) {
-    if (v is! DeleteModelRequest) checkItemFailed(v, 'DeleteModelRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteModelRequest extends DeleteModelRequest
-    with ReadonlyMessageMixin {}
-
-class CreateVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('CreateVersionRequest')
+class CreateVersionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'parent')
     ..a<Version>(
-        2, 'version', PbFieldType.OM, Version.getDefault, Version.create)
+        2, 'version', $pb.PbFieldType.OM, Version.getDefault, Version.create)
     ..hasRequiredFields = false;
 
   CreateVersionRequest() : super();
-  CreateVersionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateVersionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  CreateVersionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  CreateVersionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   CreateVersionRequest clone() =>
-      new CreateVersionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static CreateVersionRequest create() => new CreateVersionRequest();
-  static PbList<CreateVersionRequest> createRepeated() =>
-      new PbList<CreateVersionRequest>();
-  static CreateVersionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyCreateVersionRequest();
-    return _defaultInstance;
-  }
-
+      CreateVersionRequest()..mergeFromMessage(this);
+  CreateVersionRequest copyWith(void Function(CreateVersionRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateVersionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static CreateVersionRequest create() => CreateVersionRequest();
+  CreateVersionRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateVersionRequest> createRepeated() =>
+      $pb.PbList<CreateVersionRequest>();
+  static CreateVersionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static CreateVersionRequest _defaultInstance;
-  static void $checkItem(CreateVersionRequest v) {
-    if (v is! CreateVersionRequest) checkItemFailed(v, 'CreateVersionRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
   Version get version => $_getN(1);
@@ -503,301 +446,201 @@ class CreateVersionRequest extends GeneratedMessage {
     setField(2, v);
   }
 
-  bool hasVersion() => $_has(1);
+  $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 }
 
-class _ReadonlyCreateVersionRequest extends CreateVersionRequest
-    with ReadonlyMessageMixin {}
-
-class ListVersionsRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVersionsRequest')
+class ListVersionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
-    ..a<int>(5, 'pageSize', PbFieldType.O3)
+    ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ListVersionsRequest() : super();
-  ListVersionsRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVersionsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListVersionsRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVersionsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  ListVersionsRequest clone() =>
-      new ListVersionsRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListVersionsRequest create() => new ListVersionsRequest();
-  static PbList<ListVersionsRequest> createRepeated() =>
-      new PbList<ListVersionsRequest>();
-  static ListVersionsRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVersionsRequest();
-    return _defaultInstance;
-  }
-
+  ListVersionsRequest clone() => ListVersionsRequest()..mergeFromMessage(this);
+  ListVersionsRequest copyWith(void Function(ListVersionsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListVersionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ListVersionsRequest create() => ListVersionsRequest();
+  ListVersionsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListVersionsRequest> createRepeated() =>
+      $pb.PbList<ListVersionsRequest>();
+  static ListVersionsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListVersionsRequest _defaultInstance;
-  static void $checkItem(ListVersionsRequest v) {
-    if (v is! ListVersionsRequest) checkItemFailed(v, 'ListVersionsRequest');
-  }
 
-  String get parent => $_getS(0, '');
-  set parent(String v) {
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasParent() => $_has(0);
+  $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  String get pageToken => $_getS(1, '');
-  set pageToken(String v) {
+  $core.String get pageToken => $_getS(1, '');
+  set pageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasPageToken() => $_has(1);
+  $core.bool hasPageToken() => $_has(1);
   void clearPageToken() => clearField(4);
 
-  int get pageSize => $_get(2, 0);
-  set pageSize(int v) {
+  $core.int get pageSize => $_get(2, 0);
+  set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
-  bool hasPageSize() => $_has(2);
+  $core.bool hasPageSize() => $_has(2);
   void clearPageSize() => clearField(5);
 }
 
-class _ReadonlyListVersionsRequest extends ListVersionsRequest
-    with ReadonlyMessageMixin {}
-
-class ListVersionsResponse extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('ListVersionsResponse')
-    ..pp<Version>(
-        1, 'versions', PbFieldType.PM, Version.$checkItem, Version.create)
+class ListVersionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsResponse',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
+    ..pc<Version>(1, 'versions', $pb.PbFieldType.PM, Version.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
   ListVersionsResponse() : super();
-  ListVersionsResponse.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVersionsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  ListVersionsResponse.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  ListVersionsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   ListVersionsResponse clone() =>
-      new ListVersionsResponse()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static ListVersionsResponse create() => new ListVersionsResponse();
-  static PbList<ListVersionsResponse> createRepeated() =>
-      new PbList<ListVersionsResponse>();
-  static ListVersionsResponse getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyListVersionsResponse();
-    return _defaultInstance;
-  }
-
+      ListVersionsResponse()..mergeFromMessage(this);
+  ListVersionsResponse copyWith(void Function(ListVersionsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListVersionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static ListVersionsResponse create() => ListVersionsResponse();
+  ListVersionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListVersionsResponse> createRepeated() =>
+      $pb.PbList<ListVersionsResponse>();
+  static ListVersionsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static ListVersionsResponse _defaultInstance;
-  static void $checkItem(ListVersionsResponse v) {
-    if (v is! ListVersionsResponse) checkItemFailed(v, 'ListVersionsResponse');
-  }
 
-  List<Version> get versions => $_getList(0);
+  $core.List<Version> get versions => $_getList(0);
 
-  String get nextPageToken => $_getS(1, '');
-  set nextPageToken(String v) {
+  $core.String get nextPageToken => $_getS(1, '');
+  set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
-  bool hasNextPageToken() => $_has(1);
+  $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 }
 
-class _ReadonlyListVersionsResponse extends ListVersionsResponse
-    with ReadonlyMessageMixin {}
-
-class GetVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('GetVersionRequest')
+class GetVersionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVersionRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   GetVersionRequest() : super();
-  GetVersionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetVersionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  GetVersionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  GetVersionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
-  GetVersionRequest clone() => new GetVersionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static GetVersionRequest create() => new GetVersionRequest();
-  static PbList<GetVersionRequest> createRepeated() =>
-      new PbList<GetVersionRequest>();
-  static GetVersionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyGetVersionRequest();
-    return _defaultInstance;
-  }
-
+  GetVersionRequest clone() => GetVersionRequest()..mergeFromMessage(this);
+  GetVersionRequest copyWith(void Function(GetVersionRequest) updates) =>
+      super.copyWith((message) => updates(message as GetVersionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static GetVersionRequest create() => GetVersionRequest();
+  GetVersionRequest createEmptyInstance() => create();
+  static $pb.PbList<GetVersionRequest> createRepeated() =>
+      $pb.PbList<GetVersionRequest>();
+  static GetVersionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static GetVersionRequest _defaultInstance;
-  static void $checkItem(GetVersionRequest v) {
-    if (v is! GetVersionRequest) checkItemFailed(v, 'GetVersionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyGetVersionRequest extends GetVersionRequest
-    with ReadonlyMessageMixin {}
-
-class DeleteVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('DeleteVersionRequest')
+class DeleteVersionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteVersionRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   DeleteVersionRequest() : super();
-  DeleteVersionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteVersionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  DeleteVersionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  DeleteVersionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   DeleteVersionRequest clone() =>
-      new DeleteVersionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static DeleteVersionRequest create() => new DeleteVersionRequest();
-  static PbList<DeleteVersionRequest> createRepeated() =>
-      new PbList<DeleteVersionRequest>();
-  static DeleteVersionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlyDeleteVersionRequest();
-    return _defaultInstance;
-  }
-
+      DeleteVersionRequest()..mergeFromMessage(this);
+  DeleteVersionRequest copyWith(void Function(DeleteVersionRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteVersionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static DeleteVersionRequest create() => DeleteVersionRequest();
+  DeleteVersionRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteVersionRequest> createRepeated() =>
+      $pb.PbList<DeleteVersionRequest>();
+  static DeleteVersionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static DeleteVersionRequest _defaultInstance;
-  static void $checkItem(DeleteVersionRequest v) {
-    if (v is! DeleteVersionRequest) checkItemFailed(v, 'DeleteVersionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 }
 
-class _ReadonlyDeleteVersionRequest extends DeleteVersionRequest
-    with ReadonlyMessageMixin {}
-
-class SetDefaultVersionRequest extends GeneratedMessage {
-  static final BuilderInfo _i = new BuilderInfo('SetDefaultVersionRequest')
+class SetDefaultVersionRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetDefaultVersionRequest',
+      package: const $pb.PackageName('google.cloud.ml.v1'))
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
   SetDefaultVersionRequest() : super();
-  SetDefaultVersionRequest.fromBuffer(List<int> i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetDefaultVersionRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromBuffer(i, r);
-  SetDefaultVersionRequest.fromJson(String i,
-      [ExtensionRegistry r = ExtensionRegistry.EMPTY])
+  SetDefaultVersionRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
       : super.fromJson(i, r);
   SetDefaultVersionRequest clone() =>
-      new SetDefaultVersionRequest()..mergeFromMessage(this);
-  BuilderInfo get info_ => _i;
-  static SetDefaultVersionRequest create() => new SetDefaultVersionRequest();
-  static PbList<SetDefaultVersionRequest> createRepeated() =>
-      new PbList<SetDefaultVersionRequest>();
-  static SetDefaultVersionRequest getDefault() {
-    if (_defaultInstance == null)
-      _defaultInstance = new _ReadonlySetDefaultVersionRequest();
-    return _defaultInstance;
-  }
-
+      SetDefaultVersionRequest()..mergeFromMessage(this);
+  SetDefaultVersionRequest copyWith(
+          void Function(SetDefaultVersionRequest) updates) =>
+      super.copyWith((message) => updates(message as SetDefaultVersionRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static SetDefaultVersionRequest create() => SetDefaultVersionRequest();
+  SetDefaultVersionRequest createEmptyInstance() => create();
+  static $pb.PbList<SetDefaultVersionRequest> createRepeated() =>
+      $pb.PbList<SetDefaultVersionRequest>();
+  static SetDefaultVersionRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
   static SetDefaultVersionRequest _defaultInstance;
-  static void $checkItem(SetDefaultVersionRequest v) {
-    if (v is! SetDefaultVersionRequest)
-      checkItemFailed(v, 'SetDefaultVersionRequest');
-  }
 
-  String get name => $_getS(0, '');
-  set name(String v) {
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
     $_setString(0, v);
   }
 
-  bool hasName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
-}
-
-class _ReadonlySetDefaultVersionRequest extends SetDefaultVersionRequest
-    with ReadonlyMessageMixin {}
-
-class ModelServiceApi {
-  RpcClient _client;
-  ModelServiceApi(this._client);
-
-  Future<Model> createModel(ClientContext ctx, CreateModelRequest request) {
-    var emptyResponse = new Model();
-    return _client.invoke<Model>(
-        ctx, 'ModelService', 'CreateModel', request, emptyResponse);
-  }
-
-  Future<ListModelsResponse> listModels(
-      ClientContext ctx, ListModelsRequest request) {
-    var emptyResponse = new ListModelsResponse();
-    return _client.invoke<ListModelsResponse>(
-        ctx, 'ModelService', 'ListModels', request, emptyResponse);
-  }
-
-  Future<Model> getModel(ClientContext ctx, GetModelRequest request) {
-    var emptyResponse = new Model();
-    return _client.invoke<Model>(
-        ctx, 'ModelService', 'GetModel', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> deleteModel(
-      ClientContext ctx, DeleteModelRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ModelService', 'DeleteModel', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> createVersion(
-      ClientContext ctx, CreateVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ModelService', 'CreateVersion', request, emptyResponse);
-  }
-
-  Future<ListVersionsResponse> listVersions(
-      ClientContext ctx, ListVersionsRequest request) {
-    var emptyResponse = new ListVersionsResponse();
-    return _client.invoke<ListVersionsResponse>(
-        ctx, 'ModelService', 'ListVersions', request, emptyResponse);
-  }
-
-  Future<Version> getVersion(ClientContext ctx, GetVersionRequest request) {
-    var emptyResponse = new Version();
-    return _client.invoke<Version>(
-        ctx, 'ModelService', 'GetVersion', request, emptyResponse);
-  }
-
-  Future<$google$longrunning.Operation> deleteVersion(
-      ClientContext ctx, DeleteVersionRequest request) {
-    var emptyResponse = new $google$longrunning.Operation();
-    return _client.invoke<$google$longrunning.Operation>(
-        ctx, 'ModelService', 'DeleteVersion', request, emptyResponse);
-  }
-
-  Future<Version> setDefaultVersion(
-      ClientContext ctx, SetDefaultVersionRequest request) {
-    var emptyResponse = new Version();
-    return _client.invoke<Version>(
-        ctx, 'ModelService', 'SetDefaultVersion', request, emptyResponse);
-  }
 }
