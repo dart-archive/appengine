@@ -40,8 +40,11 @@ To setup a hello world application we need 4 different things:
 ```yaml
 name: hello_world
 version: 0.1.0
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
 dependencies:
-  appengine: '>=0.4.0 <0.5.0'
+  appengine: '>=0.6.0 <1.0.0'
 ```
 #### An `app/app.yaml` file describing the AppEngine app:
 ```yaml
