@@ -1,3 +1,7 @@
+## 0.7.0
+
+ * Refactored to use `package:grpc` to talk to Logging and Datastore backends.
+
 ## 0.6.1
 
  * Added `isCronJonRequest` as a helper method for determining if a request
