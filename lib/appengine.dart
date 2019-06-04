@@ -87,8 +87,7 @@ Future runAppEngine(void handler(HttpRequest request),
 ///
 /// [1]: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#validating_cron_requests
 bool isCronJobRequest(HttpRequest request) {
-  return request.headers['X-Appengine-Cron'].contains('true') &&
-      request.connectionInfo.remoteAddress == InternetAddress('10.0.0.1');
+  return request.headers['X-Appengine-Cron']?.contains('true') == true;
 }
 
 /// Runs [callback] inside a new service scope with appengine services added.
