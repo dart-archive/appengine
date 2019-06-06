@@ -3657,6 +3657,19 @@ const LargeCustomDictionaryConfig$json = {
   ],
 };
 
+const LargeCustomDictionaryStats$json = {
+  '1': 'LargeCustomDictionaryStats',
+  '2': [
+    {
+      '1': 'approx_num_phrases',
+      '3': 1,
+      '4': 1,
+      '5': 3,
+      '10': 'approxNumPhrases'
+    },
+  ],
+};
+
 const StoredInfoTypeConfig$json = {
   '1': 'StoredInfoTypeConfig',
   '2': [
@@ -3668,6 +3681,24 @@ const StoredInfoTypeConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.privacy.dlp.v2.LargeCustomDictionaryConfig',
+      '9': 0,
+      '10': 'largeCustomDictionary'
+    },
+  ],
+  '8': [
+    {'1': 'type'},
+  ],
+};
+
+const StoredInfoTypeStats$json = {
+  '1': 'StoredInfoTypeStats',
+  '2': [
+    {
+      '1': 'large_custom_dictionary',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.LargeCustomDictionaryStats',
       '9': 0,
       '10': 'largeCustomDictionary'
     },
@@ -3711,6 +3742,14 @@ const StoredInfoTypeVersion$json = {
       '5': 11,
       '6': '.google.privacy.dlp.v2.Error',
       '10': 'errors'
+    },
+    {
+      '1': 'stats',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.StoredInfoTypeStats',
+      '10': 'stats'
     },
   ],
 };

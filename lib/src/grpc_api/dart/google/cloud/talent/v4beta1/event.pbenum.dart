@@ -40,8 +40,6 @@ class JobEvent_JobEventType extends $pb.ProtobufEnum {
       JobEvent_JobEventType._(14, 'SENT_CV');
   static const JobEvent_JobEventType INTERVIEW_GRANTED =
       JobEvent_JobEventType._(15, 'INTERVIEW_GRANTED');
-  static const JobEvent_JobEventType NOT_INTERESTED =
-      JobEvent_JobEventType._(16, 'NOT_INTERESTED');
 
   static const $core.List<JobEvent_JobEventType> values =
       <JobEvent_JobEventType>[
@@ -61,7 +59,6 @@ class JobEvent_JobEventType extends $pb.ProtobufEnum {
     HIRED,
     SENT_CV,
     INTERVIEW_GRANTED,
-    NOT_INTERESTED,
   ];
 
   static final $core.Map<$core.int, JobEvent_JobEventType> _byValue =

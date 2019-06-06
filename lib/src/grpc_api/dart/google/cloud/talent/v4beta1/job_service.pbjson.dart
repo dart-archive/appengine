@@ -381,3 +381,41 @@ const SearchJobsResponse_CommuteInfo$json = {
     },
   ],
 };
+
+const BatchCreateJobsRequest$json = {
+  '1': 'BatchCreateJobsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'jobs',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Job',
+      '10': 'jobs'
+    },
+  ],
+};
+
+const BatchUpdateJobsRequest$json = {
+  '1': 'BatchUpdateJobsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'jobs',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Job',
+      '10': 'jobs'
+    },
+    {
+      '1': 'update_mask',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};

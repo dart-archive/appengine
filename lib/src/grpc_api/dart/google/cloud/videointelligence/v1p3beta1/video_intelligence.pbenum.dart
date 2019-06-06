@@ -16,16 +16,21 @@ class Feature extends $pb.ProtobufEnum {
       Feature._(2, 'SHOT_CHANGE_DETECTION');
   static const Feature EXPLICIT_CONTENT_DETECTION =
       Feature._(3, 'EXPLICIT_CONTENT_DETECTION');
+  static const Feature SPEECH_TRANSCRIPTION =
+      Feature._(6, 'SPEECH_TRANSCRIPTION');
   static const Feature TEXT_DETECTION = Feature._(7, 'TEXT_DETECTION');
   static const Feature OBJECT_TRACKING = Feature._(9, 'OBJECT_TRACKING');
+  static const Feature LOGO_RECOGNITION = Feature._(12, 'LOGO_RECOGNITION');
 
   static const $core.List<Feature> values = <Feature>[
     FEATURE_UNSPECIFIED,
     LABEL_DETECTION,
     SHOT_CHANGE_DETECTION,
     EXPLICIT_CONTENT_DETECTION,
+    SPEECH_TRANSCRIPTION,
     TEXT_DETECTION,
     OBJECT_TRACKING,
+    LOGO_RECOGNITION,
   ];
 
   static final $core.Map<$core.int, Feature> _byValue =

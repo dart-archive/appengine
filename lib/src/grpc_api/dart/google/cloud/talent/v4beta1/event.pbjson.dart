@@ -54,6 +54,7 @@ const JobEvent$json = {
       '10': 'type'
     },
     {'1': 'jobs', '3': 2, '4': 3, '5': 9, '10': 'jobs'},
+    {'1': 'profile', '3': 3, '4': 1, '5': 9, '10': 'profile'},
   ],
   '4': [JobEvent_JobEventType$json],
 };
@@ -77,7 +78,6 @@ const JobEvent_JobEventType$json = {
     {'1': 'HIRED', '2': 13},
     {'1': 'SENT_CV', '2': 14},
     {'1': 'INTERVIEW_GRANTED', '2': 15},
-    {'1': 'NOT_INTERESTED', '2': 16},
   ],
 };
 

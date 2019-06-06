@@ -171,6 +171,7 @@ const SkillProficiencyLevel$json = {
   '1': 'SkillProficiencyLevel',
   '2': [
     {'1': 'SKILL_PROFICIENCY_LEVEL_UNSPECIFIED', '2': 0},
+    {'1': 'UNSKILLED', '2': 6},
     {'1': 'FUNDAMENTAL_AWARENESS', '2': 1},
     {'1': 'NOVICE', '2': 2},
     {'1': 'INTERMEDIATE', '2': 3},

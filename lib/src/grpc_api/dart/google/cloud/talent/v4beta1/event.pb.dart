@@ -118,6 +118,7 @@ class JobEvent extends $pb.GeneratedMessage {
         JobEvent_JobEventType.valueOf,
         JobEvent_JobEventType.values)
     ..pPS(2, 'jobs')
+    ..aOS(3, 'profile')
     ..hasRequiredFields = false;
 
   JobEvent() : super();
@@ -146,6 +147,14 @@ class JobEvent extends $pb.GeneratedMessage {
   void clearType() => clearField(1);
 
   $core.List<$core.String> get jobs => $_getList(1);
+
+  $core.String get profile => $_getS(2, '');
+  set profile($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasProfile() => $_has(2);
+  void clearProfile() => clearField(3);
 }
 
 class ProfileEvent extends $pb.GeneratedMessage {

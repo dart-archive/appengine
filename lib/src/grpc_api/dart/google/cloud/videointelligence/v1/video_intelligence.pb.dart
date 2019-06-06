@@ -122,6 +122,8 @@ class VideoContext extends $pb.GeneratedMessage {
         SpeechTranscriptionConfig.create)
     ..a<TextDetectionConfig>(8, 'textDetectionConfig', $pb.PbFieldType.OM,
         TextDetectionConfig.getDefault, TextDetectionConfig.create)
+    ..a<ObjectTrackingConfig>(13, 'objectTrackingConfig', $pb.PbFieldType.OM,
+        ObjectTrackingConfig.getDefault, ObjectTrackingConfig.create)
     ..hasRequiredFields = false;
 
   VideoContext() : super();
@@ -192,6 +194,14 @@ class VideoContext extends $pb.GeneratedMessage {
 
   $core.bool hasTextDetectionConfig() => $_has(6);
   void clearTextDetectionConfig() => clearField(8);
+
+  ObjectTrackingConfig get objectTrackingConfig => $_getN(7);
+  set objectTrackingConfig(ObjectTrackingConfig v) {
+    setField(13, v);
+  }
+
+  $core.bool hasObjectTrackingConfig() => $_has(7);
+  void clearObjectTrackingConfig() => clearField(13);
 }
 
 class LabelDetectionConfig extends $pb.GeneratedMessage {
@@ -206,6 +216,8 @@ class LabelDetectionConfig extends $pb.GeneratedMessage {
         LabelDetectionMode.values)
     ..aOB(2, 'stationaryCamera')
     ..aOS(3, 'model')
+    ..a<$core.double>(4, 'frameConfidenceThreshold', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, 'videoConfidenceThreshold', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   LabelDetectionConfig() : super();
@@ -251,6 +263,22 @@ class LabelDetectionConfig extends $pb.GeneratedMessage {
 
   $core.bool hasModel() => $_has(2);
   void clearModel() => clearField(3);
+
+  $core.double get frameConfidenceThreshold => $_getN(3);
+  set frameConfidenceThreshold($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasFrameConfidenceThreshold() => $_has(3);
+  void clearFrameConfidenceThreshold() => clearField(4);
+
+  $core.double get videoConfidenceThreshold => $_getN(4);
+  set videoConfidenceThreshold($core.double v) {
+    $_setFloat(4, v);
+  }
+
+  $core.bool hasVideoConfidenceThreshold() => $_has(4);
+  void clearVideoConfidenceThreshold() => clearField(5);
 }
 
 class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
@@ -372,10 +400,46 @@ class FaceDetectionConfig extends $pb.GeneratedMessage {
   void clearIncludeBoundingBoxes() => clearField(2);
 }
 
+class ObjectTrackingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingConfig',
+      package: const $pb.PackageName('google.cloud.videointelligence.v1'))
+    ..aOS(1, 'model')
+    ..hasRequiredFields = false;
+
+  ObjectTrackingConfig() : super();
+  ObjectTrackingConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ObjectTrackingConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ObjectTrackingConfig clone() =>
+      ObjectTrackingConfig()..mergeFromMessage(this);
+  ObjectTrackingConfig copyWith(void Function(ObjectTrackingConfig) updates) =>
+      super.copyWith((message) => updates(message as ObjectTrackingConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ObjectTrackingConfig create() => ObjectTrackingConfig();
+  ObjectTrackingConfig createEmptyInstance() => create();
+  static $pb.PbList<ObjectTrackingConfig> createRepeated() =>
+      $pb.PbList<ObjectTrackingConfig>();
+  static ObjectTrackingConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ObjectTrackingConfig _defaultInstance;
+
+  $core.String get model => $_getS(0, '');
+  set model($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasModel() => $_has(0);
+  void clearModel() => clearField(1);
+}
+
 class TextDetectionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextDetectionConfig',
       package: const $pb.PackageName('google.cloud.videointelligence.v1'))
     ..pPS(1, 'languageHints')
+    ..aOS(2, 'model')
     ..hasRequiredFields = false;
 
   TextDetectionConfig() : super();
@@ -398,6 +462,14 @@ class TextDetectionConfig extends $pb.GeneratedMessage {
   static TextDetectionConfig _defaultInstance;
 
   $core.List<$core.String> get languageHints => $_getList(0);
+
+  $core.String get model => $_getS(1, '');
+  set model($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasModel() => $_has(1);
+  void clearModel() => clearField(2);
 }
 
 class VideoSegment extends $pb.GeneratedMessage {
