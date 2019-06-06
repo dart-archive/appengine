@@ -11,8 +11,10 @@ const Feature$json = {
     {'1': 'LABEL_DETECTION', '2': 1},
     {'1': 'SHOT_CHANGE_DETECTION', '2': 2},
     {'1': 'EXPLICIT_CONTENT_DETECTION', '2': 3},
+    {'1': 'SPEECH_TRANSCRIPTION', '2': 6},
     {'1': 'TEXT_DETECTION', '2': 7},
     {'1': 'OBJECT_TRACKING', '2': 9},
+    {'1': 'LOGO_RECOGNITION', '2': 12},
   ],
 };
 
@@ -113,12 +115,29 @@ const VideoContext$json = {
       '10': 'explicitContentDetectionConfig'
     },
     {
+      '1': 'speech_transcription_config',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.videointelligence.v1p3beta1.SpeechTranscriptionConfig',
+      '10': 'speechTranscriptionConfig'
+    },
+    {
       '1': 'text_detection_config',
       '3': 8,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.videointelligence.v1p3beta1.TextDetectionConfig',
       '10': 'textDetectionConfig'
+    },
+    {
+      '1': 'object_tracking_config',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.ObjectTrackingConfig',
+      '10': 'objectTrackingConfig'
     },
   ],
 };
@@ -142,11 +161,32 @@ const LabelDetectionConfig$json = {
       '10': 'stationaryCamera'
     },
     {'1': 'model', '3': 3, '4': 1, '5': 9, '10': 'model'},
+    {
+      '1': 'frame_confidence_threshold',
+      '3': 4,
+      '4': 1,
+      '5': 2,
+      '10': 'frameConfidenceThreshold'
+    },
+    {
+      '1': 'video_confidence_threshold',
+      '3': 5,
+      '4': 1,
+      '5': 2,
+      '10': 'videoConfidenceThreshold'
+    },
   ],
 };
 
 const ShotChangeDetectionConfig$json = {
   '1': 'ShotChangeDetectionConfig',
+  '2': [
+    {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
+  ],
+};
+
+const ObjectTrackingConfig$json = {
+  '1': 'ObjectTrackingConfig',
   '2': [
     {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
   ],
@@ -163,6 +203,7 @@ const TextDetectionConfig$json = {
   '1': 'TextDetectionConfig',
   '2': [
     {'1': 'language_hints', '3': 1, '4': 3, '5': 9, '10': 'languageHints'},
+    {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
   ],
 };
 
@@ -311,6 +352,76 @@ const NormalizedBoundingBox$json = {
   ],
 };
 
+const TimestampedObject$json = {
+  '1': 'TimestampedObject',
+  '2': [
+    {
+      '1': 'normalized_bounding_box',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingBox',
+      '10': 'normalizedBoundingBox'
+    },
+    {
+      '1': 'time_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeOffset'
+    },
+    {
+      '1': 'attributes',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.DetectedAttribute',
+      '10': 'attributes'
+    },
+  ],
+};
+
+const Track$json = {
+  '1': 'Track',
+  '2': [
+    {
+      '1': 'segment',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.VideoSegment',
+      '10': 'segment'
+    },
+    {
+      '1': 'timestamped_objects',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.TimestampedObject',
+      '10': 'timestampedObjects'
+    },
+    {
+      '1': 'attributes',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.DetectedAttribute',
+      '10': 'attributes'
+    },
+    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
+  ],
+};
+
+const DetectedAttribute$json = {
+  '1': 'DetectedAttribute',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
+    {'1': 'value', '3': 3, '4': 1, '5': 9, '10': 'value'},
+  ],
+};
+
 const VideoAnnotationResults$json = {
   '1': 'VideoAnnotationResults',
   '2': [
@@ -357,6 +468,14 @@ const VideoAnnotationResults$json = {
       '10': 'explicitAnnotation'
     },
     {
+      '1': 'speech_transcriptions',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.SpeechTranscription',
+      '10': 'speechTranscriptions'
+    },
+    {
       '1': 'text_annotations',
       '3': 12,
       '4': 3,
@@ -371,6 +490,15 @@ const VideoAnnotationResults$json = {
       '5': 11,
       '6': '.google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation',
       '10': 'objectAnnotations'
+    },
+    {
+      '1': 'logo_recognition_annotations',
+      '3': 19,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.videointelligence.v1p3beta1.LogoRecognitionAnnotation',
+      '10': 'logoRecognitionAnnotations'
     },
     {
       '1': 'error',
@@ -432,6 +560,116 @@ const AnnotateVideoProgress$json = {
       '6': '.google.cloud.videointelligence.v1p3beta1.VideoAnnotationProgress',
       '10': 'annotationProgress'
     },
+  ],
+};
+
+const SpeechTranscriptionConfig$json = {
+  '1': 'SpeechTranscriptionConfig',
+  '2': [
+    {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'max_alternatives', '3': 2, '4': 1, '5': 5, '10': 'maxAlternatives'},
+    {'1': 'filter_profanity', '3': 3, '4': 1, '5': 8, '10': 'filterProfanity'},
+    {
+      '1': 'speech_contexts',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.SpeechContext',
+      '10': 'speechContexts'
+    },
+    {
+      '1': 'enable_automatic_punctuation',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'enableAutomaticPunctuation'
+    },
+    {'1': 'audio_tracks', '3': 6, '4': 3, '5': 5, '10': 'audioTracks'},
+    {
+      '1': 'enable_speaker_diarization',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '10': 'enableSpeakerDiarization'
+    },
+    {
+      '1': 'diarization_speaker_count',
+      '3': 8,
+      '4': 1,
+      '5': 5,
+      '10': 'diarizationSpeakerCount'
+    },
+    {
+      '1': 'enable_word_confidence',
+      '3': 9,
+      '4': 1,
+      '5': 8,
+      '10': 'enableWordConfidence'
+    },
+  ],
+};
+
+const SpeechContext$json = {
+  '1': 'SpeechContext',
+  '2': [
+    {'1': 'phrases', '3': 1, '4': 3, '5': 9, '10': 'phrases'},
+  ],
+};
+
+const SpeechTranscription$json = {
+  '1': 'SpeechTranscription',
+  '2': [
+    {
+      '1': 'alternatives',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.videointelligence.v1p3beta1.SpeechRecognitionAlternative',
+      '10': 'alternatives'
+    },
+    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+  ],
+};
+
+const SpeechRecognitionAlternative$json = {
+  '1': 'SpeechRecognitionAlternative',
+  '2': [
+    {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
+    {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
+    {
+      '1': 'words',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.WordInfo',
+      '10': 'words'
+    },
+  ],
+};
+
+const WordInfo$json = {
+  '1': 'WordInfo',
+  '2': [
+    {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'endTime'
+    },
+    {'1': 'word', '3': 3, '4': 1, '5': 9, '10': 'word'},
+    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
+    {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '10': 'speakerTag'},
   ],
 };
 
@@ -572,6 +810,36 @@ const ObjectTrackingAnnotation$json = {
   ],
   '8': [
     {'1': 'track_info'},
+  ],
+};
+
+const LogoRecognitionAnnotation$json = {
+  '1': 'LogoRecognitionAnnotation',
+  '2': [
+    {
+      '1': 'entity',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.Entity',
+      '10': 'entity'
+    },
+    {
+      '1': 'tracks',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.Track',
+      '10': 'tracks'
+    },
+    {
+      '1': 'segments',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1p3beta1.VideoSegment',
+      '10': 'segments'
+    },
   ],
 };
 

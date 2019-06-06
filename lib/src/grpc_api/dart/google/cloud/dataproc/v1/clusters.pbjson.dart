@@ -340,6 +340,14 @@ const SoftwareConfig$json = {
       '6': '.google.cloud.dataproc.v1.SoftwareConfig.PropertiesEntry',
       '10': 'properties'
     },
+    {
+      '1': 'optional_components',
+      '3': 3,
+      '4': 3,
+      '5': 14,
+      '6': '.google.cloud.dataproc.v1.Component',
+      '10': 'optionalComponents'
+    },
   ],
   '3': [SoftwareConfig_PropertiesEntry$json],
 };

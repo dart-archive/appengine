@@ -388,6 +388,8 @@ class CommuteMethod extends $pb.ProtobufEnum {
 class SkillProficiencyLevel extends $pb.ProtobufEnum {
   static const SkillProficiencyLevel SKILL_PROFICIENCY_LEVEL_UNSPECIFIED =
       SkillProficiencyLevel._(0, 'SKILL_PROFICIENCY_LEVEL_UNSPECIFIED');
+  static const SkillProficiencyLevel UNSKILLED =
+      SkillProficiencyLevel._(6, 'UNSKILLED');
   static const SkillProficiencyLevel FUNDAMENTAL_AWARENESS =
       SkillProficiencyLevel._(1, 'FUNDAMENTAL_AWARENESS');
   static const SkillProficiencyLevel NOVICE =
@@ -402,6 +404,7 @@ class SkillProficiencyLevel extends $pb.ProtobufEnum {
   static const $core.List<SkillProficiencyLevel> values =
       <SkillProficiencyLevel>[
     SKILL_PROFICIENCY_LEVEL_UNSPECIFIED,
+    UNSKILLED,
     FUNDAMENTAL_AWARENESS,
     NOVICE,
     INTERMEDIATE,

@@ -38,6 +38,14 @@ const Device$json = {
       '10': 'attributes'
     },
     {'1': 'custom_data', '3': 10, '4': 1, '5': 9, '10': 'customData'},
+    {
+      '1': 'other_device_ids',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.google.home.graph.v1.AgentOtherDeviceId',
+      '10': 'otherDeviceIds'
+    },
   ],
 };
 
@@ -57,5 +65,13 @@ const DeviceInfo$json = {
     {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
     {'1': 'hw_version', '3': 3, '4': 1, '5': 9, '10': 'hwVersion'},
     {'1': 'sw_version', '3': 4, '4': 1, '5': 9, '10': 'swVersion'},
+  ],
+};
+
+const AgentOtherDeviceId$json = {
+  '1': 'AgentOtherDeviceId',
+  '2': [
+    {'1': 'agent_id', '3': 1, '4': 1, '5': 9, '10': 'agentId'},
+    {'1': 'device_id', '3': 2, '4': 1, '5': 9, '10': 'deviceId'},
   ],
 };

@@ -35,6 +35,16 @@ class CloudRedisClient extends $grpc.Client {
           '/google.cloud.redis.v1.CloudRedis/UpdateInstance',
           (UpdateInstanceRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+  static final _$importInstance =
+      $grpc.ClientMethod<ImportInstanceRequest, $1.Operation>(
+          '/google.cloud.redis.v1.CloudRedis/ImportInstance',
+          (ImportInstanceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+  static final _$exportInstance =
+      $grpc.ClientMethod<ExportInstanceRequest, $1.Operation>(
+          '/google.cloud.redis.v1.CloudRedis/ExportInstance',
+          (ExportInstanceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
   static final _$failoverInstance =
       $grpc.ClientMethod<FailoverInstanceRequest, $1.Operation>(
           '/google.cloud.redis.v1.CloudRedis/FailoverInstance',
@@ -80,6 +90,24 @@ class CloudRedisClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateInstance, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$1.Operation> importInstance(
+      ImportInstanceRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$importInstance, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$1.Operation> exportInstance(
+      ExportInstanceRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$exportInstance, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -137,6 +165,22 @@ abstract class CloudRedisServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             UpdateInstanceRequest.fromBuffer(value),
         ($1.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<ImportInstanceRequest, $1.Operation>(
+        'ImportInstance',
+        importInstance_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            ImportInstanceRequest.fromBuffer(value),
+        ($1.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<ExportInstanceRequest, $1.Operation>(
+        'ExportInstance',
+        exportInstance_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            ExportInstanceRequest.fromBuffer(value),
+        ($1.Operation value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<FailoverInstanceRequest, $1.Operation>(
         'FailoverInstance',
         failoverInstance_Pre,
@@ -175,6 +219,16 @@ abstract class CloudRedisServiceBase extends $grpc.Service {
     return updateInstance(call, await request);
   }
 
+  $async.Future<$1.Operation> importInstance_Pre(
+      $grpc.ServiceCall call, $async.Future request) async {
+    return importInstance(call, await request);
+  }
+
+  $async.Future<$1.Operation> exportInstance_Pre(
+      $grpc.ServiceCall call, $async.Future request) async {
+    return exportInstance(call, await request);
+  }
+
   $async.Future<$1.Operation> failoverInstance_Pre(
       $grpc.ServiceCall call, $async.Future request) async {
     return failoverInstance(call, await request);
@@ -193,6 +247,10 @@ abstract class CloudRedisServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, CreateInstanceRequest request);
   $async.Future<$1.Operation> updateInstance(
       $grpc.ServiceCall call, UpdateInstanceRequest request);
+  $async.Future<$1.Operation> importInstance(
+      $grpc.ServiceCall call, ImportInstanceRequest request);
+  $async.Future<$1.Operation> exportInstance(
+      $grpc.ServiceCall call, ExportInstanceRequest request);
   $async.Future<$1.Operation> failoverInstance(
       $grpc.ServiceCall call, FailoverInstanceRequest request);
   $async.Future<$1.Operation> deleteInstance(

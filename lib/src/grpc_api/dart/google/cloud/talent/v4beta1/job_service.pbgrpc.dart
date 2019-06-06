@@ -13,6 +13,7 @@ import 'dart:core' as $core show int, String, List;
 import 'job_service.pb.dart';
 import 'job.pb.dart' as $1;
 import '../../../protobuf/empty.pb.dart' as $0;
+import '../../../longrunning/operations.pb.dart' as $2;
 export 'job_service.pb.dart';
 
 class JobServiceClient extends $grpc.Client {
@@ -54,6 +55,16 @@ class JobServiceClient extends $grpc.Client {
           (SearchJobsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               SearchJobsResponse.fromBuffer(value));
+  static final _$batchCreateJobs =
+      $grpc.ClientMethod<BatchCreateJobsRequest, $2.Operation>(
+          '/google.cloud.talent.v4beta1.JobService/BatchCreateJobs',
+          (BatchCreateJobsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$batchUpdateJobs =
+      $grpc.ClientMethod<BatchUpdateJobsRequest, $2.Operation>(
+          '/google.cloud.talent.v4beta1.JobService/BatchUpdateJobs',
+          (BatchUpdateJobsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
 
   JobServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -114,6 +125,24 @@ class JobServiceClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$searchJobsForAlert, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> batchCreateJobs(
+      BatchCreateJobsRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$batchCreateJobs, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.Operation> batchUpdateJobs(
+      BatchUpdateJobsRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$batchUpdateJobs, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -180,6 +209,22 @@ abstract class JobServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => SearchJobsRequest.fromBuffer(value),
         (SearchJobsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<BatchCreateJobsRequest, $2.Operation>(
+        'BatchCreateJobs',
+        batchCreateJobs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            BatchCreateJobsRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<BatchUpdateJobsRequest, $2.Operation>(
+        'BatchUpdateJobs',
+        batchUpdateJobs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            BatchUpdateJobsRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Job> createJob_Pre(
@@ -222,6 +267,16 @@ abstract class JobServiceBase extends $grpc.Service {
     return searchJobsForAlert(call, await request);
   }
 
+  $async.Future<$2.Operation> batchCreateJobs_Pre(
+      $grpc.ServiceCall call, $async.Future request) async {
+    return batchCreateJobs(call, await request);
+  }
+
+  $async.Future<$2.Operation> batchUpdateJobs_Pre(
+      $grpc.ServiceCall call, $async.Future request) async {
+    return batchUpdateJobs(call, await request);
+  }
+
   $async.Future<$1.Job> createJob(
       $grpc.ServiceCall call, CreateJobRequest request);
   $async.Future<$1.Job> getJob($grpc.ServiceCall call, GetJobRequest request);
@@ -237,4 +292,8 @@ abstract class JobServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, SearchJobsRequest request);
   $async.Future<SearchJobsResponse> searchJobsForAlert(
       $grpc.ServiceCall call, SearchJobsRequest request);
+  $async.Future<$2.Operation> batchCreateJobs(
+      $grpc.ServiceCall call, BatchCreateJobsRequest request);
+  $async.Future<$2.Operation> batchUpdateJobs(
+      $grpc.ServiceCall call, BatchUpdateJobsRequest request);
 }

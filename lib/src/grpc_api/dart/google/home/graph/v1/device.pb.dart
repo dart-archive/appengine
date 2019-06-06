@@ -27,6 +27,8 @@ class Device extends $pb.GeneratedMessage {
     ..a<$0.Struct>(9, 'attributes', $pb.PbFieldType.OM, $0.Struct.getDefault,
         $0.Struct.create)
     ..aOS(10, 'customData')
+    ..pc<AgentOtherDeviceId>(
+        11, 'otherDeviceIds', $pb.PbFieldType.PM, AgentOtherDeviceId.create)
     ..hasRequiredFields = false;
 
   Device() : super();
@@ -119,6 +121,8 @@ class Device extends $pb.GeneratedMessage {
 
   $core.bool hasCustomData() => $_has(9);
   void clearCustomData() => clearField(10);
+
+  $core.List<AgentOtherDeviceId> get otherDeviceIds => $_getList(10);
 }
 
 class DeviceNames extends $pb.GeneratedMessage {
@@ -216,4 +220,47 @@ class DeviceInfo extends $pb.GeneratedMessage {
 
   $core.bool hasSwVersion() => $_has(3);
   void clearSwVersion() => clearField(4);
+}
+
+class AgentOtherDeviceId extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AgentOtherDeviceId',
+      package: const $pb.PackageName('google.home.graph.v1'))
+    ..aOS(1, 'agentId')
+    ..aOS(2, 'deviceId')
+    ..hasRequiredFields = false;
+
+  AgentOtherDeviceId() : super();
+  AgentOtherDeviceId.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  AgentOtherDeviceId.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  AgentOtherDeviceId clone() => AgentOtherDeviceId()..mergeFromMessage(this);
+  AgentOtherDeviceId copyWith(void Function(AgentOtherDeviceId) updates) =>
+      super.copyWith((message) => updates(message as AgentOtherDeviceId));
+  $pb.BuilderInfo get info_ => _i;
+  static AgentOtherDeviceId create() => AgentOtherDeviceId();
+  AgentOtherDeviceId createEmptyInstance() => create();
+  static $pb.PbList<AgentOtherDeviceId> createRepeated() =>
+      $pb.PbList<AgentOtherDeviceId>();
+  static AgentOtherDeviceId getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static AgentOtherDeviceId _defaultInstance;
+
+  $core.String get agentId => $_getS(0, '');
+  set agentId($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasAgentId() => $_has(0);
+  void clearAgentId() => clearField(1);
+
+  $core.String get deviceId => $_getS(1, '');
+  set deviceId($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasDeviceId() => $_has(1);
+  void clearDeviceId() => clearField(2);
 }

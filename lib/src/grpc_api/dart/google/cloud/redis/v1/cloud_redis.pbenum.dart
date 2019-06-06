@@ -17,6 +17,7 @@ class Instance_State extends $pb.ProtobufEnum {
   static const Instance_State DELETING = Instance_State._(4, 'DELETING');
   static const Instance_State REPAIRING = Instance_State._(5, 'REPAIRING');
   static const Instance_State MAINTENANCE = Instance_State._(6, 'MAINTENANCE');
+  static const Instance_State IMPORTING = Instance_State._(8, 'IMPORTING');
   static const Instance_State FAILING_OVER =
       Instance_State._(9, 'FAILING_OVER');
 
@@ -28,6 +29,7 @@ class Instance_State extends $pb.ProtobufEnum {
     DELETING,
     REPAIRING,
     MAINTENANCE,
+    IMPORTING,
     FAILING_OVER,
   ];
 

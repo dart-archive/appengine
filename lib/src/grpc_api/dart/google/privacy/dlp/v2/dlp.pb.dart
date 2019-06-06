@@ -8285,6 +8285,44 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
   void clearBigQueryField() => clearField(3);
 }
 
+class LargeCustomDictionaryStats extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'LargeCustomDictionaryStats',
+      package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..aInt64(1, 'approxNumPhrases')
+    ..hasRequiredFields = false;
+
+  LargeCustomDictionaryStats() : super();
+  LargeCustomDictionaryStats.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  LargeCustomDictionaryStats.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  LargeCustomDictionaryStats clone() =>
+      LargeCustomDictionaryStats()..mergeFromMessage(this);
+  LargeCustomDictionaryStats copyWith(
+          void Function(LargeCustomDictionaryStats) updates) =>
+      super.copyWith(
+          (message) => updates(message as LargeCustomDictionaryStats));
+  $pb.BuilderInfo get info_ => _i;
+  static LargeCustomDictionaryStats create() => LargeCustomDictionaryStats();
+  LargeCustomDictionaryStats createEmptyInstance() => create();
+  static $pb.PbList<LargeCustomDictionaryStats> createRepeated() =>
+      $pb.PbList<LargeCustomDictionaryStats>();
+  static LargeCustomDictionaryStats getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static LargeCustomDictionaryStats _defaultInstance;
+
+  Int64 get approxNumPhrases => $_getI64(0);
+  set approxNumPhrases(Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  $core.bool hasApproxNumPhrases() => $_has(0);
+  void clearApproxNumPhrases() => clearField(1);
+}
+
 enum StoredInfoTypeConfig_Type { largeCustomDictionary, notSet }
 
 class StoredInfoTypeConfig extends $pb.GeneratedMessage {
@@ -8355,6 +8393,57 @@ class StoredInfoTypeConfig extends $pb.GeneratedMessage {
   void clearLargeCustomDictionary() => clearField(3);
 }
 
+enum StoredInfoTypeStats_Type { largeCustomDictionary, notSet }
+
+class StoredInfoTypeStats extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, StoredInfoTypeStats_Type>
+      _StoredInfoTypeStats_TypeByTag = {
+    1: StoredInfoTypeStats_Type.largeCustomDictionary,
+    0: StoredInfoTypeStats_Type.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeStats',
+      package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..a<LargeCustomDictionaryStats>(
+        1,
+        'largeCustomDictionary',
+        $pb.PbFieldType.OM,
+        LargeCustomDictionaryStats.getDefault,
+        LargeCustomDictionaryStats.create)
+    ..oo(0, [1])
+    ..hasRequiredFields = false;
+
+  StoredInfoTypeStats() : super();
+  StoredInfoTypeStats.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  StoredInfoTypeStats.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  StoredInfoTypeStats clone() => StoredInfoTypeStats()..mergeFromMessage(this);
+  StoredInfoTypeStats copyWith(void Function(StoredInfoTypeStats) updates) =>
+      super.copyWith((message) => updates(message as StoredInfoTypeStats));
+  $pb.BuilderInfo get info_ => _i;
+  static StoredInfoTypeStats create() => StoredInfoTypeStats();
+  StoredInfoTypeStats createEmptyInstance() => create();
+  static $pb.PbList<StoredInfoTypeStats> createRepeated() =>
+      $pb.PbList<StoredInfoTypeStats>();
+  static StoredInfoTypeStats getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static StoredInfoTypeStats _defaultInstance;
+
+  StoredInfoTypeStats_Type whichType() =>
+      _StoredInfoTypeStats_TypeByTag[$_whichOneof(0)];
+  void clearType() => clearField($_whichOneof(0));
+
+  LargeCustomDictionaryStats get largeCustomDictionary => $_getN(0);
+  set largeCustomDictionary(LargeCustomDictionaryStats v) {
+    setField(1, v);
+  }
+
+  $core.bool hasLargeCustomDictionary() => $_has(0);
+  void clearLargeCustomDictionary() => clearField(1);
+}
+
 class StoredInfoTypeVersion extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeVersion',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
@@ -8370,6 +8459,8 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
         StoredInfoTypeState.valueOf,
         StoredInfoTypeState.values)
     ..pc<Error>(4, 'errors', $pb.PbFieldType.PM, Error.create)
+    ..a<StoredInfoTypeStats>(5, 'stats', $pb.PbFieldType.OM,
+        StoredInfoTypeStats.getDefault, StoredInfoTypeStats.create)
     ..hasRequiredFields = false;
 
   StoredInfoTypeVersion() : super();
@@ -8418,6 +8509,14 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
   void clearState() => clearField(3);
 
   $core.List<Error> get errors => $_getList(3);
+
+  StoredInfoTypeStats get stats => $_getN(4);
+  set stats(StoredInfoTypeStats v) {
+    setField(5, v);
+  }
+
+  $core.bool hasStats() => $_has(4);
+  void clearStats() => clearField(5);
 }
 
 class StoredInfoType extends $pb.GeneratedMessage {

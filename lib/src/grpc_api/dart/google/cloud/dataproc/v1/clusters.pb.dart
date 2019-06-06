@@ -15,6 +15,7 @@ import '../../../protobuf/timestamp.pb.dart' as $3;
 import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'clusters.pbenum.dart';
+import 'shared.pbenum.dart' as $5;
 
 export 'clusters.pbenum.dart';
 
@@ -691,6 +692,8 @@ class SoftwareConfig extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..pc<$5.Component>(3, 'optionalComponents', $pb.PbFieldType.PE, null,
+        $5.Component.valueOf, $5.Component.values)
     ..hasRequiredFields = false;
 
   SoftwareConfig() : super();
@@ -720,6 +723,8 @@ class SoftwareConfig extends $pb.GeneratedMessage {
   void clearImageVersion() => clearField(1);
 
   $core.Map<$core.String, $core.String> get properties => $_getMap(1);
+
+  $core.List<$5.Component> get optionalComponents => $_getList(2);
 }
 
 class ClusterMetrics extends $pb.GeneratedMessage {

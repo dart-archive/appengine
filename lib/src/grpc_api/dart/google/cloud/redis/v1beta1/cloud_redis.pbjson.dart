@@ -77,6 +77,13 @@ const Instance$json = {
       '5': 9,
       '10': 'authorizedNetwork'
     },
+    {
+      '1': 'persistence_iam_identity',
+      '3': 21,
+      '4': 1,
+      '5': 9,
+      '10': 'persistenceIamIdentity'
+    },
   ],
   '3': [Instance_LabelsEntry$json, Instance_RedisConfigsEntry$json],
   '4': [Instance_State$json, Instance_Tier$json],
@@ -198,6 +205,86 @@ const DeleteInstanceRequest$json = {
   '1': 'DeleteInstanceRequest',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const GcsSource$json = {
+  '1': 'GcsSource',
+  '2': [
+    {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+  ],
+};
+
+const InputConfig$json = {
+  '1': 'InputConfig',
+  '2': [
+    {
+      '1': 'gcs_source',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.redis.v1beta1.GcsSource',
+      '9': 0,
+      '10': 'gcsSource'
+    },
+  ],
+  '8': [
+    {'1': 'source'},
+  ],
+};
+
+const ImportInstanceRequest$json = {
+  '1': 'ImportInstanceRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'input_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.redis.v1beta1.InputConfig',
+      '10': 'inputConfig'
+    },
+  ],
+};
+
+const GcsDestination$json = {
+  '1': 'GcsDestination',
+  '2': [
+    {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+  ],
+};
+
+const OutputConfig$json = {
+  '1': 'OutputConfig',
+  '2': [
+    {
+      '1': 'gcs_destination',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.redis.v1beta1.GcsDestination',
+      '9': 0,
+      '10': 'gcsDestination'
+    },
+  ],
+  '8': [
+    {'1': 'destination'},
+  ],
+};
+
+const ExportInstanceRequest$json = {
+  '1': 'ExportInstanceRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'output_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.redis.v1beta1.OutputConfig',
+      '10': 'outputConfig'
+    },
   ],
 };
 

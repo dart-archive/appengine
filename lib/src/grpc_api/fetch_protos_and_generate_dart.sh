@@ -49,3 +49,5 @@ done
 
 run rm -rf $PROTOBUF_DIR
 run rm -rf $GOOGLEAPIS_DIR
+
+dartfmt --fix -w $DIR

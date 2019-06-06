@@ -125,6 +125,14 @@ const VideoContext$json = {
       '6': '.google.cloud.videointelligence.v1.TextDetectionConfig',
       '10': 'textDetectionConfig'
     },
+    {
+      '1': 'object_tracking_config',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.ObjectTrackingConfig',
+      '10': 'objectTrackingConfig'
+    },
   ],
 };
 
@@ -147,6 +155,20 @@ const LabelDetectionConfig$json = {
       '10': 'stationaryCamera'
     },
     {'1': 'model', '3': 3, '4': 1, '5': 9, '10': 'model'},
+    {
+      '1': 'frame_confidence_threshold',
+      '3': 4,
+      '4': 1,
+      '5': 2,
+      '10': 'frameConfidenceThreshold'
+    },
+    {
+      '1': 'video_confidence_threshold',
+      '3': 5,
+      '4': 1,
+      '5': 2,
+      '10': 'videoConfidenceThreshold'
+    },
   ],
 };
 
@@ -178,10 +200,18 @@ const FaceDetectionConfig$json = {
   ],
 };
 
+const ObjectTrackingConfig$json = {
+  '1': 'ObjectTrackingConfig',
+  '2': [
+    {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
+  ],
+};
+
 const TextDetectionConfig$json = {
   '1': 'TextDetectionConfig',
   '2': [
     {'1': 'language_hints', '3': 1, '4': 3, '5': 9, '10': 'languageHints'},
+    {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
   ],
 };
 

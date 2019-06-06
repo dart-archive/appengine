@@ -114,8 +114,16 @@ class VideoContext extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         ExplicitContentDetectionConfig.getDefault,
         ExplicitContentDetectionConfig.create)
+    ..a<SpeechTranscriptionConfig>(
+        6,
+        'speechTranscriptionConfig',
+        $pb.PbFieldType.OM,
+        SpeechTranscriptionConfig.getDefault,
+        SpeechTranscriptionConfig.create)
     ..a<TextDetectionConfig>(8, 'textDetectionConfig', $pb.PbFieldType.OM,
         TextDetectionConfig.getDefault, TextDetectionConfig.create)
+    ..a<ObjectTrackingConfig>(13, 'objectTrackingConfig', $pb.PbFieldType.OM,
+        ObjectTrackingConfig.getDefault, ObjectTrackingConfig.create)
     ..hasRequiredFields = false;
 
   VideoContext() : super();
@@ -163,13 +171,29 @@ class VideoContext extends $pb.GeneratedMessage {
   $core.bool hasExplicitContentDetectionConfig() => $_has(3);
   void clearExplicitContentDetectionConfig() => clearField(4);
 
-  TextDetectionConfig get textDetectionConfig => $_getN(4);
+  SpeechTranscriptionConfig get speechTranscriptionConfig => $_getN(4);
+  set speechTranscriptionConfig(SpeechTranscriptionConfig v) {
+    setField(6, v);
+  }
+
+  $core.bool hasSpeechTranscriptionConfig() => $_has(4);
+  void clearSpeechTranscriptionConfig() => clearField(6);
+
+  TextDetectionConfig get textDetectionConfig => $_getN(5);
   set textDetectionConfig(TextDetectionConfig v) {
     setField(8, v);
   }
 
-  $core.bool hasTextDetectionConfig() => $_has(4);
+  $core.bool hasTextDetectionConfig() => $_has(5);
   void clearTextDetectionConfig() => clearField(8);
+
+  ObjectTrackingConfig get objectTrackingConfig => $_getN(6);
+  set objectTrackingConfig(ObjectTrackingConfig v) {
+    setField(13, v);
+  }
+
+  $core.bool hasObjectTrackingConfig() => $_has(6);
+  void clearObjectTrackingConfig() => clearField(13);
 }
 
 class LabelDetectionConfig extends $pb.GeneratedMessage {
@@ -185,6 +209,8 @@ class LabelDetectionConfig extends $pb.GeneratedMessage {
         LabelDetectionMode.values)
     ..aOB(2, 'stationaryCamera')
     ..aOS(3, 'model')
+    ..a<$core.double>(4, 'frameConfidenceThreshold', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, 'videoConfidenceThreshold', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   LabelDetectionConfig() : super();
@@ -230,6 +256,22 @@ class LabelDetectionConfig extends $pb.GeneratedMessage {
 
   $core.bool hasModel() => $_has(2);
   void clearModel() => clearField(3);
+
+  $core.double get frameConfidenceThreshold => $_getN(3);
+  set frameConfidenceThreshold($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasFrameConfidenceThreshold() => $_has(3);
+  void clearFrameConfidenceThreshold() => clearField(4);
+
+  $core.double get videoConfidenceThreshold => $_getN(4);
+  set videoConfidenceThreshold($core.double v) {
+    $_setFloat(4, v);
+  }
+
+  $core.bool hasVideoConfidenceThreshold() => $_has(4);
+  void clearVideoConfidenceThreshold() => clearField(5);
 }
 
 class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
@@ -260,6 +302,42 @@ class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
   static ShotChangeDetectionConfig getDefault() =>
       _defaultInstance ??= create()..freeze();
   static ShotChangeDetectionConfig _defaultInstance;
+
+  $core.String get model => $_getS(0, '');
+  set model($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasModel() => $_has(0);
+  void clearModel() => clearField(1);
+}
+
+class ObjectTrackingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingConfig',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..aOS(1, 'model')
+    ..hasRequiredFields = false;
+
+  ObjectTrackingConfig() : super();
+  ObjectTrackingConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ObjectTrackingConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ObjectTrackingConfig clone() =>
+      ObjectTrackingConfig()..mergeFromMessage(this);
+  ObjectTrackingConfig copyWith(void Function(ObjectTrackingConfig) updates) =>
+      super.copyWith((message) => updates(message as ObjectTrackingConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static ObjectTrackingConfig create() => ObjectTrackingConfig();
+  ObjectTrackingConfig createEmptyInstance() => create();
+  static $pb.PbList<ObjectTrackingConfig> createRepeated() =>
+      $pb.PbList<ObjectTrackingConfig>();
+  static ObjectTrackingConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ObjectTrackingConfig _defaultInstance;
 
   $core.String get model => $_getS(0, '');
   set model($core.String v) {
@@ -315,6 +393,7 @@ class TextDetectionConfig extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..pPS(1, 'languageHints')
+    ..aOS(2, 'model')
     ..hasRequiredFields = false;
 
   TextDetectionConfig() : super();
@@ -337,6 +416,14 @@ class TextDetectionConfig extends $pb.GeneratedMessage {
   static TextDetectionConfig _defaultInstance;
 
   $core.List<$core.String> get languageHints => $_getList(0);
+
+  $core.String get model => $_getS(1, '');
+  set model($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasModel() => $_has(1);
+  void clearModel() => clearField(2);
 }
 
 class VideoSegment extends $pb.GeneratedMessage {
@@ -716,6 +803,160 @@ class NormalizedBoundingBox extends $pb.GeneratedMessage {
   void clearBottom() => clearField(4);
 }
 
+class TimestampedObject extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimestampedObject',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..a<NormalizedBoundingBox>(1, 'normalizedBoundingBox', $pb.PbFieldType.OM,
+        NormalizedBoundingBox.getDefault, NormalizedBoundingBox.create)
+    ..a<$2.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
+    ..pc<DetectedAttribute>(
+        3, 'attributes', $pb.PbFieldType.PM, DetectedAttribute.create)
+    ..hasRequiredFields = false;
+
+  TimestampedObject() : super();
+  TimestampedObject.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  TimestampedObject.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  TimestampedObject clone() => TimestampedObject()..mergeFromMessage(this);
+  TimestampedObject copyWith(void Function(TimestampedObject) updates) =>
+      super.copyWith((message) => updates(message as TimestampedObject));
+  $pb.BuilderInfo get info_ => _i;
+  static TimestampedObject create() => TimestampedObject();
+  TimestampedObject createEmptyInstance() => create();
+  static $pb.PbList<TimestampedObject> createRepeated() =>
+      $pb.PbList<TimestampedObject>();
+  static TimestampedObject getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static TimestampedObject _defaultInstance;
+
+  NormalizedBoundingBox get normalizedBoundingBox => $_getN(0);
+  set normalizedBoundingBox(NormalizedBoundingBox v) {
+    setField(1, v);
+  }
+
+  $core.bool hasNormalizedBoundingBox() => $_has(0);
+  void clearNormalizedBoundingBox() => clearField(1);
+
+  $2.Duration get timeOffset => $_getN(1);
+  set timeOffset($2.Duration v) {
+    setField(2, v);
+  }
+
+  $core.bool hasTimeOffset() => $_has(1);
+  void clearTimeOffset() => clearField(2);
+
+  $core.List<DetectedAttribute> get attributes => $_getList(2);
+}
+
+class Track extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Track',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..a<VideoSegment>(1, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
+        VideoSegment.create)
+    ..pc<TimestampedObject>(
+        2, 'timestampedObjects', $pb.PbFieldType.PM, TimestampedObject.create)
+    ..pc<DetectedAttribute>(
+        3, 'attributes', $pb.PbFieldType.PM, DetectedAttribute.create)
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  Track() : super();
+  Track.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  Track.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  Track clone() => Track()..mergeFromMessage(this);
+  Track copyWith(void Function(Track) updates) =>
+      super.copyWith((message) => updates(message as Track));
+  $pb.BuilderInfo get info_ => _i;
+  static Track create() => Track();
+  Track createEmptyInstance() => create();
+  static $pb.PbList<Track> createRepeated() => $pb.PbList<Track>();
+  static Track getDefault() => _defaultInstance ??= create()..freeze();
+  static Track _defaultInstance;
+
+  VideoSegment get segment => $_getN(0);
+  set segment(VideoSegment v) {
+    setField(1, v);
+  }
+
+  $core.bool hasSegment() => $_has(0);
+  void clearSegment() => clearField(1);
+
+  $core.List<TimestampedObject> get timestampedObjects => $_getList(1);
+
+  $core.List<DetectedAttribute> get attributes => $_getList(2);
+
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasConfidence() => $_has(3);
+  void clearConfidence() => clearField(4);
+}
+
+class DetectedAttribute extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetectedAttribute',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..aOS(1, 'name')
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..aOS(3, 'value')
+    ..hasRequiredFields = false;
+
+  DetectedAttribute() : super();
+  DetectedAttribute.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  DetectedAttribute.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  DetectedAttribute clone() => DetectedAttribute()..mergeFromMessage(this);
+  DetectedAttribute copyWith(void Function(DetectedAttribute) updates) =>
+      super.copyWith((message) => updates(message as DetectedAttribute));
+  $pb.BuilderInfo get info_ => _i;
+  static DetectedAttribute create() => DetectedAttribute();
+  DetectedAttribute createEmptyInstance() => create();
+  static $pb.PbList<DetectedAttribute> createRepeated() =>
+      $pb.PbList<DetectedAttribute>();
+  static DetectedAttribute getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static DetectedAttribute _defaultInstance;
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasConfidence() => $_has(1);
+  void clearConfidence() => clearField(2);
+
+  $core.String get value => $_getS(2, '');
+  set value($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasValue() => $_has(2);
+  void clearValue() => clearField(3);
+}
+
 class VideoAnnotationResults extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoAnnotationResults',
       package:
@@ -733,10 +974,14 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
         ExplicitContentAnnotation.getDefault, ExplicitContentAnnotation.create)
     ..a<$3.Status>(
         9, 'error', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..pc<SpeechTranscription>(11, 'speechTranscriptions', $pb.PbFieldType.PM,
+        SpeechTranscription.create)
     ..pc<TextAnnotation>(
         12, 'textAnnotations', $pb.PbFieldType.PM, TextAnnotation.create)
     ..pc<ObjectTrackingAnnotation>(14, 'objectAnnotations', $pb.PbFieldType.PM,
         ObjectTrackingAnnotation.create)
+    ..pc<LogoRecognitionAnnotation>(19, 'logoRecognitionAnnotations',
+        $pb.PbFieldType.PM, LogoRecognitionAnnotation.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationResults() : super();
@@ -792,9 +1037,14 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
   $core.bool hasError() => $_has(6);
   void clearError() => clearField(9);
 
-  $core.List<TextAnnotation> get textAnnotations => $_getList(7);
+  $core.List<SpeechTranscription> get speechTranscriptions => $_getList(7);
 
-  $core.List<ObjectTrackingAnnotation> get objectAnnotations => $_getList(8);
+  $core.List<TextAnnotation> get textAnnotations => $_getList(8);
+
+  $core.List<ObjectTrackingAnnotation> get objectAnnotations => $_getList(9);
+
+  $core.List<LogoRecognitionAnnotation> get logoRecognitionAnnotations =>
+      $_getList(10);
 }
 
 class AnnotateVideoResponse extends $pb.GeneratedMessage {
@@ -925,6 +1175,295 @@ class AnnotateVideoProgress extends $pb.GeneratedMessage {
   static AnnotateVideoProgress _defaultInstance;
 
   $core.List<VideoAnnotationProgress> get annotationProgress => $_getList(0);
+}
+
+class SpeechTranscriptionConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechTranscriptionConfig',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..aOS(1, 'languageCode')
+    ..a<$core.int>(2, 'maxAlternatives', $pb.PbFieldType.O3)
+    ..aOB(3, 'filterProfanity')
+    ..pc<SpeechContext>(
+        4, 'speechContexts', $pb.PbFieldType.PM, SpeechContext.create)
+    ..aOB(5, 'enableAutomaticPunctuation')
+    ..p<$core.int>(6, 'audioTracks', $pb.PbFieldType.P3)
+    ..aOB(7, 'enableSpeakerDiarization')
+    ..a<$core.int>(8, 'diarizationSpeakerCount', $pb.PbFieldType.O3)
+    ..aOB(9, 'enableWordConfidence')
+    ..hasRequiredFields = false;
+
+  SpeechTranscriptionConfig() : super();
+  SpeechTranscriptionConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechTranscriptionConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechTranscriptionConfig clone() =>
+      SpeechTranscriptionConfig()..mergeFromMessage(this);
+  SpeechTranscriptionConfig copyWith(
+          void Function(SpeechTranscriptionConfig) updates) =>
+      super
+          .copyWith((message) => updates(message as SpeechTranscriptionConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechTranscriptionConfig create() => SpeechTranscriptionConfig();
+  SpeechTranscriptionConfig createEmptyInstance() => create();
+  static $pb.PbList<SpeechTranscriptionConfig> createRepeated() =>
+      $pb.PbList<SpeechTranscriptionConfig>();
+  static SpeechTranscriptionConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeechTranscriptionConfig _defaultInstance;
+
+  $core.String get languageCode => $_getS(0, '');
+  set languageCode($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(0);
+  void clearLanguageCode() => clearField(1);
+
+  $core.int get maxAlternatives => $_get(1, 0);
+  set maxAlternatives($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  $core.bool hasMaxAlternatives() => $_has(1);
+  void clearMaxAlternatives() => clearField(2);
+
+  $core.bool get filterProfanity => $_get(2, false);
+  set filterProfanity($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  $core.bool hasFilterProfanity() => $_has(2);
+  void clearFilterProfanity() => clearField(3);
+
+  $core.List<SpeechContext> get speechContexts => $_getList(3);
+
+  $core.bool get enableAutomaticPunctuation => $_get(4, false);
+  set enableAutomaticPunctuation($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  $core.bool hasEnableAutomaticPunctuation() => $_has(4);
+  void clearEnableAutomaticPunctuation() => clearField(5);
+
+  $core.List<$core.int> get audioTracks => $_getList(5);
+
+  $core.bool get enableSpeakerDiarization => $_get(6, false);
+  set enableSpeakerDiarization($core.bool v) {
+    $_setBool(6, v);
+  }
+
+  $core.bool hasEnableSpeakerDiarization() => $_has(6);
+  void clearEnableSpeakerDiarization() => clearField(7);
+
+  $core.int get diarizationSpeakerCount => $_get(7, 0);
+  set diarizationSpeakerCount($core.int v) {
+    $_setSignedInt32(7, v);
+  }
+
+  $core.bool hasDiarizationSpeakerCount() => $_has(7);
+  void clearDiarizationSpeakerCount() => clearField(8);
+
+  $core.bool get enableWordConfidence => $_get(8, false);
+  set enableWordConfidence($core.bool v) {
+    $_setBool(8, v);
+  }
+
+  $core.bool hasEnableWordConfidence() => $_has(8);
+  void clearEnableWordConfidence() => clearField(9);
+}
+
+class SpeechContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechContext',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..pPS(1, 'phrases')
+    ..hasRequiredFields = false;
+
+  SpeechContext() : super();
+  SpeechContext.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechContext.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
+  SpeechContext copyWith(void Function(SpeechContext) updates) =>
+      super.copyWith((message) => updates(message as SpeechContext));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechContext create() => SpeechContext();
+  SpeechContext createEmptyInstance() => create();
+  static $pb.PbList<SpeechContext> createRepeated() =>
+      $pb.PbList<SpeechContext>();
+  static SpeechContext getDefault() => _defaultInstance ??= create()..freeze();
+  static SpeechContext _defaultInstance;
+
+  $core.List<$core.String> get phrases => $_getList(0);
+}
+
+class SpeechTranscription extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechTranscription',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..pc<SpeechRecognitionAlternative>(1, 'alternatives', $pb.PbFieldType.PM,
+        SpeechRecognitionAlternative.create)
+    ..aOS(2, 'languageCode')
+    ..hasRequiredFields = false;
+
+  SpeechTranscription() : super();
+  SpeechTranscription.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechTranscription.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechTranscription clone() => SpeechTranscription()..mergeFromMessage(this);
+  SpeechTranscription copyWith(void Function(SpeechTranscription) updates) =>
+      super.copyWith((message) => updates(message as SpeechTranscription));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechTranscription create() => SpeechTranscription();
+  SpeechTranscription createEmptyInstance() => create();
+  static $pb.PbList<SpeechTranscription> createRepeated() =>
+      $pb.PbList<SpeechTranscription>();
+  static SpeechTranscription getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeechTranscription _defaultInstance;
+
+  $core.List<SpeechRecognitionAlternative> get alternatives => $_getList(0);
+
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(1);
+  void clearLanguageCode() => clearField(2);
+}
+
+class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'SpeechRecognitionAlternative',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..aOS(1, 'transcript')
+    ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
+    ..pc<WordInfo>(3, 'words', $pb.PbFieldType.PM, WordInfo.create)
+    ..hasRequiredFields = false;
+
+  SpeechRecognitionAlternative() : super();
+  SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  SpeechRecognitionAlternative.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  SpeechRecognitionAlternative clone() =>
+      SpeechRecognitionAlternative()..mergeFromMessage(this);
+  SpeechRecognitionAlternative copyWith(
+          void Function(SpeechRecognitionAlternative) updates) =>
+      super.copyWith(
+          (message) => updates(message as SpeechRecognitionAlternative));
+  $pb.BuilderInfo get info_ => _i;
+  static SpeechRecognitionAlternative create() =>
+      SpeechRecognitionAlternative();
+  SpeechRecognitionAlternative createEmptyInstance() => create();
+  static $pb.PbList<SpeechRecognitionAlternative> createRepeated() =>
+      $pb.PbList<SpeechRecognitionAlternative>();
+  static SpeechRecognitionAlternative getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeechRecognitionAlternative _defaultInstance;
+
+  $core.String get transcript => $_getS(0, '');
+  set transcript($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasTranscript() => $_has(0);
+  void clearTranscript() => clearField(1);
+
+  $core.double get confidence => $_getN(1);
+  set confidence($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasConfidence() => $_has(1);
+  void clearConfidence() => clearField(2);
+
+  $core.List<WordInfo> get words => $_getList(2);
+}
+
+class WordInfo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WordInfo',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..a<$2.Duration>(1, 'startTime', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
+    ..a<$2.Duration>(2, 'endTime', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
+    ..aOS(3, 'word')
+    ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
+    ..a<$core.int>(5, 'speakerTag', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  WordInfo() : super();
+  WordInfo.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  WordInfo.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  WordInfo clone() => WordInfo()..mergeFromMessage(this);
+  WordInfo copyWith(void Function(WordInfo) updates) =>
+      super.copyWith((message) => updates(message as WordInfo));
+  $pb.BuilderInfo get info_ => _i;
+  static WordInfo create() => WordInfo();
+  WordInfo createEmptyInstance() => create();
+  static $pb.PbList<WordInfo> createRepeated() => $pb.PbList<WordInfo>();
+  static WordInfo getDefault() => _defaultInstance ??= create()..freeze();
+  static WordInfo _defaultInstance;
+
+  $2.Duration get startTime => $_getN(0);
+  set startTime($2.Duration v) {
+    setField(1, v);
+  }
+
+  $core.bool hasStartTime() => $_has(0);
+  void clearStartTime() => clearField(1);
+
+  $2.Duration get endTime => $_getN(1);
+  set endTime($2.Duration v) {
+    setField(2, v);
+  }
+
+  $core.bool hasEndTime() => $_has(1);
+  void clearEndTime() => clearField(2);
+
+  $core.String get word => $_getS(2, '');
+  set word($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasWord() => $_has(2);
+  void clearWord() => clearField(3);
+
+  $core.double get confidence => $_getN(3);
+  set confidence($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasConfidence() => $_has(3);
+  void clearConfidence() => clearField(4);
+
+  $core.int get speakerTag => $_get(4, 0);
+  set speakerTag($core.int v) {
+    $_setSignedInt32(4, v);
+  }
+
+  $core.bool hasSpeakerTag() => $_has(4);
+  void clearSpeakerTag() => clearField(5);
 }
 
 class NormalizedVertex extends $pb.GeneratedMessage {
@@ -1257,6 +1796,51 @@ class ObjectTrackingAnnotation extends $pb.GeneratedMessage {
 
   $core.bool hasTrackId() => $_has(4);
   void clearTrackId() => clearField(5);
+}
+
+class LogoRecognitionAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogoRecognitionAnnotation',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..a<Entity>(
+        1, 'entity', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
+    ..pc<Track>(2, 'tracks', $pb.PbFieldType.PM, Track.create)
+    ..pc<VideoSegment>(3, 'segments', $pb.PbFieldType.PM, VideoSegment.create)
+    ..hasRequiredFields = false;
+
+  LogoRecognitionAnnotation() : super();
+  LogoRecognitionAnnotation.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  LogoRecognitionAnnotation.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  LogoRecognitionAnnotation clone() =>
+      LogoRecognitionAnnotation()..mergeFromMessage(this);
+  LogoRecognitionAnnotation copyWith(
+          void Function(LogoRecognitionAnnotation) updates) =>
+      super
+          .copyWith((message) => updates(message as LogoRecognitionAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  static LogoRecognitionAnnotation create() => LogoRecognitionAnnotation();
+  LogoRecognitionAnnotation createEmptyInstance() => create();
+  static $pb.PbList<LogoRecognitionAnnotation> createRepeated() =>
+      $pb.PbList<LogoRecognitionAnnotation>();
+  static LogoRecognitionAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static LogoRecognitionAnnotation _defaultInstance;
+
+  Entity get entity => $_getN(0);
+  set entity(Entity v) {
+    setField(1, v);
+  }
+
+  $core.bool hasEntity() => $_has(0);
+  void clearEntity() => clearField(1);
+
+  $core.List<Track> get tracks => $_getList(1);
+
+  $core.List<VideoSegment> get segments => $_getList(2);
 }
 
 enum StreamingAnnotateVideoRequest_StreamingRequest {

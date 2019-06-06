@@ -67,6 +67,7 @@ class Instance extends $pb.GeneratedMessage {
         Instance_Tier.values)
     ..a<$core.int>(18, 'memorySizeGb', $pb.PbFieldType.O3)
     ..aOS(20, 'authorizedNetwork')
+    ..aOS(21, 'persistenceIamIdentity')
     ..hasRequiredFields = false;
 
   Instance() : super();
@@ -209,6 +210,14 @@ class Instance extends $pb.GeneratedMessage {
 
   $core.bool hasAuthorizedNetwork() => $_has(16);
   void clearAuthorizedNetwork() => clearField(20);
+
+  $core.String get persistenceIamIdentity => $_getS(17, '');
+  set persistenceIamIdentity($core.String v) {
+    $_setString(17, v);
+  }
+
+  $core.bool hasPersistenceIamIdentity() => $_has(17);
+  void clearPersistenceIamIdentity() => clearField(21);
 }
 
 class ListInstancesRequest extends $pb.GeneratedMessage {
@@ -476,6 +485,253 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
 
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
+}
+
+class GcsSource extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsSource',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..aOS(1, 'uri')
+    ..hasRequiredFields = false;
+
+  GcsSource() : super();
+  GcsSource.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GcsSource.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GcsSource clone() => GcsSource()..mergeFromMessage(this);
+  GcsSource copyWith(void Function(GcsSource) updates) =>
+      super.copyWith((message) => updates(message as GcsSource));
+  $pb.BuilderInfo get info_ => _i;
+  static GcsSource create() => GcsSource();
+  GcsSource createEmptyInstance() => create();
+  static $pb.PbList<GcsSource> createRepeated() => $pb.PbList<GcsSource>();
+  static GcsSource getDefault() => _defaultInstance ??= create()..freeze();
+  static GcsSource _defaultInstance;
+
+  $core.String get uri => $_getS(0, '');
+  set uri($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasUri() => $_has(0);
+  void clearUri() => clearField(1);
+}
+
+enum InputConfig_Source { gcsSource, notSet }
+
+class InputConfig extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, InputConfig_Source>
+      _InputConfig_SourceByTag = {
+    1: InputConfig_Source.gcsSource,
+    0: InputConfig_Source.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('InputConfig',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
+        GcsSource.create)
+    ..oo(0, [1])
+    ..hasRequiredFields = false;
+
+  InputConfig() : super();
+  InputConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  InputConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  InputConfig clone() => InputConfig()..mergeFromMessage(this);
+  InputConfig copyWith(void Function(InputConfig) updates) =>
+      super.copyWith((message) => updates(message as InputConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static InputConfig create() => InputConfig();
+  InputConfig createEmptyInstance() => create();
+  static $pb.PbList<InputConfig> createRepeated() => $pb.PbList<InputConfig>();
+  static InputConfig getDefault() => _defaultInstance ??= create()..freeze();
+  static InputConfig _defaultInstance;
+
+  InputConfig_Source whichSource() => _InputConfig_SourceByTag[$_whichOneof(0)];
+  void clearSource() => clearField($_whichOneof(0));
+
+  GcsSource get gcsSource => $_getN(0);
+  set gcsSource(GcsSource v) {
+    setField(1, v);
+  }
+
+  $core.bool hasGcsSource() => $_has(0);
+  void clearGcsSource() => clearField(1);
+}
+
+class ImportInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..aOS(1, 'name')
+    ..a<InputConfig>(3, 'inputConfig', $pb.PbFieldType.OM,
+        InputConfig.getDefault, InputConfig.create)
+    ..hasRequiredFields = false;
+
+  ImportInstanceRequest() : super();
+  ImportInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ImportInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ImportInstanceRequest clone() =>
+      ImportInstanceRequest()..mergeFromMessage(this);
+  ImportInstanceRequest copyWith(
+          void Function(ImportInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as ImportInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ImportInstanceRequest create() => ImportInstanceRequest();
+  ImportInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<ImportInstanceRequest> createRepeated() =>
+      $pb.PbList<ImportInstanceRequest>();
+  static ImportInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ImportInstanceRequest _defaultInstance;
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+
+  InputConfig get inputConfig => $_getN(1);
+  set inputConfig(InputConfig v) {
+    setField(3, v);
+  }
+
+  $core.bool hasInputConfig() => $_has(1);
+  void clearInputConfig() => clearField(3);
+}
+
+class GcsDestination extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsDestination',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..aOS(1, 'uri')
+    ..hasRequiredFields = false;
+
+  GcsDestination() : super();
+  GcsDestination.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  GcsDestination.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  GcsDestination clone() => GcsDestination()..mergeFromMessage(this);
+  GcsDestination copyWith(void Function(GcsDestination) updates) =>
+      super.copyWith((message) => updates(message as GcsDestination));
+  $pb.BuilderInfo get info_ => _i;
+  static GcsDestination create() => GcsDestination();
+  GcsDestination createEmptyInstance() => create();
+  static $pb.PbList<GcsDestination> createRepeated() =>
+      $pb.PbList<GcsDestination>();
+  static GcsDestination getDefault() => _defaultInstance ??= create()..freeze();
+  static GcsDestination _defaultInstance;
+
+  $core.String get uri => $_getS(0, '');
+  set uri($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasUri() => $_has(0);
+  void clearUri() => clearField(1);
+}
+
+enum OutputConfig_Destination { gcsDestination, notSet }
+
+class OutputConfig extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, OutputConfig_Destination>
+      _OutputConfig_DestinationByTag = {
+    1: OutputConfig_Destination.gcsDestination,
+    0: OutputConfig_Destination.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputConfig',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
+        GcsDestination.getDefault, GcsDestination.create)
+    ..oo(0, [1])
+    ..hasRequiredFields = false;
+
+  OutputConfig() : super();
+  OutputConfig.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  OutputConfig.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  OutputConfig clone() => OutputConfig()..mergeFromMessage(this);
+  OutputConfig copyWith(void Function(OutputConfig) updates) =>
+      super.copyWith((message) => updates(message as OutputConfig));
+  $pb.BuilderInfo get info_ => _i;
+  static OutputConfig create() => OutputConfig();
+  OutputConfig createEmptyInstance() => create();
+  static $pb.PbList<OutputConfig> createRepeated() =>
+      $pb.PbList<OutputConfig>();
+  static OutputConfig getDefault() => _defaultInstance ??= create()..freeze();
+  static OutputConfig _defaultInstance;
+
+  OutputConfig_Destination whichDestination() =>
+      _OutputConfig_DestinationByTag[$_whichOneof(0)];
+  void clearDestination() => clearField($_whichOneof(0));
+
+  GcsDestination get gcsDestination => $_getN(0);
+  set gcsDestination(GcsDestination v) {
+    setField(1, v);
+  }
+
+  $core.bool hasGcsDestination() => $_has(0);
+  void clearGcsDestination() => clearField(1);
+}
+
+class ExportInstanceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportInstanceRequest',
+      package: const $pb.PackageName('google.cloud.redis.v1beta1'))
+    ..aOS(1, 'name')
+    ..a<OutputConfig>(3, 'outputConfig', $pb.PbFieldType.OM,
+        OutputConfig.getDefault, OutputConfig.create)
+    ..hasRequiredFields = false;
+
+  ExportInstanceRequest() : super();
+  ExportInstanceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ExportInstanceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ExportInstanceRequest clone() =>
+      ExportInstanceRequest()..mergeFromMessage(this);
+  ExportInstanceRequest copyWith(
+          void Function(ExportInstanceRequest) updates) =>
+      super.copyWith((message) => updates(message as ExportInstanceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static ExportInstanceRequest create() => ExportInstanceRequest();
+  ExportInstanceRequest createEmptyInstance() => create();
+  static $pb.PbList<ExportInstanceRequest> createRepeated() =>
+      $pb.PbList<ExportInstanceRequest>();
+  static ExportInstanceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ExportInstanceRequest _defaultInstance;
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+
+  OutputConfig get outputConfig => $_getN(1);
+  set outputConfig(OutputConfig v) {
+    setField(3, v);
+  }
+
+  $core.bool hasOutputConfig() => $_has(1);
+  void clearOutputConfig() => clearField(3);
 }
 
 class FailoverInstanceRequest extends $pb.GeneratedMessage {
