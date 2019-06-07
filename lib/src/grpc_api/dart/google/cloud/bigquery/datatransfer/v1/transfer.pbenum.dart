@@ -61,6 +61,8 @@ class TransferMessage_MessageSeverity extends $pb.ProtobufEnum {
       TransferMessage_MessageSeverity._(2, 'WARNING');
   static const TransferMessage_MessageSeverity ERROR =
       TransferMessage_MessageSeverity._(3, 'ERROR');
+  static const TransferMessage_MessageSeverity DEBUG =
+      TransferMessage_MessageSeverity._(4, 'DEBUG');
 
   static const $core.List<TransferMessage_MessageSeverity> values =
       <TransferMessage_MessageSeverity>[
@@ -68,6 +70,7 @@ class TransferMessage_MessageSeverity extends $pb.ProtobufEnum {
     INFO,
     WARNING,
     ERROR,
+    DEBUG,
   ];
 
   static final $core.Map<$core.int, TransferMessage_MessageSeverity> _byValue =

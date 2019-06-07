@@ -11,6 +11,7 @@ const TransferType$json = {
     {'1': 'BATCH', '2': 1},
     {'1': 'STREAMING', '2': 2},
   ],
+  '3': {'3': true},
 };
 
 const TransferState$json = {
@@ -22,6 +23,35 @@ const TransferState$json = {
     {'1': 'SUCCEEDED', '2': 4},
     {'1': 'FAILED', '2': 5},
     {'1': 'CANCELLED', '2': 6},
+  ],
+};
+
+const ScheduleOptions$json = {
+  '1': 'ScheduleOptions',
+  '2': [
+    {
+      '1': 'disable_auto_scheduling',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '10': 'disableAutoScheduling'
+    },
+    {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
   ],
 };
 
@@ -47,6 +77,14 @@ const TransferConfig$json = {
       '10': 'params'
     },
     {'1': 'schedule', '3': 7, '4': 1, '5': 9, '10': 'schedule'},
+    {
+      '1': 'schedule_options',
+      '3': 24,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.bigquery.datatransfer.v1.ScheduleOptions',
+      '10': 'scheduleOptions'
+    },
     {
       '1': 'data_refresh_window_days',
       '3': 12,
@@ -81,6 +119,15 @@ const TransferConfig$json = {
     },
     {'1': 'user_id', '3': 11, '4': 1, '5': 3, '10': 'userId'},
     {'1': 'dataset_region', '3': 14, '4': 1, '5': 9, '10': 'datasetRegion'},
+    {'1': 'partner_token', '3': 22, '4': 1, '5': 9, '10': 'partnerToken'},
+    {
+      '1': 'partner_connection_info',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Struct',
+      '10': 'partnerConnectionInfo'
+    },
   ],
 };
 
@@ -88,6 +135,14 @@ const TransferRun$json = {
   '1': 'TransferRun',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'labels',
+      '3': 22,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.bigquery.datatransfer.v1.TransferRun.LabelsEntry',
+      '10': 'labels'
+    },
     {
       '1': 'schedule_time',
       '3': 3,
@@ -162,7 +217,18 @@ const TransferRun$json = {
     },
     {'1': 'user_id', '3': 11, '4': 1, '5': 3, '10': 'userId'},
     {'1': 'schedule', '3': 12, '4': 1, '5': 9, '10': 'schedule'},
+    {'1': 'partner_token', '3': 28, '4': 1, '5': 9, '10': 'partnerToken'},
   ],
+  '3': [TransferRun_LabelsEntry$json],
+};
+
+const TransferRun_LabelsEntry$json = {
+  '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 const TransferMessage$json = {
@@ -197,5 +263,6 @@ const TransferMessage_MessageSeverity$json = {
     {'1': 'INFO', '2': 1},
     {'1': 'WARNING', '2': 2},
     {'1': 'ERROR', '2': 3},
+    {'1': 'DEBUG', '2': 4},
   ],
 };

@@ -218,6 +218,8 @@ class DataSource extends $pb.GeneratedMessage {
     ..aOB(17, 'manualRunsDisabled')
     ..a<$3.Duration>(18, 'minimumScheduleInterval', $pb.PbFieldType.OM,
         $3.Duration.getDefault, $3.Duration.create)
+    ..aOS(22, 'partnerLegalName')
+    ..aOS(23, 'redirectUrl')
     ..hasRequiredFields = false;
 
   DataSource() : super();
@@ -279,20 +281,28 @@ class DataSource extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get scopes => $_getList(5);
 
+  @$core.Deprecated('This field is deprecated.')
   $0.TransferType get transferType => $_getN(6);
+  @$core.Deprecated('This field is deprecated.')
   set transferType($0.TransferType v) {
     setField(7, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool hasTransferType() => $_has(6);
+  @$core.Deprecated('This field is deprecated.')
   void clearTransferType() => clearField(7);
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool get supportsMultipleTransfers => $_get(7, false);
+  @$core.Deprecated('This field is deprecated.')
   set supportsMultipleTransfers($core.bool v) {
     $_setBool(7, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool hasSupportsMultipleTransfers() => $_has(7);
+  @$core.Deprecated('This field is deprecated.')
   void clearSupportsMultipleTransfers() => clearField(8);
 
   $core.int get updateDeadlineSeconds => $_get(8, 0);
@@ -368,6 +378,22 @@ class DataSource extends $pb.GeneratedMessage {
 
   $core.bool hasMinimumScheduleInterval() => $_has(17);
   void clearMinimumScheduleInterval() => clearField(18);
+
+  $core.String get partnerLegalName => $_getS(18, '');
+  set partnerLegalName($core.String v) {
+    $_setString(18, v);
+  }
+
+  $core.bool hasPartnerLegalName() => $_has(18);
+  void clearPartnerLegalName() => clearField(22);
+
+  $core.String get redirectUrl => $_getS(19, '');
+  set redirectUrl($core.String v) {
+    $_setString(19, v);
+  }
+
+  $core.bool hasRedirectUrl() => $_has(19);
+  void clearRedirectUrl() => clearField(23);
 }
 
 class GetDataSourceRequest extends $pb.GeneratedMessage {
@@ -506,6 +532,7 @@ class CreateTransferConfigRequest extends $pb.GeneratedMessage {
     ..a<$0.TransferConfig>(2, 'transferConfig', $pb.PbFieldType.OM,
         $0.TransferConfig.getDefault, $0.TransferConfig.create)
     ..aOS(3, 'authorizationCode')
+    ..aOS(5, 'versionInfo')
     ..hasRequiredFields = false;
 
   CreateTransferConfigRequest() : super();
@@ -553,6 +580,14 @@ class CreateTransferConfigRequest extends $pb.GeneratedMessage {
 
   $core.bool hasAuthorizationCode() => $_has(2);
   void clearAuthorizationCode() => clearField(3);
+
+  $core.String get versionInfo => $_getS(3, '');
+  set versionInfo($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasVersionInfo() => $_has(3);
+  void clearVersionInfo() => clearField(5);
 }
 
 class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
@@ -564,6 +599,7 @@ class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'authorizationCode')
     ..a<$4.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
         $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..aOS(5, 'versionInfo')
     ..hasRequiredFields = false;
 
   UpdateTransferConfigRequest() : super();
@@ -611,6 +647,14 @@ class UpdateTransferConfigRequest extends $pb.GeneratedMessage {
 
   $core.bool hasUpdateMask() => $_has(2);
   void clearUpdateMask() => clearField(4);
+
+  $core.String get versionInfo => $_getS(3, '');
+  set versionInfo($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasVersionInfo() => $_has(3);
+  void clearVersionInfo() => clearField(5);
 }
 
 class GetTransferConfigRequest extends $pb.GeneratedMessage {
@@ -1158,6 +1202,16 @@ class ScheduleTransferRunsRequest extends $pb.GeneratedMessage {
         $5.Timestamp.getDefault, $5.Timestamp.create)
     ..a<$5.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $5.Timestamp.getDefault,
         $5.Timestamp.create)
+    ..m<$core.String, $core.String>(
+        6,
+        'labels',
+        'ScheduleTransferRunsRequest.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..hasRequiredFields = false;
 
   ScheduleTransferRunsRequest() : super();
@@ -1205,6 +1259,8 @@ class ScheduleTransferRunsRequest extends $pb.GeneratedMessage {
 
   $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
+
+  $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 }
 
 class ScheduleTransferRunsResponse extends $pb.GeneratedMessage {
@@ -1238,4 +1294,306 @@ class ScheduleTransferRunsResponse extends $pb.GeneratedMessage {
   static ScheduleTransferRunsResponse _defaultInstance;
 
   $core.List<$0.TransferRun> get runs => $_getList(0);
+}
+
+class StartManualTransferRunsRequest_TimeRange extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StartManualTransferRunsRequest.TimeRange',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..a<$5.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $5.Timestamp.getDefault,
+        $5.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  StartManualTransferRunsRequest_TimeRange() : super();
+  StartManualTransferRunsRequest_TimeRange.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  StartManualTransferRunsRequest_TimeRange.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  StartManualTransferRunsRequest_TimeRange clone() =>
+      StartManualTransferRunsRequest_TimeRange()..mergeFromMessage(this);
+  StartManualTransferRunsRequest_TimeRange copyWith(
+          void Function(StartManualTransferRunsRequest_TimeRange) updates) =>
+      super.copyWith((message) =>
+          updates(message as StartManualTransferRunsRequest_TimeRange));
+  $pb.BuilderInfo get info_ => _i;
+  static StartManualTransferRunsRequest_TimeRange create() =>
+      StartManualTransferRunsRequest_TimeRange();
+  StartManualTransferRunsRequest_TimeRange createEmptyInstance() => create();
+  static $pb.PbList<StartManualTransferRunsRequest_TimeRange>
+      createRepeated() =>
+          $pb.PbList<StartManualTransferRunsRequest_TimeRange>();
+  static StartManualTransferRunsRequest_TimeRange getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static StartManualTransferRunsRequest_TimeRange _defaultInstance;
+
+  $5.Timestamp get startTime => $_getN(0);
+  set startTime($5.Timestamp v) {
+    setField(1, v);
+  }
+
+  $core.bool hasStartTime() => $_has(0);
+  void clearStartTime() => clearField(1);
+
+  $5.Timestamp get endTime => $_getN(1);
+  set endTime($5.Timestamp v) {
+    setField(2, v);
+  }
+
+  $core.bool hasEndTime() => $_has(1);
+  void clearEndTime() => clearField(2);
+}
+
+enum StartManualTransferRunsRequest_Time {
+  requestedTimeRange,
+  requestedRunTime,
+  notSet
+}
+
+class StartManualTransferRunsRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, StartManualTransferRunsRequest_Time>
+      _StartManualTransferRunsRequest_TimeByTag = {
+    3: StartManualTransferRunsRequest_Time.requestedTimeRange,
+    4: StartManualTransferRunsRequest_Time.requestedRunTime,
+    0: StartManualTransferRunsRequest_Time.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StartManualTransferRunsRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..aOS(1, 'parent')
+    ..m<$core.String, $core.String>(
+        2,
+        'labels',
+        'StartManualTransferRunsRequest.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..a<StartManualTransferRunsRequest_TimeRange>(
+        3,
+        'requestedTimeRange',
+        $pb.PbFieldType.OM,
+        StartManualTransferRunsRequest_TimeRange.getDefault,
+        StartManualTransferRunsRequest_TimeRange.create)
+    ..a<$5.Timestamp>(4, 'requestedRunTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..oo(0, [3, 4])
+    ..hasRequiredFields = false;
+
+  StartManualTransferRunsRequest() : super();
+  StartManualTransferRunsRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  StartManualTransferRunsRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  StartManualTransferRunsRequest clone() =>
+      StartManualTransferRunsRequest()..mergeFromMessage(this);
+  StartManualTransferRunsRequest copyWith(
+          void Function(StartManualTransferRunsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as StartManualTransferRunsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static StartManualTransferRunsRequest create() =>
+      StartManualTransferRunsRequest();
+  StartManualTransferRunsRequest createEmptyInstance() => create();
+  static $pb.PbList<StartManualTransferRunsRequest> createRepeated() =>
+      $pb.PbList<StartManualTransferRunsRequest>();
+  static StartManualTransferRunsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static StartManualTransferRunsRequest _defaultInstance;
+
+  StartManualTransferRunsRequest_Time whichTime() =>
+      _StartManualTransferRunsRequest_TimeByTag[$_whichOneof(0)];
+  void clearTime() => clearField($_whichOneof(0));
+
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasParent() => $_has(0);
+  void clearParent() => clearField(1);
+
+  $core.Map<$core.String, $core.String> get labels => $_getMap(1);
+
+  StartManualTransferRunsRequest_TimeRange get requestedTimeRange => $_getN(2);
+  set requestedTimeRange(StartManualTransferRunsRequest_TimeRange v) {
+    setField(3, v);
+  }
+
+  $core.bool hasRequestedTimeRange() => $_has(2);
+  void clearRequestedTimeRange() => clearField(3);
+
+  $5.Timestamp get requestedRunTime => $_getN(3);
+  set requestedRunTime($5.Timestamp v) {
+    setField(4, v);
+  }
+
+  $core.bool hasRequestedRunTime() => $_has(3);
+  void clearRequestedRunTime() => clearField(4);
+}
+
+class StartManualTransferRunsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StartManualTransferRunsResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..pc<$0.TransferRun>(1, 'runs', $pb.PbFieldType.PM, $0.TransferRun.create)
+    ..hasRequiredFields = false;
+
+  StartManualTransferRunsResponse() : super();
+  StartManualTransferRunsResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  StartManualTransferRunsResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  StartManualTransferRunsResponse clone() =>
+      StartManualTransferRunsResponse()..mergeFromMessage(this);
+  StartManualTransferRunsResponse copyWith(
+          void Function(StartManualTransferRunsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as StartManualTransferRunsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static StartManualTransferRunsResponse create() =>
+      StartManualTransferRunsResponse();
+  StartManualTransferRunsResponse createEmptyInstance() => create();
+  static $pb.PbList<StartManualTransferRunsResponse> createRepeated() =>
+      $pb.PbList<StartManualTransferRunsResponse>();
+  static StartManualTransferRunsResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static StartManualTransferRunsResponse _defaultInstance;
+
+  $core.List<$0.TransferRun> get runs => $_getList(0);
+}
+
+class EnableDataTransferServiceRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'EnableDataTransferServiceRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
+
+  EnableDataTransferServiceRequest() : super();
+  EnableDataTransferServiceRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  EnableDataTransferServiceRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  EnableDataTransferServiceRequest clone() =>
+      EnableDataTransferServiceRequest()..mergeFromMessage(this);
+  EnableDataTransferServiceRequest copyWith(
+          void Function(EnableDataTransferServiceRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as EnableDataTransferServiceRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static EnableDataTransferServiceRequest create() =>
+      EnableDataTransferServiceRequest();
+  EnableDataTransferServiceRequest createEmptyInstance() => create();
+  static $pb.PbList<EnableDataTransferServiceRequest> createRepeated() =>
+      $pb.PbList<EnableDataTransferServiceRequest>();
+  static EnableDataTransferServiceRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static EnableDataTransferServiceRequest _defaultInstance;
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+}
+
+class IsDataTransferServiceEnabledRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'IsDataTransferServiceEnabledRequest',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..aOS(1, 'name')
+    ..hasRequiredFields = false;
+
+  IsDataTransferServiceEnabledRequest() : super();
+  IsDataTransferServiceEnabledRequest.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  IsDataTransferServiceEnabledRequest.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  IsDataTransferServiceEnabledRequest clone() =>
+      IsDataTransferServiceEnabledRequest()..mergeFromMessage(this);
+  IsDataTransferServiceEnabledRequest copyWith(
+          void Function(IsDataTransferServiceEnabledRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as IsDataTransferServiceEnabledRequest));
+  $pb.BuilderInfo get info_ => _i;
+  static IsDataTransferServiceEnabledRequest create() =>
+      IsDataTransferServiceEnabledRequest();
+  IsDataTransferServiceEnabledRequest createEmptyInstance() => create();
+  static $pb.PbList<IsDataTransferServiceEnabledRequest> createRepeated() =>
+      $pb.PbList<IsDataTransferServiceEnabledRequest>();
+  static IsDataTransferServiceEnabledRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static IsDataTransferServiceEnabledRequest _defaultInstance;
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+}
+
+class IsDataTransferServiceEnabledResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'IsDataTransferServiceEnabledResponse',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..aOB(1, 'enabled')
+    ..aOS(2, 'reason')
+    ..hasRequiredFields = false;
+
+  IsDataTransferServiceEnabledResponse() : super();
+  IsDataTransferServiceEnabledResponse.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  IsDataTransferServiceEnabledResponse.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  IsDataTransferServiceEnabledResponse clone() =>
+      IsDataTransferServiceEnabledResponse()..mergeFromMessage(this);
+  IsDataTransferServiceEnabledResponse copyWith(
+          void Function(IsDataTransferServiceEnabledResponse) updates) =>
+      super.copyWith((message) =>
+          updates(message as IsDataTransferServiceEnabledResponse));
+  $pb.BuilderInfo get info_ => _i;
+  static IsDataTransferServiceEnabledResponse create() =>
+      IsDataTransferServiceEnabledResponse();
+  IsDataTransferServiceEnabledResponse createEmptyInstance() => create();
+  static $pb.PbList<IsDataTransferServiceEnabledResponse> createRepeated() =>
+      $pb.PbList<IsDataTransferServiceEnabledResponse>();
+  static IsDataTransferServiceEnabledResponse getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static IsDataTransferServiceEnabledResponse _defaultInstance;
+
+  $core.bool get enabled => $_get(0, false);
+  set enabled($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasEnabled() => $_has(0);
+  void clearEnabled() => clearField(1);
+
+  $core.String get reason => $_getS(1, '');
+  set reason($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasReason() => $_has(1);
+  void clearReason() => clearField(2);
 }
