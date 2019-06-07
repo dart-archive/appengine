@@ -18,6 +18,60 @@ import 'transfer.pbenum.dart';
 
 export 'transfer.pbenum.dart';
 
+class ScheduleOptions extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScheduleOptions',
+      package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..a<$0.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
+        $0.Timestamp.create)
+    ..aOB(3, 'disableAutoScheduling')
+    ..hasRequiredFields = false;
+
+  ScheduleOptions() : super();
+  ScheduleOptions.fromBuffer($core.List<$core.int> i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromBuffer(i, r);
+  ScheduleOptions.fromJson($core.String i,
+      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
+      : super.fromJson(i, r);
+  ScheduleOptions clone() => ScheduleOptions()..mergeFromMessage(this);
+  ScheduleOptions copyWith(void Function(ScheduleOptions) updates) =>
+      super.copyWith((message) => updates(message as ScheduleOptions));
+  $pb.BuilderInfo get info_ => _i;
+  static ScheduleOptions create() => ScheduleOptions();
+  ScheduleOptions createEmptyInstance() => create();
+  static $pb.PbList<ScheduleOptions> createRepeated() =>
+      $pb.PbList<ScheduleOptions>();
+  static ScheduleOptions getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ScheduleOptions _defaultInstance;
+
+  $0.Timestamp get startTime => $_getN(0);
+  set startTime($0.Timestamp v) {
+    setField(1, v);
+  }
+
+  $core.bool hasStartTime() => $_has(0);
+  void clearStartTime() => clearField(1);
+
+  $0.Timestamp get endTime => $_getN(1);
+  set endTime($0.Timestamp v) {
+    setField(2, v);
+  }
+
+  $core.bool hasEndTime() => $_has(1);
+  void clearEndTime() => clearField(2);
+
+  $core.bool get disableAutoScheduling => $_get(2, false);
+  set disableAutoScheduling($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  $core.bool hasDisableAutoScheduling() => $_has(2);
+  void clearDisableAutoScheduling() => clearField(3);
+}
+
 class TransferConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferConfig',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
@@ -43,6 +97,11 @@ class TransferConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(12, 'dataRefreshWindowDays', $pb.PbFieldType.O3)
     ..aOB(13, 'disabled')
     ..aOS(14, 'datasetRegion')
+    ..aOS(22, 'partnerToken')
+    ..a<$1.Struct>(23, 'partnerConnectionInfo', $pb.PbFieldType.OM,
+        $1.Struct.getDefault, $1.Struct.create)
+    ..a<ScheduleOptions>(24, 'scheduleOptions', $pb.PbFieldType.OM,
+        ScheduleOptions.getDefault, ScheduleOptions.create)
     ..hasRequiredFields = false;
 
   TransferConfig() : super();
@@ -166,6 +225,30 @@ class TransferConfig extends $pb.GeneratedMessage {
 
   $core.bool hasDatasetRegion() => $_has(12);
   void clearDatasetRegion() => clearField(14);
+
+  $core.String get partnerToken => $_getS(13, '');
+  set partnerToken($core.String v) {
+    $_setString(13, v);
+  }
+
+  $core.bool hasPartnerToken() => $_has(13);
+  void clearPartnerToken() => clearField(22);
+
+  $1.Struct get partnerConnectionInfo => $_getN(14);
+  set partnerConnectionInfo($1.Struct v) {
+    setField(23, v);
+  }
+
+  $core.bool hasPartnerConnectionInfo() => $_has(14);
+  void clearPartnerConnectionInfo() => clearField(23);
+
+  ScheduleOptions get scheduleOptions => $_getN(15);
+  set scheduleOptions(ScheduleOptions v) {
+    setField(24, v);
+  }
+
+  $core.bool hasScheduleOptions() => $_has(15);
+  void clearScheduleOptions() => clearField(24);
 }
 
 class TransferRun extends $pb.GeneratedMessage {
@@ -197,6 +280,17 @@ class TransferRun extends $pb.GeneratedMessage {
     ..aOS(12, 'schedule')
     ..a<$2.Status>(21, 'errorStatus', $pb.PbFieldType.OM, $2.Status.getDefault,
         $2.Status.create)
+    ..m<$core.String, $core.String>(
+        22,
+        'labels',
+        'TransferRun.LabelsEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
+    ..aOS(28, 'partnerToken')
     ..hasRequiredFields = false;
 
   TransferRun() : super();
@@ -319,6 +413,16 @@ class TransferRun extends $pb.GeneratedMessage {
 
   $core.bool hasErrorStatus() => $_has(12);
   void clearErrorStatus() => clearField(21);
+
+  $core.Map<$core.String, $core.String> get labels => $_getMap(13);
+
+  $core.String get partnerToken => $_getS(14, '');
+  set partnerToken($core.String v) {
+    $_setString(14, v);
+  }
+
+  $core.bool hasPartnerToken() => $_has(14);
+  void clearPartnerToken() => clearField(28);
 }
 
 class TransferMessage extends $pb.GeneratedMessage {

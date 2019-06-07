@@ -94,14 +94,16 @@ const DataSource$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferType',
-      '10': 'transferType'
+      '8': {'3': true},
+      '10': 'transferType',
     },
     {
       '1': 'supports_multiple_transfers',
       '3': 8,
       '4': 1,
       '5': 8,
-      '10': 'supportsMultipleTransfers'
+      '8': {'3': true},
+      '10': 'supportsMultipleTransfers',
     },
     {
       '1': 'update_deadline_seconds',
@@ -166,6 +168,14 @@ const DataSource$json = {
       '6': '.google.protobuf.Duration',
       '10': 'minimumScheduleInterval'
     },
+    {
+      '1': 'partner_legal_name',
+      '3': 22,
+      '4': 1,
+      '5': 9,
+      '10': 'partnerLegalName'
+    },
+    {'1': 'redirect_url', '3': 23, '4': 1, '5': 9, '10': 'redirectUrl'},
   ],
   '4': [DataSource_AuthorizationType$json, DataSource_DataRefreshType$json],
 };
@@ -238,6 +248,7 @@ const CreateTransferConfigRequest$json = {
       '5': 9,
       '10': 'authorizationCode'
     },
+    {'1': 'version_info', '3': 5, '4': 1, '5': 9, '10': 'versionInfo'},
   ],
 };
 
@@ -267,6 +278,7 @@ const UpdateTransferConfigRequest$json = {
       '6': '.google.protobuf.FieldMask',
       '10': 'updateMask'
     },
+    {'1': 'version_info', '3': 5, '4': 1, '5': 9, '10': 'versionInfo'},
   ],
 };
 
@@ -425,6 +437,15 @@ const ScheduleTransferRunsRequest$json = {
   '2': [
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     {
+      '1': 'labels',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.bigquery.datatransfer.v1.ScheduleTransferRunsRequest.LabelsEntry',
+      '10': 'labels'
+    },
+    {
       '1': 'start_time',
       '3': 2,
       '4': 1,
@@ -441,6 +462,16 @@ const ScheduleTransferRunsRequest$json = {
       '10': 'endTime'
     },
   ],
+  '3': [ScheduleTransferRunsRequest_LabelsEntry$json],
+};
+
+const ScheduleTransferRunsRequest_LabelsEntry$json = {
+  '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 const ScheduleTransferRunsResponse$json = {
@@ -454,5 +485,114 @@ const ScheduleTransferRunsResponse$json = {
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferRun',
       '10': 'runs'
     },
+  ],
+};
+
+const StartManualTransferRunsRequest$json = {
+  '1': 'StartManualTransferRunsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'labels',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.bigquery.datatransfer.v1.StartManualTransferRunsRequest.LabelsEntry',
+      '10': 'labels'
+    },
+    {
+      '1': 'requested_time_range',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.bigquery.datatransfer.v1.StartManualTransferRunsRequest.TimeRange',
+      '9': 0,
+      '10': 'requestedTimeRange'
+    },
+    {
+      '1': 'requested_run_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '9': 0,
+      '10': 'requestedRunTime'
+    },
+  ],
+  '3': [
+    StartManualTransferRunsRequest_TimeRange$json,
+    StartManualTransferRunsRequest_LabelsEntry$json
+  ],
+  '8': [
+    {'1': 'time'},
+  ],
+};
+
+const StartManualTransferRunsRequest_TimeRange$json = {
+  '1': 'TimeRange',
+  '2': [
+    {
+      '1': 'start_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+  ],
+};
+
+const StartManualTransferRunsRequest_LabelsEntry$json = {
+  '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+const StartManualTransferRunsResponse$json = {
+  '1': 'StartManualTransferRunsResponse',
+  '2': [
+    {
+      '1': 'runs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.bigquery.datatransfer.v1.TransferRun',
+      '10': 'runs'
+    },
+  ],
+};
+
+const EnableDataTransferServiceRequest$json = {
+  '1': 'EnableDataTransferServiceRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const IsDataTransferServiceEnabledRequest$json = {
+  '1': 'IsDataTransferServiceEnabledRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const IsDataTransferServiceEnabledResponse$json = {
+  '1': 'IsDataTransferServiceEnabledResponse',
+  '2': [
+    {'1': 'enabled', '3': 1, '4': 1, '5': 8, '10': 'enabled'},
+    {'1': 'reason', '3': 2, '4': 1, '5': 9, '10': 'reason'},
   ],
 };

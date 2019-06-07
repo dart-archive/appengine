@@ -59,6 +59,12 @@ class DataTransferServiceClient extends $grpc.Client {
       (ScheduleTransferRunsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           ScheduleTransferRunsResponse.fromBuffer(value));
+  static final _$startManualTransferRuns = $grpc.ClientMethod<
+          StartManualTransferRunsRequest, StartManualTransferRunsResponse>(
+      '/google.cloud.bigquery.datatransfer.v1.DataTransferService/StartManualTransferRuns',
+      (StartManualTransferRunsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          StartManualTransferRunsResponse.fromBuffer(value));
   static final _$getTransferRun = $grpc.ClientMethod<GetTransferRunRequest,
           $0.TransferRun>(
       '/google.cloud.bigquery.datatransfer.v1.DataTransferService/GetTransferRun',
@@ -87,6 +93,18 @@ class DataTransferServiceClient extends $grpc.Client {
       (CheckValidCredsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           CheckValidCredsResponse.fromBuffer(value));
+  static final _$enableDataTransferService = $grpc.ClientMethod<
+          EnableDataTransferServiceRequest, $1.Empty>(
+      '/google.cloud.bigquery.datatransfer.v1.DataTransferService/EnableDataTransferService',
+      (EnableDataTransferServiceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$isDataTransferServiceEnabled = $grpc.ClientMethod<
+          IsDataTransferServiceEnabledRequest,
+          IsDataTransferServiceEnabledResponse>(
+      '/google.cloud.bigquery.datatransfer.v1.DataTransferService/IsDataTransferServiceEnabled',
+      (IsDataTransferServiceEnabledRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          IsDataTransferServiceEnabledResponse.fromBuffer(value));
 
   DataTransferServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
@@ -163,6 +181,15 @@ class DataTransferServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
+  $grpc.ResponseFuture<StartManualTransferRunsResponse> startManualTransferRuns(
+      StartManualTransferRunsRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$startManualTransferRuns, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
   $grpc.ResponseFuture<$0.TransferRun> getTransferRun(
       GetTransferRunRequest request,
       {$grpc.CallOptions options}) {
@@ -204,6 +231,24 @@ class DataTransferServiceClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$checkValidCreds, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> enableDataTransferService(
+      EnableDataTransferServiceRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$enableDataTransferService, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<IsDataTransferServiceEnabledResponse>
+      isDataTransferServiceEnabled(IsDataTransferServiceEnabledRequest request,
+          {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$isDataTransferServiceEnabled, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -282,6 +327,15 @@ abstract class DataTransferServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             ScheduleTransferRunsRequest.fromBuffer(value),
         (ScheduleTransferRunsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<StartManualTransferRunsRequest,
+            StartManualTransferRunsResponse>(
+        'StartManualTransferRuns',
+        startManualTransferRuns_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            StartManualTransferRunsRequest.fromBuffer(value),
+        (StartManualTransferRunsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<GetTransferRunRequest, $0.TransferRun>(
         'GetTransferRun',
         getTransferRun_Pre,
@@ -325,6 +379,23 @@ abstract class DataTransferServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 CheckValidCredsRequest.fromBuffer(value),
             (CheckValidCredsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<EnableDataTransferServiceRequest, $1.Empty>(
+        'EnableDataTransferService',
+        enableDataTransferService_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            EnableDataTransferServiceRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<IsDataTransferServiceEnabledRequest,
+            IsDataTransferServiceEnabledResponse>(
+        'IsDataTransferServiceEnabled',
+        isDataTransferServiceEnabled_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            IsDataTransferServiceEnabledRequest.fromBuffer(value),
+        (IsDataTransferServiceEnabledResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<DataSource> getDataSource_Pre(
@@ -367,6 +438,11 @@ abstract class DataTransferServiceBase extends $grpc.Service {
     return scheduleTransferRuns(call, await request);
   }
 
+  $async.Future<StartManualTransferRunsResponse> startManualTransferRuns_Pre(
+      $grpc.ServiceCall call, $async.Future request) async {
+    return startManualTransferRuns(call, await request);
+  }
+
   $async.Future<$0.TransferRun> getTransferRun_Pre(
       $grpc.ServiceCall call, $async.Future request) async {
     return getTransferRun(call, await request);
@@ -392,6 +468,17 @@ abstract class DataTransferServiceBase extends $grpc.Service {
     return checkValidCreds(call, await request);
   }
 
+  $async.Future<$1.Empty> enableDataTransferService_Pre(
+      $grpc.ServiceCall call, $async.Future request) async {
+    return enableDataTransferService(call, await request);
+  }
+
+  $async.Future<IsDataTransferServiceEnabledResponse>
+      isDataTransferServiceEnabled_Pre(
+          $grpc.ServiceCall call, $async.Future request) async {
+    return isDataTransferServiceEnabled(call, await request);
+  }
+
   $async.Future<DataSource> getDataSource(
       $grpc.ServiceCall call, GetDataSourceRequest request);
   $async.Future<ListDataSourcesResponse> listDataSources(
@@ -408,6 +495,8 @@ abstract class DataTransferServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, ListTransferConfigsRequest request);
   $async.Future<ScheduleTransferRunsResponse> scheduleTransferRuns(
       $grpc.ServiceCall call, ScheduleTransferRunsRequest request);
+  $async.Future<StartManualTransferRunsResponse> startManualTransferRuns(
+      $grpc.ServiceCall call, StartManualTransferRunsRequest request);
   $async.Future<$0.TransferRun> getTransferRun(
       $grpc.ServiceCall call, GetTransferRunRequest request);
   $async.Future<$1.Empty> deleteTransferRun(
@@ -418,4 +507,9 @@ abstract class DataTransferServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, ListTransferLogsRequest request);
   $async.Future<CheckValidCredsResponse> checkValidCreds(
       $grpc.ServiceCall call, CheckValidCredsRequest request);
+  $async.Future<$1.Empty> enableDataTransferService(
+      $grpc.ServiceCall call, EnableDataTransferServiceRequest request);
+  $async.Future<IsDataTransferServiceEnabledResponse>
+      isDataTransferServiceEnabled(
+          $grpc.ServiceCall call, IsDataTransferServiceEnabledRequest request);
 }
