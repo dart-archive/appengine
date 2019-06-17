@@ -7,6 +7,7 @@ library grpc_logging;
 import 'dart:async';
 import 'dart:io';
 import 'package:grpc/grpc.dart' as grpc;
+import 'package:stack_trace/stack_trace.dart' show Trace;
 
 import '../grpc_api/dart/google/appengine/logging/v1/request_log.pb.dart'
     as gae_log;
@@ -62,7 +63,11 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   }
 
   @override
-  void log(LogLevel level, String message, {DateTime timestamp}) {
+  void log(
+    LogLevel level,
+    String message, {
+    DateTime timestamp,
+  }) {
     final api.LogSeverity severity = _severityFromLogLevel(level);
 
     // The severity of the combined log entry will be the highest severity
@@ -116,6 +121,38 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
           responseStatus: responseStatus,
           responseSize: responseSize);
     }
+  }
+
+  @override
+  void reportError(Object error, StackTrace stackTrace, {DateTime timestamp}) {
+    if (stackTrace == null) {
+      super.reportError(error, stackTrace, timestamp: timestamp);
+      return;
+    }
+    error ??= 'unknown error';
+    timestamp ??= DateTime.now();
+
+    final int now = timestamp.toUtc().millisecondsSinceEpoch;
+    final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
+
+    final gaeResource = api.MonitoredResource()
+      ..type = 'gae_app'
+      ..labels.addAll(_sharedLoggingService.resourceLabels);
+
+    final logEntry = api.LogEntry()
+      ..textPayload = _formatStackTrace(error, stackTrace)
+      ..resource = gaeResource
+      ..timestamp = nowTimestamp
+      ..severity = api.LogSeverity.ERROR
+      // Write to stderr log, see:
+      // https://cloud.google.com/error-reporting/docs/setup/app-engine-flexible-environment
+      ..logName = _sharedLoggingService.backgroundLogName;
+
+    if (_traceId != null) {
+      _addLabel(logEntry, 'appengine.googleapis.com/trace_id', _traceId);
+    }
+
+    _sharedLoggingService.enqueue(logEntry);
   }
 
   /// Builds up the combined [api.LogEntry] and enqueues it in the underlying
@@ -227,6 +264,34 @@ class GrpcBackgroundLoggingImpl extends Logging {
   }
 
   @override
+  void reportError(Object error, StackTrace stackTrace, {DateTime timestamp}) {
+    if (stackTrace == null) {
+      super.reportError(error, stackTrace, timestamp: timestamp);
+      return;
+    }
+    error ??= 'unknown error';
+    timestamp ??= DateTime.now();
+
+    final int now = timestamp.toUtc().millisecondsSinceEpoch;
+    final api.Timestamp nowTimestamp = _protobufTimestampFromMilliseconds(now);
+
+    final gaeResource = api.MonitoredResource()
+      ..type = 'gae_app'
+      ..labels.addAll(_sharedLoggingService.resourceLabels);
+
+    final logEntry = api.LogEntry()
+      ..textPayload = _formatStackTrace(error, stackTrace)
+      ..resource = gaeResource
+      ..timestamp = nowTimestamp
+      ..severity = api.LogSeverity.ERROR
+      // Write to stderr log, see:
+      // https://cloud.google.com/error-reporting/docs/setup/app-engine-flexible-environment
+      ..logName = _sharedLoggingService.backgroundLogName;
+
+    _sharedLoggingService.enqueue(logEntry);
+  }
+
+  @override
   Future flush() => Future.value();
 }
 
@@ -238,6 +303,7 @@ class SharedLoggingService {
 
   final api.LoggingServiceV2Client _clientStub;
   final String projectId;
+  final String serviceId;
   final String versionId;
   final String instanceId;
   final String _instanceName;
@@ -255,7 +321,7 @@ class SharedLoggingService {
       grpc.ClientChannel clientChannel,
       grpc.HttpBasedAuthenticator authenticator,
       this.projectId,
-      String serviceId,
+      this.serviceId,
       this.versionId,
       String zoneId,
       this._instanceName,
@@ -361,3 +427,37 @@ api.LogSeverity _severityFromLogLevel(LogLevel level) {
   }
   throw ArgumentError('Unknown logevel $level');
 }
+
+/// Returns a V8-style formatted stack trace.
+///
+/// This returns a [String] of the this [Trace] formatted using the stack
+/// trace format used by V8 in `Error.stack`, regardless of what platform is
+/// being used. The first line of this string will always be `'Error:\n'` as
+/// this [Trace] doesn't know which [Exception] was thrown.
+///
+/// This can be useful for submitting stack traces to error correlation
+/// services that can parse V8 stack traces, but no Dart stack traces.
+/// Though it might be useful to replace the first line with
+/// [Exception.toString()] or [Error.toString()] depending what is being
+/// reported.
+///
+/// See: https://cloud.google.com/error-reporting/docs/formatting-error-messages
+String _formatStackTrace(Object error, StackTrace stackTrace) =>
+    'Error: $error\n' +
+    Trace.from(stackTrace).frames.map((f) {
+      // Find member
+      String member = f.member;
+      if (member == '<fn>') {
+        member = '<anonymous>';
+      }
+
+      // Find a location
+      String loc = 'unknown location';
+      if (f.isCore) {
+        loc = 'native';
+      } else if (f.line != null && f.uri != null) {
+        loc = '${f.uri}:${f.line}:${f.column ?? 0}';
+      }
+
+      return '    at $member ($loc)\n';
+    }).join('');
