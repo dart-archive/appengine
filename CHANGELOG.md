@@ -1,3 +1,7 @@
+## 0.7.1
+
+ * Update to use `package:grpc` version 2.0
+
 ## 0.7.0
 
  * Refactored to use `package:grpc` to talk to Logging and Datastore backends.
