@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/keyword_plan_negative_keyword_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/keyword_plan_negative_keyword.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/keyword_plan_negative_keyword.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetKeywordPlanNegativeKeywordRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +21,15 @@ class GetKeywordPlanNegativeKeywordRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetKeywordPlanNegativeKeywordRequest() : super();
-  GetKeywordPlanNegativeKeywordRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetKeywordPlanNegativeKeywordRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetKeywordPlanNegativeKeywordRequest._() : super();
+  factory GetKeywordPlanNegativeKeywordRequest() => create();
+  factory GetKeywordPlanNegativeKeywordRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetKeywordPlanNegativeKeywordRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetKeywordPlanNegativeKeywordRequest clone() =>
       GetKeywordPlanNegativeKeywordRequest()..mergeFromMessage(this);
   GetKeywordPlanNegativeKeywordRequest copyWith(
@@ -34,8 +37,9 @@ class GetKeywordPlanNegativeKeywordRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as GetKeywordPlanNegativeKeywordRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetKeywordPlanNegativeKeywordRequest create() =>
-      GetKeywordPlanNegativeKeywordRequest();
+      GetKeywordPlanNegativeKeywordRequest._();
   GetKeywordPlanNegativeKeywordRequest createEmptyInstance() => create();
   static $pb.PbList<GetKeywordPlanNegativeKeywordRequest> createRepeated() =>
       $pb.PbList<GetKeywordPlanNegativeKeywordRequest>();
@@ -63,13 +67,15 @@ class MutateKeywordPlanNegativeKeywordsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateKeywordPlanNegativeKeywordsRequest() : super();
-  MutateKeywordPlanNegativeKeywordsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateKeywordPlanNegativeKeywordsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateKeywordPlanNegativeKeywordsRequest._() : super();
+  factory MutateKeywordPlanNegativeKeywordsRequest() => create();
+  factory MutateKeywordPlanNegativeKeywordsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateKeywordPlanNegativeKeywordsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateKeywordPlanNegativeKeywordsRequest clone() =>
       MutateKeywordPlanNegativeKeywordsRequest()..mergeFromMessage(this);
   MutateKeywordPlanNegativeKeywordsRequest copyWith(
@@ -77,8 +83,9 @@ class MutateKeywordPlanNegativeKeywordsRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateKeywordPlanNegativeKeywordsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateKeywordPlanNegativeKeywordsRequest create() =>
-      MutateKeywordPlanNegativeKeywordsRequest();
+      MutateKeywordPlanNegativeKeywordsRequest._();
   MutateKeywordPlanNegativeKeywordsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateKeywordPlanNegativeKeywordsRequest>
       createRepeated() =>
@@ -134,31 +141,33 @@ class KeywordPlanNegativeKeywordOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'KeywordPlanNegativeKeywordOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.KeywordPlanNegativeKeyword>(
+    ..oo(0, [1, 2, 3])
+    ..a<$1.KeywordPlanNegativeKeyword>(
         1,
         'create_1',
         $pb.PbFieldType.OM,
-        $0.KeywordPlanNegativeKeyword.getDefault,
-        $0.KeywordPlanNegativeKeyword.create)
-    ..a<$0.KeywordPlanNegativeKeyword>(
+        $1.KeywordPlanNegativeKeyword.getDefault,
+        $1.KeywordPlanNegativeKeyword.create)
+    ..a<$1.KeywordPlanNegativeKeyword>(
         2,
         'update',
         $pb.PbFieldType.OM,
-        $0.KeywordPlanNegativeKeyword.getDefault,
-        $0.KeywordPlanNegativeKeyword.create)
+        $1.KeywordPlanNegativeKeyword.getDefault,
+        $1.KeywordPlanNegativeKeyword.create)
     ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
-    ..oo(0, [1, 2, 3])
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  KeywordPlanNegativeKeywordOperation() : super();
-  KeywordPlanNegativeKeywordOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanNegativeKeywordOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanNegativeKeywordOperation._() : super();
+  factory KeywordPlanNegativeKeywordOperation() => create();
+  factory KeywordPlanNegativeKeywordOperation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanNegativeKeywordOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanNegativeKeywordOperation clone() =>
       KeywordPlanNegativeKeywordOperation()..mergeFromMessage(this);
   KeywordPlanNegativeKeywordOperation copyWith(
@@ -166,8 +175,9 @@ class KeywordPlanNegativeKeywordOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as KeywordPlanNegativeKeywordOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static KeywordPlanNegativeKeywordOperation create() =>
-      KeywordPlanNegativeKeywordOperation();
+      KeywordPlanNegativeKeywordOperation._();
   KeywordPlanNegativeKeywordOperation createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanNegativeKeywordOperation> createRepeated() =>
       $pb.PbList<KeywordPlanNegativeKeywordOperation>();
@@ -179,16 +189,16 @@ class KeywordPlanNegativeKeywordOperation extends $pb.GeneratedMessage {
       _KeywordPlanNegativeKeywordOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.KeywordPlanNegativeKeyword get create_1 => $_getN(0);
-  set create_1($0.KeywordPlanNegativeKeyword v) {
+  $1.KeywordPlanNegativeKeyword get create_1 => $_getN(0);
+  set create_1($1.KeywordPlanNegativeKeyword v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.KeywordPlanNegativeKeyword get update => $_getN(1);
-  set update($0.KeywordPlanNegativeKeyword v) {
+  $1.KeywordPlanNegativeKeyword get update => $_getN(1);
+  set update($1.KeywordPlanNegativeKeyword v) {
     setField(2, v);
   }
 
@@ -203,8 +213,8 @@ class KeywordPlanNegativeKeywordOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -218,17 +228,19 @@ class MutateKeywordPlanNegativeKeywordsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateKeywordPlanNegativeKeywordResult>(2, 'results',
         $pb.PbFieldType.PM, MutateKeywordPlanNegativeKeywordResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateKeywordPlanNegativeKeywordsResponse() : super();
-  MutateKeywordPlanNegativeKeywordsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateKeywordPlanNegativeKeywordsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateKeywordPlanNegativeKeywordsResponse._() : super();
+  factory MutateKeywordPlanNegativeKeywordsResponse() => create();
+  factory MutateKeywordPlanNegativeKeywordsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateKeywordPlanNegativeKeywordsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateKeywordPlanNegativeKeywordsResponse clone() =>
       MutateKeywordPlanNegativeKeywordsResponse()..mergeFromMessage(this);
   MutateKeywordPlanNegativeKeywordsResponse copyWith(
@@ -236,8 +248,9 @@ class MutateKeywordPlanNegativeKeywordsResponse extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateKeywordPlanNegativeKeywordsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateKeywordPlanNegativeKeywordsResponse create() =>
-      MutateKeywordPlanNegativeKeywordsResponse();
+      MutateKeywordPlanNegativeKeywordsResponse._();
   MutateKeywordPlanNegativeKeywordsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateKeywordPlanNegativeKeywordsResponse>
       createRepeated() =>
@@ -249,8 +262,8 @@ class MutateKeywordPlanNegativeKeywordsResponse extends $pb.GeneratedMessage {
   $core.List<MutateKeywordPlanNegativeKeywordResult> get results =>
       $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -265,13 +278,15 @@ class MutateKeywordPlanNegativeKeywordResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateKeywordPlanNegativeKeywordResult() : super();
-  MutateKeywordPlanNegativeKeywordResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateKeywordPlanNegativeKeywordResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateKeywordPlanNegativeKeywordResult._() : super();
+  factory MutateKeywordPlanNegativeKeywordResult() => create();
+  factory MutateKeywordPlanNegativeKeywordResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateKeywordPlanNegativeKeywordResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateKeywordPlanNegativeKeywordResult clone() =>
       MutateKeywordPlanNegativeKeywordResult()..mergeFromMessage(this);
   MutateKeywordPlanNegativeKeywordResult copyWith(
@@ -279,8 +294,9 @@ class MutateKeywordPlanNegativeKeywordResult extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateKeywordPlanNegativeKeywordResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateKeywordPlanNegativeKeywordResult create() =>
-      MutateKeywordPlanNegativeKeywordResult();
+      MutateKeywordPlanNegativeKeywordResult._();
   MutateKeywordPlanNegativeKeywordResult createEmptyInstance() => create();
   static $pb.PbList<MutateKeywordPlanNegativeKeywordResult> createRepeated() =>
       $pb.PbList<MutateKeywordPlanNegativeKeywordResult>();

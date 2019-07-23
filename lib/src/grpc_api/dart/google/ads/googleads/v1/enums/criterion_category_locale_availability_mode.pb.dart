@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/criterion_category_locale_availability_mode.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,14 +18,15 @@ class CriterionCategoryLocaleAvailabilityModeEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  CriterionCategoryLocaleAvailabilityModeEnum() : super();
-  CriterionCategoryLocaleAvailabilityModeEnum.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CriterionCategoryLocaleAvailabilityModeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CriterionCategoryLocaleAvailabilityModeEnum._() : super();
+  factory CriterionCategoryLocaleAvailabilityModeEnum() => create();
+  factory CriterionCategoryLocaleAvailabilityModeEnum.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CriterionCategoryLocaleAvailabilityModeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CriterionCategoryLocaleAvailabilityModeEnum clone() =>
       CriterionCategoryLocaleAvailabilityModeEnum()..mergeFromMessage(this);
   CriterionCategoryLocaleAvailabilityModeEnum copyWith(
@@ -32,8 +34,9 @@ class CriterionCategoryLocaleAvailabilityModeEnum extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as CriterionCategoryLocaleAvailabilityModeEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CriterionCategoryLocaleAvailabilityModeEnum create() =>
-      CriterionCategoryLocaleAvailabilityModeEnum();
+      CriterionCategoryLocaleAvailabilityModeEnum._();
   CriterionCategoryLocaleAvailabilityModeEnum createEmptyInstance() => create();
   static $pb.PbList<CriterionCategoryLocaleAvailabilityModeEnum>
       createRepeated() =>

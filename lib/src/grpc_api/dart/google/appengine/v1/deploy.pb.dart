@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/deploy.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,18 +29,20 @@ class Deployment extends $pb.GeneratedMessage {
         3, 'zip', $pb.PbFieldType.OM, ZipInfo.getDefault, ZipInfo.create)
     ..hasRequiredFields = false;
 
-  Deployment() : super();
-  Deployment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Deployment._() : super();
+  factory Deployment() => create();
+  factory Deployment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Deployment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Deployment clone() => Deployment()..mergeFromMessage(this);
   Deployment copyWith(void Function(Deployment) updates) =>
       super.copyWith((message) => updates(message as Deployment));
   $pb.BuilderInfo get info_ => _i;
-  static Deployment create() => Deployment();
+  @$core.pragma('dart2js:noInline')
+  static Deployment create() => Deployment._();
   Deployment createEmptyInstance() => create();
   static $pb.PbList<Deployment> createRepeated() => $pb.PbList<Deployment>();
   static Deployment getDefault() => _defaultInstance ??= create()..freeze();
@@ -72,18 +75,20 @@ class FileInfo extends $pb.GeneratedMessage {
     ..aOS(3, 'mimeType')
     ..hasRequiredFields = false;
 
-  FileInfo() : super();
-  FileInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileInfo._() : super();
+  factory FileInfo() => create();
+  factory FileInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FileInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FileInfo clone() => FileInfo()..mergeFromMessage(this);
   FileInfo copyWith(void Function(FileInfo) updates) =>
       super.copyWith((message) => updates(message as FileInfo));
   $pb.BuilderInfo get info_ => _i;
-  static FileInfo create() => FileInfo();
+  @$core.pragma('dart2js:noInline')
+  static FileInfo create() => FileInfo._();
   FileInfo createEmptyInstance() => create();
   static $pb.PbList<FileInfo> createRepeated() => $pb.PbList<FileInfo>();
   static FileInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -120,18 +125,20 @@ class ContainerInfo extends $pb.GeneratedMessage {
     ..aOS(1, 'image')
     ..hasRequiredFields = false;
 
-  ContainerInfo() : super();
-  ContainerInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ContainerInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ContainerInfo._() : super();
+  factory ContainerInfo() => create();
+  factory ContainerInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ContainerInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ContainerInfo clone() => ContainerInfo()..mergeFromMessage(this);
   ContainerInfo copyWith(void Function(ContainerInfo) updates) =>
       super.copyWith((message) => updates(message as ContainerInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ContainerInfo create() => ContainerInfo();
+  @$core.pragma('dart2js:noInline')
+  static ContainerInfo create() => ContainerInfo._();
   ContainerInfo createEmptyInstance() => create();
   static $pb.PbList<ContainerInfo> createRepeated() =>
       $pb.PbList<ContainerInfo>();
@@ -154,18 +161,20 @@ class ZipInfo extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'filesCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ZipInfo() : super();
-  ZipInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ZipInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ZipInfo._() : super();
+  factory ZipInfo() => create();
+  factory ZipInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ZipInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ZipInfo clone() => ZipInfo()..mergeFromMessage(this);
   ZipInfo copyWith(void Function(ZipInfo) updates) =>
       super.copyWith((message) => updates(message as ZipInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ZipInfo create() => ZipInfo();
+  @$core.pragma('dart2js:noInline')
+  static ZipInfo create() => ZipInfo._();
   ZipInfo createEmptyInstance() => create();
   static $pb.PbList<ZipInfo> createRepeated() => $pb.PbList<ZipInfo>();
   static ZipInfo getDefault() => _defaultInstance ??= create()..freeze();

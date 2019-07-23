@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/criterion_category_availability.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -31,13 +32,14 @@ class CriterionCategoryAvailability extends $pb.GeneratedMessage {
         CriterionCategoryLocaleAvailability.create)
     ..hasRequiredFields = false;
 
-  CriterionCategoryAvailability() : super();
-  CriterionCategoryAvailability.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CriterionCategoryAvailability.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CriterionCategoryAvailability._() : super();
+  factory CriterionCategoryAvailability() => create();
+  factory CriterionCategoryAvailability.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CriterionCategoryAvailability.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CriterionCategoryAvailability clone() =>
       CriterionCategoryAvailability()..mergeFromMessage(this);
   CriterionCategoryAvailability copyWith(
@@ -45,8 +47,9 @@ class CriterionCategoryAvailability extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CriterionCategoryAvailability));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CriterionCategoryAvailability create() =>
-      CriterionCategoryAvailability();
+      CriterionCategoryAvailability._();
   CriterionCategoryAvailability createEmptyInstance() => create();
   static $pb.PbList<CriterionCategoryAvailability> createRepeated() =>
       $pb.PbList<CriterionCategoryAvailability>();
@@ -97,13 +100,15 @@ class CriterionCategoryChannelAvailability extends $pb.GeneratedMessage {
         4, 'includeDefaultChannelSubType', $pb.PbFieldType.OM, $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  CriterionCategoryChannelAvailability() : super();
-  CriterionCategoryChannelAvailability.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CriterionCategoryChannelAvailability.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CriterionCategoryChannelAvailability._() : super();
+  factory CriterionCategoryChannelAvailability() => create();
+  factory CriterionCategoryChannelAvailability.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CriterionCategoryChannelAvailability.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CriterionCategoryChannelAvailability clone() =>
       CriterionCategoryChannelAvailability()..mergeFromMessage(this);
   CriterionCategoryChannelAvailability copyWith(
@@ -111,8 +116,9 @@ class CriterionCategoryChannelAvailability extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as CriterionCategoryChannelAvailability));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CriterionCategoryChannelAvailability create() =>
-      CriterionCategoryChannelAvailability();
+      CriterionCategoryChannelAvailability._();
   CriterionCategoryChannelAvailability createEmptyInstance() => create();
   static $pb.PbList<CriterionCategoryChannelAvailability> createRepeated() =>
       $pb.PbList<CriterionCategoryChannelAvailability>();
@@ -173,13 +179,15 @@ class CriterionCategoryLocaleAvailability extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CriterionCategoryLocaleAvailability() : super();
-  CriterionCategoryLocaleAvailability.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CriterionCategoryLocaleAvailability.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CriterionCategoryLocaleAvailability._() : super();
+  factory CriterionCategoryLocaleAvailability() => create();
+  factory CriterionCategoryLocaleAvailability.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CriterionCategoryLocaleAvailability.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CriterionCategoryLocaleAvailability clone() =>
       CriterionCategoryLocaleAvailability()..mergeFromMessage(this);
   CriterionCategoryLocaleAvailability copyWith(
@@ -187,8 +195,9 @@ class CriterionCategoryLocaleAvailability extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CriterionCategoryLocaleAvailability));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CriterionCategoryLocaleAvailability create() =>
-      CriterionCategoryLocaleAvailability();
+      CriterionCategoryLocaleAvailability._();
   CriterionCategoryLocaleAvailability createEmptyInstance() => create();
   static $pb.PbList<CriterionCategoryLocaleAvailability> createRepeated() =>
       $pb.PbList<CriterionCategoryLocaleAvailability>();

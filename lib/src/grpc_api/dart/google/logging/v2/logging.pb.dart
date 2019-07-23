@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../api/monitored_resource.pb.dart' as $1;
-import 'log_entry.pb.dart' as $2;
-import '../../rpc/status.pb.dart' as $3;
+import '../../api/monitored_resource.pb.dart' as $2;
+import 'log_entry.pb.dart' as $3;
+import '../../rpc/status.pb.dart' as $4;
 
 class DeleteLogRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteLogRequest',
@@ -19,18 +20,20 @@ class DeleteLogRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'logName')
     ..hasRequiredFields = false;
 
-  DeleteLogRequest() : super();
-  DeleteLogRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteLogRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteLogRequest._() : super();
+  factory DeleteLogRequest() => create();
+  factory DeleteLogRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteLogRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteLogRequest clone() => DeleteLogRequest()..mergeFromMessage(this);
   DeleteLogRequest copyWith(void Function(DeleteLogRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteLogRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteLogRequest create() => DeleteLogRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteLogRequest create() => DeleteLogRequest._();
   DeleteLogRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteLogRequest> createRepeated() =>
       $pb.PbList<DeleteLogRequest>();
@@ -51,8 +54,8 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WriteLogEntriesRequest',
       package: const $pb.PackageName('google.logging.v2'))
     ..aOS(1, 'logName')
-    ..a<$1.MonitoredResource>(2, 'resource', $pb.PbFieldType.OM,
-        $1.MonitoredResource.getDefault, $1.MonitoredResource.create)
+    ..a<$2.MonitoredResource>(2, 'resource', $pb.PbFieldType.OM,
+        $2.MonitoredResource.getDefault, $2.MonitoredResource.create)
     ..m<$core.String, $core.String>(
         3,
         'labels',
@@ -63,25 +66,27 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.logging.v2'))
-    ..pc<$2.LogEntry>(4, 'entries', $pb.PbFieldType.PM, $2.LogEntry.create)
+    ..pc<$3.LogEntry>(4, 'entries', $pb.PbFieldType.PM, $3.LogEntry.create)
     ..aOB(5, 'partialSuccess')
     ..aOB(6, 'dryRun')
     ..hasRequiredFields = false;
 
-  WriteLogEntriesRequest() : super();
-  WriteLogEntriesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WriteLogEntriesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WriteLogEntriesRequest._() : super();
+  factory WriteLogEntriesRequest() => create();
+  factory WriteLogEntriesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WriteLogEntriesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WriteLogEntriesRequest clone() =>
       WriteLogEntriesRequest()..mergeFromMessage(this);
   WriteLogEntriesRequest copyWith(
           void Function(WriteLogEntriesRequest) updates) =>
       super.copyWith((message) => updates(message as WriteLogEntriesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static WriteLogEntriesRequest create() => WriteLogEntriesRequest();
+  @$core.pragma('dart2js:noInline')
+  static WriteLogEntriesRequest create() => WriteLogEntriesRequest._();
   WriteLogEntriesRequest createEmptyInstance() => create();
   static $pb.PbList<WriteLogEntriesRequest> createRepeated() =>
       $pb.PbList<WriteLogEntriesRequest>();
@@ -97,8 +102,8 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
   $core.bool hasLogName() => $_has(0);
   void clearLogName() => clearField(1);
 
-  $1.MonitoredResource get resource => $_getN(1);
-  set resource($1.MonitoredResource v) {
+  $2.MonitoredResource get resource => $_getN(1);
+  set resource($2.MonitoredResource v) {
     setField(2, v);
   }
 
@@ -107,7 +112,7 @@ class WriteLogEntriesRequest extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 
-  $core.List<$2.LogEntry> get entries => $_getList(3);
+  $core.List<$3.LogEntry> get entries => $_getList(3);
 
   $core.bool get partialSuccess => $_get(4, false);
   set partialSuccess($core.bool v) {
@@ -131,20 +136,22 @@ class WriteLogEntriesResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.logging.v2'))
     ..hasRequiredFields = false;
 
-  WriteLogEntriesResponse() : super();
-  WriteLogEntriesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WriteLogEntriesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WriteLogEntriesResponse._() : super();
+  factory WriteLogEntriesResponse() => create();
+  factory WriteLogEntriesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WriteLogEntriesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WriteLogEntriesResponse clone() =>
       WriteLogEntriesResponse()..mergeFromMessage(this);
   WriteLogEntriesResponse copyWith(
           void Function(WriteLogEntriesResponse) updates) =>
       super.copyWith((message) => updates(message as WriteLogEntriesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static WriteLogEntriesResponse create() => WriteLogEntriesResponse();
+  @$core.pragma('dart2js:noInline')
+  static WriteLogEntriesResponse create() => WriteLogEntriesResponse._();
   WriteLogEntriesResponse createEmptyInstance() => create();
   static $pb.PbList<WriteLogEntriesResponse> createRepeated() =>
       $pb.PbList<WriteLogEntriesResponse>();
@@ -157,25 +164,26 @@ class WriteLogEntriesPartialErrors extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'WriteLogEntriesPartialErrors',
       package: const $pb.PackageName('google.logging.v2'))
-    ..m<$core.int, $3.Status>(
+    ..m<$core.int, $4.Status>(
         1,
         'logEntryErrors',
         'WriteLogEntriesPartialErrors.LogEntryErrorsEntry',
         $pb.PbFieldType.O3,
         $pb.PbFieldType.OM,
-        $3.Status.create,
+        $4.Status.create,
         null,
         null,
         const $pb.PackageName('google.logging.v2'))
     ..hasRequiredFields = false;
 
-  WriteLogEntriesPartialErrors() : super();
-  WriteLogEntriesPartialErrors.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WriteLogEntriesPartialErrors.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WriteLogEntriesPartialErrors._() : super();
+  factory WriteLogEntriesPartialErrors() => create();
+  factory WriteLogEntriesPartialErrors.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WriteLogEntriesPartialErrors.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WriteLogEntriesPartialErrors clone() =>
       WriteLogEntriesPartialErrors()..mergeFromMessage(this);
   WriteLogEntriesPartialErrors copyWith(
@@ -183,8 +191,9 @@ class WriteLogEntriesPartialErrors extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as WriteLogEntriesPartialErrors));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static WriteLogEntriesPartialErrors create() =>
-      WriteLogEntriesPartialErrors();
+      WriteLogEntriesPartialErrors._();
   WriteLogEntriesPartialErrors createEmptyInstance() => create();
   static $pb.PbList<WriteLogEntriesPartialErrors> createRepeated() =>
       $pb.PbList<WriteLogEntriesPartialErrors>();
@@ -192,7 +201,7 @@ class WriteLogEntriesPartialErrors extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static WriteLogEntriesPartialErrors _defaultInstance;
 
-  $core.Map<$core.int, $3.Status> get logEntryErrors => $_getMap(0);
+  $core.Map<$core.int, $4.Status> get logEntryErrors => $_getMap(0);
 }
 
 class ListLogEntriesRequest extends $pb.GeneratedMessage {
@@ -206,20 +215,22 @@ class ListLogEntriesRequest extends $pb.GeneratedMessage {
     ..pPS(8, 'resourceNames')
     ..hasRequiredFields = false;
 
-  ListLogEntriesRequest() : super();
-  ListLogEntriesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLogEntriesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLogEntriesRequest._() : super();
+  factory ListLogEntriesRequest() => create();
+  factory ListLogEntriesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLogEntriesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLogEntriesRequest clone() =>
       ListLogEntriesRequest()..mergeFromMessage(this);
   ListLogEntriesRequest copyWith(
           void Function(ListLogEntriesRequest) updates) =>
       super.copyWith((message) => updates(message as ListLogEntriesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListLogEntriesRequest create() => ListLogEntriesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListLogEntriesRequest create() => ListLogEntriesRequest._();
   ListLogEntriesRequest createEmptyInstance() => create();
   static $pb.PbList<ListLogEntriesRequest> createRepeated() =>
       $pb.PbList<ListLogEntriesRequest>();
@@ -268,24 +279,26 @@ class ListLogEntriesRequest extends $pb.GeneratedMessage {
 class ListLogEntriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLogEntriesResponse',
       package: const $pb.PackageName('google.logging.v2'))
-    ..pc<$2.LogEntry>(1, 'entries', $pb.PbFieldType.PM, $2.LogEntry.create)
+    ..pc<$3.LogEntry>(1, 'entries', $pb.PbFieldType.PM, $3.LogEntry.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListLogEntriesResponse() : super();
-  ListLogEntriesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLogEntriesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLogEntriesResponse._() : super();
+  factory ListLogEntriesResponse() => create();
+  factory ListLogEntriesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLogEntriesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLogEntriesResponse clone() =>
       ListLogEntriesResponse()..mergeFromMessage(this);
   ListLogEntriesResponse copyWith(
           void Function(ListLogEntriesResponse) updates) =>
       super.copyWith((message) => updates(message as ListLogEntriesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListLogEntriesResponse create() => ListLogEntriesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListLogEntriesResponse create() => ListLogEntriesResponse._();
   ListLogEntriesResponse createEmptyInstance() => create();
   static $pb.PbList<ListLogEntriesResponse> createRepeated() =>
       $pb.PbList<ListLogEntriesResponse>();
@@ -293,7 +306,7 @@ class ListLogEntriesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListLogEntriesResponse _defaultInstance;
 
-  $core.List<$2.LogEntry> get entries => $_getList(0);
+  $core.List<$3.LogEntry> get entries => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -312,13 +325,15 @@ class ListMonitoredResourceDescriptorsRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListMonitoredResourceDescriptorsRequest() : super();
-  ListMonitoredResourceDescriptorsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListMonitoredResourceDescriptorsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListMonitoredResourceDescriptorsRequest._() : super();
+  factory ListMonitoredResourceDescriptorsRequest() => create();
+  factory ListMonitoredResourceDescriptorsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListMonitoredResourceDescriptorsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListMonitoredResourceDescriptorsRequest clone() =>
       ListMonitoredResourceDescriptorsRequest()..mergeFromMessage(this);
   ListMonitoredResourceDescriptorsRequest copyWith(
@@ -326,8 +341,9 @@ class ListMonitoredResourceDescriptorsRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ListMonitoredResourceDescriptorsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListMonitoredResourceDescriptorsRequest create() =>
-      ListMonitoredResourceDescriptorsRequest();
+      ListMonitoredResourceDescriptorsRequest._();
   ListMonitoredResourceDescriptorsRequest createEmptyInstance() => create();
   static $pb.PbList<ListMonitoredResourceDescriptorsRequest> createRepeated() =>
       $pb.PbList<ListMonitoredResourceDescriptorsRequest>();
@@ -356,18 +372,20 @@ class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMonitoredResourceDescriptorsResponse',
       package: const $pb.PackageName('google.logging.v2'))
-    ..pc<$1.MonitoredResourceDescriptor>(1, 'resourceDescriptors',
-        $pb.PbFieldType.PM, $1.MonitoredResourceDescriptor.create)
+    ..pc<$2.MonitoredResourceDescriptor>(1, 'resourceDescriptors',
+        $pb.PbFieldType.PM, $2.MonitoredResourceDescriptor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListMonitoredResourceDescriptorsResponse() : super();
-  ListMonitoredResourceDescriptorsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListMonitoredResourceDescriptorsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListMonitoredResourceDescriptorsResponse._() : super();
+  factory ListMonitoredResourceDescriptorsResponse() => create();
+  factory ListMonitoredResourceDescriptorsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListMonitoredResourceDescriptorsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListMonitoredResourceDescriptorsResponse clone() =>
       ListMonitoredResourceDescriptorsResponse()..mergeFromMessage(this);
   ListMonitoredResourceDescriptorsResponse copyWith(
@@ -375,8 +393,9 @@ class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ListMonitoredResourceDescriptorsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListMonitoredResourceDescriptorsResponse create() =>
-      ListMonitoredResourceDescriptorsResponse();
+      ListMonitoredResourceDescriptorsResponse._();
   ListMonitoredResourceDescriptorsResponse createEmptyInstance() => create();
   static $pb.PbList<ListMonitoredResourceDescriptorsResponse>
       createRepeated() =>
@@ -385,7 +404,7 @@ class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListMonitoredResourceDescriptorsResponse _defaultInstance;
 
-  $core.List<$1.MonitoredResourceDescriptor> get resourceDescriptors =>
+  $core.List<$2.MonitoredResourceDescriptor> get resourceDescriptors =>
       $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
@@ -405,18 +424,20 @@ class ListLogsRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListLogsRequest() : super();
-  ListLogsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLogsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLogsRequest._() : super();
+  factory ListLogsRequest() => create();
+  factory ListLogsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLogsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLogsRequest clone() => ListLogsRequest()..mergeFromMessage(this);
   ListLogsRequest copyWith(void Function(ListLogsRequest) updates) =>
       super.copyWith((message) => updates(message as ListLogsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListLogsRequest create() => ListLogsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListLogsRequest create() => ListLogsRequest._();
   ListLogsRequest createEmptyInstance() => create();
   static $pb.PbList<ListLogsRequest> createRepeated() =>
       $pb.PbList<ListLogsRequest>();
@@ -456,18 +477,20 @@ class ListLogsResponse extends $pb.GeneratedMessage {
     ..pPS(3, 'logNames')
     ..hasRequiredFields = false;
 
-  ListLogsResponse() : super();
-  ListLogsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLogsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLogsResponse._() : super();
+  factory ListLogsResponse() => create();
+  factory ListLogsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLogsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLogsResponse clone() => ListLogsResponse()..mergeFromMessage(this);
   ListLogsResponse copyWith(void Function(ListLogsResponse) updates) =>
       super.copyWith((message) => updates(message as ListLogsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListLogsResponse create() => ListLogsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListLogsResponse create() => ListLogsResponse._();
   ListLogsResponse createEmptyInstance() => create();
   static $pb.PbList<ListLogsResponse> createRepeated() =>
       $pb.PbList<ListLogsResponse>();

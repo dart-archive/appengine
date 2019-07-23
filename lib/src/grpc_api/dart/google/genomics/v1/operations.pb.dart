@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/operations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -40,18 +41,20 @@ class OperationMetadata extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  OperationMetadata() : super();
-  OperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadata._() : super();
+  factory OperationMetadata() => create();
+  factory OperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static OperationMetadata create() => OperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata> createRepeated() =>
       $pb.PbList<OperationMetadata>();
@@ -130,18 +133,20 @@ class OperationEvent extends $pb.GeneratedMessage {
     ..aOS(3, 'description')
     ..hasRequiredFields = false;
 
-  OperationEvent() : super();
-  OperationEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationEvent._() : super();
+  factory OperationEvent() => create();
+  factory OperationEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationEvent clone() => OperationEvent()..mergeFromMessage(this);
   OperationEvent copyWith(void Function(OperationEvent) updates) =>
       super.copyWith((message) => updates(message as OperationEvent));
   $pb.BuilderInfo get info_ => _i;
-  static OperationEvent create() => OperationEvent();
+  @$core.pragma('dart2js:noInline')
+  static OperationEvent create() => OperationEvent._();
   OperationEvent createEmptyInstance() => create();
   static $pb.PbList<OperationEvent> createRepeated() =>
       $pb.PbList<OperationEvent>();

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/iam/credentials/v1/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const GenerateAccessTokenRequest$json = {
   '1': 'GenerateAccessTokenRequest',
@@ -84,29 +85,5 @@ const GenerateIdTokenResponse$json = {
   '1': 'GenerateIdTokenResponse',
   '2': [
     {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
-  ],
-};
-
-const GenerateIdentityBindingAccessTokenRequest$json = {
-  '1': 'GenerateIdentityBindingAccessTokenRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'scope', '3': 2, '4': 3, '5': 9, '10': 'scope'},
-    {'1': 'jwt', '3': 3, '4': 1, '5': 9, '10': 'jwt'},
-  ],
-};
-
-const GenerateIdentityBindingAccessTokenResponse$json = {
-  '1': 'GenerateIdentityBindingAccessTokenResponse',
-  '2': [
-    {'1': 'access_token', '3': 1, '4': 1, '5': 9, '10': 'accessToken'},
-    {
-      '1': 'expire_time',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '10': 'expireTime'
-    },
   ],
 };

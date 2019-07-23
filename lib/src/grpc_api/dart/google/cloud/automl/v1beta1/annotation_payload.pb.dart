@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/annotation_payload.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,6 +23,7 @@ enum AnnotationPayload_Detail {
   imageObjectDetection,
   textExtraction,
   textSentiment,
+  videoObjectTracking,
   videoClassification,
   tables,
   notSet
@@ -35,12 +37,14 @@ class AnnotationPayload extends $pb.GeneratedMessage {
     4: AnnotationPayload_Detail.imageObjectDetection,
     6: AnnotationPayload_Detail.textExtraction,
     7: AnnotationPayload_Detail.textSentiment,
+    8: AnnotationPayload_Detail.videoObjectTracking,
     9: AnnotationPayload_Detail.videoClassification,
     10: AnnotationPayload_Detail.tables,
     0: AnnotationPayload_Detail.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotationPayload',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [2, 3, 4, 6, 7, 8, 9, 10])
     ..aOS(1, 'annotationSpecId')
     ..a<$0.TranslationAnnotation>(2, 'translation', $pb.PbFieldType.OM,
         $0.TranslationAnnotation.getDefault, $0.TranslationAnnotation.create)
@@ -69,6 +73,12 @@ class AnnotationPayload extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $4.TextSentimentAnnotation.getDefault,
         $4.TextSentimentAnnotation.create)
+    ..a<$2.VideoObjectTrackingAnnotation>(
+        8,
+        'videoObjectTracking',
+        $pb.PbFieldType.OM,
+        $2.VideoObjectTrackingAnnotation.getDefault,
+        $2.VideoObjectTrackingAnnotation.create)
     ..a<$1.VideoClassificationAnnotation>(
         9,
         'videoClassification',
@@ -77,21 +87,22 @@ class AnnotationPayload extends $pb.GeneratedMessage {
         $1.VideoClassificationAnnotation.create)
     ..a<$5.TablesAnnotation>(10, 'tables', $pb.PbFieldType.OM,
         $5.TablesAnnotation.getDefault, $5.TablesAnnotation.create)
-    ..oo(0, [2, 3, 4, 6, 7, 9, 10])
     ..hasRequiredFields = false;
 
-  AnnotationPayload() : super();
-  AnnotationPayload.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotationPayload.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotationPayload._() : super();
+  factory AnnotationPayload() => create();
+  factory AnnotationPayload.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotationPayload.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotationPayload clone() => AnnotationPayload()..mergeFromMessage(this);
   AnnotationPayload copyWith(void Function(AnnotationPayload) updates) =>
       super.copyWith((message) => updates(message as AnnotationPayload));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotationPayload create() => AnnotationPayload();
+  @$core.pragma('dart2js:noInline')
+  static AnnotationPayload create() => AnnotationPayload._();
   AnnotationPayload createEmptyInstance() => create();
   static $pb.PbList<AnnotationPayload> createRepeated() =>
       $pb.PbList<AnnotationPayload>();
@@ -159,19 +170,27 @@ class AnnotationPayload extends $pb.GeneratedMessage {
   $core.bool hasTextSentiment() => $_has(6);
   void clearTextSentiment() => clearField(7);
 
-  $1.VideoClassificationAnnotation get videoClassification => $_getN(7);
+  $2.VideoObjectTrackingAnnotation get videoObjectTracking => $_getN(7);
+  set videoObjectTracking($2.VideoObjectTrackingAnnotation v) {
+    setField(8, v);
+  }
+
+  $core.bool hasVideoObjectTracking() => $_has(7);
+  void clearVideoObjectTracking() => clearField(8);
+
+  $1.VideoClassificationAnnotation get videoClassification => $_getN(8);
   set videoClassification($1.VideoClassificationAnnotation v) {
     setField(9, v);
   }
 
-  $core.bool hasVideoClassification() => $_has(7);
+  $core.bool hasVideoClassification() => $_has(8);
   void clearVideoClassification() => clearField(9);
 
-  $5.TablesAnnotation get tables => $_getN(8);
+  $5.TablesAnnotation get tables => $_getN(9);
   set tables($5.TablesAnnotation v) {
     setField(10, v);
   }
 
-  $core.bool hasTables() => $_has(8);
+  $core.bool hasTables() => $_has(9);
   void clearTables() => clearField(10);
 }

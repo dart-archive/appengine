@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/metric.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class Point extends $pb.GeneratedMessage {
         $0.TypedValue.create)
     ..hasRequiredFields = false;
 
-  Point() : super();
-  Point.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Point.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Point._() : super();
+  factory Point() => create();
+  factory Point.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Point.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Point clone() => Point()..mergeFromMessage(this);
   Point copyWith(void Function(Point) updates) =>
       super.copyWith((message) => updates(message as Point));
   $pb.BuilderInfo get info_ => _i;
-  static Point create() => Point();
+  @$core.pragma('dart2js:noInline')
+  static Point create() => Point._();
   Point createEmptyInstance() => create();
   static $pb.PbList<Point> createRepeated() => $pb.PbList<Point>();
   static Point getDefault() => _defaultInstance ??= create()..freeze();
@@ -88,18 +91,20 @@ class TimeSeries extends $pb.GeneratedMessage {
         $2.MonitoredResourceMetadata.create)
     ..hasRequiredFields = false;
 
-  TimeSeries() : super();
-  TimeSeries.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimeSeries.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimeSeries._() : super();
+  factory TimeSeries() => create();
+  factory TimeSeries.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimeSeries.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimeSeries clone() => TimeSeries()..mergeFromMessage(this);
   TimeSeries copyWith(void Function(TimeSeries) updates) =>
       super.copyWith((message) => updates(message as TimeSeries));
   $pb.BuilderInfo get info_ => _i;
-  static TimeSeries create() => TimeSeries();
+  @$core.pragma('dart2js:noInline')
+  static TimeSeries create() => TimeSeries._();
   TimeSeries createEmptyInstance() => create();
   static $pb.PbList<TimeSeries> createRepeated() => $pb.PbList<TimeSeries>();
   static TimeSeries getDefault() => _defaultInstance ??= create()..freeze();

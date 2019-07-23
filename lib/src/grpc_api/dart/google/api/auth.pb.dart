@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/auth.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class Authentication extends $pb.GeneratedMessage {
     ..pc<AuthProvider>(4, 'providers', $pb.PbFieldType.PM, AuthProvider.create)
     ..hasRequiredFields = false;
 
-  Authentication() : super();
-  Authentication.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Authentication.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Authentication._() : super();
+  factory Authentication() => create();
+  factory Authentication.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Authentication.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Authentication clone() => Authentication()..mergeFromMessage(this);
   Authentication copyWith(void Function(Authentication) updates) =>
       super.copyWith((message) => updates(message as Authentication));
   $pb.BuilderInfo get info_ => _i;
-  static Authentication create() => Authentication();
+  @$core.pragma('dart2js:noInline')
+  static Authentication create() => Authentication._();
   Authentication createEmptyInstance() => create();
   static $pb.PbList<Authentication> createRepeated() =>
       $pb.PbList<Authentication>();
@@ -51,18 +54,20 @@ class AuthenticationRule extends $pb.GeneratedMessage {
         7, 'requirements', $pb.PbFieldType.PM, AuthRequirement.create)
     ..hasRequiredFields = false;
 
-  AuthenticationRule() : super();
-  AuthenticationRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthenticationRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthenticationRule._() : super();
+  factory AuthenticationRule() => create();
+  factory AuthenticationRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuthenticationRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuthenticationRule clone() => AuthenticationRule()..mergeFromMessage(this);
   AuthenticationRule copyWith(void Function(AuthenticationRule) updates) =>
       super.copyWith((message) => updates(message as AuthenticationRule));
   $pb.BuilderInfo get info_ => _i;
-  static AuthenticationRule create() => AuthenticationRule();
+  @$core.pragma('dart2js:noInline')
+  static AuthenticationRule create() => AuthenticationRule._();
   AuthenticationRule createEmptyInstance() => create();
   static $pb.PbList<AuthenticationRule> createRepeated() =>
       $pb.PbList<AuthenticationRule>();
@@ -107,18 +112,20 @@ class AuthProvider extends $pb.GeneratedMessage {
     ..aOS(5, 'authorizationUrl')
     ..hasRequiredFields = false;
 
-  AuthProvider() : super();
-  AuthProvider.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthProvider.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthProvider._() : super();
+  factory AuthProvider() => create();
+  factory AuthProvider.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuthProvider.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuthProvider clone() => AuthProvider()..mergeFromMessage(this);
   AuthProvider copyWith(void Function(AuthProvider) updates) =>
       super.copyWith((message) => updates(message as AuthProvider));
   $pb.BuilderInfo get info_ => _i;
-  static AuthProvider create() => AuthProvider();
+  @$core.pragma('dart2js:noInline')
+  static AuthProvider create() => AuthProvider._();
   AuthProvider createEmptyInstance() => create();
   static $pb.PbList<AuthProvider> createRepeated() =>
       $pb.PbList<AuthProvider>();
@@ -172,18 +179,20 @@ class OAuthRequirements extends $pb.GeneratedMessage {
     ..aOS(1, 'canonicalScopes')
     ..hasRequiredFields = false;
 
-  OAuthRequirements() : super();
-  OAuthRequirements.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OAuthRequirements.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OAuthRequirements._() : super();
+  factory OAuthRequirements() => create();
+  factory OAuthRequirements.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OAuthRequirements.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OAuthRequirements clone() => OAuthRequirements()..mergeFromMessage(this);
   OAuthRequirements copyWith(void Function(OAuthRequirements) updates) =>
       super.copyWith((message) => updates(message as OAuthRequirements));
   $pb.BuilderInfo get info_ => _i;
-  static OAuthRequirements create() => OAuthRequirements();
+  @$core.pragma('dart2js:noInline')
+  static OAuthRequirements create() => OAuthRequirements._();
   OAuthRequirements createEmptyInstance() => create();
   static $pb.PbList<OAuthRequirements> createRepeated() =>
       $pb.PbList<OAuthRequirements>();
@@ -207,18 +216,20 @@ class AuthRequirement extends $pb.GeneratedMessage {
     ..aOS(2, 'audiences')
     ..hasRequiredFields = false;
 
-  AuthRequirement() : super();
-  AuthRequirement.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthRequirement.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthRequirement._() : super();
+  factory AuthRequirement() => create();
+  factory AuthRequirement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuthRequirement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuthRequirement clone() => AuthRequirement()..mergeFromMessage(this);
   AuthRequirement copyWith(void Function(AuthRequirement) updates) =>
       super.copyWith((message) => updates(message as AuthRequirement));
   $pb.BuilderInfo get info_ => _i;
-  static AuthRequirement create() => AuthRequirement();
+  @$core.pragma('dart2js:noInline')
+  static AuthRequirement create() => AuthRequirement._();
   AuthRequirement createEmptyInstance() => create();
   static $pb.PbList<AuthRequirement> createRepeated() =>
       $pb.PbList<AuthRequirement>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/group.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,18 +20,20 @@ class Group extends $pb.GeneratedMessage {
     ..aOB(6, 'isCluster')
     ..hasRequiredFields = false;
 
-  Group() : super();
-  Group.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Group.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Group._() : super();
+  factory Group() => create();
+  factory Group.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Group.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Group clone() => Group()..mergeFromMessage(this);
   Group copyWith(void Function(Group) updates) =>
       super.copyWith((message) => updates(message as Group));
   $pb.BuilderInfo get info_ => _i;
-  static Group create() => Group();
+  @$core.pragma('dart2js:noInline')
+  static Group create() => Group._();
   Group createEmptyInstance() => create();
   static $pb.PbList<Group> createRepeated() => $pb.PbList<Group>();
   static Group getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/user_list_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/user_list.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/user_list.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetUserListRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetUserListRequest',
@@ -19,18 +20,20 @@ class GetUserListRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetUserListRequest() : super();
-  GetUserListRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetUserListRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetUserListRequest._() : super();
+  factory GetUserListRequest() => create();
+  factory GetUserListRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetUserListRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetUserListRequest clone() => GetUserListRequest()..mergeFromMessage(this);
   GetUserListRequest copyWith(void Function(GetUserListRequest) updates) =>
       super.copyWith((message) => updates(message as GetUserListRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetUserListRequest create() => GetUserListRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetUserListRequest create() => GetUserListRequest._();
   GetUserListRequest createEmptyInstance() => create();
   static $pb.PbList<GetUserListRequest> createRepeated() =>
       $pb.PbList<GetUserListRequest>();
@@ -57,20 +60,22 @@ class MutateUserListsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateUserListsRequest() : super();
-  MutateUserListsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateUserListsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateUserListsRequest._() : super();
+  factory MutateUserListsRequest() => create();
+  factory MutateUserListsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateUserListsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateUserListsRequest clone() =>
       MutateUserListsRequest()..mergeFromMessage(this);
   MutateUserListsRequest copyWith(
           void Function(MutateUserListsRequest) updates) =>
       super.copyWith((message) => updates(message as MutateUserListsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateUserListsRequest create() => MutateUserListsRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateUserListsRequest create() => MutateUserListsRequest._();
   MutateUserListsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateUserListsRequest> createRepeated() =>
       $pb.PbList<MutateUserListsRequest>();
@@ -117,28 +122,30 @@ class UserListOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserListOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.UserList>(1, 'create_1', $pb.PbFieldType.OM, $0.UserList.getDefault,
-        $0.UserList.create)
-    ..a<$0.UserList>(2, 'update', $pb.PbFieldType.OM, $0.UserList.getDefault,
-        $0.UserList.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.UserList>(1, 'create_1', $pb.PbFieldType.OM, $1.UserList.getDefault,
+        $1.UserList.create)
+    ..a<$1.UserList>(2, 'update', $pb.PbFieldType.OM, $1.UserList.getDefault,
+        $1.UserList.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UserListOperation() : super();
-  UserListOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListOperation._() : super();
+  factory UserListOperation() => create();
+  factory UserListOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListOperation clone() => UserListOperation()..mergeFromMessage(this);
   UserListOperation copyWith(void Function(UserListOperation) updates) =>
       super.copyWith((message) => updates(message as UserListOperation));
   $pb.BuilderInfo get info_ => _i;
-  static UserListOperation create() => UserListOperation();
+  @$core.pragma('dart2js:noInline')
+  static UserListOperation create() => UserListOperation._();
   UserListOperation createEmptyInstance() => create();
   static $pb.PbList<UserListOperation> createRepeated() =>
       $pb.PbList<UserListOperation>();
@@ -150,16 +157,16 @@ class UserListOperation extends $pb.GeneratedMessage {
       _UserListOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.UserList get create_1 => $_getN(0);
-  set create_1($0.UserList v) {
+  $1.UserList get create_1 => $_getN(0);
+  set create_1($1.UserList v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.UserList get update => $_getN(1);
-  set update($0.UserList v) {
+  $1.UserList get update => $_getN(1);
+  set update($1.UserList v) {
     setField(2, v);
   }
 
@@ -174,8 +181,8 @@ class UserListOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -188,24 +195,26 @@ class MutateUserListsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateUserListResult>(
         2, 'results', $pb.PbFieldType.PM, MutateUserListResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateUserListsResponse() : super();
-  MutateUserListsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateUserListsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateUserListsResponse._() : super();
+  factory MutateUserListsResponse() => create();
+  factory MutateUserListsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateUserListsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateUserListsResponse clone() =>
       MutateUserListsResponse()..mergeFromMessage(this);
   MutateUserListsResponse copyWith(
           void Function(MutateUserListsResponse) updates) =>
       super.copyWith((message) => updates(message as MutateUserListsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static MutateUserListsResponse create() => MutateUserListsResponse();
+  @$core.pragma('dart2js:noInline')
+  static MutateUserListsResponse create() => MutateUserListsResponse._();
   MutateUserListsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateUserListsResponse> createRepeated() =>
       $pb.PbList<MutateUserListsResponse>();
@@ -215,8 +224,8 @@ class MutateUserListsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateUserListResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -230,19 +239,21 @@ class MutateUserListResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateUserListResult() : super();
-  MutateUserListResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateUserListResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateUserListResult._() : super();
+  factory MutateUserListResult() => create();
+  factory MutateUserListResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateUserListResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateUserListResult clone() =>
       MutateUserListResult()..mergeFromMessage(this);
   MutateUserListResult copyWith(void Function(MutateUserListResult) updates) =>
       super.copyWith((message) => updates(message as MutateUserListResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateUserListResult create() => MutateUserListResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateUserListResult create() => MutateUserListResult._();
   MutateUserListResult createEmptyInstance() => create();
   static $pb.PbList<MutateUserListResult> createRepeated() =>
       $pb.PbList<MutateUserListResult>();

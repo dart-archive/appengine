@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/intent.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const IntentView$json = {
   '1': 'IntentView',
@@ -320,6 +321,33 @@ const Intent_Message$json = {
       '10': 'telephonyTransferCall'
     },
     {
+      '1': 'rbm_text',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmText',
+      '9': 0,
+      '10': 'rbmText'
+    },
+    {
+      '1': 'rbm_standalone_rich_card',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmStandaloneCard',
+      '9': 0,
+      '10': 'rbmStandaloneRichCard'
+    },
+    {
+      '1': 'rbm_carousel_rich_card',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCarouselCard',
+      '9': 0,
+      '10': 'rbmCarouselRichCard'
+    },
+    {
       '1': 'platform',
       '3': 6,
       '4': 1,
@@ -344,7 +372,14 @@ const Intent_Message$json = {
     Intent_Message_SelectItemInfo$json,
     Intent_Message_TelephonyPlayAudio$json,
     Intent_Message_TelephonySynthesizeSpeech$json,
-    Intent_Message_TelephonyTransferCall$json
+    Intent_Message_TelephonyTransferCall$json,
+    Intent_Message_RbmText$json,
+    Intent_Message_RbmCarouselCard$json,
+    Intent_Message_RbmStandaloneCard$json,
+    Intent_Message_RbmCardContent$json,
+    Intent_Message_RbmSuggestion$json,
+    Intent_Message_RbmSuggestedReply$json,
+    Intent_Message_RbmSuggestedAction$json
   ],
   '4': [Intent_Message_Platform$json],
   '8': [
@@ -620,6 +655,261 @@ const Intent_Message_TelephonyTransferCall$json = {
   '2': [
     {'1': 'phone_number', '3': 1, '4': 1, '5': 9, '10': 'phoneNumber'},
   ],
+};
+
+const Intent_Message_RbmText$json = {
+  '1': 'RbmText',
+  '2': [
+    {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
+    {
+      '1': 'rbm_suggestion',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestion',
+      '10': 'rbmSuggestion'
+    },
+  ],
+};
+
+const Intent_Message_RbmCarouselCard$json = {
+  '1': 'RbmCarouselCard',
+  '2': [
+    {
+      '1': 'card_width',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCarouselCard.CardWidth',
+      '10': 'cardWidth'
+    },
+    {
+      '1': 'card_contents',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent',
+      '10': 'cardContents'
+    },
+  ],
+  '4': [Intent_Message_RbmCarouselCard_CardWidth$json],
+};
+
+const Intent_Message_RbmCarouselCard_CardWidth$json = {
+  '1': 'CardWidth',
+  '2': [
+    {'1': 'CARD_WIDTH_UNSPECIFIED', '2': 0},
+    {'1': 'SMALL', '2': 1},
+    {'1': 'MEDIUM', '2': 2},
+  ],
+};
+
+const Intent_Message_RbmStandaloneCard$json = {
+  '1': 'RbmStandaloneCard',
+  '2': [
+    {
+      '1': 'card_orientation',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmStandaloneCard.CardOrientation',
+      '10': 'cardOrientation'
+    },
+    {
+      '1': 'thumbnail_image_alignment',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmStandaloneCard.ThumbnailImageAlignment',
+      '10': 'thumbnailImageAlignment'
+    },
+    {
+      '1': 'card_content',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent',
+      '10': 'cardContent'
+    },
+  ],
+  '4': [
+    Intent_Message_RbmStandaloneCard_CardOrientation$json,
+    Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment$json
+  ],
+};
+
+const Intent_Message_RbmStandaloneCard_CardOrientation$json = {
+  '1': 'CardOrientation',
+  '2': [
+    {'1': 'CARD_ORIENTATION_UNSPECIFIED', '2': 0},
+    {'1': 'HORIZONTAL', '2': 1},
+    {'1': 'VERTICAL', '2': 2},
+  ],
+};
+
+const Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment$json = {
+  '1': 'ThumbnailImageAlignment',
+  '2': [
+    {'1': 'THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED', '2': 0},
+    {'1': 'LEFT', '2': 1},
+    {'1': 'RIGHT', '2': 2},
+  ],
+};
+
+const Intent_Message_RbmCardContent$json = {
+  '1': 'RbmCardContent',
+  '2': [
+    {'1': 'title', '3': 1, '4': 1, '5': 9, '10': 'title'},
+    {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'media',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia',
+      '10': 'media'
+    },
+    {
+      '1': 'suggestions',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestion',
+      '10': 'suggestions'
+    },
+  ],
+  '3': [Intent_Message_RbmCardContent_RbmMedia$json],
+};
+
+const Intent_Message_RbmCardContent_RbmMedia$json = {
+  '1': 'RbmMedia',
+  '2': [
+    {'1': 'file_uri', '3': 1, '4': 1, '5': 9, '10': 'fileUri'},
+    {'1': 'thumbnail_uri', '3': 2, '4': 1, '5': 9, '10': 'thumbnailUri'},
+    {
+      '1': 'height',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmCardContent.RbmMedia.Height',
+      '10': 'height'
+    },
+  ],
+  '4': [Intent_Message_RbmCardContent_RbmMedia_Height$json],
+};
+
+const Intent_Message_RbmCardContent_RbmMedia_Height$json = {
+  '1': 'Height',
+  '2': [
+    {'1': 'HEIGHT_UNSPECIFIED', '2': 0},
+    {'1': 'SHORT', '2': 1},
+    {'1': 'MEDIUM', '2': 2},
+    {'1': 'TALL', '2': 3},
+  ],
+};
+
+const Intent_Message_RbmSuggestion$json = {
+  '1': 'RbmSuggestion',
+  '2': [
+    {
+      '1': 'reply',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestedReply',
+      '9': 0,
+      '10': 'reply'
+    },
+    {
+      '1': 'action',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestedAction',
+      '9': 0,
+      '10': 'action'
+    },
+  ],
+  '8': [
+    {'1': 'suggestion'},
+  ],
+};
+
+const Intent_Message_RbmSuggestedReply$json = {
+  '1': 'RbmSuggestedReply',
+  '2': [
+    {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
+    {'1': 'postback_data', '3': 2, '4': 1, '5': 9, '10': 'postbackData'},
+  ],
+};
+
+const Intent_Message_RbmSuggestedAction$json = {
+  '1': 'RbmSuggestedAction',
+  '2': [
+    {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
+    {'1': 'postback_data', '3': 2, '4': 1, '5': 9, '10': 'postbackData'},
+    {
+      '1': 'dial',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestedAction.RbmSuggestedActionDial',
+      '9': 0,
+      '10': 'dial'
+    },
+    {
+      '1': 'open_url',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestedAction.RbmSuggestedActionOpenUri',
+      '9': 0,
+      '10': 'openUrl'
+    },
+    {
+      '1': 'share_location',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.RbmSuggestedAction.RbmSuggestedActionShareLocation',
+      '9': 0,
+      '10': 'shareLocation'
+    },
+  ],
+  '3': [
+    Intent_Message_RbmSuggestedAction_RbmSuggestedActionDial$json,
+    Intent_Message_RbmSuggestedAction_RbmSuggestedActionOpenUri$json,
+    Intent_Message_RbmSuggestedAction_RbmSuggestedActionShareLocation$json
+  ],
+  '8': [
+    {'1': 'action'},
+  ],
+};
+
+const Intent_Message_RbmSuggestedAction_RbmSuggestedActionDial$json = {
+  '1': 'RbmSuggestedActionDial',
+  '2': [
+    {'1': 'phone_number', '3': 1, '4': 1, '5': 9, '10': 'phoneNumber'},
+  ],
+};
+
+const Intent_Message_RbmSuggestedAction_RbmSuggestedActionOpenUri$json = {
+  '1': 'RbmSuggestedActionOpenUri',
+  '2': [
+    {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+  ],
+};
+
+const Intent_Message_RbmSuggestedAction_RbmSuggestedActionShareLocation$json = {
+  '1': 'RbmSuggestedActionShareLocation',
 };
 
 const Intent_Message_Platform$json = {

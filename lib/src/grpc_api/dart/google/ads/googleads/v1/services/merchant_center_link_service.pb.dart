@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/merchant_center_link_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/merchant_center_link.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
+import '../resources/merchant_center_link.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
 
 class ListMerchantCenterLinksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class ListMerchantCenterLinksRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'customerId')
     ..hasRequiredFields = false;
 
-  ListMerchantCenterLinksRequest() : super();
-  ListMerchantCenterLinksRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListMerchantCenterLinksRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListMerchantCenterLinksRequest._() : super();
+  factory ListMerchantCenterLinksRequest() => create();
+  factory ListMerchantCenterLinksRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListMerchantCenterLinksRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListMerchantCenterLinksRequest clone() =>
       ListMerchantCenterLinksRequest()..mergeFromMessage(this);
   ListMerchantCenterLinksRequest copyWith(
@@ -33,8 +35,9 @@ class ListMerchantCenterLinksRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListMerchantCenterLinksRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListMerchantCenterLinksRequest create() =>
-      ListMerchantCenterLinksRequest();
+      ListMerchantCenterLinksRequest._();
   ListMerchantCenterLinksRequest createEmptyInstance() => create();
   static $pb.PbList<ListMerchantCenterLinksRequest> createRepeated() =>
       $pb.PbList<ListMerchantCenterLinksRequest>();
@@ -55,17 +58,18 @@ class ListMerchantCenterLinksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMerchantCenterLinksResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$0.MerchantCenterLink>(1, 'merchantCenterLinks', $pb.PbFieldType.PM,
-        $0.MerchantCenterLink.create)
+    ..pc<$1.MerchantCenterLink>(1, 'merchantCenterLinks', $pb.PbFieldType.PM,
+        $1.MerchantCenterLink.create)
     ..hasRequiredFields = false;
 
-  ListMerchantCenterLinksResponse() : super();
-  ListMerchantCenterLinksResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListMerchantCenterLinksResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListMerchantCenterLinksResponse._() : super();
+  factory ListMerchantCenterLinksResponse() => create();
+  factory ListMerchantCenterLinksResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListMerchantCenterLinksResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListMerchantCenterLinksResponse clone() =>
       ListMerchantCenterLinksResponse()..mergeFromMessage(this);
   ListMerchantCenterLinksResponse copyWith(
@@ -73,8 +77,9 @@ class ListMerchantCenterLinksResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListMerchantCenterLinksResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListMerchantCenterLinksResponse create() =>
-      ListMerchantCenterLinksResponse();
+      ListMerchantCenterLinksResponse._();
   ListMerchantCenterLinksResponse createEmptyInstance() => create();
   static $pb.PbList<ListMerchantCenterLinksResponse> createRepeated() =>
       $pb.PbList<ListMerchantCenterLinksResponse>();
@@ -82,7 +87,7 @@ class ListMerchantCenterLinksResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListMerchantCenterLinksResponse _defaultInstance;
 
-  $core.List<$0.MerchantCenterLink> get merchantCenterLinks => $_getList(0);
+  $core.List<$1.MerchantCenterLink> get merchantCenterLinks => $_getList(0);
 }
 
 class GetMerchantCenterLinkRequest extends $pb.GeneratedMessage {
@@ -92,13 +97,14 @@ class GetMerchantCenterLinkRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetMerchantCenterLinkRequest() : super();
-  GetMerchantCenterLinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetMerchantCenterLinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetMerchantCenterLinkRequest._() : super();
+  factory GetMerchantCenterLinkRequest() => create();
+  factory GetMerchantCenterLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetMerchantCenterLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetMerchantCenterLinkRequest clone() =>
       GetMerchantCenterLinkRequest()..mergeFromMessage(this);
   GetMerchantCenterLinkRequest copyWith(
@@ -106,8 +112,9 @@ class GetMerchantCenterLinkRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetMerchantCenterLinkRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetMerchantCenterLinkRequest create() =>
-      GetMerchantCenterLinkRequest();
+      GetMerchantCenterLinkRequest._();
   GetMerchantCenterLinkRequest createEmptyInstance() => create();
   static $pb.PbList<GetMerchantCenterLinkRequest> createRepeated() =>
       $pb.PbList<GetMerchantCenterLinkRequest>();
@@ -137,13 +144,14 @@ class MutateMerchantCenterLinkRequest extends $pb.GeneratedMessage {
         MerchantCenterLinkOperation.create)
     ..hasRequiredFields = false;
 
-  MutateMerchantCenterLinkRequest() : super();
-  MutateMerchantCenterLinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateMerchantCenterLinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateMerchantCenterLinkRequest._() : super();
+  factory MutateMerchantCenterLinkRequest() => create();
+  factory MutateMerchantCenterLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateMerchantCenterLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateMerchantCenterLinkRequest clone() =>
       MutateMerchantCenterLinkRequest()..mergeFromMessage(this);
   MutateMerchantCenterLinkRequest copyWith(
@@ -151,8 +159,9 @@ class MutateMerchantCenterLinkRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateMerchantCenterLinkRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateMerchantCenterLinkRequest create() =>
-      MutateMerchantCenterLinkRequest();
+      MutateMerchantCenterLinkRequest._();
   MutateMerchantCenterLinkRequest createEmptyInstance() => create();
   static $pb.PbList<MutateMerchantCenterLinkRequest> createRepeated() =>
       $pb.PbList<MutateMerchantCenterLinkRequest>();
@@ -189,21 +198,22 @@ class MerchantCenterLinkOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MerchantCenterLinkOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.MerchantCenterLink>(1, 'update', $pb.PbFieldType.OM,
-        $0.MerchantCenterLink.getDefault, $0.MerchantCenterLink.create)
-    ..aOS(2, 'remove')
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2])
+    ..a<$1.MerchantCenterLink>(1, 'update', $pb.PbFieldType.OM,
+        $1.MerchantCenterLink.getDefault, $1.MerchantCenterLink.create)
+    ..aOS(2, 'remove')
+    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  MerchantCenterLinkOperation() : super();
-  MerchantCenterLinkOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MerchantCenterLinkOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MerchantCenterLinkOperation._() : super();
+  factory MerchantCenterLinkOperation() => create();
+  factory MerchantCenterLinkOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MerchantCenterLinkOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MerchantCenterLinkOperation clone() =>
       MerchantCenterLinkOperation()..mergeFromMessage(this);
   MerchantCenterLinkOperation copyWith(
@@ -211,7 +221,9 @@ class MerchantCenterLinkOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MerchantCenterLinkOperation));
   $pb.BuilderInfo get info_ => _i;
-  static MerchantCenterLinkOperation create() => MerchantCenterLinkOperation();
+  @$core.pragma('dart2js:noInline')
+  static MerchantCenterLinkOperation create() =>
+      MerchantCenterLinkOperation._();
   MerchantCenterLinkOperation createEmptyInstance() => create();
   static $pb.PbList<MerchantCenterLinkOperation> createRepeated() =>
       $pb.PbList<MerchantCenterLinkOperation>();
@@ -223,8 +235,8 @@ class MerchantCenterLinkOperation extends $pb.GeneratedMessage {
       _MerchantCenterLinkOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.MerchantCenterLink get update => $_getN(0);
-  set update($0.MerchantCenterLink v) {
+  $1.MerchantCenterLink get update => $_getN(0);
+  set update($1.MerchantCenterLink v) {
     setField(1, v);
   }
 
@@ -239,8 +251,8 @@ class MerchantCenterLinkOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(1);
   void clearRemove() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
@@ -260,13 +272,14 @@ class MutateMerchantCenterLinkResponse extends $pb.GeneratedMessage {
         MutateMerchantCenterLinkResult.create)
     ..hasRequiredFields = false;
 
-  MutateMerchantCenterLinkResponse() : super();
-  MutateMerchantCenterLinkResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateMerchantCenterLinkResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateMerchantCenterLinkResponse._() : super();
+  factory MutateMerchantCenterLinkResponse() => create();
+  factory MutateMerchantCenterLinkResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateMerchantCenterLinkResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateMerchantCenterLinkResponse clone() =>
       MutateMerchantCenterLinkResponse()..mergeFromMessage(this);
   MutateMerchantCenterLinkResponse copyWith(
@@ -274,8 +287,9 @@ class MutateMerchantCenterLinkResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateMerchantCenterLinkResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateMerchantCenterLinkResponse create() =>
-      MutateMerchantCenterLinkResponse();
+      MutateMerchantCenterLinkResponse._();
   MutateMerchantCenterLinkResponse createEmptyInstance() => create();
   static $pb.PbList<MutateMerchantCenterLinkResponse> createRepeated() =>
       $pb.PbList<MutateMerchantCenterLinkResponse>();
@@ -299,13 +313,14 @@ class MutateMerchantCenterLinkResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateMerchantCenterLinkResult() : super();
-  MutateMerchantCenterLinkResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateMerchantCenterLinkResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateMerchantCenterLinkResult._() : super();
+  factory MutateMerchantCenterLinkResult() => create();
+  factory MutateMerchantCenterLinkResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateMerchantCenterLinkResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateMerchantCenterLinkResult clone() =>
       MutateMerchantCenterLinkResult()..mergeFromMessage(this);
   MutateMerchantCenterLinkResult copyWith(
@@ -313,8 +328,9 @@ class MutateMerchantCenterLinkResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateMerchantCenterLinkResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateMerchantCenterLinkResult create() =>
-      MutateMerchantCenterLinkResult();
+      MutateMerchantCenterLinkResult._();
   MutateMerchantCenterLinkResult createEmptyInstance() => create();
   static $pb.PbList<MutateMerchantCenterLinkResult> createRepeated() =>
       $pb.PbList<MutateMerchantCenterLinkResult>();

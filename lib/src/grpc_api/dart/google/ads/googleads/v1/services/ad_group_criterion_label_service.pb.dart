@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/ad_group_criterion_label_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/ad_group_criterion_label.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
+import '../resources/ad_group_criterion_label.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
 class GetAdGroupCriterionLabelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class GetAdGroupCriterionLabelRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetAdGroupCriterionLabelRequest() : super();
-  GetAdGroupCriterionLabelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAdGroupCriterionLabelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAdGroupCriterionLabelRequest._() : super();
+  factory GetAdGroupCriterionLabelRequest() => create();
+  factory GetAdGroupCriterionLabelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAdGroupCriterionLabelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAdGroupCriterionLabelRequest clone() =>
       GetAdGroupCriterionLabelRequest()..mergeFromMessage(this);
   GetAdGroupCriterionLabelRequest copyWith(
@@ -33,8 +35,9 @@ class GetAdGroupCriterionLabelRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetAdGroupCriterionLabelRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetAdGroupCriterionLabelRequest create() =>
-      GetAdGroupCriterionLabelRequest();
+      GetAdGroupCriterionLabelRequest._();
   GetAdGroupCriterionLabelRequest createEmptyInstance() => create();
   static $pb.PbList<GetAdGroupCriterionLabelRequest> createRepeated() =>
       $pb.PbList<GetAdGroupCriterionLabelRequest>();
@@ -62,13 +65,15 @@ class MutateAdGroupCriterionLabelsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateAdGroupCriterionLabelsRequest() : super();
-  MutateAdGroupCriterionLabelsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupCriterionLabelsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupCriterionLabelsRequest._() : super();
+  factory MutateAdGroupCriterionLabelsRequest() => create();
+  factory MutateAdGroupCriterionLabelsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupCriterionLabelsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupCriterionLabelsRequest clone() =>
       MutateAdGroupCriterionLabelsRequest()..mergeFromMessage(this);
   MutateAdGroupCriterionLabelsRequest copyWith(
@@ -76,8 +81,9 @@ class MutateAdGroupCriterionLabelsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdGroupCriterionLabelsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAdGroupCriterionLabelsRequest create() =>
-      MutateAdGroupCriterionLabelsRequest();
+      MutateAdGroupCriterionLabelsRequest._();
   MutateAdGroupCriterionLabelsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupCriterionLabelsRequest> createRepeated() =>
       $pb.PbList<MutateAdGroupCriterionLabelsRequest>();
@@ -124,19 +130,20 @@ class AdGroupCriterionLabelOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AdGroupCriterionLabelOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.AdGroupCriterionLabel>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.AdGroupCriterionLabel.getDefault, $0.AdGroupCriterionLabel.create)
-    ..aOS(2, 'remove')
     ..oo(0, [1, 2])
+    ..a<$1.AdGroupCriterionLabel>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.AdGroupCriterionLabel.getDefault, $1.AdGroupCriterionLabel.create)
+    ..aOS(2, 'remove')
     ..hasRequiredFields = false;
 
-  AdGroupCriterionLabelOperation() : super();
-  AdGroupCriterionLabelOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupCriterionLabelOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupCriterionLabelOperation._() : super();
+  factory AdGroupCriterionLabelOperation() => create();
+  factory AdGroupCriterionLabelOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupCriterionLabelOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupCriterionLabelOperation clone() =>
       AdGroupCriterionLabelOperation()..mergeFromMessage(this);
   AdGroupCriterionLabelOperation copyWith(
@@ -144,8 +151,9 @@ class AdGroupCriterionLabelOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AdGroupCriterionLabelOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AdGroupCriterionLabelOperation create() =>
-      AdGroupCriterionLabelOperation();
+      AdGroupCriterionLabelOperation._();
   AdGroupCriterionLabelOperation createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterionLabelOperation> createRepeated() =>
       $pb.PbList<AdGroupCriterionLabelOperation>();
@@ -157,8 +165,8 @@ class AdGroupCriterionLabelOperation extends $pb.GeneratedMessage {
       _AdGroupCriterionLabelOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.AdGroupCriterionLabel get create_1 => $_getN(0);
-  set create_1($0.AdGroupCriterionLabel v) {
+  $1.AdGroupCriterionLabel get create_1 => $_getN(0);
+  set create_1($1.AdGroupCriterionLabel v) {
     setField(1, v);
   }
 
@@ -180,17 +188,19 @@ class MutateAdGroupCriterionLabelsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateAdGroupCriterionLabelResult>(2, 'results', $pb.PbFieldType.PM,
         MutateAdGroupCriterionLabelResult.create)
-    ..a<$1.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $1.Status.getDefault, $1.Status.create)
+    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  MutateAdGroupCriterionLabelsResponse() : super();
-  MutateAdGroupCriterionLabelsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupCriterionLabelsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupCriterionLabelsResponse._() : super();
+  factory MutateAdGroupCriterionLabelsResponse() => create();
+  factory MutateAdGroupCriterionLabelsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupCriterionLabelsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupCriterionLabelsResponse clone() =>
       MutateAdGroupCriterionLabelsResponse()..mergeFromMessage(this);
   MutateAdGroupCriterionLabelsResponse copyWith(
@@ -198,8 +208,9 @@ class MutateAdGroupCriterionLabelsResponse extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateAdGroupCriterionLabelsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAdGroupCriterionLabelsResponse create() =>
-      MutateAdGroupCriterionLabelsResponse();
+      MutateAdGroupCriterionLabelsResponse._();
   MutateAdGroupCriterionLabelsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupCriterionLabelsResponse> createRepeated() =>
       $pb.PbList<MutateAdGroupCriterionLabelsResponse>();
@@ -209,8 +220,8 @@ class MutateAdGroupCriterionLabelsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateAdGroupCriterionLabelResult> get results => $_getList(0);
 
-  $1.Status get partialFailureError => $_getN(1);
-  set partialFailureError($1.Status v) {
+  $2.Status get partialFailureError => $_getN(1);
+  set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
@@ -225,13 +236,14 @@ class MutateAdGroupCriterionLabelResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateAdGroupCriterionLabelResult() : super();
-  MutateAdGroupCriterionLabelResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupCriterionLabelResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupCriterionLabelResult._() : super();
+  factory MutateAdGroupCriterionLabelResult() => create();
+  factory MutateAdGroupCriterionLabelResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupCriterionLabelResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupCriterionLabelResult clone() =>
       MutateAdGroupCriterionLabelResult()..mergeFromMessage(this);
   MutateAdGroupCriterionLabelResult copyWith(
@@ -239,8 +251,9 @@ class MutateAdGroupCriterionLabelResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdGroupCriterionLabelResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAdGroupCriterionLabelResult create() =>
-      MutateAdGroupCriterionLabelResult();
+      MutateAdGroupCriterionLabelResult._();
   MutateAdGroupCriterionLabelResult createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupCriterionLabelResult> createRepeated() =>
       $pb.PbList<MutateAdGroupCriterionLabelResult>();

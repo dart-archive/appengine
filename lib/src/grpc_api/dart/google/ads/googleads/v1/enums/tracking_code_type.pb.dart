@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/tracking_code_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,19 +17,21 @@ class TrackingCodeTypeEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  TrackingCodeTypeEnum() : super();
-  TrackingCodeTypeEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TrackingCodeTypeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TrackingCodeTypeEnum._() : super();
+  factory TrackingCodeTypeEnum() => create();
+  factory TrackingCodeTypeEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TrackingCodeTypeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TrackingCodeTypeEnum clone() =>
       TrackingCodeTypeEnum()..mergeFromMessage(this);
   TrackingCodeTypeEnum copyWith(void Function(TrackingCodeTypeEnum) updates) =>
       super.copyWith((message) => updates(message as TrackingCodeTypeEnum));
   $pb.BuilderInfo get info_ => _i;
-  static TrackingCodeTypeEnum create() => TrackingCodeTypeEnum();
+  @$core.pragma('dart2js:noInline')
+  static TrackingCodeTypeEnum create() => TrackingCodeTypeEnum._();
   TrackingCodeTypeEnum createEmptyInstance() => create();
   static $pb.PbList<TrackingCodeTypeEnum> createRepeated() =>
       $pb.PbList<TrackingCodeTypeEnum>();

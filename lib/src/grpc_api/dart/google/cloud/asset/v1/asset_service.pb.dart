@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/asset/v1/asset_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import 'assets.pb.dart' as $3;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import 'assets.pb.dart' as $4;
 
 import 'asset_service.pbenum.dart';
 
@@ -20,8 +21,8 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportAssetsRequest',
       package: const $pb.PackageName('google.cloud.asset.v1'))
     ..aOS(1, 'parent')
-    ..a<$2.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..pPS(3, 'assetTypes')
     ..e<ContentType>(
         4,
@@ -34,18 +35,20 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
         OutputConfig.getDefault, OutputConfig.create)
     ..hasRequiredFields = false;
 
-  ExportAssetsRequest() : super();
-  ExportAssetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportAssetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportAssetsRequest._() : super();
+  factory ExportAssetsRequest() => create();
+  factory ExportAssetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportAssetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportAssetsRequest clone() => ExportAssetsRequest()..mergeFromMessage(this);
   ExportAssetsRequest copyWith(void Function(ExportAssetsRequest) updates) =>
       super.copyWith((message) => updates(message as ExportAssetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportAssetsRequest create() => ExportAssetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportAssetsRequest create() => ExportAssetsRequest._();
   ExportAssetsRequest createEmptyInstance() => create();
   static $pb.PbList<ExportAssetsRequest> createRepeated() =>
       $pb.PbList<ExportAssetsRequest>();
@@ -61,8 +64,8 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.Timestamp get readTime => $_getN(1);
-  set readTime($2.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(1);
+  set readTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -91,25 +94,27 @@ class ExportAssetsRequest extends $pb.GeneratedMessage {
 class ExportAssetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportAssetsResponse',
       package: const $pb.PackageName('google.cloud.asset.v1'))
-    ..a<$2.Timestamp>(1, 'readTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'readTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<OutputConfig>(2, 'outputConfig', $pb.PbFieldType.OM,
         OutputConfig.getDefault, OutputConfig.create)
     ..hasRequiredFields = false;
 
-  ExportAssetsResponse() : super();
-  ExportAssetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportAssetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportAssetsResponse._() : super();
+  factory ExportAssetsResponse() => create();
+  factory ExportAssetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportAssetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportAssetsResponse clone() =>
       ExportAssetsResponse()..mergeFromMessage(this);
   ExportAssetsResponse copyWith(void Function(ExportAssetsResponse) updates) =>
       super.copyWith((message) => updates(message as ExportAssetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ExportAssetsResponse create() => ExportAssetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ExportAssetsResponse create() => ExportAssetsResponse._();
   ExportAssetsResponse createEmptyInstance() => create();
   static $pb.PbList<ExportAssetsResponse> createRepeated() =>
       $pb.PbList<ExportAssetsResponse>();
@@ -117,8 +122,8 @@ class ExportAssetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExportAssetsResponse _defaultInstance;
 
-  $2.Timestamp get readTime => $_getN(0);
-  set readTime($2.Timestamp v) {
+  $3.Timestamp get readTime => $_getN(0);
+  set readTime($3.Timestamp v) {
     setField(1, v);
   }
 
@@ -147,17 +152,18 @@ class BatchGetAssetsHistoryRequest extends $pb.GeneratedMessage {
         ContentType.CONTENT_TYPE_UNSPECIFIED,
         ContentType.valueOf,
         ContentType.values)
-    ..a<$3.TimeWindow>(4, 'readTimeWindow', $pb.PbFieldType.OM,
-        $3.TimeWindow.getDefault, $3.TimeWindow.create)
+    ..a<$4.TimeWindow>(4, 'readTimeWindow', $pb.PbFieldType.OM,
+        $4.TimeWindow.getDefault, $4.TimeWindow.create)
     ..hasRequiredFields = false;
 
-  BatchGetAssetsHistoryRequest() : super();
-  BatchGetAssetsHistoryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchGetAssetsHistoryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchGetAssetsHistoryRequest._() : super();
+  factory BatchGetAssetsHistoryRequest() => create();
+  factory BatchGetAssetsHistoryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchGetAssetsHistoryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchGetAssetsHistoryRequest clone() =>
       BatchGetAssetsHistoryRequest()..mergeFromMessage(this);
   BatchGetAssetsHistoryRequest copyWith(
@@ -165,8 +171,9 @@ class BatchGetAssetsHistoryRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchGetAssetsHistoryRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchGetAssetsHistoryRequest create() =>
-      BatchGetAssetsHistoryRequest();
+      BatchGetAssetsHistoryRequest._();
   BatchGetAssetsHistoryRequest createEmptyInstance() => create();
   static $pb.PbList<BatchGetAssetsHistoryRequest> createRepeated() =>
       $pb.PbList<BatchGetAssetsHistoryRequest>();
@@ -192,8 +199,8 @@ class BatchGetAssetsHistoryRequest extends $pb.GeneratedMessage {
   $core.bool hasContentType() => $_has(2);
   void clearContentType() => clearField(3);
 
-  $3.TimeWindow get readTimeWindow => $_getN(3);
-  set readTimeWindow($3.TimeWindow v) {
+  $4.TimeWindow get readTimeWindow => $_getN(3);
+  set readTimeWindow($4.TimeWindow v) {
     setField(4, v);
   }
 
@@ -205,17 +212,18 @@ class BatchGetAssetsHistoryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchGetAssetsHistoryResponse',
       package: const $pb.PackageName('google.cloud.asset.v1'))
-    ..pc<$3.TemporalAsset>(
-        1, 'assets', $pb.PbFieldType.PM, $3.TemporalAsset.create)
+    ..pc<$4.TemporalAsset>(
+        1, 'assets', $pb.PbFieldType.PM, $4.TemporalAsset.create)
     ..hasRequiredFields = false;
 
-  BatchGetAssetsHistoryResponse() : super();
-  BatchGetAssetsHistoryResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchGetAssetsHistoryResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchGetAssetsHistoryResponse._() : super();
+  factory BatchGetAssetsHistoryResponse() => create();
+  factory BatchGetAssetsHistoryResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchGetAssetsHistoryResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchGetAssetsHistoryResponse clone() =>
       BatchGetAssetsHistoryResponse()..mergeFromMessage(this);
   BatchGetAssetsHistoryResponse copyWith(
@@ -223,8 +231,9 @@ class BatchGetAssetsHistoryResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchGetAssetsHistoryResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchGetAssetsHistoryResponse create() =>
-      BatchGetAssetsHistoryResponse();
+      BatchGetAssetsHistoryResponse._();
   BatchGetAssetsHistoryResponse createEmptyInstance() => create();
   static $pb.PbList<BatchGetAssetsHistoryResponse> createRepeated() =>
       $pb.PbList<BatchGetAssetsHistoryResponse>();
@@ -232,7 +241,7 @@ class BatchGetAssetsHistoryResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static BatchGetAssetsHistoryResponse _defaultInstance;
 
-  $core.List<$3.TemporalAsset> get assets => $_getList(0);
+  $core.List<$4.TemporalAsset> get assets => $_getList(0);
 }
 
 enum OutputConfig_Destination { gcsDestination, notSet }
@@ -245,23 +254,25 @@ class OutputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputConfig',
       package: const $pb.PackageName('google.cloud.asset.v1'))
+    ..oo(0, [1])
     ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  OutputConfig() : super();
-  OutputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutputConfig._() : super();
+  factory OutputConfig() => create();
+  factory OutputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutputConfig clone() => OutputConfig()..mergeFromMessage(this);
   OutputConfig copyWith(void Function(OutputConfig) updates) =>
       super.copyWith((message) => updates(message as OutputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static OutputConfig create() => OutputConfig();
+  @$core.pragma('dart2js:noInline')
+  static OutputConfig create() => OutputConfig._();
   OutputConfig createEmptyInstance() => create();
   static $pb.PbList<OutputConfig> createRepeated() =>
       $pb.PbList<OutputConfig>();
@@ -291,22 +302,24 @@ class GcsDestination extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsDestination',
       package: const $pb.PackageName('google.cloud.asset.v1'))
-    ..aOS(1, 'uri')
     ..oo(0, [1])
+    ..aOS(1, 'uri')
     ..hasRequiredFields = false;
 
-  GcsDestination() : super();
-  GcsDestination.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcsDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcsDestination._() : super();
+  factory GcsDestination() => create();
+  factory GcsDestination.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcsDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcsDestination clone() => GcsDestination()..mergeFromMessage(this);
   GcsDestination copyWith(void Function(GcsDestination) updates) =>
       super.copyWith((message) => updates(message as GcsDestination));
   $pb.BuilderInfo get info_ => _i;
-  static GcsDestination create() => GcsDestination();
+  @$core.pragma('dart2js:noInline')
+  static GcsDestination create() => GcsDestination._();
   GcsDestination createEmptyInstance() => create();
   static $pb.PbList<GcsDestination> createRepeated() =>
       $pb.PbList<GcsDestination>();

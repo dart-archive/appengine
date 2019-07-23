@@ -1,29 +1,29 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/remoteexecution/v1test/remote_execution.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'remote_execution.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'remote_execution.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $0;
 export 'remote_execution.pb.dart';
 
 class ExecutionClient extends $grpc.Client {
-  static final _$execute = $grpc.ClientMethod<ExecuteRequest, $1.Operation>(
+  static final _$execute = $grpc.ClientMethod<$2.ExecuteRequest, $0.Operation>(
       '/google.devtools.remoteexecution.v1test.Execution/Execute',
-      (ExecuteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+      ($2.ExecuteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   ExecutionClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$1.Operation> execute(ExecuteRequest request,
+  $grpc.ResponseFuture<$0.Operation> execute($2.ExecuteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$execute, $async.Stream.fromIterable([request]),
         options: options);
@@ -35,41 +35,41 @@ abstract class ExecutionServiceBase extends $grpc.Service {
   $core.String get $name => 'google.devtools.remoteexecution.v1test.Execution';
 
   ExecutionServiceBase() {
-    $addMethod($grpc.ServiceMethod<ExecuteRequest, $1.Operation>(
+    $addMethod($grpc.ServiceMethod<$2.ExecuteRequest, $0.Operation>(
         'Execute',
         execute_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ExecuteRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $2.ExecuteRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.Operation> execute_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> execute_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.ExecuteRequest> request) async {
     return execute(call, await request);
   }
 
-  $async.Future<$1.Operation> execute(
-      $grpc.ServiceCall call, ExecuteRequest request);
+  $async.Future<$0.Operation> execute(
+      $grpc.ServiceCall call, $2.ExecuteRequest request);
 }
 
 class ActionCacheClient extends $grpc.Client {
   static final _$getActionResult =
-      $grpc.ClientMethod<GetActionResultRequest, ActionResult>(
+      $grpc.ClientMethod<$2.GetActionResultRequest, $2.ActionResult>(
           '/google.devtools.remoteexecution.v1test.ActionCache/GetActionResult',
-          (GetActionResultRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ActionResult.fromBuffer(value));
+          ($2.GetActionResultRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.ActionResult.fromBuffer(value));
   static final _$updateActionResult = $grpc.ClientMethod<
-          UpdateActionResultRequest, ActionResult>(
+          $2.UpdateActionResultRequest, $2.ActionResult>(
       '/google.devtools.remoteexecution.v1test.ActionCache/UpdateActionResult',
-      (UpdateActionResultRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => ActionResult.fromBuffer(value));
+      ($2.UpdateActionResultRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.ActionResult.fromBuffer(value));
 
   ActionCacheClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ActionResult> getActionResult(
-      GetActionResultRequest request,
+  $grpc.ResponseFuture<$2.ActionResult> getActionResult(
+      $2.GetActionResultRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getActionResult, $async.Stream.fromIterable([request]),
@@ -77,8 +77,8 @@ class ActionCacheClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ActionResult> updateActionResult(
-      UpdateActionResultRequest request,
+  $grpc.ResponseFuture<$2.ActionResult> updateActionResult(
+      $2.UpdateActionResultRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateActionResult, $async.Stream.fromIterable([request]),
@@ -92,64 +92,66 @@ abstract class ActionCacheServiceBase extends $grpc.Service {
       'google.devtools.remoteexecution.v1test.ActionCache';
 
   ActionCacheServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetActionResultRequest, ActionResult>(
+    $addMethod($grpc.ServiceMethod<$2.GetActionResultRequest, $2.ActionResult>(
         'GetActionResult',
         getActionResult_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetActionResultRequest.fromBuffer(value),
-        (ActionResult value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateActionResultRequest, ActionResult>(
-        'UpdateActionResult',
-        updateActionResult_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            UpdateActionResultRequest.fromBuffer(value),
-        (ActionResult value) => value.writeToBuffer()));
+            $2.GetActionResultRequest.fromBuffer(value),
+        ($2.ActionResult value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.UpdateActionResultRequest, $2.ActionResult>(
+            'UpdateActionResult',
+            updateActionResult_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.UpdateActionResultRequest.fromBuffer(value),
+            ($2.ActionResult value) => value.writeToBuffer()));
   }
 
-  $async.Future<ActionResult> getActionResult_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ActionResult> getActionResult_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetActionResultRequest> request) async {
     return getActionResult(call, await request);
   }
 
-  $async.Future<ActionResult> updateActionResult_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ActionResult> updateActionResult_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateActionResultRequest> request) async {
     return updateActionResult(call, await request);
   }
 
-  $async.Future<ActionResult> getActionResult(
-      $grpc.ServiceCall call, GetActionResultRequest request);
-  $async.Future<ActionResult> updateActionResult(
-      $grpc.ServiceCall call, UpdateActionResultRequest request);
+  $async.Future<$2.ActionResult> getActionResult(
+      $grpc.ServiceCall call, $2.GetActionResultRequest request);
+  $async.Future<$2.ActionResult> updateActionResult(
+      $grpc.ServiceCall call, $2.UpdateActionResultRequest request);
 }
 
 class ContentAddressableStorageClient extends $grpc.Client {
-  static final _$findMissingBlobs = $grpc.ClientMethod<FindMissingBlobsRequest,
-          FindMissingBlobsResponse>(
+  static final _$findMissingBlobs = $grpc.ClientMethod<
+          $2.FindMissingBlobsRequest, $2.FindMissingBlobsResponse>(
       '/google.devtools.remoteexecution.v1test.ContentAddressableStorage/FindMissingBlobs',
-      (FindMissingBlobsRequest value) => value.writeToBuffer(),
+      ($2.FindMissingBlobsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          FindMissingBlobsResponse.fromBuffer(value));
-  static final _$batchUpdateBlobs = $grpc.ClientMethod<BatchUpdateBlobsRequest,
-          BatchUpdateBlobsResponse>(
+          $2.FindMissingBlobsResponse.fromBuffer(value));
+  static final _$batchUpdateBlobs = $grpc.ClientMethod<
+          $2.BatchUpdateBlobsRequest, $2.BatchUpdateBlobsResponse>(
       '/google.devtools.remoteexecution.v1test.ContentAddressableStorage/BatchUpdateBlobs',
-      (BatchUpdateBlobsRequest value) => value.writeToBuffer(),
+      ($2.BatchUpdateBlobsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          BatchUpdateBlobsResponse.fromBuffer(value));
-  static final _$getTree = $grpc.ClientMethod<GetTreeRequest, GetTreeResponse>(
+          $2.BatchUpdateBlobsResponse.fromBuffer(value));
+  static final _$getTree = $grpc.ClientMethod<$2.GetTreeRequest,
+          $2.GetTreeResponse>(
       '/google.devtools.remoteexecution.v1test.ContentAddressableStorage/GetTree',
-      (GetTreeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => GetTreeResponse.fromBuffer(value));
+      ($2.GetTreeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.GetTreeResponse.fromBuffer(value));
 
   ContentAddressableStorageClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<FindMissingBlobsResponse> findMissingBlobs(
-      FindMissingBlobsRequest request,
+  $grpc.ResponseFuture<$2.FindMissingBlobsResponse> findMissingBlobs(
+      $2.FindMissingBlobsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$findMissingBlobs, $async.Stream.fromIterable([request]),
@@ -157,8 +159,8 @@ class ContentAddressableStorageClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<BatchUpdateBlobsResponse> batchUpdateBlobs(
-      BatchUpdateBlobsRequest request,
+  $grpc.ResponseFuture<$2.BatchUpdateBlobsResponse> batchUpdateBlobs(
+      $2.BatchUpdateBlobsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$batchUpdateBlobs, $async.Stream.fromIterable([request]),
@@ -166,7 +168,7 @@ class ContentAddressableStorageClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<GetTreeResponse> getTree(GetTreeRequest request,
+  $grpc.ResponseFuture<$2.GetTreeResponse> getTree($2.GetTreeRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getTree, $async.Stream.fromIterable([request]),
         options: options);
@@ -179,52 +181,54 @@ abstract class ContentAddressableStorageServiceBase extends $grpc.Service {
       'google.devtools.remoteexecution.v1test.ContentAddressableStorage';
 
   ContentAddressableStorageServiceBase() {
-    $addMethod(
-        $grpc.ServiceMethod<FindMissingBlobsRequest, FindMissingBlobsResponse>(
-            'FindMissingBlobs',
-            findMissingBlobs_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                FindMissingBlobsRequest.fromBuffer(value),
-            (FindMissingBlobsResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<BatchUpdateBlobsRequest, BatchUpdateBlobsResponse>(
-            'BatchUpdateBlobs',
-            batchUpdateBlobs_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                BatchUpdateBlobsRequest.fromBuffer(value),
-            (BatchUpdateBlobsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetTreeRequest, GetTreeResponse>(
+    $addMethod($grpc.ServiceMethod<$2.FindMissingBlobsRequest,
+            $2.FindMissingBlobsResponse>(
+        'FindMissingBlobs',
+        findMissingBlobs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.FindMissingBlobsRequest.fromBuffer(value),
+        ($2.FindMissingBlobsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.BatchUpdateBlobsRequest,
+            $2.BatchUpdateBlobsResponse>(
+        'BatchUpdateBlobs',
+        batchUpdateBlobs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.BatchUpdateBlobsRequest.fromBuffer(value),
+        ($2.BatchUpdateBlobsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetTreeRequest, $2.GetTreeResponse>(
         'GetTree',
         getTree_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetTreeRequest.fromBuffer(value),
-        (GetTreeResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $2.GetTreeRequest.fromBuffer(value),
+        ($2.GetTreeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<FindMissingBlobsResponse> findMissingBlobs_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.FindMissingBlobsResponse> findMissingBlobs_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.FindMissingBlobsRequest> request) async {
     return findMissingBlobs(call, await request);
   }
 
-  $async.Future<BatchUpdateBlobsResponse> batchUpdateBlobs_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.BatchUpdateBlobsResponse> batchUpdateBlobs_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.BatchUpdateBlobsRequest> request) async {
     return batchUpdateBlobs(call, await request);
   }
 
-  $async.Future<GetTreeResponse> getTree_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.GetTreeResponse> getTree_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.GetTreeRequest> request) async {
     return getTree(call, await request);
   }
 
-  $async.Future<FindMissingBlobsResponse> findMissingBlobs(
-      $grpc.ServiceCall call, FindMissingBlobsRequest request);
-  $async.Future<BatchUpdateBlobsResponse> batchUpdateBlobs(
-      $grpc.ServiceCall call, BatchUpdateBlobsRequest request);
-  $async.Future<GetTreeResponse> getTree(
-      $grpc.ServiceCall call, GetTreeRequest request);
+  $async.Future<$2.FindMissingBlobsResponse> findMissingBlobs(
+      $grpc.ServiceCall call, $2.FindMissingBlobsRequest request);
+  $async.Future<$2.BatchUpdateBlobsResponse> batchUpdateBlobs(
+      $grpc.ServiceCall call, $2.BatchUpdateBlobsRequest request);
+  $async.Future<$2.GetTreeResponse> getTree(
+      $grpc.ServiceCall call, $2.GetTreeRequest request);
 }

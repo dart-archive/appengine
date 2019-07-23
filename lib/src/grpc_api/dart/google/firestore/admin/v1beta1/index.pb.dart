@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1beta1/index.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class IndexField extends $pb.GeneratedMessage {
         IndexField_Mode.values)
     ..hasRequiredFields = false;
 
-  IndexField() : super();
-  IndexField.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IndexField.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IndexField._() : super();
+  factory IndexField() => create();
+  factory IndexField.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IndexField.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IndexField clone() => IndexField()..mergeFromMessage(this);
   IndexField copyWith(void Function(IndexField) updates) =>
       super.copyWith((message) => updates(message as IndexField));
   $pb.BuilderInfo get info_ => _i;
-  static IndexField create() => IndexField();
+  @$core.pragma('dart2js:noInline')
+  static IndexField create() => IndexField._();
   IndexField createEmptyInstance() => create();
   static $pb.PbList<IndexField> createRepeated() => $pb.PbList<IndexField>();
   static IndexField getDefault() => _defaultInstance ??= create()..freeze();
@@ -70,18 +73,20 @@ class Index extends $pb.GeneratedMessage {
         Index_State.STATE_UNSPECIFIED, Index_State.valueOf, Index_State.values)
     ..hasRequiredFields = false;
 
-  Index() : super();
-  Index.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Index.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Index._() : super();
+  factory Index() => create();
+  factory Index.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Index.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Index clone() => Index()..mergeFromMessage(this);
   Index copyWith(void Function(Index) updates) =>
       super.copyWith((message) => updates(message as Index));
   $pb.BuilderInfo get info_ => _i;
-  static Index create() => Index();
+  @$core.pragma('dart2js:noInline')
+  static Index create() => Index._();
   Index createEmptyInstance() => create();
   static $pb.PbList<Index> createRepeated() => $pb.PbList<Index>();
   static Index getDefault() => _defaultInstance ??= create()..freeze();

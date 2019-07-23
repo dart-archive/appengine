@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/datastore/v1/query.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -26,18 +27,20 @@ class EntityResult extends $pb.GeneratedMessage {
     ..aInt64(4, 'version')
     ..hasRequiredFields = false;
 
-  EntityResult() : super();
-  EntityResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityResult._() : super();
+  factory EntityResult() => create();
+  factory EntityResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EntityResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EntityResult clone() => EntityResult()..mergeFromMessage(this);
   EntityResult copyWith(void Function(EntityResult) updates) =>
       super.copyWith((message) => updates(message as EntityResult));
   $pb.BuilderInfo get info_ => _i;
-  static EntityResult create() => EntityResult();
+  @$core.pragma('dart2js:noInline')
+  static EntityResult create() => EntityResult._();
   EntityResult createEmptyInstance() => create();
   static $pb.PbList<EntityResult> createRepeated() =>
       $pb.PbList<EntityResult>();
@@ -86,18 +89,20 @@ class Query extends $pb.GeneratedMessage {
         $1.Int32Value.getDefault, $1.Int32Value.create)
     ..hasRequiredFields = false;
 
-  Query() : super();
-  Query.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Query.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Query._() : super();
+  factory Query() => create();
+  factory Query.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Query.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Query clone() => Query()..mergeFromMessage(this);
   Query copyWith(void Function(Query) updates) =>
       super.copyWith((message) => updates(message as Query));
   $pb.BuilderInfo get info_ => _i;
-  static Query create() => Query();
+  @$core.pragma('dart2js:noInline')
+  static Query create() => Query._();
   Query createEmptyInstance() => create();
   static $pb.PbList<Query> createRepeated() => $pb.PbList<Query>();
   static Query getDefault() => _defaultInstance ??= create()..freeze();
@@ -158,18 +163,20 @@ class KindExpression extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  KindExpression() : super();
-  KindExpression.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KindExpression.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KindExpression._() : super();
+  factory KindExpression() => create();
+  factory KindExpression.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KindExpression.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KindExpression clone() => KindExpression()..mergeFromMessage(this);
   KindExpression copyWith(void Function(KindExpression) updates) =>
       super.copyWith((message) => updates(message as KindExpression));
   $pb.BuilderInfo get info_ => _i;
-  static KindExpression create() => KindExpression();
+  @$core.pragma('dart2js:noInline')
+  static KindExpression create() => KindExpression._();
   KindExpression createEmptyInstance() => create();
   static $pb.PbList<KindExpression> createRepeated() =>
       $pb.PbList<KindExpression>();
@@ -191,18 +198,20 @@ class PropertyReference extends $pb.GeneratedMessage {
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
-  PropertyReference() : super();
-  PropertyReference.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PropertyReference.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PropertyReference._() : super();
+  factory PropertyReference() => create();
+  factory PropertyReference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PropertyReference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PropertyReference clone() => PropertyReference()..mergeFromMessage(this);
   PropertyReference copyWith(void Function(PropertyReference) updates) =>
       super.copyWith((message) => updates(message as PropertyReference));
   $pb.BuilderInfo get info_ => _i;
-  static PropertyReference create() => PropertyReference();
+  @$core.pragma('dart2js:noInline')
+  static PropertyReference create() => PropertyReference._();
   PropertyReference createEmptyInstance() => create();
   static $pb.PbList<PropertyReference> createRepeated() =>
       $pb.PbList<PropertyReference>();
@@ -226,18 +235,20 @@ class Projection extends $pb.GeneratedMessage {
         PropertyReference.getDefault, PropertyReference.create)
     ..hasRequiredFields = false;
 
-  Projection() : super();
-  Projection.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Projection.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Projection._() : super();
+  factory Projection() => create();
+  factory Projection.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Projection.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Projection clone() => Projection()..mergeFromMessage(this);
   Projection copyWith(void Function(Projection) updates) =>
       super.copyWith((message) => updates(message as Projection));
   $pb.BuilderInfo get info_ => _i;
-  static Projection create() => Projection();
+  @$core.pragma('dart2js:noInline')
+  static Projection create() => Projection._();
   Projection createEmptyInstance() => create();
   static $pb.PbList<Projection> createRepeated() => $pb.PbList<Projection>();
   static Projection getDefault() => _defaultInstance ??= create()..freeze();
@@ -266,18 +277,20 @@ class PropertyOrder extends $pb.GeneratedMessage {
         PropertyOrder_Direction.values)
     ..hasRequiredFields = false;
 
-  PropertyOrder() : super();
-  PropertyOrder.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PropertyOrder.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PropertyOrder._() : super();
+  factory PropertyOrder() => create();
+  factory PropertyOrder.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PropertyOrder.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PropertyOrder clone() => PropertyOrder()..mergeFromMessage(this);
   PropertyOrder copyWith(void Function(PropertyOrder) updates) =>
       super.copyWith((message) => updates(message as PropertyOrder));
   $pb.BuilderInfo get info_ => _i;
-  static PropertyOrder create() => PropertyOrder();
+  @$core.pragma('dart2js:noInline')
+  static PropertyOrder create() => PropertyOrder._();
   PropertyOrder createEmptyInstance() => create();
   static $pb.PbList<PropertyOrder> createRepeated() =>
       $pb.PbList<PropertyOrder>();
@@ -312,25 +325,27 @@ class Filter extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Filter',
       package: const $pb.PackageName('google.datastore.v1'))
+    ..oo(0, [1, 2])
     ..a<CompositeFilter>(1, 'compositeFilter', $pb.PbFieldType.OM,
         CompositeFilter.getDefault, CompositeFilter.create)
     ..a<PropertyFilter>(2, 'propertyFilter', $pb.PbFieldType.OM,
         PropertyFilter.getDefault, PropertyFilter.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  Filter() : super();
-  Filter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Filter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Filter._() : super();
+  factory Filter() => create();
+  factory Filter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Filter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Filter clone() => Filter()..mergeFromMessage(this);
   Filter copyWith(void Function(Filter) updates) =>
       super.copyWith((message) => updates(message as Filter));
   $pb.BuilderInfo get info_ => _i;
-  static Filter create() => Filter();
+  @$core.pragma('dart2js:noInline')
+  static Filter create() => Filter._();
   Filter createEmptyInstance() => create();
   static $pb.PbList<Filter> createRepeated() => $pb.PbList<Filter>();
   static Filter getDefault() => _defaultInstance ??= create()..freeze();
@@ -370,18 +385,20 @@ class CompositeFilter extends $pb.GeneratedMessage {
     ..pc<Filter>(2, 'filters', $pb.PbFieldType.PM, Filter.create)
     ..hasRequiredFields = false;
 
-  CompositeFilter() : super();
-  CompositeFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CompositeFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CompositeFilter._() : super();
+  factory CompositeFilter() => create();
+  factory CompositeFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompositeFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CompositeFilter clone() => CompositeFilter()..mergeFromMessage(this);
   CompositeFilter copyWith(void Function(CompositeFilter) updates) =>
       super.copyWith((message) => updates(message as CompositeFilter));
   $pb.BuilderInfo get info_ => _i;
-  static CompositeFilter create() => CompositeFilter();
+  @$core.pragma('dart2js:noInline')
+  static CompositeFilter create() => CompositeFilter._();
   CompositeFilter createEmptyInstance() => create();
   static $pb.PbList<CompositeFilter> createRepeated() =>
       $pb.PbList<CompositeFilter>();
@@ -416,18 +433,20 @@ class PropertyFilter extends $pb.GeneratedMessage {
         3, 'value', $pb.PbFieldType.OM, $0.Value.getDefault, $0.Value.create)
     ..hasRequiredFields = false;
 
-  PropertyFilter() : super();
-  PropertyFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PropertyFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PropertyFilter._() : super();
+  factory PropertyFilter() => create();
+  factory PropertyFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PropertyFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PropertyFilter clone() => PropertyFilter()..mergeFromMessage(this);
   PropertyFilter copyWith(void Function(PropertyFilter) updates) =>
       super.copyWith((message) => updates(message as PropertyFilter));
   $pb.BuilderInfo get info_ => _i;
-  static PropertyFilter create() => PropertyFilter();
+  @$core.pragma('dart2js:noInline')
+  static PropertyFilter create() => PropertyFilter._();
   PropertyFilter createEmptyInstance() => create();
   static $pb.PbList<PropertyFilter> createRepeated() =>
       $pb.PbList<PropertyFilter>();
@@ -478,18 +497,20 @@ class GqlQuery extends $pb.GeneratedMessage {
         const $pb.PackageName('google.datastore.v1'))
     ..hasRequiredFields = false;
 
-  GqlQuery() : super();
-  GqlQuery.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GqlQuery.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GqlQuery._() : super();
+  factory GqlQuery() => create();
+  factory GqlQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GqlQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GqlQuery clone() => GqlQuery()..mergeFromMessage(this);
   GqlQuery copyWith(void Function(GqlQuery) updates) =>
       super.copyWith((message) => updates(message as GqlQuery));
   $pb.BuilderInfo get info_ => _i;
-  static GqlQuery create() => GqlQuery();
+  @$core.pragma('dart2js:noInline')
+  static GqlQuery create() => GqlQuery._();
   GqlQuery createEmptyInstance() => create();
   static $pb.PbList<GqlQuery> createRepeated() => $pb.PbList<GqlQuery>();
   static GqlQuery getDefault() => _defaultInstance ??= create()..freeze();
@@ -527,24 +548,26 @@ class GqlQueryParameter extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GqlQueryParameter',
       package: const $pb.PackageName('google.datastore.v1'))
+    ..oo(0, [2, 3])
     ..a<$0.Value>(
         2, 'value', $pb.PbFieldType.OM, $0.Value.getDefault, $0.Value.create)
     ..a<$core.List<$core.int>>(3, 'cursor', $pb.PbFieldType.OY)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  GqlQueryParameter() : super();
-  GqlQueryParameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GqlQueryParameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GqlQueryParameter._() : super();
+  factory GqlQueryParameter() => create();
+  factory GqlQueryParameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GqlQueryParameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GqlQueryParameter clone() => GqlQueryParameter()..mergeFromMessage(this);
   GqlQueryParameter copyWith(void Function(GqlQueryParameter) updates) =>
       super.copyWith((message) => updates(message as GqlQueryParameter));
   $pb.BuilderInfo get info_ => _i;
-  static GqlQueryParameter create() => GqlQueryParameter();
+  @$core.pragma('dart2js:noInline')
+  static GqlQueryParameter create() => GqlQueryParameter._();
   GqlQueryParameter createEmptyInstance() => create();
   static $pb.PbList<GqlQueryParameter> createRepeated() =>
       $pb.PbList<GqlQueryParameter>();
@@ -598,18 +621,20 @@ class QueryResultBatch extends $pb.GeneratedMessage {
     ..aInt64(7, 'snapshotVersion')
     ..hasRequiredFields = false;
 
-  QueryResultBatch() : super();
-  QueryResultBatch.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryResultBatch.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QueryResultBatch._() : super();
+  factory QueryResultBatch() => create();
+  factory QueryResultBatch.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QueryResultBatch.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QueryResultBatch clone() => QueryResultBatch()..mergeFromMessage(this);
   QueryResultBatch copyWith(void Function(QueryResultBatch) updates) =>
       super.copyWith((message) => updates(message as QueryResultBatch));
   $pb.BuilderInfo get info_ => _i;
-  static QueryResultBatch create() => QueryResultBatch();
+  @$core.pragma('dart2js:noInline')
+  static QueryResultBatch create() => QueryResultBatch._();
   QueryResultBatch createEmptyInstance() => create();
   static $pb.PbList<QueryResultBatch> createRepeated() =>
       $pb.PbList<QueryResultBatch>();

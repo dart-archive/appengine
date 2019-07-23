@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dataproc/v1beta2/workflow_templates.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import 'clusters.pb.dart' as $3;
-import 'jobs.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $5;
+import 'clusters.pb.dart' as $2;
+import 'jobs.pb.dart' as $3;
 
 import 'workflow_templates.pbenum.dart';
 
@@ -23,10 +24,10 @@ class WorkflowTemplate extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<$core.int>(3, 'version', $pb.PbFieldType.O3)
-    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$5.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
     ..m<$core.String, $core.String>(
         6,
         'labels',
@@ -44,18 +45,20 @@ class WorkflowTemplate extends $pb.GeneratedMessage {
         9, 'parameters', $pb.PbFieldType.PM, TemplateParameter.create)
     ..hasRequiredFields = false;
 
-  WorkflowTemplate() : super();
-  WorkflowTemplate.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkflowTemplate.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkflowTemplate._() : super();
+  factory WorkflowTemplate() => create();
+  factory WorkflowTemplate.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkflowTemplate.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkflowTemplate clone() => WorkflowTemplate()..mergeFromMessage(this);
   WorkflowTemplate copyWith(void Function(WorkflowTemplate) updates) =>
       super.copyWith((message) => updates(message as WorkflowTemplate));
   $pb.BuilderInfo get info_ => _i;
-  static WorkflowTemplate create() => WorkflowTemplate();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowTemplate create() => WorkflowTemplate._();
   WorkflowTemplate createEmptyInstance() => create();
   static $pb.PbList<WorkflowTemplate> createRepeated() =>
       $pb.PbList<WorkflowTemplate>();
@@ -87,16 +90,16 @@ class WorkflowTemplate extends $pb.GeneratedMessage {
   $core.bool hasVersion() => $_has(2);
   void clearVersion() => clearField(3);
 
-  $2.Timestamp get createTime => $_getN(3);
-  set createTime($2.Timestamp v) {
+  $5.Timestamp get createTime => $_getN(3);
+  set createTime($5.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $2.Timestamp get updateTime => $_getN(4);
-  set updateTime($2.Timestamp v) {
+  $5.Timestamp get updateTime => $_getN(4);
+  set updateTime($5.Timestamp v) {
     setField(5, v);
   }
 
@@ -133,20 +136,21 @@ class WorkflowTemplatePlacement extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WorkflowTemplatePlacement',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
+    ..oo(0, [1, 2])
     ..a<ManagedCluster>(1, 'managedCluster', $pb.PbFieldType.OM,
         ManagedCluster.getDefault, ManagedCluster.create)
     ..a<ClusterSelector>(2, 'clusterSelector', $pb.PbFieldType.OM,
         ClusterSelector.getDefault, ClusterSelector.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  WorkflowTemplatePlacement() : super();
-  WorkflowTemplatePlacement.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkflowTemplatePlacement.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkflowTemplatePlacement._() : super();
+  factory WorkflowTemplatePlacement() => create();
+  factory WorkflowTemplatePlacement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkflowTemplatePlacement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkflowTemplatePlacement clone() =>
       WorkflowTemplatePlacement()..mergeFromMessage(this);
   WorkflowTemplatePlacement copyWith(
@@ -154,7 +158,8 @@ class WorkflowTemplatePlacement extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as WorkflowTemplatePlacement));
   $pb.BuilderInfo get info_ => _i;
-  static WorkflowTemplatePlacement create() => WorkflowTemplatePlacement();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowTemplatePlacement create() => WorkflowTemplatePlacement._();
   WorkflowTemplatePlacement createEmptyInstance() => create();
   static $pb.PbList<WorkflowTemplatePlacement> createRepeated() =>
       $pb.PbList<WorkflowTemplatePlacement>();
@@ -187,8 +192,8 @@ class ManagedCluster extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManagedCluster',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
     ..aOS(2, 'clusterName')
-    ..a<$3.ClusterConfig>(3, 'config', $pb.PbFieldType.OM,
-        $3.ClusterConfig.getDefault, $3.ClusterConfig.create)
+    ..a<$2.ClusterConfig>(3, 'config', $pb.PbFieldType.OM,
+        $2.ClusterConfig.getDefault, $2.ClusterConfig.create)
     ..m<$core.String, $core.String>(
         4,
         'labels',
@@ -201,18 +206,20 @@ class ManagedCluster extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.dataproc.v1beta2'))
     ..hasRequiredFields = false;
 
-  ManagedCluster() : super();
-  ManagedCluster.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManagedCluster.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManagedCluster._() : super();
+  factory ManagedCluster() => create();
+  factory ManagedCluster.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManagedCluster.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManagedCluster clone() => ManagedCluster()..mergeFromMessage(this);
   ManagedCluster copyWith(void Function(ManagedCluster) updates) =>
       super.copyWith((message) => updates(message as ManagedCluster));
   $pb.BuilderInfo get info_ => _i;
-  static ManagedCluster create() => ManagedCluster();
+  @$core.pragma('dart2js:noInline')
+  static ManagedCluster create() => ManagedCluster._();
   ManagedCluster createEmptyInstance() => create();
   static $pb.PbList<ManagedCluster> createRepeated() =>
       $pb.PbList<ManagedCluster>();
@@ -227,8 +234,8 @@ class ManagedCluster extends $pb.GeneratedMessage {
   $core.bool hasClusterName() => $_has(0);
   void clearClusterName() => clearField(2);
 
-  $3.ClusterConfig get config => $_getN(1);
-  set config($3.ClusterConfig v) {
+  $2.ClusterConfig get config => $_getN(1);
+  set config($2.ClusterConfig v) {
     setField(3, v);
   }
 
@@ -254,18 +261,20 @@ class ClusterSelector extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.dataproc.v1beta2'))
     ..hasRequiredFields = false;
 
-  ClusterSelector() : super();
-  ClusterSelector.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterSelector.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClusterSelector._() : super();
+  factory ClusterSelector() => create();
+  factory ClusterSelector.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClusterSelector.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClusterSelector clone() => ClusterSelector()..mergeFromMessage(this);
   ClusterSelector copyWith(void Function(ClusterSelector) updates) =>
       super.copyWith((message) => updates(message as ClusterSelector));
   $pb.BuilderInfo get info_ => _i;
-  static ClusterSelector create() => ClusterSelector();
+  @$core.pragma('dart2js:noInline')
+  static ClusterSelector create() => ClusterSelector._();
   ClusterSelector createEmptyInstance() => create();
   static $pb.PbList<ClusterSelector> createRepeated() =>
       $pb.PbList<ClusterSelector>();
@@ -307,19 +316,20 @@ class OrderedJob extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OrderedJob',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
+    ..oo(0, [2, 3, 4, 5, 6, 7])
     ..aOS(1, 'stepId')
-    ..a<$4.HadoopJob>(2, 'hadoopJob', $pb.PbFieldType.OM,
-        $4.HadoopJob.getDefault, $4.HadoopJob.create)
-    ..a<$4.SparkJob>(3, 'sparkJob', $pb.PbFieldType.OM, $4.SparkJob.getDefault,
-        $4.SparkJob.create)
-    ..a<$4.PySparkJob>(4, 'pysparkJob', $pb.PbFieldType.OM,
-        $4.PySparkJob.getDefault, $4.PySparkJob.create)
-    ..a<$4.HiveJob>(5, 'hiveJob', $pb.PbFieldType.OM, $4.HiveJob.getDefault,
-        $4.HiveJob.create)
-    ..a<$4.PigJob>(
-        6, 'pigJob', $pb.PbFieldType.OM, $4.PigJob.getDefault, $4.PigJob.create)
-    ..a<$4.SparkSqlJob>(7, 'sparkSqlJob', $pb.PbFieldType.OM,
-        $4.SparkSqlJob.getDefault, $4.SparkSqlJob.create)
+    ..a<$3.HadoopJob>(2, 'hadoopJob', $pb.PbFieldType.OM,
+        $3.HadoopJob.getDefault, $3.HadoopJob.create)
+    ..a<$3.SparkJob>(3, 'sparkJob', $pb.PbFieldType.OM, $3.SparkJob.getDefault,
+        $3.SparkJob.create)
+    ..a<$3.PySparkJob>(4, 'pysparkJob', $pb.PbFieldType.OM,
+        $3.PySparkJob.getDefault, $3.PySparkJob.create)
+    ..a<$3.HiveJob>(5, 'hiveJob', $pb.PbFieldType.OM, $3.HiveJob.getDefault,
+        $3.HiveJob.create)
+    ..a<$3.PigJob>(
+        6, 'pigJob', $pb.PbFieldType.OM, $3.PigJob.getDefault, $3.PigJob.create)
+    ..a<$3.SparkSqlJob>(7, 'sparkSqlJob', $pb.PbFieldType.OM,
+        $3.SparkSqlJob.getDefault, $3.SparkSqlJob.create)
     ..m<$core.String, $core.String>(
         8,
         'labels',
@@ -330,24 +340,25 @@ class OrderedJob extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.cloud.dataproc.v1beta2'))
-    ..a<$4.JobScheduling>(9, 'scheduling', $pb.PbFieldType.OM,
-        $4.JobScheduling.getDefault, $4.JobScheduling.create)
+    ..a<$3.JobScheduling>(9, 'scheduling', $pb.PbFieldType.OM,
+        $3.JobScheduling.getDefault, $3.JobScheduling.create)
     ..pPS(10, 'prerequisiteStepIds')
-    ..oo(0, [2, 3, 4, 5, 6, 7])
     ..hasRequiredFields = false;
 
-  OrderedJob() : super();
-  OrderedJob.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OrderedJob.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OrderedJob._() : super();
+  factory OrderedJob() => create();
+  factory OrderedJob.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OrderedJob.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OrderedJob clone() => OrderedJob()..mergeFromMessage(this);
   OrderedJob copyWith(void Function(OrderedJob) updates) =>
       super.copyWith((message) => updates(message as OrderedJob));
   $pb.BuilderInfo get info_ => _i;
-  static OrderedJob create() => OrderedJob();
+  @$core.pragma('dart2js:noInline')
+  static OrderedJob create() => OrderedJob._();
   OrderedJob createEmptyInstance() => create();
   static $pb.PbList<OrderedJob> createRepeated() => $pb.PbList<OrderedJob>();
   static OrderedJob getDefault() => _defaultInstance ??= create()..freeze();
@@ -365,48 +376,48 @@ class OrderedJob extends $pb.GeneratedMessage {
   $core.bool hasStepId() => $_has(0);
   void clearStepId() => clearField(1);
 
-  $4.HadoopJob get hadoopJob => $_getN(1);
-  set hadoopJob($4.HadoopJob v) {
+  $3.HadoopJob get hadoopJob => $_getN(1);
+  set hadoopJob($3.HadoopJob v) {
     setField(2, v);
   }
 
   $core.bool hasHadoopJob() => $_has(1);
   void clearHadoopJob() => clearField(2);
 
-  $4.SparkJob get sparkJob => $_getN(2);
-  set sparkJob($4.SparkJob v) {
+  $3.SparkJob get sparkJob => $_getN(2);
+  set sparkJob($3.SparkJob v) {
     setField(3, v);
   }
 
   $core.bool hasSparkJob() => $_has(2);
   void clearSparkJob() => clearField(3);
 
-  $4.PySparkJob get pysparkJob => $_getN(3);
-  set pysparkJob($4.PySparkJob v) {
+  $3.PySparkJob get pysparkJob => $_getN(3);
+  set pysparkJob($3.PySparkJob v) {
     setField(4, v);
   }
 
   $core.bool hasPysparkJob() => $_has(3);
   void clearPysparkJob() => clearField(4);
 
-  $4.HiveJob get hiveJob => $_getN(4);
-  set hiveJob($4.HiveJob v) {
+  $3.HiveJob get hiveJob => $_getN(4);
+  set hiveJob($3.HiveJob v) {
     setField(5, v);
   }
 
   $core.bool hasHiveJob() => $_has(4);
   void clearHiveJob() => clearField(5);
 
-  $4.PigJob get pigJob => $_getN(5);
-  set pigJob($4.PigJob v) {
+  $3.PigJob get pigJob => $_getN(5);
+  set pigJob($3.PigJob v) {
     setField(6, v);
   }
 
   $core.bool hasPigJob() => $_has(5);
   void clearPigJob() => clearField(6);
 
-  $4.SparkSqlJob get sparkSqlJob => $_getN(6);
-  set sparkSqlJob($4.SparkSqlJob v) {
+  $3.SparkSqlJob get sparkSqlJob => $_getN(6);
+  set sparkSqlJob($3.SparkSqlJob v) {
     setField(7, v);
   }
 
@@ -415,8 +426,8 @@ class OrderedJob extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(7);
 
-  $4.JobScheduling get scheduling => $_getN(8);
-  set scheduling($4.JobScheduling v) {
+  $3.JobScheduling get scheduling => $_getN(8);
+  set scheduling($3.JobScheduling v) {
     setField(9, v);
   }
 
@@ -436,18 +447,20 @@ class TemplateParameter extends $pb.GeneratedMessage {
         ParameterValidation.getDefault, ParameterValidation.create)
     ..hasRequiredFields = false;
 
-  TemplateParameter() : super();
-  TemplateParameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TemplateParameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TemplateParameter._() : super();
+  factory TemplateParameter() => create();
+  factory TemplateParameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TemplateParameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TemplateParameter clone() => TemplateParameter()..mergeFromMessage(this);
   TemplateParameter copyWith(void Function(TemplateParameter) updates) =>
       super.copyWith((message) => updates(message as TemplateParameter));
   $pb.BuilderInfo get info_ => _i;
-  static TemplateParameter create() => TemplateParameter();
+  @$core.pragma('dart2js:noInline')
+  static TemplateParameter create() => TemplateParameter._();
   TemplateParameter createEmptyInstance() => create();
   static $pb.PbList<TemplateParameter> createRepeated() =>
       $pb.PbList<TemplateParameter>();
@@ -493,25 +506,27 @@ class ParameterValidation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ParameterValidation',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
+    ..oo(0, [1, 2])
     ..a<RegexValidation>(1, 'regex', $pb.PbFieldType.OM,
         RegexValidation.getDefault, RegexValidation.create)
     ..a<ValueValidation>(2, 'values', $pb.PbFieldType.OM,
         ValueValidation.getDefault, ValueValidation.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  ParameterValidation() : super();
-  ParameterValidation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ParameterValidation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ParameterValidation._() : super();
+  factory ParameterValidation() => create();
+  factory ParameterValidation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ParameterValidation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ParameterValidation clone() => ParameterValidation()..mergeFromMessage(this);
   ParameterValidation copyWith(void Function(ParameterValidation) updates) =>
       super.copyWith((message) => updates(message as ParameterValidation));
   $pb.BuilderInfo get info_ => _i;
-  static ParameterValidation create() => ParameterValidation();
+  @$core.pragma('dart2js:noInline')
+  static ParameterValidation create() => ParameterValidation._();
   ParameterValidation createEmptyInstance() => create();
   static $pb.PbList<ParameterValidation> createRepeated() =>
       $pb.PbList<ParameterValidation>();
@@ -546,18 +561,20 @@ class RegexValidation extends $pb.GeneratedMessage {
     ..pPS(1, 'regexes')
     ..hasRequiredFields = false;
 
-  RegexValidation() : super();
-  RegexValidation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RegexValidation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RegexValidation._() : super();
+  factory RegexValidation() => create();
+  factory RegexValidation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RegexValidation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RegexValidation clone() => RegexValidation()..mergeFromMessage(this);
   RegexValidation copyWith(void Function(RegexValidation) updates) =>
       super.copyWith((message) => updates(message as RegexValidation));
   $pb.BuilderInfo get info_ => _i;
-  static RegexValidation create() => RegexValidation();
+  @$core.pragma('dart2js:noInline')
+  static RegexValidation create() => RegexValidation._();
   RegexValidation createEmptyInstance() => create();
   static $pb.PbList<RegexValidation> createRepeated() =>
       $pb.PbList<RegexValidation>();
@@ -574,18 +591,20 @@ class ValueValidation extends $pb.GeneratedMessage {
     ..pPS(1, 'values')
     ..hasRequiredFields = false;
 
-  ValueValidation() : super();
-  ValueValidation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ValueValidation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ValueValidation._() : super();
+  factory ValueValidation() => create();
+  factory ValueValidation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ValueValidation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ValueValidation clone() => ValueValidation()..mergeFromMessage(this);
   ValueValidation copyWith(void Function(ValueValidation) updates) =>
       super.copyWith((message) => updates(message as ValueValidation));
   $pb.BuilderInfo get info_ => _i;
-  static ValueValidation create() => ValueValidation();
+  @$core.pragma('dart2js:noInline')
+  static ValueValidation create() => ValueValidation._();
   ValueValidation createEmptyInstance() => create();
   static $pb.PbList<ValueValidation> createRepeated() =>
       $pb.PbList<ValueValidation>();
@@ -625,25 +644,27 @@ class WorkflowMetadata extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.cloud.dataproc.v1beta2'))
-    ..a<$2.Timestamp>(9, 'startTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(10, 'endTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$5.Timestamp>(9, 'startTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(10, 'endTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
     ..aOS(11, 'clusterUuid')
     ..hasRequiredFields = false;
 
-  WorkflowMetadata() : super();
-  WorkflowMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkflowMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkflowMetadata._() : super();
+  factory WorkflowMetadata() => create();
+  factory WorkflowMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkflowMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkflowMetadata clone() => WorkflowMetadata()..mergeFromMessage(this);
   WorkflowMetadata copyWith(void Function(WorkflowMetadata) updates) =>
       super.copyWith((message) => updates(message as WorkflowMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static WorkflowMetadata create() => WorkflowMetadata();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowMetadata create() => WorkflowMetadata._();
   WorkflowMetadata createEmptyInstance() => create();
   static $pb.PbList<WorkflowMetadata> createRepeated() =>
       $pb.PbList<WorkflowMetadata>();
@@ -709,16 +730,16 @@ class WorkflowMetadata extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get parameters => $_getMap(7);
 
-  $2.Timestamp get startTime => $_getN(8);
-  set startTime($2.Timestamp v) {
+  $5.Timestamp get startTime => $_getN(8);
+  set startTime($5.Timestamp v) {
     setField(9, v);
   }
 
   $core.bool hasStartTime() => $_has(8);
   void clearStartTime() => clearField(9);
 
-  $2.Timestamp get endTime => $_getN(9);
-  set endTime($2.Timestamp v) {
+  $5.Timestamp get endTime => $_getN(9);
+  set endTime($5.Timestamp v) {
     setField(10, v);
   }
 
@@ -742,18 +763,20 @@ class ClusterOperation extends $pb.GeneratedMessage {
     ..aOB(3, 'done')
     ..hasRequiredFields = false;
 
-  ClusterOperation() : super();
-  ClusterOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClusterOperation._() : super();
+  factory ClusterOperation() => create();
+  factory ClusterOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClusterOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClusterOperation clone() => ClusterOperation()..mergeFromMessage(this);
   ClusterOperation copyWith(void Function(ClusterOperation) updates) =>
       super.copyWith((message) => updates(message as ClusterOperation));
   $pb.BuilderInfo get info_ => _i;
-  static ClusterOperation create() => ClusterOperation();
+  @$core.pragma('dart2js:noInline')
+  static ClusterOperation create() => ClusterOperation._();
   ClusterOperation createEmptyInstance() => create();
   static $pb.PbList<ClusterOperation> createRepeated() =>
       $pb.PbList<ClusterOperation>();
@@ -792,18 +815,20 @@ class WorkflowGraph extends $pb.GeneratedMessage {
     ..pc<WorkflowNode>(1, 'nodes', $pb.PbFieldType.PM, WorkflowNode.create)
     ..hasRequiredFields = false;
 
-  WorkflowGraph() : super();
-  WorkflowGraph.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkflowGraph.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkflowGraph._() : super();
+  factory WorkflowGraph() => create();
+  factory WorkflowGraph.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkflowGraph.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkflowGraph clone() => WorkflowGraph()..mergeFromMessage(this);
   WorkflowGraph copyWith(void Function(WorkflowGraph) updates) =>
       super.copyWith((message) => updates(message as WorkflowGraph));
   $pb.BuilderInfo get info_ => _i;
-  static WorkflowGraph create() => WorkflowGraph();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowGraph create() => WorkflowGraph._();
   WorkflowGraph createEmptyInstance() => create();
   static $pb.PbList<WorkflowGraph> createRepeated() =>
       $pb.PbList<WorkflowGraph>();
@@ -829,18 +854,20 @@ class WorkflowNode extends $pb.GeneratedMessage {
     ..aOS(6, 'error')
     ..hasRequiredFields = false;
 
-  WorkflowNode() : super();
-  WorkflowNode.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkflowNode.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkflowNode._() : super();
+  factory WorkflowNode() => create();
+  factory WorkflowNode.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkflowNode.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkflowNode clone() => WorkflowNode()..mergeFromMessage(this);
   WorkflowNode copyWith(void Function(WorkflowNode) updates) =>
       super.copyWith((message) => updates(message as WorkflowNode));
   $pb.BuilderInfo get info_ => _i;
-  static WorkflowNode create() => WorkflowNode();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowNode create() => WorkflowNode._();
   WorkflowNode createEmptyInstance() => create();
   static $pb.PbList<WorkflowNode> createRepeated() =>
       $pb.PbList<WorkflowNode>();
@@ -891,13 +918,14 @@ class CreateWorkflowTemplateRequest extends $pb.GeneratedMessage {
         WorkflowTemplate.getDefault, WorkflowTemplate.create)
     ..hasRequiredFields = false;
 
-  CreateWorkflowTemplateRequest() : super();
-  CreateWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateWorkflowTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateWorkflowTemplateRequest._() : super();
+  factory CreateWorkflowTemplateRequest() => create();
+  factory CreateWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateWorkflowTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateWorkflowTemplateRequest clone() =>
       CreateWorkflowTemplateRequest()..mergeFromMessage(this);
   CreateWorkflowTemplateRequest copyWith(
@@ -905,8 +933,9 @@ class CreateWorkflowTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateWorkflowTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateWorkflowTemplateRequest create() =>
-      CreateWorkflowTemplateRequest();
+      CreateWorkflowTemplateRequest._();
   CreateWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<CreateWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<CreateWorkflowTemplateRequest>();
@@ -939,13 +968,14 @@ class GetWorkflowTemplateRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'version', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  GetWorkflowTemplateRequest() : super();
-  GetWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetWorkflowTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetWorkflowTemplateRequest._() : super();
+  factory GetWorkflowTemplateRequest() => create();
+  factory GetWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetWorkflowTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetWorkflowTemplateRequest clone() =>
       GetWorkflowTemplateRequest()..mergeFromMessage(this);
   GetWorkflowTemplateRequest copyWith(
@@ -953,7 +983,8 @@ class GetWorkflowTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetWorkflowTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetWorkflowTemplateRequest create() => GetWorkflowTemplateRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetWorkflowTemplateRequest create() => GetWorkflowTemplateRequest._();
   GetWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<GetWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<GetWorkflowTemplateRequest>();
@@ -998,13 +1029,14 @@ class InstantiateWorkflowTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'requestId')
     ..hasRequiredFields = false;
 
-  InstantiateWorkflowTemplateRequest() : super();
-  InstantiateWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InstantiateWorkflowTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InstantiateWorkflowTemplateRequest._() : super();
+  factory InstantiateWorkflowTemplateRequest() => create();
+  factory InstantiateWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InstantiateWorkflowTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InstantiateWorkflowTemplateRequest clone() =>
       InstantiateWorkflowTemplateRequest()..mergeFromMessage(this);
   InstantiateWorkflowTemplateRequest copyWith(
@@ -1012,8 +1044,9 @@ class InstantiateWorkflowTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as InstantiateWorkflowTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InstantiateWorkflowTemplateRequest create() =>
-      InstantiateWorkflowTemplateRequest();
+      InstantiateWorkflowTemplateRequest._();
   InstantiateWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<InstantiateWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<InstantiateWorkflowTemplateRequest>();
@@ -1071,13 +1104,15 @@ class InstantiateInlineWorkflowTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'requestId')
     ..hasRequiredFields = false;
 
-  InstantiateInlineWorkflowTemplateRequest() : super();
-  InstantiateInlineWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InstantiateInlineWorkflowTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InstantiateInlineWorkflowTemplateRequest._() : super();
+  factory InstantiateInlineWorkflowTemplateRequest() => create();
+  factory InstantiateInlineWorkflowTemplateRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InstantiateInlineWorkflowTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InstantiateInlineWorkflowTemplateRequest clone() =>
       InstantiateInlineWorkflowTemplateRequest()..mergeFromMessage(this);
   InstantiateInlineWorkflowTemplateRequest copyWith(
@@ -1085,8 +1120,9 @@ class InstantiateInlineWorkflowTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as InstantiateInlineWorkflowTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InstantiateInlineWorkflowTemplateRequest create() =>
-      InstantiateInlineWorkflowTemplateRequest();
+      InstantiateInlineWorkflowTemplateRequest._();
   InstantiateInlineWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<InstantiateInlineWorkflowTemplateRequest>
       createRepeated() =>
@@ -1136,13 +1172,14 @@ class UpdateWorkflowTemplateRequest extends $pb.GeneratedMessage {
         WorkflowTemplate.getDefault, WorkflowTemplate.create)
     ..hasRequiredFields = false;
 
-  UpdateWorkflowTemplateRequest() : super();
-  UpdateWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateWorkflowTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateWorkflowTemplateRequest._() : super();
+  factory UpdateWorkflowTemplateRequest() => create();
+  factory UpdateWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateWorkflowTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateWorkflowTemplateRequest clone() =>
       UpdateWorkflowTemplateRequest()..mergeFromMessage(this);
   UpdateWorkflowTemplateRequest copyWith(
@@ -1150,8 +1187,9 @@ class UpdateWorkflowTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateWorkflowTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateWorkflowTemplateRequest create() =>
-      UpdateWorkflowTemplateRequest();
+      UpdateWorkflowTemplateRequest._();
   UpdateWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<UpdateWorkflowTemplateRequest>();
@@ -1177,13 +1215,14 @@ class ListWorkflowTemplatesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListWorkflowTemplatesRequest() : super();
-  ListWorkflowTemplatesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListWorkflowTemplatesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListWorkflowTemplatesRequest._() : super();
+  factory ListWorkflowTemplatesRequest() => create();
+  factory ListWorkflowTemplatesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListWorkflowTemplatesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListWorkflowTemplatesRequest clone() =>
       ListWorkflowTemplatesRequest()..mergeFromMessage(this);
   ListWorkflowTemplatesRequest copyWith(
@@ -1191,8 +1230,9 @@ class ListWorkflowTemplatesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListWorkflowTemplatesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListWorkflowTemplatesRequest create() =>
-      ListWorkflowTemplatesRequest();
+      ListWorkflowTemplatesRequest._();
   ListWorkflowTemplatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListWorkflowTemplatesRequest> createRepeated() =>
       $pb.PbList<ListWorkflowTemplatesRequest>();
@@ -1234,13 +1274,14 @@ class ListWorkflowTemplatesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListWorkflowTemplatesResponse() : super();
-  ListWorkflowTemplatesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListWorkflowTemplatesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListWorkflowTemplatesResponse._() : super();
+  factory ListWorkflowTemplatesResponse() => create();
+  factory ListWorkflowTemplatesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListWorkflowTemplatesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListWorkflowTemplatesResponse clone() =>
       ListWorkflowTemplatesResponse()..mergeFromMessage(this);
   ListWorkflowTemplatesResponse copyWith(
@@ -1248,8 +1289,9 @@ class ListWorkflowTemplatesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListWorkflowTemplatesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListWorkflowTemplatesResponse create() =>
-      ListWorkflowTemplatesResponse();
+      ListWorkflowTemplatesResponse._();
   ListWorkflowTemplatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListWorkflowTemplatesResponse> createRepeated() =>
       $pb.PbList<ListWorkflowTemplatesResponse>();
@@ -1276,13 +1318,14 @@ class DeleteWorkflowTemplateRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'version', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  DeleteWorkflowTemplateRequest() : super();
-  DeleteWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteWorkflowTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteWorkflowTemplateRequest._() : super();
+  factory DeleteWorkflowTemplateRequest() => create();
+  factory DeleteWorkflowTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteWorkflowTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteWorkflowTemplateRequest clone() =>
       DeleteWorkflowTemplateRequest()..mergeFromMessage(this);
   DeleteWorkflowTemplateRequest copyWith(
@@ -1290,8 +1333,9 @@ class DeleteWorkflowTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteWorkflowTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteWorkflowTemplateRequest create() =>
-      DeleteWorkflowTemplateRequest();
+      DeleteWorkflowTemplateRequest._();
   DeleteWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<DeleteWorkflowTemplateRequest>();

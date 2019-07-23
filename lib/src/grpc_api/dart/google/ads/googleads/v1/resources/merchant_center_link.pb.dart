@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/merchant_center_link.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,18 +31,20 @@ class MerchantCenterLink extends $pb.GeneratedMessage {
         $1.MerchantCenterLinkStatusEnum_MerchantCenterLinkStatus.values)
     ..hasRequiredFields = false;
 
-  MerchantCenterLink() : super();
-  MerchantCenterLink.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MerchantCenterLink.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MerchantCenterLink._() : super();
+  factory MerchantCenterLink() => create();
+  factory MerchantCenterLink.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MerchantCenterLink.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MerchantCenterLink clone() => MerchantCenterLink()..mergeFromMessage(this);
   MerchantCenterLink copyWith(void Function(MerchantCenterLink) updates) =>
       super.copyWith((message) => updates(message as MerchantCenterLink));
   $pb.BuilderInfo get info_ => _i;
-  static MerchantCenterLink create() => MerchantCenterLink();
+  @$core.pragma('dart2js:noInline')
+  static MerchantCenterLink create() => MerchantCenterLink._();
   MerchantCenterLink createEmptyInstance() => create();
   static $pb.PbList<MerchantCenterLink> createRepeated() =>
       $pb.PbList<MerchantCenterLink>();

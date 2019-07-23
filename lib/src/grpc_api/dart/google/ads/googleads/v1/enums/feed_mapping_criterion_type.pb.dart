@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/feed_mapping_criterion_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class FeedMappingCriterionTypeEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  FeedMappingCriterionTypeEnum() : super();
-  FeedMappingCriterionTypeEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedMappingCriterionTypeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedMappingCriterionTypeEnum._() : super();
+  factory FeedMappingCriterionTypeEnum() => create();
+  factory FeedMappingCriterionTypeEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedMappingCriterionTypeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedMappingCriterionTypeEnum clone() =>
       FeedMappingCriterionTypeEnum()..mergeFromMessage(this);
   FeedMappingCriterionTypeEnum copyWith(
@@ -31,8 +33,9 @@ class FeedMappingCriterionTypeEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as FeedMappingCriterionTypeEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static FeedMappingCriterionTypeEnum create() =>
-      FeedMappingCriterionTypeEnum();
+      FeedMappingCriterionTypeEnum._();
   FeedMappingCriterionTypeEnum createEmptyInstance() => create();
   static $pb.PbList<FeedMappingCriterionTypeEnum> createRepeated() =>
       $pb.PbList<FeedMappingCriterionTypeEnum>();

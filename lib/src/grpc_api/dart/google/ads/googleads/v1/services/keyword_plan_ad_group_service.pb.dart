@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/keyword_plan_ad_group_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/keyword_plan_ad_group.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/keyword_plan_ad_group.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetKeywordPlanAdGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +21,14 @@ class GetKeywordPlanAdGroupRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetKeywordPlanAdGroupRequest() : super();
-  GetKeywordPlanAdGroupRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetKeywordPlanAdGroupRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetKeywordPlanAdGroupRequest._() : super();
+  factory GetKeywordPlanAdGroupRequest() => create();
+  factory GetKeywordPlanAdGroupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetKeywordPlanAdGroupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetKeywordPlanAdGroupRequest clone() =>
       GetKeywordPlanAdGroupRequest()..mergeFromMessage(this);
   GetKeywordPlanAdGroupRequest copyWith(
@@ -34,8 +36,9 @@ class GetKeywordPlanAdGroupRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetKeywordPlanAdGroupRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetKeywordPlanAdGroupRequest create() =>
-      GetKeywordPlanAdGroupRequest();
+      GetKeywordPlanAdGroupRequest._();
   GetKeywordPlanAdGroupRequest createEmptyInstance() => create();
   static $pb.PbList<GetKeywordPlanAdGroupRequest> createRepeated() =>
       $pb.PbList<GetKeywordPlanAdGroupRequest>();
@@ -63,13 +66,14 @@ class MutateKeywordPlanAdGroupsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateKeywordPlanAdGroupsRequest() : super();
-  MutateKeywordPlanAdGroupsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateKeywordPlanAdGroupsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateKeywordPlanAdGroupsRequest._() : super();
+  factory MutateKeywordPlanAdGroupsRequest() => create();
+  factory MutateKeywordPlanAdGroupsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateKeywordPlanAdGroupsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateKeywordPlanAdGroupsRequest clone() =>
       MutateKeywordPlanAdGroupsRequest()..mergeFromMessage(this);
   MutateKeywordPlanAdGroupsRequest copyWith(
@@ -77,8 +81,9 @@ class MutateKeywordPlanAdGroupsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateKeywordPlanAdGroupsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateKeywordPlanAdGroupsRequest create() =>
-      MutateKeywordPlanAdGroupsRequest();
+      MutateKeywordPlanAdGroupsRequest._();
   MutateKeywordPlanAdGroupsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateKeywordPlanAdGroupsRequest> createRepeated() =>
       $pb.PbList<MutateKeywordPlanAdGroupsRequest>();
@@ -126,23 +131,24 @@ class KeywordPlanAdGroupOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'KeywordPlanAdGroupOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.KeywordPlanAdGroup>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.KeywordPlanAdGroup.getDefault, $0.KeywordPlanAdGroup.create)
-    ..a<$0.KeywordPlanAdGroup>(2, 'update', $pb.PbFieldType.OM,
-        $0.KeywordPlanAdGroup.getDefault, $0.KeywordPlanAdGroup.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.KeywordPlanAdGroup>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.KeywordPlanAdGroup.getDefault, $1.KeywordPlanAdGroup.create)
+    ..a<$1.KeywordPlanAdGroup>(2, 'update', $pb.PbFieldType.OM,
+        $1.KeywordPlanAdGroup.getDefault, $1.KeywordPlanAdGroup.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  KeywordPlanAdGroupOperation() : super();
-  KeywordPlanAdGroupOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanAdGroupOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanAdGroupOperation._() : super();
+  factory KeywordPlanAdGroupOperation() => create();
+  factory KeywordPlanAdGroupOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanAdGroupOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanAdGroupOperation clone() =>
       KeywordPlanAdGroupOperation()..mergeFromMessage(this);
   KeywordPlanAdGroupOperation copyWith(
@@ -150,7 +156,9 @@ class KeywordPlanAdGroupOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as KeywordPlanAdGroupOperation));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordPlanAdGroupOperation create() => KeywordPlanAdGroupOperation();
+  @$core.pragma('dart2js:noInline')
+  static KeywordPlanAdGroupOperation create() =>
+      KeywordPlanAdGroupOperation._();
   KeywordPlanAdGroupOperation createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanAdGroupOperation> createRepeated() =>
       $pb.PbList<KeywordPlanAdGroupOperation>();
@@ -162,16 +170,16 @@ class KeywordPlanAdGroupOperation extends $pb.GeneratedMessage {
       _KeywordPlanAdGroupOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.KeywordPlanAdGroup get create_1 => $_getN(0);
-  set create_1($0.KeywordPlanAdGroup v) {
+  $1.KeywordPlanAdGroup get create_1 => $_getN(0);
+  set create_1($1.KeywordPlanAdGroup v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.KeywordPlanAdGroup get update => $_getN(1);
-  set update($0.KeywordPlanAdGroup v) {
+  $1.KeywordPlanAdGroup get update => $_getN(1);
+  set update($1.KeywordPlanAdGroup v) {
     setField(2, v);
   }
 
@@ -186,8 +194,8 @@ class KeywordPlanAdGroupOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -201,17 +209,18 @@ class MutateKeywordPlanAdGroupsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateKeywordPlanAdGroupResult>(
         2, 'results', $pb.PbFieldType.PM, MutateKeywordPlanAdGroupResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateKeywordPlanAdGroupsResponse() : super();
-  MutateKeywordPlanAdGroupsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateKeywordPlanAdGroupsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateKeywordPlanAdGroupsResponse._() : super();
+  factory MutateKeywordPlanAdGroupsResponse() => create();
+  factory MutateKeywordPlanAdGroupsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateKeywordPlanAdGroupsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateKeywordPlanAdGroupsResponse clone() =>
       MutateKeywordPlanAdGroupsResponse()..mergeFromMessage(this);
   MutateKeywordPlanAdGroupsResponse copyWith(
@@ -219,8 +228,9 @@ class MutateKeywordPlanAdGroupsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateKeywordPlanAdGroupsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateKeywordPlanAdGroupsResponse create() =>
-      MutateKeywordPlanAdGroupsResponse();
+      MutateKeywordPlanAdGroupsResponse._();
   MutateKeywordPlanAdGroupsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateKeywordPlanAdGroupsResponse> createRepeated() =>
       $pb.PbList<MutateKeywordPlanAdGroupsResponse>();
@@ -230,8 +240,8 @@ class MutateKeywordPlanAdGroupsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateKeywordPlanAdGroupResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -246,13 +256,14 @@ class MutateKeywordPlanAdGroupResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateKeywordPlanAdGroupResult() : super();
-  MutateKeywordPlanAdGroupResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateKeywordPlanAdGroupResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateKeywordPlanAdGroupResult._() : super();
+  factory MutateKeywordPlanAdGroupResult() => create();
+  factory MutateKeywordPlanAdGroupResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateKeywordPlanAdGroupResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateKeywordPlanAdGroupResult clone() =>
       MutateKeywordPlanAdGroupResult()..mergeFromMessage(this);
   MutateKeywordPlanAdGroupResult copyWith(
@@ -260,8 +271,9 @@ class MutateKeywordPlanAdGroupResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateKeywordPlanAdGroupResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateKeywordPlanAdGroupResult create() =>
-      MutateKeywordPlanAdGroupResult();
+      MutateKeywordPlanAdGroupResult._();
   MutateKeywordPlanAdGroupResult createEmptyInstance() => create();
   static $pb.PbList<MutateKeywordPlanAdGroupResult> createRepeated() =>
       $pb.PbList<MutateKeywordPlanAdGroupResult>();

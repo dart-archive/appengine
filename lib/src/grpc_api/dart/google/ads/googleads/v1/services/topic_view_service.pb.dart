@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/topic_view_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class GetTopicViewRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetTopicViewRequest() : super();
-  GetTopicViewRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTopicViewRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTopicViewRequest._() : super();
+  factory GetTopicViewRequest() => create();
+  factory GetTopicViewRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTopicViewRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTopicViewRequest clone() => GetTopicViewRequest()..mergeFromMessage(this);
   GetTopicViewRequest copyWith(void Function(GetTopicViewRequest) updates) =>
       super.copyWith((message) => updates(message as GetTopicViewRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTopicViewRequest create() => GetTopicViewRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTopicViewRequest create() => GetTopicViewRequest._();
   GetTopicViewRequest createEmptyInstance() => create();
   static $pb.PbList<GetTopicViewRequest> createRepeated() =>
       $pb.PbList<GetTopicViewRequest>();

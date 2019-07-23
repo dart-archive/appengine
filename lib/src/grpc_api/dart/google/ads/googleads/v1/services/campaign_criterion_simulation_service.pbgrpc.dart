@@ -1,35 +1,35 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_criterion_simulation_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'campaign_criterion_simulation_service.pb.dart';
-import '../resources/campaign_criterion_simulation.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'campaign_criterion_simulation_service.pb.dart' as $0;
+import '../resources/campaign_criterion_simulation.pb.dart' as $1;
 export 'campaign_criterion_simulation_service.pb.dart';
 
 class CampaignCriterionSimulationServiceClient extends $grpc.Client {
   static final _$getCampaignCriterionSimulation = $grpc.ClientMethod<
-          GetCampaignCriterionSimulationRequest,
-          $0.CampaignCriterionSimulation>(
+          $0.GetCampaignCriterionSimulationRequest,
+          $1.CampaignCriterionSimulation>(
       '/google.ads.googleads.v1.services.CampaignCriterionSimulationService/GetCampaignCriterionSimulation',
-      (GetCampaignCriterionSimulationRequest value) => value.writeToBuffer(),
+      ($0.GetCampaignCriterionSimulationRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.CampaignCriterionSimulation.fromBuffer(value));
+          $1.CampaignCriterionSimulation.fromBuffer(value));
 
   CampaignCriterionSimulationServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.CampaignCriterionSimulation>
+  $grpc.ResponseFuture<$1.CampaignCriterionSimulation>
       getCampaignCriterionSimulation(
-          GetCampaignCriterionSimulationRequest request,
+          $0.GetCampaignCriterionSimulationRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getCampaignCriterionSimulation, $async.Stream.fromIterable([request]),
@@ -43,23 +43,25 @@ abstract class CampaignCriterionSimulationServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.CampaignCriterionSimulationService';
 
   CampaignCriterionSimulationServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetCampaignCriterionSimulationRequest,
-            $0.CampaignCriterionSimulation>(
+    $addMethod($grpc.ServiceMethod<$0.GetCampaignCriterionSimulationRequest,
+            $1.CampaignCriterionSimulation>(
         'GetCampaignCriterionSimulation',
         getCampaignCriterionSimulation_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetCampaignCriterionSimulationRequest.fromBuffer(value),
-        ($0.CampaignCriterionSimulation value) => value.writeToBuffer()));
+            $0.GetCampaignCriterionSimulationRequest.fromBuffer(value),
+        ($1.CampaignCriterionSimulation value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.CampaignCriterionSimulation>
+  $async.Future<$1.CampaignCriterionSimulation>
       getCampaignCriterionSimulation_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+          $grpc.ServiceCall call,
+          $async.Future<$0.GetCampaignCriterionSimulationRequest>
+              request) async {
     return getCampaignCriterionSimulation(call, await request);
   }
 
-  $async.Future<$0.CampaignCriterionSimulation> getCampaignCriterionSimulation(
-      $grpc.ServiceCall call, GetCampaignCriterionSimulationRequest request);
+  $async.Future<$1.CampaignCriterionSimulation> getCampaignCriterionSimulation(
+      $grpc.ServiceCall call, $0.GetCampaignCriterionSimulationRequest request);
 }

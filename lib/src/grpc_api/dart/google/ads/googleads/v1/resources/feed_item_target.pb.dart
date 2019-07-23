@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/feed_item_target.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -38,6 +39,7 @@ class FeedItemTarget extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FeedItemTarget',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [4, 5, 7, 8, 9, 10])
     ..aOS(1, 'resourceName')
     ..a<$0.StringValue>(2, 'feedItem', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
@@ -67,21 +69,22 @@ class FeedItemTarget extends $pb.GeneratedMessage {
         $3.FeedItemTargetDeviceEnum_FeedItemTargetDevice.values)
     ..a<$1.AdScheduleInfo>(10, 'adSchedule', $pb.PbFieldType.OM,
         $1.AdScheduleInfo.getDefault, $1.AdScheduleInfo.create)
-    ..oo(0, [4, 5, 7, 8, 9, 10])
     ..hasRequiredFields = false;
 
-  FeedItemTarget() : super();
-  FeedItemTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedItemTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedItemTarget._() : super();
+  factory FeedItemTarget() => create();
+  factory FeedItemTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedItemTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedItemTarget clone() => FeedItemTarget()..mergeFromMessage(this);
   FeedItemTarget copyWith(void Function(FeedItemTarget) updates) =>
       super.copyWith((message) => updates(message as FeedItemTarget));
   $pb.BuilderInfo get info_ => _i;
-  static FeedItemTarget create() => FeedItemTarget();
+  @$core.pragma('dart2js:noInline')
+  static FeedItemTarget create() => FeedItemTarget._();
   FeedItemTarget createEmptyInstance() => create();
   static $pb.PbList<FeedItemTarget> createRepeated() =>
       $pb.PbList<FeedItemTarget>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -38,27 +39,29 @@ class TypedValue extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TypedValue',
       package: const $pb.PackageName('google.monitoring.v3'))
+    ..oo(0, [1, 2, 3, 4, 5])
     ..aOB(1, 'boolValue')
     ..aInt64(2, 'int64Value')
     ..a<$core.double>(3, 'doubleValue', $pb.PbFieldType.OD)
     ..aOS(4, 'stringValue')
     ..a<$0.Distribution>(5, 'distributionValue', $pb.PbFieldType.OM,
         $0.Distribution.getDefault, $0.Distribution.create)
-    ..oo(0, [1, 2, 3, 4, 5])
     ..hasRequiredFields = false;
 
-  TypedValue() : super();
-  TypedValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TypedValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TypedValue._() : super();
+  factory TypedValue() => create();
+  factory TypedValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TypedValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TypedValue clone() => TypedValue()..mergeFromMessage(this);
   TypedValue copyWith(void Function(TypedValue) updates) =>
       super.copyWith((message) => updates(message as TypedValue));
   $pb.BuilderInfo get info_ => _i;
-  static TypedValue create() => TypedValue();
+  @$core.pragma('dart2js:noInline')
+  static TypedValue create() => TypedValue._();
   TypedValue createEmptyInstance() => create();
   static $pb.PbList<TypedValue> createRepeated() => $pb.PbList<TypedValue>();
   static TypedValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -117,18 +120,20 @@ class TimeInterval extends $pb.GeneratedMessage {
         $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  TimeInterval() : super();
-  TimeInterval.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimeInterval.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimeInterval._() : super();
+  factory TimeInterval() => create();
+  factory TimeInterval.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimeInterval.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimeInterval clone() => TimeInterval()..mergeFromMessage(this);
   TimeInterval copyWith(void Function(TimeInterval) updates) =>
       super.copyWith((message) => updates(message as TimeInterval));
   $pb.BuilderInfo get info_ => _i;
-  static TimeInterval create() => TimeInterval();
+  @$core.pragma('dart2js:noInline')
+  static TimeInterval create() => TimeInterval._();
   TimeInterval createEmptyInstance() => create();
   static $pb.PbList<TimeInterval> createRepeated() =>
       $pb.PbList<TimeInterval>();
@@ -174,18 +179,20 @@ class Aggregation extends $pb.GeneratedMessage {
     ..pPS(5, 'groupByFields')
     ..hasRequiredFields = false;
 
-  Aggregation() : super();
-  Aggregation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Aggregation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Aggregation._() : super();
+  factory Aggregation() => create();
+  factory Aggregation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Aggregation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Aggregation clone() => Aggregation()..mergeFromMessage(this);
   Aggregation copyWith(void Function(Aggregation) updates) =>
       super.copyWith((message) => updates(message as Aggregation));
   $pb.BuilderInfo get info_ => _i;
-  static Aggregation create() => Aggregation();
+  @$core.pragma('dart2js:noInline')
+  static Aggregation create() => Aggregation._();
   Aggregation createEmptyInstance() => create();
   static $pb.PbList<Aggregation> createRepeated() => $pb.PbList<Aggregation>();
   static Aggregation getDefault() => _defaultInstance ??= create()..freeze();

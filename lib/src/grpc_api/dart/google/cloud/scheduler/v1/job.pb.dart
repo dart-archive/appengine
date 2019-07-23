@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/scheduler/v1/job.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,6 +30,7 @@ class Job extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Job',
       package: const $pb.PackageName('google.cloud.scheduler.v1'))
+    ..oo(0, [4, 5, 6])
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..a<$0.PubsubTarget>(4, 'pubsubTarget', $pb.PbFieldType.OM,
@@ -53,21 +55,22 @@ class Job extends $pb.GeneratedMessage {
     ..aOS(21, 'timeZone')
     ..a<$3.Duration>(22, 'attemptDeadline', $pb.PbFieldType.OM,
         $3.Duration.getDefault, $3.Duration.create)
-    ..oo(0, [4, 5, 6])
     ..hasRequiredFields = false;
 
-  Job() : super();
-  Job.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Job.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Job._() : super();
+  factory Job() => create();
+  factory Job.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Job.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Job clone() => Job()..mergeFromMessage(this);
   Job copyWith(void Function(Job) updates) =>
       super.copyWith((message) => updates(message as Job));
   $pb.BuilderInfo get info_ => _i;
-  static Job create() => Job();
+  @$core.pragma('dart2js:noInline')
+  static Job create() => Job._();
   Job createEmptyInstance() => create();
   static $pb.PbList<Job> createRepeated() => $pb.PbList<Job>();
   static Job getDefault() => _defaultInstance ??= create()..freeze();
@@ -202,18 +205,20 @@ class RetryConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'maxDoublings', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  RetryConfig() : super();
-  RetryConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RetryConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RetryConfig._() : super();
+  factory RetryConfig() => create();
+  factory RetryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RetryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RetryConfig clone() => RetryConfig()..mergeFromMessage(this);
   RetryConfig copyWith(void Function(RetryConfig) updates) =>
       super.copyWith((message) => updates(message as RetryConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RetryConfig create() => RetryConfig();
+  @$core.pragma('dart2js:noInline')
+  static RetryConfig create() => RetryConfig._();
   RetryConfig createEmptyInstance() => create();
   static $pb.PbList<RetryConfig> createRepeated() => $pb.PbList<RetryConfig>();
   static RetryConfig getDefault() => _defaultInstance ??= create()..freeze();

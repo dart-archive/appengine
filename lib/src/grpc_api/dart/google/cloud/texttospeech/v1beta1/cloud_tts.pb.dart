@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/texttospeech/v1beta1/cloud_tts.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,18 +20,20 @@ class ListVoicesRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'languageCode')
     ..hasRequiredFields = false;
 
-  ListVoicesRequest() : super();
-  ListVoicesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListVoicesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListVoicesRequest._() : super();
+  factory ListVoicesRequest() => create();
+  factory ListVoicesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListVoicesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListVoicesRequest clone() => ListVoicesRequest()..mergeFromMessage(this);
   ListVoicesRequest copyWith(void Function(ListVoicesRequest) updates) =>
       super.copyWith((message) => updates(message as ListVoicesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListVoicesRequest create() => ListVoicesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListVoicesRequest create() => ListVoicesRequest._();
   ListVoicesRequest createEmptyInstance() => create();
   static $pb.PbList<ListVoicesRequest> createRepeated() =>
       $pb.PbList<ListVoicesRequest>();
@@ -53,18 +56,20 @@ class ListVoicesResponse extends $pb.GeneratedMessage {
     ..pc<Voice>(1, 'voices', $pb.PbFieldType.PM, Voice.create)
     ..hasRequiredFields = false;
 
-  ListVoicesResponse() : super();
-  ListVoicesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListVoicesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListVoicesResponse._() : super();
+  factory ListVoicesResponse() => create();
+  factory ListVoicesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListVoicesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListVoicesResponse clone() => ListVoicesResponse()..mergeFromMessage(this);
   ListVoicesResponse copyWith(void Function(ListVoicesResponse) updates) =>
       super.copyWith((message) => updates(message as ListVoicesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListVoicesResponse create() => ListVoicesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListVoicesResponse create() => ListVoicesResponse._();
   ListVoicesResponse createEmptyInstance() => create();
   static $pb.PbList<ListVoicesResponse> createRepeated() =>
       $pb.PbList<ListVoicesResponse>();
@@ -90,18 +95,20 @@ class Voice extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'naturalSampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Voice() : super();
-  Voice.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Voice.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Voice._() : super();
+  factory Voice() => create();
+  factory Voice.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Voice.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Voice clone() => Voice()..mergeFromMessage(this);
   Voice copyWith(void Function(Voice) updates) =>
       super.copyWith((message) => updates(message as Voice));
   $pb.BuilderInfo get info_ => _i;
-  static Voice create() => Voice();
+  @$core.pragma('dart2js:noInline')
+  static Voice create() => Voice._();
   Voice createEmptyInstance() => create();
   static $pb.PbList<Voice> createRepeated() => $pb.PbList<Voice>();
   static Voice getDefault() => _defaultInstance ??= create()..freeze();
@@ -145,20 +152,22 @@ class SynthesizeSpeechRequest extends $pb.GeneratedMessage {
         AudioConfig.getDefault, AudioConfig.create)
     ..hasRequiredFields = false;
 
-  SynthesizeSpeechRequest() : super();
-  SynthesizeSpeechRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SynthesizeSpeechRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SynthesizeSpeechRequest._() : super();
+  factory SynthesizeSpeechRequest() => create();
+  factory SynthesizeSpeechRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SynthesizeSpeechRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SynthesizeSpeechRequest clone() =>
       SynthesizeSpeechRequest()..mergeFromMessage(this);
   SynthesizeSpeechRequest copyWith(
           void Function(SynthesizeSpeechRequest) updates) =>
       super.copyWith((message) => updates(message as SynthesizeSpeechRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SynthesizeSpeechRequest create() => SynthesizeSpeechRequest();
+  @$core.pragma('dart2js:noInline')
+  static SynthesizeSpeechRequest create() => SynthesizeSpeechRequest._();
   SynthesizeSpeechRequest createEmptyInstance() => create();
   static $pb.PbList<SynthesizeSpeechRequest> createRepeated() =>
       $pb.PbList<SynthesizeSpeechRequest>();
@@ -202,23 +211,25 @@ class SynthesisInput extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SynthesisInput',
       package: const $pb.PackageName('google.cloud.texttospeech.v1beta1'))
+    ..oo(0, [1, 2])
     ..aOS(1, 'text')
     ..aOS(2, 'ssml')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  SynthesisInput() : super();
-  SynthesisInput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SynthesisInput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SynthesisInput._() : super();
+  factory SynthesisInput() => create();
+  factory SynthesisInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SynthesisInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SynthesisInput clone() => SynthesisInput()..mergeFromMessage(this);
   SynthesisInput copyWith(void Function(SynthesisInput) updates) =>
       super.copyWith((message) => updates(message as SynthesisInput));
   $pb.BuilderInfo get info_ => _i;
-  static SynthesisInput create() => SynthesisInput();
+  @$core.pragma('dart2js:noInline')
+  static SynthesisInput create() => SynthesisInput._();
   SynthesisInput createEmptyInstance() => create();
   static $pb.PbList<SynthesisInput> createRepeated() =>
       $pb.PbList<SynthesisInput>();
@@ -260,19 +271,21 @@ class VoiceSelectionParams extends $pb.GeneratedMessage {
         SsmlVoiceGender.values)
     ..hasRequiredFields = false;
 
-  VoiceSelectionParams() : super();
-  VoiceSelectionParams.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VoiceSelectionParams.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VoiceSelectionParams._() : super();
+  factory VoiceSelectionParams() => create();
+  factory VoiceSelectionParams.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VoiceSelectionParams.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VoiceSelectionParams clone() =>
       VoiceSelectionParams()..mergeFromMessage(this);
   VoiceSelectionParams copyWith(void Function(VoiceSelectionParams) updates) =>
       super.copyWith((message) => updates(message as VoiceSelectionParams));
   $pb.BuilderInfo get info_ => _i;
-  static VoiceSelectionParams create() => VoiceSelectionParams();
+  @$core.pragma('dart2js:noInline')
+  static VoiceSelectionParams create() => VoiceSelectionParams._();
   VoiceSelectionParams createEmptyInstance() => create();
   static $pb.PbList<VoiceSelectionParams> createRepeated() =>
       $pb.PbList<VoiceSelectionParams>();
@@ -322,18 +335,20 @@ class AudioConfig extends $pb.GeneratedMessage {
     ..pPS(6, 'effectsProfileId')
     ..hasRequiredFields = false;
 
-  AudioConfig() : super();
-  AudioConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioConfig._() : super();
+  factory AudioConfig() => create();
+  factory AudioConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioConfig clone() => AudioConfig()..mergeFromMessage(this);
   AudioConfig copyWith(void Function(AudioConfig) updates) =>
       super.copyWith((message) => updates(message as AudioConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AudioConfig create() => AudioConfig();
+  @$core.pragma('dart2js:noInline')
+  static AudioConfig create() => AudioConfig._();
   AudioConfig createEmptyInstance() => create();
   static $pb.PbList<AudioConfig> createRepeated() => $pb.PbList<AudioConfig>();
   static AudioConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -388,20 +403,22 @@ class SynthesizeSpeechResponse extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'audioContent', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  SynthesizeSpeechResponse() : super();
-  SynthesizeSpeechResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SynthesizeSpeechResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SynthesizeSpeechResponse._() : super();
+  factory SynthesizeSpeechResponse() => create();
+  factory SynthesizeSpeechResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SynthesizeSpeechResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SynthesizeSpeechResponse clone() =>
       SynthesizeSpeechResponse()..mergeFromMessage(this);
   SynthesizeSpeechResponse copyWith(
           void Function(SynthesizeSpeechResponse) updates) =>
       super.copyWith((message) => updates(message as SynthesizeSpeechResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SynthesizeSpeechResponse create() => SynthesizeSpeechResponse();
+  @$core.pragma('dart2js:noInline')
+  static SynthesizeSpeechResponse create() => SynthesizeSpeechResponse._();
   SynthesizeSpeechResponse createEmptyInstance() => create();
   static $pb.PbList<SynthesizeSpeechResponse> createRepeated() =>
       $pb.PbList<SynthesizeSpeechResponse>();

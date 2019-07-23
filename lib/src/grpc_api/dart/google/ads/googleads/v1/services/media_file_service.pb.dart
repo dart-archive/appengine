@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/media_file_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/media_file.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
+import '../resources/media_file.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
 class GetMediaFileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetMediaFileRequest',
@@ -18,18 +19,20 @@ class GetMediaFileRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetMediaFileRequest() : super();
-  GetMediaFileRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetMediaFileRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetMediaFileRequest._() : super();
+  factory GetMediaFileRequest() => create();
+  factory GetMediaFileRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetMediaFileRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetMediaFileRequest clone() => GetMediaFileRequest()..mergeFromMessage(this);
   GetMediaFileRequest copyWith(void Function(GetMediaFileRequest) updates) =>
       super.copyWith((message) => updates(message as GetMediaFileRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetMediaFileRequest create() => GetMediaFileRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetMediaFileRequest create() => GetMediaFileRequest._();
   GetMediaFileRequest createEmptyInstance() => create();
   static $pb.PbList<GetMediaFileRequest> createRepeated() =>
       $pb.PbList<GetMediaFileRequest>();
@@ -56,20 +59,22 @@ class MutateMediaFilesRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateMediaFilesRequest() : super();
-  MutateMediaFilesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateMediaFilesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateMediaFilesRequest._() : super();
+  factory MutateMediaFilesRequest() => create();
+  factory MutateMediaFilesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateMediaFilesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateMediaFilesRequest clone() =>
       MutateMediaFilesRequest()..mergeFromMessage(this);
   MutateMediaFilesRequest copyWith(
           void Function(MutateMediaFilesRequest) updates) =>
       super.copyWith((message) => updates(message as MutateMediaFilesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateMediaFilesRequest create() => MutateMediaFilesRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateMediaFilesRequest create() => MutateMediaFilesRequest._();
   MutateMediaFilesRequest createEmptyInstance() => create();
   static $pb.PbList<MutateMediaFilesRequest> createRepeated() =>
       $pb.PbList<MutateMediaFilesRequest>();
@@ -114,23 +119,25 @@ class MediaFileOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MediaFileOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.MediaFile>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.MediaFile.getDefault, $0.MediaFile.create)
     ..oo(0, [1])
+    ..a<$1.MediaFile>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.MediaFile.getDefault, $1.MediaFile.create)
     ..hasRequiredFields = false;
 
-  MediaFileOperation() : super();
-  MediaFileOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaFileOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaFileOperation._() : super();
+  factory MediaFileOperation() => create();
+  factory MediaFileOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaFileOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaFileOperation clone() => MediaFileOperation()..mergeFromMessage(this);
   MediaFileOperation copyWith(void Function(MediaFileOperation) updates) =>
       super.copyWith((message) => updates(message as MediaFileOperation));
   $pb.BuilderInfo get info_ => _i;
-  static MediaFileOperation create() => MediaFileOperation();
+  @$core.pragma('dart2js:noInline')
+  static MediaFileOperation create() => MediaFileOperation._();
   MediaFileOperation createEmptyInstance() => create();
   static $pb.PbList<MediaFileOperation> createRepeated() =>
       $pb.PbList<MediaFileOperation>();
@@ -142,8 +149,8 @@ class MediaFileOperation extends $pb.GeneratedMessage {
       _MediaFileOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.MediaFile get create_1 => $_getN(0);
-  set create_1($0.MediaFile v) {
+  $1.MediaFile get create_1 => $_getN(0);
+  set create_1($1.MediaFile v) {
     setField(1, v);
   }
 
@@ -156,24 +163,26 @@ class MutateMediaFilesResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateMediaFileResult>(
         2, 'results', $pb.PbFieldType.PM, MutateMediaFileResult.create)
-    ..a<$1.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $1.Status.getDefault, $1.Status.create)
+    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  MutateMediaFilesResponse() : super();
-  MutateMediaFilesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateMediaFilesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateMediaFilesResponse._() : super();
+  factory MutateMediaFilesResponse() => create();
+  factory MutateMediaFilesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateMediaFilesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateMediaFilesResponse clone() =>
       MutateMediaFilesResponse()..mergeFromMessage(this);
   MutateMediaFilesResponse copyWith(
           void Function(MutateMediaFilesResponse) updates) =>
       super.copyWith((message) => updates(message as MutateMediaFilesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static MutateMediaFilesResponse create() => MutateMediaFilesResponse();
+  @$core.pragma('dart2js:noInline')
+  static MutateMediaFilesResponse create() => MutateMediaFilesResponse._();
   MutateMediaFilesResponse createEmptyInstance() => create();
   static $pb.PbList<MutateMediaFilesResponse> createRepeated() =>
       $pb.PbList<MutateMediaFilesResponse>();
@@ -183,8 +192,8 @@ class MutateMediaFilesResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateMediaFileResult> get results => $_getList(0);
 
-  $1.Status get partialFailureError => $_getN(1);
-  set partialFailureError($1.Status v) {
+  $2.Status get partialFailureError => $_getN(1);
+  set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
@@ -198,20 +207,22 @@ class MutateMediaFileResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateMediaFileResult() : super();
-  MutateMediaFileResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateMediaFileResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateMediaFileResult._() : super();
+  factory MutateMediaFileResult() => create();
+  factory MutateMediaFileResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateMediaFileResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateMediaFileResult clone() =>
       MutateMediaFileResult()..mergeFromMessage(this);
   MutateMediaFileResult copyWith(
           void Function(MutateMediaFileResult) updates) =>
       super.copyWith((message) => updates(message as MutateMediaFileResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateMediaFileResult create() => MutateMediaFileResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateMediaFileResult create() => MutateMediaFileResult._();
   MutateMediaFileResult createEmptyInstance() => create();
   static $pb.PbList<MutateMediaFileResult> createRepeated() =>
       $pb.PbList<MutateMediaFileResult>();

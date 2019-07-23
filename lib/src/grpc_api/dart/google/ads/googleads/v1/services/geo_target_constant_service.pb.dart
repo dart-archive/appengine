@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/geo_target_constant_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $1;
-import '../resources/geo_target_constant.pb.dart' as $0;
+import '../../../../protobuf/wrappers.pb.dart' as $2;
+import '../resources/geo_target_constant.pb.dart' as $1;
 
 class GetGeoTargetConstantRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class GetGeoTargetConstantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetGeoTargetConstantRequest() : super();
-  GetGeoTargetConstantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetGeoTargetConstantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetGeoTargetConstantRequest._() : super();
+  factory GetGeoTargetConstantRequest() => create();
+  factory GetGeoTargetConstantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetGeoTargetConstantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetGeoTargetConstantRequest clone() =>
       GetGeoTargetConstantRequest()..mergeFromMessage(this);
   GetGeoTargetConstantRequest copyWith(
@@ -33,7 +35,9 @@ class GetGeoTargetConstantRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetGeoTargetConstantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetGeoTargetConstantRequest create() => GetGeoTargetConstantRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetGeoTargetConstantRequest create() =>
+      GetGeoTargetConstantRequest._();
   GetGeoTargetConstantRequest createEmptyInstance() => create();
   static $pb.PbList<GetGeoTargetConstantRequest> createRepeated() =>
       $pb.PbList<GetGeoTargetConstantRequest>();
@@ -55,17 +59,19 @@ class SuggestGeoTargetConstantsRequest_LocationNames
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SuggestGeoTargetConstantsRequest.LocationNames',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$1.StringValue>(1, 'names', $pb.PbFieldType.PM, $1.StringValue.create)
+    ..pc<$2.StringValue>(1, 'names', $pb.PbFieldType.PM, $2.StringValue.create)
     ..hasRequiredFields = false;
 
-  SuggestGeoTargetConstantsRequest_LocationNames() : super();
-  SuggestGeoTargetConstantsRequest_LocationNames.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SuggestGeoTargetConstantsRequest_LocationNames.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SuggestGeoTargetConstantsRequest_LocationNames._() : super();
+  factory SuggestGeoTargetConstantsRequest_LocationNames() => create();
+  factory SuggestGeoTargetConstantsRequest_LocationNames.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestGeoTargetConstantsRequest_LocationNames.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SuggestGeoTargetConstantsRequest_LocationNames clone() =>
       SuggestGeoTargetConstantsRequest_LocationNames()..mergeFromMessage(this);
   SuggestGeoTargetConstantsRequest_LocationNames copyWith(
@@ -74,8 +80,9 @@ class SuggestGeoTargetConstantsRequest_LocationNames
       super.copyWith((message) =>
           updates(message as SuggestGeoTargetConstantsRequest_LocationNames));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SuggestGeoTargetConstantsRequest_LocationNames create() =>
-      SuggestGeoTargetConstantsRequest_LocationNames();
+      SuggestGeoTargetConstantsRequest_LocationNames._();
   SuggestGeoTargetConstantsRequest_LocationNames createEmptyInstance() =>
       create();
   static $pb.PbList<SuggestGeoTargetConstantsRequest_LocationNames>
@@ -85,25 +92,26 @@ class SuggestGeoTargetConstantsRequest_LocationNames
       _defaultInstance ??= create()..freeze();
   static SuggestGeoTargetConstantsRequest_LocationNames _defaultInstance;
 
-  $core.List<$1.StringValue> get names => $_getList(0);
+  $core.List<$2.StringValue> get names => $_getList(0);
 }
 
 class SuggestGeoTargetConstantsRequest_GeoTargets extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SuggestGeoTargetConstantsRequest.GeoTargets',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$1.StringValue>(
-        1, 'geoTargetConstants', $pb.PbFieldType.PM, $1.StringValue.create)
+    ..pc<$2.StringValue>(
+        1, 'geoTargetConstants', $pb.PbFieldType.PM, $2.StringValue.create)
     ..hasRequiredFields = false;
 
-  SuggestGeoTargetConstantsRequest_GeoTargets() : super();
-  SuggestGeoTargetConstantsRequest_GeoTargets.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SuggestGeoTargetConstantsRequest_GeoTargets.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SuggestGeoTargetConstantsRequest_GeoTargets._() : super();
+  factory SuggestGeoTargetConstantsRequest_GeoTargets() => create();
+  factory SuggestGeoTargetConstantsRequest_GeoTargets.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestGeoTargetConstantsRequest_GeoTargets.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SuggestGeoTargetConstantsRequest_GeoTargets clone() =>
       SuggestGeoTargetConstantsRequest_GeoTargets()..mergeFromMessage(this);
   SuggestGeoTargetConstantsRequest_GeoTargets copyWith(
@@ -111,8 +119,9 @@ class SuggestGeoTargetConstantsRequest_GeoTargets extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as SuggestGeoTargetConstantsRequest_GeoTargets));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SuggestGeoTargetConstantsRequest_GeoTargets create() =>
-      SuggestGeoTargetConstantsRequest_GeoTargets();
+      SuggestGeoTargetConstantsRequest_GeoTargets._();
   SuggestGeoTargetConstantsRequest_GeoTargets createEmptyInstance() => create();
   static $pb.PbList<SuggestGeoTargetConstantsRequest_GeoTargets>
       createRepeated() =>
@@ -121,7 +130,7 @@ class SuggestGeoTargetConstantsRequest_GeoTargets extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SuggestGeoTargetConstantsRequest_GeoTargets _defaultInstance;
 
-  $core.List<$1.StringValue> get geoTargetConstants => $_getList(0);
+  $core.List<$2.StringValue> get geoTargetConstants => $_getList(0);
 }
 
 enum SuggestGeoTargetConstantsRequest_Query {
@@ -140,6 +149,7 @@ class SuggestGeoTargetConstantsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SuggestGeoTargetConstantsRequest',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
+    ..oo(0, [1, 2])
     ..a<SuggestGeoTargetConstantsRequest_LocationNames>(
         1,
         'locationNames',
@@ -152,20 +162,20 @@ class SuggestGeoTargetConstantsRequest extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         SuggestGeoTargetConstantsRequest_GeoTargets.getDefault,
         SuggestGeoTargetConstantsRequest_GeoTargets.create)
-    ..a<$1.StringValue>(3, 'locale', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.StringValue>(5, 'countryCode', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..oo(0, [1, 2])
+    ..a<$2.StringValue>(3, 'locale', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.StringValue>(5, 'countryCode', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
     ..hasRequiredFields = false;
 
-  SuggestGeoTargetConstantsRequest() : super();
-  SuggestGeoTargetConstantsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SuggestGeoTargetConstantsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SuggestGeoTargetConstantsRequest._() : super();
+  factory SuggestGeoTargetConstantsRequest() => create();
+  factory SuggestGeoTargetConstantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestGeoTargetConstantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SuggestGeoTargetConstantsRequest clone() =>
       SuggestGeoTargetConstantsRequest()..mergeFromMessage(this);
   SuggestGeoTargetConstantsRequest copyWith(
@@ -173,8 +183,9 @@ class SuggestGeoTargetConstantsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SuggestGeoTargetConstantsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SuggestGeoTargetConstantsRequest create() =>
-      SuggestGeoTargetConstantsRequest();
+      SuggestGeoTargetConstantsRequest._();
   SuggestGeoTargetConstantsRequest createEmptyInstance() => create();
   static $pb.PbList<SuggestGeoTargetConstantsRequest> createRepeated() =>
       $pb.PbList<SuggestGeoTargetConstantsRequest>();
@@ -202,16 +213,16 @@ class SuggestGeoTargetConstantsRequest extends $pb.GeneratedMessage {
   $core.bool hasGeoTargets() => $_has(1);
   void clearGeoTargets() => clearField(2);
 
-  $1.StringValue get locale => $_getN(2);
-  set locale($1.StringValue v) {
+  $2.StringValue get locale => $_getN(2);
+  set locale($2.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasLocale() => $_has(2);
   void clearLocale() => clearField(3);
 
-  $1.StringValue get countryCode => $_getN(3);
-  set countryCode($1.StringValue v) {
+  $2.StringValue get countryCode => $_getN(3);
+  set countryCode($2.StringValue v) {
     setField(5, v);
   }
 
@@ -227,13 +238,14 @@ class SuggestGeoTargetConstantsResponse extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, GeoTargetConstantSuggestion.create)
     ..hasRequiredFields = false;
 
-  SuggestGeoTargetConstantsResponse() : super();
-  SuggestGeoTargetConstantsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SuggestGeoTargetConstantsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SuggestGeoTargetConstantsResponse._() : super();
+  factory SuggestGeoTargetConstantsResponse() => create();
+  factory SuggestGeoTargetConstantsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SuggestGeoTargetConstantsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SuggestGeoTargetConstantsResponse clone() =>
       SuggestGeoTargetConstantsResponse()..mergeFromMessage(this);
   SuggestGeoTargetConstantsResponse copyWith(
@@ -241,8 +253,9 @@ class SuggestGeoTargetConstantsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SuggestGeoTargetConstantsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SuggestGeoTargetConstantsResponse create() =>
-      SuggestGeoTargetConstantsResponse();
+      SuggestGeoTargetConstantsResponse._();
   SuggestGeoTargetConstantsResponse createEmptyInstance() => create();
   static $pb.PbList<SuggestGeoTargetConstantsResponse> createRepeated() =>
       $pb.PbList<SuggestGeoTargetConstantsResponse>();
@@ -258,25 +271,26 @@ class GeoTargetConstantSuggestion extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GeoTargetConstantSuggestion',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.StringValue>(1, 'locale', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.Int64Value>(2, 'reach', $pb.PbFieldType.OM, $1.Int64Value.getDefault,
-        $1.Int64Value.create)
-    ..a<$1.StringValue>(3, 'searchTerm', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$0.GeoTargetConstant>(4, 'geoTargetConstant', $pb.PbFieldType.OM,
-        $0.GeoTargetConstant.getDefault, $0.GeoTargetConstant.create)
-    ..pc<$0.GeoTargetConstant>(5, 'geoTargetConstantParents',
-        $pb.PbFieldType.PM, $0.GeoTargetConstant.create)
+    ..a<$2.StringValue>(1, 'locale', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.Int64Value>(2, 'reach', $pb.PbFieldType.OM, $2.Int64Value.getDefault,
+        $2.Int64Value.create)
+    ..a<$2.StringValue>(3, 'searchTerm', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$1.GeoTargetConstant>(4, 'geoTargetConstant', $pb.PbFieldType.OM,
+        $1.GeoTargetConstant.getDefault, $1.GeoTargetConstant.create)
+    ..pc<$1.GeoTargetConstant>(5, 'geoTargetConstantParents',
+        $pb.PbFieldType.PM, $1.GeoTargetConstant.create)
     ..hasRequiredFields = false;
 
-  GeoTargetConstantSuggestion() : super();
-  GeoTargetConstantSuggestion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GeoTargetConstantSuggestion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GeoTargetConstantSuggestion._() : super();
+  factory GeoTargetConstantSuggestion() => create();
+  factory GeoTargetConstantSuggestion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GeoTargetConstantSuggestion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GeoTargetConstantSuggestion clone() =>
       GeoTargetConstantSuggestion()..mergeFromMessage(this);
   GeoTargetConstantSuggestion copyWith(
@@ -284,7 +298,9 @@ class GeoTargetConstantSuggestion extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GeoTargetConstantSuggestion));
   $pb.BuilderInfo get info_ => _i;
-  static GeoTargetConstantSuggestion create() => GeoTargetConstantSuggestion();
+  @$core.pragma('dart2js:noInline')
+  static GeoTargetConstantSuggestion create() =>
+      GeoTargetConstantSuggestion._();
   GeoTargetConstantSuggestion createEmptyInstance() => create();
   static $pb.PbList<GeoTargetConstantSuggestion> createRepeated() =>
       $pb.PbList<GeoTargetConstantSuggestion>();
@@ -292,37 +308,37 @@ class GeoTargetConstantSuggestion extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static GeoTargetConstantSuggestion _defaultInstance;
 
-  $1.StringValue get locale => $_getN(0);
-  set locale($1.StringValue v) {
+  $2.StringValue get locale => $_getN(0);
+  set locale($2.StringValue v) {
     setField(1, v);
   }
 
   $core.bool hasLocale() => $_has(0);
   void clearLocale() => clearField(1);
 
-  $1.Int64Value get reach => $_getN(1);
-  set reach($1.Int64Value v) {
+  $2.Int64Value get reach => $_getN(1);
+  set reach($2.Int64Value v) {
     setField(2, v);
   }
 
   $core.bool hasReach() => $_has(1);
   void clearReach() => clearField(2);
 
-  $1.StringValue get searchTerm => $_getN(2);
-  set searchTerm($1.StringValue v) {
+  $2.StringValue get searchTerm => $_getN(2);
+  set searchTerm($2.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasSearchTerm() => $_has(2);
   void clearSearchTerm() => clearField(3);
 
-  $0.GeoTargetConstant get geoTargetConstant => $_getN(3);
-  set geoTargetConstant($0.GeoTargetConstant v) {
+  $1.GeoTargetConstant get geoTargetConstant => $_getN(3);
+  set geoTargetConstant($1.GeoTargetConstant v) {
     setField(4, v);
   }
 
   $core.bool hasGeoTargetConstant() => $_has(3);
   void clearGeoTargetConstant() => clearField(4);
 
-  $core.List<$0.GeoTargetConstant> get geoTargetConstantParents => $_getList(4);
+  $core.List<$1.GeoTargetConstant> get geoTargetConstantParents => $_getList(4);
 }

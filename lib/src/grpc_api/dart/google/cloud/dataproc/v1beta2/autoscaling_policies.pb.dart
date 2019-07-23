@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dataproc/v1beta2/autoscaling_policies.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $2;
+import '../../../protobuf/duration.pb.dart' as $5;
 
 enum AutoscalingPolicy_Algorithm { basicAlgorithm, notSet }
 
@@ -21,6 +22,7 @@ class AutoscalingPolicy extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AutoscalingPolicy',
       package: const $pb.PackageName('google.cloud.dataproc.v1beta2'))
+    ..oo(0, [3])
     ..aOS(1, 'id')
     ..aOS(2, 'name')
     ..a<BasicAutoscalingAlgorithm>(3, 'basicAlgorithm', $pb.PbFieldType.OM,
@@ -37,21 +39,22 @@ class AutoscalingPolicy extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         InstanceGroupAutoscalingPolicyConfig.getDefault,
         InstanceGroupAutoscalingPolicyConfig.create)
-    ..oo(0, [3])
     ..hasRequiredFields = false;
 
-  AutoscalingPolicy() : super();
-  AutoscalingPolicy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AutoscalingPolicy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AutoscalingPolicy._() : super();
+  factory AutoscalingPolicy() => create();
+  factory AutoscalingPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AutoscalingPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AutoscalingPolicy clone() => AutoscalingPolicy()..mergeFromMessage(this);
   AutoscalingPolicy copyWith(void Function(AutoscalingPolicy) updates) =>
       super.copyWith((message) => updates(message as AutoscalingPolicy));
   $pb.BuilderInfo get info_ => _i;
-  static AutoscalingPolicy create() => AutoscalingPolicy();
+  @$core.pragma('dart2js:noInline')
+  static AutoscalingPolicy create() => AutoscalingPolicy._();
   AutoscalingPolicy createEmptyInstance() => create();
   static $pb.PbList<AutoscalingPolicy> createRepeated() =>
       $pb.PbList<AutoscalingPolicy>();
@@ -113,17 +116,18 @@ class BasicAutoscalingAlgorithm extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         BasicYarnAutoscalingConfig.getDefault,
         BasicYarnAutoscalingConfig.create)
-    ..a<$2.Duration>(2, 'cooldownPeriod', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$5.Duration>(2, 'cooldownPeriod', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..hasRequiredFields = false;
 
-  BasicAutoscalingAlgorithm() : super();
-  BasicAutoscalingAlgorithm.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BasicAutoscalingAlgorithm.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BasicAutoscalingAlgorithm._() : super();
+  factory BasicAutoscalingAlgorithm() => create();
+  factory BasicAutoscalingAlgorithm.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BasicAutoscalingAlgorithm.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BasicAutoscalingAlgorithm clone() =>
       BasicAutoscalingAlgorithm()..mergeFromMessage(this);
   BasicAutoscalingAlgorithm copyWith(
@@ -131,7 +135,8 @@ class BasicAutoscalingAlgorithm extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BasicAutoscalingAlgorithm));
   $pb.BuilderInfo get info_ => _i;
-  static BasicAutoscalingAlgorithm create() => BasicAutoscalingAlgorithm();
+  @$core.pragma('dart2js:noInline')
+  static BasicAutoscalingAlgorithm create() => BasicAutoscalingAlgorithm._();
   BasicAutoscalingAlgorithm createEmptyInstance() => create();
   static $pb.PbList<BasicAutoscalingAlgorithm> createRepeated() =>
       $pb.PbList<BasicAutoscalingAlgorithm>();
@@ -147,8 +152,8 @@ class BasicAutoscalingAlgorithm extends $pb.GeneratedMessage {
   $core.bool hasYarnConfig() => $_has(0);
   void clearYarnConfig() => clearField(1);
 
-  $2.Duration get cooldownPeriod => $_getN(1);
-  set cooldownPeriod($2.Duration v) {
+  $5.Duration get cooldownPeriod => $_getN(1);
+  set cooldownPeriod($5.Duration v) {
     setField(2, v);
   }
 
@@ -164,17 +169,18 @@ class BasicYarnAutoscalingConfig extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'scaleDownFactor', $pb.PbFieldType.OD)
     ..a<$core.double>(3, 'scaleUpMinWorkerFraction', $pb.PbFieldType.OD)
     ..a<$core.double>(4, 'scaleDownMinWorkerFraction', $pb.PbFieldType.OD)
-    ..a<$2.Duration>(5, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$5.Duration>(5, 'gracefulDecommissionTimeout', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..hasRequiredFields = false;
 
-  BasicYarnAutoscalingConfig() : super();
-  BasicYarnAutoscalingConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BasicYarnAutoscalingConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BasicYarnAutoscalingConfig._() : super();
+  factory BasicYarnAutoscalingConfig() => create();
+  factory BasicYarnAutoscalingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BasicYarnAutoscalingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BasicYarnAutoscalingConfig clone() =>
       BasicYarnAutoscalingConfig()..mergeFromMessage(this);
   BasicYarnAutoscalingConfig copyWith(
@@ -182,7 +188,8 @@ class BasicYarnAutoscalingConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BasicYarnAutoscalingConfig));
   $pb.BuilderInfo get info_ => _i;
-  static BasicYarnAutoscalingConfig create() => BasicYarnAutoscalingConfig();
+  @$core.pragma('dart2js:noInline')
+  static BasicYarnAutoscalingConfig create() => BasicYarnAutoscalingConfig._();
   BasicYarnAutoscalingConfig createEmptyInstance() => create();
   static $pb.PbList<BasicYarnAutoscalingConfig> createRepeated() =>
       $pb.PbList<BasicYarnAutoscalingConfig>();
@@ -222,8 +229,8 @@ class BasicYarnAutoscalingConfig extends $pb.GeneratedMessage {
   $core.bool hasScaleDownMinWorkerFraction() => $_has(3);
   void clearScaleDownMinWorkerFraction() => clearField(4);
 
-  $2.Duration get gracefulDecommissionTimeout => $_getN(4);
-  set gracefulDecommissionTimeout($2.Duration v) {
+  $5.Duration get gracefulDecommissionTimeout => $_getN(4);
+  set gracefulDecommissionTimeout($5.Duration v) {
     setField(5, v);
   }
 
@@ -240,13 +247,15 @@ class InstanceGroupAutoscalingPolicyConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'weight', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  InstanceGroupAutoscalingPolicyConfig() : super();
-  InstanceGroupAutoscalingPolicyConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InstanceGroupAutoscalingPolicyConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InstanceGroupAutoscalingPolicyConfig._() : super();
+  factory InstanceGroupAutoscalingPolicyConfig() => create();
+  factory InstanceGroupAutoscalingPolicyConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InstanceGroupAutoscalingPolicyConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InstanceGroupAutoscalingPolicyConfig clone() =>
       InstanceGroupAutoscalingPolicyConfig()..mergeFromMessage(this);
   InstanceGroupAutoscalingPolicyConfig copyWith(
@@ -254,8 +263,9 @@ class InstanceGroupAutoscalingPolicyConfig extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as InstanceGroupAutoscalingPolicyConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InstanceGroupAutoscalingPolicyConfig create() =>
-      InstanceGroupAutoscalingPolicyConfig();
+      InstanceGroupAutoscalingPolicyConfig._();
   InstanceGroupAutoscalingPolicyConfig createEmptyInstance() => create();
   static $pb.PbList<InstanceGroupAutoscalingPolicyConfig> createRepeated() =>
       $pb.PbList<InstanceGroupAutoscalingPolicyConfig>();
@@ -297,13 +307,14 @@ class CreateAutoscalingPolicyRequest extends $pb.GeneratedMessage {
         AutoscalingPolicy.getDefault, AutoscalingPolicy.create)
     ..hasRequiredFields = false;
 
-  CreateAutoscalingPolicyRequest() : super();
-  CreateAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAutoscalingPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateAutoscalingPolicyRequest._() : super();
+  factory CreateAutoscalingPolicyRequest() => create();
+  factory CreateAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAutoscalingPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateAutoscalingPolicyRequest clone() =>
       CreateAutoscalingPolicyRequest()..mergeFromMessage(this);
   CreateAutoscalingPolicyRequest copyWith(
@@ -311,8 +322,9 @@ class CreateAutoscalingPolicyRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateAutoscalingPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateAutoscalingPolicyRequest create() =>
-      CreateAutoscalingPolicyRequest();
+      CreateAutoscalingPolicyRequest._();
   CreateAutoscalingPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAutoscalingPolicyRequest> createRepeated() =>
       $pb.PbList<CreateAutoscalingPolicyRequest>();
@@ -344,13 +356,14 @@ class GetAutoscalingPolicyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetAutoscalingPolicyRequest() : super();
-  GetAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAutoscalingPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAutoscalingPolicyRequest._() : super();
+  factory GetAutoscalingPolicyRequest() => create();
+  factory GetAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAutoscalingPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAutoscalingPolicyRequest clone() =>
       GetAutoscalingPolicyRequest()..mergeFromMessage(this);
   GetAutoscalingPolicyRequest copyWith(
@@ -358,7 +371,9 @@ class GetAutoscalingPolicyRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetAutoscalingPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAutoscalingPolicyRequest create() => GetAutoscalingPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAutoscalingPolicyRequest create() =>
+      GetAutoscalingPolicyRequest._();
   GetAutoscalingPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<GetAutoscalingPolicyRequest> createRepeated() =>
       $pb.PbList<GetAutoscalingPolicyRequest>();
@@ -383,13 +398,14 @@ class UpdateAutoscalingPolicyRequest extends $pb.GeneratedMessage {
         AutoscalingPolicy.getDefault, AutoscalingPolicy.create)
     ..hasRequiredFields = false;
 
-  UpdateAutoscalingPolicyRequest() : super();
-  UpdateAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateAutoscalingPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateAutoscalingPolicyRequest._() : super();
+  factory UpdateAutoscalingPolicyRequest() => create();
+  factory UpdateAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAutoscalingPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateAutoscalingPolicyRequest clone() =>
       UpdateAutoscalingPolicyRequest()..mergeFromMessage(this);
   UpdateAutoscalingPolicyRequest copyWith(
@@ -397,8 +413,9 @@ class UpdateAutoscalingPolicyRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateAutoscalingPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateAutoscalingPolicyRequest create() =>
-      UpdateAutoscalingPolicyRequest();
+      UpdateAutoscalingPolicyRequest._();
   UpdateAutoscalingPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAutoscalingPolicyRequest> createRepeated() =>
       $pb.PbList<UpdateAutoscalingPolicyRequest>();
@@ -422,13 +439,14 @@ class DeleteAutoscalingPolicyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteAutoscalingPolicyRequest() : super();
-  DeleteAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteAutoscalingPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteAutoscalingPolicyRequest._() : super();
+  factory DeleteAutoscalingPolicyRequest() => create();
+  factory DeleteAutoscalingPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAutoscalingPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteAutoscalingPolicyRequest clone() =>
       DeleteAutoscalingPolicyRequest()..mergeFromMessage(this);
   DeleteAutoscalingPolicyRequest copyWith(
@@ -436,8 +454,9 @@ class DeleteAutoscalingPolicyRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteAutoscalingPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteAutoscalingPolicyRequest create() =>
-      DeleteAutoscalingPolicyRequest();
+      DeleteAutoscalingPolicyRequest._();
   DeleteAutoscalingPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAutoscalingPolicyRequest> createRepeated() =>
       $pb.PbList<DeleteAutoscalingPolicyRequest>();
@@ -463,13 +482,14 @@ class ListAutoscalingPoliciesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListAutoscalingPoliciesRequest() : super();
-  ListAutoscalingPoliciesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAutoscalingPoliciesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAutoscalingPoliciesRequest._() : super();
+  factory ListAutoscalingPoliciesRequest() => create();
+  factory ListAutoscalingPoliciesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAutoscalingPoliciesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAutoscalingPoliciesRequest clone() =>
       ListAutoscalingPoliciesRequest()..mergeFromMessage(this);
   ListAutoscalingPoliciesRequest copyWith(
@@ -477,8 +497,9 @@ class ListAutoscalingPoliciesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListAutoscalingPoliciesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListAutoscalingPoliciesRequest create() =>
-      ListAutoscalingPoliciesRequest();
+      ListAutoscalingPoliciesRequest._();
   ListAutoscalingPoliciesRequest createEmptyInstance() => create();
   static $pb.PbList<ListAutoscalingPoliciesRequest> createRepeated() =>
       $pb.PbList<ListAutoscalingPoliciesRequest>();
@@ -520,13 +541,14 @@ class ListAutoscalingPoliciesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListAutoscalingPoliciesResponse() : super();
-  ListAutoscalingPoliciesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAutoscalingPoliciesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAutoscalingPoliciesResponse._() : super();
+  factory ListAutoscalingPoliciesResponse() => create();
+  factory ListAutoscalingPoliciesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAutoscalingPoliciesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAutoscalingPoliciesResponse clone() =>
       ListAutoscalingPoliciesResponse()..mergeFromMessage(this);
   ListAutoscalingPoliciesResponse copyWith(
@@ -534,8 +556,9 @@ class ListAutoscalingPoliciesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListAutoscalingPoliciesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListAutoscalingPoliciesResponse create() =>
-      ListAutoscalingPoliciesResponse();
+      ListAutoscalingPoliciesResponse._();
   ListAutoscalingPoliciesResponse createEmptyInstance() => create();
   static $pb.PbList<ListAutoscalingPoliciesResponse> createRepeated() =>
       $pb.PbList<ListAutoscalingPoliciesResponse>();

@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/iam/credentials/v1/iamcredentials.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
+import 'package:grpc/service_api.dart' as $grpc;
 import 'common.pb.dart' as $0;
 export 'iamcredentials.pb.dart';
 
@@ -38,14 +38,6 @@ class IAMCredentialsClient extends $grpc.Client {
           ($0.SignJwtRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.SignJwtResponse.fromBuffer(value));
-  static final _$generateIdentityBindingAccessToken = $grpc.ClientMethod<
-          $0.GenerateIdentityBindingAccessTokenRequest,
-          $0.GenerateIdentityBindingAccessTokenResponse>(
-      '/google.iam.credentials.v1.IAMCredentials/GenerateIdentityBindingAccessToken',
-      ($0.GenerateIdentityBindingAccessTokenRequest value) =>
-          value.writeToBuffer(),
-      ($core.List<$core.int> value) =>
-          $0.GenerateIdentityBindingAccessTokenResponse.fromBuffer(value));
 
   IAMCredentialsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -78,16 +70,6 @@ class IAMCredentialsClient extends $grpc.Client {
   $grpc.ResponseFuture<$0.SignJwtResponse> signJwt($0.SignJwtRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$signJwt, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
-  }
-
-  $grpc.ResponseFuture<$0.GenerateIdentityBindingAccessTokenResponse>
-      generateIdentityBindingAccessToken(
-          $0.GenerateIdentityBindingAccessTokenRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(_$generateIdentityBindingAccessToken,
-        $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -129,42 +111,28 @@ abstract class IAMCredentialsServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.SignJwtRequest.fromBuffer(value),
         ($0.SignJwtResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GenerateIdentityBindingAccessTokenRequest,
-            $0.GenerateIdentityBindingAccessTokenResponse>(
-        'GenerateIdentityBindingAccessToken',
-        generateIdentityBindingAccessToken_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.GenerateIdentityBindingAccessTokenRequest.fromBuffer(value),
-        ($0.GenerateIdentityBindingAccessTokenResponse value) =>
-            value.writeToBuffer()));
   }
 
   $async.Future<$0.GenerateAccessTokenResponse> generateAccessToken_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call,
+      $async.Future<$0.GenerateAccessTokenRequest> request) async {
     return generateAccessToken(call, await request);
   }
 
   $async.Future<$0.GenerateIdTokenResponse> generateIdToken_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call,
+      $async.Future<$0.GenerateIdTokenRequest> request) async {
     return generateIdToken(call, await request);
   }
 
   $async.Future<$0.SignBlobResponse> signBlob_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$0.SignBlobRequest> request) async {
     return signBlob(call, await request);
   }
 
   $async.Future<$0.SignJwtResponse> signJwt_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$0.SignJwtRequest> request) async {
     return signJwt(call, await request);
-  }
-
-  $async.Future<$0.GenerateIdentityBindingAccessTokenResponse>
-      generateIdentityBindingAccessToken_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
-    return generateIdentityBindingAccessToken(call, await request);
   }
 
   $async.Future<$0.GenerateAccessTokenResponse> generateAccessToken(
@@ -175,7 +143,4 @@ abstract class IAMCredentialsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SignBlobRequest request);
   $async.Future<$0.SignJwtResponse> signJwt(
       $grpc.ServiceCall call, $0.SignJwtRequest request);
-  $async.Future<$0.GenerateIdentityBindingAccessTokenResponse>
-      generateIdentityBindingAccessToken($grpc.ServiceCall call,
-          $0.GenerateIdentityBindingAccessTokenRequest request);
 }

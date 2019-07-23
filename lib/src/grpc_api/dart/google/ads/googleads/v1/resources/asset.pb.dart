@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/asset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -32,6 +33,7 @@ class Asset extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Asset',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [5, 6, 7, 8])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -52,21 +54,22 @@ class Asset extends $pb.GeneratedMessage {
         $1.ImageAsset.getDefault, $1.ImageAsset.create)
     ..a<$1.TextAsset>(8, 'textAsset', $pb.PbFieldType.OM,
         $1.TextAsset.getDefault, $1.TextAsset.create)
-    ..oo(0, [5, 6, 7, 8])
     ..hasRequiredFields = false;
 
-  Asset() : super();
-  Asset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Asset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Asset._() : super();
+  factory Asset() => create();
+  factory Asset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Asset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Asset clone() => Asset()..mergeFromMessage(this);
   Asset copyWith(void Function(Asset) updates) =>
       super.copyWith((message) => updates(message as Asset));
   $pb.BuilderInfo get info_ => _i;
-  static Asset create() => Asset();
+  @$core.pragma('dart2js:noInline')
+  static Asset create() => Asset._();
   Asset createEmptyInstance() => create();
   static $pb.PbList<Asset> createRepeated() => $pb.PbList<Asset>();
   static Asset getDefault() => _defaultInstance ??= create()..freeze();

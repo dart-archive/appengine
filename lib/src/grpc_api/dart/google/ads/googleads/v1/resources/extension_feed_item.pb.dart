@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/extension_feed_item.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -60,6 +61,8 @@ class ExtensionFeedItem extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExtensionFeedItem',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [2, 3, 7, 8, 9, 10, 11, 12, 14, 15])
+    ..oo(1, [18, 19])
     ..aOS(1, 'resourceName')
     ..a<$0.SitelinkFeedItem>(2, 'sitelinkFeedItem', $pb.PbFieldType.OM,
         $0.SitelinkFeedItem.getDefault, $0.SitelinkFeedItem.create)
@@ -99,22 +102,22 @@ class ExtensionFeedItem extends $pb.GeneratedMessage {
     ..a<$1.StringValue>(18, 'targetedCampaign', $pb.PbFieldType.OM, $1.StringValue.getDefault, $1.StringValue.create)
     ..a<$1.StringValue>(19, 'targetedAdGroup', $pb.PbFieldType.OM, $1.StringValue.getDefault, $1.StringValue.create)
     ..a<$1.StringValue>(20, 'targetedGeoTargetConstant', $pb.PbFieldType.OM, $1.StringValue.getDefault, $1.StringValue.create)
-    ..oo(0, [2, 3, 7, 8, 9, 10, 11, 12, 14, 15])
-    ..oo(1, [18, 19])
     ..hasRequiredFields = false;
 
-  ExtensionFeedItem() : super();
-  ExtensionFeedItem.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExtensionFeedItem.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExtensionFeedItem._() : super();
+  factory ExtensionFeedItem() => create();
+  factory ExtensionFeedItem.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExtensionFeedItem.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExtensionFeedItem clone() => ExtensionFeedItem()..mergeFromMessage(this);
   ExtensionFeedItem copyWith(void Function(ExtensionFeedItem) updates) =>
       super.copyWith((message) => updates(message as ExtensionFeedItem));
   $pb.BuilderInfo get info_ => _i;
-  static ExtensionFeedItem create() => ExtensionFeedItem();
+  @$core.pragma('dart2js:noInline')
+  static ExtensionFeedItem create() => ExtensionFeedItem._();
   ExtensionFeedItem createEmptyInstance() => create();
   static $pb.PbList<ExtensionFeedItem> createRepeated() =>
       $pb.PbList<ExtensionFeedItem>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/user_list.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -40,6 +41,7 @@ class UserList extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserList',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [19, 20, 21, 22, 23])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -83,21 +85,22 @@ class UserList extends $pb.GeneratedMessage {
     ..a<$1.RuleBasedUserListInfo>(21, 'ruleBasedUserList', $pb.PbFieldType.OM, $1.RuleBasedUserListInfo.getDefault, $1.RuleBasedUserListInfo.create)
     ..a<$1.LogicalUserListInfo>(22, 'logicalUserList', $pb.PbFieldType.OM, $1.LogicalUserListInfo.getDefault, $1.LogicalUserListInfo.create)
     ..a<$1.BasicUserListInfo>(23, 'basicUserList', $pb.PbFieldType.OM, $1.BasicUserListInfo.getDefault, $1.BasicUserListInfo.create)
-    ..oo(0, [19, 20, 21, 22, 23])
     ..hasRequiredFields = false;
 
-  UserList() : super();
-  UserList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserList._() : super();
+  factory UserList() => create();
+  factory UserList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserList clone() => UserList()..mergeFromMessage(this);
   UserList copyWith(void Function(UserList) updates) =>
       super.copyWith((message) => updates(message as UserList));
   $pb.BuilderInfo get info_ => _i;
-  static UserList create() => UserList();
+  @$core.pragma('dart2js:noInline')
+  static UserList create() => UserList._();
   UserList createEmptyInstance() => create();
   static $pb.PbList<UserList> createRepeated() => $pb.PbList<UserList>();
   static UserList getDefault() => _defaultInstance ??= create()..freeze();

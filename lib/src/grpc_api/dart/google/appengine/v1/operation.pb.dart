@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/operation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,18 +24,20 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
     ..aOS(5, 'target')
     ..hasRequiredFields = false;
 
-  OperationMetadataV1() : super();
-  OperationMetadataV1.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadataV1.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadataV1._() : super();
+  factory OperationMetadataV1() => create();
+  factory OperationMetadataV1.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationMetadataV1.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationMetadataV1 clone() => OperationMetadataV1()..mergeFromMessage(this);
   OperationMetadataV1 copyWith(void Function(OperationMetadataV1) updates) =>
       super.copyWith((message) => updates(message as OperationMetadataV1));
   $pb.BuilderInfo get info_ => _i;
-  static OperationMetadataV1 create() => OperationMetadataV1();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadataV1 create() => OperationMetadataV1._();
   OperationMetadataV1 createEmptyInstance() => create();
   static $pb.PbList<OperationMetadataV1> createRepeated() =>
       $pb.PbList<OperationMetadataV1>();

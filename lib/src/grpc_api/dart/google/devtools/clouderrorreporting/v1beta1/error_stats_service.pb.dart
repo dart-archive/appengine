@@ -1,18 +1,19 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/error_stats_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import 'common.pb.dart' as $2;
+import '../../../protobuf/duration.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import 'common.pb.dart' as $3;
 
 import 'error_stats_service.pbenum.dart';
 
@@ -28,8 +29,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
         ServiceContextFilter.getDefault, ServiceContextFilter.create)
     ..a<QueryTimeRange>(5, 'timeRange', $pb.PbFieldType.OM,
         QueryTimeRange.getDefault, QueryTimeRange.create)
-    ..a<$0.Duration>(6, 'timedCountDuration', $pb.PbFieldType.OM,
-        $0.Duration.getDefault, $0.Duration.create)
+    ..a<$1.Duration>(6, 'timedCountDuration', $pb.PbFieldType.OM,
+        $1.Duration.getDefault, $1.Duration.create)
     ..e<TimedCountAlignment>(
         7,
         'alignment',
@@ -37,8 +38,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
         TimedCountAlignment.ERROR_COUNT_ALIGNMENT_UNSPECIFIED,
         TimedCountAlignment.valueOf,
         TimedCountAlignment.values)
-    ..a<$1.Timestamp>(8, 'alignmentTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(8, 'alignmentTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..e<ErrorGroupOrder>(
         9,
         'order',
@@ -50,20 +51,22 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
     ..aOS(12, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListGroupStatsRequest() : super();
-  ListGroupStatsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGroupStatsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGroupStatsRequest._() : super();
+  factory ListGroupStatsRequest() => create();
+  factory ListGroupStatsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGroupStatsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGroupStatsRequest clone() =>
       ListGroupStatsRequest()..mergeFromMessage(this);
   ListGroupStatsRequest copyWith(
           void Function(ListGroupStatsRequest) updates) =>
       super.copyWith((message) => updates(message as ListGroupStatsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListGroupStatsRequest create() => ListGroupStatsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupStatsRequest create() => ListGroupStatsRequest._();
   ListGroupStatsRequest createEmptyInstance() => create();
   static $pb.PbList<ListGroupStatsRequest> createRepeated() =>
       $pb.PbList<ListGroupStatsRequest>();
@@ -97,8 +100,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   $core.bool hasTimeRange() => $_has(3);
   void clearTimeRange() => clearField(5);
 
-  $0.Duration get timedCountDuration => $_getN(4);
-  set timedCountDuration($0.Duration v) {
+  $1.Duration get timedCountDuration => $_getN(4);
+  set timedCountDuration($1.Duration v) {
     setField(6, v);
   }
 
@@ -113,8 +116,8 @@ class ListGroupStatsRequest extends $pb.GeneratedMessage {
   $core.bool hasAlignment() => $_has(5);
   void clearAlignment() => clearField(7);
 
-  $1.Timestamp get alignmentTime => $_getN(6);
-  set alignmentTime($1.Timestamp v) {
+  $2.Timestamp get alignmentTime => $_getN(6);
+  set alignmentTime($2.Timestamp v) {
     setField(8, v);
   }
 
@@ -153,24 +156,26 @@ class ListGroupStatsResponse extends $pb.GeneratedMessage {
     ..pc<ErrorGroupStats>(
         1, 'errorGroupStats', $pb.PbFieldType.PM, ErrorGroupStats.create)
     ..aOS(2, 'nextPageToken')
-    ..a<$1.Timestamp>(4, 'timeRangeBegin', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'timeRangeBegin', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  ListGroupStatsResponse() : super();
-  ListGroupStatsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGroupStatsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGroupStatsResponse._() : super();
+  factory ListGroupStatsResponse() => create();
+  factory ListGroupStatsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGroupStatsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGroupStatsResponse clone() =>
       ListGroupStatsResponse()..mergeFromMessage(this);
   ListGroupStatsResponse copyWith(
           void Function(ListGroupStatsResponse) updates) =>
       super.copyWith((message) => updates(message as ListGroupStatsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListGroupStatsResponse create() => ListGroupStatsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupStatsResponse create() => ListGroupStatsResponse._();
   ListGroupStatsResponse createEmptyInstance() => create();
   static $pb.PbList<ListGroupStatsResponse> createRepeated() =>
       $pb.PbList<ListGroupStatsResponse>();
@@ -188,8 +193,8 @@ class ListGroupStatsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $1.Timestamp get timeRangeBegin => $_getN(2);
-  set timeRangeBegin($1.Timestamp v) {
+  $2.Timestamp get timeRangeBegin => $_getN(2);
+  set timeRangeBegin($2.Timestamp v) {
     setField(4, v);
   }
 
@@ -201,34 +206,36 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorGroupStats',
       package:
           const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
-    ..a<$2.ErrorGroup>(1, 'group', $pb.PbFieldType.OM, $2.ErrorGroup.getDefault,
-        $2.ErrorGroup.create)
+    ..a<$3.ErrorGroup>(1, 'group', $pb.PbFieldType.OM, $3.ErrorGroup.getDefault,
+        $3.ErrorGroup.create)
     ..aInt64(2, 'count')
     ..aInt64(3, 'affectedUsersCount')
     ..pc<TimedCount>(4, 'timedCounts', $pb.PbFieldType.PM, TimedCount.create)
-    ..a<$1.Timestamp>(5, 'firstSeenTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(6, 'lastSeenTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..pc<$2.ServiceContext>(
-        7, 'affectedServices', $pb.PbFieldType.PM, $2.ServiceContext.create)
+    ..a<$2.Timestamp>(5, 'firstSeenTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'lastSeenTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..pc<$3.ServiceContext>(
+        7, 'affectedServices', $pb.PbFieldType.PM, $3.ServiceContext.create)
     ..a<$core.int>(8, 'numAffectedServices', $pb.PbFieldType.O3)
-    ..a<$2.ErrorEvent>(9, 'representative', $pb.PbFieldType.OM,
-        $2.ErrorEvent.getDefault, $2.ErrorEvent.create)
+    ..a<$3.ErrorEvent>(9, 'representative', $pb.PbFieldType.OM,
+        $3.ErrorEvent.getDefault, $3.ErrorEvent.create)
     ..hasRequiredFields = false;
 
-  ErrorGroupStats() : super();
-  ErrorGroupStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorGroupStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorGroupStats._() : super();
+  factory ErrorGroupStats() => create();
+  factory ErrorGroupStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorGroupStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorGroupStats clone() => ErrorGroupStats()..mergeFromMessage(this);
   ErrorGroupStats copyWith(void Function(ErrorGroupStats) updates) =>
       super.copyWith((message) => updates(message as ErrorGroupStats));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorGroupStats create() => ErrorGroupStats();
+  @$core.pragma('dart2js:noInline')
+  static ErrorGroupStats create() => ErrorGroupStats._();
   ErrorGroupStats createEmptyInstance() => create();
   static $pb.PbList<ErrorGroupStats> createRepeated() =>
       $pb.PbList<ErrorGroupStats>();
@@ -236,8 +243,8 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ErrorGroupStats _defaultInstance;
 
-  $2.ErrorGroup get group => $_getN(0);
-  set group($2.ErrorGroup v) {
+  $3.ErrorGroup get group => $_getN(0);
+  set group($3.ErrorGroup v) {
     setField(1, v);
   }
 
@@ -262,23 +269,23 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
 
   $core.List<TimedCount> get timedCounts => $_getList(3);
 
-  $1.Timestamp get firstSeenTime => $_getN(4);
-  set firstSeenTime($1.Timestamp v) {
+  $2.Timestamp get firstSeenTime => $_getN(4);
+  set firstSeenTime($2.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasFirstSeenTime() => $_has(4);
   void clearFirstSeenTime() => clearField(5);
 
-  $1.Timestamp get lastSeenTime => $_getN(5);
-  set lastSeenTime($1.Timestamp v) {
+  $2.Timestamp get lastSeenTime => $_getN(5);
+  set lastSeenTime($2.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasLastSeenTime() => $_has(5);
   void clearLastSeenTime() => clearField(6);
 
-  $core.List<$2.ServiceContext> get affectedServices => $_getList(6);
+  $core.List<$3.ServiceContext> get affectedServices => $_getList(6);
 
   $core.int get numAffectedServices => $_get(7, 0);
   set numAffectedServices($core.int v) {
@@ -288,8 +295,8 @@ class ErrorGroupStats extends $pb.GeneratedMessage {
   $core.bool hasNumAffectedServices() => $_has(7);
   void clearNumAffectedServices() => clearField(8);
 
-  $2.ErrorEvent get representative => $_getN(8);
-  set representative($2.ErrorEvent v) {
+  $3.ErrorEvent get representative => $_getN(8);
+  set representative($3.ErrorEvent v) {
     setField(9, v);
   }
 
@@ -302,24 +309,26 @@ class TimedCount extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
     ..aInt64(1, 'count')
-    ..a<$1.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  TimedCount() : super();
-  TimedCount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimedCount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimedCount._() : super();
+  factory TimedCount() => create();
+  factory TimedCount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimedCount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimedCount clone() => TimedCount()..mergeFromMessage(this);
   TimedCount copyWith(void Function(TimedCount) updates) =>
       super.copyWith((message) => updates(message as TimedCount));
   $pb.BuilderInfo get info_ => _i;
-  static TimedCount create() => TimedCount();
+  @$core.pragma('dart2js:noInline')
+  static TimedCount create() => TimedCount._();
   TimedCount createEmptyInstance() => create();
   static $pb.PbList<TimedCount> createRepeated() => $pb.PbList<TimedCount>();
   static TimedCount getDefault() => _defaultInstance ??= create()..freeze();
@@ -333,16 +342,16 @@ class TimedCount extends $pb.GeneratedMessage {
   $core.bool hasCount() => $_has(0);
   void clearCount() => clearField(1);
 
-  $1.Timestamp get startTime => $_getN(1);
-  set startTime($1.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(1);
+  set startTime($2.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $1.Timestamp get endTime => $_getN(2);
-  set endTime($1.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(2);
+  set endTime($2.Timestamp v) {
     setField(3, v);
   }
 
@@ -364,18 +373,20 @@ class ListEventsRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListEventsRequest() : super();
-  ListEventsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListEventsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListEventsRequest._() : super();
+  factory ListEventsRequest() => create();
+  factory ListEventsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListEventsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListEventsRequest clone() => ListEventsRequest()..mergeFromMessage(this);
   ListEventsRequest copyWith(void Function(ListEventsRequest) updates) =>
       super.copyWith((message) => updates(message as ListEventsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListEventsRequest create() => ListEventsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListEventsRequest create() => ListEventsRequest._();
   ListEventsRequest createEmptyInstance() => create();
   static $pb.PbList<ListEventsRequest> createRepeated() =>
       $pb.PbList<ListEventsRequest>();
@@ -436,25 +447,27 @@ class ListEventsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEventsResponse',
       package:
           const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
-    ..pc<$2.ErrorEvent>(
-        1, 'errorEvents', $pb.PbFieldType.PM, $2.ErrorEvent.create)
+    ..pc<$3.ErrorEvent>(
+        1, 'errorEvents', $pb.PbFieldType.PM, $3.ErrorEvent.create)
     ..aOS(2, 'nextPageToken')
-    ..a<$1.Timestamp>(4, 'timeRangeBegin', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'timeRangeBegin', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  ListEventsResponse() : super();
-  ListEventsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListEventsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListEventsResponse._() : super();
+  factory ListEventsResponse() => create();
+  factory ListEventsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListEventsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListEventsResponse clone() => ListEventsResponse()..mergeFromMessage(this);
   ListEventsResponse copyWith(void Function(ListEventsResponse) updates) =>
       super.copyWith((message) => updates(message as ListEventsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListEventsResponse create() => ListEventsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListEventsResponse create() => ListEventsResponse._();
   ListEventsResponse createEmptyInstance() => create();
   static $pb.PbList<ListEventsResponse> createRepeated() =>
       $pb.PbList<ListEventsResponse>();
@@ -462,7 +475,7 @@ class ListEventsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListEventsResponse _defaultInstance;
 
-  $core.List<$2.ErrorEvent> get errorEvents => $_getList(0);
+  $core.List<$3.ErrorEvent> get errorEvents => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -472,8 +485,8 @@ class ListEventsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $1.Timestamp get timeRangeBegin => $_getN(2);
-  set timeRangeBegin($1.Timestamp v) {
+  $2.Timestamp get timeRangeBegin => $_getN(2);
+  set timeRangeBegin($2.Timestamp v) {
     setField(4, v);
   }
 
@@ -494,18 +507,20 @@ class QueryTimeRange extends $pb.GeneratedMessage {
         QueryTimeRange_Period.values)
     ..hasRequiredFields = false;
 
-  QueryTimeRange() : super();
-  QueryTimeRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryTimeRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QueryTimeRange._() : super();
+  factory QueryTimeRange() => create();
+  factory QueryTimeRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QueryTimeRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QueryTimeRange clone() => QueryTimeRange()..mergeFromMessage(this);
   QueryTimeRange copyWith(void Function(QueryTimeRange) updates) =>
       super.copyWith((message) => updates(message as QueryTimeRange));
   $pb.BuilderInfo get info_ => _i;
-  static QueryTimeRange create() => QueryTimeRange();
+  @$core.pragma('dart2js:noInline')
+  static QueryTimeRange create() => QueryTimeRange._();
   QueryTimeRange createEmptyInstance() => create();
   static $pb.PbList<QueryTimeRange> createRepeated() =>
       $pb.PbList<QueryTimeRange>();
@@ -530,19 +545,21 @@ class ServiceContextFilter extends $pb.GeneratedMessage {
     ..aOS(4, 'resourceType')
     ..hasRequiredFields = false;
 
-  ServiceContextFilter() : super();
-  ServiceContextFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceContextFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServiceContextFilter._() : super();
+  factory ServiceContextFilter() => create();
+  factory ServiceContextFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ServiceContextFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ServiceContextFilter clone() =>
       ServiceContextFilter()..mergeFromMessage(this);
   ServiceContextFilter copyWith(void Function(ServiceContextFilter) updates) =>
       super.copyWith((message) => updates(message as ServiceContextFilter));
   $pb.BuilderInfo get info_ => _i;
-  static ServiceContextFilter create() => ServiceContextFilter();
+  @$core.pragma('dart2js:noInline')
+  static ServiceContextFilter create() => ServiceContextFilter._();
   ServiceContextFilter createEmptyInstance() => create();
   static $pb.PbList<ServiceContextFilter> createRepeated() =>
       $pb.PbList<ServiceContextFilter>();
@@ -582,18 +599,20 @@ class DeleteEventsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'projectName')
     ..hasRequiredFields = false;
 
-  DeleteEventsRequest() : super();
-  DeleteEventsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteEventsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteEventsRequest._() : super();
+  factory DeleteEventsRequest() => create();
+  factory DeleteEventsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteEventsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteEventsRequest clone() => DeleteEventsRequest()..mergeFromMessage(this);
   DeleteEventsRequest copyWith(void Function(DeleteEventsRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteEventsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteEventsRequest create() => DeleteEventsRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteEventsRequest create() => DeleteEventsRequest._();
   DeleteEventsRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteEventsRequest> createRepeated() =>
       $pb.PbList<DeleteEventsRequest>();
@@ -616,19 +635,21 @@ class DeleteEventsResponse extends $pb.GeneratedMessage {
           const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
     ..hasRequiredFields = false;
 
-  DeleteEventsResponse() : super();
-  DeleteEventsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteEventsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteEventsResponse._() : super();
+  factory DeleteEventsResponse() => create();
+  factory DeleteEventsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteEventsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteEventsResponse clone() =>
       DeleteEventsResponse()..mergeFromMessage(this);
   DeleteEventsResponse copyWith(void Function(DeleteEventsResponse) updates) =>
       super.copyWith((message) => updates(message as DeleteEventsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteEventsResponse create() => DeleteEventsResponse();
+  @$core.pragma('dart2js:noInline')
+  static DeleteEventsResponse create() => DeleteEventsResponse._();
   DeleteEventsResponse createEmptyInstance() => create();
   static $pb.PbList<DeleteEventsResponse> createRepeated() =>
       $pb.PbList<DeleteEventsResponse>();

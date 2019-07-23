@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/binaryauthorization/v1beta1/service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $0;
+import 'resources.pb.dart' as $1;
 
 class GetPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetPolicyRequest',
@@ -18,18 +19,20 @@ class GetPolicyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetPolicyRequest() : super();
-  GetPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetPolicyRequest._() : super();
+  factory GetPolicyRequest() => create();
+  factory GetPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetPolicyRequest clone() => GetPolicyRequest()..mergeFromMessage(this);
   GetPolicyRequest copyWith(void Function(GetPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as GetPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetPolicyRequest create() => GetPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetPolicyRequest create() => GetPolicyRequest._();
   GetPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<GetPolicyRequest> createRepeated() =>
       $pb.PbList<GetPolicyRequest>();
@@ -50,22 +53,24 @@ class UpdatePolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdatePolicyRequest',
       package:
           const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
-    ..a<$0.Policy>(
-        1, 'policy', $pb.PbFieldType.OM, $0.Policy.getDefault, $0.Policy.create)
+    ..a<$1.Policy>(
+        1, 'policy', $pb.PbFieldType.OM, $1.Policy.getDefault, $1.Policy.create)
     ..hasRequiredFields = false;
 
-  UpdatePolicyRequest() : super();
-  UpdatePolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdatePolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdatePolicyRequest._() : super();
+  factory UpdatePolicyRequest() => create();
+  factory UpdatePolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdatePolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdatePolicyRequest clone() => UpdatePolicyRequest()..mergeFromMessage(this);
   UpdatePolicyRequest copyWith(void Function(UpdatePolicyRequest) updates) =>
       super.copyWith((message) => updates(message as UpdatePolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdatePolicyRequest create() => UpdatePolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePolicyRequest create() => UpdatePolicyRequest._();
   UpdatePolicyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdatePolicyRequest> createRepeated() =>
       $pb.PbList<UpdatePolicyRequest>();
@@ -73,8 +78,8 @@ class UpdatePolicyRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdatePolicyRequest _defaultInstance;
 
-  $0.Policy get policy => $_getN(0);
-  set policy($0.Policy v) {
+  $1.Policy get policy => $_getN(0);
+  set policy($1.Policy v) {
     setField(1, v);
   }
 
@@ -88,24 +93,26 @@ class CreateAttestorRequest extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
     ..aOS(1, 'parent')
     ..aOS(2, 'attestorId')
-    ..a<$0.Attestor>(3, 'attestor', $pb.PbFieldType.OM, $0.Attestor.getDefault,
-        $0.Attestor.create)
+    ..a<$1.Attestor>(3, 'attestor', $pb.PbFieldType.OM, $1.Attestor.getDefault,
+        $1.Attestor.create)
     ..hasRequiredFields = false;
 
-  CreateAttestorRequest() : super();
-  CreateAttestorRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAttestorRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateAttestorRequest._() : super();
+  factory CreateAttestorRequest() => create();
+  factory CreateAttestorRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAttestorRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateAttestorRequest clone() =>
       CreateAttestorRequest()..mergeFromMessage(this);
   CreateAttestorRequest copyWith(
           void Function(CreateAttestorRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAttestorRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateAttestorRequest create() => CreateAttestorRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateAttestorRequest create() => CreateAttestorRequest._();
   CreateAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAttestorRequest> createRepeated() =>
       $pb.PbList<CreateAttestorRequest>();
@@ -129,8 +136,8 @@ class CreateAttestorRequest extends $pb.GeneratedMessage {
   $core.bool hasAttestorId() => $_has(1);
   void clearAttestorId() => clearField(2);
 
-  $0.Attestor get attestor => $_getN(2);
-  set attestor($0.Attestor v) {
+  $1.Attestor get attestor => $_getN(2);
+  set attestor($1.Attestor v) {
     setField(3, v);
   }
 
@@ -145,18 +152,20 @@ class GetAttestorRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetAttestorRequest() : super();
-  GetAttestorRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAttestorRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAttestorRequest._() : super();
+  factory GetAttestorRequest() => create();
+  factory GetAttestorRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAttestorRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAttestorRequest clone() => GetAttestorRequest()..mergeFromMessage(this);
   GetAttestorRequest copyWith(void Function(GetAttestorRequest) updates) =>
       super.copyWith((message) => updates(message as GetAttestorRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAttestorRequest create() => GetAttestorRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAttestorRequest create() => GetAttestorRequest._();
   GetAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<GetAttestorRequest> createRepeated() =>
       $pb.PbList<GetAttestorRequest>();
@@ -177,24 +186,26 @@ class UpdateAttestorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAttestorRequest',
       package:
           const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
-    ..a<$0.Attestor>(1, 'attestor', $pb.PbFieldType.OM, $0.Attestor.getDefault,
-        $0.Attestor.create)
+    ..a<$1.Attestor>(1, 'attestor', $pb.PbFieldType.OM, $1.Attestor.getDefault,
+        $1.Attestor.create)
     ..hasRequiredFields = false;
 
-  UpdateAttestorRequest() : super();
-  UpdateAttestorRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateAttestorRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateAttestorRequest._() : super();
+  factory UpdateAttestorRequest() => create();
+  factory UpdateAttestorRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAttestorRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateAttestorRequest clone() =>
       UpdateAttestorRequest()..mergeFromMessage(this);
   UpdateAttestorRequest copyWith(
           void Function(UpdateAttestorRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAttestorRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateAttestorRequest create() => UpdateAttestorRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAttestorRequest create() => UpdateAttestorRequest._();
   UpdateAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAttestorRequest> createRepeated() =>
       $pb.PbList<UpdateAttestorRequest>();
@@ -202,8 +213,8 @@ class UpdateAttestorRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateAttestorRequest _defaultInstance;
 
-  $0.Attestor get attestor => $_getN(0);
-  set attestor($0.Attestor v) {
+  $1.Attestor get attestor => $_getN(0);
+  set attestor($1.Attestor v) {
     setField(1, v);
   }
 
@@ -220,19 +231,21 @@ class ListAttestorsRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListAttestorsRequest() : super();
-  ListAttestorsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAttestorsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAttestorsRequest._() : super();
+  factory ListAttestorsRequest() => create();
+  factory ListAttestorsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAttestorsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAttestorsRequest clone() =>
       ListAttestorsRequest()..mergeFromMessage(this);
   ListAttestorsRequest copyWith(void Function(ListAttestorsRequest) updates) =>
       super.copyWith((message) => updates(message as ListAttestorsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListAttestorsRequest create() => ListAttestorsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListAttestorsRequest create() => ListAttestorsRequest._();
   ListAttestorsRequest createEmptyInstance() => create();
   static $pb.PbList<ListAttestorsRequest> createRepeated() =>
       $pb.PbList<ListAttestorsRequest>();
@@ -269,24 +282,26 @@ class ListAttestorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttestorsResponse',
       package:
           const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
-    ..pc<$0.Attestor>(1, 'attestors', $pb.PbFieldType.PM, $0.Attestor.create)
+    ..pc<$1.Attestor>(1, 'attestors', $pb.PbFieldType.PM, $1.Attestor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListAttestorsResponse() : super();
-  ListAttestorsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAttestorsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAttestorsResponse._() : super();
+  factory ListAttestorsResponse() => create();
+  factory ListAttestorsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAttestorsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAttestorsResponse clone() =>
       ListAttestorsResponse()..mergeFromMessage(this);
   ListAttestorsResponse copyWith(
           void Function(ListAttestorsResponse) updates) =>
       super.copyWith((message) => updates(message as ListAttestorsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListAttestorsResponse create() => ListAttestorsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListAttestorsResponse create() => ListAttestorsResponse._();
   ListAttestorsResponse createEmptyInstance() => create();
   static $pb.PbList<ListAttestorsResponse> createRepeated() =>
       $pb.PbList<ListAttestorsResponse>();
@@ -294,7 +309,7 @@ class ListAttestorsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListAttestorsResponse _defaultInstance;
 
-  $core.List<$0.Attestor> get attestors => $_getList(0);
+  $core.List<$1.Attestor> get attestors => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -312,20 +327,22 @@ class DeleteAttestorRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteAttestorRequest() : super();
-  DeleteAttestorRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteAttestorRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteAttestorRequest._() : super();
+  factory DeleteAttestorRequest() => create();
+  factory DeleteAttestorRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAttestorRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteAttestorRequest clone() =>
       DeleteAttestorRequest()..mergeFromMessage(this);
   DeleteAttestorRequest copyWith(
           void Function(DeleteAttestorRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAttestorRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteAttestorRequest create() => DeleteAttestorRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAttestorRequest create() => DeleteAttestorRequest._();
   DeleteAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAttestorRequest> createRepeated() =>
       $pb.PbList<DeleteAttestorRequest>();

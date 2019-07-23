@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/event.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class ClientEvent extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClientEvent',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+    ..oo(0, [5, 6])
     ..aOS(1, 'requestId')
     ..aOS(2, 'eventId')
     ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
@@ -35,21 +37,22 @@ class ClientEvent extends $pb.GeneratedMessage {
     ..a<ProfileEvent>(6, 'profileEvent', $pb.PbFieldType.OM,
         ProfileEvent.getDefault, ProfileEvent.create)
     ..aOS(9, 'eventNotes')
-    ..oo(0, [5, 6])
     ..hasRequiredFields = false;
 
-  ClientEvent() : super();
-  ClientEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClientEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClientEvent._() : super();
+  factory ClientEvent() => create();
+  factory ClientEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClientEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClientEvent clone() => ClientEvent()..mergeFromMessage(this);
   ClientEvent copyWith(void Function(ClientEvent) updates) =>
       super.copyWith((message) => updates(message as ClientEvent));
   $pb.BuilderInfo get info_ => _i;
-  static ClientEvent create() => ClientEvent();
+  @$core.pragma('dart2js:noInline')
+  static ClientEvent create() => ClientEvent._();
   ClientEvent createEmptyInstance() => create();
   static $pb.PbList<ClientEvent> createRepeated() => $pb.PbList<ClientEvent>();
   static ClientEvent getDefault() => _defaultInstance ??= create()..freeze();
@@ -121,18 +124,20 @@ class JobEvent extends $pb.GeneratedMessage {
     ..aOS(3, 'profile')
     ..hasRequiredFields = false;
 
-  JobEvent() : super();
-  JobEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobEvent._() : super();
+  factory JobEvent() => create();
+  factory JobEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobEvent clone() => JobEvent()..mergeFromMessage(this);
   JobEvent copyWith(void Function(JobEvent) updates) =>
       super.copyWith((message) => updates(message as JobEvent));
   $pb.BuilderInfo get info_ => _i;
-  static JobEvent create() => JobEvent();
+  @$core.pragma('dart2js:noInline')
+  static JobEvent create() => JobEvent._();
   JobEvent createEmptyInstance() => create();
   static $pb.PbList<JobEvent> createRepeated() => $pb.PbList<JobEvent>();
   static JobEvent getDefault() => _defaultInstance ??= create()..freeze();
@@ -171,18 +176,20 @@ class ProfileEvent extends $pb.GeneratedMessage {
     ..pPS(6, 'jobs')
     ..hasRequiredFields = false;
 
-  ProfileEvent() : super();
-  ProfileEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProfileEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProfileEvent._() : super();
+  factory ProfileEvent() => create();
+  factory ProfileEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProfileEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProfileEvent clone() => ProfileEvent()..mergeFromMessage(this);
   ProfileEvent copyWith(void Function(ProfileEvent) updates) =>
       super.copyWith((message) => updates(message as ProfileEvent));
   $pb.BuilderInfo get info_ => _i;
-  static ProfileEvent create() => ProfileEvent();
+  @$core.pragma('dart2js:noInline')
+  static ProfileEvent create() => ProfileEvent._();
   ProfileEvent createEmptyInstance() => create();
   static $pb.PbList<ProfileEvent> createRepeated() =>
       $pb.PbList<ProfileEvent>();

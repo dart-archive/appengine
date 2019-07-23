@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/errors.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -122,18 +123,20 @@ class GoogleAdsFailure extends $pb.GeneratedMessage {
     ..pc<GoogleAdsError>(1, 'errors', $pb.PbFieldType.PM, GoogleAdsError.create)
     ..hasRequiredFields = false;
 
-  GoogleAdsFailure() : super();
-  GoogleAdsFailure.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GoogleAdsFailure.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GoogleAdsFailure._() : super();
+  factory GoogleAdsFailure() => create();
+  factory GoogleAdsFailure.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GoogleAdsFailure.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GoogleAdsFailure clone() => GoogleAdsFailure()..mergeFromMessage(this);
   GoogleAdsFailure copyWith(void Function(GoogleAdsFailure) updates) =>
       super.copyWith((message) => updates(message as GoogleAdsFailure));
   $pb.BuilderInfo get info_ => _i;
-  static GoogleAdsFailure create() => GoogleAdsFailure();
+  @$core.pragma('dart2js:noInline')
+  static GoogleAdsFailure create() => GoogleAdsFailure._();
   GoogleAdsFailure createEmptyInstance() => create();
   static $pb.PbList<GoogleAdsFailure> createRepeated() =>
       $pb.PbList<GoogleAdsFailure>();
@@ -158,18 +161,20 @@ class GoogleAdsError extends $pb.GeneratedMessage {
         ErrorDetails.create)
     ..hasRequiredFields = false;
 
-  GoogleAdsError() : super();
-  GoogleAdsError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GoogleAdsError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GoogleAdsError._() : super();
+  factory GoogleAdsError() => create();
+  factory GoogleAdsError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GoogleAdsError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GoogleAdsError clone() => GoogleAdsError()..mergeFromMessage(this);
   GoogleAdsError copyWith(void Function(GoogleAdsError) updates) =>
       super.copyWith((message) => updates(message as GoogleAdsError));
   $pb.BuilderInfo get info_ => _i;
-  static GoogleAdsError create() => GoogleAdsError();
+  @$core.pragma('dart2js:noInline')
+  static GoogleAdsError create() => GoogleAdsError._();
   GoogleAdsError createEmptyInstance() => create();
   static $pb.PbList<GoogleAdsError> createRepeated() =>
       $pb.PbList<GoogleAdsError>();
@@ -432,6 +437,110 @@ class ErrorCode extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorCode',
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
+    ..oo(0, [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      21,
+      24,
+      25,
+      26,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      42,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      86,
+      87,
+      88,
+      90,
+      91,
+      92,
+      93,
+      94,
+      96,
+      97,
+      98,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      114,
+      115,
+      116,
+      117,
+      118,
+      120,
+      121
+    ])
     ..e<$3.RequestErrorEnum_RequestError>(
         1,
         'requestError',
@@ -589,124 +698,22 @@ class ErrorCode extends $pb.GeneratedMessage {
     ..e<$102.SizeLimitErrorEnum_SizeLimitError>(118, 'sizeLimitError', $pb.PbFieldType.OE, $102.SizeLimitErrorEnum_SizeLimitError.UNSPECIFIED, $102.SizeLimitErrorEnum_SizeLimitError.valueOf, $102.SizeLimitErrorEnum_SizeLimitError.values)
     ..e<$103.NotWhitelistedErrorEnum_NotWhitelistedError>(120, 'notWhitelistedError', $pb.PbFieldType.OE, $103.NotWhitelistedErrorEnum_NotWhitelistedError.UNSPECIFIED, $103.NotWhitelistedErrorEnum_NotWhitelistedError.valueOf, $103.NotWhitelistedErrorEnum_NotWhitelistedError.values)
     ..e<$104.ManagerLinkErrorEnum_ManagerLinkError>(121, 'managerLinkError', $pb.PbFieldType.OE, $104.ManagerLinkErrorEnum_ManagerLinkError.UNSPECIFIED, $104.ManagerLinkErrorEnum_ManagerLinkError.valueOf, $104.ManagerLinkErrorEnum_ManagerLinkError.values)
-    ..oo(0, [
-      1,
-      2,
-      3,
-      4,
-      5,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      17,
-      18,
-      19,
-      21,
-      24,
-      25,
-      26,
-      29,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      42,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60,
-      61,
-      62,
-      63,
-      64,
-      65,
-      66,
-      67,
-      68,
-      70,
-      71,
-      72,
-      73,
-      74,
-      75,
-      76,
-      77,
-      78,
-      79,
-      80,
-      81,
-      82,
-      83,
-      84,
-      86,
-      87,
-      88,
-      90,
-      91,
-      92,
-      93,
-      94,
-      96,
-      97,
-      98,
-      100,
-      101,
-      102,
-      103,
-      104,
-      105,
-      107,
-      108,
-      109,
-      110,
-      111,
-      112,
-      114,
-      115,
-      116,
-      117,
-      118,
-      120,
-      121
-    ])
     ..hasRequiredFields = false;
 
-  ErrorCode() : super();
-  ErrorCode.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorCode.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorCode._() : super();
+  factory ErrorCode() => create();
+  factory ErrorCode.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorCode.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorCode clone() => ErrorCode()..mergeFromMessage(this);
   ErrorCode copyWith(void Function(ErrorCode) updates) =>
       super.copyWith((message) => updates(message as ErrorCode));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorCode create() => ErrorCode();
+  @$core.pragma('dart2js:noInline')
+  static ErrorCode create() => ErrorCode._();
   ErrorCode createEmptyInstance() => create();
   static $pb.PbList<ErrorCode> createRepeated() => $pb.PbList<ErrorCode>();
   static ErrorCode getDefault() => _defaultInstance ??= create()..freeze();
@@ -1628,13 +1635,14 @@ class ErrorLocation_FieldPathElement extends $pb.GeneratedMessage {
         $1.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ErrorLocation_FieldPathElement() : super();
-  ErrorLocation_FieldPathElement.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorLocation_FieldPathElement.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorLocation_FieldPathElement._() : super();
+  factory ErrorLocation_FieldPathElement() => create();
+  factory ErrorLocation_FieldPathElement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorLocation_FieldPathElement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorLocation_FieldPathElement clone() =>
       ErrorLocation_FieldPathElement()..mergeFromMessage(this);
   ErrorLocation_FieldPathElement copyWith(
@@ -1642,8 +1650,9 @@ class ErrorLocation_FieldPathElement extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ErrorLocation_FieldPathElement));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ErrorLocation_FieldPathElement create() =>
-      ErrorLocation_FieldPathElement();
+      ErrorLocation_FieldPathElement._();
   ErrorLocation_FieldPathElement createEmptyInstance() => create();
   static $pb.PbList<ErrorLocation_FieldPathElement> createRepeated() =>
       $pb.PbList<ErrorLocation_FieldPathElement>();
@@ -1675,18 +1684,20 @@ class ErrorLocation extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, ErrorLocation_FieldPathElement.create)
     ..hasRequiredFields = false;
 
-  ErrorLocation() : super();
-  ErrorLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorLocation._() : super();
+  factory ErrorLocation() => create();
+  factory ErrorLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorLocation clone() => ErrorLocation()..mergeFromMessage(this);
   ErrorLocation copyWith(void Function(ErrorLocation) updates) =>
       super.copyWith((message) => updates(message as ErrorLocation));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorLocation create() => ErrorLocation();
+  @$core.pragma('dart2js:noInline')
+  static ErrorLocation create() => ErrorLocation._();
   ErrorLocation createEmptyInstance() => create();
   static $pb.PbList<ErrorLocation> createRepeated() =>
       $pb.PbList<ErrorLocation>();
@@ -1707,18 +1718,20 @@ class ErrorDetails extends $pb.GeneratedMessage {
         PolicyFindingDetails.getDefault, PolicyFindingDetails.create)
     ..hasRequiredFields = false;
 
-  ErrorDetails() : super();
-  ErrorDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorDetails._() : super();
+  factory ErrorDetails() => create();
+  factory ErrorDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorDetails clone() => ErrorDetails()..mergeFromMessage(this);
   ErrorDetails copyWith(void Function(ErrorDetails) updates) =>
       super.copyWith((message) => updates(message as ErrorDetails));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorDetails create() => ErrorDetails();
+  @$core.pragma('dart2js:noInline')
+  static ErrorDetails create() => ErrorDetails._();
   ErrorDetails createEmptyInstance() => create();
   static $pb.PbList<ErrorDetails> createRepeated() =>
       $pb.PbList<ErrorDetails>();
@@ -1760,20 +1773,22 @@ class PolicyViolationDetails extends $pb.GeneratedMessage {
     ..aOB(6, 'isExemptible')
     ..hasRequiredFields = false;
 
-  PolicyViolationDetails() : super();
-  PolicyViolationDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyViolationDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyViolationDetails._() : super();
+  factory PolicyViolationDetails() => create();
+  factory PolicyViolationDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyViolationDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyViolationDetails clone() =>
       PolicyViolationDetails()..mergeFromMessage(this);
   PolicyViolationDetails copyWith(
           void Function(PolicyViolationDetails) updates) =>
       super.copyWith((message) => updates(message as PolicyViolationDetails));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyViolationDetails create() => PolicyViolationDetails();
+  @$core.pragma('dart2js:noInline')
+  static PolicyViolationDetails create() => PolicyViolationDetails._();
   PolicyViolationDetails createEmptyInstance() => create();
   static $pb.PbList<PolicyViolationDetails> createRepeated() =>
       $pb.PbList<PolicyViolationDetails>();
@@ -1821,19 +1836,21 @@ class PolicyFindingDetails extends $pb.GeneratedMessage {
         1, 'policyTopicEntries', $pb.PbFieldType.PM, $2.PolicyTopicEntry.create)
     ..hasRequiredFields = false;
 
-  PolicyFindingDetails() : super();
-  PolicyFindingDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyFindingDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyFindingDetails._() : super();
+  factory PolicyFindingDetails() => create();
+  factory PolicyFindingDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyFindingDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyFindingDetails clone() =>
       PolicyFindingDetails()..mergeFromMessage(this);
   PolicyFindingDetails copyWith(void Function(PolicyFindingDetails) updates) =>
       super.copyWith((message) => updates(message as PolicyFindingDetails));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyFindingDetails create() => PolicyFindingDetails();
+  @$core.pragma('dart2js:noInline')
+  static PolicyFindingDetails create() => PolicyFindingDetails._();
   PolicyFindingDetails createEmptyInstance() => create();
   static $pb.PbList<PolicyFindingDetails> createRepeated() =>
       $pb.PbList<PolicyFindingDetails>();

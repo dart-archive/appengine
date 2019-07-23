@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2beta3/queue.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class Queue extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Queue',
       package: const $pb.PackageName('google.cloud.tasks.v2beta3'))
+    ..oo(0, [3])
     ..aOS(1, 'name')
     ..a<$0.AppEngineHttpQueue>(3, 'appEngineHttpQueue', $pb.PbFieldType.OM,
         $0.AppEngineHttpQueue.getDefault, $0.AppEngineHttpQueue.create)
@@ -43,21 +45,22 @@ class Queue extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         StackdriverLoggingConfig.getDefault,
         StackdriverLoggingConfig.create)
-    ..oo(0, [3])
     ..hasRequiredFields = false;
 
-  Queue() : super();
-  Queue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Queue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Queue._() : super();
+  factory Queue() => create();
+  factory Queue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Queue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Queue clone() => Queue()..mergeFromMessage(this);
   Queue copyWith(void Function(Queue) updates) =>
       super.copyWith((message) => updates(message as Queue));
   $pb.BuilderInfo get info_ => _i;
-  static Queue create() => Queue();
+  @$core.pragma('dart2js:noInline')
+  static Queue create() => Queue._();
   Queue createEmptyInstance() => create();
   static $pb.PbList<Queue> createRepeated() => $pb.PbList<Queue>();
   static Queue getDefault() => _defaultInstance ??= create()..freeze();
@@ -131,18 +134,20 @@ class RateLimits extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'maxConcurrentDispatches', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  RateLimits() : super();
-  RateLimits.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RateLimits.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RateLimits._() : super();
+  factory RateLimits() => create();
+  factory RateLimits.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RateLimits.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RateLimits clone() => RateLimits()..mergeFromMessage(this);
   RateLimits copyWith(void Function(RateLimits) updates) =>
       super.copyWith((message) => updates(message as RateLimits));
   $pb.BuilderInfo get info_ => _i;
-  static RateLimits create() => RateLimits();
+  @$core.pragma('dart2js:noInline')
+  static RateLimits create() => RateLimits._();
   RateLimits createEmptyInstance() => create();
   static $pb.PbList<RateLimits> createRepeated() => $pb.PbList<RateLimits>();
   static RateLimits getDefault() => _defaultInstance ??= create()..freeze();
@@ -186,18 +191,20 @@ class RetryConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'maxDoublings', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  RetryConfig() : super();
-  RetryConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RetryConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RetryConfig._() : super();
+  factory RetryConfig() => create();
+  factory RetryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RetryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RetryConfig clone() => RetryConfig()..mergeFromMessage(this);
   RetryConfig copyWith(void Function(RetryConfig) updates) =>
       super.copyWith((message) => updates(message as RetryConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RetryConfig create() => RetryConfig();
+  @$core.pragma('dart2js:noInline')
+  static RetryConfig create() => RetryConfig._();
   RetryConfig createEmptyInstance() => create();
   static $pb.PbList<RetryConfig> createRepeated() => $pb.PbList<RetryConfig>();
   static RetryConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -250,20 +257,22 @@ class StackdriverLoggingConfig extends $pb.GeneratedMessage {
     ..a<$core.double>(1, 'samplingRatio', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  StackdriverLoggingConfig() : super();
-  StackdriverLoggingConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StackdriverLoggingConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StackdriverLoggingConfig._() : super();
+  factory StackdriverLoggingConfig() => create();
+  factory StackdriverLoggingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StackdriverLoggingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StackdriverLoggingConfig clone() =>
       StackdriverLoggingConfig()..mergeFromMessage(this);
   StackdriverLoggingConfig copyWith(
           void Function(StackdriverLoggingConfig) updates) =>
       super.copyWith((message) => updates(message as StackdriverLoggingConfig));
   $pb.BuilderInfo get info_ => _i;
-  static StackdriverLoggingConfig create() => StackdriverLoggingConfig();
+  @$core.pragma('dart2js:noInline')
+  static StackdriverLoggingConfig create() => StackdriverLoggingConfig._();
   StackdriverLoggingConfig createEmptyInstance() => create();
   static $pb.PbList<StackdriverLoggingConfig> createRepeated() =>
       $pb.PbList<StackdriverLoggingConfig>();

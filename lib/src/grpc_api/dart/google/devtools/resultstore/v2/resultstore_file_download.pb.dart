@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/resultstore_file_download.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -16,20 +17,23 @@ class GetFileRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'uri')
     ..aInt64(2, 'readOffset')
     ..aInt64(3, 'readLimit')
+    ..aOS(4, 'archiveEntry')
     ..hasRequiredFields = false;
 
-  GetFileRequest() : super();
-  GetFileRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetFileRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetFileRequest._() : super();
+  factory GetFileRequest() => create();
+  factory GetFileRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetFileRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetFileRequest clone() => GetFileRequest()..mergeFromMessage(this);
   GetFileRequest copyWith(void Function(GetFileRequest) updates) =>
       super.copyWith((message) => updates(message as GetFileRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetFileRequest create() => GetFileRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetFileRequest create() => GetFileRequest._();
   GetFileRequest createEmptyInstance() => create();
   static $pb.PbList<GetFileRequest> createRepeated() =>
       $pb.PbList<GetFileRequest>();
@@ -59,6 +63,14 @@ class GetFileRequest extends $pb.GeneratedMessage {
 
   $core.bool hasReadLimit() => $_has(2);
   void clearReadLimit() => clearField(3);
+
+  $core.String get archiveEntry => $_getS(3, '');
+  set archiveEntry($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasArchiveEntry() => $_has(3);
+  void clearArchiveEntry() => clearField(4);
 }
 
 class GetFileResponse extends $pb.GeneratedMessage {
@@ -67,18 +79,20 @@ class GetFileResponse extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  GetFileResponse() : super();
-  GetFileResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetFileResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetFileResponse._() : super();
+  factory GetFileResponse() => create();
+  factory GetFileResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetFileResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetFileResponse clone() => GetFileResponse()..mergeFromMessage(this);
   GetFileResponse copyWith(void Function(GetFileResponse) updates) =>
       super.copyWith((message) => updates(message as GetFileResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GetFileResponse create() => GetFileResponse();
+  @$core.pragma('dart2js:noInline')
+  static GetFileResponse create() => GetFileResponse._();
   GetFileResponse createEmptyInstance() => create();
   static $pb.PbList<GetFileResponse> createRepeated() =>
       $pb.PbList<GetFileResponse>();
@@ -101,20 +115,23 @@ class GetFileTailRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'uri')
     ..aInt64(2, 'readOffset')
     ..aInt64(3, 'readLimit')
+    ..aOS(4, 'archiveEntry')
     ..hasRequiredFields = false;
 
-  GetFileTailRequest() : super();
-  GetFileTailRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetFileTailRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetFileTailRequest._() : super();
+  factory GetFileTailRequest() => create();
+  factory GetFileTailRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetFileTailRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetFileTailRequest clone() => GetFileTailRequest()..mergeFromMessage(this);
   GetFileTailRequest copyWith(void Function(GetFileTailRequest) updates) =>
       super.copyWith((message) => updates(message as GetFileTailRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetFileTailRequest create() => GetFileTailRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetFileTailRequest create() => GetFileTailRequest._();
   GetFileTailRequest createEmptyInstance() => create();
   static $pb.PbList<GetFileTailRequest> createRepeated() =>
       $pb.PbList<GetFileTailRequest>();
@@ -145,6 +162,14 @@ class GetFileTailRequest extends $pb.GeneratedMessage {
 
   $core.bool hasReadLimit() => $_has(2);
   void clearReadLimit() => clearField(3);
+
+  $core.String get archiveEntry => $_getS(3, '');
+  set archiveEntry($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasArchiveEntry() => $_has(3);
+  void clearArchiveEntry() => clearField(4);
 }
 
 class GetFileTailResponse extends $pb.GeneratedMessage {
@@ -153,18 +178,20 @@ class GetFileTailResponse extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  GetFileTailResponse() : super();
-  GetFileTailResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetFileTailResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetFileTailResponse._() : super();
+  factory GetFileTailResponse() => create();
+  factory GetFileTailResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetFileTailResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetFileTailResponse clone() => GetFileTailResponse()..mergeFromMessage(this);
   GetFileTailResponse copyWith(void Function(GetFileTailResponse) updates) =>
       super.copyWith((message) => updates(message as GetFileTailResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GetFileTailResponse create() => GetFileTailResponse();
+  @$core.pragma('dart2js:noInline')
+  static GetFileTailResponse create() => GetFileTailResponse._();
   GetFileTailResponse createEmptyInstance() => create();
   static $pb.PbList<GetFileTailResponse> createRepeated() =>
       $pb.PbList<GetFileTailResponse>();

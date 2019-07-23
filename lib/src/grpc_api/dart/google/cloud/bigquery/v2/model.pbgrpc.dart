@@ -1,50 +1,53 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/v2/model.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'model.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'model.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 export 'model.pb.dart';
 
 class ModelServiceClient extends $grpc.Client {
-  static final _$getModel = $grpc.ClientMethod<GetModelRequest, Model>(
+  static final _$getModel = $grpc.ClientMethod<$0.GetModelRequest, $0.Model>(
       '/google.cloud.bigquery.v2.ModelService/GetModel',
-      (GetModelRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Model.fromBuffer(value));
+      ($0.GetModelRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Model.fromBuffer(value));
   static final _$listModels =
-      $grpc.ClientMethod<ListModelsRequest, ListModelsResponse>(
+      $grpc.ClientMethod<$0.ListModelsRequest, $0.ListModelsResponse>(
           '/google.cloud.bigquery.v2.ModelService/ListModels',
-          (ListModelsRequest value) => value.writeToBuffer(),
+          ($0.ListModelsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListModelsResponse.fromBuffer(value));
-  static final _$patchModel = $grpc.ClientMethod<PatchModelRequest, Model>(
-      '/google.cloud.bigquery.v2.ModelService/PatchModel',
-      (PatchModelRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Model.fromBuffer(value));
-  static final _$deleteModel = $grpc.ClientMethod<DeleteModelRequest, $0.Empty>(
-      '/google.cloud.bigquery.v2.ModelService/DeleteModel',
-      (DeleteModelRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+              $0.ListModelsResponse.fromBuffer(value));
+  static final _$patchModel =
+      $grpc.ClientMethod<$0.PatchModelRequest, $0.Model>(
+          '/google.cloud.bigquery.v2.ModelService/PatchModel',
+          ($0.PatchModelRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Model.fromBuffer(value));
+  static final _$deleteModel =
+      $grpc.ClientMethod<$0.DeleteModelRequest, $1.Empty>(
+          '/google.cloud.bigquery.v2.ModelService/DeleteModel',
+          ($0.DeleteModelRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   ModelServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<Model> getModel(GetModelRequest request,
+  $grpc.ResponseFuture<$0.Model> getModel($0.GetModelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getModel, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListModelsResponse> listModels(ListModelsRequest request,
+  $grpc.ResponseFuture<$0.ListModelsResponse> listModels(
+      $0.ListModelsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listModels, $async.Stream.fromIterable([request]),
@@ -52,7 +55,7 @@ class ModelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Model> patchModel(PatchModelRequest request,
+  $grpc.ResponseFuture<$0.Model> patchModel($0.PatchModelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$patchModel, $async.Stream.fromIterable([request]),
@@ -60,7 +63,7 @@ class ModelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteModel(DeleteModelRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteModel($0.DeleteModelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteModel, $async.Stream.fromIterable([request]),
@@ -73,62 +76,63 @@ abstract class ModelServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.bigquery.v2.ModelService';
 
   ModelServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetModelRequest, Model>(
+    $addMethod($grpc.ServiceMethod<$0.GetModelRequest, $0.Model>(
         'GetModel',
         getModel_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetModelRequest.fromBuffer(value),
-        (Model value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListModelsRequest, ListModelsResponse>(
+        ($core.List<$core.int> value) => $0.GetModelRequest.fromBuffer(value),
+        ($0.Model value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListModelsRequest, $0.ListModelsResponse>(
         'ListModels',
         listModels_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ListModelsRequest.fromBuffer(value),
-        (ListModelsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<PatchModelRequest, Model>(
+        ($core.List<$core.int> value) => $0.ListModelsRequest.fromBuffer(value),
+        ($0.ListModelsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.PatchModelRequest, $0.Model>(
         'PatchModel',
         patchModel_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => PatchModelRequest.fromBuffer(value),
-        (Model value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteModelRequest, $0.Empty>(
+        ($core.List<$core.int> value) => $0.PatchModelRequest.fromBuffer(value),
+        ($0.Model value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteModelRequest, $1.Empty>(
         'DeleteModel',
         deleteModel_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteModelRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) =>
+            $0.DeleteModelRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<Model> getModel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Model> getModel_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.GetModelRequest> request) async {
     return getModel(call, await request);
   }
 
-  $async.Future<ListModelsResponse> listModels_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListModelsResponse> listModels_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ListModelsRequest> request) async {
     return listModels(call, await request);
   }
 
-  $async.Future<Model> patchModel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Model> patchModel_Pre($grpc.ServiceCall call,
+      $async.Future<$0.PatchModelRequest> request) async {
     return patchModel(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteModel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteModel_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteModelRequest> request) async {
     return deleteModel(call, await request);
   }
 
-  $async.Future<Model> getModel(
-      $grpc.ServiceCall call, GetModelRequest request);
-  $async.Future<ListModelsResponse> listModels(
-      $grpc.ServiceCall call, ListModelsRequest request);
-  $async.Future<Model> patchModel(
-      $grpc.ServiceCall call, PatchModelRequest request);
-  $async.Future<$0.Empty> deleteModel(
-      $grpc.ServiceCall call, DeleteModelRequest request);
+  $async.Future<$0.Model> getModel(
+      $grpc.ServiceCall call, $0.GetModelRequest request);
+  $async.Future<$0.ListModelsResponse> listModels(
+      $grpc.ServiceCall call, $0.ListModelsRequest request);
+  $async.Future<$0.Model> patchModel(
+      $grpc.ServiceCall call, $0.PatchModelRequest request);
+  $async.Future<$1.Empty> deleteModel(
+      $grpc.ServiceCall call, $0.DeleteModelRequest request);
 }

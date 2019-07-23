@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign_draft.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -38,18 +39,20 @@ class CampaignDraft extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CampaignDraft() : super();
-  CampaignDraft.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignDraft.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignDraft._() : super();
+  factory CampaignDraft() => create();
+  factory CampaignDraft.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignDraft.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignDraft clone() => CampaignDraft()..mergeFromMessage(this);
   CampaignDraft copyWith(void Function(CampaignDraft) updates) =>
       super.copyWith((message) => updates(message as CampaignDraft));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignDraft create() => CampaignDraft();
+  @$core.pragma('dart2js:noInline')
+  static CampaignDraft create() => CampaignDraft._();
   CampaignDraft createEmptyInstance() => create();
   static $pb.PbList<CampaignDraft> createRepeated() =>
       $pb.PbList<CampaignDraft>();

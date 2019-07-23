@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/cluster/v1/bigtable_cluster_data.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../longrunning/operations.pb.dart' as $1;
+import '../../../../longrunning/operations.pb.dart' as $0;
 
 import 'bigtable_cluster_data.pbenum.dart';
 
@@ -24,18 +25,20 @@ class Zone extends $pb.GeneratedMessage {
         Zone_Status.valueOf, Zone_Status.values)
     ..hasRequiredFields = false;
 
-  Zone() : super();
-  Zone.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Zone.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Zone._() : super();
+  factory Zone() => create();
+  factory Zone.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Zone.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Zone clone() => Zone()..mergeFromMessage(this);
   Zone copyWith(void Function(Zone) updates) =>
       super.copyWith((message) => updates(message as Zone));
   $pb.BuilderInfo get info_ => _i;
-  static Zone create() => Zone();
+  @$core.pragma('dart2js:noInline')
+  static Zone create() => Zone._();
   Zone createEmptyInstance() => create();
   static $pb.PbList<Zone> createRepeated() => $pb.PbList<Zone>();
   static Zone getDefault() => _defaultInstance ??= create()..freeze();
@@ -70,8 +73,8 @@ class Cluster extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cluster',
       package: const $pb.PackageName('google.bigtable.admin.cluster.v1'))
     ..aOS(1, 'name')
-    ..a<$1.Operation>(3, 'currentOperation', $pb.PbFieldType.OM,
-        $1.Operation.getDefault, $1.Operation.create)
+    ..a<$0.Operation>(3, 'currentOperation', $pb.PbFieldType.OM,
+        $0.Operation.getDefault, $0.Operation.create)
     ..aOS(4, 'displayName')
     ..a<$core.int>(5, 'serveNodes', $pb.PbFieldType.O3)
     ..e<StorageType>(
@@ -83,18 +86,20 @@ class Cluster extends $pb.GeneratedMessage {
         StorageType.values)
     ..hasRequiredFields = false;
 
-  Cluster() : super();
-  Cluster.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cluster.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Cluster._() : super();
+  factory Cluster() => create();
+  factory Cluster.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cluster.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Cluster clone() => Cluster()..mergeFromMessage(this);
   Cluster copyWith(void Function(Cluster) updates) =>
       super.copyWith((message) => updates(message as Cluster));
   $pb.BuilderInfo get info_ => _i;
-  static Cluster create() => Cluster();
+  @$core.pragma('dart2js:noInline')
+  static Cluster create() => Cluster._();
   Cluster createEmptyInstance() => create();
   static $pb.PbList<Cluster> createRepeated() => $pb.PbList<Cluster>();
   static Cluster getDefault() => _defaultInstance ??= create()..freeze();
@@ -108,8 +113,8 @@ class Cluster extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $1.Operation get currentOperation => $_getN(1);
-  set currentOperation($1.Operation v) {
+  $0.Operation get currentOperation => $_getN(1);
+  set currentOperation($0.Operation v) {
     setField(3, v);
   }
 

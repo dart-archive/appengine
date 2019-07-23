@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/managed_placement_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,19 +16,21 @@ class ManagedPlacementView extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  ManagedPlacementView() : super();
-  ManagedPlacementView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManagedPlacementView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManagedPlacementView._() : super();
+  factory ManagedPlacementView() => create();
+  factory ManagedPlacementView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManagedPlacementView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManagedPlacementView clone() =>
       ManagedPlacementView()..mergeFromMessage(this);
   ManagedPlacementView copyWith(void Function(ManagedPlacementView) updates) =>
       super.copyWith((message) => updates(message as ManagedPlacementView));
   $pb.BuilderInfo get info_ => _i;
-  static ManagedPlacementView create() => ManagedPlacementView();
+  @$core.pragma('dart2js:noInline')
+  static ManagedPlacementView create() => ManagedPlacementView._();
   ManagedPlacementView createEmptyInstance() => create();
   static $pb.PbList<ManagedPlacementView> createRepeated() =>
       $pb.PbList<ManagedPlacementView>();

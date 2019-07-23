@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/feed_mapping.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -48,6 +49,7 @@ class FeedMapping extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FeedMapping',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [3, 4])
     ..aOS(1, 'resourceName')
     ..a<$0.StringValue>(2, 'feed', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
@@ -74,21 +76,22 @@ class FeedMapping extends $pb.GeneratedMessage {
         $3.FeedMappingStatusEnum_FeedMappingStatus.UNSPECIFIED,
         $3.FeedMappingStatusEnum_FeedMappingStatus.valueOf,
         $3.FeedMappingStatusEnum_FeedMappingStatus.values)
-    ..oo(0, [3, 4])
     ..hasRequiredFields = false;
 
-  FeedMapping() : super();
-  FeedMapping.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedMapping.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedMapping._() : super();
+  factory FeedMapping() => create();
+  factory FeedMapping.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedMapping.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedMapping clone() => FeedMapping()..mergeFromMessage(this);
   FeedMapping copyWith(void Function(FeedMapping) updates) =>
       super.copyWith((message) => updates(message as FeedMapping));
   $pb.BuilderInfo get info_ => _i;
-  static FeedMapping create() => FeedMapping();
+  @$core.pragma('dart2js:noInline')
+  static FeedMapping create() => FeedMapping._();
   FeedMapping createEmptyInstance() => create();
   static $pb.PbList<FeedMapping> createRepeated() => $pb.PbList<FeedMapping>();
   static FeedMapping getDefault() => _defaultInstance ??= create()..freeze();
@@ -195,6 +198,29 @@ class AttributeFieldMapping extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttributeFieldMapping',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ])
     ..a<$0.Int64Value>(1, 'feedAttributeId', $pb.PbFieldType.OM,
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..a<$0.Int64Value>(2, 'fieldId', $pb.PbFieldType.OM,
@@ -228,17 +254,8 @@ class AttributeFieldMapping extends $pb.GeneratedMessage {
         $7.LocationPlaceholderFieldEnum_LocationPlaceholderField.valueOf,
         $7.LocationPlaceholderFieldEnum_LocationPlaceholderField.values)
     ..e<$8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField>(
-        7,
-        'affiliateLocationField',
-        $pb.PbFieldType.OE,
-        $8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField
-            .UNSPECIFIED,
-        $8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField
-            .valueOf,
-        $8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField
-            .values)
-    ..e<$9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField>(
-        8, 'calloutField', $pb.PbFieldType.OE, $9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField.UNSPECIFIED, $9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField.valueOf, $9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField.values)
+        7, 'affiliateLocationField', $pb.PbFieldType.OE, $8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField.UNSPECIFIED, $8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField.valueOf, $8.AffiliateLocationPlaceholderFieldEnum_AffiliateLocationPlaceholderField.values)
+    ..e<$9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField>(8, 'calloutField', $pb.PbFieldType.OE, $9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField.UNSPECIFIED, $9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField.valueOf, $9.CalloutPlaceholderFieldEnum_CalloutPlaceholderField.values)
     ..e<$10.StructuredSnippetPlaceholderFieldEnum_StructuredSnippetPlaceholderField>(9, 'structuredSnippetField', $pb.PbFieldType.OE, $10.StructuredSnippetPlaceholderFieldEnum_StructuredSnippetPlaceholderField.UNSPECIFIED, $10.StructuredSnippetPlaceholderFieldEnum_StructuredSnippetPlaceholderField.valueOf, $10.StructuredSnippetPlaceholderFieldEnum_StructuredSnippetPlaceholderField.values)
     ..e<$11.MessagePlaceholderFieldEnum_MessagePlaceholderField>(10, 'messageField', $pb.PbFieldType.OE, $11.MessagePlaceholderFieldEnum_MessagePlaceholderField.UNSPECIFIED, $11.MessagePlaceholderFieldEnum_MessagePlaceholderField.valueOf, $11.MessagePlaceholderFieldEnum_MessagePlaceholderField.values)
     ..e<$12.PricePlaceholderFieldEnum_PricePlaceholderField>(11, 'priceField', $pb.PbFieldType.OE, $12.PricePlaceholderFieldEnum_PricePlaceholderField.UNSPECIFIED, $12.PricePlaceholderFieldEnum_PricePlaceholderField.valueOf, $12.PricePlaceholderFieldEnum_PricePlaceholderField.values)
@@ -254,23 +271,24 @@ class AttributeFieldMapping extends $pb.GeneratedMessage {
     ..e<$22.TravelPlaceholderFieldEnum_TravelPlaceholderField>(21, 'travelField', $pb.PbFieldType.OE, $22.TravelPlaceholderFieldEnum_TravelPlaceholderField.UNSPECIFIED, $22.TravelPlaceholderFieldEnum_TravelPlaceholderField.valueOf, $22.TravelPlaceholderFieldEnum_TravelPlaceholderField.values)
     ..e<$23.LocalPlaceholderFieldEnum_LocalPlaceholderField>(22, 'localField', $pb.PbFieldType.OE, $23.LocalPlaceholderFieldEnum_LocalPlaceholderField.UNSPECIFIED, $23.LocalPlaceholderFieldEnum_LocalPlaceholderField.valueOf, $23.LocalPlaceholderFieldEnum_LocalPlaceholderField.values)
     ..e<$24.JobPlaceholderFieldEnum_JobPlaceholderField>(23, 'jobField', $pb.PbFieldType.OE, $24.JobPlaceholderFieldEnum_JobPlaceholderField.UNSPECIFIED, $24.JobPlaceholderFieldEnum_JobPlaceholderField.valueOf, $24.JobPlaceholderFieldEnum_JobPlaceholderField.values)
-    ..oo(0, [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23])
     ..hasRequiredFields = false;
 
-  AttributeFieldMapping() : super();
-  AttributeFieldMapping.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttributeFieldMapping.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AttributeFieldMapping._() : super();
+  factory AttributeFieldMapping() => create();
+  factory AttributeFieldMapping.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AttributeFieldMapping.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AttributeFieldMapping clone() =>
       AttributeFieldMapping()..mergeFromMessage(this);
   AttributeFieldMapping copyWith(
           void Function(AttributeFieldMapping) updates) =>
       super.copyWith((message) => updates(message as AttributeFieldMapping));
   $pb.BuilderInfo get info_ => _i;
-  static AttributeFieldMapping create() => AttributeFieldMapping();
+  @$core.pragma('dart2js:noInline')
+  static AttributeFieldMapping create() => AttributeFieldMapping._();
   AttributeFieldMapping createEmptyInstance() => create();
   static $pb.PbList<AttributeFieldMapping> createRepeated() =>
       $pb.PbList<AttributeFieldMapping>();

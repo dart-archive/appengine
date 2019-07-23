@@ -1,32 +1,32 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/report_errors_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'report_errors_service.pb.dart';
+import 'package:grpc/service_api.dart' as $grpc;
+import 'report_errors_service.pb.dart' as $0;
 export 'report_errors_service.pb.dart';
 
 class ReportErrorsServiceClient extends $grpc.Client {
-  static final _$reportErrorEvent = $grpc.ClientMethod<ReportErrorEventRequest,
-          ReportErrorEventResponse>(
+  static final _$reportErrorEvent = $grpc.ClientMethod<
+          $0.ReportErrorEventRequest, $0.ReportErrorEventResponse>(
       '/google.devtools.clouderrorreporting.v1beta1.ReportErrorsService/ReportErrorEvent',
-      (ReportErrorEventRequest value) => value.writeToBuffer(),
+      ($0.ReportErrorEventRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ReportErrorEventResponse.fromBuffer(value));
+          $0.ReportErrorEventResponse.fromBuffer(value));
 
   ReportErrorsServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ReportErrorEventResponse> reportErrorEvent(
-      ReportErrorEventRequest request,
+  $grpc.ResponseFuture<$0.ReportErrorEventResponse> reportErrorEvent(
+      $0.ReportErrorEventRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$reportErrorEvent, $async.Stream.fromIterable([request]),
@@ -40,22 +40,23 @@ abstract class ReportErrorsServiceBase extends $grpc.Service {
       'google.devtools.clouderrorreporting.v1beta1.ReportErrorsService';
 
   ReportErrorsServiceBase() {
-    $addMethod(
-        $grpc.ServiceMethod<ReportErrorEventRequest, ReportErrorEventResponse>(
-            'ReportErrorEvent',
-            reportErrorEvent_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                ReportErrorEventRequest.fromBuffer(value),
-            (ReportErrorEventResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ReportErrorEventRequest,
+            $0.ReportErrorEventResponse>(
+        'ReportErrorEvent',
+        reportErrorEvent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ReportErrorEventRequest.fromBuffer(value),
+        ($0.ReportErrorEventResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<ReportErrorEventResponse> reportErrorEvent_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ReportErrorEventResponse> reportErrorEvent_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ReportErrorEventRequest> request) async {
     return reportErrorEvent(call, await request);
   }
 
-  $async.Future<ReportErrorEventResponse> reportErrorEvent(
-      $grpc.ServiceCall call, ReportErrorEventRequest request);
+  $async.Future<$0.ReportErrorEventResponse> reportErrorEvent(
+      $grpc.ServiceCall call, $0.ReportErrorEventRequest request);
 }

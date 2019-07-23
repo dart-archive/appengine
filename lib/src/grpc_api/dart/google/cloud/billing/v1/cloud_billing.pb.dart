@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/billing/v1/cloud_billing.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class BillingAccount extends $pb.GeneratedMessage {
     ..aOS(3, 'displayName')
     ..hasRequiredFields = false;
 
-  BillingAccount() : super();
-  BillingAccount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BillingAccount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BillingAccount._() : super();
+  factory BillingAccount() => create();
+  factory BillingAccount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BillingAccount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BillingAccount clone() => BillingAccount()..mergeFromMessage(this);
   BillingAccount copyWith(void Function(BillingAccount) updates) =>
       super.copyWith((message) => updates(message as BillingAccount));
   $pb.BuilderInfo get info_ => _i;
-  static BillingAccount create() => BillingAccount();
+  @$core.pragma('dart2js:noInline')
+  static BillingAccount create() => BillingAccount._();
   BillingAccount createEmptyInstance() => create();
   static $pb.PbList<BillingAccount> createRepeated() =>
       $pb.PbList<BillingAccount>();
@@ -69,18 +72,20 @@ class ProjectBillingInfo extends $pb.GeneratedMessage {
     ..aOB(4, 'billingEnabled')
     ..hasRequiredFields = false;
 
-  ProjectBillingInfo() : super();
-  ProjectBillingInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProjectBillingInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProjectBillingInfo._() : super();
+  factory ProjectBillingInfo() => create();
+  factory ProjectBillingInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProjectBillingInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProjectBillingInfo clone() => ProjectBillingInfo()..mergeFromMessage(this);
   ProjectBillingInfo copyWith(void Function(ProjectBillingInfo) updates) =>
       super.copyWith((message) => updates(message as ProjectBillingInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ProjectBillingInfo create() => ProjectBillingInfo();
+  @$core.pragma('dart2js:noInline')
+  static ProjectBillingInfo create() => ProjectBillingInfo._();
   ProjectBillingInfo createEmptyInstance() => create();
   static $pb.PbList<ProjectBillingInfo> createRepeated() =>
       $pb.PbList<ProjectBillingInfo>();
@@ -127,20 +132,22 @@ class GetBillingAccountRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetBillingAccountRequest() : super();
-  GetBillingAccountRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetBillingAccountRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetBillingAccountRequest._() : super();
+  factory GetBillingAccountRequest() => create();
+  factory GetBillingAccountRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetBillingAccountRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetBillingAccountRequest clone() =>
       GetBillingAccountRequest()..mergeFromMessage(this);
   GetBillingAccountRequest copyWith(
           void Function(GetBillingAccountRequest) updates) =>
       super.copyWith((message) => updates(message as GetBillingAccountRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetBillingAccountRequest create() => GetBillingAccountRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetBillingAccountRequest create() => GetBillingAccountRequest._();
   GetBillingAccountRequest createEmptyInstance() => create();
   static $pb.PbList<GetBillingAccountRequest> createRepeated() =>
       $pb.PbList<GetBillingAccountRequest>();
@@ -165,13 +172,14 @@ class ListBillingAccountsRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListBillingAccountsRequest() : super();
-  ListBillingAccountsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBillingAccountsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListBillingAccountsRequest._() : super();
+  factory ListBillingAccountsRequest() => create();
+  factory ListBillingAccountsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListBillingAccountsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListBillingAccountsRequest clone() =>
       ListBillingAccountsRequest()..mergeFromMessage(this);
   ListBillingAccountsRequest copyWith(
@@ -179,7 +187,8 @@ class ListBillingAccountsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListBillingAccountsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListBillingAccountsRequest create() => ListBillingAccountsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListBillingAccountsRequest create() => ListBillingAccountsRequest._();
   ListBillingAccountsRequest createEmptyInstance() => create();
   static $pb.PbList<ListBillingAccountsRequest> createRepeated() =>
       $pb.PbList<ListBillingAccountsRequest>();
@@ -213,13 +222,14 @@ class ListBillingAccountsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListBillingAccountsResponse() : super();
-  ListBillingAccountsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBillingAccountsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListBillingAccountsResponse._() : super();
+  factory ListBillingAccountsResponse() => create();
+  factory ListBillingAccountsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListBillingAccountsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListBillingAccountsResponse clone() =>
       ListBillingAccountsResponse()..mergeFromMessage(this);
   ListBillingAccountsResponse copyWith(
@@ -227,7 +237,9 @@ class ListBillingAccountsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListBillingAccountsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListBillingAccountsResponse create() => ListBillingAccountsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListBillingAccountsResponse create() =>
+      ListBillingAccountsResponse._();
   ListBillingAccountsResponse createEmptyInstance() => create();
   static $pb.PbList<ListBillingAccountsResponse> createRepeated() =>
       $pb.PbList<ListBillingAccountsResponse>();
@@ -255,13 +267,14 @@ class ListProjectBillingInfoRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListProjectBillingInfoRequest() : super();
-  ListProjectBillingInfoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListProjectBillingInfoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListProjectBillingInfoRequest._() : super();
+  factory ListProjectBillingInfoRequest() => create();
+  factory ListProjectBillingInfoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListProjectBillingInfoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListProjectBillingInfoRequest clone() =>
       ListProjectBillingInfoRequest()..mergeFromMessage(this);
   ListProjectBillingInfoRequest copyWith(
@@ -269,8 +282,9 @@ class ListProjectBillingInfoRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListProjectBillingInfoRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListProjectBillingInfoRequest create() =>
-      ListProjectBillingInfoRequest();
+      ListProjectBillingInfoRequest._();
   ListProjectBillingInfoRequest createEmptyInstance() => create();
   static $pb.PbList<ListProjectBillingInfoRequest> createRepeated() =>
       $pb.PbList<ListProjectBillingInfoRequest>();
@@ -312,13 +326,14 @@ class ListProjectBillingInfoResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListProjectBillingInfoResponse() : super();
-  ListProjectBillingInfoResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListProjectBillingInfoResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListProjectBillingInfoResponse._() : super();
+  factory ListProjectBillingInfoResponse() => create();
+  factory ListProjectBillingInfoResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListProjectBillingInfoResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListProjectBillingInfoResponse clone() =>
       ListProjectBillingInfoResponse()..mergeFromMessage(this);
   ListProjectBillingInfoResponse copyWith(
@@ -326,8 +341,9 @@ class ListProjectBillingInfoResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListProjectBillingInfoResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListProjectBillingInfoResponse create() =>
-      ListProjectBillingInfoResponse();
+      ListProjectBillingInfoResponse._();
   ListProjectBillingInfoResponse createEmptyInstance() => create();
   static $pb.PbList<ListProjectBillingInfoResponse> createRepeated() =>
       $pb.PbList<ListProjectBillingInfoResponse>();
@@ -353,13 +369,14 @@ class GetProjectBillingInfoRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetProjectBillingInfoRequest() : super();
-  GetProjectBillingInfoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetProjectBillingInfoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetProjectBillingInfoRequest._() : super();
+  factory GetProjectBillingInfoRequest() => create();
+  factory GetProjectBillingInfoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetProjectBillingInfoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetProjectBillingInfoRequest clone() =>
       GetProjectBillingInfoRequest()..mergeFromMessage(this);
   GetProjectBillingInfoRequest copyWith(
@@ -367,8 +384,9 @@ class GetProjectBillingInfoRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetProjectBillingInfoRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetProjectBillingInfoRequest create() =>
-      GetProjectBillingInfoRequest();
+      GetProjectBillingInfoRequest._();
   GetProjectBillingInfoRequest createEmptyInstance() => create();
   static $pb.PbList<GetProjectBillingInfoRequest> createRepeated() =>
       $pb.PbList<GetProjectBillingInfoRequest>();
@@ -394,13 +412,14 @@ class UpdateProjectBillingInfoRequest extends $pb.GeneratedMessage {
         ProjectBillingInfo.getDefault, ProjectBillingInfo.create)
     ..hasRequiredFields = false;
 
-  UpdateProjectBillingInfoRequest() : super();
-  UpdateProjectBillingInfoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateProjectBillingInfoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateProjectBillingInfoRequest._() : super();
+  factory UpdateProjectBillingInfoRequest() => create();
+  factory UpdateProjectBillingInfoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateProjectBillingInfoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateProjectBillingInfoRequest clone() =>
       UpdateProjectBillingInfoRequest()..mergeFromMessage(this);
   UpdateProjectBillingInfoRequest copyWith(
@@ -408,8 +427,9 @@ class UpdateProjectBillingInfoRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateProjectBillingInfoRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateProjectBillingInfoRequest create() =>
-      UpdateProjectBillingInfoRequest();
+      UpdateProjectBillingInfoRequest._();
   UpdateProjectBillingInfoRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateProjectBillingInfoRequest> createRepeated() =>
       $pb.PbList<UpdateProjectBillingInfoRequest>();

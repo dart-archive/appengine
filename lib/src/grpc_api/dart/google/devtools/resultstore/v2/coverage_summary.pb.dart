@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/coverage_summary.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class LineCoverageSummary extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'executedLineCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  LineCoverageSummary() : super();
-  LineCoverageSummary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LineCoverageSummary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LineCoverageSummary._() : super();
+  factory LineCoverageSummary() => create();
+  factory LineCoverageSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LineCoverageSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LineCoverageSummary clone() => LineCoverageSummary()..mergeFromMessage(this);
   LineCoverageSummary copyWith(void Function(LineCoverageSummary) updates) =>
       super.copyWith((message) => updates(message as LineCoverageSummary));
   $pb.BuilderInfo get info_ => _i;
-  static LineCoverageSummary create() => LineCoverageSummary();
+  @$core.pragma('dart2js:noInline')
+  static LineCoverageSummary create() => LineCoverageSummary._();
   LineCoverageSummary createEmptyInstance() => create();
   static $pb.PbList<LineCoverageSummary> createRepeated() =>
       $pb.PbList<LineCoverageSummary>();
@@ -62,20 +65,22 @@ class BranchCoverageSummary extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'takenBranchCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  BranchCoverageSummary() : super();
-  BranchCoverageSummary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BranchCoverageSummary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BranchCoverageSummary._() : super();
+  factory BranchCoverageSummary() => create();
+  factory BranchCoverageSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BranchCoverageSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BranchCoverageSummary clone() =>
       BranchCoverageSummary()..mergeFromMessage(this);
   BranchCoverageSummary copyWith(
           void Function(BranchCoverageSummary) updates) =>
       super.copyWith((message) => updates(message as BranchCoverageSummary));
   $pb.BuilderInfo get info_ => _i;
-  static BranchCoverageSummary create() => BranchCoverageSummary();
+  @$core.pragma('dart2js:noInline')
+  static BranchCoverageSummary create() => BranchCoverageSummary._();
   BranchCoverageSummary createEmptyInstance() => create();
   static $pb.PbList<BranchCoverageSummary> createRepeated() =>
       $pb.PbList<BranchCoverageSummary>();
@@ -124,20 +129,22 @@ class LanguageCoverageSummary extends $pb.GeneratedMessage {
         BranchCoverageSummary.getDefault, BranchCoverageSummary.create)
     ..hasRequiredFields = false;
 
-  LanguageCoverageSummary() : super();
-  LanguageCoverageSummary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LanguageCoverageSummary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LanguageCoverageSummary._() : super();
+  factory LanguageCoverageSummary() => create();
+  factory LanguageCoverageSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LanguageCoverageSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LanguageCoverageSummary clone() =>
       LanguageCoverageSummary()..mergeFromMessage(this);
   LanguageCoverageSummary copyWith(
           void Function(LanguageCoverageSummary) updates) =>
       super.copyWith((message) => updates(message as LanguageCoverageSummary));
   $pb.BuilderInfo get info_ => _i;
-  static LanguageCoverageSummary create() => LanguageCoverageSummary();
+  @$core.pragma('dart2js:noInline')
+  static LanguageCoverageSummary create() => LanguageCoverageSummary._();
   LanguageCoverageSummary createEmptyInstance() => create();
   static $pb.PbList<LanguageCoverageSummary> createRepeated() =>
       $pb.PbList<LanguageCoverageSummary>();

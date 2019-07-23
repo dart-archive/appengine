@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/media_file.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,6 +28,7 @@ class MediaFile extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MediaFile',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [3, 4, 10, 11])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -58,21 +60,22 @@ class MediaFile extends $pb.GeneratedMessage {
         MediaAudio.create)
     ..a<MediaVideo>(11, 'video', $pb.PbFieldType.OM, MediaVideo.getDefault,
         MediaVideo.create)
-    ..oo(0, [3, 4, 10, 11])
     ..hasRequiredFields = false;
 
-  MediaFile() : super();
-  MediaFile.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaFile.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaFile._() : super();
+  factory MediaFile() => create();
+  factory MediaFile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaFile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaFile clone() => MediaFile()..mergeFromMessage(this);
   MediaFile copyWith(void Function(MediaFile) updates) =>
       super.copyWith((message) => updates(message as MediaFile));
   $pb.BuilderInfo get info_ => _i;
-  static MediaFile create() => MediaFile();
+  @$core.pragma('dart2js:noInline')
+  static MediaFile create() => MediaFile._();
   MediaFile createEmptyInstance() => create();
   static $pb.PbList<MediaFile> createRepeated() => $pb.PbList<MediaFile>();
   static MediaFile getDefault() => _defaultInstance ??= create()..freeze();
@@ -178,18 +181,20 @@ class MediaImage extends $pb.GeneratedMessage {
         $0.BytesValue.create)
     ..hasRequiredFields = false;
 
-  MediaImage() : super();
-  MediaImage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaImage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaImage._() : super();
+  factory MediaImage() => create();
+  factory MediaImage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaImage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaImage clone() => MediaImage()..mergeFromMessage(this);
   MediaImage copyWith(void Function(MediaImage) updates) =>
       super.copyWith((message) => updates(message as MediaImage));
   $pb.BuilderInfo get info_ => _i;
-  static MediaImage create() => MediaImage();
+  @$core.pragma('dart2js:noInline')
+  static MediaImage create() => MediaImage._();
   MediaImage createEmptyInstance() => create();
   static $pb.PbList<MediaImage> createRepeated() => $pb.PbList<MediaImage>();
   static MediaImage getDefault() => _defaultInstance ??= create()..freeze();
@@ -211,18 +216,20 @@ class MediaBundle extends $pb.GeneratedMessage {
         $0.BytesValue.create)
     ..hasRequiredFields = false;
 
-  MediaBundle() : super();
-  MediaBundle.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaBundle.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaBundle._() : super();
+  factory MediaBundle() => create();
+  factory MediaBundle.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaBundle.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaBundle clone() => MediaBundle()..mergeFromMessage(this);
   MediaBundle copyWith(void Function(MediaBundle) updates) =>
       super.copyWith((message) => updates(message as MediaBundle));
   $pb.BuilderInfo get info_ => _i;
-  static MediaBundle create() => MediaBundle();
+  @$core.pragma('dart2js:noInline')
+  static MediaBundle create() => MediaBundle._();
   MediaBundle createEmptyInstance() => create();
   static $pb.PbList<MediaBundle> createRepeated() => $pb.PbList<MediaBundle>();
   static MediaBundle getDefault() => _defaultInstance ??= create()..freeze();
@@ -244,18 +251,20 @@ class MediaAudio extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  MediaAudio() : super();
-  MediaAudio.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaAudio.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaAudio._() : super();
+  factory MediaAudio() => create();
+  factory MediaAudio.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaAudio.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaAudio clone() => MediaAudio()..mergeFromMessage(this);
   MediaAudio copyWith(void Function(MediaAudio) updates) =>
       super.copyWith((message) => updates(message as MediaAudio));
   $pb.BuilderInfo get info_ => _i;
-  static MediaAudio create() => MediaAudio();
+  @$core.pragma('dart2js:noInline')
+  static MediaAudio create() => MediaAudio._();
   MediaAudio createEmptyInstance() => create();
   static $pb.PbList<MediaAudio> createRepeated() => $pb.PbList<MediaAudio>();
   static MediaAudio getDefault() => _defaultInstance ??= create()..freeze();
@@ -283,18 +292,20 @@ class MediaVideo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  MediaVideo() : super();
-  MediaVideo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaVideo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaVideo._() : super();
+  factory MediaVideo() => create();
+  factory MediaVideo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaVideo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaVideo clone() => MediaVideo()..mergeFromMessage(this);
   MediaVideo copyWith(void Function(MediaVideo) updates) =>
       super.copyWith((message) => updates(message as MediaVideo));
   $pb.BuilderInfo get info_ => _i;
-  static MediaVideo create() => MediaVideo();
+  @$core.pragma('dart2js:noInline')
+  static MediaVideo create() => MediaVideo._();
   MediaVideo createEmptyInstance() => create();
   static $pb.PbList<MediaVideo> createRepeated() => $pb.PbList<MediaVideo>();
   static MediaVideo getDefault() => _defaultInstance ??= create()..freeze();

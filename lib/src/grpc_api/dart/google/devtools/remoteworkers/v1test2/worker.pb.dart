@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/remoteworkers/v1test2/worker.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class Worker_Property extends $pb.GeneratedMessage {
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
 
-  Worker_Property() : super();
-  Worker_Property.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Worker_Property.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Worker_Property._() : super();
+  factory Worker_Property() => create();
+  factory Worker_Property.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Worker_Property.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Worker_Property clone() => Worker_Property()..mergeFromMessage(this);
   Worker_Property copyWith(void Function(Worker_Property) updates) =>
       super.copyWith((message) => updates(message as Worker_Property));
   $pb.BuilderInfo get info_ => _i;
-  static Worker_Property create() => Worker_Property();
+  @$core.pragma('dart2js:noInline')
+  static Worker_Property create() => Worker_Property._();
   Worker_Property createEmptyInstance() => create();
   static $pb.PbList<Worker_Property> createRepeated() =>
       $pb.PbList<Worker_Property>();
@@ -59,18 +62,20 @@ class Worker_Config extends $pb.GeneratedMessage {
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
 
-  Worker_Config() : super();
-  Worker_Config.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Worker_Config.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Worker_Config._() : super();
+  factory Worker_Config() => create();
+  factory Worker_Config.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Worker_Config.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Worker_Config clone() => Worker_Config()..mergeFromMessage(this);
   Worker_Config copyWith(void Function(Worker_Config) updates) =>
       super.copyWith((message) => updates(message as Worker_Config));
   $pb.BuilderInfo get info_ => _i;
-  static Worker_Config create() => Worker_Config();
+  @$core.pragma('dart2js:noInline')
+  static Worker_Config create() => Worker_Config._();
   Worker_Config createEmptyInstance() => create();
   static $pb.PbList<Worker_Config> createRepeated() =>
       $pb.PbList<Worker_Config>();
@@ -103,18 +108,20 @@ class Worker extends $pb.GeneratedMessage {
     ..pc<Worker_Config>(3, 'configs', $pb.PbFieldType.PM, Worker_Config.create)
     ..hasRequiredFields = false;
 
-  Worker() : super();
-  Worker.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Worker.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Worker._() : super();
+  factory Worker() => create();
+  factory Worker.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Worker.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Worker clone() => Worker()..mergeFromMessage(this);
   Worker copyWith(void Function(Worker) updates) =>
       super.copyWith((message) => updates(message as Worker));
   $pb.BuilderInfo get info_ => _i;
-  static Worker create() => Worker();
+  @$core.pragma('dart2js:noInline')
+  static Worker create() => Worker._();
   Worker createEmptyInstance() => create();
   static $pb.PbList<Worker> createRepeated() => $pb.PbList<Worker>();
   static Worker getDefault() => _defaultInstance ??= create()..freeze();
@@ -134,18 +141,20 @@ class Device_Property extends $pb.GeneratedMessage {
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
 
-  Device_Property() : super();
-  Device_Property.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Device_Property.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Device_Property._() : super();
+  factory Device_Property() => create();
+  factory Device_Property.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Device_Property.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Device_Property clone() => Device_Property()..mergeFromMessage(this);
   Device_Property copyWith(void Function(Device_Property) updates) =>
       super.copyWith((message) => updates(message as Device_Property));
   $pb.BuilderInfo get info_ => _i;
-  static Device_Property create() => Device_Property();
+  @$core.pragma('dart2js:noInline')
+  static Device_Property create() => Device_Property._();
   Device_Property createEmptyInstance() => create();
   static $pb.PbList<Device_Property> createRepeated() =>
       $pb.PbList<Device_Property>();
@@ -178,18 +187,20 @@ class Device extends $pb.GeneratedMessage {
         2, 'properties', $pb.PbFieldType.PM, Device_Property.create)
     ..hasRequiredFields = false;
 
-  Device() : super();
-  Device.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Device.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Device._() : super();
+  factory Device() => create();
+  factory Device.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Device.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Device clone() => Device()..mergeFromMessage(this);
   Device copyWith(void Function(Device) updates) =>
       super.copyWith((message) => updates(message as Device));
   $pb.BuilderInfo get info_ => _i;
-  static Device create() => Device();
+  @$core.pragma('dart2js:noInline')
+  static Device create() => Device._();
   Device createEmptyInstance() => create();
   static $pb.PbList<Device> createRepeated() => $pb.PbList<Device>();
   static Device getDefault() => _defaultInstance ??= create()..freeze();

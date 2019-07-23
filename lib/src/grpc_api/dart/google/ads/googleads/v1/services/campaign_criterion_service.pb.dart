@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_criterion_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign_criterion.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/campaign_criterion.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetCampaignCriterionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +21,14 @@ class GetCampaignCriterionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCampaignCriterionRequest() : super();
-  GetCampaignCriterionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCampaignCriterionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCampaignCriterionRequest._() : super();
+  factory GetCampaignCriterionRequest() => create();
+  factory GetCampaignCriterionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCampaignCriterionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCampaignCriterionRequest clone() =>
       GetCampaignCriterionRequest()..mergeFromMessage(this);
   GetCampaignCriterionRequest copyWith(
@@ -34,7 +36,9 @@ class GetCampaignCriterionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetCampaignCriterionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCampaignCriterionRequest create() => GetCampaignCriterionRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignCriterionRequest create() =>
+      GetCampaignCriterionRequest._();
   GetCampaignCriterionRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignCriterionRequest> createRepeated() =>
       $pb.PbList<GetCampaignCriterionRequest>();
@@ -62,13 +66,14 @@ class MutateCampaignCriteriaRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCampaignCriteriaRequest() : super();
-  MutateCampaignCriteriaRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignCriteriaRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignCriteriaRequest._() : super();
+  factory MutateCampaignCriteriaRequest() => create();
+  factory MutateCampaignCriteriaRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignCriteriaRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignCriteriaRequest clone() =>
       MutateCampaignCriteriaRequest()..mergeFromMessage(this);
   MutateCampaignCriteriaRequest copyWith(
@@ -76,8 +81,9 @@ class MutateCampaignCriteriaRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignCriteriaRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignCriteriaRequest create() =>
-      MutateCampaignCriteriaRequest();
+      MutateCampaignCriteriaRequest._();
   MutateCampaignCriteriaRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignCriteriaRequest> createRepeated() =>
       $pb.PbList<MutateCampaignCriteriaRequest>();
@@ -125,23 +131,24 @@ class CampaignCriterionOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CampaignCriterionOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CampaignCriterion>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.CampaignCriterion.getDefault, $0.CampaignCriterion.create)
-    ..a<$0.CampaignCriterion>(2, 'update', $pb.PbFieldType.OM,
-        $0.CampaignCriterion.getDefault, $0.CampaignCriterion.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.CampaignCriterion>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.CampaignCriterion.getDefault, $1.CampaignCriterion.create)
+    ..a<$1.CampaignCriterion>(2, 'update', $pb.PbFieldType.OM,
+        $1.CampaignCriterion.getDefault, $1.CampaignCriterion.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CampaignCriterionOperation() : super();
-  CampaignCriterionOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignCriterionOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignCriterionOperation._() : super();
+  factory CampaignCriterionOperation() => create();
+  factory CampaignCriterionOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignCriterionOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignCriterionOperation clone() =>
       CampaignCriterionOperation()..mergeFromMessage(this);
   CampaignCriterionOperation copyWith(
@@ -149,7 +156,8 @@ class CampaignCriterionOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CampaignCriterionOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignCriterionOperation create() => CampaignCriterionOperation();
+  @$core.pragma('dart2js:noInline')
+  static CampaignCriterionOperation create() => CampaignCriterionOperation._();
   CampaignCriterionOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignCriterionOperation> createRepeated() =>
       $pb.PbList<CampaignCriterionOperation>();
@@ -161,16 +169,16 @@ class CampaignCriterionOperation extends $pb.GeneratedMessage {
       _CampaignCriterionOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CampaignCriterion get create_1 => $_getN(0);
-  set create_1($0.CampaignCriterion v) {
+  $1.CampaignCriterion get create_1 => $_getN(0);
+  set create_1($1.CampaignCriterion v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.CampaignCriterion get update => $_getN(1);
-  set update($0.CampaignCriterion v) {
+  $1.CampaignCriterion get update => $_getN(1);
+  set update($1.CampaignCriterion v) {
     setField(2, v);
   }
 
@@ -185,8 +193,8 @@ class CampaignCriterionOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -200,17 +208,18 @@ class MutateCampaignCriteriaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignCriterionResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignCriterionResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCampaignCriteriaResponse() : super();
-  MutateCampaignCriteriaResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignCriteriaResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignCriteriaResponse._() : super();
+  factory MutateCampaignCriteriaResponse() => create();
+  factory MutateCampaignCriteriaResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignCriteriaResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignCriteriaResponse clone() =>
       MutateCampaignCriteriaResponse()..mergeFromMessage(this);
   MutateCampaignCriteriaResponse copyWith(
@@ -218,8 +227,9 @@ class MutateCampaignCriteriaResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignCriteriaResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignCriteriaResponse create() =>
-      MutateCampaignCriteriaResponse();
+      MutateCampaignCriteriaResponse._();
   MutateCampaignCriteriaResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignCriteriaResponse> createRepeated() =>
       $pb.PbList<MutateCampaignCriteriaResponse>();
@@ -229,8 +239,8 @@ class MutateCampaignCriteriaResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignCriterionResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -245,13 +255,14 @@ class MutateCampaignCriterionResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCampaignCriterionResult() : super();
-  MutateCampaignCriterionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignCriterionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignCriterionResult._() : super();
+  factory MutateCampaignCriterionResult() => create();
+  factory MutateCampaignCriterionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignCriterionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignCriterionResult clone() =>
       MutateCampaignCriterionResult()..mergeFromMessage(this);
   MutateCampaignCriterionResult copyWith(
@@ -259,8 +270,9 @@ class MutateCampaignCriterionResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignCriterionResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignCriterionResult create() =>
-      MutateCampaignCriterionResult();
+      MutateCampaignCriterionResult._();
   MutateCampaignCriterionResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignCriterionResult> createRepeated() =>
       $pb.PbList<MutateCampaignCriterionResult>();

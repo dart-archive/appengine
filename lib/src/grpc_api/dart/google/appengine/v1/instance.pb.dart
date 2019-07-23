@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/instance.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -43,18 +44,20 @@ class Instance extends $pb.GeneratedMessage {
     ..aOB(15, 'vmDebugEnabled')
     ..hasRequiredFields = false;
 
-  Instance() : super();
-  Instance.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Instance._() : super();
+  factory Instance() => create();
+  factory Instance.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Instance.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Instance clone() => Instance()..mergeFromMessage(this);
   Instance copyWith(void Function(Instance) updates) =>
       super.copyWith((message) => updates(message as Instance));
   $pb.BuilderInfo get info_ => _i;
-  static Instance create() => Instance();
+  @$core.pragma('dart2js:noInline')
+  static Instance create() => Instance._();
   Instance createEmptyInstance() => create();
   static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
   static Instance getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/rpc/error_details.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class RetryInfo extends $pb.GeneratedMessage {
             $0.Duration.getDefault, $0.Duration.create)
         ..hasRequiredFields = false;
 
-  RetryInfo() : super();
-  RetryInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RetryInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RetryInfo._() : super();
+  factory RetryInfo() => create();
+  factory RetryInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RetryInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RetryInfo clone() => RetryInfo()..mergeFromMessage(this);
   RetryInfo copyWith(void Function(RetryInfo) updates) =>
       super.copyWith((message) => updates(message as RetryInfo));
   $pb.BuilderInfo get info_ => _i;
-  static RetryInfo create() => RetryInfo();
+  @$core.pragma('dart2js:noInline')
+  static RetryInfo create() => RetryInfo._();
   RetryInfo createEmptyInstance() => create();
   static $pb.PbList<RetryInfo> createRepeated() => $pb.PbList<RetryInfo>();
   static RetryInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -51,18 +54,20 @@ class DebugInfo extends $pb.GeneratedMessage {
         ..aOS(2, 'detail')
         ..hasRequiredFields = false;
 
-  DebugInfo() : super();
-  DebugInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DebugInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DebugInfo._() : super();
+  factory DebugInfo() => create();
+  factory DebugInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DebugInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DebugInfo clone() => DebugInfo()..mergeFromMessage(this);
   DebugInfo copyWith(void Function(DebugInfo) updates) =>
       super.copyWith((message) => updates(message as DebugInfo));
   $pb.BuilderInfo get info_ => _i;
-  static DebugInfo create() => DebugInfo();
+  @$core.pragma('dart2js:noInline')
+  static DebugInfo create() => DebugInfo._();
   DebugInfo createEmptyInstance() => create();
   static $pb.PbList<DebugInfo> createRepeated() => $pb.PbList<DebugInfo>();
   static DebugInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -86,20 +91,22 @@ class QuotaFailure_Violation extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
-  QuotaFailure_Violation() : super();
-  QuotaFailure_Violation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaFailure_Violation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaFailure_Violation._() : super();
+  factory QuotaFailure_Violation() => create();
+  factory QuotaFailure_Violation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuotaFailure_Violation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuotaFailure_Violation clone() =>
       QuotaFailure_Violation()..mergeFromMessage(this);
   QuotaFailure_Violation copyWith(
           void Function(QuotaFailure_Violation) updates) =>
       super.copyWith((message) => updates(message as QuotaFailure_Violation));
   $pb.BuilderInfo get info_ => _i;
-  static QuotaFailure_Violation create() => QuotaFailure_Violation();
+  @$core.pragma('dart2js:noInline')
+  static QuotaFailure_Violation create() => QuotaFailure_Violation._();
   QuotaFailure_Violation createEmptyInstance() => create();
   static $pb.PbList<QuotaFailure_Violation> createRepeated() =>
       $pb.PbList<QuotaFailure_Violation>();
@@ -131,18 +138,20 @@ class QuotaFailure extends $pb.GeneratedMessage {
         1, 'violations', $pb.PbFieldType.PM, QuotaFailure_Violation.create)
     ..hasRequiredFields = false;
 
-  QuotaFailure() : super();
-  QuotaFailure.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaFailure.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaFailure._() : super();
+  factory QuotaFailure() => create();
+  factory QuotaFailure.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuotaFailure.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuotaFailure clone() => QuotaFailure()..mergeFromMessage(this);
   QuotaFailure copyWith(void Function(QuotaFailure) updates) =>
       super.copyWith((message) => updates(message as QuotaFailure));
   $pb.BuilderInfo get info_ => _i;
-  static QuotaFailure create() => QuotaFailure();
+  @$core.pragma('dart2js:noInline')
+  static QuotaFailure create() => QuotaFailure._();
   QuotaFailure createEmptyInstance() => create();
   static $pb.PbList<QuotaFailure> createRepeated() =>
       $pb.PbList<QuotaFailure>();
@@ -161,13 +170,14 @@ class PreconditionFailure_Violation extends $pb.GeneratedMessage {
     ..aOS(3, 'description')
     ..hasRequiredFields = false;
 
-  PreconditionFailure_Violation() : super();
-  PreconditionFailure_Violation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PreconditionFailure_Violation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PreconditionFailure_Violation._() : super();
+  factory PreconditionFailure_Violation() => create();
+  factory PreconditionFailure_Violation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PreconditionFailure_Violation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PreconditionFailure_Violation clone() =>
       PreconditionFailure_Violation()..mergeFromMessage(this);
   PreconditionFailure_Violation copyWith(
@@ -175,8 +185,9 @@ class PreconditionFailure_Violation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PreconditionFailure_Violation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PreconditionFailure_Violation create() =>
-      PreconditionFailure_Violation();
+      PreconditionFailure_Violation._();
   PreconditionFailure_Violation createEmptyInstance() => create();
   static $pb.PbList<PreconditionFailure_Violation> createRepeated() =>
       $pb.PbList<PreconditionFailure_Violation>();
@@ -216,18 +227,20 @@ class PreconditionFailure extends $pb.GeneratedMessage {
         PreconditionFailure_Violation.create)
     ..hasRequiredFields = false;
 
-  PreconditionFailure() : super();
-  PreconditionFailure.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PreconditionFailure.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PreconditionFailure._() : super();
+  factory PreconditionFailure() => create();
+  factory PreconditionFailure.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PreconditionFailure.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PreconditionFailure clone() => PreconditionFailure()..mergeFromMessage(this);
   PreconditionFailure copyWith(void Function(PreconditionFailure) updates) =>
       super.copyWith((message) => updates(message as PreconditionFailure));
   $pb.BuilderInfo get info_ => _i;
-  static PreconditionFailure create() => PreconditionFailure();
+  @$core.pragma('dart2js:noInline')
+  static PreconditionFailure create() => PreconditionFailure._();
   PreconditionFailure createEmptyInstance() => create();
   static $pb.PbList<PreconditionFailure> createRepeated() =>
       $pb.PbList<PreconditionFailure>();
@@ -245,13 +258,14 @@ class BadRequest_FieldViolation extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
-  BadRequest_FieldViolation() : super();
-  BadRequest_FieldViolation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BadRequest_FieldViolation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BadRequest_FieldViolation._() : super();
+  factory BadRequest_FieldViolation() => create();
+  factory BadRequest_FieldViolation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BadRequest_FieldViolation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BadRequest_FieldViolation clone() =>
       BadRequest_FieldViolation()..mergeFromMessage(this);
   BadRequest_FieldViolation copyWith(
@@ -259,7 +273,8 @@ class BadRequest_FieldViolation extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BadRequest_FieldViolation));
   $pb.BuilderInfo get info_ => _i;
-  static BadRequest_FieldViolation create() => BadRequest_FieldViolation();
+  @$core.pragma('dart2js:noInline')
+  static BadRequest_FieldViolation create() => BadRequest_FieldViolation._();
   BadRequest_FieldViolation createEmptyInstance() => create();
   static $pb.PbList<BadRequest_FieldViolation> createRepeated() =>
       $pb.PbList<BadRequest_FieldViolation>();
@@ -291,18 +306,20 @@ class BadRequest extends $pb.GeneratedMessage {
         BadRequest_FieldViolation.create)
     ..hasRequiredFields = false;
 
-  BadRequest() : super();
-  BadRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BadRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BadRequest._() : super();
+  factory BadRequest() => create();
+  factory BadRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BadRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BadRequest clone() => BadRequest()..mergeFromMessage(this);
   BadRequest copyWith(void Function(BadRequest) updates) =>
       super.copyWith((message) => updates(message as BadRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BadRequest create() => BadRequest();
+  @$core.pragma('dart2js:noInline')
+  static BadRequest create() => BadRequest._();
   BadRequest createEmptyInstance() => create();
   static $pb.PbList<BadRequest> createRepeated() => $pb.PbList<BadRequest>();
   static BadRequest getDefault() => _defaultInstance ??= create()..freeze();
@@ -318,18 +335,20 @@ class RequestInfo extends $pb.GeneratedMessage {
     ..aOS(2, 'servingData')
     ..hasRequiredFields = false;
 
-  RequestInfo() : super();
-  RequestInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RequestInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RequestInfo._() : super();
+  factory RequestInfo() => create();
+  factory RequestInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RequestInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RequestInfo clone() => RequestInfo()..mergeFromMessage(this);
   RequestInfo copyWith(void Function(RequestInfo) updates) =>
       super.copyWith((message) => updates(message as RequestInfo));
   $pb.BuilderInfo get info_ => _i;
-  static RequestInfo create() => RequestInfo();
+  @$core.pragma('dart2js:noInline')
+  static RequestInfo create() => RequestInfo._();
   RequestInfo createEmptyInstance() => create();
   static $pb.PbList<RequestInfo> createRepeated() => $pb.PbList<RequestInfo>();
   static RequestInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -361,18 +380,20 @@ class ResourceInfo extends $pb.GeneratedMessage {
     ..aOS(4, 'description')
     ..hasRequiredFields = false;
 
-  ResourceInfo() : super();
-  ResourceInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceInfo._() : super();
+  factory ResourceInfo() => create();
+  factory ResourceInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceInfo clone() => ResourceInfo()..mergeFromMessage(this);
   ResourceInfo copyWith(void Function(ResourceInfo) updates) =>
       super.copyWith((message) => updates(message as ResourceInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ResourceInfo create() => ResourceInfo();
+  @$core.pragma('dart2js:noInline')
+  static ResourceInfo create() => ResourceInfo._();
   ResourceInfo createEmptyInstance() => create();
   static $pb.PbList<ResourceInfo> createRepeated() =>
       $pb.PbList<ResourceInfo>();
@@ -419,18 +440,20 @@ class Help_Link extends $pb.GeneratedMessage {
         ..aOS(2, 'url')
         ..hasRequiredFields = false;
 
-  Help_Link() : super();
-  Help_Link.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Help_Link.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Help_Link._() : super();
+  factory Help_Link() => create();
+  factory Help_Link.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Help_Link.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Help_Link clone() => Help_Link()..mergeFromMessage(this);
   Help_Link copyWith(void Function(Help_Link) updates) =>
       super.copyWith((message) => updates(message as Help_Link));
   $pb.BuilderInfo get info_ => _i;
-  static Help_Link create() => Help_Link();
+  @$core.pragma('dart2js:noInline')
+  static Help_Link create() => Help_Link._();
   Help_Link createEmptyInstance() => create();
   static $pb.PbList<Help_Link> createRepeated() => $pb.PbList<Help_Link>();
   static Help_Link getDefault() => _defaultInstance ??= create()..freeze();
@@ -459,18 +482,20 @@ class Help extends $pb.GeneratedMessage {
         ..pc<Help_Link>(1, 'links', $pb.PbFieldType.PM, Help_Link.create)
         ..hasRequiredFields = false;
 
-  Help() : super();
-  Help.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Help.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Help._() : super();
+  factory Help() => create();
+  factory Help.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Help.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Help clone() => Help()..mergeFromMessage(this);
   Help copyWith(void Function(Help) updates) =>
       super.copyWith((message) => updates(message as Help));
   $pb.BuilderInfo get info_ => _i;
-  static Help create() => Help();
+  @$core.pragma('dart2js:noInline')
+  static Help create() => Help._();
   Help createEmptyInstance() => create();
   static $pb.PbList<Help> createRepeated() => $pb.PbList<Help>();
   static Help getDefault() => _defaultInstance ??= create()..freeze();
@@ -486,18 +511,20 @@ class LocalizedMessage extends $pb.GeneratedMessage {
     ..aOS(2, 'message')
     ..hasRequiredFields = false;
 
-  LocalizedMessage() : super();
-  LocalizedMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LocalizedMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LocalizedMessage._() : super();
+  factory LocalizedMessage() => create();
+  factory LocalizedMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LocalizedMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LocalizedMessage clone() => LocalizedMessage()..mergeFromMessage(this);
   LocalizedMessage copyWith(void Function(LocalizedMessage) updates) =>
       super.copyWith((message) => updates(message as LocalizedMessage));
   $pb.BuilderInfo get info_ => _i;
-  static LocalizedMessage create() => LocalizedMessage();
+  @$core.pragma('dart2js:noInline')
+  static LocalizedMessage create() => LocalizedMessage._();
   LocalizedMessage createEmptyInstance() => create();
   static $pb.PbList<LocalizedMessage> createRepeated() =>
       $pb.PbList<LocalizedMessage>();

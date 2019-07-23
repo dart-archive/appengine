@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/irm/v1alpha2/incidents.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const User$json = {
   '1': 'User',
@@ -118,6 +119,7 @@ const Annotation$json = {
       '10': 'createTime'
     },
     {'1': 'content', '3': 4, '4': 1, '5': 9, '10': 'content'},
+    {'1': 'content_type', '3': 5, '4': 1, '5': 9, '10': 'contentType'},
   ],
 };
 

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/text_sentiment.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const TextSentimentAnnotation$json = {
   '1': 'TextSentimentAnnotation',
@@ -47,7 +48,8 @@ const TextSentimentEvaluationMetrics$json = {
       '3': 9,
       '4': 3,
       '5': 9,
-      '10': 'annotationSpecId'
+      '8': {'3': true},
+      '10': 'annotationSpecId',
     },
   ],
 };

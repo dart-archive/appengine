@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/operation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -49,18 +50,20 @@ class Operation extends $pb.GeneratedMessage {
         Operation_Importance.values)
     ..hasRequiredFields = false;
 
-  Operation() : super();
-  Operation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operation._() : super();
+  factory Operation() => create();
+  factory Operation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operation clone() => Operation()..mergeFromMessage(this);
   Operation copyWith(void Function(Operation) updates) =>
       super.copyWith((message) => updates(message as Operation));
   $pb.BuilderInfo get info_ => _i;
-  static Operation create() => Operation();
+  @$core.pragma('dart2js:noInline')
+  static Operation create() => Operation._();
   Operation createEmptyInstance() => create();
   static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
   static Operation getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign_shared_set.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,18 +31,20 @@ class CampaignSharedSet extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CampaignSharedSet() : super();
-  CampaignSharedSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignSharedSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignSharedSet._() : super();
+  factory CampaignSharedSet() => create();
+  factory CampaignSharedSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignSharedSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignSharedSet clone() => CampaignSharedSet()..mergeFromMessage(this);
   CampaignSharedSet copyWith(void Function(CampaignSharedSet) updates) =>
       super.copyWith((message) => updates(message as CampaignSharedSet));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignSharedSet create() => CampaignSharedSet();
+  @$core.pragma('dart2js:noInline')
+  static CampaignSharedSet create() => CampaignSharedSet._();
   CampaignSharedSet createEmptyInstance() => create();
   static $pb.PbList<CampaignSharedSet> createRepeated() =>
       $pb.PbList<CampaignSharedSet>();

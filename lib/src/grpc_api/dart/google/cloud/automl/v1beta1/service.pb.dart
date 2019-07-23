@@ -1,44 +1,47 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'dataset.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $7;
-import 'io.pb.dart' as $8;
-import 'table_spec.pb.dart' as $3;
-import 'column_spec.pb.dart' as $4;
-import 'model.pb.dart' as $5;
-import 'image.pb.dart' as $9;
-import 'model_evaluation.pb.dart' as $6;
+import 'dataset.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $9;
+import 'io.pb.dart' as $10;
+import 'table_spec.pb.dart' as $5;
+import 'column_spec.pb.dart' as $6;
+import 'model.pb.dart' as $7;
+import 'image.pb.dart' as $11;
+import 'model_evaluation.pb.dart' as $8;
 
 class CreateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDatasetRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$1.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $1.Dataset.getDefault,
-        $1.Dataset.create)
+    ..a<$3.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $3.Dataset.getDefault,
+        $3.Dataset.create)
     ..hasRequiredFields = false;
 
-  CreateDatasetRequest() : super();
-  CreateDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDatasetRequest._() : super();
+  factory CreateDatasetRequest() => create();
+  factory CreateDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDatasetRequest clone() =>
       CreateDatasetRequest()..mergeFromMessage(this);
   CreateDatasetRequest copyWith(void Function(CreateDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateDatasetRequest create() => CreateDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateDatasetRequest create() => CreateDatasetRequest._();
   CreateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDatasetRequest> createRepeated() =>
       $pb.PbList<CreateDatasetRequest>();
@@ -54,8 +57,8 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.Dataset get dataset => $_getN(1);
-  set dataset($1.Dataset v) {
+  $3.Dataset get dataset => $_getN(1);
+  set dataset($3.Dataset v) {
     setField(2, v);
   }
 
@@ -69,18 +72,20 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetDatasetRequest() : super();
-  GetDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDatasetRequest._() : super();
+  factory GetDatasetRequest() => create();
+  factory GetDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDatasetRequest clone() => GetDatasetRequest()..mergeFromMessage(this);
   GetDatasetRequest copyWith(void Function(GetDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as GetDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetDatasetRequest create() => GetDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetDatasetRequest create() => GetDatasetRequest._();
   GetDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<GetDatasetRequest> createRepeated() =>
       $pb.PbList<GetDatasetRequest>();
@@ -106,18 +111,20 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListDatasetsRequest() : super();
-  ListDatasetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDatasetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDatasetsRequest._() : super();
+  factory ListDatasetsRequest() => create();
+  factory ListDatasetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatasetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDatasetsRequest clone() => ListDatasetsRequest()..mergeFromMessage(this);
   ListDatasetsRequest copyWith(void Function(ListDatasetsRequest) updates) =>
       super.copyWith((message) => updates(message as ListDatasetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListDatasetsRequest create() => ListDatasetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsRequest create() => ListDatasetsRequest._();
   ListDatasetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsRequest> createRepeated() =>
       $pb.PbList<ListDatasetsRequest>();
@@ -161,23 +168,25 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
 class ListDatasetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$1.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $1.Dataset.create)
+    ..pc<$3.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $3.Dataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListDatasetsResponse() : super();
-  ListDatasetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDatasetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDatasetsResponse._() : super();
+  factory ListDatasetsResponse() => create();
+  factory ListDatasetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatasetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDatasetsResponse clone() =>
       ListDatasetsResponse()..mergeFromMessage(this);
   ListDatasetsResponse copyWith(void Function(ListDatasetsResponse) updates) =>
       super.copyWith((message) => updates(message as ListDatasetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListDatasetsResponse create() => ListDatasetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsResponse create() => ListDatasetsResponse._();
   ListDatasetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsResponse> createRepeated() =>
       $pb.PbList<ListDatasetsResponse>();
@@ -185,7 +194,7 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListDatasetsResponse _defaultInstance;
 
-  $core.List<$1.Dataset> get datasets => $_getList(0);
+  $core.List<$3.Dataset> get datasets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -199,25 +208,27 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
 class UpdateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDatasetRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$1.Dataset>(1, 'dataset', $pb.PbFieldType.OM, $1.Dataset.getDefault,
-        $1.Dataset.create)
-    ..a<$7.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$3.Dataset>(1, 'dataset', $pb.PbFieldType.OM, $3.Dataset.getDefault,
+        $3.Dataset.create)
+    ..a<$9.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateDatasetRequest() : super();
-  UpdateDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateDatasetRequest._() : super();
+  factory UpdateDatasetRequest() => create();
+  factory UpdateDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateDatasetRequest clone() =>
       UpdateDatasetRequest()..mergeFromMessage(this);
   UpdateDatasetRequest copyWith(void Function(UpdateDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateDatasetRequest create() => UpdateDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatasetRequest create() => UpdateDatasetRequest._();
   UpdateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDatasetRequest> createRepeated() =>
       $pb.PbList<UpdateDatasetRequest>();
@@ -225,16 +236,16 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateDatasetRequest _defaultInstance;
 
-  $1.Dataset get dataset => $_getN(0);
-  set dataset($1.Dataset v) {
+  $3.Dataset get dataset => $_getN(0);
+  set dataset($3.Dataset v) {
     setField(1, v);
   }
 
   $core.bool hasDataset() => $_has(0);
   void clearDataset() => clearField(1);
 
-  $7.FieldMask get updateMask => $_getN(1);
-  set updateMask($7.FieldMask v) {
+  $9.FieldMask get updateMask => $_getN(1);
+  set updateMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -248,19 +259,21 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteDatasetRequest() : super();
-  DeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteDatasetRequest._() : super();
+  factory DeleteDatasetRequest() => create();
+  factory DeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteDatasetRequest clone() =>
       DeleteDatasetRequest()..mergeFromMessage(this);
   DeleteDatasetRequest copyWith(void Function(DeleteDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteDatasetRequest create() => DeleteDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDatasetRequest create() => DeleteDatasetRequest._();
   DeleteDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDatasetRequest> createRepeated() =>
       $pb.PbList<DeleteDatasetRequest>();
@@ -281,22 +294,24 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDataRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$8.InputConfig>(3, 'inputConfig', $pb.PbFieldType.OM,
-        $8.InputConfig.getDefault, $8.InputConfig.create)
+    ..a<$10.InputConfig>(3, 'inputConfig', $pb.PbFieldType.OM,
+        $10.InputConfig.getDefault, $10.InputConfig.create)
     ..hasRequiredFields = false;
 
-  ImportDataRequest() : super();
-  ImportDataRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportDataRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportDataRequest._() : super();
+  factory ImportDataRequest() => create();
+  factory ImportDataRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportDataRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportDataRequest clone() => ImportDataRequest()..mergeFromMessage(this);
   ImportDataRequest copyWith(void Function(ImportDataRequest) updates) =>
       super.copyWith((message) => updates(message as ImportDataRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ImportDataRequest create() => ImportDataRequest();
+  @$core.pragma('dart2js:noInline')
+  static ImportDataRequest create() => ImportDataRequest._();
   ImportDataRequest createEmptyInstance() => create();
   static $pb.PbList<ImportDataRequest> createRepeated() =>
       $pb.PbList<ImportDataRequest>();
@@ -312,8 +327,8 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $8.InputConfig get inputConfig => $_getN(1);
-  set inputConfig($8.InputConfig v) {
+  $10.InputConfig get inputConfig => $_getN(1);
+  set inputConfig($10.InputConfig v) {
     setField(3, v);
   }
 
@@ -325,22 +340,24 @@ class ExportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportDataRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$8.OutputConfig>(3, 'outputConfig', $pb.PbFieldType.OM,
-        $8.OutputConfig.getDefault, $8.OutputConfig.create)
+    ..a<$10.OutputConfig>(3, 'outputConfig', $pb.PbFieldType.OM,
+        $10.OutputConfig.getDefault, $10.OutputConfig.create)
     ..hasRequiredFields = false;
 
-  ExportDataRequest() : super();
-  ExportDataRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDataRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDataRequest._() : super();
+  factory ExportDataRequest() => create();
+  factory ExportDataRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDataRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDataRequest clone() => ExportDataRequest()..mergeFromMessage(this);
   ExportDataRequest copyWith(void Function(ExportDataRequest) updates) =>
       super.copyWith((message) => updates(message as ExportDataRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDataRequest create() => ExportDataRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportDataRequest create() => ExportDataRequest._();
   ExportDataRequest createEmptyInstance() => create();
   static $pb.PbList<ExportDataRequest> createRepeated() =>
       $pb.PbList<ExportDataRequest>();
@@ -356,8 +373,8 @@ class ExportDataRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $8.OutputConfig get outputConfig => $_getN(1);
-  set outputConfig($8.OutputConfig v) {
+  $10.OutputConfig get outputConfig => $_getN(1);
+  set outputConfig($10.OutputConfig v) {
     setField(3, v);
   }
 
@@ -371,20 +388,22 @@ class GetAnnotationSpecRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetAnnotationSpecRequest() : super();
-  GetAnnotationSpecRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAnnotationSpecRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAnnotationSpecRequest._() : super();
+  factory GetAnnotationSpecRequest() => create();
+  factory GetAnnotationSpecRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAnnotationSpecRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAnnotationSpecRequest clone() =>
       GetAnnotationSpecRequest()..mergeFromMessage(this);
   GetAnnotationSpecRequest copyWith(
           void Function(GetAnnotationSpecRequest) updates) =>
       super.copyWith((message) => updates(message as GetAnnotationSpecRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAnnotationSpecRequest create() => GetAnnotationSpecRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAnnotationSpecRequest create() => GetAnnotationSpecRequest._();
   GetAnnotationSpecRequest createEmptyInstance() => create();
   static $pb.PbList<GetAnnotationSpecRequest> createRepeated() =>
       $pb.PbList<GetAnnotationSpecRequest>();
@@ -405,22 +424,24 @@ class GetTableSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTableSpecRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..hasRequiredFields = false;
 
-  GetTableSpecRequest() : super();
-  GetTableSpecRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTableSpecRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTableSpecRequest._() : super();
+  factory GetTableSpecRequest() => create();
+  factory GetTableSpecRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTableSpecRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTableSpecRequest clone() => GetTableSpecRequest()..mergeFromMessage(this);
   GetTableSpecRequest copyWith(void Function(GetTableSpecRequest) updates) =>
       super.copyWith((message) => updates(message as GetTableSpecRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTableSpecRequest create() => GetTableSpecRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTableSpecRequest create() => GetTableSpecRequest._();
   GetTableSpecRequest createEmptyInstance() => create();
   static $pb.PbList<GetTableSpecRequest> createRepeated() =>
       $pb.PbList<GetTableSpecRequest>();
@@ -436,8 +457,8 @@ class GetTableSpecRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $7.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($7.FieldMask v) {
+  $9.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -449,27 +470,29 @@ class ListTableSpecsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTableSpecsRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListTableSpecsRequest() : super();
-  ListTableSpecsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTableSpecsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTableSpecsRequest._() : super();
+  factory ListTableSpecsRequest() => create();
+  factory ListTableSpecsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTableSpecsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTableSpecsRequest clone() =>
       ListTableSpecsRequest()..mergeFromMessage(this);
   ListTableSpecsRequest copyWith(
           void Function(ListTableSpecsRequest) updates) =>
       super.copyWith((message) => updates(message as ListTableSpecsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListTableSpecsRequest create() => ListTableSpecsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListTableSpecsRequest create() => ListTableSpecsRequest._();
   ListTableSpecsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTableSpecsRequest> createRepeated() =>
       $pb.PbList<ListTableSpecsRequest>();
@@ -485,8 +508,8 @@ class ListTableSpecsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $7.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($7.FieldMask v) {
+  $9.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -521,24 +544,26 @@ class ListTableSpecsRequest extends $pb.GeneratedMessage {
 class ListTableSpecsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTableSpecsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$3.TableSpec>(1, 'tableSpecs', $pb.PbFieldType.PM, $3.TableSpec.create)
+    ..pc<$5.TableSpec>(1, 'tableSpecs', $pb.PbFieldType.PM, $5.TableSpec.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListTableSpecsResponse() : super();
-  ListTableSpecsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTableSpecsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTableSpecsResponse._() : super();
+  factory ListTableSpecsResponse() => create();
+  factory ListTableSpecsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTableSpecsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTableSpecsResponse clone() =>
       ListTableSpecsResponse()..mergeFromMessage(this);
   ListTableSpecsResponse copyWith(
           void Function(ListTableSpecsResponse) updates) =>
       super.copyWith((message) => updates(message as ListTableSpecsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListTableSpecsResponse create() => ListTableSpecsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListTableSpecsResponse create() => ListTableSpecsResponse._();
   ListTableSpecsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTableSpecsResponse> createRepeated() =>
       $pb.PbList<ListTableSpecsResponse>();
@@ -546,7 +571,7 @@ class ListTableSpecsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTableSpecsResponse _defaultInstance;
 
-  $core.List<$3.TableSpec> get tableSpecs => $_getList(0);
+  $core.List<$5.TableSpec> get tableSpecs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -560,26 +585,28 @@ class ListTableSpecsResponse extends $pb.GeneratedMessage {
 class UpdateTableSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTableSpecRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$3.TableSpec>(1, 'tableSpec', $pb.PbFieldType.OM,
-        $3.TableSpec.getDefault, $3.TableSpec.create)
-    ..a<$7.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$5.TableSpec>(1, 'tableSpec', $pb.PbFieldType.OM,
+        $5.TableSpec.getDefault, $5.TableSpec.create)
+    ..a<$9.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateTableSpecRequest() : super();
-  UpdateTableSpecRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateTableSpecRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateTableSpecRequest._() : super();
+  factory UpdateTableSpecRequest() => create();
+  factory UpdateTableSpecRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateTableSpecRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateTableSpecRequest clone() =>
       UpdateTableSpecRequest()..mergeFromMessage(this);
   UpdateTableSpecRequest copyWith(
           void Function(UpdateTableSpecRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateTableSpecRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateTableSpecRequest create() => UpdateTableSpecRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTableSpecRequest create() => UpdateTableSpecRequest._();
   UpdateTableSpecRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTableSpecRequest> createRepeated() =>
       $pb.PbList<UpdateTableSpecRequest>();
@@ -587,16 +614,16 @@ class UpdateTableSpecRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateTableSpecRequest _defaultInstance;
 
-  $3.TableSpec get tableSpec => $_getN(0);
-  set tableSpec($3.TableSpec v) {
+  $5.TableSpec get tableSpec => $_getN(0);
+  set tableSpec($5.TableSpec v) {
     setField(1, v);
   }
 
   $core.bool hasTableSpec() => $_has(0);
   void clearTableSpec() => clearField(1);
 
-  $7.FieldMask get updateMask => $_getN(1);
-  set updateMask($7.FieldMask v) {
+  $9.FieldMask get updateMask => $_getN(1);
+  set updateMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -608,23 +635,25 @@ class GetColumnSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetColumnSpecRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..hasRequiredFields = false;
 
-  GetColumnSpecRequest() : super();
-  GetColumnSpecRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetColumnSpecRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetColumnSpecRequest._() : super();
+  factory GetColumnSpecRequest() => create();
+  factory GetColumnSpecRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetColumnSpecRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetColumnSpecRequest clone() =>
       GetColumnSpecRequest()..mergeFromMessage(this);
   GetColumnSpecRequest copyWith(void Function(GetColumnSpecRequest) updates) =>
       super.copyWith((message) => updates(message as GetColumnSpecRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetColumnSpecRequest create() => GetColumnSpecRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetColumnSpecRequest create() => GetColumnSpecRequest._();
   GetColumnSpecRequest createEmptyInstance() => create();
   static $pb.PbList<GetColumnSpecRequest> createRepeated() =>
       $pb.PbList<GetColumnSpecRequest>();
@@ -640,8 +669,8 @@ class GetColumnSpecRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $7.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($7.FieldMask v) {
+  $9.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -653,27 +682,29 @@ class ListColumnSpecsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListColumnSpecsRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$7.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListColumnSpecsRequest() : super();
-  ListColumnSpecsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListColumnSpecsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListColumnSpecsRequest._() : super();
+  factory ListColumnSpecsRequest() => create();
+  factory ListColumnSpecsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListColumnSpecsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListColumnSpecsRequest clone() =>
       ListColumnSpecsRequest()..mergeFromMessage(this);
   ListColumnSpecsRequest copyWith(
           void Function(ListColumnSpecsRequest) updates) =>
       super.copyWith((message) => updates(message as ListColumnSpecsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListColumnSpecsRequest create() => ListColumnSpecsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListColumnSpecsRequest create() => ListColumnSpecsRequest._();
   ListColumnSpecsRequest createEmptyInstance() => create();
   static $pb.PbList<ListColumnSpecsRequest> createRepeated() =>
       $pb.PbList<ListColumnSpecsRequest>();
@@ -689,8 +720,8 @@ class ListColumnSpecsRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $7.FieldMask get fieldMask => $_getN(1);
-  set fieldMask($7.FieldMask v) {
+  $9.FieldMask get fieldMask => $_getN(1);
+  set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -725,25 +756,27 @@ class ListColumnSpecsRequest extends $pb.GeneratedMessage {
 class ListColumnSpecsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListColumnSpecsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$4.ColumnSpec>(
-        1, 'columnSpecs', $pb.PbFieldType.PM, $4.ColumnSpec.create)
+    ..pc<$6.ColumnSpec>(
+        1, 'columnSpecs', $pb.PbFieldType.PM, $6.ColumnSpec.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListColumnSpecsResponse() : super();
-  ListColumnSpecsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListColumnSpecsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListColumnSpecsResponse._() : super();
+  factory ListColumnSpecsResponse() => create();
+  factory ListColumnSpecsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListColumnSpecsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListColumnSpecsResponse clone() =>
       ListColumnSpecsResponse()..mergeFromMessage(this);
   ListColumnSpecsResponse copyWith(
           void Function(ListColumnSpecsResponse) updates) =>
       super.copyWith((message) => updates(message as ListColumnSpecsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListColumnSpecsResponse create() => ListColumnSpecsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListColumnSpecsResponse create() => ListColumnSpecsResponse._();
   ListColumnSpecsResponse createEmptyInstance() => create();
   static $pb.PbList<ListColumnSpecsResponse> createRepeated() =>
       $pb.PbList<ListColumnSpecsResponse>();
@@ -751,7 +784,7 @@ class ListColumnSpecsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListColumnSpecsResponse _defaultInstance;
 
-  $core.List<$4.ColumnSpec> get columnSpecs => $_getList(0);
+  $core.List<$6.ColumnSpec> get columnSpecs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -765,26 +798,28 @@ class ListColumnSpecsResponse extends $pb.GeneratedMessage {
 class UpdateColumnSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateColumnSpecRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$4.ColumnSpec>(1, 'columnSpec', $pb.PbFieldType.OM,
-        $4.ColumnSpec.getDefault, $4.ColumnSpec.create)
-    ..a<$7.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$6.ColumnSpec>(1, 'columnSpec', $pb.PbFieldType.OM,
+        $6.ColumnSpec.getDefault, $6.ColumnSpec.create)
+    ..a<$9.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateColumnSpecRequest() : super();
-  UpdateColumnSpecRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateColumnSpecRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateColumnSpecRequest._() : super();
+  factory UpdateColumnSpecRequest() => create();
+  factory UpdateColumnSpecRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateColumnSpecRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateColumnSpecRequest clone() =>
       UpdateColumnSpecRequest()..mergeFromMessage(this);
   UpdateColumnSpecRequest copyWith(
           void Function(UpdateColumnSpecRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateColumnSpecRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateColumnSpecRequest create() => UpdateColumnSpecRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateColumnSpecRequest create() => UpdateColumnSpecRequest._();
   UpdateColumnSpecRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateColumnSpecRequest> createRepeated() =>
       $pb.PbList<UpdateColumnSpecRequest>();
@@ -792,16 +827,16 @@ class UpdateColumnSpecRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateColumnSpecRequest _defaultInstance;
 
-  $4.ColumnSpec get columnSpec => $_getN(0);
-  set columnSpec($4.ColumnSpec v) {
+  $6.ColumnSpec get columnSpec => $_getN(0);
+  set columnSpec($6.ColumnSpec v) {
     setField(1, v);
   }
 
   $core.bool hasColumnSpec() => $_has(0);
   void clearColumnSpec() => clearField(1);
 
-  $7.FieldMask get updateMask => $_getN(1);
-  set updateMask($7.FieldMask v) {
+  $9.FieldMask get updateMask => $_getN(1);
+  set updateMask($9.FieldMask v) {
     setField(2, v);
   }
 
@@ -813,22 +848,24 @@ class CreateModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateModelRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$5.Model>(
-        4, 'model', $pb.PbFieldType.OM, $5.Model.getDefault, $5.Model.create)
+    ..a<$7.Model>(
+        4, 'model', $pb.PbFieldType.OM, $7.Model.getDefault, $7.Model.create)
     ..hasRequiredFields = false;
 
-  CreateModelRequest() : super();
-  CreateModelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateModelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateModelRequest._() : super();
+  factory CreateModelRequest() => create();
+  factory CreateModelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateModelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateModelRequest clone() => CreateModelRequest()..mergeFromMessage(this);
   CreateModelRequest copyWith(void Function(CreateModelRequest) updates) =>
       super.copyWith((message) => updates(message as CreateModelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateModelRequest create() => CreateModelRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateModelRequest create() => CreateModelRequest._();
   CreateModelRequest createEmptyInstance() => create();
   static $pb.PbList<CreateModelRequest> createRepeated() =>
       $pb.PbList<CreateModelRequest>();
@@ -844,8 +881,8 @@ class CreateModelRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $5.Model get model => $_getN(1);
-  set model($5.Model v) {
+  $7.Model get model => $_getN(1);
+  set model($7.Model v) {
     setField(4, v);
   }
 
@@ -859,18 +896,20 @@ class GetModelRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetModelRequest() : super();
-  GetModelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetModelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetModelRequest._() : super();
+  factory GetModelRequest() => create();
+  factory GetModelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetModelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetModelRequest clone() => GetModelRequest()..mergeFromMessage(this);
   GetModelRequest copyWith(void Function(GetModelRequest) updates) =>
       super.copyWith((message) => updates(message as GetModelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetModelRequest create() => GetModelRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetModelRequest create() => GetModelRequest._();
   GetModelRequest createEmptyInstance() => create();
   static $pb.PbList<GetModelRequest> createRepeated() =>
       $pb.PbList<GetModelRequest>();
@@ -896,18 +935,20 @@ class ListModelsRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListModelsRequest() : super();
-  ListModelsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListModelsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListModelsRequest._() : super();
+  factory ListModelsRequest() => create();
+  factory ListModelsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListModelsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListModelsRequest clone() => ListModelsRequest()..mergeFromMessage(this);
   ListModelsRequest copyWith(void Function(ListModelsRequest) updates) =>
       super.copyWith((message) => updates(message as ListModelsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListModelsRequest create() => ListModelsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListModelsRequest create() => ListModelsRequest._();
   ListModelsRequest createEmptyInstance() => create();
   static $pb.PbList<ListModelsRequest> createRepeated() =>
       $pb.PbList<ListModelsRequest>();
@@ -951,22 +992,24 @@ class ListModelsRequest extends $pb.GeneratedMessage {
 class ListModelsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$5.Model>(1, 'model', $pb.PbFieldType.PM, $5.Model.create)
+    ..pc<$7.Model>(1, 'model', $pb.PbFieldType.PM, $7.Model.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListModelsResponse() : super();
-  ListModelsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListModelsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListModelsResponse._() : super();
+  factory ListModelsResponse() => create();
+  factory ListModelsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListModelsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListModelsResponse clone() => ListModelsResponse()..mergeFromMessage(this);
   ListModelsResponse copyWith(void Function(ListModelsResponse) updates) =>
       super.copyWith((message) => updates(message as ListModelsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListModelsResponse create() => ListModelsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListModelsResponse create() => ListModelsResponse._();
   ListModelsResponse createEmptyInstance() => create();
   static $pb.PbList<ListModelsResponse> createRepeated() =>
       $pb.PbList<ListModelsResponse>();
@@ -974,7 +1017,7 @@ class ListModelsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListModelsResponse _defaultInstance;
 
-  $core.List<$5.Model> get model => $_getList(0);
+  $core.List<$7.Model> get model => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -991,18 +1034,20 @@ class DeleteModelRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteModelRequest() : super();
-  DeleteModelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteModelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteModelRequest._() : super();
+  factory DeleteModelRequest() => create();
+  factory DeleteModelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteModelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteModelRequest clone() => DeleteModelRequest()..mergeFromMessage(this);
   DeleteModelRequest copyWith(void Function(DeleteModelRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteModelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteModelRequest create() => DeleteModelRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteModelRequest create() => DeleteModelRequest._();
   DeleteModelRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteModelRequest> createRepeated() =>
       $pb.PbList<DeleteModelRequest>();
@@ -1033,28 +1078,30 @@ class DeployModelRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeployModelRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [2])
     ..aOS(1, 'name')
-    ..a<$9.ImageObjectDetectionModelDeploymentMetadata>(
+    ..a<$11.ImageObjectDetectionModelDeploymentMetadata>(
         2,
         'imageObjectDetectionModelDeploymentMetadata',
         $pb.PbFieldType.OM,
-        $9.ImageObjectDetectionModelDeploymentMetadata.getDefault,
-        $9.ImageObjectDetectionModelDeploymentMetadata.create)
-    ..oo(0, [2])
+        $11.ImageObjectDetectionModelDeploymentMetadata.getDefault,
+        $11.ImageObjectDetectionModelDeploymentMetadata.create)
     ..hasRequiredFields = false;
 
-  DeployModelRequest() : super();
-  DeployModelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeployModelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeployModelRequest._() : super();
+  factory DeployModelRequest() => create();
+  factory DeployModelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeployModelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeployModelRequest clone() => DeployModelRequest()..mergeFromMessage(this);
   DeployModelRequest copyWith(void Function(DeployModelRequest) updates) =>
       super.copyWith((message) => updates(message as DeployModelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeployModelRequest create() => DeployModelRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeployModelRequest create() => DeployModelRequest._();
   DeployModelRequest createEmptyInstance() => create();
   static $pb.PbList<DeployModelRequest> createRepeated() =>
       $pb.PbList<DeployModelRequest>();
@@ -1074,10 +1121,10 @@ class DeployModelRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $9.ImageObjectDetectionModelDeploymentMetadata
+  $11.ImageObjectDetectionModelDeploymentMetadata
       get imageObjectDetectionModelDeploymentMetadata => $_getN(1);
   set imageObjectDetectionModelDeploymentMetadata(
-      $9.ImageObjectDetectionModelDeploymentMetadata v) {
+      $11.ImageObjectDetectionModelDeploymentMetadata v) {
     setField(2, v);
   }
 
@@ -1091,19 +1138,21 @@ class UndeployModelRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  UndeployModelRequest() : super();
-  UndeployModelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeployModelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UndeployModelRequest._() : super();
+  factory UndeployModelRequest() => create();
+  factory UndeployModelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UndeployModelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UndeployModelRequest clone() =>
       UndeployModelRequest()..mergeFromMessage(this);
   UndeployModelRequest copyWith(void Function(UndeployModelRequest) updates) =>
       super.copyWith((message) => updates(message as UndeployModelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UndeployModelRequest create() => UndeployModelRequest();
+  @$core.pragma('dart2js:noInline')
+  static UndeployModelRequest create() => UndeployModelRequest._();
   UndeployModelRequest createEmptyInstance() => create();
   static $pb.PbList<UndeployModelRequest> createRepeated() =>
       $pb.PbList<UndeployModelRequest>();
@@ -1124,26 +1173,28 @@ class ExportModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportModelRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$8.ModelExportOutputConfig>(
+    ..a<$10.ModelExportOutputConfig>(
         3,
         'outputConfig',
         $pb.PbFieldType.OM,
-        $8.ModelExportOutputConfig.getDefault,
-        $8.ModelExportOutputConfig.create)
+        $10.ModelExportOutputConfig.getDefault,
+        $10.ModelExportOutputConfig.create)
     ..hasRequiredFields = false;
 
-  ExportModelRequest() : super();
-  ExportModelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportModelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportModelRequest._() : super();
+  factory ExportModelRequest() => create();
+  factory ExportModelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportModelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportModelRequest clone() => ExportModelRequest()..mergeFromMessage(this);
   ExportModelRequest copyWith(void Function(ExportModelRequest) updates) =>
       super.copyWith((message) => updates(message as ExportModelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportModelRequest create() => ExportModelRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportModelRequest create() => ExportModelRequest._();
   ExportModelRequest createEmptyInstance() => create();
   static $pb.PbList<ExportModelRequest> createRepeated() =>
       $pb.PbList<ExportModelRequest>();
@@ -1159,8 +1210,8 @@ class ExportModelRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $8.ModelExportOutputConfig get outputConfig => $_getN(1);
-  set outputConfig($8.ModelExportOutputConfig v) {
+  $10.ModelExportOutputConfig get outputConfig => $_getN(1);
+  set outputConfig($10.ModelExportOutputConfig v) {
     setField(3, v);
   }
 
@@ -1173,21 +1224,22 @@ class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
       'ExportEvaluatedExamplesRequest',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..aOS(1, 'name')
-    ..a<$8.ExportEvaluatedExamplesOutputConfig>(
+    ..a<$10.ExportEvaluatedExamplesOutputConfig>(
         3,
         'outputConfig',
         $pb.PbFieldType.OM,
-        $8.ExportEvaluatedExamplesOutputConfig.getDefault,
-        $8.ExportEvaluatedExamplesOutputConfig.create)
+        $10.ExportEvaluatedExamplesOutputConfig.getDefault,
+        $10.ExportEvaluatedExamplesOutputConfig.create)
     ..hasRequiredFields = false;
 
-  ExportEvaluatedExamplesRequest() : super();
-  ExportEvaluatedExamplesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEvaluatedExamplesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportEvaluatedExamplesRequest._() : super();
+  factory ExportEvaluatedExamplesRequest() => create();
+  factory ExportEvaluatedExamplesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEvaluatedExamplesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEvaluatedExamplesRequest clone() =>
       ExportEvaluatedExamplesRequest()..mergeFromMessage(this);
   ExportEvaluatedExamplesRequest copyWith(
@@ -1195,8 +1247,9 @@ class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExportEvaluatedExamplesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesRequest create() =>
-      ExportEvaluatedExamplesRequest();
+      ExportEvaluatedExamplesRequest._();
   ExportEvaluatedExamplesRequest createEmptyInstance() => create();
   static $pb.PbList<ExportEvaluatedExamplesRequest> createRepeated() =>
       $pb.PbList<ExportEvaluatedExamplesRequest>();
@@ -1212,8 +1265,8 @@ class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $8.ExportEvaluatedExamplesOutputConfig get outputConfig => $_getN(1);
-  set outputConfig($8.ExportEvaluatedExamplesOutputConfig v) {
+  $10.ExportEvaluatedExamplesOutputConfig get outputConfig => $_getN(1);
+  set outputConfig($10.ExportEvaluatedExamplesOutputConfig v) {
     setField(3, v);
   }
 
@@ -1227,13 +1280,14 @@ class GetModelEvaluationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetModelEvaluationRequest() : super();
-  GetModelEvaluationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetModelEvaluationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetModelEvaluationRequest._() : super();
+  factory GetModelEvaluationRequest() => create();
+  factory GetModelEvaluationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetModelEvaluationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetModelEvaluationRequest clone() =>
       GetModelEvaluationRequest()..mergeFromMessage(this);
   GetModelEvaluationRequest copyWith(
@@ -1241,7 +1295,8 @@ class GetModelEvaluationRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as GetModelEvaluationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetModelEvaluationRequest create() => GetModelEvaluationRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetModelEvaluationRequest create() => GetModelEvaluationRequest._();
   GetModelEvaluationRequest createEmptyInstance() => create();
   static $pb.PbList<GetModelEvaluationRequest> createRepeated() =>
       $pb.PbList<GetModelEvaluationRequest>();
@@ -1268,13 +1323,14 @@ class ListModelEvaluationsRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListModelEvaluationsRequest() : super();
-  ListModelEvaluationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListModelEvaluationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListModelEvaluationsRequest._() : super();
+  factory ListModelEvaluationsRequest() => create();
+  factory ListModelEvaluationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListModelEvaluationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListModelEvaluationsRequest clone() =>
       ListModelEvaluationsRequest()..mergeFromMessage(this);
   ListModelEvaluationsRequest copyWith(
@@ -1282,7 +1338,9 @@ class ListModelEvaluationsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListModelEvaluationsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListModelEvaluationsRequest create() => ListModelEvaluationsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListModelEvaluationsRequest create() =>
+      ListModelEvaluationsRequest._();
   ListModelEvaluationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListModelEvaluationsRequest> createRepeated() =>
       $pb.PbList<ListModelEvaluationsRequest>();
@@ -1327,18 +1385,19 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListModelEvaluationsResponse',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$6.ModelEvaluation>(
-        1, 'modelEvaluation', $pb.PbFieldType.PM, $6.ModelEvaluation.create)
+    ..pc<$8.ModelEvaluation>(
+        1, 'modelEvaluation', $pb.PbFieldType.PM, $8.ModelEvaluation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListModelEvaluationsResponse() : super();
-  ListModelEvaluationsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListModelEvaluationsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListModelEvaluationsResponse._() : super();
+  factory ListModelEvaluationsResponse() => create();
+  factory ListModelEvaluationsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListModelEvaluationsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListModelEvaluationsResponse clone() =>
       ListModelEvaluationsResponse()..mergeFromMessage(this);
   ListModelEvaluationsResponse copyWith(
@@ -1346,8 +1405,9 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListModelEvaluationsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListModelEvaluationsResponse create() =>
-      ListModelEvaluationsResponse();
+      ListModelEvaluationsResponse._();
   ListModelEvaluationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListModelEvaluationsResponse> createRepeated() =>
       $pb.PbList<ListModelEvaluationsResponse>();
@@ -1355,7 +1415,7 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListModelEvaluationsResponse _defaultInstance;
 
-  $core.List<$6.ModelEvaluation> get modelEvaluation => $_getList(0);
+  $core.List<$8.ModelEvaluation> get modelEvaluation => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {

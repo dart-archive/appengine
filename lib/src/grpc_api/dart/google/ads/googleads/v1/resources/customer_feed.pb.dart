@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/customer_feed.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -39,18 +40,20 @@ class CustomerFeed extends $pb.GeneratedMessage {
         $3.FeedLinkStatusEnum_FeedLinkStatus.values)
     ..hasRequiredFields = false;
 
-  CustomerFeed() : super();
-  CustomerFeed.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerFeed.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerFeed._() : super();
+  factory CustomerFeed() => create();
+  factory CustomerFeed.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerFeed.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerFeed clone() => CustomerFeed()..mergeFromMessage(this);
   CustomerFeed copyWith(void Function(CustomerFeed) updates) =>
       super.copyWith((message) => updates(message as CustomerFeed));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerFeed create() => CustomerFeed();
+  @$core.pragma('dart2js:noInline')
+  static CustomerFeed create() => CustomerFeed._();
   CustomerFeed createEmptyInstance() => create();
   static $pb.PbList<CustomerFeed> createRepeated() =>
       $pb.PbList<CustomerFeed>();

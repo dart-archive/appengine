@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_shared_set_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign_shared_set.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
+import '../resources/campaign_shared_set.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
 class GetCampaignSharedSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class GetCampaignSharedSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCampaignSharedSetRequest() : super();
-  GetCampaignSharedSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCampaignSharedSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCampaignSharedSetRequest._() : super();
+  factory GetCampaignSharedSetRequest() => create();
+  factory GetCampaignSharedSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCampaignSharedSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCampaignSharedSetRequest clone() =>
       GetCampaignSharedSetRequest()..mergeFromMessage(this);
   GetCampaignSharedSetRequest copyWith(
@@ -33,7 +35,9 @@ class GetCampaignSharedSetRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetCampaignSharedSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCampaignSharedSetRequest create() => GetCampaignSharedSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignSharedSetRequest create() =>
+      GetCampaignSharedSetRequest._();
   GetCampaignSharedSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignSharedSetRequest> createRepeated() =>
       $pb.PbList<GetCampaignSharedSetRequest>();
@@ -61,13 +65,14 @@ class MutateCampaignSharedSetsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCampaignSharedSetsRequest() : super();
-  MutateCampaignSharedSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignSharedSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignSharedSetsRequest._() : super();
+  factory MutateCampaignSharedSetsRequest() => create();
+  factory MutateCampaignSharedSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignSharedSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignSharedSetsRequest clone() =>
       MutateCampaignSharedSetsRequest()..mergeFromMessage(this);
   MutateCampaignSharedSetsRequest copyWith(
@@ -75,8 +80,9 @@ class MutateCampaignSharedSetsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignSharedSetsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignSharedSetsRequest create() =>
-      MutateCampaignSharedSetsRequest();
+      MutateCampaignSharedSetsRequest._();
   MutateCampaignSharedSetsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignSharedSetsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignSharedSetsRequest>();
@@ -123,19 +129,20 @@ class CampaignSharedSetOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CampaignSharedSetOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CampaignSharedSet>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.CampaignSharedSet.getDefault, $0.CampaignSharedSet.create)
-    ..aOS(3, 'remove')
     ..oo(0, [1, 3])
+    ..a<$1.CampaignSharedSet>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.CampaignSharedSet.getDefault, $1.CampaignSharedSet.create)
+    ..aOS(3, 'remove')
     ..hasRequiredFields = false;
 
-  CampaignSharedSetOperation() : super();
-  CampaignSharedSetOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignSharedSetOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignSharedSetOperation._() : super();
+  factory CampaignSharedSetOperation() => create();
+  factory CampaignSharedSetOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignSharedSetOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignSharedSetOperation clone() =>
       CampaignSharedSetOperation()..mergeFromMessage(this);
   CampaignSharedSetOperation copyWith(
@@ -143,7 +150,8 @@ class CampaignSharedSetOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CampaignSharedSetOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignSharedSetOperation create() => CampaignSharedSetOperation();
+  @$core.pragma('dart2js:noInline')
+  static CampaignSharedSetOperation create() => CampaignSharedSetOperation._();
   CampaignSharedSetOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignSharedSetOperation> createRepeated() =>
       $pb.PbList<CampaignSharedSetOperation>();
@@ -155,8 +163,8 @@ class CampaignSharedSetOperation extends $pb.GeneratedMessage {
       _CampaignSharedSetOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CampaignSharedSet get create_1 => $_getN(0);
-  set create_1($0.CampaignSharedSet v) {
+  $1.CampaignSharedSet get create_1 => $_getN(0);
+  set create_1($1.CampaignSharedSet v) {
     setField(1, v);
   }
 
@@ -178,17 +186,18 @@ class MutateCampaignSharedSetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignSharedSetResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignSharedSetResult.create)
-    ..a<$1.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $1.Status.getDefault, $1.Status.create)
+    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCampaignSharedSetsResponse() : super();
-  MutateCampaignSharedSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignSharedSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignSharedSetsResponse._() : super();
+  factory MutateCampaignSharedSetsResponse() => create();
+  factory MutateCampaignSharedSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignSharedSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignSharedSetsResponse clone() =>
       MutateCampaignSharedSetsResponse()..mergeFromMessage(this);
   MutateCampaignSharedSetsResponse copyWith(
@@ -196,8 +205,9 @@ class MutateCampaignSharedSetsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignSharedSetsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignSharedSetsResponse create() =>
-      MutateCampaignSharedSetsResponse();
+      MutateCampaignSharedSetsResponse._();
   MutateCampaignSharedSetsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignSharedSetsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignSharedSetsResponse>();
@@ -207,8 +217,8 @@ class MutateCampaignSharedSetsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignSharedSetResult> get results => $_getList(0);
 
-  $1.Status get partialFailureError => $_getN(1);
-  set partialFailureError($1.Status v) {
+  $2.Status get partialFailureError => $_getN(1);
+  set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
@@ -223,13 +233,14 @@ class MutateCampaignSharedSetResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCampaignSharedSetResult() : super();
-  MutateCampaignSharedSetResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignSharedSetResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignSharedSetResult._() : super();
+  factory MutateCampaignSharedSetResult() => create();
+  factory MutateCampaignSharedSetResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignSharedSetResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignSharedSetResult clone() =>
       MutateCampaignSharedSetResult()..mergeFromMessage(this);
   MutateCampaignSharedSetResult copyWith(
@@ -237,8 +248,9 @@ class MutateCampaignSharedSetResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignSharedSetResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignSharedSetResult create() =>
-      MutateCampaignSharedSetResult();
+      MutateCampaignSharedSetResult._();
   MutateCampaignSharedSetResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignSharedSetResult> createRepeated() =>
       $pb.PbList<MutateCampaignSharedSetResult>();

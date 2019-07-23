@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group_feed.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -41,18 +42,20 @@ class AdGroupFeed extends $pb.GeneratedMessage {
         $3.FeedLinkStatusEnum_FeedLinkStatus.values)
     ..hasRequiredFields = false;
 
-  AdGroupFeed() : super();
-  AdGroupFeed.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupFeed.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupFeed._() : super();
+  factory AdGroupFeed() => create();
+  factory AdGroupFeed.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupFeed.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupFeed clone() => AdGroupFeed()..mergeFromMessage(this);
   AdGroupFeed copyWith(void Function(AdGroupFeed) updates) =>
       super.copyWith((message) => updates(message as AdGroupFeed));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupFeed create() => AdGroupFeed();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupFeed create() => AdGroupFeed._();
   AdGroupFeed createEmptyInstance() => create();
   static $pb.PbList<AdGroupFeed> createRepeated() => $pb.PbList<AdGroupFeed>();
   static AdGroupFeed getDefault() => _defaultInstance ??= create()..freeze();

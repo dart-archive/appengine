@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/app_yaml.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -43,18 +44,20 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
     ..aOS(5, 'url')
     ..hasRequiredFields = false;
 
-  ApiConfigHandler() : super();
-  ApiConfigHandler.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApiConfigHandler.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApiConfigHandler._() : super();
+  factory ApiConfigHandler() => create();
+  factory ApiConfigHandler.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApiConfigHandler.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApiConfigHandler clone() => ApiConfigHandler()..mergeFromMessage(this);
   ApiConfigHandler copyWith(void Function(ApiConfigHandler) updates) =>
       super.copyWith((message) => updates(message as ApiConfigHandler));
   $pb.BuilderInfo get info_ => _i;
-  static ApiConfigHandler create() => ApiConfigHandler();
+  @$core.pragma('dart2js:noInline')
+  static ApiConfigHandler create() => ApiConfigHandler._();
   ApiConfigHandler createEmptyInstance() => create();
   static $pb.PbList<ApiConfigHandler> createRepeated() =>
       $pb.PbList<ApiConfigHandler>();
@@ -117,18 +120,20 @@ class ErrorHandler extends $pb.GeneratedMessage {
     ..aOS(3, 'mimeType')
     ..hasRequiredFields = false;
 
-  ErrorHandler() : super();
-  ErrorHandler.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorHandler.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorHandler._() : super();
+  factory ErrorHandler() => create();
+  factory ErrorHandler.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorHandler.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorHandler clone() => ErrorHandler()..mergeFromMessage(this);
   ErrorHandler copyWith(void Function(ErrorHandler) updates) =>
       super.copyWith((message) => updates(message as ErrorHandler));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorHandler create() => ErrorHandler();
+  @$core.pragma('dart2js:noInline')
+  static ErrorHandler create() => ErrorHandler._();
   ErrorHandler createEmptyInstance() => create();
   static $pb.PbList<ErrorHandler> createRepeated() =>
       $pb.PbList<ErrorHandler>();
@@ -172,6 +177,7 @@ class UrlMap extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UrlMap',
       package: const $pb.PackageName('google.appengine.v1'))
+    ..oo(0, [2, 3, 4])
     ..aOS(1, 'urlRegex')
     ..a<StaticFilesHandler>(2, 'staticFiles', $pb.PbFieldType.OM,
         StaticFilesHandler.getDefault, StaticFilesHandler.create)
@@ -207,21 +213,22 @@ class UrlMap extends $pb.GeneratedMessage {
         UrlMap_RedirectHttpResponseCode.REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED,
         UrlMap_RedirectHttpResponseCode.valueOf,
         UrlMap_RedirectHttpResponseCode.values)
-    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
-  UrlMap() : super();
-  UrlMap.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UrlMap.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UrlMap._() : super();
+  factory UrlMap() => create();
+  factory UrlMap.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UrlMap.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UrlMap clone() => UrlMap()..mergeFromMessage(this);
   UrlMap copyWith(void Function(UrlMap) updates) =>
       super.copyWith((message) => updates(message as UrlMap));
   $pb.BuilderInfo get info_ => _i;
-  static UrlMap create() => UrlMap();
+  @$core.pragma('dart2js:noInline')
+  static UrlMap create() => UrlMap._();
   UrlMap createEmptyInstance() => create();
   static $pb.PbList<UrlMap> createRepeated() => $pb.PbList<UrlMap>();
   static UrlMap getDefault() => _defaultInstance ??= create()..freeze();
@@ -318,18 +325,20 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
     ..aOB(7, 'applicationReadable')
     ..hasRequiredFields = false;
 
-  StaticFilesHandler() : super();
-  StaticFilesHandler.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StaticFilesHandler.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StaticFilesHandler._() : super();
+  factory StaticFilesHandler() => create();
+  factory StaticFilesHandler.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StaticFilesHandler.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StaticFilesHandler clone() => StaticFilesHandler()..mergeFromMessage(this);
   StaticFilesHandler copyWith(void Function(StaticFilesHandler) updates) =>
       super.copyWith((message) => updates(message as StaticFilesHandler));
   $pb.BuilderInfo get info_ => _i;
-  static StaticFilesHandler create() => StaticFilesHandler();
+  @$core.pragma('dart2js:noInline')
+  static StaticFilesHandler create() => StaticFilesHandler._();
   StaticFilesHandler createEmptyInstance() => create();
   static $pb.PbList<StaticFilesHandler> createRepeated() =>
       $pb.PbList<StaticFilesHandler>();
@@ -394,18 +403,20 @@ class ScriptHandler extends $pb.GeneratedMessage {
     ..aOS(1, 'scriptPath')
     ..hasRequiredFields = false;
 
-  ScriptHandler() : super();
-  ScriptHandler.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScriptHandler.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScriptHandler._() : super();
+  factory ScriptHandler() => create();
+  factory ScriptHandler.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScriptHandler.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScriptHandler clone() => ScriptHandler()..mergeFromMessage(this);
   ScriptHandler copyWith(void Function(ScriptHandler) updates) =>
       super.copyWith((message) => updates(message as ScriptHandler));
   $pb.BuilderInfo get info_ => _i;
-  static ScriptHandler create() => ScriptHandler();
+  @$core.pragma('dart2js:noInline')
+  static ScriptHandler create() => ScriptHandler._();
   ScriptHandler createEmptyInstance() => create();
   static $pb.PbList<ScriptHandler> createRepeated() =>
       $pb.PbList<ScriptHandler>();
@@ -427,18 +438,20 @@ class ApiEndpointHandler extends $pb.GeneratedMessage {
     ..aOS(1, 'scriptPath')
     ..hasRequiredFields = false;
 
-  ApiEndpointHandler() : super();
-  ApiEndpointHandler.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApiEndpointHandler.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApiEndpointHandler._() : super();
+  factory ApiEndpointHandler() => create();
+  factory ApiEndpointHandler.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApiEndpointHandler.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApiEndpointHandler clone() => ApiEndpointHandler()..mergeFromMessage(this);
   ApiEndpointHandler copyWith(void Function(ApiEndpointHandler) updates) =>
       super.copyWith((message) => updates(message as ApiEndpointHandler));
   $pb.BuilderInfo get info_ => _i;
-  static ApiEndpointHandler create() => ApiEndpointHandler();
+  @$core.pragma('dart2js:noInline')
+  static ApiEndpointHandler create() => ApiEndpointHandler._();
   ApiEndpointHandler createEmptyInstance() => create();
   static $pb.PbList<ApiEndpointHandler> createRepeated() =>
       $pb.PbList<ApiEndpointHandler>();
@@ -469,18 +482,20 @@ class HealthCheck extends $pb.GeneratedMessage {
         $0.Duration.create)
     ..hasRequiredFields = false;
 
-  HealthCheck() : super();
-  HealthCheck.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HealthCheck.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HealthCheck._() : super();
+  factory HealthCheck() => create();
+  factory HealthCheck.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HealthCheck.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HealthCheck clone() => HealthCheck()..mergeFromMessage(this);
   HealthCheck copyWith(void Function(HealthCheck) updates) =>
       super.copyWith((message) => updates(message as HealthCheck));
   $pb.BuilderInfo get info_ => _i;
-  static HealthCheck create() => HealthCheck();
+  @$core.pragma('dart2js:noInline')
+  static HealthCheck create() => HealthCheck._();
   HealthCheck createEmptyInstance() => create();
   static $pb.PbList<HealthCheck> createRepeated() => $pb.PbList<HealthCheck>();
   static HealthCheck getDefault() => _defaultInstance ??= create()..freeze();
@@ -550,18 +565,20 @@ class Library extends $pb.GeneratedMessage {
     ..aOS(2, 'version')
     ..hasRequiredFields = false;
 
-  Library() : super();
-  Library.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Library.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Library._() : super();
+  factory Library() => create();
+  factory Library.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Library.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Library clone() => Library()..mergeFromMessage(this);
   Library copyWith(void Function(Library) updates) =>
       super.copyWith((message) => updates(message as Library));
   $pb.BuilderInfo get info_ => _i;
-  static Library create() => Library();
+  @$core.pragma('dart2js:noInline')
+  static Library create() => Library._();
   Library createEmptyInstance() => create();
   static $pb.PbList<Library> createRepeated() => $pb.PbList<Library>();
   static Library getDefault() => _defaultInstance ??= create()..freeze();

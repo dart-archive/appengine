@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/iot/v1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -58,18 +59,20 @@ class Device extends $pb.GeneratedMessage {
     ..a<GatewayConfig>(24, 'gatewayConfig', $pb.PbFieldType.OM, GatewayConfig.getDefault, GatewayConfig.create)
     ..hasRequiredFields = false;
 
-  Device() : super();
-  Device.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Device.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Device._() : super();
+  factory Device() => create();
+  factory Device.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Device.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Device clone() => Device()..mergeFromMessage(this);
   Device copyWith(void Function(Device) updates) =>
       super.copyWith((message) => updates(message as Device));
   $pb.BuilderInfo get info_ => _i;
-  static Device create() => Device();
+  @$core.pragma('dart2js:noInline')
+  static Device create() => Device._();
   Device createEmptyInstance() => create();
   static $pb.PbList<Device> createRepeated() => $pb.PbList<Device>();
   static Device getDefault() => _defaultInstance ??= create()..freeze();
@@ -222,18 +225,20 @@ class GatewayConfig extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  GatewayConfig() : super();
-  GatewayConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GatewayConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GatewayConfig._() : super();
+  factory GatewayConfig() => create();
+  factory GatewayConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GatewayConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GatewayConfig clone() => GatewayConfig()..mergeFromMessage(this);
   GatewayConfig copyWith(void Function(GatewayConfig) updates) =>
       super.copyWith((message) => updates(message as GatewayConfig));
   $pb.BuilderInfo get info_ => _i;
-  static GatewayConfig create() => GatewayConfig();
+  @$core.pragma('dart2js:noInline')
+  static GatewayConfig create() => GatewayConfig._();
   GatewayConfig createEmptyInstance() => create();
   static $pb.PbList<GatewayConfig> createRepeated() =>
       $pb.PbList<GatewayConfig>();
@@ -296,18 +301,20 @@ class DeviceRegistry extends $pb.GeneratedMessage {
         LogLevel.LOG_LEVEL_UNSPECIFIED, LogLevel.valueOf, LogLevel.values)
     ..hasRequiredFields = false;
 
-  DeviceRegistry() : super();
-  DeviceRegistry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceRegistry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceRegistry._() : super();
+  factory DeviceRegistry() => create();
+  factory DeviceRegistry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceRegistry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceRegistry clone() => DeviceRegistry()..mergeFromMessage(this);
   DeviceRegistry copyWith(void Function(DeviceRegistry) updates) =>
       super.copyWith((message) => updates(message as DeviceRegistry));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceRegistry create() => DeviceRegistry();
+  @$core.pragma('dart2js:noInline')
+  static DeviceRegistry create() => DeviceRegistry._();
   DeviceRegistry createEmptyInstance() => create();
   static $pb.PbList<DeviceRegistry> createRepeated() =>
       $pb.PbList<DeviceRegistry>();
@@ -375,18 +382,20 @@ class MqttConfig extends $pb.GeneratedMessage {
         MqttState.MQTT_STATE_UNSPECIFIED, MqttState.valueOf, MqttState.values)
     ..hasRequiredFields = false;
 
-  MqttConfig() : super();
-  MqttConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MqttConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MqttConfig._() : super();
+  factory MqttConfig() => create();
+  factory MqttConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MqttConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MqttConfig clone() => MqttConfig()..mergeFromMessage(this);
   MqttConfig copyWith(void Function(MqttConfig) updates) =>
       super.copyWith((message) => updates(message as MqttConfig));
   $pb.BuilderInfo get info_ => _i;
-  static MqttConfig create() => MqttConfig();
+  @$core.pragma('dart2js:noInline')
+  static MqttConfig create() => MqttConfig._();
   MqttConfig createEmptyInstance() => create();
   static $pb.PbList<MqttConfig> createRepeated() => $pb.PbList<MqttConfig>();
   static MqttConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -408,18 +417,20 @@ class HttpConfig extends $pb.GeneratedMessage {
         HttpState.HTTP_STATE_UNSPECIFIED, HttpState.valueOf, HttpState.values)
     ..hasRequiredFields = false;
 
-  HttpConfig() : super();
-  HttpConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HttpConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HttpConfig._() : super();
+  factory HttpConfig() => create();
+  factory HttpConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HttpConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HttpConfig clone() => HttpConfig()..mergeFromMessage(this);
   HttpConfig copyWith(void Function(HttpConfig) updates) =>
       super.copyWith((message) => updates(message as HttpConfig));
   $pb.BuilderInfo get info_ => _i;
-  static HttpConfig create() => HttpConfig();
+  @$core.pragma('dart2js:noInline')
+  static HttpConfig create() => HttpConfig._();
   HttpConfig createEmptyInstance() => create();
   static $pb.PbList<HttpConfig> createRepeated() => $pb.PbList<HttpConfig>();
   static HttpConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -441,20 +452,22 @@ class EventNotificationConfig extends $pb.GeneratedMessage {
     ..aOS(2, 'subfolderMatches')
     ..hasRequiredFields = false;
 
-  EventNotificationConfig() : super();
-  EventNotificationConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EventNotificationConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EventNotificationConfig._() : super();
+  factory EventNotificationConfig() => create();
+  factory EventNotificationConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EventNotificationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EventNotificationConfig clone() =>
       EventNotificationConfig()..mergeFromMessage(this);
   EventNotificationConfig copyWith(
           void Function(EventNotificationConfig) updates) =>
       super.copyWith((message) => updates(message as EventNotificationConfig));
   $pb.BuilderInfo get info_ => _i;
-  static EventNotificationConfig create() => EventNotificationConfig();
+  @$core.pragma('dart2js:noInline')
+  static EventNotificationConfig create() => EventNotificationConfig._();
   EventNotificationConfig createEmptyInstance() => create();
   static $pb.PbList<EventNotificationConfig> createRepeated() =>
       $pb.PbList<EventNotificationConfig>();
@@ -485,20 +498,22 @@ class StateNotificationConfig extends $pb.GeneratedMessage {
     ..aOS(1, 'pubsubTopicName')
     ..hasRequiredFields = false;
 
-  StateNotificationConfig() : super();
-  StateNotificationConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StateNotificationConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StateNotificationConfig._() : super();
+  factory StateNotificationConfig() => create();
+  factory StateNotificationConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StateNotificationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StateNotificationConfig clone() =>
       StateNotificationConfig()..mergeFromMessage(this);
   StateNotificationConfig copyWith(
           void Function(StateNotificationConfig) updates) =>
       super.copyWith((message) => updates(message as StateNotificationConfig));
   $pb.BuilderInfo get info_ => _i;
-  static StateNotificationConfig create() => StateNotificationConfig();
+  @$core.pragma('dart2js:noInline')
+  static StateNotificationConfig create() => StateNotificationConfig._();
   StateNotificationConfig createEmptyInstance() => create();
   static $pb.PbList<StateNotificationConfig> createRepeated() =>
       $pb.PbList<StateNotificationConfig>();
@@ -525,23 +540,25 @@ class RegistryCredential extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegistryCredential',
       package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..oo(0, [1])
     ..a<PublicKeyCertificate>(1, 'publicKeyCertificate', $pb.PbFieldType.OM,
         PublicKeyCertificate.getDefault, PublicKeyCertificate.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  RegistryCredential() : super();
-  RegistryCredential.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RegistryCredential.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RegistryCredential._() : super();
+  factory RegistryCredential() => create();
+  factory RegistryCredential.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RegistryCredential.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RegistryCredential clone() => RegistryCredential()..mergeFromMessage(this);
   RegistryCredential copyWith(void Function(RegistryCredential) updates) =>
       super.copyWith((message) => updates(message as RegistryCredential));
   $pb.BuilderInfo get info_ => _i;
-  static RegistryCredential create() => RegistryCredential();
+  @$core.pragma('dart2js:noInline')
+  static RegistryCredential create() => RegistryCredential._();
   RegistryCredential createEmptyInstance() => create();
   static $pb.PbList<RegistryCredential> createRepeated() =>
       $pb.PbList<RegistryCredential>();
@@ -575,20 +592,22 @@ class X509CertificateDetails extends $pb.GeneratedMessage {
     ..aOS(6, 'publicKeyType')
     ..hasRequiredFields = false;
 
-  X509CertificateDetails() : super();
-  X509CertificateDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  X509CertificateDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  X509CertificateDetails._() : super();
+  factory X509CertificateDetails() => create();
+  factory X509CertificateDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory X509CertificateDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   X509CertificateDetails clone() =>
       X509CertificateDetails()..mergeFromMessage(this);
   X509CertificateDetails copyWith(
           void Function(X509CertificateDetails) updates) =>
       super.copyWith((message) => updates(message as X509CertificateDetails));
   $pb.BuilderInfo get info_ => _i;
-  static X509CertificateDetails create() => X509CertificateDetails();
+  @$core.pragma('dart2js:noInline')
+  static X509CertificateDetails create() => X509CertificateDetails._();
   X509CertificateDetails createEmptyInstance() => create();
   static $pb.PbList<X509CertificateDetails> createRepeated() =>
       $pb.PbList<X509CertificateDetails>();
@@ -660,19 +679,21 @@ class PublicKeyCertificate extends $pb.GeneratedMessage {
         X509CertificateDetails.getDefault, X509CertificateDetails.create)
     ..hasRequiredFields = false;
 
-  PublicKeyCertificate() : super();
-  PublicKeyCertificate.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PublicKeyCertificate.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PublicKeyCertificate._() : super();
+  factory PublicKeyCertificate() => create();
+  factory PublicKeyCertificate.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublicKeyCertificate.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PublicKeyCertificate clone() =>
       PublicKeyCertificate()..mergeFromMessage(this);
   PublicKeyCertificate copyWith(void Function(PublicKeyCertificate) updates) =>
       super.copyWith((message) => updates(message as PublicKeyCertificate));
   $pb.BuilderInfo get info_ => _i;
-  static PublicKeyCertificate create() => PublicKeyCertificate();
+  @$core.pragma('dart2js:noInline')
+  static PublicKeyCertificate create() => PublicKeyCertificate._();
   PublicKeyCertificate createEmptyInstance() => create();
   static $pb.PbList<PublicKeyCertificate> createRepeated() =>
       $pb.PbList<PublicKeyCertificate>();
@@ -715,25 +736,27 @@ class DeviceCredential extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceCredential',
       package: const $pb.PackageName('google.cloud.iot.v1'))
+    ..oo(0, [2])
     ..a<PublicKeyCredential>(2, 'publicKey', $pb.PbFieldType.OM,
         PublicKeyCredential.getDefault, PublicKeyCredential.create)
     ..a<$0.Timestamp>(6, 'expirationTime', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  DeviceCredential() : super();
-  DeviceCredential.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceCredential.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceCredential._() : super();
+  factory DeviceCredential() => create();
+  factory DeviceCredential.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceCredential.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceCredential clone() => DeviceCredential()..mergeFromMessage(this);
   DeviceCredential copyWith(void Function(DeviceCredential) updates) =>
       super.copyWith((message) => updates(message as DeviceCredential));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceCredential create() => DeviceCredential();
+  @$core.pragma('dart2js:noInline')
+  static DeviceCredential create() => DeviceCredential._();
   DeviceCredential createEmptyInstance() => create();
   static $pb.PbList<DeviceCredential> createRepeated() =>
       $pb.PbList<DeviceCredential>();
@@ -775,18 +798,20 @@ class PublicKeyCredential extends $pb.GeneratedMessage {
     ..aOS(2, 'key')
     ..hasRequiredFields = false;
 
-  PublicKeyCredential() : super();
-  PublicKeyCredential.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PublicKeyCredential.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PublicKeyCredential._() : super();
+  factory PublicKeyCredential() => create();
+  factory PublicKeyCredential.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublicKeyCredential.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PublicKeyCredential clone() => PublicKeyCredential()..mergeFromMessage(this);
   PublicKeyCredential copyWith(void Function(PublicKeyCredential) updates) =>
       super.copyWith((message) => updates(message as PublicKeyCredential));
   $pb.BuilderInfo get info_ => _i;
-  static PublicKeyCredential create() => PublicKeyCredential();
+  @$core.pragma('dart2js:noInline')
+  static PublicKeyCredential create() => PublicKeyCredential._();
   PublicKeyCredential createEmptyInstance() => create();
   static $pb.PbList<PublicKeyCredential> createRepeated() =>
       $pb.PbList<PublicKeyCredential>();
@@ -822,18 +847,20 @@ class DeviceConfig extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, 'binaryData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  DeviceConfig() : super();
-  DeviceConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceConfig._() : super();
+  factory DeviceConfig() => create();
+  factory DeviceConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceConfig clone() => DeviceConfig()..mergeFromMessage(this);
   DeviceConfig copyWith(void Function(DeviceConfig) updates) =>
       super.copyWith((message) => updates(message as DeviceConfig));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceConfig create() => DeviceConfig();
+  @$core.pragma('dart2js:noInline')
+  static DeviceConfig create() => DeviceConfig._();
   DeviceConfig createEmptyInstance() => create();
   static $pb.PbList<DeviceConfig> createRepeated() =>
       $pb.PbList<DeviceConfig>();
@@ -881,18 +908,20 @@ class DeviceState extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'binaryData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  DeviceState() : super();
-  DeviceState.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceState.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceState._() : super();
+  factory DeviceState() => create();
+  factory DeviceState.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceState.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceState clone() => DeviceState()..mergeFromMessage(this);
   DeviceState copyWith(void Function(DeviceState) updates) =>
       super.copyWith((message) => updates(message as DeviceState));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceState create() => DeviceState();
+  @$core.pragma('dart2js:noInline')
+  static DeviceState create() => DeviceState._();
   DeviceState createEmptyInstance() => create();
   static $pb.PbList<DeviceState> createRepeated() => $pb.PbList<DeviceState>();
   static DeviceState getDefault() => _defaultInstance ??= create()..freeze();

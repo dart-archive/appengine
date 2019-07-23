@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group_extension_setting.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -38,20 +39,22 @@ class AdGroupExtensionSetting extends $pb.GeneratedMessage {
         $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.values)
     ..hasRequiredFields = false;
 
-  AdGroupExtensionSetting() : super();
-  AdGroupExtensionSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupExtensionSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupExtensionSetting._() : super();
+  factory AdGroupExtensionSetting() => create();
+  factory AdGroupExtensionSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupExtensionSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupExtensionSetting clone() =>
       AdGroupExtensionSetting()..mergeFromMessage(this);
   AdGroupExtensionSetting copyWith(
           void Function(AdGroupExtensionSetting) updates) =>
       super.copyWith((message) => updates(message as AdGroupExtensionSetting));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupExtensionSetting create() => AdGroupExtensionSetting();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupExtensionSetting create() => AdGroupExtensionSetting._();
   AdGroupExtensionSetting createEmptyInstance() => create();
   static $pb.PbList<AdGroupExtensionSetting> createRepeated() =>
       $pb.PbList<AdGroupExtensionSetting>();

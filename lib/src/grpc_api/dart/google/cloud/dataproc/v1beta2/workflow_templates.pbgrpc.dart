@@ -1,64 +1,65 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dataproc/v1beta2/workflow_templates.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'workflow_templates.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'workflow_templates.pb.dart' as $4;
+import '../../../longrunning/operations.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 export 'workflow_templates.pb.dart';
 
 class WorkflowTemplateServiceClient extends $grpc.Client {
   static final _$createWorkflowTemplate = $grpc.ClientMethod<
-          CreateWorkflowTemplateRequest, WorkflowTemplate>(
+          $4.CreateWorkflowTemplateRequest, $4.WorkflowTemplate>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/CreateWorkflowTemplate',
-      (CreateWorkflowTemplateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => WorkflowTemplate.fromBuffer(value));
+      ($4.CreateWorkflowTemplateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.WorkflowTemplate.fromBuffer(value));
   static final _$getWorkflowTemplate = $grpc.ClientMethod<
-          GetWorkflowTemplateRequest, WorkflowTemplate>(
+          $4.GetWorkflowTemplateRequest, $4.WorkflowTemplate>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/GetWorkflowTemplate',
-      (GetWorkflowTemplateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => WorkflowTemplate.fromBuffer(value));
+      ($4.GetWorkflowTemplateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.WorkflowTemplate.fromBuffer(value));
   static final _$instantiateWorkflowTemplate = $grpc.ClientMethod<
-          InstantiateWorkflowTemplateRequest, $1.Operation>(
+          $4.InstantiateWorkflowTemplateRequest, $0.Operation>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/InstantiateWorkflowTemplate',
-      (InstantiateWorkflowTemplateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+      ($4.InstantiateWorkflowTemplateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$instantiateInlineWorkflowTemplate = $grpc.ClientMethod<
-          InstantiateInlineWorkflowTemplateRequest, $1.Operation>(
+          $4.InstantiateInlineWorkflowTemplateRequest, $0.Operation>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/InstantiateInlineWorkflowTemplate',
-      (InstantiateInlineWorkflowTemplateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+      ($4.InstantiateInlineWorkflowTemplateRequest value) =>
+          value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$updateWorkflowTemplate = $grpc.ClientMethod<
-          UpdateWorkflowTemplateRequest, WorkflowTemplate>(
+          $4.UpdateWorkflowTemplateRequest, $4.WorkflowTemplate>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/UpdateWorkflowTemplate',
-      (UpdateWorkflowTemplateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => WorkflowTemplate.fromBuffer(value));
+      ($4.UpdateWorkflowTemplateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.WorkflowTemplate.fromBuffer(value));
   static final _$listWorkflowTemplates = $grpc.ClientMethod<
-          ListWorkflowTemplatesRequest, ListWorkflowTemplatesResponse>(
+          $4.ListWorkflowTemplatesRequest, $4.ListWorkflowTemplatesResponse>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/ListWorkflowTemplates',
-      (ListWorkflowTemplatesRequest value) => value.writeToBuffer(),
+      ($4.ListWorkflowTemplatesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListWorkflowTemplatesResponse.fromBuffer(value));
+          $4.ListWorkflowTemplatesResponse.fromBuffer(value));
   static final _$deleteWorkflowTemplate = $grpc.ClientMethod<
-          DeleteWorkflowTemplateRequest, $0.Empty>(
+          $4.DeleteWorkflowTemplateRequest, $1.Empty>(
       '/google.cloud.dataproc.v1beta2.WorkflowTemplateService/DeleteWorkflowTemplate',
-      (DeleteWorkflowTemplateRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+      ($4.DeleteWorkflowTemplateRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   WorkflowTemplateServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<WorkflowTemplate> createWorkflowTemplate(
-      CreateWorkflowTemplateRequest request,
+  $grpc.ResponseFuture<$4.WorkflowTemplate> createWorkflowTemplate(
+      $4.CreateWorkflowTemplateRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createWorkflowTemplate, $async.Stream.fromIterable([request]),
@@ -66,8 +67,8 @@ class WorkflowTemplateServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<WorkflowTemplate> getWorkflowTemplate(
-      GetWorkflowTemplateRequest request,
+  $grpc.ResponseFuture<$4.WorkflowTemplate> getWorkflowTemplate(
+      $4.GetWorkflowTemplateRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getWorkflowTemplate, $async.Stream.fromIterable([request]),
@@ -75,8 +76,8 @@ class WorkflowTemplateServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> instantiateWorkflowTemplate(
-      InstantiateWorkflowTemplateRequest request,
+  $grpc.ResponseFuture<$0.Operation> instantiateWorkflowTemplate(
+      $4.InstantiateWorkflowTemplateRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$instantiateWorkflowTemplate, $async.Stream.fromIterable([request]),
@@ -84,8 +85,8 @@ class WorkflowTemplateServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> instantiateInlineWorkflowTemplate(
-      InstantiateInlineWorkflowTemplateRequest request,
+  $grpc.ResponseFuture<$0.Operation> instantiateInlineWorkflowTemplate(
+      $4.InstantiateInlineWorkflowTemplateRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$instantiateInlineWorkflowTemplate,
         $async.Stream.fromIterable([request]),
@@ -93,8 +94,8 @@ class WorkflowTemplateServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<WorkflowTemplate> updateWorkflowTemplate(
-      UpdateWorkflowTemplateRequest request,
+  $grpc.ResponseFuture<$4.WorkflowTemplate> updateWorkflowTemplate(
+      $4.UpdateWorkflowTemplateRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateWorkflowTemplate, $async.Stream.fromIterable([request]),
@@ -102,8 +103,8 @@ class WorkflowTemplateServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListWorkflowTemplatesResponse> listWorkflowTemplates(
-      ListWorkflowTemplatesRequest request,
+  $grpc.ResponseFuture<$4.ListWorkflowTemplatesResponse> listWorkflowTemplates(
+      $4.ListWorkflowTemplatesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listWorkflowTemplates, $async.Stream.fromIterable([request]),
@@ -111,8 +112,8 @@ class WorkflowTemplateServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteWorkflowTemplate(
-      DeleteWorkflowTemplateRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteWorkflowTemplate(
+      $4.DeleteWorkflowTemplateRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteWorkflowTemplate, $async.Stream.fromIterable([request]),
@@ -126,117 +127,125 @@ abstract class WorkflowTemplateServiceBase extends $grpc.Service {
       'google.cloud.dataproc.v1beta2.WorkflowTemplateService';
 
   WorkflowTemplateServiceBase() {
+    $addMethod($grpc.ServiceMethod<$4.CreateWorkflowTemplateRequest,
+            $4.WorkflowTemplate>(
+        'CreateWorkflowTemplate',
+        createWorkflowTemplate_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.CreateWorkflowTemplateRequest.fromBuffer(value),
+        ($4.WorkflowTemplate value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<CreateWorkflowTemplateRequest, WorkflowTemplate>(
-            'CreateWorkflowTemplate',
-            createWorkflowTemplate_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                CreateWorkflowTemplateRequest.fromBuffer(value),
-            (WorkflowTemplate value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<GetWorkflowTemplateRequest, WorkflowTemplate>(
+        $grpc.ServiceMethod<$4.GetWorkflowTemplateRequest, $4.WorkflowTemplate>(
             'GetWorkflowTemplate',
             getWorkflowTemplate_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                GetWorkflowTemplateRequest.fromBuffer(value),
-            (WorkflowTemplate value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<InstantiateWorkflowTemplateRequest, $1.Operation>(
-            'InstantiateWorkflowTemplate',
-            instantiateWorkflowTemplate_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                InstantiateWorkflowTemplateRequest.fromBuffer(value),
-            ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<InstantiateInlineWorkflowTemplateRequest,
-            $1.Operation>(
+                $4.GetWorkflowTemplateRequest.fromBuffer(value),
+            ($4.WorkflowTemplate value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.InstantiateWorkflowTemplateRequest,
+            $0.Operation>(
+        'InstantiateWorkflowTemplate',
+        instantiateWorkflowTemplate_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.InstantiateWorkflowTemplateRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.InstantiateInlineWorkflowTemplateRequest,
+            $0.Operation>(
         'InstantiateInlineWorkflowTemplate',
         instantiateInlineWorkflowTemplate_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            InstantiateInlineWorkflowTemplateRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<UpdateWorkflowTemplateRequest, WorkflowTemplate>(
-            'UpdateWorkflowTemplate',
-            updateWorkflowTemplate_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                UpdateWorkflowTemplateRequest.fromBuffer(value),
-            (WorkflowTemplate value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListWorkflowTemplatesRequest,
-            ListWorkflowTemplatesResponse>(
+            $4.InstantiateInlineWorkflowTemplateRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateWorkflowTemplateRequest,
+            $4.WorkflowTemplate>(
+        'UpdateWorkflowTemplate',
+        updateWorkflowTemplate_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.UpdateWorkflowTemplateRequest.fromBuffer(value),
+        ($4.WorkflowTemplate value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListWorkflowTemplatesRequest,
+            $4.ListWorkflowTemplatesResponse>(
         'ListWorkflowTemplates',
         listWorkflowTemplates_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListWorkflowTemplatesRequest.fromBuffer(value),
-        (ListWorkflowTemplatesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteWorkflowTemplateRequest, $0.Empty>(
+            $4.ListWorkflowTemplatesRequest.fromBuffer(value),
+        ($4.ListWorkflowTemplatesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.DeleteWorkflowTemplateRequest, $1.Empty>(
         'DeleteWorkflowTemplate',
         deleteWorkflowTemplate_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteWorkflowTemplateRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+            $4.DeleteWorkflowTemplateRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<WorkflowTemplate> createWorkflowTemplate_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.WorkflowTemplate> createWorkflowTemplate_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.CreateWorkflowTemplateRequest> request) async {
     return createWorkflowTemplate(call, await request);
   }
 
-  $async.Future<WorkflowTemplate> getWorkflowTemplate_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.WorkflowTemplate> getWorkflowTemplate_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.GetWorkflowTemplateRequest> request) async {
     return getWorkflowTemplate(call, await request);
   }
 
-  $async.Future<$1.Operation> instantiateWorkflowTemplate_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> instantiateWorkflowTemplate_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.InstantiateWorkflowTemplateRequest> request) async {
     return instantiateWorkflowTemplate(call, await request);
   }
 
-  $async.Future<$1.Operation> instantiateInlineWorkflowTemplate_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> instantiateInlineWorkflowTemplate_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.InstantiateInlineWorkflowTemplateRequest>
+          request) async {
     return instantiateInlineWorkflowTemplate(call, await request);
   }
 
-  $async.Future<WorkflowTemplate> updateWorkflowTemplate_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.WorkflowTemplate> updateWorkflowTemplate_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.UpdateWorkflowTemplateRequest> request) async {
     return updateWorkflowTemplate(call, await request);
   }
 
-  $async.Future<ListWorkflowTemplatesResponse> listWorkflowTemplates_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ListWorkflowTemplatesResponse> listWorkflowTemplates_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListWorkflowTemplatesRequest> request) async {
     return listWorkflowTemplates(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteWorkflowTemplate_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteWorkflowTemplate_Pre($grpc.ServiceCall call,
+      $async.Future<$4.DeleteWorkflowTemplateRequest> request) async {
     return deleteWorkflowTemplate(call, await request);
   }
 
-  $async.Future<WorkflowTemplate> createWorkflowTemplate(
-      $grpc.ServiceCall call, CreateWorkflowTemplateRequest request);
-  $async.Future<WorkflowTemplate> getWorkflowTemplate(
-      $grpc.ServiceCall call, GetWorkflowTemplateRequest request);
-  $async.Future<$1.Operation> instantiateWorkflowTemplate(
-      $grpc.ServiceCall call, InstantiateWorkflowTemplateRequest request);
-  $async.Future<$1.Operation> instantiateInlineWorkflowTemplate(
-      $grpc.ServiceCall call, InstantiateInlineWorkflowTemplateRequest request);
-  $async.Future<WorkflowTemplate> updateWorkflowTemplate(
-      $grpc.ServiceCall call, UpdateWorkflowTemplateRequest request);
-  $async.Future<ListWorkflowTemplatesResponse> listWorkflowTemplates(
-      $grpc.ServiceCall call, ListWorkflowTemplatesRequest request);
-  $async.Future<$0.Empty> deleteWorkflowTemplate(
-      $grpc.ServiceCall call, DeleteWorkflowTemplateRequest request);
+  $async.Future<$4.WorkflowTemplate> createWorkflowTemplate(
+      $grpc.ServiceCall call, $4.CreateWorkflowTemplateRequest request);
+  $async.Future<$4.WorkflowTemplate> getWorkflowTemplate(
+      $grpc.ServiceCall call, $4.GetWorkflowTemplateRequest request);
+  $async.Future<$0.Operation> instantiateWorkflowTemplate(
+      $grpc.ServiceCall call, $4.InstantiateWorkflowTemplateRequest request);
+  $async.Future<$0.Operation> instantiateInlineWorkflowTemplate(
+      $grpc.ServiceCall call,
+      $4.InstantiateInlineWorkflowTemplateRequest request);
+  $async.Future<$4.WorkflowTemplate> updateWorkflowTemplate(
+      $grpc.ServiceCall call, $4.UpdateWorkflowTemplateRequest request);
+  $async.Future<$4.ListWorkflowTemplatesResponse> listWorkflowTemplates(
+      $grpc.ServiceCall call, $4.ListWorkflowTemplatesRequest request);
+  $async.Future<$1.Empty> deleteWorkflowTemplate(
+      $grpc.ServiceCall call, $4.DeleteWorkflowTemplateRequest request);
 }

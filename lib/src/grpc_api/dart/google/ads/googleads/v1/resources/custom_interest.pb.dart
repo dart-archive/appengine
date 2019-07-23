@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/custom_interest.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -43,18 +44,20 @@ class CustomInterest extends $pb.GeneratedMessage {
         7, 'members', $pb.PbFieldType.PM, CustomInterestMember.create)
     ..hasRequiredFields = false;
 
-  CustomInterest() : super();
-  CustomInterest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomInterest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomInterest._() : super();
+  factory CustomInterest() => create();
+  factory CustomInterest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomInterest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomInterest clone() => CustomInterest()..mergeFromMessage(this);
   CustomInterest copyWith(void Function(CustomInterest) updates) =>
       super.copyWith((message) => updates(message as CustomInterest));
   $pb.BuilderInfo get info_ => _i;
-  static CustomInterest create() => CustomInterest();
+  @$core.pragma('dart2js:noInline')
+  static CustomInterest create() => CustomInterest._();
   CustomInterest createEmptyInstance() => create();
   static $pb.PbList<CustomInterest> createRepeated() =>
       $pb.PbList<CustomInterest>();
@@ -126,19 +129,21 @@ class CustomInterestMember extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CustomInterestMember() : super();
-  CustomInterestMember.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomInterestMember.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomInterestMember._() : super();
+  factory CustomInterestMember() => create();
+  factory CustomInterestMember.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomInterestMember.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomInterestMember clone() =>
       CustomInterestMember()..mergeFromMessage(this);
   CustomInterestMember copyWith(void Function(CustomInterestMember) updates) =>
       super.copyWith((message) => updates(message as CustomInterestMember));
   $pb.BuilderInfo get info_ => _i;
-  static CustomInterestMember create() => CustomInterestMember();
+  @$core.pragma('dart2js:noInline')
+  static CustomInterestMember create() => CustomInterestMember._();
   CustomInterestMember createEmptyInstance() => create();
   static $pb.PbList<CustomInterestMember> createRepeated() =>
       $pb.PbList<CustomInterestMember>();

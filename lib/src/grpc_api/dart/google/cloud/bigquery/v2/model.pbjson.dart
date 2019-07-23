@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/v2/model.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Model$json = {
   '1': 'Model',
@@ -84,7 +85,8 @@ const Model$json = {
     Model_LossType$json,
     Model_DistanceType$json,
     Model_DataSplitMethod$json,
-    Model_LearnRateStrategy$json
+    Model_LearnRateStrategy$json,
+    Model_OptimizationStrategy$json
   ],
 };
 
@@ -216,6 +218,8 @@ const Model_BinaryClassificationMetrics$json = {
           '.google.cloud.bigquery.v2.Model.BinaryClassificationMetrics.BinaryConfusionMatrix',
       '10': 'binaryConfusionMatrixList'
     },
+    {'1': 'positive_label', '3': 3, '4': 1, '5': 9, '10': 'positiveLabel'},
+    {'1': 'negative_label', '3': 4, '4': 1, '5': 9, '10': 'negativeLabel'},
   ],
   '3': [Model_BinaryClassificationMetrics_BinaryConfusionMatrix$json],
 };
@@ -278,6 +282,22 @@ const Model_BinaryClassificationMetrics_BinaryConfusionMatrix$json = {
       '5': 11,
       '6': '.google.protobuf.DoubleValue',
       '10': 'recall'
+    },
+    {
+      '1': 'f1_score',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'f1Score'
+    },
+    {
+      '1': 'accuracy',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'accuracy'
     },
   ],
 };
@@ -588,6 +608,15 @@ const Model_TrainingRun_TrainingOptions$json = {
       '10': 'distanceType'
     },
     {'1': 'num_clusters', '3': 21, '4': 1, '5': 3, '10': 'numClusters'},
+    {'1': 'model_uri', '3': 22, '4': 1, '5': 9, '10': 'modelUri'},
+    {
+      '1': 'optimization_strategy',
+      '3': 23,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.bigquery.v2.Model.OptimizationStrategy',
+      '10': 'optimizationStrategy'
+    },
   ],
   '3': [Model_TrainingRun_TrainingOptions_LabelClassWeightsEntry$json],
 };
@@ -689,6 +718,7 @@ const Model_ModelType$json = {
     {'1': 'LINEAR_REGRESSION', '2': 1},
     {'1': 'LOGISTIC_REGRESSION', '2': 2},
     {'1': 'KMEANS', '2': 3},
+    {'1': 'TENSORFLOW', '2': 6},
   ],
 };
 
@@ -728,6 +758,15 @@ const Model_LearnRateStrategy$json = {
     {'1': 'LEARN_RATE_STRATEGY_UNSPECIFIED', '2': 0},
     {'1': 'LINE_SEARCH', '2': 1},
     {'1': 'CONSTANT', '2': 2},
+  ],
+};
+
+const Model_OptimizationStrategy$json = {
+  '1': 'OptimizationStrategy',
+  '2': [
+    {'1': 'OPTIMIZATION_STRATEGY_UNSPECIFIED', '2': 0},
+    {'1': 'BATCH_GRADIENT_DESCENT', '2': 1},
+    {'1': 'NORMAL_EQUATION', '2': 2},
   ],
 };
 

@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/streetview/publish/v1/streetview_publish.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
+import 'package:grpc/service_api.dart' as $grpc;
 import '../../../protobuf/empty.pb.dart' as $0;
 import 'resources.pb.dart' as $1;
 import 'rpcmessages.pb.dart' as $2;
@@ -224,47 +224,50 @@ abstract class StreetViewPublishServiceBase extends $grpc.Service {
   }
 
   $async.Future<$1.UploadRef> startUpload_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return startUpload(call, await request);
   }
 
-  $async.Future<$1.Photo> createPhoto_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Photo> createPhoto_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreatePhotoRequest> request) async {
     return createPhoto(call, await request);
   }
 
   $async.Future<$1.Photo> getPhoto_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$2.GetPhotoRequest> request) async {
     return getPhoto(call, await request);
   }
 
   $async.Future<$2.BatchGetPhotosResponse> batchGetPhotos_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call,
+      $async.Future<$2.BatchGetPhotosRequest> request) async {
     return batchGetPhotos(call, await request);
   }
 
-  $async.Future<$2.ListPhotosResponse> listPhotos_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListPhotosResponse> listPhotos_Pre($grpc.ServiceCall call,
+      $async.Future<$2.ListPhotosRequest> request) async {
     return listPhotos(call, await request);
   }
 
-  $async.Future<$1.Photo> updatePhoto_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Photo> updatePhoto_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdatePhotoRequest> request) async {
     return updatePhoto(call, await request);
   }
 
   $async.Future<$2.BatchUpdatePhotosResponse> batchUpdatePhotos_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call,
+      $async.Future<$2.BatchUpdatePhotosRequest> request) async {
     return batchUpdatePhotos(call, await request);
   }
 
-  $async.Future<$0.Empty> deletePhoto_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Empty> deletePhoto_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeletePhotoRequest> request) async {
     return deletePhoto(call, await request);
   }
 
   $async.Future<$2.BatchDeletePhotosResponse> batchDeletePhotos_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call,
+      $async.Future<$2.BatchDeletePhotosRequest> request) async {
     return batchDeletePhotos(call, await request);
   }
 

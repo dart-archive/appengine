@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/account_budget.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -48,6 +49,8 @@ class AccountBudget_PendingAccountBudgetProposal extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AccountBudget.PendingAccountBudgetProposal',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [5, 6])
+    ..oo(1, [7, 8])
     ..a<$0.StringValue>(1, 'accountBudgetProposal', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
     ..e<$4.AccountBudgetProposalTypeEnum_AccountBudgetProposalType>(
@@ -83,17 +86,17 @@ class AccountBudget_PendingAccountBudgetProposal extends $pb.GeneratedMessage {
         9, 'purchaseOrderNumber', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..a<$0.StringValue>(10, 'notes', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..a<$0.StringValue>(11, 'creationDateTime', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
-    ..oo(0, [5, 6])
-    ..oo(1, [7, 8])
     ..hasRequiredFields = false;
 
-  AccountBudget_PendingAccountBudgetProposal() : super();
-  AccountBudget_PendingAccountBudgetProposal.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AccountBudget_PendingAccountBudgetProposal.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AccountBudget_PendingAccountBudgetProposal._() : super();
+  factory AccountBudget_PendingAccountBudgetProposal() => create();
+  factory AccountBudget_PendingAccountBudgetProposal.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccountBudget_PendingAccountBudgetProposal.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AccountBudget_PendingAccountBudgetProposal clone() =>
       AccountBudget_PendingAccountBudgetProposal()..mergeFromMessage(this);
   AccountBudget_PendingAccountBudgetProposal copyWith(
@@ -101,8 +104,9 @@ class AccountBudget_PendingAccountBudgetProposal extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as AccountBudget_PendingAccountBudgetProposal));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AccountBudget_PendingAccountBudgetProposal create() =>
-      AccountBudget_PendingAccountBudgetProposal();
+      AccountBudget_PendingAccountBudgetProposal._();
   AccountBudget_PendingAccountBudgetProposal createEmptyInstance() => create();
   static $pb.PbList<AccountBudget_PendingAccountBudgetProposal>
       createRepeated() =>
@@ -275,6 +279,11 @@ class AccountBudget extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AccountBudget',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [8, 9])
+    ..oo(1, [10, 11])
+    ..oo(2, [12, 13])
+    ..oo(3, [14, 15])
+    ..oo(4, [16, 17])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -322,25 +331,22 @@ class AccountBudget extends $pb.GeneratedMessage {
     ..a<$0.StringValue>(20, 'purchaseOrderNumber', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..a<$0.StringValue>(21, 'notes', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..a<AccountBudget_PendingAccountBudgetProposal>(22, 'pendingProposal', $pb.PbFieldType.OM, AccountBudget_PendingAccountBudgetProposal.getDefault, AccountBudget_PendingAccountBudgetProposal.create)
-    ..oo(0, [8, 9])
-    ..oo(1, [10, 11])
-    ..oo(2, [12, 13])
-    ..oo(3, [14, 15])
-    ..oo(4, [16, 17])
     ..hasRequiredFields = false;
 
-  AccountBudget() : super();
-  AccountBudget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AccountBudget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AccountBudget._() : super();
+  factory AccountBudget() => create();
+  factory AccountBudget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccountBudget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AccountBudget clone() => AccountBudget()..mergeFromMessage(this);
   AccountBudget copyWith(void Function(AccountBudget) updates) =>
       super.copyWith((message) => updates(message as AccountBudget));
   $pb.BuilderInfo get info_ => _i;
-  static AccountBudget create() => AccountBudget();
+  @$core.pragma('dart2js:noInline')
+  static AccountBudget create() => AccountBudget._();
   AccountBudget createEmptyInstance() => create();
   static $pb.PbList<AccountBudget> createRepeated() =>
       $pb.PbList<AccountBudget>();

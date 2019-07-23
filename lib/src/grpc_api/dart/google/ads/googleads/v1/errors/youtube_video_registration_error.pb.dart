@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/youtube_video_registration_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class YoutubeVideoRegistrationErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  YoutubeVideoRegistrationErrorEnum() : super();
-  YoutubeVideoRegistrationErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  YoutubeVideoRegistrationErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  YoutubeVideoRegistrationErrorEnum._() : super();
+  factory YoutubeVideoRegistrationErrorEnum() => create();
+  factory YoutubeVideoRegistrationErrorEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory YoutubeVideoRegistrationErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   YoutubeVideoRegistrationErrorEnum clone() =>
       YoutubeVideoRegistrationErrorEnum()..mergeFromMessage(this);
   YoutubeVideoRegistrationErrorEnum copyWith(
@@ -31,8 +33,9 @@ class YoutubeVideoRegistrationErrorEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as YoutubeVideoRegistrationErrorEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static YoutubeVideoRegistrationErrorEnum create() =>
-      YoutubeVideoRegistrationErrorEnum();
+      YoutubeVideoRegistrationErrorEnum._();
   YoutubeVideoRegistrationErrorEnum createEmptyInstance() => create();
   static $pb.PbList<YoutubeVideoRegistrationErrorEnum> createRepeated() =>
       $pb.PbList<YoutubeVideoRegistrationErrorEnum>();

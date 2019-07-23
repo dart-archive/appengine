@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/logging/v1/request_log.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -27,18 +28,20 @@ class LogLine extends $pb.GeneratedMessage {
         SourceLocation.getDefault, SourceLocation.create)
     ..hasRequiredFields = false;
 
-  LogLine() : super();
-  LogLine.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogLine.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogLine._() : super();
+  factory LogLine() => create();
+  factory LogLine.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogLine.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogLine clone() => LogLine()..mergeFromMessage(this);
   LogLine copyWith(void Function(LogLine) updates) =>
       super.copyWith((message) => updates(message as LogLine));
   $pb.BuilderInfo get info_ => _i;
-  static LogLine create() => LogLine();
+  @$core.pragma('dart2js:noInline')
+  static LogLine create() => LogLine._();
   LogLine createEmptyInstance() => create();
   static $pb.PbList<LogLine> createRepeated() => $pb.PbList<LogLine>();
   static LogLine getDefault() => _defaultInstance ??= create()..freeze();
@@ -85,18 +88,20 @@ class SourceLocation extends $pb.GeneratedMessage {
     ..aOS(3, 'functionName')
     ..hasRequiredFields = false;
 
-  SourceLocation() : super();
-  SourceLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceLocation._() : super();
+  factory SourceLocation() => create();
+  factory SourceLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
   SourceLocation copyWith(void Function(SourceLocation) updates) =>
       super.copyWith((message) => updates(message as SourceLocation));
   $pb.BuilderInfo get info_ => _i;
-  static SourceLocation create() => SourceLocation();
+  @$core.pragma('dart2js:noInline')
+  static SourceLocation create() => SourceLocation._();
   SourceLocation createEmptyInstance() => create();
   static $pb.PbList<SourceLocation> createRepeated() =>
       $pb.PbList<SourceLocation>();
@@ -135,18 +140,20 @@ class SourceReference extends $pb.GeneratedMessage {
     ..aOS(2, 'revisionId')
     ..hasRequiredFields = false;
 
-  SourceReference() : super();
-  SourceReference.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceReference.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceReference._() : super();
+  factory SourceReference() => create();
+  factory SourceReference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceReference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceReference clone() => SourceReference()..mergeFromMessage(this);
   SourceReference copyWith(void Function(SourceReference) updates) =>
       super.copyWith((message) => updates(message as SourceReference));
   $pb.BuilderInfo get info_ => _i;
-  static SourceReference create() => SourceReference();
+  @$core.pragma('dart2js:noInline')
+  static SourceReference create() => SourceReference._();
   SourceReference createEmptyInstance() => create();
   static $pb.PbList<SourceReference> createRepeated() =>
       $pb.PbList<SourceReference>();
@@ -213,18 +220,20 @@ class RequestLog extends $pb.GeneratedMessage {
     ..aOB(42, 'first')
     ..hasRequiredFields = false;
 
-  RequestLog() : super();
-  RequestLog.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RequestLog.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RequestLog._() : super();
+  factory RequestLog() => create();
+  factory RequestLog.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RequestLog.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RequestLog clone() => RequestLog()..mergeFromMessage(this);
   RequestLog copyWith(void Function(RequestLog) updates) =>
       super.copyWith((message) => updates(message as RequestLog));
   $pb.BuilderInfo get info_ => _i;
-  static RequestLog create() => RequestLog();
+  @$core.pragma('dart2js:noInline')
+  static RequestLog create() => RequestLog._();
   RequestLog createEmptyInstance() => create();
   static $pb.PbList<RequestLog> createRepeated() => $pb.PbList<RequestLog>();
   static RequestLog getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/location/locations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/any.pb.dart' as $0;
+import '../../protobuf/any.pb.dart' as $1;
 
 class ListLocationsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLocationsRequest',
@@ -20,19 +21,21 @@ class ListLocationsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListLocationsRequest() : super();
-  ListLocationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLocationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLocationsRequest._() : super();
+  factory ListLocationsRequest() => create();
+  factory ListLocationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLocationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLocationsRequest clone() =>
       ListLocationsRequest()..mergeFromMessage(this);
   ListLocationsRequest copyWith(void Function(ListLocationsRequest) updates) =>
       super.copyWith((message) => updates(message as ListLocationsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListLocationsRequest create() => ListLocationsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListLocationsRequest create() => ListLocationsRequest._();
   ListLocationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListLocationsRequest> createRepeated() =>
       $pb.PbList<ListLocationsRequest>();
@@ -80,20 +83,22 @@ class ListLocationsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListLocationsResponse() : super();
-  ListLocationsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLocationsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLocationsResponse._() : super();
+  factory ListLocationsResponse() => create();
+  factory ListLocationsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLocationsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLocationsResponse clone() =>
       ListLocationsResponse()..mergeFromMessage(this);
   ListLocationsResponse copyWith(
           void Function(ListLocationsResponse) updates) =>
       super.copyWith((message) => updates(message as ListLocationsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListLocationsResponse create() => ListLocationsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListLocationsResponse create() => ListLocationsResponse._();
   ListLocationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListLocationsResponse> createRepeated() =>
       $pb.PbList<ListLocationsResponse>();
@@ -118,18 +123,20 @@ class GetLocationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetLocationRequest() : super();
-  GetLocationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetLocationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetLocationRequest._() : super();
+  factory GetLocationRequest() => create();
+  factory GetLocationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetLocationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetLocationRequest clone() => GetLocationRequest()..mergeFromMessage(this);
   GetLocationRequest copyWith(void Function(GetLocationRequest) updates) =>
       super.copyWith((message) => updates(message as GetLocationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetLocationRequest create() => GetLocationRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetLocationRequest create() => GetLocationRequest._();
   GetLocationRequest createEmptyInstance() => create();
   static $pb.PbList<GetLocationRequest> createRepeated() =>
       $pb.PbList<GetLocationRequest>();
@@ -160,24 +167,26 @@ class Location extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.cloud.location'))
-    ..a<$0.Any>(
-        3, 'metadata', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
+    ..a<$1.Any>(
+        3, 'metadata', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..aOS(4, 'locationId')
     ..aOS(5, 'displayName')
     ..hasRequiredFields = false;
 
-  Location() : super();
-  Location.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Location.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Location._() : super();
+  factory Location() => create();
+  factory Location.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Location.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Location clone() => Location()..mergeFromMessage(this);
   Location copyWith(void Function(Location) updates) =>
       super.copyWith((message) => updates(message as Location));
   $pb.BuilderInfo get info_ => _i;
-  static Location create() => Location();
+  @$core.pragma('dart2js:noInline')
+  static Location create() => Location._();
   Location createEmptyInstance() => create();
   static $pb.PbList<Location> createRepeated() => $pb.PbList<Location>();
   static Location getDefault() => _defaultInstance ??= create()..freeze();
@@ -193,8 +202,8 @@ class Location extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
-  $0.Any get metadata => $_getN(2);
-  set metadata($0.Any v) {
+  $1.Any get metadata => $_getN(2);
+  set metadata($1.Any v) {
     setField(3, v);
   }
 

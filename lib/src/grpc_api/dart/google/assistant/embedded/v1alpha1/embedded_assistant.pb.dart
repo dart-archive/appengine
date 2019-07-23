@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/assistant/embedded/v1alpha1/embedded_assistant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../rpc/status.pb.dart' as $0;
+import '../../../rpc/status.pb.dart' as $1;
 
 import 'embedded_assistant.pbenum.dart';
 
@@ -26,18 +27,20 @@ class ConverseConfig extends $pb.GeneratedMessage {
         ConverseState.getDefault, ConverseState.create)
     ..hasRequiredFields = false;
 
-  ConverseConfig() : super();
-  ConverseConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConverseConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConverseConfig._() : super();
+  factory ConverseConfig() => create();
+  factory ConverseConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConverseConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConverseConfig clone() => ConverseConfig()..mergeFromMessage(this);
   ConverseConfig copyWith(void Function(ConverseConfig) updates) =>
       super.copyWith((message) => updates(message as ConverseConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ConverseConfig create() => ConverseConfig();
+  @$core.pragma('dart2js:noInline')
+  static ConverseConfig create() => ConverseConfig._();
   ConverseConfig createEmptyInstance() => create();
   static $pb.PbList<ConverseConfig> createRepeated() =>
       $pb.PbList<ConverseConfig>();
@@ -82,18 +85,20 @@ class AudioInConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  AudioInConfig() : super();
-  AudioInConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioInConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioInConfig._() : super();
+  factory AudioInConfig() => create();
+  factory AudioInConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioInConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioInConfig clone() => AudioInConfig()..mergeFromMessage(this);
   AudioInConfig copyWith(void Function(AudioInConfig) updates) =>
       super.copyWith((message) => updates(message as AudioInConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AudioInConfig create() => AudioInConfig();
+  @$core.pragma('dart2js:noInline')
+  static AudioInConfig create() => AudioInConfig._();
   AudioInConfig createEmptyInstance() => create();
   static $pb.PbList<AudioInConfig> createRepeated() =>
       $pb.PbList<AudioInConfig>();
@@ -131,18 +136,20 @@ class AudioOutConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  AudioOutConfig() : super();
-  AudioOutConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioOutConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioOutConfig._() : super();
+  factory AudioOutConfig() => create();
+  factory AudioOutConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioOutConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioOutConfig clone() => AudioOutConfig()..mergeFromMessage(this);
   AudioOutConfig copyWith(void Function(AudioOutConfig) updates) =>
       super.copyWith((message) => updates(message as AudioOutConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AudioOutConfig create() => AudioOutConfig();
+  @$core.pragma('dart2js:noInline')
+  static AudioOutConfig create() => AudioOutConfig._();
   AudioOutConfig createEmptyInstance() => create();
   static $pb.PbList<AudioOutConfig> createRepeated() =>
       $pb.PbList<AudioOutConfig>();
@@ -180,18 +187,20 @@ class ConverseState extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'conversationState', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  ConverseState() : super();
-  ConverseState.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConverseState.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConverseState._() : super();
+  factory ConverseState() => create();
+  factory ConverseState.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConverseState.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConverseState clone() => ConverseState()..mergeFromMessage(this);
   ConverseState copyWith(void Function(ConverseState) updates) =>
       super.copyWith((message) => updates(message as ConverseState));
   $pb.BuilderInfo get info_ => _i;
-  static ConverseState create() => ConverseState();
+  @$core.pragma('dart2js:noInline')
+  static ConverseState create() => ConverseState._();
   ConverseState createEmptyInstance() => create();
   static $pb.PbList<ConverseState> createRepeated() =>
       $pb.PbList<ConverseState>();
@@ -213,18 +222,20 @@ class AudioOut extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'audioData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  AudioOut() : super();
-  AudioOut.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioOut.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioOut._() : super();
+  factory AudioOut() => create();
+  factory AudioOut.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioOut.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioOut clone() => AudioOut()..mergeFromMessage(this);
   AudioOut copyWith(void Function(AudioOut) updates) =>
       super.copyWith((message) => updates(message as AudioOut));
   $pb.BuilderInfo get info_ => _i;
-  static AudioOut create() => AudioOut();
+  @$core.pragma('dart2js:noInline')
+  static AudioOut create() => AudioOut._();
   AudioOut createEmptyInstance() => create();
   static $pb.PbList<AudioOut> createRepeated() => $pb.PbList<AudioOut>();
   static AudioOut getDefault() => _defaultInstance ??= create()..freeze();
@@ -255,18 +266,20 @@ class ConverseResult extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ConverseResult() : super();
-  ConverseResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConverseResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConverseResult._() : super();
+  factory ConverseResult() => create();
+  factory ConverseResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConverseResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConverseResult clone() => ConverseResult()..mergeFromMessage(this);
   ConverseResult copyWith(void Function(ConverseResult) updates) =>
       super.copyWith((message) => updates(message as ConverseResult));
   $pb.BuilderInfo get info_ => _i;
-  static ConverseResult create() => ConverseResult();
+  @$core.pragma('dart2js:noInline')
+  static ConverseResult create() => ConverseResult._();
   ConverseResult createEmptyInstance() => create();
   static $pb.PbList<ConverseResult> createRepeated() =>
       $pb.PbList<ConverseResult>();
@@ -325,24 +338,26 @@ class ConverseRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseRequest',
       package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
+    ..oo(0, [1, 2])
     ..a<ConverseConfig>(1, 'config', $pb.PbFieldType.OM,
         ConverseConfig.getDefault, ConverseConfig.create)
     ..a<$core.List<$core.int>>(2, 'audioIn', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  ConverseRequest() : super();
-  ConverseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConverseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConverseRequest._() : super();
+  factory ConverseRequest() => create();
+  factory ConverseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConverseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConverseRequest clone() => ConverseRequest()..mergeFromMessage(this);
   ConverseRequest copyWith(void Function(ConverseRequest) updates) =>
       super.copyWith((message) => updates(message as ConverseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ConverseRequest create() => ConverseRequest();
+  @$core.pragma('dart2js:noInline')
+  static ConverseRequest create() => ConverseRequest._();
   ConverseRequest createEmptyInstance() => create();
   static $pb.PbList<ConverseRequest> createRepeated() =>
       $pb.PbList<ConverseRequest>();
@@ -390,8 +405,9 @@ class ConverseResponse extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseResponse',
       package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
-    ..a<$0.Status>(
-        1, 'error', $pb.PbFieldType.OM, $0.Status.getDefault, $0.Status.create)
+    ..oo(0, [1, 2, 3, 5])
+    ..a<$1.Status>(
+        1, 'error', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
     ..e<ConverseResponse_EventType>(
         2,
         'eventType',
@@ -403,21 +419,22 @@ class ConverseResponse extends $pb.GeneratedMessage {
         3, 'audioOut', $pb.PbFieldType.OM, AudioOut.getDefault, AudioOut.create)
     ..a<ConverseResult>(5, 'result', $pb.PbFieldType.OM,
         ConverseResult.getDefault, ConverseResult.create)
-    ..oo(0, [1, 2, 3, 5])
     ..hasRequiredFields = false;
 
-  ConverseResponse() : super();
-  ConverseResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConverseResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConverseResponse._() : super();
+  factory ConverseResponse() => create();
+  factory ConverseResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConverseResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConverseResponse clone() => ConverseResponse()..mergeFromMessage(this);
   ConverseResponse copyWith(void Function(ConverseResponse) updates) =>
       super.copyWith((message) => updates(message as ConverseResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ConverseResponse create() => ConverseResponse();
+  @$core.pragma('dart2js:noInline')
+  static ConverseResponse create() => ConverseResponse._();
   ConverseResponse createEmptyInstance() => create();
   static $pb.PbList<ConverseResponse> createRepeated() =>
       $pb.PbList<ConverseResponse>();
@@ -429,8 +446,8 @@ class ConverseResponse extends $pb.GeneratedMessage {
       _ConverseResponse_ConverseResponseByTag[$_whichOneof(0)];
   void clearConverseResponse() => clearField($_whichOneof(0));
 
-  $0.Status get error => $_getN(0);
-  set error($0.Status v) {
+  $1.Status get error => $_getN(0);
+  set error($1.Status v) {
     setField(1, v);
   }
 

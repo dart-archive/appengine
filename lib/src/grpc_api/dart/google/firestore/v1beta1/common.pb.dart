@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/v1beta1/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class DocumentMask extends $pb.GeneratedMessage {
     ..pPS(1, 'fieldPaths')
     ..hasRequiredFields = false;
 
-  DocumentMask() : super();
-  DocumentMask.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentMask.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentMask._() : super();
+  factory DocumentMask() => create();
+  factory DocumentMask.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentMask.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentMask clone() => DocumentMask()..mergeFromMessage(this);
   DocumentMask copyWith(void Function(DocumentMask) updates) =>
       super.copyWith((message) => updates(message as DocumentMask));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentMask create() => DocumentMask();
+  @$core.pragma('dart2js:noInline')
+  static DocumentMask create() => DocumentMask._();
   DocumentMask createEmptyInstance() => create();
   static $pb.PbList<DocumentMask> createRepeated() =>
       $pb.PbList<DocumentMask>();
@@ -49,24 +52,26 @@ class Precondition extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Precondition',
       package: const $pb.PackageName('google.firestore.v1beta1'))
+    ..oo(0, [1, 2])
     ..aOB(1, 'exists')
     ..a<$0.Timestamp>(2, 'updateTime', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  Precondition() : super();
-  Precondition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Precondition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Precondition._() : super();
+  factory Precondition() => create();
+  factory Precondition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Precondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Precondition clone() => Precondition()..mergeFromMessage(this);
   Precondition copyWith(void Function(Precondition) updates) =>
       super.copyWith((message) => updates(message as Precondition));
   $pb.BuilderInfo get info_ => _i;
-  static Precondition create() => Precondition();
+  @$core.pragma('dart2js:noInline')
+  static Precondition create() => Precondition._();
   Precondition createEmptyInstance() => create();
   static $pb.PbList<Precondition> createRepeated() =>
       $pb.PbList<Precondition>();
@@ -101,13 +106,14 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'retryTransaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  TransactionOptions_ReadWrite() : super();
-  TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_ReadWrite.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_ReadWrite._() : super();
+  factory TransactionOptions_ReadWrite() => create();
+  factory TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_ReadWrite.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_ReadWrite clone() =>
       TransactionOptions_ReadWrite()..mergeFromMessage(this);
   TransactionOptions_ReadWrite copyWith(
@@ -115,8 +121,9 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_ReadWrite));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadWrite create() =>
-      TransactionOptions_ReadWrite();
+      TransactionOptions_ReadWrite._();
   TransactionOptions_ReadWrite createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadWrite> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadWrite>();
@@ -145,18 +152,19 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.ReadOnly',
       package: const $pb.PackageName('google.firestore.v1beta1'))
+    ..oo(0, [2])
     ..a<$0.Timestamp>(2, 'readTime', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  TransactionOptions_ReadOnly() : super();
-  TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_ReadOnly.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_ReadOnly._() : super();
+  factory TransactionOptions_ReadOnly() => create();
+  factory TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_ReadOnly.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_ReadOnly clone() =>
       TransactionOptions_ReadOnly()..mergeFromMessage(this);
   TransactionOptions_ReadOnly copyWith(
@@ -164,7 +172,9 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_ReadOnly));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionOptions_ReadOnly create() => TransactionOptions_ReadOnly();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadOnly create() =>
+      TransactionOptions_ReadOnly._();
   TransactionOptions_ReadOnly createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadOnly> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadOnly>();
@@ -196,6 +206,7 @@ class TransactionOptions extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
       package: const $pb.PackageName('google.firestore.v1beta1'))
+    ..oo(0, [2, 3])
     ..a<TransactionOptions_ReadOnly>(
         2,
         'readOnly',
@@ -208,21 +219,22 @@ class TransactionOptions extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         TransactionOptions_ReadWrite.getDefault,
         TransactionOptions_ReadWrite.create)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  TransactionOptions() : super();
-  TransactionOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions._() : super();
+  factory TransactionOptions() => create();
+  factory TransactionOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions clone() => TransactionOptions()..mergeFromMessage(this);
   TransactionOptions copyWith(void Function(TransactionOptions) updates) =>
       super.copyWith((message) => updates(message as TransactionOptions));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionOptions create() => TransactionOptions();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions create() => TransactionOptions._();
   TransactionOptions createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions> createRepeated() =>
       $pb.PbList<TransactionOptions>();

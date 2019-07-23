@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/kms/v1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -97,6 +98,9 @@ class CryptoKeyVersion_CryptoKeyVersionAlgorithm extends $pb.ProtobufEnum {
       RSA_SIGN_PSS_4096_SHA256 = CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
           4, 'RSA_SIGN_PSS_4096_SHA256');
   static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
+      RSA_SIGN_PSS_4096_SHA512 = CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
+          15, 'RSA_SIGN_PSS_4096_SHA512');
+  static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
       RSA_SIGN_PKCS1_2048_SHA256 = CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
           5, 'RSA_SIGN_PKCS1_2048_SHA256');
   static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
@@ -105,6 +109,9 @@ class CryptoKeyVersion_CryptoKeyVersionAlgorithm extends $pb.ProtobufEnum {
   static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
       RSA_SIGN_PKCS1_4096_SHA256 = CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
           7, 'RSA_SIGN_PKCS1_4096_SHA256');
+  static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
+      RSA_SIGN_PKCS1_4096_SHA512 = CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
+          16, 'RSA_SIGN_PKCS1_4096_SHA512');
   static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
       RSA_DECRYPT_OAEP_2048_SHA256 =
       CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
@@ -117,6 +124,10 @@ class CryptoKeyVersion_CryptoKeyVersionAlgorithm extends $pb.ProtobufEnum {
       RSA_DECRYPT_OAEP_4096_SHA256 =
       CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
           10, 'RSA_DECRYPT_OAEP_4096_SHA256');
+  static const CryptoKeyVersion_CryptoKeyVersionAlgorithm
+      RSA_DECRYPT_OAEP_4096_SHA512 =
+      CryptoKeyVersion_CryptoKeyVersionAlgorithm._(
+          17, 'RSA_DECRYPT_OAEP_4096_SHA512');
   static const CryptoKeyVersion_CryptoKeyVersionAlgorithm EC_SIGN_P256_SHA256 =
       CryptoKeyVersion_CryptoKeyVersionAlgorithm._(12, 'EC_SIGN_P256_SHA256');
   static const CryptoKeyVersion_CryptoKeyVersionAlgorithm EC_SIGN_P384_SHA384 =
@@ -129,12 +140,15 @@ class CryptoKeyVersion_CryptoKeyVersionAlgorithm extends $pb.ProtobufEnum {
     RSA_SIGN_PSS_2048_SHA256,
     RSA_SIGN_PSS_3072_SHA256,
     RSA_SIGN_PSS_4096_SHA256,
+    RSA_SIGN_PSS_4096_SHA512,
     RSA_SIGN_PKCS1_2048_SHA256,
     RSA_SIGN_PKCS1_3072_SHA256,
     RSA_SIGN_PKCS1_4096_SHA256,
+    RSA_SIGN_PKCS1_4096_SHA512,
     RSA_DECRYPT_OAEP_2048_SHA256,
     RSA_DECRYPT_OAEP_3072_SHA256,
     RSA_DECRYPT_OAEP_4096_SHA256,
+    RSA_DECRYPT_OAEP_4096_SHA512,
     EC_SIGN_P256_SHA256,
     EC_SIGN_P384_SHA384,
   ];
@@ -164,6 +178,10 @@ class CryptoKeyVersion_CryptoKeyVersionState extends $pb.ProtobufEnum {
       CryptoKeyVersion_CryptoKeyVersionState._(3, 'DESTROYED');
   static const CryptoKeyVersion_CryptoKeyVersionState DESTROY_SCHEDULED =
       CryptoKeyVersion_CryptoKeyVersionState._(4, 'DESTROY_SCHEDULED');
+  static const CryptoKeyVersion_CryptoKeyVersionState PENDING_IMPORT =
+      CryptoKeyVersion_CryptoKeyVersionState._(6, 'PENDING_IMPORT');
+  static const CryptoKeyVersion_CryptoKeyVersionState IMPORT_FAILED =
+      CryptoKeyVersion_CryptoKeyVersionState._(7, 'IMPORT_FAILED');
 
   static const $core.List<CryptoKeyVersion_CryptoKeyVersionState> values =
       <CryptoKeyVersion_CryptoKeyVersionState>[
@@ -173,6 +191,8 @@ class CryptoKeyVersion_CryptoKeyVersionState extends $pb.ProtobufEnum {
     DISABLED,
     DESTROYED,
     DESTROY_SCHEDULED,
+    PENDING_IMPORT,
+    IMPORT_FAILED,
   ];
 
   static final $core.Map<$core.int, CryptoKeyVersion_CryptoKeyVersionState>
@@ -205,4 +225,51 @@ class CryptoKeyVersion_CryptoKeyVersionView extends $pb.ProtobufEnum {
 
   const CryptoKeyVersion_CryptoKeyVersionView._($core.int v, $core.String n)
       : super(v, n);
+}
+
+class ImportJob_ImportMethod extends $pb.ProtobufEnum {
+  static const ImportJob_ImportMethod IMPORT_METHOD_UNSPECIFIED =
+      ImportJob_ImportMethod._(0, 'IMPORT_METHOD_UNSPECIFIED');
+  static const ImportJob_ImportMethod RSA_OAEP_3072_SHA1_AES_256 =
+      ImportJob_ImportMethod._(1, 'RSA_OAEP_3072_SHA1_AES_256');
+  static const ImportJob_ImportMethod RSA_OAEP_4096_SHA1_AES_256 =
+      ImportJob_ImportMethod._(2, 'RSA_OAEP_4096_SHA1_AES_256');
+
+  static const $core.List<ImportJob_ImportMethod> values =
+      <ImportJob_ImportMethod>[
+    IMPORT_METHOD_UNSPECIFIED,
+    RSA_OAEP_3072_SHA1_AES_256,
+    RSA_OAEP_4096_SHA1_AES_256,
+  ];
+
+  static final $core.Map<$core.int, ImportJob_ImportMethod> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ImportJob_ImportMethod valueOf($core.int value) => _byValue[value];
+
+  const ImportJob_ImportMethod._($core.int v, $core.String n) : super(v, n);
+}
+
+class ImportJob_ImportJobState extends $pb.ProtobufEnum {
+  static const ImportJob_ImportJobState IMPORT_JOB_STATE_UNSPECIFIED =
+      ImportJob_ImportJobState._(0, 'IMPORT_JOB_STATE_UNSPECIFIED');
+  static const ImportJob_ImportJobState PENDING_GENERATION =
+      ImportJob_ImportJobState._(1, 'PENDING_GENERATION');
+  static const ImportJob_ImportJobState ACTIVE =
+      ImportJob_ImportJobState._(2, 'ACTIVE');
+  static const ImportJob_ImportJobState EXPIRED =
+      ImportJob_ImportJobState._(3, 'EXPIRED');
+
+  static const $core.List<ImportJob_ImportJobState> values =
+      <ImportJob_ImportJobState>[
+    IMPORT_JOB_STATE_UNSPECIFIED,
+    PENDING_GENERATION,
+    ACTIVE,
+    EXPIRED,
+  ];
+
+  static final $core.Map<$core.int, ImportJob_ImportJobState> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ImportJob_ImportJobState valueOf($core.int value) => _byValue[value];
+
+  const ImportJob_ImportJobState._($core.int v, $core.String n) : super(v, n);
 }

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/billing_setup.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,13 +31,14 @@ class BillingSetup_PaymentsAccountInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  BillingSetup_PaymentsAccountInfo() : super();
-  BillingSetup_PaymentsAccountInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BillingSetup_PaymentsAccountInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BillingSetup_PaymentsAccountInfo._() : super();
+  factory BillingSetup_PaymentsAccountInfo() => create();
+  factory BillingSetup_PaymentsAccountInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BillingSetup_PaymentsAccountInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BillingSetup_PaymentsAccountInfo clone() =>
       BillingSetup_PaymentsAccountInfo()..mergeFromMessage(this);
   BillingSetup_PaymentsAccountInfo copyWith(
@@ -44,8 +46,9 @@ class BillingSetup_PaymentsAccountInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BillingSetup_PaymentsAccountInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BillingSetup_PaymentsAccountInfo create() =>
-      BillingSetup_PaymentsAccountInfo();
+      BillingSetup_PaymentsAccountInfo._();
   BillingSetup_PaymentsAccountInfo createEmptyInstance() => create();
   static $pb.PbList<BillingSetup_PaymentsAccountInfo> createRepeated() =>
       $pb.PbList<BillingSetup_PaymentsAccountInfo>();
@@ -113,6 +116,8 @@ class BillingSetup extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BillingSetup',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [9, 10])
+    ..oo(1, [13, 14])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -149,22 +154,22 @@ class BillingSetup extends $pb.GeneratedMessage {
         $2.TimeTypeEnum_TimeType.UNSPECIFIED,
         $2.TimeTypeEnum_TimeType.valueOf,
         $2.TimeTypeEnum_TimeType.values)
-    ..oo(0, [9, 10])
-    ..oo(1, [13, 14])
     ..hasRequiredFields = false;
 
-  BillingSetup() : super();
-  BillingSetup.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BillingSetup.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BillingSetup._() : super();
+  factory BillingSetup() => create();
+  factory BillingSetup.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BillingSetup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BillingSetup clone() => BillingSetup()..mergeFromMessage(this);
   BillingSetup copyWith(void Function(BillingSetup) updates) =>
       super.copyWith((message) => updates(message as BillingSetup));
   $pb.BuilderInfo get info_ => _i;
-  static BillingSetup create() => BillingSetup();
+  @$core.pragma('dart2js:noInline')
+  static BillingSetup create() => BillingSetup._();
   BillingSetup createEmptyInstance() => create();
   static $pb.PbList<BillingSetup> createRepeated() =>
       $pb.PbList<BillingSetup>();

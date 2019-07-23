@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/type/color.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class Color extends $pb.GeneratedMessage {
             $0.FloatValue.getDefault, $0.FloatValue.create)
         ..hasRequiredFields = false;
 
-  Color() : super();
-  Color.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Color.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Color._() : super();
+  factory Color() => create();
+  factory Color.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Color.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Color clone() => Color()..mergeFromMessage(this);
   Color copyWith(void Function(Color) updates) =>
       super.copyWith((message) => updates(message as Color));
   $pb.BuilderInfo get info_ => _i;
-  static Color create() => Color();
+  @$core.pragma('dart2js:noInline')
+  static Color create() => Color._();
   Color createEmptyInstance() => create();
   static $pb.PbList<Color> createRepeated() => $pb.PbList<Color>();
   static Color getDefault() => _defaultInstance ??= create()..freeze();

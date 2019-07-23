@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/entity_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $3;
 
 import 'entity_type.pbenum.dart';
 
@@ -22,18 +23,20 @@ class EntityType_Entity extends $pb.GeneratedMessage {
     ..pPS(2, 'synonyms')
     ..hasRequiredFields = false;
 
-  EntityType_Entity() : super();
-  EntityType_Entity.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityType_Entity.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityType_Entity._() : super();
+  factory EntityType_Entity() => create();
+  factory EntityType_Entity.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EntityType_Entity.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EntityType_Entity clone() => EntityType_Entity()..mergeFromMessage(this);
   EntityType_Entity copyWith(void Function(EntityType_Entity) updates) =>
       super.copyWith((message) => updates(message as EntityType_Entity));
   $pb.BuilderInfo get info_ => _i;
-  static EntityType_Entity create() => EntityType_Entity();
+  @$core.pragma('dart2js:noInline')
+  static EntityType_Entity create() => EntityType_Entity._();
   EntityType_Entity createEmptyInstance() => create();
   static $pb.PbList<EntityType_Entity> createRepeated() =>
       $pb.PbList<EntityType_Entity>();
@@ -75,18 +78,20 @@ class EntityType extends $pb.GeneratedMessage {
         6, 'entities', $pb.PbFieldType.PM, EntityType_Entity.create)
     ..hasRequiredFields = false;
 
-  EntityType() : super();
-  EntityType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityType._() : super();
+  factory EntityType() => create();
+  factory EntityType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EntityType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EntityType clone() => EntityType()..mergeFromMessage(this);
   EntityType copyWith(void Function(EntityType) updates) =>
       super.copyWith((message) => updates(message as EntityType));
   $pb.BuilderInfo get info_ => _i;
-  static EntityType create() => EntityType();
+  @$core.pragma('dart2js:noInline')
+  static EntityType create() => EntityType._();
   EntityType createEmptyInstance() => create();
   static $pb.PbList<EntityType> createRepeated() => $pb.PbList<EntityType>();
   static EntityType getDefault() => _defaultInstance ??= create()..freeze();
@@ -136,20 +141,22 @@ class ListEntityTypesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListEntityTypesRequest() : super();
-  ListEntityTypesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListEntityTypesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListEntityTypesRequest._() : super();
+  factory ListEntityTypesRequest() => create();
+  factory ListEntityTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListEntityTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListEntityTypesRequest clone() =>
       ListEntityTypesRequest()..mergeFromMessage(this);
   ListEntityTypesRequest copyWith(
           void Function(ListEntityTypesRequest) updates) =>
       super.copyWith((message) => updates(message as ListEntityTypesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListEntityTypesRequest create() => ListEntityTypesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListEntityTypesRequest create() => ListEntityTypesRequest._();
   ListEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListEntityTypesRequest> createRepeated() =>
       $pb.PbList<ListEntityTypesRequest>();
@@ -197,20 +204,22 @@ class ListEntityTypesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListEntityTypesResponse() : super();
-  ListEntityTypesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListEntityTypesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListEntityTypesResponse._() : super();
+  factory ListEntityTypesResponse() => create();
+  factory ListEntityTypesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListEntityTypesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListEntityTypesResponse clone() =>
       ListEntityTypesResponse()..mergeFromMessage(this);
   ListEntityTypesResponse copyWith(
           void Function(ListEntityTypesResponse) updates) =>
       super.copyWith((message) => updates(message as ListEntityTypesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListEntityTypesResponse create() => ListEntityTypesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListEntityTypesResponse create() => ListEntityTypesResponse._();
   ListEntityTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListEntityTypesResponse> createRepeated() =>
       $pb.PbList<ListEntityTypesResponse>();
@@ -236,19 +245,21 @@ class GetEntityTypeRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
 
-  GetEntityTypeRequest() : super();
-  GetEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetEntityTypeRequest._() : super();
+  factory GetEntityTypeRequest() => create();
+  factory GetEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetEntityTypeRequest clone() =>
       GetEntityTypeRequest()..mergeFromMessage(this);
   GetEntityTypeRequest copyWith(void Function(GetEntityTypeRequest) updates) =>
       super.copyWith((message) => updates(message as GetEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetEntityTypeRequest create() => GetEntityTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetEntityTypeRequest create() => GetEntityTypeRequest._();
   GetEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<GetEntityTypeRequest> createRepeated() =>
       $pb.PbList<GetEntityTypeRequest>();
@@ -282,20 +293,22 @@ class CreateEntityTypeRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  CreateEntityTypeRequest() : super();
-  CreateEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateEntityTypeRequest._() : super();
+  factory CreateEntityTypeRequest() => create();
+  factory CreateEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateEntityTypeRequest clone() =>
       CreateEntityTypeRequest()..mergeFromMessage(this);
   CreateEntityTypeRequest copyWith(
           void Function(CreateEntityTypeRequest) updates) =>
       super.copyWith((message) => updates(message as CreateEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateEntityTypeRequest create() => CreateEntityTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateEntityTypeRequest create() => CreateEntityTypeRequest._();
   CreateEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<CreateEntityTypeRequest> createRepeated() =>
       $pb.PbList<CreateEntityTypeRequest>();
@@ -334,24 +347,26 @@ class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
     ..a<EntityType>(1, 'entityType', $pb.PbFieldType.OM, EntityType.getDefault,
         EntityType.create)
     ..aOS(2, 'languageCode')
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateEntityTypeRequest() : super();
-  UpdateEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateEntityTypeRequest._() : super();
+  factory UpdateEntityTypeRequest() => create();
+  factory UpdateEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateEntityTypeRequest clone() =>
       UpdateEntityTypeRequest()..mergeFromMessage(this);
   UpdateEntityTypeRequest copyWith(
           void Function(UpdateEntityTypeRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateEntityTypeRequest create() => UpdateEntityTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateEntityTypeRequest create() => UpdateEntityTypeRequest._();
   UpdateEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateEntityTypeRequest> createRepeated() =>
       $pb.PbList<UpdateEntityTypeRequest>();
@@ -375,8 +390,8 @@ class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -390,20 +405,22 @@ class DeleteEntityTypeRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteEntityTypeRequest() : super();
-  DeleteEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteEntityTypeRequest._() : super();
+  factory DeleteEntityTypeRequest() => create();
+  factory DeleteEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteEntityTypeRequest clone() =>
       DeleteEntityTypeRequest()..mergeFromMessage(this);
   DeleteEntityTypeRequest copyWith(
           void Function(DeleteEntityTypeRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteEntityTypeRequest create() => DeleteEntityTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteEntityTypeRequest create() => DeleteEntityTypeRequest._();
   DeleteEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteEntityTypeRequest> createRepeated() =>
       $pb.PbList<DeleteEntityTypeRequest>();
@@ -437,23 +454,24 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchUpdateEntityTypesRequest',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..oo(0, [2, 3])
     ..aOS(1, 'parent')
     ..aOS(2, 'entityTypeBatchUri')
     ..a<EntityTypeBatch>(3, 'entityTypeBatchInline', $pb.PbFieldType.OM,
         EntityTypeBatch.getDefault, EntityTypeBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$2.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
-    ..oo(0, [2, 3])
+    ..a<$3.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  BatchUpdateEntityTypesRequest() : super();
-  BatchUpdateEntityTypesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateEntityTypesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdateEntityTypesRequest._() : super();
+  factory BatchUpdateEntityTypesRequest() => create();
+  factory BatchUpdateEntityTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdateEntityTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdateEntityTypesRequest clone() =>
       BatchUpdateEntityTypesRequest()..mergeFromMessage(this);
   BatchUpdateEntityTypesRequest copyWith(
@@ -461,8 +479,9 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchUpdateEntityTypesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchUpdateEntityTypesRequest create() =>
-      BatchUpdateEntityTypesRequest();
+      BatchUpdateEntityTypesRequest._();
   BatchUpdateEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateEntityTypesRequest> createRepeated() =>
       $pb.PbList<BatchUpdateEntityTypesRequest>();
@@ -506,8 +525,8 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(3);
   void clearLanguageCode() => clearField(4);
 
-  $2.FieldMask get updateMask => $_getN(4);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(4);
+  set updateMask($3.FieldMask v) {
     setField(5, v);
   }
 
@@ -522,13 +541,14 @@ class BatchUpdateEntityTypesResponse extends $pb.GeneratedMessage {
     ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM, EntityType.create)
     ..hasRequiredFields = false;
 
-  BatchUpdateEntityTypesResponse() : super();
-  BatchUpdateEntityTypesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateEntityTypesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdateEntityTypesResponse._() : super();
+  factory BatchUpdateEntityTypesResponse() => create();
+  factory BatchUpdateEntityTypesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdateEntityTypesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdateEntityTypesResponse clone() =>
       BatchUpdateEntityTypesResponse()..mergeFromMessage(this);
   BatchUpdateEntityTypesResponse copyWith(
@@ -536,8 +556,9 @@ class BatchUpdateEntityTypesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchUpdateEntityTypesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchUpdateEntityTypesResponse create() =>
-      BatchUpdateEntityTypesResponse();
+      BatchUpdateEntityTypesResponse._();
   BatchUpdateEntityTypesResponse createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateEntityTypesResponse> createRepeated() =>
       $pb.PbList<BatchUpdateEntityTypesResponse>();
@@ -556,13 +577,14 @@ class BatchDeleteEntityTypesRequest extends $pb.GeneratedMessage {
     ..pPS(2, 'entityTypeNames')
     ..hasRequiredFields = false;
 
-  BatchDeleteEntityTypesRequest() : super();
-  BatchDeleteEntityTypesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeleteEntityTypesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchDeleteEntityTypesRequest._() : super();
+  factory BatchDeleteEntityTypesRequest() => create();
+  factory BatchDeleteEntityTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchDeleteEntityTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchDeleteEntityTypesRequest clone() =>
       BatchDeleteEntityTypesRequest()..mergeFromMessage(this);
   BatchDeleteEntityTypesRequest copyWith(
@@ -570,8 +592,9 @@ class BatchDeleteEntityTypesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchDeleteEntityTypesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchDeleteEntityTypesRequest create() =>
-      BatchDeleteEntityTypesRequest();
+      BatchDeleteEntityTypesRequest._();
   BatchDeleteEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchDeleteEntityTypesRequest> createRepeated() =>
       $pb.PbList<BatchDeleteEntityTypesRequest>();
@@ -600,13 +623,14 @@ class BatchCreateEntitiesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  BatchCreateEntitiesRequest() : super();
-  BatchCreateEntitiesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateEntitiesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateEntitiesRequest._() : super();
+  factory BatchCreateEntitiesRequest() => create();
+  factory BatchCreateEntitiesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateEntitiesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateEntitiesRequest clone() =>
       BatchCreateEntitiesRequest()..mergeFromMessage(this);
   BatchCreateEntitiesRequest copyWith(
@@ -614,7 +638,8 @@ class BatchCreateEntitiesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchCreateEntitiesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchCreateEntitiesRequest create() => BatchCreateEntitiesRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateEntitiesRequest create() => BatchCreateEntitiesRequest._();
   BatchCreateEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchCreateEntitiesRequest> createRepeated() =>
       $pb.PbList<BatchCreateEntitiesRequest>();
@@ -649,17 +674,18 @@ class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
     ..pc<EntityType_Entity>(
         2, 'entities', $pb.PbFieldType.PM, EntityType_Entity.create)
     ..aOS(3, 'languageCode')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  BatchUpdateEntitiesRequest() : super();
-  BatchUpdateEntitiesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateEntitiesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdateEntitiesRequest._() : super();
+  factory BatchUpdateEntitiesRequest() => create();
+  factory BatchUpdateEntitiesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdateEntitiesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdateEntitiesRequest clone() =>
       BatchUpdateEntitiesRequest()..mergeFromMessage(this);
   BatchUpdateEntitiesRequest copyWith(
@@ -667,7 +693,8 @@ class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchUpdateEntitiesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchUpdateEntitiesRequest create() => BatchUpdateEntitiesRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateEntitiesRequest create() => BatchUpdateEntitiesRequest._();
   BatchUpdateEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateEntitiesRequest> createRepeated() =>
       $pb.PbList<BatchUpdateEntitiesRequest>();
@@ -693,8 +720,8 @@ class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(2);
   void clearLanguageCode() => clearField(3);
 
-  $2.FieldMask get updateMask => $_getN(3);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(3);
+  set updateMask($3.FieldMask v) {
     setField(4, v);
   }
 
@@ -711,13 +738,14 @@ class BatchDeleteEntitiesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  BatchDeleteEntitiesRequest() : super();
-  BatchDeleteEntitiesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeleteEntitiesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchDeleteEntitiesRequest._() : super();
+  factory BatchDeleteEntitiesRequest() => create();
+  factory BatchDeleteEntitiesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchDeleteEntitiesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchDeleteEntitiesRequest clone() =>
       BatchDeleteEntitiesRequest()..mergeFromMessage(this);
   BatchDeleteEntitiesRequest copyWith(
@@ -725,7 +753,8 @@ class BatchDeleteEntitiesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchDeleteEntitiesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchDeleteEntitiesRequest create() => BatchDeleteEntitiesRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeleteEntitiesRequest create() => BatchDeleteEntitiesRequest._();
   BatchDeleteEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchDeleteEntitiesRequest> createRepeated() =>
       $pb.PbList<BatchDeleteEntitiesRequest>();
@@ -758,18 +787,20 @@ class EntityTypeBatch extends $pb.GeneratedMessage {
     ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM, EntityType.create)
     ..hasRequiredFields = false;
 
-  EntityTypeBatch() : super();
-  EntityTypeBatch.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityTypeBatch.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityTypeBatch._() : super();
+  factory EntityTypeBatch() => create();
+  factory EntityTypeBatch.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EntityTypeBatch.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EntityTypeBatch clone() => EntityTypeBatch()..mergeFromMessage(this);
   EntityTypeBatch copyWith(void Function(EntityTypeBatch) updates) =>
       super.copyWith((message) => updates(message as EntityTypeBatch));
   $pb.BuilderInfo get info_ => _i;
-  static EntityTypeBatch create() => EntityTypeBatch();
+  @$core.pragma('dart2js:noInline')
+  static EntityTypeBatch create() => EntityTypeBatch._();
   EntityTypeBatch createEmptyInstance() => create();
   static $pb.PbList<EntityTypeBatch> createRepeated() =>
       $pb.PbList<EntityTypeBatch>();

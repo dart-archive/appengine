@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/header_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class HeaderErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  HeaderErrorEnum() : super();
-  HeaderErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HeaderErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HeaderErrorEnum._() : super();
+  factory HeaderErrorEnum() => create();
+  factory HeaderErrorEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HeaderErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HeaderErrorEnum clone() => HeaderErrorEnum()..mergeFromMessage(this);
   HeaderErrorEnum copyWith(void Function(HeaderErrorEnum) updates) =>
       super.copyWith((message) => updates(message as HeaderErrorEnum));
   $pb.BuilderInfo get info_ => _i;
-  static HeaderErrorEnum create() => HeaderErrorEnum();
+  @$core.pragma('dart2js:noInline')
+  static HeaderErrorEnum create() => HeaderErrorEnum._();
   HeaderErrorEnum createEmptyInstance() => create();
   static $pb.PbList<HeaderErrorEnum> createRepeated() =>
       $pb.PbList<HeaderErrorEnum>();

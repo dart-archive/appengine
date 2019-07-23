@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/common/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class RelatedUrl extends $pb.GeneratedMessage {
     ..aOS(2, 'label')
     ..hasRequiredFields = false;
 
-  RelatedUrl() : super();
-  RelatedUrl.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RelatedUrl.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RelatedUrl._() : super();
+  factory RelatedUrl() => create();
+  factory RelatedUrl.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RelatedUrl.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RelatedUrl clone() => RelatedUrl()..mergeFromMessage(this);
   RelatedUrl copyWith(void Function(RelatedUrl) updates) =>
       super.copyWith((message) => updates(message as RelatedUrl));
   $pb.BuilderInfo get info_ => _i;
-  static RelatedUrl create() => RelatedUrl();
+  @$core.pragma('dart2js:noInline')
+  static RelatedUrl create() => RelatedUrl._();
   RelatedUrl createEmptyInstance() => create();
   static $pb.PbList<RelatedUrl> createRepeated() => $pb.PbList<RelatedUrl>();
   static RelatedUrl getDefault() => _defaultInstance ??= create()..freeze();

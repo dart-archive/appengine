@@ -1,15 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/detection.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'geometry.pb.dart' as $0;
+import '../../../protobuf/duration.pb.dart' as $1;
 
 class ImageObjectDetectionAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +22,14 @@ class ImageObjectDetectionAnnotation extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  ImageObjectDetectionAnnotation() : super();
-  ImageObjectDetectionAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageObjectDetectionAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageObjectDetectionAnnotation._() : super();
+  factory ImageObjectDetectionAnnotation() => create();
+  factory ImageObjectDetectionAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageObjectDetectionAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageObjectDetectionAnnotation clone() =>
       ImageObjectDetectionAnnotation()..mergeFromMessage(this);
   ImageObjectDetectionAnnotation copyWith(
@@ -34,8 +37,9 @@ class ImageObjectDetectionAnnotation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImageObjectDetectionAnnotation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageObjectDetectionAnnotation create() =>
-      ImageObjectDetectionAnnotation();
+      ImageObjectDetectionAnnotation._();
   ImageObjectDetectionAnnotation createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionAnnotation> createRepeated() =>
       $pb.PbList<ImageObjectDetectionAnnotation>();
@@ -60,6 +64,76 @@ class ImageObjectDetectionAnnotation extends $pb.GeneratedMessage {
   void clearScore() => clearField(2);
 }
 
+class VideoObjectTrackingAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'VideoObjectTrackingAnnotation',
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..aOS(1, 'instanceId')
+    ..a<$1.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $1.Duration.getDefault, $1.Duration.create)
+    ..a<$0.BoundingPoly>(3, 'boundingBox', $pb.PbFieldType.OM,
+        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  VideoObjectTrackingAnnotation._() : super();
+  factory VideoObjectTrackingAnnotation() => create();
+  factory VideoObjectTrackingAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoObjectTrackingAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  VideoObjectTrackingAnnotation clone() =>
+      VideoObjectTrackingAnnotation()..mergeFromMessage(this);
+  VideoObjectTrackingAnnotation copyWith(
+          void Function(VideoObjectTrackingAnnotation) updates) =>
+      super.copyWith(
+          (message) => updates(message as VideoObjectTrackingAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoObjectTrackingAnnotation create() =>
+      VideoObjectTrackingAnnotation._();
+  VideoObjectTrackingAnnotation createEmptyInstance() => create();
+  static $pb.PbList<VideoObjectTrackingAnnotation> createRepeated() =>
+      $pb.PbList<VideoObjectTrackingAnnotation>();
+  static VideoObjectTrackingAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static VideoObjectTrackingAnnotation _defaultInstance;
+
+  $core.String get instanceId => $_getS(0, '');
+  set instanceId($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasInstanceId() => $_has(0);
+  void clearInstanceId() => clearField(1);
+
+  $1.Duration get timeOffset => $_getN(1);
+  set timeOffset($1.Duration v) {
+    setField(2, v);
+  }
+
+  $core.bool hasTimeOffset() => $_has(1);
+  void clearTimeOffset() => clearField(2);
+
+  $0.BoundingPoly get boundingBox => $_getN(2);
+  set boundingBox($0.BoundingPoly v) {
+    setField(3, v);
+  }
+
+  $core.bool hasBoundingBox() => $_has(2);
+  void clearBoundingBox() => clearField(3);
+
+  $core.double get score => $_getN(3);
+  set score($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasScore() => $_has(3);
+  void clearScore() => clearField(4);
+}
+
 class BoundingBoxMetricsEntry_ConfidenceMetricsEntry
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -71,14 +145,16 @@ class BoundingBoxMetricsEntry_ConfidenceMetricsEntry
     ..a<$core.double>(4, 'f1Score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  BoundingBoxMetricsEntry_ConfidenceMetricsEntry() : super();
-  BoundingBoxMetricsEntry_ConfidenceMetricsEntry.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BoundingBoxMetricsEntry_ConfidenceMetricsEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BoundingBoxMetricsEntry_ConfidenceMetricsEntry._() : super();
+  factory BoundingBoxMetricsEntry_ConfidenceMetricsEntry() => create();
+  factory BoundingBoxMetricsEntry_ConfidenceMetricsEntry.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BoundingBoxMetricsEntry_ConfidenceMetricsEntry.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BoundingBoxMetricsEntry_ConfidenceMetricsEntry clone() =>
       BoundingBoxMetricsEntry_ConfidenceMetricsEntry()..mergeFromMessage(this);
   BoundingBoxMetricsEntry_ConfidenceMetricsEntry copyWith(
@@ -87,8 +163,9 @@ class BoundingBoxMetricsEntry_ConfidenceMetricsEntry
       super.copyWith((message) =>
           updates(message as BoundingBoxMetricsEntry_ConfidenceMetricsEntry));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BoundingBoxMetricsEntry_ConfidenceMetricsEntry create() =>
-      BoundingBoxMetricsEntry_ConfidenceMetricsEntry();
+      BoundingBoxMetricsEntry_ConfidenceMetricsEntry._();
   BoundingBoxMetricsEntry_ConfidenceMetricsEntry createEmptyInstance() =>
       create();
   static $pb.PbList<BoundingBoxMetricsEntry_ConfidenceMetricsEntry>
@@ -143,20 +220,22 @@ class BoundingBoxMetricsEntry extends $pb.GeneratedMessage {
         BoundingBoxMetricsEntry_ConfidenceMetricsEntry.create)
     ..hasRequiredFields = false;
 
-  BoundingBoxMetricsEntry() : super();
-  BoundingBoxMetricsEntry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BoundingBoxMetricsEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BoundingBoxMetricsEntry._() : super();
+  factory BoundingBoxMetricsEntry() => create();
+  factory BoundingBoxMetricsEntry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BoundingBoxMetricsEntry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BoundingBoxMetricsEntry clone() =>
       BoundingBoxMetricsEntry()..mergeFromMessage(this);
   BoundingBoxMetricsEntry copyWith(
           void Function(BoundingBoxMetricsEntry) updates) =>
       super.copyWith((message) => updates(message as BoundingBoxMetricsEntry));
   $pb.BuilderInfo get info_ => _i;
-  static BoundingBoxMetricsEntry create() => BoundingBoxMetricsEntry();
+  @$core.pragma('dart2js:noInline')
+  static BoundingBoxMetricsEntry create() => BoundingBoxMetricsEntry._();
   BoundingBoxMetricsEntry createEmptyInstance() => create();
   static $pb.PbList<BoundingBoxMetricsEntry> createRepeated() =>
       $pb.PbList<BoundingBoxMetricsEntry>();
@@ -194,13 +273,15 @@ class ImageObjectDetectionEvaluationMetrics extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'boundingBoxMeanAveragePrecision', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  ImageObjectDetectionEvaluationMetrics() : super();
-  ImageObjectDetectionEvaluationMetrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageObjectDetectionEvaluationMetrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageObjectDetectionEvaluationMetrics._() : super();
+  factory ImageObjectDetectionEvaluationMetrics() => create();
+  factory ImageObjectDetectionEvaluationMetrics.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageObjectDetectionEvaluationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageObjectDetectionEvaluationMetrics clone() =>
       ImageObjectDetectionEvaluationMetrics()..mergeFromMessage(this);
   ImageObjectDetectionEvaluationMetrics copyWith(
@@ -208,8 +289,9 @@ class ImageObjectDetectionEvaluationMetrics extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ImageObjectDetectionEvaluationMetrics));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageObjectDetectionEvaluationMetrics create() =>
-      ImageObjectDetectionEvaluationMetrics();
+      ImageObjectDetectionEvaluationMetrics._();
   ImageObjectDetectionEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionEvaluationMetrics> createRepeated() =>
       $pb.PbList<ImageObjectDetectionEvaluationMetrics>();
@@ -235,4 +317,69 @@ class ImageObjectDetectionEvaluationMetrics extends $pb.GeneratedMessage {
 
   $core.bool hasBoundingBoxMeanAveragePrecision() => $_has(2);
   void clearBoundingBoxMeanAveragePrecision() => clearField(3);
+}
+
+class VideoObjectTrackingEvaluationMetrics extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'VideoObjectTrackingEvaluationMetrics',
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..a<$core.int>(1, 'evaluatedFrameCount', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'evaluatedBoundingBoxCount', $pb.PbFieldType.O3)
+    ..pc<BoundingBoxMetricsEntry>(4, 'boundingBoxMetricsEntries',
+        $pb.PbFieldType.PM, BoundingBoxMetricsEntry.create)
+    ..a<$core.double>(6, 'boundingBoxMeanAveragePrecision', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  VideoObjectTrackingEvaluationMetrics._() : super();
+  factory VideoObjectTrackingEvaluationMetrics() => create();
+  factory VideoObjectTrackingEvaluationMetrics.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoObjectTrackingEvaluationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  VideoObjectTrackingEvaluationMetrics clone() =>
+      VideoObjectTrackingEvaluationMetrics()..mergeFromMessage(this);
+  VideoObjectTrackingEvaluationMetrics copyWith(
+          void Function(VideoObjectTrackingEvaluationMetrics) updates) =>
+      super.copyWith((message) =>
+          updates(message as VideoObjectTrackingEvaluationMetrics));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VideoObjectTrackingEvaluationMetrics create() =>
+      VideoObjectTrackingEvaluationMetrics._();
+  VideoObjectTrackingEvaluationMetrics createEmptyInstance() => create();
+  static $pb.PbList<VideoObjectTrackingEvaluationMetrics> createRepeated() =>
+      $pb.PbList<VideoObjectTrackingEvaluationMetrics>();
+  static VideoObjectTrackingEvaluationMetrics getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static VideoObjectTrackingEvaluationMetrics _defaultInstance;
+
+  $core.int get evaluatedFrameCount => $_get(0, 0);
+  set evaluatedFrameCount($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
+  $core.bool hasEvaluatedFrameCount() => $_has(0);
+  void clearEvaluatedFrameCount() => clearField(1);
+
+  $core.int get evaluatedBoundingBoxCount => $_get(1, 0);
+  set evaluatedBoundingBoxCount($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  $core.bool hasEvaluatedBoundingBoxCount() => $_has(1);
+  void clearEvaluatedBoundingBoxCount() => clearField(2);
+
+  $core.List<BoundingBoxMetricsEntry> get boundingBoxMetricsEntries =>
+      $_getList(2);
+
+  $core.double get boundingBoxMeanAveragePrecision => $_getN(3);
+  set boundingBoxMeanAveragePrecision($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasBoundingBoxMeanAveragePrecision() => $_has(3);
+  void clearBoundingBoxMeanAveragePrecision() => clearField(6);
 }

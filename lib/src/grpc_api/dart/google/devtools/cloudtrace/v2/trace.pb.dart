@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudtrace/v2/trace.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -34,18 +35,20 @@ class Span_Attributes extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'droppedAttributesCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Span_Attributes() : super();
-  Span_Attributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_Attributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_Attributes._() : super();
+  factory Span_Attributes() => create();
+  factory Span_Attributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_Attributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_Attributes clone() => Span_Attributes()..mergeFromMessage(this);
   Span_Attributes copyWith(void Function(Span_Attributes) updates) =>
       super.copyWith((message) => updates(message as Span_Attributes));
   $pb.BuilderInfo get info_ => _i;
-  static Span_Attributes create() => Span_Attributes();
+  @$core.pragma('dart2js:noInline')
+  static Span_Attributes create() => Span_Attributes._();
   Span_Attributes createEmptyInstance() => create();
   static $pb.PbList<Span_Attributes> createRepeated() =>
       $pb.PbList<Span_Attributes>();
@@ -73,13 +76,14 @@ class Span_TimeEvent_Annotation extends $pb.GeneratedMessage {
         Span_Attributes.getDefault, Span_Attributes.create)
     ..hasRequiredFields = false;
 
-  Span_TimeEvent_Annotation() : super();
-  Span_TimeEvent_Annotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_TimeEvent_Annotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_TimeEvent_Annotation._() : super();
+  factory Span_TimeEvent_Annotation() => create();
+  factory Span_TimeEvent_Annotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_TimeEvent_Annotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_TimeEvent_Annotation clone() =>
       Span_TimeEvent_Annotation()..mergeFromMessage(this);
   Span_TimeEvent_Annotation copyWith(
@@ -87,7 +91,8 @@ class Span_TimeEvent_Annotation extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Span_TimeEvent_Annotation));
   $pb.BuilderInfo get info_ => _i;
-  static Span_TimeEvent_Annotation create() => Span_TimeEvent_Annotation();
+  @$core.pragma('dart2js:noInline')
+  static Span_TimeEvent_Annotation create() => Span_TimeEvent_Annotation._();
   Span_TimeEvent_Annotation createEmptyInstance() => create();
   static $pb.PbList<Span_TimeEvent_Annotation> createRepeated() =>
       $pb.PbList<Span_TimeEvent_Annotation>();
@@ -128,13 +133,14 @@ class Span_TimeEvent_MessageEvent extends $pb.GeneratedMessage {
     ..aInt64(4, 'compressedSizeBytes')
     ..hasRequiredFields = false;
 
-  Span_TimeEvent_MessageEvent() : super();
-  Span_TimeEvent_MessageEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_TimeEvent_MessageEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_TimeEvent_MessageEvent._() : super();
+  factory Span_TimeEvent_MessageEvent() => create();
+  factory Span_TimeEvent_MessageEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_TimeEvent_MessageEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_TimeEvent_MessageEvent clone() =>
       Span_TimeEvent_MessageEvent()..mergeFromMessage(this);
   Span_TimeEvent_MessageEvent copyWith(
@@ -142,7 +148,9 @@ class Span_TimeEvent_MessageEvent extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Span_TimeEvent_MessageEvent));
   $pb.BuilderInfo get info_ => _i;
-  static Span_TimeEvent_MessageEvent create() => Span_TimeEvent_MessageEvent();
+  @$core.pragma('dart2js:noInline')
+  static Span_TimeEvent_MessageEvent create() =>
+      Span_TimeEvent_MessageEvent._();
   Span_TimeEvent_MessageEvent createEmptyInstance() => create();
   static $pb.PbList<Span_TimeEvent_MessageEvent> createRepeated() =>
       $pb.PbList<Span_TimeEvent_MessageEvent>();
@@ -194,6 +202,7 @@ class Span_TimeEvent extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Span.TimeEvent',
       package: const $pb.PackageName('google.devtools.cloudtrace.v2'))
+    ..oo(0, [2, 3])
     ..a<$0.Timestamp>(1, 'time', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
         $0.Timestamp.create)
     ..a<Span_TimeEvent_Annotation>(2, 'annotation', $pb.PbFieldType.OM,
@@ -204,21 +213,22 @@ class Span_TimeEvent extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Span_TimeEvent_MessageEvent.getDefault,
         Span_TimeEvent_MessageEvent.create)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  Span_TimeEvent() : super();
-  Span_TimeEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_TimeEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_TimeEvent._() : super();
+  factory Span_TimeEvent() => create();
+  factory Span_TimeEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_TimeEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_TimeEvent clone() => Span_TimeEvent()..mergeFromMessage(this);
   Span_TimeEvent copyWith(void Function(Span_TimeEvent) updates) =>
       super.copyWith((message) => updates(message as Span_TimeEvent));
   $pb.BuilderInfo get info_ => _i;
-  static Span_TimeEvent create() => Span_TimeEvent();
+  @$core.pragma('dart2js:noInline')
+  static Span_TimeEvent create() => Span_TimeEvent._();
   Span_TimeEvent createEmptyInstance() => create();
   static $pb.PbList<Span_TimeEvent> createRepeated() =>
       $pb.PbList<Span_TimeEvent>();
@@ -263,18 +273,20 @@ class Span_TimeEvents extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'droppedMessageEventsCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Span_TimeEvents() : super();
-  Span_TimeEvents.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_TimeEvents.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_TimeEvents._() : super();
+  factory Span_TimeEvents() => create();
+  factory Span_TimeEvents.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_TimeEvents.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_TimeEvents clone() => Span_TimeEvents()..mergeFromMessage(this);
   Span_TimeEvents copyWith(void Function(Span_TimeEvents) updates) =>
       super.copyWith((message) => updates(message as Span_TimeEvents));
   $pb.BuilderInfo get info_ => _i;
-  static Span_TimeEvents create() => Span_TimeEvents();
+  @$core.pragma('dart2js:noInline')
+  static Span_TimeEvents create() => Span_TimeEvents._();
   Span_TimeEvents createEmptyInstance() => create();
   static $pb.PbList<Span_TimeEvents> createRepeated() =>
       $pb.PbList<Span_TimeEvents>();
@@ -317,18 +329,20 @@ class Span_Link extends $pb.GeneratedMessage {
         Span_Attributes.getDefault, Span_Attributes.create)
     ..hasRequiredFields = false;
 
-  Span_Link() : super();
-  Span_Link.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_Link.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_Link._() : super();
+  factory Span_Link() => create();
+  factory Span_Link.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_Link.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_Link clone() => Span_Link()..mergeFromMessage(this);
   Span_Link copyWith(void Function(Span_Link) updates) =>
       super.copyWith((message) => updates(message as Span_Link));
   $pb.BuilderInfo get info_ => _i;
-  static Span_Link create() => Span_Link();
+  @$core.pragma('dart2js:noInline')
+  static Span_Link create() => Span_Link._();
   Span_Link createEmptyInstance() => create();
   static $pb.PbList<Span_Link> createRepeated() => $pb.PbList<Span_Link>();
   static Span_Link getDefault() => _defaultInstance ??= create()..freeze();
@@ -374,18 +388,20 @@ class Span_Links extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'droppedLinksCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Span_Links() : super();
-  Span_Links.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span_Links.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span_Links._() : super();
+  factory Span_Links() => create();
+  factory Span_Links.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span_Links.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span_Links clone() => Span_Links()..mergeFromMessage(this);
   Span_Links copyWith(void Function(Span_Links) updates) =>
       super.copyWith((message) => updates(message as Span_Links));
   $pb.BuilderInfo get info_ => _i;
-  static Span_Links create() => Span_Links();
+  @$core.pragma('dart2js:noInline')
+  static Span_Links create() => Span_Links._();
   Span_Links createEmptyInstance() => create();
   static $pb.PbList<Span_Links> createRepeated() => $pb.PbList<Span_Links>();
   static Span_Links getDefault() => _defaultInstance ??= create()..freeze();
@@ -430,18 +446,20 @@ class Span extends $pb.GeneratedMessage {
         $2.Int32Value.getDefault, $2.Int32Value.create)
     ..hasRequiredFields = false;
 
-  Span() : super();
-  Span.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Span.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Span._() : super();
+  factory Span() => create();
+  factory Span.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Span.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Span clone() => Span()..mergeFromMessage(this);
   Span copyWith(void Function(Span) updates) =>
       super.copyWith((message) => updates(message as Span));
   $pb.BuilderInfo get info_ => _i;
-  static Span create() => Span();
+  @$core.pragma('dart2js:noInline')
+  static Span create() => Span._();
   Span createEmptyInstance() => create();
   static $pb.PbList<Span> createRepeated() => $pb.PbList<Span>();
   static Span getDefault() => _defaultInstance ??= create()..freeze();
@@ -564,25 +582,27 @@ class AttributeValue extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttributeValue',
       package: const $pb.PackageName('google.devtools.cloudtrace.v2'))
+    ..oo(0, [1, 2, 3])
     ..a<TruncatableString>(1, 'stringValue', $pb.PbFieldType.OM,
         TruncatableString.getDefault, TruncatableString.create)
     ..aInt64(2, 'intValue')
     ..aOB(3, 'boolValue')
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  AttributeValue() : super();
-  AttributeValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttributeValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AttributeValue._() : super();
+  factory AttributeValue() => create();
+  factory AttributeValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AttributeValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AttributeValue clone() => AttributeValue()..mergeFromMessage(this);
   AttributeValue copyWith(void Function(AttributeValue) updates) =>
       super.copyWith((message) => updates(message as AttributeValue));
   $pb.BuilderInfo get info_ => _i;
-  static AttributeValue create() => AttributeValue();
+  @$core.pragma('dart2js:noInline')
+  static AttributeValue create() => AttributeValue._();
   AttributeValue createEmptyInstance() => create();
   static $pb.PbList<AttributeValue> createRepeated() =>
       $pb.PbList<AttributeValue>();
@@ -635,20 +655,22 @@ class StackTrace_StackFrame extends $pb.GeneratedMessage {
         TruncatableString.getDefault, TruncatableString.create)
     ..hasRequiredFields = false;
 
-  StackTrace_StackFrame() : super();
-  StackTrace_StackFrame.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StackTrace_StackFrame.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StackTrace_StackFrame._() : super();
+  factory StackTrace_StackFrame() => create();
+  factory StackTrace_StackFrame.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StackTrace_StackFrame.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StackTrace_StackFrame clone() =>
       StackTrace_StackFrame()..mergeFromMessage(this);
   StackTrace_StackFrame copyWith(
           void Function(StackTrace_StackFrame) updates) =>
       super.copyWith((message) => updates(message as StackTrace_StackFrame));
   $pb.BuilderInfo get info_ => _i;
-  static StackTrace_StackFrame create() => StackTrace_StackFrame();
+  @$core.pragma('dart2js:noInline')
+  static StackTrace_StackFrame create() => StackTrace_StackFrame._();
   StackTrace_StackFrame createEmptyInstance() => create();
   static $pb.PbList<StackTrace_StackFrame> createRepeated() =>
       $pb.PbList<StackTrace_StackFrame>();
@@ -721,20 +743,22 @@ class StackTrace_StackFrames extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'droppedFramesCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  StackTrace_StackFrames() : super();
-  StackTrace_StackFrames.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StackTrace_StackFrames.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StackTrace_StackFrames._() : super();
+  factory StackTrace_StackFrames() => create();
+  factory StackTrace_StackFrames.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StackTrace_StackFrames.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StackTrace_StackFrames clone() =>
       StackTrace_StackFrames()..mergeFromMessage(this);
   StackTrace_StackFrames copyWith(
           void Function(StackTrace_StackFrames) updates) =>
       super.copyWith((message) => updates(message as StackTrace_StackFrames));
   $pb.BuilderInfo get info_ => _i;
-  static StackTrace_StackFrames create() => StackTrace_StackFrames();
+  @$core.pragma('dart2js:noInline')
+  static StackTrace_StackFrames create() => StackTrace_StackFrames._();
   StackTrace_StackFrames createEmptyInstance() => create();
   static $pb.PbList<StackTrace_StackFrames> createRepeated() =>
       $pb.PbList<StackTrace_StackFrames>();
@@ -761,18 +785,20 @@ class StackTrace extends $pb.GeneratedMessage {
     ..aInt64(2, 'stackTraceHashId')
     ..hasRequiredFields = false;
 
-  StackTrace() : super();
-  StackTrace.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StackTrace.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StackTrace._() : super();
+  factory StackTrace() => create();
+  factory StackTrace.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StackTrace.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StackTrace clone() => StackTrace()..mergeFromMessage(this);
   StackTrace copyWith(void Function(StackTrace) updates) =>
       super.copyWith((message) => updates(message as StackTrace));
   $pb.BuilderInfo get info_ => _i;
-  static StackTrace create() => StackTrace();
+  @$core.pragma('dart2js:noInline')
+  static StackTrace create() => StackTrace._();
   StackTrace createEmptyInstance() => create();
   static $pb.PbList<StackTrace> createRepeated() => $pb.PbList<StackTrace>();
   static StackTrace getDefault() => _defaultInstance ??= create()..freeze();
@@ -804,18 +830,20 @@ class Module extends $pb.GeneratedMessage {
         TruncatableString.getDefault, TruncatableString.create)
     ..hasRequiredFields = false;
 
-  Module() : super();
-  Module.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Module.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Module._() : super();
+  factory Module() => create();
+  factory Module.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Module.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Module clone() => Module()..mergeFromMessage(this);
   Module copyWith(void Function(Module) updates) =>
       super.copyWith((message) => updates(message as Module));
   $pb.BuilderInfo get info_ => _i;
-  static Module create() => Module();
+  @$core.pragma('dart2js:noInline')
+  static Module create() => Module._();
   Module createEmptyInstance() => create();
   static $pb.PbList<Module> createRepeated() => $pb.PbList<Module>();
   static Module getDefault() => _defaultInstance ??= create()..freeze();
@@ -845,18 +873,20 @@ class TruncatableString extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'truncatedByteCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  TruncatableString() : super();
-  TruncatableString.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TruncatableString.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TruncatableString._() : super();
+  factory TruncatableString() => create();
+  factory TruncatableString.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TruncatableString.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TruncatableString clone() => TruncatableString()..mergeFromMessage(this);
   TruncatableString copyWith(void Function(TruncatableString) updates) =>
       super.copyWith((message) => updates(message as TruncatableString));
   $pb.BuilderInfo get info_ => _i;
-  static TruncatableString create() => TruncatableString();
+  @$core.pragma('dart2js:noInline')
+  static TruncatableString create() => TruncatableString._();
   TruncatableString createEmptyInstance() => create();
   static $pb.PbList<TruncatableString> createRepeated() =>
       $pb.PbList<TruncatableString>();

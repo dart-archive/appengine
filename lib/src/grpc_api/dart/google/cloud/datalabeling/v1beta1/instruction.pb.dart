@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/instruction.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -34,20 +35,23 @@ class Instruction extends $pb.GeneratedMessage {
         CsvInstruction.getDefault, CsvInstruction.create)
     ..a<PdfInstruction>(9, 'pdfInstruction', $pb.PbFieldType.OM,
         PdfInstruction.getDefault, PdfInstruction.create)
+    ..pPS(10, 'blockingResources')
     ..hasRequiredFields = false;
 
-  Instruction() : super();
-  Instruction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instruction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Instruction._() : super();
+  factory Instruction() => create();
+  factory Instruction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Instruction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Instruction clone() => Instruction()..mergeFromMessage(this);
   Instruction copyWith(void Function(Instruction) updates) =>
       super.copyWith((message) => updates(message as Instruction));
   $pb.BuilderInfo get info_ => _i;
-  static Instruction create() => Instruction();
+  @$core.pragma('dart2js:noInline')
+  static Instruction create() => Instruction._();
   Instruction createEmptyInstance() => create();
   static $pb.PbList<Instruction> createRepeated() => $pb.PbList<Instruction>();
   static Instruction getDefault() => _defaultInstance ??= create()..freeze();
@@ -116,6 +120,8 @@ class Instruction extends $pb.GeneratedMessage {
 
   $core.bool hasPdfInstruction() => $_has(7);
   void clearPdfInstruction() => clearField(9);
+
+  $core.List<$core.String> get blockingResources => $_getList(8);
 }
 
 class CsvInstruction extends $pb.GeneratedMessage {
@@ -124,18 +130,20 @@ class CsvInstruction extends $pb.GeneratedMessage {
     ..aOS(1, 'gcsFileUri')
     ..hasRequiredFields = false;
 
-  CsvInstruction() : super();
-  CsvInstruction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CsvInstruction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CsvInstruction._() : super();
+  factory CsvInstruction() => create();
+  factory CsvInstruction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CsvInstruction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CsvInstruction clone() => CsvInstruction()..mergeFromMessage(this);
   CsvInstruction copyWith(void Function(CsvInstruction) updates) =>
       super.copyWith((message) => updates(message as CsvInstruction));
   $pb.BuilderInfo get info_ => _i;
-  static CsvInstruction create() => CsvInstruction();
+  @$core.pragma('dart2js:noInline')
+  static CsvInstruction create() => CsvInstruction._();
   CsvInstruction createEmptyInstance() => create();
   static $pb.PbList<CsvInstruction> createRepeated() =>
       $pb.PbList<CsvInstruction>();
@@ -157,18 +165,20 @@ class PdfInstruction extends $pb.GeneratedMessage {
     ..aOS(1, 'gcsFileUri')
     ..hasRequiredFields = false;
 
-  PdfInstruction() : super();
-  PdfInstruction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PdfInstruction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PdfInstruction._() : super();
+  factory PdfInstruction() => create();
+  factory PdfInstruction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PdfInstruction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PdfInstruction clone() => PdfInstruction()..mergeFromMessage(this);
   PdfInstruction copyWith(void Function(PdfInstruction) updates) =>
       super.copyWith((message) => updates(message as PdfInstruction));
   $pb.BuilderInfo get info_ => _i;
-  static PdfInstruction create() => PdfInstruction();
+  @$core.pragma('dart2js:noInline')
+  static PdfInstruction create() => PdfInstruction._();
   PdfInstruction createEmptyInstance() => create();
   static $pb.PbList<PdfInstruction> createRepeated() =>
       $pb.PbList<PdfInstruction>();

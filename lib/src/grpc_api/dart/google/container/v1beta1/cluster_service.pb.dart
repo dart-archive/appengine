@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/container/v1beta1/cluster_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -58,18 +59,20 @@ class NodeConfig extends $pb.GeneratedMessage {
     ..pc<NodeTaint>(15, 'taints', $pb.PbFieldType.PM, NodeTaint.create)
     ..hasRequiredFields = false;
 
-  NodeConfig() : super();
-  NodeConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodeConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NodeConfig._() : super();
+  factory NodeConfig() => create();
+  factory NodeConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NodeConfig clone() => NodeConfig()..mergeFromMessage(this);
   NodeConfig copyWith(void Function(NodeConfig) updates) =>
       super.copyWith((message) => updates(message as NodeConfig));
   $pb.BuilderInfo get info_ => _i;
-  static NodeConfig create() => NodeConfig();
+  @$core.pragma('dart2js:noInline')
+  static NodeConfig create() => NodeConfig._();
   NodeConfig createEmptyInstance() => create();
   static $pb.PbList<NodeConfig> createRepeated() => $pb.PbList<NodeConfig>();
   static NodeConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -174,18 +177,20 @@ class NodeTaint extends $pb.GeneratedMessage {
         NodeTaint_Effect.values)
     ..hasRequiredFields = false;
 
-  NodeTaint() : super();
-  NodeTaint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodeTaint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NodeTaint._() : super();
+  factory NodeTaint() => create();
+  factory NodeTaint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeTaint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NodeTaint clone() => NodeTaint()..mergeFromMessage(this);
   NodeTaint copyWith(void Function(NodeTaint) updates) =>
       super.copyWith((message) => updates(message as NodeTaint));
   $pb.BuilderInfo get info_ => _i;
-  static NodeTaint create() => NodeTaint();
+  @$core.pragma('dart2js:noInline')
+  static NodeTaint create() => NodeTaint._();
   NodeTaint createEmptyInstance() => create();
   static $pb.PbList<NodeTaint> createRepeated() => $pb.PbList<NodeTaint>();
   static NodeTaint getDefault() => _defaultInstance ??= create()..freeze();
@@ -232,18 +237,20 @@ class MasterAuth extends $pb.GeneratedMessage {
     ..aOS(102, 'clientKey')
     ..hasRequiredFields = false;
 
-  MasterAuth() : super();
-  MasterAuth.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MasterAuth.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MasterAuth._() : super();
+  factory MasterAuth() => create();
+  factory MasterAuth.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MasterAuth.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MasterAuth clone() => MasterAuth()..mergeFromMessage(this);
   MasterAuth copyWith(void Function(MasterAuth) updates) =>
       super.copyWith((message) => updates(message as MasterAuth));
   $pb.BuilderInfo get info_ => _i;
-  static MasterAuth create() => MasterAuth();
+  @$core.pragma('dart2js:noInline')
+  static MasterAuth create() => MasterAuth._();
   MasterAuth createEmptyInstance() => create();
   static $pb.PbList<MasterAuth> createRepeated() => $pb.PbList<MasterAuth>();
   static MasterAuth getDefault() => _defaultInstance ??= create()..freeze();
@@ -304,20 +311,22 @@ class ClientCertificateConfig extends $pb.GeneratedMessage {
     ..aOB(1, 'issueClientCertificate')
     ..hasRequiredFields = false;
 
-  ClientCertificateConfig() : super();
-  ClientCertificateConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClientCertificateConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClientCertificateConfig._() : super();
+  factory ClientCertificateConfig() => create();
+  factory ClientCertificateConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClientCertificateConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClientCertificateConfig clone() =>
       ClientCertificateConfig()..mergeFromMessage(this);
   ClientCertificateConfig copyWith(
           void Function(ClientCertificateConfig) updates) =>
       super.copyWith((message) => updates(message as ClientCertificateConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ClientCertificateConfig create() => ClientCertificateConfig();
+  @$core.pragma('dart2js:noInline')
+  static ClientCertificateConfig create() => ClientCertificateConfig._();
   ClientCertificateConfig createEmptyInstance() => create();
   static $pb.PbList<ClientCertificateConfig> createRepeated() =>
       $pb.PbList<ClientCertificateConfig>();
@@ -355,18 +364,20 @@ class AddonsConfig extends $pb.GeneratedMessage {
         CloudRunConfig.getDefault, CloudRunConfig.create)
     ..hasRequiredFields = false;
 
-  AddonsConfig() : super();
-  AddonsConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AddonsConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AddonsConfig._() : super();
+  factory AddonsConfig() => create();
+  factory AddonsConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AddonsConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AddonsConfig clone() => AddonsConfig()..mergeFromMessage(this);
   AddonsConfig copyWith(void Function(AddonsConfig) updates) =>
       super.copyWith((message) => updates(message as AddonsConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AddonsConfig create() => AddonsConfig();
+  @$core.pragma('dart2js:noInline')
+  static AddonsConfig create() => AddonsConfig._();
   AddonsConfig createEmptyInstance() => create();
   static $pb.PbList<AddonsConfig> createRepeated() =>
       $pb.PbList<AddonsConfig>();
@@ -428,18 +439,20 @@ class HttpLoadBalancing extends $pb.GeneratedMessage {
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
-  HttpLoadBalancing() : super();
-  HttpLoadBalancing.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HttpLoadBalancing.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HttpLoadBalancing._() : super();
+  factory HttpLoadBalancing() => create();
+  factory HttpLoadBalancing.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HttpLoadBalancing.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HttpLoadBalancing clone() => HttpLoadBalancing()..mergeFromMessage(this);
   HttpLoadBalancing copyWith(void Function(HttpLoadBalancing) updates) =>
       super.copyWith((message) => updates(message as HttpLoadBalancing));
   $pb.BuilderInfo get info_ => _i;
-  static HttpLoadBalancing create() => HttpLoadBalancing();
+  @$core.pragma('dart2js:noInline')
+  static HttpLoadBalancing create() => HttpLoadBalancing._();
   HttpLoadBalancing createEmptyInstance() => create();
   static $pb.PbList<HttpLoadBalancing> createRepeated() =>
       $pb.PbList<HttpLoadBalancing>();
@@ -462,20 +475,22 @@ class HorizontalPodAutoscaling extends $pb.GeneratedMessage {
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
-  HorizontalPodAutoscaling() : super();
-  HorizontalPodAutoscaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HorizontalPodAutoscaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HorizontalPodAutoscaling._() : super();
+  factory HorizontalPodAutoscaling() => create();
+  factory HorizontalPodAutoscaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HorizontalPodAutoscaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HorizontalPodAutoscaling clone() =>
       HorizontalPodAutoscaling()..mergeFromMessage(this);
   HorizontalPodAutoscaling copyWith(
           void Function(HorizontalPodAutoscaling) updates) =>
       super.copyWith((message) => updates(message as HorizontalPodAutoscaling));
   $pb.BuilderInfo get info_ => _i;
-  static HorizontalPodAutoscaling create() => HorizontalPodAutoscaling();
+  @$core.pragma('dart2js:noInline')
+  static HorizontalPodAutoscaling create() => HorizontalPodAutoscaling._();
   HorizontalPodAutoscaling createEmptyInstance() => create();
   static $pb.PbList<HorizontalPodAutoscaling> createRepeated() =>
       $pb.PbList<HorizontalPodAutoscaling>();
@@ -498,18 +513,20 @@ class KubernetesDashboard extends $pb.GeneratedMessage {
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
-  KubernetesDashboard() : super();
-  KubernetesDashboard.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KubernetesDashboard.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KubernetesDashboard._() : super();
+  factory KubernetesDashboard() => create();
+  factory KubernetesDashboard.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KubernetesDashboard.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KubernetesDashboard clone() => KubernetesDashboard()..mergeFromMessage(this);
   KubernetesDashboard copyWith(void Function(KubernetesDashboard) updates) =>
       super.copyWith((message) => updates(message as KubernetesDashboard));
   $pb.BuilderInfo get info_ => _i;
-  static KubernetesDashboard create() => KubernetesDashboard();
+  @$core.pragma('dart2js:noInline')
+  static KubernetesDashboard create() => KubernetesDashboard._();
   KubernetesDashboard createEmptyInstance() => create();
   static $pb.PbList<KubernetesDashboard> createRepeated() =>
       $pb.PbList<KubernetesDashboard>();
@@ -532,18 +549,20 @@ class NetworkPolicyConfig extends $pb.GeneratedMessage {
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
-  NetworkPolicyConfig() : super();
-  NetworkPolicyConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NetworkPolicyConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NetworkPolicyConfig._() : super();
+  factory NetworkPolicyConfig() => create();
+  factory NetworkPolicyConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NetworkPolicyConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NetworkPolicyConfig clone() => NetworkPolicyConfig()..mergeFromMessage(this);
   NetworkPolicyConfig copyWith(void Function(NetworkPolicyConfig) updates) =>
       super.copyWith((message) => updates(message as NetworkPolicyConfig));
   $pb.BuilderInfo get info_ => _i;
-  static NetworkPolicyConfig create() => NetworkPolicyConfig();
+  @$core.pragma('dart2js:noInline')
+  static NetworkPolicyConfig create() => NetworkPolicyConfig._();
   NetworkPolicyConfig createEmptyInstance() => create();
   static $pb.PbList<NetworkPolicyConfig> createRepeated() =>
       $pb.PbList<NetworkPolicyConfig>();
@@ -570,19 +589,21 @@ class PrivateClusterConfig extends $pb.GeneratedMessage {
     ..aOS(5, 'publicEndpoint')
     ..hasRequiredFields = false;
 
-  PrivateClusterConfig() : super();
-  PrivateClusterConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivateClusterConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivateClusterConfig._() : super();
+  factory PrivateClusterConfig() => create();
+  factory PrivateClusterConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivateClusterConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivateClusterConfig clone() =>
       PrivateClusterConfig()..mergeFromMessage(this);
   PrivateClusterConfig copyWith(void Function(PrivateClusterConfig) updates) =>
       super.copyWith((message) => updates(message as PrivateClusterConfig));
   $pb.BuilderInfo get info_ => _i;
-  static PrivateClusterConfig create() => PrivateClusterConfig();
+  @$core.pragma('dart2js:noInline')
+  static PrivateClusterConfig create() => PrivateClusterConfig._();
   PrivateClusterConfig createEmptyInstance() => create();
   static $pb.PbList<PrivateClusterConfig> createRepeated() =>
       $pb.PbList<PrivateClusterConfig>();
@@ -644,18 +665,20 @@ class IstioConfig extends $pb.GeneratedMessage {
         IstioConfig_IstioAuthMode.values)
     ..hasRequiredFields = false;
 
-  IstioConfig() : super();
-  IstioConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IstioConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IstioConfig._() : super();
+  factory IstioConfig() => create();
+  factory IstioConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IstioConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IstioConfig clone() => IstioConfig()..mergeFromMessage(this);
   IstioConfig copyWith(void Function(IstioConfig) updates) =>
       super.copyWith((message) => updates(message as IstioConfig));
   $pb.BuilderInfo get info_ => _i;
-  static IstioConfig create() => IstioConfig();
+  @$core.pragma('dart2js:noInline')
+  static IstioConfig create() => IstioConfig._();
   IstioConfig createEmptyInstance() => create();
   static $pb.PbList<IstioConfig> createRepeated() => $pb.PbList<IstioConfig>();
   static IstioConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -684,18 +707,20 @@ class CloudRunConfig extends $pb.GeneratedMessage {
     ..aOB(1, 'disabled')
     ..hasRequiredFields = false;
 
-  CloudRunConfig() : super();
-  CloudRunConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CloudRunConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CloudRunConfig._() : super();
+  factory CloudRunConfig() => create();
+  factory CloudRunConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudRunConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CloudRunConfig clone() => CloudRunConfig()..mergeFromMessage(this);
   CloudRunConfig copyWith(void Function(CloudRunConfig) updates) =>
       super.copyWith((message) => updates(message as CloudRunConfig));
   $pb.BuilderInfo get info_ => _i;
-  static CloudRunConfig create() => CloudRunConfig();
+  @$core.pragma('dart2js:noInline')
+  static CloudRunConfig create() => CloudRunConfig._();
   CloudRunConfig createEmptyInstance() => create();
   static $pb.PbList<CloudRunConfig> createRepeated() =>
       $pb.PbList<CloudRunConfig>();
@@ -719,13 +744,15 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
     ..aOS(2, 'cidrBlock')
     ..hasRequiredFields = false;
 
-  MasterAuthorizedNetworksConfig_CidrBlock() : super();
-  MasterAuthorizedNetworksConfig_CidrBlock.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MasterAuthorizedNetworksConfig_CidrBlock.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MasterAuthorizedNetworksConfig_CidrBlock._() : super();
+  factory MasterAuthorizedNetworksConfig_CidrBlock() => create();
+  factory MasterAuthorizedNetworksConfig_CidrBlock.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MasterAuthorizedNetworksConfig_CidrBlock.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MasterAuthorizedNetworksConfig_CidrBlock clone() =>
       MasterAuthorizedNetworksConfig_CidrBlock()..mergeFromMessage(this);
   MasterAuthorizedNetworksConfig_CidrBlock copyWith(
@@ -733,8 +760,9 @@ class MasterAuthorizedNetworksConfig_CidrBlock extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MasterAuthorizedNetworksConfig_CidrBlock));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MasterAuthorizedNetworksConfig_CidrBlock create() =>
-      MasterAuthorizedNetworksConfig_CidrBlock();
+      MasterAuthorizedNetworksConfig_CidrBlock._();
   MasterAuthorizedNetworksConfig_CidrBlock createEmptyInstance() => create();
   static $pb.PbList<MasterAuthorizedNetworksConfig_CidrBlock>
       createRepeated() =>
@@ -769,13 +797,14 @@ class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, MasterAuthorizedNetworksConfig_CidrBlock.create)
     ..hasRequiredFields = false;
 
-  MasterAuthorizedNetworksConfig() : super();
-  MasterAuthorizedNetworksConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MasterAuthorizedNetworksConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MasterAuthorizedNetworksConfig._() : super();
+  factory MasterAuthorizedNetworksConfig() => create();
+  factory MasterAuthorizedNetworksConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MasterAuthorizedNetworksConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MasterAuthorizedNetworksConfig clone() =>
       MasterAuthorizedNetworksConfig()..mergeFromMessage(this);
   MasterAuthorizedNetworksConfig copyWith(
@@ -783,8 +812,9 @@ class MasterAuthorizedNetworksConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MasterAuthorizedNetworksConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MasterAuthorizedNetworksConfig create() =>
-      MasterAuthorizedNetworksConfig();
+      MasterAuthorizedNetworksConfig._();
   MasterAuthorizedNetworksConfig createEmptyInstance() => create();
   static $pb.PbList<MasterAuthorizedNetworksConfig> createRepeated() =>
       $pb.PbList<MasterAuthorizedNetworksConfig>();
@@ -810,18 +840,20 @@ class LegacyAbac extends $pb.GeneratedMessage {
     ..aOB(1, 'enabled')
     ..hasRequiredFields = false;
 
-  LegacyAbac() : super();
-  LegacyAbac.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LegacyAbac.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LegacyAbac._() : super();
+  factory LegacyAbac() => create();
+  factory LegacyAbac.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LegacyAbac.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LegacyAbac clone() => LegacyAbac()..mergeFromMessage(this);
   LegacyAbac copyWith(void Function(LegacyAbac) updates) =>
       super.copyWith((message) => updates(message as LegacyAbac));
   $pb.BuilderInfo get info_ => _i;
-  static LegacyAbac create() => LegacyAbac();
+  @$core.pragma('dart2js:noInline')
+  static LegacyAbac create() => LegacyAbac._();
   LegacyAbac createEmptyInstance() => create();
   static $pb.PbList<LegacyAbac> createRepeated() => $pb.PbList<LegacyAbac>();
   static LegacyAbac getDefault() => _defaultInstance ??= create()..freeze();
@@ -849,18 +881,20 @@ class NetworkPolicy extends $pb.GeneratedMessage {
     ..aOB(2, 'enabled')
     ..hasRequiredFields = false;
 
-  NetworkPolicy() : super();
-  NetworkPolicy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NetworkPolicy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NetworkPolicy._() : super();
+  factory NetworkPolicy() => create();
+  factory NetworkPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NetworkPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NetworkPolicy clone() => NetworkPolicy()..mergeFromMessage(this);
   NetworkPolicy copyWith(void Function(NetworkPolicy) updates) =>
       super.copyWith((message) => updates(message as NetworkPolicy));
   $pb.BuilderInfo get info_ => _i;
-  static NetworkPolicy create() => NetworkPolicy();
+  @$core.pragma('dart2js:noInline')
+  static NetworkPolicy create() => NetworkPolicy._();
   NetworkPolicy createEmptyInstance() => create();
   static $pb.PbList<NetworkPolicy> createRepeated() =>
       $pb.PbList<NetworkPolicy>();
@@ -902,18 +936,20 @@ class IPAllocationPolicy extends $pb.GeneratedMessage {
     ..aOS(13, 'tpuIpv4CidrBlock')
     ..hasRequiredFields = false;
 
-  IPAllocationPolicy() : super();
-  IPAllocationPolicy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IPAllocationPolicy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IPAllocationPolicy._() : super();
+  factory IPAllocationPolicy() => create();
+  factory IPAllocationPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IPAllocationPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IPAllocationPolicy clone() => IPAllocationPolicy()..mergeFromMessage(this);
   IPAllocationPolicy copyWith(void Function(IPAllocationPolicy) updates) =>
       super.copyWith((message) => updates(message as IPAllocationPolicy));
   $pb.BuilderInfo get info_ => _i;
-  static IPAllocationPolicy create() => IPAllocationPolicy();
+  @$core.pragma('dart2js:noInline')
+  static IPAllocationPolicy create() => IPAllocationPolicy._();
   IPAllocationPolicy createEmptyInstance() => create();
   static $pb.PbList<IPAllocationPolicy> createRepeated() =>
       $pb.PbList<IPAllocationPolicy>();
@@ -1044,18 +1080,20 @@ class BinaryAuthorization extends $pb.GeneratedMessage {
     ..aOB(1, 'enabled')
     ..hasRequiredFields = false;
 
-  BinaryAuthorization() : super();
-  BinaryAuthorization.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BinaryAuthorization.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BinaryAuthorization._() : super();
+  factory BinaryAuthorization() => create();
+  factory BinaryAuthorization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BinaryAuthorization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BinaryAuthorization clone() => BinaryAuthorization()..mergeFromMessage(this);
   BinaryAuthorization copyWith(void Function(BinaryAuthorization) updates) =>
       super.copyWith((message) => updates(message as BinaryAuthorization));
   $pb.BuilderInfo get info_ => _i;
-  static BinaryAuthorization create() => BinaryAuthorization();
+  @$core.pragma('dart2js:noInline')
+  static BinaryAuthorization create() => BinaryAuthorization._();
   BinaryAuthorization createEmptyInstance() => create();
   static $pb.PbList<BinaryAuthorization> createRepeated() =>
       $pb.PbList<BinaryAuthorization>();
@@ -1078,20 +1116,22 @@ class PodSecurityPolicyConfig extends $pb.GeneratedMessage {
     ..aOB(1, 'enabled')
     ..hasRequiredFields = false;
 
-  PodSecurityPolicyConfig() : super();
-  PodSecurityPolicyConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PodSecurityPolicyConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PodSecurityPolicyConfig._() : super();
+  factory PodSecurityPolicyConfig() => create();
+  factory PodSecurityPolicyConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PodSecurityPolicyConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PodSecurityPolicyConfig clone() =>
       PodSecurityPolicyConfig()..mergeFromMessage(this);
   PodSecurityPolicyConfig copyWith(
           void Function(PodSecurityPolicyConfig) updates) =>
       super.copyWith((message) => updates(message as PodSecurityPolicyConfig));
   $pb.BuilderInfo get info_ => _i;
-  static PodSecurityPolicyConfig create() => PodSecurityPolicyConfig();
+  @$core.pragma('dart2js:noInline')
+  static PodSecurityPolicyConfig create() => PodSecurityPolicyConfig._();
   PodSecurityPolicyConfig createEmptyInstance() => create();
   static $pb.PbList<PodSecurityPolicyConfig> createRepeated() =>
       $pb.PbList<PodSecurityPolicyConfig>();
@@ -1189,18 +1229,20 @@ class Cluster extends $pb.GeneratedMessage {
     ..pc<StatusCondition>(118, 'conditions', $pb.PbFieldType.PM, StatusCondition.create)
     ..hasRequiredFields = false;
 
-  Cluster() : super();
-  Cluster.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cluster.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Cluster._() : super();
+  factory Cluster() => create();
+  factory Cluster.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cluster.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Cluster clone() => Cluster()..mergeFromMessage(this);
   Cluster copyWith(void Function(Cluster) updates) =>
       super.copyWith((message) => updates(message as Cluster));
   $pb.BuilderInfo get info_ => _i;
-  static Cluster create() => Cluster();
+  @$core.pragma('dart2js:noInline')
+  static Cluster create() => Cluster._();
   Cluster createEmptyInstance() => create();
   static $pb.PbList<Cluster> createRepeated() => $pb.PbList<Cluster>();
   static Cluster getDefault() => _defaultInstance ??= create()..freeze();
@@ -1643,18 +1685,20 @@ class ClusterUpdate extends $pb.GeneratedMessage {
     ..aOS(100, 'desiredMasterVersion')
     ..hasRequiredFields = false;
 
-  ClusterUpdate() : super();
-  ClusterUpdate.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterUpdate.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClusterUpdate._() : super();
+  factory ClusterUpdate() => create();
+  factory ClusterUpdate.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClusterUpdate.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClusterUpdate clone() => ClusterUpdate()..mergeFromMessage(this);
   ClusterUpdate copyWith(void Function(ClusterUpdate) updates) =>
       super.copyWith((message) => updates(message as ClusterUpdate));
   $pb.BuilderInfo get info_ => _i;
-  static ClusterUpdate create() => ClusterUpdate();
+  @$core.pragma('dart2js:noInline')
+  static ClusterUpdate create() => ClusterUpdate._();
   ClusterUpdate createEmptyInstance() => create();
   static $pb.PbList<ClusterUpdate> createRepeated() =>
       $pb.PbList<ClusterUpdate>();
@@ -1811,18 +1855,20 @@ class Operation extends $pb.GeneratedMessage {
         14, 'nodepoolConditions', $pb.PbFieldType.PM, StatusCondition.create)
     ..hasRequiredFields = false;
 
-  Operation() : super();
-  Operation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operation._() : super();
+  factory Operation() => create();
+  factory Operation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operation clone() => Operation()..mergeFromMessage(this);
   Operation copyWith(void Function(Operation) updates) =>
       super.copyWith((message) => updates(message as Operation));
   $pb.BuilderInfo get info_ => _i;
-  static Operation create() => Operation();
+  @$core.pragma('dart2js:noInline')
+  static Operation create() => Operation._();
   Operation createEmptyInstance() => create();
   static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
   static Operation getDefault() => _defaultInstance ??= create()..freeze();
@@ -1950,27 +1996,29 @@ class OperationProgress_Metric extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationProgress.Metric',
       package: const $pb.PackageName('google.container.v1beta1'))
+    ..oo(0, [2, 3, 4])
     ..aOS(1, 'name')
     ..aInt64(2, 'intValue')
     ..a<$core.double>(3, 'doubleValue', $pb.PbFieldType.OD)
     ..aOS(4, 'stringValue')
-    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
-  OperationProgress_Metric() : super();
-  OperationProgress_Metric.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationProgress_Metric.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationProgress_Metric._() : super();
+  factory OperationProgress_Metric() => create();
+  factory OperationProgress_Metric.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationProgress_Metric.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationProgress_Metric clone() =>
       OperationProgress_Metric()..mergeFromMessage(this);
   OperationProgress_Metric copyWith(
           void Function(OperationProgress_Metric) updates) =>
       super.copyWith((message) => updates(message as OperationProgress_Metric));
   $pb.BuilderInfo get info_ => _i;
-  static OperationProgress_Metric create() => OperationProgress_Metric();
+  @$core.pragma('dart2js:noInline')
+  static OperationProgress_Metric create() => OperationProgress_Metric._();
   OperationProgress_Metric createEmptyInstance() => create();
   static $pb.PbList<OperationProgress_Metric> createRepeated() =>
       $pb.PbList<OperationProgress_Metric>();
@@ -2032,18 +2080,20 @@ class OperationProgress extends $pb.GeneratedMessage {
         4, 'stages', $pb.PbFieldType.PM, OperationProgress.create)
     ..hasRequiredFields = false;
 
-  OperationProgress() : super();
-  OperationProgress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationProgress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationProgress._() : super();
+  factory OperationProgress() => create();
+  factory OperationProgress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationProgress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationProgress clone() => OperationProgress()..mergeFromMessage(this);
   OperationProgress copyWith(void Function(OperationProgress) updates) =>
       super.copyWith((message) => updates(message as OperationProgress));
   $pb.BuilderInfo get info_ => _i;
-  static OperationProgress create() => OperationProgress();
+  @$core.pragma('dart2js:noInline')
+  static OperationProgress create() => OperationProgress._();
   OperationProgress createEmptyInstance() => create();
   static $pb.PbList<OperationProgress> createRepeated() =>
       $pb.PbList<OperationProgress>();
@@ -2082,19 +2132,21 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'parent')
     ..hasRequiredFields = false;
 
-  CreateClusterRequest() : super();
-  CreateClusterRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateClusterRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateClusterRequest._() : super();
+  factory CreateClusterRequest() => create();
+  factory CreateClusterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateClusterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateClusterRequest clone() =>
       CreateClusterRequest()..mergeFromMessage(this);
   CreateClusterRequest copyWith(void Function(CreateClusterRequest) updates) =>
       super.copyWith((message) => updates(message as CreateClusterRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateClusterRequest create() => CreateClusterRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateClusterRequest create() => CreateClusterRequest._();
   CreateClusterRequest createEmptyInstance() => create();
   static $pb.PbList<CreateClusterRequest> createRepeated() =>
       $pb.PbList<CreateClusterRequest>();
@@ -2152,18 +2204,20 @@ class GetClusterRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
-  GetClusterRequest() : super();
-  GetClusterRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetClusterRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetClusterRequest._() : super();
+  factory GetClusterRequest() => create();
+  factory GetClusterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetClusterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetClusterRequest clone() => GetClusterRequest()..mergeFromMessage(this);
   GetClusterRequest copyWith(void Function(GetClusterRequest) updates) =>
       super.copyWith((message) => updates(message as GetClusterRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetClusterRequest create() => GetClusterRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetClusterRequest create() => GetClusterRequest._();
   GetClusterRequest createEmptyInstance() => create();
   static $pb.PbList<GetClusterRequest> createRepeated() =>
       $pb.PbList<GetClusterRequest>();
@@ -2227,19 +2281,21 @@ class UpdateClusterRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
-  UpdateClusterRequest() : super();
-  UpdateClusterRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateClusterRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateClusterRequest._() : super();
+  factory UpdateClusterRequest() => create();
+  factory UpdateClusterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateClusterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateClusterRequest clone() =>
       UpdateClusterRequest()..mergeFromMessage(this);
   UpdateClusterRequest copyWith(void Function(UpdateClusterRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateClusterRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateClusterRequest create() => UpdateClusterRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateClusterRequest create() => UpdateClusterRequest._();
   UpdateClusterRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateClusterRequest> createRepeated() =>
       $pb.PbList<UpdateClusterRequest>();
@@ -2312,20 +2368,22 @@ class UpdateNodePoolRequest extends $pb.GeneratedMessage {
     ..aOS(8, 'name')
     ..hasRequiredFields = false;
 
-  UpdateNodePoolRequest() : super();
-  UpdateNodePoolRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateNodePoolRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateNodePoolRequest._() : super();
+  factory UpdateNodePoolRequest() => create();
+  factory UpdateNodePoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateNodePoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateNodePoolRequest clone() =>
       UpdateNodePoolRequest()..mergeFromMessage(this);
   UpdateNodePoolRequest copyWith(
           void Function(UpdateNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateNodePoolRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateNodePoolRequest create() => UpdateNodePoolRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateNodePoolRequest create() => UpdateNodePoolRequest._();
   UpdateNodePoolRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateNodePoolRequest> createRepeated() =>
       $pb.PbList<UpdateNodePoolRequest>();
@@ -2419,13 +2477,14 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetNodePoolAutoscalingRequest() : super();
-  SetNodePoolAutoscalingRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetNodePoolAutoscalingRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetNodePoolAutoscalingRequest._() : super();
+  factory SetNodePoolAutoscalingRequest() => create();
+  factory SetNodePoolAutoscalingRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetNodePoolAutoscalingRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetNodePoolAutoscalingRequest clone() =>
       SetNodePoolAutoscalingRequest()..mergeFromMessage(this);
   SetNodePoolAutoscalingRequest copyWith(
@@ -2433,8 +2492,9 @@ class SetNodePoolAutoscalingRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SetNodePoolAutoscalingRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SetNodePoolAutoscalingRequest create() =>
-      SetNodePoolAutoscalingRequest();
+      SetNodePoolAutoscalingRequest._();
   SetNodePoolAutoscalingRequest createEmptyInstance() => create();
   static $pb.PbList<SetNodePoolAutoscalingRequest> createRepeated() =>
       $pb.PbList<SetNodePoolAutoscalingRequest>();
@@ -2517,20 +2577,22 @@ class SetLoggingServiceRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
-  SetLoggingServiceRequest() : super();
-  SetLoggingServiceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetLoggingServiceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetLoggingServiceRequest._() : super();
+  factory SetLoggingServiceRequest() => create();
+  factory SetLoggingServiceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetLoggingServiceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetLoggingServiceRequest clone() =>
       SetLoggingServiceRequest()..mergeFromMessage(this);
   SetLoggingServiceRequest copyWith(
           void Function(SetLoggingServiceRequest) updates) =>
       super.copyWith((message) => updates(message as SetLoggingServiceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetLoggingServiceRequest create() => SetLoggingServiceRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetLoggingServiceRequest create() => SetLoggingServiceRequest._();
   SetLoggingServiceRequest createEmptyInstance() => create();
   static $pb.PbList<SetLoggingServiceRequest> createRepeated() =>
       $pb.PbList<SetLoggingServiceRequest>();
@@ -2598,13 +2660,14 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetMonitoringServiceRequest() : super();
-  SetMonitoringServiceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetMonitoringServiceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetMonitoringServiceRequest._() : super();
+  factory SetMonitoringServiceRequest() => create();
+  factory SetMonitoringServiceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetMonitoringServiceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetMonitoringServiceRequest clone() =>
       SetMonitoringServiceRequest()..mergeFromMessage(this);
   SetMonitoringServiceRequest copyWith(
@@ -2612,7 +2675,9 @@ class SetMonitoringServiceRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SetMonitoringServiceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetMonitoringServiceRequest create() => SetMonitoringServiceRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetMonitoringServiceRequest create() =>
+      SetMonitoringServiceRequest._();
   SetMonitoringServiceRequest createEmptyInstance() => create();
   static $pb.PbList<SetMonitoringServiceRequest> createRepeated() =>
       $pb.PbList<SetMonitoringServiceRequest>();
@@ -2684,20 +2749,22 @@ class SetAddonsConfigRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetAddonsConfigRequest() : super();
-  SetAddonsConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetAddonsConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetAddonsConfigRequest._() : super();
+  factory SetAddonsConfigRequest() => create();
+  factory SetAddonsConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetAddonsConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetAddonsConfigRequest clone() =>
       SetAddonsConfigRequest()..mergeFromMessage(this);
   SetAddonsConfigRequest copyWith(
           void Function(SetAddonsConfigRequest) updates) =>
       super.copyWith((message) => updates(message as SetAddonsConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetAddonsConfigRequest create() => SetAddonsConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetAddonsConfigRequest create() => SetAddonsConfigRequest._();
   SetAddonsConfigRequest createEmptyInstance() => create();
   static $pb.PbList<SetAddonsConfigRequest> createRepeated() =>
       $pb.PbList<SetAddonsConfigRequest>();
@@ -2768,18 +2835,20 @@ class SetLocationsRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetLocationsRequest() : super();
-  SetLocationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetLocationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetLocationsRequest._() : super();
+  factory SetLocationsRequest() => create();
+  factory SetLocationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetLocationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetLocationsRequest clone() => SetLocationsRequest()..mergeFromMessage(this);
   SetLocationsRequest copyWith(void Function(SetLocationsRequest) updates) =>
       super.copyWith((message) => updates(message as SetLocationsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetLocationsRequest create() => SetLocationsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetLocationsRequest create() => SetLocationsRequest._();
   SetLocationsRequest createEmptyInstance() => create();
   static $pb.PbList<SetLocationsRequest> createRepeated() =>
       $pb.PbList<SetLocationsRequest>();
@@ -2844,18 +2913,20 @@ class UpdateMasterRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  UpdateMasterRequest() : super();
-  UpdateMasterRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateMasterRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateMasterRequest._() : super();
+  factory UpdateMasterRequest() => create();
+  factory UpdateMasterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateMasterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateMasterRequest clone() => UpdateMasterRequest()..mergeFromMessage(this);
   UpdateMasterRequest copyWith(void Function(UpdateMasterRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateMasterRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateMasterRequest create() => UpdateMasterRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateMasterRequest create() => UpdateMasterRequest._();
   UpdateMasterRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateMasterRequest> createRepeated() =>
       $pb.PbList<UpdateMasterRequest>();
@@ -2934,19 +3005,21 @@ class SetMasterAuthRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  SetMasterAuthRequest() : super();
-  SetMasterAuthRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetMasterAuthRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetMasterAuthRequest._() : super();
+  factory SetMasterAuthRequest() => create();
+  factory SetMasterAuthRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetMasterAuthRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetMasterAuthRequest clone() =>
       SetMasterAuthRequest()..mergeFromMessage(this);
   SetMasterAuthRequest copyWith(void Function(SetMasterAuthRequest) updates) =>
       super.copyWith((message) => updates(message as SetMasterAuthRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetMasterAuthRequest create() => SetMasterAuthRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetMasterAuthRequest create() => SetMasterAuthRequest._();
   SetMasterAuthRequest createEmptyInstance() => create();
   static $pb.PbList<SetMasterAuthRequest> createRepeated() =>
       $pb.PbList<SetMasterAuthRequest>();
@@ -3024,19 +3097,21 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
-  DeleteClusterRequest() : super();
-  DeleteClusterRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteClusterRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteClusterRequest._() : super();
+  factory DeleteClusterRequest() => create();
+  factory DeleteClusterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteClusterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteClusterRequest clone() =>
       DeleteClusterRequest()..mergeFromMessage(this);
   DeleteClusterRequest copyWith(void Function(DeleteClusterRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteClusterRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteClusterRequest create() => DeleteClusterRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteClusterRequest create() => DeleteClusterRequest._();
   DeleteClusterRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteClusterRequest> createRepeated() =>
       $pb.PbList<DeleteClusterRequest>();
@@ -3097,18 +3172,20 @@ class ListClustersRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
-  ListClustersRequest() : super();
-  ListClustersRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListClustersRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListClustersRequest._() : super();
+  factory ListClustersRequest() => create();
+  factory ListClustersRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListClustersRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListClustersRequest clone() => ListClustersRequest()..mergeFromMessage(this);
   ListClustersRequest copyWith(void Function(ListClustersRequest) updates) =>
       super.copyWith((message) => updates(message as ListClustersRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListClustersRequest create() => ListClustersRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListClustersRequest create() => ListClustersRequest._();
   ListClustersRequest createEmptyInstance() => create();
   static $pb.PbList<ListClustersRequest> createRepeated() =>
       $pb.PbList<ListClustersRequest>();
@@ -3156,19 +3233,21 @@ class ListClustersResponse extends $pb.GeneratedMessage {
     ..pPS(2, 'missingZones')
     ..hasRequiredFields = false;
 
-  ListClustersResponse() : super();
-  ListClustersResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListClustersResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListClustersResponse._() : super();
+  factory ListClustersResponse() => create();
+  factory ListClustersResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListClustersResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListClustersResponse clone() =>
       ListClustersResponse()..mergeFromMessage(this);
   ListClustersResponse copyWith(void Function(ListClustersResponse) updates) =>
       super.copyWith((message) => updates(message as ListClustersResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListClustersResponse create() => ListClustersResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListClustersResponse create() => ListClustersResponse._();
   ListClustersResponse createEmptyInstance() => create();
   static $pb.PbList<ListClustersResponse> createRepeated() =>
       $pb.PbList<ListClustersResponse>();
@@ -3190,18 +3269,20 @@ class GetOperationRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
-  GetOperationRequest() : super();
-  GetOperationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetOperationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetOperationRequest._() : super();
+  factory GetOperationRequest() => create();
+  factory GetOperationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetOperationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetOperationRequest clone() => GetOperationRequest()..mergeFromMessage(this);
   GetOperationRequest copyWith(void Function(GetOperationRequest) updates) =>
       super.copyWith((message) => updates(message as GetOperationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetOperationRequest create() => GetOperationRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetOperationRequest create() => GetOperationRequest._();
   GetOperationRequest createEmptyInstance() => create();
   static $pb.PbList<GetOperationRequest> createRepeated() =>
       $pb.PbList<GetOperationRequest>();
@@ -3262,20 +3343,22 @@ class ListOperationsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
-  ListOperationsRequest() : super();
-  ListOperationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListOperationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListOperationsRequest._() : super();
+  factory ListOperationsRequest() => create();
+  factory ListOperationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListOperationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListOperationsRequest clone() =>
       ListOperationsRequest()..mergeFromMessage(this);
   ListOperationsRequest copyWith(
           void Function(ListOperationsRequest) updates) =>
       super.copyWith((message) => updates(message as ListOperationsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListOperationsRequest create() => ListOperationsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListOperationsRequest create() => ListOperationsRequest._();
   ListOperationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListOperationsRequest> createRepeated() =>
       $pb.PbList<ListOperationsRequest>();
@@ -3325,20 +3408,22 @@ class CancelOperationRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
-  CancelOperationRequest() : super();
-  CancelOperationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CancelOperationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CancelOperationRequest._() : super();
+  factory CancelOperationRequest() => create();
+  factory CancelOperationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CancelOperationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CancelOperationRequest clone() =>
       CancelOperationRequest()..mergeFromMessage(this);
   CancelOperationRequest copyWith(
           void Function(CancelOperationRequest) updates) =>
       super.copyWith((message) => updates(message as CancelOperationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CancelOperationRequest create() => CancelOperationRequest();
+  @$core.pragma('dart2js:noInline')
+  static CancelOperationRequest create() => CancelOperationRequest._();
   CancelOperationRequest createEmptyInstance() => create();
   static $pb.PbList<CancelOperationRequest> createRepeated() =>
       $pb.PbList<CancelOperationRequest>();
@@ -3398,20 +3483,22 @@ class ListOperationsResponse extends $pb.GeneratedMessage {
     ..pPS(2, 'missingZones')
     ..hasRequiredFields = false;
 
-  ListOperationsResponse() : super();
-  ListOperationsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListOperationsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListOperationsResponse._() : super();
+  factory ListOperationsResponse() => create();
+  factory ListOperationsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListOperationsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListOperationsResponse clone() =>
       ListOperationsResponse()..mergeFromMessage(this);
   ListOperationsResponse copyWith(
           void Function(ListOperationsResponse) updates) =>
       super.copyWith((message) => updates(message as ListOperationsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListOperationsResponse create() => ListOperationsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListOperationsResponse create() => ListOperationsResponse._();
   ListOperationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListOperationsResponse> createRepeated() =>
       $pb.PbList<ListOperationsResponse>();
@@ -3432,20 +3519,22 @@ class GetServerConfigRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
-  GetServerConfigRequest() : super();
-  GetServerConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServerConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetServerConfigRequest._() : super();
+  factory GetServerConfigRequest() => create();
+  factory GetServerConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetServerConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetServerConfigRequest clone() =>
       GetServerConfigRequest()..mergeFromMessage(this);
   GetServerConfigRequest copyWith(
           void Function(GetServerConfigRequest) updates) =>
       super.copyWith((message) => updates(message as GetServerConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetServerConfigRequest create() => GetServerConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetServerConfigRequest create() => GetServerConfigRequest._();
   GetServerConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetServerConfigRequest> createRepeated() =>
       $pb.PbList<GetServerConfigRequest>();
@@ -3496,18 +3585,20 @@ class ServerConfig extends $pb.GeneratedMessage {
     ..pPS(6, 'validMasterVersions')
     ..hasRequiredFields = false;
 
-  ServerConfig() : super();
-  ServerConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServerConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServerConfig._() : super();
+  factory ServerConfig() => create();
+  factory ServerConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ServerConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ServerConfig clone() => ServerConfig()..mergeFromMessage(this);
   ServerConfig copyWith(void Function(ServerConfig) updates) =>
       super.copyWith((message) => updates(message as ServerConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ServerConfig create() => ServerConfig();
+  @$core.pragma('dart2js:noInline')
+  static ServerConfig create() => ServerConfig._();
   ServerConfig createEmptyInstance() => create();
   static $pb.PbList<ServerConfig> createRepeated() =>
       $pb.PbList<ServerConfig>();
@@ -3548,20 +3639,22 @@ class CreateNodePoolRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'parent')
     ..hasRequiredFields = false;
 
-  CreateNodePoolRequest() : super();
-  CreateNodePoolRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateNodePoolRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateNodePoolRequest._() : super();
+  factory CreateNodePoolRequest() => create();
+  factory CreateNodePoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateNodePoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateNodePoolRequest clone() =>
       CreateNodePoolRequest()..mergeFromMessage(this);
   CreateNodePoolRequest copyWith(
           void Function(CreateNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as CreateNodePoolRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateNodePoolRequest create() => CreateNodePoolRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateNodePoolRequest create() => CreateNodePoolRequest._();
   CreateNodePoolRequest createEmptyInstance() => create();
   static $pb.PbList<CreateNodePoolRequest> createRepeated() =>
       $pb.PbList<CreateNodePoolRequest>();
@@ -3632,20 +3725,22 @@ class DeleteNodePoolRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  DeleteNodePoolRequest() : super();
-  DeleteNodePoolRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteNodePoolRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteNodePoolRequest._() : super();
+  factory DeleteNodePoolRequest() => create();
+  factory DeleteNodePoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteNodePoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteNodePoolRequest clone() =>
       DeleteNodePoolRequest()..mergeFromMessage(this);
   DeleteNodePoolRequest copyWith(
           void Function(DeleteNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteNodePoolRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteNodePoolRequest create() => DeleteNodePoolRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteNodePoolRequest create() => DeleteNodePoolRequest._();
   DeleteNodePoolRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteNodePoolRequest> createRepeated() =>
       $pb.PbList<DeleteNodePoolRequest>();
@@ -3719,19 +3814,21 @@ class ListNodePoolsRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'parent')
     ..hasRequiredFields = false;
 
-  ListNodePoolsRequest() : super();
-  ListNodePoolsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNodePoolsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNodePoolsRequest._() : super();
+  factory ListNodePoolsRequest() => create();
+  factory ListNodePoolsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListNodePoolsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListNodePoolsRequest clone() =>
       ListNodePoolsRequest()..mergeFromMessage(this);
   ListNodePoolsRequest copyWith(void Function(ListNodePoolsRequest) updates) =>
       super.copyWith((message) => updates(message as ListNodePoolsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListNodePoolsRequest create() => ListNodePoolsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListNodePoolsRequest create() => ListNodePoolsRequest._();
   ListNodePoolsRequest createEmptyInstance() => create();
   static $pb.PbList<ListNodePoolsRequest> createRepeated() =>
       $pb.PbList<ListNodePoolsRequest>();
@@ -3794,18 +3891,20 @@ class GetNodePoolRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  GetNodePoolRequest() : super();
-  GetNodePoolRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNodePoolRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetNodePoolRequest._() : super();
+  factory GetNodePoolRequest() => create();
+  factory GetNodePoolRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetNodePoolRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetNodePoolRequest clone() => GetNodePoolRequest()..mergeFromMessage(this);
   GetNodePoolRequest copyWith(void Function(GetNodePoolRequest) updates) =>
       super.copyWith((message) => updates(message as GetNodePoolRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetNodePoolRequest create() => GetNodePoolRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetNodePoolRequest create() => GetNodePoolRequest._();
   GetNodePoolRequest createEmptyInstance() => create();
   static $pb.PbList<GetNodePoolRequest> createRepeated() =>
       $pb.PbList<GetNodePoolRequest>();
@@ -3898,18 +3997,20 @@ class NodePool extends $pb.GeneratedMessage {
         105, 'conditions', $pb.PbFieldType.PM, StatusCondition.create)
     ..hasRequiredFields = false;
 
-  NodePool() : super();
-  NodePool.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodePool.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NodePool._() : super();
+  factory NodePool() => create();
+  factory NodePool.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodePool.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NodePool clone() => NodePool()..mergeFromMessage(this);
   NodePool copyWith(void Function(NodePool) updates) =>
       super.copyWith((message) => updates(message as NodePool));
   $pb.BuilderInfo get info_ => _i;
-  static NodePool create() => NodePool();
+  @$core.pragma('dart2js:noInline')
+  static NodePool create() => NodePool._();
   NodePool createEmptyInstance() => create();
   static $pb.PbList<NodePool> createRepeated() => $pb.PbList<NodePool>();
   static NodePool getDefault() => _defaultInstance ??= create()..freeze();
@@ -4009,18 +4110,20 @@ class NodeManagement extends $pb.GeneratedMessage {
         AutoUpgradeOptions.getDefault, AutoUpgradeOptions.create)
     ..hasRequiredFields = false;
 
-  NodeManagement() : super();
-  NodeManagement.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodeManagement.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NodeManagement._() : super();
+  factory NodeManagement() => create();
+  factory NodeManagement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodeManagement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NodeManagement clone() => NodeManagement()..mergeFromMessage(this);
   NodeManagement copyWith(void Function(NodeManagement) updates) =>
       super.copyWith((message) => updates(message as NodeManagement));
   $pb.BuilderInfo get info_ => _i;
-  static NodeManagement create() => NodeManagement();
+  @$core.pragma('dart2js:noInline')
+  static NodeManagement create() => NodeManagement._();
   NodeManagement createEmptyInstance() => create();
   static $pb.PbList<NodeManagement> createRepeated() =>
       $pb.PbList<NodeManagement>();
@@ -4059,18 +4162,20 @@ class AutoUpgradeOptions extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
-  AutoUpgradeOptions() : super();
-  AutoUpgradeOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AutoUpgradeOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AutoUpgradeOptions._() : super();
+  factory AutoUpgradeOptions() => create();
+  factory AutoUpgradeOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AutoUpgradeOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AutoUpgradeOptions clone() => AutoUpgradeOptions()..mergeFromMessage(this);
   AutoUpgradeOptions copyWith(void Function(AutoUpgradeOptions) updates) =>
       super.copyWith((message) => updates(message as AutoUpgradeOptions));
   $pb.BuilderInfo get info_ => _i;
-  static AutoUpgradeOptions create() => AutoUpgradeOptions();
+  @$core.pragma('dart2js:noInline')
+  static AutoUpgradeOptions create() => AutoUpgradeOptions._();
   AutoUpgradeOptions createEmptyInstance() => create();
   static $pb.PbList<AutoUpgradeOptions> createRepeated() =>
       $pb.PbList<AutoUpgradeOptions>();
@@ -4102,18 +4207,20 @@ class MaintenancePolicy extends $pb.GeneratedMessage {
         MaintenanceWindow.getDefault, MaintenanceWindow.create)
     ..hasRequiredFields = false;
 
-  MaintenancePolicy() : super();
-  MaintenancePolicy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MaintenancePolicy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MaintenancePolicy._() : super();
+  factory MaintenancePolicy() => create();
+  factory MaintenancePolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MaintenancePolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MaintenancePolicy clone() => MaintenancePolicy()..mergeFromMessage(this);
   MaintenancePolicy copyWith(void Function(MaintenancePolicy) updates) =>
       super.copyWith((message) => updates(message as MaintenancePolicy));
   $pb.BuilderInfo get info_ => _i;
-  static MaintenancePolicy create() => MaintenancePolicy();
+  @$core.pragma('dart2js:noInline')
+  static MaintenancePolicy create() => MaintenancePolicy._();
   MaintenancePolicy createEmptyInstance() => create();
   static $pb.PbList<MaintenancePolicy> createRepeated() =>
       $pb.PbList<MaintenancePolicy>();
@@ -4140,23 +4247,25 @@ class MaintenanceWindow extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MaintenanceWindow',
       package: const $pb.PackageName('google.container.v1beta1'))
+    ..oo(0, [2])
     ..a<DailyMaintenanceWindow>(2, 'dailyMaintenanceWindow', $pb.PbFieldType.OM,
         DailyMaintenanceWindow.getDefault, DailyMaintenanceWindow.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  MaintenanceWindow() : super();
-  MaintenanceWindow.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MaintenanceWindow.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MaintenanceWindow._() : super();
+  factory MaintenanceWindow() => create();
+  factory MaintenanceWindow.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MaintenanceWindow.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MaintenanceWindow clone() => MaintenanceWindow()..mergeFromMessage(this);
   MaintenanceWindow copyWith(void Function(MaintenanceWindow) updates) =>
       super.copyWith((message) => updates(message as MaintenanceWindow));
   $pb.BuilderInfo get info_ => _i;
-  static MaintenanceWindow create() => MaintenanceWindow();
+  @$core.pragma('dart2js:noInline')
+  static MaintenanceWindow create() => MaintenanceWindow._();
   MaintenanceWindow createEmptyInstance() => create();
   static $pb.PbList<MaintenanceWindow> createRepeated() =>
       $pb.PbList<MaintenanceWindow>();
@@ -4184,20 +4293,22 @@ class DailyMaintenanceWindow extends $pb.GeneratedMessage {
     ..aOS(3, 'duration')
     ..hasRequiredFields = false;
 
-  DailyMaintenanceWindow() : super();
-  DailyMaintenanceWindow.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DailyMaintenanceWindow.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DailyMaintenanceWindow._() : super();
+  factory DailyMaintenanceWindow() => create();
+  factory DailyMaintenanceWindow.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DailyMaintenanceWindow.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DailyMaintenanceWindow clone() =>
       DailyMaintenanceWindow()..mergeFromMessage(this);
   DailyMaintenanceWindow copyWith(
           void Function(DailyMaintenanceWindow) updates) =>
       super.copyWith((message) => updates(message as DailyMaintenanceWindow));
   $pb.BuilderInfo get info_ => _i;
-  static DailyMaintenanceWindow create() => DailyMaintenanceWindow();
+  @$core.pragma('dart2js:noInline')
+  static DailyMaintenanceWindow create() => DailyMaintenanceWindow._();
   DailyMaintenanceWindow createEmptyInstance() => create();
   static $pb.PbList<DailyMaintenanceWindow> createRepeated() =>
       $pb.PbList<DailyMaintenanceWindow>();
@@ -4235,13 +4346,14 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  SetNodePoolManagementRequest() : super();
-  SetNodePoolManagementRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetNodePoolManagementRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetNodePoolManagementRequest._() : super();
+  factory SetNodePoolManagementRequest() => create();
+  factory SetNodePoolManagementRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetNodePoolManagementRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetNodePoolManagementRequest clone() =>
       SetNodePoolManagementRequest()..mergeFromMessage(this);
   SetNodePoolManagementRequest copyWith(
@@ -4249,8 +4361,9 @@ class SetNodePoolManagementRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SetNodePoolManagementRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SetNodePoolManagementRequest create() =>
-      SetNodePoolManagementRequest();
+      SetNodePoolManagementRequest._();
   SetNodePoolManagementRequest createEmptyInstance() => create();
   static $pb.PbList<SetNodePoolManagementRequest> createRepeated() =>
       $pb.PbList<SetNodePoolManagementRequest>();
@@ -4334,20 +4447,22 @@ class SetNodePoolSizeRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  SetNodePoolSizeRequest() : super();
-  SetNodePoolSizeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetNodePoolSizeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetNodePoolSizeRequest._() : super();
+  factory SetNodePoolSizeRequest() => create();
+  factory SetNodePoolSizeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetNodePoolSizeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetNodePoolSizeRequest clone() =>
       SetNodePoolSizeRequest()..mergeFromMessage(this);
   SetNodePoolSizeRequest copyWith(
           void Function(SetNodePoolSizeRequest) updates) =>
       super.copyWith((message) => updates(message as SetNodePoolSizeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetNodePoolSizeRequest create() => SetNodePoolSizeRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetNodePoolSizeRequest create() => SetNodePoolSizeRequest._();
   SetNodePoolSizeRequest createEmptyInstance() => create();
   static $pb.PbList<SetNodePoolSizeRequest> createRepeated() =>
       $pb.PbList<SetNodePoolSizeRequest>();
@@ -4431,13 +4546,14 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  RollbackNodePoolUpgradeRequest() : super();
-  RollbackNodePoolUpgradeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RollbackNodePoolUpgradeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RollbackNodePoolUpgradeRequest._() : super();
+  factory RollbackNodePoolUpgradeRequest() => create();
+  factory RollbackNodePoolUpgradeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RollbackNodePoolUpgradeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RollbackNodePoolUpgradeRequest clone() =>
       RollbackNodePoolUpgradeRequest()..mergeFromMessage(this);
   RollbackNodePoolUpgradeRequest copyWith(
@@ -4445,8 +4561,9 @@ class RollbackNodePoolUpgradeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as RollbackNodePoolUpgradeRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static RollbackNodePoolUpgradeRequest create() =>
-      RollbackNodePoolUpgradeRequest();
+      RollbackNodePoolUpgradeRequest._();
   RollbackNodePoolUpgradeRequest createEmptyInstance() => create();
   static $pb.PbList<RollbackNodePoolUpgradeRequest> createRepeated() =>
       $pb.PbList<RollbackNodePoolUpgradeRequest>();
@@ -4517,20 +4634,22 @@ class ListNodePoolsResponse extends $pb.GeneratedMessage {
     ..pc<NodePool>(1, 'nodePools', $pb.PbFieldType.PM, NodePool.create)
     ..hasRequiredFields = false;
 
-  ListNodePoolsResponse() : super();
-  ListNodePoolsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNodePoolsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNodePoolsResponse._() : super();
+  factory ListNodePoolsResponse() => create();
+  factory ListNodePoolsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListNodePoolsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListNodePoolsResponse clone() =>
       ListNodePoolsResponse()..mergeFromMessage(this);
   ListNodePoolsResponse copyWith(
           void Function(ListNodePoolsResponse) updates) =>
       super.copyWith((message) => updates(message as ListNodePoolsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListNodePoolsResponse create() => ListNodePoolsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListNodePoolsResponse create() => ListNodePoolsResponse._();
   ListNodePoolsResponse createEmptyInstance() => create();
   static $pb.PbList<ListNodePoolsResponse> createRepeated() =>
       $pb.PbList<ListNodePoolsResponse>();
@@ -4549,18 +4668,20 @@ class ClusterAutoscaling extends $pb.GeneratedMessage {
         2, 'resourceLimits', $pb.PbFieldType.PM, ResourceLimit.create)
     ..hasRequiredFields = false;
 
-  ClusterAutoscaling() : super();
-  ClusterAutoscaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterAutoscaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClusterAutoscaling._() : super();
+  factory ClusterAutoscaling() => create();
+  factory ClusterAutoscaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClusterAutoscaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClusterAutoscaling clone() => ClusterAutoscaling()..mergeFromMessage(this);
   ClusterAutoscaling copyWith(void Function(ClusterAutoscaling) updates) =>
       super.copyWith((message) => updates(message as ClusterAutoscaling));
   $pb.BuilderInfo get info_ => _i;
-  static ClusterAutoscaling create() => ClusterAutoscaling();
+  @$core.pragma('dart2js:noInline')
+  static ClusterAutoscaling create() => ClusterAutoscaling._();
   ClusterAutoscaling createEmptyInstance() => create();
   static $pb.PbList<ClusterAutoscaling> createRepeated() =>
       $pb.PbList<ClusterAutoscaling>();
@@ -4587,18 +4708,20 @@ class ResourceLimit extends $pb.GeneratedMessage {
     ..aInt64(3, 'maximum')
     ..hasRequiredFields = false;
 
-  ResourceLimit() : super();
-  ResourceLimit.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceLimit.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceLimit._() : super();
+  factory ResourceLimit() => create();
+  factory ResourceLimit.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceLimit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceLimit clone() => ResourceLimit()..mergeFromMessage(this);
   ResourceLimit copyWith(void Function(ResourceLimit) updates) =>
       super.copyWith((message) => updates(message as ResourceLimit));
   $pb.BuilderInfo get info_ => _i;
-  static ResourceLimit create() => ResourceLimit();
+  @$core.pragma('dart2js:noInline')
+  static ResourceLimit create() => ResourceLimit._();
   ResourceLimit createEmptyInstance() => create();
   static $pb.PbList<ResourceLimit> createRepeated() =>
       $pb.PbList<ResourceLimit>();
@@ -4639,18 +4762,20 @@ class NodePoolAutoscaling extends $pb.GeneratedMessage {
     ..aOB(4, 'autoprovisioned')
     ..hasRequiredFields = false;
 
-  NodePoolAutoscaling() : super();
-  NodePoolAutoscaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NodePoolAutoscaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NodePoolAutoscaling._() : super();
+  factory NodePoolAutoscaling() => create();
+  factory NodePoolAutoscaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NodePoolAutoscaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NodePoolAutoscaling clone() => NodePoolAutoscaling()..mergeFromMessage(this);
   NodePoolAutoscaling copyWith(void Function(NodePoolAutoscaling) updates) =>
       super.copyWith((message) => updates(message as NodePoolAutoscaling));
   $pb.BuilderInfo get info_ => _i;
-  static NodePoolAutoscaling create() => NodePoolAutoscaling();
+  @$core.pragma('dart2js:noInline')
+  static NodePoolAutoscaling create() => NodePoolAutoscaling._();
   NodePoolAutoscaling createEmptyInstance() => create();
   static $pb.PbList<NodePoolAutoscaling> createRepeated() =>
       $pb.PbList<NodePoolAutoscaling>();
@@ -4711,18 +4836,20 @@ class SetLabelsRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  SetLabelsRequest() : super();
-  SetLabelsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetLabelsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetLabelsRequest._() : super();
+  factory SetLabelsRequest() => create();
+  factory SetLabelsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetLabelsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetLabelsRequest clone() => SetLabelsRequest()..mergeFromMessage(this);
   SetLabelsRequest copyWith(void Function(SetLabelsRequest) updates) =>
       super.copyWith((message) => updates(message as SetLabelsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetLabelsRequest create() => SetLabelsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetLabelsRequest create() => SetLabelsRequest._();
   SetLabelsRequest createEmptyInstance() => create();
   static $pb.PbList<SetLabelsRequest> createRepeated() =>
       $pb.PbList<SetLabelsRequest>();
@@ -4795,19 +4922,21 @@ class SetLegacyAbacRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetLegacyAbacRequest() : super();
-  SetLegacyAbacRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetLegacyAbacRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetLegacyAbacRequest._() : super();
+  factory SetLegacyAbacRequest() => create();
+  factory SetLegacyAbacRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetLegacyAbacRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetLegacyAbacRequest clone() =>
       SetLegacyAbacRequest()..mergeFromMessage(this);
   SetLegacyAbacRequest copyWith(void Function(SetLegacyAbacRequest) updates) =>
       super.copyWith((message) => updates(message as SetLegacyAbacRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetLegacyAbacRequest create() => SetLegacyAbacRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetLegacyAbacRequest create() => SetLegacyAbacRequest._();
   SetLegacyAbacRequest createEmptyInstance() => create();
   static $pb.PbList<SetLegacyAbacRequest> createRepeated() =>
       $pb.PbList<SetLegacyAbacRequest>();
@@ -4878,20 +5007,22 @@ class StartIPRotationRequest extends $pb.GeneratedMessage {
     ..aOB(7, 'rotateCredentials')
     ..hasRequiredFields = false;
 
-  StartIPRotationRequest() : super();
-  StartIPRotationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StartIPRotationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StartIPRotationRequest._() : super();
+  factory StartIPRotationRequest() => create();
+  factory StartIPRotationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StartIPRotationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StartIPRotationRequest clone() =>
       StartIPRotationRequest()..mergeFromMessage(this);
   StartIPRotationRequest copyWith(
           void Function(StartIPRotationRequest) updates) =>
       super.copyWith((message) => updates(message as StartIPRotationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static StartIPRotationRequest create() => StartIPRotationRequest();
+  @$core.pragma('dart2js:noInline')
+  static StartIPRotationRequest create() => StartIPRotationRequest._();
   StartIPRotationRequest createEmptyInstance() => create();
   static $pb.PbList<StartIPRotationRequest> createRepeated() =>
       $pb.PbList<StartIPRotationRequest>();
@@ -4961,13 +5092,14 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  CompleteIPRotationRequest() : super();
-  CompleteIPRotationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CompleteIPRotationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CompleteIPRotationRequest._() : super();
+  factory CompleteIPRotationRequest() => create();
+  factory CompleteIPRotationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompleteIPRotationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CompleteIPRotationRequest clone() =>
       CompleteIPRotationRequest()..mergeFromMessage(this);
   CompleteIPRotationRequest copyWith(
@@ -4975,7 +5107,8 @@ class CompleteIPRotationRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CompleteIPRotationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CompleteIPRotationRequest create() => CompleteIPRotationRequest();
+  @$core.pragma('dart2js:noInline')
+  static CompleteIPRotationRequest create() => CompleteIPRotationRequest._();
   CompleteIPRotationRequest createEmptyInstance() => create();
   static $pb.PbList<CompleteIPRotationRequest> createRepeated() =>
       $pb.PbList<CompleteIPRotationRequest>();
@@ -5035,18 +5168,20 @@ class AcceleratorConfig extends $pb.GeneratedMessage {
     ..aOS(2, 'acceleratorType')
     ..hasRequiredFields = false;
 
-  AcceleratorConfig() : super();
-  AcceleratorConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AcceleratorConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AcceleratorConfig._() : super();
+  factory AcceleratorConfig() => create();
+  factory AcceleratorConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AcceleratorConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AcceleratorConfig clone() => AcceleratorConfig()..mergeFromMessage(this);
   AcceleratorConfig copyWith(void Function(AcceleratorConfig) updates) =>
       super.copyWith((message) => updates(message as AcceleratorConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AcceleratorConfig create() => AcceleratorConfig();
+  @$core.pragma('dart2js:noInline')
+  static AcceleratorConfig create() => AcceleratorConfig._();
   AcceleratorConfig createEmptyInstance() => create();
   static $pb.PbList<AcceleratorConfig> createRepeated() =>
       $pb.PbList<AcceleratorConfig>();
@@ -5083,20 +5218,22 @@ class WorkloadMetadataConfig extends $pb.GeneratedMessage {
         WorkloadMetadataConfig_NodeMetadata.values)
     ..hasRequiredFields = false;
 
-  WorkloadMetadataConfig() : super();
-  WorkloadMetadataConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkloadMetadataConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkloadMetadataConfig._() : super();
+  factory WorkloadMetadataConfig() => create();
+  factory WorkloadMetadataConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkloadMetadataConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkloadMetadataConfig clone() =>
       WorkloadMetadataConfig()..mergeFromMessage(this);
   WorkloadMetadataConfig copyWith(
           void Function(WorkloadMetadataConfig) updates) =>
       super.copyWith((message) => updates(message as WorkloadMetadataConfig));
   $pb.BuilderInfo get info_ => _i;
-  static WorkloadMetadataConfig create() => WorkloadMetadataConfig();
+  @$core.pragma('dart2js:noInline')
+  static WorkloadMetadataConfig create() => WorkloadMetadataConfig._();
   WorkloadMetadataConfig createEmptyInstance() => create();
   static $pb.PbList<WorkloadMetadataConfig> createRepeated() =>
       $pb.PbList<WorkloadMetadataConfig>();
@@ -5124,20 +5261,22 @@ class SetNetworkPolicyRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  SetNetworkPolicyRequest() : super();
-  SetNetworkPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetNetworkPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetNetworkPolicyRequest._() : super();
+  factory SetNetworkPolicyRequest() => create();
+  factory SetNetworkPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetNetworkPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetNetworkPolicyRequest clone() =>
       SetNetworkPolicyRequest()..mergeFromMessage(this);
   SetNetworkPolicyRequest copyWith(
           void Function(SetNetworkPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as SetNetworkPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetNetworkPolicyRequest create() => SetNetworkPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetNetworkPolicyRequest create() => SetNetworkPolicyRequest._();
   SetNetworkPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<SetNetworkPolicyRequest> createRepeated() =>
       $pb.PbList<SetNetworkPolicyRequest>();
@@ -5210,13 +5349,14 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'name')
     ..hasRequiredFields = false;
 
-  SetMaintenancePolicyRequest() : super();
-  SetMaintenancePolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetMaintenancePolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetMaintenancePolicyRequest._() : super();
+  factory SetMaintenancePolicyRequest() => create();
+  factory SetMaintenancePolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetMaintenancePolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetMaintenancePolicyRequest clone() =>
       SetMaintenancePolicyRequest()..mergeFromMessage(this);
   SetMaintenancePolicyRequest copyWith(
@@ -5224,7 +5364,9 @@ class SetMaintenancePolicyRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SetMaintenancePolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetMaintenancePolicyRequest create() => SetMaintenancePolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetMaintenancePolicyRequest create() =>
+      SetMaintenancePolicyRequest._();
   SetMaintenancePolicyRequest createEmptyInstance() => create();
   static $pb.PbList<SetMaintenancePolicyRequest> createRepeated() =>
       $pb.PbList<SetMaintenancePolicyRequest>();
@@ -5279,19 +5421,21 @@ class ListLocationsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
-  ListLocationsRequest() : super();
-  ListLocationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLocationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLocationsRequest._() : super();
+  factory ListLocationsRequest() => create();
+  factory ListLocationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLocationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLocationsRequest clone() =>
       ListLocationsRequest()..mergeFromMessage(this);
   ListLocationsRequest copyWith(void Function(ListLocationsRequest) updates) =>
       super.copyWith((message) => updates(message as ListLocationsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListLocationsRequest create() => ListLocationsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListLocationsRequest create() => ListLocationsRequest._();
   ListLocationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListLocationsRequest> createRepeated() =>
       $pb.PbList<ListLocationsRequest>();
@@ -5315,20 +5459,22 @@ class ListLocationsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListLocationsResponse() : super();
-  ListLocationsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLocationsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLocationsResponse._() : super();
+  factory ListLocationsResponse() => create();
+  factory ListLocationsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLocationsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLocationsResponse clone() =>
       ListLocationsResponse()..mergeFromMessage(this);
   ListLocationsResponse copyWith(
           void Function(ListLocationsResponse) updates) =>
       super.copyWith((message) => updates(message as ListLocationsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListLocationsResponse create() => ListLocationsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListLocationsResponse create() => ListLocationsResponse._();
   ListLocationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListLocationsResponse> createRepeated() =>
       $pb.PbList<ListLocationsResponse>();
@@ -5361,18 +5507,20 @@ class Location extends $pb.GeneratedMessage {
     ..aOB(3, 'recommended')
     ..hasRequiredFields = false;
 
-  Location() : super();
-  Location.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Location.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Location._() : super();
+  factory Location() => create();
+  factory Location.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Location.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Location clone() => Location()..mergeFromMessage(this);
   Location copyWith(void Function(Location) updates) =>
       super.copyWith((message) => updates(message as Location));
   $pb.BuilderInfo get info_ => _i;
-  static Location create() => Location();
+  @$core.pragma('dart2js:noInline')
+  static Location create() => Location._();
   Location createEmptyInstance() => create();
   static $pb.PbList<Location> createRepeated() => $pb.PbList<Location>();
   static Location getDefault() => _defaultInstance ??= create()..freeze();
@@ -5416,18 +5564,20 @@ class StatusCondition extends $pb.GeneratedMessage {
     ..aOS(2, 'message')
     ..hasRequiredFields = false;
 
-  StatusCondition() : super();
-  StatusCondition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StatusCondition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StatusCondition._() : super();
+  factory StatusCondition() => create();
+  factory StatusCondition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StatusCondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StatusCondition clone() => StatusCondition()..mergeFromMessage(this);
   StatusCondition copyWith(void Function(StatusCondition) updates) =>
       super.copyWith((message) => updates(message as StatusCondition));
   $pb.BuilderInfo get info_ => _i;
-  static StatusCondition create() => StatusCondition();
+  @$core.pragma('dart2js:noInline')
+  static StatusCondition create() => StatusCondition._();
   StatusCondition createEmptyInstance() => create();
   static $pb.PbList<StatusCondition> createRepeated() =>
       $pb.PbList<StatusCondition>();
@@ -5459,18 +5609,20 @@ class NetworkConfig extends $pb.GeneratedMessage {
     ..aOS(2, 'subnetwork')
     ..hasRequiredFields = false;
 
-  NetworkConfig() : super();
-  NetworkConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NetworkConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NetworkConfig._() : super();
+  factory NetworkConfig() => create();
+  factory NetworkConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NetworkConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NetworkConfig clone() => NetworkConfig()..mergeFromMessage(this);
   NetworkConfig copyWith(void Function(NetworkConfig) updates) =>
       super.copyWith((message) => updates(message as NetworkConfig));
   $pb.BuilderInfo get info_ => _i;
-  static NetworkConfig create() => NetworkConfig();
+  @$core.pragma('dart2js:noInline')
+  static NetworkConfig create() => NetworkConfig._();
   NetworkConfig createEmptyInstance() => create();
   static $pb.PbList<NetworkConfig> createRepeated() =>
       $pb.PbList<NetworkConfig>();
@@ -5504,13 +5656,14 @@ class ListUsableSubnetworksRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListUsableSubnetworksRequest() : super();
-  ListUsableSubnetworksRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListUsableSubnetworksRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListUsableSubnetworksRequest._() : super();
+  factory ListUsableSubnetworksRequest() => create();
+  factory ListUsableSubnetworksRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListUsableSubnetworksRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListUsableSubnetworksRequest clone() =>
       ListUsableSubnetworksRequest()..mergeFromMessage(this);
   ListUsableSubnetworksRequest copyWith(
@@ -5518,8 +5671,9 @@ class ListUsableSubnetworksRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListUsableSubnetworksRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListUsableSubnetworksRequest create() =>
-      ListUsableSubnetworksRequest();
+      ListUsableSubnetworksRequest._();
   ListUsableSubnetworksRequest createEmptyInstance() => create();
   static $pb.PbList<ListUsableSubnetworksRequest> createRepeated() =>
       $pb.PbList<ListUsableSubnetworksRequest>();
@@ -5569,13 +5723,14 @@ class ListUsableSubnetworksResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListUsableSubnetworksResponse() : super();
-  ListUsableSubnetworksResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListUsableSubnetworksResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListUsableSubnetworksResponse._() : super();
+  factory ListUsableSubnetworksResponse() => create();
+  factory ListUsableSubnetworksResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListUsableSubnetworksResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListUsableSubnetworksResponse clone() =>
       ListUsableSubnetworksResponse()..mergeFromMessage(this);
   ListUsableSubnetworksResponse copyWith(
@@ -5583,8 +5738,9 @@ class ListUsableSubnetworksResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListUsableSubnetworksResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListUsableSubnetworksResponse create() =>
-      ListUsableSubnetworksResponse();
+      ListUsableSubnetworksResponse._();
   ListUsableSubnetworksResponse createEmptyInstance() => create();
   static $pb.PbList<ListUsableSubnetworksResponse> createRepeated() =>
       $pb.PbList<ListUsableSubnetworksResponse>();
@@ -5618,13 +5774,14 @@ class UsableSubnetworkSecondaryRange extends $pb.GeneratedMessage {
         UsableSubnetworkSecondaryRange_Status.values)
     ..hasRequiredFields = false;
 
-  UsableSubnetworkSecondaryRange() : super();
-  UsableSubnetworkSecondaryRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UsableSubnetworkSecondaryRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UsableSubnetworkSecondaryRange._() : super();
+  factory UsableSubnetworkSecondaryRange() => create();
+  factory UsableSubnetworkSecondaryRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UsableSubnetworkSecondaryRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UsableSubnetworkSecondaryRange clone() =>
       UsableSubnetworkSecondaryRange()..mergeFromMessage(this);
   UsableSubnetworkSecondaryRange copyWith(
@@ -5632,8 +5789,9 @@ class UsableSubnetworkSecondaryRange extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UsableSubnetworkSecondaryRange));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UsableSubnetworkSecondaryRange create() =>
-      UsableSubnetworkSecondaryRange();
+      UsableSubnetworkSecondaryRange._();
   UsableSubnetworkSecondaryRange createEmptyInstance() => create();
   static $pb.PbList<UsableSubnetworkSecondaryRange> createRepeated() =>
       $pb.PbList<UsableSubnetworkSecondaryRange>();
@@ -5677,18 +5835,20 @@ class UsableSubnetwork extends $pb.GeneratedMessage {
     ..aOS(5, 'statusMessage')
     ..hasRequiredFields = false;
 
-  UsableSubnetwork() : super();
-  UsableSubnetwork.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UsableSubnetwork.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UsableSubnetwork._() : super();
+  factory UsableSubnetwork() => create();
+  factory UsableSubnetwork.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UsableSubnetwork.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UsableSubnetwork clone() => UsableSubnetwork()..mergeFromMessage(this);
   UsableSubnetwork copyWith(void Function(UsableSubnetwork) updates) =>
       super.copyWith((message) => updates(message as UsableSubnetwork));
   $pb.BuilderInfo get info_ => _i;
-  static UsableSubnetwork create() => UsableSubnetwork();
+  @$core.pragma('dart2js:noInline')
+  static UsableSubnetwork create() => UsableSubnetwork._();
   UsableSubnetwork createEmptyInstance() => create();
   static $pb.PbList<UsableSubnetwork> createRepeated() =>
       $pb.PbList<UsableSubnetwork>();
@@ -5738,20 +5898,22 @@ class VerticalPodAutoscaling extends $pb.GeneratedMessage {
     ..aOB(1, 'enabled')
     ..hasRequiredFields = false;
 
-  VerticalPodAutoscaling() : super();
-  VerticalPodAutoscaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VerticalPodAutoscaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VerticalPodAutoscaling._() : super();
+  factory VerticalPodAutoscaling() => create();
+  factory VerticalPodAutoscaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VerticalPodAutoscaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VerticalPodAutoscaling clone() =>
       VerticalPodAutoscaling()..mergeFromMessage(this);
   VerticalPodAutoscaling copyWith(
           void Function(VerticalPodAutoscaling) updates) =>
       super.copyWith((message) => updates(message as VerticalPodAutoscaling));
   $pb.BuilderInfo get info_ => _i;
-  static VerticalPodAutoscaling create() => VerticalPodAutoscaling();
+  @$core.pragma('dart2js:noInline')
+  static VerticalPodAutoscaling create() => VerticalPodAutoscaling._();
   VerticalPodAutoscaling createEmptyInstance() => create();
   static $pb.PbList<VerticalPodAutoscaling> createRepeated() =>
       $pb.PbList<VerticalPodAutoscaling>();
@@ -5774,18 +5936,20 @@ class MaxPodsConstraint extends $pb.GeneratedMessage {
     ..aInt64(1, 'maxPodsPerNode')
     ..hasRequiredFields = false;
 
-  MaxPodsConstraint() : super();
-  MaxPodsConstraint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MaxPodsConstraint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MaxPodsConstraint._() : super();
+  factory MaxPodsConstraint() => create();
+  factory MaxPodsConstraint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MaxPodsConstraint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MaxPodsConstraint clone() => MaxPodsConstraint()..mergeFromMessage(this);
   MaxPodsConstraint copyWith(void Function(MaxPodsConstraint) updates) =>
       super.copyWith((message) => updates(message as MaxPodsConstraint));
   $pb.BuilderInfo get info_ => _i;
-  static MaxPodsConstraint create() => MaxPodsConstraint();
+  @$core.pragma('dart2js:noInline')
+  static MaxPodsConstraint create() => MaxPodsConstraint._();
   MaxPodsConstraint createEmptyInstance() => create();
   static $pb.PbList<MaxPodsConstraint> createRepeated() =>
       $pb.PbList<MaxPodsConstraint>();
@@ -5810,14 +5974,15 @@ class ResourceUsageExportConfig_BigQueryDestination
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
-  ResourceUsageExportConfig_BigQueryDestination() : super();
-  ResourceUsageExportConfig_BigQueryDestination.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceUsageExportConfig_BigQueryDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceUsageExportConfig_BigQueryDestination._() : super();
+  factory ResourceUsageExportConfig_BigQueryDestination() => create();
+  factory ResourceUsageExportConfig_BigQueryDestination.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceUsageExportConfig_BigQueryDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceUsageExportConfig_BigQueryDestination clone() =>
       ResourceUsageExportConfig_BigQueryDestination()..mergeFromMessage(this);
   ResourceUsageExportConfig_BigQueryDestination copyWith(
@@ -5826,8 +5991,9 @@ class ResourceUsageExportConfig_BigQueryDestination
       super.copyWith((message) =>
           updates(message as ResourceUsageExportConfig_BigQueryDestination));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ResourceUsageExportConfig_BigQueryDestination create() =>
-      ResourceUsageExportConfig_BigQueryDestination();
+      ResourceUsageExportConfig_BigQueryDestination._();
   ResourceUsageExportConfig_BigQueryDestination createEmptyInstance() =>
       create();
   static $pb.PbList<ResourceUsageExportConfig_BigQueryDestination>
@@ -5858,13 +6024,14 @@ class ResourceUsageExportConfig extends $pb.GeneratedMessage {
     ..aOB(2, 'enableNetworkEgressMetering')
     ..hasRequiredFields = false;
 
-  ResourceUsageExportConfig() : super();
-  ResourceUsageExportConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceUsageExportConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceUsageExportConfig._() : super();
+  factory ResourceUsageExportConfig() => create();
+  factory ResourceUsageExportConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceUsageExportConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceUsageExportConfig clone() =>
       ResourceUsageExportConfig()..mergeFromMessage(this);
   ResourceUsageExportConfig copyWith(
@@ -5872,7 +6039,8 @@ class ResourceUsageExportConfig extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ResourceUsageExportConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ResourceUsageExportConfig create() => ResourceUsageExportConfig();
+  @$core.pragma('dart2js:noInline')
+  static ResourceUsageExportConfig create() => ResourceUsageExportConfig._();
   ResourceUsageExportConfig createEmptyInstance() => create();
   static $pb.PbList<ResourceUsageExportConfig> createRepeated() =>
       $pb.PbList<ResourceUsageExportConfig>();

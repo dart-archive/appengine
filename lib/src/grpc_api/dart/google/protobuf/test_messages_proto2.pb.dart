@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/protobuf/test_messages_proto2.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -22,13 +23,14 @@ class TestAllTypesProto2_NestedMessage extends $pb.GeneratedMessage {
     ..a<TestAllTypesProto2>(2, 'corecursive', $pb.PbFieldType.OM,
         TestAllTypesProto2.getDefault, TestAllTypesProto2.create);
 
-  TestAllTypesProto2_NestedMessage() : super();
-  TestAllTypesProto2_NestedMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto2_NestedMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto2_NestedMessage._() : super();
+  factory TestAllTypesProto2_NestedMessage() => create();
+  factory TestAllTypesProto2_NestedMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto2_NestedMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto2_NestedMessage clone() =>
       TestAllTypesProto2_NestedMessage()..mergeFromMessage(this);
   TestAllTypesProto2_NestedMessage copyWith(
@@ -36,8 +38,9 @@ class TestAllTypesProto2_NestedMessage extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TestAllTypesProto2_NestedMessage));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TestAllTypesProto2_NestedMessage create() =>
-      TestAllTypesProto2_NestedMessage();
+      TestAllTypesProto2_NestedMessage._();
   TestAllTypesProto2_NestedMessage createEmptyInstance() => create();
   static $pb.PbList<TestAllTypesProto2_NestedMessage> createRepeated() =>
       $pb.PbList<TestAllTypesProto2_NestedMessage>();
@@ -69,20 +72,22 @@ class TestAllTypesProto2_Data extends $pb.GeneratedMessage {
     ..a<$core.int>(203, 'groupUint32', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
-  TestAllTypesProto2_Data() : super();
-  TestAllTypesProto2_Data.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto2_Data.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto2_Data._() : super();
+  factory TestAllTypesProto2_Data() => create();
+  factory TestAllTypesProto2_Data.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto2_Data.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto2_Data clone() =>
       TestAllTypesProto2_Data()..mergeFromMessage(this);
   TestAllTypesProto2_Data copyWith(
           void Function(TestAllTypesProto2_Data) updates) =>
       super.copyWith((message) => updates(message as TestAllTypesProto2_Data));
   $pb.BuilderInfo get info_ => _i;
-  static TestAllTypesProto2_Data create() => TestAllTypesProto2_Data();
+  @$core.pragma('dart2js:noInline')
+  static TestAllTypesProto2_Data create() => TestAllTypesProto2_Data._();
   TestAllTypesProto2_Data createEmptyInstance() => create();
   static $pb.PbList<TestAllTypesProto2_Data> createRepeated() =>
       $pb.PbList<TestAllTypesProto2_Data>();
@@ -113,13 +118,15 @@ class TestAllTypesProto2_MessageSetCorrect extends $pb.GeneratedMessage {
       package: const $pb.PackageName('protobuf_test_messages.proto2'))
     ..hasExtensions = true;
 
-  TestAllTypesProto2_MessageSetCorrect() : super();
-  TestAllTypesProto2_MessageSetCorrect.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto2_MessageSetCorrect.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto2_MessageSetCorrect._() : super();
+  factory TestAllTypesProto2_MessageSetCorrect() => create();
+  factory TestAllTypesProto2_MessageSetCorrect.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto2_MessageSetCorrect.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto2_MessageSetCorrect clone() =>
       TestAllTypesProto2_MessageSetCorrect()..mergeFromMessage(this);
   TestAllTypesProto2_MessageSetCorrect copyWith(
@@ -127,8 +134,9 @@ class TestAllTypesProto2_MessageSetCorrect extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as TestAllTypesProto2_MessageSetCorrect));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TestAllTypesProto2_MessageSetCorrect create() =>
-      TestAllTypesProto2_MessageSetCorrect();
+      TestAllTypesProto2_MessageSetCorrect._();
   TestAllTypesProto2_MessageSetCorrect createEmptyInstance() => create();
   static $pb.PbList<TestAllTypesProto2_MessageSetCorrect> createRepeated() =>
       $pb.PbList<TestAllTypesProto2_MessageSetCorrect>();
@@ -153,14 +161,16 @@ class TestAllTypesProto2_MessageSetCorrectExtension1
           TestAllTypesProto2_MessageSetCorrectExtension1.getDefault,
           TestAllTypesProto2_MessageSetCorrectExtension1.create);
 
-  TestAllTypesProto2_MessageSetCorrectExtension1() : super();
-  TestAllTypesProto2_MessageSetCorrectExtension1.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto2_MessageSetCorrectExtension1.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto2_MessageSetCorrectExtension1._() : super();
+  factory TestAllTypesProto2_MessageSetCorrectExtension1() => create();
+  factory TestAllTypesProto2_MessageSetCorrectExtension1.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto2_MessageSetCorrectExtension1.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto2_MessageSetCorrectExtension1 clone() =>
       TestAllTypesProto2_MessageSetCorrectExtension1()..mergeFromMessage(this);
   TestAllTypesProto2_MessageSetCorrectExtension1 copyWith(
@@ -169,8 +179,9 @@ class TestAllTypesProto2_MessageSetCorrectExtension1
       super.copyWith((message) =>
           updates(message as TestAllTypesProto2_MessageSetCorrectExtension1));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TestAllTypesProto2_MessageSetCorrectExtension1 create() =>
-      TestAllTypesProto2_MessageSetCorrectExtension1();
+      TestAllTypesProto2_MessageSetCorrectExtension1._();
   TestAllTypesProto2_MessageSetCorrectExtension1 createEmptyInstance() =>
       create();
   static $pb.PbList<TestAllTypesProto2_MessageSetCorrectExtension1>
@@ -205,14 +216,16 @@ class TestAllTypesProto2_MessageSetCorrectExtension2
           TestAllTypesProto2_MessageSetCorrectExtension2.getDefault,
           TestAllTypesProto2_MessageSetCorrectExtension2.create);
 
-  TestAllTypesProto2_MessageSetCorrectExtension2() : super();
-  TestAllTypesProto2_MessageSetCorrectExtension2.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto2_MessageSetCorrectExtension2.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto2_MessageSetCorrectExtension2._() : super();
+  factory TestAllTypesProto2_MessageSetCorrectExtension2() => create();
+  factory TestAllTypesProto2_MessageSetCorrectExtension2.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto2_MessageSetCorrectExtension2.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto2_MessageSetCorrectExtension2 clone() =>
       TestAllTypesProto2_MessageSetCorrectExtension2()..mergeFromMessage(this);
   TestAllTypesProto2_MessageSetCorrectExtension2 copyWith(
@@ -221,8 +234,9 @@ class TestAllTypesProto2_MessageSetCorrectExtension2
       super.copyWith((message) =>
           updates(message as TestAllTypesProto2_MessageSetCorrectExtension2));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TestAllTypesProto2_MessageSetCorrectExtension2 create() =>
-      TestAllTypesProto2_MessageSetCorrectExtension2();
+      TestAllTypesProto2_MessageSetCorrectExtension2._();
   TestAllTypesProto2_MessageSetCorrectExtension2 createEmptyInstance() =>
       create();
   static $pb.PbList<TestAllTypesProto2_MessageSetCorrectExtension2>
@@ -270,6 +284,7 @@ class TestAllTypesProto2 extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestAllTypesProto2',
       package: const $pb.PackageName('protobuf_test_messages.proto2'))
+    ..oo(0, [111, 112, 113, 114, 115, 116, 117, 118, 119])
     ..a<$core.int>(1, 'optionalInt32', $pb.PbFieldType.O3)
     ..aInt64(2, 'optionalInt64')
     ..a<$core.int>(3, 'optionalUint32', $pb.PbFieldType.OU3)
@@ -424,21 +439,22 @@ class TestAllTypesProto2 extends $pb.GeneratedMessage {
     ..a<$core.int>(416, 'fieldName16', $pb.PbFieldType.O3)
     ..a<$core.int>(417, 'fieldName17', $pb.PbFieldType.O3)
     ..a<$core.int>(418, 'fieldName18', $pb.PbFieldType.O3)
-    ..oo(0, [111, 112, 113, 114, 115, 116, 117, 118, 119])
     ..hasExtensions = true;
 
-  TestAllTypesProto2() : super();
-  TestAllTypesProto2.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto2.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto2._() : super();
+  factory TestAllTypesProto2() => create();
+  factory TestAllTypesProto2.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto2.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto2 clone() => TestAllTypesProto2()..mergeFromMessage(this);
   TestAllTypesProto2 copyWith(void Function(TestAllTypesProto2) updates) =>
       super.copyWith((message) => updates(message as TestAllTypesProto2));
   $pb.BuilderInfo get info_ => _i;
-  static TestAllTypesProto2 create() => TestAllTypesProto2();
+  @$core.pragma('dart2js:noInline')
+  static TestAllTypesProto2 create() => TestAllTypesProto2._();
   TestAllTypesProto2 createEmptyInstance() => create();
   static $pb.PbList<TestAllTypesProto2> createRepeated() =>
       $pb.PbList<TestAllTypesProto2>();
@@ -944,19 +960,21 @@ class ForeignMessageProto2 extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'c', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ForeignMessageProto2() : super();
-  ForeignMessageProto2.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ForeignMessageProto2.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ForeignMessageProto2._() : super();
+  factory ForeignMessageProto2() => create();
+  factory ForeignMessageProto2.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ForeignMessageProto2.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ForeignMessageProto2 clone() =>
       ForeignMessageProto2()..mergeFromMessage(this);
   ForeignMessageProto2 copyWith(void Function(ForeignMessageProto2) updates) =>
       super.copyWith((message) => updates(message as ForeignMessageProto2));
   $pb.BuilderInfo get info_ => _i;
-  static ForeignMessageProto2 create() => ForeignMessageProto2();
+  @$core.pragma('dart2js:noInline')
+  static ForeignMessageProto2 create() => ForeignMessageProto2._();
   ForeignMessageProto2 createEmptyInstance() => create();
   static $pb.PbList<ForeignMessageProto2> createRepeated() =>
       $pb.PbList<ForeignMessageProto2>();
@@ -980,13 +998,15 @@ class UnknownToTestAllTypes_OptionalGroup extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'a', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  UnknownToTestAllTypes_OptionalGroup() : super();
-  UnknownToTestAllTypes_OptionalGroup.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UnknownToTestAllTypes_OptionalGroup.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UnknownToTestAllTypes_OptionalGroup._() : super();
+  factory UnknownToTestAllTypes_OptionalGroup() => create();
+  factory UnknownToTestAllTypes_OptionalGroup.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UnknownToTestAllTypes_OptionalGroup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UnknownToTestAllTypes_OptionalGroup clone() =>
       UnknownToTestAllTypes_OptionalGroup()..mergeFromMessage(this);
   UnknownToTestAllTypes_OptionalGroup copyWith(
@@ -994,8 +1014,9 @@ class UnknownToTestAllTypes_OptionalGroup extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UnknownToTestAllTypes_OptionalGroup));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UnknownToTestAllTypes_OptionalGroup create() =>
-      UnknownToTestAllTypes_OptionalGroup();
+      UnknownToTestAllTypes_OptionalGroup._();
   UnknownToTestAllTypes_OptionalGroup createEmptyInstance() => create();
   static $pb.PbList<UnknownToTestAllTypes_OptionalGroup> createRepeated() =>
       $pb.PbList<UnknownToTestAllTypes_OptionalGroup>();
@@ -1029,20 +1050,22 @@ class UnknownToTestAllTypes extends $pb.GeneratedMessage {
     ..p<$core.int>(1011, 'repeatedInt32', $pb.PbFieldType.P3)
     ..hasRequiredFields = false;
 
-  UnknownToTestAllTypes() : super();
-  UnknownToTestAllTypes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UnknownToTestAllTypes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UnknownToTestAllTypes._() : super();
+  factory UnknownToTestAllTypes() => create();
+  factory UnknownToTestAllTypes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UnknownToTestAllTypes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UnknownToTestAllTypes clone() =>
       UnknownToTestAllTypes()..mergeFromMessage(this);
   UnknownToTestAllTypes copyWith(
           void Function(UnknownToTestAllTypes) updates) =>
       super.copyWith((message) => updates(message as UnknownToTestAllTypes));
   $pb.BuilderInfo get info_ => _i;
-  static UnknownToTestAllTypes create() => UnknownToTestAllTypes();
+  @$core.pragma('dart2js:noInline')
+  static UnknownToTestAllTypes create() => UnknownToTestAllTypes._();
   UnknownToTestAllTypes createEmptyInstance() => create();
   static $pb.PbList<UnknownToTestAllTypes> createRepeated() =>
       $pb.PbList<UnknownToTestAllTypes>();

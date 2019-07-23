@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/extension_feed_item_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/extension_feed_item.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
+import '../resources/extension_feed_item.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
 
 class GetExtensionFeedItemRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class GetExtensionFeedItemRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetExtensionFeedItemRequest() : super();
-  GetExtensionFeedItemRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetExtensionFeedItemRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetExtensionFeedItemRequest._() : super();
+  factory GetExtensionFeedItemRequest() => create();
+  factory GetExtensionFeedItemRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetExtensionFeedItemRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetExtensionFeedItemRequest clone() =>
       GetExtensionFeedItemRequest()..mergeFromMessage(this);
   GetExtensionFeedItemRequest copyWith(
@@ -33,7 +35,9 @@ class GetExtensionFeedItemRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetExtensionFeedItemRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetExtensionFeedItemRequest create() => GetExtensionFeedItemRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetExtensionFeedItemRequest create() =>
+      GetExtensionFeedItemRequest._();
   GetExtensionFeedItemRequest createEmptyInstance() => create();
   static $pb.PbList<GetExtensionFeedItemRequest> createRepeated() =>
       $pb.PbList<GetExtensionFeedItemRequest>();
@@ -60,13 +64,14 @@ class MutateExtensionFeedItemsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateExtensionFeedItemsRequest() : super();
-  MutateExtensionFeedItemsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateExtensionFeedItemsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateExtensionFeedItemsRequest._() : super();
+  factory MutateExtensionFeedItemsRequest() => create();
+  factory MutateExtensionFeedItemsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateExtensionFeedItemsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateExtensionFeedItemsRequest clone() =>
       MutateExtensionFeedItemsRequest()..mergeFromMessage(this);
   MutateExtensionFeedItemsRequest copyWith(
@@ -74,8 +79,9 @@ class MutateExtensionFeedItemsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateExtensionFeedItemsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateExtensionFeedItemsRequest create() =>
-      MutateExtensionFeedItemsRequest();
+      MutateExtensionFeedItemsRequest._();
   MutateExtensionFeedItemsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateExtensionFeedItemsRequest> createRepeated() =>
       $pb.PbList<MutateExtensionFeedItemsRequest>();
@@ -115,23 +121,24 @@ class ExtensionFeedItemOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExtensionFeedItemOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.ExtensionFeedItem>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.ExtensionFeedItem.getDefault, $0.ExtensionFeedItem.create)
-    ..a<$0.ExtensionFeedItem>(2, 'update', $pb.PbFieldType.OM,
-        $0.ExtensionFeedItem.getDefault, $0.ExtensionFeedItem.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.ExtensionFeedItem>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.ExtensionFeedItem.getDefault, $1.ExtensionFeedItem.create)
+    ..a<$1.ExtensionFeedItem>(2, 'update', $pb.PbFieldType.OM,
+        $1.ExtensionFeedItem.getDefault, $1.ExtensionFeedItem.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  ExtensionFeedItemOperation() : super();
-  ExtensionFeedItemOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExtensionFeedItemOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExtensionFeedItemOperation._() : super();
+  factory ExtensionFeedItemOperation() => create();
+  factory ExtensionFeedItemOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExtensionFeedItemOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExtensionFeedItemOperation clone() =>
       ExtensionFeedItemOperation()..mergeFromMessage(this);
   ExtensionFeedItemOperation copyWith(
@@ -139,7 +146,8 @@ class ExtensionFeedItemOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExtensionFeedItemOperation));
   $pb.BuilderInfo get info_ => _i;
-  static ExtensionFeedItemOperation create() => ExtensionFeedItemOperation();
+  @$core.pragma('dart2js:noInline')
+  static ExtensionFeedItemOperation create() => ExtensionFeedItemOperation._();
   ExtensionFeedItemOperation createEmptyInstance() => create();
   static $pb.PbList<ExtensionFeedItemOperation> createRepeated() =>
       $pb.PbList<ExtensionFeedItemOperation>();
@@ -151,16 +159,16 @@ class ExtensionFeedItemOperation extends $pb.GeneratedMessage {
       _ExtensionFeedItemOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.ExtensionFeedItem get create_1 => $_getN(0);
-  set create_1($0.ExtensionFeedItem v) {
+  $1.ExtensionFeedItem get create_1 => $_getN(0);
+  set create_1($1.ExtensionFeedItem v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.ExtensionFeedItem get update => $_getN(1);
-  set update($0.ExtensionFeedItem v) {
+  $1.ExtensionFeedItem get update => $_getN(1);
+  set update($1.ExtensionFeedItem v) {
     setField(2, v);
   }
 
@@ -175,8 +183,8 @@ class ExtensionFeedItemOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -192,13 +200,14 @@ class MutateExtensionFeedItemsResponse extends $pb.GeneratedMessage {
         2, 'results', $pb.PbFieldType.PM, MutateExtensionFeedItemResult.create)
     ..hasRequiredFields = false;
 
-  MutateExtensionFeedItemsResponse() : super();
-  MutateExtensionFeedItemsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateExtensionFeedItemsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateExtensionFeedItemsResponse._() : super();
+  factory MutateExtensionFeedItemsResponse() => create();
+  factory MutateExtensionFeedItemsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateExtensionFeedItemsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateExtensionFeedItemsResponse clone() =>
       MutateExtensionFeedItemsResponse()..mergeFromMessage(this);
   MutateExtensionFeedItemsResponse copyWith(
@@ -206,8 +215,9 @@ class MutateExtensionFeedItemsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateExtensionFeedItemsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateExtensionFeedItemsResponse create() =>
-      MutateExtensionFeedItemsResponse();
+      MutateExtensionFeedItemsResponse._();
   MutateExtensionFeedItemsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateExtensionFeedItemsResponse> createRepeated() =>
       $pb.PbList<MutateExtensionFeedItemsResponse>();
@@ -225,13 +235,14 @@ class MutateExtensionFeedItemResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateExtensionFeedItemResult() : super();
-  MutateExtensionFeedItemResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateExtensionFeedItemResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateExtensionFeedItemResult._() : super();
+  factory MutateExtensionFeedItemResult() => create();
+  factory MutateExtensionFeedItemResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateExtensionFeedItemResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateExtensionFeedItemResult clone() =>
       MutateExtensionFeedItemResult()..mergeFromMessage(this);
   MutateExtensionFeedItemResult copyWith(
@@ -239,8 +250,9 @@ class MutateExtensionFeedItemResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateExtensionFeedItemResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateExtensionFeedItemResult create() =>
-      MutateExtensionFeedItemResult();
+      MutateExtensionFeedItemResult._();
   MutateExtensionFeedItemResult createEmptyInstance() => create();
   static $pb.PbList<MutateExtensionFeedItemResult> createRepeated() =>
       $pb.PbList<MutateExtensionFeedItemResult>();

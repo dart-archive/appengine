@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/remarketing_action.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class RemarketingAction extends $pb.GeneratedMessage {
         4, 'tagSnippets', $pb.PbFieldType.PM, $1.TagSnippet.create)
     ..hasRequiredFields = false;
 
-  RemarketingAction() : super();
-  RemarketingAction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RemarketingAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RemarketingAction._() : super();
+  factory RemarketingAction() => create();
+  factory RemarketingAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemarketingAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RemarketingAction clone() => RemarketingAction()..mergeFromMessage(this);
   RemarketingAction copyWith(void Function(RemarketingAction) updates) =>
       super.copyWith((message) => updates(message as RemarketingAction));
   $pb.BuilderInfo get info_ => _i;
-  static RemarketingAction create() => RemarketingAction();
+  @$core.pragma('dart2js:noInline')
+  static RemarketingAction create() => RemarketingAction._();
   RemarketingAction createEmptyInstance() => create();
   static $pb.PbList<RemarketingAction> createRepeated() =>
       $pb.PbList<RemarketingAction>();

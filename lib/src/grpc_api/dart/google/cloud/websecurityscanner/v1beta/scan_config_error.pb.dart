@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1beta/scan_config_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class ScanConfigError extends $pb.GeneratedMessage {
     ..aOS(2, 'fieldName')
     ..hasRequiredFields = false;
 
-  ScanConfigError() : super();
-  ScanConfigError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfigError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfigError._() : super();
+  factory ScanConfigError() => create();
+  factory ScanConfigError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfigError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfigError clone() => ScanConfigError()..mergeFromMessage(this);
   ScanConfigError copyWith(void Function(ScanConfigError) updates) =>
       super.copyWith((message) => updates(message as ScanConfigError));
   $pb.BuilderInfo get info_ => _i;
-  static ScanConfigError create() => ScanConfigError();
+  @$core.pragma('dart2js:noInline')
+  static ScanConfigError create() => ScanConfigError._();
   ScanConfigError createEmptyInstance() => create();
   static $pb.PbList<ScanConfigError> createRepeated() =>
       $pb.PbList<ScanConfigError>();

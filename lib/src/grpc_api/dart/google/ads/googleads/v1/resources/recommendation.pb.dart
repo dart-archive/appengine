@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/recommendation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -36,13 +37,15 @@ class Recommendation_RecommendationImpact extends $pb.GeneratedMessage {
         Recommendation_RecommendationMetrics.create)
     ..hasRequiredFields = false;
 
-  Recommendation_RecommendationImpact() : super();
-  Recommendation_RecommendationImpact.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_RecommendationImpact.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_RecommendationImpact._() : super();
+  factory Recommendation_RecommendationImpact() => create();
+  factory Recommendation_RecommendationImpact.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_RecommendationImpact.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_RecommendationImpact clone() =>
       Recommendation_RecommendationImpact()..mergeFromMessage(this);
   Recommendation_RecommendationImpact copyWith(
@@ -50,8 +53,9 @@ class Recommendation_RecommendationImpact extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Recommendation_RecommendationImpact));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_RecommendationImpact create() =>
-      Recommendation_RecommendationImpact();
+      Recommendation_RecommendationImpact._();
   Recommendation_RecommendationImpact createEmptyInstance() => create();
   static $pb.PbList<Recommendation_RecommendationImpact> createRepeated() =>
       $pb.PbList<Recommendation_RecommendationImpact>();
@@ -92,13 +96,15 @@ class Recommendation_RecommendationMetrics extends $pb.GeneratedMessage {
         $0.DoubleValue.getDefault, $0.DoubleValue.create)
     ..hasRequiredFields = false;
 
-  Recommendation_RecommendationMetrics() : super();
-  Recommendation_RecommendationMetrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_RecommendationMetrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_RecommendationMetrics._() : super();
+  factory Recommendation_RecommendationMetrics() => create();
+  factory Recommendation_RecommendationMetrics.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_RecommendationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_RecommendationMetrics clone() =>
       Recommendation_RecommendationMetrics()..mergeFromMessage(this);
   Recommendation_RecommendationMetrics copyWith(
@@ -106,8 +112,9 @@ class Recommendation_RecommendationMetrics extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Recommendation_RecommendationMetrics));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_RecommendationMetrics create() =>
-      Recommendation_RecommendationMetrics();
+      Recommendation_RecommendationMetrics._();
   Recommendation_RecommendationMetrics createEmptyInstance() => create();
   static $pb.PbList<Recommendation_RecommendationMetrics> createRepeated() =>
       $pb.PbList<Recommendation_RecommendationMetrics>();
@@ -171,16 +178,18 @@ class Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOp
         Recommendation_RecommendationImpact.create)
     ..hasRequiredFields = false;
 
-  Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption()
+  Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption._()
       : super();
-  Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption() =>
+      create();
+  factory Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption
       clone() =>
           Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption()
@@ -193,9 +202,11 @@ class Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOp
           super.copyWith((message) => updates(message
               as Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption
       create() =>
-          Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption();
+          Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption
+              ._();
   Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -240,14 +251,15 @@ class Recommendation_CampaignBudgetRecommendation extends $pb.GeneratedMessage {
             .create)
     ..hasRequiredFields = false;
 
-  Recommendation_CampaignBudgetRecommendation() : super();
-  Recommendation_CampaignBudgetRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_CampaignBudgetRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_CampaignBudgetRecommendation._() : super();
+  factory Recommendation_CampaignBudgetRecommendation() => create();
+  factory Recommendation_CampaignBudgetRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_CampaignBudgetRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_CampaignBudgetRecommendation clone() =>
       Recommendation_CampaignBudgetRecommendation()..mergeFromMessage(this);
   Recommendation_CampaignBudgetRecommendation copyWith(
@@ -255,8 +267,9 @@ class Recommendation_CampaignBudgetRecommendation extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Recommendation_CampaignBudgetRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_CampaignBudgetRecommendation create() =>
-      Recommendation_CampaignBudgetRecommendation();
+      Recommendation_CampaignBudgetRecommendation._();
   Recommendation_CampaignBudgetRecommendation createEmptyInstance() => create();
   static $pb.PbList<Recommendation_CampaignBudgetRecommendation>
       createRepeated() =>
@@ -296,13 +309,15 @@ class Recommendation_KeywordRecommendation extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Recommendation_KeywordRecommendation() : super();
-  Recommendation_KeywordRecommendation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_KeywordRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_KeywordRecommendation._() : super();
+  factory Recommendation_KeywordRecommendation() => create();
+  factory Recommendation_KeywordRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_KeywordRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_KeywordRecommendation clone() =>
       Recommendation_KeywordRecommendation()..mergeFromMessage(this);
   Recommendation_KeywordRecommendation copyWith(
@@ -310,8 +325,9 @@ class Recommendation_KeywordRecommendation extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Recommendation_KeywordRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_KeywordRecommendation create() =>
-      Recommendation_KeywordRecommendation();
+      Recommendation_KeywordRecommendation._();
   Recommendation_KeywordRecommendation createEmptyInstance() => create();
   static $pb.PbList<Recommendation_KeywordRecommendation> createRepeated() =>
       $pb.PbList<Recommendation_KeywordRecommendation>();
@@ -352,14 +368,15 @@ class Recommendation_KeywordMatchTypeRecommendation
         $5.KeywordMatchTypeEnum_KeywordMatchType.values)
     ..hasRequiredFields = false;
 
-  Recommendation_KeywordMatchTypeRecommendation() : super();
-  Recommendation_KeywordMatchTypeRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_KeywordMatchTypeRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_KeywordMatchTypeRecommendation._() : super();
+  factory Recommendation_KeywordMatchTypeRecommendation() => create();
+  factory Recommendation_KeywordMatchTypeRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_KeywordMatchTypeRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_KeywordMatchTypeRecommendation clone() =>
       Recommendation_KeywordMatchTypeRecommendation()..mergeFromMessage(this);
   Recommendation_KeywordMatchTypeRecommendation copyWith(
@@ -368,8 +385,9 @@ class Recommendation_KeywordMatchTypeRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_KeywordMatchTypeRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_KeywordMatchTypeRecommendation create() =>
-      Recommendation_KeywordMatchTypeRecommendation();
+      Recommendation_KeywordMatchTypeRecommendation._();
   Recommendation_KeywordMatchTypeRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_KeywordMatchTypeRecommendation>
@@ -408,13 +426,15 @@ class Recommendation_TextAdRecommendation extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Recommendation_TextAdRecommendation() : super();
-  Recommendation_TextAdRecommendation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_TextAdRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_TextAdRecommendation._() : super();
+  factory Recommendation_TextAdRecommendation() => create();
+  factory Recommendation_TextAdRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_TextAdRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_TextAdRecommendation clone() =>
       Recommendation_TextAdRecommendation()..mergeFromMessage(this);
   Recommendation_TextAdRecommendation copyWith(
@@ -422,8 +442,9 @@ class Recommendation_TextAdRecommendation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Recommendation_TextAdRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_TextAdRecommendation create() =>
-      Recommendation_TextAdRecommendation();
+      Recommendation_TextAdRecommendation._();
   Recommendation_TextAdRecommendation createEmptyInstance() => create();
   static $pb.PbList<Recommendation_TextAdRecommendation> createRepeated() =>
       $pb.PbList<Recommendation_TextAdRecommendation>();
@@ -463,14 +484,16 @@ class Recommendation_SearchPartnersOptInRecommendation
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
     ..hasRequiredFields = false;
 
-  Recommendation_SearchPartnersOptInRecommendation() : super();
-  Recommendation_SearchPartnersOptInRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_SearchPartnersOptInRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_SearchPartnersOptInRecommendation._() : super();
+  factory Recommendation_SearchPartnersOptInRecommendation() => create();
+  factory Recommendation_SearchPartnersOptInRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_SearchPartnersOptInRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_SearchPartnersOptInRecommendation clone() =>
       Recommendation_SearchPartnersOptInRecommendation()
         ..mergeFromMessage(this);
@@ -480,8 +503,9 @@ class Recommendation_SearchPartnersOptInRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_SearchPartnersOptInRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_SearchPartnersOptInRecommendation create() =>
-      Recommendation_SearchPartnersOptInRecommendation();
+      Recommendation_SearchPartnersOptInRecommendation._();
   Recommendation_SearchPartnersOptInRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_SearchPartnersOptInRecommendation>
@@ -501,14 +525,16 @@ class Recommendation_MaximizeClicksOptInRecommendation
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Recommendation_MaximizeClicksOptInRecommendation() : super();
-  Recommendation_MaximizeClicksOptInRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_MaximizeClicksOptInRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_MaximizeClicksOptInRecommendation._() : super();
+  factory Recommendation_MaximizeClicksOptInRecommendation() => create();
+  factory Recommendation_MaximizeClicksOptInRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_MaximizeClicksOptInRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_MaximizeClicksOptInRecommendation clone() =>
       Recommendation_MaximizeClicksOptInRecommendation()
         ..mergeFromMessage(this);
@@ -518,8 +544,9 @@ class Recommendation_MaximizeClicksOptInRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_MaximizeClicksOptInRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_MaximizeClicksOptInRecommendation create() =>
-      Recommendation_MaximizeClicksOptInRecommendation();
+      Recommendation_MaximizeClicksOptInRecommendation._();
   Recommendation_MaximizeClicksOptInRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_MaximizeClicksOptInRecommendation>
@@ -547,14 +574,15 @@ class Recommendation_CalloutExtensionRecommendation
         $3.CalloutFeedItem.create)
     ..hasRequiredFields = false;
 
-  Recommendation_CalloutExtensionRecommendation() : super();
-  Recommendation_CalloutExtensionRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_CalloutExtensionRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_CalloutExtensionRecommendation._() : super();
+  factory Recommendation_CalloutExtensionRecommendation() => create();
+  factory Recommendation_CalloutExtensionRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_CalloutExtensionRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_CalloutExtensionRecommendation clone() =>
       Recommendation_CalloutExtensionRecommendation()..mergeFromMessage(this);
   Recommendation_CalloutExtensionRecommendation copyWith(
@@ -563,8 +591,9 @@ class Recommendation_CalloutExtensionRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_CalloutExtensionRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_CalloutExtensionRecommendation create() =>
-      Recommendation_CalloutExtensionRecommendation();
+      Recommendation_CalloutExtensionRecommendation._();
   Recommendation_CalloutExtensionRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_CalloutExtensionRecommendation>
@@ -599,16 +628,18 @@ class Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOp
     ..a<Recommendation_RecommendationImpact>(4, 'impact', $pb.PbFieldType.OM, Recommendation_RecommendationImpact.getDefault, Recommendation_RecommendationImpact.create)
     ..hasRequiredFields = false;
 
-  Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption()
+  Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption._()
       : super();
-  Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption() =>
+      create();
+  factory Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption
       clone() =>
           Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption()
@@ -621,9 +652,11 @@ class Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOp
           super.copyWith((message) => updates(message
               as Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption
       create() =>
-          Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption();
+          Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption
+              ._();
   Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -685,14 +718,15 @@ class Recommendation_TargetCpaOptInRecommendation extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Recommendation_TargetCpaOptInRecommendation() : super();
-  Recommendation_TargetCpaOptInRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_TargetCpaOptInRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_TargetCpaOptInRecommendation._() : super();
+  factory Recommendation_TargetCpaOptInRecommendation() => create();
+  factory Recommendation_TargetCpaOptInRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_TargetCpaOptInRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_TargetCpaOptInRecommendation clone() =>
       Recommendation_TargetCpaOptInRecommendation()..mergeFromMessage(this);
   Recommendation_TargetCpaOptInRecommendation copyWith(
@@ -700,8 +734,9 @@ class Recommendation_TargetCpaOptInRecommendation extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Recommendation_TargetCpaOptInRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_TargetCpaOptInRecommendation create() =>
-      Recommendation_TargetCpaOptInRecommendation();
+      Recommendation_TargetCpaOptInRecommendation._();
   Recommendation_TargetCpaOptInRecommendation createEmptyInstance() => create();
   static $pb.PbList<Recommendation_TargetCpaOptInRecommendation>
       createRepeated() =>
@@ -732,14 +767,16 @@ class Recommendation_MaximizeConversionsOptInRecommendation
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Recommendation_MaximizeConversionsOptInRecommendation() : super();
-  Recommendation_MaximizeConversionsOptInRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_MaximizeConversionsOptInRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_MaximizeConversionsOptInRecommendation._() : super();
+  factory Recommendation_MaximizeConversionsOptInRecommendation() => create();
+  factory Recommendation_MaximizeConversionsOptInRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_MaximizeConversionsOptInRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_MaximizeConversionsOptInRecommendation clone() =>
       Recommendation_MaximizeConversionsOptInRecommendation()
         ..mergeFromMessage(this);
@@ -749,8 +786,9 @@ class Recommendation_MaximizeConversionsOptInRecommendation
       super.copyWith((message) => updates(
           message as Recommendation_MaximizeConversionsOptInRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_MaximizeConversionsOptInRecommendation create() =>
-      Recommendation_MaximizeConversionsOptInRecommendation();
+      Recommendation_MaximizeConversionsOptInRecommendation._();
   Recommendation_MaximizeConversionsOptInRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_MaximizeConversionsOptInRecommendation>
@@ -776,14 +814,15 @@ class Recommendation_EnhancedCpcOptInRecommendation
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
     ..hasRequiredFields = false;
 
-  Recommendation_EnhancedCpcOptInRecommendation() : super();
-  Recommendation_EnhancedCpcOptInRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_EnhancedCpcOptInRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_EnhancedCpcOptInRecommendation._() : super();
+  factory Recommendation_EnhancedCpcOptInRecommendation() => create();
+  factory Recommendation_EnhancedCpcOptInRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_EnhancedCpcOptInRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_EnhancedCpcOptInRecommendation clone() =>
       Recommendation_EnhancedCpcOptInRecommendation()..mergeFromMessage(this);
   Recommendation_EnhancedCpcOptInRecommendation copyWith(
@@ -792,8 +831,9 @@ class Recommendation_EnhancedCpcOptInRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_EnhancedCpcOptInRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_EnhancedCpcOptInRecommendation create() =>
-      Recommendation_EnhancedCpcOptInRecommendation();
+      Recommendation_EnhancedCpcOptInRecommendation._();
   Recommendation_EnhancedCpcOptInRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_EnhancedCpcOptInRecommendation>
@@ -811,14 +851,16 @@ class Recommendation_OptimizeAdRotationRecommendation
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
     ..hasRequiredFields = false;
 
-  Recommendation_OptimizeAdRotationRecommendation() : super();
-  Recommendation_OptimizeAdRotationRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_OptimizeAdRotationRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_OptimizeAdRotationRecommendation._() : super();
+  factory Recommendation_OptimizeAdRotationRecommendation() => create();
+  factory Recommendation_OptimizeAdRotationRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_OptimizeAdRotationRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_OptimizeAdRotationRecommendation clone() =>
       Recommendation_OptimizeAdRotationRecommendation()..mergeFromMessage(this);
   Recommendation_OptimizeAdRotationRecommendation copyWith(
@@ -827,8 +869,9 @@ class Recommendation_OptimizeAdRotationRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_OptimizeAdRotationRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_OptimizeAdRotationRecommendation create() =>
-      Recommendation_OptimizeAdRotationRecommendation();
+      Recommendation_OptimizeAdRotationRecommendation._();
   Recommendation_OptimizeAdRotationRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_OptimizeAdRotationRecommendation>
@@ -848,14 +891,16 @@ class Recommendation_SitelinkExtensionRecommendation
         $3.SitelinkFeedItem.create)
     ..hasRequiredFields = false;
 
-  Recommendation_SitelinkExtensionRecommendation() : super();
-  Recommendation_SitelinkExtensionRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_SitelinkExtensionRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_SitelinkExtensionRecommendation._() : super();
+  factory Recommendation_SitelinkExtensionRecommendation() => create();
+  factory Recommendation_SitelinkExtensionRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_SitelinkExtensionRecommendation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_SitelinkExtensionRecommendation clone() =>
       Recommendation_SitelinkExtensionRecommendation()..mergeFromMessage(this);
   Recommendation_SitelinkExtensionRecommendation copyWith(
@@ -864,8 +909,9 @@ class Recommendation_SitelinkExtensionRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_SitelinkExtensionRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_SitelinkExtensionRecommendation create() =>
-      Recommendation_SitelinkExtensionRecommendation();
+      Recommendation_SitelinkExtensionRecommendation._();
   Recommendation_SitelinkExtensionRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_SitelinkExtensionRecommendation>
@@ -886,13 +932,15 @@ class Recommendation_CallExtensionRecommendation extends $pb.GeneratedMessage {
         1, 'recommendedExtensions', $pb.PbFieldType.PM, $3.CallFeedItem.create)
     ..hasRequiredFields = false;
 
-  Recommendation_CallExtensionRecommendation() : super();
-  Recommendation_CallExtensionRecommendation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_CallExtensionRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_CallExtensionRecommendation._() : super();
+  factory Recommendation_CallExtensionRecommendation() => create();
+  factory Recommendation_CallExtensionRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_CallExtensionRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_CallExtensionRecommendation clone() =>
       Recommendation_CallExtensionRecommendation()..mergeFromMessage(this);
   Recommendation_CallExtensionRecommendation copyWith(
@@ -900,8 +948,9 @@ class Recommendation_CallExtensionRecommendation extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Recommendation_CallExtensionRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_CallExtensionRecommendation create() =>
-      Recommendation_CallExtensionRecommendation();
+      Recommendation_CallExtensionRecommendation._();
   Recommendation_CallExtensionRecommendation createEmptyInstance() => create();
   static $pb.PbList<Recommendation_CallExtensionRecommendation>
       createRepeated() =>
@@ -928,14 +977,15 @@ class Recommendation_MoveUnusedBudgetRecommendation
         Recommendation_CampaignBudgetRecommendation.create)
     ..hasRequiredFields = false;
 
-  Recommendation_MoveUnusedBudgetRecommendation() : super();
-  Recommendation_MoveUnusedBudgetRecommendation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation_MoveUnusedBudgetRecommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation_MoveUnusedBudgetRecommendation._() : super();
+  factory Recommendation_MoveUnusedBudgetRecommendation() => create();
+  factory Recommendation_MoveUnusedBudgetRecommendation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation_MoveUnusedBudgetRecommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation_MoveUnusedBudgetRecommendation clone() =>
       Recommendation_MoveUnusedBudgetRecommendation()..mergeFromMessage(this);
   Recommendation_MoveUnusedBudgetRecommendation copyWith(
@@ -944,8 +994,9 @@ class Recommendation_MoveUnusedBudgetRecommendation
       super.copyWith((message) =>
           updates(message as Recommendation_MoveUnusedBudgetRecommendation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Recommendation_MoveUnusedBudgetRecommendation create() =>
-      Recommendation_MoveUnusedBudgetRecommendation();
+      Recommendation_MoveUnusedBudgetRecommendation._();
   Recommendation_MoveUnusedBudgetRecommendation createEmptyInstance() =>
       create();
   static $pb.PbList<Recommendation_MoveUnusedBudgetRecommendation>
@@ -1012,6 +1063,7 @@ class Recommendation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Recommendation',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [4, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21])
     ..aOS(1, 'resourceName')
     ..e<$4.RecommendationTypeEnum_RecommendationType>(
         2,
@@ -1077,21 +1129,22 @@ class Recommendation extends $pb.GeneratedMessage {
     ..a<Recommendation_CallExtensionRecommendation>(19, 'callExtensionRecommendation', $pb.PbFieldType.OM, Recommendation_CallExtensionRecommendation.getDefault, Recommendation_CallExtensionRecommendation.create)
     ..a<Recommendation_KeywordMatchTypeRecommendation>(20, 'keywordMatchTypeRecommendation', $pb.PbFieldType.OM, Recommendation_KeywordMatchTypeRecommendation.getDefault, Recommendation_KeywordMatchTypeRecommendation.create)
     ..a<Recommendation_MoveUnusedBudgetRecommendation>(21, 'moveUnusedBudgetRecommendation', $pb.PbFieldType.OM, Recommendation_MoveUnusedBudgetRecommendation.getDefault, Recommendation_MoveUnusedBudgetRecommendation.create)
-    ..oo(0, [4, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21])
     ..hasRequiredFields = false;
 
-  Recommendation() : super();
-  Recommendation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Recommendation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Recommendation._() : super();
+  factory Recommendation() => create();
+  factory Recommendation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Recommendation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Recommendation clone() => Recommendation()..mergeFromMessage(this);
   Recommendation copyWith(void Function(Recommendation) updates) =>
       super.copyWith((message) => updates(message as Recommendation));
   $pb.BuilderInfo get info_ => _i;
-  static Recommendation create() => Recommendation();
+  @$core.pragma('dart2js:noInline')
+  static Recommendation create() => Recommendation._();
   Recommendation createEmptyInstance() => create();
   static $pb.PbList<Recommendation> createRepeated() =>
       $pb.PbList<Recommendation>();

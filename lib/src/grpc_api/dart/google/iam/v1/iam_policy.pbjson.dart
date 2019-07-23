@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/iam/v1/iam_policy.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const SetIamPolicyRequest$json = {
   '1': 'SetIamPolicyRequest',
@@ -23,6 +24,14 @@ const GetIamPolicyRequest$json = {
   '1': 'GetIamPolicyRequest',
   '2': [
     {'1': 'resource', '3': 1, '4': 1, '5': 9, '10': 'resource'},
+    {
+      '1': 'options',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.iam.v1.GetPolicyOptions',
+      '10': 'options'
+    },
   ],
 };
 

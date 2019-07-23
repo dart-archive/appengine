@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudtrace/v1/trace.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 import 'trace.pbenum.dart';
 
@@ -24,18 +25,20 @@ class Trace extends $pb.GeneratedMessage {
     ..pc<TraceSpan>(3, 'spans', $pb.PbFieldType.PM, TraceSpan.create)
     ..hasRequiredFields = false;
 
-  Trace() : super();
-  Trace.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Trace.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Trace._() : super();
+  factory Trace() => create();
+  factory Trace.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Trace.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Trace clone() => Trace()..mergeFromMessage(this);
   Trace copyWith(void Function(Trace) updates) =>
       super.copyWith((message) => updates(message as Trace));
   $pb.BuilderInfo get info_ => _i;
-  static Trace create() => Trace();
+  @$core.pragma('dart2js:noInline')
+  static Trace create() => Trace._();
   Trace createEmptyInstance() => create();
   static $pb.PbList<Trace> createRepeated() => $pb.PbList<Trace>();
   static Trace getDefault() => _defaultInstance ??= create()..freeze();
@@ -66,18 +69,20 @@ class Traces extends $pb.GeneratedMessage {
     ..pc<Trace>(1, 'traces', $pb.PbFieldType.PM, Trace.create)
     ..hasRequiredFields = false;
 
-  Traces() : super();
-  Traces.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Traces.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Traces._() : super();
+  factory Traces() => create();
+  factory Traces.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Traces.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Traces clone() => Traces()..mergeFromMessage(this);
   Traces copyWith(void Function(Traces) updates) =>
       super.copyWith((message) => updates(message as Traces));
   $pb.BuilderInfo get info_ => _i;
-  static Traces create() => Traces();
+  @$core.pragma('dart2js:noInline')
+  static Traces create() => Traces._();
   Traces createEmptyInstance() => create();
   static $pb.PbList<Traces> createRepeated() => $pb.PbList<Traces>();
   static Traces getDefault() => _defaultInstance ??= create()..freeze();
@@ -98,10 +103,10 @@ class TraceSpan extends $pb.GeneratedMessage {
         TraceSpan_SpanKind.valueOf,
         TraceSpan_SpanKind.values)
     ..aOS(3, 'name')
-    ..a<$1.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..a<Int64>(6, 'parentSpanId', $pb.PbFieldType.OF6, Int64.ZERO)
     ..m<$core.String, $core.String>(
         7,
@@ -115,18 +120,20 @@ class TraceSpan extends $pb.GeneratedMessage {
         const $pb.PackageName('google.devtools.cloudtrace.v1'))
     ..hasRequiredFields = false;
 
-  TraceSpan() : super();
-  TraceSpan.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TraceSpan.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TraceSpan._() : super();
+  factory TraceSpan() => create();
+  factory TraceSpan.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TraceSpan.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TraceSpan clone() => TraceSpan()..mergeFromMessage(this);
   TraceSpan copyWith(void Function(TraceSpan) updates) =>
       super.copyWith((message) => updates(message as TraceSpan));
   $pb.BuilderInfo get info_ => _i;
-  static TraceSpan create() => TraceSpan();
+  @$core.pragma('dart2js:noInline')
+  static TraceSpan create() => TraceSpan._();
   TraceSpan createEmptyInstance() => create();
   static $pb.PbList<TraceSpan> createRepeated() => $pb.PbList<TraceSpan>();
   static TraceSpan getDefault() => _defaultInstance ??= create()..freeze();
@@ -156,16 +163,16 @@ class TraceSpan extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  $1.Timestamp get startTime => $_getN(3);
-  set startTime($1.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(3);
+  set startTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasStartTime() => $_has(3);
   void clearStartTime() => clearField(4);
 
-  $1.Timestamp get endTime => $_getN(4);
-  set endTime($1.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(4);
+  set endTime($2.Timestamp v) {
     setField(5, v);
   }
 
@@ -196,26 +203,28 @@ class ListTracesRequest extends $pb.GeneratedMessage {
         ListTracesRequest_ViewType.values)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
-    ..a<$1.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..aOS(7, 'filter')
     ..aOS(8, 'orderBy')
     ..hasRequiredFields = false;
 
-  ListTracesRequest() : super();
-  ListTracesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTracesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTracesRequest._() : super();
+  factory ListTracesRequest() => create();
+  factory ListTracesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTracesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTracesRequest clone() => ListTracesRequest()..mergeFromMessage(this);
   ListTracesRequest copyWith(void Function(ListTracesRequest) updates) =>
       super.copyWith((message) => updates(message as ListTracesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListTracesRequest create() => ListTracesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListTracesRequest create() => ListTracesRequest._();
   ListTracesRequest createEmptyInstance() => create();
   static $pb.PbList<ListTracesRequest> createRepeated() =>
       $pb.PbList<ListTracesRequest>();
@@ -255,16 +264,16 @@ class ListTracesRequest extends $pb.GeneratedMessage {
   $core.bool hasPageToken() => $_has(3);
   void clearPageToken() => clearField(4);
 
-  $1.Timestamp get startTime => $_getN(4);
-  set startTime($1.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(4);
+  set startTime($2.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(5);
 
-  $1.Timestamp get endTime => $_getN(5);
-  set endTime($1.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(5);
+  set endTime($2.Timestamp v) {
     setField(6, v);
   }
 
@@ -295,18 +304,20 @@ class ListTracesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListTracesResponse() : super();
-  ListTracesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTracesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTracesResponse._() : super();
+  factory ListTracesResponse() => create();
+  factory ListTracesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTracesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTracesResponse clone() => ListTracesResponse()..mergeFromMessage(this);
   ListTracesResponse copyWith(void Function(ListTracesResponse) updates) =>
       super.copyWith((message) => updates(message as ListTracesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListTracesResponse create() => ListTracesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListTracesResponse create() => ListTracesResponse._();
   ListTracesResponse createEmptyInstance() => create();
   static $pb.PbList<ListTracesResponse> createRepeated() =>
       $pb.PbList<ListTracesResponse>();
@@ -332,18 +343,20 @@ class GetTraceRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'traceId')
     ..hasRequiredFields = false;
 
-  GetTraceRequest() : super();
-  GetTraceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTraceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTraceRequest._() : super();
+  factory GetTraceRequest() => create();
+  factory GetTraceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTraceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTraceRequest clone() => GetTraceRequest()..mergeFromMessage(this);
   GetTraceRequest copyWith(void Function(GetTraceRequest) updates) =>
       super.copyWith((message) => updates(message as GetTraceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTraceRequest create() => GetTraceRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTraceRequest create() => GetTraceRequest._();
   GetTraceRequest createEmptyInstance() => create();
   static $pb.PbList<GetTraceRequest> createRepeated() =>
       $pb.PbList<GetTraceRequest>();
@@ -376,18 +389,20 @@ class PatchTracesRequest extends $pb.GeneratedMessage {
         2, 'traces', $pb.PbFieldType.OM, Traces.getDefault, Traces.create)
     ..hasRequiredFields = false;
 
-  PatchTracesRequest() : super();
-  PatchTracesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PatchTracesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PatchTracesRequest._() : super();
+  factory PatchTracesRequest() => create();
+  factory PatchTracesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PatchTracesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PatchTracesRequest clone() => PatchTracesRequest()..mergeFromMessage(this);
   PatchTracesRequest copyWith(void Function(PatchTracesRequest) updates) =>
       super.copyWith((message) => updates(message as PatchTracesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PatchTracesRequest create() => PatchTracesRequest();
+  @$core.pragma('dart2js:noInline')
+  static PatchTracesRequest create() => PatchTracesRequest._();
   PatchTracesRequest createEmptyInstance() => create();
   static $pb.PbList<PatchTracesRequest> createRepeated() =>
       $pb.PbList<PatchTracesRequest>();

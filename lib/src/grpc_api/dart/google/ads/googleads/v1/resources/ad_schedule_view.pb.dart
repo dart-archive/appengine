@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_schedule_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class AdScheduleView extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  AdScheduleView() : super();
-  AdScheduleView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdScheduleView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdScheduleView._() : super();
+  factory AdScheduleView() => create();
+  factory AdScheduleView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdScheduleView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdScheduleView clone() => AdScheduleView()..mergeFromMessage(this);
   AdScheduleView copyWith(void Function(AdScheduleView) updates) =>
       super.copyWith((message) => updates(message as AdScheduleView));
   $pb.BuilderInfo get info_ => _i;
-  static AdScheduleView create() => AdScheduleView();
+  @$core.pragma('dart2js:noInline')
+  static AdScheduleView create() => AdScheduleView._();
   AdScheduleView createEmptyInstance() => create();
   static $pb.PbList<AdScheduleView> createRepeated() =>
       $pb.PbList<AdScheduleView>();

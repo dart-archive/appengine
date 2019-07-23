@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/conversion_action_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/conversion_action.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/conversion_action.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetConversionActionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +21,14 @@ class GetConversionActionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetConversionActionRequest() : super();
-  GetConversionActionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetConversionActionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetConversionActionRequest._() : super();
+  factory GetConversionActionRequest() => create();
+  factory GetConversionActionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetConversionActionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetConversionActionRequest clone() =>
       GetConversionActionRequest()..mergeFromMessage(this);
   GetConversionActionRequest copyWith(
@@ -34,7 +36,8 @@ class GetConversionActionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetConversionActionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetConversionActionRequest create() => GetConversionActionRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetConversionActionRequest create() => GetConversionActionRequest._();
   GetConversionActionRequest createEmptyInstance() => create();
   static $pb.PbList<GetConversionActionRequest> createRepeated() =>
       $pb.PbList<GetConversionActionRequest>();
@@ -62,13 +65,14 @@ class MutateConversionActionsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateConversionActionsRequest() : super();
-  MutateConversionActionsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateConversionActionsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateConversionActionsRequest._() : super();
+  factory MutateConversionActionsRequest() => create();
+  factory MutateConversionActionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateConversionActionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateConversionActionsRequest clone() =>
       MutateConversionActionsRequest()..mergeFromMessage(this);
   MutateConversionActionsRequest copyWith(
@@ -76,8 +80,9 @@ class MutateConversionActionsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateConversionActionsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateConversionActionsRequest create() =>
-      MutateConversionActionsRequest();
+      MutateConversionActionsRequest._();
   MutateConversionActionsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateConversionActionsRequest> createRepeated() =>
       $pb.PbList<MutateConversionActionsRequest>();
@@ -124,23 +129,24 @@ class ConversionActionOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConversionActionOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.ConversionAction>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.ConversionAction.getDefault, $0.ConversionAction.create)
-    ..a<$0.ConversionAction>(2, 'update', $pb.PbFieldType.OM,
-        $0.ConversionAction.getDefault, $0.ConversionAction.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.ConversionAction>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.ConversionAction.getDefault, $1.ConversionAction.create)
+    ..a<$1.ConversionAction>(2, 'update', $pb.PbFieldType.OM,
+        $1.ConversionAction.getDefault, $1.ConversionAction.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  ConversionActionOperation() : super();
-  ConversionActionOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionActionOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionActionOperation._() : super();
+  factory ConversionActionOperation() => create();
+  factory ConversionActionOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionActionOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionActionOperation clone() =>
       ConversionActionOperation()..mergeFromMessage(this);
   ConversionActionOperation copyWith(
@@ -148,7 +154,8 @@ class ConversionActionOperation extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ConversionActionOperation));
   $pb.BuilderInfo get info_ => _i;
-  static ConversionActionOperation create() => ConversionActionOperation();
+  @$core.pragma('dart2js:noInline')
+  static ConversionActionOperation create() => ConversionActionOperation._();
   ConversionActionOperation createEmptyInstance() => create();
   static $pb.PbList<ConversionActionOperation> createRepeated() =>
       $pb.PbList<ConversionActionOperation>();
@@ -160,16 +167,16 @@ class ConversionActionOperation extends $pb.GeneratedMessage {
       _ConversionActionOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.ConversionAction get create_1 => $_getN(0);
-  set create_1($0.ConversionAction v) {
+  $1.ConversionAction get create_1 => $_getN(0);
+  set create_1($1.ConversionAction v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.ConversionAction get update => $_getN(1);
-  set update($0.ConversionAction v) {
+  $1.ConversionAction get update => $_getN(1);
+  set update($1.ConversionAction v) {
     setField(2, v);
   }
 
@@ -184,8 +191,8 @@ class ConversionActionOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -199,17 +206,18 @@ class MutateConversionActionsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateConversionActionResult>(
         2, 'results', $pb.PbFieldType.PM, MutateConversionActionResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateConversionActionsResponse() : super();
-  MutateConversionActionsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateConversionActionsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateConversionActionsResponse._() : super();
+  factory MutateConversionActionsResponse() => create();
+  factory MutateConversionActionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateConversionActionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateConversionActionsResponse clone() =>
       MutateConversionActionsResponse()..mergeFromMessage(this);
   MutateConversionActionsResponse copyWith(
@@ -217,8 +225,9 @@ class MutateConversionActionsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateConversionActionsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateConversionActionsResponse create() =>
-      MutateConversionActionsResponse();
+      MutateConversionActionsResponse._();
   MutateConversionActionsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateConversionActionsResponse> createRepeated() =>
       $pb.PbList<MutateConversionActionsResponse>();
@@ -228,8 +237,8 @@ class MutateConversionActionsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateConversionActionResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -244,13 +253,14 @@ class MutateConversionActionResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateConversionActionResult() : super();
-  MutateConversionActionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateConversionActionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateConversionActionResult._() : super();
+  factory MutateConversionActionResult() => create();
+  factory MutateConversionActionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateConversionActionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateConversionActionResult clone() =>
       MutateConversionActionResult()..mergeFromMessage(this);
   MutateConversionActionResult copyWith(
@@ -258,8 +268,9 @@ class MutateConversionActionResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateConversionActionResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateConversionActionResult create() =>
-      MutateConversionActionResult();
+      MutateConversionActionResult._();
   MutateConversionActionResult createEmptyInstance() => create();
   static $pb.PbList<MutateConversionActionResult> createRepeated() =>
       $pb.PbList<MutateConversionActionResult>();

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/instruction.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Instruction$json = {
   '1': 'Instruction',
@@ -49,6 +50,13 @@ const Instruction$json = {
       '5': 11,
       '6': '.google.cloud.datalabeling.v1beta1.PdfInstruction',
       '10': 'pdfInstruction'
+    },
+    {
+      '1': 'blocking_resources',
+      '3': 10,
+      '4': 3,
+      '5': 9,
+      '10': 'blockingResources'
     },
   ],
 };

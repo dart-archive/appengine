@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/readalignment.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,18 +23,20 @@ class LinearAlignment extends $pb.GeneratedMessage {
     ..pc<$1.CigarUnit>(3, 'cigar', $pb.PbFieldType.PM, $1.CigarUnit.create)
     ..hasRequiredFields = false;
 
-  LinearAlignment() : super();
-  LinearAlignment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LinearAlignment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LinearAlignment._() : super();
+  factory LinearAlignment() => create();
+  factory LinearAlignment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LinearAlignment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LinearAlignment clone() => LinearAlignment()..mergeFromMessage(this);
   LinearAlignment copyWith(void Function(LinearAlignment) updates) =>
       super.copyWith((message) => updates(message as LinearAlignment));
   $pb.BuilderInfo get info_ => _i;
-  static LinearAlignment create() => LinearAlignment();
+  @$core.pragma('dart2js:noInline')
+  static LinearAlignment create() => LinearAlignment._();
   LinearAlignment createEmptyInstance() => create();
   static $pb.PbList<LinearAlignment> createRepeated() =>
       $pb.PbList<LinearAlignment>();
@@ -93,18 +96,20 @@ class Read extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  Read() : super();
-  Read.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Read.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Read._() : super();
+  factory Read() => create();
+  factory Read.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Read.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Read clone() => Read()..mergeFromMessage(this);
   Read copyWith(void Function(Read) updates) =>
       super.copyWith((message) => updates(message as Read));
   $pb.BuilderInfo get info_ => _i;
-  static Read create() => Read();
+  @$core.pragma('dart2js:noInline')
+  static Read create() => Read._();
   Read createEmptyInstance() => create();
   static $pb.PbList<Read> createRepeated() => $pb.PbList<Read>();
   static Read getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/image.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -25,13 +26,14 @@ class ImageClassificationDatasetMetadata extends $pb.GeneratedMessage {
         $0.ClassificationType.values)
     ..hasRequiredFields = false;
 
-  ImageClassificationDatasetMetadata() : super();
-  ImageClassificationDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageClassificationDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageClassificationDatasetMetadata._() : super();
+  factory ImageClassificationDatasetMetadata() => create();
+  factory ImageClassificationDatasetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageClassificationDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageClassificationDatasetMetadata clone() =>
       ImageClassificationDatasetMetadata()..mergeFromMessage(this);
   ImageClassificationDatasetMetadata copyWith(
@@ -39,8 +41,9 @@ class ImageClassificationDatasetMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImageClassificationDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageClassificationDatasetMetadata create() =>
-      ImageClassificationDatasetMetadata();
+      ImageClassificationDatasetMetadata._();
   ImageClassificationDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<ImageClassificationDatasetMetadata> createRepeated() =>
       $pb.PbList<ImageClassificationDatasetMetadata>();
@@ -63,13 +66,15 @@ class ImageObjectDetectionDatasetMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  ImageObjectDetectionDatasetMetadata() : super();
-  ImageObjectDetectionDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageObjectDetectionDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageObjectDetectionDatasetMetadata._() : super();
+  factory ImageObjectDetectionDatasetMetadata() => create();
+  factory ImageObjectDetectionDatasetMetadata.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageObjectDetectionDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageObjectDetectionDatasetMetadata clone() =>
       ImageObjectDetectionDatasetMetadata()..mergeFromMessage(this);
   ImageObjectDetectionDatasetMetadata copyWith(
@@ -77,8 +82,9 @@ class ImageObjectDetectionDatasetMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImageObjectDetectionDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageObjectDetectionDatasetMetadata create() =>
-      ImageObjectDetectionDatasetMetadata();
+      ImageObjectDetectionDatasetMetadata._();
   ImageObjectDetectionDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionDatasetMetadata> createRepeated() =>
       $pb.PbList<ImageObjectDetectionDatasetMetadata>();
@@ -98,13 +104,14 @@ class ImageClassificationModelMetadata extends $pb.GeneratedMessage {
     ..aOS(7, 'modelType')
     ..hasRequiredFields = false;
 
-  ImageClassificationModelMetadata() : super();
-  ImageClassificationModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageClassificationModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageClassificationModelMetadata._() : super();
+  factory ImageClassificationModelMetadata() => create();
+  factory ImageClassificationModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageClassificationModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageClassificationModelMetadata clone() =>
       ImageClassificationModelMetadata()..mergeFromMessage(this);
   ImageClassificationModelMetadata copyWith(
@@ -112,8 +119,9 @@ class ImageClassificationModelMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImageClassificationModelMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageClassificationModelMetadata create() =>
-      ImageClassificationModelMetadata();
+      ImageClassificationModelMetadata._();
   ImageClassificationModelMetadata createEmptyInstance() => create();
   static $pb.PbList<ImageClassificationModelMetadata> createRepeated() =>
       $pb.PbList<ImageClassificationModelMetadata>();
@@ -169,15 +177,19 @@ class ImageObjectDetectionModelMetadata extends $pb.GeneratedMessage {
     ..aOS(1, 'modelType')
     ..aInt64(3, 'nodeCount')
     ..a<$core.double>(4, 'nodeQps', $pb.PbFieldType.OD)
+    ..aOS(5, 'stopReason')
+    ..aInt64(6, 'trainBudgetMilliNodeHours')
+    ..aInt64(7, 'trainCostMilliNodeHours')
     ..hasRequiredFields = false;
 
-  ImageObjectDetectionModelMetadata() : super();
-  ImageObjectDetectionModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageObjectDetectionModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageObjectDetectionModelMetadata._() : super();
+  factory ImageObjectDetectionModelMetadata() => create();
+  factory ImageObjectDetectionModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageObjectDetectionModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageObjectDetectionModelMetadata clone() =>
       ImageObjectDetectionModelMetadata()..mergeFromMessage(this);
   ImageObjectDetectionModelMetadata copyWith(
@@ -185,8 +197,9 @@ class ImageObjectDetectionModelMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImageObjectDetectionModelMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageObjectDetectionModelMetadata create() =>
-      ImageObjectDetectionModelMetadata();
+      ImageObjectDetectionModelMetadata._();
   ImageObjectDetectionModelMetadata createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionModelMetadata> createRepeated() =>
       $pb.PbList<ImageObjectDetectionModelMetadata>();
@@ -217,6 +230,30 @@ class ImageObjectDetectionModelMetadata extends $pb.GeneratedMessage {
 
   $core.bool hasNodeQps() => $_has(2);
   void clearNodeQps() => clearField(4);
+
+  $core.String get stopReason => $_getS(3, '');
+  set stopReason($core.String v) {
+    $_setString(3, v);
+  }
+
+  $core.bool hasStopReason() => $_has(3);
+  void clearStopReason() => clearField(5);
+
+  Int64 get trainBudgetMilliNodeHours => $_getI64(4);
+  set trainBudgetMilliNodeHours(Int64 v) {
+    $_setInt64(4, v);
+  }
+
+  $core.bool hasTrainBudgetMilliNodeHours() => $_has(4);
+  void clearTrainBudgetMilliNodeHours() => clearField(6);
+
+  Int64 get trainCostMilliNodeHours => $_getI64(5);
+  set trainCostMilliNodeHours(Int64 v) {
+    $_setInt64(5, v);
+  }
+
+  $core.bool hasTrainCostMilliNodeHours() => $_has(5);
+  void clearTrainCostMilliNodeHours() => clearField(7);
 }
 
 class ImageObjectDetectionModelDeploymentMetadata extends $pb.GeneratedMessage {
@@ -226,14 +263,15 @@ class ImageObjectDetectionModelDeploymentMetadata extends $pb.GeneratedMessage {
     ..aInt64(1, 'nodeCount')
     ..hasRequiredFields = false;
 
-  ImageObjectDetectionModelDeploymentMetadata() : super();
-  ImageObjectDetectionModelDeploymentMetadata.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageObjectDetectionModelDeploymentMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageObjectDetectionModelDeploymentMetadata._() : super();
+  factory ImageObjectDetectionModelDeploymentMetadata() => create();
+  factory ImageObjectDetectionModelDeploymentMetadata.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageObjectDetectionModelDeploymentMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageObjectDetectionModelDeploymentMetadata clone() =>
       ImageObjectDetectionModelDeploymentMetadata()..mergeFromMessage(this);
   ImageObjectDetectionModelDeploymentMetadata copyWith(
@@ -241,8 +279,9 @@ class ImageObjectDetectionModelDeploymentMetadata extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ImageObjectDetectionModelDeploymentMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImageObjectDetectionModelDeploymentMetadata create() =>
-      ImageObjectDetectionModelDeploymentMetadata();
+      ImageObjectDetectionModelDeploymentMetadata._();
   ImageObjectDetectionModelDeploymentMetadata createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionModelDeploymentMetadata>
       createRepeated() =>

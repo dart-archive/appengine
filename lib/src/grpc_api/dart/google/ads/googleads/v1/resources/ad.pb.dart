@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -65,6 +66,8 @@ class Ad extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Ad',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0,
+        [6, 7, 13, 14, 15, 17, 18, 21, 22, 24, 25, 28, 29, 30, 31, 33, 34, 36])
     ..a<$0.Int64Value>(1, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
     ..pc<$0.StringValue>(
@@ -86,14 +89,8 @@ class Ad extends $pb.GeneratedMessage {
         $2.CustomParameter.create)
     ..a<$0.StringValue>(12, 'trackingUrlTemplate', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$1.CallOnlyAdInfo>(13, 'callOnlyAd', $pb.PbFieldType.OM,
-        $1.CallOnlyAdInfo.getDefault, $1.CallOnlyAdInfo.create)
-    ..a<$1.ExpandedDynamicSearchAdInfo>(
-        14,
-        'expandedDynamicSearchAd',
-        $pb.PbFieldType.OM,
-        $1.ExpandedDynamicSearchAdInfo.getDefault,
-        $1.ExpandedDynamicSearchAdInfo.create)
+    ..a<$1.CallOnlyAdInfo>(13, 'callOnlyAd', $pb.PbFieldType.OM, $1.CallOnlyAdInfo.getDefault, $1.CallOnlyAdInfo.create)
+    ..a<$1.ExpandedDynamicSearchAdInfo>(14, 'expandedDynamicSearchAd', $pb.PbFieldType.OM, $1.ExpandedDynamicSearchAdInfo.getDefault, $1.ExpandedDynamicSearchAdInfo.create)
     ..a<$1.HotelAdInfo>(15, 'hotelAd', $pb.PbFieldType.OM, $1.HotelAdInfo.getDefault, $1.HotelAdInfo.create)
     ..pc<$0.StringValue>(16, 'finalMobileUrls', $pb.PbFieldType.PM, $0.StringValue.create)
     ..a<$1.ShoppingSmartAdInfo>(17, 'shoppingSmartAd', $pb.PbFieldType.OM, $1.ShoppingSmartAdInfo.getDefault, $1.ShoppingSmartAdInfo.create)
@@ -115,21 +112,22 @@ class Ad extends $pb.GeneratedMessage {
     ..a<$1.AppEngagementAdInfo>(34, 'appEngagementAd', $pb.PbFieldType.OM, $1.AppEngagementAdInfo.getDefault, $1.AppEngagementAdInfo.create)
     ..pc<$4.FinalAppUrl>(35, 'finalAppUrls', $pb.PbFieldType.PM, $4.FinalAppUrl.create)
     ..a<$1.ShoppingComparisonListingAdInfo>(36, 'shoppingComparisonListingAd', $pb.PbFieldType.OM, $1.ShoppingComparisonListingAdInfo.getDefault, $1.ShoppingComparisonListingAdInfo.create)
-    ..oo(0, [6, 7, 13, 14, 15, 17, 18, 21, 22, 24, 25, 28, 29, 30, 31, 33, 34, 36])
     ..hasRequiredFields = false;
 
-  Ad() : super();
-  Ad.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Ad.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Ad._() : super();
+  factory Ad() => create();
+  factory Ad.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Ad.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Ad clone() => Ad()..mergeFromMessage(this);
   Ad copyWith(void Function(Ad) updates) =>
       super.copyWith((message) => updates(message as Ad));
   $pb.BuilderInfo get info_ => _i;
-  static Ad create() => Ad();
+  @$core.pragma('dart2js:noInline')
+  static Ad create() => Ad._();
   Ad createEmptyInstance() => create();
   static $pb.PbList<Ad> createRepeated() => $pb.PbList<Ad>();
   static Ad getDefault() => _defaultInstance ??= create()..freeze();

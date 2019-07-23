@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/resultstore_download.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const GetInvocationRequest$json = {
   '1': 'GetInvocationRequest',
@@ -19,6 +20,7 @@ const SearchInvocationsRequest$json = {
     {'1': 'offset', '3': 3, '4': 1, '5': 3, '9': 0, '10': 'offset'},
     {'1': 'query', '3': 4, '4': 1, '5': 9, '10': 'query'},
     {'1': 'project_id', '3': 5, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'exact_match', '3': 7, '4': 1, '5': 8, '10': 'exactMatch'},
   ],
   '8': [
     {'1': 'page_start'},
@@ -40,6 +42,13 @@ const SearchInvocationsResponse$json = {
   ],
 };
 
+const GetInvocationDownloadMetadataRequest$json = {
+  '1': 'GetInvocationDownloadMetadataRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
 const GetConfigurationRequest$json = {
   '1': 'GetConfigurationRequest',
   '2': [
@@ -54,6 +63,7 @@ const ListConfigurationsRequest$json = {
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'pageToken'},
     {'1': 'offset', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'offset'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
   ],
   '8': [
     {'1': 'page_start'},
@@ -89,6 +99,7 @@ const ListTargetsRequest$json = {
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'pageToken'},
     {'1': 'offset', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'offset'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
   ],
   '8': [
     {'1': 'page_start'},
@@ -124,6 +135,7 @@ const ListConfiguredTargetsRequest$json = {
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'pageToken'},
     {'1': 'offset', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'offset'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
   ],
   '8': [
     {'1': 'page_start'},
@@ -159,6 +171,7 @@ const ListActionsRequest$json = {
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'pageToken'},
     {'1': 'offset', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'offset'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
   ],
   '8': [
     {'1': 'page_start'},
@@ -194,6 +207,7 @@ const ListFileSetsRequest$json = {
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'pageToken'},
     {'1': 'offset', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'offset'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
   ],
   '8': [
     {'1': 'page_start'},
@@ -202,6 +216,34 @@ const ListFileSetsRequest$json = {
 
 const ListFileSetsResponse$json = {
   '1': 'ListFileSetsResponse',
+  '2': [
+    {
+      '1': 'file_sets',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.FileSet',
+      '10': 'fileSets'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+const TraverseFileSetsRequest$json = {
+  '1': 'TraverseFileSetsRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'pageToken'},
+    {'1': 'offset', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'offset'},
+  ],
+  '8': [
+    {'1': 'page_start'},
+  ],
+};
+
+const TraverseFileSetsResponse$json = {
+  '1': 'TraverseFileSetsResponse',
   '2': [
     {
       '1': 'file_sets',

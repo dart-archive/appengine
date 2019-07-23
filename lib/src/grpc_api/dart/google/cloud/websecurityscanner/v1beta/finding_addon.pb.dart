@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1beta/finding_addon.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class Form extends $pb.GeneratedMessage {
     ..pPS(2, 'fields')
     ..hasRequiredFields = false;
 
-  Form() : super();
-  Form.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Form.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Form._() : super();
+  factory Form() => create();
+  factory Form.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Form.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Form clone() => Form()..mergeFromMessage(this);
   Form copyWith(void Function(Form) updates) =>
       super.copyWith((message) => updates(message as Form));
   $pb.BuilderInfo get info_ => _i;
-  static Form create() => Form();
+  @$core.pragma('dart2js:noInline')
+  static Form create() => Form._();
   Form createEmptyInstance() => create();
   static $pb.PbList<Form> createRepeated() => $pb.PbList<Form>();
   static Form getDefault() => _defaultInstance ??= create()..freeze();
@@ -52,18 +55,20 @@ class OutdatedLibrary extends $pb.GeneratedMessage {
     ..pPS(3, 'learnMoreUrls')
     ..hasRequiredFields = false;
 
-  OutdatedLibrary() : super();
-  OutdatedLibrary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutdatedLibrary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutdatedLibrary._() : super();
+  factory OutdatedLibrary() => create();
+  factory OutdatedLibrary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutdatedLibrary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutdatedLibrary clone() => OutdatedLibrary()..mergeFromMessage(this);
   OutdatedLibrary copyWith(void Function(OutdatedLibrary) updates) =>
       super.copyWith((message) => updates(message as OutdatedLibrary));
   $pb.BuilderInfo get info_ => _i;
-  static OutdatedLibrary create() => OutdatedLibrary();
+  @$core.pragma('dart2js:noInline')
+  static OutdatedLibrary create() => OutdatedLibrary._();
   OutdatedLibrary createEmptyInstance() => create();
   static $pb.PbList<OutdatedLibrary> createRepeated() =>
       $pb.PbList<OutdatedLibrary>();
@@ -97,18 +102,20 @@ class ViolatingResource extends $pb.GeneratedMessage {
     ..aOS(2, 'resourceUrl')
     ..hasRequiredFields = false;
 
-  ViolatingResource() : super();
-  ViolatingResource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ViolatingResource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ViolatingResource._() : super();
+  factory ViolatingResource() => create();
+  factory ViolatingResource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ViolatingResource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ViolatingResource clone() => ViolatingResource()..mergeFromMessage(this);
   ViolatingResource copyWith(void Function(ViolatingResource) updates) =>
       super.copyWith((message) => updates(message as ViolatingResource));
   $pb.BuilderInfo get info_ => _i;
-  static ViolatingResource create() => ViolatingResource();
+  @$core.pragma('dart2js:noInline')
+  static ViolatingResource create() => ViolatingResource._();
   ViolatingResource createEmptyInstance() => create();
   static $pb.PbList<ViolatingResource> createRepeated() =>
       $pb.PbList<ViolatingResource>();
@@ -139,19 +146,21 @@ class VulnerableParameters extends $pb.GeneratedMessage {
     ..pPS(1, 'parameterNames')
     ..hasRequiredFields = false;
 
-  VulnerableParameters() : super();
-  VulnerableParameters.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerableParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VulnerableParameters._() : super();
+  factory VulnerableParameters() => create();
+  factory VulnerableParameters.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerableParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VulnerableParameters clone() =>
       VulnerableParameters()..mergeFromMessage(this);
   VulnerableParameters copyWith(void Function(VulnerableParameters) updates) =>
       super.copyWith((message) => updates(message as VulnerableParameters));
   $pb.BuilderInfo get info_ => _i;
-  static VulnerableParameters create() => VulnerableParameters();
+  @$core.pragma('dart2js:noInline')
+  static VulnerableParameters create() => VulnerableParameters._();
   VulnerableParameters createEmptyInstance() => create();
   static $pb.PbList<VulnerableParameters> createRepeated() =>
       $pb.PbList<VulnerableParameters>();
@@ -169,20 +178,22 @@ class VulnerableHeaders_Header extends $pb.GeneratedMessage {
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
 
-  VulnerableHeaders_Header() : super();
-  VulnerableHeaders_Header.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerableHeaders_Header.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VulnerableHeaders_Header._() : super();
+  factory VulnerableHeaders_Header() => create();
+  factory VulnerableHeaders_Header.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerableHeaders_Header.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VulnerableHeaders_Header clone() =>
       VulnerableHeaders_Header()..mergeFromMessage(this);
   VulnerableHeaders_Header copyWith(
           void Function(VulnerableHeaders_Header) updates) =>
       super.copyWith((message) => updates(message as VulnerableHeaders_Header));
   $pb.BuilderInfo get info_ => _i;
-  static VulnerableHeaders_Header create() => VulnerableHeaders_Header();
+  @$core.pragma('dart2js:noInline')
+  static VulnerableHeaders_Header create() => VulnerableHeaders_Header._();
   VulnerableHeaders_Header createEmptyInstance() => create();
   static $pb.PbList<VulnerableHeaders_Header> createRepeated() =>
       $pb.PbList<VulnerableHeaders_Header>();
@@ -216,18 +227,20 @@ class VulnerableHeaders extends $pb.GeneratedMessage {
         VulnerableHeaders_Header.create)
     ..hasRequiredFields = false;
 
-  VulnerableHeaders() : super();
-  VulnerableHeaders.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerableHeaders.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VulnerableHeaders._() : super();
+  factory VulnerableHeaders() => create();
+  factory VulnerableHeaders.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerableHeaders.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VulnerableHeaders clone() => VulnerableHeaders()..mergeFromMessage(this);
   VulnerableHeaders copyWith(void Function(VulnerableHeaders) updates) =>
       super.copyWith((message) => updates(message as VulnerableHeaders));
   $pb.BuilderInfo get info_ => _i;
-  static VulnerableHeaders create() => VulnerableHeaders();
+  @$core.pragma('dart2js:noInline')
+  static VulnerableHeaders create() => VulnerableHeaders._();
   VulnerableHeaders createEmptyInstance() => create();
   static $pb.PbList<VulnerableHeaders> createRepeated() =>
       $pb.PbList<VulnerableHeaders>();
@@ -247,18 +260,20 @@ class Xss extends $pb.GeneratedMessage {
     ..aOS(2, 'errorMessage')
     ..hasRequiredFields = false;
 
-  Xss() : super();
-  Xss.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Xss.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Xss._() : super();
+  factory Xss() => create();
+  factory Xss.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Xss.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Xss clone() => Xss()..mergeFromMessage(this);
   Xss copyWith(void Function(Xss) updates) =>
       super.copyWith((message) => updates(message as Xss));
   $pb.BuilderInfo get info_ => _i;
-  static Xss create() => Xss();
+  @$core.pragma('dart2js:noInline')
+  static Xss create() => Xss._();
   Xss createEmptyInstance() => create();
   static $pb.PbList<Xss> createRepeated() => $pb.PbList<Xss>();
   static Xss getDefault() => _defaultInstance ??= create()..freeze();

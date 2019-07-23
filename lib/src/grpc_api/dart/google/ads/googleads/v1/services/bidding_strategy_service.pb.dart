@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/bidding_strategy_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/bidding_strategy.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/bidding_strategy.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetBiddingStrategyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBiddingStrategyRequest',
@@ -19,13 +20,14 @@ class GetBiddingStrategyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetBiddingStrategyRequest() : super();
-  GetBiddingStrategyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetBiddingStrategyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetBiddingStrategyRequest._() : super();
+  factory GetBiddingStrategyRequest() => create();
+  factory GetBiddingStrategyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetBiddingStrategyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetBiddingStrategyRequest clone() =>
       GetBiddingStrategyRequest()..mergeFromMessage(this);
   GetBiddingStrategyRequest copyWith(
@@ -33,7 +35,8 @@ class GetBiddingStrategyRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as GetBiddingStrategyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetBiddingStrategyRequest create() => GetBiddingStrategyRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetBiddingStrategyRequest create() => GetBiddingStrategyRequest._();
   GetBiddingStrategyRequest createEmptyInstance() => create();
   static $pb.PbList<GetBiddingStrategyRequest> createRepeated() =>
       $pb.PbList<GetBiddingStrategyRequest>();
@@ -61,13 +64,14 @@ class MutateBiddingStrategiesRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateBiddingStrategiesRequest() : super();
-  MutateBiddingStrategiesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateBiddingStrategiesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateBiddingStrategiesRequest._() : super();
+  factory MutateBiddingStrategiesRequest() => create();
+  factory MutateBiddingStrategiesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateBiddingStrategiesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateBiddingStrategiesRequest clone() =>
       MutateBiddingStrategiesRequest()..mergeFromMessage(this);
   MutateBiddingStrategiesRequest copyWith(
@@ -75,8 +79,9 @@ class MutateBiddingStrategiesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateBiddingStrategiesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateBiddingStrategiesRequest create() =>
-      MutateBiddingStrategiesRequest();
+      MutateBiddingStrategiesRequest._();
   MutateBiddingStrategiesRequest createEmptyInstance() => create();
   static $pb.PbList<MutateBiddingStrategiesRequest> createRepeated() =>
       $pb.PbList<MutateBiddingStrategiesRequest>();
@@ -123,30 +128,32 @@ class BiddingStrategyOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BiddingStrategyOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.BiddingStrategy>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.BiddingStrategy.getDefault, $0.BiddingStrategy.create)
-    ..a<$0.BiddingStrategy>(2, 'update', $pb.PbFieldType.OM,
-        $0.BiddingStrategy.getDefault, $0.BiddingStrategy.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.BiddingStrategy>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.BiddingStrategy.getDefault, $1.BiddingStrategy.create)
+    ..a<$1.BiddingStrategy>(2, 'update', $pb.PbFieldType.OM,
+        $1.BiddingStrategy.getDefault, $1.BiddingStrategy.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  BiddingStrategyOperation() : super();
-  BiddingStrategyOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BiddingStrategyOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BiddingStrategyOperation._() : super();
+  factory BiddingStrategyOperation() => create();
+  factory BiddingStrategyOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BiddingStrategyOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BiddingStrategyOperation clone() =>
       BiddingStrategyOperation()..mergeFromMessage(this);
   BiddingStrategyOperation copyWith(
           void Function(BiddingStrategyOperation) updates) =>
       super.copyWith((message) => updates(message as BiddingStrategyOperation));
   $pb.BuilderInfo get info_ => _i;
-  static BiddingStrategyOperation create() => BiddingStrategyOperation();
+  @$core.pragma('dart2js:noInline')
+  static BiddingStrategyOperation create() => BiddingStrategyOperation._();
   BiddingStrategyOperation createEmptyInstance() => create();
   static $pb.PbList<BiddingStrategyOperation> createRepeated() =>
       $pb.PbList<BiddingStrategyOperation>();
@@ -158,16 +165,16 @@ class BiddingStrategyOperation extends $pb.GeneratedMessage {
       _BiddingStrategyOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.BiddingStrategy get create_1 => $_getN(0);
-  set create_1($0.BiddingStrategy v) {
+  $1.BiddingStrategy get create_1 => $_getN(0);
+  set create_1($1.BiddingStrategy v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.BiddingStrategy get update => $_getN(1);
-  set update($0.BiddingStrategy v) {
+  $1.BiddingStrategy get update => $_getN(1);
+  set update($1.BiddingStrategy v) {
     setField(2, v);
   }
 
@@ -182,8 +189,8 @@ class BiddingStrategyOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -197,17 +204,18 @@ class MutateBiddingStrategiesResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateBiddingStrategyResult>(
         2, 'results', $pb.PbFieldType.PM, MutateBiddingStrategyResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateBiddingStrategiesResponse() : super();
-  MutateBiddingStrategiesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateBiddingStrategiesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateBiddingStrategiesResponse._() : super();
+  factory MutateBiddingStrategiesResponse() => create();
+  factory MutateBiddingStrategiesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateBiddingStrategiesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateBiddingStrategiesResponse clone() =>
       MutateBiddingStrategiesResponse()..mergeFromMessage(this);
   MutateBiddingStrategiesResponse copyWith(
@@ -215,8 +223,9 @@ class MutateBiddingStrategiesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateBiddingStrategiesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateBiddingStrategiesResponse create() =>
-      MutateBiddingStrategiesResponse();
+      MutateBiddingStrategiesResponse._();
   MutateBiddingStrategiesResponse createEmptyInstance() => create();
   static $pb.PbList<MutateBiddingStrategiesResponse> createRepeated() =>
       $pb.PbList<MutateBiddingStrategiesResponse>();
@@ -226,8 +235,8 @@ class MutateBiddingStrategiesResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateBiddingStrategyResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -242,13 +251,14 @@ class MutateBiddingStrategyResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateBiddingStrategyResult() : super();
-  MutateBiddingStrategyResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateBiddingStrategyResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateBiddingStrategyResult._() : super();
+  factory MutateBiddingStrategyResult() => create();
+  factory MutateBiddingStrategyResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateBiddingStrategyResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateBiddingStrategyResult clone() =>
       MutateBiddingStrategyResult()..mergeFromMessage(this);
   MutateBiddingStrategyResult copyWith(
@@ -256,7 +266,9 @@ class MutateBiddingStrategyResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateBiddingStrategyResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateBiddingStrategyResult create() => MutateBiddingStrategyResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateBiddingStrategyResult create() =>
+      MutateBiddingStrategyResult._();
   MutateBiddingStrategyResult createEmptyInstance() => create();
   static $pb.PbList<MutateBiddingStrategyResult> createRepeated() =>
       $pb.PbList<MutateBiddingStrategyResult>();

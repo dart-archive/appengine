@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/text.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,13 +25,14 @@ class TextClassificationDatasetMetadata extends $pb.GeneratedMessage {
         $0.ClassificationType.values)
     ..hasRequiredFields = false;
 
-  TextClassificationDatasetMetadata() : super();
-  TextClassificationDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextClassificationDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextClassificationDatasetMetadata._() : super();
+  factory TextClassificationDatasetMetadata() => create();
+  factory TextClassificationDatasetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextClassificationDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextClassificationDatasetMetadata clone() =>
       TextClassificationDatasetMetadata()..mergeFromMessage(this);
   TextClassificationDatasetMetadata copyWith(
@@ -38,8 +40,9 @@ class TextClassificationDatasetMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextClassificationDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextClassificationDatasetMetadata create() =>
-      TextClassificationDatasetMetadata();
+      TextClassificationDatasetMetadata._();
   TextClassificationDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TextClassificationDatasetMetadata> createRepeated() =>
       $pb.PbList<TextClassificationDatasetMetadata>();
@@ -62,13 +65,14 @@ class TextClassificationModelMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  TextClassificationModelMetadata() : super();
-  TextClassificationModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextClassificationModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextClassificationModelMetadata._() : super();
+  factory TextClassificationModelMetadata() => create();
+  factory TextClassificationModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextClassificationModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextClassificationModelMetadata clone() =>
       TextClassificationModelMetadata()..mergeFromMessage(this);
   TextClassificationModelMetadata copyWith(
@@ -76,8 +80,9 @@ class TextClassificationModelMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextClassificationModelMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextClassificationModelMetadata create() =>
-      TextClassificationModelMetadata();
+      TextClassificationModelMetadata._();
   TextClassificationModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TextClassificationModelMetadata> createRepeated() =>
       $pb.PbList<TextClassificationModelMetadata>();
@@ -92,13 +97,14 @@ class TextExtractionDatasetMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  TextExtractionDatasetMetadata() : super();
-  TextExtractionDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextExtractionDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextExtractionDatasetMetadata._() : super();
+  factory TextExtractionDatasetMetadata() => create();
+  factory TextExtractionDatasetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextExtractionDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextExtractionDatasetMetadata clone() =>
       TextExtractionDatasetMetadata()..mergeFromMessage(this);
   TextExtractionDatasetMetadata copyWith(
@@ -106,8 +112,9 @@ class TextExtractionDatasetMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextExtractionDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextExtractionDatasetMetadata create() =>
-      TextExtractionDatasetMetadata();
+      TextExtractionDatasetMetadata._();
   TextExtractionDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TextExtractionDatasetMetadata> createRepeated() =>
       $pb.PbList<TextExtractionDatasetMetadata>();
@@ -122,13 +129,14 @@ class TextExtractionModelMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  TextExtractionModelMetadata() : super();
-  TextExtractionModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextExtractionModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextExtractionModelMetadata._() : super();
+  factory TextExtractionModelMetadata() => create();
+  factory TextExtractionModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextExtractionModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextExtractionModelMetadata clone() =>
       TextExtractionModelMetadata()..mergeFromMessage(this);
   TextExtractionModelMetadata copyWith(
@@ -136,7 +144,9 @@ class TextExtractionModelMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextExtractionModelMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static TextExtractionModelMetadata create() => TextExtractionModelMetadata();
+  @$core.pragma('dart2js:noInline')
+  static TextExtractionModelMetadata create() =>
+      TextExtractionModelMetadata._();
   TextExtractionModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TextExtractionModelMetadata> createRepeated() =>
       $pb.PbList<TextExtractionModelMetadata>();
@@ -152,13 +162,14 @@ class TextSentimentDatasetMetadata extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'sentimentMax', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  TextSentimentDatasetMetadata() : super();
-  TextSentimentDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSentimentDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSentimentDatasetMetadata._() : super();
+  factory TextSentimentDatasetMetadata() => create();
+  factory TextSentimentDatasetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSentimentDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSentimentDatasetMetadata clone() =>
       TextSentimentDatasetMetadata()..mergeFromMessage(this);
   TextSentimentDatasetMetadata copyWith(
@@ -166,8 +177,9 @@ class TextSentimentDatasetMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextSentimentDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextSentimentDatasetMetadata create() =>
-      TextSentimentDatasetMetadata();
+      TextSentimentDatasetMetadata._();
   TextSentimentDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TextSentimentDatasetMetadata> createRepeated() =>
       $pb.PbList<TextSentimentDatasetMetadata>();
@@ -190,13 +202,14 @@ class TextSentimentModelMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  TextSentimentModelMetadata() : super();
-  TextSentimentModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSentimentModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSentimentModelMetadata._() : super();
+  factory TextSentimentModelMetadata() => create();
+  factory TextSentimentModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSentimentModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSentimentModelMetadata clone() =>
       TextSentimentModelMetadata()..mergeFromMessage(this);
   TextSentimentModelMetadata copyWith(
@@ -204,7 +217,8 @@ class TextSentimentModelMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextSentimentModelMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static TextSentimentModelMetadata create() => TextSentimentModelMetadata();
+  @$core.pragma('dart2js:noInline')
+  static TextSentimentModelMetadata create() => TextSentimentModelMetadata._();
   TextSentimentModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TextSentimentModelMetadata> createRepeated() =>
       $pb.PbList<TextSentimentModelMetadata>();

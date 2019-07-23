@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/keys.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,6 +31,8 @@ class KeyRange extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeyRange',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [1, 2])
+    ..oo(1, [3, 4])
     ..a<$0.ListValue>(1, 'startClosed', $pb.PbFieldType.OM,
         $0.ListValue.getDefault, $0.ListValue.create)
     ..a<$0.ListValue>(2, 'startOpen', $pb.PbFieldType.OM,
@@ -38,22 +41,22 @@ class KeyRange extends $pb.GeneratedMessage {
         $0.ListValue.getDefault, $0.ListValue.create)
     ..a<$0.ListValue>(4, 'endOpen', $pb.PbFieldType.OM, $0.ListValue.getDefault,
         $0.ListValue.create)
-    ..oo(0, [1, 2])
-    ..oo(1, [3, 4])
     ..hasRequiredFields = false;
 
-  KeyRange() : super();
-  KeyRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeyRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeyRange._() : super();
+  factory KeyRange() => create();
+  factory KeyRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeyRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeyRange clone() => KeyRange()..mergeFromMessage(this);
   KeyRange copyWith(void Function(KeyRange) updates) =>
       super.copyWith((message) => updates(message as KeyRange));
   $pb.BuilderInfo get info_ => _i;
-  static KeyRange create() => KeyRange();
+  @$core.pragma('dart2js:noInline')
+  static KeyRange create() => KeyRange._();
   KeyRange createEmptyInstance() => create();
   static $pb.PbList<KeyRange> createRepeated() => $pb.PbList<KeyRange>();
   static KeyRange getDefault() => _defaultInstance ??= create()..freeze();
@@ -108,18 +111,20 @@ class KeySet extends $pb.GeneratedMessage {
     ..aOB(3, 'all')
     ..hasRequiredFields = false;
 
-  KeySet() : super();
-  KeySet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeySet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeySet._() : super();
+  factory KeySet() => create();
+  factory KeySet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeySet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeySet clone() => KeySet()..mergeFromMessage(this);
   KeySet copyWith(void Function(KeySet) updates) =>
       super.copyWith((message) => updates(message as KeySet));
   $pb.BuilderInfo get info_ => _i;
-  static KeySet create() => KeySet();
+  @$core.pragma('dart2js:noInline')
+  static KeySet create() => KeySet._();
   KeySet createEmptyInstance() => create();
   static $pb.PbList<KeySet> createRepeated() => $pb.PbList<KeySet>();
   static KeySet getDefault() => _defaultInstance ??= create()..freeze();

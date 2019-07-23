@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/click_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class ClickView extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ClickView() : super();
-  ClickView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClickView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClickView._() : super();
+  factory ClickView() => create();
+  factory ClickView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClickView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClickView clone() => ClickView()..mergeFromMessage(this);
   ClickView copyWith(void Function(ClickView) updates) =>
       super.copyWith((message) => updates(message as ClickView));
   $pb.BuilderInfo get info_ => _i;
-  static ClickView create() => ClickView();
+  @$core.pragma('dart2js:noInline')
+  static ClickView create() => ClickView._();
   ClickView createEmptyInstance() => create();
   static $pb.PbList<ClickView> createRepeated() => $pb.PbList<ClickView>();
   static ClickView getDefault() => _defaultInstance ??= create()..freeze();

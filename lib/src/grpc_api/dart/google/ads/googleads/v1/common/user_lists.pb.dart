@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/user_lists.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,18 +29,20 @@ class SimilarUserListInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  SimilarUserListInfo() : super();
-  SimilarUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SimilarUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SimilarUserListInfo._() : super();
+  factory SimilarUserListInfo() => create();
+  factory SimilarUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SimilarUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SimilarUserListInfo clone() => SimilarUserListInfo()..mergeFromMessage(this);
   SimilarUserListInfo copyWith(void Function(SimilarUserListInfo) updates) =>
       super.copyWith((message) => updates(message as SimilarUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static SimilarUserListInfo create() => SimilarUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static SimilarUserListInfo create() => SimilarUserListInfo._();
   SimilarUserListInfo createEmptyInstance() => create();
   static $pb.PbList<SimilarUserListInfo> createRepeated() =>
       $pb.PbList<SimilarUserListInfo>();
@@ -78,19 +81,21 @@ class CrmBasedUserListInfo extends $pb.GeneratedMessage {
         $2.UserListCrmDataSourceTypeEnum_UserListCrmDataSourceType.values)
     ..hasRequiredFields = false;
 
-  CrmBasedUserListInfo() : super();
-  CrmBasedUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CrmBasedUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CrmBasedUserListInfo._() : super();
+  factory CrmBasedUserListInfo() => create();
+  factory CrmBasedUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CrmBasedUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CrmBasedUserListInfo clone() =>
       CrmBasedUserListInfo()..mergeFromMessage(this);
   CrmBasedUserListInfo copyWith(void Function(CrmBasedUserListInfo) updates) =>
       super.copyWith((message) => updates(message as CrmBasedUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static CrmBasedUserListInfo create() => CrmBasedUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static CrmBasedUserListInfo create() => CrmBasedUserListInfo._();
   CrmBasedUserListInfo createEmptyInstance() => create();
   static $pb.PbList<CrmBasedUserListInfo> createRepeated() =>
       $pb.PbList<CrmBasedUserListInfo>();
@@ -141,18 +146,20 @@ class UserListRuleInfo extends $pb.GeneratedMessage {
         UserListRuleItemGroupInfo.create)
     ..hasRequiredFields = false;
 
-  UserListRuleInfo() : super();
-  UserListRuleInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListRuleInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListRuleInfo._() : super();
+  factory UserListRuleInfo() => create();
+  factory UserListRuleInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListRuleInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListRuleInfo clone() => UserListRuleInfo()..mergeFromMessage(this);
   UserListRuleInfo copyWith(void Function(UserListRuleInfo) updates) =>
       super.copyWith((message) => updates(message as UserListRuleInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListRuleInfo create() => UserListRuleInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListRuleInfo create() => UserListRuleInfo._();
   UserListRuleInfo createEmptyInstance() => create();
   static $pb.PbList<UserListRuleInfo> createRepeated() =>
       $pb.PbList<UserListRuleInfo>();
@@ -178,13 +185,14 @@ class UserListRuleItemGroupInfo extends $pb.GeneratedMessage {
         1, 'ruleItems', $pb.PbFieldType.PM, UserListRuleItemInfo.create)
     ..hasRequiredFields = false;
 
-  UserListRuleItemGroupInfo() : super();
-  UserListRuleItemGroupInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListRuleItemGroupInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListRuleItemGroupInfo._() : super();
+  factory UserListRuleItemGroupInfo() => create();
+  factory UserListRuleItemGroupInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListRuleItemGroupInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListRuleItemGroupInfo clone() =>
       UserListRuleItemGroupInfo()..mergeFromMessage(this);
   UserListRuleItemGroupInfo copyWith(
@@ -192,7 +200,8 @@ class UserListRuleItemGroupInfo extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as UserListRuleItemGroupInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListRuleItemGroupInfo create() => UserListRuleItemGroupInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListRuleItemGroupInfo create() => UserListRuleItemGroupInfo._();
   UserListRuleItemGroupInfo createEmptyInstance() => create();
   static $pb.PbList<UserListRuleItemGroupInfo> createRepeated() =>
       $pb.PbList<UserListRuleItemGroupInfo>();
@@ -220,6 +229,7 @@ class UserListRuleItemInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserListRuleItemInfo',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [2, 3, 4])
     ..a<$0.StringValue>(1, 'name', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
     ..a<UserListNumberRuleItemInfo>(
@@ -236,22 +246,23 @@ class UserListRuleItemInfo extends $pb.GeneratedMessage {
         UserListStringRuleItemInfo.create)
     ..a<UserListDateRuleItemInfo>(4, 'dateRuleItem', $pb.PbFieldType.OM,
         UserListDateRuleItemInfo.getDefault, UserListDateRuleItemInfo.create)
-    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
-  UserListRuleItemInfo() : super();
-  UserListRuleItemInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListRuleItemInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListRuleItemInfo._() : super();
+  factory UserListRuleItemInfo() => create();
+  factory UserListRuleItemInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListRuleItemInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListRuleItemInfo clone() =>
       UserListRuleItemInfo()..mergeFromMessage(this);
   UserListRuleItemInfo copyWith(void Function(UserListRuleItemInfo) updates) =>
       super.copyWith((message) => updates(message as UserListRuleItemInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListRuleItemInfo create() => UserListRuleItemInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListRuleItemInfo create() => UserListRuleItemInfo._();
   UserListRuleItemInfo createEmptyInstance() => create();
   static $pb.PbList<UserListRuleItemInfo> createRepeated() =>
       $pb.PbList<UserListRuleItemInfo>();
@@ -314,20 +325,22 @@ class UserListDateRuleItemInfo extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  UserListDateRuleItemInfo() : super();
-  UserListDateRuleItemInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListDateRuleItemInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListDateRuleItemInfo._() : super();
+  factory UserListDateRuleItemInfo() => create();
+  factory UserListDateRuleItemInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListDateRuleItemInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListDateRuleItemInfo clone() =>
       UserListDateRuleItemInfo()..mergeFromMessage(this);
   UserListDateRuleItemInfo copyWith(
           void Function(UserListDateRuleItemInfo) updates) =>
       super.copyWith((message) => updates(message as UserListDateRuleItemInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListDateRuleItemInfo create() => UserListDateRuleItemInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListDateRuleItemInfo create() => UserListDateRuleItemInfo._();
   UserListDateRuleItemInfo createEmptyInstance() => create();
   static $pb.PbList<UserListDateRuleItemInfo> createRepeated() =>
       $pb.PbList<UserListDateRuleItemInfo>();
@@ -380,13 +393,14 @@ class UserListNumberRuleItemInfo extends $pb.GeneratedMessage {
         $0.DoubleValue.getDefault, $0.DoubleValue.create)
     ..hasRequiredFields = false;
 
-  UserListNumberRuleItemInfo() : super();
-  UserListNumberRuleItemInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListNumberRuleItemInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListNumberRuleItemInfo._() : super();
+  factory UserListNumberRuleItemInfo() => create();
+  factory UserListNumberRuleItemInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListNumberRuleItemInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListNumberRuleItemInfo clone() =>
       UserListNumberRuleItemInfo()..mergeFromMessage(this);
   UserListNumberRuleItemInfo copyWith(
@@ -394,7 +408,8 @@ class UserListNumberRuleItemInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UserListNumberRuleItemInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListNumberRuleItemInfo create() => UserListNumberRuleItemInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListNumberRuleItemInfo create() => UserListNumberRuleItemInfo._();
   UserListNumberRuleItemInfo createEmptyInstance() => create();
   static $pb.PbList<UserListNumberRuleItemInfo> createRepeated() =>
       $pb.PbList<UserListNumberRuleItemInfo>();
@@ -439,13 +454,14 @@ class UserListStringRuleItemInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  UserListStringRuleItemInfo() : super();
-  UserListStringRuleItemInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListStringRuleItemInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListStringRuleItemInfo._() : super();
+  factory UserListStringRuleItemInfo() => create();
+  factory UserListStringRuleItemInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListStringRuleItemInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListStringRuleItemInfo clone() =>
       UserListStringRuleItemInfo()..mergeFromMessage(this);
   UserListStringRuleItemInfo copyWith(
@@ -453,7 +469,8 @@ class UserListStringRuleItemInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UserListStringRuleItemInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListStringRuleItemInfo create() => UserListStringRuleItemInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListStringRuleItemInfo create() => UserListStringRuleItemInfo._();
   UserListStringRuleItemInfo createEmptyInstance() => create();
   static $pb.PbList<UserListStringRuleItemInfo> createRepeated() =>
       $pb.PbList<UserListStringRuleItemInfo>();
@@ -498,20 +515,22 @@ class CombinedRuleUserListInfo extends $pb.GeneratedMessage {
         $7.UserListCombinedRuleOperatorEnum_UserListCombinedRuleOperator.values)
     ..hasRequiredFields = false;
 
-  CombinedRuleUserListInfo() : super();
-  CombinedRuleUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CombinedRuleUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CombinedRuleUserListInfo._() : super();
+  factory CombinedRuleUserListInfo() => create();
+  factory CombinedRuleUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CombinedRuleUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CombinedRuleUserListInfo clone() =>
       CombinedRuleUserListInfo()..mergeFromMessage(this);
   CombinedRuleUserListInfo copyWith(
           void Function(CombinedRuleUserListInfo) updates) =>
       super.copyWith((message) => updates(message as CombinedRuleUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static CombinedRuleUserListInfo create() => CombinedRuleUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static CombinedRuleUserListInfo create() => CombinedRuleUserListInfo._();
   CombinedRuleUserListInfo createEmptyInstance() => create();
   static $pb.PbList<CombinedRuleUserListInfo> createRepeated() =>
       $pb.PbList<CombinedRuleUserListInfo>();
@@ -558,13 +577,14 @@ class DateSpecificRuleUserListInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  DateSpecificRuleUserListInfo() : super();
-  DateSpecificRuleUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DateSpecificRuleUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DateSpecificRuleUserListInfo._() : super();
+  factory DateSpecificRuleUserListInfo() => create();
+  factory DateSpecificRuleUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DateSpecificRuleUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DateSpecificRuleUserListInfo clone() =>
       DateSpecificRuleUserListInfo()..mergeFromMessage(this);
   DateSpecificRuleUserListInfo copyWith(
@@ -572,8 +592,9 @@ class DateSpecificRuleUserListInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DateSpecificRuleUserListInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DateSpecificRuleUserListInfo create() =>
-      DateSpecificRuleUserListInfo();
+      DateSpecificRuleUserListInfo._();
   DateSpecificRuleUserListInfo createEmptyInstance() => create();
   static $pb.PbList<DateSpecificRuleUserListInfo> createRepeated() =>
       $pb.PbList<DateSpecificRuleUserListInfo>();
@@ -614,13 +635,14 @@ class ExpressionRuleUserListInfo extends $pb.GeneratedMessage {
         UserListRuleInfo.getDefault, UserListRuleInfo.create)
     ..hasRequiredFields = false;
 
-  ExpressionRuleUserListInfo() : super();
-  ExpressionRuleUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExpressionRuleUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExpressionRuleUserListInfo._() : super();
+  factory ExpressionRuleUserListInfo() => create();
+  factory ExpressionRuleUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExpressionRuleUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExpressionRuleUserListInfo clone() =>
       ExpressionRuleUserListInfo()..mergeFromMessage(this);
   ExpressionRuleUserListInfo copyWith(
@@ -628,7 +650,8 @@ class ExpressionRuleUserListInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExpressionRuleUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ExpressionRuleUserListInfo create() => ExpressionRuleUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static ExpressionRuleUserListInfo create() => ExpressionRuleUserListInfo._();
   ExpressionRuleUserListInfo createEmptyInstance() => create();
   static $pb.PbList<ExpressionRuleUserListInfo> createRepeated() =>
       $pb.PbList<ExpressionRuleUserListInfo>();
@@ -662,6 +685,7 @@ class RuleBasedUserListInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RuleBasedUserListInfo',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [2, 3, 4])
     ..e<$8.UserListPrepopulationStatusEnum_UserListPrepopulationStatus>(
         1,
         'prepopulationStatus',
@@ -684,23 +708,24 @@ class RuleBasedUserListInfo extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         ExpressionRuleUserListInfo.getDefault,
         ExpressionRuleUserListInfo.create)
-    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
-  RuleBasedUserListInfo() : super();
-  RuleBasedUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RuleBasedUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RuleBasedUserListInfo._() : super();
+  factory RuleBasedUserListInfo() => create();
+  factory RuleBasedUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RuleBasedUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RuleBasedUserListInfo clone() =>
       RuleBasedUserListInfo()..mergeFromMessage(this);
   RuleBasedUserListInfo copyWith(
           void Function(RuleBasedUserListInfo) updates) =>
       super.copyWith((message) => updates(message as RuleBasedUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static RuleBasedUserListInfo create() => RuleBasedUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static RuleBasedUserListInfo create() => RuleBasedUserListInfo._();
   RuleBasedUserListInfo createEmptyInstance() => create();
   static $pb.PbList<RuleBasedUserListInfo> createRepeated() =>
       $pb.PbList<RuleBasedUserListInfo>();
@@ -754,18 +779,20 @@ class LogicalUserListInfo extends $pb.GeneratedMessage {
         1, 'rules', $pb.PbFieldType.PM, UserListLogicalRuleInfo.create)
     ..hasRequiredFields = false;
 
-  LogicalUserListInfo() : super();
-  LogicalUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogicalUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogicalUserListInfo._() : super();
+  factory LogicalUserListInfo() => create();
+  factory LogicalUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogicalUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogicalUserListInfo clone() => LogicalUserListInfo()..mergeFromMessage(this);
   LogicalUserListInfo copyWith(void Function(LogicalUserListInfo) updates) =>
       super.copyWith((message) => updates(message as LogicalUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static LogicalUserListInfo create() => LogicalUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static LogicalUserListInfo create() => LogicalUserListInfo._();
   LogicalUserListInfo createEmptyInstance() => create();
   static $pb.PbList<LogicalUserListInfo> createRepeated() =>
       $pb.PbList<LogicalUserListInfo>();
@@ -791,20 +818,22 @@ class UserListLogicalRuleInfo extends $pb.GeneratedMessage {
         LogicalUserListOperandInfo.create)
     ..hasRequiredFields = false;
 
-  UserListLogicalRuleInfo() : super();
-  UserListLogicalRuleInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListLogicalRuleInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListLogicalRuleInfo._() : super();
+  factory UserListLogicalRuleInfo() => create();
+  factory UserListLogicalRuleInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListLogicalRuleInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListLogicalRuleInfo clone() =>
       UserListLogicalRuleInfo()..mergeFromMessage(this);
   UserListLogicalRuleInfo copyWith(
           void Function(UserListLogicalRuleInfo) updates) =>
       super.copyWith((message) => updates(message as UserListLogicalRuleInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListLogicalRuleInfo create() => UserListLogicalRuleInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListLogicalRuleInfo create() => UserListLogicalRuleInfo._();
   UserListLogicalRuleInfo createEmptyInstance() => create();
   static $pb.PbList<UserListLogicalRuleInfo> createRepeated() =>
       $pb.PbList<UserListLogicalRuleInfo>();
@@ -833,13 +862,14 @@ class LogicalUserListOperandInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  LogicalUserListOperandInfo() : super();
-  LogicalUserListOperandInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogicalUserListOperandInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogicalUserListOperandInfo._() : super();
+  factory LogicalUserListOperandInfo() => create();
+  factory LogicalUserListOperandInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogicalUserListOperandInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogicalUserListOperandInfo clone() =>
       LogicalUserListOperandInfo()..mergeFromMessage(this);
   LogicalUserListOperandInfo copyWith(
@@ -847,7 +877,8 @@ class LogicalUserListOperandInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LogicalUserListOperandInfo));
   $pb.BuilderInfo get info_ => _i;
-  static LogicalUserListOperandInfo create() => LogicalUserListOperandInfo();
+  @$core.pragma('dart2js:noInline')
+  static LogicalUserListOperandInfo create() => LogicalUserListOperandInfo._();
   LogicalUserListOperandInfo createEmptyInstance() => create();
   static $pb.PbList<LogicalUserListOperandInfo> createRepeated() =>
       $pb.PbList<LogicalUserListOperandInfo>();
@@ -871,18 +902,20 @@ class BasicUserListInfo extends $pb.GeneratedMessage {
         1, 'actions', $pb.PbFieldType.PM, UserListActionInfo.create)
     ..hasRequiredFields = false;
 
-  BasicUserListInfo() : super();
-  BasicUserListInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BasicUserListInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BasicUserListInfo._() : super();
+  factory BasicUserListInfo() => create();
+  factory BasicUserListInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BasicUserListInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BasicUserListInfo clone() => BasicUserListInfo()..mergeFromMessage(this);
   BasicUserListInfo copyWith(void Function(BasicUserListInfo) updates) =>
       super.copyWith((message) => updates(message as BasicUserListInfo));
   $pb.BuilderInfo get info_ => _i;
-  static BasicUserListInfo create() => BasicUserListInfo();
+  @$core.pragma('dart2js:noInline')
+  static BasicUserListInfo create() => BasicUserListInfo._();
   BasicUserListInfo createEmptyInstance() => create();
   static $pb.PbList<BasicUserListInfo> createRepeated() =>
       $pb.PbList<BasicUserListInfo>();
@@ -908,25 +941,27 @@ class UserListActionInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserListActionInfo',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [1, 2])
     ..a<$0.StringValue>(1, 'conversionAction', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
     ..a<$0.StringValue>(2, 'remarketingAction', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  UserListActionInfo() : super();
-  UserListActionInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListActionInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListActionInfo._() : super();
+  factory UserListActionInfo() => create();
+  factory UserListActionInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListActionInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListActionInfo clone() => UserListActionInfo()..mergeFromMessage(this);
   UserListActionInfo copyWith(void Function(UserListActionInfo) updates) =>
       super.copyWith((message) => updates(message as UserListActionInfo));
   $pb.BuilderInfo get info_ => _i;
-  static UserListActionInfo create() => UserListActionInfo();
+  @$core.pragma('dart2js:noInline')
+  static UserListActionInfo create() => UserListActionInfo._();
   UserListActionInfo createEmptyInstance() => create();
   static $pb.PbList<UserListActionInfo> createRepeated() =>
       $pb.PbList<UserListActionInfo>();

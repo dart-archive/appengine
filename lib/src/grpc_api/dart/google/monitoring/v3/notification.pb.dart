@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/notification.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -31,13 +32,14 @@ class NotificationChannelDescriptor extends $pb.GeneratedMessage {
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
-  NotificationChannelDescriptor() : super();
-  NotificationChannelDescriptor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NotificationChannelDescriptor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NotificationChannelDescriptor._() : super();
+  factory NotificationChannelDescriptor() => create();
+  factory NotificationChannelDescriptor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NotificationChannelDescriptor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NotificationChannelDescriptor clone() =>
       NotificationChannelDescriptor()..mergeFromMessage(this);
   NotificationChannelDescriptor copyWith(
@@ -45,8 +47,9 @@ class NotificationChannelDescriptor extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as NotificationChannelDescriptor));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static NotificationChannelDescriptor create() =>
-      NotificationChannelDescriptor();
+      NotificationChannelDescriptor._();
   NotificationChannelDescriptor createEmptyInstance() => create();
   static $pb.PbList<NotificationChannelDescriptor> createRepeated() =>
       $pb.PbList<NotificationChannelDescriptor>();
@@ -130,18 +133,20 @@ class NotificationChannel extends $pb.GeneratedMessage {
         $1.BoolValue.getDefault, $1.BoolValue.create)
     ..hasRequiredFields = false;
 
-  NotificationChannel() : super();
-  NotificationChannel.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NotificationChannel.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NotificationChannel._() : super();
+  factory NotificationChannel() => create();
+  factory NotificationChannel.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NotificationChannel.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NotificationChannel clone() => NotificationChannel()..mergeFromMessage(this);
   NotificationChannel copyWith(void Function(NotificationChannel) updates) =>
       super.copyWith((message) => updates(message as NotificationChannel));
   $pb.BuilderInfo get info_ => _i;
-  static NotificationChannel create() => NotificationChannel();
+  @$core.pragma('dart2js:noInline')
+  static NotificationChannel create() => NotificationChannel._();
   NotificationChannel createEmptyInstance() => create();
   static $pb.PbList<NotificationChannel> createRepeated() =>
       $pb.PbList<NotificationChannel>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/carrier_constant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,18 +24,20 @@ class CarrierConstant extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CarrierConstant() : super();
-  CarrierConstant.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CarrierConstant.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CarrierConstant._() : super();
+  factory CarrierConstant() => create();
+  factory CarrierConstant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CarrierConstant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CarrierConstant clone() => CarrierConstant()..mergeFromMessage(this);
   CarrierConstant copyWith(void Function(CarrierConstant) updates) =>
       super.copyWith((message) => updates(message as CarrierConstant));
   $pb.BuilderInfo get info_ => _i;
-  static CarrierConstant create() => CarrierConstant();
+  @$core.pragma('dart2js:noInline')
+  static CarrierConstant create() => CarrierConstant._();
   CarrierConstant createEmptyInstance() => create();
   static $pb.PbList<CarrierConstant> createRepeated() =>
       $pb.PbList<CarrierConstant>();

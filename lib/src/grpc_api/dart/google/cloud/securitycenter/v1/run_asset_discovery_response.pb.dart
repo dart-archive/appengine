@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/securitycenter/v1/run_asset_discovery_response.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,13 +30,14 @@ class RunAssetDiscoveryResponse extends $pb.GeneratedMessage {
         $0.Duration.create)
     ..hasRequiredFields = false;
 
-  RunAssetDiscoveryResponse() : super();
-  RunAssetDiscoveryResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunAssetDiscoveryResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunAssetDiscoveryResponse._() : super();
+  factory RunAssetDiscoveryResponse() => create();
+  factory RunAssetDiscoveryResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunAssetDiscoveryResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunAssetDiscoveryResponse clone() =>
       RunAssetDiscoveryResponse()..mergeFromMessage(this);
   RunAssetDiscoveryResponse copyWith(
@@ -43,7 +45,8 @@ class RunAssetDiscoveryResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as RunAssetDiscoveryResponse));
   $pb.BuilderInfo get info_ => _i;
-  static RunAssetDiscoveryResponse create() => RunAssetDiscoveryResponse();
+  @$core.pragma('dart2js:noInline')
+  static RunAssetDiscoveryResponse create() => RunAssetDiscoveryResponse._();
   RunAssetDiscoveryResponse createEmptyInstance() => create();
   static $pb.PbList<RunAssetDiscoveryResponse> createRepeated() =>
       $pb.PbList<RunAssetDiscoveryResponse>();

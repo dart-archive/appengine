@@ -1,38 +1,38 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/feed_item_target_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'feed_item_target_service.pb.dart';
-import '../resources/feed_item_target.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'feed_item_target_service.pb.dart' as $0;
+import '../resources/feed_item_target.pb.dart' as $1;
 export 'feed_item_target_service.pb.dart';
 
 class FeedItemTargetServiceClient extends $grpc.Client {
   static final _$getFeedItemTarget = $grpc.ClientMethod<
-          GetFeedItemTargetRequest, $0.FeedItemTarget>(
+          $0.GetFeedItemTargetRequest, $1.FeedItemTarget>(
       '/google.ads.googleads.v1.services.FeedItemTargetService/GetFeedItemTarget',
-      (GetFeedItemTargetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.FeedItemTarget.fromBuffer(value));
+      ($0.GetFeedItemTargetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.FeedItemTarget.fromBuffer(value));
   static final _$mutateFeedItemTargets = $grpc.ClientMethod<
-          MutateFeedItemTargetsRequest, MutateFeedItemTargetsResponse>(
+          $0.MutateFeedItemTargetsRequest, $0.MutateFeedItemTargetsResponse>(
       '/google.ads.googleads.v1.services.FeedItemTargetService/MutateFeedItemTargets',
-      (MutateFeedItemTargetsRequest value) => value.writeToBuffer(),
+      ($0.MutateFeedItemTargetsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          MutateFeedItemTargetsResponse.fromBuffer(value));
+          $0.MutateFeedItemTargetsResponse.fromBuffer(value));
 
   FeedItemTargetServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.FeedItemTarget> getFeedItemTarget(
-      GetFeedItemTargetRequest request,
+  $grpc.ResponseFuture<$1.FeedItemTarget> getFeedItemTarget(
+      $0.GetFeedItemTargetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getFeedItemTarget, $async.Stream.fromIterable([request]),
@@ -40,8 +40,8 @@ class FeedItemTargetServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<MutateFeedItemTargetsResponse> mutateFeedItemTargets(
-      MutateFeedItemTargetsRequest request,
+  $grpc.ResponseFuture<$0.MutateFeedItemTargetsResponse> mutateFeedItemTargets(
+      $0.MutateFeedItemTargetsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$mutateFeedItemTargets, $async.Stream.fromIterable([request]),
@@ -55,37 +55,39 @@ abstract class FeedItemTargetServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.FeedItemTargetService';
 
   FeedItemTargetServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetFeedItemTargetRequest, $0.FeedItemTarget>(
-        'GetFeedItemTarget',
-        getFeedItemTarget_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            GetFeedItemTargetRequest.fromBuffer(value),
-        ($0.FeedItemTarget value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateFeedItemTargetsRequest,
-            MutateFeedItemTargetsResponse>(
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetFeedItemTargetRequest, $1.FeedItemTarget>(
+            'GetFeedItemTarget',
+            getFeedItemTarget_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetFeedItemTargetRequest.fromBuffer(value),
+            ($1.FeedItemTarget value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateFeedItemTargetsRequest,
+            $0.MutateFeedItemTargetsResponse>(
         'MutateFeedItemTargets',
         mutateFeedItemTargets_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            MutateFeedItemTargetsRequest.fromBuffer(value),
-        (MutateFeedItemTargetsResponse value) => value.writeToBuffer()));
+            $0.MutateFeedItemTargetsRequest.fromBuffer(value),
+        ($0.MutateFeedItemTargetsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.FeedItemTarget> getFeedItemTarget_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.FeedItemTarget> getFeedItemTarget_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetFeedItemTargetRequest> request) async {
     return getFeedItemTarget(call, await request);
   }
 
-  $async.Future<MutateFeedItemTargetsResponse> mutateFeedItemTargets_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateFeedItemTargetsResponse> mutateFeedItemTargets_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.MutateFeedItemTargetsRequest> request) async {
     return mutateFeedItemTargets(call, await request);
   }
 
-  $async.Future<$0.FeedItemTarget> getFeedItemTarget(
-      $grpc.ServiceCall call, GetFeedItemTargetRequest request);
-  $async.Future<MutateFeedItemTargetsResponse> mutateFeedItemTargets(
-      $grpc.ServiceCall call, MutateFeedItemTargetsRequest request);
+  $async.Future<$1.FeedItemTarget> getFeedItemTarget(
+      $grpc.ServiceCall call, $0.GetFeedItemTargetRequest request);
+  $async.Future<$0.MutateFeedItemTargetsResponse> mutateFeedItemTargets(
+      $grpc.ServiceCall call, $0.MutateFeedItemTargetsRequest request);
 }

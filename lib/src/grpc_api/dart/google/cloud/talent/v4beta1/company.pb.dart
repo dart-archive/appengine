@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/company.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,18 +21,20 @@ class Company_DerivedInfo extends $pb.GeneratedMessage {
         $0.Location.getDefault, $0.Location.create)
     ..hasRequiredFields = false;
 
-  Company_DerivedInfo() : super();
-  Company_DerivedInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Company_DerivedInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Company_DerivedInfo._() : super();
+  factory Company_DerivedInfo() => create();
+  factory Company_DerivedInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Company_DerivedInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Company_DerivedInfo clone() => Company_DerivedInfo()..mergeFromMessage(this);
   Company_DerivedInfo copyWith(void Function(Company_DerivedInfo) updates) =>
       super.copyWith((message) => updates(message as Company_DerivedInfo));
   $pb.BuilderInfo get info_ => _i;
-  static Company_DerivedInfo create() => Company_DerivedInfo();
+  @$core.pragma('dart2js:noInline')
+  static Company_DerivedInfo create() => Company_DerivedInfo._();
   Company_DerivedInfo createEmptyInstance() => create();
   static $pb.PbList<Company_DerivedInfo> createRepeated() =>
       $pb.PbList<Company_DerivedInfo>();
@@ -73,18 +76,20 @@ class Company extends $pb.GeneratedMessage {
     ..aOB(13, 'suspended')
     ..hasRequiredFields = false;
 
-  Company() : super();
-  Company.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Company.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Company._() : super();
+  factory Company() => create();
+  factory Company.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Company.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Company clone() => Company()..mergeFromMessage(this);
   Company copyWith(void Function(Company) updates) =>
       super.copyWith((message) => updates(message as Company));
   $pb.BuilderInfo get info_ => _i;
-  static Company create() => Company();
+  @$core.pragma('dart2js:noInline')
+  static Company create() => Company._();
   Company createEmptyInstance() => create();
   static $pb.PbList<Company> createRepeated() => $pb.PbList<Company>();
   static Company getDefault() => _defaultInstance ??= create()..freeze();

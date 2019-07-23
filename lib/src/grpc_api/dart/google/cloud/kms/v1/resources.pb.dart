@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/kms/v1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class KeyRing extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  KeyRing() : super();
-  KeyRing.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeyRing.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeyRing._() : super();
+  factory KeyRing() => create();
+  factory KeyRing.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeyRing.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeyRing clone() => KeyRing()..mergeFromMessage(this);
   KeyRing copyWith(void Function(KeyRing) updates) =>
       super.copyWith((message) => updates(message as KeyRing));
   $pb.BuilderInfo get info_ => _i;
-  static KeyRing create() => KeyRing();
+  @$core.pragma('dart2js:noInline')
+  static KeyRing create() => KeyRing._();
   KeyRing createEmptyInstance() => create();
   static $pb.PbList<KeyRing> createRepeated() => $pb.PbList<KeyRing>();
   static KeyRing getDefault() => _defaultInstance ??= create()..freeze();
@@ -68,6 +71,7 @@ class CryptoKey extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoKey',
       package: const $pb.PackageName('google.cloud.kms.v1'))
+    ..oo(0, [8])
     ..aOS(1, 'name')
     ..a<CryptoKeyVersion>(2, 'primary', $pb.PbFieldType.OM,
         CryptoKeyVersion.getDefault, CryptoKeyVersion.create)
@@ -96,21 +100,22 @@ class CryptoKey extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.kms.v1'))
     ..a<CryptoKeyVersionTemplate>(11, 'versionTemplate', $pb.PbFieldType.OM,
         CryptoKeyVersionTemplate.getDefault, CryptoKeyVersionTemplate.create)
-    ..oo(0, [8])
     ..hasRequiredFields = false;
 
-  CryptoKey() : super();
-  CryptoKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoKey._() : super();
+  factory CryptoKey() => create();
+  factory CryptoKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoKey clone() => CryptoKey()..mergeFromMessage(this);
   CryptoKey copyWith(void Function(CryptoKey) updates) =>
       super.copyWith((message) => updates(message as CryptoKey));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoKey create() => CryptoKey();
+  @$core.pragma('dart2js:noInline')
+  static CryptoKey create() => CryptoKey._();
   CryptoKey createEmptyInstance() => create();
   static $pb.PbList<CryptoKey> createRepeated() => $pb.PbList<CryptoKey>();
   static CryptoKey getDefault() => _defaultInstance ??= create()..freeze();
@@ -199,20 +204,22 @@ class CryptoKeyVersionTemplate extends $pb.GeneratedMessage {
         CryptoKeyVersion_CryptoKeyVersionAlgorithm.values)
     ..hasRequiredFields = false;
 
-  CryptoKeyVersionTemplate() : super();
-  CryptoKeyVersionTemplate.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoKeyVersionTemplate.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoKeyVersionTemplate._() : super();
+  factory CryptoKeyVersionTemplate() => create();
+  factory CryptoKeyVersionTemplate.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoKeyVersionTemplate.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoKeyVersionTemplate clone() =>
       CryptoKeyVersionTemplate()..mergeFromMessage(this);
   CryptoKeyVersionTemplate copyWith(
           void Function(CryptoKeyVersionTemplate) updates) =>
       super.copyWith((message) => updates(message as CryptoKeyVersionTemplate));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoKeyVersionTemplate create() => CryptoKeyVersionTemplate();
+  @$core.pragma('dart2js:noInline')
+  static CryptoKeyVersionTemplate create() => CryptoKeyVersionTemplate._();
   CryptoKeyVersionTemplate createEmptyInstance() => create();
   static $pb.PbList<CryptoKeyVersionTemplate> createRepeated() =>
       $pb.PbList<CryptoKeyVersionTemplate>();
@@ -251,20 +258,22 @@ class KeyOperationAttestation extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(5, 'content', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  KeyOperationAttestation() : super();
-  KeyOperationAttestation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeyOperationAttestation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeyOperationAttestation._() : super();
+  factory KeyOperationAttestation() => create();
+  factory KeyOperationAttestation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeyOperationAttestation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeyOperationAttestation clone() =>
       KeyOperationAttestation()..mergeFromMessage(this);
   KeyOperationAttestation copyWith(
           void Function(KeyOperationAttestation) updates) =>
       super.copyWith((message) => updates(message as KeyOperationAttestation));
   $pb.BuilderInfo get info_ => _i;
-  static KeyOperationAttestation create() => KeyOperationAttestation();
+  @$core.pragma('dart2js:noInline')
+  static KeyOperationAttestation create() => KeyOperationAttestation._();
   KeyOperationAttestation createEmptyInstance() => create();
   static $pb.PbList<KeyOperationAttestation> createRepeated() =>
       $pb.PbList<KeyOperationAttestation>();
@@ -326,20 +335,26 @@ class CryptoKeyVersion extends $pb.GeneratedMessage {
         CryptoKeyVersion_CryptoKeyVersionAlgorithm.values)
     ..a<$0.Timestamp>(11, 'generateTime', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..aOS(14, 'importJob')
+    ..a<$0.Timestamp>(15, 'importTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..aOS(16, 'importFailureReason')
     ..hasRequiredFields = false;
 
-  CryptoKeyVersion() : super();
-  CryptoKeyVersion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoKeyVersion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoKeyVersion._() : super();
+  factory CryptoKeyVersion() => create();
+  factory CryptoKeyVersion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoKeyVersion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoKeyVersion clone() => CryptoKeyVersion()..mergeFromMessage(this);
   CryptoKeyVersion copyWith(void Function(CryptoKeyVersion) updates) =>
       super.copyWith((message) => updates(message as CryptoKeyVersion));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoKeyVersion create() => CryptoKeyVersion();
+  @$core.pragma('dart2js:noInline')
+  static CryptoKeyVersion create() => CryptoKeyVersion._();
   CryptoKeyVersion createEmptyInstance() => create();
   static $pb.PbList<CryptoKeyVersion> createRepeated() =>
       $pb.PbList<CryptoKeyVersion>();
@@ -418,6 +433,30 @@ class CryptoKeyVersion extends $pb.GeneratedMessage {
 
   $core.bool hasGenerateTime() => $_has(8);
   void clearGenerateTime() => clearField(11);
+
+  $core.String get importJob => $_getS(9, '');
+  set importJob($core.String v) {
+    $_setString(9, v);
+  }
+
+  $core.bool hasImportJob() => $_has(9);
+  void clearImportJob() => clearField(14);
+
+  $0.Timestamp get importTime => $_getN(10);
+  set importTime($0.Timestamp v) {
+    setField(15, v);
+  }
+
+  $core.bool hasImportTime() => $_has(10);
+  void clearImportTime() => clearField(15);
+
+  $core.String get importFailureReason => $_getS(11, '');
+  set importFailureReason($core.String v) {
+    $_setString(11, v);
+  }
+
+  $core.bool hasImportFailureReason() => $_has(11);
+  void clearImportFailureReason() => clearField(16);
 }
 
 class PublicKey extends $pb.GeneratedMessage {
@@ -434,18 +473,20 @@ class PublicKey extends $pb.GeneratedMessage {
         CryptoKeyVersion_CryptoKeyVersionAlgorithm.values)
     ..hasRequiredFields = false;
 
-  PublicKey() : super();
-  PublicKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PublicKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PublicKey._() : super();
+  factory PublicKey() => create();
+  factory PublicKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublicKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PublicKey clone() => PublicKey()..mergeFromMessage(this);
   PublicKey copyWith(void Function(PublicKey) updates) =>
       super.copyWith((message) => updates(message as PublicKey));
   $pb.BuilderInfo get info_ => _i;
-  static PublicKey create() => PublicKey();
+  @$core.pragma('dart2js:noInline')
+  static PublicKey create() => PublicKey._();
   PublicKey createEmptyInstance() => create();
   static $pb.PbList<PublicKey> createRepeated() => $pb.PbList<PublicKey>();
   static PublicKey getDefault() => _defaultInstance ??= create()..freeze();
@@ -466,4 +507,188 @@ class PublicKey extends $pb.GeneratedMessage {
 
   $core.bool hasAlgorithm() => $_has(1);
   void clearAlgorithm() => clearField(2);
+}
+
+class ImportJob_WrappingPublicKey extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ImportJob.WrappingPublicKey',
+      package: const $pb.PackageName('google.cloud.kms.v1'))
+    ..aOS(1, 'pem')
+    ..hasRequiredFields = false;
+
+  ImportJob_WrappingPublicKey._() : super();
+  factory ImportJob_WrappingPublicKey() => create();
+  factory ImportJob_WrappingPublicKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportJob_WrappingPublicKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  ImportJob_WrappingPublicKey clone() =>
+      ImportJob_WrappingPublicKey()..mergeFromMessage(this);
+  ImportJob_WrappingPublicKey copyWith(
+          void Function(ImportJob_WrappingPublicKey) updates) =>
+      super.copyWith(
+          (message) => updates(message as ImportJob_WrappingPublicKey));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImportJob_WrappingPublicKey create() =>
+      ImportJob_WrappingPublicKey._();
+  ImportJob_WrappingPublicKey createEmptyInstance() => create();
+  static $pb.PbList<ImportJob_WrappingPublicKey> createRepeated() =>
+      $pb.PbList<ImportJob_WrappingPublicKey>();
+  static ImportJob_WrappingPublicKey getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ImportJob_WrappingPublicKey _defaultInstance;
+
+  $core.String get pem => $_getS(0, '');
+  set pem($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasPem() => $_has(0);
+  void clearPem() => clearField(1);
+}
+
+class ImportJob extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportJob',
+      package: const $pb.PackageName('google.cloud.kms.v1'))
+    ..aOS(1, 'name')
+    ..e<ImportJob_ImportMethod>(
+        2,
+        'importMethod',
+        $pb.PbFieldType.OE,
+        ImportJob_ImportMethod.IMPORT_METHOD_UNSPECIFIED,
+        ImportJob_ImportMethod.valueOf,
+        ImportJob_ImportMethod.values)
+    ..a<$0.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(4, 'generateTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$0.Timestamp>(5, 'expireTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..e<ImportJob_ImportJobState>(
+        6,
+        'state',
+        $pb.PbFieldType.OE,
+        ImportJob_ImportJobState.IMPORT_JOB_STATE_UNSPECIFIED,
+        ImportJob_ImportJobState.valueOf,
+        ImportJob_ImportJobState.values)
+    ..a<ImportJob_WrappingPublicKey>(
+        7,
+        'publicKey',
+        $pb.PbFieldType.OM,
+        ImportJob_WrappingPublicKey.getDefault,
+        ImportJob_WrappingPublicKey.create)
+    ..a<KeyOperationAttestation>(8, 'attestation', $pb.PbFieldType.OM,
+        KeyOperationAttestation.getDefault, KeyOperationAttestation.create)
+    ..e<ProtectionLevel>(
+        9,
+        'protectionLevel',
+        $pb.PbFieldType.OE,
+        ProtectionLevel.PROTECTION_LEVEL_UNSPECIFIED,
+        ProtectionLevel.valueOf,
+        ProtectionLevel.values)
+    ..a<$0.Timestamp>(10, 'expireEventTime', $pb.PbFieldType.OM,
+        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..hasRequiredFields = false;
+
+  ImportJob._() : super();
+  factory ImportJob() => create();
+  factory ImportJob.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportJob.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  ImportJob clone() => ImportJob()..mergeFromMessage(this);
+  ImportJob copyWith(void Function(ImportJob) updates) =>
+      super.copyWith((message) => updates(message as ImportJob));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ImportJob create() => ImportJob._();
+  ImportJob createEmptyInstance() => create();
+  static $pb.PbList<ImportJob> createRepeated() => $pb.PbList<ImportJob>();
+  static ImportJob getDefault() => _defaultInstance ??= create()..freeze();
+  static ImportJob _defaultInstance;
+
+  $core.String get name => $_getS(0, '');
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasName() => $_has(0);
+  void clearName() => clearField(1);
+
+  ImportJob_ImportMethod get importMethod => $_getN(1);
+  set importMethod(ImportJob_ImportMethod v) {
+    setField(2, v);
+  }
+
+  $core.bool hasImportMethod() => $_has(1);
+  void clearImportMethod() => clearField(2);
+
+  $0.Timestamp get createTime => $_getN(2);
+  set createTime($0.Timestamp v) {
+    setField(3, v);
+  }
+
+  $core.bool hasCreateTime() => $_has(2);
+  void clearCreateTime() => clearField(3);
+
+  $0.Timestamp get generateTime => $_getN(3);
+  set generateTime($0.Timestamp v) {
+    setField(4, v);
+  }
+
+  $core.bool hasGenerateTime() => $_has(3);
+  void clearGenerateTime() => clearField(4);
+
+  $0.Timestamp get expireTime => $_getN(4);
+  set expireTime($0.Timestamp v) {
+    setField(5, v);
+  }
+
+  $core.bool hasExpireTime() => $_has(4);
+  void clearExpireTime() => clearField(5);
+
+  ImportJob_ImportJobState get state => $_getN(5);
+  set state(ImportJob_ImportJobState v) {
+    setField(6, v);
+  }
+
+  $core.bool hasState() => $_has(5);
+  void clearState() => clearField(6);
+
+  ImportJob_WrappingPublicKey get publicKey => $_getN(6);
+  set publicKey(ImportJob_WrappingPublicKey v) {
+    setField(7, v);
+  }
+
+  $core.bool hasPublicKey() => $_has(6);
+  void clearPublicKey() => clearField(7);
+
+  KeyOperationAttestation get attestation => $_getN(7);
+  set attestation(KeyOperationAttestation v) {
+    setField(8, v);
+  }
+
+  $core.bool hasAttestation() => $_has(7);
+  void clearAttestation() => clearField(8);
+
+  ProtectionLevel get protectionLevel => $_getN(8);
+  set protectionLevel(ProtectionLevel v) {
+    setField(9, v);
+  }
+
+  $core.bool hasProtectionLevel() => $_has(8);
+  void clearProtectionLevel() => clearField(9);
+
+  $0.Timestamp get expireEventTime => $_getN(9);
+  set expireEventTime($0.Timestamp v) {
+    setField(10, v);
+  }
+
+  $core.bool hasExpireEventTime() => $_has(9);
+  void clearExpireEventTime() => clearField(10);
 }

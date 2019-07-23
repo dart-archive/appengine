@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1alpha1/bill_of_materials.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -39,13 +40,14 @@ class PackageManager_Distribution extends $pb.GeneratedMessage {
     ..aOS(7, 'description')
     ..hasRequiredFields = false;
 
-  PackageManager_Distribution() : super();
-  PackageManager_Distribution.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PackageManager_Distribution.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PackageManager_Distribution._() : super();
+  factory PackageManager_Distribution() => create();
+  factory PackageManager_Distribution.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PackageManager_Distribution.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PackageManager_Distribution clone() =>
       PackageManager_Distribution()..mergeFromMessage(this);
   PackageManager_Distribution copyWith(
@@ -53,7 +55,9 @@ class PackageManager_Distribution extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PackageManager_Distribution));
   $pb.BuilderInfo get info_ => _i;
-  static PackageManager_Distribution create() => PackageManager_Distribution();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Distribution create() =>
+      PackageManager_Distribution._();
   PackageManager_Distribution createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Distribution> createRepeated() =>
       $pb.PbList<PackageManager_Distribution>();
@@ -124,20 +128,22 @@ class PackageManager_Location extends $pb.GeneratedMessage {
     ..aOS(3, 'path')
     ..hasRequiredFields = false;
 
-  PackageManager_Location() : super();
-  PackageManager_Location.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PackageManager_Location.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PackageManager_Location._() : super();
+  factory PackageManager_Location() => create();
+  factory PackageManager_Location.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PackageManager_Location.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PackageManager_Location clone() =>
       PackageManager_Location()..mergeFromMessage(this);
   PackageManager_Location copyWith(
           void Function(PackageManager_Location) updates) =>
       super.copyWith((message) => updates(message as PackageManager_Location));
   $pb.BuilderInfo get info_ => _i;
-  static PackageManager_Location create() => PackageManager_Location();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Location create() => PackageManager_Location._();
   PackageManager_Location createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Location> createRepeated() =>
       $pb.PbList<PackageManager_Location>();
@@ -179,20 +185,22 @@ class PackageManager_Package extends $pb.GeneratedMessage {
         PackageManager_Distribution.create)
     ..hasRequiredFields = false;
 
-  PackageManager_Package() : super();
-  PackageManager_Package.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PackageManager_Package.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PackageManager_Package._() : super();
+  factory PackageManager_Package() => create();
+  factory PackageManager_Package.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PackageManager_Package.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PackageManager_Package clone() =>
       PackageManager_Package()..mergeFromMessage(this);
   PackageManager_Package copyWith(
           void Function(PackageManager_Package) updates) =>
       super.copyWith((message) => updates(message as PackageManager_Package));
   $pb.BuilderInfo get info_ => _i;
-  static PackageManager_Package create() => PackageManager_Package();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Package create() => PackageManager_Package._();
   PackageManager_Package createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Package> createRepeated() =>
       $pb.PbList<PackageManager_Package>();
@@ -221,13 +229,14 @@ class PackageManager_Installation extends $pb.GeneratedMessage {
         2, 'location', $pb.PbFieldType.PM, PackageManager_Location.create)
     ..hasRequiredFields = false;
 
-  PackageManager_Installation() : super();
-  PackageManager_Installation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PackageManager_Installation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PackageManager_Installation._() : super();
+  factory PackageManager_Installation() => create();
+  factory PackageManager_Installation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PackageManager_Installation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PackageManager_Installation clone() =>
       PackageManager_Installation()..mergeFromMessage(this);
   PackageManager_Installation copyWith(
@@ -235,7 +244,9 @@ class PackageManager_Installation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PackageManager_Installation));
   $pb.BuilderInfo get info_ => _i;
-  static PackageManager_Installation create() => PackageManager_Installation();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Installation create() =>
+      PackageManager_Installation._();
   PackageManager_Installation createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Installation> createRepeated() =>
       $pb.PbList<PackageManager_Installation>();
@@ -260,18 +271,20 @@ class PackageManager extends $pb.GeneratedMessage {
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..hasRequiredFields = false;
 
-  PackageManager() : super();
-  PackageManager.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PackageManager.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PackageManager._() : super();
+  factory PackageManager() => create();
+  factory PackageManager.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PackageManager.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PackageManager clone() => PackageManager()..mergeFromMessage(this);
   PackageManager copyWith(void Function(PackageManager) updates) =>
       super.copyWith((message) => updates(message as PackageManager));
   $pb.BuilderInfo get info_ => _i;
-  static PackageManager create() => PackageManager();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager create() => PackageManager._();
   PackageManager createEmptyInstance() => create();
   static $pb.PbList<PackageManager> createRepeated() =>
       $pb.PbList<PackageManager>();

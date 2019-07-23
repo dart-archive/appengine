@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/vision/v1p4beta1/geometry.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class Vertex extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'y', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Vertex() : super();
-  Vertex.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Vertex.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Vertex._() : super();
+  factory Vertex() => create();
+  factory Vertex.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Vertex.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Vertex clone() => Vertex()..mergeFromMessage(this);
   Vertex copyWith(void Function(Vertex) updates) =>
       super.copyWith((message) => updates(message as Vertex));
   $pb.BuilderInfo get info_ => _i;
-  static Vertex create() => Vertex();
+  @$core.pragma('dart2js:noInline')
+  static Vertex create() => Vertex._();
   Vertex createEmptyInstance() => create();
   static $pb.PbList<Vertex> createRepeated() => $pb.PbList<Vertex>();
   static Vertex getDefault() => _defaultInstance ??= create()..freeze();
@@ -57,18 +60,20 @@ class NormalizedVertex extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'y', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  NormalizedVertex() : super();
-  NormalizedVertex.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NormalizedVertex.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NormalizedVertex._() : super();
+  factory NormalizedVertex() => create();
+  factory NormalizedVertex.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NormalizedVertex.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NormalizedVertex clone() => NormalizedVertex()..mergeFromMessage(this);
   NormalizedVertex copyWith(void Function(NormalizedVertex) updates) =>
       super.copyWith((message) => updates(message as NormalizedVertex));
   $pb.BuilderInfo get info_ => _i;
-  static NormalizedVertex create() => NormalizedVertex();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedVertex create() => NormalizedVertex._();
   NormalizedVertex createEmptyInstance() => create();
   static $pb.PbList<NormalizedVertex> createRepeated() =>
       $pb.PbList<NormalizedVertex>();
@@ -101,18 +106,20 @@ class BoundingPoly extends $pb.GeneratedMessage {
         2, 'normalizedVertices', $pb.PbFieldType.PM, NormalizedVertex.create)
     ..hasRequiredFields = false;
 
-  BoundingPoly() : super();
-  BoundingPoly.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BoundingPoly.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BoundingPoly._() : super();
+  factory BoundingPoly() => create();
+  factory BoundingPoly.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BoundingPoly.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BoundingPoly clone() => BoundingPoly()..mergeFromMessage(this);
   BoundingPoly copyWith(void Function(BoundingPoly) updates) =>
       super.copyWith((message) => updates(message as BoundingPoly));
   $pb.BuilderInfo get info_ => _i;
-  static BoundingPoly create() => BoundingPoly();
+  @$core.pragma('dart2js:noInline')
+  static BoundingPoly create() => BoundingPoly._();
   BoundingPoly createEmptyInstance() => create();
   static $pb.PbList<BoundingPoly> createRepeated() =>
       $pb.PbList<BoundingPoly>();
@@ -132,18 +139,20 @@ class Position extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'z', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Position() : super();
-  Position.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Position.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Position._() : super();
+  factory Position() => create();
+  factory Position.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Position.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Position clone() => Position()..mergeFromMessage(this);
   Position copyWith(void Function(Position) updates) =>
       super.copyWith((message) => updates(message as Position));
   $pb.BuilderInfo get info_ => _i;
-  static Position create() => Position();
+  @$core.pragma('dart2js:noInline')
+  static Position create() => Position._();
   Position createEmptyInstance() => create();
   static $pb.PbList<Position> createRepeated() => $pb.PbList<Position>();
   static Position getDefault() => _defaultInstance ??= create()..freeze();

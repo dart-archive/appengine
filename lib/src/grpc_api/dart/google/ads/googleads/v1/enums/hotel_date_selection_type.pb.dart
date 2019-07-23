@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/hotel_date_selection_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class HotelDateSelectionTypeEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  HotelDateSelectionTypeEnum() : super();
-  HotelDateSelectionTypeEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HotelDateSelectionTypeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HotelDateSelectionTypeEnum._() : super();
+  factory HotelDateSelectionTypeEnum() => create();
+  factory HotelDateSelectionTypeEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HotelDateSelectionTypeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HotelDateSelectionTypeEnum clone() =>
       HotelDateSelectionTypeEnum()..mergeFromMessage(this);
   HotelDateSelectionTypeEnum copyWith(
@@ -31,7 +33,8 @@ class HotelDateSelectionTypeEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as HotelDateSelectionTypeEnum));
   $pb.BuilderInfo get info_ => _i;
-  static HotelDateSelectionTypeEnum create() => HotelDateSelectionTypeEnum();
+  @$core.pragma('dart2js:noInline')
+  static HotelDateSelectionTypeEnum create() => HotelDateSelectionTypeEnum._();
   HotelDateSelectionTypeEnum createEmptyInstance() => create();
   static $pb.PbList<HotelDateSelectionTypeEnum> createRepeated() =>
       $pb.PbList<HotelDateSelectionTypeEnum>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/tables.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -37,20 +38,22 @@ class TablesDatasetMetadata extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  TablesDatasetMetadata() : super();
-  TablesDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TablesDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TablesDatasetMetadata._() : super();
+  factory TablesDatasetMetadata() => create();
+  factory TablesDatasetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TablesDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TablesDatasetMetadata clone() =>
       TablesDatasetMetadata()..mergeFromMessage(this);
   TablesDatasetMetadata copyWith(
           void Function(TablesDatasetMetadata) updates) =>
       super.copyWith((message) => updates(message as TablesDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static TablesDatasetMetadata create() => TablesDatasetMetadata();
+  @$core.pragma('dart2js:noInline')
+  static TablesDatasetMetadata create() => TablesDatasetMetadata._();
   TablesDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TablesDatasetMetadata> createRepeated() =>
       $pb.PbList<TablesDatasetMetadata>();
@@ -102,9 +105,25 @@ class TablesDatasetMetadata extends $pb.GeneratedMessage {
   void clearStatsUpdateTime() => clearField(7);
 }
 
+enum TablesModelMetadata_AdditionalOptimizationObjectiveConfig {
+  optimizationObjectiveRecallValue,
+  optimizationObjectivePrecisionValue,
+  notSet
+}
+
 class TablesModelMetadata extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int,
+          TablesModelMetadata_AdditionalOptimizationObjectiveConfig>
+      _TablesModelMetadata_AdditionalOptimizationObjectiveConfigByTag = {
+    17: TablesModelMetadata_AdditionalOptimizationObjectiveConfig
+        .optimizationObjectiveRecallValue,
+    18: TablesModelMetadata_AdditionalOptimizationObjectiveConfig
+        .optimizationObjectivePrecisionValue,
+    0: TablesModelMetadata_AdditionalOptimizationObjectiveConfig.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TablesModelMetadata',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [17, 18])
     ..a<$2.ColumnSpec>(2, 'targetColumnSpec', $pb.PbFieldType.OM,
         $2.ColumnSpec.getDefault, $2.ColumnSpec.create)
     ..pc<$2.ColumnSpec>(
@@ -114,26 +133,40 @@ class TablesModelMetadata extends $pb.GeneratedMessage {
         TablesModelColumnInfo.create)
     ..aInt64(6, 'trainBudgetMilliNodeHours')
     ..aInt64(7, 'trainCostMilliNodeHours')
+    ..aOB(12, 'disableEarlyStopping')
+    ..a<$core.double>(
+        17, 'optimizationObjectiveRecallValue', $pb.PbFieldType.OF)
+    ..a<$core.double>(
+        18, 'optimizationObjectivePrecisionValue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  TablesModelMetadata() : super();
-  TablesModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TablesModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TablesModelMetadata._() : super();
+  factory TablesModelMetadata() => create();
+  factory TablesModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TablesModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TablesModelMetadata clone() => TablesModelMetadata()..mergeFromMessage(this);
   TablesModelMetadata copyWith(void Function(TablesModelMetadata) updates) =>
       super.copyWith((message) => updates(message as TablesModelMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static TablesModelMetadata create() => TablesModelMetadata();
+  @$core.pragma('dart2js:noInline')
+  static TablesModelMetadata create() => TablesModelMetadata._();
   TablesModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TablesModelMetadata> createRepeated() =>
       $pb.PbList<TablesModelMetadata>();
   static TablesModelMetadata getDefault() =>
       _defaultInstance ??= create()..freeze();
   static TablesModelMetadata _defaultInstance;
+
+  TablesModelMetadata_AdditionalOptimizationObjectiveConfig
+      whichAdditionalOptimizationObjectiveConfig() =>
+          _TablesModelMetadata_AdditionalOptimizationObjectiveConfigByTag[
+              $_whichOneof(0)];
+  void clearAdditionalOptimizationObjectiveConfig() =>
+      clearField($_whichOneof(0));
 
   $2.ColumnSpec get targetColumnSpec => $_getN(0);
   set targetColumnSpec($2.ColumnSpec v) {
@@ -170,6 +203,30 @@ class TablesModelMetadata extends $pb.GeneratedMessage {
 
   $core.bool hasTrainCostMilliNodeHours() => $_has(5);
   void clearTrainCostMilliNodeHours() => clearField(7);
+
+  $core.bool get disableEarlyStopping => $_get(6, false);
+  set disableEarlyStopping($core.bool v) {
+    $_setBool(6, v);
+  }
+
+  $core.bool hasDisableEarlyStopping() => $_has(6);
+  void clearDisableEarlyStopping() => clearField(12);
+
+  $core.double get optimizationObjectiveRecallValue => $_getN(7);
+  set optimizationObjectiveRecallValue($core.double v) {
+    $_setFloat(7, v);
+  }
+
+  $core.bool hasOptimizationObjectiveRecallValue() => $_has(7);
+  void clearOptimizationObjectiveRecallValue() => clearField(17);
+
+  $core.double get optimizationObjectivePrecisionValue => $_getN(8);
+  set optimizationObjectivePrecisionValue($core.double v) {
+    $_setFloat(8, v);
+  }
+
+  $core.bool hasOptimizationObjectivePrecisionValue() => $_has(8);
+  void clearOptimizationObjectivePrecisionValue() => clearField(18);
 }
 
 class TablesAnnotation extends $pb.GeneratedMessage {
@@ -184,18 +241,20 @@ class TablesAnnotation extends $pb.GeneratedMessage {
         $4.DoubleRange.getDefault, $4.DoubleRange.create)
     ..hasRequiredFields = false;
 
-  TablesAnnotation() : super();
-  TablesAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TablesAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TablesAnnotation._() : super();
+  factory TablesAnnotation() => create();
+  factory TablesAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TablesAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TablesAnnotation clone() => TablesAnnotation()..mergeFromMessage(this);
   TablesAnnotation copyWith(void Function(TablesAnnotation) updates) =>
       super.copyWith((message) => updates(message as TablesAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static TablesAnnotation create() => TablesAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static TablesAnnotation create() => TablesAnnotation._();
   TablesAnnotation createEmptyInstance() => create();
   static $pb.PbList<TablesAnnotation> createRepeated() =>
       $pb.PbList<TablesAnnotation>();
@@ -238,20 +297,22 @@ class TablesModelColumnInfo extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'featureImportance', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  TablesModelColumnInfo() : super();
-  TablesModelColumnInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TablesModelColumnInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TablesModelColumnInfo._() : super();
+  factory TablesModelColumnInfo() => create();
+  factory TablesModelColumnInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TablesModelColumnInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TablesModelColumnInfo clone() =>
       TablesModelColumnInfo()..mergeFromMessage(this);
   TablesModelColumnInfo copyWith(
           void Function(TablesModelColumnInfo) updates) =>
       super.copyWith((message) => updates(message as TablesModelColumnInfo));
   $pb.BuilderInfo get info_ => _i;
-  static TablesModelColumnInfo create() => TablesModelColumnInfo();
+  @$core.pragma('dart2js:noInline')
+  static TablesModelColumnInfo create() => TablesModelColumnInfo._();
   TablesModelColumnInfo createEmptyInstance() => create();
   static $pb.PbList<TablesModelColumnInfo> createRepeated() =>
       $pb.PbList<TablesModelColumnInfo>();

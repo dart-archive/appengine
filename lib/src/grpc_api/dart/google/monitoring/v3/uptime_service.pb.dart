@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/uptime_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'uptime.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $2;
+import 'uptime.pb.dart' as $1;
+import '../../protobuf/field_mask.pb.dart' as $3;
 
 class ListUptimeCheckConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -21,13 +22,14 @@ class ListUptimeCheckConfigsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListUptimeCheckConfigsRequest() : super();
-  ListUptimeCheckConfigsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListUptimeCheckConfigsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListUptimeCheckConfigsRequest._() : super();
+  factory ListUptimeCheckConfigsRequest() => create();
+  factory ListUptimeCheckConfigsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListUptimeCheckConfigsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListUptimeCheckConfigsRequest clone() =>
       ListUptimeCheckConfigsRequest()..mergeFromMessage(this);
   ListUptimeCheckConfigsRequest copyWith(
@@ -35,8 +37,9 @@ class ListUptimeCheckConfigsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListUptimeCheckConfigsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListUptimeCheckConfigsRequest create() =>
-      ListUptimeCheckConfigsRequest();
+      ListUptimeCheckConfigsRequest._();
   ListUptimeCheckConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckConfigsRequest> createRepeated() =>
       $pb.PbList<ListUptimeCheckConfigsRequest>();
@@ -73,19 +76,20 @@ class ListUptimeCheckConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListUptimeCheckConfigsResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$0.UptimeCheckConfig>(1, 'uptimeCheckConfigs', $pb.PbFieldType.PM,
-        $0.UptimeCheckConfig.create)
+    ..pc<$1.UptimeCheckConfig>(1, 'uptimeCheckConfigs', $pb.PbFieldType.PM,
+        $1.UptimeCheckConfig.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListUptimeCheckConfigsResponse() : super();
-  ListUptimeCheckConfigsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListUptimeCheckConfigsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListUptimeCheckConfigsResponse._() : super();
+  factory ListUptimeCheckConfigsResponse() => create();
+  factory ListUptimeCheckConfigsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListUptimeCheckConfigsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListUptimeCheckConfigsResponse clone() =>
       ListUptimeCheckConfigsResponse()..mergeFromMessage(this);
   ListUptimeCheckConfigsResponse copyWith(
@@ -93,8 +97,9 @@ class ListUptimeCheckConfigsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListUptimeCheckConfigsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListUptimeCheckConfigsResponse create() =>
-      ListUptimeCheckConfigsResponse();
+      ListUptimeCheckConfigsResponse._();
   ListUptimeCheckConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckConfigsResponse> createRepeated() =>
       $pb.PbList<ListUptimeCheckConfigsResponse>();
@@ -102,7 +107,7 @@ class ListUptimeCheckConfigsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListUptimeCheckConfigsResponse _defaultInstance;
 
-  $core.List<$0.UptimeCheckConfig> get uptimeCheckConfigs => $_getList(0);
+  $core.List<$1.UptimeCheckConfig> get uptimeCheckConfigs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -128,13 +133,14 @@ class GetUptimeCheckConfigRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetUptimeCheckConfigRequest() : super();
-  GetUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetUptimeCheckConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetUptimeCheckConfigRequest._() : super();
+  factory GetUptimeCheckConfigRequest() => create();
+  factory GetUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetUptimeCheckConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetUptimeCheckConfigRequest clone() =>
       GetUptimeCheckConfigRequest()..mergeFromMessage(this);
   GetUptimeCheckConfigRequest copyWith(
@@ -142,7 +148,9 @@ class GetUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetUptimeCheckConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetUptimeCheckConfigRequest create() => GetUptimeCheckConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetUptimeCheckConfigRequest create() =>
+      GetUptimeCheckConfigRequest._();
   GetUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<GetUptimeCheckConfigRequest>();
@@ -164,17 +172,18 @@ class CreateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       'CreateUptimeCheckConfigRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(1, 'parent')
-    ..a<$0.UptimeCheckConfig>(2, 'uptimeCheckConfig', $pb.PbFieldType.OM,
-        $0.UptimeCheckConfig.getDefault, $0.UptimeCheckConfig.create)
+    ..a<$1.UptimeCheckConfig>(2, 'uptimeCheckConfig', $pb.PbFieldType.OM,
+        $1.UptimeCheckConfig.getDefault, $1.UptimeCheckConfig.create)
     ..hasRequiredFields = false;
 
-  CreateUptimeCheckConfigRequest() : super();
-  CreateUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateUptimeCheckConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateUptimeCheckConfigRequest._() : super();
+  factory CreateUptimeCheckConfigRequest() => create();
+  factory CreateUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateUptimeCheckConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateUptimeCheckConfigRequest clone() =>
       CreateUptimeCheckConfigRequest()..mergeFromMessage(this);
   CreateUptimeCheckConfigRequest copyWith(
@@ -182,8 +191,9 @@ class CreateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateUptimeCheckConfigRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateUptimeCheckConfigRequest create() =>
-      CreateUptimeCheckConfigRequest();
+      CreateUptimeCheckConfigRequest._();
   CreateUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<CreateUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<CreateUptimeCheckConfigRequest>();
@@ -199,8 +209,8 @@ class CreateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.UptimeCheckConfig get uptimeCheckConfig => $_getN(1);
-  set uptimeCheckConfig($0.UptimeCheckConfig v) {
+  $1.UptimeCheckConfig get uptimeCheckConfig => $_getN(1);
+  set uptimeCheckConfig($1.UptimeCheckConfig v) {
     setField(2, v);
   }
 
@@ -212,19 +222,20 @@ class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateUptimeCheckConfigRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
-    ..a<$0.UptimeCheckConfig>(3, 'uptimeCheckConfig', $pb.PbFieldType.OM,
-        $0.UptimeCheckConfig.getDefault, $0.UptimeCheckConfig.create)
+    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$1.UptimeCheckConfig>(3, 'uptimeCheckConfig', $pb.PbFieldType.OM,
+        $1.UptimeCheckConfig.getDefault, $1.UptimeCheckConfig.create)
     ..hasRequiredFields = false;
 
-  UpdateUptimeCheckConfigRequest() : super();
-  UpdateUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateUptimeCheckConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateUptimeCheckConfigRequest._() : super();
+  factory UpdateUptimeCheckConfigRequest() => create();
+  factory UpdateUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateUptimeCheckConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateUptimeCheckConfigRequest clone() =>
       UpdateUptimeCheckConfigRequest()..mergeFromMessage(this);
   UpdateUptimeCheckConfigRequest copyWith(
@@ -232,8 +243,9 @@ class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateUptimeCheckConfigRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateUptimeCheckConfigRequest create() =>
-      UpdateUptimeCheckConfigRequest();
+      UpdateUptimeCheckConfigRequest._();
   UpdateUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<UpdateUptimeCheckConfigRequest>();
@@ -241,16 +253,16 @@ class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateUptimeCheckConfigRequest _defaultInstance;
 
-  $2.FieldMask get updateMask => $_getN(0);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(0);
+  set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
   $core.bool hasUpdateMask() => $_has(0);
   void clearUpdateMask() => clearField(2);
 
-  $0.UptimeCheckConfig get uptimeCheckConfig => $_getN(1);
-  set uptimeCheckConfig($0.UptimeCheckConfig v) {
+  $1.UptimeCheckConfig get uptimeCheckConfig => $_getN(1);
+  set uptimeCheckConfig($1.UptimeCheckConfig v) {
     setField(3, v);
   }
 
@@ -265,13 +277,14 @@ class DeleteUptimeCheckConfigRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteUptimeCheckConfigRequest() : super();
-  DeleteUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteUptimeCheckConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteUptimeCheckConfigRequest._() : super();
+  factory DeleteUptimeCheckConfigRequest() => create();
+  factory DeleteUptimeCheckConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteUptimeCheckConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteUptimeCheckConfigRequest clone() =>
       DeleteUptimeCheckConfigRequest()..mergeFromMessage(this);
   DeleteUptimeCheckConfigRequest copyWith(
@@ -279,8 +292,9 @@ class DeleteUptimeCheckConfigRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteUptimeCheckConfigRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteUptimeCheckConfigRequest create() =>
-      DeleteUptimeCheckConfigRequest();
+      DeleteUptimeCheckConfigRequest._();
   DeleteUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<DeleteUptimeCheckConfigRequest>();
@@ -304,13 +318,14 @@ class ListUptimeCheckIpsRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListUptimeCheckIpsRequest() : super();
-  ListUptimeCheckIpsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListUptimeCheckIpsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListUptimeCheckIpsRequest._() : super();
+  factory ListUptimeCheckIpsRequest() => create();
+  factory ListUptimeCheckIpsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListUptimeCheckIpsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListUptimeCheckIpsRequest clone() =>
       ListUptimeCheckIpsRequest()..mergeFromMessage(this);
   ListUptimeCheckIpsRequest copyWith(
@@ -318,7 +333,8 @@ class ListUptimeCheckIpsRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ListUptimeCheckIpsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListUptimeCheckIpsRequest create() => ListUptimeCheckIpsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListUptimeCheckIpsRequest create() => ListUptimeCheckIpsRequest._();
   ListUptimeCheckIpsRequest createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckIpsRequest> createRepeated() =>
       $pb.PbList<ListUptimeCheckIpsRequest>();
@@ -347,18 +363,19 @@ class ListUptimeCheckIpsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListUptimeCheckIpsResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$0.UptimeCheckIp>(
-        1, 'uptimeCheckIps', $pb.PbFieldType.PM, $0.UptimeCheckIp.create)
+    ..pc<$1.UptimeCheckIp>(
+        1, 'uptimeCheckIps', $pb.PbFieldType.PM, $1.UptimeCheckIp.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListUptimeCheckIpsResponse() : super();
-  ListUptimeCheckIpsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListUptimeCheckIpsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListUptimeCheckIpsResponse._() : super();
+  factory ListUptimeCheckIpsResponse() => create();
+  factory ListUptimeCheckIpsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListUptimeCheckIpsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListUptimeCheckIpsResponse clone() =>
       ListUptimeCheckIpsResponse()..mergeFromMessage(this);
   ListUptimeCheckIpsResponse copyWith(
@@ -366,7 +383,8 @@ class ListUptimeCheckIpsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListUptimeCheckIpsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListUptimeCheckIpsResponse create() => ListUptimeCheckIpsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListUptimeCheckIpsResponse create() => ListUptimeCheckIpsResponse._();
   ListUptimeCheckIpsResponse createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckIpsResponse> createRepeated() =>
       $pb.PbList<ListUptimeCheckIpsResponse>();
@@ -374,7 +392,7 @@ class ListUptimeCheckIpsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListUptimeCheckIpsResponse _defaultInstance;
 
-  $core.List<$0.UptimeCheckIp> get uptimeCheckIps => $_getList(0);
+  $core.List<$1.UptimeCheckIp> get uptimeCheckIps => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {

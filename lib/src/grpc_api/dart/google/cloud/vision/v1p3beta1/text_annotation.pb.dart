@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/vision/v1p3beta1/text_annotation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,13 +24,14 @@ class TextAnnotation_DetectedLanguage extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  TextAnnotation_DetectedLanguage() : super();
-  TextAnnotation_DetectedLanguage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAnnotation_DetectedLanguage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAnnotation_DetectedLanguage._() : super();
+  factory TextAnnotation_DetectedLanguage() => create();
+  factory TextAnnotation_DetectedLanguage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAnnotation_DetectedLanguage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAnnotation_DetectedLanguage clone() =>
       TextAnnotation_DetectedLanguage()..mergeFromMessage(this);
   TextAnnotation_DetectedLanguage copyWith(
@@ -37,8 +39,9 @@ class TextAnnotation_DetectedLanguage extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextAnnotation_DetectedLanguage));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextAnnotation_DetectedLanguage create() =>
-      TextAnnotation_DetectedLanguage();
+      TextAnnotation_DetectedLanguage._();
   TextAnnotation_DetectedLanguage createEmptyInstance() => create();
   static $pb.PbList<TextAnnotation_DetectedLanguage> createRepeated() =>
       $pb.PbList<TextAnnotation_DetectedLanguage>();
@@ -77,13 +80,14 @@ class TextAnnotation_DetectedBreak extends $pb.GeneratedMessage {
     ..aOB(2, 'isPrefix')
     ..hasRequiredFields = false;
 
-  TextAnnotation_DetectedBreak() : super();
-  TextAnnotation_DetectedBreak.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAnnotation_DetectedBreak.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAnnotation_DetectedBreak._() : super();
+  factory TextAnnotation_DetectedBreak() => create();
+  factory TextAnnotation_DetectedBreak.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAnnotation_DetectedBreak.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAnnotation_DetectedBreak clone() =>
       TextAnnotation_DetectedBreak()..mergeFromMessage(this);
   TextAnnotation_DetectedBreak copyWith(
@@ -91,8 +95,9 @@ class TextAnnotation_DetectedBreak extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextAnnotation_DetectedBreak));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextAnnotation_DetectedBreak create() =>
-      TextAnnotation_DetectedBreak();
+      TextAnnotation_DetectedBreak._();
   TextAnnotation_DetectedBreak createEmptyInstance() => create();
   static $pb.PbList<TextAnnotation_DetectedBreak> createRepeated() =>
       $pb.PbList<TextAnnotation_DetectedBreak>();
@@ -131,13 +136,14 @@ class TextAnnotation_TextProperty extends $pb.GeneratedMessage {
         TextAnnotation_DetectedBreak.create)
     ..hasRequiredFields = false;
 
-  TextAnnotation_TextProperty() : super();
-  TextAnnotation_TextProperty.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAnnotation_TextProperty.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAnnotation_TextProperty._() : super();
+  factory TextAnnotation_TextProperty() => create();
+  factory TextAnnotation_TextProperty.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAnnotation_TextProperty.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAnnotation_TextProperty clone() =>
       TextAnnotation_TextProperty()..mergeFromMessage(this);
   TextAnnotation_TextProperty copyWith(
@@ -145,7 +151,9 @@ class TextAnnotation_TextProperty extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextAnnotation_TextProperty));
   $pb.BuilderInfo get info_ => _i;
-  static TextAnnotation_TextProperty create() => TextAnnotation_TextProperty();
+  @$core.pragma('dart2js:noInline')
+  static TextAnnotation_TextProperty create() =>
+      TextAnnotation_TextProperty._();
   TextAnnotation_TextProperty createEmptyInstance() => create();
   static $pb.PbList<TextAnnotation_TextProperty> createRepeated() =>
       $pb.PbList<TextAnnotation_TextProperty>();
@@ -172,18 +180,20 @@ class TextAnnotation extends $pb.GeneratedMessage {
     ..aOS(2, 'text')
     ..hasRequiredFields = false;
 
-  TextAnnotation() : super();
-  TextAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAnnotation._() : super();
+  factory TextAnnotation() => create();
+  factory TextAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAnnotation clone() => TextAnnotation()..mergeFromMessage(this);
   TextAnnotation copyWith(void Function(TextAnnotation) updates) =>
       super.copyWith((message) => updates(message as TextAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static TextAnnotation create() => TextAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static TextAnnotation create() => TextAnnotation._();
   TextAnnotation createEmptyInstance() => create();
   static $pb.PbList<TextAnnotation> createRepeated() =>
       $pb.PbList<TextAnnotation>();
@@ -216,18 +226,20 @@ class Page extends $pb.GeneratedMessage {
     ..a<$core.double>(5, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Page() : super();
-  Page.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Page.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Page._() : super();
+  factory Page() => create();
+  factory Page.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Page.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Page clone() => Page()..mergeFromMessage(this);
   Page copyWith(void Function(Page) updates) =>
       super.copyWith((message) => updates(message as Page));
   $pb.BuilderInfo get info_ => _i;
-  static Page create() => Page();
+  @$core.pragma('dart2js:noInline')
+  static Page create() => Page._();
   Page createEmptyInstance() => create();
   static $pb.PbList<Page> createRepeated() => $pb.PbList<Page>();
   static Page getDefault() => _defaultInstance ??= create()..freeze();
@@ -290,18 +302,20 @@ class Block extends $pb.GeneratedMessage {
     ..a<$core.double>(5, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Block() : super();
-  Block.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Block.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Block._() : super();
+  factory Block() => create();
+  factory Block.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Block.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Block clone() => Block()..mergeFromMessage(this);
   Block copyWith(void Function(Block) updates) =>
       super.copyWith((message) => updates(message as Block));
   $pb.BuilderInfo get info_ => _i;
-  static Block create() => Block();
+  @$core.pragma('dart2js:noInline')
+  static Block create() => Block._();
   Block createEmptyInstance() => create();
   static $pb.PbList<Block> createRepeated() => $pb.PbList<Block>();
   static Block getDefault() => _defaultInstance ??= create()..freeze();
@@ -357,18 +371,20 @@ class Paragraph extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Paragraph() : super();
-  Paragraph.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Paragraph.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Paragraph._() : super();
+  factory Paragraph() => create();
+  factory Paragraph.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Paragraph.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Paragraph clone() => Paragraph()..mergeFromMessage(this);
   Paragraph copyWith(void Function(Paragraph) updates) =>
       super.copyWith((message) => updates(message as Paragraph));
   $pb.BuilderInfo get info_ => _i;
-  static Paragraph create() => Paragraph();
+  @$core.pragma('dart2js:noInline')
+  static Paragraph create() => Paragraph._();
   Paragraph createEmptyInstance() => create();
   static $pb.PbList<Paragraph> createRepeated() => $pb.PbList<Paragraph>();
   static Paragraph getDefault() => _defaultInstance ??= create()..freeze();
@@ -416,18 +432,20 @@ class Word extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Word() : super();
-  Word.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Word.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Word._() : super();
+  factory Word() => create();
+  factory Word.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Word.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Word clone() => Word()..mergeFromMessage(this);
   Word copyWith(void Function(Word) updates) =>
       super.copyWith((message) => updates(message as Word));
   $pb.BuilderInfo get info_ => _i;
-  static Word create() => Word();
+  @$core.pragma('dart2js:noInline')
+  static Word create() => Word._();
   Word createEmptyInstance() => create();
   static $pb.PbList<Word> createRepeated() => $pb.PbList<Word>();
   static Word getDefault() => _defaultInstance ??= create()..freeze();
@@ -475,18 +493,20 @@ class Symbol extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Symbol() : super();
-  Symbol.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Symbol.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Symbol._() : super();
+  factory Symbol() => create();
+  factory Symbol.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Symbol.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Symbol clone() => Symbol()..mergeFromMessage(this);
   Symbol copyWith(void Function(Symbol) updates) =>
       super.copyWith((message) => updates(message as Symbol));
   $pb.BuilderInfo get info_ => _i;
-  static Symbol create() => Symbol();
+  @$core.pragma('dart2js:noInline')
+  static Symbol create() => Symbol._();
   Symbol createEmptyInstance() => create();
   static $pb.PbList<Symbol> createRepeated() => $pb.PbList<Symbol>();
   static Symbol getDefault() => _defaultInstance ??= create()..freeze();

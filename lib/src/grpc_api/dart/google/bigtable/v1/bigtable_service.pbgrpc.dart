@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/v1/bigtable_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
+import 'package:grpc/service_api.dart' as $grpc;
 import 'bigtable_service_messages.pb.dart' as $0;
 import '../../protobuf/empty.pb.dart' as $1;
 import 'bigtable_data.pb.dart' as $2;
@@ -158,33 +158,35 @@ abstract class BigtableServiceBase extends $grpc.Service {
         ($2.Row value) => value.writeToBuffer()));
   }
 
-  $async.Stream<$0.ReadRowsResponse> readRows_Pre(
-      $grpc.ServiceCall call, $async.Future request) async* {
-    yield* readRows(call, (await request) as $0.ReadRowsRequest);
+  $async.Stream<$0.ReadRowsResponse> readRows_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ReadRowsRequest> request) async* {
+    yield* readRows(call, await request);
   }
 
   $async.Stream<$0.SampleRowKeysResponse> sampleRowKeys_Pre(
-      $grpc.ServiceCall call, $async.Future request) async* {
-    yield* sampleRowKeys(call, (await request) as $0.SampleRowKeysRequest);
+      $grpc.ServiceCall call,
+      $async.Future<$0.SampleRowKeysRequest> request) async* {
+    yield* sampleRowKeys(call, await request);
   }
 
-  $async.Future<$1.Empty> mutateRow_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> mutateRow_Pre($grpc.ServiceCall call,
+      $async.Future<$0.MutateRowRequest> request) async {
     return mutateRow(call, await request);
   }
 
-  $async.Future<$0.MutateRowsResponse> mutateRows_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateRowsResponse> mutateRows_Pre($grpc.ServiceCall call,
+      $async.Future<$0.MutateRowsRequest> request) async {
     return mutateRows(call, await request);
   }
 
   $async.Future<$0.CheckAndMutateRowResponse> checkAndMutateRow_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call,
+      $async.Future<$0.CheckAndMutateRowRequest> request) async {
     return checkAndMutateRow(call, await request);
   }
 
-  $async.Future<$2.Row> readModifyWriteRow_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Row> readModifyWriteRow_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ReadModifyWriteRowRequest> request) async {
     return readModifyWriteRow(call, await request);
   }
 

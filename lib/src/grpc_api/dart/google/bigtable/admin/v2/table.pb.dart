@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/table.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -29,18 +30,20 @@ class Table_ClusterState extends $pb.GeneratedMessage {
         Table_ClusterState_ReplicationState.values)
     ..hasRequiredFields = false;
 
-  Table_ClusterState() : super();
-  Table_ClusterState.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Table_ClusterState.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Table_ClusterState._() : super();
+  factory Table_ClusterState() => create();
+  factory Table_ClusterState.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Table_ClusterState.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Table_ClusterState clone() => Table_ClusterState()..mergeFromMessage(this);
   Table_ClusterState copyWith(void Function(Table_ClusterState) updates) =>
       super.copyWith((message) => updates(message as Table_ClusterState));
   $pb.BuilderInfo get info_ => _i;
-  static Table_ClusterState create() => Table_ClusterState();
+  @$core.pragma('dart2js:noInline')
+  static Table_ClusterState create() => Table_ClusterState._();
   Table_ClusterState createEmptyInstance() => create();
   static $pb.PbList<Table_ClusterState> createRepeated() =>
       $pb.PbList<Table_ClusterState>();
@@ -90,18 +93,20 @@ class Table extends $pb.GeneratedMessage {
         Table_TimestampGranularity.values)
     ..hasRequiredFields = false;
 
-  Table() : super();
-  Table.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Table.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Table._() : super();
+  factory Table() => create();
+  factory Table.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Table.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Table clone() => Table()..mergeFromMessage(this);
   Table copyWith(void Function(Table) updates) =>
       super.copyWith((message) => updates(message as Table));
   $pb.BuilderInfo get info_ => _i;
-  static Table create() => Table();
+  @$core.pragma('dart2js:noInline')
+  static Table create() => Table._();
   Table createEmptyInstance() => create();
   static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
   static Table getDefault() => _defaultInstance ??= create()..freeze();
@@ -135,18 +140,20 @@ class ColumnFamily extends $pb.GeneratedMessage {
         1, 'gcRule', $pb.PbFieldType.OM, GcRule.getDefault, GcRule.create)
     ..hasRequiredFields = false;
 
-  ColumnFamily() : super();
-  ColumnFamily.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ColumnFamily.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ColumnFamily._() : super();
+  factory ColumnFamily() => create();
+  factory ColumnFamily.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ColumnFamily.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ColumnFamily clone() => ColumnFamily()..mergeFromMessage(this);
   ColumnFamily copyWith(void Function(ColumnFamily) updates) =>
       super.copyWith((message) => updates(message as ColumnFamily));
   $pb.BuilderInfo get info_ => _i;
-  static ColumnFamily create() => ColumnFamily();
+  @$core.pragma('dart2js:noInline')
+  static ColumnFamily create() => ColumnFamily._();
   ColumnFamily createEmptyInstance() => create();
   static $pb.PbList<ColumnFamily> createRepeated() =>
       $pb.PbList<ColumnFamily>();
@@ -168,18 +175,20 @@ class GcRule_Intersection extends $pb.GeneratedMessage {
     ..pc<GcRule>(1, 'rules', $pb.PbFieldType.PM, GcRule.create)
     ..hasRequiredFields = false;
 
-  GcRule_Intersection() : super();
-  GcRule_Intersection.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcRule_Intersection.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcRule_Intersection._() : super();
+  factory GcRule_Intersection() => create();
+  factory GcRule_Intersection.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcRule_Intersection.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcRule_Intersection clone() => GcRule_Intersection()..mergeFromMessage(this);
   GcRule_Intersection copyWith(void Function(GcRule_Intersection) updates) =>
       super.copyWith((message) => updates(message as GcRule_Intersection));
   $pb.BuilderInfo get info_ => _i;
-  static GcRule_Intersection create() => GcRule_Intersection();
+  @$core.pragma('dart2js:noInline')
+  static GcRule_Intersection create() => GcRule_Intersection._();
   GcRule_Intersection createEmptyInstance() => create();
   static $pb.PbList<GcRule_Intersection> createRepeated() =>
       $pb.PbList<GcRule_Intersection>();
@@ -196,18 +205,20 @@ class GcRule_Union extends $pb.GeneratedMessage {
     ..pc<GcRule>(1, 'rules', $pb.PbFieldType.PM, GcRule.create)
     ..hasRequiredFields = false;
 
-  GcRule_Union() : super();
-  GcRule_Union.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcRule_Union.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcRule_Union._() : super();
+  factory GcRule_Union() => create();
+  factory GcRule_Union.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcRule_Union.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcRule_Union clone() => GcRule_Union()..mergeFromMessage(this);
   GcRule_Union copyWith(void Function(GcRule_Union) updates) =>
       super.copyWith((message) => updates(message as GcRule_Union));
   $pb.BuilderInfo get info_ => _i;
-  static GcRule_Union create() => GcRule_Union();
+  @$core.pragma('dart2js:noInline')
+  static GcRule_Union create() => GcRule_Union._();
   GcRule_Union createEmptyInstance() => create();
   static $pb.PbList<GcRule_Union> createRepeated() =>
       $pb.PbList<GcRule_Union>();
@@ -229,6 +240,7 @@ class GcRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcRule',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..oo(0, [1, 2, 3, 4])
     ..a<$core.int>(1, 'maxNumVersions', $pb.PbFieldType.O3)
     ..a<$0.Duration>(2, 'maxAge', $pb.PbFieldType.OM, $0.Duration.getDefault,
         $0.Duration.create)
@@ -236,21 +248,22 @@ class GcRule extends $pb.GeneratedMessage {
         GcRule_Intersection.getDefault, GcRule_Intersection.create)
     ..a<GcRule_Union>(4, 'union', $pb.PbFieldType.OM, GcRule_Union.getDefault,
         GcRule_Union.create)
-    ..oo(0, [1, 2, 3, 4])
     ..hasRequiredFields = false;
 
-  GcRule() : super();
-  GcRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcRule._() : super();
+  factory GcRule() => create();
+  factory GcRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcRule clone() => GcRule()..mergeFromMessage(this);
   GcRule copyWith(void Function(GcRule) updates) =>
       super.copyWith((message) => updates(message as GcRule));
   $pb.BuilderInfo get info_ => _i;
-  static GcRule create() => GcRule();
+  @$core.pragma('dart2js:noInline')
+  static GcRule create() => GcRule._();
   GcRule createEmptyInstance() => create();
   static $pb.PbList<GcRule> createRepeated() => $pb.PbList<GcRule>();
   static GcRule getDefault() => _defaultInstance ??= create()..freeze();
@@ -313,18 +326,20 @@ class Snapshot extends $pb.GeneratedMessage {
     ..aOS(7, 'description')
     ..hasRequiredFields = false;
 
-  Snapshot() : super();
-  Snapshot.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Snapshot.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Snapshot._() : super();
+  factory Snapshot() => create();
+  factory Snapshot.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Snapshot.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Snapshot clone() => Snapshot()..mergeFromMessage(this);
   Snapshot copyWith(void Function(Snapshot) updates) =>
       super.copyWith((message) => updates(message as Snapshot));
   $pb.BuilderInfo get info_ => _i;
-  static Snapshot create() => Snapshot();
+  @$core.pragma('dart2js:noInline')
+  static Snapshot create() => Snapshot._();
   Snapshot createEmptyInstance() => create();
   static $pb.PbList<Snapshot> createRepeated() => $pb.PbList<Snapshot>();
   static Snapshot getDefault() => _defaultInstance ??= create()..freeze();

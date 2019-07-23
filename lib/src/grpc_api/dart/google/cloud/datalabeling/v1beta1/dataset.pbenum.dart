@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/dataset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -14,14 +15,14 @@ class DataType extends $pb.ProtobufEnum {
   static const DataType IMAGE = DataType._(1, 'IMAGE');
   static const DataType VIDEO = DataType._(2, 'VIDEO');
   static const DataType TEXT = DataType._(4, 'TEXT');
-  static const DataType AUDIO = DataType._(5, 'AUDIO');
+  static const DataType GENERAL_DATA = DataType._(6, 'GENERAL_DATA');
 
   static const $core.List<DataType> values = <DataType>[
     DATA_TYPE_UNSPECIFIED,
     IMAGE,
     VIDEO,
     TEXT,
-    AUDIO,
+    GENERAL_DATA,
   ];
 
   static final $core.Map<$core.int, DataType> _byValue =

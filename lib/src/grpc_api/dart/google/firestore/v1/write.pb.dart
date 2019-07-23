@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/v1/write.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,6 +29,7 @@ class Write extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Write',
       package: const $pb.PackageName('google.firestore.v1'))
+    ..oo(0, [1, 2, 6])
     ..a<$0.Document>(1, 'update', $pb.PbFieldType.OM, $0.Document.getDefault,
         $0.Document.create)
     ..aOS(2, 'delete')
@@ -37,21 +39,22 @@ class Write extends $pb.GeneratedMessage {
         $1.Precondition.getDefault, $1.Precondition.create)
     ..a<DocumentTransform>(6, 'transform', $pb.PbFieldType.OM,
         DocumentTransform.getDefault, DocumentTransform.create)
-    ..oo(0, [1, 2, 6])
     ..hasRequiredFields = false;
 
-  Write() : super();
-  Write.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Write.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Write._() : super();
+  factory Write() => create();
+  factory Write.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Write.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Write clone() => Write()..mergeFromMessage(this);
   Write copyWith(void Function(Write) updates) =>
       super.copyWith((message) => updates(message as Write));
   $pb.BuilderInfo get info_ => _i;
-  static Write create() => Write();
+  @$core.pragma('dart2js:noInline')
+  static Write create() => Write._();
   Write createEmptyInstance() => create();
   static $pb.PbList<Write> createRepeated() => $pb.PbList<Write>();
   static Write getDefault() => _defaultInstance ??= create()..freeze();
@@ -126,6 +129,7 @@ class DocumentTransform_FieldTransform extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DocumentTransform.FieldTransform',
       package: const $pb.PackageName('google.firestore.v1'))
+    ..oo(0, [2, 3, 4, 5, 6, 7])
     ..aOS(1, 'fieldPath')
     ..e<DocumentTransform_FieldTransform_ServerValue>(
         2,
@@ -144,16 +148,16 @@ class DocumentTransform_FieldTransform extends $pb.GeneratedMessage {
         $0.ArrayValue.getDefault, $0.ArrayValue.create)
     ..a<$0.ArrayValue>(7, 'removeAllFromArray', $pb.PbFieldType.OM,
         $0.ArrayValue.getDefault, $0.ArrayValue.create)
-    ..oo(0, [2, 3, 4, 5, 6, 7])
     ..hasRequiredFields = false;
 
-  DocumentTransform_FieldTransform() : super();
-  DocumentTransform_FieldTransform.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentTransform_FieldTransform.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentTransform_FieldTransform._() : super();
+  factory DocumentTransform_FieldTransform() => create();
+  factory DocumentTransform_FieldTransform.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentTransform_FieldTransform.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentTransform_FieldTransform clone() =>
       DocumentTransform_FieldTransform()..mergeFromMessage(this);
   DocumentTransform_FieldTransform copyWith(
@@ -161,8 +165,9 @@ class DocumentTransform_FieldTransform extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DocumentTransform_FieldTransform));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DocumentTransform_FieldTransform create() =>
-      DocumentTransform_FieldTransform();
+      DocumentTransform_FieldTransform._();
   DocumentTransform_FieldTransform createEmptyInstance() => create();
   static $pb.PbList<DocumentTransform_FieldTransform> createRepeated() =>
       $pb.PbList<DocumentTransform_FieldTransform>();
@@ -240,18 +245,20 @@ class DocumentTransform extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, DocumentTransform_FieldTransform.create)
     ..hasRequiredFields = false;
 
-  DocumentTransform() : super();
-  DocumentTransform.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentTransform.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentTransform._() : super();
+  factory DocumentTransform() => create();
+  factory DocumentTransform.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentTransform.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentTransform clone() => DocumentTransform()..mergeFromMessage(this);
   DocumentTransform copyWith(void Function(DocumentTransform) updates) =>
       super.copyWith((message) => updates(message as DocumentTransform));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentTransform create() => DocumentTransform();
+  @$core.pragma('dart2js:noInline')
+  static DocumentTransform create() => DocumentTransform._();
   DocumentTransform createEmptyInstance() => create();
   static $pb.PbList<DocumentTransform> createRepeated() =>
       $pb.PbList<DocumentTransform>();
@@ -279,18 +286,20 @@ class WriteResult extends $pb.GeneratedMessage {
     ..pc<$0.Value>(2, 'transformResults', $pb.PbFieldType.PM, $0.Value.create)
     ..hasRequiredFields = false;
 
-  WriteResult() : super();
-  WriteResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WriteResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WriteResult._() : super();
+  factory WriteResult() => create();
+  factory WriteResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WriteResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WriteResult clone() => WriteResult()..mergeFromMessage(this);
   WriteResult copyWith(void Function(WriteResult) updates) =>
       super.copyWith((message) => updates(message as WriteResult));
   $pb.BuilderInfo get info_ => _i;
-  static WriteResult create() => WriteResult();
+  @$core.pragma('dart2js:noInline')
+  static WriteResult create() => WriteResult._();
   WriteResult createEmptyInstance() => create();
   static $pb.PbList<WriteResult> createRepeated() => $pb.PbList<WriteResult>();
   static WriteResult getDefault() => _defaultInstance ??= create()..freeze();
@@ -316,18 +325,20 @@ class DocumentChange extends $pb.GeneratedMessage {
     ..p<$core.int>(6, 'removedTargetIds', $pb.PbFieldType.P3)
     ..hasRequiredFields = false;
 
-  DocumentChange() : super();
-  DocumentChange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentChange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentChange._() : super();
+  factory DocumentChange() => create();
+  factory DocumentChange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentChange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentChange clone() => DocumentChange()..mergeFromMessage(this);
   DocumentChange copyWith(void Function(DocumentChange) updates) =>
       super.copyWith((message) => updates(message as DocumentChange));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentChange create() => DocumentChange();
+  @$core.pragma('dart2js:noInline')
+  static DocumentChange create() => DocumentChange._();
   DocumentChange createEmptyInstance() => create();
   static $pb.PbList<DocumentChange> createRepeated() =>
       $pb.PbList<DocumentChange>();
@@ -356,18 +367,20 @@ class DocumentDelete extends $pb.GeneratedMessage {
     ..p<$core.int>(6, 'removedTargetIds', $pb.PbFieldType.P3)
     ..hasRequiredFields = false;
 
-  DocumentDelete() : super();
-  DocumentDelete.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentDelete.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentDelete._() : super();
+  factory DocumentDelete() => create();
+  factory DocumentDelete.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentDelete.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentDelete clone() => DocumentDelete()..mergeFromMessage(this);
   DocumentDelete copyWith(void Function(DocumentDelete) updates) =>
       super.copyWith((message) => updates(message as DocumentDelete));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentDelete create() => DocumentDelete();
+  @$core.pragma('dart2js:noInline')
+  static DocumentDelete create() => DocumentDelete._();
   DocumentDelete createEmptyInstance() => create();
   static $pb.PbList<DocumentDelete> createRepeated() =>
       $pb.PbList<DocumentDelete>();
@@ -402,18 +415,20 @@ class DocumentRemove extends $pb.GeneratedMessage {
         $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  DocumentRemove() : super();
-  DocumentRemove.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentRemove.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentRemove._() : super();
+  factory DocumentRemove() => create();
+  factory DocumentRemove.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentRemove.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentRemove clone() => DocumentRemove()..mergeFromMessage(this);
   DocumentRemove copyWith(void Function(DocumentRemove) updates) =>
       super.copyWith((message) => updates(message as DocumentRemove));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentRemove create() => DocumentRemove();
+  @$core.pragma('dart2js:noInline')
+  static DocumentRemove create() => DocumentRemove._();
   DocumentRemove createEmptyInstance() => create();
   static $pb.PbList<DocumentRemove> createRepeated() =>
       $pb.PbList<DocumentRemove>();
@@ -446,18 +461,20 @@ class ExistenceFilter extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'count', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ExistenceFilter() : super();
-  ExistenceFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExistenceFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExistenceFilter._() : super();
+  factory ExistenceFilter() => create();
+  factory ExistenceFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExistenceFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExistenceFilter clone() => ExistenceFilter()..mergeFromMessage(this);
   ExistenceFilter copyWith(void Function(ExistenceFilter) updates) =>
       super.copyWith((message) => updates(message as ExistenceFilter));
   $pb.BuilderInfo get info_ => _i;
-  static ExistenceFilter create() => ExistenceFilter();
+  @$core.pragma('dart2js:noInline')
+  static ExistenceFilter create() => ExistenceFilter._();
   ExistenceFilter createEmptyInstance() => create();
   static $pb.PbList<ExistenceFilter> createRepeated() =>
       $pb.PbList<ExistenceFilter>();

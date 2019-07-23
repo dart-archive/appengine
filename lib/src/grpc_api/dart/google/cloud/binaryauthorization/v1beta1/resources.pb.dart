@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/binaryauthorization/v1beta1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -47,18 +48,20 @@ class Policy extends $pb.GeneratedMessage {
         Policy_GlobalPolicyEvaluationMode.values)
     ..hasRequiredFields = false;
 
-  Policy() : super();
-  Policy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Policy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Policy._() : super();
+  factory Policy() => create();
+  factory Policy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Policy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Policy clone() => Policy()..mergeFromMessage(this);
   Policy copyWith(void Function(Policy) updates) =>
       super.copyWith((message) => updates(message as Policy));
   $pb.BuilderInfo get info_ => _i;
-  static Policy create() => Policy();
+  @$core.pragma('dart2js:noInline')
+  static Policy create() => Policy._();
   Policy createEmptyInstance() => create();
   static $pb.PbList<Policy> createRepeated() => $pb.PbList<Policy>();
   static Policy getDefault() => _defaultInstance ??= create()..freeze();
@@ -118,13 +121,14 @@ class AdmissionWhitelistPattern extends $pb.GeneratedMessage {
     ..aOS(1, 'namePattern')
     ..hasRequiredFields = false;
 
-  AdmissionWhitelistPattern() : super();
-  AdmissionWhitelistPattern.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdmissionWhitelistPattern.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdmissionWhitelistPattern._() : super();
+  factory AdmissionWhitelistPattern() => create();
+  factory AdmissionWhitelistPattern.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdmissionWhitelistPattern.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdmissionWhitelistPattern clone() =>
       AdmissionWhitelistPattern()..mergeFromMessage(this);
   AdmissionWhitelistPattern copyWith(
@@ -132,7 +136,8 @@ class AdmissionWhitelistPattern extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as AdmissionWhitelistPattern));
   $pb.BuilderInfo get info_ => _i;
-  static AdmissionWhitelistPattern create() => AdmissionWhitelistPattern();
+  @$core.pragma('dart2js:noInline')
+  static AdmissionWhitelistPattern create() => AdmissionWhitelistPattern._();
   AdmissionWhitelistPattern createEmptyInstance() => create();
   static $pb.PbList<AdmissionWhitelistPattern> createRepeated() =>
       $pb.PbList<AdmissionWhitelistPattern>();
@@ -170,18 +175,20 @@ class AdmissionRule extends $pb.GeneratedMessage {
         AdmissionRule_EnforcementMode.values)
     ..hasRequiredFields = false;
 
-  AdmissionRule() : super();
-  AdmissionRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdmissionRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdmissionRule._() : super();
+  factory AdmissionRule() => create();
+  factory AdmissionRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdmissionRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdmissionRule clone() => AdmissionRule()..mergeFromMessage(this);
   AdmissionRule copyWith(void Function(AdmissionRule) updates) =>
       super.copyWith((message) => updates(message as AdmissionRule));
   $pb.BuilderInfo get info_ => _i;
-  static AdmissionRule create() => AdmissionRule();
+  @$core.pragma('dart2js:noInline')
+  static AdmissionRule create() => AdmissionRule._();
   AdmissionRule createEmptyInstance() => create();
   static $pb.PbList<AdmissionRule> createRepeated() =>
       $pb.PbList<AdmissionRule>();
@@ -218,27 +225,29 @@ class Attestor extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Attestor',
       package:
           const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+    ..oo(0, [3])
     ..aOS(1, 'name')
     ..a<UserOwnedDrydockNote>(3, 'userOwnedDrydockNote', $pb.PbFieldType.OM,
         UserOwnedDrydockNote.getDefault, UserOwnedDrydockNote.create)
     ..a<$0.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..aOS(6, 'description')
-    ..oo(0, [3])
     ..hasRequiredFields = false;
 
-  Attestor() : super();
-  Attestor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Attestor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Attestor._() : super();
+  factory Attestor() => create();
+  factory Attestor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Attestor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Attestor clone() => Attestor()..mergeFromMessage(this);
   Attestor copyWith(void Function(Attestor) updates) =>
       super.copyWith((message) => updates(message as Attestor));
   $pb.BuilderInfo get info_ => _i;
-  static Attestor create() => Attestor();
+  @$core.pragma('dart2js:noInline')
+  static Attestor create() => Attestor._();
   Attestor createEmptyInstance() => create();
   static $pb.PbList<Attestor> createRepeated() => $pb.PbList<Attestor>();
   static Attestor getDefault() => _defaultInstance ??= create()..freeze();
@@ -291,19 +300,21 @@ class UserOwnedDrydockNote extends $pb.GeneratedMessage {
     ..aOS(3, 'delegationServiceAccountEmail')
     ..hasRequiredFields = false;
 
-  UserOwnedDrydockNote() : super();
-  UserOwnedDrydockNote.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserOwnedDrydockNote.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserOwnedDrydockNote._() : super();
+  factory UserOwnedDrydockNote() => create();
+  factory UserOwnedDrydockNote.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserOwnedDrydockNote.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserOwnedDrydockNote clone() =>
       UserOwnedDrydockNote()..mergeFromMessage(this);
   UserOwnedDrydockNote copyWith(void Function(UserOwnedDrydockNote) updates) =>
       super.copyWith((message) => updates(message as UserOwnedDrydockNote));
   $pb.BuilderInfo get info_ => _i;
-  static UserOwnedDrydockNote create() => UserOwnedDrydockNote();
+  @$core.pragma('dart2js:noInline')
+  static UserOwnedDrydockNote create() => UserOwnedDrydockNote._();
   UserOwnedDrydockNote createEmptyInstance() => create();
   static $pb.PbList<UserOwnedDrydockNote> createRepeated() =>
       $pb.PbList<UserOwnedDrydockNote>();
@@ -344,18 +355,20 @@ class PkixPublicKey extends $pb.GeneratedMessage {
         PkixPublicKey_SignatureAlgorithm.values)
     ..hasRequiredFields = false;
 
-  PkixPublicKey() : super();
-  PkixPublicKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PkixPublicKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PkixPublicKey._() : super();
+  factory PkixPublicKey() => create();
+  factory PkixPublicKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PkixPublicKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PkixPublicKey clone() => PkixPublicKey()..mergeFromMessage(this);
   PkixPublicKey copyWith(void Function(PkixPublicKey) updates) =>
       super.copyWith((message) => updates(message as PkixPublicKey));
   $pb.BuilderInfo get info_ => _i;
-  static PkixPublicKey create() => PkixPublicKey();
+  @$core.pragma('dart2js:noInline')
+  static PkixPublicKey create() => PkixPublicKey._();
   PkixPublicKey createEmptyInstance() => create();
   static $pb.PbList<PkixPublicKey> createRepeated() =>
       $pb.PbList<PkixPublicKey>();
@@ -395,26 +408,28 @@ class AttestorPublicKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttestorPublicKey',
       package:
           const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+    ..oo(0, [3, 5])
     ..aOS(1, 'comment')
     ..aOS(2, 'id')
     ..aOS(3, 'asciiArmoredPgpPublicKey')
     ..a<PkixPublicKey>(5, 'pkixPublicKey', $pb.PbFieldType.OM,
         PkixPublicKey.getDefault, PkixPublicKey.create)
-    ..oo(0, [3, 5])
     ..hasRequiredFields = false;
 
-  AttestorPublicKey() : super();
-  AttestorPublicKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttestorPublicKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AttestorPublicKey._() : super();
+  factory AttestorPublicKey() => create();
+  factory AttestorPublicKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AttestorPublicKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AttestorPublicKey clone() => AttestorPublicKey()..mergeFromMessage(this);
   AttestorPublicKey copyWith(void Function(AttestorPublicKey) updates) =>
       super.copyWith((message) => updates(message as AttestorPublicKey));
   $pb.BuilderInfo get info_ => _i;
-  static AttestorPublicKey create() => AttestorPublicKey();
+  @$core.pragma('dart2js:noInline')
+  static AttestorPublicKey create() => AttestorPublicKey._();
   AttestorPublicKey createEmptyInstance() => create();
   static $pb.PbList<AttestorPublicKey> createRepeated() =>
       $pb.PbList<AttestorPublicKey>();

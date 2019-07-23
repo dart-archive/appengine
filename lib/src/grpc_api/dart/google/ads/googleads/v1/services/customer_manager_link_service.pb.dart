@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/customer_manager_link_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/customer_manager_link.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
+import '../resources/customer_manager_link.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
 
 class GetCustomerManagerLinkRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class GetCustomerManagerLinkRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCustomerManagerLinkRequest() : super();
-  GetCustomerManagerLinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCustomerManagerLinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCustomerManagerLinkRequest._() : super();
+  factory GetCustomerManagerLinkRequest() => create();
+  factory GetCustomerManagerLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCustomerManagerLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCustomerManagerLinkRequest clone() =>
       GetCustomerManagerLinkRequest()..mergeFromMessage(this);
   GetCustomerManagerLinkRequest copyWith(
@@ -33,8 +35,9 @@ class GetCustomerManagerLinkRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetCustomerManagerLinkRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetCustomerManagerLinkRequest create() =>
-      GetCustomerManagerLinkRequest();
+      GetCustomerManagerLinkRequest._();
   GetCustomerManagerLinkRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerManagerLinkRequest> createRepeated() =>
       $pb.PbList<GetCustomerManagerLinkRequest>();
@@ -60,13 +63,14 @@ class MutateCustomerManagerLinkRequest extends $pb.GeneratedMessage {
         CustomerManagerLinkOperation.create)
     ..hasRequiredFields = false;
 
-  MutateCustomerManagerLinkRequest() : super();
-  MutateCustomerManagerLinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerManagerLinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerManagerLinkRequest._() : super();
+  factory MutateCustomerManagerLinkRequest() => create();
+  factory MutateCustomerManagerLinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerManagerLinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerManagerLinkRequest clone() =>
       MutateCustomerManagerLinkRequest()..mergeFromMessage(this);
   MutateCustomerManagerLinkRequest copyWith(
@@ -74,8 +78,9 @@ class MutateCustomerManagerLinkRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCustomerManagerLinkRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerManagerLinkRequest create() =>
-      MutateCustomerManagerLinkRequest();
+      MutateCustomerManagerLinkRequest._();
   MutateCustomerManagerLinkRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerManagerLinkRequest> createRepeated() =>
       $pb.PbList<MutateCustomerManagerLinkRequest>();
@@ -105,20 +110,21 @@ class CustomerManagerLinkOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CustomerManagerLinkOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CustomerManagerLink>(2, 'update', $pb.PbFieldType.OM,
-        $0.CustomerManagerLink.getDefault, $0.CustomerManagerLink.create)
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [2])
+    ..a<$1.CustomerManagerLink>(2, 'update', $pb.PbFieldType.OM,
+        $1.CustomerManagerLink.getDefault, $1.CustomerManagerLink.create)
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CustomerManagerLinkOperation() : super();
-  CustomerManagerLinkOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerManagerLinkOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerManagerLinkOperation._() : super();
+  factory CustomerManagerLinkOperation() => create();
+  factory CustomerManagerLinkOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerManagerLinkOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerManagerLinkOperation clone() =>
       CustomerManagerLinkOperation()..mergeFromMessage(this);
   CustomerManagerLinkOperation copyWith(
@@ -126,8 +132,9 @@ class CustomerManagerLinkOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CustomerManagerLinkOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CustomerManagerLinkOperation create() =>
-      CustomerManagerLinkOperation();
+      CustomerManagerLinkOperation._();
   CustomerManagerLinkOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerManagerLinkOperation> createRepeated() =>
       $pb.PbList<CustomerManagerLinkOperation>();
@@ -139,16 +146,16 @@ class CustomerManagerLinkOperation extends $pb.GeneratedMessage {
       _CustomerManagerLinkOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CustomerManagerLink get update => $_getN(0);
-  set update($0.CustomerManagerLink v) {
+  $1.CustomerManagerLink get update => $_getN(0);
+  set update($1.CustomerManagerLink v) {
     setField(2, v);
   }
 
   $core.bool hasUpdate() => $_has(0);
   void clearUpdate() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -164,13 +171,14 @@ class MutateCustomerManagerLinkResponse extends $pb.GeneratedMessage {
         MutateCustomerManagerLinkResult.create)
     ..hasRequiredFields = false;
 
-  MutateCustomerManagerLinkResponse() : super();
-  MutateCustomerManagerLinkResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerManagerLinkResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerManagerLinkResponse._() : super();
+  factory MutateCustomerManagerLinkResponse() => create();
+  factory MutateCustomerManagerLinkResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerManagerLinkResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerManagerLinkResponse clone() =>
       MutateCustomerManagerLinkResponse()..mergeFromMessage(this);
   MutateCustomerManagerLinkResponse copyWith(
@@ -178,8 +186,9 @@ class MutateCustomerManagerLinkResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCustomerManagerLinkResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerManagerLinkResponse create() =>
-      MutateCustomerManagerLinkResponse();
+      MutateCustomerManagerLinkResponse._();
   MutateCustomerManagerLinkResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerManagerLinkResponse> createRepeated() =>
       $pb.PbList<MutateCustomerManagerLinkResponse>();
@@ -197,13 +206,14 @@ class MutateCustomerManagerLinkResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCustomerManagerLinkResult() : super();
-  MutateCustomerManagerLinkResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerManagerLinkResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerManagerLinkResult._() : super();
+  factory MutateCustomerManagerLinkResult() => create();
+  factory MutateCustomerManagerLinkResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerManagerLinkResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerManagerLinkResult clone() =>
       MutateCustomerManagerLinkResult()..mergeFromMessage(this);
   MutateCustomerManagerLinkResult copyWith(
@@ -211,8 +221,9 @@ class MutateCustomerManagerLinkResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCustomerManagerLinkResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerManagerLinkResult create() =>
-      MutateCustomerManagerLinkResult();
+      MutateCustomerManagerLinkResult._();
   MutateCustomerManagerLinkResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerManagerLinkResult> createRepeated() =>
       $pb.PbList<MutateCustomerManagerLinkResult>();

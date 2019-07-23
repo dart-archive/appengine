@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/datastore/admin/v1beta1/datastore_admin.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 import 'datastore_admin.pbenum.dart';
 
@@ -19,10 +20,10 @@ export 'datastore_admin.pbenum.dart';
 class CommonMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommonMetadata',
       package: const $pb.PackageName('google.datastore.admin.v1beta1'))
-    ..a<$2.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
-        $2.Timestamp.create)
+    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..e<OperationType>(
         3,
         'operationType',
@@ -49,34 +50,36 @@ class CommonMetadata extends $pb.GeneratedMessage {
         CommonMetadata_State.values)
     ..hasRequiredFields = false;
 
-  CommonMetadata() : super();
-  CommonMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommonMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommonMetadata._() : super();
+  factory CommonMetadata() => create();
+  factory CommonMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommonMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommonMetadata clone() => CommonMetadata()..mergeFromMessage(this);
   CommonMetadata copyWith(void Function(CommonMetadata) updates) =>
       super.copyWith((message) => updates(message as CommonMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static CommonMetadata create() => CommonMetadata();
+  @$core.pragma('dart2js:noInline')
+  static CommonMetadata create() => CommonMetadata._();
   CommonMetadata createEmptyInstance() => create();
   static $pb.PbList<CommonMetadata> createRepeated() =>
       $pb.PbList<CommonMetadata>();
   static CommonMetadata getDefault() => _defaultInstance ??= create()..freeze();
   static CommonMetadata _defaultInstance;
 
-  $2.Timestamp get startTime => $_getN(0);
-  set startTime($2.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(0);
+  set startTime($3.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $2.Timestamp get endTime => $_getN(1);
-  set endTime($2.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(1);
+  set endTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -109,18 +112,20 @@ class Progress extends $pb.GeneratedMessage {
     ..aInt64(2, 'workEstimated')
     ..hasRequiredFields = false;
 
-  Progress() : super();
-  Progress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Progress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Progress._() : super();
+  factory Progress() => create();
+  factory Progress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Progress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Progress clone() => Progress()..mergeFromMessage(this);
   Progress copyWith(void Function(Progress) updates) =>
       super.copyWith((message) => updates(message as Progress));
   $pb.BuilderInfo get info_ => _i;
-  static Progress create() => Progress();
+  @$core.pragma('dart2js:noInline')
+  static Progress create() => Progress._();
   Progress createEmptyInstance() => create();
   static $pb.PbList<Progress> createRepeated() => $pb.PbList<Progress>();
   static Progress getDefault() => _defaultInstance ??= create()..freeze();
@@ -162,20 +167,22 @@ class ExportEntitiesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'outputUrlPrefix')
     ..hasRequiredFields = false;
 
-  ExportEntitiesRequest() : super();
-  ExportEntitiesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEntitiesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportEntitiesRequest._() : super();
+  factory ExportEntitiesRequest() => create();
+  factory ExportEntitiesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEntitiesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEntitiesRequest clone() =>
       ExportEntitiesRequest()..mergeFromMessage(this);
   ExportEntitiesRequest copyWith(
           void Function(ExportEntitiesRequest) updates) =>
       super.copyWith((message) => updates(message as ExportEntitiesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportEntitiesRequest create() => ExportEntitiesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportEntitiesRequest create() => ExportEntitiesRequest._();
   ExportEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<ExportEntitiesRequest> createRepeated() =>
       $pb.PbList<ExportEntitiesRequest>();
@@ -229,20 +236,22 @@ class ImportEntitiesRequest extends $pb.GeneratedMessage {
         EntityFilter.getDefault, EntityFilter.create)
     ..hasRequiredFields = false;
 
-  ImportEntitiesRequest() : super();
-  ImportEntitiesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportEntitiesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportEntitiesRequest._() : super();
+  factory ImportEntitiesRequest() => create();
+  factory ImportEntitiesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportEntitiesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportEntitiesRequest clone() =>
       ImportEntitiesRequest()..mergeFromMessage(this);
   ImportEntitiesRequest copyWith(
           void Function(ImportEntitiesRequest) updates) =>
       super.copyWith((message) => updates(message as ImportEntitiesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ImportEntitiesRequest create() => ImportEntitiesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ImportEntitiesRequest create() => ImportEntitiesRequest._();
   ImportEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<ImportEntitiesRequest> createRepeated() =>
       $pb.PbList<ImportEntitiesRequest>();
@@ -283,20 +292,22 @@ class ExportEntitiesResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUrl')
     ..hasRequiredFields = false;
 
-  ExportEntitiesResponse() : super();
-  ExportEntitiesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEntitiesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportEntitiesResponse._() : super();
+  factory ExportEntitiesResponse() => create();
+  factory ExportEntitiesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEntitiesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEntitiesResponse clone() =>
       ExportEntitiesResponse()..mergeFromMessage(this);
   ExportEntitiesResponse copyWith(
           void Function(ExportEntitiesResponse) updates) =>
       super.copyWith((message) => updates(message as ExportEntitiesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ExportEntitiesResponse create() => ExportEntitiesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ExportEntitiesResponse create() => ExportEntitiesResponse._();
   ExportEntitiesResponse createEmptyInstance() => create();
   static $pb.PbList<ExportEntitiesResponse> createRepeated() =>
       $pb.PbList<ExportEntitiesResponse>();
@@ -327,20 +338,22 @@ class ExportEntitiesMetadata extends $pb.GeneratedMessage {
     ..aOS(5, 'outputUrlPrefix')
     ..hasRequiredFields = false;
 
-  ExportEntitiesMetadata() : super();
-  ExportEntitiesMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEntitiesMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportEntitiesMetadata._() : super();
+  factory ExportEntitiesMetadata() => create();
+  factory ExportEntitiesMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEntitiesMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEntitiesMetadata clone() =>
       ExportEntitiesMetadata()..mergeFromMessage(this);
   ExportEntitiesMetadata copyWith(
           void Function(ExportEntitiesMetadata) updates) =>
       super.copyWith((message) => updates(message as ExportEntitiesMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ExportEntitiesMetadata create() => ExportEntitiesMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ExportEntitiesMetadata create() => ExportEntitiesMetadata._();
   ExportEntitiesMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportEntitiesMetadata> createRepeated() =>
       $pb.PbList<ExportEntitiesMetadata>();
@@ -403,20 +416,22 @@ class ImportEntitiesMetadata extends $pb.GeneratedMessage {
     ..aOS(5, 'inputUrl')
     ..hasRequiredFields = false;
 
-  ImportEntitiesMetadata() : super();
-  ImportEntitiesMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportEntitiesMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportEntitiesMetadata._() : super();
+  factory ImportEntitiesMetadata() => create();
+  factory ImportEntitiesMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportEntitiesMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportEntitiesMetadata clone() =>
       ImportEntitiesMetadata()..mergeFromMessage(this);
   ImportEntitiesMetadata copyWith(
           void Function(ImportEntitiesMetadata) updates) =>
       super.copyWith((message) => updates(message as ImportEntitiesMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ImportEntitiesMetadata create() => ImportEntitiesMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ImportEntitiesMetadata create() => ImportEntitiesMetadata._();
   ImportEntitiesMetadata createEmptyInstance() => create();
   static $pb.PbList<ImportEntitiesMetadata> createRepeated() =>
       $pb.PbList<ImportEntitiesMetadata>();
@@ -472,18 +487,20 @@ class EntityFilter extends $pb.GeneratedMessage {
     ..pPS(2, 'namespaceIds')
     ..hasRequiredFields = false;
 
-  EntityFilter() : super();
-  EntityFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EntityFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EntityFilter._() : super();
+  factory EntityFilter() => create();
+  factory EntityFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EntityFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EntityFilter clone() => EntityFilter()..mergeFromMessage(this);
   EntityFilter copyWith(void Function(EntityFilter) updates) =>
       super.copyWith((message) => updates(message as EntityFilter));
   $pb.BuilderInfo get info_ => _i;
-  static EntityFilter create() => EntityFilter();
+  @$core.pragma('dart2js:noInline')
+  static EntityFilter create() => EntityFilter._();
   EntityFilter createEmptyInstance() => create();
   static $pb.PbList<EntityFilter> createRepeated() =>
       $pb.PbList<EntityFilter>();

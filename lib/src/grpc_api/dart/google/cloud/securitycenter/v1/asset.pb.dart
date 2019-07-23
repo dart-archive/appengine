@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/securitycenter/v1/asset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,13 +25,14 @@ class Asset_SecurityCenterProperties extends $pb.GeneratedMessage {
     ..pPS(5, 'resourceOwners')
     ..hasRequiredFields = false;
 
-  Asset_SecurityCenterProperties() : super();
-  Asset_SecurityCenterProperties.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Asset_SecurityCenterProperties.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Asset_SecurityCenterProperties._() : super();
+  factory Asset_SecurityCenterProperties() => create();
+  factory Asset_SecurityCenterProperties.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Asset_SecurityCenterProperties.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Asset_SecurityCenterProperties clone() =>
       Asset_SecurityCenterProperties()..mergeFromMessage(this);
   Asset_SecurityCenterProperties copyWith(
@@ -38,8 +40,9 @@ class Asset_SecurityCenterProperties extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Asset_SecurityCenterProperties));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Asset_SecurityCenterProperties create() =>
-      Asset_SecurityCenterProperties();
+      Asset_SecurityCenterProperties._();
   Asset_SecurityCenterProperties createEmptyInstance() => create();
   static $pb.PbList<Asset_SecurityCenterProperties> createRepeated() =>
       $pb.PbList<Asset_SecurityCenterProperties>();
@@ -88,18 +91,20 @@ class Asset_IamPolicy extends $pb.GeneratedMessage {
     ..aOS(1, 'policyBlob')
     ..hasRequiredFields = false;
 
-  Asset_IamPolicy() : super();
-  Asset_IamPolicy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Asset_IamPolicy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Asset_IamPolicy._() : super();
+  factory Asset_IamPolicy() => create();
+  factory Asset_IamPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Asset_IamPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Asset_IamPolicy clone() => Asset_IamPolicy()..mergeFromMessage(this);
   Asset_IamPolicy copyWith(void Function(Asset_IamPolicy) updates) =>
       super.copyWith((message) => updates(message as Asset_IamPolicy));
   $pb.BuilderInfo get info_ => _i;
-  static Asset_IamPolicy create() => Asset_IamPolicy();
+  @$core.pragma('dart2js:noInline')
+  static Asset_IamPolicy create() => Asset_IamPolicy._();
   Asset_IamPolicy createEmptyInstance() => create();
   static $pb.PbList<Asset_IamPolicy> createRepeated() =>
       $pb.PbList<Asset_IamPolicy>();
@@ -146,18 +151,20 @@ class Asset extends $pb.GeneratedMessage {
         Asset_IamPolicy.getDefault, Asset_IamPolicy.create)
     ..hasRequiredFields = false;
 
-  Asset() : super();
-  Asset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Asset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Asset._() : super();
+  factory Asset() => create();
+  factory Asset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Asset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Asset clone() => Asset()..mergeFromMessage(this);
   Asset copyWith(void Function(Asset) updates) =>
       super.copyWith((message) => updates(message as Asset));
   $pb.BuilderInfo get info_ => _i;
-  static Asset create() => Asset();
+  @$core.pragma('dart2js:noInline')
+  static Asset create() => Asset._();
   Asset createEmptyInstance() => create();
   static $pb.PbList<Asset> createRepeated() => $pb.PbList<Asset>();
   static Asset getDefault() => _defaultInstance ??= create()..freeze();

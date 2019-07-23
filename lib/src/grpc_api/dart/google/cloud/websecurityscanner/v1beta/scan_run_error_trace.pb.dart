@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1beta/scan_run_error_trace.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,18 +31,20 @@ class ScanRunErrorTrace extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'mostCommonHttpErrorCode', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ScanRunErrorTrace() : super();
-  ScanRunErrorTrace.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanRunErrorTrace.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanRunErrorTrace._() : super();
+  factory ScanRunErrorTrace() => create();
+  factory ScanRunErrorTrace.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanRunErrorTrace.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanRunErrorTrace clone() => ScanRunErrorTrace()..mergeFromMessage(this);
   ScanRunErrorTrace copyWith(void Function(ScanRunErrorTrace) updates) =>
       super.copyWith((message) => updates(message as ScanRunErrorTrace));
   $pb.BuilderInfo get info_ => _i;
-  static ScanRunErrorTrace create() => ScanRunErrorTrace();
+  @$core.pragma('dart2js:noInline')
+  static ScanRunErrorTrace create() => ScanRunErrorTrace._();
   ScanRunErrorTrace createEmptyInstance() => create();
   static $pb.PbList<ScanRunErrorTrace> createRepeated() =>
       $pb.PbList<ScanRunErrorTrace>();

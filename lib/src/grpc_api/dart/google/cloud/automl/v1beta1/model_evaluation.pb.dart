@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/model_evaluation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,6 +24,7 @@ enum ModelEvaluation_Metrics {
   textSentimentEvaluationMetrics,
   imageObjectDetectionEvaluationMetrics,
   textExtractionEvaluationMetrics,
+  videoObjectTrackingEvaluationMetrics,
   regressionEvaluationMetrics,
   notSet
 }
@@ -35,11 +37,13 @@ class ModelEvaluation extends $pb.GeneratedMessage {
     11: ModelEvaluation_Metrics.textSentimentEvaluationMetrics,
     12: ModelEvaluation_Metrics.imageObjectDetectionEvaluationMetrics,
     13: ModelEvaluation_Metrics.textExtractionEvaluationMetrics,
+    14: ModelEvaluation_Metrics.videoObjectTrackingEvaluationMetrics,
     24: ModelEvaluation_Metrics.regressionEvaluationMetrics,
     0: ModelEvaluation_Metrics.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModelEvaluation',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [8, 9, 11, 12, 13, 14, 24])
     ..aOS(1, 'name')
     ..aOS(2, 'annotationSpecId')
     ..a<$0.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
@@ -75,6 +79,12 @@ class ModelEvaluation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $5.TextExtractionEvaluationMetrics.getDefault,
         $5.TextExtractionEvaluationMetrics.create)
+    ..a<$4.VideoObjectTrackingEvaluationMetrics>(
+        14,
+        'videoObjectTrackingEvaluationMetrics',
+        $pb.PbFieldType.OM,
+        $4.VideoObjectTrackingEvaluationMetrics.getDefault,
+        $4.VideoObjectTrackingEvaluationMetrics.create)
     ..aOS(15, 'displayName')
     ..a<$6.RegressionEvaluationMetrics>(
         24,
@@ -82,21 +92,22 @@ class ModelEvaluation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $6.RegressionEvaluationMetrics.getDefault,
         $6.RegressionEvaluationMetrics.create)
-    ..oo(0, [8, 9, 11, 12, 13, 24])
     ..hasRequiredFields = false;
 
-  ModelEvaluation() : super();
-  ModelEvaluation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ModelEvaluation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ModelEvaluation._() : super();
+  factory ModelEvaluation() => create();
+  factory ModelEvaluation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ModelEvaluation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ModelEvaluation clone() => ModelEvaluation()..mergeFromMessage(this);
   ModelEvaluation copyWith(void Function(ModelEvaluation) updates) =>
       super.copyWith((message) => updates(message as ModelEvaluation));
   $pb.BuilderInfo get info_ => _i;
-  static ModelEvaluation create() => ModelEvaluation();
+  @$core.pragma('dart2js:noInline')
+  static ModelEvaluation create() => ModelEvaluation._();
   ModelEvaluation createEmptyInstance() => create();
   static $pb.PbList<ModelEvaluation> createRepeated() =>
       $pb.PbList<ModelEvaluation>();
@@ -185,19 +196,29 @@ class ModelEvaluation extends $pb.GeneratedMessage {
   $core.bool hasTextExtractionEvaluationMetrics() => $_has(8);
   void clearTextExtractionEvaluationMetrics() => clearField(13);
 
-  $core.String get displayName => $_getS(9, '');
-  set displayName($core.String v) {
-    $_setString(9, v);
+  $4.VideoObjectTrackingEvaluationMetrics
+      get videoObjectTrackingEvaluationMetrics => $_getN(9);
+  set videoObjectTrackingEvaluationMetrics(
+      $4.VideoObjectTrackingEvaluationMetrics v) {
+    setField(14, v);
   }
 
-  $core.bool hasDisplayName() => $_has(9);
+  $core.bool hasVideoObjectTrackingEvaluationMetrics() => $_has(9);
+  void clearVideoObjectTrackingEvaluationMetrics() => clearField(14);
+
+  $core.String get displayName => $_getS(10, '');
+  set displayName($core.String v) {
+    $_setString(10, v);
+  }
+
+  $core.bool hasDisplayName() => $_has(10);
   void clearDisplayName() => clearField(15);
 
-  $6.RegressionEvaluationMetrics get regressionEvaluationMetrics => $_getN(10);
+  $6.RegressionEvaluationMetrics get regressionEvaluationMetrics => $_getN(11);
   set regressionEvaluationMetrics($6.RegressionEvaluationMetrics v) {
     setField(24, v);
   }
 
-  $core.bool hasRegressionEvaluationMetrics() => $_has(10);
+  $core.bool hasRegressionEvaluationMetrics() => $_has(11);
   void clearRegressionEvaluationMetrics() => clearField(24);
 }

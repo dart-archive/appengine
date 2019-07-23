@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/deployment/deployment.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class Deployable extends $pb.GeneratedMessage {
     ..pPS(1, 'resourceUri')
     ..hasRequiredFields = false;
 
-  Deployable() : super();
-  Deployable.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployable.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Deployable._() : super();
+  factory Deployable() => create();
+  factory Deployable.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Deployable.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Deployable clone() => Deployable()..mergeFromMessage(this);
   Deployable copyWith(void Function(Deployable) updates) =>
       super.copyWith((message) => updates(message as Deployable));
   $pb.BuilderInfo get info_ => _i;
-  static Deployable create() => Deployable();
+  @$core.pragma('dart2js:noInline')
+  static Deployable create() => Deployable._();
   Deployable createEmptyInstance() => create();
   static $pb.PbList<Deployable> createRepeated() => $pb.PbList<Deployable>();
   static Deployable getDefault() => _defaultInstance ??= create()..freeze();
@@ -48,18 +51,20 @@ class Details extends $pb.GeneratedMessage {
         Deployment.create)
     ..hasRequiredFields = false;
 
-  Details() : super();
-  Details.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Details.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Details._() : super();
+  factory Details() => create();
+  factory Details.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Details.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Details clone() => Details()..mergeFromMessage(this);
   Details copyWith(void Function(Details) updates) =>
       super.copyWith((message) => updates(message as Details));
   $pb.BuilderInfo get info_ => _i;
-  static Details create() => Details();
+  @$core.pragma('dart2js:noInline')
+  static Details create() => Details._();
   Details createEmptyInstance() => create();
   static $pb.PbList<Details> createRepeated() => $pb.PbList<Details>();
   static Details getDefault() => _defaultInstance ??= create()..freeze();
@@ -94,18 +99,20 @@ class Deployment extends $pb.GeneratedMessage {
         Deployment_Platform.values)
     ..hasRequiredFields = false;
 
-  Deployment() : super();
-  Deployment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Deployment._() : super();
+  factory Deployment() => create();
+  factory Deployment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Deployment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Deployment clone() => Deployment()..mergeFromMessage(this);
   Deployment copyWith(void Function(Deployment) updates) =>
       super.copyWith((message) => updates(message as Deployment));
   $pb.BuilderInfo get info_ => _i;
-  static Deployment create() => Deployment();
+  @$core.pragma('dart2js:noInline')
+  static Deployment create() => Deployment._();
   Deployment createEmptyInstance() => create();
   static $pb.PbList<Deployment> createRepeated() => $pb.PbList<Deployment>();
   static Deployment getDefault() => _defaultInstance ??= create()..freeze();

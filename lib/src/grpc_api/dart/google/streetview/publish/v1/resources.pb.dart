@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/streetview/publish/v1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -23,18 +24,20 @@ class UploadRef extends $pb.GeneratedMessage {
     ..aOS(1, 'uploadUrl')
     ..hasRequiredFields = false;
 
-  UploadRef() : super();
-  UploadRef.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UploadRef.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UploadRef._() : super();
+  factory UploadRef() => create();
+  factory UploadRef.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UploadRef.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UploadRef clone() => UploadRef()..mergeFromMessage(this);
   UploadRef copyWith(void Function(UploadRef) updates) =>
       super.copyWith((message) => updates(message as UploadRef));
   $pb.BuilderInfo get info_ => _i;
-  static UploadRef create() => UploadRef();
+  @$core.pragma('dart2js:noInline')
+  static UploadRef create() => UploadRef._();
   UploadRef createEmptyInstance() => create();
   static $pb.PbList<UploadRef> createRepeated() => $pb.PbList<UploadRef>();
   static UploadRef getDefault() => _defaultInstance ??= create()..freeze();
@@ -55,18 +58,20 @@ class PhotoId extends $pb.GeneratedMessage {
     ..aOS(1, 'id')
     ..hasRequiredFields = false;
 
-  PhotoId() : super();
-  PhotoId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PhotoId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PhotoId._() : super();
+  factory PhotoId() => create();
+  factory PhotoId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PhotoId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PhotoId clone() => PhotoId()..mergeFromMessage(this);
   PhotoId copyWith(void Function(PhotoId) updates) =>
       super.copyWith((message) => updates(message as PhotoId));
   $pb.BuilderInfo get info_ => _i;
-  static PhotoId create() => PhotoId();
+  @$core.pragma('dart2js:noInline')
+  static PhotoId create() => PhotoId._();
   PhotoId createEmptyInstance() => create();
   static $pb.PbList<PhotoId> createRepeated() => $pb.PbList<PhotoId>();
   static PhotoId getDefault() => _defaultInstance ??= create()..freeze();
@@ -88,18 +93,20 @@ class Level extends $pb.GeneratedMessage {
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
-  Level() : super();
-  Level.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Level.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Level._() : super();
+  factory Level() => create();
+  factory Level.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Level.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Level clone() => Level()..mergeFromMessage(this);
   Level copyWith(void Function(Level) updates) =>
       super.copyWith((message) => updates(message as Level));
   $pb.BuilderInfo get info_ => _i;
-  static Level create() => Level();
+  @$core.pragma('dart2js:noInline')
+  static Level create() => Level._();
   Level createEmptyInstance() => create();
   static $pb.PbList<Level> createRepeated() => $pb.PbList<Level>();
   static Level getDefault() => _defaultInstance ??= create()..freeze();
@@ -135,18 +142,20 @@ class Pose extends $pb.GeneratedMessage {
     ..a<$core.double>(9, 'accuracyMeters', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Pose() : super();
-  Pose.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Pose.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Pose._() : super();
+  factory Pose() => create();
+  factory Pose.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Pose.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Pose clone() => Pose()..mergeFromMessage(this);
   Pose copyWith(void Function(Pose) updates) =>
       super.copyWith((message) => updates(message as Pose));
   $pb.BuilderInfo get info_ => _i;
-  static Pose create() => Pose();
+  @$core.pragma('dart2js:noInline')
+  static Pose create() => Pose._();
   Pose createEmptyInstance() => create();
   static $pb.PbList<Pose> createRepeated() => $pb.PbList<Pose>();
   static Pose getDefault() => _defaultInstance ??= create()..freeze();
@@ -217,18 +226,20 @@ class Place extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  Place() : super();
-  Place.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Place.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Place._() : super();
+  factory Place() => create();
+  factory Place.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Place.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Place clone() => Place()..mergeFromMessage(this);
   Place copyWith(void Function(Place) updates) =>
       super.copyWith((message) => updates(message as Place));
   $pb.BuilderInfo get info_ => _i;
-  static Place create() => Place();
+  @$core.pragma('dart2js:noInline')
+  static Place create() => Place._();
   Place createEmptyInstance() => create();
   static $pb.PbList<Place> createRepeated() => $pb.PbList<Place>();
   static Place getDefault() => _defaultInstance ??= create()..freeze();
@@ -266,18 +277,20 @@ class Connection extends $pb.GeneratedMessage {
         1, 'target', $pb.PbFieldType.OM, PhotoId.getDefault, PhotoId.create)
     ..hasRequiredFields = false;
 
-  Connection() : super();
-  Connection.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Connection.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Connection._() : super();
+  factory Connection() => create();
+  factory Connection.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Connection.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Connection clone() => Connection()..mergeFromMessage(this);
   Connection copyWith(void Function(Connection) updates) =>
       super.copyWith((message) => updates(message as Connection));
   $pb.BuilderInfo get info_ => _i;
-  static Connection create() => Connection();
+  @$core.pragma('dart2js:noInline')
+  static Connection create() => Connection._();
   Connection createEmptyInstance() => create();
   static $pb.PbList<Connection> createRepeated() => $pb.PbList<Connection>();
   static Connection getDefault() => _defaultInstance ??= create()..freeze();
@@ -324,18 +337,20 @@ class Photo extends $pb.GeneratedMessage {
         Photo_MapsPublishStatus.values)
     ..hasRequiredFields = false;
 
-  Photo() : super();
-  Photo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Photo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Photo._() : super();
+  factory Photo() => create();
+  factory Photo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Photo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Photo clone() => Photo()..mergeFromMessage(this);
   Photo copyWith(void Function(Photo) updates) =>
       super.copyWith((message) => updates(message as Photo));
   $pb.BuilderInfo get info_ => _i;
-  static Photo create() => Photo();
+  @$core.pragma('dart2js:noInline')
+  static Photo create() => Photo._();
   Photo createEmptyInstance() => create();
   static $pb.PbList<Photo> createRepeated() => $pb.PbList<Photo>();
   static Photo getDefault() => _defaultInstance ??= create()..freeze();

@@ -7,11 +7,11 @@ language_settings:
   python:
     package_name: google.cloud.automl_v1beta1.gapic
   go:
-    package_name: cloud.google.com/go/cloud/automl/apiv1beta1
+    package_name: cloud.google.com/go/automl/apiv1beta1
   csharp:
     package_name: Google.Cloud.Automl.V1Beta1
   ruby:
-    package_name: Google::Cloud::Automl::V1Beta1
+    package_name: Google::Cloud::AutoML::V1beta1
   php:
     package_name: Google\Cloud\AutoMl\V1beta1
   nodejs:

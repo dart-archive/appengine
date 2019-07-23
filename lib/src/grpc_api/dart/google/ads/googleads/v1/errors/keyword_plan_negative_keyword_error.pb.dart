@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/keyword_plan_negative_keyword_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,15 @@ class KeywordPlanNegativeKeywordErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  KeywordPlanNegativeKeywordErrorEnum() : super();
-  KeywordPlanNegativeKeywordErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanNegativeKeywordErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanNegativeKeywordErrorEnum._() : super();
+  factory KeywordPlanNegativeKeywordErrorEnum() => create();
+  factory KeywordPlanNegativeKeywordErrorEnum.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanNegativeKeywordErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanNegativeKeywordErrorEnum clone() =>
       KeywordPlanNegativeKeywordErrorEnum()..mergeFromMessage(this);
   KeywordPlanNegativeKeywordErrorEnum copyWith(
@@ -31,8 +34,9 @@ class KeywordPlanNegativeKeywordErrorEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as KeywordPlanNegativeKeywordErrorEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static KeywordPlanNegativeKeywordErrorEnum create() =>
-      KeywordPlanNegativeKeywordErrorEnum();
+      KeywordPlanNegativeKeywordErrorEnum._();
   KeywordPlanNegativeKeywordErrorEnum createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanNegativeKeywordErrorEnum> createRepeated() =>
       $pb.PbList<KeywordPlanNegativeKeywordErrorEnum>();

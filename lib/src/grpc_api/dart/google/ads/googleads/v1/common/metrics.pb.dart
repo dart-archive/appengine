@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/metrics.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -140,18 +141,20 @@ class Metrics extends $pb.GeneratedMessage {
     ..a<$0.Int64Value>(125, 'impressionsFromStoreReach', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Metrics() : super();
-  Metrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Metrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Metrics._() : super();
+  factory Metrics() => create();
+  factory Metrics.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Metrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Metrics clone() => Metrics()..mergeFromMessage(this);
   Metrics copyWith(void Function(Metrics) updates) =>
       super.copyWith((message) => updates(message as Metrics));
   $pb.BuilderInfo get info_ => _i;
-  static Metrics create() => Metrics();
+  @$core.pragma('dart2js:noInline')
+  static Metrics create() => Metrics._();
   Metrics createEmptyInstance() => create();
   static $pb.PbList<Metrics> createRepeated() => $pb.PbList<Metrics>();
   static Metrics getDefault() => _defaultInstance ??= create()..freeze();

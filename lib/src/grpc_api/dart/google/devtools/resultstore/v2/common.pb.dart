@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class StatusAttributes extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
-  StatusAttributes() : super();
-  StatusAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StatusAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StatusAttributes._() : super();
+  factory StatusAttributes() => create();
+  factory StatusAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StatusAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StatusAttributes clone() => StatusAttributes()..mergeFromMessage(this);
   StatusAttributes copyWith(void Function(StatusAttributes) updates) =>
       super.copyWith((message) => updates(message as StatusAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static StatusAttributes create() => StatusAttributes();
+  @$core.pragma('dart2js:noInline')
+  static StatusAttributes create() => StatusAttributes._();
   StatusAttributes createEmptyInstance() => create();
   static $pb.PbList<StatusAttributes> createRepeated() =>
       $pb.PbList<StatusAttributes>();
@@ -67,18 +70,20 @@ class Property extends $pb.GeneratedMessage {
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
 
-  Property() : super();
-  Property.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Property.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Property._() : super();
+  factory Property() => create();
+  factory Property.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Property.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Property clone() => Property()..mergeFromMessage(this);
   Property copyWith(void Function(Property) updates) =>
       super.copyWith((message) => updates(message as Property));
   $pb.BuilderInfo get info_ => _i;
-  static Property create() => Property();
+  @$core.pragma('dart2js:noInline')
+  static Property create() => Property._();
   Property createEmptyInstance() => create();
   static $pb.PbList<Property> createRepeated() => $pb.PbList<Property>();
   static Property getDefault() => _defaultInstance ??= create()..freeze();
@@ -110,18 +115,20 @@ class Timing extends $pb.GeneratedMessage {
         $1.Duration.create)
     ..hasRequiredFields = false;
 
-  Timing() : super();
-  Timing.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Timing.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Timing._() : super();
+  factory Timing() => create();
+  factory Timing.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Timing.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Timing clone() => Timing()..mergeFromMessage(this);
   Timing copyWith(void Function(Timing) updates) =>
       super.copyWith((message) => updates(message as Timing));
   $pb.BuilderInfo get info_ => _i;
-  static Timing create() => Timing();
+  @$core.pragma('dart2js:noInline')
+  static Timing create() => Timing._();
   Timing createEmptyInstance() => create();
   static $pb.PbList<Timing> createRepeated() => $pb.PbList<Timing>();
   static Timing getDefault() => _defaultInstance ??= create()..freeze();
@@ -156,25 +163,27 @@ class Dependency extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dependency',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
+    ..oo(0, [1, 2, 3])
     ..aOS(1, 'target')
     ..aOS(2, 'configuredTarget')
     ..aOS(3, 'action')
     ..aOS(4, 'label')
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  Dependency() : super();
-  Dependency.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Dependency.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Dependency._() : super();
+  factory Dependency() => create();
+  factory Dependency.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Dependency.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Dependency clone() => Dependency()..mergeFromMessage(this);
   Dependency copyWith(void Function(Dependency) updates) =>
       super.copyWith((message) => updates(message as Dependency));
   $pb.BuilderInfo get info_ => _i;
-  static Dependency create() => Dependency();
+  @$core.pragma('dart2js:noInline')
+  static Dependency create() => Dependency._();
   Dependency createEmptyInstance() => create();
   static $pb.PbList<Dependency> createRepeated() => $pb.PbList<Dependency>();
   static Dependency getDefault() => _defaultInstance ??= create()..freeze();

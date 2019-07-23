@@ -1,66 +1,68 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/v2/bigtable.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'bigtable.pb.dart';
+import 'package:grpc/service_api.dart' as $grpc;
+import 'bigtable.pb.dart' as $0;
 export 'bigtable.pb.dart';
 
 class BigtableClient extends $grpc.Client {
   static final _$readRows =
-      $grpc.ClientMethod<ReadRowsRequest, ReadRowsResponse>(
+      $grpc.ClientMethod<$0.ReadRowsRequest, $0.ReadRowsResponse>(
           '/google.bigtable.v2.Bigtable/ReadRows',
-          (ReadRowsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ReadRowsResponse.fromBuffer(value));
+          ($0.ReadRowsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ReadRowsResponse.fromBuffer(value));
   static final _$sampleRowKeys =
-      $grpc.ClientMethod<SampleRowKeysRequest, SampleRowKeysResponse>(
+      $grpc.ClientMethod<$0.SampleRowKeysRequest, $0.SampleRowKeysResponse>(
           '/google.bigtable.v2.Bigtable/SampleRowKeys',
-          (SampleRowKeysRequest value) => value.writeToBuffer(),
+          ($0.SampleRowKeysRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              SampleRowKeysResponse.fromBuffer(value));
+              $0.SampleRowKeysResponse.fromBuffer(value));
   static final _$mutateRow =
-      $grpc.ClientMethod<MutateRowRequest, MutateRowResponse>(
+      $grpc.ClientMethod<$0.MutateRowRequest, $0.MutateRowResponse>(
           '/google.bigtable.v2.Bigtable/MutateRow',
-          (MutateRowRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => MutateRowResponse.fromBuffer(value));
+          ($0.MutateRowRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.MutateRowResponse.fromBuffer(value));
   static final _$mutateRows =
-      $grpc.ClientMethod<MutateRowsRequest, MutateRowsResponse>(
+      $grpc.ClientMethod<$0.MutateRowsRequest, $0.MutateRowsResponse>(
           '/google.bigtable.v2.Bigtable/MutateRows',
-          (MutateRowsRequest value) => value.writeToBuffer(),
+          ($0.MutateRowsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              MutateRowsResponse.fromBuffer(value));
-  static final _$checkAndMutateRow =
-      $grpc.ClientMethod<CheckAndMutateRowRequest, CheckAndMutateRowResponse>(
-          '/google.bigtable.v2.Bigtable/CheckAndMutateRow',
-          (CheckAndMutateRowRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              CheckAndMutateRowResponse.fromBuffer(value));
-  static final _$readModifyWriteRow =
-      $grpc.ClientMethod<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>(
-          '/google.bigtable.v2.Bigtable/ReadModifyWriteRow',
-          (ReadModifyWriteRowRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              ReadModifyWriteRowResponse.fromBuffer(value));
+              $0.MutateRowsResponse.fromBuffer(value));
+  static final _$checkAndMutateRow = $grpc.ClientMethod<
+          $0.CheckAndMutateRowRequest, $0.CheckAndMutateRowResponse>(
+      '/google.bigtable.v2.Bigtable/CheckAndMutateRow',
+      ($0.CheckAndMutateRowRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.CheckAndMutateRowResponse.fromBuffer(value));
+  static final _$readModifyWriteRow = $grpc.ClientMethod<
+          $0.ReadModifyWriteRowRequest, $0.ReadModifyWriteRowResponse>(
+      '/google.bigtable.v2.Bigtable/ReadModifyWriteRow',
+      ($0.ReadModifyWriteRowRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ReadModifyWriteRowResponse.fromBuffer(value));
 
   BigtableClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseStream<ReadRowsResponse> readRows(ReadRowsRequest request,
+  $grpc.ResponseStream<$0.ReadRowsResponse> readRows($0.ReadRowsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$readRows, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseStream(call);
   }
 
-  $grpc.ResponseStream<SampleRowKeysResponse> sampleRowKeys(
-      SampleRowKeysRequest request,
+  $grpc.ResponseStream<$0.SampleRowKeysResponse> sampleRowKeys(
+      $0.SampleRowKeysRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$sampleRowKeys, $async.Stream.fromIterable([request]),
@@ -68,14 +70,16 @@ class BigtableClient extends $grpc.Client {
     return $grpc.ResponseStream(call);
   }
 
-  $grpc.ResponseFuture<MutateRowResponse> mutateRow(MutateRowRequest request,
+  $grpc.ResponseFuture<$0.MutateRowResponse> mutateRow(
+      $0.MutateRowRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$mutateRow, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseStream<MutateRowsResponse> mutateRows(MutateRowsRequest request,
+  $grpc.ResponseStream<$0.MutateRowsResponse> mutateRows(
+      $0.MutateRowsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$mutateRows, $async.Stream.fromIterable([request]),
@@ -83,8 +87,8 @@ class BigtableClient extends $grpc.Client {
     return $grpc.ResponseStream(call);
   }
 
-  $grpc.ResponseFuture<CheckAndMutateRowResponse> checkAndMutateRow(
-      CheckAndMutateRowRequest request,
+  $grpc.ResponseFuture<$0.CheckAndMutateRowResponse> checkAndMutateRow(
+      $0.CheckAndMutateRowRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$checkAndMutateRow, $async.Stream.fromIterable([request]),
@@ -92,8 +96,8 @@ class BigtableClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ReadModifyWriteRowResponse> readModifyWriteRow(
-      ReadModifyWriteRowRequest request,
+  $grpc.ResponseFuture<$0.ReadModifyWriteRowResponse> readModifyWriteRow(
+      $0.ReadModifyWriteRowRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$readModifyWriteRow, $async.Stream.fromIterable([request]),
@@ -106,94 +110,99 @@ abstract class BigtableServiceBase extends $grpc.Service {
   $core.String get $name => 'google.bigtable.v2.Bigtable';
 
   BigtableServiceBase() {
-    $addMethod($grpc.ServiceMethod<ReadRowsRequest, ReadRowsResponse>(
+    $addMethod($grpc.ServiceMethod<$0.ReadRowsRequest, $0.ReadRowsResponse>(
         'ReadRows',
         readRows_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => ReadRowsRequest.fromBuffer(value),
-        (ReadRowsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<SampleRowKeysRequest, SampleRowKeysResponse>(
-        'SampleRowKeys',
-        sampleRowKeys_Pre,
-        false,
-        true,
-        ($core.List<$core.int> value) => SampleRowKeysRequest.fromBuffer(value),
-        (SampleRowKeysResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateRowRequest, MutateRowResponse>(
+        ($core.List<$core.int> value) => $0.ReadRowsRequest.fromBuffer(value),
+        ($0.ReadRowsResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.SampleRowKeysRequest, $0.SampleRowKeysResponse>(
+            'SampleRowKeys',
+            sampleRowKeys_Pre,
+            false,
+            true,
+            ($core.List<$core.int> value) =>
+                $0.SampleRowKeysRequest.fromBuffer(value),
+            ($0.SampleRowKeysResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateRowRequest, $0.MutateRowResponse>(
         'MutateRow',
         mutateRow_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => MutateRowRequest.fromBuffer(value),
-        (MutateRowResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateRowsRequest, MutateRowsResponse>(
+        ($core.List<$core.int> value) => $0.MutateRowRequest.fromBuffer(value),
+        ($0.MutateRowResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateRowsRequest, $0.MutateRowsResponse>(
         'MutateRows',
         mutateRows_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => MutateRowsRequest.fromBuffer(value),
-        (MutateRowsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CheckAndMutateRowRequest,
-            CheckAndMutateRowResponse>(
+        ($core.List<$core.int> value) => $0.MutateRowsRequest.fromBuffer(value),
+        ($0.MutateRowsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CheckAndMutateRowRequest,
+            $0.CheckAndMutateRowResponse>(
         'CheckAndMutateRow',
         checkAndMutateRow_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CheckAndMutateRowRequest.fromBuffer(value),
-        (CheckAndMutateRowResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ReadModifyWriteRowRequest,
-            ReadModifyWriteRowResponse>(
+            $0.CheckAndMutateRowRequest.fromBuffer(value),
+        ($0.CheckAndMutateRowResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ReadModifyWriteRowRequest,
+            $0.ReadModifyWriteRowResponse>(
         'ReadModifyWriteRow',
         readModifyWriteRow_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ReadModifyWriteRowRequest.fromBuffer(value),
-        (ReadModifyWriteRowResponse value) => value.writeToBuffer()));
+            $0.ReadModifyWriteRowRequest.fromBuffer(value),
+        ($0.ReadModifyWriteRowResponse value) => value.writeToBuffer()));
   }
 
-  $async.Stream<ReadRowsResponse> readRows_Pre(
-      $grpc.ServiceCall call, $async.Future request) async* {
-    yield* readRows(call, (await request) as ReadRowsRequest);
+  $async.Stream<$0.ReadRowsResponse> readRows_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ReadRowsRequest> request) async* {
+    yield* readRows(call, await request);
   }
 
-  $async.Stream<SampleRowKeysResponse> sampleRowKeys_Pre(
-      $grpc.ServiceCall call, $async.Future request) async* {
-    yield* sampleRowKeys(call, (await request) as SampleRowKeysRequest);
+  $async.Stream<$0.SampleRowKeysResponse> sampleRowKeys_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.SampleRowKeysRequest> request) async* {
+    yield* sampleRowKeys(call, await request);
   }
 
-  $async.Future<MutateRowResponse> mutateRow_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateRowResponse> mutateRow_Pre($grpc.ServiceCall call,
+      $async.Future<$0.MutateRowRequest> request) async {
     return mutateRow(call, await request);
   }
 
-  $async.Stream<MutateRowsResponse> mutateRows_Pre(
-      $grpc.ServiceCall call, $async.Future request) async* {
-    yield* mutateRows(call, (await request) as MutateRowsRequest);
+  $async.Stream<$0.MutateRowsResponse> mutateRows_Pre($grpc.ServiceCall call,
+      $async.Future<$0.MutateRowsRequest> request) async* {
+    yield* mutateRows(call, await request);
   }
 
-  $async.Future<CheckAndMutateRowResponse> checkAndMutateRow_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.CheckAndMutateRowResponse> checkAndMutateRow_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CheckAndMutateRowRequest> request) async {
     return checkAndMutateRow(call, await request);
   }
 
-  $async.Future<ReadModifyWriteRowResponse> readModifyWriteRow_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ReadModifyWriteRowResponse> readModifyWriteRow_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ReadModifyWriteRowRequest> request) async {
     return readModifyWriteRow(call, await request);
   }
 
-  $async.Stream<ReadRowsResponse> readRows(
-      $grpc.ServiceCall call, ReadRowsRequest request);
-  $async.Stream<SampleRowKeysResponse> sampleRowKeys(
-      $grpc.ServiceCall call, SampleRowKeysRequest request);
-  $async.Future<MutateRowResponse> mutateRow(
-      $grpc.ServiceCall call, MutateRowRequest request);
-  $async.Stream<MutateRowsResponse> mutateRows(
-      $grpc.ServiceCall call, MutateRowsRequest request);
-  $async.Future<CheckAndMutateRowResponse> checkAndMutateRow(
-      $grpc.ServiceCall call, CheckAndMutateRowRequest request);
-  $async.Future<ReadModifyWriteRowResponse> readModifyWriteRow(
-      $grpc.ServiceCall call, ReadModifyWriteRowRequest request);
+  $async.Stream<$0.ReadRowsResponse> readRows(
+      $grpc.ServiceCall call, $0.ReadRowsRequest request);
+  $async.Stream<$0.SampleRowKeysResponse> sampleRowKeys(
+      $grpc.ServiceCall call, $0.SampleRowKeysRequest request);
+  $async.Future<$0.MutateRowResponse> mutateRow(
+      $grpc.ServiceCall call, $0.MutateRowRequest request);
+  $async.Stream<$0.MutateRowsResponse> mutateRows(
+      $grpc.ServiceCall call, $0.MutateRowsRequest request);
+  $async.Future<$0.CheckAndMutateRowResponse> checkAndMutateRow(
+      $grpc.ServiceCall call, $0.CheckAndMutateRowRequest request);
+  $async.Future<$0.ReadModifyWriteRowResponse> readModifyWriteRow(
+      $grpc.ServiceCall call, $0.ReadModifyWriteRowRequest request);
 }

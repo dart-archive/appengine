@@ -1,21 +1,22 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/session.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'audio_config.pb.dart' as $2;
-import '../../../rpc/status.pb.dart' as $3;
-import '../../../type/latlng.pb.dart' as $4;
-import 'context.pb.dart' as $5;
-import 'session_entity_type.pb.dart' as $6;
-import '../../../protobuf/struct.pb.dart' as $7;
-import 'intent.pb.dart' as $8;
+import 'audio_config.pb.dart' as $7;
+import '../../../rpc/status.pb.dart' as $8;
+import '../../../type/latlng.pb.dart' as $9;
+import 'context.pb.dart' as $0;
+import 'session_entity_type.pb.dart' as $5;
+import '../../../protobuf/struct.pb.dart' as $10;
+import 'intent.pb.dart' as $3;
 
 import 'session.pbenum.dart';
 
@@ -29,23 +30,25 @@ class DetectIntentRequest extends $pb.GeneratedMessage {
         QueryParameters.getDefault, QueryParameters.create)
     ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
         QueryInput.create)
-    ..a<$2.OutputAudioConfig>(4, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
+    ..a<$7.OutputAudioConfig>(4, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
     ..a<$core.List<$core.int>>(5, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  DetectIntentRequest() : super();
-  DetectIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DetectIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DetectIntentRequest._() : super();
+  factory DetectIntentRequest() => create();
+  factory DetectIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DetectIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DetectIntentRequest clone() => DetectIntentRequest()..mergeFromMessage(this);
   DetectIntentRequest copyWith(void Function(DetectIntentRequest) updates) =>
       super.copyWith((message) => updates(message as DetectIntentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DetectIntentRequest create() => DetectIntentRequest();
+  @$core.pragma('dart2js:noInline')
+  static DetectIntentRequest create() => DetectIntentRequest._();
   DetectIntentRequest createEmptyInstance() => create();
   static $pb.PbList<DetectIntentRequest> createRepeated() =>
       $pb.PbList<DetectIntentRequest>();
@@ -77,8 +80,8 @@ class DetectIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasQueryInput() => $_has(2);
   void clearQueryInput() => clearField(3);
 
-  $2.OutputAudioConfig get outputAudioConfig => $_getN(3);
-  set outputAudioConfig($2.OutputAudioConfig v) {
+  $7.OutputAudioConfig get outputAudioConfig => $_getN(3);
+  set outputAudioConfig($7.OutputAudioConfig v) {
     setField(4, v);
   }
 
@@ -100,26 +103,28 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'responseId')
     ..a<QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
         QueryResult.getDefault, QueryResult.create)
-    ..a<$3.Status>(3, 'webhookStatus', $pb.PbFieldType.OM, $3.Status.getDefault,
-        $3.Status.create)
+    ..a<$8.Status>(3, 'webhookStatus', $pb.PbFieldType.OM, $8.Status.getDefault,
+        $8.Status.create)
     ..a<$core.List<$core.int>>(4, 'outputAudio', $pb.PbFieldType.OY)
-    ..a<$2.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
+    ..a<$7.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
-  DetectIntentResponse() : super();
-  DetectIntentResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DetectIntentResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DetectIntentResponse._() : super();
+  factory DetectIntentResponse() => create();
+  factory DetectIntentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DetectIntentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DetectIntentResponse clone() =>
       DetectIntentResponse()..mergeFromMessage(this);
   DetectIntentResponse copyWith(void Function(DetectIntentResponse) updates) =>
       super.copyWith((message) => updates(message as DetectIntentResponse));
   $pb.BuilderInfo get info_ => _i;
-  static DetectIntentResponse create() => DetectIntentResponse();
+  @$core.pragma('dart2js:noInline')
+  static DetectIntentResponse create() => DetectIntentResponse._();
   DetectIntentResponse createEmptyInstance() => create();
   static $pb.PbList<DetectIntentResponse> createRepeated() =>
       $pb.PbList<DetectIntentResponse>();
@@ -143,8 +148,8 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasQueryResult() => $_has(1);
   void clearQueryResult() => clearField(2);
 
-  $3.Status get webhookStatus => $_getN(2);
-  set webhookStatus($3.Status v) {
+  $8.Status get webhookStatus => $_getN(2);
+  set webhookStatus($8.Status v) {
     setField(3, v);
   }
 
@@ -159,8 +164,8 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasOutputAudio() => $_has(3);
   void clearOutputAudio() => clearField(4);
 
-  $2.OutputAudioConfig get outputAudioConfig => $_getN(4);
-  set outputAudioConfig($2.OutputAudioConfig v) {
+  $7.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  set outputAudioConfig($7.OutputAudioConfig v) {
     setField(6, v);
   }
 
@@ -172,14 +177,14 @@ class QueryParameters extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryParameters',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'timeZone')
-    ..a<$4.LatLng>(2, 'geoLocation', $pb.PbFieldType.OM, $4.LatLng.getDefault,
-        $4.LatLng.create)
-    ..pc<$5.Context>(3, 'contexts', $pb.PbFieldType.PM, $5.Context.create)
+    ..a<$9.LatLng>(2, 'geoLocation', $pb.PbFieldType.OM, $9.LatLng.getDefault,
+        $9.LatLng.create)
+    ..pc<$0.Context>(3, 'contexts', $pb.PbFieldType.PM, $0.Context.create)
     ..aOB(4, 'resetContexts')
-    ..pc<$6.SessionEntityType>(5, 'sessionEntityTypes', $pb.PbFieldType.PM,
-        $6.SessionEntityType.create)
-    ..a<$7.Struct>(6, 'payload', $pb.PbFieldType.OM, $7.Struct.getDefault,
-        $7.Struct.create)
+    ..pc<$5.SessionEntityType>(5, 'sessionEntityTypes', $pb.PbFieldType.PM,
+        $5.SessionEntityType.create)
+    ..a<$10.Struct>(6, 'payload', $pb.PbFieldType.OM, $10.Struct.getDefault,
+        $10.Struct.create)
     ..a<SentimentAnalysisRequestConfig>(
         10,
         'sentimentAnalysisRequestConfig',
@@ -188,18 +193,20 @@ class QueryParameters extends $pb.GeneratedMessage {
         SentimentAnalysisRequestConfig.create)
     ..hasRequiredFields = false;
 
-  QueryParameters() : super();
-  QueryParameters.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QueryParameters._() : super();
+  factory QueryParameters() => create();
+  factory QueryParameters.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QueryParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QueryParameters clone() => QueryParameters()..mergeFromMessage(this);
   QueryParameters copyWith(void Function(QueryParameters) updates) =>
       super.copyWith((message) => updates(message as QueryParameters));
   $pb.BuilderInfo get info_ => _i;
-  static QueryParameters create() => QueryParameters();
+  @$core.pragma('dart2js:noInline')
+  static QueryParameters create() => QueryParameters._();
   QueryParameters createEmptyInstance() => create();
   static $pb.PbList<QueryParameters> createRepeated() =>
       $pb.PbList<QueryParameters>();
@@ -215,15 +222,15 @@ class QueryParameters extends $pb.GeneratedMessage {
   $core.bool hasTimeZone() => $_has(0);
   void clearTimeZone() => clearField(1);
 
-  $4.LatLng get geoLocation => $_getN(1);
-  set geoLocation($4.LatLng v) {
+  $9.LatLng get geoLocation => $_getN(1);
+  set geoLocation($9.LatLng v) {
     setField(2, v);
   }
 
   $core.bool hasGeoLocation() => $_has(1);
   void clearGeoLocation() => clearField(2);
 
-  $core.List<$5.Context> get contexts => $_getList(2);
+  $core.List<$0.Context> get contexts => $_getList(2);
 
   $core.bool get resetContexts => $_get(3, false);
   set resetContexts($core.bool v) {
@@ -233,10 +240,10 @@ class QueryParameters extends $pb.GeneratedMessage {
   $core.bool hasResetContexts() => $_has(3);
   void clearResetContexts() => clearField(4);
 
-  $core.List<$6.SessionEntityType> get sessionEntityTypes => $_getList(4);
+  $core.List<$5.SessionEntityType> get sessionEntityTypes => $_getList(4);
 
-  $7.Struct get payload => $_getN(5);
-  set payload($7.Struct v) {
+  $10.Struct get payload => $_getN(5);
+  set payload($10.Struct v) {
     setField(6, v);
   }
 
@@ -264,27 +271,29 @@ class QueryInput extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryInput',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..a<$2.InputAudioConfig>(1, 'audioConfig', $pb.PbFieldType.OM,
-        $2.InputAudioConfig.getDefault, $2.InputAudioConfig.create)
+    ..oo(0, [1, 2, 3])
+    ..a<$7.InputAudioConfig>(1, 'audioConfig', $pb.PbFieldType.OM,
+        $7.InputAudioConfig.getDefault, $7.InputAudioConfig.create)
     ..a<TextInput>(
         2, 'text', $pb.PbFieldType.OM, TextInput.getDefault, TextInput.create)
     ..a<EventInput>(3, 'event', $pb.PbFieldType.OM, EventInput.getDefault,
         EventInput.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  QueryInput() : super();
-  QueryInput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryInput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QueryInput._() : super();
+  factory QueryInput() => create();
+  factory QueryInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QueryInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QueryInput clone() => QueryInput()..mergeFromMessage(this);
   QueryInput copyWith(void Function(QueryInput) updates) =>
       super.copyWith((message) => updates(message as QueryInput));
   $pb.BuilderInfo get info_ => _i;
-  static QueryInput create() => QueryInput();
+  @$core.pragma('dart2js:noInline')
+  static QueryInput create() => QueryInput._();
   QueryInput createEmptyInstance() => create();
   static $pb.PbList<QueryInput> createRepeated() => $pb.PbList<QueryInput>();
   static QueryInput getDefault() => _defaultInstance ??= create()..freeze();
@@ -293,8 +302,8 @@ class QueryInput extends $pb.GeneratedMessage {
   QueryInput_Input whichInput() => _QueryInput_InputByTag[$_whichOneof(0)];
   void clearInput() => clearField($_whichOneof(0));
 
-  $2.InputAudioConfig get audioConfig => $_getN(0);
-  set audioConfig($2.InputAudioConfig v) {
+  $7.InputAudioConfig get audioConfig => $_getN(0);
+  set audioConfig($7.InputAudioConfig v) {
     setField(1, v);
   }
 
@@ -324,22 +333,22 @@ class QueryResult extends $pb.GeneratedMessage {
     ..aOS(1, 'queryText')
     ..a<$core.double>(2, 'speechRecognitionConfidence', $pb.PbFieldType.OF)
     ..aOS(3, 'action')
-    ..a<$7.Struct>(4, 'parameters', $pb.PbFieldType.OM, $7.Struct.getDefault,
-        $7.Struct.create)
+    ..a<$10.Struct>(4, 'parameters', $pb.PbFieldType.OM, $10.Struct.getDefault,
+        $10.Struct.create)
     ..aOB(5, 'allRequiredParamsPresent')
     ..aOS(6, 'fulfillmentText')
-    ..pc<$8.Intent_Message>(
-        7, 'fulfillmentMessages', $pb.PbFieldType.PM, $8.Intent_Message.create)
+    ..pc<$3.Intent_Message>(
+        7, 'fulfillmentMessages', $pb.PbFieldType.PM, $3.Intent_Message.create)
     ..aOS(8, 'webhookSource')
-    ..a<$7.Struct>(9, 'webhookPayload', $pb.PbFieldType.OM,
-        $7.Struct.getDefault, $7.Struct.create)
-    ..pc<$5.Context>(
-        10, 'outputContexts', $pb.PbFieldType.PM, $5.Context.create)
-    ..a<$8.Intent>(11, 'intent', $pb.PbFieldType.OM, $8.Intent.getDefault,
-        $8.Intent.create)
+    ..a<$10.Struct>(9, 'webhookPayload', $pb.PbFieldType.OM,
+        $10.Struct.getDefault, $10.Struct.create)
+    ..pc<$0.Context>(
+        10, 'outputContexts', $pb.PbFieldType.PM, $0.Context.create)
+    ..a<$3.Intent>(11, 'intent', $pb.PbFieldType.OM, $3.Intent.getDefault,
+        $3.Intent.create)
     ..a<$core.double>(12, 'intentDetectionConfidence', $pb.PbFieldType.OF)
-    ..a<$7.Struct>(14, 'diagnosticInfo', $pb.PbFieldType.OM,
-        $7.Struct.getDefault, $7.Struct.create)
+    ..a<$10.Struct>(14, 'diagnosticInfo', $pb.PbFieldType.OM,
+        $10.Struct.getDefault, $10.Struct.create)
     ..aOS(15, 'languageCode')
     ..a<SentimentAnalysisResult>(
         17,
@@ -349,18 +358,20 @@ class QueryResult extends $pb.GeneratedMessage {
         SentimentAnalysisResult.create)
     ..hasRequiredFields = false;
 
-  QueryResult() : super();
-  QueryResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QueryResult._() : super();
+  factory QueryResult() => create();
+  factory QueryResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QueryResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QueryResult clone() => QueryResult()..mergeFromMessage(this);
   QueryResult copyWith(void Function(QueryResult) updates) =>
       super.copyWith((message) => updates(message as QueryResult));
   $pb.BuilderInfo get info_ => _i;
-  static QueryResult create() => QueryResult();
+  @$core.pragma('dart2js:noInline')
+  static QueryResult create() => QueryResult._();
   QueryResult createEmptyInstance() => create();
   static $pb.PbList<QueryResult> createRepeated() => $pb.PbList<QueryResult>();
   static QueryResult getDefault() => _defaultInstance ??= create()..freeze();
@@ -390,8 +401,8 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasAction() => $_has(2);
   void clearAction() => clearField(3);
 
-  $7.Struct get parameters => $_getN(3);
-  set parameters($7.Struct v) {
+  $10.Struct get parameters => $_getN(3);
+  set parameters($10.Struct v) {
     setField(4, v);
   }
 
@@ -414,7 +425,7 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasFulfillmentText() => $_has(5);
   void clearFulfillmentText() => clearField(6);
 
-  $core.List<$8.Intent_Message> get fulfillmentMessages => $_getList(6);
+  $core.List<$3.Intent_Message> get fulfillmentMessages => $_getList(6);
 
   $core.String get webhookSource => $_getS(7, '');
   set webhookSource($core.String v) {
@@ -424,18 +435,18 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasWebhookSource() => $_has(7);
   void clearWebhookSource() => clearField(8);
 
-  $7.Struct get webhookPayload => $_getN(8);
-  set webhookPayload($7.Struct v) {
+  $10.Struct get webhookPayload => $_getN(8);
+  set webhookPayload($10.Struct v) {
     setField(9, v);
   }
 
   $core.bool hasWebhookPayload() => $_has(8);
   void clearWebhookPayload() => clearField(9);
 
-  $core.List<$5.Context> get outputContexts => $_getList(9);
+  $core.List<$0.Context> get outputContexts => $_getList(9);
 
-  $8.Intent get intent => $_getN(10);
-  set intent($8.Intent v) {
+  $3.Intent get intent => $_getN(10);
+  set intent($3.Intent v) {
     setField(11, v);
   }
 
@@ -450,8 +461,8 @@ class QueryResult extends $pb.GeneratedMessage {
   $core.bool hasIntentDetectionConfidence() => $_has(11);
   void clearIntentDetectionConfidence() => clearField(12);
 
-  $7.Struct get diagnosticInfo => $_getN(12);
-  set diagnosticInfo($7.Struct v) {
+  $10.Struct get diagnosticInfo => $_getN(12);
+  set diagnosticInfo($10.Struct v) {
     setField(14, v);
   }
 
@@ -485,18 +496,19 @@ class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
     ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
         QueryInput.create)
     ..aOB(4, 'singleUtterance')
-    ..a<$2.OutputAudioConfig>(5, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
+    ..a<$7.OutputAudioConfig>(5, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
     ..a<$core.List<$core.int>>(6, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  StreamingDetectIntentRequest() : super();
-  StreamingDetectIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingDetectIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingDetectIntentRequest._() : super();
+  factory StreamingDetectIntentRequest() => create();
+  factory StreamingDetectIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingDetectIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingDetectIntentRequest clone() =>
       StreamingDetectIntentRequest()..mergeFromMessage(this);
   StreamingDetectIntentRequest copyWith(
@@ -504,8 +516,9 @@ class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingDetectIntentRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingDetectIntentRequest create() =>
-      StreamingDetectIntentRequest();
+      StreamingDetectIntentRequest._();
   StreamingDetectIntentRequest createEmptyInstance() => create();
   static $pb.PbList<StreamingDetectIntentRequest> createRepeated() =>
       $pb.PbList<StreamingDetectIntentRequest>();
@@ -537,16 +550,20 @@ class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasQueryInput() => $_has(2);
   void clearQueryInput() => clearField(3);
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool get singleUtterance => $_get(3, false);
+  @$core.Deprecated('This field is deprecated.')
   set singleUtterance($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool hasSingleUtterance() => $_has(3);
+  @$core.Deprecated('This field is deprecated.')
   void clearSingleUtterance() => clearField(4);
 
-  $2.OutputAudioConfig get outputAudioConfig => $_getN(4);
-  set outputAudioConfig($2.OutputAudioConfig v) {
+  $7.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  set outputAudioConfig($7.OutputAudioConfig v) {
     setField(5, v);
   }
 
@@ -575,20 +592,21 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
         StreamingRecognitionResult.create)
     ..a<QueryResult>(3, 'queryResult', $pb.PbFieldType.OM,
         QueryResult.getDefault, QueryResult.create)
-    ..a<$3.Status>(4, 'webhookStatus', $pb.PbFieldType.OM, $3.Status.getDefault,
-        $3.Status.create)
+    ..a<$8.Status>(4, 'webhookStatus', $pb.PbFieldType.OM, $8.Status.getDefault,
+        $8.Status.create)
     ..a<$core.List<$core.int>>(5, 'outputAudio', $pb.PbFieldType.OY)
-    ..a<$2.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $2.OutputAudioConfig.getDefault, $2.OutputAudioConfig.create)
+    ..a<$7.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
+        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
-  StreamingDetectIntentResponse() : super();
-  StreamingDetectIntentResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingDetectIntentResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingDetectIntentResponse._() : super();
+  factory StreamingDetectIntentResponse() => create();
+  factory StreamingDetectIntentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingDetectIntentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingDetectIntentResponse clone() =>
       StreamingDetectIntentResponse()..mergeFromMessage(this);
   StreamingDetectIntentResponse copyWith(
@@ -596,8 +614,9 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingDetectIntentResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingDetectIntentResponse create() =>
-      StreamingDetectIntentResponse();
+      StreamingDetectIntentResponse._();
   StreamingDetectIntentResponse createEmptyInstance() => create();
   static $pb.PbList<StreamingDetectIntentResponse> createRepeated() =>
       $pb.PbList<StreamingDetectIntentResponse>();
@@ -629,8 +648,8 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasQueryResult() => $_has(2);
   void clearQueryResult() => clearField(3);
 
-  $3.Status get webhookStatus => $_getN(3);
-  set webhookStatus($3.Status v) {
+  $8.Status get webhookStatus => $_getN(3);
+  set webhookStatus($8.Status v) {
     setField(4, v);
   }
 
@@ -645,8 +664,8 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
   $core.bool hasOutputAudio() => $_has(4);
   void clearOutputAudio() => clearField(5);
 
-  $2.OutputAudioConfig get outputAudioConfig => $_getN(5);
-  set outputAudioConfig($2.OutputAudioConfig v) {
+  $7.OutputAudioConfig get outputAudioConfig => $_getN(5);
+  set outputAudioConfig($7.OutputAudioConfig v) {
     setField(6, v);
   }
 
@@ -670,13 +689,14 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  StreamingRecognitionResult() : super();
-  StreamingRecognitionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingRecognitionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingRecognitionResult._() : super();
+  factory StreamingRecognitionResult() => create();
+  factory StreamingRecognitionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingRecognitionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingRecognitionResult clone() =>
       StreamingRecognitionResult()..mergeFromMessage(this);
   StreamingRecognitionResult copyWith(
@@ -684,7 +704,8 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingRecognitionResult));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingRecognitionResult create() => StreamingRecognitionResult();
+  @$core.pragma('dart2js:noInline')
+  static StreamingRecognitionResult create() => StreamingRecognitionResult._();
   StreamingRecognitionResult createEmptyInstance() => create();
   static $pb.PbList<StreamingRecognitionResult> createRepeated() =>
       $pb.PbList<StreamingRecognitionResult>();
@@ -732,18 +753,20 @@ class TextInput extends $pb.GeneratedMessage {
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
 
-  TextInput() : super();
-  TextInput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextInput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextInput._() : super();
+  factory TextInput() => create();
+  factory TextInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextInput clone() => TextInput()..mergeFromMessage(this);
   TextInput copyWith(void Function(TextInput) updates) =>
       super.copyWith((message) => updates(message as TextInput));
   $pb.BuilderInfo get info_ => _i;
-  static TextInput create() => TextInput();
+  @$core.pragma('dart2js:noInline')
+  static TextInput create() => TextInput._();
   TextInput createEmptyInstance() => create();
   static $pb.PbList<TextInput> createRepeated() => $pb.PbList<TextInput>();
   static TextInput getDefault() => _defaultInstance ??= create()..freeze();
@@ -770,23 +793,25 @@ class EventInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EventInput',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'name')
-    ..a<$7.Struct>(2, 'parameters', $pb.PbFieldType.OM, $7.Struct.getDefault,
-        $7.Struct.create)
+    ..a<$10.Struct>(2, 'parameters', $pb.PbFieldType.OM, $10.Struct.getDefault,
+        $10.Struct.create)
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  EventInput() : super();
-  EventInput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EventInput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EventInput._() : super();
+  factory EventInput() => create();
+  factory EventInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EventInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EventInput clone() => EventInput()..mergeFromMessage(this);
   EventInput copyWith(void Function(EventInput) updates) =>
       super.copyWith((message) => updates(message as EventInput));
   $pb.BuilderInfo get info_ => _i;
-  static EventInput create() => EventInput();
+  @$core.pragma('dart2js:noInline')
+  static EventInput create() => EventInput._();
   EventInput createEmptyInstance() => create();
   static $pb.PbList<EventInput> createRepeated() => $pb.PbList<EventInput>();
   static EventInput getDefault() => _defaultInstance ??= create()..freeze();
@@ -800,8 +825,8 @@ class EventInput extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $7.Struct get parameters => $_getN(1);
-  set parameters($7.Struct v) {
+  $10.Struct get parameters => $_getN(1);
+  set parameters($10.Struct v) {
     setField(2, v);
   }
 
@@ -824,13 +849,14 @@ class SentimentAnalysisRequestConfig extends $pb.GeneratedMessage {
     ..aOB(1, 'analyzeQueryTextSentiment')
     ..hasRequiredFields = false;
 
-  SentimentAnalysisRequestConfig() : super();
-  SentimentAnalysisRequestConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SentimentAnalysisRequestConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SentimentAnalysisRequestConfig._() : super();
+  factory SentimentAnalysisRequestConfig() => create();
+  factory SentimentAnalysisRequestConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SentimentAnalysisRequestConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SentimentAnalysisRequestConfig clone() =>
       SentimentAnalysisRequestConfig()..mergeFromMessage(this);
   SentimentAnalysisRequestConfig copyWith(
@@ -838,8 +864,9 @@ class SentimentAnalysisRequestConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SentimentAnalysisRequestConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SentimentAnalysisRequestConfig create() =>
-      SentimentAnalysisRequestConfig();
+      SentimentAnalysisRequestConfig._();
   SentimentAnalysisRequestConfig createEmptyInstance() => create();
   static $pb.PbList<SentimentAnalysisRequestConfig> createRepeated() =>
       $pb.PbList<SentimentAnalysisRequestConfig>();
@@ -863,20 +890,22 @@ class SentimentAnalysisResult extends $pb.GeneratedMessage {
         Sentiment.getDefault, Sentiment.create)
     ..hasRequiredFields = false;
 
-  SentimentAnalysisResult() : super();
-  SentimentAnalysisResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SentimentAnalysisResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SentimentAnalysisResult._() : super();
+  factory SentimentAnalysisResult() => create();
+  factory SentimentAnalysisResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SentimentAnalysisResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SentimentAnalysisResult clone() =>
       SentimentAnalysisResult()..mergeFromMessage(this);
   SentimentAnalysisResult copyWith(
           void Function(SentimentAnalysisResult) updates) =>
       super.copyWith((message) => updates(message as SentimentAnalysisResult));
   $pb.BuilderInfo get info_ => _i;
-  static SentimentAnalysisResult create() => SentimentAnalysisResult();
+  @$core.pragma('dart2js:noInline')
+  static SentimentAnalysisResult create() => SentimentAnalysisResult._();
   SentimentAnalysisResult createEmptyInstance() => create();
   static $pb.PbList<SentimentAnalysisResult> createRepeated() =>
       $pb.PbList<SentimentAnalysisResult>();
@@ -900,18 +929,20 @@ class Sentiment extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'magnitude', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Sentiment() : super();
-  Sentiment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Sentiment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Sentiment._() : super();
+  factory Sentiment() => create();
+  factory Sentiment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Sentiment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Sentiment clone() => Sentiment()..mergeFromMessage(this);
   Sentiment copyWith(void Function(Sentiment) updates) =>
       super.copyWith((message) => updates(message as Sentiment));
   $pb.BuilderInfo get info_ => _i;
-  static Sentiment create() => Sentiment();
+  @$core.pragma('dart2js:noInline')
+  static Sentiment create() => Sentiment._();
   Sentiment createEmptyInstance() => create();
   static $pb.PbList<Sentiment> createRepeated() => $pb.PbList<Sentiment>();
   static Sentiment getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/annotation_payload.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const AnnotationPayload$json = {
   '1': 'AnnotationPayload',
@@ -42,6 +43,15 @@ const AnnotationPayload$json = {
       '6': '.google.cloud.automl.v1beta1.VideoClassificationAnnotation',
       '9': 0,
       '10': 'videoClassification'
+    },
+    {
+      '1': 'video_object_tracking',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.VideoObjectTrackingAnnotation',
+      '9': 0,
+      '10': 'videoObjectTracking'
     },
     {
       '1': 'text_extraction',

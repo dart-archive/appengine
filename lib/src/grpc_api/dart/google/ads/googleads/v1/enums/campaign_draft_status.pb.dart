@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/campaign_draft_status.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,20 +17,22 @@ class CampaignDraftStatusEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  CampaignDraftStatusEnum() : super();
-  CampaignDraftStatusEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignDraftStatusEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignDraftStatusEnum._() : super();
+  factory CampaignDraftStatusEnum() => create();
+  factory CampaignDraftStatusEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignDraftStatusEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignDraftStatusEnum clone() =>
       CampaignDraftStatusEnum()..mergeFromMessage(this);
   CampaignDraftStatusEnum copyWith(
           void Function(CampaignDraftStatusEnum) updates) =>
       super.copyWith((message) => updates(message as CampaignDraftStatusEnum));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignDraftStatusEnum create() => CampaignDraftStatusEnum();
+  @$core.pragma('dart2js:noInline')
+  static CampaignDraftStatusEnum create() => CampaignDraftStatusEnum._();
   CampaignDraftStatusEnum createEmptyInstance() => create();
   static $pb.PbList<CampaignDraftStatusEnum> createRepeated() =>
       $pb.PbList<CampaignDraftStatusEnum>();

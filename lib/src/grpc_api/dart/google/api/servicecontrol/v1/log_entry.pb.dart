@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/log_entry.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class LogEntry extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogEntry',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..oo(0, [2, 3, 6])
     ..a<$0.Any>(
         2, 'protoPayload', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
     ..aOS(3, 'textPayload')
@@ -47,21 +49,22 @@ class LogEntry extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..oo(0, [2, 3, 6])
     ..hasRequiredFields = false;
 
-  LogEntry() : super();
-  LogEntry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogEntry._() : super();
+  factory LogEntry() => create();
+  factory LogEntry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogEntry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogEntry clone() => LogEntry()..mergeFromMessage(this);
   LogEntry copyWith(void Function(LogEntry) updates) =>
       super.copyWith((message) => updates(message as LogEntry));
   $pb.BuilderInfo get info_ => _i;
-  static LogEntry create() => LogEntry();
+  @$core.pragma('dart2js:noInline')
+  static LogEntry create() => LogEntry._();
   LogEntry createEmptyInstance() => create();
   static $pb.PbList<LogEntry> createRepeated() => $pb.PbList<LogEntry>();
   static LogEntry getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign_label.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class CampaignLabel extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CampaignLabel() : super();
-  CampaignLabel.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignLabel.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignLabel._() : super();
+  factory CampaignLabel() => create();
+  factory CampaignLabel.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignLabel.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignLabel clone() => CampaignLabel()..mergeFromMessage(this);
   CampaignLabel copyWith(void Function(CampaignLabel) updates) =>
       super.copyWith((message) => updates(message as CampaignLabel));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignLabel create() => CampaignLabel();
+  @$core.pragma('dart2js:noInline')
+  static CampaignLabel create() => CampaignLabel._();
   CampaignLabel createEmptyInstance() => create();
   static $pb.PbList<CampaignLabel> createRepeated() =>
       $pb.PbList<CampaignLabel>();

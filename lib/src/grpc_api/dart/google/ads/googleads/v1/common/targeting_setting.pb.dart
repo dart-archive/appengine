@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/targeting_setting.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,18 +21,20 @@ class TargetingSetting extends $pb.GeneratedMessage {
         1, 'targetRestrictions', $pb.PbFieldType.PM, TargetRestriction.create)
     ..hasRequiredFields = false;
 
-  TargetingSetting() : super();
-  TargetingSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetingSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetingSetting._() : super();
+  factory TargetingSetting() => create();
+  factory TargetingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetingSetting clone() => TargetingSetting()..mergeFromMessage(this);
   TargetingSetting copyWith(void Function(TargetingSetting) updates) =>
       super.copyWith((message) => updates(message as TargetingSetting));
   $pb.BuilderInfo get info_ => _i;
-  static TargetingSetting create() => TargetingSetting();
+  @$core.pragma('dart2js:noInline')
+  static TargetingSetting create() => TargetingSetting._();
   TargetingSetting createEmptyInstance() => create();
   static $pb.PbList<TargetingSetting> createRepeated() =>
       $pb.PbList<TargetingSetting>();
@@ -56,18 +59,20 @@ class TargetRestriction extends $pb.GeneratedMessage {
         $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  TargetRestriction() : super();
-  TargetRestriction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetRestriction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetRestriction._() : super();
+  factory TargetRestriction() => create();
+  factory TargetRestriction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetRestriction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetRestriction clone() => TargetRestriction()..mergeFromMessage(this);
   TargetRestriction copyWith(void Function(TargetRestriction) updates) =>
       super.copyWith((message) => updates(message as TargetRestriction));
   $pb.BuilderInfo get info_ => _i;
-  static TargetRestriction create() => TargetRestriction();
+  @$core.pragma('dart2js:noInline')
+  static TargetRestriction create() => TargetRestriction._();
   TargetRestriction createEmptyInstance() => create();
   static $pb.PbList<TargetRestriction> createRepeated() =>
       $pb.PbList<TargetRestriction>();

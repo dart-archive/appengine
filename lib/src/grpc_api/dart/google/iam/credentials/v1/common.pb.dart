@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/iam/credentials/v1/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,13 +24,14 @@ class GenerateAccessTokenRequest extends $pb.GeneratedMessage {
         $0.Duration.create)
     ..hasRequiredFields = false;
 
-  GenerateAccessTokenRequest() : super();
-  GenerateAccessTokenRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateAccessTokenRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateAccessTokenRequest._() : super();
+  factory GenerateAccessTokenRequest() => create();
+  factory GenerateAccessTokenRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateAccessTokenRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateAccessTokenRequest clone() =>
       GenerateAccessTokenRequest()..mergeFromMessage(this);
   GenerateAccessTokenRequest copyWith(
@@ -37,7 +39,8 @@ class GenerateAccessTokenRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GenerateAccessTokenRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateAccessTokenRequest create() => GenerateAccessTokenRequest();
+  @$core.pragma('dart2js:noInline')
+  static GenerateAccessTokenRequest create() => GenerateAccessTokenRequest._();
   GenerateAccessTokenRequest createEmptyInstance() => create();
   static $pb.PbList<GenerateAccessTokenRequest> createRepeated() =>
       $pb.PbList<GenerateAccessTokenRequest>();
@@ -75,13 +78,14 @@ class GenerateAccessTokenResponse extends $pb.GeneratedMessage {
         $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  GenerateAccessTokenResponse() : super();
-  GenerateAccessTokenResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateAccessTokenResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateAccessTokenResponse._() : super();
+  factory GenerateAccessTokenResponse() => create();
+  factory GenerateAccessTokenResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateAccessTokenResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateAccessTokenResponse clone() =>
       GenerateAccessTokenResponse()..mergeFromMessage(this);
   GenerateAccessTokenResponse copyWith(
@@ -89,7 +93,9 @@ class GenerateAccessTokenResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GenerateAccessTokenResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateAccessTokenResponse create() => GenerateAccessTokenResponse();
+  @$core.pragma('dart2js:noInline')
+  static GenerateAccessTokenResponse create() =>
+      GenerateAccessTokenResponse._();
   GenerateAccessTokenResponse createEmptyInstance() => create();
   static $pb.PbList<GenerateAccessTokenResponse> createRepeated() =>
       $pb.PbList<GenerateAccessTokenResponse>();
@@ -122,18 +128,20 @@ class SignBlobRequest extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(5, 'payload', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  SignBlobRequest() : super();
-  SignBlobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignBlobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignBlobRequest._() : super();
+  factory SignBlobRequest() => create();
+  factory SignBlobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SignBlobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SignBlobRequest clone() => SignBlobRequest()..mergeFromMessage(this);
   SignBlobRequest copyWith(void Function(SignBlobRequest) updates) =>
       super.copyWith((message) => updates(message as SignBlobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SignBlobRequest create() => SignBlobRequest();
+  @$core.pragma('dart2js:noInline')
+  static SignBlobRequest create() => SignBlobRequest._();
   SignBlobRequest createEmptyInstance() => create();
   static $pb.PbList<SignBlobRequest> createRepeated() =>
       $pb.PbList<SignBlobRequest>();
@@ -167,18 +175,20 @@ class SignBlobResponse extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, 'signedBlob', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  SignBlobResponse() : super();
-  SignBlobResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignBlobResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignBlobResponse._() : super();
+  factory SignBlobResponse() => create();
+  factory SignBlobResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SignBlobResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SignBlobResponse clone() => SignBlobResponse()..mergeFromMessage(this);
   SignBlobResponse copyWith(void Function(SignBlobResponse) updates) =>
       super.copyWith((message) => updates(message as SignBlobResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SignBlobResponse create() => SignBlobResponse();
+  @$core.pragma('dart2js:noInline')
+  static SignBlobResponse create() => SignBlobResponse._();
   SignBlobResponse createEmptyInstance() => create();
   static $pb.PbList<SignBlobResponse> createRepeated() =>
       $pb.PbList<SignBlobResponse>();
@@ -211,18 +221,20 @@ class SignJwtRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'payload')
     ..hasRequiredFields = false;
 
-  SignJwtRequest() : super();
-  SignJwtRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignJwtRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignJwtRequest._() : super();
+  factory SignJwtRequest() => create();
+  factory SignJwtRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SignJwtRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SignJwtRequest clone() => SignJwtRequest()..mergeFromMessage(this);
   SignJwtRequest copyWith(void Function(SignJwtRequest) updates) =>
       super.copyWith((message) => updates(message as SignJwtRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SignJwtRequest create() => SignJwtRequest();
+  @$core.pragma('dart2js:noInline')
+  static SignJwtRequest create() => SignJwtRequest._();
   SignJwtRequest createEmptyInstance() => create();
   static $pb.PbList<SignJwtRequest> createRepeated() =>
       $pb.PbList<SignJwtRequest>();
@@ -255,18 +267,20 @@ class SignJwtResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'signedJwt')
     ..hasRequiredFields = false;
 
-  SignJwtResponse() : super();
-  SignJwtResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SignJwtResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SignJwtResponse._() : super();
+  factory SignJwtResponse() => create();
+  factory SignJwtResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SignJwtResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SignJwtResponse clone() => SignJwtResponse()..mergeFromMessage(this);
   SignJwtResponse copyWith(void Function(SignJwtResponse) updates) =>
       super.copyWith((message) => updates(message as SignJwtResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SignJwtResponse create() => SignJwtResponse();
+  @$core.pragma('dart2js:noInline')
+  static SignJwtResponse create() => SignJwtResponse._();
   SignJwtResponse createEmptyInstance() => create();
   static $pb.PbList<SignJwtResponse> createRepeated() =>
       $pb.PbList<SignJwtResponse>();
@@ -300,20 +314,22 @@ class GenerateIdTokenRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'includeEmail')
     ..hasRequiredFields = false;
 
-  GenerateIdTokenRequest() : super();
-  GenerateIdTokenRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateIdTokenRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateIdTokenRequest._() : super();
+  factory GenerateIdTokenRequest() => create();
+  factory GenerateIdTokenRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateIdTokenRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateIdTokenRequest clone() =>
       GenerateIdTokenRequest()..mergeFromMessage(this);
   GenerateIdTokenRequest copyWith(
           void Function(GenerateIdTokenRequest) updates) =>
       super.copyWith((message) => updates(message as GenerateIdTokenRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateIdTokenRequest create() => GenerateIdTokenRequest();
+  @$core.pragma('dart2js:noInline')
+  static GenerateIdTokenRequest create() => GenerateIdTokenRequest._();
   GenerateIdTokenRequest createEmptyInstance() => create();
   static $pb.PbList<GenerateIdTokenRequest> createRepeated() =>
       $pb.PbList<GenerateIdTokenRequest>();
@@ -354,20 +370,22 @@ class GenerateIdTokenResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'token')
     ..hasRequiredFields = false;
 
-  GenerateIdTokenResponse() : super();
-  GenerateIdTokenResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateIdTokenResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateIdTokenResponse._() : super();
+  factory GenerateIdTokenResponse() => create();
+  factory GenerateIdTokenResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateIdTokenResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateIdTokenResponse clone() =>
       GenerateIdTokenResponse()..mergeFromMessage(this);
   GenerateIdTokenResponse copyWith(
           void Function(GenerateIdTokenResponse) updates) =>
       super.copyWith((message) => updates(message as GenerateIdTokenResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateIdTokenResponse create() => GenerateIdTokenResponse();
+  @$core.pragma('dart2js:noInline')
+  static GenerateIdTokenResponse create() => GenerateIdTokenResponse._();
   GenerateIdTokenResponse createEmptyInstance() => create();
   static $pb.PbList<GenerateIdTokenResponse> createRepeated() =>
       $pb.PbList<GenerateIdTokenResponse>();
@@ -382,106 +400,4 @@ class GenerateIdTokenResponse extends $pb.GeneratedMessage {
 
   $core.bool hasToken() => $_has(0);
   void clearToken() => clearField(1);
-}
-
-class GenerateIdentityBindingAccessTokenRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'GenerateIdentityBindingAccessTokenRequest',
-      package: const $pb.PackageName('google.iam.credentials.v1'))
-    ..aOS(1, 'name')
-    ..pPS(2, 'scope')
-    ..aOS(3, 'jwt')
-    ..hasRequiredFields = false;
-
-  GenerateIdentityBindingAccessTokenRequest() : super();
-  GenerateIdentityBindingAccessTokenRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateIdentityBindingAccessTokenRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GenerateIdentityBindingAccessTokenRequest clone() =>
-      GenerateIdentityBindingAccessTokenRequest()..mergeFromMessage(this);
-  GenerateIdentityBindingAccessTokenRequest copyWith(
-          void Function(GenerateIdentityBindingAccessTokenRequest) updates) =>
-      super.copyWith((message) =>
-          updates(message as GenerateIdentityBindingAccessTokenRequest));
-  $pb.BuilderInfo get info_ => _i;
-  static GenerateIdentityBindingAccessTokenRequest create() =>
-      GenerateIdentityBindingAccessTokenRequest();
-  GenerateIdentityBindingAccessTokenRequest createEmptyInstance() => create();
-  static $pb.PbList<GenerateIdentityBindingAccessTokenRequest>
-      createRepeated() =>
-          $pb.PbList<GenerateIdentityBindingAccessTokenRequest>();
-  static GenerateIdentityBindingAccessTokenRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
-  static GenerateIdentityBindingAccessTokenRequest _defaultInstance;
-
-  $core.String get name => $_getS(0, '');
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
-  $core.bool hasName() => $_has(0);
-  void clearName() => clearField(1);
-
-  $core.List<$core.String> get scope => $_getList(1);
-
-  $core.String get jwt => $_getS(2, '');
-  set jwt($core.String v) {
-    $_setString(2, v);
-  }
-
-  $core.bool hasJwt() => $_has(2);
-  void clearJwt() => clearField(3);
-}
-
-class GenerateIdentityBindingAccessTokenResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'GenerateIdentityBindingAccessTokenResponse',
-      package: const $pb.PackageName('google.iam.credentials.v1'))
-    ..aOS(1, 'accessToken')
-    ..a<$1.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..hasRequiredFields = false;
-
-  GenerateIdentityBindingAccessTokenResponse() : super();
-  GenerateIdentityBindingAccessTokenResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateIdentityBindingAccessTokenResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  GenerateIdentityBindingAccessTokenResponse clone() =>
-      GenerateIdentityBindingAccessTokenResponse()..mergeFromMessage(this);
-  GenerateIdentityBindingAccessTokenResponse copyWith(
-          void Function(GenerateIdentityBindingAccessTokenResponse) updates) =>
-      super.copyWith((message) =>
-          updates(message as GenerateIdentityBindingAccessTokenResponse));
-  $pb.BuilderInfo get info_ => _i;
-  static GenerateIdentityBindingAccessTokenResponse create() =>
-      GenerateIdentityBindingAccessTokenResponse();
-  GenerateIdentityBindingAccessTokenResponse createEmptyInstance() => create();
-  static $pb.PbList<GenerateIdentityBindingAccessTokenResponse>
-      createRepeated() =>
-          $pb.PbList<GenerateIdentityBindingAccessTokenResponse>();
-  static GenerateIdentityBindingAccessTokenResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
-  static GenerateIdentityBindingAccessTokenResponse _defaultInstance;
-
-  $core.String get accessToken => $_getS(0, '');
-  set accessToken($core.String v) {
-    $_setString(0, v);
-  }
-
-  $core.bool hasAccessToken() => $_has(0);
-  void clearAccessToken() => clearField(1);
-
-  $1.Timestamp get expireTime => $_getN(1);
-  set expireTime($1.Timestamp v) {
-    setField(2, v);
-  }
-
-  $core.bool hasExpireTime() => $_has(1);
-  void clearExpireTime() => clearField(2);
 }

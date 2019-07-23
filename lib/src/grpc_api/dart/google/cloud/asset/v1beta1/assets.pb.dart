@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/asset/v1beta1/assets.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,18 +23,20 @@ class TemporalAsset extends $pb.GeneratedMessage {
     ..a<Asset>(3, 'asset', $pb.PbFieldType.OM, Asset.getDefault, Asset.create)
     ..hasRequiredFields = false;
 
-  TemporalAsset() : super();
-  TemporalAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TemporalAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TemporalAsset._() : super();
+  factory TemporalAsset() => create();
+  factory TemporalAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TemporalAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TemporalAsset clone() => TemporalAsset()..mergeFromMessage(this);
   TemporalAsset copyWith(void Function(TemporalAsset) updates) =>
       super.copyWith((message) => updates(message as TemporalAsset));
   $pb.BuilderInfo get info_ => _i;
-  static TemporalAsset create() => TemporalAsset();
+  @$core.pragma('dart2js:noInline')
+  static TemporalAsset create() => TemporalAsset._();
   TemporalAsset createEmptyInstance() => create();
   static $pb.PbList<TemporalAsset> createRepeated() =>
       $pb.PbList<TemporalAsset>();
@@ -74,18 +77,20 @@ class TimeWindow extends $pb.GeneratedMessage {
         $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  TimeWindow() : super();
-  TimeWindow.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimeWindow.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimeWindow._() : super();
+  factory TimeWindow() => create();
+  factory TimeWindow.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimeWindow.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimeWindow clone() => TimeWindow()..mergeFromMessage(this);
   TimeWindow copyWith(void Function(TimeWindow) updates) =>
       super.copyWith((message) => updates(message as TimeWindow));
   $pb.BuilderInfo get info_ => _i;
-  static TimeWindow create() => TimeWindow();
+  @$core.pragma('dart2js:noInline')
+  static TimeWindow create() => TimeWindow._();
   TimeWindow createEmptyInstance() => create();
   static $pb.PbList<TimeWindow> createRepeated() => $pb.PbList<TimeWindow>();
   static TimeWindow getDefault() => _defaultInstance ??= create()..freeze();
@@ -119,18 +124,20 @@ class Asset extends $pb.GeneratedMessage {
         $1.Policy.create)
     ..hasRequiredFields = false;
 
-  Asset() : super();
-  Asset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Asset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Asset._() : super();
+  factory Asset() => create();
+  factory Asset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Asset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Asset clone() => Asset()..mergeFromMessage(this);
   Asset copyWith(void Function(Asset) updates) =>
       super.copyWith((message) => updates(message as Asset));
   $pb.BuilderInfo get info_ => _i;
-  static Asset create() => Asset();
+  @$core.pragma('dart2js:noInline')
+  static Asset create() => Asset._();
   Asset createEmptyInstance() => create();
   static $pb.PbList<Asset> createRepeated() => $pb.PbList<Asset>();
   static Asset getDefault() => _defaultInstance ??= create()..freeze();
@@ -181,18 +188,20 @@ class Resource extends $pb.GeneratedMessage {
         6, 'data', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
     ..hasRequiredFields = false;
 
-  Resource() : super();
-  Resource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Resource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Resource._() : super();
+  factory Resource() => create();
+  factory Resource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Resource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Resource clone() => Resource()..mergeFromMessage(this);
   Resource copyWith(void Function(Resource) updates) =>
       super.copyWith((message) => updates(message as Resource));
   $pb.BuilderInfo get info_ => _i;
-  static Resource create() => Resource();
+  @$core.pragma('dart2js:noInline')
+  static Resource create() => Resource._();
   Resource createEmptyInstance() => create();
   static $pb.PbList<Resource> createRepeated() => $pb.PbList<Resource>();
   static Resource getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class Type extends $pb.GeneratedMessage {
         StructType.create)
     ..hasRequiredFields = false;
 
-  Type() : super();
-  Type.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Type.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Type._() : super();
+  factory Type() => create();
+  factory Type.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Type.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Type clone() => Type()..mergeFromMessage(this);
   Type copyWith(void Function(Type) updates) =>
       super.copyWith((message) => updates(message as Type));
   $pb.BuilderInfo get info_ => _i;
-  static Type create() => Type();
+  @$core.pragma('dart2js:noInline')
+  static Type create() => Type._();
   Type createEmptyInstance() => create();
   static $pb.PbList<Type> createRepeated() => $pb.PbList<Type>();
   static Type getDefault() => _defaultInstance ??= create()..freeze();
@@ -73,18 +76,20 @@ class StructType_Field extends $pb.GeneratedMessage {
     ..a<Type>(2, 'type', $pb.PbFieldType.OM, Type.getDefault, Type.create)
     ..hasRequiredFields = false;
 
-  StructType_Field() : super();
-  StructType_Field.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructType_Field.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructType_Field._() : super();
+  factory StructType_Field() => create();
+  factory StructType_Field.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructType_Field.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructType_Field clone() => StructType_Field()..mergeFromMessage(this);
   StructType_Field copyWith(void Function(StructType_Field) updates) =>
       super.copyWith((message) => updates(message as StructType_Field));
   $pb.BuilderInfo get info_ => _i;
-  static StructType_Field create() => StructType_Field();
+  @$core.pragma('dart2js:noInline')
+  static StructType_Field create() => StructType_Field._();
   StructType_Field createEmptyInstance() => create();
   static $pb.PbList<StructType_Field> createRepeated() =>
       $pb.PbList<StructType_Field>();
@@ -116,18 +121,20 @@ class StructType extends $pb.GeneratedMessage {
         1, 'fields', $pb.PbFieldType.PM, StructType_Field.create)
     ..hasRequiredFields = false;
 
-  StructType() : super();
-  StructType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructType._() : super();
+  factory StructType() => create();
+  factory StructType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructType clone() => StructType()..mergeFromMessage(this);
   StructType copyWith(void Function(StructType) updates) =>
       super.copyWith((message) => updates(message as StructType));
   $pb.BuilderInfo get info_ => _i;
-  static StructType create() => StructType();
+  @$core.pragma('dart2js:noInline')
+  static StructType create() => StructType._();
   StructType createEmptyInstance() => create();
   static $pb.PbList<StructType> createRepeated() => $pb.PbList<StructType>();
   static StructType getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/segments.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -135,18 +136,20 @@ class Segments extends $pb.GeneratedMessage {
     ..a<$0.StringValue>(75, 'geoTargetProvince', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Segments() : super();
-  Segments.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Segments.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Segments._() : super();
+  factory Segments() => create();
+  factory Segments.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Segments.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Segments clone() => Segments()..mergeFromMessage(this);
   Segments copyWith(void Function(Segments) updates) =>
       super.copyWith((message) => updates(message as Segments));
   $pb.BuilderInfo get info_ => _i;
-  static Segments create() => Segments();
+  @$core.pragma('dart2js:noInline')
+  static Segments create() => Segments._();
   Segments createEmptyInstance() => create();
   static $pb.PbList<Segments> createRepeated() => $pb.PbList<Segments>();
   static Segments getDefault() => _defaultInstance ??= create()..freeze();
@@ -779,18 +782,20 @@ class Keyword extends $pb.GeneratedMessage {
         $1.KeywordInfo.getDefault, $1.KeywordInfo.create)
     ..hasRequiredFields = false;
 
-  Keyword() : super();
-  Keyword.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Keyword.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Keyword._() : super();
+  factory Keyword() => create();
+  factory Keyword.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Keyword.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Keyword clone() => Keyword()..mergeFromMessage(this);
   Keyword copyWith(void Function(Keyword) updates) =>
       super.copyWith((message) => updates(message as Keyword));
   $pb.BuilderInfo get info_ => _i;
-  static Keyword create() => Keyword();
+  @$core.pragma('dart2js:noInline')
+  static Keyword create() => Keyword._();
   Keyword createEmptyInstance() => create();
   static $pb.PbList<Keyword> createRepeated() => $pb.PbList<Keyword>();
   static Keyword getDefault() => _defaultInstance ??= create()..freeze();

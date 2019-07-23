@@ -1,103 +1,106 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/grafeas/grafeas.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'grafeas.pb.dart';
-import '../../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'grafeas.pb.dart' as $0;
+import '../../../../protobuf/empty.pb.dart' as $1;
 export 'grafeas.pb.dart';
 
 class GrafeasV1Beta1Client extends $grpc.Client {
   static final _$getOccurrence =
-      $grpc.ClientMethod<GetOccurrenceRequest, Occurrence>(
+      $grpc.ClientMethod<$0.GetOccurrenceRequest, $0.Occurrence>(
           '/grafeas.v1beta1.GrafeasV1Beta1/GetOccurrence',
-          (GetOccurrenceRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Occurrence.fromBuffer(value));
+          ($0.GetOccurrenceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Occurrence.fromBuffer(value));
   static final _$listOccurrences =
-      $grpc.ClientMethod<ListOccurrencesRequest, ListOccurrencesResponse>(
+      $grpc.ClientMethod<$0.ListOccurrencesRequest, $0.ListOccurrencesResponse>(
           '/grafeas.v1beta1.GrafeasV1Beta1/ListOccurrences',
-          (ListOccurrencesRequest value) => value.writeToBuffer(),
+          ($0.ListOccurrencesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListOccurrencesResponse.fromBuffer(value));
+              $0.ListOccurrencesResponse.fromBuffer(value));
   static final _$deleteOccurrence =
-      $grpc.ClientMethod<DeleteOccurrenceRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.DeleteOccurrenceRequest, $1.Empty>(
           '/grafeas.v1beta1.GrafeasV1Beta1/DeleteOccurrence',
-          (DeleteOccurrenceRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($0.DeleteOccurrenceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$createOccurrence =
-      $grpc.ClientMethod<CreateOccurrenceRequest, Occurrence>(
+      $grpc.ClientMethod<$0.CreateOccurrenceRequest, $0.Occurrence>(
           '/grafeas.v1beta1.GrafeasV1Beta1/CreateOccurrence',
-          (CreateOccurrenceRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Occurrence.fromBuffer(value));
+          ($0.CreateOccurrenceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Occurrence.fromBuffer(value));
   static final _$batchCreateOccurrences = $grpc.ClientMethod<
-          BatchCreateOccurrencesRequest, BatchCreateOccurrencesResponse>(
+          $0.BatchCreateOccurrencesRequest, $0.BatchCreateOccurrencesResponse>(
       '/grafeas.v1beta1.GrafeasV1Beta1/BatchCreateOccurrences',
-      (BatchCreateOccurrencesRequest value) => value.writeToBuffer(),
+      ($0.BatchCreateOccurrencesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          BatchCreateOccurrencesResponse.fromBuffer(value));
+          $0.BatchCreateOccurrencesResponse.fromBuffer(value));
   static final _$updateOccurrence =
-      $grpc.ClientMethod<UpdateOccurrenceRequest, Occurrence>(
+      $grpc.ClientMethod<$0.UpdateOccurrenceRequest, $0.Occurrence>(
           '/grafeas.v1beta1.GrafeasV1Beta1/UpdateOccurrence',
-          (UpdateOccurrenceRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Occurrence.fromBuffer(value));
+          ($0.UpdateOccurrenceRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Occurrence.fromBuffer(value));
   static final _$getOccurrenceNote =
-      $grpc.ClientMethod<GetOccurrenceNoteRequest, Note>(
+      $grpc.ClientMethod<$0.GetOccurrenceNoteRequest, $0.Note>(
           '/grafeas.v1beta1.GrafeasV1Beta1/GetOccurrenceNote',
-          (GetOccurrenceNoteRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Note.fromBuffer(value));
-  static final _$getNote = $grpc.ClientMethod<GetNoteRequest, Note>(
+          ($0.GetOccurrenceNoteRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Note.fromBuffer(value));
+  static final _$getNote = $grpc.ClientMethod<$0.GetNoteRequest, $0.Note>(
       '/grafeas.v1beta1.GrafeasV1Beta1/GetNote',
-      (GetNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
+      ($0.GetNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Note.fromBuffer(value));
   static final _$listNotes =
-      $grpc.ClientMethod<ListNotesRequest, ListNotesResponse>(
+      $grpc.ClientMethod<$0.ListNotesRequest, $0.ListNotesResponse>(
           '/grafeas.v1beta1.GrafeasV1Beta1/ListNotes',
-          (ListNotesRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ListNotesResponse.fromBuffer(value));
-  static final _$deleteNote = $grpc.ClientMethod<DeleteNoteRequest, $0.Empty>(
-      '/grafeas.v1beta1.GrafeasV1Beta1/DeleteNote',
-      (DeleteNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$createNote = $grpc.ClientMethod<CreateNoteRequest, Note>(
-      '/grafeas.v1beta1.GrafeasV1Beta1/CreateNote',
-      (CreateNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
-  static final _$batchCreateNotes =
-      $grpc.ClientMethod<BatchCreateNotesRequest, BatchCreateNotesResponse>(
-          '/grafeas.v1beta1.GrafeasV1Beta1/BatchCreateNotes',
-          (BatchCreateNotesRequest value) => value.writeToBuffer(),
+          ($0.ListNotesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              BatchCreateNotesResponse.fromBuffer(value));
-  static final _$updateNote = $grpc.ClientMethod<UpdateNoteRequest, Note>(
-      '/grafeas.v1beta1.GrafeasV1Beta1/UpdateNote',
-      (UpdateNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
-  static final _$listNoteOccurrences = $grpc.ClientMethod<
-          ListNoteOccurrencesRequest, ListNoteOccurrencesResponse>(
-      '/grafeas.v1beta1.GrafeasV1Beta1/ListNoteOccurrences',
-      (ListNoteOccurrencesRequest value) => value.writeToBuffer(),
+              $0.ListNotesResponse.fromBuffer(value));
+  static final _$deleteNote =
+      $grpc.ClientMethod<$0.DeleteNoteRequest, $1.Empty>(
+          '/grafeas.v1beta1.GrafeasV1Beta1/DeleteNote',
+          ($0.DeleteNoteRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$createNote = $grpc.ClientMethod<$0.CreateNoteRequest, $0.Note>(
+      '/grafeas.v1beta1.GrafeasV1Beta1/CreateNote',
+      ($0.CreateNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Note.fromBuffer(value));
+  static final _$batchCreateNotes = $grpc.ClientMethod<
+          $0.BatchCreateNotesRequest, $0.BatchCreateNotesResponse>(
+      '/grafeas.v1beta1.GrafeasV1Beta1/BatchCreateNotes',
+      ($0.BatchCreateNotesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListNoteOccurrencesResponse.fromBuffer(value));
+          $0.BatchCreateNotesResponse.fromBuffer(value));
+  static final _$updateNote = $grpc.ClientMethod<$0.UpdateNoteRequest, $0.Note>(
+      '/grafeas.v1beta1.GrafeasV1Beta1/UpdateNote',
+      ($0.UpdateNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Note.fromBuffer(value));
+  static final _$listNoteOccurrences = $grpc.ClientMethod<
+          $0.ListNoteOccurrencesRequest, $0.ListNoteOccurrencesResponse>(
+      '/grafeas.v1beta1.GrafeasV1Beta1/ListNoteOccurrences',
+      ($0.ListNoteOccurrencesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListNoteOccurrencesResponse.fromBuffer(value));
   static final _$getVulnerabilityOccurrencesSummary = $grpc.ClientMethod<
-          GetVulnerabilityOccurrencesSummaryRequest,
-          VulnerabilityOccurrencesSummary>(
+          $0.GetVulnerabilityOccurrencesSummaryRequest,
+          $0.VulnerabilityOccurrencesSummary>(
       '/grafeas.v1beta1.GrafeasV1Beta1/GetVulnerabilityOccurrencesSummary',
-      (GetVulnerabilityOccurrencesSummaryRequest value) =>
+      ($0.GetVulnerabilityOccurrencesSummaryRequest value) =>
           value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          VulnerabilityOccurrencesSummary.fromBuffer(value));
+          $0.VulnerabilityOccurrencesSummary.fromBuffer(value));
 
   GrafeasV1Beta1Client($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<Occurrence> getOccurrence(GetOccurrenceRequest request,
+  $grpc.ResponseFuture<$0.Occurrence> getOccurrence(
+      $0.GetOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getOccurrence, $async.Stream.fromIterable([request]),
@@ -105,8 +108,8 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListOccurrencesResponse> listOccurrences(
-      ListOccurrencesRequest request,
+  $grpc.ResponseFuture<$0.ListOccurrencesResponse> listOccurrences(
+      $0.ListOccurrencesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listOccurrences, $async.Stream.fromIterable([request]),
@@ -114,8 +117,8 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteOccurrence(
-      DeleteOccurrenceRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteOccurrence(
+      $0.DeleteOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteOccurrence, $async.Stream.fromIterable([request]),
@@ -123,8 +126,8 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Occurrence> createOccurrence(
-      CreateOccurrenceRequest request,
+  $grpc.ResponseFuture<$0.Occurrence> createOccurrence(
+      $0.CreateOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createOccurrence, $async.Stream.fromIterable([request]),
@@ -132,17 +135,17 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<BatchCreateOccurrencesResponse> batchCreateOccurrences(
-      BatchCreateOccurrencesRequest request,
-      {$grpc.CallOptions options}) {
+  $grpc.ResponseFuture<$0.BatchCreateOccurrencesResponse>
+      batchCreateOccurrences($0.BatchCreateOccurrencesRequest request,
+          {$grpc.CallOptions options}) {
     final call = $createCall(
         _$batchCreateOccurrences, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Occurrence> updateOccurrence(
-      UpdateOccurrenceRequest request,
+  $grpc.ResponseFuture<$0.Occurrence> updateOccurrence(
+      $0.UpdateOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateOccurrence, $async.Stream.fromIterable([request]),
@@ -150,7 +153,8 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> getOccurrenceNote(GetOccurrenceNoteRequest request,
+  $grpc.ResponseFuture<$0.Note> getOccurrenceNote(
+      $0.GetOccurrenceNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getOccurrenceNote, $async.Stream.fromIterable([request]),
@@ -158,21 +162,22 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> getNote(GetNoteRequest request,
+  $grpc.ResponseFuture<$0.Note> getNote($0.GetNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getNote, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListNotesResponse> listNotes(ListNotesRequest request,
+  $grpc.ResponseFuture<$0.ListNotesResponse> listNotes(
+      $0.ListNotesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$listNotes, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteNote(DeleteNoteRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteNote($0.DeleteNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteNote, $async.Stream.fromIterable([request]),
@@ -180,7 +185,7 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> createNote(CreateNoteRequest request,
+  $grpc.ResponseFuture<$0.Note> createNote($0.CreateNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createNote, $async.Stream.fromIterable([request]),
@@ -188,8 +193,8 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<BatchCreateNotesResponse> batchCreateNotes(
-      BatchCreateNotesRequest request,
+  $grpc.ResponseFuture<$0.BatchCreateNotesResponse> batchCreateNotes(
+      $0.BatchCreateNotesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$batchCreateNotes, $async.Stream.fromIterable([request]),
@@ -197,7 +202,7 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> updateNote(UpdateNoteRequest request,
+  $grpc.ResponseFuture<$0.Note> updateNote($0.UpdateNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateNote, $async.Stream.fromIterable([request]),
@@ -205,8 +210,8 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListNoteOccurrencesResponse> listNoteOccurrences(
-      ListNoteOccurrencesRequest request,
+  $grpc.ResponseFuture<$0.ListNoteOccurrencesResponse> listNoteOccurrences(
+      $0.ListNoteOccurrencesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listNoteOccurrences, $async.Stream.fromIterable([request]),
@@ -214,9 +219,9 @@ class GrafeasV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<VulnerabilityOccurrencesSummary>
+  $grpc.ResponseFuture<$0.VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummary(
-          GetVulnerabilityOccurrencesSummaryRequest request,
+          $0.GetVulnerabilityOccurrencesSummaryRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(_$getVulnerabilityOccurrencesSummary,
         $async.Stream.fromIterable([request]),
@@ -229,231 +234,239 @@ abstract class GrafeasV1Beta1ServiceBase extends $grpc.Service {
   $core.String get $name => 'grafeas.v1beta1.GrafeasV1Beta1';
 
   GrafeasV1Beta1ServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetOccurrenceRequest, Occurrence>(
+    $addMethod($grpc.ServiceMethod<$0.GetOccurrenceRequest, $0.Occurrence>(
         'GetOccurrence',
         getOccurrence_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetOccurrenceRequest.fromBuffer(value),
-        (Occurrence value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<ListOccurrencesRequest, ListOccurrencesResponse>(
-            'ListOccurrences',
-            listOccurrences_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                ListOccurrencesRequest.fromBuffer(value),
-            (ListOccurrencesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteOccurrenceRequest, $0.Empty>(
+        ($core.List<$core.int> value) =>
+            $0.GetOccurrenceRequest.fromBuffer(value),
+        ($0.Occurrence value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListOccurrencesRequest,
+            $0.ListOccurrencesResponse>(
+        'ListOccurrences',
+        listOccurrences_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListOccurrencesRequest.fromBuffer(value),
+        ($0.ListOccurrencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteOccurrenceRequest, $1.Empty>(
         'DeleteOccurrence',
         deleteOccurrence_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteOccurrenceRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateOccurrenceRequest, Occurrence>(
+            $0.DeleteOccurrenceRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateOccurrenceRequest, $0.Occurrence>(
         'CreateOccurrence',
         createOccurrence_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateOccurrenceRequest.fromBuffer(value),
-        (Occurrence value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<BatchCreateOccurrencesRequest,
-            BatchCreateOccurrencesResponse>(
+            $0.CreateOccurrenceRequest.fromBuffer(value),
+        ($0.Occurrence value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchCreateOccurrencesRequest,
+            $0.BatchCreateOccurrencesResponse>(
         'BatchCreateOccurrences',
         batchCreateOccurrences_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            BatchCreateOccurrencesRequest.fromBuffer(value),
-        (BatchCreateOccurrencesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateOccurrenceRequest, Occurrence>(
+            $0.BatchCreateOccurrencesRequest.fromBuffer(value),
+        ($0.BatchCreateOccurrencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateOccurrenceRequest, $0.Occurrence>(
         'UpdateOccurrence',
         updateOccurrence_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateOccurrenceRequest.fromBuffer(value),
-        (Occurrence value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetOccurrenceNoteRequest, Note>(
+            $0.UpdateOccurrenceRequest.fromBuffer(value),
+        ($0.Occurrence value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetOccurrenceNoteRequest, $0.Note>(
         'GetOccurrenceNote',
         getOccurrenceNote_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetOccurrenceNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetNoteRequest, Note>(
+            $0.GetOccurrenceNoteRequest.fromBuffer(value),
+        ($0.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetNoteRequest, $0.Note>(
         'GetNote',
         getNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListNotesRequest, ListNotesResponse>(
+        ($core.List<$core.int> value) => $0.GetNoteRequest.fromBuffer(value),
+        ($0.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListNotesRequest, $0.ListNotesResponse>(
         'ListNotes',
         listNotes_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ListNotesRequest.fromBuffer(value),
-        (ListNotesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteNoteRequest, $0.Empty>(
+        ($core.List<$core.int> value) => $0.ListNotesRequest.fromBuffer(value),
+        ($0.ListNotesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteNoteRequest, $1.Empty>(
         'DeleteNote',
         deleteNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteNoteRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateNoteRequest, Note>(
+        ($core.List<$core.int> value) => $0.DeleteNoteRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateNoteRequest, $0.Note>(
         'CreateNote',
         createNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<BatchCreateNotesRequest, BatchCreateNotesResponse>(
-            'BatchCreateNotes',
-            batchCreateNotes_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                BatchCreateNotesRequest.fromBuffer(value),
-            (BatchCreateNotesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateNoteRequest, Note>(
+        ($core.List<$core.int> value) => $0.CreateNoteRequest.fromBuffer(value),
+        ($0.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchCreateNotesRequest,
+            $0.BatchCreateNotesResponse>(
+        'BatchCreateNotes',
+        batchCreateNotes_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BatchCreateNotesRequest.fromBuffer(value),
+        ($0.BatchCreateNotesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateNoteRequest, $0.Note>(
         'UpdateNote',
         updateNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListNoteOccurrencesRequest,
-            ListNoteOccurrencesResponse>(
+        ($core.List<$core.int> value) => $0.UpdateNoteRequest.fromBuffer(value),
+        ($0.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListNoteOccurrencesRequest,
+            $0.ListNoteOccurrencesResponse>(
         'ListNoteOccurrences',
         listNoteOccurrences_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListNoteOccurrencesRequest.fromBuffer(value),
-        (ListNoteOccurrencesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetVulnerabilityOccurrencesSummaryRequest,
-            VulnerabilityOccurrencesSummary>(
+            $0.ListNoteOccurrencesRequest.fromBuffer(value),
+        ($0.ListNoteOccurrencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetVulnerabilityOccurrencesSummaryRequest,
+            $0.VulnerabilityOccurrencesSummary>(
         'GetVulnerabilityOccurrencesSummary',
         getVulnerabilityOccurrencesSummary_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetVulnerabilityOccurrencesSummaryRequest.fromBuffer(value),
-        (VulnerabilityOccurrencesSummary value) => value.writeToBuffer()));
+            $0.GetVulnerabilityOccurrencesSummaryRequest.fromBuffer(value),
+        ($0.VulnerabilityOccurrencesSummary value) => value.writeToBuffer()));
   }
 
-  $async.Future<Occurrence> getOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Occurrence> getOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetOccurrenceRequest> request) async {
     return getOccurrence(call, await request);
   }
 
-  $async.Future<ListOccurrencesResponse> listOccurrences_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListOccurrencesResponse> listOccurrences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListOccurrencesRequest> request) async {
     return listOccurrences(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteOccurrenceRequest> request) async {
     return deleteOccurrence(call, await request);
   }
 
-  $async.Future<Occurrence> createOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Occurrence> createOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateOccurrenceRequest> request) async {
     return createOccurrence(call, await request);
   }
 
-  $async.Future<BatchCreateOccurrencesResponse> batchCreateOccurrences_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.BatchCreateOccurrencesResponse> batchCreateOccurrences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.BatchCreateOccurrencesRequest> request) async {
     return batchCreateOccurrences(call, await request);
   }
 
-  $async.Future<Occurrence> updateOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Occurrence> updateOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateOccurrenceRequest> request) async {
     return updateOccurrence(call, await request);
   }
 
-  $async.Future<Note> getOccurrenceNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Note> getOccurrenceNote_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetOccurrenceNoteRequest> request) async {
     return getOccurrenceNote(call, await request);
   }
 
-  $async.Future<Note> getNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Note> getNote_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.GetNoteRequest> request) async {
     return getNote(call, await request);
   }
 
-  $async.Future<ListNotesResponse> listNotes_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListNotesResponse> listNotes_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ListNotesRequest> request) async {
     return listNotes(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteNote_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteNoteRequest> request) async {
     return deleteNote(call, await request);
   }
 
-  $async.Future<Note> createNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Note> createNote_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateNoteRequest> request) async {
     return createNote(call, await request);
   }
 
-  $async.Future<BatchCreateNotesResponse> batchCreateNotes_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.BatchCreateNotesResponse> batchCreateNotes_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.BatchCreateNotesRequest> request) async {
     return batchCreateNotes(call, await request);
   }
 
-  $async.Future<Note> updateNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Note> updateNote_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateNoteRequest> request) async {
     return updateNote(call, await request);
   }
 
-  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListNoteOccurrencesResponse> listNoteOccurrences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListNoteOccurrencesRequest> request) async {
     return listNoteOccurrences(call, await request);
   }
 
-  $async.Future<VulnerabilityOccurrencesSummary>
+  $async.Future<$0.VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummary_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+          $grpc.ServiceCall call,
+          $async.Future<$0.GetVulnerabilityOccurrencesSummaryRequest>
+              request) async {
     return getVulnerabilityOccurrencesSummary(call, await request);
   }
 
-  $async.Future<Occurrence> getOccurrence(
-      $grpc.ServiceCall call, GetOccurrenceRequest request);
-  $async.Future<ListOccurrencesResponse> listOccurrences(
-      $grpc.ServiceCall call, ListOccurrencesRequest request);
-  $async.Future<$0.Empty> deleteOccurrence(
-      $grpc.ServiceCall call, DeleteOccurrenceRequest request);
-  $async.Future<Occurrence> createOccurrence(
-      $grpc.ServiceCall call, CreateOccurrenceRequest request);
-  $async.Future<BatchCreateOccurrencesResponse> batchCreateOccurrences(
-      $grpc.ServiceCall call, BatchCreateOccurrencesRequest request);
-  $async.Future<Occurrence> updateOccurrence(
-      $grpc.ServiceCall call, UpdateOccurrenceRequest request);
-  $async.Future<Note> getOccurrenceNote(
-      $grpc.ServiceCall call, GetOccurrenceNoteRequest request);
-  $async.Future<Note> getNote($grpc.ServiceCall call, GetNoteRequest request);
-  $async.Future<ListNotesResponse> listNotes(
-      $grpc.ServiceCall call, ListNotesRequest request);
-  $async.Future<$0.Empty> deleteNote(
-      $grpc.ServiceCall call, DeleteNoteRequest request);
-  $async.Future<Note> createNote(
-      $grpc.ServiceCall call, CreateNoteRequest request);
-  $async.Future<BatchCreateNotesResponse> batchCreateNotes(
-      $grpc.ServiceCall call, BatchCreateNotesRequest request);
-  $async.Future<Note> updateNote(
-      $grpc.ServiceCall call, UpdateNoteRequest request);
-  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences(
-      $grpc.ServiceCall call, ListNoteOccurrencesRequest request);
-  $async.Future<VulnerabilityOccurrencesSummary>
+  $async.Future<$0.Occurrence> getOccurrence(
+      $grpc.ServiceCall call, $0.GetOccurrenceRequest request);
+  $async.Future<$0.ListOccurrencesResponse> listOccurrences(
+      $grpc.ServiceCall call, $0.ListOccurrencesRequest request);
+  $async.Future<$1.Empty> deleteOccurrence(
+      $grpc.ServiceCall call, $0.DeleteOccurrenceRequest request);
+  $async.Future<$0.Occurrence> createOccurrence(
+      $grpc.ServiceCall call, $0.CreateOccurrenceRequest request);
+  $async.Future<$0.BatchCreateOccurrencesResponse> batchCreateOccurrences(
+      $grpc.ServiceCall call, $0.BatchCreateOccurrencesRequest request);
+  $async.Future<$0.Occurrence> updateOccurrence(
+      $grpc.ServiceCall call, $0.UpdateOccurrenceRequest request);
+  $async.Future<$0.Note> getOccurrenceNote(
+      $grpc.ServiceCall call, $0.GetOccurrenceNoteRequest request);
+  $async.Future<$0.Note> getNote(
+      $grpc.ServiceCall call, $0.GetNoteRequest request);
+  $async.Future<$0.ListNotesResponse> listNotes(
+      $grpc.ServiceCall call, $0.ListNotesRequest request);
+  $async.Future<$1.Empty> deleteNote(
+      $grpc.ServiceCall call, $0.DeleteNoteRequest request);
+  $async.Future<$0.Note> createNote(
+      $grpc.ServiceCall call, $0.CreateNoteRequest request);
+  $async.Future<$0.BatchCreateNotesResponse> batchCreateNotes(
+      $grpc.ServiceCall call, $0.BatchCreateNotesRequest request);
+  $async.Future<$0.Note> updateNote(
+      $grpc.ServiceCall call, $0.UpdateNoteRequest request);
+  $async.Future<$0.ListNoteOccurrencesResponse> listNoteOccurrences(
+      $grpc.ServiceCall call, $0.ListNoteOccurrencesRequest request);
+  $async.Future<$0.VulnerabilityOccurrencesSummary>
       getVulnerabilityOccurrencesSummary($grpc.ServiceCall call,
-          GetVulnerabilityOccurrencesSummaryRequest request);
+          $0.GetVulnerabilityOccurrencesSummaryRequest request);
 }

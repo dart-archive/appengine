@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/metric_value.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -34,6 +35,7 @@ class MetricValue extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricValue',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..oo(0, [4, 5, 6, 7, 8])
     ..m<$core.String, $core.String>(
         1,
         'labels',
@@ -54,21 +56,22 @@ class MetricValue extends $pb.GeneratedMessage {
     ..aOS(7, 'stringValue')
     ..a<$1.Distribution>(8, 'distributionValue', $pb.PbFieldType.OM,
         $1.Distribution.getDefault, $1.Distribution.create)
-    ..oo(0, [4, 5, 6, 7, 8])
     ..hasRequiredFields = false;
 
-  MetricValue() : super();
-  MetricValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MetricValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MetricValue._() : super();
+  factory MetricValue() => create();
+  factory MetricValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MetricValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MetricValue clone() => MetricValue()..mergeFromMessage(this);
   MetricValue copyWith(void Function(MetricValue) updates) =>
       super.copyWith((message) => updates(message as MetricValue));
   $pb.BuilderInfo get info_ => _i;
-  static MetricValue create() => MetricValue();
+  @$core.pragma('dart2js:noInline')
+  static MetricValue create() => MetricValue._();
   MetricValue createEmptyInstance() => create();
   static $pb.PbList<MetricValue> createRepeated() => $pb.PbList<MetricValue>();
   static MetricValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -143,18 +146,20 @@ class MetricValueSet extends $pb.GeneratedMessage {
     ..pc<MetricValue>(2, 'metricValues', $pb.PbFieldType.PM, MetricValue.create)
     ..hasRequiredFields = false;
 
-  MetricValueSet() : super();
-  MetricValueSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MetricValueSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MetricValueSet._() : super();
+  factory MetricValueSet() => create();
+  factory MetricValueSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MetricValueSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MetricValueSet clone() => MetricValueSet()..mergeFromMessage(this);
   MetricValueSet copyWith(void Function(MetricValueSet) updates) =>
       super.copyWith((message) => updates(message as MetricValueSet));
   $pb.BuilderInfo get info_ => _i;
-  static MetricValueSet create() => MetricValueSet();
+  @$core.pragma('dart2js:noInline')
+  static MetricValueSet create() => MetricValueSet._();
   MetricValueSet createEmptyInstance() => create();
   static $pb.PbList<MetricValueSet> createRepeated() =>
       $pb.PbList<MetricValueSet>();

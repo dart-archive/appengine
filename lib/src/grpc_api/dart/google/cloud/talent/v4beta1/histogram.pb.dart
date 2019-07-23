@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/histogram.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -16,18 +17,20 @@ class HistogramQuery extends $pb.GeneratedMessage {
     ..aOS(1, 'histogramQuery')
     ..hasRequiredFields = false;
 
-  HistogramQuery() : super();
-  HistogramQuery.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HistogramQuery.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HistogramQuery._() : super();
+  factory HistogramQuery() => create();
+  factory HistogramQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HistogramQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HistogramQuery clone() => HistogramQuery()..mergeFromMessage(this);
   HistogramQuery copyWith(void Function(HistogramQuery) updates) =>
       super.copyWith((message) => updates(message as HistogramQuery));
   $pb.BuilderInfo get info_ => _i;
-  static HistogramQuery create() => HistogramQuery();
+  @$core.pragma('dart2js:noInline')
+  static HistogramQuery create() => HistogramQuery._();
   HistogramQuery createEmptyInstance() => create();
   static $pb.PbList<HistogramQuery> createRepeated() =>
       $pb.PbList<HistogramQuery>();
@@ -59,19 +62,21 @@ class HistogramQueryResult extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..hasRequiredFields = false;
 
-  HistogramQueryResult() : super();
-  HistogramQueryResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HistogramQueryResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HistogramQueryResult._() : super();
+  factory HistogramQueryResult() => create();
+  factory HistogramQueryResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HistogramQueryResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HistogramQueryResult clone() =>
       HistogramQueryResult()..mergeFromMessage(this);
   HistogramQueryResult copyWith(void Function(HistogramQueryResult) updates) =>
       super.copyWith((message) => updates(message as HistogramQueryResult));
   $pb.BuilderInfo get info_ => _i;
-  static HistogramQueryResult create() => HistogramQueryResult();
+  @$core.pragma('dart2js:noInline')
+  static HistogramQueryResult create() => HistogramQueryResult._();
   HistogramQueryResult createEmptyInstance() => create();
   static $pb.PbList<HistogramQueryResult> createRepeated() =>
       $pb.PbList<HistogramQueryResult>();

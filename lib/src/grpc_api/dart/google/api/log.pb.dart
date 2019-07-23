@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/log.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class LogDescriptor extends $pb.GeneratedMessage {
     ..aOS(4, 'displayName')
     ..hasRequiredFields = false;
 
-  LogDescriptor() : super();
-  LogDescriptor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogDescriptor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogDescriptor._() : super();
+  factory LogDescriptor() => create();
+  factory LogDescriptor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogDescriptor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogDescriptor clone() => LogDescriptor()..mergeFromMessage(this);
   LogDescriptor copyWith(void Function(LogDescriptor) updates) =>
       super.copyWith((message) => updates(message as LogDescriptor));
   $pb.BuilderInfo get info_ => _i;
-  static LogDescriptor create() => LogDescriptor();
+  @$core.pragma('dart2js:noInline')
+  static LogDescriptor create() => LogDescriptor._();
   LogDescriptor createEmptyInstance() => create();
   static $pb.PbList<LogDescriptor> createRepeated() =>
       $pb.PbList<LogDescriptor>();

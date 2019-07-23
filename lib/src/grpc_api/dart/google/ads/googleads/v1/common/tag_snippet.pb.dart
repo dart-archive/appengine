@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/tag_snippet.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -37,18 +38,20 @@ class TagSnippet extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  TagSnippet() : super();
-  TagSnippet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TagSnippet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TagSnippet._() : super();
+  factory TagSnippet() => create();
+  factory TagSnippet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TagSnippet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TagSnippet clone() => TagSnippet()..mergeFromMessage(this);
   TagSnippet copyWith(void Function(TagSnippet) updates) =>
       super.copyWith((message) => updates(message as TagSnippet));
   $pb.BuilderInfo get info_ => _i;
-  static TagSnippet create() => TagSnippet();
+  @$core.pragma('dart2js:noInline')
+  static TagSnippet create() => TagSnippet._();
   TagSnippet createEmptyInstance() => create();
   static $pb.PbList<TagSnippet> createRepeated() => $pb.PbList<TagSnippet>();
   static TagSnippet getDefault() => _defaultInstance ??= create()..freeze();

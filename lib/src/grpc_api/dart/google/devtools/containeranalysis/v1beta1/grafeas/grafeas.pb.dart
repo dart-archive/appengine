@@ -1,29 +1,30 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/grafeas/grafeas.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/timestamp.pb.dart' as $1;
-import '../vulnerability/vulnerability.pb.dart' as $2;
-import '../build/build.pb.dart' as $3;
-import '../image/image.pb.dart' as $4;
-import '../package/package.pb.dart' as $5;
-import '../deployment/deployment.pb.dart' as $6;
-import '../discovery/discovery.pb.dart' as $7;
-import '../attestation/attestation.pb.dart' as $8;
-import '../provenance/provenance.pb.dart' as $9;
-import '../common/common.pb.dart' as $10;
-import '../../../../protobuf/field_mask.pb.dart' as $11;
+import '../../../../protobuf/timestamp.pb.dart' as $2;
+import '../vulnerability/vulnerability.pb.dart' as $3;
+import '../build/build.pb.dart' as $4;
+import '../image/image.pb.dart' as $5;
+import '../package/package.pb.dart' as $6;
+import '../deployment/deployment.pb.dart' as $7;
+import '../discovery/discovery.pb.dart' as $8;
+import '../attestation/attestation.pb.dart' as $9;
+import '../provenance/provenance.pb.dart' as $10;
+import '../common/common.pb.dart' as $11;
+import '../../../../protobuf/field_mask.pb.dart' as $12;
 
-import '../common/common.pbenum.dart' as $10;
-import '../vulnerability/vulnerability.pbenum.dart' as $2;
+import '../common/common.pbenum.dart' as $11;
+import '../vulnerability/vulnerability.pbenum.dart' as $3;
 
 enum Occurrence_Details {
   vulnerability,
@@ -50,50 +51,52 @@ class Occurrence extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Occurrence',
       package: const $pb.PackageName('grafeas.v1beta1'))
+    ..oo(0, [8, 9, 10, 11, 12, 13, 14])
     ..aOS(1, 'name')
     ..a<Resource>(
         2, 'resource', $pb.PbFieldType.OM, Resource.getDefault, Resource.create)
     ..aOS(3, 'noteName')
-    ..e<$10.NoteKind>(
+    ..e<$11.NoteKind>(
         4,
         'kind',
         $pb.PbFieldType.OE,
-        $10.NoteKind.NOTE_KIND_UNSPECIFIED,
-        $10.NoteKind.valueOf,
-        $10.NoteKind.values)
+        $11.NoteKind.NOTE_KIND_UNSPECIFIED,
+        $11.NoteKind.valueOf,
+        $11.NoteKind.values)
     ..aOS(5, 'remediation')
-    ..a<$1.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(7, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$2.Details>(8, 'vulnerability', $pb.PbFieldType.OM,
-        $2.Details.getDefault, $2.Details.create)
-    ..a<$3.Details>(9, 'build', $pb.PbFieldType.OM, $3.Details.getDefault,
-        $3.Details.create)
-    ..a<$4.Details>(10, 'derivedImage', $pb.PbFieldType.OM,
-        $4.Details.getDefault, $4.Details.create)
-    ..a<$5.Details>(11, 'installation', $pb.PbFieldType.OM,
+    ..a<$2.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(7, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Details>(8, 'vulnerability', $pb.PbFieldType.OM,
+        $3.Details.getDefault, $3.Details.create)
+    ..a<$4.Details>(9, 'build', $pb.PbFieldType.OM, $4.Details.getDefault,
+        $4.Details.create)
+    ..a<$5.Details>(10, 'derivedImage', $pb.PbFieldType.OM,
         $5.Details.getDefault, $5.Details.create)
-    ..a<$6.Details>(12, 'deployment', $pb.PbFieldType.OM, $6.Details.getDefault,
-        $6.Details.create)
-    ..a<$7.Details>(13, 'discovered', $pb.PbFieldType.OM, $7.Details.getDefault,
+    ..a<$6.Details>(11, 'installation', $pb.PbFieldType.OM,
+        $6.Details.getDefault, $6.Details.create)
+    ..a<$7.Details>(12, 'deployment', $pb.PbFieldType.OM, $7.Details.getDefault,
         $7.Details.create)
-    ..a<$8.Details>(14, 'attestation', $pb.PbFieldType.OM, $8.Details.getDefault, $8.Details.create)
-    ..oo(0, [8, 9, 10, 11, 12, 13, 14])
+    ..a<$8.Details>(13, 'discovered', $pb.PbFieldType.OM, $8.Details.getDefault,
+        $8.Details.create)
+    ..a<$9.Details>(14, 'attestation', $pb.PbFieldType.OM, $9.Details.getDefault, $9.Details.create)
     ..hasRequiredFields = false;
 
-  Occurrence() : super();
-  Occurrence.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Occurrence.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Occurrence._() : super();
+  factory Occurrence() => create();
+  factory Occurrence.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Occurrence.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Occurrence clone() => Occurrence()..mergeFromMessage(this);
   Occurrence copyWith(void Function(Occurrence) updates) =>
       super.copyWith((message) => updates(message as Occurrence));
   $pb.BuilderInfo get info_ => _i;
-  static Occurrence create() => Occurrence();
+  @$core.pragma('dart2js:noInline')
+  static Occurrence create() => Occurrence._();
   Occurrence createEmptyInstance() => create();
   static $pb.PbList<Occurrence> createRepeated() => $pb.PbList<Occurrence>();
   static Occurrence getDefault() => _defaultInstance ??= create()..freeze();
@@ -127,8 +130,8 @@ class Occurrence extends $pb.GeneratedMessage {
   $core.bool hasNoteName() => $_has(2);
   void clearNoteName() => clearField(3);
 
-  $10.NoteKind get kind => $_getN(3);
-  set kind($10.NoteKind v) {
+  $11.NoteKind get kind => $_getN(3);
+  set kind($11.NoteKind v) {
     setField(4, v);
   }
 
@@ -143,72 +146,72 @@ class Occurrence extends $pb.GeneratedMessage {
   $core.bool hasRemediation() => $_has(4);
   void clearRemediation() => clearField(5);
 
-  $1.Timestamp get createTime => $_getN(5);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(5);
+  set createTime($2.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasCreateTime() => $_has(5);
   void clearCreateTime() => clearField(6);
 
-  $1.Timestamp get updateTime => $_getN(6);
-  set updateTime($1.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(6);
+  set updateTime($2.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasUpdateTime() => $_has(6);
   void clearUpdateTime() => clearField(7);
 
-  $2.Details get vulnerability => $_getN(7);
-  set vulnerability($2.Details v) {
+  $3.Details get vulnerability => $_getN(7);
+  set vulnerability($3.Details v) {
     setField(8, v);
   }
 
   $core.bool hasVulnerability() => $_has(7);
   void clearVulnerability() => clearField(8);
 
-  $3.Details get build => $_getN(8);
-  set build($3.Details v) {
+  $4.Details get build => $_getN(8);
+  set build($4.Details v) {
     setField(9, v);
   }
 
   $core.bool hasBuild() => $_has(8);
   void clearBuild() => clearField(9);
 
-  $4.Details get derivedImage => $_getN(9);
-  set derivedImage($4.Details v) {
+  $5.Details get derivedImage => $_getN(9);
+  set derivedImage($5.Details v) {
     setField(10, v);
   }
 
   $core.bool hasDerivedImage() => $_has(9);
   void clearDerivedImage() => clearField(10);
 
-  $5.Details get installation => $_getN(10);
-  set installation($5.Details v) {
+  $6.Details get installation => $_getN(10);
+  set installation($6.Details v) {
     setField(11, v);
   }
 
   $core.bool hasInstallation() => $_has(10);
   void clearInstallation() => clearField(11);
 
-  $6.Details get deployment => $_getN(11);
-  set deployment($6.Details v) {
+  $7.Details get deployment => $_getN(11);
+  set deployment($7.Details v) {
     setField(12, v);
   }
 
   $core.bool hasDeployment() => $_has(11);
   void clearDeployment() => clearField(12);
 
-  $7.Details get discovered => $_getN(12);
-  set discovered($7.Details v) {
+  $8.Details get discovered => $_getN(12);
+  set discovered($8.Details v) {
     setField(13, v);
   }
 
   $core.bool hasDiscovered() => $_has(12);
   void clearDiscovered() => clearField(13);
 
-  $8.Details get attestation => $_getN(13);
-  set attestation($8.Details v) {
+  $9.Details get attestation => $_getN(13);
+  set attestation($9.Details v) {
     setField(14, v);
   }
 
@@ -221,22 +224,24 @@ class Resource extends $pb.GeneratedMessage {
       package: const $pb.PackageName('grafeas.v1beta1'))
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..a<$9.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $9.Hash.getDefault,
-        $9.Hash.create)
+    ..a<$10.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $10.Hash.getDefault,
+        $10.Hash.create)
     ..hasRequiredFields = false;
 
-  Resource() : super();
-  Resource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Resource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Resource._() : super();
+  factory Resource() => create();
+  factory Resource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Resource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Resource clone() => Resource()..mergeFromMessage(this);
   Resource copyWith(void Function(Resource) updates) =>
       super.copyWith((message) => updates(message as Resource));
   $pb.BuilderInfo get info_ => _i;
-  static Resource create() => Resource();
+  @$core.pragma('dart2js:noInline')
+  static Resource create() => Resource._();
   Resource createEmptyInstance() => create();
   static $pb.PbList<Resource> createRepeated() => $pb.PbList<Resource>();
   static Resource getDefault() => _defaultInstance ??= create()..freeze();
@@ -258,8 +263,8 @@ class Resource extends $pb.GeneratedMessage {
   $core.bool hasUri() => $_has(1);
   void clearUri() => clearField(2);
 
-  $9.Hash get contentHash => $_getN(2);
-  set contentHash($9.Hash v) {
+  $10.Hash get contentHash => $_getN(2);
+  set contentHash($10.Hash v) {
     setField(3, v);
   }
 
@@ -291,52 +296,54 @@ class Note extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Note',
       package: const $pb.PackageName('grafeas.v1beta1'))
+    ..oo(0, [10, 11, 12, 13, 14, 15, 16])
     ..aOS(1, 'name')
     ..aOS(2, 'shortDescription')
     ..aOS(3, 'longDescription')
-    ..e<$10.NoteKind>(
+    ..e<$11.NoteKind>(
         4,
         'kind',
         $pb.PbFieldType.OE,
-        $10.NoteKind.NOTE_KIND_UNSPECIFIED,
-        $10.NoteKind.valueOf,
-        $10.NoteKind.values)
-    ..pc<$10.RelatedUrl>(
-        5, 'relatedUrl', $pb.PbFieldType.PM, $10.RelatedUrl.create)
-    ..a<$1.Timestamp>(6, 'expirationTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+        $11.NoteKind.NOTE_KIND_UNSPECIFIED,
+        $11.NoteKind.valueOf,
+        $11.NoteKind.values)
+    ..pc<$11.RelatedUrl>(
+        5, 'relatedUrl', $pb.PbFieldType.PM, $11.RelatedUrl.create)
+    ..a<$2.Timestamp>(6, 'expirationTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..pPS(9, 'relatedNoteNames')
-    ..a<$2.Vulnerability>(10, 'vulnerability', $pb.PbFieldType.OM,
-        $2.Vulnerability.getDefault, $2.Vulnerability.create)
-    ..a<$3.Build>(
-        11, 'build', $pb.PbFieldType.OM, $3.Build.getDefault, $3.Build.create)
-    ..a<$4.Basis>(12, 'baseImage', $pb.PbFieldType.OM, $4.Basis.getDefault,
-        $4.Basis.create)
-    ..a<$5.Package>(13, 'package', $pb.PbFieldType.OM, $5.Package.getDefault,
-        $5.Package.create)
-    ..a<$6.Deployable>(14, 'deployable', $pb.PbFieldType.OM,
-        $6.Deployable.getDefault, $6.Deployable.create)
-    ..a<$7.Discovery>(15, 'discovery', $pb.PbFieldType.OM, $7.Discovery.getDefault, $7.Discovery.create)
-    ..a<$8.Authority>(16, 'attestationAuthority', $pb.PbFieldType.OM, $8.Authority.getDefault, $8.Authority.create)
-    ..oo(0, [10, 11, 12, 13, 14, 15, 16])
+    ..a<$3.Vulnerability>(10, 'vulnerability', $pb.PbFieldType.OM,
+        $3.Vulnerability.getDefault, $3.Vulnerability.create)
+    ..a<$4.Build>(
+        11, 'build', $pb.PbFieldType.OM, $4.Build.getDefault, $4.Build.create)
+    ..a<$5.Basis>(12, 'baseImage', $pb.PbFieldType.OM, $5.Basis.getDefault,
+        $5.Basis.create)
+    ..a<$6.Package>(13, 'package', $pb.PbFieldType.OM, $6.Package.getDefault,
+        $6.Package.create)
+    ..a<$7.Deployable>(14, 'deployable', $pb.PbFieldType.OM,
+        $7.Deployable.getDefault, $7.Deployable.create)
+    ..a<$8.Discovery>(15, 'discovery', $pb.PbFieldType.OM, $8.Discovery.getDefault, $8.Discovery.create)
+    ..a<$9.Authority>(16, 'attestationAuthority', $pb.PbFieldType.OM, $9.Authority.getDefault, $9.Authority.create)
     ..hasRequiredFields = false;
 
-  Note() : super();
-  Note.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Note.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Note._() : super();
+  factory Note() => create();
+  factory Note.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Note.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Note clone() => Note()..mergeFromMessage(this);
   Note copyWith(void Function(Note) updates) =>
       super.copyWith((message) => updates(message as Note));
   $pb.BuilderInfo get info_ => _i;
-  static Note create() => Note();
+  @$core.pragma('dart2js:noInline')
+  static Note create() => Note._();
   Note createEmptyInstance() => create();
   static $pb.PbList<Note> createRepeated() => $pb.PbList<Note>();
   static Note getDefault() => _defaultInstance ??= create()..freeze();
@@ -369,34 +376,34 @@ class Note extends $pb.GeneratedMessage {
   $core.bool hasLongDescription() => $_has(2);
   void clearLongDescription() => clearField(3);
 
-  $10.NoteKind get kind => $_getN(3);
-  set kind($10.NoteKind v) {
+  $11.NoteKind get kind => $_getN(3);
+  set kind($11.NoteKind v) {
     setField(4, v);
   }
 
   $core.bool hasKind() => $_has(3);
   void clearKind() => clearField(4);
 
-  $core.List<$10.RelatedUrl> get relatedUrl => $_getList(4);
+  $core.List<$11.RelatedUrl> get relatedUrl => $_getList(4);
 
-  $1.Timestamp get expirationTime => $_getN(5);
-  set expirationTime($1.Timestamp v) {
+  $2.Timestamp get expirationTime => $_getN(5);
+  set expirationTime($2.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasExpirationTime() => $_has(5);
   void clearExpirationTime() => clearField(6);
 
-  $1.Timestamp get createTime => $_getN(6);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(6);
+  set createTime($2.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasCreateTime() => $_has(6);
   void clearCreateTime() => clearField(7);
 
-  $1.Timestamp get updateTime => $_getN(7);
-  set updateTime($1.Timestamp v) {
+  $2.Timestamp get updateTime => $_getN(7);
+  set updateTime($2.Timestamp v) {
     setField(8, v);
   }
 
@@ -405,56 +412,56 @@ class Note extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get relatedNoteNames => $_getList(8);
 
-  $2.Vulnerability get vulnerability => $_getN(9);
-  set vulnerability($2.Vulnerability v) {
+  $3.Vulnerability get vulnerability => $_getN(9);
+  set vulnerability($3.Vulnerability v) {
     setField(10, v);
   }
 
   $core.bool hasVulnerability() => $_has(9);
   void clearVulnerability() => clearField(10);
 
-  $3.Build get build => $_getN(10);
-  set build($3.Build v) {
+  $4.Build get build => $_getN(10);
+  set build($4.Build v) {
     setField(11, v);
   }
 
   $core.bool hasBuild() => $_has(10);
   void clearBuild() => clearField(11);
 
-  $4.Basis get baseImage => $_getN(11);
-  set baseImage($4.Basis v) {
+  $5.Basis get baseImage => $_getN(11);
+  set baseImage($5.Basis v) {
     setField(12, v);
   }
 
   $core.bool hasBaseImage() => $_has(11);
   void clearBaseImage() => clearField(12);
 
-  $5.Package get package => $_getN(12);
-  set package($5.Package v) {
+  $6.Package get package => $_getN(12);
+  set package($6.Package v) {
     setField(13, v);
   }
 
   $core.bool hasPackage() => $_has(12);
   void clearPackage() => clearField(13);
 
-  $6.Deployable get deployable => $_getN(13);
-  set deployable($6.Deployable v) {
+  $7.Deployable get deployable => $_getN(13);
+  set deployable($7.Deployable v) {
     setField(14, v);
   }
 
   $core.bool hasDeployable() => $_has(13);
   void clearDeployable() => clearField(14);
 
-  $7.Discovery get discovery => $_getN(14);
-  set discovery($7.Discovery v) {
+  $8.Discovery get discovery => $_getN(14);
+  set discovery($8.Discovery v) {
     setField(15, v);
   }
 
   $core.bool hasDiscovery() => $_has(14);
   void clearDiscovery() => clearField(15);
 
-  $8.Authority get attestationAuthority => $_getN(15);
-  set attestationAuthority($8.Authority v) {
+  $9.Authority get attestationAuthority => $_getN(15);
+  set attestationAuthority($9.Authority v) {
     setField(16, v);
   }
 
@@ -468,19 +475,21 @@ class GetOccurrenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetOccurrenceRequest() : super();
-  GetOccurrenceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetOccurrenceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetOccurrenceRequest._() : super();
+  factory GetOccurrenceRequest() => create();
+  factory GetOccurrenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetOccurrenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetOccurrenceRequest clone() =>
       GetOccurrenceRequest()..mergeFromMessage(this);
   GetOccurrenceRequest copyWith(void Function(GetOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as GetOccurrenceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetOccurrenceRequest create() => GetOccurrenceRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetOccurrenceRequest create() => GetOccurrenceRequest._();
   GetOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<GetOccurrenceRequest> createRepeated() =>
       $pb.PbList<GetOccurrenceRequest>();
@@ -506,20 +515,22 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListOccurrencesRequest() : super();
-  ListOccurrencesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListOccurrencesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListOccurrencesRequest._() : super();
+  factory ListOccurrencesRequest() => create();
+  factory ListOccurrencesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListOccurrencesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListOccurrencesRequest clone() =>
       ListOccurrencesRequest()..mergeFromMessage(this);
   ListOccurrencesRequest copyWith(
           void Function(ListOccurrencesRequest) updates) =>
       super.copyWith((message) => updates(message as ListOccurrencesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListOccurrencesRequest create() => ListOccurrencesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListOccurrencesRequest create() => ListOccurrencesRequest._();
   ListOccurrencesRequest createEmptyInstance() => create();
   static $pb.PbList<ListOccurrencesRequest> createRepeated() =>
       $pb.PbList<ListOccurrencesRequest>();
@@ -567,20 +578,22 @@ class ListOccurrencesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListOccurrencesResponse() : super();
-  ListOccurrencesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListOccurrencesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListOccurrencesResponse._() : super();
+  factory ListOccurrencesResponse() => create();
+  factory ListOccurrencesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListOccurrencesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListOccurrencesResponse clone() =>
       ListOccurrencesResponse()..mergeFromMessage(this);
   ListOccurrencesResponse copyWith(
           void Function(ListOccurrencesResponse) updates) =>
       super.copyWith((message) => updates(message as ListOccurrencesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListOccurrencesResponse create() => ListOccurrencesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListOccurrencesResponse create() => ListOccurrencesResponse._();
   ListOccurrencesResponse createEmptyInstance() => create();
   static $pb.PbList<ListOccurrencesResponse> createRepeated() =>
       $pb.PbList<ListOccurrencesResponse>();
@@ -605,20 +618,22 @@ class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteOccurrenceRequest() : super();
-  DeleteOccurrenceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteOccurrenceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteOccurrenceRequest._() : super();
+  factory DeleteOccurrenceRequest() => create();
+  factory DeleteOccurrenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteOccurrenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteOccurrenceRequest clone() =>
       DeleteOccurrenceRequest()..mergeFromMessage(this);
   DeleteOccurrenceRequest copyWith(
           void Function(DeleteOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteOccurrenceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteOccurrenceRequest create() => DeleteOccurrenceRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteOccurrenceRequest create() => DeleteOccurrenceRequest._();
   DeleteOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteOccurrenceRequest> createRepeated() =>
       $pb.PbList<DeleteOccurrenceRequest>();
@@ -643,20 +658,22 @@ class CreateOccurrenceRequest extends $pb.GeneratedMessage {
         Occurrence.create)
     ..hasRequiredFields = false;
 
-  CreateOccurrenceRequest() : super();
-  CreateOccurrenceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateOccurrenceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateOccurrenceRequest._() : super();
+  factory CreateOccurrenceRequest() => create();
+  factory CreateOccurrenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateOccurrenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateOccurrenceRequest clone() =>
       CreateOccurrenceRequest()..mergeFromMessage(this);
   CreateOccurrenceRequest copyWith(
           void Function(CreateOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as CreateOccurrenceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateOccurrenceRequest create() => CreateOccurrenceRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateOccurrenceRequest create() => CreateOccurrenceRequest._();
   CreateOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<CreateOccurrenceRequest> createRepeated() =>
       $pb.PbList<CreateOccurrenceRequest>();
@@ -687,24 +704,26 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault,
         Occurrence.create)
-    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..a<$12.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $12.FieldMask.getDefault, $12.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateOccurrenceRequest() : super();
-  UpdateOccurrenceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateOccurrenceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateOccurrenceRequest._() : super();
+  factory UpdateOccurrenceRequest() => create();
+  factory UpdateOccurrenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateOccurrenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateOccurrenceRequest clone() =>
       UpdateOccurrenceRequest()..mergeFromMessage(this);
   UpdateOccurrenceRequest copyWith(
           void Function(UpdateOccurrenceRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateOccurrenceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateOccurrenceRequest create() => UpdateOccurrenceRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateOccurrenceRequest create() => UpdateOccurrenceRequest._();
   UpdateOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateOccurrenceRequest> createRepeated() =>
       $pb.PbList<UpdateOccurrenceRequest>();
@@ -728,8 +747,8 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   $core.bool hasOccurrence() => $_has(1);
   void clearOccurrence() => clearField(2);
 
-  $11.FieldMask get updateMask => $_getN(2);
-  set updateMask($11.FieldMask v) {
+  $12.FieldMask get updateMask => $_getN(2);
+  set updateMask($12.FieldMask v) {
     setField(3, v);
   }
 
@@ -743,18 +762,20 @@ class GetNoteRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetNoteRequest() : super();
-  GetNoteRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetNoteRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetNoteRequest._() : super();
+  factory GetNoteRequest() => create();
+  factory GetNoteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetNoteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetNoteRequest clone() => GetNoteRequest()..mergeFromMessage(this);
   GetNoteRequest copyWith(void Function(GetNoteRequest) updates) =>
       super.copyWith((message) => updates(message as GetNoteRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetNoteRequest create() => GetNoteRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetNoteRequest create() => GetNoteRequest._();
   GetNoteRequest createEmptyInstance() => create();
   static $pb.PbList<GetNoteRequest> createRepeated() =>
       $pb.PbList<GetNoteRequest>();
@@ -776,20 +797,22 @@ class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetOccurrenceNoteRequest() : super();
-  GetOccurrenceNoteRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetOccurrenceNoteRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetOccurrenceNoteRequest._() : super();
+  factory GetOccurrenceNoteRequest() => create();
+  factory GetOccurrenceNoteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetOccurrenceNoteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetOccurrenceNoteRequest clone() =>
       GetOccurrenceNoteRequest()..mergeFromMessage(this);
   GetOccurrenceNoteRequest copyWith(
           void Function(GetOccurrenceNoteRequest) updates) =>
       super.copyWith((message) => updates(message as GetOccurrenceNoteRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetOccurrenceNoteRequest create() => GetOccurrenceNoteRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetOccurrenceNoteRequest create() => GetOccurrenceNoteRequest._();
   GetOccurrenceNoteRequest createEmptyInstance() => create();
   static $pb.PbList<GetOccurrenceNoteRequest> createRepeated() =>
       $pb.PbList<GetOccurrenceNoteRequest>();
@@ -815,18 +838,20 @@ class ListNotesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListNotesRequest() : super();
-  ListNotesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNotesRequest._() : super();
+  factory ListNotesRequest() => create();
+  factory ListNotesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListNotesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListNotesRequest clone() => ListNotesRequest()..mergeFromMessage(this);
   ListNotesRequest copyWith(void Function(ListNotesRequest) updates) =>
       super.copyWith((message) => updates(message as ListNotesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListNotesRequest create() => ListNotesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListNotesRequest create() => ListNotesRequest._();
   ListNotesRequest createEmptyInstance() => create();
   static $pb.PbList<ListNotesRequest> createRepeated() =>
       $pb.PbList<ListNotesRequest>();
@@ -874,18 +899,20 @@ class ListNotesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListNotesResponse() : super();
-  ListNotesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNotesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNotesResponse._() : super();
+  factory ListNotesResponse() => create();
+  factory ListNotesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListNotesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListNotesResponse clone() => ListNotesResponse()..mergeFromMessage(this);
   ListNotesResponse copyWith(void Function(ListNotesResponse) updates) =>
       super.copyWith((message) => updates(message as ListNotesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListNotesResponse create() => ListNotesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListNotesResponse create() => ListNotesResponse._();
   ListNotesResponse createEmptyInstance() => create();
   static $pb.PbList<ListNotesResponse> createRepeated() =>
       $pb.PbList<ListNotesResponse>();
@@ -910,18 +937,20 @@ class DeleteNoteRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteNoteRequest() : super();
-  DeleteNoteRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteNoteRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteNoteRequest._() : super();
+  factory DeleteNoteRequest() => create();
+  factory DeleteNoteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteNoteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteNoteRequest clone() => DeleteNoteRequest()..mergeFromMessage(this);
   DeleteNoteRequest copyWith(void Function(DeleteNoteRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteNoteRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteNoteRequest create() => DeleteNoteRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteNoteRequest create() => DeleteNoteRequest._();
   DeleteNoteRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteNoteRequest> createRepeated() =>
       $pb.PbList<DeleteNoteRequest>();
@@ -946,18 +975,20 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
     ..a<Note>(3, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
     ..hasRequiredFields = false;
 
-  CreateNoteRequest() : super();
-  CreateNoteRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateNoteRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateNoteRequest._() : super();
+  factory CreateNoteRequest() => create();
+  factory CreateNoteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateNoteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateNoteRequest clone() => CreateNoteRequest()..mergeFromMessage(this);
   CreateNoteRequest copyWith(void Function(CreateNoteRequest) updates) =>
       super.copyWith((message) => updates(message as CreateNoteRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateNoteRequest create() => CreateNoteRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateNoteRequest create() => CreateNoteRequest._();
   CreateNoteRequest createEmptyInstance() => create();
   static $pb.PbList<CreateNoteRequest> createRepeated() =>
       $pb.PbList<CreateNoteRequest>();
@@ -995,22 +1026,24 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('grafeas.v1beta1'))
     ..aOS(1, 'name')
     ..a<Note>(2, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
-    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..a<$12.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $12.FieldMask.getDefault, $12.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateNoteRequest() : super();
-  UpdateNoteRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateNoteRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateNoteRequest._() : super();
+  factory UpdateNoteRequest() => create();
+  factory UpdateNoteRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateNoteRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateNoteRequest clone() => UpdateNoteRequest()..mergeFromMessage(this);
   UpdateNoteRequest copyWith(void Function(UpdateNoteRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateNoteRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateNoteRequest create() => UpdateNoteRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateNoteRequest create() => UpdateNoteRequest._();
   UpdateNoteRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateNoteRequest> createRepeated() =>
       $pb.PbList<UpdateNoteRequest>();
@@ -1034,8 +1067,8 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   $core.bool hasNote() => $_has(1);
   void clearNote() => clearField(2);
 
-  $11.FieldMask get updateMask => $_getN(2);
-  set updateMask($11.FieldMask v) {
+  $12.FieldMask get updateMask => $_getN(2);
+  set updateMask($12.FieldMask v) {
     setField(3, v);
   }
 
@@ -1053,13 +1086,14 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListNoteOccurrencesRequest() : super();
-  ListNoteOccurrencesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNoteOccurrencesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNoteOccurrencesRequest._() : super();
+  factory ListNoteOccurrencesRequest() => create();
+  factory ListNoteOccurrencesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListNoteOccurrencesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListNoteOccurrencesRequest clone() =>
       ListNoteOccurrencesRequest()..mergeFromMessage(this);
   ListNoteOccurrencesRequest copyWith(
@@ -1067,7 +1101,8 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListNoteOccurrencesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListNoteOccurrencesRequest create() => ListNoteOccurrencesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListNoteOccurrencesRequest create() => ListNoteOccurrencesRequest._();
   ListNoteOccurrencesRequest createEmptyInstance() => create();
   static $pb.PbList<ListNoteOccurrencesRequest> createRepeated() =>
       $pb.PbList<ListNoteOccurrencesRequest>();
@@ -1116,13 +1151,14 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListNoteOccurrencesResponse() : super();
-  ListNoteOccurrencesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListNoteOccurrencesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListNoteOccurrencesResponse._() : super();
+  factory ListNoteOccurrencesResponse() => create();
+  factory ListNoteOccurrencesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListNoteOccurrencesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListNoteOccurrencesResponse clone() =>
       ListNoteOccurrencesResponse()..mergeFromMessage(this);
   ListNoteOccurrencesResponse copyWith(
@@ -1130,7 +1166,9 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListNoteOccurrencesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListNoteOccurrencesResponse create() => ListNoteOccurrencesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListNoteOccurrencesResponse create() =>
+      ListNoteOccurrencesResponse._();
   ListNoteOccurrencesResponse createEmptyInstance() => create();
   static $pb.PbList<ListNoteOccurrencesResponse> createRepeated() =>
       $pb.PbList<ListNoteOccurrencesResponse>();
@@ -1165,20 +1203,22 @@ class BatchCreateNotesRequest extends $pb.GeneratedMessage {
         const $pb.PackageName('grafeas.v1beta1'))
     ..hasRequiredFields = false;
 
-  BatchCreateNotesRequest() : super();
-  BatchCreateNotesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateNotesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateNotesRequest._() : super();
+  factory BatchCreateNotesRequest() => create();
+  factory BatchCreateNotesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateNotesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateNotesRequest clone() =>
       BatchCreateNotesRequest()..mergeFromMessage(this);
   BatchCreateNotesRequest copyWith(
           void Function(BatchCreateNotesRequest) updates) =>
       super.copyWith((message) => updates(message as BatchCreateNotesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchCreateNotesRequest create() => BatchCreateNotesRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateNotesRequest create() => BatchCreateNotesRequest._();
   BatchCreateNotesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchCreateNotesRequest> createRepeated() =>
       $pb.PbList<BatchCreateNotesRequest>();
@@ -1203,20 +1243,22 @@ class BatchCreateNotesResponse extends $pb.GeneratedMessage {
     ..pc<Note>(1, 'notes', $pb.PbFieldType.PM, Note.create)
     ..hasRequiredFields = false;
 
-  BatchCreateNotesResponse() : super();
-  BatchCreateNotesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateNotesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateNotesResponse._() : super();
+  factory BatchCreateNotesResponse() => create();
+  factory BatchCreateNotesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateNotesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateNotesResponse clone() =>
       BatchCreateNotesResponse()..mergeFromMessage(this);
   BatchCreateNotesResponse copyWith(
           void Function(BatchCreateNotesResponse) updates) =>
       super.copyWith((message) => updates(message as BatchCreateNotesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BatchCreateNotesResponse create() => BatchCreateNotesResponse();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateNotesResponse create() => BatchCreateNotesResponse._();
   BatchCreateNotesResponse createEmptyInstance() => create();
   static $pb.PbList<BatchCreateNotesResponse> createRepeated() =>
       $pb.PbList<BatchCreateNotesResponse>();
@@ -1235,13 +1277,14 @@ class BatchCreateOccurrencesRequest extends $pb.GeneratedMessage {
     ..pc<Occurrence>(2, 'occurrences', $pb.PbFieldType.PM, Occurrence.create)
     ..hasRequiredFields = false;
 
-  BatchCreateOccurrencesRequest() : super();
-  BatchCreateOccurrencesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateOccurrencesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateOccurrencesRequest._() : super();
+  factory BatchCreateOccurrencesRequest() => create();
+  factory BatchCreateOccurrencesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateOccurrencesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateOccurrencesRequest clone() =>
       BatchCreateOccurrencesRequest()..mergeFromMessage(this);
   BatchCreateOccurrencesRequest copyWith(
@@ -1249,8 +1292,9 @@ class BatchCreateOccurrencesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchCreateOccurrencesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchCreateOccurrencesRequest create() =>
-      BatchCreateOccurrencesRequest();
+      BatchCreateOccurrencesRequest._();
   BatchCreateOccurrencesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchCreateOccurrencesRequest> createRepeated() =>
       $pb.PbList<BatchCreateOccurrencesRequest>();
@@ -1276,13 +1320,14 @@ class BatchCreateOccurrencesResponse extends $pb.GeneratedMessage {
     ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM, Occurrence.create)
     ..hasRequiredFields = false;
 
-  BatchCreateOccurrencesResponse() : super();
-  BatchCreateOccurrencesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateOccurrencesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateOccurrencesResponse._() : super();
+  factory BatchCreateOccurrencesResponse() => create();
+  factory BatchCreateOccurrencesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateOccurrencesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateOccurrencesResponse clone() =>
       BatchCreateOccurrencesResponse()..mergeFromMessage(this);
   BatchCreateOccurrencesResponse copyWith(
@@ -1290,8 +1335,9 @@ class BatchCreateOccurrencesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchCreateOccurrencesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchCreateOccurrencesResponse create() =>
-      BatchCreateOccurrencesResponse();
+      BatchCreateOccurrencesResponse._();
   BatchCreateOccurrencesResponse createEmptyInstance() => create();
   static $pb.PbList<BatchCreateOccurrencesResponse> createRepeated() =>
       $pb.PbList<BatchCreateOccurrencesResponse>();
@@ -1310,13 +1356,15 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'filter')
     ..hasRequiredFields = false;
 
-  GetVulnerabilityOccurrencesSummaryRequest() : super();
-  GetVulnerabilityOccurrencesSummaryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVulnerabilityOccurrencesSummaryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetVulnerabilityOccurrencesSummaryRequest._() : super();
+  factory GetVulnerabilityOccurrencesSummaryRequest() => create();
+  factory GetVulnerabilityOccurrencesSummaryRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetVulnerabilityOccurrencesSummaryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetVulnerabilityOccurrencesSummaryRequest clone() =>
       GetVulnerabilityOccurrencesSummaryRequest()..mergeFromMessage(this);
   GetVulnerabilityOccurrencesSummaryRequest copyWith(
@@ -1324,8 +1372,9 @@ class GetVulnerabilityOccurrencesSummaryRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as GetVulnerabilityOccurrencesSummaryRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetVulnerabilityOccurrencesSummaryRequest create() =>
-      GetVulnerabilityOccurrencesSummaryRequest();
+      GetVulnerabilityOccurrencesSummaryRequest._();
   GetVulnerabilityOccurrencesSummaryRequest createEmptyInstance() => create();
   static $pb.PbList<GetVulnerabilityOccurrencesSummaryRequest>
       createRepeated() =>
@@ -1358,25 +1407,27 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
       package: const $pb.PackageName('grafeas.v1beta1'))
     ..a<Resource>(
         1, 'resource', $pb.PbFieldType.OM, Resource.getDefault, Resource.create)
-    ..e<$2.Severity>(
+    ..e<$3.Severity>(
         2,
         'severity',
         $pb.PbFieldType.OE,
-        $2.Severity.SEVERITY_UNSPECIFIED,
-        $2.Severity.valueOf,
-        $2.Severity.values)
+        $3.Severity.SEVERITY_UNSPECIFIED,
+        $3.Severity.valueOf,
+        $3.Severity.values)
     ..aInt64(3, 'fixableCount')
     ..aInt64(4, 'totalCount')
     ..hasRequiredFields = false;
 
-  VulnerabilityOccurrencesSummary_FixableTotalByDigest() : super();
-  VulnerabilityOccurrencesSummary_FixableTotalByDigest.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerabilityOccurrencesSummary_FixableTotalByDigest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VulnerabilityOccurrencesSummary_FixableTotalByDigest._() : super();
+  factory VulnerabilityOccurrencesSummary_FixableTotalByDigest() => create();
+  factory VulnerabilityOccurrencesSummary_FixableTotalByDigest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerabilityOccurrencesSummary_FixableTotalByDigest.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VulnerabilityOccurrencesSummary_FixableTotalByDigest clone() =>
       VulnerabilityOccurrencesSummary_FixableTotalByDigest()
         ..mergeFromMessage(this);
@@ -1386,8 +1437,9 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
       super.copyWith((message) => updates(
           message as VulnerabilityOccurrencesSummary_FixableTotalByDigest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static VulnerabilityOccurrencesSummary_FixableTotalByDigest create() =>
-      VulnerabilityOccurrencesSummary_FixableTotalByDigest();
+      VulnerabilityOccurrencesSummary_FixableTotalByDigest._();
   VulnerabilityOccurrencesSummary_FixableTotalByDigest createEmptyInstance() =>
       create();
   static $pb.PbList<VulnerabilityOccurrencesSummary_FixableTotalByDigest>
@@ -1405,8 +1457,8 @@ class VulnerabilityOccurrencesSummary_FixableTotalByDigest
   $core.bool hasResource() => $_has(0);
   void clearResource() => clearField(1);
 
-  $2.Severity get severity => $_getN(1);
-  set severity($2.Severity v) {
+  $3.Severity get severity => $_getN(1);
+  set severity($3.Severity v) {
     setField(2, v);
   }
 
@@ -1441,13 +1493,14 @@ class VulnerabilityOccurrencesSummary extends $pb.GeneratedMessage {
         VulnerabilityOccurrencesSummary_FixableTotalByDigest.create)
     ..hasRequiredFields = false;
 
-  VulnerabilityOccurrencesSummary() : super();
-  VulnerabilityOccurrencesSummary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerabilityOccurrencesSummary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VulnerabilityOccurrencesSummary._() : super();
+  factory VulnerabilityOccurrencesSummary() => create();
+  factory VulnerabilityOccurrencesSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerabilityOccurrencesSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VulnerabilityOccurrencesSummary clone() =>
       VulnerabilityOccurrencesSummary()..mergeFromMessage(this);
   VulnerabilityOccurrencesSummary copyWith(
@@ -1455,8 +1508,9 @@ class VulnerabilityOccurrencesSummary extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as VulnerabilityOccurrencesSummary));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static VulnerabilityOccurrencesSummary create() =>
-      VulnerabilityOccurrencesSummary();
+      VulnerabilityOccurrencesSummary._();
   VulnerabilityOccurrencesSummary createEmptyInstance() => create();
   static $pb.PbList<VulnerabilityOccurrencesSummary> createRepeated() =>
       $pb.PbList<VulnerabilityOccurrencesSummary>();

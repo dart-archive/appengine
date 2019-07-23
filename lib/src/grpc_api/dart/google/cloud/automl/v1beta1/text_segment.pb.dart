@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/text_segment.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -18,18 +19,20 @@ class TextSegment extends $pb.GeneratedMessage {
     ..aOS(3, 'content')
     ..hasRequiredFields = false;
 
-  TextSegment() : super();
-  TextSegment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSegment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSegment._() : super();
+  factory TextSegment() => create();
+  factory TextSegment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSegment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSegment clone() => TextSegment()..mergeFromMessage(this);
   TextSegment copyWith(void Function(TextSegment) updates) =>
       super.copyWith((message) => updates(message as TextSegment));
   $pb.BuilderInfo get info_ => _i;
-  static TextSegment create() => TextSegment();
+  @$core.pragma('dart2js:noInline')
+  static TextSegment create() => TextSegment._();
   TextSegment createEmptyInstance() => create();
   static $pb.PbList<TextSegment> createRepeated() => $pb.PbList<TextSegment>();
   static TextSegment getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datacatalog/v1beta1/timestamps.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,18 +23,20 @@ class SystemTimestamps extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  SystemTimestamps() : super();
-  SystemTimestamps.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SystemTimestamps.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SystemTimestamps._() : super();
+  factory SystemTimestamps() => create();
+  factory SystemTimestamps.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SystemTimestamps.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SystemTimestamps clone() => SystemTimestamps()..mergeFromMessage(this);
   SystemTimestamps copyWith(void Function(SystemTimestamps) updates) =>
       super.copyWith((message) => updates(message as SystemTimestamps));
   $pb.BuilderInfo get info_ => _i;
-  static SystemTimestamps create() => SystemTimestamps();
+  @$core.pragma('dart2js:noInline')
+  static SystemTimestamps create() => SystemTimestamps._();
   SystemTimestamps createEmptyInstance() => create();
   static $pb.PbList<SystemTimestamps> createRepeated() =>
       $pb.PbList<SystemTimestamps>();

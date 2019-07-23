@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/payments_account_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/payments_account.pb.dart' as $0;
+import '../resources/payments_account.pb.dart' as $1;
 
 class ListPaymentsAccountsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -18,13 +19,14 @@ class ListPaymentsAccountsRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'customerId')
     ..hasRequiredFields = false;
 
-  ListPaymentsAccountsRequest() : super();
-  ListPaymentsAccountsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListPaymentsAccountsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListPaymentsAccountsRequest._() : super();
+  factory ListPaymentsAccountsRequest() => create();
+  factory ListPaymentsAccountsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPaymentsAccountsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListPaymentsAccountsRequest clone() =>
       ListPaymentsAccountsRequest()..mergeFromMessage(this);
   ListPaymentsAccountsRequest copyWith(
@@ -32,7 +34,9 @@ class ListPaymentsAccountsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListPaymentsAccountsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListPaymentsAccountsRequest create() => ListPaymentsAccountsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListPaymentsAccountsRequest create() =>
+      ListPaymentsAccountsRequest._();
   ListPaymentsAccountsRequest createEmptyInstance() => create();
   static $pb.PbList<ListPaymentsAccountsRequest> createRepeated() =>
       $pb.PbList<ListPaymentsAccountsRequest>();
@@ -53,17 +57,18 @@ class ListPaymentsAccountsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListPaymentsAccountsResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$0.PaymentsAccount>(
-        1, 'paymentsAccounts', $pb.PbFieldType.PM, $0.PaymentsAccount.create)
+    ..pc<$1.PaymentsAccount>(
+        1, 'paymentsAccounts', $pb.PbFieldType.PM, $1.PaymentsAccount.create)
     ..hasRequiredFields = false;
 
-  ListPaymentsAccountsResponse() : super();
-  ListPaymentsAccountsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListPaymentsAccountsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListPaymentsAccountsResponse._() : super();
+  factory ListPaymentsAccountsResponse() => create();
+  factory ListPaymentsAccountsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPaymentsAccountsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListPaymentsAccountsResponse clone() =>
       ListPaymentsAccountsResponse()..mergeFromMessage(this);
   ListPaymentsAccountsResponse copyWith(
@@ -71,8 +76,9 @@ class ListPaymentsAccountsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListPaymentsAccountsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListPaymentsAccountsResponse create() =>
-      ListPaymentsAccountsResponse();
+      ListPaymentsAccountsResponse._();
   ListPaymentsAccountsResponse createEmptyInstance() => create();
   static $pb.PbList<ListPaymentsAccountsResponse> createRepeated() =>
       $pb.PbList<ListPaymentsAccountsResponse>();
@@ -80,5 +86,5 @@ class ListPaymentsAccountsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListPaymentsAccountsResponse _defaultInstance;
 
-  $core.List<$0.PaymentsAccount> get paymentsAccounts => $_getList(0);
+  $core.List<$1.PaymentsAccount> get paymentsAccounts => $_getList(0);
 }

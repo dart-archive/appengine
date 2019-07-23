@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/ml/v1/project_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -16,18 +17,20 @@ class GetConfigRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetConfigRequest() : super();
-  GetConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetConfigRequest._() : super();
+  factory GetConfigRequest() => create();
+  factory GetConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetConfigRequest clone() => GetConfigRequest()..mergeFromMessage(this);
   GetConfigRequest copyWith(void Function(GetConfigRequest) updates) =>
       super.copyWith((message) => updates(message as GetConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetConfigRequest create() => GetConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetConfigRequest create() => GetConfigRequest._();
   GetConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetConfigRequest> createRepeated() =>
       $pb.PbList<GetConfigRequest>();
@@ -51,18 +54,20 @@ class GetConfigResponse extends $pb.GeneratedMessage {
     ..aInt64(2, 'serviceAccountProject')
     ..hasRequiredFields = false;
 
-  GetConfigResponse() : super();
-  GetConfigResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetConfigResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetConfigResponse._() : super();
+  factory GetConfigResponse() => create();
+  factory GetConfigResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetConfigResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetConfigResponse clone() => GetConfigResponse()..mergeFromMessage(this);
   GetConfigResponse copyWith(void Function(GetConfigResponse) updates) =>
       super.copyWith((message) => updates(message as GetConfigResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GetConfigResponse create() => GetConfigResponse();
+  @$core.pragma('dart2js:noInline')
+  static GetConfigResponse create() => GetConfigResponse._();
   GetConfigResponse createEmptyInstance() => create();
   static $pb.PbList<GetConfigResponse> createRepeated() =>
       $pb.PbList<GetConfigResponse>();

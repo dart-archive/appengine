@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/datatransfer/v1/transfer.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -61,8 +62,6 @@ class TransferMessage_MessageSeverity extends $pb.ProtobufEnum {
       TransferMessage_MessageSeverity._(2, 'WARNING');
   static const TransferMessage_MessageSeverity ERROR =
       TransferMessage_MessageSeverity._(3, 'ERROR');
-  static const TransferMessage_MessageSeverity DEBUG =
-      TransferMessage_MessageSeverity._(4, 'DEBUG');
 
   static const $core.List<TransferMessage_MessageSeverity> values =
       <TransferMessage_MessageSeverity>[
@@ -70,7 +69,6 @@ class TransferMessage_MessageSeverity extends $pb.ProtobufEnum {
     INFO,
     WARNING,
     ERROR,
-    DEBUG,
   ];
 
   static final $core.Map<$core.int, TransferMessage_MessageSeverity> _byValue =

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/user_list_number_rule_item_operator.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class UserListNumberRuleItemOperatorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  UserListNumberRuleItemOperatorEnum() : super();
-  UserListNumberRuleItemOperatorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserListNumberRuleItemOperatorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserListNumberRuleItemOperatorEnum._() : super();
+  factory UserListNumberRuleItemOperatorEnum() => create();
+  factory UserListNumberRuleItemOperatorEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserListNumberRuleItemOperatorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserListNumberRuleItemOperatorEnum clone() =>
       UserListNumberRuleItemOperatorEnum()..mergeFromMessage(this);
   UserListNumberRuleItemOperatorEnum copyWith(
@@ -31,8 +33,9 @@ class UserListNumberRuleItemOperatorEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UserListNumberRuleItemOperatorEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UserListNumberRuleItemOperatorEnum create() =>
-      UserListNumberRuleItemOperatorEnum();
+      UserListNumberRuleItemOperatorEnum._();
   UserListNumberRuleItemOperatorEnum createEmptyInstance() => create();
   static $pb.PbList<UserListNumberRuleItemOperatorEnum> createRepeated() =>
       $pb.PbList<UserListNumberRuleItemOperatorEnum>();

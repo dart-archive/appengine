@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/knowledge_base.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $2;
 
 class KnowledgeBase extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KnowledgeBase',
@@ -18,18 +19,20 @@ class KnowledgeBase extends $pb.GeneratedMessage {
     ..aOS(2, 'displayName')
     ..hasRequiredFields = false;
 
-  KnowledgeBase() : super();
-  KnowledgeBase.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KnowledgeBase.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KnowledgeBase._() : super();
+  factory KnowledgeBase() => create();
+  factory KnowledgeBase.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KnowledgeBase.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KnowledgeBase clone() => KnowledgeBase()..mergeFromMessage(this);
   KnowledgeBase copyWith(void Function(KnowledgeBase) updates) =>
       super.copyWith((message) => updates(message as KnowledgeBase));
   $pb.BuilderInfo get info_ => _i;
-  static KnowledgeBase create() => KnowledgeBase();
+  @$core.pragma('dart2js:noInline')
+  static KnowledgeBase create() => KnowledgeBase._();
   KnowledgeBase createEmptyInstance() => create();
   static $pb.PbList<KnowledgeBase> createRepeated() =>
       $pb.PbList<KnowledgeBase>();
@@ -61,13 +64,14 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListKnowledgeBasesRequest() : super();
-  ListKnowledgeBasesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListKnowledgeBasesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListKnowledgeBasesRequest._() : super();
+  factory ListKnowledgeBasesRequest() => create();
+  factory ListKnowledgeBasesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListKnowledgeBasesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListKnowledgeBasesRequest clone() =>
       ListKnowledgeBasesRequest()..mergeFromMessage(this);
   ListKnowledgeBasesRequest copyWith(
@@ -75,7 +79,8 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ListKnowledgeBasesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListKnowledgeBasesRequest create() => ListKnowledgeBasesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListKnowledgeBasesRequest create() => ListKnowledgeBasesRequest._();
   ListKnowledgeBasesRequest createEmptyInstance() => create();
   static $pb.PbList<ListKnowledgeBasesRequest> createRepeated() =>
       $pb.PbList<ListKnowledgeBasesRequest>();
@@ -117,13 +122,14 @@ class ListKnowledgeBasesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListKnowledgeBasesResponse() : super();
-  ListKnowledgeBasesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListKnowledgeBasesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListKnowledgeBasesResponse._() : super();
+  factory ListKnowledgeBasesResponse() => create();
+  factory ListKnowledgeBasesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListKnowledgeBasesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListKnowledgeBasesResponse clone() =>
       ListKnowledgeBasesResponse()..mergeFromMessage(this);
   ListKnowledgeBasesResponse copyWith(
@@ -131,7 +137,8 @@ class ListKnowledgeBasesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListKnowledgeBasesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListKnowledgeBasesResponse create() => ListKnowledgeBasesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListKnowledgeBasesResponse create() => ListKnowledgeBasesResponse._();
   ListKnowledgeBasesResponse createEmptyInstance() => create();
   static $pb.PbList<ListKnowledgeBasesResponse> createRepeated() =>
       $pb.PbList<ListKnowledgeBasesResponse>();
@@ -156,20 +163,22 @@ class GetKnowledgeBaseRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetKnowledgeBaseRequest() : super();
-  GetKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetKnowledgeBaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetKnowledgeBaseRequest._() : super();
+  factory GetKnowledgeBaseRequest() => create();
+  factory GetKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetKnowledgeBaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetKnowledgeBaseRequest clone() =>
       GetKnowledgeBaseRequest()..mergeFromMessage(this);
   GetKnowledgeBaseRequest copyWith(
           void Function(GetKnowledgeBaseRequest) updates) =>
       super.copyWith((message) => updates(message as GetKnowledgeBaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetKnowledgeBaseRequest create() => GetKnowledgeBaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetKnowledgeBaseRequest create() => GetKnowledgeBaseRequest._();
   GetKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<GetKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<GetKnowledgeBaseRequest>();
@@ -195,13 +204,14 @@ class CreateKnowledgeBaseRequest extends $pb.GeneratedMessage {
         KnowledgeBase.getDefault, KnowledgeBase.create)
     ..hasRequiredFields = false;
 
-  CreateKnowledgeBaseRequest() : super();
-  CreateKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateKnowledgeBaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateKnowledgeBaseRequest._() : super();
+  factory CreateKnowledgeBaseRequest() => create();
+  factory CreateKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateKnowledgeBaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateKnowledgeBaseRequest clone() =>
       CreateKnowledgeBaseRequest()..mergeFromMessage(this);
   CreateKnowledgeBaseRequest copyWith(
@@ -209,7 +219,8 @@ class CreateKnowledgeBaseRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateKnowledgeBaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateKnowledgeBaseRequest create() => CreateKnowledgeBaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateKnowledgeBaseRequest create() => CreateKnowledgeBaseRequest._();
   CreateKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<CreateKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<CreateKnowledgeBaseRequest>();
@@ -242,13 +253,14 @@ class DeleteKnowledgeBaseRequest extends $pb.GeneratedMessage {
     ..aOB(2, 'force')
     ..hasRequiredFields = false;
 
-  DeleteKnowledgeBaseRequest() : super();
-  DeleteKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteKnowledgeBaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteKnowledgeBaseRequest._() : super();
+  factory DeleteKnowledgeBaseRequest() => create();
+  factory DeleteKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteKnowledgeBaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteKnowledgeBaseRequest clone() =>
       DeleteKnowledgeBaseRequest()..mergeFromMessage(this);
   DeleteKnowledgeBaseRequest copyWith(
@@ -256,7 +268,8 @@ class DeleteKnowledgeBaseRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteKnowledgeBaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteKnowledgeBaseRequest create() => DeleteKnowledgeBaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteKnowledgeBaseRequest create() => DeleteKnowledgeBaseRequest._();
   DeleteKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<DeleteKnowledgeBaseRequest>();
@@ -287,17 +300,18 @@ class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..a<KnowledgeBase>(1, 'knowledgeBase', $pb.PbFieldType.OM,
         KnowledgeBase.getDefault, KnowledgeBase.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateKnowledgeBaseRequest() : super();
-  UpdateKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateKnowledgeBaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateKnowledgeBaseRequest._() : super();
+  factory UpdateKnowledgeBaseRequest() => create();
+  factory UpdateKnowledgeBaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateKnowledgeBaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateKnowledgeBaseRequest clone() =>
       UpdateKnowledgeBaseRequest()..mergeFromMessage(this);
   UpdateKnowledgeBaseRequest copyWith(
@@ -305,7 +319,8 @@ class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateKnowledgeBaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateKnowledgeBaseRequest create() => UpdateKnowledgeBaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateKnowledgeBaseRequest create() => UpdateKnowledgeBaseRequest._();
   UpdateKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<UpdateKnowledgeBaseRequest>();
@@ -321,8 +336,8 @@ class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
   $core.bool hasKnowledgeBase() => $_has(0);
   void clearKnowledgeBase() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 

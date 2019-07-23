@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/user_interest.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -37,18 +38,20 @@ class UserInterest extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, $1.CriterionCategoryAvailability.create)
     ..hasRequiredFields = false;
 
-  UserInterest() : super();
-  UserInterest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UserInterest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UserInterest._() : super();
+  factory UserInterest() => create();
+  factory UserInterest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UserInterest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UserInterest clone() => UserInterest()..mergeFromMessage(this);
   UserInterest copyWith(void Function(UserInterest) updates) =>
       super.copyWith((message) => updates(message as UserInterest));
   $pb.BuilderInfo get info_ => _i;
-  static UserInterest create() => UserInterest();
+  @$core.pragma('dart2js:noInline')
+  static UserInterest create() => UserInterest._();
   UserInterest createEmptyInstance() => create();
   static $pb.PbList<UserInterest> createRepeated() =>
       $pb.PbList<UserInterest>();

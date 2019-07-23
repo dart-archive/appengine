@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1beta1/source.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class SourceInfo extends $pb.GeneratedMessage {
         const $pb.PackageName('google.api.expr.v1beta1'))
     ..hasRequiredFields = false;
 
-  SourceInfo() : super();
-  SourceInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceInfo._() : super();
+  factory SourceInfo() => create();
+  factory SourceInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceInfo clone() => SourceInfo()..mergeFromMessage(this);
   SourceInfo copyWith(void Function(SourceInfo) updates) =>
       super.copyWith((message) => updates(message as SourceInfo));
   $pb.BuilderInfo get info_ => _i;
-  static SourceInfo create() => SourceInfo();
+  @$core.pragma('dart2js:noInline')
+  static SourceInfo create() => SourceInfo._();
   SourceInfo createEmptyInstance() => create();
   static $pb.PbList<SourceInfo> createRepeated() => $pb.PbList<SourceInfo>();
   static SourceInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -65,18 +68,20 @@ class SourcePosition extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'column', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SourcePosition() : super();
-  SourcePosition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourcePosition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourcePosition._() : super();
+  factory SourcePosition() => create();
+  factory SourcePosition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourcePosition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourcePosition clone() => SourcePosition()..mergeFromMessage(this);
   SourcePosition copyWith(void Function(SourcePosition) updates) =>
       super.copyWith((message) => updates(message as SourcePosition));
   $pb.BuilderInfo get info_ => _i;
-  static SourcePosition create() => SourcePosition();
+  @$core.pragma('dart2js:noInline')
+  static SourcePosition create() => SourcePosition._();
   SourcePosition createEmptyInstance() => create();
   static $pb.PbList<SourcePosition> createRepeated() =>
       $pb.PbList<SourcePosition>();

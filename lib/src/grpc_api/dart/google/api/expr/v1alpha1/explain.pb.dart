@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/explain.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -19,18 +20,20 @@ class Explain_ExprStep extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'valueIndex', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Explain_ExprStep() : super();
-  Explain_ExprStep.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Explain_ExprStep.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Explain_ExprStep._() : super();
+  factory Explain_ExprStep() => create();
+  factory Explain_ExprStep.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Explain_ExprStep.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Explain_ExprStep clone() => Explain_ExprStep()..mergeFromMessage(this);
   Explain_ExprStep copyWith(void Function(Explain_ExprStep) updates) =>
       super.copyWith((message) => updates(message as Explain_ExprStep));
   $pb.BuilderInfo get info_ => _i;
-  static Explain_ExprStep create() => Explain_ExprStep();
+  @$core.pragma('dart2js:noInline')
+  static Explain_ExprStep create() => Explain_ExprStep._();
   Explain_ExprStep createEmptyInstance() => create();
   static $pb.PbList<Explain_ExprStep> createRepeated() =>
       $pb.PbList<Explain_ExprStep>();
@@ -63,18 +66,20 @@ class Explain extends $pb.GeneratedMessage {
         2, 'exprSteps', $pb.PbFieldType.PM, Explain_ExprStep.create)
     ..hasRequiredFields = false;
 
-  Explain() : super();
-  Explain.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Explain.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Explain._() : super();
+  factory Explain() => create();
+  factory Explain.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Explain.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Explain clone() => Explain()..mergeFromMessage(this);
   Explain copyWith(void Function(Explain) updates) =>
       super.copyWith((message) => updates(message as Explain));
   $pb.BuilderInfo get info_ => _i;
-  static Explain create() => Explain();
+  @$core.pragma('dart2js:noInline')
+  static Explain create() => Explain._();
   Explain createEmptyInstance() => create();
   static $pb.PbList<Explain> createRepeated() => $pb.PbList<Explain>();
   static Explain getDefault() => _defaultInstance ??= create()..freeze();

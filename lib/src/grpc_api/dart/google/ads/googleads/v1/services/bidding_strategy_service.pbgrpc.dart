@@ -1,38 +1,39 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/bidding_strategy_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'bidding_strategy_service.pb.dart';
-import '../resources/bidding_strategy.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'bidding_strategy_service.pb.dart' as $0;
+import '../resources/bidding_strategy.pb.dart' as $1;
 export 'bidding_strategy_service.pb.dart';
 
 class BiddingStrategyServiceClient extends $grpc.Client {
   static final _$getBiddingStrategy = $grpc.ClientMethod<
-          GetBiddingStrategyRequest, $0.BiddingStrategy>(
+          $0.GetBiddingStrategyRequest, $1.BiddingStrategy>(
       '/google.ads.googleads.v1.services.BiddingStrategyService/GetBiddingStrategy',
-      (GetBiddingStrategyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.BiddingStrategy.fromBuffer(value));
+      ($0.GetBiddingStrategyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.BiddingStrategy.fromBuffer(value));
   static final _$mutateBiddingStrategies = $grpc.ClientMethod<
-          MutateBiddingStrategiesRequest, MutateBiddingStrategiesResponse>(
+          $0.MutateBiddingStrategiesRequest,
+          $0.MutateBiddingStrategiesResponse>(
       '/google.ads.googleads.v1.services.BiddingStrategyService/MutateBiddingStrategies',
-      (MutateBiddingStrategiesRequest value) => value.writeToBuffer(),
+      ($0.MutateBiddingStrategiesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          MutateBiddingStrategiesResponse.fromBuffer(value));
+          $0.MutateBiddingStrategiesResponse.fromBuffer(value));
 
   BiddingStrategyServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.BiddingStrategy> getBiddingStrategy(
-      GetBiddingStrategyRequest request,
+  $grpc.ResponseFuture<$1.BiddingStrategy> getBiddingStrategy(
+      $0.GetBiddingStrategyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getBiddingStrategy, $async.Stream.fromIterable([request]),
@@ -40,9 +41,9 @@ class BiddingStrategyServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<MutateBiddingStrategiesResponse> mutateBiddingStrategies(
-      MutateBiddingStrategiesRequest request,
-      {$grpc.CallOptions options}) {
+  $grpc.ResponseFuture<$0.MutateBiddingStrategiesResponse>
+      mutateBiddingStrategies($0.MutateBiddingStrategiesRequest request,
+          {$grpc.CallOptions options}) {
     final call = $createCall(
         _$mutateBiddingStrategies, $async.Stream.fromIterable([request]),
         options: options);
@@ -56,37 +57,39 @@ abstract class BiddingStrategyServiceBase extends $grpc.Service {
 
   BiddingStrategyServiceBase() {
     $addMethod(
-        $grpc.ServiceMethod<GetBiddingStrategyRequest, $0.BiddingStrategy>(
+        $grpc.ServiceMethod<$0.GetBiddingStrategyRequest, $1.BiddingStrategy>(
             'GetBiddingStrategy',
             getBiddingStrategy_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                GetBiddingStrategyRequest.fromBuffer(value),
-            ($0.BiddingStrategy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateBiddingStrategiesRequest,
-            MutateBiddingStrategiesResponse>(
+                $0.GetBiddingStrategyRequest.fromBuffer(value),
+            ($1.BiddingStrategy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateBiddingStrategiesRequest,
+            $0.MutateBiddingStrategiesResponse>(
         'MutateBiddingStrategies',
         mutateBiddingStrategies_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            MutateBiddingStrategiesRequest.fromBuffer(value),
-        (MutateBiddingStrategiesResponse value) => value.writeToBuffer()));
+            $0.MutateBiddingStrategiesRequest.fromBuffer(value),
+        ($0.MutateBiddingStrategiesResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.BiddingStrategy> getBiddingStrategy_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.BiddingStrategy> getBiddingStrategy_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetBiddingStrategyRequest> request) async {
     return getBiddingStrategy(call, await request);
   }
 
-  $async.Future<MutateBiddingStrategiesResponse> mutateBiddingStrategies_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateBiddingStrategiesResponse> mutateBiddingStrategies_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.MutateBiddingStrategiesRequest> request) async {
     return mutateBiddingStrategies(call, await request);
   }
 
-  $async.Future<$0.BiddingStrategy> getBiddingStrategy(
-      $grpc.ServiceCall call, GetBiddingStrategyRequest request);
-  $async.Future<MutateBiddingStrategiesResponse> mutateBiddingStrategies(
-      $grpc.ServiceCall call, MutateBiddingStrategiesRequest request);
+  $async.Future<$1.BiddingStrategy> getBiddingStrategy(
+      $grpc.ServiceCall call, $0.GetBiddingStrategyRequest request);
+  $async.Future<$0.MutateBiddingStrategiesResponse> mutateBiddingStrategies(
+      $grpc.ServiceCall call, $0.MutateBiddingStrategiesRequest request);
 }

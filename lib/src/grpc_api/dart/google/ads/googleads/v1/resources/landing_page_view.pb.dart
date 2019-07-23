@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/landing_page_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,18 +20,20 @@ class LandingPageView extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  LandingPageView() : super();
-  LandingPageView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LandingPageView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LandingPageView._() : super();
+  factory LandingPageView() => create();
+  factory LandingPageView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LandingPageView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LandingPageView clone() => LandingPageView()..mergeFromMessage(this);
   LandingPageView copyWith(void Function(LandingPageView) updates) =>
       super.copyWith((message) => updates(message as LandingPageView));
   $pb.BuilderInfo get info_ => _i;
-  static LandingPageView create() => LandingPageView();
+  @$core.pragma('dart2js:noInline')
+  static LandingPageView create() => LandingPageView._();
   LandingPageView createEmptyInstance() => create();
   static $pb.PbList<LandingPageView> createRepeated() =>
       $pb.PbList<LandingPageView>();

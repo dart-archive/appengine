@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/data_labeling_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const CreateDatasetRequest$json = {
   '1': 'CreateDatasetRequest',
@@ -70,6 +71,13 @@ const ImportDataRequest$json = {
       '6': '.google.cloud.datalabeling.v1beta1.InputConfig',
       '10': 'inputConfig'
     },
+    {
+      '1': 'user_email_address',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'userEmailAddress'
+    },
   ],
 };
 
@@ -92,6 +100,13 @@ const ExportDataRequest$json = {
       '5': 11,
       '6': '.google.cloud.datalabeling.v1beta1.OutputConfig',
       '10': 'outputConfig'
+    },
+    {
+      '1': 'user_email_address',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'userEmailAddress'
     },
   ],
 };
@@ -145,13 +160,6 @@ const ListAnnotatedDatasetsRequest$json = {
   ],
 };
 
-const DeleteAnnotatedDatasetRequest$json = {
-  '1': 'DeleteAnnotatedDatasetRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-  ],
-};
-
 const ListAnnotatedDatasetsResponse$json = {
   '1': 'ListAnnotatedDatasetsResponse',
   '2': [
@@ -164,6 +172,13 @@ const ListAnnotatedDatasetsResponse$json = {
       '10': 'annotatedDatasets'
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+const DeleteAnnotatedDatasetRequest$json = {
+  '1': 'DeleteAnnotatedDatasetRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
 };
 
@@ -371,38 +386,6 @@ const LabelTextRequest_Feature$json = {
   ],
 };
 
-const LabelAudioRequest$json = {
-  '1': 'LabelAudioRequest',
-  '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {
-      '1': 'basic_config',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.HumanAnnotationConfig',
-      '10': 'basicConfig'
-    },
-    {
-      '1': 'feature',
-      '3': 3,
-      '4': 1,
-      '5': 14,
-      '6': '.google.cloud.datalabeling.v1beta1.LabelAudioRequest.Feature',
-      '10': 'feature'
-    },
-  ],
-  '4': [LabelAudioRequest_Feature$json],
-};
-
-const LabelAudioRequest_Feature$json = {
-  '1': 'Feature',
-  '2': [
-    {'1': 'FEATURE_UNSPECIFIED', '2': 0},
-    {'1': 'AUDIO_TRANSCRIPTION', '2': 1},
-  ],
-};
-
 const GetExampleRequest$json = {
   '1': 'GetExampleRequest',
   '2': [
@@ -539,6 +522,176 @@ const ListInstructionsResponse$json = {
       '5': 11,
       '6': '.google.cloud.datalabeling.v1beta1.Instruction',
       '10': 'instructions'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+const GetEvaluationRequest$json = {
+  '1': 'GetEvaluationRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const SearchEvaluationsRequest$json = {
+  '1': 'SearchEvaluationsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+const SearchEvaluationsResponse$json = {
+  '1': 'SearchEvaluationsResponse',
+  '2': [
+    {
+      '1': 'evaluations',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.Evaluation',
+      '10': 'evaluations'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+const SearchExampleComparisonsRequest$json = {
+  '1': 'SearchExampleComparisonsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+const SearchExampleComparisonsResponse$json = {
+  '1': 'SearchExampleComparisonsResponse',
+  '2': [
+    {
+      '1': 'example_comparisons',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.datalabeling.v1beta1.SearchExampleComparisonsResponse.ExampleComparison',
+      '10': 'exampleComparisons'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+  '3': [SearchExampleComparisonsResponse_ExampleComparison$json],
+};
+
+const SearchExampleComparisonsResponse_ExampleComparison$json = {
+  '1': 'ExampleComparison',
+  '2': [
+    {
+      '1': 'ground_truth_example',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.Example',
+      '10': 'groundTruthExample'
+    },
+    {
+      '1': 'model_created_examples',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.Example',
+      '10': 'modelCreatedExamples'
+    },
+  ],
+};
+
+const CreateEvaluationJobRequest$json = {
+  '1': 'CreateEvaluationJobRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'job',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.EvaluationJob',
+      '10': 'job'
+    },
+  ],
+};
+
+const UpdateEvaluationJobRequest$json = {
+  '1': 'UpdateEvaluationJobRequest',
+  '2': [
+    {
+      '1': 'evaluation_job',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.EvaluationJob',
+      '10': 'evaluationJob'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+const GetEvaluationJobRequest$json = {
+  '1': 'GetEvaluationJobRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const PauseEvaluationJobRequest$json = {
+  '1': 'PauseEvaluationJobRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const ResumeEvaluationJobRequest$json = {
+  '1': 'ResumeEvaluationJobRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const DeleteEvaluationJobRequest$json = {
+  '1': 'DeleteEvaluationJobRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const ListEvaluationJobsRequest$json = {
+  '1': 'ListEvaluationJobsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+  ],
+};
+
+const ListEvaluationJobsResponse$json = {
+  '1': 'ListEvaluationJobsResponse',
+  '2': [
+    {
+      '1': 'evaluation_jobs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.EvaluationJob',
+      '10': 'evaluationJobs'
     },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],

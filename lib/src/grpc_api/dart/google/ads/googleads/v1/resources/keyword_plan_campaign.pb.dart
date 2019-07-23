@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/keyword_plan_campaign.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -38,18 +39,20 @@ class KeywordPlanCampaign extends $pb.GeneratedMessage {
         8, 'geoTargets', $pb.PbFieldType.PM, KeywordPlanGeoTarget.create)
     ..hasRequiredFields = false;
 
-  KeywordPlanCampaign() : super();
-  KeywordPlanCampaign.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanCampaign.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanCampaign._() : super();
+  factory KeywordPlanCampaign() => create();
+  factory KeywordPlanCampaign.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanCampaign.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanCampaign clone() => KeywordPlanCampaign()..mergeFromMessage(this);
   KeywordPlanCampaign copyWith(void Function(KeywordPlanCampaign) updates) =>
       super.copyWith((message) => updates(message as KeywordPlanCampaign));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordPlanCampaign create() => KeywordPlanCampaign();
+  @$core.pragma('dart2js:noInline')
+  static KeywordPlanCampaign create() => KeywordPlanCampaign._();
   KeywordPlanCampaign createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanCampaign> createRepeated() =>
       $pb.PbList<KeywordPlanCampaign>();
@@ -118,19 +121,21 @@ class KeywordPlanGeoTarget extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  KeywordPlanGeoTarget() : super();
-  KeywordPlanGeoTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanGeoTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanGeoTarget._() : super();
+  factory KeywordPlanGeoTarget() => create();
+  factory KeywordPlanGeoTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanGeoTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanGeoTarget clone() =>
       KeywordPlanGeoTarget()..mergeFromMessage(this);
   KeywordPlanGeoTarget copyWith(void Function(KeywordPlanGeoTarget) updates) =>
       super.copyWith((message) => updates(message as KeywordPlanGeoTarget));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordPlanGeoTarget create() => KeywordPlanGeoTarget();
+  @$core.pragma('dart2js:noInline')
+  static KeywordPlanGeoTarget create() => KeywordPlanGeoTarget._();
   KeywordPlanGeoTarget createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanGeoTarget> createRepeated() =>
       $pb.PbList<KeywordPlanGeoTarget>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2beta2/task.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,6 +28,7 @@ class Task extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Task',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..oo(0, [3, 4])
     ..aOS(1, 'name')
     ..a<$0.AppEngineHttpRequest>(3, 'appEngineHttpRequest', $pb.PbFieldType.OM,
         $0.AppEngineHttpRequest.getDefault, $0.AppEngineHttpRequest.create)
@@ -40,21 +42,22 @@ class Task extends $pb.GeneratedMessage {
         TaskStatus.create)
     ..e<Task_View>(8, 'view', $pb.PbFieldType.OE, Task_View.VIEW_UNSPECIFIED,
         Task_View.valueOf, Task_View.values)
-    ..oo(0, [3, 4])
     ..hasRequiredFields = false;
 
-  Task() : super();
-  Task.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Task.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Task._() : super();
+  factory Task() => create();
+  factory Task.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Task.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Task clone() => Task()..mergeFromMessage(this);
   Task copyWith(void Function(Task) updates) =>
       super.copyWith((message) => updates(message as Task));
   $pb.BuilderInfo get info_ => _i;
-  static Task create() => Task();
+  @$core.pragma('dart2js:noInline')
+  static Task create() => Task._();
   Task createEmptyInstance() => create();
   static $pb.PbList<Task> createRepeated() => $pb.PbList<Task>();
   static Task getDefault() => _defaultInstance ??= create()..freeze();
@@ -132,18 +135,20 @@ class TaskStatus extends $pb.GeneratedMessage {
         AttemptStatus.getDefault, AttemptStatus.create)
     ..hasRequiredFields = false;
 
-  TaskStatus() : super();
-  TaskStatus.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TaskStatus.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TaskStatus._() : super();
+  factory TaskStatus() => create();
+  factory TaskStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TaskStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TaskStatus clone() => TaskStatus()..mergeFromMessage(this);
   TaskStatus copyWith(void Function(TaskStatus) updates) =>
       super.copyWith((message) => updates(message as TaskStatus));
   $pb.BuilderInfo get info_ => _i;
-  static TaskStatus create() => TaskStatus();
+  @$core.pragma('dart2js:noInline')
+  static TaskStatus create() => TaskStatus._();
   TaskStatus createEmptyInstance() => create();
   static $pb.PbList<TaskStatus> createRepeated() => $pb.PbList<TaskStatus>();
   static TaskStatus getDefault() => _defaultInstance ??= create()..freeze();
@@ -195,18 +200,20 @@ class AttemptStatus extends $pb.GeneratedMessage {
         $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  AttemptStatus() : super();
-  AttemptStatus.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AttemptStatus.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AttemptStatus._() : super();
+  factory AttemptStatus() => create();
+  factory AttemptStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AttemptStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AttemptStatus clone() => AttemptStatus()..mergeFromMessage(this);
   AttemptStatus copyWith(void Function(AttemptStatus) updates) =>
       super.copyWith((message) => updates(message as AttemptStatus));
   $pb.BuilderInfo get info_ => _i;
-  static AttemptStatus create() => AttemptStatus();
+  @$core.pragma('dart2js:noInline')
+  static AttemptStatus create() => AttemptStatus._();
   AttemptStatus createEmptyInstance() => create();
   static $pb.PbList<AttemptStatus> createRepeated() =>
       $pb.PbList<AttemptStatus>();

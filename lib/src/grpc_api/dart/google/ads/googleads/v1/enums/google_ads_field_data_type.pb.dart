@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/google_ads_field_data_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class GoogleAdsFieldDataTypeEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  GoogleAdsFieldDataTypeEnum() : super();
-  GoogleAdsFieldDataTypeEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GoogleAdsFieldDataTypeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GoogleAdsFieldDataTypeEnum._() : super();
+  factory GoogleAdsFieldDataTypeEnum() => create();
+  factory GoogleAdsFieldDataTypeEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GoogleAdsFieldDataTypeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GoogleAdsFieldDataTypeEnum clone() =>
       GoogleAdsFieldDataTypeEnum()..mergeFromMessage(this);
   GoogleAdsFieldDataTypeEnum copyWith(
@@ -31,7 +33,8 @@ class GoogleAdsFieldDataTypeEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GoogleAdsFieldDataTypeEnum));
   $pb.BuilderInfo get info_ => _i;
-  static GoogleAdsFieldDataTypeEnum create() => GoogleAdsFieldDataTypeEnum();
+  @$core.pragma('dart2js:noInline')
+  static GoogleAdsFieldDataTypeEnum create() => GoogleAdsFieldDataTypeEnum._();
   GoogleAdsFieldDataTypeEnum createEmptyInstance() => create();
   static $pb.PbList<GoogleAdsFieldDataTypeEnum> createRepeated() =>
       $pb.PbList<GoogleAdsFieldDataTypeEnum>();

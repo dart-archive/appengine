@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/frequency_cap.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class FrequencyCapEntry extends $pb.GeneratedMessage {
         $0.Int32Value.create)
     ..hasRequiredFields = false;
 
-  FrequencyCapEntry() : super();
-  FrequencyCapEntry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FrequencyCapEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FrequencyCapEntry._() : super();
+  factory FrequencyCapEntry() => create();
+  factory FrequencyCapEntry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FrequencyCapEntry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FrequencyCapEntry clone() => FrequencyCapEntry()..mergeFromMessage(this);
   FrequencyCapEntry copyWith(void Function(FrequencyCapEntry) updates) =>
       super.copyWith((message) => updates(message as FrequencyCapEntry));
   $pb.BuilderInfo get info_ => _i;
-  static FrequencyCapEntry create() => FrequencyCapEntry();
+  @$core.pragma('dart2js:noInline')
+  static FrequencyCapEntry create() => FrequencyCapEntry._();
   FrequencyCapEntry createEmptyInstance() => create();
   static $pb.PbList<FrequencyCapEntry> createRepeated() =>
       $pb.PbList<FrequencyCapEntry>();
@@ -88,18 +91,20 @@ class FrequencyCapKey extends $pb.GeneratedMessage {
         $0.Int32Value.getDefault, $0.Int32Value.create)
     ..hasRequiredFields = false;
 
-  FrequencyCapKey() : super();
-  FrequencyCapKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FrequencyCapKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FrequencyCapKey._() : super();
+  factory FrequencyCapKey() => create();
+  factory FrequencyCapKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FrequencyCapKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FrequencyCapKey clone() => FrequencyCapKey()..mergeFromMessage(this);
   FrequencyCapKey copyWith(void Function(FrequencyCapKey) updates) =>
       super.copyWith((message) => updates(message as FrequencyCapKey));
   $pb.BuilderInfo get info_ => _i;
-  static FrequencyCapKey create() => FrequencyCapKey();
+  @$core.pragma('dart2js:noInline')
+  static FrequencyCapKey create() => FrequencyCapKey._();
   FrequencyCapKey createEmptyInstance() => create();
   static $pb.PbList<FrequencyCapKey> createRepeated() =>
       $pb.PbList<FrequencyCapKey>();

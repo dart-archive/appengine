@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group_simulation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -32,6 +33,7 @@ class AdGroupSimulation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupSimulation',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [8, 9, 10])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'adGroupId', $pb.PbFieldType.OM,
         $0.Int64Value.getDefault, $0.Int64Value.create)
@@ -64,21 +66,22 @@ class AdGroupSimulation extends $pb.GeneratedMessage {
     ..a<$1.TargetCpaSimulationPointList>(
         9, 'targetCpaPointList', $pb.PbFieldType.OM, $1.TargetCpaSimulationPointList.getDefault, $1.TargetCpaSimulationPointList.create)
     ..a<$1.CpvBidSimulationPointList>(10, 'cpvBidPointList', $pb.PbFieldType.OM, $1.CpvBidSimulationPointList.getDefault, $1.CpvBidSimulationPointList.create)
-    ..oo(0, [8, 9, 10])
     ..hasRequiredFields = false;
 
-  AdGroupSimulation() : super();
-  AdGroupSimulation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupSimulation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupSimulation._() : super();
+  factory AdGroupSimulation() => create();
+  factory AdGroupSimulation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupSimulation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupSimulation clone() => AdGroupSimulation()..mergeFromMessage(this);
   AdGroupSimulation copyWith(void Function(AdGroupSimulation) updates) =>
       super.copyWith((message) => updates(message as AdGroupSimulation));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupSimulation create() => AdGroupSimulation();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupSimulation create() => AdGroupSimulation._();
   AdGroupSimulation createEmptyInstance() => create();
   static $pb.PbList<AdGroupSimulation> createRepeated() =>
       $pb.PbList<AdGroupSimulation>();

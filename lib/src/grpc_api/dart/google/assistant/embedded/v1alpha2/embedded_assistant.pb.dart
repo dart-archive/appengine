@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/assistant/embedded/v1alpha2/embedded_assistant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../type/latlng.pb.dart' as $0;
+import '../../../type/latlng.pb.dart' as $1;
 
 import 'embedded_assistant.pbenum.dart';
 
@@ -26,24 +27,26 @@ class AssistRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistRequest',
       package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..oo(0, [1, 2])
     ..a<AssistConfig>(1, 'config', $pb.PbFieldType.OM, AssistConfig.getDefault,
         AssistConfig.create)
     ..a<$core.List<$core.int>>(2, 'audioIn', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  AssistRequest() : super();
-  AssistRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AssistRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AssistRequest._() : super();
+  factory AssistRequest() => create();
+  factory AssistRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AssistRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AssistRequest clone() => AssistRequest()..mergeFromMessage(this);
   AssistRequest copyWith(void Function(AssistRequest) updates) =>
       super.copyWith((message) => updates(message as AssistRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AssistRequest create() => AssistRequest();
+  @$core.pragma('dart2js:noInline')
+  static AssistRequest create() => AssistRequest._();
   AssistRequest createEmptyInstance() => create();
   static $pb.PbList<AssistRequest> createRepeated() =>
       $pb.PbList<AssistRequest>();
@@ -94,18 +97,20 @@ class AssistResponse extends $pb.GeneratedMessage {
         DebugInfo.create)
     ..hasRequiredFields = false;
 
-  AssistResponse() : super();
-  AssistResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AssistResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AssistResponse._() : super();
+  factory AssistResponse() => create();
+  factory AssistResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AssistResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AssistResponse clone() => AssistResponse()..mergeFromMessage(this);
   AssistResponse copyWith(void Function(AssistResponse) updates) =>
       super.copyWith((message) => updates(message as AssistResponse));
   $pb.BuilderInfo get info_ => _i;
-  static AssistResponse create() => AssistResponse();
+  @$core.pragma('dart2js:noInline')
+  static AssistResponse create() => AssistResponse._();
   AssistResponse createEmptyInstance() => create();
   static $pb.PbList<AssistResponse> createRepeated() =>
       $pb.PbList<AssistResponse>();
@@ -169,18 +174,20 @@ class DebugInfo extends $pb.GeneratedMessage {
     ..aOS(1, 'aogAgentToAssistantJson')
     ..hasRequiredFields = false;
 
-  DebugInfo() : super();
-  DebugInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DebugInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DebugInfo._() : super();
+  factory DebugInfo() => create();
+  factory DebugInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DebugInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DebugInfo clone() => DebugInfo()..mergeFromMessage(this);
   DebugInfo copyWith(void Function(DebugInfo) updates) =>
       super.copyWith((message) => updates(message as DebugInfo));
   $pb.BuilderInfo get info_ => _i;
-  static DebugInfo create() => DebugInfo();
+  @$core.pragma('dart2js:noInline')
+  static DebugInfo create() => DebugInfo._();
   DebugInfo createEmptyInstance() => create();
   static $pb.PbList<DebugInfo> createRepeated() => $pb.PbList<DebugInfo>();
   static DebugInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -206,6 +213,7 @@ class AssistConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistConfig',
       package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+    ..oo(0, [1, 6])
     ..a<AudioInConfig>(1, 'audioInConfig', $pb.PbFieldType.OM,
         AudioInConfig.getDefault, AudioInConfig.create)
     ..a<AudioOutConfig>(2, 'audioOutConfig', $pb.PbFieldType.OM,
@@ -219,21 +227,22 @@ class AssistConfig extends $pb.GeneratedMessage {
     ..aOS(6, 'textQuery')
     ..a<ScreenOutConfig>(8, 'screenOutConfig', $pb.PbFieldType.OM,
         ScreenOutConfig.getDefault, ScreenOutConfig.create)
-    ..oo(0, [1, 6])
     ..hasRequiredFields = false;
 
-  AssistConfig() : super();
-  AssistConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AssistConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AssistConfig._() : super();
+  factory AssistConfig() => create();
+  factory AssistConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AssistConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AssistConfig clone() => AssistConfig()..mergeFromMessage(this);
   AssistConfig copyWith(void Function(AssistConfig) updates) =>
       super.copyWith((message) => updates(message as AssistConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AssistConfig create() => AssistConfig();
+  @$core.pragma('dart2js:noInline')
+  static AssistConfig create() => AssistConfig._();
   AssistConfig createEmptyInstance() => create();
   static $pb.PbList<AssistConfig> createRepeated() =>
       $pb.PbList<AssistConfig>();
@@ -313,18 +322,20 @@ class AudioInConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  AudioInConfig() : super();
-  AudioInConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioInConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioInConfig._() : super();
+  factory AudioInConfig() => create();
+  factory AudioInConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioInConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioInConfig clone() => AudioInConfig()..mergeFromMessage(this);
   AudioInConfig copyWith(void Function(AudioInConfig) updates) =>
       super.copyWith((message) => updates(message as AudioInConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AudioInConfig create() => AudioInConfig();
+  @$core.pragma('dart2js:noInline')
+  static AudioInConfig create() => AudioInConfig._();
   AudioInConfig createEmptyInstance() => create();
   static $pb.PbList<AudioInConfig> createRepeated() =>
       $pb.PbList<AudioInConfig>();
@@ -362,18 +373,20 @@ class AudioOutConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  AudioOutConfig() : super();
-  AudioOutConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioOutConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioOutConfig._() : super();
+  factory AudioOutConfig() => create();
+  factory AudioOutConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioOutConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioOutConfig clone() => AudioOutConfig()..mergeFromMessage(this);
   AudioOutConfig copyWith(void Function(AudioOutConfig) updates) =>
       super.copyWith((message) => updates(message as AudioOutConfig));
   $pb.BuilderInfo get info_ => _i;
-  static AudioOutConfig create() => AudioOutConfig();
+  @$core.pragma('dart2js:noInline')
+  static AudioOutConfig create() => AudioOutConfig._();
   AudioOutConfig createEmptyInstance() => create();
   static $pb.PbList<AudioOutConfig> createRepeated() =>
       $pb.PbList<AudioOutConfig>();
@@ -417,18 +430,20 @@ class ScreenOutConfig extends $pb.GeneratedMessage {
         ScreenOutConfig_ScreenMode.values)
     ..hasRequiredFields = false;
 
-  ScreenOutConfig() : super();
-  ScreenOutConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScreenOutConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScreenOutConfig._() : super();
+  factory ScreenOutConfig() => create();
+  factory ScreenOutConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScreenOutConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScreenOutConfig clone() => ScreenOutConfig()..mergeFromMessage(this);
   ScreenOutConfig copyWith(void Function(ScreenOutConfig) updates) =>
       super.copyWith((message) => updates(message as ScreenOutConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ScreenOutConfig create() => ScreenOutConfig();
+  @$core.pragma('dart2js:noInline')
+  static ScreenOutConfig create() => ScreenOutConfig._();
   ScreenOutConfig createEmptyInstance() => create();
   static $pb.PbList<ScreenOutConfig> createRepeated() =>
       $pb.PbList<ScreenOutConfig>();
@@ -455,18 +470,20 @@ class DialogStateIn extends $pb.GeneratedMessage {
     ..aOB(7, 'isNewConversation')
     ..hasRequiredFields = false;
 
-  DialogStateIn() : super();
-  DialogStateIn.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DialogStateIn.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DialogStateIn._() : super();
+  factory DialogStateIn() => create();
+  factory DialogStateIn.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DialogStateIn.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DialogStateIn clone() => DialogStateIn()..mergeFromMessage(this);
   DialogStateIn copyWith(void Function(DialogStateIn) updates) =>
       super.copyWith((message) => updates(message as DialogStateIn));
   $pb.BuilderInfo get info_ => _i;
-  static DialogStateIn create() => DialogStateIn();
+  @$core.pragma('dart2js:noInline')
+  static DialogStateIn create() => DialogStateIn._();
   DialogStateIn createEmptyInstance() => create();
   static $pb.PbList<DialogStateIn> createRepeated() =>
       $pb.PbList<DialogStateIn>();
@@ -513,18 +530,20 @@ class DeviceConfig extends $pb.GeneratedMessage {
     ..aOS(3, 'deviceModelId')
     ..hasRequiredFields = false;
 
-  DeviceConfig() : super();
-  DeviceConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceConfig._() : super();
+  factory DeviceConfig() => create();
+  factory DeviceConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceConfig clone() => DeviceConfig()..mergeFromMessage(this);
   DeviceConfig copyWith(void Function(DeviceConfig) updates) =>
       super.copyWith((message) => updates(message as DeviceConfig));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceConfig create() => DeviceConfig();
+  @$core.pragma('dart2js:noInline')
+  static DeviceConfig create() => DeviceConfig._();
   DeviceConfig createEmptyInstance() => create();
   static $pb.PbList<DeviceConfig> createRepeated() =>
       $pb.PbList<DeviceConfig>();
@@ -554,18 +573,20 @@ class AudioOut extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'audioData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  AudioOut() : super();
-  AudioOut.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AudioOut.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AudioOut._() : super();
+  factory AudioOut() => create();
+  factory AudioOut.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AudioOut.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AudioOut clone() => AudioOut()..mergeFromMessage(this);
   AudioOut copyWith(void Function(AudioOut) updates) =>
       super.copyWith((message) => updates(message as AudioOut));
   $pb.BuilderInfo get info_ => _i;
-  static AudioOut create() => AudioOut();
+  @$core.pragma('dart2js:noInline')
+  static AudioOut create() => AudioOut._();
   AudioOut createEmptyInstance() => create();
   static $pb.PbList<AudioOut> createRepeated() => $pb.PbList<AudioOut>();
   static AudioOut getDefault() => _defaultInstance ??= create()..freeze();
@@ -593,18 +614,20 @@ class ScreenOut extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  ScreenOut() : super();
-  ScreenOut.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScreenOut.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScreenOut._() : super();
+  factory ScreenOut() => create();
+  factory ScreenOut.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScreenOut.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScreenOut clone() => ScreenOut()..mergeFromMessage(this);
   ScreenOut copyWith(void Function(ScreenOut) updates) =>
       super.copyWith((message) => updates(message as ScreenOut));
   $pb.BuilderInfo get info_ => _i;
-  static ScreenOut create() => ScreenOut();
+  @$core.pragma('dart2js:noInline')
+  static ScreenOut create() => ScreenOut._();
   ScreenOut createEmptyInstance() => create();
   static $pb.PbList<ScreenOut> createRepeated() => $pb.PbList<ScreenOut>();
   static ScreenOut getDefault() => _defaultInstance ??= create()..freeze();
@@ -633,18 +656,20 @@ class DeviceAction extends $pb.GeneratedMessage {
     ..aOS(1, 'deviceRequestJson')
     ..hasRequiredFields = false;
 
-  DeviceAction() : super();
-  DeviceAction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceAction._() : super();
+  factory DeviceAction() => create();
+  factory DeviceAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceAction clone() => DeviceAction()..mergeFromMessage(this);
   DeviceAction copyWith(void Function(DeviceAction) updates) =>
       super.copyWith((message) => updates(message as DeviceAction));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceAction create() => DeviceAction();
+  @$core.pragma('dart2js:noInline')
+  static DeviceAction create() => DeviceAction._();
   DeviceAction createEmptyInstance() => create();
   static $pb.PbList<DeviceAction> createRepeated() =>
       $pb.PbList<DeviceAction>();
@@ -667,20 +692,22 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'stability', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  SpeechRecognitionResult() : super();
-  SpeechRecognitionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechRecognitionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechRecognitionResult._() : super();
+  factory SpeechRecognitionResult() => create();
+  factory SpeechRecognitionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechRecognitionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechRecognitionResult clone() =>
       SpeechRecognitionResult()..mergeFromMessage(this);
   SpeechRecognitionResult copyWith(
           void Function(SpeechRecognitionResult) updates) =>
       super.copyWith((message) => updates(message as SpeechRecognitionResult));
   $pb.BuilderInfo get info_ => _i;
-  static SpeechRecognitionResult create() => SpeechRecognitionResult();
+  @$core.pragma('dart2js:noInline')
+  static SpeechRecognitionResult create() => SpeechRecognitionResult._();
   SpeechRecognitionResult createEmptyInstance() => create();
   static $pb.PbList<SpeechRecognitionResult> createRepeated() =>
       $pb.PbList<SpeechRecognitionResult>();
@@ -720,18 +747,20 @@ class DialogStateOut extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  DialogStateOut() : super();
-  DialogStateOut.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DialogStateOut.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DialogStateOut._() : super();
+  factory DialogStateOut() => create();
+  factory DialogStateOut.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DialogStateOut.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DialogStateOut clone() => DialogStateOut()..mergeFromMessage(this);
   DialogStateOut copyWith(void Function(DialogStateOut) updates) =>
       super.copyWith((message) => updates(message as DialogStateOut));
   $pb.BuilderInfo get info_ => _i;
-  static DialogStateOut create() => DialogStateOut();
+  @$core.pragma('dart2js:noInline')
+  static DialogStateOut create() => DialogStateOut._();
   DialogStateOut createEmptyInstance() => create();
   static $pb.PbList<DialogStateOut> createRepeated() =>
       $pb.PbList<DialogStateOut>();
@@ -777,18 +806,20 @@ class DebugConfig extends $pb.GeneratedMessage {
     ..aOB(6, 'returnDebugInfo')
     ..hasRequiredFields = false;
 
-  DebugConfig() : super();
-  DebugConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DebugConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DebugConfig._() : super();
+  factory DebugConfig() => create();
+  factory DebugConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DebugConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DebugConfig clone() => DebugConfig()..mergeFromMessage(this);
   DebugConfig copyWith(void Function(DebugConfig) updates) =>
       super.copyWith((message) => updates(message as DebugConfig));
   $pb.BuilderInfo get info_ => _i;
-  static DebugConfig create() => DebugConfig();
+  @$core.pragma('dart2js:noInline')
+  static DebugConfig create() => DebugConfig._();
   DebugConfig createEmptyInstance() => create();
   static $pb.PbList<DebugConfig> createRepeated() => $pb.PbList<DebugConfig>();
   static DebugConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -813,23 +844,25 @@ class DeviceLocation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceLocation',
       package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
-    ..a<$0.LatLng>(1, 'coordinates', $pb.PbFieldType.OM, $0.LatLng.getDefault,
-        $0.LatLng.create)
     ..oo(0, [1])
+    ..a<$1.LatLng>(1, 'coordinates', $pb.PbFieldType.OM, $1.LatLng.getDefault,
+        $1.LatLng.create)
     ..hasRequiredFields = false;
 
-  DeviceLocation() : super();
-  DeviceLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceLocation._() : super();
+  factory DeviceLocation() => create();
+  factory DeviceLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceLocation clone() => DeviceLocation()..mergeFromMessage(this);
   DeviceLocation copyWith(void Function(DeviceLocation) updates) =>
       super.copyWith((message) => updates(message as DeviceLocation));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceLocation create() => DeviceLocation();
+  @$core.pragma('dart2js:noInline')
+  static DeviceLocation create() => DeviceLocation._();
   DeviceLocation createEmptyInstance() => create();
   static $pb.PbList<DeviceLocation> createRepeated() =>
       $pb.PbList<DeviceLocation>();
@@ -839,8 +872,8 @@ class DeviceLocation extends $pb.GeneratedMessage {
   DeviceLocation_Type whichType() => _DeviceLocation_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $0.LatLng get coordinates => $_getN(0);
-  set coordinates($0.LatLng v) {
+  $1.LatLng get coordinates => $_getN(0);
+  set coordinates($1.LatLng v) {
     setField(1, v);
   }
 

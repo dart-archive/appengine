@@ -1,48 +1,51 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/oslogin/v1alpha/oslogin.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../common/common.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $2;
+import '../common/common.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class LoginProfile extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LoginProfile',
       package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
     ..aOS(1, 'name')
-    ..pc<$1.PosixAccount>(
-        2, 'posixAccounts', $pb.PbFieldType.PM, $1.PosixAccount.create)
-    ..m<$core.String, $1.SshPublicKey>(
+    ..pc<$2.PosixAccount>(
+        2, 'posixAccounts', $pb.PbFieldType.PM, $2.PosixAccount.create)
+    ..m<$core.String, $2.SshPublicKey>(
         3,
         'sshPublicKeys',
         'LoginProfile.SshPublicKeysEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $1.SshPublicKey.create,
+        $2.SshPublicKey.create,
         null,
         null,
         const $pb.PackageName('google.cloud.oslogin.v1alpha'))
     ..aOB(4, 'suspended')
     ..hasRequiredFields = false;
 
-  LoginProfile() : super();
-  LoginProfile.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LoginProfile.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LoginProfile._() : super();
+  factory LoginProfile() => create();
+  factory LoginProfile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LoginProfile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LoginProfile clone() => LoginProfile()..mergeFromMessage(this);
   LoginProfile copyWith(void Function(LoginProfile) updates) =>
       super.copyWith((message) => updates(message as LoginProfile));
   $pb.BuilderInfo get info_ => _i;
-  static LoginProfile create() => LoginProfile();
+  @$core.pragma('dart2js:noInline')
+  static LoginProfile create() => LoginProfile._();
   LoginProfile createEmptyInstance() => create();
   static $pb.PbList<LoginProfile> createRepeated() =>
       $pb.PbList<LoginProfile>();
@@ -57,9 +60,9 @@ class LoginProfile extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $core.List<$1.PosixAccount> get posixAccounts => $_getList(1);
+  $core.List<$2.PosixAccount> get posixAccounts => $_getList(1);
 
-  $core.Map<$core.String, $1.SshPublicKey> get sshPublicKeys => $_getMap(2);
+  $core.Map<$core.String, $2.SshPublicKey> get sshPublicKeys => $_getMap(2);
 
   $core.bool get suspended => $_get(3, false);
   set suspended($core.bool v) {
@@ -76,13 +79,14 @@ class DeletePosixAccountRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeletePosixAccountRequest() : super();
-  DeletePosixAccountRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeletePosixAccountRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeletePosixAccountRequest._() : super();
+  factory DeletePosixAccountRequest() => create();
+  factory DeletePosixAccountRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeletePosixAccountRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeletePosixAccountRequest clone() =>
       DeletePosixAccountRequest()..mergeFromMessage(this);
   DeletePosixAccountRequest copyWith(
@@ -90,7 +94,8 @@ class DeletePosixAccountRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as DeletePosixAccountRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeletePosixAccountRequest create() => DeletePosixAccountRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeletePosixAccountRequest create() => DeletePosixAccountRequest._();
   DeletePosixAccountRequest createEmptyInstance() => create();
   static $pb.PbList<DeletePosixAccountRequest> createRepeated() =>
       $pb.PbList<DeletePosixAccountRequest>();
@@ -113,13 +118,14 @@ class DeleteSshPublicKeyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteSshPublicKeyRequest() : super();
-  DeleteSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteSshPublicKeyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteSshPublicKeyRequest._() : super();
+  factory DeleteSshPublicKeyRequest() => create();
+  factory DeleteSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteSshPublicKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteSshPublicKeyRequest clone() =>
       DeleteSshPublicKeyRequest()..mergeFromMessage(this);
   DeleteSshPublicKeyRequest copyWith(
@@ -127,7 +133,8 @@ class DeleteSshPublicKeyRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as DeleteSshPublicKeyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteSshPublicKeyRequest create() => DeleteSshPublicKeyRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSshPublicKeyRequest create() => DeleteSshPublicKeyRequest._();
   DeleteSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<DeleteSshPublicKeyRequest>();
@@ -150,20 +157,22 @@ class GetLoginProfileRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetLoginProfileRequest() : super();
-  GetLoginProfileRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetLoginProfileRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetLoginProfileRequest._() : super();
+  factory GetLoginProfileRequest() => create();
+  factory GetLoginProfileRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetLoginProfileRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetLoginProfileRequest clone() =>
       GetLoginProfileRequest()..mergeFromMessage(this);
   GetLoginProfileRequest copyWith(
           void Function(GetLoginProfileRequest) updates) =>
       super.copyWith((message) => updates(message as GetLoginProfileRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetLoginProfileRequest create() => GetLoginProfileRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetLoginProfileRequest create() => GetLoginProfileRequest._();
   GetLoginProfileRequest createEmptyInstance() => create();
   static $pb.PbList<GetLoginProfileRequest> createRepeated() =>
       $pb.PbList<GetLoginProfileRequest>();
@@ -186,20 +195,22 @@ class GetSshPublicKeyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetSshPublicKeyRequest() : super();
-  GetSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetSshPublicKeyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetSshPublicKeyRequest._() : super();
+  factory GetSshPublicKeyRequest() => create();
+  factory GetSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSshPublicKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetSshPublicKeyRequest clone() =>
       GetSshPublicKeyRequest()..mergeFromMessage(this);
   GetSshPublicKeyRequest copyWith(
           void Function(GetSshPublicKeyRequest) updates) =>
       super.copyWith((message) => updates(message as GetSshPublicKeyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetSshPublicKeyRequest create() => GetSshPublicKeyRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetSshPublicKeyRequest create() => GetSshPublicKeyRequest._();
   GetSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<GetSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<GetSshPublicKeyRequest>();
@@ -220,18 +231,19 @@ class ImportSshPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportSshPublicKeyRequest',
       package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
     ..aOS(1, 'parent')
-    ..a<$1.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
-        $1.SshPublicKey.getDefault, $1.SshPublicKey.create)
+    ..a<$2.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
+        $2.SshPublicKey.getDefault, $2.SshPublicKey.create)
     ..aOS(3, 'projectId')
     ..hasRequiredFields = false;
 
-  ImportSshPublicKeyRequest() : super();
-  ImportSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportSshPublicKeyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportSshPublicKeyRequest._() : super();
+  factory ImportSshPublicKeyRequest() => create();
+  factory ImportSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportSshPublicKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportSshPublicKeyRequest clone() =>
       ImportSshPublicKeyRequest()..mergeFromMessage(this);
   ImportSshPublicKeyRequest copyWith(
@@ -239,7 +251,8 @@ class ImportSshPublicKeyRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ImportSshPublicKeyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ImportSshPublicKeyRequest create() => ImportSshPublicKeyRequest();
+  @$core.pragma('dart2js:noInline')
+  static ImportSshPublicKeyRequest create() => ImportSshPublicKeyRequest._();
   ImportSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<ImportSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<ImportSshPublicKeyRequest>();
@@ -255,8 +268,8 @@ class ImportSshPublicKeyRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.SshPublicKey get sshPublicKey => $_getN(1);
-  set sshPublicKey($1.SshPublicKey v) {
+  $2.SshPublicKey get sshPublicKey => $_getN(1);
+  set sshPublicKey($2.SshPublicKey v) {
     setField(2, v);
   }
 
@@ -280,13 +293,14 @@ class ImportSshPublicKeyResponse extends $pb.GeneratedMessage {
         LoginProfile.getDefault, LoginProfile.create)
     ..hasRequiredFields = false;
 
-  ImportSshPublicKeyResponse() : super();
-  ImportSshPublicKeyResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportSshPublicKeyResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportSshPublicKeyResponse._() : super();
+  factory ImportSshPublicKeyResponse() => create();
+  factory ImportSshPublicKeyResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportSshPublicKeyResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportSshPublicKeyResponse clone() =>
       ImportSshPublicKeyResponse()..mergeFromMessage(this);
   ImportSshPublicKeyResponse copyWith(
@@ -294,7 +308,8 @@ class ImportSshPublicKeyResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportSshPublicKeyResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ImportSshPublicKeyResponse create() => ImportSshPublicKeyResponse();
+  @$core.pragma('dart2js:noInline')
+  static ImportSshPublicKeyResponse create() => ImportSshPublicKeyResponse._();
   ImportSshPublicKeyResponse createEmptyInstance() => create();
   static $pb.PbList<ImportSshPublicKeyResponse> createRepeated() =>
       $pb.PbList<ImportSshPublicKeyResponse>();
@@ -315,19 +330,20 @@ class UpdateSshPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSshPublicKeyRequest',
       package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
     ..aOS(1, 'name')
-    ..a<$1.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
-        $1.SshPublicKey.getDefault, $1.SshPublicKey.create)
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$2.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
+        $2.SshPublicKey.getDefault, $2.SshPublicKey.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateSshPublicKeyRequest() : super();
-  UpdateSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateSshPublicKeyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateSshPublicKeyRequest._() : super();
+  factory UpdateSshPublicKeyRequest() => create();
+  factory UpdateSshPublicKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateSshPublicKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateSshPublicKeyRequest clone() =>
       UpdateSshPublicKeyRequest()..mergeFromMessage(this);
   UpdateSshPublicKeyRequest copyWith(
@@ -335,7 +351,8 @@ class UpdateSshPublicKeyRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as UpdateSshPublicKeyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateSshPublicKeyRequest create() => UpdateSshPublicKeyRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSshPublicKeyRequest create() => UpdateSshPublicKeyRequest._();
   UpdateSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<UpdateSshPublicKeyRequest>();
@@ -351,16 +368,16 @@ class UpdateSshPublicKeyRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $1.SshPublicKey get sshPublicKey => $_getN(1);
-  set sshPublicKey($1.SshPublicKey v) {
+  $2.SshPublicKey get sshPublicKey => $_getN(1);
+  set sshPublicKey($2.SshPublicKey v) {
     setField(2, v);
   }
 
   $core.bool hasSshPublicKey() => $_has(1);
   void clearSshPublicKey() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/vision/v1p2beta1/web_detection.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,20 +18,22 @@ class WebDetection_WebEntity extends $pb.GeneratedMessage {
     ..aOS(3, 'description')
     ..hasRequiredFields = false;
 
-  WebDetection_WebEntity() : super();
-  WebDetection_WebEntity.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebDetection_WebEntity.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebDetection_WebEntity._() : super();
+  factory WebDetection_WebEntity() => create();
+  factory WebDetection_WebEntity.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebDetection_WebEntity.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebDetection_WebEntity clone() =>
       WebDetection_WebEntity()..mergeFromMessage(this);
   WebDetection_WebEntity copyWith(
           void Function(WebDetection_WebEntity) updates) =>
       super.copyWith((message) => updates(message as WebDetection_WebEntity));
   $pb.BuilderInfo get info_ => _i;
-  static WebDetection_WebEntity create() => WebDetection_WebEntity();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebEntity create() => WebDetection_WebEntity._();
   WebDetection_WebEntity createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebEntity> createRepeated() =>
       $pb.PbList<WebDetection_WebEntity>();
@@ -70,20 +73,22 @@ class WebDetection_WebImage extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  WebDetection_WebImage() : super();
-  WebDetection_WebImage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebDetection_WebImage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebDetection_WebImage._() : super();
+  factory WebDetection_WebImage() => create();
+  factory WebDetection_WebImage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebDetection_WebImage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebDetection_WebImage clone() =>
       WebDetection_WebImage()..mergeFromMessage(this);
   WebDetection_WebImage copyWith(
           void Function(WebDetection_WebImage) updates) =>
       super.copyWith((message) => updates(message as WebDetection_WebImage));
   $pb.BuilderInfo get info_ => _i;
-  static WebDetection_WebImage create() => WebDetection_WebImage();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebImage create() => WebDetection_WebImage._();
   WebDetection_WebImage createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebImage> createRepeated() =>
       $pb.PbList<WebDetection_WebImage>();
@@ -120,19 +125,21 @@ class WebDetection_WebPage extends $pb.GeneratedMessage {
         WebDetection_WebImage.create)
     ..hasRequiredFields = false;
 
-  WebDetection_WebPage() : super();
-  WebDetection_WebPage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebDetection_WebPage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebDetection_WebPage._() : super();
+  factory WebDetection_WebPage() => create();
+  factory WebDetection_WebPage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebDetection_WebPage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebDetection_WebPage clone() =>
       WebDetection_WebPage()..mergeFromMessage(this);
   WebDetection_WebPage copyWith(void Function(WebDetection_WebPage) updates) =>
       super.copyWith((message) => updates(message as WebDetection_WebPage));
   $pb.BuilderInfo get info_ => _i;
-  static WebDetection_WebPage create() => WebDetection_WebPage();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebPage create() => WebDetection_WebPage._();
   WebDetection_WebPage createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebPage> createRepeated() =>
       $pb.PbList<WebDetection_WebPage>();
@@ -176,20 +183,22 @@ class WebDetection_WebLabel extends $pb.GeneratedMessage {
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
 
-  WebDetection_WebLabel() : super();
-  WebDetection_WebLabel.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebDetection_WebLabel.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebDetection_WebLabel._() : super();
+  factory WebDetection_WebLabel() => create();
+  factory WebDetection_WebLabel.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebDetection_WebLabel.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebDetection_WebLabel clone() =>
       WebDetection_WebLabel()..mergeFromMessage(this);
   WebDetection_WebLabel copyWith(
           void Function(WebDetection_WebLabel) updates) =>
       super.copyWith((message) => updates(message as WebDetection_WebLabel));
   $pb.BuilderInfo get info_ => _i;
-  static WebDetection_WebLabel create() => WebDetection_WebLabel();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebLabel create() => WebDetection_WebLabel._();
   WebDetection_WebLabel createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebLabel> createRepeated() =>
       $pb.PbList<WebDetection_WebLabel>();
@@ -231,18 +240,20 @@ class WebDetection extends $pb.GeneratedMessage {
         8, 'bestGuessLabels', $pb.PbFieldType.PM, WebDetection_WebLabel.create)
     ..hasRequiredFields = false;
 
-  WebDetection() : super();
-  WebDetection.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebDetection.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebDetection._() : super();
+  factory WebDetection() => create();
+  factory WebDetection.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebDetection.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebDetection clone() => WebDetection()..mergeFromMessage(this);
   WebDetection copyWith(void Function(WebDetection) updates) =>
       super.copyWith((message) => updates(message as WebDetection));
   $pb.BuilderInfo get info_ => _i;
-  static WebDetection create() => WebDetection();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection create() => WebDetection._();
   WebDetection createEmptyInstance() => create();
   static $pb.PbList<WebDetection> createRepeated() =>
       $pb.PbList<WebDetection>();

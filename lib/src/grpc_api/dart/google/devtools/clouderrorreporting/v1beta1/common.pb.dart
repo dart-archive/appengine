@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class ErrorGroup extends $pb.GeneratedMessage {
         3, 'trackingIssues', $pb.PbFieldType.PM, TrackingIssue.create)
     ..hasRequiredFields = false;
 
-  ErrorGroup() : super();
-  ErrorGroup.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorGroup.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorGroup._() : super();
+  factory ErrorGroup() => create();
+  factory ErrorGroup.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorGroup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorGroup clone() => ErrorGroup()..mergeFromMessage(this);
   ErrorGroup copyWith(void Function(ErrorGroup) updates) =>
       super.copyWith((message) => updates(message as ErrorGroup));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorGroup create() => ErrorGroup();
+  @$core.pragma('dart2js:noInline')
+  static ErrorGroup create() => ErrorGroup._();
   ErrorGroup createEmptyInstance() => create();
   static $pb.PbList<ErrorGroup> createRepeated() => $pb.PbList<ErrorGroup>();
   static ErrorGroup getDefault() => _defaultInstance ??= create()..freeze();
@@ -64,18 +67,20 @@ class TrackingIssue extends $pb.GeneratedMessage {
     ..aOS(1, 'url')
     ..hasRequiredFields = false;
 
-  TrackingIssue() : super();
-  TrackingIssue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TrackingIssue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TrackingIssue._() : super();
+  factory TrackingIssue() => create();
+  factory TrackingIssue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TrackingIssue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TrackingIssue clone() => TrackingIssue()..mergeFromMessage(this);
   TrackingIssue copyWith(void Function(TrackingIssue) updates) =>
       super.copyWith((message) => updates(message as TrackingIssue));
   $pb.BuilderInfo get info_ => _i;
-  static TrackingIssue create() => TrackingIssue();
+  @$core.pragma('dart2js:noInline')
+  static TrackingIssue create() => TrackingIssue._();
   TrackingIssue createEmptyInstance() => create();
   static $pb.PbList<TrackingIssue> createRepeated() =>
       $pb.PbList<TrackingIssue>();
@@ -104,18 +109,20 @@ class ErrorEvent extends $pb.GeneratedMessage {
         ErrorContext.create)
     ..hasRequiredFields = false;
 
-  ErrorEvent() : super();
-  ErrorEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorEvent._() : super();
+  factory ErrorEvent() => create();
+  factory ErrorEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorEvent clone() => ErrorEvent()..mergeFromMessage(this);
   ErrorEvent copyWith(void Function(ErrorEvent) updates) =>
       super.copyWith((message) => updates(message as ErrorEvent));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorEvent create() => ErrorEvent();
+  @$core.pragma('dart2js:noInline')
+  static ErrorEvent create() => ErrorEvent._();
   ErrorEvent createEmptyInstance() => create();
   static $pb.PbList<ErrorEvent> createRepeated() => $pb.PbList<ErrorEvent>();
   static ErrorEvent getDefault() => _defaultInstance ??= create()..freeze();
@@ -163,18 +170,20 @@ class ServiceContext extends $pb.GeneratedMessage {
     ..aOS(4, 'resourceType')
     ..hasRequiredFields = false;
 
-  ServiceContext() : super();
-  ServiceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServiceContext._() : super();
+  factory ServiceContext() => create();
+  factory ServiceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ServiceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ServiceContext clone() => ServiceContext()..mergeFromMessage(this);
   ServiceContext copyWith(void Function(ServiceContext) updates) =>
       super.copyWith((message) => updates(message as ServiceContext));
   $pb.BuilderInfo get info_ => _i;
-  static ServiceContext create() => ServiceContext();
+  @$core.pragma('dart2js:noInline')
+  static ServiceContext create() => ServiceContext._();
   ServiceContext createEmptyInstance() => create();
   static $pb.PbList<ServiceContext> createRepeated() =>
       $pb.PbList<ServiceContext>();
@@ -217,18 +226,20 @@ class ErrorContext extends $pb.GeneratedMessage {
         SourceLocation.getDefault, SourceLocation.create)
     ..hasRequiredFields = false;
 
-  ErrorContext() : super();
-  ErrorContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ErrorContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ErrorContext._() : super();
+  factory ErrorContext() => create();
+  factory ErrorContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ErrorContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ErrorContext clone() => ErrorContext()..mergeFromMessage(this);
   ErrorContext copyWith(void Function(ErrorContext) updates) =>
       super.copyWith((message) => updates(message as ErrorContext));
   $pb.BuilderInfo get info_ => _i;
-  static ErrorContext create() => ErrorContext();
+  @$core.pragma('dart2js:noInline')
+  static ErrorContext create() => ErrorContext._();
   ErrorContext createEmptyInstance() => create();
   static $pb.PbList<ErrorContext> createRepeated() =>
       $pb.PbList<ErrorContext>();
@@ -272,18 +283,20 @@ class HttpRequestContext extends $pb.GeneratedMessage {
     ..aOS(6, 'remoteIp')
     ..hasRequiredFields = false;
 
-  HttpRequestContext() : super();
-  HttpRequestContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HttpRequestContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HttpRequestContext._() : super();
+  factory HttpRequestContext() => create();
+  factory HttpRequestContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HttpRequestContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HttpRequestContext clone() => HttpRequestContext()..mergeFromMessage(this);
   HttpRequestContext copyWith(void Function(HttpRequestContext) updates) =>
       super.copyWith((message) => updates(message as HttpRequestContext));
   $pb.BuilderInfo get info_ => _i;
-  static HttpRequestContext create() => HttpRequestContext();
+  @$core.pragma('dart2js:noInline')
+  static HttpRequestContext create() => HttpRequestContext._();
   HttpRequestContext createEmptyInstance() => create();
   static $pb.PbList<HttpRequestContext> createRepeated() =>
       $pb.PbList<HttpRequestContext>();
@@ -349,18 +362,20 @@ class SourceLocation extends $pb.GeneratedMessage {
     ..aOS(4, 'functionName')
     ..hasRequiredFields = false;
 
-  SourceLocation() : super();
-  SourceLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceLocation._() : super();
+  factory SourceLocation() => create();
+  factory SourceLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
   SourceLocation copyWith(void Function(SourceLocation) updates) =>
       super.copyWith((message) => updates(message as SourceLocation));
   $pb.BuilderInfo get info_ => _i;
-  static SourceLocation create() => SourceLocation();
+  @$core.pragma('dart2js:noInline')
+  static SourceLocation create() => SourceLocation._();
   SourceLocation createEmptyInstance() => create();
   static $pb.PbList<SourceLocation> createRepeated() =>
       $pb.PbList<SourceLocation>();

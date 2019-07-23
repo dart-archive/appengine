@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/custom_parameter.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,18 +21,20 @@ class CustomParameter extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CustomParameter() : super();
-  CustomParameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomParameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomParameter._() : super();
+  factory CustomParameter() => create();
+  factory CustomParameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomParameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomParameter clone() => CustomParameter()..mergeFromMessage(this);
   CustomParameter copyWith(void Function(CustomParameter) updates) =>
       super.copyWith((message) => updates(message as CustomParameter));
   $pb.BuilderInfo get info_ => _i;
-  static CustomParameter create() => CustomParameter();
+  @$core.pragma('dart2js:noInline')
+  static CustomParameter create() => CustomParameter._();
   CustomParameter createEmptyInstance() => create();
   static $pb.PbList<CustomParameter> createRepeated() =>
       $pb.PbList<CustomParameter>();

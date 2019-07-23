@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/build/build.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,18 +24,20 @@ class Build extends $pb.GeneratedMessage {
         BuildSignature.getDefault, BuildSignature.create)
     ..hasRequiredFields = false;
 
-  Build() : super();
-  Build.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Build.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Build._() : super();
+  factory Build() => create();
+  factory Build.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Build.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Build clone() => Build()..mergeFromMessage(this);
   Build copyWith(void Function(Build) updates) =>
       super.copyWith((message) => updates(message as Build));
   $pb.BuilderInfo get info_ => _i;
-  static Build create() => Build();
+  @$core.pragma('dart2js:noInline')
+  static Build create() => Build._();
   Build createEmptyInstance() => create();
   static $pb.PbList<Build> createRepeated() => $pb.PbList<Build>();
   static Build getDefault() => _defaultInstance ??= create()..freeze();
@@ -72,18 +75,20 @@ class BuildSignature extends $pb.GeneratedMessage {
         BuildSignature_KeyType.values)
     ..hasRequiredFields = false;
 
-  BuildSignature() : super();
-  BuildSignature.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildSignature.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildSignature._() : super();
+  factory BuildSignature() => create();
+  factory BuildSignature.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildSignature.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildSignature clone() => BuildSignature()..mergeFromMessage(this);
   BuildSignature copyWith(void Function(BuildSignature) updates) =>
       super.copyWith((message) => updates(message as BuildSignature));
   $pb.BuilderInfo get info_ => _i;
-  static BuildSignature create() => BuildSignature();
+  @$core.pragma('dart2js:noInline')
+  static BuildSignature create() => BuildSignature._();
   BuildSignature createEmptyInstance() => create();
   static $pb.PbList<BuildSignature> createRepeated() =>
       $pb.PbList<BuildSignature>();
@@ -131,18 +136,20 @@ class Details extends $pb.GeneratedMessage {
     ..aOS(2, 'provenanceBytes')
     ..hasRequiredFields = false;
 
-  Details() : super();
-  Details.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Details.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Details._() : super();
+  factory Details() => create();
+  factory Details.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Details.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Details clone() => Details()..mergeFromMessage(this);
   Details copyWith(void Function(Details) updates) =>
       super.copyWith((message) => updates(message as Details));
   $pb.BuilderInfo get info_ => _i;
-  static Details create() => Details();
+  @$core.pragma('dart2js:noInline')
+  static Details create() => Details._();
   Details createEmptyInstance() => create();
   static $pb.PbList<Details> createRepeated() => $pb.PbList<Details>();
   static Details getDefault() => _defaultInstance ??= create()..freeze();

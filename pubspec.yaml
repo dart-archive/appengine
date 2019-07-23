@@ -1,11 +1,11 @@
 name: appengine
-version: 0.7.1
+version: 0.7.2
 author: Dart Team <misc@dartlang.org>
 description: Support for using Dart as a custom runtime on Google App Engine Flexible Environment
 homepage: https://github.com/dart-lang/appengine
 
 environment:
-  sdk: '>=2.2.0 <3.0.0'
+  sdk: '>=2.3.0 <3.0.0'
 
 dependencies:
   fixnum: ^0.10.0
@@ -22,4 +22,4 @@ dependencies:
 
 dev_dependencies:
   test: ^1.6.0
-  pedantic: ^1.7.0
+  pedantic: ^1.8.0

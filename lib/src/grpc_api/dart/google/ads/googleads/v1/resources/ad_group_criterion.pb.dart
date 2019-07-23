@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group_criterion.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -49,13 +50,14 @@ class AdGroupCriterion_QualityInfo extends $pb.GeneratedMessage {
         $8.QualityScoreBucketEnum_QualityScoreBucket.values)
     ..hasRequiredFields = false;
 
-  AdGroupCriterion_QualityInfo() : super();
-  AdGroupCriterion_QualityInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupCriterion_QualityInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupCriterion_QualityInfo._() : super();
+  factory AdGroupCriterion_QualityInfo() => create();
+  factory AdGroupCriterion_QualityInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupCriterion_QualityInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupCriterion_QualityInfo clone() =>
       AdGroupCriterion_QualityInfo()..mergeFromMessage(this);
   AdGroupCriterion_QualityInfo copyWith(
@@ -63,8 +65,9 @@ class AdGroupCriterion_QualityInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AdGroupCriterion_QualityInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AdGroupCriterion_QualityInfo create() =>
-      AdGroupCriterion_QualityInfo();
+      AdGroupCriterion_QualityInfo._();
   AdGroupCriterion_QualityInfo createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterion_QualityInfo> createRepeated() =>
       $pb.PbList<AdGroupCriterion_QualityInfo>();
@@ -124,13 +127,14 @@ class AdGroupCriterion_PositionEstimates extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  AdGroupCriterion_PositionEstimates() : super();
-  AdGroupCriterion_PositionEstimates.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupCriterion_PositionEstimates.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupCriterion_PositionEstimates._() : super();
+  factory AdGroupCriterion_PositionEstimates() => create();
+  factory AdGroupCriterion_PositionEstimates.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupCriterion_PositionEstimates.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupCriterion_PositionEstimates clone() =>
       AdGroupCriterion_PositionEstimates()..mergeFromMessage(this);
   AdGroupCriterion_PositionEstimates copyWith(
@@ -138,8 +142,9 @@ class AdGroupCriterion_PositionEstimates extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AdGroupCriterion_PositionEstimates));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AdGroupCriterion_PositionEstimates create() =>
-      AdGroupCriterion_PositionEstimates();
+      AdGroupCriterion_PositionEstimates._();
   AdGroupCriterion_PositionEstimates createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterion_PositionEstimates> createRepeated() =>
       $pb.PbList<AdGroupCriterion_PositionEstimates>();
@@ -235,6 +240,8 @@ class AdGroupCriterion extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupCriterion',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0,
+        [27, 28, 29, 30, 32, 36, 37, 38, 39, 40, 41, 42, 43, 45, 46, 47, 48, 49])
     ..aOS(1, 'resourceName')
     ..e<$3.AdGroupCriterionStatusEnum_AdGroupCriterionStatus>(
         3,
@@ -265,12 +272,9 @@ class AdGroupCriterion extends $pb.GeneratedMessage {
         $1.CustomParameter.create)
     ..a<$0.Int64Value>(16, 'cpcBidMicros', $pb.PbFieldType.OM,
         $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(17, 'cpmBidMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(18, 'effectiveCpcBidMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(19, 'effectiveCpmBidMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$0.Int64Value>(17, 'cpmBidMicros', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$0.Int64Value>(18, 'effectiveCpcBidMicros', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..a<$0.Int64Value>(19, 'effectiveCpmBidMicros', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..a<$0.Int64Value>(20, 'effectiveCpvBidMicros', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..e<$4.BiddingSourceEnum_BiddingSource>(21, 'effectiveCpcBidSource', $pb.PbFieldType.OE, $4.BiddingSourceEnum_BiddingSource.UNSPECIFIED, $4.BiddingSourceEnum_BiddingSource.valueOf, $4.BiddingSourceEnum_BiddingSource.values)
     ..e<$4.BiddingSourceEnum_BiddingSource>(22, 'effectiveCpmBidSource', $pb.PbFieldType.OE, $4.BiddingSourceEnum_BiddingSource.UNSPECIFIED, $4.BiddingSourceEnum_BiddingSource.valueOf, $4.BiddingSourceEnum_BiddingSource.values)
@@ -305,21 +309,22 @@ class AdGroupCriterion extends $pb.GeneratedMessage {
     ..pc<$0.StringValue>(51, 'finalMobileUrls', $pb.PbFieldType.PM, $0.StringValue.create)
     ..e<$6.CriterionSystemServingStatusEnum_CriterionSystemServingStatus>(52, 'systemServingStatus', $pb.PbFieldType.OE, $6.CriterionSystemServingStatusEnum_CriterionSystemServingStatus.UNSPECIFIED, $6.CriterionSystemServingStatusEnum_CriterionSystemServingStatus.valueOf, $6.CriterionSystemServingStatusEnum_CriterionSystemServingStatus.values)
     ..e<$7.AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus>(53, 'approvalStatus', $pb.PbFieldType.OE, $7.AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus.UNSPECIFIED, $7.AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus.valueOf, $7.AdGroupCriterionApprovalStatusEnum_AdGroupCriterionApprovalStatus.values)
-    ..oo(0, [27, 28, 29, 30, 32, 36, 37, 38, 39, 40, 41, 42, 43, 45, 46, 47, 48, 49])
     ..hasRequiredFields = false;
 
-  AdGroupCriterion() : super();
-  AdGroupCriterion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupCriterion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupCriterion._() : super();
+  factory AdGroupCriterion() => create();
+  factory AdGroupCriterion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupCriterion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupCriterion clone() => AdGroupCriterion()..mergeFromMessage(this);
   AdGroupCriterion copyWith(void Function(AdGroupCriterion) updates) =>
       super.copyWith((message) => updates(message as AdGroupCriterion));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupCriterion create() => AdGroupCriterion();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupCriterion create() => AdGroupCriterion._();
   AdGroupCriterion createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterion> createRepeated() =>
       $pb.PbList<AdGroupCriterion>();

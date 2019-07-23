@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/custom_placeholder_field.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class CustomPlaceholderFieldEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  CustomPlaceholderFieldEnum() : super();
-  CustomPlaceholderFieldEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomPlaceholderFieldEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomPlaceholderFieldEnum._() : super();
+  factory CustomPlaceholderFieldEnum() => create();
+  factory CustomPlaceholderFieldEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomPlaceholderFieldEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomPlaceholderFieldEnum clone() =>
       CustomPlaceholderFieldEnum()..mergeFromMessage(this);
   CustomPlaceholderFieldEnum copyWith(
@@ -31,7 +33,8 @@ class CustomPlaceholderFieldEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CustomPlaceholderFieldEnum));
   $pb.BuilderInfo get info_ => _i;
-  static CustomPlaceholderFieldEnum create() => CustomPlaceholderFieldEnum();
+  @$core.pragma('dart2js:noInline')
+  static CustomPlaceholderFieldEnum create() => CustomPlaceholderFieldEnum._();
   CustomPlaceholderFieldEnum createEmptyInstance() => create();
   static $pb.PbList<CustomPlaceholderFieldEnum> createRepeated() =>
       $pb.PbList<CustomPlaceholderFieldEnum>();

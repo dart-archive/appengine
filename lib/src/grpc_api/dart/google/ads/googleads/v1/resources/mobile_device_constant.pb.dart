@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/mobile_device_constant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -34,19 +35,21 @@ class MobileDeviceConstant extends $pb.GeneratedMessage {
         $1.MobileDeviceTypeEnum_MobileDeviceType.values)
     ..hasRequiredFields = false;
 
-  MobileDeviceConstant() : super();
-  MobileDeviceConstant.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MobileDeviceConstant.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MobileDeviceConstant._() : super();
+  factory MobileDeviceConstant() => create();
+  factory MobileDeviceConstant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MobileDeviceConstant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MobileDeviceConstant clone() =>
       MobileDeviceConstant()..mergeFromMessage(this);
   MobileDeviceConstant copyWith(void Function(MobileDeviceConstant) updates) =>
       super.copyWith((message) => updates(message as MobileDeviceConstant));
   $pb.BuilderInfo get info_ => _i;
-  static MobileDeviceConstant create() => MobileDeviceConstant();
+  @$core.pragma('dart2js:noInline')
+  static MobileDeviceConstant create() => MobileDeviceConstant._();
   MobileDeviceConstant createEmptyInstance() => create();
   static $pb.PbList<MobileDeviceConstant> createRepeated() =>
       $pb.PbList<MobileDeviceConstant>();

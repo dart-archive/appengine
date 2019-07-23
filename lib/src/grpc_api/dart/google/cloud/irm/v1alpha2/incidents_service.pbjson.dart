@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/irm/v1alpha2/incidents_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const CreateIncidentRequest$json = {
   '1': 'CreateIncidentRequest',
@@ -216,6 +217,24 @@ const GetSignalRequest$json = {
   '1': 'GetSignalRequest',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const LookupSignalRequest$json = {
+  '1': 'LookupSignalRequest',
+  '2': [
+    {'1': 'cscc_finding', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'csccFinding'},
+    {
+      '1': 'stackdriver_notification_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'stackdriverNotificationId'
+    },
+  ],
+  '8': [
+    {'1': 'alternate_id'},
   ],
 };
 

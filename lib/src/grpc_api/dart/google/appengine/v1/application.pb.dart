@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/application.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,18 +28,20 @@ class Application extends $pb.GeneratedMessage {
     ..aOS(12, 'defaultBucket')
     ..hasRequiredFields = false;
 
-  Application() : super();
-  Application.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Application.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Application._() : super();
+  factory Application() => create();
+  factory Application.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Application.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Application clone() => Application()..mergeFromMessage(this);
   Application copyWith(void Function(Application) updates) =>
       super.copyWith((message) => updates(message as Application));
   $pb.BuilderInfo get info_ => _i;
-  static Application create() => Application();
+  @$core.pragma('dart2js:noInline')
+  static Application create() => Application._();
   Application createEmptyInstance() => create();
   static $pb.PbList<Application> createRepeated() => $pb.PbList<Application>();
   static Application getDefault() => _defaultInstance ??= create()..freeze();
@@ -119,18 +122,20 @@ class UrlDispatchRule extends $pb.GeneratedMessage {
     ..aOS(3, 'service')
     ..hasRequiredFields = false;
 
-  UrlDispatchRule() : super();
-  UrlDispatchRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UrlDispatchRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UrlDispatchRule._() : super();
+  factory UrlDispatchRule() => create();
+  factory UrlDispatchRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UrlDispatchRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UrlDispatchRule clone() => UrlDispatchRule()..mergeFromMessage(this);
   UrlDispatchRule copyWith(void Function(UrlDispatchRule) updates) =>
       super.copyWith((message) => updates(message as UrlDispatchRule));
   $pb.BuilderInfo get info_ => _i;
-  static UrlDispatchRule create() => UrlDispatchRule();
+  @$core.pragma('dart2js:noInline')
+  static UrlDispatchRule create() => UrlDispatchRule._();
   UrlDispatchRule createEmptyInstance() => create();
   static $pb.PbList<UrlDispatchRule> createRepeated() =>
       $pb.PbList<UrlDispatchRule>();

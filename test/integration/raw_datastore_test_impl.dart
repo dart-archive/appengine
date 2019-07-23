@@ -309,7 +309,9 @@ runTests(Datastore datastore, String namespace) {
         }
 
         Future test(Transaction transaction) {
-          return datastore.lookup(keysToLookup).then((List<Entity> entities) {
+          return datastore
+              .lookup(keysToLookup)
+              .then((List<Entity> entities) async {
             expect(entities.length, equals(keysToLookup.length));
             if (negative) {
               for (int i = 0; i < entities.length; i++) {
@@ -390,9 +392,10 @@ runTests(Datastore datastore, String namespace) {
           {bool transactional = false, bool xg = false}) {
         Future test(Transaction transaction) {
           return datastore.commit(deletes: keys).then((_) {
-            if (transaction != null) {
-              return datastore.commit(transaction: transaction);
+            if (transaction == null) {
+              return null;
             }
+            return datastore.commit(transaction: transaction);
           });
         }
 

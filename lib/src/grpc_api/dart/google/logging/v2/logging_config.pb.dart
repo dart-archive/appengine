@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging_config.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $1;
-import '../../protobuf/field_mask.pb.dart' as $2;
+import '../../protobuf/timestamp.pb.dart' as $2;
+import '../../protobuf/field_mask.pb.dart' as $3;
 
 import 'logging_config.pbenum.dart';
 
@@ -31,24 +32,26 @@ class LogSink extends $pb.GeneratedMessage {
         LogSink_VersionFormat.values)
     ..aOS(8, 'writerIdentity')
     ..aOB(9, 'includeChildren')
-    ..a<$1.Timestamp>(10, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(11, 'endTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(10, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(11, 'endTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  LogSink() : super();
-  LogSink.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogSink.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogSink._() : super();
+  factory LogSink() => create();
+  factory LogSink.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogSink.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogSink clone() => LogSink()..mergeFromMessage(this);
   LogSink copyWith(void Function(LogSink) updates) =>
       super.copyWith((message) => updates(message as LogSink));
   $pb.BuilderInfo get info_ => _i;
-  static LogSink create() => LogSink();
+  @$core.pragma('dart2js:noInline')
+  static LogSink create() => LogSink._();
   LogSink createEmptyInstance() => create();
   static $pb.PbList<LogSink> createRepeated() => $pb.PbList<LogSink>();
   static LogSink getDefault() => _defaultInstance ??= create()..freeze();
@@ -107,9 +110,9 @@ class LogSink extends $pb.GeneratedMessage {
   void clearIncludeChildren() => clearField(9);
 
   @$core.Deprecated('This field is deprecated.')
-  $1.Timestamp get startTime => $_getN(6);
+  $2.Timestamp get startTime => $_getN(6);
   @$core.Deprecated('This field is deprecated.')
-  set startTime($1.Timestamp v) {
+  set startTime($2.Timestamp v) {
     setField(10, v);
   }
 
@@ -119,9 +122,9 @@ class LogSink extends $pb.GeneratedMessage {
   void clearStartTime() => clearField(10);
 
   @$core.Deprecated('This field is deprecated.')
-  $1.Timestamp get endTime => $_getN(7);
+  $2.Timestamp get endTime => $_getN(7);
   @$core.Deprecated('This field is deprecated.')
-  set endTime($1.Timestamp v) {
+  set endTime($2.Timestamp v) {
     setField(11, v);
   }
 
@@ -139,18 +142,20 @@ class ListSinksRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListSinksRequest() : super();
-  ListSinksRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListSinksRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListSinksRequest._() : super();
+  factory ListSinksRequest() => create();
+  factory ListSinksRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSinksRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListSinksRequest clone() => ListSinksRequest()..mergeFromMessage(this);
   ListSinksRequest copyWith(void Function(ListSinksRequest) updates) =>
       super.copyWith((message) => updates(message as ListSinksRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListSinksRequest create() => ListSinksRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListSinksRequest create() => ListSinksRequest._();
   ListSinksRequest createEmptyInstance() => create();
   static $pb.PbList<ListSinksRequest> createRepeated() =>
       $pb.PbList<ListSinksRequest>();
@@ -190,18 +195,20 @@ class ListSinksResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListSinksResponse() : super();
-  ListSinksResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListSinksResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListSinksResponse._() : super();
+  factory ListSinksResponse() => create();
+  factory ListSinksResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSinksResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListSinksResponse clone() => ListSinksResponse()..mergeFromMessage(this);
   ListSinksResponse copyWith(void Function(ListSinksResponse) updates) =>
       super.copyWith((message) => updates(message as ListSinksResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListSinksResponse create() => ListSinksResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListSinksResponse create() => ListSinksResponse._();
   ListSinksResponse createEmptyInstance() => create();
   static $pb.PbList<ListSinksResponse> createRepeated() =>
       $pb.PbList<ListSinksResponse>();
@@ -226,18 +233,20 @@ class GetSinkRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'sinkName')
     ..hasRequiredFields = false;
 
-  GetSinkRequest() : super();
-  GetSinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetSinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetSinkRequest._() : super();
+  factory GetSinkRequest() => create();
+  factory GetSinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetSinkRequest clone() => GetSinkRequest()..mergeFromMessage(this);
   GetSinkRequest copyWith(void Function(GetSinkRequest) updates) =>
       super.copyWith((message) => updates(message as GetSinkRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetSinkRequest create() => GetSinkRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetSinkRequest create() => GetSinkRequest._();
   GetSinkRequest createEmptyInstance() => create();
   static $pb.PbList<GetSinkRequest> createRepeated() =>
       $pb.PbList<GetSinkRequest>();
@@ -262,18 +271,20 @@ class CreateSinkRequest extends $pb.GeneratedMessage {
     ..aOB(3, 'uniqueWriterIdentity')
     ..hasRequiredFields = false;
 
-  CreateSinkRequest() : super();
-  CreateSinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateSinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateSinkRequest._() : super();
+  factory CreateSinkRequest() => create();
+  factory CreateSinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateSinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateSinkRequest clone() => CreateSinkRequest()..mergeFromMessage(this);
   CreateSinkRequest copyWith(void Function(CreateSinkRequest) updates) =>
       super.copyWith((message) => updates(message as CreateSinkRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateSinkRequest create() => CreateSinkRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateSinkRequest create() => CreateSinkRequest._();
   CreateSinkRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSinkRequest> createRepeated() =>
       $pb.PbList<CreateSinkRequest>();
@@ -313,22 +324,24 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
     ..a<LogSink>(
         2, 'sink', $pb.PbFieldType.OM, LogSink.getDefault, LogSink.create)
     ..aOB(3, 'uniqueWriterIdentity')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateSinkRequest() : super();
-  UpdateSinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateSinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateSinkRequest._() : super();
+  factory UpdateSinkRequest() => create();
+  factory UpdateSinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateSinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateSinkRequest clone() => UpdateSinkRequest()..mergeFromMessage(this);
   UpdateSinkRequest copyWith(void Function(UpdateSinkRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateSinkRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateSinkRequest create() => UpdateSinkRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSinkRequest create() => UpdateSinkRequest._();
   UpdateSinkRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSinkRequest> createRepeated() =>
       $pb.PbList<UpdateSinkRequest>();
@@ -360,8 +373,8 @@ class UpdateSinkRequest extends $pb.GeneratedMessage {
   $core.bool hasUniqueWriterIdentity() => $_has(2);
   void clearUniqueWriterIdentity() => clearField(3);
 
-  $2.FieldMask get updateMask => $_getN(3);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(3);
+  set updateMask($3.FieldMask v) {
     setField(4, v);
   }
 
@@ -375,18 +388,20 @@ class DeleteSinkRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'sinkName')
     ..hasRequiredFields = false;
 
-  DeleteSinkRequest() : super();
-  DeleteSinkRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteSinkRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteSinkRequest._() : super();
+  factory DeleteSinkRequest() => create();
+  factory DeleteSinkRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteSinkRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteSinkRequest clone() => DeleteSinkRequest()..mergeFromMessage(this);
   DeleteSinkRequest copyWith(void Function(DeleteSinkRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteSinkRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteSinkRequest create() => DeleteSinkRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSinkRequest create() => DeleteSinkRequest._();
   DeleteSinkRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSinkRequest> createRepeated() =>
       $pb.PbList<DeleteSinkRequest>();
@@ -412,18 +427,20 @@ class LogExclusion extends $pb.GeneratedMessage {
     ..aOB(4, 'disabled')
     ..hasRequiredFields = false;
 
-  LogExclusion() : super();
-  LogExclusion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogExclusion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogExclusion._() : super();
+  factory LogExclusion() => create();
+  factory LogExclusion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogExclusion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogExclusion clone() => LogExclusion()..mergeFromMessage(this);
   LogExclusion copyWith(void Function(LogExclusion) updates) =>
       super.copyWith((message) => updates(message as LogExclusion));
   $pb.BuilderInfo get info_ => _i;
-  static LogExclusion create() => LogExclusion();
+  @$core.pragma('dart2js:noInline')
+  static LogExclusion create() => LogExclusion._();
   LogExclusion createEmptyInstance() => create();
   static $pb.PbList<LogExclusion> createRepeated() =>
       $pb.PbList<LogExclusion>();
@@ -471,20 +488,22 @@ class ListExclusionsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListExclusionsRequest() : super();
-  ListExclusionsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListExclusionsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListExclusionsRequest._() : super();
+  factory ListExclusionsRequest() => create();
+  factory ListExclusionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListExclusionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListExclusionsRequest clone() =>
       ListExclusionsRequest()..mergeFromMessage(this);
   ListExclusionsRequest copyWith(
           void Function(ListExclusionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListExclusionsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListExclusionsRequest create() => ListExclusionsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListExclusionsRequest create() => ListExclusionsRequest._();
   ListExclusionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListExclusionsRequest> createRepeated() =>
       $pb.PbList<ListExclusionsRequest>();
@@ -524,20 +543,22 @@ class ListExclusionsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListExclusionsResponse() : super();
-  ListExclusionsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListExclusionsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListExclusionsResponse._() : super();
+  factory ListExclusionsResponse() => create();
+  factory ListExclusionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListExclusionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListExclusionsResponse clone() =>
       ListExclusionsResponse()..mergeFromMessage(this);
   ListExclusionsResponse copyWith(
           void Function(ListExclusionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListExclusionsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListExclusionsResponse create() => ListExclusionsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListExclusionsResponse create() => ListExclusionsResponse._();
   ListExclusionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListExclusionsResponse> createRepeated() =>
       $pb.PbList<ListExclusionsResponse>();
@@ -562,18 +583,20 @@ class GetExclusionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetExclusionRequest() : super();
-  GetExclusionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetExclusionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetExclusionRequest._() : super();
+  factory GetExclusionRequest() => create();
+  factory GetExclusionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetExclusionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetExclusionRequest clone() => GetExclusionRequest()..mergeFromMessage(this);
   GetExclusionRequest copyWith(void Function(GetExclusionRequest) updates) =>
       super.copyWith((message) => updates(message as GetExclusionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetExclusionRequest create() => GetExclusionRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetExclusionRequest create() => GetExclusionRequest._();
   GetExclusionRequest createEmptyInstance() => create();
   static $pb.PbList<GetExclusionRequest> createRepeated() =>
       $pb.PbList<GetExclusionRequest>();
@@ -598,20 +621,22 @@ class CreateExclusionRequest extends $pb.GeneratedMessage {
         LogExclusion.getDefault, LogExclusion.create)
     ..hasRequiredFields = false;
 
-  CreateExclusionRequest() : super();
-  CreateExclusionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateExclusionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateExclusionRequest._() : super();
+  factory CreateExclusionRequest() => create();
+  factory CreateExclusionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateExclusionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateExclusionRequest clone() =>
       CreateExclusionRequest()..mergeFromMessage(this);
   CreateExclusionRequest copyWith(
           void Function(CreateExclusionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateExclusionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateExclusionRequest create() => CreateExclusionRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateExclusionRequest create() => CreateExclusionRequest._();
   CreateExclusionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateExclusionRequest> createRepeated() =>
       $pb.PbList<CreateExclusionRequest>();
@@ -642,24 +667,26 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<LogExclusion>(2, 'exclusion', $pb.PbFieldType.OM,
         LogExclusion.getDefault, LogExclusion.create)
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateExclusionRequest() : super();
-  UpdateExclusionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateExclusionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateExclusionRequest._() : super();
+  factory UpdateExclusionRequest() => create();
+  factory UpdateExclusionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateExclusionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateExclusionRequest clone() =>
       UpdateExclusionRequest()..mergeFromMessage(this);
   UpdateExclusionRequest copyWith(
           void Function(UpdateExclusionRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateExclusionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateExclusionRequest create() => UpdateExclusionRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateExclusionRequest create() => UpdateExclusionRequest._();
   UpdateExclusionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateExclusionRequest> createRepeated() =>
       $pb.PbList<UpdateExclusionRequest>();
@@ -683,8 +710,8 @@ class UpdateExclusionRequest extends $pb.GeneratedMessage {
   $core.bool hasExclusion() => $_has(1);
   void clearExclusion() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -698,20 +725,22 @@ class DeleteExclusionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteExclusionRequest() : super();
-  DeleteExclusionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteExclusionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteExclusionRequest._() : super();
+  factory DeleteExclusionRequest() => create();
+  factory DeleteExclusionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteExclusionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteExclusionRequest clone() =>
       DeleteExclusionRequest()..mergeFromMessage(this);
   DeleteExclusionRequest copyWith(
           void Function(DeleteExclusionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteExclusionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteExclusionRequest create() => DeleteExclusionRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteExclusionRequest create() => DeleteExclusionRequest._();
   DeleteExclusionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteExclusionRequest> createRepeated() =>
       $pb.PbList<DeleteExclusionRequest>();

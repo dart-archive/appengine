@@ -1,81 +1,82 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudbuild/v1/cloudbuild.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'cloudbuild.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $1;
-import '../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'cloudbuild.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 export 'cloudbuild.pb.dart';
 
 class CloudBuildClient extends $grpc.Client {
   static final _$createBuild =
-      $grpc.ClientMethod<CreateBuildRequest, $1.Operation>(
+      $grpc.ClientMethod<$2.CreateBuildRequest, $0.Operation>(
           '/google.devtools.cloudbuild.v1.CloudBuild/CreateBuild',
-          (CreateBuildRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
-  static final _$getBuild = $grpc.ClientMethod<GetBuildRequest, Build>(
+          ($2.CreateBuildRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$getBuild = $grpc.ClientMethod<$2.GetBuildRequest, $2.Build>(
       '/google.devtools.cloudbuild.v1.CloudBuild/GetBuild',
-      (GetBuildRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Build.fromBuffer(value));
+      ($2.GetBuildRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Build.fromBuffer(value));
   static final _$listBuilds =
-      $grpc.ClientMethod<ListBuildsRequest, ListBuildsResponse>(
+      $grpc.ClientMethod<$2.ListBuildsRequest, $2.ListBuildsResponse>(
           '/google.devtools.cloudbuild.v1.CloudBuild/ListBuilds',
-          (ListBuildsRequest value) => value.writeToBuffer(),
+          ($2.ListBuildsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListBuildsResponse.fromBuffer(value));
-  static final _$cancelBuild = $grpc.ClientMethod<CancelBuildRequest, Build>(
-      '/google.devtools.cloudbuild.v1.CloudBuild/CancelBuild',
-      (CancelBuildRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Build.fromBuffer(value));
+              $2.ListBuildsResponse.fromBuffer(value));
+  static final _$cancelBuild =
+      $grpc.ClientMethod<$2.CancelBuildRequest, $2.Build>(
+          '/google.devtools.cloudbuild.v1.CloudBuild/CancelBuild',
+          ($2.CancelBuildRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Build.fromBuffer(value));
   static final _$retryBuild =
-      $grpc.ClientMethod<RetryBuildRequest, $1.Operation>(
+      $grpc.ClientMethod<$2.RetryBuildRequest, $0.Operation>(
           '/google.devtools.cloudbuild.v1.CloudBuild/RetryBuild',
-          (RetryBuildRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+          ($2.RetryBuildRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$createBuildTrigger =
-      $grpc.ClientMethod<CreateBuildTriggerRequest, BuildTrigger>(
+      $grpc.ClientMethod<$2.CreateBuildTriggerRequest, $2.BuildTrigger>(
           '/google.devtools.cloudbuild.v1.CloudBuild/CreateBuildTrigger',
-          (CreateBuildTriggerRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => BuildTrigger.fromBuffer(value));
+          ($2.CreateBuildTriggerRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.BuildTrigger.fromBuffer(value));
   static final _$getBuildTrigger =
-      $grpc.ClientMethod<GetBuildTriggerRequest, BuildTrigger>(
+      $grpc.ClientMethod<$2.GetBuildTriggerRequest, $2.BuildTrigger>(
           '/google.devtools.cloudbuild.v1.CloudBuild/GetBuildTrigger',
-          (GetBuildTriggerRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => BuildTrigger.fromBuffer(value));
-  static final _$listBuildTriggers =
-      $grpc.ClientMethod<ListBuildTriggersRequest, ListBuildTriggersResponse>(
-          '/google.devtools.cloudbuild.v1.CloudBuild/ListBuildTriggers',
-          (ListBuildTriggersRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              ListBuildTriggersResponse.fromBuffer(value));
+          ($2.GetBuildTriggerRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.BuildTrigger.fromBuffer(value));
+  static final _$listBuildTriggers = $grpc.ClientMethod<
+          $2.ListBuildTriggersRequest, $2.ListBuildTriggersResponse>(
+      '/google.devtools.cloudbuild.v1.CloudBuild/ListBuildTriggers',
+      ($2.ListBuildTriggersRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $2.ListBuildTriggersResponse.fromBuffer(value));
   static final _$deleteBuildTrigger =
-      $grpc.ClientMethod<DeleteBuildTriggerRequest, $0.Empty>(
+      $grpc.ClientMethod<$2.DeleteBuildTriggerRequest, $1.Empty>(
           '/google.devtools.cloudbuild.v1.CloudBuild/DeleteBuildTrigger',
-          (DeleteBuildTriggerRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($2.DeleteBuildTriggerRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$updateBuildTrigger =
-      $grpc.ClientMethod<UpdateBuildTriggerRequest, BuildTrigger>(
+      $grpc.ClientMethod<$2.UpdateBuildTriggerRequest, $2.BuildTrigger>(
           '/google.devtools.cloudbuild.v1.CloudBuild/UpdateBuildTrigger',
-          (UpdateBuildTriggerRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => BuildTrigger.fromBuffer(value));
+          ($2.UpdateBuildTriggerRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.BuildTrigger.fromBuffer(value));
   static final _$runBuildTrigger =
-      $grpc.ClientMethod<RunBuildTriggerRequest, $1.Operation>(
+      $grpc.ClientMethod<$2.RunBuildTriggerRequest, $0.Operation>(
           '/google.devtools.cloudbuild.v1.CloudBuild/RunBuildTrigger',
-          (RunBuildTriggerRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+          ($2.RunBuildTriggerRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   CloudBuildClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$1.Operation> createBuild(CreateBuildRequest request,
+  $grpc.ResponseFuture<$0.Operation> createBuild($2.CreateBuildRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createBuild, $async.Stream.fromIterable([request]),
@@ -83,14 +84,15 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Build> getBuild(GetBuildRequest request,
+  $grpc.ResponseFuture<$2.Build> getBuild($2.GetBuildRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getBuild, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListBuildsResponse> listBuilds(ListBuildsRequest request,
+  $grpc.ResponseFuture<$2.ListBuildsResponse> listBuilds(
+      $2.ListBuildsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listBuilds, $async.Stream.fromIterable([request]),
@@ -98,7 +100,7 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Build> cancelBuild(CancelBuildRequest request,
+  $grpc.ResponseFuture<$2.Build> cancelBuild($2.CancelBuildRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$cancelBuild, $async.Stream.fromIterable([request]),
@@ -106,7 +108,7 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> retryBuild(RetryBuildRequest request,
+  $grpc.ResponseFuture<$0.Operation> retryBuild($2.RetryBuildRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$retryBuild, $async.Stream.fromIterable([request]),
@@ -114,8 +116,8 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<BuildTrigger> createBuildTrigger(
-      CreateBuildTriggerRequest request,
+  $grpc.ResponseFuture<$2.BuildTrigger> createBuildTrigger(
+      $2.CreateBuildTriggerRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createBuildTrigger, $async.Stream.fromIterable([request]),
@@ -123,8 +125,8 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<BuildTrigger> getBuildTrigger(
-      GetBuildTriggerRequest request,
+  $grpc.ResponseFuture<$2.BuildTrigger> getBuildTrigger(
+      $2.GetBuildTriggerRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getBuildTrigger, $async.Stream.fromIterable([request]),
@@ -132,8 +134,8 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListBuildTriggersResponse> listBuildTriggers(
-      ListBuildTriggersRequest request,
+  $grpc.ResponseFuture<$2.ListBuildTriggersResponse> listBuildTriggers(
+      $2.ListBuildTriggersRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listBuildTriggers, $async.Stream.fromIterable([request]),
@@ -141,8 +143,8 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteBuildTrigger(
-      DeleteBuildTriggerRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteBuildTrigger(
+      $2.DeleteBuildTriggerRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteBuildTrigger, $async.Stream.fromIterable([request]),
@@ -150,8 +152,8 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<BuildTrigger> updateBuildTrigger(
-      UpdateBuildTriggerRequest request,
+  $grpc.ResponseFuture<$2.BuildTrigger> updateBuildTrigger(
+      $2.UpdateBuildTriggerRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateBuildTrigger, $async.Stream.fromIterable([request]),
@@ -159,8 +161,8 @@ class CloudBuildClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> runBuildTrigger(
-      RunBuildTriggerRequest request,
+  $grpc.ResponseFuture<$0.Operation> runBuildTrigger(
+      $2.RunBuildTriggerRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$runBuildTrigger, $async.Stream.fromIterable([request]),
@@ -173,167 +175,172 @@ abstract class CloudBuildServiceBase extends $grpc.Service {
   $core.String get $name => 'google.devtools.cloudbuild.v1.CloudBuild';
 
   CloudBuildServiceBase() {
-    $addMethod($grpc.ServiceMethod<CreateBuildRequest, $1.Operation>(
+    $addMethod($grpc.ServiceMethod<$2.CreateBuildRequest, $0.Operation>(
         'CreateBuild',
         createBuild_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateBuildRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetBuildRequest, Build>(
+        ($core.List<$core.int> value) =>
+            $2.CreateBuildRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetBuildRequest, $2.Build>(
         'GetBuild',
         getBuild_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetBuildRequest.fromBuffer(value),
-        (Build value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListBuildsRequest, ListBuildsResponse>(
+        ($core.List<$core.int> value) => $2.GetBuildRequest.fromBuffer(value),
+        ($2.Build value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListBuildsRequest, $2.ListBuildsResponse>(
         'ListBuilds',
         listBuilds_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ListBuildsRequest.fromBuffer(value),
-        (ListBuildsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CancelBuildRequest, Build>(
+        ($core.List<$core.int> value) => $2.ListBuildsRequest.fromBuffer(value),
+        ($2.ListBuildsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CancelBuildRequest, $2.Build>(
         'CancelBuild',
         cancelBuild_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CancelBuildRequest.fromBuffer(value),
-        (Build value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<RetryBuildRequest, $1.Operation>(
+        ($core.List<$core.int> value) =>
+            $2.CancelBuildRequest.fromBuffer(value),
+        ($2.Build value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RetryBuildRequest, $0.Operation>(
         'RetryBuild',
         retryBuild_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => RetryBuildRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateBuildTriggerRequest, BuildTrigger>(
-        'CreateBuildTrigger',
-        createBuildTrigger_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            CreateBuildTriggerRequest.fromBuffer(value),
-        (BuildTrigger value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetBuildTriggerRequest, BuildTrigger>(
+        ($core.List<$core.int> value) => $2.RetryBuildRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.CreateBuildTriggerRequest, $2.BuildTrigger>(
+            'CreateBuildTrigger',
+            createBuildTrigger_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.CreateBuildTriggerRequest.fromBuffer(value),
+            ($2.BuildTrigger value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetBuildTriggerRequest, $2.BuildTrigger>(
         'GetBuildTrigger',
         getBuildTrigger_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetBuildTriggerRequest.fromBuffer(value),
-        (BuildTrigger value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListBuildTriggersRequest,
-            ListBuildTriggersResponse>(
+            $2.GetBuildTriggerRequest.fromBuffer(value),
+        ($2.BuildTrigger value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListBuildTriggersRequest,
+            $2.ListBuildTriggersResponse>(
         'ListBuildTriggers',
         listBuildTriggers_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListBuildTriggersRequest.fromBuffer(value),
-        (ListBuildTriggersResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteBuildTriggerRequest, $0.Empty>(
+            $2.ListBuildTriggersRequest.fromBuffer(value),
+        ($2.ListBuildTriggersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteBuildTriggerRequest, $1.Empty>(
         'DeleteBuildTrigger',
         deleteBuildTrigger_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteBuildTriggerRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateBuildTriggerRequest, BuildTrigger>(
-        'UpdateBuildTrigger',
-        updateBuildTrigger_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            UpdateBuildTriggerRequest.fromBuffer(value),
-        (BuildTrigger value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<RunBuildTriggerRequest, $1.Operation>(
+            $2.DeleteBuildTriggerRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.UpdateBuildTriggerRequest, $2.BuildTrigger>(
+            'UpdateBuildTrigger',
+            updateBuildTrigger_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.UpdateBuildTriggerRequest.fromBuffer(value),
+            ($2.BuildTrigger value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.RunBuildTriggerRequest, $0.Operation>(
         'RunBuildTrigger',
         runBuildTrigger_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            RunBuildTriggerRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
+            $2.RunBuildTriggerRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.Operation> createBuild_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> createBuild_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateBuildRequest> request) async {
     return createBuild(call, await request);
   }
 
-  $async.Future<Build> getBuild_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Build> getBuild_Pre(
+      $grpc.ServiceCall call, $async.Future<$2.GetBuildRequest> request) async {
     return getBuild(call, await request);
   }
 
-  $async.Future<ListBuildsResponse> listBuilds_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListBuildsResponse> listBuilds_Pre($grpc.ServiceCall call,
+      $async.Future<$2.ListBuildsRequest> request) async {
     return listBuilds(call, await request);
   }
 
-  $async.Future<Build> cancelBuild_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Build> cancelBuild_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CancelBuildRequest> request) async {
     return cancelBuild(call, await request);
   }
 
-  $async.Future<$1.Operation> retryBuild_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> retryBuild_Pre($grpc.ServiceCall call,
+      $async.Future<$2.RetryBuildRequest> request) async {
     return retryBuild(call, await request);
   }
 
-  $async.Future<BuildTrigger> createBuildTrigger_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.BuildTrigger> createBuildTrigger_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateBuildTriggerRequest> request) async {
     return createBuildTrigger(call, await request);
   }
 
-  $async.Future<BuildTrigger> getBuildTrigger_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.BuildTrigger> getBuildTrigger_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetBuildTriggerRequest> request) async {
     return getBuildTrigger(call, await request);
   }
 
-  $async.Future<ListBuildTriggersResponse> listBuildTriggers_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListBuildTriggersResponse> listBuildTriggers_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListBuildTriggersRequest> request) async {
     return listBuildTriggers(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteBuildTrigger_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteBuildTrigger_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteBuildTriggerRequest> request) async {
     return deleteBuildTrigger(call, await request);
   }
 
-  $async.Future<BuildTrigger> updateBuildTrigger_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.BuildTrigger> updateBuildTrigger_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateBuildTriggerRequest> request) async {
     return updateBuildTrigger(call, await request);
   }
 
-  $async.Future<$1.Operation> runBuildTrigger_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> runBuildTrigger_Pre($grpc.ServiceCall call,
+      $async.Future<$2.RunBuildTriggerRequest> request) async {
     return runBuildTrigger(call, await request);
   }
 
-  $async.Future<$1.Operation> createBuild(
-      $grpc.ServiceCall call, CreateBuildRequest request);
-  $async.Future<Build> getBuild(
-      $grpc.ServiceCall call, GetBuildRequest request);
-  $async.Future<ListBuildsResponse> listBuilds(
-      $grpc.ServiceCall call, ListBuildsRequest request);
-  $async.Future<Build> cancelBuild(
-      $grpc.ServiceCall call, CancelBuildRequest request);
-  $async.Future<$1.Operation> retryBuild(
-      $grpc.ServiceCall call, RetryBuildRequest request);
-  $async.Future<BuildTrigger> createBuildTrigger(
-      $grpc.ServiceCall call, CreateBuildTriggerRequest request);
-  $async.Future<BuildTrigger> getBuildTrigger(
-      $grpc.ServiceCall call, GetBuildTriggerRequest request);
-  $async.Future<ListBuildTriggersResponse> listBuildTriggers(
-      $grpc.ServiceCall call, ListBuildTriggersRequest request);
-  $async.Future<$0.Empty> deleteBuildTrigger(
-      $grpc.ServiceCall call, DeleteBuildTriggerRequest request);
-  $async.Future<BuildTrigger> updateBuildTrigger(
-      $grpc.ServiceCall call, UpdateBuildTriggerRequest request);
-  $async.Future<$1.Operation> runBuildTrigger(
-      $grpc.ServiceCall call, RunBuildTriggerRequest request);
+  $async.Future<$0.Operation> createBuild(
+      $grpc.ServiceCall call, $2.CreateBuildRequest request);
+  $async.Future<$2.Build> getBuild(
+      $grpc.ServiceCall call, $2.GetBuildRequest request);
+  $async.Future<$2.ListBuildsResponse> listBuilds(
+      $grpc.ServiceCall call, $2.ListBuildsRequest request);
+  $async.Future<$2.Build> cancelBuild(
+      $grpc.ServiceCall call, $2.CancelBuildRequest request);
+  $async.Future<$0.Operation> retryBuild(
+      $grpc.ServiceCall call, $2.RetryBuildRequest request);
+  $async.Future<$2.BuildTrigger> createBuildTrigger(
+      $grpc.ServiceCall call, $2.CreateBuildTriggerRequest request);
+  $async.Future<$2.BuildTrigger> getBuildTrigger(
+      $grpc.ServiceCall call, $2.GetBuildTriggerRequest request);
+  $async.Future<$2.ListBuildTriggersResponse> listBuildTriggers(
+      $grpc.ServiceCall call, $2.ListBuildTriggersRequest request);
+  $async.Future<$1.Empty> deleteBuildTrigger(
+      $grpc.ServiceCall call, $2.DeleteBuildTriggerRequest request);
+  $async.Future<$2.BuildTrigger> updateBuildTrigger(
+      $grpc.ServiceCall call, $2.UpdateBuildTriggerRequest request);
+  $async.Future<$0.Operation> runBuildTrigger(
+      $grpc.ServiceCall call, $2.RunBuildTriggerRequest request);
 }

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/iam/v1/logging/audit_data.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class AuditData extends $pb.GeneratedMessage {
         $0.PolicyDelta.getDefault, $0.PolicyDelta.create)
     ..hasRequiredFields = false;
 
-  AuditData() : super();
-  AuditData.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuditData.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuditData._() : super();
+  factory AuditData() => create();
+  factory AuditData.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuditData.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuditData clone() => AuditData()..mergeFromMessage(this);
   AuditData copyWith(void Function(AuditData) updates) =>
       super.copyWith((message) => updates(message as AuditData));
   $pb.BuilderInfo get info_ => _i;
-  static AuditData create() => AuditData();
+  @$core.pragma('dart2js:noInline')
+  static AuditData create() => AuditData._();
   AuditData createEmptyInstance() => create();
   static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
   static AuditData getDefault() => _defaultInstance ??= create()..freeze();

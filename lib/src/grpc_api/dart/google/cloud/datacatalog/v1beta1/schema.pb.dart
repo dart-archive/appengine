@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datacatalog/v1beta1/schema.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class Schema extends $pb.GeneratedMessage {
     ..pc<ColumnSchema>(2, 'columns', $pb.PbFieldType.PM, ColumnSchema.create)
     ..hasRequiredFields = false;
 
-  Schema() : super();
-  Schema.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Schema.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Schema._() : super();
+  factory Schema() => create();
+  factory Schema.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Schema.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Schema clone() => Schema()..mergeFromMessage(this);
   Schema copyWith(void Function(Schema) updates) =>
       super.copyWith((message) => updates(message as Schema));
   $pb.BuilderInfo get info_ => _i;
-  static Schema create() => Schema();
+  @$core.pragma('dart2js:noInline')
+  static Schema create() => Schema._();
   Schema createEmptyInstance() => create();
   static $pb.PbList<Schema> createRepeated() => $pb.PbList<Schema>();
   static Schema getDefault() => _defaultInstance ??= create()..freeze();
@@ -45,18 +48,20 @@ class ColumnSchema extends $pb.GeneratedMessage {
     ..pc<ColumnSchema>(7, 'subcolumns', $pb.PbFieldType.PM, ColumnSchema.create)
     ..hasRequiredFields = false;
 
-  ColumnSchema() : super();
-  ColumnSchema.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ColumnSchema.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ColumnSchema._() : super();
+  factory ColumnSchema() => create();
+  factory ColumnSchema.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ColumnSchema.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ColumnSchema clone() => ColumnSchema()..mergeFromMessage(this);
   ColumnSchema copyWith(void Function(ColumnSchema) updates) =>
       super.copyWith((message) => updates(message as ColumnSchema));
   $pb.BuilderInfo get info_ => _i;
-  static ColumnSchema create() => ColumnSchema();
+  @$core.pragma('dart2js:noInline')
+  static ColumnSchema create() => ColumnSchema._();
   ColumnSchema createEmptyInstance() => create();
   static $pb.PbList<ColumnSchema> createRepeated() =>
       $pb.PbList<ColumnSchema>();

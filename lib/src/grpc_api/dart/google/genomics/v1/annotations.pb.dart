@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/annotations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $1;
-import '../../protobuf/wrappers.pb.dart' as $2;
-import '../../protobuf/field_mask.pb.dart' as $3;
-import '../../rpc/status.pb.dart' as $4;
+import '../../protobuf/struct.pb.dart' as $2;
+import '../../protobuf/wrappers.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $4;
+import '../../rpc/status.pb.dart' as $5;
 
 import 'annotations.pbenum.dart';
 
@@ -34,30 +35,32 @@ class AnnotationSet extends $pb.GeneratedMessage {
         AnnotationType.ANNOTATION_TYPE_UNSPECIFIED,
         AnnotationType.valueOf,
         AnnotationType.values)
-    ..m<$core.String, $1.ListValue>(
+    ..m<$core.String, $2.ListValue>(
         17,
         'info',
         'AnnotationSet.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $1.ListValue.create,
+        $2.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  AnnotationSet() : super();
-  AnnotationSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotationSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotationSet._() : super();
+  factory AnnotationSet() => create();
+  factory AnnotationSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotationSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotationSet clone() => AnnotationSet()..mergeFromMessage(this);
   AnnotationSet copyWith(void Function(AnnotationSet) updates) =>
       super.copyWith((message) => updates(message as AnnotationSet));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotationSet create() => AnnotationSet();
+  @$core.pragma('dart2js:noInline')
+  static AnnotationSet create() => AnnotationSet._();
   AnnotationSet createEmptyInstance() => create();
   static $pb.PbList<AnnotationSet> createRepeated() =>
       $pb.PbList<AnnotationSet>();
@@ -112,7 +115,7 @@ class AnnotationSet extends $pb.GeneratedMessage {
   $core.bool hasType() => $_has(5);
   void clearType() => clearField(6);
 
-  $core.Map<$core.String, $1.ListValue> get info => $_getMap(6);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(6);
 }
 
 enum Annotation_Value { variant, transcript, notSet }
@@ -125,6 +128,7 @@ class Annotation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Annotation',
       package: const $pb.PackageName('google.genomics.v1'))
+    ..oo(0, [10, 11])
     ..aOS(1, 'id')
     ..aOS(2, 'annotationSetId')
     ..aOS(3, 'name')
@@ -144,31 +148,32 @@ class Annotation extends $pb.GeneratedMessage {
         VariantAnnotation.getDefault, VariantAnnotation.create)
     ..a<Transcript>(11, 'transcript', $pb.PbFieldType.OM, Transcript.getDefault,
         Transcript.create)
-    ..m<$core.String, $1.ListValue>(
+    ..m<$core.String, $2.ListValue>(
         12,
         'info',
         'Annotation.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $1.ListValue.create,
+        $2.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
-    ..oo(0, [10, 11])
     ..hasRequiredFields = false;
 
-  Annotation() : super();
-  Annotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Annotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Annotation._() : super();
+  factory Annotation() => create();
+  factory Annotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Annotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Annotation clone() => Annotation()..mergeFromMessage(this);
   Annotation copyWith(void Function(Annotation) updates) =>
       super.copyWith((message) => updates(message as Annotation));
   $pb.BuilderInfo get info_ => _i;
-  static Annotation create() => Annotation();
+  @$core.pragma('dart2js:noInline')
+  static Annotation create() => Annotation._();
   Annotation createEmptyInstance() => create();
   static $pb.PbList<Annotation> createRepeated() => $pb.PbList<Annotation>();
   static Annotation getDefault() => _defaultInstance ??= create()..freeze();
@@ -265,7 +270,7 @@ class Annotation extends $pb.GeneratedMessage {
   $core.bool hasTranscript() => $_has(10);
   void clearTranscript() => clearField(11);
 
-  $core.Map<$core.String, $1.ListValue> get info => $_getMap(11);
+  $core.Map<$core.String, $2.ListValue> get info => $_getMap(11);
 }
 
 class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
@@ -278,13 +283,15 @@ class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
     ..aOS(4, 'omimId')
     ..hasRequiredFields = false;
 
-  VariantAnnotation_ClinicalCondition() : super();
-  VariantAnnotation_ClinicalCondition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantAnnotation_ClinicalCondition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VariantAnnotation_ClinicalCondition._() : super();
+  factory VariantAnnotation_ClinicalCondition() => create();
+  factory VariantAnnotation_ClinicalCondition.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VariantAnnotation_ClinicalCondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VariantAnnotation_ClinicalCondition clone() =>
       VariantAnnotation_ClinicalCondition()..mergeFromMessage(this);
   VariantAnnotation_ClinicalCondition copyWith(
@@ -292,8 +299,9 @@ class VariantAnnotation_ClinicalCondition extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as VariantAnnotation_ClinicalCondition));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static VariantAnnotation_ClinicalCondition create() =>
-      VariantAnnotation_ClinicalCondition();
+      VariantAnnotation_ClinicalCondition._();
   VariantAnnotation_ClinicalCondition createEmptyInstance() => create();
   static $pb.PbList<VariantAnnotation_ClinicalCondition> createRepeated() =>
       $pb.PbList<VariantAnnotation_ClinicalCondition>();
@@ -354,18 +362,20 @@ class VariantAnnotation extends $pb.GeneratedMessage {
         VariantAnnotation_ClinicalSignificance.values)
     ..hasRequiredFields = false;
 
-  VariantAnnotation() : super();
-  VariantAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VariantAnnotation._() : super();
+  factory VariantAnnotation() => create();
+  factory VariantAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VariantAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VariantAnnotation clone() => VariantAnnotation()..mergeFromMessage(this);
   VariantAnnotation copyWith(void Function(VariantAnnotation) updates) =>
       super.copyWith((message) => updates(message as VariantAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static VariantAnnotation create() => VariantAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static VariantAnnotation create() => VariantAnnotation._();
   VariantAnnotation createEmptyInstance() => create();
   static $pb.PbList<VariantAnnotation> createRepeated() =>
       $pb.PbList<VariantAnnotation>();
@@ -424,22 +434,24 @@ class Transcript_Exon extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.genomics.v1'))
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
-    ..a<$2.Int32Value>(3, 'frame', $pb.PbFieldType.OM, $2.Int32Value.getDefault,
-        $2.Int32Value.create)
+    ..a<$3.Int32Value>(3, 'frame', $pb.PbFieldType.OM, $3.Int32Value.getDefault,
+        $3.Int32Value.create)
     ..hasRequiredFields = false;
 
-  Transcript_Exon() : super();
-  Transcript_Exon.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Transcript_Exon.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Transcript_Exon._() : super();
+  factory Transcript_Exon() => create();
+  factory Transcript_Exon.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Transcript_Exon.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Transcript_Exon clone() => Transcript_Exon()..mergeFromMessage(this);
   Transcript_Exon copyWith(void Function(Transcript_Exon) updates) =>
       super.copyWith((message) => updates(message as Transcript_Exon));
   $pb.BuilderInfo get info_ => _i;
-  static Transcript_Exon create() => Transcript_Exon();
+  @$core.pragma('dart2js:noInline')
+  static Transcript_Exon create() => Transcript_Exon._();
   Transcript_Exon createEmptyInstance() => create();
   static $pb.PbList<Transcript_Exon> createRepeated() =>
       $pb.PbList<Transcript_Exon>();
@@ -463,8 +475,8 @@ class Transcript_Exon extends $pb.GeneratedMessage {
   $core.bool hasEnd() => $_has(1);
   void clearEnd() => clearField(2);
 
-  $2.Int32Value get frame => $_getN(2);
-  set frame($2.Int32Value v) {
+  $3.Int32Value get frame => $_getN(2);
+  set frame($3.Int32Value v) {
     setField(3, v);
   }
 
@@ -479,13 +491,14 @@ class Transcript_CodingSequence extends $pb.GeneratedMessage {
     ..aInt64(2, 'end')
     ..hasRequiredFields = false;
 
-  Transcript_CodingSequence() : super();
-  Transcript_CodingSequence.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Transcript_CodingSequence.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Transcript_CodingSequence._() : super();
+  factory Transcript_CodingSequence() => create();
+  factory Transcript_CodingSequence.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Transcript_CodingSequence.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Transcript_CodingSequence clone() =>
       Transcript_CodingSequence()..mergeFromMessage(this);
   Transcript_CodingSequence copyWith(
@@ -493,7 +506,8 @@ class Transcript_CodingSequence extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Transcript_CodingSequence));
   $pb.BuilderInfo get info_ => _i;
-  static Transcript_CodingSequence create() => Transcript_CodingSequence();
+  @$core.pragma('dart2js:noInline')
+  static Transcript_CodingSequence create() => Transcript_CodingSequence._();
   Transcript_CodingSequence createEmptyInstance() => create();
   static $pb.PbList<Transcript_CodingSequence> createRepeated() =>
       $pb.PbList<Transcript_CodingSequence>();
@@ -528,18 +542,20 @@ class Transcript extends $pb.GeneratedMessage {
         Transcript_CodingSequence.getDefault, Transcript_CodingSequence.create)
     ..hasRequiredFields = false;
 
-  Transcript() : super();
-  Transcript.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Transcript.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Transcript._() : super();
+  factory Transcript() => create();
+  factory Transcript.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Transcript.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Transcript clone() => Transcript()..mergeFromMessage(this);
   Transcript copyWith(void Function(Transcript) updates) =>
       super.copyWith((message) => updates(message as Transcript));
   $pb.BuilderInfo get info_ => _i;
-  static Transcript create() => Transcript();
+  @$core.pragma('dart2js:noInline')
+  static Transcript create() => Transcript._();
   Transcript createEmptyInstance() => create();
   static $pb.PbList<Transcript> createRepeated() => $pb.PbList<Transcript>();
   static Transcript getDefault() => _defaultInstance ??= create()..freeze();
@@ -571,18 +587,20 @@ class ExternalId extends $pb.GeneratedMessage {
     ..aOS(2, 'id')
     ..hasRequiredFields = false;
 
-  ExternalId() : super();
-  ExternalId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExternalId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExternalId._() : super();
+  factory ExternalId() => create();
+  factory ExternalId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExternalId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExternalId clone() => ExternalId()..mergeFromMessage(this);
   ExternalId copyWith(void Function(ExternalId) updates) =>
       super.copyWith((message) => updates(message as ExternalId));
   $pb.BuilderInfo get info_ => _i;
-  static ExternalId create() => ExternalId();
+  @$core.pragma('dart2js:noInline')
+  static ExternalId create() => ExternalId._();
   ExternalId createEmptyInstance() => create();
   static $pb.PbList<ExternalId> createRepeated() => $pb.PbList<ExternalId>();
   static ExternalId getDefault() => _defaultInstance ??= create()..freeze();
@@ -613,13 +631,14 @@ class CreateAnnotationSetRequest extends $pb.GeneratedMessage {
         AnnotationSet.getDefault, AnnotationSet.create)
     ..hasRequiredFields = false;
 
-  CreateAnnotationSetRequest() : super();
-  CreateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAnnotationSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateAnnotationSetRequest._() : super();
+  factory CreateAnnotationSetRequest() => create();
+  factory CreateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAnnotationSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateAnnotationSetRequest clone() =>
       CreateAnnotationSetRequest()..mergeFromMessage(this);
   CreateAnnotationSetRequest copyWith(
@@ -627,7 +646,8 @@ class CreateAnnotationSetRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateAnnotationSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateAnnotationSetRequest create() => CreateAnnotationSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateAnnotationSetRequest create() => CreateAnnotationSetRequest._();
   CreateAnnotationSetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAnnotationSetRequest> createRepeated() =>
       $pb.PbList<CreateAnnotationSetRequest>();
@@ -650,20 +670,22 @@ class GetAnnotationSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationSetId')
     ..hasRequiredFields = false;
 
-  GetAnnotationSetRequest() : super();
-  GetAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAnnotationSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAnnotationSetRequest._() : super();
+  factory GetAnnotationSetRequest() => create();
+  factory GetAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAnnotationSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAnnotationSetRequest clone() =>
       GetAnnotationSetRequest()..mergeFromMessage(this);
   GetAnnotationSetRequest copyWith(
           void Function(GetAnnotationSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetAnnotationSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAnnotationSetRequest create() => GetAnnotationSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAnnotationSetRequest create() => GetAnnotationSetRequest._();
   GetAnnotationSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetAnnotationSetRequest> createRepeated() =>
       $pb.PbList<GetAnnotationSetRequest>();
@@ -687,17 +709,18 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationSetId')
     ..a<AnnotationSet>(2, 'annotationSet', $pb.PbFieldType.OM,
         AnnotationSet.getDefault, AnnotationSet.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateAnnotationSetRequest() : super();
-  UpdateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateAnnotationSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateAnnotationSetRequest._() : super();
+  factory UpdateAnnotationSetRequest() => create();
+  factory UpdateAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAnnotationSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateAnnotationSetRequest clone() =>
       UpdateAnnotationSetRequest()..mergeFromMessage(this);
   UpdateAnnotationSetRequest copyWith(
@@ -705,7 +728,8 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateAnnotationSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateAnnotationSetRequest create() => UpdateAnnotationSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAnnotationSetRequest create() => UpdateAnnotationSetRequest._();
   UpdateAnnotationSetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAnnotationSetRequest> createRepeated() =>
       $pb.PbList<UpdateAnnotationSetRequest>();
@@ -729,8 +753,8 @@ class UpdateAnnotationSetRequest extends $pb.GeneratedMessage {
   $core.bool hasAnnotationSet() => $_has(1);
   void clearAnnotationSet() => clearField(2);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -745,13 +769,14 @@ class DeleteAnnotationSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationSetId')
     ..hasRequiredFields = false;
 
-  DeleteAnnotationSetRequest() : super();
-  DeleteAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteAnnotationSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteAnnotationSetRequest._() : super();
+  factory DeleteAnnotationSetRequest() => create();
+  factory DeleteAnnotationSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAnnotationSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteAnnotationSetRequest clone() =>
       DeleteAnnotationSetRequest()..mergeFromMessage(this);
   DeleteAnnotationSetRequest copyWith(
@@ -759,7 +784,8 @@ class DeleteAnnotationSetRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteAnnotationSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteAnnotationSetRequest create() => DeleteAnnotationSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAnnotationSetRequest create() => DeleteAnnotationSetRequest._();
   DeleteAnnotationSetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAnnotationSetRequest> createRepeated() =>
       $pb.PbList<DeleteAnnotationSetRequest>();
@@ -789,13 +815,14 @@ class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(6, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchAnnotationSetsRequest() : super();
-  SearchAnnotationSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchAnnotationSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchAnnotationSetsRequest._() : super();
+  factory SearchAnnotationSetsRequest() => create();
+  factory SearchAnnotationSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchAnnotationSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchAnnotationSetsRequest clone() =>
       SearchAnnotationSetsRequest()..mergeFromMessage(this);
   SearchAnnotationSetsRequest copyWith(
@@ -803,7 +830,9 @@ class SearchAnnotationSetsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchAnnotationSetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchAnnotationSetsRequest create() => SearchAnnotationSetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchAnnotationSetsRequest create() =>
+      SearchAnnotationSetsRequest._();
   SearchAnnotationSetsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchAnnotationSetsRequest> createRepeated() =>
       $pb.PbList<SearchAnnotationSetsRequest>();
@@ -857,13 +886,14 @@ class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchAnnotationSetsResponse() : super();
-  SearchAnnotationSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchAnnotationSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchAnnotationSetsResponse._() : super();
+  factory SearchAnnotationSetsResponse() => create();
+  factory SearchAnnotationSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchAnnotationSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchAnnotationSetsResponse clone() =>
       SearchAnnotationSetsResponse()..mergeFromMessage(this);
   SearchAnnotationSetsResponse copyWith(
@@ -871,8 +901,9 @@ class SearchAnnotationSetsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchAnnotationSetsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SearchAnnotationSetsResponse create() =>
-      SearchAnnotationSetsResponse();
+      SearchAnnotationSetsResponse._();
   SearchAnnotationSetsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchAnnotationSetsResponse> createRepeated() =>
       $pb.PbList<SearchAnnotationSetsResponse>();
@@ -898,20 +929,22 @@ class CreateAnnotationRequest extends $pb.GeneratedMessage {
         Annotation.create)
     ..hasRequiredFields = false;
 
-  CreateAnnotationRequest() : super();
-  CreateAnnotationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAnnotationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateAnnotationRequest._() : super();
+  factory CreateAnnotationRequest() => create();
+  factory CreateAnnotationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAnnotationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateAnnotationRequest clone() =>
       CreateAnnotationRequest()..mergeFromMessage(this);
   CreateAnnotationRequest copyWith(
           void Function(CreateAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAnnotationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateAnnotationRequest create() => CreateAnnotationRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateAnnotationRequest create() => CreateAnnotationRequest._();
   CreateAnnotationRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAnnotationRequest> createRepeated() =>
       $pb.PbList<CreateAnnotationRequest>();
@@ -936,13 +969,14 @@ class BatchCreateAnnotationsRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'requestId')
     ..hasRequiredFields = false;
 
-  BatchCreateAnnotationsRequest() : super();
-  BatchCreateAnnotationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateAnnotationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateAnnotationsRequest._() : super();
+  factory BatchCreateAnnotationsRequest() => create();
+  factory BatchCreateAnnotationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateAnnotationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateAnnotationsRequest clone() =>
       BatchCreateAnnotationsRequest()..mergeFromMessage(this);
   BatchCreateAnnotationsRequest copyWith(
@@ -950,8 +984,9 @@ class BatchCreateAnnotationsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchCreateAnnotationsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsRequest create() =>
-      BatchCreateAnnotationsRequest();
+      BatchCreateAnnotationsRequest._();
   BatchCreateAnnotationsRequest createEmptyInstance() => create();
   static $pb.PbList<BatchCreateAnnotationsRequest> createRepeated() =>
       $pb.PbList<BatchCreateAnnotationsRequest>();
@@ -974,19 +1009,21 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchCreateAnnotationsResponse.Entry',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..a<$4.Status>(
-        1, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
+    ..a<$5.Status>(
+        1, 'status', $pb.PbFieldType.OM, $5.Status.getDefault, $5.Status.create)
     ..a<Annotation>(2, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
     ..hasRequiredFields = false;
 
-  BatchCreateAnnotationsResponse_Entry() : super();
-  BatchCreateAnnotationsResponse_Entry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateAnnotationsResponse_Entry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateAnnotationsResponse_Entry._() : super();
+  factory BatchCreateAnnotationsResponse_Entry() => create();
+  factory BatchCreateAnnotationsResponse_Entry.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateAnnotationsResponse_Entry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateAnnotationsResponse_Entry clone() =>
       BatchCreateAnnotationsResponse_Entry()..mergeFromMessage(this);
   BatchCreateAnnotationsResponse_Entry copyWith(
@@ -994,8 +1031,9 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as BatchCreateAnnotationsResponse_Entry));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsResponse_Entry create() =>
-      BatchCreateAnnotationsResponse_Entry();
+      BatchCreateAnnotationsResponse_Entry._();
   BatchCreateAnnotationsResponse_Entry createEmptyInstance() => create();
   static $pb.PbList<BatchCreateAnnotationsResponse_Entry> createRepeated() =>
       $pb.PbList<BatchCreateAnnotationsResponse_Entry>();
@@ -1003,8 +1041,8 @@ class BatchCreateAnnotationsResponse_Entry extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static BatchCreateAnnotationsResponse_Entry _defaultInstance;
 
-  $4.Status get status => $_getN(0);
-  set status($4.Status v) {
+  $5.Status get status => $_getN(0);
+  set status($5.Status v) {
     setField(1, v);
   }
 
@@ -1028,13 +1066,14 @@ class BatchCreateAnnotationsResponse extends $pb.GeneratedMessage {
         BatchCreateAnnotationsResponse_Entry.create)
     ..hasRequiredFields = false;
 
-  BatchCreateAnnotationsResponse() : super();
-  BatchCreateAnnotationsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchCreateAnnotationsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchCreateAnnotationsResponse._() : super();
+  factory BatchCreateAnnotationsResponse() => create();
+  factory BatchCreateAnnotationsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateAnnotationsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchCreateAnnotationsResponse clone() =>
       BatchCreateAnnotationsResponse()..mergeFromMessage(this);
   BatchCreateAnnotationsResponse copyWith(
@@ -1042,8 +1081,9 @@ class BatchCreateAnnotationsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchCreateAnnotationsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchCreateAnnotationsResponse create() =>
-      BatchCreateAnnotationsResponse();
+      BatchCreateAnnotationsResponse._();
   BatchCreateAnnotationsResponse createEmptyInstance() => create();
   static $pb.PbList<BatchCreateAnnotationsResponse> createRepeated() =>
       $pb.PbList<BatchCreateAnnotationsResponse>();
@@ -1060,19 +1100,21 @@ class GetAnnotationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationId')
     ..hasRequiredFields = false;
 
-  GetAnnotationRequest() : super();
-  GetAnnotationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAnnotationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAnnotationRequest._() : super();
+  factory GetAnnotationRequest() => create();
+  factory GetAnnotationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAnnotationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAnnotationRequest clone() =>
       GetAnnotationRequest()..mergeFromMessage(this);
   GetAnnotationRequest copyWith(void Function(GetAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as GetAnnotationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAnnotationRequest create() => GetAnnotationRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAnnotationRequest create() => GetAnnotationRequest._();
   GetAnnotationRequest createEmptyInstance() => create();
   static $pb.PbList<GetAnnotationRequest> createRepeated() =>
       $pb.PbList<GetAnnotationRequest>();
@@ -1095,24 +1137,26 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationId')
     ..a<Annotation>(2, 'annotation', $pb.PbFieldType.OM, Annotation.getDefault,
         Annotation.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateAnnotationRequest() : super();
-  UpdateAnnotationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateAnnotationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateAnnotationRequest._() : super();
+  factory UpdateAnnotationRequest() => create();
+  factory UpdateAnnotationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAnnotationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateAnnotationRequest clone() =>
       UpdateAnnotationRequest()..mergeFromMessage(this);
   UpdateAnnotationRequest copyWith(
           void Function(UpdateAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAnnotationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateAnnotationRequest create() => UpdateAnnotationRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAnnotationRequest create() => UpdateAnnotationRequest._();
   UpdateAnnotationRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAnnotationRequest> createRepeated() =>
       $pb.PbList<UpdateAnnotationRequest>();
@@ -1136,8 +1180,8 @@ class UpdateAnnotationRequest extends $pb.GeneratedMessage {
   $core.bool hasAnnotation() => $_has(1);
   void clearAnnotation() => clearField(2);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -1151,20 +1195,22 @@ class DeleteAnnotationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'annotationId')
     ..hasRequiredFields = false;
 
-  DeleteAnnotationRequest() : super();
-  DeleteAnnotationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteAnnotationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteAnnotationRequest._() : super();
+  factory DeleteAnnotationRequest() => create();
+  factory DeleteAnnotationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAnnotationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteAnnotationRequest clone() =>
       DeleteAnnotationRequest()..mergeFromMessage(this);
   DeleteAnnotationRequest copyWith(
           void Function(DeleteAnnotationRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAnnotationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteAnnotationRequest create() => DeleteAnnotationRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAnnotationRequest create() => DeleteAnnotationRequest._();
   DeleteAnnotationRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAnnotationRequest> createRepeated() =>
       $pb.PbList<DeleteAnnotationRequest>();
@@ -1192,6 +1238,7 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchAnnotationsRequest',
       package: const $pb.PackageName('google.genomics.v1'))
+    ..oo(0, [2, 3])
     ..pPS(1, 'annotationSetIds')
     ..aOS(2, 'referenceId')
     ..aOS(3, 'referenceName')
@@ -1199,23 +1246,24 @@ class SearchAnnotationsRequest extends $pb.GeneratedMessage {
     ..aInt64(5, 'end')
     ..aOS(6, 'pageToken')
     ..a<$core.int>(7, 'pageSize', $pb.PbFieldType.O3)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  SearchAnnotationsRequest() : super();
-  SearchAnnotationsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchAnnotationsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchAnnotationsRequest._() : super();
+  factory SearchAnnotationsRequest() => create();
+  factory SearchAnnotationsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchAnnotationsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchAnnotationsRequest clone() =>
       SearchAnnotationsRequest()..mergeFromMessage(this);
   SearchAnnotationsRequest copyWith(
           void Function(SearchAnnotationsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchAnnotationsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchAnnotationsRequest create() => SearchAnnotationsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchAnnotationsRequest create() => SearchAnnotationsRequest._();
   SearchAnnotationsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchAnnotationsRequest> createRepeated() =>
       $pb.PbList<SearchAnnotationsRequest>();
@@ -1285,13 +1333,14 @@ class SearchAnnotationsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchAnnotationsResponse() : super();
-  SearchAnnotationsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchAnnotationsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchAnnotationsResponse._() : super();
+  factory SearchAnnotationsResponse() => create();
+  factory SearchAnnotationsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchAnnotationsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchAnnotationsResponse clone() =>
       SearchAnnotationsResponse()..mergeFromMessage(this);
   SearchAnnotationsResponse copyWith(
@@ -1299,7 +1348,8 @@ class SearchAnnotationsResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as SearchAnnotationsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchAnnotationsResponse create() => SearchAnnotationsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchAnnotationsResponse create() => SearchAnnotationsResponse._();
   SearchAnnotationsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchAnnotationsResponse> createRepeated() =>
       $pb.PbList<SearchAnnotationsResponse>();

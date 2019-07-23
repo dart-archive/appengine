@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/criterion_category_channel_availability_mode.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,14 +19,15 @@ class CriterionCategoryChannelAvailabilityModeEnum
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  CriterionCategoryChannelAvailabilityModeEnum() : super();
-  CriterionCategoryChannelAvailabilityModeEnum.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CriterionCategoryChannelAvailabilityModeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CriterionCategoryChannelAvailabilityModeEnum._() : super();
+  factory CriterionCategoryChannelAvailabilityModeEnum() => create();
+  factory CriterionCategoryChannelAvailabilityModeEnum.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CriterionCategoryChannelAvailabilityModeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CriterionCategoryChannelAvailabilityModeEnum clone() =>
       CriterionCategoryChannelAvailabilityModeEnum()..mergeFromMessage(this);
   CriterionCategoryChannelAvailabilityModeEnum copyWith(
@@ -34,8 +36,9 @@ class CriterionCategoryChannelAvailabilityModeEnum
       super.copyWith((message) =>
           updates(message as CriterionCategoryChannelAvailabilityModeEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CriterionCategoryChannelAvailabilityModeEnum create() =>
-      CriterionCategoryChannelAvailabilityModeEnum();
+      CriterionCategoryChannelAvailabilityModeEnum._();
   CriterionCategoryChannelAvailabilityModeEnum createEmptyInstance() =>
       create();
   static $pb.PbList<CriterionCategoryChannelAvailabilityModeEnum>

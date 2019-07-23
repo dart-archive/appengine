@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/feed_item.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -57,18 +58,20 @@ class FeedItem extends $pb.GeneratedMessage {
         FeedItemPlaceholderPolicyInfo.create)
     ..hasRequiredFields = false;
 
-  FeedItem() : super();
-  FeedItem.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedItem.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedItem._() : super();
+  factory FeedItem() => create();
+  factory FeedItem.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedItem.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedItem clone() => FeedItem()..mergeFromMessage(this);
   FeedItem copyWith(void Function(FeedItem) updates) =>
       super.copyWith((message) => updates(message as FeedItem));
   $pb.BuilderInfo get info_ => _i;
-  static FeedItem create() => FeedItem();
+  @$core.pragma('dart2js:noInline')
+  static FeedItem create() => FeedItem._();
   FeedItem createEmptyInstance() => create();
   static $pb.PbList<FeedItem> createRepeated() => $pb.PbList<FeedItem>();
   static FeedItem getDefault() => _defaultInstance ??= create()..freeze();
@@ -164,20 +167,22 @@ class FeedItemAttributeValue extends $pb.GeneratedMessage {
         10, 'doubleValues', $pb.PbFieldType.PM, $0.DoubleValue.create)
     ..hasRequiredFields = false;
 
-  FeedItemAttributeValue() : super();
-  FeedItemAttributeValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedItemAttributeValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedItemAttributeValue._() : super();
+  factory FeedItemAttributeValue() => create();
+  factory FeedItemAttributeValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedItemAttributeValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedItemAttributeValue clone() =>
       FeedItemAttributeValue()..mergeFromMessage(this);
   FeedItemAttributeValue copyWith(
           void Function(FeedItemAttributeValue) updates) =>
       super.copyWith((message) => updates(message as FeedItemAttributeValue));
   $pb.BuilderInfo get info_ => _i;
-  static FeedItemAttributeValue create() => FeedItemAttributeValue();
+  @$core.pragma('dart2js:noInline')
+  static FeedItemAttributeValue create() => FeedItemAttributeValue._();
   FeedItemAttributeValue createEmptyInstance() => create();
   static $pb.PbList<FeedItemAttributeValue> createRepeated() =>
       $pb.PbList<FeedItemAttributeValue>();
@@ -288,13 +293,14 @@ class FeedItemPlaceholderPolicyInfo extends $pb.GeneratedMessage {
     ..pc<$10.FeedItemQualityDisapprovalReasonEnum_FeedItemQualityDisapprovalReason>(9, 'qualityDisapprovalReasons', $pb.PbFieldType.PE, null, $10.FeedItemQualityDisapprovalReasonEnum_FeedItemQualityDisapprovalReason.valueOf, $10.FeedItemQualityDisapprovalReasonEnum_FeedItemQualityDisapprovalReason.values)
     ..hasRequiredFields = false;
 
-  FeedItemPlaceholderPolicyInfo() : super();
-  FeedItemPlaceholderPolicyInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedItemPlaceholderPolicyInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedItemPlaceholderPolicyInfo._() : super();
+  factory FeedItemPlaceholderPolicyInfo() => create();
+  factory FeedItemPlaceholderPolicyInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedItemPlaceholderPolicyInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedItemPlaceholderPolicyInfo clone() =>
       FeedItemPlaceholderPolicyInfo()..mergeFromMessage(this);
   FeedItemPlaceholderPolicyInfo copyWith(
@@ -302,8 +308,9 @@ class FeedItemPlaceholderPolicyInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as FeedItemPlaceholderPolicyInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static FeedItemPlaceholderPolicyInfo create() =>
-      FeedItemPlaceholderPolicyInfo();
+      FeedItemPlaceholderPolicyInfo._();
   FeedItemPlaceholderPolicyInfo createEmptyInstance() => create();
   static $pb.PbList<FeedItemPlaceholderPolicyInfo> createRepeated() =>
       $pb.PbList<FeedItemPlaceholderPolicyInfo>();
@@ -391,20 +398,22 @@ class FeedItemValidationError extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  FeedItemValidationError() : super();
-  FeedItemValidationError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedItemValidationError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedItemValidationError._() : super();
+  factory FeedItemValidationError() => create();
+  factory FeedItemValidationError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedItemValidationError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedItemValidationError clone() =>
       FeedItemValidationError()..mergeFromMessage(this);
   FeedItemValidationError copyWith(
           void Function(FeedItemValidationError) updates) =>
       super.copyWith((message) => updates(message as FeedItemValidationError));
   $pb.BuilderInfo get info_ => _i;
-  static FeedItemValidationError create() => FeedItemValidationError();
+  @$core.pragma('dart2js:noInline')
+  static FeedItemValidationError create() => FeedItemValidationError._();
   FeedItemValidationError createEmptyInstance() => create();
   static $pb.PbList<FeedItemValidationError> createRepeated() =>
       $pb.PbList<FeedItemValidationError>();

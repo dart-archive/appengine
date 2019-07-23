@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/datastore/v1/entity.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -22,18 +23,20 @@ class PartitionId extends $pb.GeneratedMessage {
     ..aOS(4, 'namespaceId')
     ..hasRequiredFields = false;
 
-  PartitionId() : super();
-  PartitionId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartitionId._() : super();
+  factory PartitionId() => create();
+  factory PartitionId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartitionId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PartitionId clone() => PartitionId()..mergeFromMessage(this);
   PartitionId copyWith(void Function(PartitionId) updates) =>
       super.copyWith((message) => updates(message as PartitionId));
   $pb.BuilderInfo get info_ => _i;
-  static PartitionId create() => PartitionId();
+  @$core.pragma('dart2js:noInline')
+  static PartitionId create() => PartitionId._();
   PartitionId createEmptyInstance() => create();
   static $pb.PbList<PartitionId> createRepeated() => $pb.PbList<PartitionId>();
   static PartitionId getDefault() => _defaultInstance ??= create()..freeze();
@@ -67,24 +70,26 @@ class Key_PathElement extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Key.PathElement',
       package: const $pb.PackageName('google.datastore.v1'))
+    ..oo(0, [2, 3])
     ..aOS(1, 'kind')
     ..aInt64(2, 'id')
     ..aOS(3, 'name')
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  Key_PathElement() : super();
-  Key_PathElement.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Key_PathElement.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Key_PathElement._() : super();
+  factory Key_PathElement() => create();
+  factory Key_PathElement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Key_PathElement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Key_PathElement clone() => Key_PathElement()..mergeFromMessage(this);
   Key_PathElement copyWith(void Function(Key_PathElement) updates) =>
       super.copyWith((message) => updates(message as Key_PathElement));
   $pb.BuilderInfo get info_ => _i;
-  static Key_PathElement create() => Key_PathElement();
+  @$core.pragma('dart2js:noInline')
+  static Key_PathElement create() => Key_PathElement._();
   Key_PathElement createEmptyInstance() => create();
   static $pb.PbList<Key_PathElement> createRepeated() =>
       $pb.PbList<Key_PathElement>();
@@ -129,18 +134,20 @@ class Key extends $pb.GeneratedMessage {
     ..pc<Key_PathElement>(2, 'path', $pb.PbFieldType.PM, Key_PathElement.create)
     ..hasRequiredFields = false;
 
-  Key() : super();
-  Key.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Key.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Key._() : super();
+  factory Key() => create();
+  factory Key.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Key.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Key clone() => Key()..mergeFromMessage(this);
   Key copyWith(void Function(Key) updates) =>
       super.copyWith((message) => updates(message as Key));
   $pb.BuilderInfo get info_ => _i;
-  static Key create() => Key();
+  @$core.pragma('dart2js:noInline')
+  static Key create() => Key._();
   Key createEmptyInstance() => create();
   static $pb.PbList<Key> createRepeated() => $pb.PbList<Key>();
   static Key getDefault() => _defaultInstance ??= create()..freeze();
@@ -163,18 +170,20 @@ class ArrayValue extends $pb.GeneratedMessage {
     ..pc<Value>(1, 'values', $pb.PbFieldType.PM, Value.create)
     ..hasRequiredFields = false;
 
-  ArrayValue() : super();
-  ArrayValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ArrayValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ArrayValue._() : super();
+  factory ArrayValue() => create();
+  factory ArrayValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ArrayValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ArrayValue clone() => ArrayValue()..mergeFromMessage(this);
   ArrayValue copyWith(void Function(ArrayValue) updates) =>
       super.copyWith((message) => updates(message as ArrayValue));
   $pb.BuilderInfo get info_ => _i;
-  static ArrayValue create() => ArrayValue();
+  @$core.pragma('dart2js:noInline')
+  static ArrayValue create() => ArrayValue._();
   ArrayValue createEmptyInstance() => create();
   static $pb.PbList<ArrayValue> createRepeated() => $pb.PbList<ArrayValue>();
   static ArrayValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -215,6 +224,7 @@ class Value extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
       package: const $pb.PackageName('google.datastore.v1'))
+    ..oo(0, [1, 2, 3, 5, 6, 8, 9, 10, 11, 17, 18])
     ..aOB(1, 'booleanValue')
     ..aInt64(2, 'integerValue')
     ..a<$core.double>(3, 'doubleValue', $pb.PbFieldType.OD)
@@ -233,21 +243,22 @@ class Value extends $pb.GeneratedMessage {
     ..aOS(17, 'stringValue')
     ..a<$core.List<$core.int>>(18, 'blobValue', $pb.PbFieldType.OY)
     ..aOB(19, 'excludeFromIndexes')
-    ..oo(0, [1, 2, 3, 5, 6, 8, 9, 10, 11, 17, 18])
     ..hasRequiredFields = false;
 
-  Value() : super();
-  Value.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Value.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Value._() : super();
+  factory Value() => create();
+  factory Value.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Value.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Value clone() => Value()..mergeFromMessage(this);
   Value copyWith(void Function(Value) updates) =>
       super.copyWith((message) => updates(message as Value));
   $pb.BuilderInfo get info_ => _i;
-  static Value create() => Value();
+  @$core.pragma('dart2js:noInline')
+  static Value create() => Value._();
   Value createEmptyInstance() => create();
   static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
   static Value getDefault() => _defaultInstance ??= create()..freeze();
@@ -377,18 +388,20 @@ class Entity extends $pb.GeneratedMessage {
         const $pb.PackageName('google.datastore.v1'))
     ..hasRequiredFields = false;
 
-  Entity() : super();
-  Entity.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Entity.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Entity._() : super();
+  factory Entity() => create();
+  factory Entity.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Entity.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Entity clone() => Entity()..mergeFromMessage(this);
   Entity copyWith(void Function(Entity) updates) =>
       super.copyWith((message) => updates(message as Entity));
   $pb.BuilderInfo get info_ => _i;
-  static Entity create() => Entity();
+  @$core.pragma('dart2js:noInline')
+  static Entity create() => Entity._();
   Entity createEmptyInstance() => create();
   static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
   static Entity getDefault() => _defaultInstance ??= create()..freeze();

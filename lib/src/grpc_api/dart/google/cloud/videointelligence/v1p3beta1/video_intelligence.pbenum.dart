@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/videointelligence/v1p3beta1/video_intelligence.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -100,6 +101,10 @@ class StreamingFeature extends $pb.ProtobufEnum {
       StreamingFeature._(3, 'STREAMING_EXPLICIT_CONTENT_DETECTION');
   static const StreamingFeature STREAMING_OBJECT_TRACKING =
       StreamingFeature._(4, 'STREAMING_OBJECT_TRACKING');
+  static const StreamingFeature STREAMING_AUTOML_CLASSIFICATION =
+      StreamingFeature._(21, 'STREAMING_AUTOML_CLASSIFICATION');
+  static const StreamingFeature STREAMING_AUTOML_OBJECT_TRACKING =
+      StreamingFeature._(22, 'STREAMING_AUTOML_OBJECT_TRACKING');
 
   static const $core.List<StreamingFeature> values = <StreamingFeature>[
     STREAMING_FEATURE_UNSPECIFIED,
@@ -107,6 +112,8 @@ class StreamingFeature extends $pb.ProtobufEnum {
     STREAMING_SHOT_CHANGE_DETECTION,
     STREAMING_EXPLICIT_CONTENT_DETECTION,
     STREAMING_OBJECT_TRACKING,
+    STREAMING_AUTOML_CLASSIFICATION,
+    STREAMING_AUTOML_OBJECT_TRACKING,
   ];
 
   static final $core.Map<$core.int, StreamingFeature> _byValue =

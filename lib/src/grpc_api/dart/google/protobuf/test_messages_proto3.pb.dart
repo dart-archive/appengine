@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/protobuf/test_messages_proto3.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -30,13 +31,14 @@ class TestAllTypesProto3_NestedMessage extends $pb.GeneratedMessage {
         TestAllTypesProto3.getDefault, TestAllTypesProto3.create)
     ..hasRequiredFields = false;
 
-  TestAllTypesProto3_NestedMessage() : super();
-  TestAllTypesProto3_NestedMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto3_NestedMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto3_NestedMessage._() : super();
+  factory TestAllTypesProto3_NestedMessage() => create();
+  factory TestAllTypesProto3_NestedMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto3_NestedMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto3_NestedMessage clone() =>
       TestAllTypesProto3_NestedMessage()..mergeFromMessage(this);
   TestAllTypesProto3_NestedMessage copyWith(
@@ -44,8 +46,9 @@ class TestAllTypesProto3_NestedMessage extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TestAllTypesProto3_NestedMessage));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TestAllTypesProto3_NestedMessage create() =>
-      TestAllTypesProto3_NestedMessage();
+      TestAllTypesProto3_NestedMessage._();
   TestAllTypesProto3_NestedMessage createEmptyInstance() => create();
   static $pb.PbList<TestAllTypesProto3_NestedMessage> createRepeated() =>
       $pb.PbList<TestAllTypesProto3_NestedMessage>();
@@ -99,6 +102,7 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestAllTypesProto3',
       package: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..oo(0, [111, 112, 113, 114, 115, 116, 117, 118, 119])
     ..a<$core.int>(1, 'optionalInt32', $pb.PbFieldType.O3)
     ..aInt64(2, 'optionalInt64')
     ..a<$core.int>(3, 'optionalUint32', $pb.PbFieldType.OU3)
@@ -276,21 +280,22 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
     ..a<$core.int>(416, 'fieldName16', $pb.PbFieldType.O3)
     ..a<$core.int>(417, 'fieldName17', $pb.PbFieldType.O3)
     ..a<$core.int>(418, 'fieldName18', $pb.PbFieldType.O3)
-    ..oo(0, [111, 112, 113, 114, 115, 116, 117, 118, 119])
     ..hasRequiredFields = false;
 
-  TestAllTypesProto3() : super();
-  TestAllTypesProto3.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAllTypesProto3.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAllTypesProto3._() : super();
+  factory TestAllTypesProto3() => create();
+  factory TestAllTypesProto3.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAllTypesProto3.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAllTypesProto3 clone() => TestAllTypesProto3()..mergeFromMessage(this);
   TestAllTypesProto3 copyWith(void Function(TestAllTypesProto3) updates) =>
       super.copyWith((message) => updates(message as TestAllTypesProto3));
   $pb.BuilderInfo get info_ => _i;
-  static TestAllTypesProto3 create() => TestAllTypesProto3();
+  @$core.pragma('dart2js:noInline')
+  static TestAllTypesProto3 create() => TestAllTypesProto3._();
   TestAllTypesProto3 createEmptyInstance() => create();
   static $pb.PbList<TestAllTypesProto3> createRepeated() =>
       $pb.PbList<TestAllTypesProto3>();
@@ -947,18 +952,20 @@ class ForeignMessage extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'c', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ForeignMessage() : super();
-  ForeignMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ForeignMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ForeignMessage._() : super();
+  factory ForeignMessage() => create();
+  factory ForeignMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ForeignMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ForeignMessage clone() => ForeignMessage()..mergeFromMessage(this);
   ForeignMessage copyWith(void Function(ForeignMessage) updates) =>
       super.copyWith((message) => updates(message as ForeignMessage));
   $pb.BuilderInfo get info_ => _i;
-  static ForeignMessage create() => ForeignMessage();
+  @$core.pragma('dart2js:noInline')
+  static ForeignMessage create() => ForeignMessage._();
   ForeignMessage createEmptyInstance() => create();
   static $pb.PbList<ForeignMessage> createRepeated() =>
       $pb.PbList<ForeignMessage>();

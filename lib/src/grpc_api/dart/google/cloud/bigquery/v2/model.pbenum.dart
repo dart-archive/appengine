@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/v2/model.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -16,12 +17,14 @@ class Model_ModelType extends $pb.ProtobufEnum {
   static const Model_ModelType LOGISTIC_REGRESSION =
       Model_ModelType._(2, 'LOGISTIC_REGRESSION');
   static const Model_ModelType KMEANS = Model_ModelType._(3, 'KMEANS');
+  static const Model_ModelType TENSORFLOW = Model_ModelType._(6, 'TENSORFLOW');
 
   static const $core.List<Model_ModelType> values = <Model_ModelType>[
     MODEL_TYPE_UNSPECIFIED,
     LINEAR_REGRESSION,
     LOGISTIC_REGRESSION,
     KMEANS,
+    TENSORFLOW,
   ];
 
   static final $core.Map<$core.int, Model_ModelType> _byValue =
@@ -123,4 +126,26 @@ class Model_LearnRateStrategy extends $pb.ProtobufEnum {
   static Model_LearnRateStrategy valueOf($core.int value) => _byValue[value];
 
   const Model_LearnRateStrategy._($core.int v, $core.String n) : super(v, n);
+}
+
+class Model_OptimizationStrategy extends $pb.ProtobufEnum {
+  static const Model_OptimizationStrategy OPTIMIZATION_STRATEGY_UNSPECIFIED =
+      Model_OptimizationStrategy._(0, 'OPTIMIZATION_STRATEGY_UNSPECIFIED');
+  static const Model_OptimizationStrategy BATCH_GRADIENT_DESCENT =
+      Model_OptimizationStrategy._(1, 'BATCH_GRADIENT_DESCENT');
+  static const Model_OptimizationStrategy NORMAL_EQUATION =
+      Model_OptimizationStrategy._(2, 'NORMAL_EQUATION');
+
+  static const $core.List<Model_OptimizationStrategy> values =
+      <Model_OptimizationStrategy>[
+    OPTIMIZATION_STRATEGY_UNSPECIFIED,
+    BATCH_GRADIENT_DESCENT,
+    NORMAL_EQUATION,
+  ];
+
+  static final $core.Map<$core.int, Model_OptimizationStrategy> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Model_OptimizationStrategy valueOf($core.int value) => _byValue[value];
+
+  const Model_OptimizationStrategy._($core.int v, $core.String n) : super(v, n);
 }

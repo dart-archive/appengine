@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/expanded_landing_page_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,20 +20,22 @@ class ExpandedLandingPageView extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ExpandedLandingPageView() : super();
-  ExpandedLandingPageView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExpandedLandingPageView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExpandedLandingPageView._() : super();
+  factory ExpandedLandingPageView() => create();
+  factory ExpandedLandingPageView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExpandedLandingPageView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExpandedLandingPageView clone() =>
       ExpandedLandingPageView()..mergeFromMessage(this);
   ExpandedLandingPageView copyWith(
           void Function(ExpandedLandingPageView) updates) =>
       super.copyWith((message) => updates(message as ExpandedLandingPageView));
   $pb.BuilderInfo get info_ => _i;
-  static ExpandedLandingPageView create() => ExpandedLandingPageView();
+  @$core.pragma('dart2js:noInline')
+  static ExpandedLandingPageView create() => ExpandedLandingPageView._();
   ExpandedLandingPageView createEmptyInstance() => create();
   static $pb.PbList<ExpandedLandingPageView> createRepeated() =>
       $pb.PbList<ExpandedLandingPageView>();

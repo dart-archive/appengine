@@ -1,14 +1,25 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/storage/v1beta1/storage.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const DataFormat$json = {
   '1': 'DataFormat',
   '2': [
     {'1': 'DATA_FORMAT_UNSPECIFIED', '2': 0},
     {'1': 'AVRO', '2': 1},
+    {'1': 'ARROW', '2': 3},
+  ],
+};
+
+const ShardingStrategy$json = {
+  '1': 'ShardingStrategy',
+  '2': [
+    {'1': 'SHARDING_STRATEGY_UNSPECIFIED', '2': 0},
+    {'1': 'LIQUID', '2': 1},
+    {'1': 'BALANCED', '2': 2},
   ],
 };
 
@@ -16,7 +27,6 @@ const Stream$json = {
   '1': 'Stream',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'row_count', '3': 2, '4': 1, '5': 3, '10': 'rowCount'},
   ],
 };
 
@@ -57,6 +67,15 @@ const ReadSession$json = {
       '10': 'avroSchema'
     },
     {
+      '1': 'arrow_schema',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.bigquery.storage.v1beta1.ArrowSchema',
+      '9': 0,
+      '10': 'arrowSchema'
+    },
+    {
       '1': 'streams',
       '3': 4,
       '4': 3,
@@ -79,6 +98,14 @@ const ReadSession$json = {
       '5': 11,
       '6': '.google.cloud.bigquery.storage.v1beta1.TableModifiers',
       '10': 'tableModifiers'
+    },
+    {
+      '1': 'sharding_strategy',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.bigquery.storage.v1beta1.ShardingStrategy',
+      '10': 'shardingStrategy'
     },
   ],
   '8': [
@@ -129,6 +156,14 @@ const CreateReadSessionRequest$json = {
       '6': '.google.cloud.bigquery.storage.v1beta1.DataFormat',
       '10': 'format'
     },
+    {
+      '1': 'sharding_strategy',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.bigquery.storage.v1beta1.ShardingStrategy',
+      '10': 'shardingStrategy'
+    },
   ],
 };
 
@@ -156,6 +191,14 @@ const StreamStatus$json = {
       '5': 3,
       '10': 'estimatedRowCount'
     },
+    {
+      '1': 'fraction_consumed',
+      '3': 2,
+      '4': 1,
+      '5': 2,
+      '10': 'fractionConsumed'
+    },
+    {'1': 'is_splittable', '3': 3, '4': 1, '5': 8, '10': 'isSplittable'},
   ],
 };
 
@@ -178,6 +221,16 @@ const ReadRowsResponse$json = {
       '9': 0,
       '10': 'avroRows'
     },
+    {
+      '1': 'arrow_record_batch',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.bigquery.storage.v1beta1.ArrowRecordBatch',
+      '9': 0,
+      '10': 'arrowRecordBatch'
+    },
+    {'1': 'row_count', '3': 6, '4': 1, '5': 3, '10': 'rowCount'},
     {
       '1': 'status',
       '3': 2,
@@ -260,6 +313,7 @@ const SplitReadStreamRequest$json = {
       '6': '.google.cloud.bigquery.storage.v1beta1.Stream',
       '10': 'originalStream'
     },
+    {'1': 'fraction', '3': 2, '4': 1, '5': 2, '10': 'fraction'},
   ],
 };
 

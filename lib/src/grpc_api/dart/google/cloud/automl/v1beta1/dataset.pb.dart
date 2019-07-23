@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/dataset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,6 +23,7 @@ enum Dataset_DatasetMetadata {
   textClassificationDatasetMetadata,
   imageObjectDetectionDatasetMetadata,
   textExtractionDatasetMetadata,
+  videoObjectTrackingDatasetMetadata,
   textSentimentDatasetMetadata,
   videoClassificationDatasetMetadata,
   tablesDatasetMetadata,
@@ -36,6 +38,7 @@ class Dataset extends $pb.GeneratedMessage {
     25: Dataset_DatasetMetadata.textClassificationDatasetMetadata,
     26: Dataset_DatasetMetadata.imageObjectDetectionDatasetMetadata,
     28: Dataset_DatasetMetadata.textExtractionDatasetMetadata,
+    29: Dataset_DatasetMetadata.videoObjectTrackingDatasetMetadata,
     30: Dataset_DatasetMetadata.textSentimentDatasetMetadata,
     31: Dataset_DatasetMetadata.videoClassificationDatasetMetadata,
     33: Dataset_DatasetMetadata.tablesDatasetMetadata,
@@ -43,6 +46,7 @@ class Dataset extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [23, 24, 25, 26, 28, 29, 30, 31, 33])
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
@@ -80,6 +84,12 @@ class Dataset extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $3.TextExtractionDatasetMetadata.getDefault,
         $3.TextExtractionDatasetMetadata.create)
+    ..a<$4.VideoObjectTrackingDatasetMetadata>(
+        29,
+        'videoObjectTrackingDatasetMetadata',
+        $pb.PbFieldType.OM,
+        $4.VideoObjectTrackingDatasetMetadata.getDefault,
+        $4.VideoObjectTrackingDatasetMetadata.create)
     ..a<$3.TextSentimentDatasetMetadata>(
         30,
         'textSentimentDatasetMetadata',
@@ -98,21 +108,22 @@ class Dataset extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $5.TablesDatasetMetadata.getDefault,
         $5.TablesDatasetMetadata.create)
-    ..oo(0, [23, 24, 25, 26, 28, 30, 31, 33])
     ..hasRequiredFields = false;
 
-  Dataset() : super();
-  Dataset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Dataset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Dataset._() : super();
+  factory Dataset() => create();
+  factory Dataset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Dataset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Dataset clone() => Dataset()..mergeFromMessage(this);
   Dataset copyWith(void Function(Dataset) updates) =>
       super.copyWith((message) => updates(message as Dataset));
   $pb.BuilderInfo get info_ => _i;
-  static Dataset create() => Dataset();
+  @$core.pragma('dart2js:noInline')
+  static Dataset create() => Dataset._();
   Dataset createEmptyInstance() => create();
   static $pb.PbList<Dataset> createRepeated() => $pb.PbList<Dataset>();
   static Dataset getDefault() => _defaultInstance ??= create()..freeze();
@@ -217,81 +228,40 @@ class Dataset extends $pb.GeneratedMessage {
   $core.bool hasTextExtractionDatasetMetadata() => $_has(10);
   void clearTextExtractionDatasetMetadata() => clearField(28);
 
+  $4.VideoObjectTrackingDatasetMetadata
+      get videoObjectTrackingDatasetMetadata => $_getN(11);
+  set videoObjectTrackingDatasetMetadata(
+      $4.VideoObjectTrackingDatasetMetadata v) {
+    setField(29, v);
+  }
+
+  $core.bool hasVideoObjectTrackingDatasetMetadata() => $_has(11);
+  void clearVideoObjectTrackingDatasetMetadata() => clearField(29);
+
   $3.TextSentimentDatasetMetadata get textSentimentDatasetMetadata =>
-      $_getN(11);
+      $_getN(12);
   set textSentimentDatasetMetadata($3.TextSentimentDatasetMetadata v) {
     setField(30, v);
   }
 
-  $core.bool hasTextSentimentDatasetMetadata() => $_has(11);
+  $core.bool hasTextSentimentDatasetMetadata() => $_has(12);
   void clearTextSentimentDatasetMetadata() => clearField(30);
 
   $4.VideoClassificationDatasetMetadata
-      get videoClassificationDatasetMetadata => $_getN(12);
+      get videoClassificationDatasetMetadata => $_getN(13);
   set videoClassificationDatasetMetadata(
       $4.VideoClassificationDatasetMetadata v) {
     setField(31, v);
   }
 
-  $core.bool hasVideoClassificationDatasetMetadata() => $_has(12);
+  $core.bool hasVideoClassificationDatasetMetadata() => $_has(13);
   void clearVideoClassificationDatasetMetadata() => clearField(31);
 
-  $5.TablesDatasetMetadata get tablesDatasetMetadata => $_getN(13);
+  $5.TablesDatasetMetadata get tablesDatasetMetadata => $_getN(14);
   set tablesDatasetMetadata($5.TablesDatasetMetadata v) {
     setField(33, v);
   }
 
-  $core.bool hasTablesDatasetMetadata() => $_has(13);
+  $core.bool hasTablesDatasetMetadata() => $_has(14);
   void clearTablesDatasetMetadata() => clearField(33);
-}
-
-class AnnotationSpec extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotationSpec',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..aOS(1, 'name')
-    ..aOS(2, 'displayName')
-    ..a<$core.int>(9, 'exampleCount', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  AnnotationSpec() : super();
-  AnnotationSpec.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotationSpec.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  AnnotationSpec clone() => AnnotationSpec()..mergeFromMessage(this);
-  AnnotationSpec copyWith(void Function(AnnotationSpec) updates) =>
-      super.copyWith((message) => updates(message as AnnotationSpec));
-  $pb.BuilderInfo get info_ => _i;
-  static AnnotationSpec create() => AnnotationSpec();
-  AnnotationSpec createEmptyInstance() => create();
-  static $pb.PbList<AnnotationSpec> createRepeated() =>
-      $pb.PbList<AnnotationSpec>();
-  static AnnotationSpec getDefault() => _defaultInstance ??= create()..freeze();
-  static AnnotationSpec _defaultInstance;
-
-  $core.String get name => $_getS(0, '');
-  set name($core.String v) {
-    $_setString(0, v);
-  }
-
-  $core.bool hasName() => $_has(0);
-  void clearName() => clearField(1);
-
-  $core.String get displayName => $_getS(1, '');
-  set displayName($core.String v) {
-    $_setString(1, v);
-  }
-
-  $core.bool hasDisplayName() => $_has(1);
-  void clearDisplayName() => clearField(2);
-
-  $core.int get exampleCount => $_get(2, 0);
-  set exampleCount($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
-  $core.bool hasExampleCount() => $_has(2);
-  void clearExampleCount() => clearField(9);
 }

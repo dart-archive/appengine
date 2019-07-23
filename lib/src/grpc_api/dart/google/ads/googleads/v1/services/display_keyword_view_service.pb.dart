@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/display_keyword_view_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,13 +17,14 @@ class GetDisplayKeywordViewRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetDisplayKeywordViewRequest() : super();
-  GetDisplayKeywordViewRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDisplayKeywordViewRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDisplayKeywordViewRequest._() : super();
+  factory GetDisplayKeywordViewRequest() => create();
+  factory GetDisplayKeywordViewRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDisplayKeywordViewRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDisplayKeywordViewRequest clone() =>
       GetDisplayKeywordViewRequest()..mergeFromMessage(this);
   GetDisplayKeywordViewRequest copyWith(
@@ -30,8 +32,9 @@ class GetDisplayKeywordViewRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetDisplayKeywordViewRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetDisplayKeywordViewRequest create() =>
-      GetDisplayKeywordViewRequest();
+      GetDisplayKeywordViewRequest._();
   GetDisplayKeywordViewRequest createEmptyInstance() => create();
   static $pb.PbList<GetDisplayKeywordViewRequest> createRepeated() =>
       $pb.PbList<GetDisplayKeywordViewRequest>();

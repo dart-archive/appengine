@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2/cloudtasks.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'queue.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $5;
-import 'task.pb.dart' as $4;
+import 'queue.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $6;
+import 'task.pb.dart' as $5;
 
-import 'task.pbenum.dart' as $4;
+import 'task.pbenum.dart' as $5;
 
 class ListQueuesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListQueuesRequest',
@@ -24,18 +25,20 @@ class ListQueuesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListQueuesRequest() : super();
-  ListQueuesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListQueuesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListQueuesRequest._() : super();
+  factory ListQueuesRequest() => create();
+  factory ListQueuesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListQueuesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListQueuesRequest clone() => ListQueuesRequest()..mergeFromMessage(this);
   ListQueuesRequest copyWith(void Function(ListQueuesRequest) updates) =>
       super.copyWith((message) => updates(message as ListQueuesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListQueuesRequest create() => ListQueuesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListQueuesRequest create() => ListQueuesRequest._();
   ListQueuesRequest createEmptyInstance() => create();
   static $pb.PbList<ListQueuesRequest> createRepeated() =>
       $pb.PbList<ListQueuesRequest>();
@@ -79,22 +82,24 @@ class ListQueuesRequest extends $pb.GeneratedMessage {
 class ListQueuesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListQueuesResponse',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
-    ..pc<$1.Queue>(1, 'queues', $pb.PbFieldType.PM, $1.Queue.create)
+    ..pc<$3.Queue>(1, 'queues', $pb.PbFieldType.PM, $3.Queue.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListQueuesResponse() : super();
-  ListQueuesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListQueuesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListQueuesResponse._() : super();
+  factory ListQueuesResponse() => create();
+  factory ListQueuesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListQueuesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListQueuesResponse clone() => ListQueuesResponse()..mergeFromMessage(this);
   ListQueuesResponse copyWith(void Function(ListQueuesResponse) updates) =>
       super.copyWith((message) => updates(message as ListQueuesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListQueuesResponse create() => ListQueuesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListQueuesResponse create() => ListQueuesResponse._();
   ListQueuesResponse createEmptyInstance() => create();
   static $pb.PbList<ListQueuesResponse> createRepeated() =>
       $pb.PbList<ListQueuesResponse>();
@@ -102,7 +107,7 @@ class ListQueuesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListQueuesResponse _defaultInstance;
 
-  $core.List<$1.Queue> get queues => $_getList(0);
+  $core.List<$3.Queue> get queues => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -119,18 +124,20 @@ class GetQueueRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetQueueRequest() : super();
-  GetQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetQueueRequest._() : super();
+  factory GetQueueRequest() => create();
+  factory GetQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetQueueRequest clone() => GetQueueRequest()..mergeFromMessage(this);
   GetQueueRequest copyWith(void Function(GetQueueRequest) updates) =>
       super.copyWith((message) => updates(message as GetQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetQueueRequest create() => GetQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetQueueRequest create() => GetQueueRequest._();
   GetQueueRequest createEmptyInstance() => create();
   static $pb.PbList<GetQueueRequest> createRepeated() =>
       $pb.PbList<GetQueueRequest>();
@@ -151,22 +158,24 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateQueueRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
     ..aOS(1, 'parent')
-    ..a<$1.Queue>(
-        2, 'queue', $pb.PbFieldType.OM, $1.Queue.getDefault, $1.Queue.create)
+    ..a<$3.Queue>(
+        2, 'queue', $pb.PbFieldType.OM, $3.Queue.getDefault, $3.Queue.create)
     ..hasRequiredFields = false;
 
-  CreateQueueRequest() : super();
-  CreateQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateQueueRequest._() : super();
+  factory CreateQueueRequest() => create();
+  factory CreateQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateQueueRequest clone() => CreateQueueRequest()..mergeFromMessage(this);
   CreateQueueRequest copyWith(void Function(CreateQueueRequest) updates) =>
       super.copyWith((message) => updates(message as CreateQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateQueueRequest create() => CreateQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateQueueRequest create() => CreateQueueRequest._();
   CreateQueueRequest createEmptyInstance() => create();
   static $pb.PbList<CreateQueueRequest> createRepeated() =>
       $pb.PbList<CreateQueueRequest>();
@@ -182,8 +191,8 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $1.Queue get queue => $_getN(1);
-  set queue($1.Queue v) {
+  $3.Queue get queue => $_getN(1);
+  set queue($3.Queue v) {
     setField(2, v);
   }
 
@@ -194,24 +203,26 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
 class UpdateQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateQueueRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
-    ..a<$1.Queue>(
-        1, 'queue', $pb.PbFieldType.OM, $1.Queue.getDefault, $1.Queue.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..a<$3.Queue>(
+        1, 'queue', $pb.PbFieldType.OM, $3.Queue.getDefault, $3.Queue.create)
+    ..a<$6.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $6.FieldMask.getDefault, $6.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateQueueRequest() : super();
-  UpdateQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateQueueRequest._() : super();
+  factory UpdateQueueRequest() => create();
+  factory UpdateQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateQueueRequest clone() => UpdateQueueRequest()..mergeFromMessage(this);
   UpdateQueueRequest copyWith(void Function(UpdateQueueRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateQueueRequest create() => UpdateQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateQueueRequest create() => UpdateQueueRequest._();
   UpdateQueueRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateQueueRequest> createRepeated() =>
       $pb.PbList<UpdateQueueRequest>();
@@ -219,16 +230,16 @@ class UpdateQueueRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateQueueRequest _defaultInstance;
 
-  $1.Queue get queue => $_getN(0);
-  set queue($1.Queue v) {
+  $3.Queue get queue => $_getN(0);
+  set queue($3.Queue v) {
     setField(1, v);
   }
 
   $core.bool hasQueue() => $_has(0);
   void clearQueue() => clearField(1);
 
-  $5.FieldMask get updateMask => $_getN(1);
-  set updateMask($5.FieldMask v) {
+  $6.FieldMask get updateMask => $_getN(1);
+  set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
@@ -242,18 +253,20 @@ class DeleteQueueRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteQueueRequest() : super();
-  DeleteQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteQueueRequest._() : super();
+  factory DeleteQueueRequest() => create();
+  factory DeleteQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteQueueRequest clone() => DeleteQueueRequest()..mergeFromMessage(this);
   DeleteQueueRequest copyWith(void Function(DeleteQueueRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteQueueRequest create() => DeleteQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteQueueRequest create() => DeleteQueueRequest._();
   DeleteQueueRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteQueueRequest> createRepeated() =>
       $pb.PbList<DeleteQueueRequest>();
@@ -276,18 +289,20 @@ class PurgeQueueRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  PurgeQueueRequest() : super();
-  PurgeQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PurgeQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PurgeQueueRequest._() : super();
+  factory PurgeQueueRequest() => create();
+  factory PurgeQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PurgeQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PurgeQueueRequest clone() => PurgeQueueRequest()..mergeFromMessage(this);
   PurgeQueueRequest copyWith(void Function(PurgeQueueRequest) updates) =>
       super.copyWith((message) => updates(message as PurgeQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PurgeQueueRequest create() => PurgeQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static PurgeQueueRequest create() => PurgeQueueRequest._();
   PurgeQueueRequest createEmptyInstance() => create();
   static $pb.PbList<PurgeQueueRequest> createRepeated() =>
       $pb.PbList<PurgeQueueRequest>();
@@ -310,18 +325,20 @@ class PauseQueueRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  PauseQueueRequest() : super();
-  PauseQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PauseQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PauseQueueRequest._() : super();
+  factory PauseQueueRequest() => create();
+  factory PauseQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PauseQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PauseQueueRequest clone() => PauseQueueRequest()..mergeFromMessage(this);
   PauseQueueRequest copyWith(void Function(PauseQueueRequest) updates) =>
       super.copyWith((message) => updates(message as PauseQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PauseQueueRequest create() => PauseQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static PauseQueueRequest create() => PauseQueueRequest._();
   PauseQueueRequest createEmptyInstance() => create();
   static $pb.PbList<PauseQueueRequest> createRepeated() =>
       $pb.PbList<PauseQueueRequest>();
@@ -344,18 +361,20 @@ class ResumeQueueRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  ResumeQueueRequest() : super();
-  ResumeQueueRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResumeQueueRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResumeQueueRequest._() : super();
+  factory ResumeQueueRequest() => create();
+  factory ResumeQueueRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResumeQueueRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResumeQueueRequest clone() => ResumeQueueRequest()..mergeFromMessage(this);
   ResumeQueueRequest copyWith(void Function(ResumeQueueRequest) updates) =>
       super.copyWith((message) => updates(message as ResumeQueueRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ResumeQueueRequest create() => ResumeQueueRequest();
+  @$core.pragma('dart2js:noInline')
+  static ResumeQueueRequest create() => ResumeQueueRequest._();
   ResumeQueueRequest createEmptyInstance() => create();
   static $pb.PbList<ResumeQueueRequest> createRepeated() =>
       $pb.PbList<ResumeQueueRequest>();
@@ -376,29 +395,31 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTasksRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
     ..aOS(1, 'parent')
-    ..e<$4.Task_View>(
+    ..e<$5.Task_View>(
         2,
         'responseView',
         $pb.PbFieldType.OE,
-        $4.Task_View.VIEW_UNSPECIFIED,
-        $4.Task_View.valueOf,
-        $4.Task_View.values)
+        $5.Task_View.VIEW_UNSPECIFIED,
+        $5.Task_View.valueOf,
+        $5.Task_View.values)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListTasksRequest() : super();
-  ListTasksRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTasksRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTasksRequest._() : super();
+  factory ListTasksRequest() => create();
+  factory ListTasksRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTasksRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTasksRequest clone() => ListTasksRequest()..mergeFromMessage(this);
   ListTasksRequest copyWith(void Function(ListTasksRequest) updates) =>
       super.copyWith((message) => updates(message as ListTasksRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListTasksRequest create() => ListTasksRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListTasksRequest create() => ListTasksRequest._();
   ListTasksRequest createEmptyInstance() => create();
   static $pb.PbList<ListTasksRequest> createRepeated() =>
       $pb.PbList<ListTasksRequest>();
@@ -414,8 +435,8 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $4.Task_View get responseView => $_getN(1);
-  set responseView($4.Task_View v) {
+  $5.Task_View get responseView => $_getN(1);
+  set responseView($5.Task_View v) {
     setField(2, v);
   }
 
@@ -442,22 +463,24 @@ class ListTasksRequest extends $pb.GeneratedMessage {
 class ListTasksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTasksResponse',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
-    ..pc<$4.Task>(1, 'tasks', $pb.PbFieldType.PM, $4.Task.create)
+    ..pc<$5.Task>(1, 'tasks', $pb.PbFieldType.PM, $5.Task.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListTasksResponse() : super();
-  ListTasksResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTasksResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTasksResponse._() : super();
+  factory ListTasksResponse() => create();
+  factory ListTasksResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTasksResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTasksResponse clone() => ListTasksResponse()..mergeFromMessage(this);
   ListTasksResponse copyWith(void Function(ListTasksResponse) updates) =>
       super.copyWith((message) => updates(message as ListTasksResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListTasksResponse create() => ListTasksResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListTasksResponse create() => ListTasksResponse._();
   ListTasksResponse createEmptyInstance() => create();
   static $pb.PbList<ListTasksResponse> createRepeated() =>
       $pb.PbList<ListTasksResponse>();
@@ -465,7 +488,7 @@ class ListTasksResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTasksResponse _defaultInstance;
 
-  $core.List<$4.Task> get tasks => $_getList(0);
+  $core.List<$5.Task> get tasks => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -480,27 +503,29 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
     ..aOS(1, 'name')
-    ..e<$4.Task_View>(
+    ..e<$5.Task_View>(
         2,
         'responseView',
         $pb.PbFieldType.OE,
-        $4.Task_View.VIEW_UNSPECIFIED,
-        $4.Task_View.valueOf,
-        $4.Task_View.values)
+        $5.Task_View.VIEW_UNSPECIFIED,
+        $5.Task_View.valueOf,
+        $5.Task_View.values)
     ..hasRequiredFields = false;
 
-  GetTaskRequest() : super();
-  GetTaskRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTaskRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTaskRequest._() : super();
+  factory GetTaskRequest() => create();
+  factory GetTaskRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTaskRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTaskRequest clone() => GetTaskRequest()..mergeFromMessage(this);
   GetTaskRequest copyWith(void Function(GetTaskRequest) updates) =>
       super.copyWith((message) => updates(message as GetTaskRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTaskRequest create() => GetTaskRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTaskRequest create() => GetTaskRequest._();
   GetTaskRequest createEmptyInstance() => create();
   static $pb.PbList<GetTaskRequest> createRepeated() =>
       $pb.PbList<GetTaskRequest>();
@@ -515,8 +540,8 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $4.Task_View get responseView => $_getN(1);
-  set responseView($4.Task_View v) {
+  $5.Task_View get responseView => $_getN(1);
+  set responseView($5.Task_View v) {
     setField(2, v);
   }
 
@@ -528,29 +553,31 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
     ..aOS(1, 'parent')
-    ..a<$4.Task>(
-        2, 'task', $pb.PbFieldType.OM, $4.Task.getDefault, $4.Task.create)
-    ..e<$4.Task_View>(
+    ..a<$5.Task>(
+        2, 'task', $pb.PbFieldType.OM, $5.Task.getDefault, $5.Task.create)
+    ..e<$5.Task_View>(
         3,
         'responseView',
         $pb.PbFieldType.OE,
-        $4.Task_View.VIEW_UNSPECIFIED,
-        $4.Task_View.valueOf,
-        $4.Task_View.values)
+        $5.Task_View.VIEW_UNSPECIFIED,
+        $5.Task_View.valueOf,
+        $5.Task_View.values)
     ..hasRequiredFields = false;
 
-  CreateTaskRequest() : super();
-  CreateTaskRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateTaskRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateTaskRequest._() : super();
+  factory CreateTaskRequest() => create();
+  factory CreateTaskRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateTaskRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateTaskRequest clone() => CreateTaskRequest()..mergeFromMessage(this);
   CreateTaskRequest copyWith(void Function(CreateTaskRequest) updates) =>
       super.copyWith((message) => updates(message as CreateTaskRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateTaskRequest create() => CreateTaskRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateTaskRequest create() => CreateTaskRequest._();
   CreateTaskRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTaskRequest> createRepeated() =>
       $pb.PbList<CreateTaskRequest>();
@@ -566,16 +593,16 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $4.Task get task => $_getN(1);
-  set task($4.Task v) {
+  $5.Task get task => $_getN(1);
+  set task($5.Task v) {
     setField(2, v);
   }
 
   $core.bool hasTask() => $_has(1);
   void clearTask() => clearField(2);
 
-  $4.Task_View get responseView => $_getN(2);
-  set responseView($4.Task_View v) {
+  $5.Task_View get responseView => $_getN(2);
+  set responseView($5.Task_View v) {
     setField(3, v);
   }
 
@@ -589,18 +616,20 @@ class DeleteTaskRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteTaskRequest() : super();
-  DeleteTaskRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteTaskRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteTaskRequest._() : super();
+  factory DeleteTaskRequest() => create();
+  factory DeleteTaskRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteTaskRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteTaskRequest clone() => DeleteTaskRequest()..mergeFromMessage(this);
   DeleteTaskRequest copyWith(void Function(DeleteTaskRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteTaskRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteTaskRequest create() => DeleteTaskRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTaskRequest create() => DeleteTaskRequest._();
   DeleteTaskRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTaskRequest> createRepeated() =>
       $pb.PbList<DeleteTaskRequest>();
@@ -621,27 +650,29 @@ class RunTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunTaskRequest',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
     ..aOS(1, 'name')
-    ..e<$4.Task_View>(
+    ..e<$5.Task_View>(
         2,
         'responseView',
         $pb.PbFieldType.OE,
-        $4.Task_View.VIEW_UNSPECIFIED,
-        $4.Task_View.valueOf,
-        $4.Task_View.values)
+        $5.Task_View.VIEW_UNSPECIFIED,
+        $5.Task_View.valueOf,
+        $5.Task_View.values)
     ..hasRequiredFields = false;
 
-  RunTaskRequest() : super();
-  RunTaskRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunTaskRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunTaskRequest._() : super();
+  factory RunTaskRequest() => create();
+  factory RunTaskRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunTaskRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunTaskRequest clone() => RunTaskRequest()..mergeFromMessage(this);
   RunTaskRequest copyWith(void Function(RunTaskRequest) updates) =>
       super.copyWith((message) => updates(message as RunTaskRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RunTaskRequest create() => RunTaskRequest();
+  @$core.pragma('dart2js:noInline')
+  static RunTaskRequest create() => RunTaskRequest._();
   RunTaskRequest createEmptyInstance() => create();
   static $pb.PbList<RunTaskRequest> createRepeated() =>
       $pb.PbList<RunTaskRequest>();
@@ -656,8 +687,8 @@ class RunTaskRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $4.Task_View get responseView => $_getN(1);
-  set responseView($4.Task_View v) {
+  $5.Task_View get responseView => $_getN(1);
+  set responseView($5.Task_View v) {
     setField(2, v);
   }
 

@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/recaptchaenterprise/v1beta1/recaptchaenterprise.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/timestamp.pb.dart' as $1;
 
 import 'recaptchaenterprise.pbenum.dart';
 
@@ -24,20 +25,22 @@ class CreateAssessmentRequest extends $pb.GeneratedMessage {
         Assessment.create)
     ..hasRequiredFields = false;
 
-  CreateAssessmentRequest() : super();
-  CreateAssessmentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAssessmentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateAssessmentRequest._() : super();
+  factory CreateAssessmentRequest() => create();
+  factory CreateAssessmentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAssessmentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateAssessmentRequest clone() =>
       CreateAssessmentRequest()..mergeFromMessage(this);
   CreateAssessmentRequest copyWith(
           void Function(CreateAssessmentRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAssessmentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateAssessmentRequest create() => CreateAssessmentRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateAssessmentRequest create() => CreateAssessmentRequest._();
   CreateAssessmentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAssessmentRequest> createRepeated() =>
       $pb.PbList<CreateAssessmentRequest>();
@@ -76,13 +79,14 @@ class AnnotateAssessmentRequest extends $pb.GeneratedMessage {
         AnnotateAssessmentRequest_Annotation.values)
     ..hasRequiredFields = false;
 
-  AnnotateAssessmentRequest() : super();
-  AnnotateAssessmentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateAssessmentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotateAssessmentRequest._() : super();
+  factory AnnotateAssessmentRequest() => create();
+  factory AnnotateAssessmentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotateAssessmentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotateAssessmentRequest clone() =>
       AnnotateAssessmentRequest()..mergeFromMessage(this);
   AnnotateAssessmentRequest copyWith(
@@ -90,7 +94,8 @@ class AnnotateAssessmentRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as AnnotateAssessmentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotateAssessmentRequest create() => AnnotateAssessmentRequest();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateAssessmentRequest create() => AnnotateAssessmentRequest._();
   AnnotateAssessmentRequest createEmptyInstance() => create();
   static $pb.PbList<AnnotateAssessmentRequest> createRepeated() =>
       $pb.PbList<AnnotateAssessmentRequest>();
@@ -122,13 +127,14 @@ class AnnotateAssessmentResponse extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.recaptchaenterprise.v1beta1'))
     ..hasRequiredFields = false;
 
-  AnnotateAssessmentResponse() : super();
-  AnnotateAssessmentResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateAssessmentResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotateAssessmentResponse._() : super();
+  factory AnnotateAssessmentResponse() => create();
+  factory AnnotateAssessmentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotateAssessmentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotateAssessmentResponse clone() =>
       AnnotateAssessmentResponse()..mergeFromMessage(this);
   AnnotateAssessmentResponse copyWith(
@@ -136,7 +142,8 @@ class AnnotateAssessmentResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AnnotateAssessmentResponse));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotateAssessmentResponse create() => AnnotateAssessmentResponse();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateAssessmentResponse create() => AnnotateAssessmentResponse._();
   AnnotateAssessmentResponse createEmptyInstance() => create();
   static $pb.PbList<AnnotateAssessmentResponse> createRepeated() =>
       $pb.PbList<AnnotateAssessmentResponse>();
@@ -163,18 +170,20 @@ class Assessment extends $pb.GeneratedMessage {
         Assessment_ClassificationReason.values)
     ..hasRequiredFields = false;
 
-  Assessment() : super();
-  Assessment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Assessment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Assessment._() : super();
+  factory Assessment() => create();
+  factory Assessment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Assessment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Assessment clone() => Assessment()..mergeFromMessage(this);
   Assessment copyWith(void Function(Assessment) updates) =>
       super.copyWith((message) => updates(message as Assessment));
   $pb.BuilderInfo get info_ => _i;
-  static Assessment create() => Assessment();
+  @$core.pragma('dart2js:noInline')
+  static Assessment create() => Assessment._();
   Assessment createEmptyInstance() => create();
   static $pb.PbList<Assessment> createRepeated() => $pb.PbList<Assessment>();
   static Assessment getDefault() => _defaultInstance ??= create()..freeze();
@@ -223,18 +232,20 @@ class Event extends $pb.GeneratedMessage {
     ..aOS(2, 'siteKey')
     ..hasRequiredFields = false;
 
-  Event() : super();
-  Event.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Event.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Event._() : super();
+  factory Event() => create();
+  factory Event.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Event.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Event clone() => Event()..mergeFromMessage(this);
   Event copyWith(void Function(Event) updates) =>
       super.copyWith((message) => updates(message as Event));
   $pb.BuilderInfo get info_ => _i;
-  static Event create() => Event();
+  @$core.pragma('dart2js:noInline')
+  static Event create() => Event._();
   Event createEmptyInstance() => create();
   static $pb.PbList<Event> createRepeated() => $pb.PbList<Event>();
   static Event getDefault() => _defaultInstance ??= create()..freeze();
@@ -269,24 +280,26 @@ class TokenProperties extends $pb.GeneratedMessage {
         TokenProperties_InvalidReason.INVALID_REASON_UNSPECIFIED,
         TokenProperties_InvalidReason.valueOf,
         TokenProperties_InvalidReason.values)
-    ..a<$0.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..aOS(4, 'hostname')
     ..aOS(5, 'action')
     ..hasRequiredFields = false;
 
-  TokenProperties() : super();
-  TokenProperties.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TokenProperties.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TokenProperties._() : super();
+  factory TokenProperties() => create();
+  factory TokenProperties.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TokenProperties.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TokenProperties clone() => TokenProperties()..mergeFromMessage(this);
   TokenProperties copyWith(void Function(TokenProperties) updates) =>
       super.copyWith((message) => updates(message as TokenProperties));
   $pb.BuilderInfo get info_ => _i;
-  static TokenProperties create() => TokenProperties();
+  @$core.pragma('dart2js:noInline')
+  static TokenProperties create() => TokenProperties._();
   TokenProperties createEmptyInstance() => create();
   static $pb.PbList<TokenProperties> createRepeated() =>
       $pb.PbList<TokenProperties>();
@@ -310,8 +323,8 @@ class TokenProperties extends $pb.GeneratedMessage {
   $core.bool hasInvalidReason() => $_has(1);
   void clearInvalidReason() => clearField(2);
 
-  $0.Timestamp get createTime => $_getN(2);
-  set createTime($0.Timestamp v) {
+  $1.Timestamp get createTime => $_getN(2);
+  set createTime($1.Timestamp v) {
     setField(3, v);
   }
 

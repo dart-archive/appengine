@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/product_condition.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,19 +17,21 @@ class ProductConditionEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  ProductConditionEnum() : super();
-  ProductConditionEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProductConditionEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProductConditionEnum._() : super();
+  factory ProductConditionEnum() => create();
+  factory ProductConditionEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProductConditionEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProductConditionEnum clone() =>
       ProductConditionEnum()..mergeFromMessage(this);
   ProductConditionEnum copyWith(void Function(ProductConditionEnum) updates) =>
       super.copyWith((message) => updates(message as ProductConditionEnum));
   $pb.BuilderInfo get info_ => _i;
-  static ProductConditionEnum create() => ProductConditionEnum();
+  @$core.pragma('dart2js:noInline')
+  static ProductConditionEnum create() => ProductConditionEnum._();
   ProductConditionEnum createEmptyInstance() => create();
   static $pb.PbList<ProductConditionEnum> createRepeated() =>
       $pb.PbList<ProductConditionEnum>();

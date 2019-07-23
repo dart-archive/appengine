@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/ml/v1/job_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../protobuf/timestamp.pb.dart' as $2;
 
 import 'job_service.pbenum.dart';
 
@@ -41,18 +42,20 @@ class TrainingInput extends $pb.GeneratedMessage {
     ..aOS(16, 'jobDir')
     ..hasRequiredFields = false;
 
-  TrainingInput() : super();
-  TrainingInput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TrainingInput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TrainingInput._() : super();
+  factory TrainingInput() => create();
+  factory TrainingInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TrainingInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TrainingInput clone() => TrainingInput()..mergeFromMessage(this);
   TrainingInput copyWith(void Function(TrainingInput) updates) =>
       super.copyWith((message) => updates(message as TrainingInput));
   $pb.BuilderInfo get info_ => _i;
-  static TrainingInput create() => TrainingInput();
+  @$core.pragma('dart2js:noInline')
+  static TrainingInput create() => TrainingInput._();
   TrainingInput createEmptyInstance() => create();
   static $pb.PbList<TrainingInput> createRepeated() =>
       $pb.PbList<TrainingInput>();
@@ -168,18 +171,20 @@ class HyperparameterSpec extends $pb.GeneratedMessage {
     ..aOS(5, 'hyperparameterMetricTag')
     ..hasRequiredFields = false;
 
-  HyperparameterSpec() : super();
-  HyperparameterSpec.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HyperparameterSpec.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HyperparameterSpec._() : super();
+  factory HyperparameterSpec() => create();
+  factory HyperparameterSpec.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HyperparameterSpec.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HyperparameterSpec clone() => HyperparameterSpec()..mergeFromMessage(this);
   HyperparameterSpec copyWith(void Function(HyperparameterSpec) updates) =>
       super.copyWith((message) => updates(message as HyperparameterSpec));
   $pb.BuilderInfo get info_ => _i;
-  static HyperparameterSpec create() => HyperparameterSpec();
+  @$core.pragma('dart2js:noInline')
+  static HyperparameterSpec create() => HyperparameterSpec._();
   HyperparameterSpec createEmptyInstance() => create();
   static $pb.PbList<HyperparameterSpec> createRepeated() =>
       $pb.PbList<HyperparameterSpec>();
@@ -246,18 +251,20 @@ class ParameterSpec extends $pb.GeneratedMessage {
         ParameterSpec_ScaleType.values)
     ..hasRequiredFields = false;
 
-  ParameterSpec() : super();
-  ParameterSpec.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ParameterSpec.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ParameterSpec._() : super();
+  factory ParameterSpec() => create();
+  factory ParameterSpec.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ParameterSpec.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ParameterSpec clone() => ParameterSpec()..mergeFromMessage(this);
   ParameterSpec copyWith(void Function(ParameterSpec) updates) =>
       super.copyWith((message) => updates(message as ParameterSpec));
   $pb.BuilderInfo get info_ => _i;
-  static ParameterSpec create() => ParameterSpec();
+  @$core.pragma('dart2js:noInline')
+  static ParameterSpec create() => ParameterSpec._();
   ParameterSpec createEmptyInstance() => create();
   static $pb.PbList<ParameterSpec> createRepeated() =>
       $pb.PbList<ParameterSpec>();
@@ -317,13 +324,15 @@ class HyperparameterOutput_HyperparameterMetric extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'objectiveValue', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  HyperparameterOutput_HyperparameterMetric() : super();
-  HyperparameterOutput_HyperparameterMetric.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HyperparameterOutput_HyperparameterMetric.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HyperparameterOutput_HyperparameterMetric._() : super();
+  factory HyperparameterOutput_HyperparameterMetric() => create();
+  factory HyperparameterOutput_HyperparameterMetric.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HyperparameterOutput_HyperparameterMetric.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HyperparameterOutput_HyperparameterMetric clone() =>
       HyperparameterOutput_HyperparameterMetric()..mergeFromMessage(this);
   HyperparameterOutput_HyperparameterMetric copyWith(
@@ -331,8 +340,9 @@ class HyperparameterOutput_HyperparameterMetric extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as HyperparameterOutput_HyperparameterMetric));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static HyperparameterOutput_HyperparameterMetric create() =>
-      HyperparameterOutput_HyperparameterMetric();
+      HyperparameterOutput_HyperparameterMetric._();
   HyperparameterOutput_HyperparameterMetric createEmptyInstance() => create();
   static $pb.PbList<HyperparameterOutput_HyperparameterMetric>
       createRepeated() =>
@@ -382,19 +392,21 @@ class HyperparameterOutput extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, HyperparameterOutput_HyperparameterMetric.create)
     ..hasRequiredFields = false;
 
-  HyperparameterOutput() : super();
-  HyperparameterOutput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HyperparameterOutput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HyperparameterOutput._() : super();
+  factory HyperparameterOutput() => create();
+  factory HyperparameterOutput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HyperparameterOutput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HyperparameterOutput clone() =>
       HyperparameterOutput()..mergeFromMessage(this);
   HyperparameterOutput copyWith(void Function(HyperparameterOutput) updates) =>
       super.copyWith((message) => updates(message as HyperparameterOutput));
   $pb.BuilderInfo get info_ => _i;
-  static HyperparameterOutput create() => HyperparameterOutput();
+  @$core.pragma('dart2js:noInline')
+  static HyperparameterOutput create() => HyperparameterOutput._();
   HyperparameterOutput createEmptyInstance() => create();
   static $pb.PbList<HyperparameterOutput> createRepeated() =>
       $pb.PbList<HyperparameterOutput>();
@@ -434,18 +446,20 @@ class TrainingOutput extends $pb.GeneratedMessage {
     ..aOB(4, 'isHyperparameterTuningJob')
     ..hasRequiredFields = false;
 
-  TrainingOutput() : super();
-  TrainingOutput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TrainingOutput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TrainingOutput._() : super();
+  factory TrainingOutput() => create();
+  factory TrainingOutput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TrainingOutput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TrainingOutput clone() => TrainingOutput()..mergeFromMessage(this);
   TrainingOutput copyWith(void Function(TrainingOutput) updates) =>
       super.copyWith((message) => updates(message as TrainingOutput));
   $pb.BuilderInfo get info_ => _i;
-  static TrainingOutput create() => TrainingOutput();
+  @$core.pragma('dart2js:noInline')
+  static TrainingOutput create() => TrainingOutput._();
   TrainingOutput createEmptyInstance() => create();
   static $pb.PbList<TrainingOutput> createRepeated() =>
       $pb.PbList<TrainingOutput>();
@@ -491,6 +505,7 @@ class PredictionInput extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PredictionInput',
       package: const $pb.PackageName('google.cloud.ml.v1'))
+    ..oo(0, [1, 2, 9])
     ..aOS(1, 'modelName')
     ..aOS(2, 'versionName')
     ..e<PredictionInput_DataFormat>(
@@ -506,21 +521,22 @@ class PredictionInput extends $pb.GeneratedMessage {
     ..aOS(7, 'region')
     ..aOS(8, 'runtimeVersion')
     ..aOS(9, 'uri')
-    ..oo(0, [1, 2, 9])
     ..hasRequiredFields = false;
 
-  PredictionInput() : super();
-  PredictionInput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PredictionInput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PredictionInput._() : super();
+  factory PredictionInput() => create();
+  factory PredictionInput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PredictionInput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PredictionInput clone() => PredictionInput()..mergeFromMessage(this);
   PredictionInput copyWith(void Function(PredictionInput) updates) =>
       super.copyWith((message) => updates(message as PredictionInput));
   $pb.BuilderInfo get info_ => _i;
-  static PredictionInput create() => PredictionInput();
+  @$core.pragma('dart2js:noInline')
+  static PredictionInput create() => PredictionInput._();
   PredictionInput createEmptyInstance() => create();
   static $pb.PbList<PredictionInput> createRepeated() =>
       $pb.PbList<PredictionInput>();
@@ -608,18 +624,20 @@ class PredictionOutput extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'nodeHours', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  PredictionOutput() : super();
-  PredictionOutput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PredictionOutput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PredictionOutput._() : super();
+  factory PredictionOutput() => create();
+  factory PredictionOutput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PredictionOutput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PredictionOutput clone() => PredictionOutput()..mergeFromMessage(this);
   PredictionOutput copyWith(void Function(PredictionOutput) updates) =>
       super.copyWith((message) => updates(message as PredictionOutput));
   $pb.BuilderInfo get info_ => _i;
-  static PredictionOutput create() => PredictionOutput();
+  @$core.pragma('dart2js:noInline')
+  static PredictionOutput create() => PredictionOutput._();
   PredictionOutput createEmptyInstance() => create();
   static $pb.PbList<PredictionOutput> createRepeated() =>
       $pb.PbList<PredictionOutput>();
@@ -677,17 +695,19 @@ class Job extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Job',
       package: const $pb.PackageName('google.cloud.ml.v1'))
+    ..oo(0, [2, 3])
+    ..oo(1, [9, 10])
     ..aOS(1, 'jobId')
     ..a<TrainingInput>(2, 'trainingInput', $pb.PbFieldType.OM,
         TrainingInput.getDefault, TrainingInput.create)
     ..a<PredictionInput>(3, 'predictionInput', $pb.PbFieldType.OM,
         PredictionInput.getDefault, PredictionInput.create)
-    ..a<$1.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $1.Timestamp.getDefault,
-        $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(5, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$2.Timestamp>(6, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
+        $2.Timestamp.create)
     ..e<Job_State>(7, 'state', $pb.PbFieldType.OE, Job_State.STATE_UNSPECIFIED,
         Job_State.valueOf, Job_State.values)
     ..aOS(8, 'errorMessage')
@@ -695,22 +715,22 @@ class Job extends $pb.GeneratedMessage {
         TrainingOutput.getDefault, TrainingOutput.create)
     ..a<PredictionOutput>(10, 'predictionOutput', $pb.PbFieldType.OM,
         PredictionOutput.getDefault, PredictionOutput.create)
-    ..oo(0, [2, 3])
-    ..oo(1, [9, 10])
     ..hasRequiredFields = false;
 
-  Job() : super();
-  Job.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Job.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Job._() : super();
+  factory Job() => create();
+  factory Job.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Job.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Job clone() => Job()..mergeFromMessage(this);
   Job copyWith(void Function(Job) updates) =>
       super.copyWith((message) => updates(message as Job));
   $pb.BuilderInfo get info_ => _i;
-  static Job create() => Job();
+  @$core.pragma('dart2js:noInline')
+  static Job create() => Job._();
   Job createEmptyInstance() => create();
   static $pb.PbList<Job> createRepeated() => $pb.PbList<Job>();
   static Job getDefault() => _defaultInstance ??= create()..freeze();
@@ -746,24 +766,24 @@ class Job extends $pb.GeneratedMessage {
   $core.bool hasPredictionInput() => $_has(2);
   void clearPredictionInput() => clearField(3);
 
-  $1.Timestamp get createTime => $_getN(3);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(3);
+  set createTime($2.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $1.Timestamp get startTime => $_getN(4);
-  set startTime($1.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(4);
+  set startTime($2.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasStartTime() => $_has(4);
   void clearStartTime() => clearField(5);
 
-  $1.Timestamp get endTime => $_getN(5);
-  set endTime($1.Timestamp v) {
+  $2.Timestamp get endTime => $_getN(5);
+  set endTime($2.Timestamp v) {
     setField(6, v);
   }
 
@@ -810,18 +830,20 @@ class CreateJobRequest extends $pb.GeneratedMessage {
     ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
     ..hasRequiredFields = false;
 
-  CreateJobRequest() : super();
-  CreateJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateJobRequest._() : super();
+  factory CreateJobRequest() => create();
+  factory CreateJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateJobRequest clone() => CreateJobRequest()..mergeFromMessage(this);
   CreateJobRequest copyWith(void Function(CreateJobRequest) updates) =>
       super.copyWith((message) => updates(message as CreateJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateJobRequest create() => CreateJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateJobRequest create() => CreateJobRequest._();
   CreateJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateJobRequest> createRepeated() =>
       $pb.PbList<CreateJobRequest>();
@@ -855,18 +877,20 @@ class ListJobsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListJobsRequest() : super();
-  ListJobsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListJobsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListJobsRequest._() : super();
+  factory ListJobsRequest() => create();
+  factory ListJobsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListJobsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListJobsRequest clone() => ListJobsRequest()..mergeFromMessage(this);
   ListJobsRequest copyWith(void Function(ListJobsRequest) updates) =>
       super.copyWith((message) => updates(message as ListJobsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListJobsRequest create() => ListJobsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListJobsRequest create() => ListJobsRequest._();
   ListJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListJobsRequest> createRepeated() =>
       $pb.PbList<ListJobsRequest>();
@@ -914,18 +938,20 @@ class ListJobsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListJobsResponse() : super();
-  ListJobsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListJobsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListJobsResponse._() : super();
+  factory ListJobsResponse() => create();
+  factory ListJobsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListJobsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListJobsResponse clone() => ListJobsResponse()..mergeFromMessage(this);
   ListJobsResponse copyWith(void Function(ListJobsResponse) updates) =>
       super.copyWith((message) => updates(message as ListJobsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListJobsResponse create() => ListJobsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListJobsResponse create() => ListJobsResponse._();
   ListJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListJobsResponse> createRepeated() =>
       $pb.PbList<ListJobsResponse>();
@@ -950,18 +976,20 @@ class GetJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetJobRequest() : super();
-  GetJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetJobRequest._() : super();
+  factory GetJobRequest() => create();
+  factory GetJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetJobRequest clone() => GetJobRequest()..mergeFromMessage(this);
   GetJobRequest copyWith(void Function(GetJobRequest) updates) =>
       super.copyWith((message) => updates(message as GetJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetJobRequest create() => GetJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetJobRequest create() => GetJobRequest._();
   GetJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetJobRequest> createRepeated() =>
       $pb.PbList<GetJobRequest>();
@@ -983,18 +1011,20 @@ class CancelJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  CancelJobRequest() : super();
-  CancelJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CancelJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CancelJobRequest._() : super();
+  factory CancelJobRequest() => create();
+  factory CancelJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CancelJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CancelJobRequest clone() => CancelJobRequest()..mergeFromMessage(this);
   CancelJobRequest copyWith(void Function(CancelJobRequest) updates) =>
       super.copyWith((message) => updates(message as CancelJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CancelJobRequest create() => CancelJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static CancelJobRequest create() => CancelJobRequest._();
   CancelJobRequest createEmptyInstance() => create();
   static $pb.PbList<CancelJobRequest> createRepeated() =>
       $pb.PbList<CancelJobRequest>();

@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/intent.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'context.pb.dart' as $2;
-import '../../../protobuf/struct.pb.dart' as $3;
-import '../../../protobuf/field_mask.pb.dart' as $4;
+import 'context.pb.dart' as $0;
+import '../../../protobuf/struct.pb.dart' as $4;
+import '../../../protobuf/field_mask.pb.dart' as $5;
 
 import 'intent.pbenum.dart';
 
@@ -27,13 +28,14 @@ class Intent_TrainingPhrase_Part extends $pb.GeneratedMessage {
     ..aOB(4, 'userDefined')
     ..hasRequiredFields = false;
 
-  Intent_TrainingPhrase_Part() : super();
-  Intent_TrainingPhrase_Part.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_TrainingPhrase_Part.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_TrainingPhrase_Part._() : super();
+  factory Intent_TrainingPhrase_Part() => create();
+  factory Intent_TrainingPhrase_Part.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_TrainingPhrase_Part.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_TrainingPhrase_Part clone() =>
       Intent_TrainingPhrase_Part()..mergeFromMessage(this);
   Intent_TrainingPhrase_Part copyWith(
@@ -41,7 +43,8 @@ class Intent_TrainingPhrase_Part extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_TrainingPhrase_Part));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_TrainingPhrase_Part create() => Intent_TrainingPhrase_Part();
+  @$core.pragma('dart2js:noInline')
+  static Intent_TrainingPhrase_Part create() => Intent_TrainingPhrase_Part._();
   Intent_TrainingPhrase_Part createEmptyInstance() => create();
   static $pb.PbList<Intent_TrainingPhrase_Part> createRepeated() =>
       $pb.PbList<Intent_TrainingPhrase_Part>();
@@ -98,20 +101,22 @@ class Intent_TrainingPhrase extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'timesAddedCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Intent_TrainingPhrase() : super();
-  Intent_TrainingPhrase.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_TrainingPhrase.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_TrainingPhrase._() : super();
+  factory Intent_TrainingPhrase() => create();
+  factory Intent_TrainingPhrase.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_TrainingPhrase.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_TrainingPhrase clone() =>
       Intent_TrainingPhrase()..mergeFromMessage(this);
   Intent_TrainingPhrase copyWith(
           void Function(Intent_TrainingPhrase) updates) =>
       super.copyWith((message) => updates(message as Intent_TrainingPhrase));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_TrainingPhrase create() => Intent_TrainingPhrase();
+  @$core.pragma('dart2js:noInline')
+  static Intent_TrainingPhrase create() => Intent_TrainingPhrase._();
   Intent_TrainingPhrase createEmptyInstance() => create();
   static $pb.PbList<Intent_TrainingPhrase> createRepeated() =>
       $pb.PbList<Intent_TrainingPhrase>();
@@ -159,18 +164,20 @@ class Intent_Parameter extends $pb.GeneratedMessage {
     ..aOB(8, 'isList')
     ..hasRequiredFields = false;
 
-  Intent_Parameter() : super();
-  Intent_Parameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Parameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Parameter._() : super();
+  factory Intent_Parameter() => create();
+  factory Intent_Parameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Parameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Parameter clone() => Intent_Parameter()..mergeFromMessage(this);
   Intent_Parameter copyWith(void Function(Intent_Parameter) updates) =>
       super.copyWith((message) => updates(message as Intent_Parameter));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Parameter create() => Intent_Parameter();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Parameter create() => Intent_Parameter._();
   Intent_Parameter createEmptyInstance() => create();
   static $pb.PbList<Intent_Parameter> createRepeated() =>
       $pb.PbList<Intent_Parameter>();
@@ -243,18 +250,20 @@ class Intent_Message_Text extends $pb.GeneratedMessage {
     ..pPS(1, 'text')
     ..hasRequiredFields = false;
 
-  Intent_Message_Text() : super();
-  Intent_Message_Text.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_Text.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_Text._() : super();
+  factory Intent_Message_Text() => create();
+  factory Intent_Message_Text.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_Text.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_Text clone() => Intent_Message_Text()..mergeFromMessage(this);
   Intent_Message_Text copyWith(void Function(Intent_Message_Text) updates) =>
       super.copyWith((message) => updates(message as Intent_Message_Text));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_Text create() => Intent_Message_Text();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_Text create() => Intent_Message_Text._();
   Intent_Message_Text createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_Text> createRepeated() =>
       $pb.PbList<Intent_Message_Text>();
@@ -272,19 +281,21 @@ class Intent_Message_Image extends $pb.GeneratedMessage {
     ..aOS(2, 'accessibilityText')
     ..hasRequiredFields = false;
 
-  Intent_Message_Image() : super();
-  Intent_Message_Image.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_Image.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_Image._() : super();
+  factory Intent_Message_Image() => create();
+  factory Intent_Message_Image.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_Image.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_Image clone() =>
       Intent_Message_Image()..mergeFromMessage(this);
   Intent_Message_Image copyWith(void Function(Intent_Message_Image) updates) =>
       super.copyWith((message) => updates(message as Intent_Message_Image));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_Image create() => Intent_Message_Image();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_Image create() => Intent_Message_Image._();
   Intent_Message_Image createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_Image> createRepeated() =>
       $pb.PbList<Intent_Message_Image>();
@@ -317,13 +328,14 @@ class Intent_Message_QuickReplies extends $pb.GeneratedMessage {
     ..pPS(2, 'quickReplies')
     ..hasRequiredFields = false;
 
-  Intent_Message_QuickReplies() : super();
-  Intent_Message_QuickReplies.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_QuickReplies.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_QuickReplies._() : super();
+  factory Intent_Message_QuickReplies() => create();
+  factory Intent_Message_QuickReplies.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_QuickReplies.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_QuickReplies clone() =>
       Intent_Message_QuickReplies()..mergeFromMessage(this);
   Intent_Message_QuickReplies copyWith(
@@ -331,7 +343,9 @@ class Intent_Message_QuickReplies extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_QuickReplies));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_QuickReplies create() => Intent_Message_QuickReplies();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_QuickReplies create() =>
+      Intent_Message_QuickReplies._();
   Intent_Message_QuickReplies createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_QuickReplies> createRepeated() =>
       $pb.PbList<Intent_Message_QuickReplies>();
@@ -358,13 +372,14 @@ class Intent_Message_Card_Button extends $pb.GeneratedMessage {
     ..aOS(2, 'postback')
     ..hasRequiredFields = false;
 
-  Intent_Message_Card_Button() : super();
-  Intent_Message_Card_Button.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_Card_Button.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_Card_Button._() : super();
+  factory Intent_Message_Card_Button() => create();
+  factory Intent_Message_Card_Button.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_Card_Button.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_Card_Button clone() =>
       Intent_Message_Card_Button()..mergeFromMessage(this);
   Intent_Message_Card_Button copyWith(
@@ -372,7 +387,8 @@ class Intent_Message_Card_Button extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_Card_Button));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_Card_Button create() => Intent_Message_Card_Button();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_Card_Button create() => Intent_Message_Card_Button._();
   Intent_Message_Card_Button createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_Card_Button> createRepeated() =>
       $pb.PbList<Intent_Message_Card_Button>();
@@ -407,18 +423,20 @@ class Intent_Message_Card extends $pb.GeneratedMessage {
         4, 'buttons', $pb.PbFieldType.PM, Intent_Message_Card_Button.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_Card() : super();
-  Intent_Message_Card.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_Card.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_Card._() : super();
+  factory Intent_Message_Card() => create();
+  factory Intent_Message_Card.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_Card.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_Card clone() => Intent_Message_Card()..mergeFromMessage(this);
   Intent_Message_Card copyWith(void Function(Intent_Message_Card) updates) =>
       super.copyWith((message) => updates(message as Intent_Message_Card));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_Card create() => Intent_Message_Card();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_Card create() => Intent_Message_Card._();
   Intent_Message_Card createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_Card> createRepeated() =>
       $pb.PbList<Intent_Message_Card>();
@@ -462,13 +480,14 @@ class Intent_Message_SimpleResponse extends $pb.GeneratedMessage {
     ..aOS(3, 'displayText')
     ..hasRequiredFields = false;
 
-  Intent_Message_SimpleResponse() : super();
-  Intent_Message_SimpleResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_SimpleResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_SimpleResponse._() : super();
+  factory Intent_Message_SimpleResponse() => create();
+  factory Intent_Message_SimpleResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_SimpleResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_SimpleResponse clone() =>
       Intent_Message_SimpleResponse()..mergeFromMessage(this);
   Intent_Message_SimpleResponse copyWith(
@@ -476,8 +495,9 @@ class Intent_Message_SimpleResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_SimpleResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_SimpleResponse create() =>
-      Intent_Message_SimpleResponse();
+      Intent_Message_SimpleResponse._();
   Intent_Message_SimpleResponse createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_SimpleResponse> createRepeated() =>
       $pb.PbList<Intent_Message_SimpleResponse>();
@@ -518,13 +538,14 @@ class Intent_Message_SimpleResponses extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, Intent_Message_SimpleResponse.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_SimpleResponses() : super();
-  Intent_Message_SimpleResponses.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_SimpleResponses.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_SimpleResponses._() : super();
+  factory Intent_Message_SimpleResponses() => create();
+  factory Intent_Message_SimpleResponses.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_SimpleResponses.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_SimpleResponses clone() =>
       Intent_Message_SimpleResponses()..mergeFromMessage(this);
   Intent_Message_SimpleResponses copyWith(
@@ -532,8 +553,9 @@ class Intent_Message_SimpleResponses extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_SimpleResponses));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_SimpleResponses create() =>
-      Intent_Message_SimpleResponses();
+      Intent_Message_SimpleResponses._();
   Intent_Message_SimpleResponses createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_SimpleResponses> createRepeated() =>
       $pb.PbList<Intent_Message_SimpleResponses>();
@@ -552,14 +574,15 @@ class Intent_Message_BasicCard_Button_OpenUriAction
     ..aOS(1, 'uri')
     ..hasRequiredFields = false;
 
-  Intent_Message_BasicCard_Button_OpenUriAction() : super();
-  Intent_Message_BasicCard_Button_OpenUriAction.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_BasicCard_Button_OpenUriAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_BasicCard_Button_OpenUriAction._() : super();
+  factory Intent_Message_BasicCard_Button_OpenUriAction() => create();
+  factory Intent_Message_BasicCard_Button_OpenUriAction.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_BasicCard_Button_OpenUriAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_BasicCard_Button_OpenUriAction clone() =>
       Intent_Message_BasicCard_Button_OpenUriAction()..mergeFromMessage(this);
   Intent_Message_BasicCard_Button_OpenUriAction copyWith(
@@ -568,8 +591,9 @@ class Intent_Message_BasicCard_Button_OpenUriAction
       super.copyWith((message) =>
           updates(message as Intent_Message_BasicCard_Button_OpenUriAction));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_BasicCard_Button_OpenUriAction create() =>
-      Intent_Message_BasicCard_Button_OpenUriAction();
+      Intent_Message_BasicCard_Button_OpenUriAction._();
   Intent_Message_BasicCard_Button_OpenUriAction createEmptyInstance() =>
       create();
   static $pb.PbList<Intent_Message_BasicCard_Button_OpenUriAction>
@@ -601,13 +625,14 @@ class Intent_Message_BasicCard_Button extends $pb.GeneratedMessage {
         Intent_Message_BasicCard_Button_OpenUriAction.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_BasicCard_Button() : super();
-  Intent_Message_BasicCard_Button.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_BasicCard_Button.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_BasicCard_Button._() : super();
+  factory Intent_Message_BasicCard_Button() => create();
+  factory Intent_Message_BasicCard_Button.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_BasicCard_Button.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_BasicCard_Button clone() =>
       Intent_Message_BasicCard_Button()..mergeFromMessage(this);
   Intent_Message_BasicCard_Button copyWith(
@@ -615,8 +640,9 @@ class Intent_Message_BasicCard_Button extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_BasicCard_Button));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_BasicCard_Button create() =>
-      Intent_Message_BasicCard_Button();
+      Intent_Message_BasicCard_Button._();
   Intent_Message_BasicCard_Button createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_BasicCard_Button> createRepeated() =>
       $pb.PbList<Intent_Message_BasicCard_Button>();
@@ -653,20 +679,22 @@ class Intent_Message_BasicCard extends $pb.GeneratedMessage {
         Intent_Message_BasicCard_Button.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_BasicCard() : super();
-  Intent_Message_BasicCard.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_BasicCard.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_BasicCard._() : super();
+  factory Intent_Message_BasicCard() => create();
+  factory Intent_Message_BasicCard.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_BasicCard.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_BasicCard clone() =>
       Intent_Message_BasicCard()..mergeFromMessage(this);
   Intent_Message_BasicCard copyWith(
           void Function(Intent_Message_BasicCard) updates) =>
       super.copyWith((message) => updates(message as Intent_Message_BasicCard));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_BasicCard create() => Intent_Message_BasicCard();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_BasicCard create() => Intent_Message_BasicCard._();
   Intent_Message_BasicCard createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_BasicCard> createRepeated() =>
       $pb.PbList<Intent_Message_BasicCard>();
@@ -715,13 +743,14 @@ class Intent_Message_Suggestion extends $pb.GeneratedMessage {
     ..aOS(1, 'title')
     ..hasRequiredFields = false;
 
-  Intent_Message_Suggestion() : super();
-  Intent_Message_Suggestion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_Suggestion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_Suggestion._() : super();
+  factory Intent_Message_Suggestion() => create();
+  factory Intent_Message_Suggestion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_Suggestion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_Suggestion clone() =>
       Intent_Message_Suggestion()..mergeFromMessage(this);
   Intent_Message_Suggestion copyWith(
@@ -729,7 +758,8 @@ class Intent_Message_Suggestion extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Intent_Message_Suggestion));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_Suggestion create() => Intent_Message_Suggestion();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_Suggestion create() => Intent_Message_Suggestion._();
   Intent_Message_Suggestion createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_Suggestion> createRepeated() =>
       $pb.PbList<Intent_Message_Suggestion>();
@@ -754,13 +784,14 @@ class Intent_Message_Suggestions extends $pb.GeneratedMessage {
         1, 'suggestions', $pb.PbFieldType.PM, Intent_Message_Suggestion.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_Suggestions() : super();
-  Intent_Message_Suggestions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_Suggestions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_Suggestions._() : super();
+  factory Intent_Message_Suggestions() => create();
+  factory Intent_Message_Suggestions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_Suggestions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_Suggestions clone() =>
       Intent_Message_Suggestions()..mergeFromMessage(this);
   Intent_Message_Suggestions copyWith(
@@ -768,7 +799,8 @@ class Intent_Message_Suggestions extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_Suggestions));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_Suggestions create() => Intent_Message_Suggestions();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_Suggestions create() => Intent_Message_Suggestions._();
   Intent_Message_Suggestions createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_Suggestions> createRepeated() =>
       $pb.PbList<Intent_Message_Suggestions>();
@@ -787,13 +819,14 @@ class Intent_Message_LinkOutSuggestion extends $pb.GeneratedMessage {
     ..aOS(2, 'uri')
     ..hasRequiredFields = false;
 
-  Intent_Message_LinkOutSuggestion() : super();
-  Intent_Message_LinkOutSuggestion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_LinkOutSuggestion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_LinkOutSuggestion._() : super();
+  factory Intent_Message_LinkOutSuggestion() => create();
+  factory Intent_Message_LinkOutSuggestion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_LinkOutSuggestion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_LinkOutSuggestion clone() =>
       Intent_Message_LinkOutSuggestion()..mergeFromMessage(this);
   Intent_Message_LinkOutSuggestion copyWith(
@@ -801,8 +834,9 @@ class Intent_Message_LinkOutSuggestion extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_LinkOutSuggestion));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_LinkOutSuggestion create() =>
-      Intent_Message_LinkOutSuggestion();
+      Intent_Message_LinkOutSuggestion._();
   Intent_Message_LinkOutSuggestion createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_LinkOutSuggestion> createRepeated() =>
       $pb.PbList<Intent_Message_LinkOutSuggestion>();
@@ -843,13 +877,14 @@ class Intent_Message_ListSelect_Item extends $pb.GeneratedMessage {
         Intent_Message_Image.getDefault, Intent_Message_Image.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_ListSelect_Item() : super();
-  Intent_Message_ListSelect_Item.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_ListSelect_Item.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_ListSelect_Item._() : super();
+  factory Intent_Message_ListSelect_Item() => create();
+  factory Intent_Message_ListSelect_Item.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_ListSelect_Item.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_ListSelect_Item clone() =>
       Intent_Message_ListSelect_Item()..mergeFromMessage(this);
   Intent_Message_ListSelect_Item copyWith(
@@ -857,8 +892,9 @@ class Intent_Message_ListSelect_Item extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_ListSelect_Item));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_ListSelect_Item create() =>
-      Intent_Message_ListSelect_Item();
+      Intent_Message_ListSelect_Item._();
   Intent_Message_ListSelect_Item createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_ListSelect_Item> createRepeated() =>
       $pb.PbList<Intent_Message_ListSelect_Item>();
@@ -907,13 +943,14 @@ class Intent_Message_ListSelect extends $pb.GeneratedMessage {
         2, 'items', $pb.PbFieldType.PM, Intent_Message_ListSelect_Item.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_ListSelect() : super();
-  Intent_Message_ListSelect.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_ListSelect.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_ListSelect._() : super();
+  factory Intent_Message_ListSelect() => create();
+  factory Intent_Message_ListSelect.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_ListSelect.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_ListSelect clone() =>
       Intent_Message_ListSelect()..mergeFromMessage(this);
   Intent_Message_ListSelect copyWith(
@@ -921,7 +958,8 @@ class Intent_Message_ListSelect extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Intent_Message_ListSelect));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message_ListSelect create() => Intent_Message_ListSelect();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message_ListSelect create() => Intent_Message_ListSelect._();
   Intent_Message_ListSelect createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_ListSelect> createRepeated() =>
       $pb.PbList<Intent_Message_ListSelect>();
@@ -956,13 +994,14 @@ class Intent_Message_CarouselSelect_Item extends $pb.GeneratedMessage {
         Intent_Message_Image.getDefault, Intent_Message_Image.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_CarouselSelect_Item() : super();
-  Intent_Message_CarouselSelect_Item.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_CarouselSelect_Item.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_CarouselSelect_Item._() : super();
+  factory Intent_Message_CarouselSelect_Item() => create();
+  factory Intent_Message_CarouselSelect_Item.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_CarouselSelect_Item.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_CarouselSelect_Item clone() =>
       Intent_Message_CarouselSelect_Item()..mergeFromMessage(this);
   Intent_Message_CarouselSelect_Item copyWith(
@@ -970,8 +1009,9 @@ class Intent_Message_CarouselSelect_Item extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_CarouselSelect_Item));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_CarouselSelect_Item create() =>
-      Intent_Message_CarouselSelect_Item();
+      Intent_Message_CarouselSelect_Item._();
   Intent_Message_CarouselSelect_Item createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_CarouselSelect_Item> createRepeated() =>
       $pb.PbList<Intent_Message_CarouselSelect_Item>();
@@ -1020,13 +1060,14 @@ class Intent_Message_CarouselSelect extends $pb.GeneratedMessage {
         Intent_Message_CarouselSelect_Item.create)
     ..hasRequiredFields = false;
 
-  Intent_Message_CarouselSelect() : super();
-  Intent_Message_CarouselSelect.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_CarouselSelect.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_CarouselSelect._() : super();
+  factory Intent_Message_CarouselSelect() => create();
+  factory Intent_Message_CarouselSelect.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_CarouselSelect.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_CarouselSelect clone() =>
       Intent_Message_CarouselSelect()..mergeFromMessage(this);
   Intent_Message_CarouselSelect copyWith(
@@ -1034,8 +1075,9 @@ class Intent_Message_CarouselSelect extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_CarouselSelect));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_CarouselSelect create() =>
-      Intent_Message_CarouselSelect();
+      Intent_Message_CarouselSelect._();
   Intent_Message_CarouselSelect createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_CarouselSelect> createRepeated() =>
       $pb.PbList<Intent_Message_CarouselSelect>();
@@ -1054,13 +1096,14 @@ class Intent_Message_SelectItemInfo extends $pb.GeneratedMessage {
     ..pPS(2, 'synonyms')
     ..hasRequiredFields = false;
 
-  Intent_Message_SelectItemInfo() : super();
-  Intent_Message_SelectItemInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message_SelectItemInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message_SelectItemInfo._() : super();
+  factory Intent_Message_SelectItemInfo() => create();
+  factory Intent_Message_SelectItemInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message_SelectItemInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message_SelectItemInfo clone() =>
       Intent_Message_SelectItemInfo()..mergeFromMessage(this);
   Intent_Message_SelectItemInfo copyWith(
@@ -1068,8 +1111,9 @@ class Intent_Message_SelectItemInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Intent_Message_SelectItemInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Intent_Message_SelectItemInfo create() =>
-      Intent_Message_SelectItemInfo();
+      Intent_Message_SelectItemInfo._();
   Intent_Message_SelectItemInfo createEmptyInstance() => create();
   static $pb.PbList<Intent_Message_SelectItemInfo> createRepeated() =>
       $pb.PbList<Intent_Message_SelectItemInfo>();
@@ -1121,6 +1165,7 @@ class Intent_Message extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Intent.Message',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..oo(0, [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12])
     ..a<Intent_Message_Text>(1, 'text', $pb.PbFieldType.OM,
         Intent_Message_Text.getDefault, Intent_Message_Text.create)
     ..a<Intent_Message_Image>(2, 'image', $pb.PbFieldType.OM,
@@ -1133,8 +1178,8 @@ class Intent_Message extends $pb.GeneratedMessage {
         Intent_Message_QuickReplies.create)
     ..a<Intent_Message_Card>(4, 'card', $pb.PbFieldType.OM,
         Intent_Message_Card.getDefault, Intent_Message_Card.create)
-    ..a<$3.Struct>(5, 'payload', $pb.PbFieldType.OM, $3.Struct.getDefault,
-        $3.Struct.create)
+    ..a<$4.Struct>(5, 'payload', $pb.PbFieldType.OM, $4.Struct.getDefault,
+        $4.Struct.create)
     ..e<Intent_Message_Platform>(
         6,
         'platform',
@@ -1170,21 +1215,22 @@ class Intent_Message extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Intent_Message_CarouselSelect.getDefault,
         Intent_Message_CarouselSelect.create)
-    ..oo(0, [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12])
     ..hasRequiredFields = false;
 
-  Intent_Message() : super();
-  Intent_Message.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_Message.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_Message._() : super();
+  factory Intent_Message() => create();
+  factory Intent_Message.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_Message.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_Message clone() => Intent_Message()..mergeFromMessage(this);
   Intent_Message copyWith(void Function(Intent_Message) updates) =>
       super.copyWith((message) => updates(message as Intent_Message));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_Message create() => Intent_Message();
+  @$core.pragma('dart2js:noInline')
+  static Intent_Message create() => Intent_Message._();
   Intent_Message createEmptyInstance() => create();
   static $pb.PbList<Intent_Message> createRepeated() =>
       $pb.PbList<Intent_Message>();
@@ -1227,8 +1273,8 @@ class Intent_Message extends $pb.GeneratedMessage {
   $core.bool hasCard() => $_has(3);
   void clearCard() => clearField(4);
 
-  $3.Struct get payload => $_getN(4);
-  set payload($3.Struct v) {
+  $4.Struct get payload => $_getN(4);
+  set payload($4.Struct v) {
     setField(5, v);
   }
 
@@ -1299,13 +1345,14 @@ class Intent_FollowupIntentInfo extends $pb.GeneratedMessage {
     ..aOS(2, 'parentFollowupIntentName')
     ..hasRequiredFields = false;
 
-  Intent_FollowupIntentInfo() : super();
-  Intent_FollowupIntentInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent_FollowupIntentInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent_FollowupIntentInfo._() : super();
+  factory Intent_FollowupIntentInfo() => create();
+  factory Intent_FollowupIntentInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent_FollowupIntentInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent_FollowupIntentInfo clone() =>
       Intent_FollowupIntentInfo()..mergeFromMessage(this);
   Intent_FollowupIntentInfo copyWith(
@@ -1313,7 +1360,8 @@ class Intent_FollowupIntentInfo extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Intent_FollowupIntentInfo));
   $pb.BuilderInfo get info_ => _i;
-  static Intent_FollowupIntentInfo create() => Intent_FollowupIntentInfo();
+  @$core.pragma('dart2js:noInline')
+  static Intent_FollowupIntentInfo create() => Intent_FollowupIntentInfo._();
   Intent_FollowupIntentInfo createEmptyInstance() => create();
   static $pb.PbList<Intent_FollowupIntentInfo> createRepeated() =>
       $pb.PbList<Intent_FollowupIntentInfo>();
@@ -1357,8 +1405,8 @@ class Intent extends $pb.GeneratedMessage {
     ..pc<Intent_TrainingPhrase>(
         9, 'trainingPhrases', $pb.PbFieldType.PM, Intent_TrainingPhrase.create)
     ..aOS(10, 'action')
-    ..pc<$2.Context>(
-        11, 'outputContexts', $pb.PbFieldType.PM, $2.Context.create)
+    ..pc<$0.Context>(
+        11, 'outputContexts', $pb.PbFieldType.PM, $0.Context.create)
     ..aOB(12, 'resetContexts')
     ..pc<Intent_Parameter>(
         13, 'parameters', $pb.PbFieldType.PM, Intent_Parameter.create)
@@ -1378,18 +1426,20 @@ class Intent extends $pb.GeneratedMessage {
     ..aOB(19, 'mlDisabled')
     ..hasRequiredFields = false;
 
-  Intent() : super();
-  Intent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Intent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Intent._() : super();
+  factory Intent() => create();
+  factory Intent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Intent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Intent clone() => Intent()..mergeFromMessage(this);
   Intent copyWith(void Function(Intent) updates) =>
       super.copyWith((message) => updates(message as Intent));
   $pb.BuilderInfo get info_ => _i;
-  static Intent create() => Intent();
+  @$core.pragma('dart2js:noInline')
+  static Intent create() => Intent._();
   Intent createEmptyInstance() => create();
   static $pb.PbList<Intent> createRepeated() => $pb.PbList<Intent>();
   static Intent getDefault() => _defaultInstance ??= create()..freeze();
@@ -1449,7 +1499,7 @@ class Intent extends $pb.GeneratedMessage {
   $core.bool hasAction() => $_has(8);
   void clearAction() => clearField(10);
 
-  $core.List<$2.Context> get outputContexts => $_getList(9);
+  $core.List<$0.Context> get outputContexts => $_getList(9);
 
   $core.bool get resetContexts => $_get(10, false);
   set resetContexts($core.bool v) {
@@ -1509,18 +1559,20 @@ class ListIntentsRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListIntentsRequest() : super();
-  ListIntentsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListIntentsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListIntentsRequest._() : super();
+  factory ListIntentsRequest() => create();
+  factory ListIntentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListIntentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListIntentsRequest clone() => ListIntentsRequest()..mergeFromMessage(this);
   ListIntentsRequest copyWith(void Function(ListIntentsRequest) updates) =>
       super.copyWith((message) => updates(message as ListIntentsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListIntentsRequest create() => ListIntentsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListIntentsRequest create() => ListIntentsRequest._();
   ListIntentsRequest createEmptyInstance() => create();
   static $pb.PbList<ListIntentsRequest> createRepeated() =>
       $pb.PbList<ListIntentsRequest>();
@@ -1576,18 +1628,20 @@ class ListIntentsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListIntentsResponse() : super();
-  ListIntentsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListIntentsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListIntentsResponse._() : super();
+  factory ListIntentsResponse() => create();
+  factory ListIntentsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListIntentsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListIntentsResponse clone() => ListIntentsResponse()..mergeFromMessage(this);
   ListIntentsResponse copyWith(void Function(ListIntentsResponse) updates) =>
       super.copyWith((message) => updates(message as ListIntentsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListIntentsResponse create() => ListIntentsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListIntentsResponse create() => ListIntentsResponse._();
   ListIntentsResponse createEmptyInstance() => create();
   static $pb.PbList<ListIntentsResponse> createRepeated() =>
       $pb.PbList<ListIntentsResponse>();
@@ -1620,18 +1674,20 @@ class GetIntentRequest extends $pb.GeneratedMessage {
         IntentView.values)
     ..hasRequiredFields = false;
 
-  GetIntentRequest() : super();
-  GetIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetIntentRequest._() : super();
+  factory GetIntentRequest() => create();
+  factory GetIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetIntentRequest clone() => GetIntentRequest()..mergeFromMessage(this);
   GetIntentRequest copyWith(void Function(GetIntentRequest) updates) =>
       super.copyWith((message) => updates(message as GetIntentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetIntentRequest create() => GetIntentRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetIntentRequest create() => GetIntentRequest._();
   GetIntentRequest createEmptyInstance() => create();
   static $pb.PbList<GetIntentRequest> createRepeated() =>
       $pb.PbList<GetIntentRequest>();
@@ -1680,18 +1736,20 @@ class CreateIntentRequest extends $pb.GeneratedMessage {
         IntentView.values)
     ..hasRequiredFields = false;
 
-  CreateIntentRequest() : super();
-  CreateIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateIntentRequest._() : super();
+  factory CreateIntentRequest() => create();
+  factory CreateIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateIntentRequest clone() => CreateIntentRequest()..mergeFromMessage(this);
   CreateIntentRequest copyWith(void Function(CreateIntentRequest) updates) =>
       super.copyWith((message) => updates(message as CreateIntentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateIntentRequest create() => CreateIntentRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateIntentRequest create() => CreateIntentRequest._();
   CreateIntentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateIntentRequest> createRepeated() =>
       $pb.PbList<CreateIntentRequest>();
@@ -1738,8 +1796,8 @@ class UpdateIntentRequest extends $pb.GeneratedMessage {
     ..a<Intent>(
         1, 'intent', $pb.PbFieldType.OM, Intent.getDefault, Intent.create)
     ..aOS(2, 'languageCode')
-    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..a<$5.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..e<IntentView>(
         4,
         'intentView',
@@ -1749,18 +1807,20 @@ class UpdateIntentRequest extends $pb.GeneratedMessage {
         IntentView.values)
     ..hasRequiredFields = false;
 
-  UpdateIntentRequest() : super();
-  UpdateIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateIntentRequest._() : super();
+  factory UpdateIntentRequest() => create();
+  factory UpdateIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateIntentRequest clone() => UpdateIntentRequest()..mergeFromMessage(this);
   UpdateIntentRequest copyWith(void Function(UpdateIntentRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateIntentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateIntentRequest create() => UpdateIntentRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateIntentRequest create() => UpdateIntentRequest._();
   UpdateIntentRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateIntentRequest> createRepeated() =>
       $pb.PbList<UpdateIntentRequest>();
@@ -1784,8 +1844,8 @@ class UpdateIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(1);
   void clearLanguageCode() => clearField(2);
 
-  $4.FieldMask get updateMask => $_getN(2);
-  set updateMask($4.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(2);
+  set updateMask($5.FieldMask v) {
     setField(3, v);
   }
 
@@ -1807,18 +1867,20 @@ class DeleteIntentRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteIntentRequest() : super();
-  DeleteIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteIntentRequest._() : super();
+  factory DeleteIntentRequest() => create();
+  factory DeleteIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteIntentRequest clone() => DeleteIntentRequest()..mergeFromMessage(this);
   DeleteIntentRequest copyWith(void Function(DeleteIntentRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteIntentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteIntentRequest create() => DeleteIntentRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteIntentRequest create() => DeleteIntentRequest._();
   DeleteIntentRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteIntentRequest> createRepeated() =>
       $pb.PbList<DeleteIntentRequest>();
@@ -1850,13 +1912,14 @@ class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateIntentsRequest',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+    ..oo(0, [2, 3])
     ..aOS(1, 'parent')
     ..aOS(2, 'intentBatchUri')
     ..a<IntentBatch>(3, 'intentBatchInline', $pb.PbFieldType.OM,
         IntentBatch.getDefault, IntentBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$4.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..a<$5.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..e<IntentView>(
         6,
         'intentView',
@@ -1864,16 +1927,16 @@ class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
         IntentView.INTENT_VIEW_UNSPECIFIED,
         IntentView.valueOf,
         IntentView.values)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  BatchUpdateIntentsRequest() : super();
-  BatchUpdateIntentsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateIntentsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdateIntentsRequest._() : super();
+  factory BatchUpdateIntentsRequest() => create();
+  factory BatchUpdateIntentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdateIntentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdateIntentsRequest clone() =>
       BatchUpdateIntentsRequest()..mergeFromMessage(this);
   BatchUpdateIntentsRequest copyWith(
@@ -1881,7 +1944,8 @@ class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BatchUpdateIntentsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchUpdateIntentsRequest create() => BatchUpdateIntentsRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateIntentsRequest create() => BatchUpdateIntentsRequest._();
   BatchUpdateIntentsRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateIntentsRequest> createRepeated() =>
       $pb.PbList<BatchUpdateIntentsRequest>();
@@ -1925,8 +1989,8 @@ class BatchUpdateIntentsRequest extends $pb.GeneratedMessage {
   $core.bool hasLanguageCode() => $_has(3);
   void clearLanguageCode() => clearField(4);
 
-  $4.FieldMask get updateMask => $_getN(4);
-  set updateMask($4.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(4);
+  set updateMask($5.FieldMask v) {
     setField(5, v);
   }
 
@@ -1949,13 +2013,14 @@ class BatchUpdateIntentsResponse extends $pb.GeneratedMessage {
     ..pc<Intent>(1, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..hasRequiredFields = false;
 
-  BatchUpdateIntentsResponse() : super();
-  BatchUpdateIntentsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdateIntentsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdateIntentsResponse._() : super();
+  factory BatchUpdateIntentsResponse() => create();
+  factory BatchUpdateIntentsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdateIntentsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdateIntentsResponse clone() =>
       BatchUpdateIntentsResponse()..mergeFromMessage(this);
   BatchUpdateIntentsResponse copyWith(
@@ -1963,7 +2028,8 @@ class BatchUpdateIntentsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchUpdateIntentsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BatchUpdateIntentsResponse create() => BatchUpdateIntentsResponse();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateIntentsResponse create() => BatchUpdateIntentsResponse._();
   BatchUpdateIntentsResponse createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateIntentsResponse> createRepeated() =>
       $pb.PbList<BatchUpdateIntentsResponse>();
@@ -1981,13 +2047,14 @@ class BatchDeleteIntentsRequest extends $pb.GeneratedMessage {
     ..pc<Intent>(2, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..hasRequiredFields = false;
 
-  BatchDeleteIntentsRequest() : super();
-  BatchDeleteIntentsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeleteIntentsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchDeleteIntentsRequest._() : super();
+  factory BatchDeleteIntentsRequest() => create();
+  factory BatchDeleteIntentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchDeleteIntentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchDeleteIntentsRequest clone() =>
       BatchDeleteIntentsRequest()..mergeFromMessage(this);
   BatchDeleteIntentsRequest copyWith(
@@ -1995,7 +2062,8 @@ class BatchDeleteIntentsRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BatchDeleteIntentsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchDeleteIntentsRequest create() => BatchDeleteIntentsRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeleteIntentsRequest create() => BatchDeleteIntentsRequest._();
   BatchDeleteIntentsRequest createEmptyInstance() => create();
   static $pb.PbList<BatchDeleteIntentsRequest> createRepeated() =>
       $pb.PbList<BatchDeleteIntentsRequest>();
@@ -2020,18 +2088,20 @@ class IntentBatch extends $pb.GeneratedMessage {
     ..pc<Intent>(1, 'intents', $pb.PbFieldType.PM, Intent.create)
     ..hasRequiredFields = false;
 
-  IntentBatch() : super();
-  IntentBatch.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IntentBatch.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IntentBatch._() : super();
+  factory IntentBatch() => create();
+  factory IntentBatch.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IntentBatch.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IntentBatch clone() => IntentBatch()..mergeFromMessage(this);
   IntentBatch copyWith(void Function(IntentBatch) updates) =>
       super.copyWith((message) => updates(message as IntentBatch));
   $pb.BuilderInfo get info_ => _i;
-  static IntentBatch create() => IntentBatch();
+  @$core.pragma('dart2js:noInline')
+  static IntentBatch create() => IntentBatch._();
   IntentBatch createEmptyInstance() => create();
   static $pb.PbList<IntentBatch> createRepeated() => $pb.PbList<IntentBatch>();
   static IntentBatch getDefault() => _defaultInstance ??= create()..freeze();

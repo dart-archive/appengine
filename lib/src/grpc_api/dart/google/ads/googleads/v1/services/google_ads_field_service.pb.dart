@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/google_ads_field_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/google_ads_field.pb.dart' as $0;
+import '../resources/google_ads_field.pb.dart' as $1;
 
 class GetGoogleAdsFieldRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetGoogleAdsFieldRequest',
@@ -18,20 +19,22 @@ class GetGoogleAdsFieldRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetGoogleAdsFieldRequest() : super();
-  GetGoogleAdsFieldRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetGoogleAdsFieldRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetGoogleAdsFieldRequest._() : super();
+  factory GetGoogleAdsFieldRequest() => create();
+  factory GetGoogleAdsFieldRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetGoogleAdsFieldRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetGoogleAdsFieldRequest clone() =>
       GetGoogleAdsFieldRequest()..mergeFromMessage(this);
   GetGoogleAdsFieldRequest copyWith(
           void Function(GetGoogleAdsFieldRequest) updates) =>
       super.copyWith((message) => updates(message as GetGoogleAdsFieldRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetGoogleAdsFieldRequest create() => GetGoogleAdsFieldRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetGoogleAdsFieldRequest create() => GetGoogleAdsFieldRequest._();
   GetGoogleAdsFieldRequest createEmptyInstance() => create();
   static $pb.PbList<GetGoogleAdsFieldRequest> createRepeated() =>
       $pb.PbList<GetGoogleAdsFieldRequest>();
@@ -57,13 +60,14 @@ class SearchGoogleAdsFieldsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchGoogleAdsFieldsRequest() : super();
-  SearchGoogleAdsFieldsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchGoogleAdsFieldsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchGoogleAdsFieldsRequest._() : super();
+  factory SearchGoogleAdsFieldsRequest() => create();
+  factory SearchGoogleAdsFieldsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchGoogleAdsFieldsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchGoogleAdsFieldsRequest clone() =>
       SearchGoogleAdsFieldsRequest()..mergeFromMessage(this);
   SearchGoogleAdsFieldsRequest copyWith(
@@ -71,8 +75,9 @@ class SearchGoogleAdsFieldsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchGoogleAdsFieldsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SearchGoogleAdsFieldsRequest create() =>
-      SearchGoogleAdsFieldsRequest();
+      SearchGoogleAdsFieldsRequest._();
   SearchGoogleAdsFieldsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchGoogleAdsFieldsRequest> createRepeated() =>
       $pb.PbList<SearchGoogleAdsFieldsRequest>();
@@ -109,19 +114,20 @@ class SearchGoogleAdsFieldsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchGoogleAdsFieldsResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$0.GoogleAdsField>(
-        1, 'results', $pb.PbFieldType.PM, $0.GoogleAdsField.create)
+    ..pc<$1.GoogleAdsField>(
+        1, 'results', $pb.PbFieldType.PM, $1.GoogleAdsField.create)
     ..aOS(2, 'nextPageToken')
     ..aInt64(3, 'totalResultsCount')
     ..hasRequiredFields = false;
 
-  SearchGoogleAdsFieldsResponse() : super();
-  SearchGoogleAdsFieldsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchGoogleAdsFieldsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchGoogleAdsFieldsResponse._() : super();
+  factory SearchGoogleAdsFieldsResponse() => create();
+  factory SearchGoogleAdsFieldsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchGoogleAdsFieldsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchGoogleAdsFieldsResponse clone() =>
       SearchGoogleAdsFieldsResponse()..mergeFromMessage(this);
   SearchGoogleAdsFieldsResponse copyWith(
@@ -129,8 +135,9 @@ class SearchGoogleAdsFieldsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchGoogleAdsFieldsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SearchGoogleAdsFieldsResponse create() =>
-      SearchGoogleAdsFieldsResponse();
+      SearchGoogleAdsFieldsResponse._();
   SearchGoogleAdsFieldsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchGoogleAdsFieldsResponse> createRepeated() =>
       $pb.PbList<SearchGoogleAdsFieldsResponse>();
@@ -138,7 +145,7 @@ class SearchGoogleAdsFieldsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchGoogleAdsFieldsResponse _defaultInstance;
 
-  $core.List<$0.GoogleAdsField> get results => $_getList(0);
+  $core.List<$1.GoogleAdsField> get results => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {

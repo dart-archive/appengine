@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/streetview/publish/v1/rpcmessages.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class CreatePhotoRequest extends $pb.GeneratedMessage {
         1, 'photo', $pb.PbFieldType.OM, $0.Photo.getDefault, $0.Photo.create)
     ..hasRequiredFields = false;
 
-  CreatePhotoRequest() : super();
-  CreatePhotoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreatePhotoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreatePhotoRequest._() : super();
+  factory CreatePhotoRequest() => create();
+  factory CreatePhotoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreatePhotoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreatePhotoRequest clone() => CreatePhotoRequest()..mergeFromMessage(this);
   CreatePhotoRequest copyWith(void Function(CreatePhotoRequest) updates) =>
       super.copyWith((message) => updates(message as CreatePhotoRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreatePhotoRequest create() => CreatePhotoRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreatePhotoRequest create() => CreatePhotoRequest._();
   CreatePhotoRequest createEmptyInstance() => create();
   static $pb.PbList<CreatePhotoRequest> createRepeated() =>
       $pb.PbList<CreatePhotoRequest>();
@@ -61,18 +64,20 @@ class GetPhotoRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  GetPhotoRequest() : super();
-  GetPhotoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetPhotoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetPhotoRequest._() : super();
+  factory GetPhotoRequest() => create();
+  factory GetPhotoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetPhotoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetPhotoRequest clone() => GetPhotoRequest()..mergeFromMessage(this);
   GetPhotoRequest copyWith(void Function(GetPhotoRequest) updates) =>
       super.copyWith((message) => updates(message as GetPhotoRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetPhotoRequest create() => GetPhotoRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetPhotoRequest create() => GetPhotoRequest._();
   GetPhotoRequest createEmptyInstance() => create();
   static $pb.PbList<GetPhotoRequest> createRepeated() =>
       $pb.PbList<GetPhotoRequest>();
@@ -114,20 +119,22 @@ class BatchGetPhotosRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  BatchGetPhotosRequest() : super();
-  BatchGetPhotosRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchGetPhotosRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchGetPhotosRequest._() : super();
+  factory BatchGetPhotosRequest() => create();
+  factory BatchGetPhotosRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchGetPhotosRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchGetPhotosRequest clone() =>
       BatchGetPhotosRequest()..mergeFromMessage(this);
   BatchGetPhotosRequest copyWith(
           void Function(BatchGetPhotosRequest) updates) =>
       super.copyWith((message) => updates(message as BatchGetPhotosRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchGetPhotosRequest create() => BatchGetPhotosRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchGetPhotosRequest create() => BatchGetPhotosRequest._();
   BatchGetPhotosRequest createEmptyInstance() => create();
   static $pb.PbList<BatchGetPhotosRequest> createRepeated() =>
       $pb.PbList<BatchGetPhotosRequest>();
@@ -160,20 +167,22 @@ class BatchGetPhotosResponse extends $pb.GeneratedMessage {
     ..pc<PhotoResponse>(1, 'results', $pb.PbFieldType.PM, PhotoResponse.create)
     ..hasRequiredFields = false;
 
-  BatchGetPhotosResponse() : super();
-  BatchGetPhotosResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchGetPhotosResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchGetPhotosResponse._() : super();
+  factory BatchGetPhotosResponse() => create();
+  factory BatchGetPhotosResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchGetPhotosResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchGetPhotosResponse clone() =>
       BatchGetPhotosResponse()..mergeFromMessage(this);
   BatchGetPhotosResponse copyWith(
           void Function(BatchGetPhotosResponse) updates) =>
       super.copyWith((message) => updates(message as BatchGetPhotosResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BatchGetPhotosResponse create() => BatchGetPhotosResponse();
+  @$core.pragma('dart2js:noInline')
+  static BatchGetPhotosResponse create() => BatchGetPhotosResponse._();
   BatchGetPhotosResponse createEmptyInstance() => create();
   static $pb.PbList<BatchGetPhotosResponse> createRepeated() =>
       $pb.PbList<BatchGetPhotosResponse>();
@@ -193,18 +202,20 @@ class PhotoResponse extends $pb.GeneratedMessage {
         2, 'photo', $pb.PbFieldType.OM, $0.Photo.getDefault, $0.Photo.create)
     ..hasRequiredFields = false;
 
-  PhotoResponse() : super();
-  PhotoResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PhotoResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PhotoResponse._() : super();
+  factory PhotoResponse() => create();
+  factory PhotoResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PhotoResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PhotoResponse clone() => PhotoResponse()..mergeFromMessage(this);
   PhotoResponse copyWith(void Function(PhotoResponse) updates) =>
       super.copyWith((message) => updates(message as PhotoResponse));
   $pb.BuilderInfo get info_ => _i;
-  static PhotoResponse create() => PhotoResponse();
+  @$core.pragma('dart2js:noInline')
+  static PhotoResponse create() => PhotoResponse._();
   PhotoResponse createEmptyInstance() => create();
   static $pb.PbList<PhotoResponse> createRepeated() =>
       $pb.PbList<PhotoResponse>();
@@ -239,18 +250,20 @@ class ListPhotosRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'languageCode')
     ..hasRequiredFields = false;
 
-  ListPhotosRequest() : super();
-  ListPhotosRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListPhotosRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListPhotosRequest._() : super();
+  factory ListPhotosRequest() => create();
+  factory ListPhotosRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPhotosRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListPhotosRequest clone() => ListPhotosRequest()..mergeFromMessage(this);
   ListPhotosRequest copyWith(void Function(ListPhotosRequest) updates) =>
       super.copyWith((message) => updates(message as ListPhotosRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListPhotosRequest create() => ListPhotosRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListPhotosRequest create() => ListPhotosRequest._();
   ListPhotosRequest createEmptyInstance() => create();
   static $pb.PbList<ListPhotosRequest> createRepeated() =>
       $pb.PbList<ListPhotosRequest>();
@@ -306,18 +319,20 @@ class ListPhotosResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListPhotosResponse() : super();
-  ListPhotosResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListPhotosResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListPhotosResponse._() : super();
+  factory ListPhotosResponse() => create();
+  factory ListPhotosResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPhotosResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListPhotosResponse clone() => ListPhotosResponse()..mergeFromMessage(this);
   ListPhotosResponse copyWith(void Function(ListPhotosResponse) updates) =>
       super.copyWith((message) => updates(message as ListPhotosResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListPhotosResponse create() => ListPhotosResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListPhotosResponse create() => ListPhotosResponse._();
   ListPhotosResponse createEmptyInstance() => create();
   static $pb.PbList<ListPhotosResponse> createRepeated() =>
       $pb.PbList<ListPhotosResponse>();
@@ -345,18 +360,20 @@ class UpdatePhotoRequest extends $pb.GeneratedMessage {
         $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdatePhotoRequest() : super();
-  UpdatePhotoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdatePhotoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdatePhotoRequest._() : super();
+  factory UpdatePhotoRequest() => create();
+  factory UpdatePhotoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdatePhotoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdatePhotoRequest clone() => UpdatePhotoRequest()..mergeFromMessage(this);
   UpdatePhotoRequest copyWith(void Function(UpdatePhotoRequest) updates) =>
       super.copyWith((message) => updates(message as UpdatePhotoRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdatePhotoRequest create() => UpdatePhotoRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePhotoRequest create() => UpdatePhotoRequest._();
   UpdatePhotoRequest createEmptyInstance() => create();
   static $pb.PbList<UpdatePhotoRequest> createRepeated() =>
       $pb.PbList<UpdatePhotoRequest>();
@@ -388,20 +405,22 @@ class BatchUpdatePhotosRequest extends $pb.GeneratedMessage {
         1, 'updatePhotoRequests', $pb.PbFieldType.PM, UpdatePhotoRequest.create)
     ..hasRequiredFields = false;
 
-  BatchUpdatePhotosRequest() : super();
-  BatchUpdatePhotosRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdatePhotosRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdatePhotosRequest._() : super();
+  factory BatchUpdatePhotosRequest() => create();
+  factory BatchUpdatePhotosRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdatePhotosRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdatePhotosRequest clone() =>
       BatchUpdatePhotosRequest()..mergeFromMessage(this);
   BatchUpdatePhotosRequest copyWith(
           void Function(BatchUpdatePhotosRequest) updates) =>
       super.copyWith((message) => updates(message as BatchUpdatePhotosRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchUpdatePhotosRequest create() => BatchUpdatePhotosRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdatePhotosRequest create() => BatchUpdatePhotosRequest._();
   BatchUpdatePhotosRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdatePhotosRequest> createRepeated() =>
       $pb.PbList<BatchUpdatePhotosRequest>();
@@ -418,13 +437,14 @@ class BatchUpdatePhotosResponse extends $pb.GeneratedMessage {
     ..pc<PhotoResponse>(1, 'results', $pb.PbFieldType.PM, PhotoResponse.create)
     ..hasRequiredFields = false;
 
-  BatchUpdatePhotosResponse() : super();
-  BatchUpdatePhotosResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchUpdatePhotosResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchUpdatePhotosResponse._() : super();
+  factory BatchUpdatePhotosResponse() => create();
+  factory BatchUpdatePhotosResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchUpdatePhotosResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchUpdatePhotosResponse clone() =>
       BatchUpdatePhotosResponse()..mergeFromMessage(this);
   BatchUpdatePhotosResponse copyWith(
@@ -432,7 +452,8 @@ class BatchUpdatePhotosResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BatchUpdatePhotosResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BatchUpdatePhotosResponse create() => BatchUpdatePhotosResponse();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdatePhotosResponse create() => BatchUpdatePhotosResponse._();
   BatchUpdatePhotosResponse createEmptyInstance() => create();
   static $pb.PbList<BatchUpdatePhotosResponse> createRepeated() =>
       $pb.PbList<BatchUpdatePhotosResponse>();
@@ -449,18 +470,20 @@ class DeletePhotoRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'photoId')
     ..hasRequiredFields = false;
 
-  DeletePhotoRequest() : super();
-  DeletePhotoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeletePhotoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeletePhotoRequest._() : super();
+  factory DeletePhotoRequest() => create();
+  factory DeletePhotoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeletePhotoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeletePhotoRequest clone() => DeletePhotoRequest()..mergeFromMessage(this);
   DeletePhotoRequest copyWith(void Function(DeletePhotoRequest) updates) =>
       super.copyWith((message) => updates(message as DeletePhotoRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeletePhotoRequest create() => DeletePhotoRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeletePhotoRequest create() => DeletePhotoRequest._();
   DeletePhotoRequest createEmptyInstance() => create();
   static $pb.PbList<DeletePhotoRequest> createRepeated() =>
       $pb.PbList<DeletePhotoRequest>();
@@ -483,20 +506,22 @@ class BatchDeletePhotosRequest extends $pb.GeneratedMessage {
     ..pPS(1, 'photoIds')
     ..hasRequiredFields = false;
 
-  BatchDeletePhotosRequest() : super();
-  BatchDeletePhotosRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeletePhotosRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchDeletePhotosRequest._() : super();
+  factory BatchDeletePhotosRequest() => create();
+  factory BatchDeletePhotosRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchDeletePhotosRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchDeletePhotosRequest clone() =>
       BatchDeletePhotosRequest()..mergeFromMessage(this);
   BatchDeletePhotosRequest copyWith(
           void Function(BatchDeletePhotosRequest) updates) =>
       super.copyWith((message) => updates(message as BatchDeletePhotosRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchDeletePhotosRequest create() => BatchDeletePhotosRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeletePhotosRequest create() => BatchDeletePhotosRequest._();
   BatchDeletePhotosRequest createEmptyInstance() => create();
   static $pb.PbList<BatchDeletePhotosRequest> createRepeated() =>
       $pb.PbList<BatchDeletePhotosRequest>();
@@ -513,13 +538,14 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
     ..pc<$1.Status>(1, 'status', $pb.PbFieldType.PM, $1.Status.create)
     ..hasRequiredFields = false;
 
-  BatchDeletePhotosResponse() : super();
-  BatchDeletePhotosResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchDeletePhotosResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchDeletePhotosResponse._() : super();
+  factory BatchDeletePhotosResponse() => create();
+  factory BatchDeletePhotosResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchDeletePhotosResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchDeletePhotosResponse clone() =>
       BatchDeletePhotosResponse()..mergeFromMessage(this);
   BatchDeletePhotosResponse copyWith(
@@ -527,7 +553,8 @@ class BatchDeletePhotosResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BatchDeletePhotosResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BatchDeletePhotosResponse create() => BatchDeletePhotosResponse();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeletePhotosResponse create() => BatchDeletePhotosResponse._();
   BatchDeletePhotosResponse createEmptyInstance() => create();
   static $pb.PbList<BatchDeletePhotosResponse> createRepeated() =>
       $pb.PbList<BatchDeletePhotosResponse>();

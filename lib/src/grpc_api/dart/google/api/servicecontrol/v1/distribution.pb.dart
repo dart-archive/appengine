@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/distribution.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -19,13 +20,14 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'offset', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Distribution_LinearBuckets() : super();
-  Distribution_LinearBuckets.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_LinearBuckets.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_LinearBuckets._() : super();
+  factory Distribution_LinearBuckets() => create();
+  factory Distribution_LinearBuckets.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_LinearBuckets.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_LinearBuckets clone() =>
       Distribution_LinearBuckets()..mergeFromMessage(this);
   Distribution_LinearBuckets copyWith(
@@ -33,7 +35,8 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Distribution_LinearBuckets));
   $pb.BuilderInfo get info_ => _i;
-  static Distribution_LinearBuckets create() => Distribution_LinearBuckets();
+  @$core.pragma('dart2js:noInline')
+  static Distribution_LinearBuckets create() => Distribution_LinearBuckets._();
   Distribution_LinearBuckets createEmptyInstance() => create();
   static $pb.PbList<Distribution_LinearBuckets> createRepeated() =>
       $pb.PbList<Distribution_LinearBuckets>();
@@ -75,13 +78,14 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'scale', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Distribution_ExponentialBuckets() : super();
-  Distribution_ExponentialBuckets.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_ExponentialBuckets.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_ExponentialBuckets._() : super();
+  factory Distribution_ExponentialBuckets() => create();
+  factory Distribution_ExponentialBuckets.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_ExponentialBuckets.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_ExponentialBuckets clone() =>
       Distribution_ExponentialBuckets()..mergeFromMessage(this);
   Distribution_ExponentialBuckets copyWith(
@@ -89,8 +93,9 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Distribution_ExponentialBuckets));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Distribution_ExponentialBuckets create() =>
-      Distribution_ExponentialBuckets();
+      Distribution_ExponentialBuckets._();
   Distribution_ExponentialBuckets createEmptyInstance() => create();
   static $pb.PbList<Distribution_ExponentialBuckets> createRepeated() =>
       $pb.PbList<Distribution_ExponentialBuckets>();
@@ -130,13 +135,14 @@ class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
     ..p<$core.double>(1, 'bounds', $pb.PbFieldType.PD)
     ..hasRequiredFields = false;
 
-  Distribution_ExplicitBuckets() : super();
-  Distribution_ExplicitBuckets.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_ExplicitBuckets.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_ExplicitBuckets._() : super();
+  factory Distribution_ExplicitBuckets() => create();
+  factory Distribution_ExplicitBuckets.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_ExplicitBuckets.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_ExplicitBuckets clone() =>
       Distribution_ExplicitBuckets()..mergeFromMessage(this);
   Distribution_ExplicitBuckets copyWith(
@@ -144,8 +150,9 @@ class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Distribution_ExplicitBuckets));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Distribution_ExplicitBuckets create() =>
-      Distribution_ExplicitBuckets();
+      Distribution_ExplicitBuckets._();
   Distribution_ExplicitBuckets createEmptyInstance() => create();
   static $pb.PbList<Distribution_ExplicitBuckets> createRepeated() =>
       $pb.PbList<Distribution_ExplicitBuckets>();
@@ -173,6 +180,7 @@ class Distribution extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Distribution',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..oo(0, [7, 8, 9])
     ..aInt64(1, 'count')
     ..a<$core.double>(2, 'mean', $pb.PbFieldType.OD)
     ..a<$core.double>(3, 'minimum', $pb.PbFieldType.OD)
@@ -197,21 +205,22 @@ class Distribution extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Distribution_ExplicitBuckets.getDefault,
         Distribution_ExplicitBuckets.create)
-    ..oo(0, [7, 8, 9])
     ..hasRequiredFields = false;
 
-  Distribution() : super();
-  Distribution.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution._() : super();
+  factory Distribution() => create();
+  factory Distribution.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution clone() => Distribution()..mergeFromMessage(this);
   Distribution copyWith(void Function(Distribution) updates) =>
       super.copyWith((message) => updates(message as Distribution));
   $pb.BuilderInfo get info_ => _i;
-  static Distribution create() => Distribution();
+  @$core.pragma('dart2js:noInline')
+  static Distribution create() => Distribution._();
   Distribution createEmptyInstance() => create();
   static $pb.PbList<Distribution> createRepeated() =>
       $pb.PbList<Distribution>();

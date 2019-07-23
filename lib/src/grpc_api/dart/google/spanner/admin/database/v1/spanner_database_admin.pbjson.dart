@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/admin/database/v1/spanner_database_admin.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Database$json = {
   '1': 'Database',

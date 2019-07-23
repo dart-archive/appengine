@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/batch.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -39,20 +40,22 @@ class BatchOperationMetadata extends $pb.GeneratedMessage {
         $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  BatchOperationMetadata() : super();
-  BatchOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchOperationMetadata._() : super();
+  factory BatchOperationMetadata() => create();
+  factory BatchOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchOperationMetadata clone() =>
       BatchOperationMetadata()..mergeFromMessage(this);
   BatchOperationMetadata copyWith(
           void Function(BatchOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as BatchOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static BatchOperationMetadata create() => BatchOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static BatchOperationMetadata create() => BatchOperationMetadata._();
   BatchOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<BatchOperationMetadata> createRepeated() =>
       $pb.PbList<BatchOperationMetadata>();
@@ -134,13 +137,14 @@ class JobOperationResult_JobResult extends $pb.GeneratedMessage {
         2, 'status', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  JobOperationResult_JobResult() : super();
-  JobOperationResult_JobResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobOperationResult_JobResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobOperationResult_JobResult._() : super();
+  factory JobOperationResult_JobResult() => create();
+  factory JobOperationResult_JobResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobOperationResult_JobResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobOperationResult_JobResult clone() =>
       JobOperationResult_JobResult()..mergeFromMessage(this);
   JobOperationResult_JobResult copyWith(
@@ -148,8 +152,9 @@ class JobOperationResult_JobResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as JobOperationResult_JobResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static JobOperationResult_JobResult create() =>
-      JobOperationResult_JobResult();
+      JobOperationResult_JobResult._();
   JobOperationResult_JobResult createEmptyInstance() => create();
   static $pb.PbList<JobOperationResult_JobResult> createRepeated() =>
       $pb.PbList<JobOperationResult_JobResult>();
@@ -181,18 +186,20 @@ class JobOperationResult extends $pb.GeneratedMessage {
         JobOperationResult_JobResult.create)
     ..hasRequiredFields = false;
 
-  JobOperationResult() : super();
-  JobOperationResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobOperationResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobOperationResult._() : super();
+  factory JobOperationResult() => create();
+  factory JobOperationResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobOperationResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobOperationResult clone() => JobOperationResult()..mergeFromMessage(this);
   JobOperationResult copyWith(void Function(JobOperationResult) updates) =>
       super.copyWith((message) => updates(message as JobOperationResult));
   $pb.BuilderInfo get info_ => _i;
-  static JobOperationResult create() => JobOperationResult();
+  @$core.pragma('dart2js:noInline')
+  static JobOperationResult create() => JobOperationResult._();
   JobOperationResult createEmptyInstance() => create();
   static $pb.PbList<JobOperationResult> createRepeated() =>
       $pb.PbList<JobOperationResult>();

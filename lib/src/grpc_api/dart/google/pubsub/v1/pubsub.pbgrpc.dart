@@ -1,63 +1,67 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/pubsub/v1/pubsub.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'pubsub.pb.dart';
-import '../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'pubsub.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $1;
 export 'pubsub.pb.dart';
 
 class PublisherClient extends $grpc.Client {
-  static final _$createTopic = $grpc.ClientMethod<Topic, Topic>(
+  static final _$createTopic = $grpc.ClientMethod<$0.Topic, $0.Topic>(
       '/google.pubsub.v1.Publisher/CreateTopic',
-      (Topic value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Topic.fromBuffer(value));
-  static final _$updateTopic = $grpc.ClientMethod<UpdateTopicRequest, Topic>(
-      '/google.pubsub.v1.Publisher/UpdateTopic',
-      (UpdateTopicRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Topic.fromBuffer(value));
-  static final _$publish = $grpc.ClientMethod<PublishRequest, PublishResponse>(
-      '/google.pubsub.v1.Publisher/Publish',
-      (PublishRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => PublishResponse.fromBuffer(value));
-  static final _$getTopic = $grpc.ClientMethod<GetTopicRequest, Topic>(
+      ($0.Topic value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Topic.fromBuffer(value));
+  static final _$updateTopic =
+      $grpc.ClientMethod<$0.UpdateTopicRequest, $0.Topic>(
+          '/google.pubsub.v1.Publisher/UpdateTopic',
+          ($0.UpdateTopicRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Topic.fromBuffer(value));
+  static final _$publish =
+      $grpc.ClientMethod<$0.PublishRequest, $0.PublishResponse>(
+          '/google.pubsub.v1.Publisher/Publish',
+          ($0.PublishRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.PublishResponse.fromBuffer(value));
+  static final _$getTopic = $grpc.ClientMethod<$0.GetTopicRequest, $0.Topic>(
       '/google.pubsub.v1.Publisher/GetTopic',
-      (GetTopicRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Topic.fromBuffer(value));
+      ($0.GetTopicRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Topic.fromBuffer(value));
   static final _$listTopics =
-      $grpc.ClientMethod<ListTopicsRequest, ListTopicsResponse>(
+      $grpc.ClientMethod<$0.ListTopicsRequest, $0.ListTopicsResponse>(
           '/google.pubsub.v1.Publisher/ListTopics',
-          (ListTopicsRequest value) => value.writeToBuffer(),
+          ($0.ListTopicsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListTopicsResponse.fromBuffer(value));
+              $0.ListTopicsResponse.fromBuffer(value));
   static final _$listTopicSubscriptions = $grpc.ClientMethod<
-          ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(
+          $0.ListTopicSubscriptionsRequest, $0.ListTopicSubscriptionsResponse>(
       '/google.pubsub.v1.Publisher/ListTopicSubscriptions',
-      (ListTopicSubscriptionsRequest value) => value.writeToBuffer(),
+      ($0.ListTopicSubscriptionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListTopicSubscriptionsResponse.fromBuffer(value));
-  static final _$listTopicSnapshots =
-      $grpc.ClientMethod<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse>(
-          '/google.pubsub.v1.Publisher/ListTopicSnapshots',
-          (ListTopicSnapshotsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              ListTopicSnapshotsResponse.fromBuffer(value));
-  static final _$deleteTopic = $grpc.ClientMethod<DeleteTopicRequest, $0.Empty>(
-      '/google.pubsub.v1.Publisher/DeleteTopic',
-      (DeleteTopicRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          $0.ListTopicSubscriptionsResponse.fromBuffer(value));
+  static final _$listTopicSnapshots = $grpc.ClientMethod<
+          $0.ListTopicSnapshotsRequest, $0.ListTopicSnapshotsResponse>(
+      '/google.pubsub.v1.Publisher/ListTopicSnapshots',
+      ($0.ListTopicSnapshotsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListTopicSnapshotsResponse.fromBuffer(value));
+  static final _$deleteTopic =
+      $grpc.ClientMethod<$0.DeleteTopicRequest, $1.Empty>(
+          '/google.pubsub.v1.Publisher/DeleteTopic',
+          ($0.DeleteTopicRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   PublisherClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<Topic> createTopic(Topic request,
+  $grpc.ResponseFuture<$0.Topic> createTopic($0.Topic request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createTopic, $async.Stream.fromIterable([request]),
@@ -65,7 +69,7 @@ class PublisherClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Topic> updateTopic(UpdateTopicRequest request,
+  $grpc.ResponseFuture<$0.Topic> updateTopic($0.UpdateTopicRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateTopic, $async.Stream.fromIterable([request]),
@@ -73,21 +77,22 @@ class PublisherClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<PublishResponse> publish(PublishRequest request,
+  $grpc.ResponseFuture<$0.PublishResponse> publish($0.PublishRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$publish, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Topic> getTopic(GetTopicRequest request,
+  $grpc.ResponseFuture<$0.Topic> getTopic($0.GetTopicRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getTopic, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListTopicsResponse> listTopics(ListTopicsRequest request,
+  $grpc.ResponseFuture<$0.ListTopicsResponse> listTopics(
+      $0.ListTopicsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listTopics, $async.Stream.fromIterable([request]),
@@ -95,17 +100,17 @@ class PublisherClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListTopicSubscriptionsResponse> listTopicSubscriptions(
-      ListTopicSubscriptionsRequest request,
-      {$grpc.CallOptions options}) {
+  $grpc.ResponseFuture<$0.ListTopicSubscriptionsResponse>
+      listTopicSubscriptions($0.ListTopicSubscriptionsRequest request,
+          {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listTopicSubscriptions, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListTopicSnapshotsResponse> listTopicSnapshots(
-      ListTopicSnapshotsRequest request,
+  $grpc.ResponseFuture<$0.ListTopicSnapshotsResponse> listTopicSnapshots(
+      $0.ListTopicSnapshotsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listTopicSnapshots, $async.Stream.fromIterable([request]),
@@ -113,7 +118,7 @@ class PublisherClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteTopic(DeleteTopicRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteTopic($0.DeleteTopicRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteTopic, $async.Stream.fromIterable([request]),
@@ -126,210 +131,217 @@ abstract class PublisherServiceBase extends $grpc.Service {
   $core.String get $name => 'google.pubsub.v1.Publisher';
 
   PublisherServiceBase() {
-    $addMethod($grpc.ServiceMethod<Topic, Topic>(
+    $addMethod($grpc.ServiceMethod<$0.Topic, $0.Topic>(
         'CreateTopic',
         createTopic_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => Topic.fromBuffer(value),
-        (Topic value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateTopicRequest, Topic>(
+        ($core.List<$core.int> value) => $0.Topic.fromBuffer(value),
+        ($0.Topic value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateTopicRequest, $0.Topic>(
         'UpdateTopic',
         updateTopic_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateTopicRequest.fromBuffer(value),
-        (Topic value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<PublishRequest, PublishResponse>(
+        ($core.List<$core.int> value) =>
+            $0.UpdateTopicRequest.fromBuffer(value),
+        ($0.Topic value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.PublishRequest, $0.PublishResponse>(
         'Publish',
         publish_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => PublishRequest.fromBuffer(value),
-        (PublishResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetTopicRequest, Topic>(
+        ($core.List<$core.int> value) => $0.PublishRequest.fromBuffer(value),
+        ($0.PublishResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetTopicRequest, $0.Topic>(
         'GetTopic',
         getTopic_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetTopicRequest.fromBuffer(value),
-        (Topic value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListTopicsRequest, ListTopicsResponse>(
+        ($core.List<$core.int> value) => $0.GetTopicRequest.fromBuffer(value),
+        ($0.Topic value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListTopicsRequest, $0.ListTopicsResponse>(
         'ListTopics',
         listTopics_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ListTopicsRequest.fromBuffer(value),
-        (ListTopicsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListTopicSubscriptionsRequest,
-            ListTopicSubscriptionsResponse>(
+        ($core.List<$core.int> value) => $0.ListTopicsRequest.fromBuffer(value),
+        ($0.ListTopicsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListTopicSubscriptionsRequest,
+            $0.ListTopicSubscriptionsResponse>(
         'ListTopicSubscriptions',
         listTopicSubscriptions_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListTopicSubscriptionsRequest.fromBuffer(value),
-        (ListTopicSubscriptionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListTopicSnapshotsRequest,
-            ListTopicSnapshotsResponse>(
+            $0.ListTopicSubscriptionsRequest.fromBuffer(value),
+        ($0.ListTopicSubscriptionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListTopicSnapshotsRequest,
+            $0.ListTopicSnapshotsResponse>(
         'ListTopicSnapshots',
         listTopicSnapshots_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListTopicSnapshotsRequest.fromBuffer(value),
-        (ListTopicSnapshotsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteTopicRequest, $0.Empty>(
+            $0.ListTopicSnapshotsRequest.fromBuffer(value),
+        ($0.ListTopicSnapshotsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteTopicRequest, $1.Empty>(
         'DeleteTopic',
         deleteTopic_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteTopicRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) =>
+            $0.DeleteTopicRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<Topic> createTopic_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Topic> createTopic_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Topic> request) async {
     return createTopic(call, await request);
   }
 
-  $async.Future<Topic> updateTopic_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Topic> updateTopic_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateTopicRequest> request) async {
     return updateTopic(call, await request);
   }
 
-  $async.Future<PublishResponse> publish_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.PublishResponse> publish_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.PublishRequest> request) async {
     return publish(call, await request);
   }
 
-  $async.Future<Topic> getTopic_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Topic> getTopic_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.GetTopicRequest> request) async {
     return getTopic(call, await request);
   }
 
-  $async.Future<ListTopicsResponse> listTopics_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListTopicsResponse> listTopics_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ListTopicsRequest> request) async {
     return listTopics(call, await request);
   }
 
-  $async.Future<ListTopicSubscriptionsResponse> listTopicSubscriptions_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListTopicSubscriptionsResponse> listTopicSubscriptions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListTopicSubscriptionsRequest> request) async {
     return listTopicSubscriptions(call, await request);
   }
 
-  $async.Future<ListTopicSnapshotsResponse> listTopicSnapshots_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListTopicSnapshotsResponse> listTopicSnapshots_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListTopicSnapshotsRequest> request) async {
     return listTopicSnapshots(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteTopic_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteTopic_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteTopicRequest> request) async {
     return deleteTopic(call, await request);
   }
 
-  $async.Future<Topic> createTopic($grpc.ServiceCall call, Topic request);
-  $async.Future<Topic> updateTopic(
-      $grpc.ServiceCall call, UpdateTopicRequest request);
-  $async.Future<PublishResponse> publish(
-      $grpc.ServiceCall call, PublishRequest request);
-  $async.Future<Topic> getTopic(
-      $grpc.ServiceCall call, GetTopicRequest request);
-  $async.Future<ListTopicsResponse> listTopics(
-      $grpc.ServiceCall call, ListTopicsRequest request);
-  $async.Future<ListTopicSubscriptionsResponse> listTopicSubscriptions(
-      $grpc.ServiceCall call, ListTopicSubscriptionsRequest request);
-  $async.Future<ListTopicSnapshotsResponse> listTopicSnapshots(
-      $grpc.ServiceCall call, ListTopicSnapshotsRequest request);
-  $async.Future<$0.Empty> deleteTopic(
-      $grpc.ServiceCall call, DeleteTopicRequest request);
+  $async.Future<$0.Topic> createTopic($grpc.ServiceCall call, $0.Topic request);
+  $async.Future<$0.Topic> updateTopic(
+      $grpc.ServiceCall call, $0.UpdateTopicRequest request);
+  $async.Future<$0.PublishResponse> publish(
+      $grpc.ServiceCall call, $0.PublishRequest request);
+  $async.Future<$0.Topic> getTopic(
+      $grpc.ServiceCall call, $0.GetTopicRequest request);
+  $async.Future<$0.ListTopicsResponse> listTopics(
+      $grpc.ServiceCall call, $0.ListTopicsRequest request);
+  $async.Future<$0.ListTopicSubscriptionsResponse> listTopicSubscriptions(
+      $grpc.ServiceCall call, $0.ListTopicSubscriptionsRequest request);
+  $async.Future<$0.ListTopicSnapshotsResponse> listTopicSnapshots(
+      $grpc.ServiceCall call, $0.ListTopicSnapshotsRequest request);
+  $async.Future<$1.Empty> deleteTopic(
+      $grpc.ServiceCall call, $0.DeleteTopicRequest request);
 }
 
 class SubscriberClient extends $grpc.Client {
   static final _$createSubscription =
-      $grpc.ClientMethod<Subscription, Subscription>(
+      $grpc.ClientMethod<$0.Subscription, $0.Subscription>(
           '/google.pubsub.v1.Subscriber/CreateSubscription',
-          (Subscription value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Subscription.fromBuffer(value));
+          ($0.Subscription value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Subscription.fromBuffer(value));
   static final _$getSubscription =
-      $grpc.ClientMethod<GetSubscriptionRequest, Subscription>(
+      $grpc.ClientMethod<$0.GetSubscriptionRequest, $0.Subscription>(
           '/google.pubsub.v1.Subscriber/GetSubscription',
-          (GetSubscriptionRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Subscription.fromBuffer(value));
+          ($0.GetSubscriptionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Subscription.fromBuffer(value));
   static final _$updateSubscription =
-      $grpc.ClientMethod<UpdateSubscriptionRequest, Subscription>(
+      $grpc.ClientMethod<$0.UpdateSubscriptionRequest, $0.Subscription>(
           '/google.pubsub.v1.Subscriber/UpdateSubscription',
-          (UpdateSubscriptionRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Subscription.fromBuffer(value));
-  static final _$listSubscriptions =
-      $grpc.ClientMethod<ListSubscriptionsRequest, ListSubscriptionsResponse>(
-          '/google.pubsub.v1.Subscriber/ListSubscriptions',
-          (ListSubscriptionsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              ListSubscriptionsResponse.fromBuffer(value));
+          ($0.UpdateSubscriptionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Subscription.fromBuffer(value));
+  static final _$listSubscriptions = $grpc.ClientMethod<
+          $0.ListSubscriptionsRequest, $0.ListSubscriptionsResponse>(
+      '/google.pubsub.v1.Subscriber/ListSubscriptions',
+      ($0.ListSubscriptionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ListSubscriptionsResponse.fromBuffer(value));
   static final _$deleteSubscription =
-      $grpc.ClientMethod<DeleteSubscriptionRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.DeleteSubscriptionRequest, $1.Empty>(
           '/google.pubsub.v1.Subscriber/DeleteSubscription',
-          (DeleteSubscriptionRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($0.DeleteSubscriptionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$modifyAckDeadline =
-      $grpc.ClientMethod<ModifyAckDeadlineRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.ModifyAckDeadlineRequest, $1.Empty>(
           '/google.pubsub.v1.Subscriber/ModifyAckDeadline',
-          (ModifyAckDeadlineRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$acknowledge = $grpc.ClientMethod<AcknowledgeRequest, $0.Empty>(
-      '/google.pubsub.v1.Subscriber/Acknowledge',
-      (AcknowledgeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$pull = $grpc.ClientMethod<PullRequest, PullResponse>(
+          ($0.ModifyAckDeadlineRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$acknowledge =
+      $grpc.ClientMethod<$0.AcknowledgeRequest, $1.Empty>(
+          '/google.pubsub.v1.Subscriber/Acknowledge',
+          ($0.AcknowledgeRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$pull = $grpc.ClientMethod<$0.PullRequest, $0.PullResponse>(
       '/google.pubsub.v1.Subscriber/Pull',
-      (PullRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => PullResponse.fromBuffer(value));
+      ($0.PullRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.PullResponse.fromBuffer(value));
   static final _$streamingPull =
-      $grpc.ClientMethod<StreamingPullRequest, StreamingPullResponse>(
+      $grpc.ClientMethod<$0.StreamingPullRequest, $0.StreamingPullResponse>(
           '/google.pubsub.v1.Subscriber/StreamingPull',
-          (StreamingPullRequest value) => value.writeToBuffer(),
+          ($0.StreamingPullRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              StreamingPullResponse.fromBuffer(value));
+              $0.StreamingPullResponse.fromBuffer(value));
   static final _$modifyPushConfig =
-      $grpc.ClientMethod<ModifyPushConfigRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.ModifyPushConfigRequest, $1.Empty>(
           '/google.pubsub.v1.Subscriber/ModifyPushConfig',
-          (ModifyPushConfigRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getSnapshot = $grpc.ClientMethod<GetSnapshotRequest, Snapshot>(
-      '/google.pubsub.v1.Subscriber/GetSnapshot',
-      (GetSnapshotRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Snapshot.fromBuffer(value));
+          ($0.ModifyPushConfigRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$getSnapshot =
+      $grpc.ClientMethod<$0.GetSnapshotRequest, $0.Snapshot>(
+          '/google.pubsub.v1.Subscriber/GetSnapshot',
+          ($0.GetSnapshotRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Snapshot.fromBuffer(value));
   static final _$listSnapshots =
-      $grpc.ClientMethod<ListSnapshotsRequest, ListSnapshotsResponse>(
+      $grpc.ClientMethod<$0.ListSnapshotsRequest, $0.ListSnapshotsResponse>(
           '/google.pubsub.v1.Subscriber/ListSnapshots',
-          (ListSnapshotsRequest value) => value.writeToBuffer(),
+          ($0.ListSnapshotsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListSnapshotsResponse.fromBuffer(value));
+              $0.ListSnapshotsResponse.fromBuffer(value));
   static final _$createSnapshot =
-      $grpc.ClientMethod<CreateSnapshotRequest, Snapshot>(
+      $grpc.ClientMethod<$0.CreateSnapshotRequest, $0.Snapshot>(
           '/google.pubsub.v1.Subscriber/CreateSnapshot',
-          (CreateSnapshotRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Snapshot.fromBuffer(value));
+          ($0.CreateSnapshotRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Snapshot.fromBuffer(value));
   static final _$updateSnapshot =
-      $grpc.ClientMethod<UpdateSnapshotRequest, Snapshot>(
+      $grpc.ClientMethod<$0.UpdateSnapshotRequest, $0.Snapshot>(
           '/google.pubsub.v1.Subscriber/UpdateSnapshot',
-          (UpdateSnapshotRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Snapshot.fromBuffer(value));
+          ($0.UpdateSnapshotRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Snapshot.fromBuffer(value));
   static final _$deleteSnapshot =
-      $grpc.ClientMethod<DeleteSnapshotRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.DeleteSnapshotRequest, $1.Empty>(
           '/google.pubsub.v1.Subscriber/DeleteSnapshot',
-          (DeleteSnapshotRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$seek = $grpc.ClientMethod<SeekRequest, SeekResponse>(
+          ($0.DeleteSnapshotRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$seek = $grpc.ClientMethod<$0.SeekRequest, $0.SeekResponse>(
       '/google.pubsub.v1.Subscriber/Seek',
-      (SeekRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => SeekResponse.fromBuffer(value));
+      ($0.SeekRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.SeekResponse.fromBuffer(value));
 
   SubscriberClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<Subscription> createSubscription(Subscription request,
+  $grpc.ResponseFuture<$0.Subscription> createSubscription(
+      $0.Subscription request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createSubscription, $async.Stream.fromIterable([request]),
@@ -337,8 +349,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Subscription> getSubscription(
-      GetSubscriptionRequest request,
+  $grpc.ResponseFuture<$0.Subscription> getSubscription(
+      $0.GetSubscriptionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getSubscription, $async.Stream.fromIterable([request]),
@@ -346,8 +358,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Subscription> updateSubscription(
-      UpdateSubscriptionRequest request,
+  $grpc.ResponseFuture<$0.Subscription> updateSubscription(
+      $0.UpdateSubscriptionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateSubscription, $async.Stream.fromIterable([request]),
@@ -355,8 +367,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListSubscriptionsResponse> listSubscriptions(
-      ListSubscriptionsRequest request,
+  $grpc.ResponseFuture<$0.ListSubscriptionsResponse> listSubscriptions(
+      $0.ListSubscriptionsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listSubscriptions, $async.Stream.fromIterable([request]),
@@ -364,8 +376,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteSubscription(
-      DeleteSubscriptionRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteSubscription(
+      $0.DeleteSubscriptionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteSubscription, $async.Stream.fromIterable([request]),
@@ -373,8 +385,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> modifyAckDeadline(
-      ModifyAckDeadlineRequest request,
+  $grpc.ResponseFuture<$1.Empty> modifyAckDeadline(
+      $0.ModifyAckDeadlineRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$modifyAckDeadline, $async.Stream.fromIterable([request]),
@@ -382,7 +394,7 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> acknowledge(AcknowledgeRequest request,
+  $grpc.ResponseFuture<$1.Empty> acknowledge($0.AcknowledgeRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$acknowledge, $async.Stream.fromIterable([request]),
@@ -390,22 +402,22 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<PullResponse> pull(PullRequest request,
+  $grpc.ResponseFuture<$0.PullResponse> pull($0.PullRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$pull, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseStream<StreamingPullResponse> streamingPull(
-      $async.Stream<StreamingPullRequest> request,
+  $grpc.ResponseStream<$0.StreamingPullResponse> streamingPull(
+      $async.Stream<$0.StreamingPullRequest> request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$streamingPull, request, options: options);
     return $grpc.ResponseStream(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> modifyPushConfig(
-      ModifyPushConfigRequest request,
+  $grpc.ResponseFuture<$1.Empty> modifyPushConfig(
+      $0.ModifyPushConfigRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$modifyPushConfig, $async.Stream.fromIterable([request]),
@@ -413,7 +425,7 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Snapshot> getSnapshot(GetSnapshotRequest request,
+  $grpc.ResponseFuture<$0.Snapshot> getSnapshot($0.GetSnapshotRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getSnapshot, $async.Stream.fromIterable([request]),
@@ -421,8 +433,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListSnapshotsResponse> listSnapshots(
-      ListSnapshotsRequest request,
+  $grpc.ResponseFuture<$0.ListSnapshotsResponse> listSnapshots(
+      $0.ListSnapshotsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listSnapshots, $async.Stream.fromIterable([request]),
@@ -430,7 +442,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Snapshot> createSnapshot(CreateSnapshotRequest request,
+  $grpc.ResponseFuture<$0.Snapshot> createSnapshot(
+      $0.CreateSnapshotRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createSnapshot, $async.Stream.fromIterable([request]),
@@ -438,7 +451,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Snapshot> updateSnapshot(UpdateSnapshotRequest request,
+  $grpc.ResponseFuture<$0.Snapshot> updateSnapshot(
+      $0.UpdateSnapshotRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateSnapshot, $async.Stream.fromIterable([request]),
@@ -446,7 +460,8 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteSnapshot(DeleteSnapshotRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteSnapshot(
+      $0.DeleteSnapshotRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteSnapshot, $async.Stream.fromIterable([request]),
@@ -454,7 +469,7 @@ class SubscriberClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<SeekResponse> seek(SeekRequest request,
+  $grpc.ResponseFuture<$0.SeekResponse> seek($0.SeekRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$seek, $async.Stream.fromIterable([request]),
         options: options);
@@ -466,233 +481,244 @@ abstract class SubscriberServiceBase extends $grpc.Service {
   $core.String get $name => 'google.pubsub.v1.Subscriber';
 
   SubscriberServiceBase() {
-    $addMethod($grpc.ServiceMethod<Subscription, Subscription>(
+    $addMethod($grpc.ServiceMethod<$0.Subscription, $0.Subscription>(
         'CreateSubscription',
         createSubscription_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => Subscription.fromBuffer(value),
-        (Subscription value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetSubscriptionRequest, Subscription>(
+        ($core.List<$core.int> value) => $0.Subscription.fromBuffer(value),
+        ($0.Subscription value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSubscriptionRequest, $0.Subscription>(
         'GetSubscription',
         getSubscription_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetSubscriptionRequest.fromBuffer(value),
-        (Subscription value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateSubscriptionRequest, Subscription>(
-        'UpdateSubscription',
-        updateSubscription_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            UpdateSubscriptionRequest.fromBuffer(value),
-        (Subscription value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListSubscriptionsRequest,
-            ListSubscriptionsResponse>(
+            $0.GetSubscriptionRequest.fromBuffer(value),
+        ($0.Subscription value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.UpdateSubscriptionRequest, $0.Subscription>(
+            'UpdateSubscription',
+            updateSubscription_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.UpdateSubscriptionRequest.fromBuffer(value),
+            ($0.Subscription value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListSubscriptionsRequest,
+            $0.ListSubscriptionsResponse>(
         'ListSubscriptions',
         listSubscriptions_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListSubscriptionsRequest.fromBuffer(value),
-        (ListSubscriptionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteSubscriptionRequest, $0.Empty>(
+            $0.ListSubscriptionsRequest.fromBuffer(value),
+        ($0.ListSubscriptionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteSubscriptionRequest, $1.Empty>(
         'DeleteSubscription',
         deleteSubscription_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteSubscriptionRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ModifyAckDeadlineRequest, $0.Empty>(
+            $0.DeleteSubscriptionRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ModifyAckDeadlineRequest, $1.Empty>(
         'ModifyAckDeadline',
         modifyAckDeadline_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ModifyAckDeadlineRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<AcknowledgeRequest, $0.Empty>(
+            $0.ModifyAckDeadlineRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AcknowledgeRequest, $1.Empty>(
         'Acknowledge',
         acknowledge_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => AcknowledgeRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<PullRequest, PullResponse>(
+        ($core.List<$core.int> value) =>
+            $0.AcknowledgeRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.PullRequest, $0.PullResponse>(
         'Pull',
         pull_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => PullRequest.fromBuffer(value),
-        (PullResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<StreamingPullRequest, StreamingPullResponse>(
-        'StreamingPull',
-        streamingPull,
-        true,
-        true,
-        ($core.List<$core.int> value) => StreamingPullRequest.fromBuffer(value),
-        (StreamingPullResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ModifyPushConfigRequest, $0.Empty>(
+        ($core.List<$core.int> value) => $0.PullRequest.fromBuffer(value),
+        ($0.PullResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.StreamingPullRequest, $0.StreamingPullResponse>(
+            'StreamingPull',
+            streamingPull,
+            true,
+            true,
+            ($core.List<$core.int> value) =>
+                $0.StreamingPullRequest.fromBuffer(value),
+            ($0.StreamingPullResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ModifyPushConfigRequest, $1.Empty>(
         'ModifyPushConfig',
         modifyPushConfig_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ModifyPushConfigRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetSnapshotRequest, Snapshot>(
+            $0.ModifyPushConfigRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSnapshotRequest, $0.Snapshot>(
         'GetSnapshot',
         getSnapshot_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetSnapshotRequest.fromBuffer(value),
-        (Snapshot value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListSnapshotsRequest, ListSnapshotsResponse>(
-        'ListSnapshots',
-        listSnapshots_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListSnapshotsRequest.fromBuffer(value),
-        (ListSnapshotsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateSnapshotRequest, Snapshot>(
+        ($core.List<$core.int> value) =>
+            $0.GetSnapshotRequest.fromBuffer(value),
+        ($0.Snapshot value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListSnapshotsRequest, $0.ListSnapshotsResponse>(
+            'ListSnapshots',
+            listSnapshots_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListSnapshotsRequest.fromBuffer(value),
+            ($0.ListSnapshotsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateSnapshotRequest, $0.Snapshot>(
         'CreateSnapshot',
         createSnapshot_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateSnapshotRequest.fromBuffer(value),
-        (Snapshot value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateSnapshotRequest, Snapshot>(
+            $0.CreateSnapshotRequest.fromBuffer(value),
+        ($0.Snapshot value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateSnapshotRequest, $0.Snapshot>(
         'UpdateSnapshot',
         updateSnapshot_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateSnapshotRequest.fromBuffer(value),
-        (Snapshot value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteSnapshotRequest, $0.Empty>(
+            $0.UpdateSnapshotRequest.fromBuffer(value),
+        ($0.Snapshot value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteSnapshotRequest, $1.Empty>(
         'DeleteSnapshot',
         deleteSnapshot_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteSnapshotRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<SeekRequest, SeekResponse>(
+            $0.DeleteSnapshotRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SeekRequest, $0.SeekResponse>(
         'Seek',
         seek_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => SeekRequest.fromBuffer(value),
-        (SeekResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.SeekRequest.fromBuffer(value),
+        ($0.SeekResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<Subscription> createSubscription_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Subscription> createSubscription_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Subscription> request) async {
     return createSubscription(call, await request);
   }
 
-  $async.Future<Subscription> getSubscription_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Subscription> getSubscription_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetSubscriptionRequest> request) async {
     return getSubscription(call, await request);
   }
 
-  $async.Future<Subscription> updateSubscription_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Subscription> updateSubscription_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateSubscriptionRequest> request) async {
     return updateSubscription(call, await request);
   }
 
-  $async.Future<ListSubscriptionsResponse> listSubscriptions_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListSubscriptionsResponse> listSubscriptions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListSubscriptionsRequest> request) async {
     return listSubscriptions(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteSubscription_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteSubscription_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteSubscriptionRequest> request) async {
     return deleteSubscription(call, await request);
   }
 
-  $async.Future<$0.Empty> modifyAckDeadline_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> modifyAckDeadline_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ModifyAckDeadlineRequest> request) async {
     return modifyAckDeadline(call, await request);
   }
 
-  $async.Future<$0.Empty> acknowledge_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> acknowledge_Pre($grpc.ServiceCall call,
+      $async.Future<$0.AcknowledgeRequest> request) async {
     return acknowledge(call, await request);
   }
 
-  $async.Future<PullResponse> pull_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.PullResponse> pull_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.PullRequest> request) async {
     return pull(call, await request);
   }
 
-  $async.Future<$0.Empty> modifyPushConfig_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> modifyPushConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ModifyPushConfigRequest> request) async {
     return modifyPushConfig(call, await request);
   }
 
-  $async.Future<Snapshot> getSnapshot_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Snapshot> getSnapshot_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetSnapshotRequest> request) async {
     return getSnapshot(call, await request);
   }
 
-  $async.Future<ListSnapshotsResponse> listSnapshots_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListSnapshotsResponse> listSnapshots_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListSnapshotsRequest> request) async {
     return listSnapshots(call, await request);
   }
 
-  $async.Future<Snapshot> createSnapshot_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Snapshot> createSnapshot_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateSnapshotRequest> request) async {
     return createSnapshot(call, await request);
   }
 
-  $async.Future<Snapshot> updateSnapshot_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Snapshot> updateSnapshot_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateSnapshotRequest> request) async {
     return updateSnapshot(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteSnapshot_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteSnapshot_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteSnapshotRequest> request) async {
     return deleteSnapshot(call, await request);
   }
 
-  $async.Future<SeekResponse> seek_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.SeekResponse> seek_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.SeekRequest> request) async {
     return seek(call, await request);
   }
 
-  $async.Future<Subscription> createSubscription(
-      $grpc.ServiceCall call, Subscription request);
-  $async.Future<Subscription> getSubscription(
-      $grpc.ServiceCall call, GetSubscriptionRequest request);
-  $async.Future<Subscription> updateSubscription(
-      $grpc.ServiceCall call, UpdateSubscriptionRequest request);
-  $async.Future<ListSubscriptionsResponse> listSubscriptions(
-      $grpc.ServiceCall call, ListSubscriptionsRequest request);
-  $async.Future<$0.Empty> deleteSubscription(
-      $grpc.ServiceCall call, DeleteSubscriptionRequest request);
-  $async.Future<$0.Empty> modifyAckDeadline(
-      $grpc.ServiceCall call, ModifyAckDeadlineRequest request);
-  $async.Future<$0.Empty> acknowledge(
-      $grpc.ServiceCall call, AcknowledgeRequest request);
-  $async.Future<PullResponse> pull($grpc.ServiceCall call, PullRequest request);
-  $async.Stream<StreamingPullResponse> streamingPull(
-      $grpc.ServiceCall call, $async.Stream<StreamingPullRequest> request);
-  $async.Future<$0.Empty> modifyPushConfig(
-      $grpc.ServiceCall call, ModifyPushConfigRequest request);
-  $async.Future<Snapshot> getSnapshot(
-      $grpc.ServiceCall call, GetSnapshotRequest request);
-  $async.Future<ListSnapshotsResponse> listSnapshots(
-      $grpc.ServiceCall call, ListSnapshotsRequest request);
-  $async.Future<Snapshot> createSnapshot(
-      $grpc.ServiceCall call, CreateSnapshotRequest request);
-  $async.Future<Snapshot> updateSnapshot(
-      $grpc.ServiceCall call, UpdateSnapshotRequest request);
-  $async.Future<$0.Empty> deleteSnapshot(
-      $grpc.ServiceCall call, DeleteSnapshotRequest request);
-  $async.Future<SeekResponse> seek($grpc.ServiceCall call, SeekRequest request);
+  $async.Future<$0.Subscription> createSubscription(
+      $grpc.ServiceCall call, $0.Subscription request);
+  $async.Future<$0.Subscription> getSubscription(
+      $grpc.ServiceCall call, $0.GetSubscriptionRequest request);
+  $async.Future<$0.Subscription> updateSubscription(
+      $grpc.ServiceCall call, $0.UpdateSubscriptionRequest request);
+  $async.Future<$0.ListSubscriptionsResponse> listSubscriptions(
+      $grpc.ServiceCall call, $0.ListSubscriptionsRequest request);
+  $async.Future<$1.Empty> deleteSubscription(
+      $grpc.ServiceCall call, $0.DeleteSubscriptionRequest request);
+  $async.Future<$1.Empty> modifyAckDeadline(
+      $grpc.ServiceCall call, $0.ModifyAckDeadlineRequest request);
+  $async.Future<$1.Empty> acknowledge(
+      $grpc.ServiceCall call, $0.AcknowledgeRequest request);
+  $async.Future<$0.PullResponse> pull(
+      $grpc.ServiceCall call, $0.PullRequest request);
+  $async.Stream<$0.StreamingPullResponse> streamingPull(
+      $grpc.ServiceCall call, $async.Stream<$0.StreamingPullRequest> request);
+  $async.Future<$1.Empty> modifyPushConfig(
+      $grpc.ServiceCall call, $0.ModifyPushConfigRequest request);
+  $async.Future<$0.Snapshot> getSnapshot(
+      $grpc.ServiceCall call, $0.GetSnapshotRequest request);
+  $async.Future<$0.ListSnapshotsResponse> listSnapshots(
+      $grpc.ServiceCall call, $0.ListSnapshotsRequest request);
+  $async.Future<$0.Snapshot> createSnapshot(
+      $grpc.ServiceCall call, $0.CreateSnapshotRequest request);
+  $async.Future<$0.Snapshot> updateSnapshot(
+      $grpc.ServiceCall call, $0.UpdateSnapshotRequest request);
+  $async.Future<$1.Empty> deleteSnapshot(
+      $grpc.ServiceCall call, $0.DeleteSnapshotRequest request);
+  $async.Future<$0.SeekResponse> seek(
+      $grpc.ServiceCall call, $0.SeekRequest request);
 }

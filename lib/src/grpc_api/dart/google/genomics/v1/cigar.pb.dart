@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/cigar.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -28,18 +29,20 @@ class CigarUnit extends $pb.GeneratedMessage {
     ..aOS(3, 'referenceSequence')
     ..hasRequiredFields = false;
 
-  CigarUnit() : super();
-  CigarUnit.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CigarUnit.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CigarUnit._() : super();
+  factory CigarUnit() => create();
+  factory CigarUnit.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CigarUnit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CigarUnit clone() => CigarUnit()..mergeFromMessage(this);
   CigarUnit copyWith(void Function(CigarUnit) updates) =>
       super.copyWith((message) => updates(message as CigarUnit));
   $pb.BuilderInfo get info_ => _i;
-  static CigarUnit create() => CigarUnit();
+  @$core.pragma('dart2js:noInline')
+  static CigarUnit create() => CigarUnit._();
   CigarUnit createEmptyInstance() => create();
   static $pb.PbList<CigarUnit> createRepeated() => $pb.PbList<CigarUnit>();
   static CigarUnit getDefault() => _defaultInstance ??= create()..freeze();

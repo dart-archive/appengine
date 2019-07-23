@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/mutate_job.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,13 +30,14 @@ class MutateJob_MutateJobMetadata extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  MutateJob_MutateJobMetadata() : super();
-  MutateJob_MutateJobMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateJob_MutateJobMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateJob_MutateJobMetadata._() : super();
+  factory MutateJob_MutateJobMetadata() => create();
+  factory MutateJob_MutateJobMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateJob_MutateJobMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateJob_MutateJobMetadata clone() =>
       MutateJob_MutateJobMetadata()..mergeFromMessage(this);
   MutateJob_MutateJobMetadata copyWith(
@@ -43,7 +45,9 @@ class MutateJob_MutateJobMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateJob_MutateJobMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static MutateJob_MutateJobMetadata create() => MutateJob_MutateJobMetadata();
+  @$core.pragma('dart2js:noInline')
+  static MutateJob_MutateJobMetadata create() =>
+      MutateJob_MutateJobMetadata._();
   MutateJob_MutateJobMetadata createEmptyInstance() => create();
   static $pb.PbList<MutateJob_MutateJobMetadata> createRepeated() =>
       $pb.PbList<MutateJob_MutateJobMetadata>();
@@ -117,18 +121,20 @@ class MutateJob extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  MutateJob() : super();
-  MutateJob.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateJob.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateJob._() : super();
+  factory MutateJob() => create();
+  factory MutateJob.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateJob.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateJob clone() => MutateJob()..mergeFromMessage(this);
   MutateJob copyWith(void Function(MutateJob) updates) =>
       super.copyWith((message) => updates(message as MutateJob));
   $pb.BuilderInfo get info_ => _i;
-  static MutateJob create() => MutateJob();
+  @$core.pragma('dart2js:noInline')
+  static MutateJob create() => MutateJob._();
   MutateJob createEmptyInstance() => create();
   static $pb.PbList<MutateJob> createRepeated() => $pb.PbList<MutateJob>();
   static MutateJob getDefault() => _defaultInstance ??= create()..freeze();

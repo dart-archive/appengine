@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/campaign.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetCampaignRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCampaignRequest',
@@ -19,18 +20,20 @@ class GetCampaignRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCampaignRequest() : super();
-  GetCampaignRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCampaignRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCampaignRequest._() : super();
+  factory GetCampaignRequest() => create();
+  factory GetCampaignRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCampaignRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCampaignRequest clone() => GetCampaignRequest()..mergeFromMessage(this);
   GetCampaignRequest copyWith(void Function(GetCampaignRequest) updates) =>
       super.copyWith((message) => updates(message as GetCampaignRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCampaignRequest create() => GetCampaignRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignRequest create() => GetCampaignRequest._();
   GetCampaignRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignRequest> createRepeated() =>
       $pb.PbList<GetCampaignRequest>();
@@ -57,20 +60,22 @@ class MutateCampaignsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCampaignsRequest() : super();
-  MutateCampaignsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignsRequest._() : super();
+  factory MutateCampaignsRequest() => create();
+  factory MutateCampaignsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignsRequest clone() =>
       MutateCampaignsRequest()..mergeFromMessage(this);
   MutateCampaignsRequest copyWith(
           void Function(MutateCampaignsRequest) updates) =>
       super.copyWith((message) => updates(message as MutateCampaignsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCampaignsRequest create() => MutateCampaignsRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignsRequest create() => MutateCampaignsRequest._();
   MutateCampaignsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignsRequest>();
@@ -117,28 +122,30 @@ class CampaignOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.Campaign>(1, 'create_1', $pb.PbFieldType.OM, $0.Campaign.getDefault,
-        $0.Campaign.create)
-    ..a<$0.Campaign>(2, 'update', $pb.PbFieldType.OM, $0.Campaign.getDefault,
-        $0.Campaign.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.Campaign>(1, 'create_1', $pb.PbFieldType.OM, $1.Campaign.getDefault,
+        $1.Campaign.create)
+    ..a<$1.Campaign>(2, 'update', $pb.PbFieldType.OM, $1.Campaign.getDefault,
+        $1.Campaign.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CampaignOperation() : super();
-  CampaignOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignOperation._() : super();
+  factory CampaignOperation() => create();
+  factory CampaignOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignOperation clone() => CampaignOperation()..mergeFromMessage(this);
   CampaignOperation copyWith(void Function(CampaignOperation) updates) =>
       super.copyWith((message) => updates(message as CampaignOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignOperation create() => CampaignOperation();
+  @$core.pragma('dart2js:noInline')
+  static CampaignOperation create() => CampaignOperation._();
   CampaignOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignOperation> createRepeated() =>
       $pb.PbList<CampaignOperation>();
@@ -150,16 +157,16 @@ class CampaignOperation extends $pb.GeneratedMessage {
       _CampaignOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.Campaign get create_1 => $_getN(0);
-  set create_1($0.Campaign v) {
+  $1.Campaign get create_1 => $_getN(0);
+  set create_1($1.Campaign v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.Campaign get update => $_getN(1);
-  set update($0.Campaign v) {
+  $1.Campaign get update => $_getN(1);
+  set update($1.Campaign v) {
     setField(2, v);
   }
 
@@ -174,8 +181,8 @@ class CampaignOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -188,24 +195,26 @@ class MutateCampaignsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCampaignsResponse() : super();
-  MutateCampaignsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignsResponse._() : super();
+  factory MutateCampaignsResponse() => create();
+  factory MutateCampaignsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignsResponse clone() =>
       MutateCampaignsResponse()..mergeFromMessage(this);
   MutateCampaignsResponse copyWith(
           void Function(MutateCampaignsResponse) updates) =>
       super.copyWith((message) => updates(message as MutateCampaignsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCampaignsResponse create() => MutateCampaignsResponse();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignsResponse create() => MutateCampaignsResponse._();
   MutateCampaignsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignsResponse>();
@@ -215,8 +224,8 @@ class MutateCampaignsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -230,19 +239,21 @@ class MutateCampaignResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCampaignResult() : super();
-  MutateCampaignResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignResult._() : super();
+  factory MutateCampaignResult() => create();
+  factory MutateCampaignResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignResult clone() =>
       MutateCampaignResult()..mergeFromMessage(this);
   MutateCampaignResult copyWith(void Function(MutateCampaignResult) updates) =>
       super.copyWith((message) => updates(message as MutateCampaignResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCampaignResult create() => MutateCampaignResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignResult create() => MutateCampaignResult._();
   MutateCampaignResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignResult> createRepeated() =>
       $pb.PbList<MutateCampaignResult>();

@@ -1,54 +1,52 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/billing/v1/cloud_billing.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'cloud_billing.pb.dart';
+import 'package:grpc/service_api.dart' as $grpc;
+import 'cloud_billing.pb.dart' as $0;
 export 'cloud_billing.pb.dart';
 
 class CloudBillingClient extends $grpc.Client {
   static final _$getBillingAccount =
-      $grpc.ClientMethod<GetBillingAccountRequest, BillingAccount>(
+      $grpc.ClientMethod<$0.GetBillingAccountRequest, $0.BillingAccount>(
           '/google.cloud.billing.v1.CloudBilling/GetBillingAccount',
-          (GetBillingAccountRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => BillingAccount.fromBuffer(value));
+          ($0.GetBillingAccountRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.BillingAccount.fromBuffer(value));
   static final _$listBillingAccounts = $grpc.ClientMethod<
-          ListBillingAccountsRequest, ListBillingAccountsResponse>(
+          $0.ListBillingAccountsRequest, $0.ListBillingAccountsResponse>(
       '/google.cloud.billing.v1.CloudBilling/ListBillingAccounts',
-      (ListBillingAccountsRequest value) => value.writeToBuffer(),
+      ($0.ListBillingAccountsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListBillingAccountsResponse.fromBuffer(value));
+          $0.ListBillingAccountsResponse.fromBuffer(value));
   static final _$listProjectBillingInfo = $grpc.ClientMethod<
-          ListProjectBillingInfoRequest, ListProjectBillingInfoResponse>(
+          $0.ListProjectBillingInfoRequest, $0.ListProjectBillingInfoResponse>(
       '/google.cloud.billing.v1.CloudBilling/ListProjectBillingInfo',
-      (ListProjectBillingInfoRequest value) => value.writeToBuffer(),
+      ($0.ListProjectBillingInfoRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListProjectBillingInfoResponse.fromBuffer(value));
-  static final _$getProjectBillingInfo =
-      $grpc.ClientMethod<GetProjectBillingInfoRequest, ProjectBillingInfo>(
-          '/google.cloud.billing.v1.CloudBilling/GetProjectBillingInfo',
-          (GetProjectBillingInfoRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              ProjectBillingInfo.fromBuffer(value));
-  static final _$updateProjectBillingInfo =
-      $grpc.ClientMethod<UpdateProjectBillingInfoRequest, ProjectBillingInfo>(
-          '/google.cloud.billing.v1.CloudBilling/UpdateProjectBillingInfo',
-          (UpdateProjectBillingInfoRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              ProjectBillingInfo.fromBuffer(value));
+          $0.ListProjectBillingInfoResponse.fromBuffer(value));
+  static final _$getProjectBillingInfo = $grpc.ClientMethod<
+          $0.GetProjectBillingInfoRequest, $0.ProjectBillingInfo>(
+      '/google.cloud.billing.v1.CloudBilling/GetProjectBillingInfo',
+      ($0.GetProjectBillingInfoRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ProjectBillingInfo.fromBuffer(value));
+  static final _$updateProjectBillingInfo = $grpc.ClientMethod<
+          $0.UpdateProjectBillingInfoRequest, $0.ProjectBillingInfo>(
+      '/google.cloud.billing.v1.CloudBilling/UpdateProjectBillingInfo',
+      ($0.UpdateProjectBillingInfoRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ProjectBillingInfo.fromBuffer(value));
 
   CloudBillingClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<BillingAccount> getBillingAccount(
-      GetBillingAccountRequest request,
+  $grpc.ResponseFuture<$0.BillingAccount> getBillingAccount(
+      $0.GetBillingAccountRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getBillingAccount, $async.Stream.fromIterable([request]),
@@ -56,8 +54,8 @@ class CloudBillingClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListBillingAccountsResponse> listBillingAccounts(
-      ListBillingAccountsRequest request,
+  $grpc.ResponseFuture<$0.ListBillingAccountsResponse> listBillingAccounts(
+      $0.ListBillingAccountsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listBillingAccounts, $async.Stream.fromIterable([request]),
@@ -65,17 +63,17 @@ class CloudBillingClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListProjectBillingInfoResponse> listProjectBillingInfo(
-      ListProjectBillingInfoRequest request,
-      {$grpc.CallOptions options}) {
+  $grpc.ResponseFuture<$0.ListProjectBillingInfoResponse>
+      listProjectBillingInfo($0.ListProjectBillingInfoRequest request,
+          {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listProjectBillingInfo, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ProjectBillingInfo> getProjectBillingInfo(
-      GetProjectBillingInfoRequest request,
+  $grpc.ResponseFuture<$0.ProjectBillingInfo> getProjectBillingInfo(
+      $0.GetProjectBillingInfoRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getProjectBillingInfo, $async.Stream.fromIterable([request]),
@@ -83,8 +81,8 @@ class CloudBillingClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ProjectBillingInfo> updateProjectBillingInfo(
-      UpdateProjectBillingInfoRequest request,
+  $grpc.ResponseFuture<$0.ProjectBillingInfo> updateProjectBillingInfo(
+      $0.UpdateProjectBillingInfoRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateProjectBillingInfo, $async.Stream.fromIterable([request]),
@@ -97,85 +95,90 @@ abstract class CloudBillingServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.billing.v1.CloudBilling';
 
   CloudBillingServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetBillingAccountRequest, BillingAccount>(
-        'GetBillingAccount',
-        getBillingAccount_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            GetBillingAccountRequest.fromBuffer(value),
-        (BillingAccount value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListBillingAccountsRequest,
-            ListBillingAccountsResponse>(
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetBillingAccountRequest, $0.BillingAccount>(
+            'GetBillingAccount',
+            getBillingAccount_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetBillingAccountRequest.fromBuffer(value),
+            ($0.BillingAccount value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListBillingAccountsRequest,
+            $0.ListBillingAccountsResponse>(
         'ListBillingAccounts',
         listBillingAccounts_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListBillingAccountsRequest.fromBuffer(value),
-        (ListBillingAccountsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListProjectBillingInfoRequest,
-            ListProjectBillingInfoResponse>(
+            $0.ListBillingAccountsRequest.fromBuffer(value),
+        ($0.ListBillingAccountsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListProjectBillingInfoRequest,
+            $0.ListProjectBillingInfoResponse>(
         'ListProjectBillingInfo',
         listProjectBillingInfo_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListProjectBillingInfoRequest.fromBuffer(value),
-        (ListProjectBillingInfoResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<GetProjectBillingInfoRequest, ProjectBillingInfo>(
-            'GetProjectBillingInfo',
-            getProjectBillingInfo_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                GetProjectBillingInfoRequest.fromBuffer(value),
-            (ProjectBillingInfo value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateProjectBillingInfoRequest,
-            ProjectBillingInfo>(
+            $0.ListProjectBillingInfoRequest.fromBuffer(value),
+        ($0.ListProjectBillingInfoResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetProjectBillingInfoRequest,
+            $0.ProjectBillingInfo>(
+        'GetProjectBillingInfo',
+        getProjectBillingInfo_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetProjectBillingInfoRequest.fromBuffer(value),
+        ($0.ProjectBillingInfo value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateProjectBillingInfoRequest,
+            $0.ProjectBillingInfo>(
         'UpdateProjectBillingInfo',
         updateProjectBillingInfo_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateProjectBillingInfoRequest.fromBuffer(value),
-        (ProjectBillingInfo value) => value.writeToBuffer()));
+            $0.UpdateProjectBillingInfoRequest.fromBuffer(value),
+        ($0.ProjectBillingInfo value) => value.writeToBuffer()));
   }
 
-  $async.Future<BillingAccount> getBillingAccount_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.BillingAccount> getBillingAccount_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetBillingAccountRequest> request) async {
     return getBillingAccount(call, await request);
   }
 
-  $async.Future<ListBillingAccountsResponse> listBillingAccounts_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListBillingAccountsResponse> listBillingAccounts_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListBillingAccountsRequest> request) async {
     return listBillingAccounts(call, await request);
   }
 
-  $async.Future<ListProjectBillingInfoResponse> listProjectBillingInfo_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListProjectBillingInfoResponse> listProjectBillingInfo_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListProjectBillingInfoRequest> request) async {
     return listProjectBillingInfo(call, await request);
   }
 
-  $async.Future<ProjectBillingInfo> getProjectBillingInfo_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ProjectBillingInfo> getProjectBillingInfo_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetProjectBillingInfoRequest> request) async {
     return getProjectBillingInfo(call, await request);
   }
 
-  $async.Future<ProjectBillingInfo> updateProjectBillingInfo_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ProjectBillingInfo> updateProjectBillingInfo_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateProjectBillingInfoRequest> request) async {
     return updateProjectBillingInfo(call, await request);
   }
 
-  $async.Future<BillingAccount> getBillingAccount(
-      $grpc.ServiceCall call, GetBillingAccountRequest request);
-  $async.Future<ListBillingAccountsResponse> listBillingAccounts(
-      $grpc.ServiceCall call, ListBillingAccountsRequest request);
-  $async.Future<ListProjectBillingInfoResponse> listProjectBillingInfo(
-      $grpc.ServiceCall call, ListProjectBillingInfoRequest request);
-  $async.Future<ProjectBillingInfo> getProjectBillingInfo(
-      $grpc.ServiceCall call, GetProjectBillingInfoRequest request);
-  $async.Future<ProjectBillingInfo> updateProjectBillingInfo(
-      $grpc.ServiceCall call, UpdateProjectBillingInfoRequest request);
+  $async.Future<$0.BillingAccount> getBillingAccount(
+      $grpc.ServiceCall call, $0.GetBillingAccountRequest request);
+  $async.Future<$0.ListBillingAccountsResponse> listBillingAccounts(
+      $grpc.ServiceCall call, $0.ListBillingAccountsRequest request);
+  $async.Future<$0.ListProjectBillingInfoResponse> listProjectBillingInfo(
+      $grpc.ServiceCall call, $0.ListProjectBillingInfoRequest request);
+  $async.Future<$0.ProjectBillingInfo> getProjectBillingInfo(
+      $grpc.ServiceCall call, $0.GetProjectBillingInfoRequest request);
+  $async.Future<$0.ProjectBillingInfo> updateProjectBillingInfo(
+      $grpc.ServiceCall call, $0.UpdateProjectBillingInfoRequest request);
 }

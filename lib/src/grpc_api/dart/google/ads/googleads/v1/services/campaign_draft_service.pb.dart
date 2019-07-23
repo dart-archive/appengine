@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_draft_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign_draft.pb.dart' as $1;
-import '../../../../protobuf/field_mask.pb.dart' as $3;
-import '../../../../rpc/status.pb.dart' as $4;
+import '../resources/campaign_draft.pb.dart' as $3;
+import '../../../../protobuf/field_mask.pb.dart' as $4;
+import '../../../../rpc/status.pb.dart' as $5;
 
 class GetCampaignDraftRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCampaignDraftRequest',
@@ -19,20 +20,22 @@ class GetCampaignDraftRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCampaignDraftRequest() : super();
-  GetCampaignDraftRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCampaignDraftRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCampaignDraftRequest._() : super();
+  factory GetCampaignDraftRequest() => create();
+  factory GetCampaignDraftRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCampaignDraftRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCampaignDraftRequest clone() =>
       GetCampaignDraftRequest()..mergeFromMessage(this);
   GetCampaignDraftRequest copyWith(
           void Function(GetCampaignDraftRequest) updates) =>
       super.copyWith((message) => updates(message as GetCampaignDraftRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCampaignDraftRequest create() => GetCampaignDraftRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignDraftRequest create() => GetCampaignDraftRequest._();
   GetCampaignDraftRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignDraftRequest> createRepeated() =>
       $pb.PbList<GetCampaignDraftRequest>();
@@ -60,13 +63,14 @@ class MutateCampaignDraftsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCampaignDraftsRequest() : super();
-  MutateCampaignDraftsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignDraftsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignDraftsRequest._() : super();
+  factory MutateCampaignDraftsRequest() => create();
+  factory MutateCampaignDraftsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignDraftsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignDraftsRequest clone() =>
       MutateCampaignDraftsRequest()..mergeFromMessage(this);
   MutateCampaignDraftsRequest copyWith(
@@ -74,7 +78,9 @@ class MutateCampaignDraftsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignDraftsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCampaignDraftsRequest create() => MutateCampaignDraftsRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignDraftsRequest create() =>
+      MutateCampaignDraftsRequest._();
   MutateCampaignDraftsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignDraftsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignDraftsRequest>();
@@ -116,13 +122,14 @@ class PromoteCampaignDraftRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'campaignDraft')
     ..hasRequiredFields = false;
 
-  PromoteCampaignDraftRequest() : super();
-  PromoteCampaignDraftRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PromoteCampaignDraftRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PromoteCampaignDraftRequest._() : super();
+  factory PromoteCampaignDraftRequest() => create();
+  factory PromoteCampaignDraftRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PromoteCampaignDraftRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PromoteCampaignDraftRequest clone() =>
       PromoteCampaignDraftRequest()..mergeFromMessage(this);
   PromoteCampaignDraftRequest copyWith(
@@ -130,7 +137,9 @@ class PromoteCampaignDraftRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PromoteCampaignDraftRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PromoteCampaignDraftRequest create() => PromoteCampaignDraftRequest();
+  @$core.pragma('dart2js:noInline')
+  static PromoteCampaignDraftRequest create() =>
+      PromoteCampaignDraftRequest._();
   PromoteCampaignDraftRequest createEmptyInstance() => create();
   static $pb.PbList<PromoteCampaignDraftRequest> createRepeated() =>
       $pb.PbList<PromoteCampaignDraftRequest>();
@@ -159,30 +168,32 @@ class CampaignDraftOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignDraftOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.CampaignDraft>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.CampaignDraft.getDefault, $1.CampaignDraft.create)
-    ..a<$1.CampaignDraft>(2, 'update', $pb.PbFieldType.OM,
-        $1.CampaignDraft.getDefault, $1.CampaignDraft.create)
-    ..aOS(3, 'remove')
-    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$3.CampaignDraft>(1, 'create_1', $pb.PbFieldType.OM,
+        $3.CampaignDraft.getDefault, $3.CampaignDraft.create)
+    ..a<$3.CampaignDraft>(2, 'update', $pb.PbFieldType.OM,
+        $3.CampaignDraft.getDefault, $3.CampaignDraft.create)
+    ..aOS(3, 'remove')
+    ..a<$4.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CampaignDraftOperation() : super();
-  CampaignDraftOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignDraftOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignDraftOperation._() : super();
+  factory CampaignDraftOperation() => create();
+  factory CampaignDraftOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignDraftOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignDraftOperation clone() =>
       CampaignDraftOperation()..mergeFromMessage(this);
   CampaignDraftOperation copyWith(
           void Function(CampaignDraftOperation) updates) =>
       super.copyWith((message) => updates(message as CampaignDraftOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignDraftOperation create() => CampaignDraftOperation();
+  @$core.pragma('dart2js:noInline')
+  static CampaignDraftOperation create() => CampaignDraftOperation._();
   CampaignDraftOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignDraftOperation> createRepeated() =>
       $pb.PbList<CampaignDraftOperation>();
@@ -194,16 +205,16 @@ class CampaignDraftOperation extends $pb.GeneratedMessage {
       _CampaignDraftOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $1.CampaignDraft get create_1 => $_getN(0);
-  set create_1($1.CampaignDraft v) {
+  $3.CampaignDraft get create_1 => $_getN(0);
+  set create_1($3.CampaignDraft v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $1.CampaignDraft get update => $_getN(1);
-  set update($1.CampaignDraft v) {
+  $3.CampaignDraft get update => $_getN(1);
+  set update($3.CampaignDraft v) {
     setField(2, v);
   }
 
@@ -218,8 +229,8 @@ class CampaignDraftOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $3.FieldMask get updateMask => $_getN(3);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(3);
+  set updateMask($4.FieldMask v) {
     setField(4, v);
   }
 
@@ -233,17 +244,18 @@ class MutateCampaignDraftsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignDraftResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignDraftResult.create)
-    ..a<$4.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $4.Status.getDefault, $4.Status.create)
+    ..a<$5.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $5.Status.getDefault, $5.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCampaignDraftsResponse() : super();
-  MutateCampaignDraftsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignDraftsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignDraftsResponse._() : super();
+  factory MutateCampaignDraftsResponse() => create();
+  factory MutateCampaignDraftsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignDraftsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignDraftsResponse clone() =>
       MutateCampaignDraftsResponse()..mergeFromMessage(this);
   MutateCampaignDraftsResponse copyWith(
@@ -251,8 +263,9 @@ class MutateCampaignDraftsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignDraftsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignDraftsResponse create() =>
-      MutateCampaignDraftsResponse();
+      MutateCampaignDraftsResponse._();
   MutateCampaignDraftsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignDraftsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignDraftsResponse>();
@@ -262,8 +275,8 @@ class MutateCampaignDraftsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignDraftResult> get results => $_getList(0);
 
-  $4.Status get partialFailureError => $_getN(1);
-  set partialFailureError($4.Status v) {
+  $5.Status get partialFailureError => $_getN(1);
+  set partialFailureError($5.Status v) {
     setField(3, v);
   }
 
@@ -277,13 +290,14 @@ class MutateCampaignDraftResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCampaignDraftResult() : super();
-  MutateCampaignDraftResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignDraftResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignDraftResult._() : super();
+  factory MutateCampaignDraftResult() => create();
+  factory MutateCampaignDraftResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignDraftResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignDraftResult clone() =>
       MutateCampaignDraftResult()..mergeFromMessage(this);
   MutateCampaignDraftResult copyWith(
@@ -291,7 +305,8 @@ class MutateCampaignDraftResult extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as MutateCampaignDraftResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCampaignDraftResult create() => MutateCampaignDraftResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignDraftResult create() => MutateCampaignDraftResult._();
   MutateCampaignDraftResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignDraftResult> createRepeated() =>
       $pb.PbList<MutateCampaignDraftResult>();
@@ -317,13 +332,15 @@ class ListCampaignDraftAsyncErrorsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListCampaignDraftAsyncErrorsRequest() : super();
-  ListCampaignDraftAsyncErrorsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListCampaignDraftAsyncErrorsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListCampaignDraftAsyncErrorsRequest._() : super();
+  factory ListCampaignDraftAsyncErrorsRequest() => create();
+  factory ListCampaignDraftAsyncErrorsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListCampaignDraftAsyncErrorsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListCampaignDraftAsyncErrorsRequest clone() =>
       ListCampaignDraftAsyncErrorsRequest()..mergeFromMessage(this);
   ListCampaignDraftAsyncErrorsRequest copyWith(
@@ -331,8 +348,9 @@ class ListCampaignDraftAsyncErrorsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListCampaignDraftAsyncErrorsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListCampaignDraftAsyncErrorsRequest create() =>
-      ListCampaignDraftAsyncErrorsRequest();
+      ListCampaignDraftAsyncErrorsRequest._();
   ListCampaignDraftAsyncErrorsRequest createEmptyInstance() => create();
   static $pb.PbList<ListCampaignDraftAsyncErrorsRequest> createRepeated() =>
       $pb.PbList<ListCampaignDraftAsyncErrorsRequest>();
@@ -369,17 +387,19 @@ class ListCampaignDraftAsyncErrorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCampaignDraftAsyncErrorsResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$4.Status>(1, 'errors', $pb.PbFieldType.PM, $4.Status.create)
+    ..pc<$5.Status>(1, 'errors', $pb.PbFieldType.PM, $5.Status.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListCampaignDraftAsyncErrorsResponse() : super();
-  ListCampaignDraftAsyncErrorsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListCampaignDraftAsyncErrorsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListCampaignDraftAsyncErrorsResponse._() : super();
+  factory ListCampaignDraftAsyncErrorsResponse() => create();
+  factory ListCampaignDraftAsyncErrorsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListCampaignDraftAsyncErrorsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListCampaignDraftAsyncErrorsResponse clone() =>
       ListCampaignDraftAsyncErrorsResponse()..mergeFromMessage(this);
   ListCampaignDraftAsyncErrorsResponse copyWith(
@@ -387,8 +407,9 @@ class ListCampaignDraftAsyncErrorsResponse extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ListCampaignDraftAsyncErrorsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListCampaignDraftAsyncErrorsResponse create() =>
-      ListCampaignDraftAsyncErrorsResponse();
+      ListCampaignDraftAsyncErrorsResponse._();
   ListCampaignDraftAsyncErrorsResponse createEmptyInstance() => create();
   static $pb.PbList<ListCampaignDraftAsyncErrorsResponse> createRepeated() =>
       $pb.PbList<ListCampaignDraftAsyncErrorsResponse>();
@@ -396,7 +417,7 @@ class ListCampaignDraftAsyncErrorsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListCampaignDraftAsyncErrorsResponse _defaultInstance;
 
-  $core.List<$4.Status> get errors => $_getList(0);
+  $core.List<$5.Status> get errors => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {

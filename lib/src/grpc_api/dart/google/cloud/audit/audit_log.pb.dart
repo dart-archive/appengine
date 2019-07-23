@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/audit/audit_log.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -37,18 +38,20 @@ class AuditLog extends $pb.GeneratedMessage {
         $2.Struct.create)
     ..hasRequiredFields = false;
 
-  AuditLog() : super();
-  AuditLog.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuditLog.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuditLog._() : super();
+  factory AuditLog() => create();
+  factory AuditLog.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuditLog.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuditLog clone() => AuditLog()..mergeFromMessage(this);
   AuditLog copyWith(void Function(AuditLog) updates) =>
       super.copyWith((message) => updates(message as AuditLog));
   $pb.BuilderInfo get info_ => _i;
-  static AuditLog create() => AuditLog();
+  @$core.pragma('dart2js:noInline')
+  static AuditLog create() => AuditLog._();
   AuditLog createEmptyInstance() => create();
   static $pb.PbList<AuditLog> createRepeated() => $pb.PbList<AuditLog>();
   static AuditLog getDefault() => _defaultInstance ??= create()..freeze();
@@ -143,18 +146,20 @@ class AuthenticationInfo extends $pb.GeneratedMessage {
     ..aOS(1, 'principalEmail')
     ..hasRequiredFields = false;
 
-  AuthenticationInfo() : super();
-  AuthenticationInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthenticationInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthenticationInfo._() : super();
+  factory AuthenticationInfo() => create();
+  factory AuthenticationInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuthenticationInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuthenticationInfo clone() => AuthenticationInfo()..mergeFromMessage(this);
   AuthenticationInfo copyWith(void Function(AuthenticationInfo) updates) =>
       super.copyWith((message) => updates(message as AuthenticationInfo));
   $pb.BuilderInfo get info_ => _i;
-  static AuthenticationInfo create() => AuthenticationInfo();
+  @$core.pragma('dart2js:noInline')
+  static AuthenticationInfo create() => AuthenticationInfo._();
   AuthenticationInfo createEmptyInstance() => create();
   static $pb.PbList<AuthenticationInfo> createRepeated() =>
       $pb.PbList<AuthenticationInfo>();
@@ -179,18 +184,20 @@ class AuthorizationInfo extends $pb.GeneratedMessage {
     ..aOB(3, 'granted')
     ..hasRequiredFields = false;
 
-  AuthorizationInfo() : super();
-  AuthorizationInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuthorizationInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuthorizationInfo._() : super();
+  factory AuthorizationInfo() => create();
+  factory AuthorizationInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuthorizationInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuthorizationInfo clone() => AuthorizationInfo()..mergeFromMessage(this);
   AuthorizationInfo copyWith(void Function(AuthorizationInfo) updates) =>
       super.copyWith((message) => updates(message as AuthorizationInfo));
   $pb.BuilderInfo get info_ => _i;
-  static AuthorizationInfo create() => AuthorizationInfo();
+  @$core.pragma('dart2js:noInline')
+  static AuthorizationInfo create() => AuthorizationInfo._();
   AuthorizationInfo createEmptyInstance() => create();
   static $pb.PbList<AuthorizationInfo> createRepeated() =>
       $pb.PbList<AuthorizationInfo>();
@@ -230,18 +237,20 @@ class RequestMetadata extends $pb.GeneratedMessage {
     ..aOS(2, 'callerSuppliedUserAgent')
     ..hasRequiredFields = false;
 
-  RequestMetadata() : super();
-  RequestMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RequestMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RequestMetadata._() : super();
+  factory RequestMetadata() => create();
+  factory RequestMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RequestMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RequestMetadata clone() => RequestMetadata()..mergeFromMessage(this);
   RequestMetadata copyWith(void Function(RequestMetadata) updates) =>
       super.copyWith((message) => updates(message as RequestMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static RequestMetadata create() => RequestMetadata();
+  @$core.pragma('dart2js:noInline')
+  static RequestMetadata create() => RequestMetadata._();
   RequestMetadata createEmptyInstance() => create();
   static $pb.PbList<RequestMetadata> createRepeated() =>
       $pb.PbList<RequestMetadata>();

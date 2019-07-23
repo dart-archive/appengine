@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/detection.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ImageObjectDetectionAnnotation$json = {
   '1': 'ImageObjectDetectionAnnotation',
@@ -16,6 +17,30 @@ const ImageObjectDetectionAnnotation$json = {
       '10': 'boundingBox'
     },
     {'1': 'score', '3': 2, '4': 1, '5': 2, '10': 'score'},
+  ],
+};
+
+const VideoObjectTrackingAnnotation$json = {
+  '1': 'VideoObjectTrackingAnnotation',
+  '2': [
+    {'1': 'instance_id', '3': 1, '4': 1, '5': 9, '10': 'instanceId'},
+    {
+      '1': 'time_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'timeOffset'
+    },
+    {
+      '1': 'bounding_box',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BoundingPoly',
+      '10': 'boundingBox'
+    },
+    {'1': 'score', '3': 4, '4': 1, '5': 2, '10': 'score'},
   ],
 };
 
@@ -80,6 +105,41 @@ const ImageObjectDetectionEvaluationMetrics$json = {
     {
       '1': 'bounding_box_mean_average_precision',
       '3': 3,
+      '4': 1,
+      '5': 2,
+      '10': 'boundingBoxMeanAveragePrecision'
+    },
+  ],
+};
+
+const VideoObjectTrackingEvaluationMetrics$json = {
+  '1': 'VideoObjectTrackingEvaluationMetrics',
+  '2': [
+    {
+      '1': 'evaluated_frame_count',
+      '3': 1,
+      '4': 1,
+      '5': 5,
+      '10': 'evaluatedFrameCount'
+    },
+    {
+      '1': 'evaluated_bounding_box_count',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '10': 'evaluatedBoundingBoxCount'
+    },
+    {
+      '1': 'bounding_box_metrics_entries',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BoundingBoxMetricsEntry',
+      '10': 'boundingBoxMetricsEntries'
+    },
+    {
+      '1': 'bounding_box_mean_average_precision',
+      '3': 6,
       '4': 1,
       '5': 2,
       '10': 'boundingBoxMeanAveragePrecision'

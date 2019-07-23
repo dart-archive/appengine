@@ -1,32 +1,32 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/geographic_view_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'geographic_view_service.pb.dart';
-import '../resources/geographic_view.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'geographic_view_service.pb.dart' as $0;
+import '../resources/geographic_view.pb.dart' as $1;
 export 'geographic_view_service.pb.dart';
 
 class GeographicViewServiceClient extends $grpc.Client {
   static final _$getGeographicView = $grpc.ClientMethod<
-          GetGeographicViewRequest, $0.GeographicView>(
+          $0.GetGeographicViewRequest, $1.GeographicView>(
       '/google.ads.googleads.v1.services.GeographicViewService/GetGeographicView',
-      (GetGeographicViewRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GeographicView.fromBuffer(value));
+      ($0.GetGeographicViewRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GeographicView.fromBuffer(value));
 
   GeographicViewServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.GeographicView> getGeographicView(
-      GetGeographicViewRequest request,
+  $grpc.ResponseFuture<$1.GeographicView> getGeographicView(
+      $0.GetGeographicViewRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getGeographicView, $async.Stream.fromIterable([request]),
@@ -40,21 +40,22 @@ abstract class GeographicViewServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.GeographicViewService';
 
   GeographicViewServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetGeographicViewRequest, $0.GeographicView>(
-        'GetGeographicView',
-        getGeographicView_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            GetGeographicViewRequest.fromBuffer(value),
-        ($0.GeographicView value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetGeographicViewRequest, $1.GeographicView>(
+            'GetGeographicView',
+            getGeographicView_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetGeographicViewRequest.fromBuffer(value),
+            ($1.GeographicView value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.GeographicView> getGeographicView_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.GeographicView> getGeographicView_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetGeographicViewRequest> request) async {
     return getGeographicView(call, await request);
   }
 
-  $async.Future<$0.GeographicView> getGeographicView(
-      $grpc.ServiceCall call, GetGeographicViewRequest request);
+  $async.Future<$1.GeographicView> getGeographicView(
+      $grpc.ServiceCall call, $0.GetGeographicViewRequest request);
 }

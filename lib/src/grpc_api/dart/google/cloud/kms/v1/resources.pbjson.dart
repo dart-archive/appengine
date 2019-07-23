@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/kms/v1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ProtectionLevel$json = {
   '1': 'ProtectionLevel',
@@ -231,6 +232,22 @@ const CryptoKeyVersion$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'destroyEventTime'
     },
+    {'1': 'import_job', '3': 14, '4': 1, '5': 9, '10': 'importJob'},
+    {
+      '1': 'import_time',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'importTime'
+    },
+    {
+      '1': 'import_failure_reason',
+      '3': 16,
+      '4': 1,
+      '5': 9,
+      '10': 'importFailureReason'
+    },
   ],
   '4': [
     CryptoKeyVersion_CryptoKeyVersionAlgorithm$json,
@@ -247,12 +264,15 @@ const CryptoKeyVersion_CryptoKeyVersionAlgorithm$json = {
     {'1': 'RSA_SIGN_PSS_2048_SHA256', '2': 2},
     {'1': 'RSA_SIGN_PSS_3072_SHA256', '2': 3},
     {'1': 'RSA_SIGN_PSS_4096_SHA256', '2': 4},
+    {'1': 'RSA_SIGN_PSS_4096_SHA512', '2': 15},
     {'1': 'RSA_SIGN_PKCS1_2048_SHA256', '2': 5},
     {'1': 'RSA_SIGN_PKCS1_3072_SHA256', '2': 6},
     {'1': 'RSA_SIGN_PKCS1_4096_SHA256', '2': 7},
+    {'1': 'RSA_SIGN_PKCS1_4096_SHA512', '2': 16},
     {'1': 'RSA_DECRYPT_OAEP_2048_SHA256', '2': 8},
     {'1': 'RSA_DECRYPT_OAEP_3072_SHA256', '2': 9},
     {'1': 'RSA_DECRYPT_OAEP_4096_SHA256', '2': 10},
+    {'1': 'RSA_DECRYPT_OAEP_4096_SHA512', '2': 17},
     {'1': 'EC_SIGN_P256_SHA256', '2': 12},
     {'1': 'EC_SIGN_P384_SHA384', '2': 13},
   ],
@@ -267,6 +287,8 @@ const CryptoKeyVersion_CryptoKeyVersionState$json = {
     {'1': 'DISABLED', '2': 2},
     {'1': 'DESTROYED', '2': 3},
     {'1': 'DESTROY_SCHEDULED', '2': 4},
+    {'1': 'PENDING_IMPORT', '2': 6},
+    {'1': 'IMPORT_FAILED', '2': 7},
   ],
 };
 
@@ -290,5 +312,112 @@ const PublicKey$json = {
       '6': '.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm',
       '10': 'algorithm'
     },
+  ],
+};
+
+const ImportJob$json = {
+  '1': 'ImportJob',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'import_method',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.kms.v1.ImportJob.ImportMethod',
+      '10': 'importMethod'
+    },
+    {
+      '1': 'protection_level',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.kms.v1.ProtectionLevel',
+      '10': 'protectionLevel'
+    },
+    {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'generate_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'generateTime'
+    },
+    {
+      '1': 'expire_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'expireTime'
+    },
+    {
+      '1': 'expire_event_time',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'expireEventTime'
+    },
+    {
+      '1': 'state',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.kms.v1.ImportJob.ImportJobState',
+      '10': 'state'
+    },
+    {
+      '1': 'public_key',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.kms.v1.ImportJob.WrappingPublicKey',
+      '10': 'publicKey'
+    },
+    {
+      '1': 'attestation',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.kms.v1.KeyOperationAttestation',
+      '10': 'attestation'
+    },
+  ],
+  '3': [ImportJob_WrappingPublicKey$json],
+  '4': [ImportJob_ImportMethod$json, ImportJob_ImportJobState$json],
+};
+
+const ImportJob_WrappingPublicKey$json = {
+  '1': 'WrappingPublicKey',
+  '2': [
+    {'1': 'pem', '3': 1, '4': 1, '5': 9, '10': 'pem'},
+  ],
+};
+
+const ImportJob_ImportMethod$json = {
+  '1': 'ImportMethod',
+  '2': [
+    {'1': 'IMPORT_METHOD_UNSPECIFIED', '2': 0},
+    {'1': 'RSA_OAEP_3072_SHA1_AES_256', '2': 1},
+    {'1': 'RSA_OAEP_4096_SHA1_AES_256', '2': 2},
+  ],
+};
+
+const ImportJob_ImportJobState$json = {
+  '1': 'ImportJobState',
+  '2': [
+    {'1': 'IMPORT_JOB_STATE_UNSPECIFIED', '2': 0},
+    {'1': 'PENDING_GENERATION', '2': 1},
+    {'1': 'ACTIVE', '2': 2},
+    {'1': 'EXPIRED', '2': 3},
   ],
 };

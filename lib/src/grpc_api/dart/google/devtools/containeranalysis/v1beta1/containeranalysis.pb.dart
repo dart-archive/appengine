@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/containeranalysis.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 class ScanConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanConfig',
@@ -18,24 +19,26 @@ class ScanConfig extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'enabled')
-    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  ScanConfig() : super();
-  ScanConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig._() : super();
+  factory ScanConfig() => create();
+  factory ScanConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfig clone() => ScanConfig()..mergeFromMessage(this);
   ScanConfig copyWith(void Function(ScanConfig) updates) =>
       super.copyWith((message) => updates(message as ScanConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ScanConfig create() => ScanConfig();
+  @$core.pragma('dart2js:noInline')
+  static ScanConfig create() => ScanConfig._();
   ScanConfig createEmptyInstance() => create();
   static $pb.PbList<ScanConfig> createRepeated() => $pb.PbList<ScanConfig>();
   static ScanConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -65,16 +68,16 @@ class ScanConfig extends $pb.GeneratedMessage {
   $core.bool hasEnabled() => $_has(2);
   void clearEnabled() => clearField(3);
 
-  $2.Timestamp get createTime => $_getN(3);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $2.Timestamp get updateTime => $_getN(4);
-  set updateTime($2.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(4);
+  set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -89,19 +92,21 @@ class GetScanConfigRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetScanConfigRequest() : super();
-  GetScanConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetScanConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetScanConfigRequest._() : super();
+  factory GetScanConfigRequest() => create();
+  factory GetScanConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetScanConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetScanConfigRequest clone() =>
       GetScanConfigRequest()..mergeFromMessage(this);
   GetScanConfigRequest copyWith(void Function(GetScanConfigRequest) updates) =>
       super.copyWith((message) => updates(message as GetScanConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetScanConfigRequest create() => GetScanConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetScanConfigRequest create() => GetScanConfigRequest._();
   GetScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetScanConfigRequest> createRepeated() =>
       $pb.PbList<GetScanConfigRequest>();
@@ -128,20 +133,22 @@ class ListScanConfigsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListScanConfigsRequest() : super();
-  ListScanConfigsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListScanConfigsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListScanConfigsRequest._() : super();
+  factory ListScanConfigsRequest() => create();
+  factory ListScanConfigsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListScanConfigsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListScanConfigsRequest clone() =>
       ListScanConfigsRequest()..mergeFromMessage(this);
   ListScanConfigsRequest copyWith(
           void Function(ListScanConfigsRequest) updates) =>
       super.copyWith((message) => updates(message as ListScanConfigsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListScanConfigsRequest create() => ListScanConfigsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListScanConfigsRequest create() => ListScanConfigsRequest._();
   ListScanConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListScanConfigsRequest> createRepeated() =>
       $pb.PbList<ListScanConfigsRequest>();
@@ -190,20 +197,22 @@ class ListScanConfigsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListScanConfigsResponse() : super();
-  ListScanConfigsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListScanConfigsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListScanConfigsResponse._() : super();
+  factory ListScanConfigsResponse() => create();
+  factory ListScanConfigsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListScanConfigsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListScanConfigsResponse clone() =>
       ListScanConfigsResponse()..mergeFromMessage(this);
   ListScanConfigsResponse copyWith(
           void Function(ListScanConfigsResponse) updates) =>
       super.copyWith((message) => updates(message as ListScanConfigsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListScanConfigsResponse create() => ListScanConfigsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListScanConfigsResponse create() => ListScanConfigsResponse._();
   ListScanConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListScanConfigsResponse> createRepeated() =>
       $pb.PbList<ListScanConfigsResponse>();
@@ -231,20 +240,22 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
         ScanConfig.create)
     ..hasRequiredFields = false;
 
-  UpdateScanConfigRequest() : super();
-  UpdateScanConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateScanConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateScanConfigRequest._() : super();
+  factory UpdateScanConfigRequest() => create();
+  factory UpdateScanConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateScanConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateScanConfigRequest clone() =>
       UpdateScanConfigRequest()..mergeFromMessage(this);
   UpdateScanConfigRequest copyWith(
           void Function(UpdateScanConfigRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateScanConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateScanConfigRequest create() => UpdateScanConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateScanConfigRequest create() => UpdateScanConfigRequest._();
   UpdateScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateScanConfigRequest> createRepeated() =>
       $pb.PbList<UpdateScanConfigRequest>();

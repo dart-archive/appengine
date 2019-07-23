@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/configuration.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Configuration$json = {
   '1': 'Configuration',
@@ -40,6 +41,7 @@ const Configuration$json = {
       '6': '.google.devtools.resultstore.v2.Property',
       '10': 'properties'
     },
+    {'1': 'display_name', '3': 8, '4': 1, '5': 9, '10': 'displayName'},
   ],
   '3': [Configuration_Id$json],
 };

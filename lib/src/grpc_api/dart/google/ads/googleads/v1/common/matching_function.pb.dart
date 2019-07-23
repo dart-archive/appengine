@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/matching_function.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,18 +31,20 @@ class MatchingFunction extends $pb.GeneratedMessage {
         $1.MatchingFunctionOperatorEnum_MatchingFunctionOperator.values)
     ..hasRequiredFields = false;
 
-  MatchingFunction() : super();
-  MatchingFunction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MatchingFunction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MatchingFunction._() : super();
+  factory MatchingFunction() => create();
+  factory MatchingFunction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MatchingFunction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MatchingFunction clone() => MatchingFunction()..mergeFromMessage(this);
   MatchingFunction copyWith(void Function(MatchingFunction) updates) =>
       super.copyWith((message) => updates(message as MatchingFunction));
   $pb.BuilderInfo get info_ => _i;
-  static MatchingFunction create() => MatchingFunction();
+  @$core.pragma('dart2js:noInline')
+  static MatchingFunction create() => MatchingFunction._();
   MatchingFunction createEmptyInstance() => create();
   static $pb.PbList<MatchingFunction> createRepeated() =>
       $pb.PbList<MatchingFunction>();
@@ -91,6 +94,7 @@ class Operand_ConstantOperand extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operand.ConstantOperand',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [1, 2, 3, 4])
     ..a<$0.StringValue>(1, 'stringValue', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
     ..a<$0.Int64Value>(2, 'longValue', $pb.PbFieldType.OM,
@@ -99,23 +103,24 @@ class Operand_ConstantOperand extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..a<$0.DoubleValue>(4, 'doubleValue', $pb.PbFieldType.OM,
         $0.DoubleValue.getDefault, $0.DoubleValue.create)
-    ..oo(0, [1, 2, 3, 4])
     ..hasRequiredFields = false;
 
-  Operand_ConstantOperand() : super();
-  Operand_ConstantOperand.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operand_ConstantOperand.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operand_ConstantOperand._() : super();
+  factory Operand_ConstantOperand() => create();
+  factory Operand_ConstantOperand.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operand_ConstantOperand.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operand_ConstantOperand clone() =>
       Operand_ConstantOperand()..mergeFromMessage(this);
   Operand_ConstantOperand copyWith(
           void Function(Operand_ConstantOperand) updates) =>
       super.copyWith((message) => updates(message as Operand_ConstantOperand));
   $pb.BuilderInfo get info_ => _i;
-  static Operand_ConstantOperand create() => Operand_ConstantOperand();
+  @$core.pragma('dart2js:noInline')
+  static Operand_ConstantOperand create() => Operand_ConstantOperand._();
   Operand_ConstantOperand createEmptyInstance() => create();
   static $pb.PbList<Operand_ConstantOperand> createRepeated() =>
       $pb.PbList<Operand_ConstantOperand>();
@@ -170,13 +175,14 @@ class Operand_FeedAttributeOperand extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Operand_FeedAttributeOperand() : super();
-  Operand_FeedAttributeOperand.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operand_FeedAttributeOperand.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operand_FeedAttributeOperand._() : super();
+  factory Operand_FeedAttributeOperand() => create();
+  factory Operand_FeedAttributeOperand.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operand_FeedAttributeOperand.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operand_FeedAttributeOperand clone() =>
       Operand_FeedAttributeOperand()..mergeFromMessage(this);
   Operand_FeedAttributeOperand copyWith(
@@ -184,8 +190,9 @@ class Operand_FeedAttributeOperand extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Operand_FeedAttributeOperand));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Operand_FeedAttributeOperand create() =>
-      Operand_FeedAttributeOperand();
+      Operand_FeedAttributeOperand._();
   Operand_FeedAttributeOperand createEmptyInstance() => create();
   static $pb.PbList<Operand_FeedAttributeOperand> createRepeated() =>
       $pb.PbList<Operand_FeedAttributeOperand>();
@@ -217,20 +224,22 @@ class Operand_FunctionOperand extends $pb.GeneratedMessage {
         MatchingFunction.getDefault, MatchingFunction.create)
     ..hasRequiredFields = false;
 
-  Operand_FunctionOperand() : super();
-  Operand_FunctionOperand.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operand_FunctionOperand.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operand_FunctionOperand._() : super();
+  factory Operand_FunctionOperand() => create();
+  factory Operand_FunctionOperand.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operand_FunctionOperand.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operand_FunctionOperand clone() =>
       Operand_FunctionOperand()..mergeFromMessage(this);
   Operand_FunctionOperand copyWith(
           void Function(Operand_FunctionOperand) updates) =>
       super.copyWith((message) => updates(message as Operand_FunctionOperand));
   $pb.BuilderInfo get info_ => _i;
-  static Operand_FunctionOperand create() => Operand_FunctionOperand();
+  @$core.pragma('dart2js:noInline')
+  static Operand_FunctionOperand create() => Operand_FunctionOperand._();
   Operand_FunctionOperand createEmptyInstance() => create();
   static $pb.PbList<Operand_FunctionOperand> createRepeated() =>
       $pb.PbList<Operand_FunctionOperand>();
@@ -261,13 +270,14 @@ class Operand_RequestContextOperand extends $pb.GeneratedMessage {
         $2.MatchingFunctionContextTypeEnum_MatchingFunctionContextType.values)
     ..hasRequiredFields = false;
 
-  Operand_RequestContextOperand() : super();
-  Operand_RequestContextOperand.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operand_RequestContextOperand.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operand_RequestContextOperand._() : super();
+  factory Operand_RequestContextOperand() => create();
+  factory Operand_RequestContextOperand.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operand_RequestContextOperand.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operand_RequestContextOperand clone() =>
       Operand_RequestContextOperand()..mergeFromMessage(this);
   Operand_RequestContextOperand copyWith(
@@ -275,8 +285,9 @@ class Operand_RequestContextOperand extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Operand_RequestContextOperand));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Operand_RequestContextOperand create() =>
-      Operand_RequestContextOperand();
+      Operand_RequestContextOperand._();
   Operand_RequestContextOperand createEmptyInstance() => create();
   static $pb.PbList<Operand_RequestContextOperand> createRepeated() =>
       $pb.PbList<Operand_RequestContextOperand>();
@@ -314,6 +325,7 @@ class Operand extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Operand',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [1, 2, 3, 4])
     ..a<Operand_ConstantOperand>(1, 'constantOperand', $pb.PbFieldType.OM,
         Operand_ConstantOperand.getDefault, Operand_ConstantOperand.create)
     ..a<Operand_FeedAttributeOperand>(
@@ -330,21 +342,22 @@ class Operand extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Operand_RequestContextOperand.getDefault,
         Operand_RequestContextOperand.create)
-    ..oo(0, [1, 2, 3, 4])
     ..hasRequiredFields = false;
 
-  Operand() : super();
-  Operand.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Operand.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Operand._() : super();
+  factory Operand() => create();
+  factory Operand.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Operand.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Operand clone() => Operand()..mergeFromMessage(this);
   Operand copyWith(void Function(Operand) updates) =>
       super.copyWith((message) => updates(message as Operand));
   $pb.BuilderInfo get info_ => _i;
-  static Operand create() => Operand();
+  @$core.pragma('dart2js:noInline')
+  static Operand create() => Operand._();
   Operand createEmptyInstance() => create();
   static $pb.PbList<Operand> createRepeated() => $pb.PbList<Operand>();
   static Operand getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/ad_group_feed_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/ad_group_feed.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/ad_group_feed.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetAdGroupFeedRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAdGroupFeedRequest',
@@ -19,20 +20,22 @@ class GetAdGroupFeedRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetAdGroupFeedRequest() : super();
-  GetAdGroupFeedRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAdGroupFeedRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAdGroupFeedRequest._() : super();
+  factory GetAdGroupFeedRequest() => create();
+  factory GetAdGroupFeedRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAdGroupFeedRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAdGroupFeedRequest clone() =>
       GetAdGroupFeedRequest()..mergeFromMessage(this);
   GetAdGroupFeedRequest copyWith(
           void Function(GetAdGroupFeedRequest) updates) =>
       super.copyWith((message) => updates(message as GetAdGroupFeedRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAdGroupFeedRequest create() => GetAdGroupFeedRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAdGroupFeedRequest create() => GetAdGroupFeedRequest._();
   GetAdGroupFeedRequest createEmptyInstance() => create();
   static $pb.PbList<GetAdGroupFeedRequest> createRepeated() =>
       $pb.PbList<GetAdGroupFeedRequest>();
@@ -59,13 +62,14 @@ class MutateAdGroupFeedsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateAdGroupFeedsRequest() : super();
-  MutateAdGroupFeedsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupFeedsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupFeedsRequest._() : super();
+  factory MutateAdGroupFeedsRequest() => create();
+  factory MutateAdGroupFeedsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupFeedsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupFeedsRequest clone() =>
       MutateAdGroupFeedsRequest()..mergeFromMessage(this);
   MutateAdGroupFeedsRequest copyWith(
@@ -73,7 +77,8 @@ class MutateAdGroupFeedsRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as MutateAdGroupFeedsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdGroupFeedsRequest create() => MutateAdGroupFeedsRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupFeedsRequest create() => MutateAdGroupFeedsRequest._();
   MutateAdGroupFeedsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupFeedsRequest> createRepeated() =>
       $pb.PbList<MutateAdGroupFeedsRequest>();
@@ -120,29 +125,31 @@ class AdGroupFeedOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupFeedOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.AdGroupFeed>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.AdGroupFeed.getDefault, $0.AdGroupFeed.create)
-    ..a<$0.AdGroupFeed>(2, 'update', $pb.PbFieldType.OM,
-        $0.AdGroupFeed.getDefault, $0.AdGroupFeed.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.AdGroupFeed>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.AdGroupFeed.getDefault, $1.AdGroupFeed.create)
+    ..a<$1.AdGroupFeed>(2, 'update', $pb.PbFieldType.OM,
+        $1.AdGroupFeed.getDefault, $1.AdGroupFeed.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  AdGroupFeedOperation() : super();
-  AdGroupFeedOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupFeedOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupFeedOperation._() : super();
+  factory AdGroupFeedOperation() => create();
+  factory AdGroupFeedOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupFeedOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupFeedOperation clone() =>
       AdGroupFeedOperation()..mergeFromMessage(this);
   AdGroupFeedOperation copyWith(void Function(AdGroupFeedOperation) updates) =>
       super.copyWith((message) => updates(message as AdGroupFeedOperation));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupFeedOperation create() => AdGroupFeedOperation();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupFeedOperation create() => AdGroupFeedOperation._();
   AdGroupFeedOperation createEmptyInstance() => create();
   static $pb.PbList<AdGroupFeedOperation> createRepeated() =>
       $pb.PbList<AdGroupFeedOperation>();
@@ -154,16 +161,16 @@ class AdGroupFeedOperation extends $pb.GeneratedMessage {
       _AdGroupFeedOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.AdGroupFeed get create_1 => $_getN(0);
-  set create_1($0.AdGroupFeed v) {
+  $1.AdGroupFeed get create_1 => $_getN(0);
+  set create_1($1.AdGroupFeed v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.AdGroupFeed get update => $_getN(1);
-  set update($0.AdGroupFeed v) {
+  $1.AdGroupFeed get update => $_getN(1);
+  set update($1.AdGroupFeed v) {
     setField(2, v);
   }
 
@@ -178,8 +185,8 @@ class AdGroupFeedOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -193,17 +200,18 @@ class MutateAdGroupFeedsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateAdGroupFeedResult>(
         2, 'results', $pb.PbFieldType.PM, MutateAdGroupFeedResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateAdGroupFeedsResponse() : super();
-  MutateAdGroupFeedsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupFeedsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupFeedsResponse._() : super();
+  factory MutateAdGroupFeedsResponse() => create();
+  factory MutateAdGroupFeedsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupFeedsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupFeedsResponse clone() =>
       MutateAdGroupFeedsResponse()..mergeFromMessage(this);
   MutateAdGroupFeedsResponse copyWith(
@@ -211,7 +219,8 @@ class MutateAdGroupFeedsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdGroupFeedsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdGroupFeedsResponse create() => MutateAdGroupFeedsResponse();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupFeedsResponse create() => MutateAdGroupFeedsResponse._();
   MutateAdGroupFeedsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupFeedsResponse> createRepeated() =>
       $pb.PbList<MutateAdGroupFeedsResponse>();
@@ -221,8 +230,8 @@ class MutateAdGroupFeedsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateAdGroupFeedResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -236,20 +245,22 @@ class MutateAdGroupFeedResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateAdGroupFeedResult() : super();
-  MutateAdGroupFeedResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupFeedResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupFeedResult._() : super();
+  factory MutateAdGroupFeedResult() => create();
+  factory MutateAdGroupFeedResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupFeedResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupFeedResult clone() =>
       MutateAdGroupFeedResult()..mergeFromMessage(this);
   MutateAdGroupFeedResult copyWith(
           void Function(MutateAdGroupFeedResult) updates) =>
       super.copyWith((message) => updates(message as MutateAdGroupFeedResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdGroupFeedResult create() => MutateAdGroupFeedResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupFeedResult create() => MutateAdGroupFeedResult._();
   MutateAdGroupFeedResult createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupFeedResult> createRepeated() =>
       $pb.PbList<MutateAdGroupFeedResult>();

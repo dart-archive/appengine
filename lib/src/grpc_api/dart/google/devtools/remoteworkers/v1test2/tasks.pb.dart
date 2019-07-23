@@ -1,24 +1,25 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/remoteworkers/v1test2/tasks.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/any.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import '../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../protobuf/any.pb.dart' as $1;
+import '../../../rpc/status.pb.dart' as $2;
+import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class Task extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Task',
       package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..aOS(1, 'name')
-    ..a<$0.Any>(
-        2, 'description', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
+    ..a<$1.Any>(
+        2, 'description', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..m<$core.String, $core.String>(
         3,
         'logs',
@@ -31,18 +32,20 @@ class Task extends $pb.GeneratedMessage {
         const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..hasRequiredFields = false;
 
-  Task() : super();
-  Task.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Task.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Task._() : super();
+  factory Task() => create();
+  factory Task.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Task.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Task clone() => Task()..mergeFromMessage(this);
   Task copyWith(void Function(Task) updates) =>
       super.copyWith((message) => updates(message as Task));
   $pb.BuilderInfo get info_ => _i;
-  static Task create() => Task();
+  @$core.pragma('dart2js:noInline')
+  static Task create() => Task._();
   Task createEmptyInstance() => create();
   static $pb.PbList<Task> createRepeated() => $pb.PbList<Task>();
   static Task getDefault() => _defaultInstance ??= create()..freeze();
@@ -56,8 +59,8 @@ class Task extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $0.Any get description => $_getN(1);
-  set description($0.Any v) {
+  $1.Any get description => $_getN(1);
+  set description($1.Any v) {
     setField(2, v);
   }
 
@@ -72,25 +75,27 @@ class TaskResult extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..aOS(1, 'name')
     ..aOB(2, 'complete')
-    ..a<$1.Status>(
-        3, 'status', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
-    ..a<$0.Any>(
-        4, 'output', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
-    ..a<$0.Any>(5, 'meta', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
+    ..a<$2.Status>(
+        3, 'status', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
+    ..a<$1.Any>(
+        4, 'output', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
+    ..a<$1.Any>(5, 'meta', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..hasRequiredFields = false;
 
-  TaskResult() : super();
-  TaskResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TaskResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TaskResult._() : super();
+  factory TaskResult() => create();
+  factory TaskResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TaskResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TaskResult clone() => TaskResult()..mergeFromMessage(this);
   TaskResult copyWith(void Function(TaskResult) updates) =>
       super.copyWith((message) => updates(message as TaskResult));
   $pb.BuilderInfo get info_ => _i;
-  static TaskResult create() => TaskResult();
+  @$core.pragma('dart2js:noInline')
+  static TaskResult create() => TaskResult._();
   TaskResult createEmptyInstance() => create();
   static $pb.PbList<TaskResult> createRepeated() => $pb.PbList<TaskResult>();
   static TaskResult getDefault() => _defaultInstance ??= create()..freeze();
@@ -112,24 +117,24 @@ class TaskResult extends $pb.GeneratedMessage {
   $core.bool hasComplete() => $_has(1);
   void clearComplete() => clearField(2);
 
-  $1.Status get status => $_getN(2);
-  set status($1.Status v) {
+  $2.Status get status => $_getN(2);
+  set status($2.Status v) {
     setField(3, v);
   }
 
   $core.bool hasStatus() => $_has(2);
   void clearStatus() => clearField(3);
 
-  $0.Any get output => $_getN(3);
-  set output($0.Any v) {
+  $1.Any get output => $_getN(3);
+  set output($1.Any v) {
     setField(4, v);
   }
 
   $core.bool hasOutput() => $_has(3);
   void clearOutput() => clearField(4);
 
-  $0.Any get meta => $_getN(4);
-  set meta($0.Any v) {
+  $1.Any get meta => $_getN(4);
+  set meta($1.Any v) {
     setField(5, v);
   }
 
@@ -143,18 +148,20 @@ class GetTaskRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetTaskRequest() : super();
-  GetTaskRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTaskRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTaskRequest._() : super();
+  factory GetTaskRequest() => create();
+  factory GetTaskRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTaskRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTaskRequest clone() => GetTaskRequest()..mergeFromMessage(this);
   GetTaskRequest copyWith(void Function(GetTaskRequest) updates) =>
       super.copyWith((message) => updates(message as GetTaskRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTaskRequest create() => GetTaskRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTaskRequest create() => GetTaskRequest._();
   GetTaskRequest createEmptyInstance() => create();
   static $pb.PbList<GetTaskRequest> createRepeated() =>
       $pb.PbList<GetTaskRequest>();
@@ -176,25 +183,27 @@ class UpdateTaskResultRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<TaskResult>(2, 'result', $pb.PbFieldType.OM, TaskResult.getDefault,
         TaskResult.create)
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..aOS(4, 'source')
     ..hasRequiredFields = false;
 
-  UpdateTaskResultRequest() : super();
-  UpdateTaskResultRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateTaskResultRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateTaskResultRequest._() : super();
+  factory UpdateTaskResultRequest() => create();
+  factory UpdateTaskResultRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateTaskResultRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateTaskResultRequest clone() =>
       UpdateTaskResultRequest()..mergeFromMessage(this);
   UpdateTaskResultRequest copyWith(
           void Function(UpdateTaskResultRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateTaskResultRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateTaskResultRequest create() => UpdateTaskResultRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTaskResultRequest create() => UpdateTaskResultRequest._();
   UpdateTaskResultRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTaskResultRequest> createRepeated() =>
       $pb.PbList<UpdateTaskResultRequest>();
@@ -218,8 +227,8 @@ class UpdateTaskResultRequest extends $pb.GeneratedMessage {
   $core.bool hasResult() => $_has(1);
   void clearResult() => clearField(2);
 
-  $2.FieldMask get updateMask => $_getN(2);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(2);
+  set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
@@ -242,18 +251,20 @@ class AddTaskLogRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'logId')
     ..hasRequiredFields = false;
 
-  AddTaskLogRequest() : super();
-  AddTaskLogRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AddTaskLogRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AddTaskLogRequest._() : super();
+  factory AddTaskLogRequest() => create();
+  factory AddTaskLogRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AddTaskLogRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AddTaskLogRequest clone() => AddTaskLogRequest()..mergeFromMessage(this);
   AddTaskLogRequest copyWith(void Function(AddTaskLogRequest) updates) =>
       super.copyWith((message) => updates(message as AddTaskLogRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AddTaskLogRequest create() => AddTaskLogRequest();
+  @$core.pragma('dart2js:noInline')
+  static AddTaskLogRequest create() => AddTaskLogRequest._();
   AddTaskLogRequest createEmptyInstance() => create();
   static $pb.PbList<AddTaskLogRequest> createRepeated() =>
       $pb.PbList<AddTaskLogRequest>();
@@ -284,18 +295,20 @@ class AddTaskLogResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'handle')
     ..hasRequiredFields = false;
 
-  AddTaskLogResponse() : super();
-  AddTaskLogResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AddTaskLogResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AddTaskLogResponse._() : super();
+  factory AddTaskLogResponse() => create();
+  factory AddTaskLogResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AddTaskLogResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AddTaskLogResponse clone() => AddTaskLogResponse()..mergeFromMessage(this);
   AddTaskLogResponse copyWith(void Function(AddTaskLogResponse) updates) =>
       super.copyWith((message) => updates(message as AddTaskLogResponse));
   $pb.BuilderInfo get info_ => _i;
-  static AddTaskLogResponse create() => AddTaskLogResponse();
+  @$core.pragma('dart2js:noInline')
+  static AddTaskLogResponse create() => AddTaskLogResponse._();
   AddTaskLogResponse createEmptyInstance() => create();
   static $pb.PbList<AddTaskLogResponse> createRepeated() =>
       $pb.PbList<AddTaskLogResponse>();

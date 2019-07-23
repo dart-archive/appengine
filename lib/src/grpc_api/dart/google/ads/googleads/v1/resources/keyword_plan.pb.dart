@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/keyword_plan.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class KeywordPlan extends $pb.GeneratedMessage {
         KeywordPlanForecastPeriod.getDefault, KeywordPlanForecastPeriod.create)
     ..hasRequiredFields = false;
 
-  KeywordPlan() : super();
-  KeywordPlan.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlan.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlan._() : super();
+  factory KeywordPlan() => create();
+  factory KeywordPlan.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlan.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlan clone() => KeywordPlan()..mergeFromMessage(this);
   KeywordPlan copyWith(void Function(KeywordPlan) updates) =>
       super.copyWith((message) => updates(message as KeywordPlan));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordPlan create() => KeywordPlan();
+  @$core.pragma('dart2js:noInline')
+  static KeywordPlan create() => KeywordPlan._();
   KeywordPlan createEmptyInstance() => create();
   static $pb.PbList<KeywordPlan> createRepeated() => $pb.PbList<KeywordPlan>();
   static KeywordPlan getDefault() => _defaultInstance ??= create()..freeze();
@@ -87,6 +90,7 @@ class KeywordPlanForecastPeriod extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeywordPlanForecastPeriod',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [1, 2])
     ..e<$2.KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval>(
         1,
         'dateInterval',
@@ -97,16 +101,16 @@ class KeywordPlanForecastPeriod extends $pb.GeneratedMessage {
         $2.KeywordPlanForecastIntervalEnum_KeywordPlanForecastInterval.values)
     ..a<$1.DateRange>(2, 'dateRange', $pb.PbFieldType.OM,
         $1.DateRange.getDefault, $1.DateRange.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  KeywordPlanForecastPeriod() : super();
-  KeywordPlanForecastPeriod.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanForecastPeriod.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanForecastPeriod._() : super();
+  factory KeywordPlanForecastPeriod() => create();
+  factory KeywordPlanForecastPeriod.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanForecastPeriod.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanForecastPeriod clone() =>
       KeywordPlanForecastPeriod()..mergeFromMessage(this);
   KeywordPlanForecastPeriod copyWith(
@@ -114,7 +118,8 @@ class KeywordPlanForecastPeriod extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as KeywordPlanForecastPeriod));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordPlanForecastPeriod create() => KeywordPlanForecastPeriod();
+  @$core.pragma('dart2js:noInline')
+  static KeywordPlanForecastPeriod create() => KeywordPlanForecastPeriod._();
   KeywordPlanForecastPeriod createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanForecastPeriod> createRepeated() =>
       $pb.PbList<KeywordPlanForecastPeriod>();

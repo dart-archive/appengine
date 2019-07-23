@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/v2/data.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -17,18 +18,20 @@ class Row extends $pb.GeneratedMessage {
     ..pc<Family>(2, 'families', $pb.PbFieldType.PM, Family.create)
     ..hasRequiredFields = false;
 
-  Row() : super();
-  Row.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Row.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Row._() : super();
+  factory Row() => create();
+  factory Row.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Row.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Row clone() => Row()..mergeFromMessage(this);
   Row copyWith(void Function(Row) updates) =>
       super.copyWith((message) => updates(message as Row));
   $pb.BuilderInfo get info_ => _i;
-  static Row create() => Row();
+  @$core.pragma('dart2js:noInline')
+  static Row create() => Row._();
   Row createEmptyInstance() => create();
   static $pb.PbList<Row> createRepeated() => $pb.PbList<Row>();
   static Row getDefault() => _defaultInstance ??= create()..freeze();
@@ -52,18 +55,20 @@ class Family extends $pb.GeneratedMessage {
     ..pc<Column>(2, 'columns', $pb.PbFieldType.PM, Column.create)
     ..hasRequiredFields = false;
 
-  Family() : super();
-  Family.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Family.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Family._() : super();
+  factory Family() => create();
+  factory Family.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Family.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Family clone() => Family()..mergeFromMessage(this);
   Family copyWith(void Function(Family) updates) =>
       super.copyWith((message) => updates(message as Family));
   $pb.BuilderInfo get info_ => _i;
-  static Family create() => Family();
+  @$core.pragma('dart2js:noInline')
+  static Family create() => Family._();
   Family createEmptyInstance() => create();
   static $pb.PbList<Family> createRepeated() => $pb.PbList<Family>();
   static Family getDefault() => _defaultInstance ??= create()..freeze();
@@ -87,18 +92,20 @@ class Column extends $pb.GeneratedMessage {
     ..pc<Cell>(2, 'cells', $pb.PbFieldType.PM, Cell.create)
     ..hasRequiredFields = false;
 
-  Column() : super();
-  Column.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Column.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Column._() : super();
+  factory Column() => create();
+  factory Column.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Column.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Column clone() => Column()..mergeFromMessage(this);
   Column copyWith(void Function(Column) updates) =>
       super.copyWith((message) => updates(message as Column));
   $pb.BuilderInfo get info_ => _i;
-  static Column create() => Column();
+  @$core.pragma('dart2js:noInline')
+  static Column create() => Column._();
   Column createEmptyInstance() => create();
   static $pb.PbList<Column> createRepeated() => $pb.PbList<Column>();
   static Column getDefault() => _defaultInstance ??= create()..freeze();
@@ -123,18 +130,20 @@ class Cell extends $pb.GeneratedMessage {
     ..pPS(3, 'labels')
     ..hasRequiredFields = false;
 
-  Cell() : super();
-  Cell.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cell.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Cell._() : super();
+  factory Cell() => create();
+  factory Cell.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cell.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Cell clone() => Cell()..mergeFromMessage(this);
   Cell copyWith(void Function(Cell) updates) =>
       super.copyWith((message) => updates(message as Cell));
   $pb.BuilderInfo get info_ => _i;
-  static Cell create() => Cell();
+  @$core.pragma('dart2js:noInline')
+  static Cell create() => Cell._();
   Cell createEmptyInstance() => create();
   static $pb.PbList<Cell> createRepeated() => $pb.PbList<Cell>();
   static Cell getDefault() => _defaultInstance ??= create()..freeze();
@@ -177,26 +186,28 @@ class RowRange extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowRange',
       package: const $pb.PackageName('google.bigtable.v2'))
+    ..oo(0, [1, 2])
+    ..oo(1, [3, 4])
     ..a<$core.List<$core.int>>(1, 'startKeyClosed', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, 'startKeyOpen', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, 'endKeyOpen', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(4, 'endKeyClosed', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
-    ..oo(1, [3, 4])
     ..hasRequiredFields = false;
 
-  RowRange() : super();
-  RowRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowRange._() : super();
+  factory RowRange() => create();
+  factory RowRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RowRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RowRange clone() => RowRange()..mergeFromMessage(this);
   RowRange copyWith(void Function(RowRange) updates) =>
       super.copyWith((message) => updates(message as RowRange));
   $pb.BuilderInfo get info_ => _i;
-  static RowRange create() => RowRange();
+  @$core.pragma('dart2js:noInline')
+  static RowRange create() => RowRange._();
   RowRange createEmptyInstance() => create();
   static $pb.PbList<RowRange> createRepeated() => $pb.PbList<RowRange>();
   static RowRange getDefault() => _defaultInstance ??= create()..freeze();
@@ -248,18 +259,20 @@ class RowSet extends $pb.GeneratedMessage {
     ..pc<RowRange>(2, 'rowRanges', $pb.PbFieldType.PM, RowRange.create)
     ..hasRequiredFields = false;
 
-  RowSet() : super();
-  RowSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowSet._() : super();
+  factory RowSet() => create();
+  factory RowSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RowSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RowSet clone() => RowSet()..mergeFromMessage(this);
   RowSet copyWith(void Function(RowSet) updates) =>
       super.copyWith((message) => updates(message as RowSet));
   $pb.BuilderInfo get info_ => _i;
-  static RowSet create() => RowSet();
+  @$core.pragma('dart2js:noInline')
+  static RowSet create() => RowSet._();
   RowSet createEmptyInstance() => create();
   static $pb.PbList<RowSet> createRepeated() => $pb.PbList<RowSet>();
   static RowSet getDefault() => _defaultInstance ??= create()..freeze();
@@ -293,27 +306,29 @@ class ColumnRange extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ColumnRange',
       package: const $pb.PackageName('google.bigtable.v2'))
+    ..oo(0, [2, 3])
+    ..oo(1, [4, 5])
     ..aOS(1, 'familyName')
     ..a<$core.List<$core.int>>(2, 'startQualifierClosed', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, 'startQualifierOpen', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(4, 'endQualifierClosed', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(5, 'endQualifierOpen', $pb.PbFieldType.OY)
-    ..oo(0, [2, 3])
-    ..oo(1, [4, 5])
     ..hasRequiredFields = false;
 
-  ColumnRange() : super();
-  ColumnRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ColumnRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ColumnRange._() : super();
+  factory ColumnRange() => create();
+  factory ColumnRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ColumnRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ColumnRange clone() => ColumnRange()..mergeFromMessage(this);
   ColumnRange copyWith(void Function(ColumnRange) updates) =>
       super.copyWith((message) => updates(message as ColumnRange));
   $pb.BuilderInfo get info_ => _i;
-  static ColumnRange create() => ColumnRange();
+  @$core.pragma('dart2js:noInline')
+  static ColumnRange create() => ColumnRange._();
   ColumnRange createEmptyInstance() => create();
   static $pb.PbList<ColumnRange> createRepeated() => $pb.PbList<ColumnRange>();
   static ColumnRange getDefault() => _defaultInstance ??= create()..freeze();
@@ -375,18 +390,20 @@ class TimestampRange extends $pb.GeneratedMessage {
     ..aInt64(2, 'endTimestampMicros')
     ..hasRequiredFields = false;
 
-  TimestampRange() : super();
-  TimestampRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimestampRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimestampRange._() : super();
+  factory TimestampRange() => create();
+  factory TimestampRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimestampRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimestampRange clone() => TimestampRange()..mergeFromMessage(this);
   TimestampRange copyWith(void Function(TimestampRange) updates) =>
       super.copyWith((message) => updates(message as TimestampRange));
   $pb.BuilderInfo get info_ => _i;
-  static TimestampRange create() => TimestampRange();
+  @$core.pragma('dart2js:noInline')
+  static TimestampRange create() => TimestampRange._();
   TimestampRange createEmptyInstance() => create();
   static $pb.PbList<TimestampRange> createRepeated() =>
       $pb.PbList<TimestampRange>();
@@ -429,26 +446,28 @@ class ValueRange extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ValueRange',
       package: const $pb.PackageName('google.bigtable.v2'))
+    ..oo(0, [1, 2])
+    ..oo(1, [3, 4])
     ..a<$core.List<$core.int>>(1, 'startValueClosed', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, 'startValueOpen', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, 'endValueClosed', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(4, 'endValueOpen', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
-    ..oo(1, [3, 4])
     ..hasRequiredFields = false;
 
-  ValueRange() : super();
-  ValueRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ValueRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ValueRange._() : super();
+  factory ValueRange() => create();
+  factory ValueRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ValueRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ValueRange clone() => ValueRange()..mergeFromMessage(this);
   ValueRange copyWith(void Function(ValueRange) updates) =>
       super.copyWith((message) => updates(message as ValueRange));
   $pb.BuilderInfo get info_ => _i;
-  static ValueRange create() => ValueRange();
+  @$core.pragma('dart2js:noInline')
+  static ValueRange create() => ValueRange._();
   ValueRange createEmptyInstance() => create();
   static $pb.PbList<ValueRange> createRepeated() => $pb.PbList<ValueRange>();
   static ValueRange getDefault() => _defaultInstance ??= create()..freeze();
@@ -501,18 +520,20 @@ class RowFilter_Chain extends $pb.GeneratedMessage {
     ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM, RowFilter.create)
     ..hasRequiredFields = false;
 
-  RowFilter_Chain() : super();
-  RowFilter_Chain.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter_Chain.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter_Chain._() : super();
+  factory RowFilter_Chain() => create();
+  factory RowFilter_Chain.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RowFilter_Chain.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RowFilter_Chain clone() => RowFilter_Chain()..mergeFromMessage(this);
   RowFilter_Chain copyWith(void Function(RowFilter_Chain) updates) =>
       super.copyWith((message) => updates(message as RowFilter_Chain));
   $pb.BuilderInfo get info_ => _i;
-  static RowFilter_Chain create() => RowFilter_Chain();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter_Chain create() => RowFilter_Chain._();
   RowFilter_Chain createEmptyInstance() => create();
   static $pb.PbList<RowFilter_Chain> createRepeated() =>
       $pb.PbList<RowFilter_Chain>();
@@ -529,19 +550,21 @@ class RowFilter_Interleave extends $pb.GeneratedMessage {
     ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM, RowFilter.create)
     ..hasRequiredFields = false;
 
-  RowFilter_Interleave() : super();
-  RowFilter_Interleave.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter_Interleave.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter_Interleave._() : super();
+  factory RowFilter_Interleave() => create();
+  factory RowFilter_Interleave.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RowFilter_Interleave.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RowFilter_Interleave clone() =>
       RowFilter_Interleave()..mergeFromMessage(this);
   RowFilter_Interleave copyWith(void Function(RowFilter_Interleave) updates) =>
       super.copyWith((message) => updates(message as RowFilter_Interleave));
   $pb.BuilderInfo get info_ => _i;
-  static RowFilter_Interleave create() => RowFilter_Interleave();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter_Interleave create() => RowFilter_Interleave._();
   RowFilter_Interleave createEmptyInstance() => create();
   static $pb.PbList<RowFilter_Interleave> createRepeated() =>
       $pb.PbList<RowFilter_Interleave>();
@@ -563,18 +586,20 @@ class RowFilter_Condition extends $pb.GeneratedMessage {
         RowFilter.create)
     ..hasRequiredFields = false;
 
-  RowFilter_Condition() : super();
-  RowFilter_Condition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter_Condition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter_Condition._() : super();
+  factory RowFilter_Condition() => create();
+  factory RowFilter_Condition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RowFilter_Condition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RowFilter_Condition clone() => RowFilter_Condition()..mergeFromMessage(this);
   RowFilter_Condition copyWith(void Function(RowFilter_Condition) updates) =>
       super.copyWith((message) => updates(message as RowFilter_Condition));
   $pb.BuilderInfo get info_ => _i;
-  static RowFilter_Condition create() => RowFilter_Condition();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter_Condition create() => RowFilter_Condition._();
   RowFilter_Condition createEmptyInstance() => create();
   static $pb.PbList<RowFilter_Condition> createRepeated() =>
       $pb.PbList<RowFilter_Condition>();
@@ -655,6 +680,7 @@ class RowFilter extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter',
       package: const $pb.PackageName('google.bigtable.v2'))
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
     ..a<RowFilter_Chain>(1, 'chain', $pb.PbFieldType.OM,
         RowFilter_Chain.getDefault, RowFilter_Chain.create)
     ..a<RowFilter_Interleave>(2, 'interleave', $pb.PbFieldType.OM,
@@ -681,21 +707,22 @@ class RowFilter extends $pb.GeneratedMessage {
     ..aOB(17, 'passAllFilter')
     ..aOB(18, 'blockAllFilter')
     ..aOS(19, 'applyLabelTransformer')
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
     ..hasRequiredFields = false;
 
-  RowFilter() : super();
-  RowFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RowFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RowFilter._() : super();
+  factory RowFilter() => create();
+  factory RowFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RowFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RowFilter clone() => RowFilter()..mergeFromMessage(this);
   RowFilter copyWith(void Function(RowFilter) updates) =>
       super.copyWith((message) => updates(message as RowFilter));
   $pb.BuilderInfo get info_ => _i;
-  static RowFilter create() => RowFilter();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter create() => RowFilter._();
   RowFilter createEmptyInstance() => create();
   static $pb.PbList<RowFilter> createRepeated() => $pb.PbList<RowFilter>();
   static RowFilter getDefault() => _defaultInstance ??= create()..freeze();
@@ -866,18 +893,20 @@ class Mutation_SetCell extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, 'value', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  Mutation_SetCell() : super();
-  Mutation_SetCell.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_SetCell.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_SetCell._() : super();
+  factory Mutation_SetCell() => create();
+  factory Mutation_SetCell.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation_SetCell.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation_SetCell clone() => Mutation_SetCell()..mergeFromMessage(this);
   Mutation_SetCell copyWith(void Function(Mutation_SetCell) updates) =>
       super.copyWith((message) => updates(message as Mutation_SetCell));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation_SetCell create() => Mutation_SetCell();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_SetCell create() => Mutation_SetCell._();
   Mutation_SetCell createEmptyInstance() => create();
   static $pb.PbList<Mutation_SetCell> createRepeated() =>
       $pb.PbList<Mutation_SetCell>();
@@ -927,13 +956,14 @@ class Mutation_DeleteFromColumn extends $pb.GeneratedMessage {
         TimestampRange.getDefault, TimestampRange.create)
     ..hasRequiredFields = false;
 
-  Mutation_DeleteFromColumn() : super();
-  Mutation_DeleteFromColumn.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_DeleteFromColumn.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_DeleteFromColumn._() : super();
+  factory Mutation_DeleteFromColumn() => create();
+  factory Mutation_DeleteFromColumn.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation_DeleteFromColumn.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation_DeleteFromColumn clone() =>
       Mutation_DeleteFromColumn()..mergeFromMessage(this);
   Mutation_DeleteFromColumn copyWith(
@@ -941,7 +971,8 @@ class Mutation_DeleteFromColumn extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Mutation_DeleteFromColumn));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation_DeleteFromColumn create() => Mutation_DeleteFromColumn();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_DeleteFromColumn create() => Mutation_DeleteFromColumn._();
   Mutation_DeleteFromColumn createEmptyInstance() => create();
   static $pb.PbList<Mutation_DeleteFromColumn> createRepeated() =>
       $pb.PbList<Mutation_DeleteFromColumn>();
@@ -980,13 +1011,14 @@ class Mutation_DeleteFromFamily extends $pb.GeneratedMessage {
     ..aOS(1, 'familyName')
     ..hasRequiredFields = false;
 
-  Mutation_DeleteFromFamily() : super();
-  Mutation_DeleteFromFamily.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_DeleteFromFamily.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_DeleteFromFamily._() : super();
+  factory Mutation_DeleteFromFamily() => create();
+  factory Mutation_DeleteFromFamily.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation_DeleteFromFamily.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation_DeleteFromFamily clone() =>
       Mutation_DeleteFromFamily()..mergeFromMessage(this);
   Mutation_DeleteFromFamily copyWith(
@@ -994,7 +1026,8 @@ class Mutation_DeleteFromFamily extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Mutation_DeleteFromFamily));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation_DeleteFromFamily create() => Mutation_DeleteFromFamily();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_DeleteFromFamily create() => Mutation_DeleteFromFamily._();
   Mutation_DeleteFromFamily createEmptyInstance() => create();
   static $pb.PbList<Mutation_DeleteFromFamily> createRepeated() =>
       $pb.PbList<Mutation_DeleteFromFamily>();
@@ -1016,20 +1049,22 @@ class Mutation_DeleteFromRow extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.v2'))
     ..hasRequiredFields = false;
 
-  Mutation_DeleteFromRow() : super();
-  Mutation_DeleteFromRow.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_DeleteFromRow.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_DeleteFromRow._() : super();
+  factory Mutation_DeleteFromRow() => create();
+  factory Mutation_DeleteFromRow.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation_DeleteFromRow.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation_DeleteFromRow clone() =>
       Mutation_DeleteFromRow()..mergeFromMessage(this);
   Mutation_DeleteFromRow copyWith(
           void Function(Mutation_DeleteFromRow) updates) =>
       super.copyWith((message) => updates(message as Mutation_DeleteFromRow));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation_DeleteFromRow create() => Mutation_DeleteFromRow();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_DeleteFromRow create() => Mutation_DeleteFromRow._();
   Mutation_DeleteFromRow createEmptyInstance() => create();
   static $pb.PbList<Mutation_DeleteFromRow> createRepeated() =>
       $pb.PbList<Mutation_DeleteFromRow>();
@@ -1057,6 +1092,7 @@ class Mutation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
       package: const $pb.PackageName('google.bigtable.v2'))
+    ..oo(0, [1, 2, 3, 4])
     ..a<Mutation_SetCell>(1, 'setCell', $pb.PbFieldType.OM,
         Mutation_SetCell.getDefault, Mutation_SetCell.create)
     ..a<Mutation_DeleteFromColumn>(2, 'deleteFromColumn', $pb.PbFieldType.OM,
@@ -1065,21 +1101,22 @@ class Mutation extends $pb.GeneratedMessage {
         Mutation_DeleteFromFamily.getDefault, Mutation_DeleteFromFamily.create)
     ..a<Mutation_DeleteFromRow>(4, 'deleteFromRow', $pb.PbFieldType.OM,
         Mutation_DeleteFromRow.getDefault, Mutation_DeleteFromRow.create)
-    ..oo(0, [1, 2, 3, 4])
     ..hasRequiredFields = false;
 
-  Mutation() : super();
-  Mutation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation._() : super();
+  factory Mutation() => create();
+  factory Mutation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation clone() => Mutation()..mergeFromMessage(this);
   Mutation copyWith(void Function(Mutation) updates) =>
       super.copyWith((message) => updates(message as Mutation));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation create() => Mutation();
+  @$core.pragma('dart2js:noInline')
+  static Mutation create() => Mutation._();
   Mutation createEmptyInstance() => create();
   static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
   static Mutation getDefault() => _defaultInstance ??= create()..freeze();
@@ -1132,25 +1169,27 @@ class ReadModifyWriteRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadModifyWriteRule',
       package: const $pb.PackageName('google.bigtable.v2'))
+    ..oo(0, [3, 4])
     ..aOS(1, 'familyName')
     ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, 'appendValue', $pb.PbFieldType.OY)
     ..aInt64(4, 'incrementAmount')
-    ..oo(0, [3, 4])
     ..hasRequiredFields = false;
 
-  ReadModifyWriteRule() : super();
-  ReadModifyWriteRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadModifyWriteRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadModifyWriteRule._() : super();
+  factory ReadModifyWriteRule() => create();
+  factory ReadModifyWriteRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadModifyWriteRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadModifyWriteRule clone() => ReadModifyWriteRule()..mergeFromMessage(this);
   ReadModifyWriteRule copyWith(void Function(ReadModifyWriteRule) updates) =>
       super.copyWith((message) => updates(message as ReadModifyWriteRule));
   $pb.BuilderInfo get info_ => _i;
-  static ReadModifyWriteRule create() => ReadModifyWriteRule();
+  @$core.pragma('dart2js:noInline')
+  static ReadModifyWriteRule create() => ReadModifyWriteRule._();
   ReadModifyWriteRule createEmptyInstance() => create();
   static $pb.PbList<ReadModifyWriteRule> createRepeated() =>
       $pb.PbList<ReadModifyWriteRule>();

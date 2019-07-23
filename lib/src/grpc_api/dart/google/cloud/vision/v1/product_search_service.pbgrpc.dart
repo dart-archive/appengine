@@ -1,120 +1,123 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/vision/v1/product_search_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'product_search_service.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $0;
-import '../../../longrunning/operations.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'product_search_service.pb.dart' as $2;
+import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $0;
 export 'product_search_service.pb.dart';
 
 class ProductSearchClient extends $grpc.Client {
   static final _$createProductSet =
-      $grpc.ClientMethod<CreateProductSetRequest, ProductSet>(
+      $grpc.ClientMethod<$2.CreateProductSetRequest, $2.ProductSet>(
           '/google.cloud.vision.v1.ProductSearch/CreateProductSet',
-          (CreateProductSetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ProductSet.fromBuffer(value));
+          ($2.CreateProductSetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.ProductSet.fromBuffer(value));
   static final _$listProductSets =
-      $grpc.ClientMethod<ListProductSetsRequest, ListProductSetsResponse>(
+      $grpc.ClientMethod<$2.ListProductSetsRequest, $2.ListProductSetsResponse>(
           '/google.cloud.vision.v1.ProductSearch/ListProductSets',
-          (ListProductSetsRequest value) => value.writeToBuffer(),
+          ($2.ListProductSetsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListProductSetsResponse.fromBuffer(value));
+              $2.ListProductSetsResponse.fromBuffer(value));
   static final _$getProductSet =
-      $grpc.ClientMethod<GetProductSetRequest, ProductSet>(
+      $grpc.ClientMethod<$2.GetProductSetRequest, $2.ProductSet>(
           '/google.cloud.vision.v1.ProductSearch/GetProductSet',
-          (GetProductSetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ProductSet.fromBuffer(value));
+          ($2.GetProductSetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.ProductSet.fromBuffer(value));
   static final _$updateProductSet =
-      $grpc.ClientMethod<UpdateProductSetRequest, ProductSet>(
+      $grpc.ClientMethod<$2.UpdateProductSetRequest, $2.ProductSet>(
           '/google.cloud.vision.v1.ProductSearch/UpdateProductSet',
-          (UpdateProductSetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ProductSet.fromBuffer(value));
+          ($2.UpdateProductSetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.ProductSet.fromBuffer(value));
   static final _$deleteProductSet =
-      $grpc.ClientMethod<DeleteProductSetRequest, $0.Empty>(
+      $grpc.ClientMethod<$2.DeleteProductSetRequest, $1.Empty>(
           '/google.cloud.vision.v1.ProductSearch/DeleteProductSet',
-          (DeleteProductSetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($2.DeleteProductSetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$createProduct =
-      $grpc.ClientMethod<CreateProductRequest, Product>(
+      $grpc.ClientMethod<$2.CreateProductRequest, $2.Product>(
           '/google.cloud.vision.v1.ProductSearch/CreateProduct',
-          (CreateProductRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Product.fromBuffer(value));
+          ($2.CreateProductRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Product.fromBuffer(value));
   static final _$listProducts =
-      $grpc.ClientMethod<ListProductsRequest, ListProductsResponse>(
+      $grpc.ClientMethod<$2.ListProductsRequest, $2.ListProductsResponse>(
           '/google.cloud.vision.v1.ProductSearch/ListProducts',
-          (ListProductsRequest value) => value.writeToBuffer(),
+          ($2.ListProductsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListProductsResponse.fromBuffer(value));
-  static final _$getProduct = $grpc.ClientMethod<GetProductRequest, Product>(
-      '/google.cloud.vision.v1.ProductSearch/GetProduct',
-      (GetProductRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Product.fromBuffer(value));
+              $2.ListProductsResponse.fromBuffer(value));
+  static final _$getProduct =
+      $grpc.ClientMethod<$2.GetProductRequest, $2.Product>(
+          '/google.cloud.vision.v1.ProductSearch/GetProduct',
+          ($2.GetProductRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Product.fromBuffer(value));
   static final _$updateProduct =
-      $grpc.ClientMethod<UpdateProductRequest, Product>(
+      $grpc.ClientMethod<$2.UpdateProductRequest, $2.Product>(
           '/google.cloud.vision.v1.ProductSearch/UpdateProduct',
-          (UpdateProductRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Product.fromBuffer(value));
+          ($2.UpdateProductRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Product.fromBuffer(value));
   static final _$deleteProduct =
-      $grpc.ClientMethod<DeleteProductRequest, $0.Empty>(
+      $grpc.ClientMethod<$2.DeleteProductRequest, $1.Empty>(
           '/google.cloud.vision.v1.ProductSearch/DeleteProduct',
-          (DeleteProductRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($2.DeleteProductRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$createReferenceImage =
-      $grpc.ClientMethod<CreateReferenceImageRequest, ReferenceImage>(
+      $grpc.ClientMethod<$2.CreateReferenceImageRequest, $2.ReferenceImage>(
           '/google.cloud.vision.v1.ProductSearch/CreateReferenceImage',
-          (CreateReferenceImageRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ReferenceImage.fromBuffer(value));
+          ($2.CreateReferenceImageRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.ReferenceImage.fromBuffer(value));
   static final _$deleteReferenceImage =
-      $grpc.ClientMethod<DeleteReferenceImageRequest, $0.Empty>(
+      $grpc.ClientMethod<$2.DeleteReferenceImageRequest, $1.Empty>(
           '/google.cloud.vision.v1.ProductSearch/DeleteReferenceImage',
-          (DeleteReferenceImageRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($2.DeleteReferenceImageRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$listReferenceImages = $grpc.ClientMethod<
-          ListReferenceImagesRequest, ListReferenceImagesResponse>(
+          $2.ListReferenceImagesRequest, $2.ListReferenceImagesResponse>(
       '/google.cloud.vision.v1.ProductSearch/ListReferenceImages',
-      (ListReferenceImagesRequest value) => value.writeToBuffer(),
+      ($2.ListReferenceImagesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListReferenceImagesResponse.fromBuffer(value));
+          $2.ListReferenceImagesResponse.fromBuffer(value));
   static final _$getReferenceImage =
-      $grpc.ClientMethod<GetReferenceImageRequest, ReferenceImage>(
+      $grpc.ClientMethod<$2.GetReferenceImageRequest, $2.ReferenceImage>(
           '/google.cloud.vision.v1.ProductSearch/GetReferenceImage',
-          (GetReferenceImageRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ReferenceImage.fromBuffer(value));
+          ($2.GetReferenceImageRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.ReferenceImage.fromBuffer(value));
   static final _$addProductToProductSet =
-      $grpc.ClientMethod<AddProductToProductSetRequest, $0.Empty>(
+      $grpc.ClientMethod<$2.AddProductToProductSetRequest, $1.Empty>(
           '/google.cloud.vision.v1.ProductSearch/AddProductToProductSet',
-          (AddProductToProductSetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($2.AddProductToProductSetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$removeProductFromProductSet =
-      $grpc.ClientMethod<RemoveProductFromProductSetRequest, $0.Empty>(
+      $grpc.ClientMethod<$2.RemoveProductFromProductSetRequest, $1.Empty>(
           '/google.cloud.vision.v1.ProductSearch/RemoveProductFromProductSet',
-          (RemoveProductFromProductSetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($2.RemoveProductFromProductSetRequest value) =>
+              value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$listProductsInProductSet = $grpc.ClientMethod<
-          ListProductsInProductSetRequest, ListProductsInProductSetResponse>(
+          $2.ListProductsInProductSetRequest,
+          $2.ListProductsInProductSetResponse>(
       '/google.cloud.vision.v1.ProductSearch/ListProductsInProductSet',
-      (ListProductsInProductSetRequest value) => value.writeToBuffer(),
+      ($2.ListProductsInProductSetRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListProductsInProductSetResponse.fromBuffer(value));
+          $2.ListProductsInProductSetResponse.fromBuffer(value));
   static final _$importProductSets =
-      $grpc.ClientMethod<ImportProductSetsRequest, $1.Operation>(
+      $grpc.ClientMethod<$2.ImportProductSetsRequest, $0.Operation>(
           '/google.cloud.vision.v1.ProductSearch/ImportProductSets',
-          (ImportProductSetsRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+          ($2.ImportProductSetsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   ProductSearchClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ProductSet> createProductSet(
-      CreateProductSetRequest request,
+  $grpc.ResponseFuture<$2.ProductSet> createProductSet(
+      $2.CreateProductSetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createProductSet, $async.Stream.fromIterable([request]),
@@ -122,8 +125,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListProductSetsResponse> listProductSets(
-      ListProductSetsRequest request,
+  $grpc.ResponseFuture<$2.ListProductSetsResponse> listProductSets(
+      $2.ListProductSetsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listProductSets, $async.Stream.fromIterable([request]),
@@ -131,7 +134,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ProductSet> getProductSet(GetProductSetRequest request,
+  $grpc.ResponseFuture<$2.ProductSet> getProductSet(
+      $2.GetProductSetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getProductSet, $async.Stream.fromIterable([request]),
@@ -139,8 +143,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ProductSet> updateProductSet(
-      UpdateProductSetRequest request,
+  $grpc.ResponseFuture<$2.ProductSet> updateProductSet(
+      $2.UpdateProductSetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateProductSet, $async.Stream.fromIterable([request]),
@@ -148,8 +152,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteProductSet(
-      DeleteProductSetRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteProductSet(
+      $2.DeleteProductSetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteProductSet, $async.Stream.fromIterable([request]),
@@ -157,7 +161,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Product> createProduct(CreateProductRequest request,
+  $grpc.ResponseFuture<$2.Product> createProduct(
+      $2.CreateProductRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createProduct, $async.Stream.fromIterable([request]),
@@ -165,8 +170,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListProductsResponse> listProducts(
-      ListProductsRequest request,
+  $grpc.ResponseFuture<$2.ListProductsResponse> listProducts(
+      $2.ListProductsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listProducts, $async.Stream.fromIterable([request]),
@@ -174,7 +179,7 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Product> getProduct(GetProductRequest request,
+  $grpc.ResponseFuture<$2.Product> getProduct($2.GetProductRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getProduct, $async.Stream.fromIterable([request]),
@@ -182,7 +187,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Product> updateProduct(UpdateProductRequest request,
+  $grpc.ResponseFuture<$2.Product> updateProduct(
+      $2.UpdateProductRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateProduct, $async.Stream.fromIterable([request]),
@@ -190,7 +196,7 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteProduct(DeleteProductRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteProduct($2.DeleteProductRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteProduct, $async.Stream.fromIterable([request]),
@@ -198,8 +204,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ReferenceImage> createReferenceImage(
-      CreateReferenceImageRequest request,
+  $grpc.ResponseFuture<$2.ReferenceImage> createReferenceImage(
+      $2.CreateReferenceImageRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createReferenceImage, $async.Stream.fromIterable([request]),
@@ -207,8 +213,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteReferenceImage(
-      DeleteReferenceImageRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteReferenceImage(
+      $2.DeleteReferenceImageRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteReferenceImage, $async.Stream.fromIterable([request]),
@@ -216,8 +222,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListReferenceImagesResponse> listReferenceImages(
-      ListReferenceImagesRequest request,
+  $grpc.ResponseFuture<$2.ListReferenceImagesResponse> listReferenceImages(
+      $2.ListReferenceImagesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listReferenceImages, $async.Stream.fromIterable([request]),
@@ -225,8 +231,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ReferenceImage> getReferenceImage(
-      GetReferenceImageRequest request,
+  $grpc.ResponseFuture<$2.ReferenceImage> getReferenceImage(
+      $2.GetReferenceImageRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getReferenceImage, $async.Stream.fromIterable([request]),
@@ -234,8 +240,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> addProductToProductSet(
-      AddProductToProductSetRequest request,
+  $grpc.ResponseFuture<$1.Empty> addProductToProductSet(
+      $2.AddProductToProductSetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$addProductToProductSet, $async.Stream.fromIterable([request]),
@@ -243,8 +249,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> removeProductFromProductSet(
-      RemoveProductFromProductSetRequest request,
+  $grpc.ResponseFuture<$1.Empty> removeProductFromProductSet(
+      $2.RemoveProductFromProductSetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$removeProductFromProductSet, $async.Stream.fromIterable([request]),
@@ -252,8 +258,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListProductsInProductSetResponse>
-      listProductsInProductSet(ListProductsInProductSetRequest request,
+  $grpc.ResponseFuture<$2.ListProductsInProductSetResponse>
+      listProductsInProductSet($2.ListProductsInProductSetRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listProductsInProductSet, $async.Stream.fromIterable([request]),
@@ -261,8 +267,8 @@ class ProductSearchClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> importProductSets(
-      ImportProductSetsRequest request,
+  $grpc.ResponseFuture<$0.Operation> importProductSets(
+      $2.ImportProductSetsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$importProductSets, $async.Stream.fromIterable([request]),
@@ -275,274 +281,288 @@ abstract class ProductSearchServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.vision.v1.ProductSearch';
 
   ProductSearchServiceBase() {
-    $addMethod($grpc.ServiceMethod<CreateProductSetRequest, ProductSet>(
+    $addMethod($grpc.ServiceMethod<$2.CreateProductSetRequest, $2.ProductSet>(
         'CreateProductSet',
         createProductSet_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateProductSetRequest.fromBuffer(value),
-        (ProductSet value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<ListProductSetsRequest, ListProductSetsResponse>(
-            'ListProductSets',
-            listProductSets_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                ListProductSetsRequest.fromBuffer(value),
-            (ListProductSetsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetProductSetRequest, ProductSet>(
+            $2.CreateProductSetRequest.fromBuffer(value),
+        ($2.ProductSet value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListProductSetsRequest,
+            $2.ListProductSetsResponse>(
+        'ListProductSets',
+        listProductSets_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ListProductSetsRequest.fromBuffer(value),
+        ($2.ListProductSetsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetProductSetRequest, $2.ProductSet>(
         'GetProductSet',
         getProductSet_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetProductSetRequest.fromBuffer(value),
-        (ProductSet value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateProductSetRequest, ProductSet>(
+        ($core.List<$core.int> value) =>
+            $2.GetProductSetRequest.fromBuffer(value),
+        ($2.ProductSet value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateProductSetRequest, $2.ProductSet>(
         'UpdateProductSet',
         updateProductSet_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateProductSetRequest.fromBuffer(value),
-        (ProductSet value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteProductSetRequest, $0.Empty>(
+            $2.UpdateProductSetRequest.fromBuffer(value),
+        ($2.ProductSet value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteProductSetRequest, $1.Empty>(
         'DeleteProductSet',
         deleteProductSet_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteProductSetRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateProductRequest, Product>(
+            $2.DeleteProductSetRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateProductRequest, $2.Product>(
         'CreateProduct',
         createProduct_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateProductRequest.fromBuffer(value),
-        (Product value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListProductsRequest, ListProductsResponse>(
-        'ListProducts',
-        listProducts_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListProductsRequest.fromBuffer(value),
-        (ListProductsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetProductRequest, Product>(
+        ($core.List<$core.int> value) =>
+            $2.CreateProductRequest.fromBuffer(value),
+        ($2.Product value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.ListProductsRequest, $2.ListProductsResponse>(
+            'ListProducts',
+            listProducts_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.ListProductsRequest.fromBuffer(value),
+            ($2.ListProductsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetProductRequest, $2.Product>(
         'GetProduct',
         getProduct_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetProductRequest.fromBuffer(value),
-        (Product value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateProductRequest, Product>(
+        ($core.List<$core.int> value) => $2.GetProductRequest.fromBuffer(value),
+        ($2.Product value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateProductRequest, $2.Product>(
         'UpdateProduct',
         updateProduct_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateProductRequest.fromBuffer(value),
-        (Product value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteProductRequest, $0.Empty>(
+        ($core.List<$core.int> value) =>
+            $2.UpdateProductRequest.fromBuffer(value),
+        ($2.Product value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteProductRequest, $1.Empty>(
         'DeleteProduct',
         deleteProduct_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteProductRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateReferenceImageRequest, ReferenceImage>(
-        'CreateReferenceImage',
-        createReferenceImage_Pre,
-        false,
-        false,
         ($core.List<$core.int> value) =>
-            CreateReferenceImageRequest.fromBuffer(value),
-        (ReferenceImage value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteReferenceImageRequest, $0.Empty>(
+            $2.DeleteProductRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.CreateReferenceImageRequest, $2.ReferenceImage>(
+            'CreateReferenceImage',
+            createReferenceImage_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.CreateReferenceImageRequest.fromBuffer(value),
+            ($2.ReferenceImage value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteReferenceImageRequest, $1.Empty>(
         'DeleteReferenceImage',
         deleteReferenceImage_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteReferenceImageRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListReferenceImagesRequest,
-            ListReferenceImagesResponse>(
+            $2.DeleteReferenceImageRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListReferenceImagesRequest,
+            $2.ListReferenceImagesResponse>(
         'ListReferenceImages',
         listReferenceImages_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListReferenceImagesRequest.fromBuffer(value),
-        (ListReferenceImagesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetReferenceImageRequest, ReferenceImage>(
-        'GetReferenceImage',
-        getReferenceImage_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            GetReferenceImageRequest.fromBuffer(value),
-        (ReferenceImage value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<AddProductToProductSetRequest, $0.Empty>(
+            $2.ListReferenceImagesRequest.fromBuffer(value),
+        ($2.ListReferenceImagesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.GetReferenceImageRequest, $2.ReferenceImage>(
+            'GetReferenceImage',
+            getReferenceImage_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.GetReferenceImageRequest.fromBuffer(value),
+            ($2.ReferenceImage value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.AddProductToProductSetRequest, $1.Empty>(
         'AddProductToProductSet',
         addProductToProductSet_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            AddProductToProductSetRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+            $2.AddProductToProductSetRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<RemoveProductFromProductSetRequest, $0.Empty>(
+        $grpc.ServiceMethod<$2.RemoveProductFromProductSetRequest, $1.Empty>(
             'RemoveProductFromProductSet',
             removeProductFromProductSet_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                RemoveProductFromProductSetRequest.fromBuffer(value),
-            ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListProductsInProductSetRequest,
-            ListProductsInProductSetResponse>(
+                $2.RemoveProductFromProductSetRequest.fromBuffer(value),
+            ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListProductsInProductSetRequest,
+            $2.ListProductsInProductSetResponse>(
         'ListProductsInProductSet',
         listProductsInProductSet_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListProductsInProductSetRequest.fromBuffer(value),
-        (ListProductsInProductSetResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ImportProductSetsRequest, $1.Operation>(
+            $2.ListProductsInProductSetRequest.fromBuffer(value),
+        ($2.ListProductsInProductSetResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ImportProductSetsRequest, $0.Operation>(
         'ImportProductSets',
         importProductSets_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ImportProductSetsRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
+            $2.ImportProductSetsRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
-  $async.Future<ProductSet> createProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ProductSet> createProductSet_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateProductSetRequest> request) async {
     return createProductSet(call, await request);
   }
 
-  $async.Future<ListProductSetsResponse> listProductSets_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListProductSetsResponse> listProductSets_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListProductSetsRequest> request) async {
     return listProductSets(call, await request);
   }
 
-  $async.Future<ProductSet> getProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ProductSet> getProductSet_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetProductSetRequest> request) async {
     return getProductSet(call, await request);
   }
 
-  $async.Future<ProductSet> updateProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ProductSet> updateProductSet_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateProductSetRequest> request) async {
     return updateProductSet(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteProductSet_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteProductSetRequest> request) async {
     return deleteProductSet(call, await request);
   }
 
-  $async.Future<Product> createProduct_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Product> createProduct_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateProductRequest> request) async {
     return createProduct(call, await request);
   }
 
-  $async.Future<ListProductsResponse> listProducts_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListProductsResponse> listProducts_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListProductsRequest> request) async {
     return listProducts(call, await request);
   }
 
-  $async.Future<Product> getProduct_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Product> getProduct_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetProductRequest> request) async {
     return getProduct(call, await request);
   }
 
-  $async.Future<Product> updateProduct_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Product> updateProduct_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateProductRequest> request) async {
     return updateProduct(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteProduct_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteProduct_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteProductRequest> request) async {
     return deleteProduct(call, await request);
   }
 
-  $async.Future<ReferenceImage> createReferenceImage_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ReferenceImage> createReferenceImage_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.CreateReferenceImageRequest> request) async {
     return createReferenceImage(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteReferenceImage_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteReferenceImage_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteReferenceImageRequest> request) async {
     return deleteReferenceImage(call, await request);
   }
 
-  $async.Future<ListReferenceImagesResponse> listReferenceImages_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListReferenceImagesResponse> listReferenceImages_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListReferenceImagesRequest> request) async {
     return listReferenceImages(call, await request);
   }
 
-  $async.Future<ReferenceImage> getReferenceImage_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ReferenceImage> getReferenceImage_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetReferenceImageRequest> request) async {
     return getReferenceImage(call, await request);
   }
 
-  $async.Future<$0.Empty> addProductToProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> addProductToProductSet_Pre($grpc.ServiceCall call,
+      $async.Future<$2.AddProductToProductSetRequest> request) async {
     return addProductToProductSet(call, await request);
   }
 
-  $async.Future<$0.Empty> removeProductFromProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> removeProductFromProductSet_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.RemoveProductFromProductSetRequest> request) async {
     return removeProductFromProductSet(call, await request);
   }
 
-  $async.Future<ListProductsInProductSetResponse> listProductsInProductSet_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListProductsInProductSetResponse>
+      listProductsInProductSet_Pre($grpc.ServiceCall call,
+          $async.Future<$2.ListProductsInProductSetRequest> request) async {
     return listProductsInProductSet(call, await request);
   }
 
-  $async.Future<$1.Operation> importProductSets_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> importProductSets_Pre($grpc.ServiceCall call,
+      $async.Future<$2.ImportProductSetsRequest> request) async {
     return importProductSets(call, await request);
   }
 
-  $async.Future<ProductSet> createProductSet(
-      $grpc.ServiceCall call, CreateProductSetRequest request);
-  $async.Future<ListProductSetsResponse> listProductSets(
-      $grpc.ServiceCall call, ListProductSetsRequest request);
-  $async.Future<ProductSet> getProductSet(
-      $grpc.ServiceCall call, GetProductSetRequest request);
-  $async.Future<ProductSet> updateProductSet(
-      $grpc.ServiceCall call, UpdateProductSetRequest request);
-  $async.Future<$0.Empty> deleteProductSet(
-      $grpc.ServiceCall call, DeleteProductSetRequest request);
-  $async.Future<Product> createProduct(
-      $grpc.ServiceCall call, CreateProductRequest request);
-  $async.Future<ListProductsResponse> listProducts(
-      $grpc.ServiceCall call, ListProductsRequest request);
-  $async.Future<Product> getProduct(
-      $grpc.ServiceCall call, GetProductRequest request);
-  $async.Future<Product> updateProduct(
-      $grpc.ServiceCall call, UpdateProductRequest request);
-  $async.Future<$0.Empty> deleteProduct(
-      $grpc.ServiceCall call, DeleteProductRequest request);
-  $async.Future<ReferenceImage> createReferenceImage(
-      $grpc.ServiceCall call, CreateReferenceImageRequest request);
-  $async.Future<$0.Empty> deleteReferenceImage(
-      $grpc.ServiceCall call, DeleteReferenceImageRequest request);
-  $async.Future<ListReferenceImagesResponse> listReferenceImages(
-      $grpc.ServiceCall call, ListReferenceImagesRequest request);
-  $async.Future<ReferenceImage> getReferenceImage(
-      $grpc.ServiceCall call, GetReferenceImageRequest request);
-  $async.Future<$0.Empty> addProductToProductSet(
-      $grpc.ServiceCall call, AddProductToProductSetRequest request);
-  $async.Future<$0.Empty> removeProductFromProductSet(
-      $grpc.ServiceCall call, RemoveProductFromProductSetRequest request);
-  $async.Future<ListProductsInProductSetResponse> listProductsInProductSet(
-      $grpc.ServiceCall call, ListProductsInProductSetRequest request);
-  $async.Future<$1.Operation> importProductSets(
-      $grpc.ServiceCall call, ImportProductSetsRequest request);
+  $async.Future<$2.ProductSet> createProductSet(
+      $grpc.ServiceCall call, $2.CreateProductSetRequest request);
+  $async.Future<$2.ListProductSetsResponse> listProductSets(
+      $grpc.ServiceCall call, $2.ListProductSetsRequest request);
+  $async.Future<$2.ProductSet> getProductSet(
+      $grpc.ServiceCall call, $2.GetProductSetRequest request);
+  $async.Future<$2.ProductSet> updateProductSet(
+      $grpc.ServiceCall call, $2.UpdateProductSetRequest request);
+  $async.Future<$1.Empty> deleteProductSet(
+      $grpc.ServiceCall call, $2.DeleteProductSetRequest request);
+  $async.Future<$2.Product> createProduct(
+      $grpc.ServiceCall call, $2.CreateProductRequest request);
+  $async.Future<$2.ListProductsResponse> listProducts(
+      $grpc.ServiceCall call, $2.ListProductsRequest request);
+  $async.Future<$2.Product> getProduct(
+      $grpc.ServiceCall call, $2.GetProductRequest request);
+  $async.Future<$2.Product> updateProduct(
+      $grpc.ServiceCall call, $2.UpdateProductRequest request);
+  $async.Future<$1.Empty> deleteProduct(
+      $grpc.ServiceCall call, $2.DeleteProductRequest request);
+  $async.Future<$2.ReferenceImage> createReferenceImage(
+      $grpc.ServiceCall call, $2.CreateReferenceImageRequest request);
+  $async.Future<$1.Empty> deleteReferenceImage(
+      $grpc.ServiceCall call, $2.DeleteReferenceImageRequest request);
+  $async.Future<$2.ListReferenceImagesResponse> listReferenceImages(
+      $grpc.ServiceCall call, $2.ListReferenceImagesRequest request);
+  $async.Future<$2.ReferenceImage> getReferenceImage(
+      $grpc.ServiceCall call, $2.GetReferenceImageRequest request);
+  $async.Future<$1.Empty> addProductToProductSet(
+      $grpc.ServiceCall call, $2.AddProductToProductSetRequest request);
+  $async.Future<$1.Empty> removeProductFromProductSet(
+      $grpc.ServiceCall call, $2.RemoveProductFromProductSetRequest request);
+  $async.Future<$2.ListProductsInProductSetResponse> listProductsInProductSet(
+      $grpc.ServiceCall call, $2.ListProductsInProductSetRequest request);
+  $async.Future<$0.Operation> importProductSets(
+      $grpc.ServiceCall call, $2.ImportProductSetsRequest request);
 }

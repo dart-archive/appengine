@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/backend.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,18 +20,20 @@ class Backend extends $pb.GeneratedMessage {
         ..pc<BackendRule>(1, 'rules', $pb.PbFieldType.PM, BackendRule.create)
         ..hasRequiredFields = false;
 
-  Backend() : super();
-  Backend.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Backend.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Backend._() : super();
+  factory Backend() => create();
+  factory Backend.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Backend.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Backend clone() => Backend()..mergeFromMessage(this);
   Backend copyWith(void Function(Backend) updates) =>
       super.copyWith((message) => updates(message as Backend));
   $pb.BuilderInfo get info_ => _i;
-  static Backend create() => Backend();
+  @$core.pragma('dart2js:noInline')
+  static Backend create() => Backend._();
   Backend createEmptyInstance() => create();
   static $pb.PbList<Backend> createRepeated() => $pb.PbList<Backend>();
   static Backend getDefault() => _defaultInstance ??= create()..freeze();
@@ -49,6 +52,7 @@ class BackendRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BackendRule',
       package: const $pb.PackageName('google.api'))
+    ..oo(0, [7])
     ..aOS(1, 'selector')
     ..aOS(2, 'address')
     ..a<$core.double>(3, 'deadline', $pb.PbFieldType.OD)
@@ -62,21 +66,22 @@ class BackendRule extends $pb.GeneratedMessage {
         BackendRule_PathTranslation.valueOf,
         BackendRule_PathTranslation.values)
     ..aOS(7, 'jwtAudience')
-    ..oo(0, [7])
     ..hasRequiredFields = false;
 
-  BackendRule() : super();
-  BackendRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BackendRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BackendRule._() : super();
+  factory BackendRule() => create();
+  factory BackendRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BackendRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BackendRule clone() => BackendRule()..mergeFromMessage(this);
   BackendRule copyWith(void Function(BackendRule) updates) =>
       super.copyWith((message) => updates(message as BackendRule));
   $pb.BuilderInfo get info_ => _i;
-  static BackendRule create() => BackendRule();
+  @$core.pragma('dart2js:noInline')
+  static BackendRule create() => BackendRule._();
   BackendRule createEmptyInstance() => create();
   static $pb.PbList<BackendRule> createRepeated() => $pb.PbList<BackendRule>();
   static BackendRule getDefault() => _defaultInstance ??= create()..freeze();

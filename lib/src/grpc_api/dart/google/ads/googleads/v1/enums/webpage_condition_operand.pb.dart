@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/webpage_condition_operand.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class WebpageConditionOperandEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  WebpageConditionOperandEnum() : super();
-  WebpageConditionOperandEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebpageConditionOperandEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebpageConditionOperandEnum._() : super();
+  factory WebpageConditionOperandEnum() => create();
+  factory WebpageConditionOperandEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebpageConditionOperandEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebpageConditionOperandEnum clone() =>
       WebpageConditionOperandEnum()..mergeFromMessage(this);
   WebpageConditionOperandEnum copyWith(
@@ -31,7 +33,9 @@ class WebpageConditionOperandEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as WebpageConditionOperandEnum));
   $pb.BuilderInfo get info_ => _i;
-  static WebpageConditionOperandEnum create() => WebpageConditionOperandEnum();
+  @$core.pragma('dart2js:noInline')
+  static WebpageConditionOperandEnum create() =>
+      WebpageConditionOperandEnum._();
   WebpageConditionOperandEnum createEmptyInstance() => create();
   static $pb.PbList<WebpageConditionOperandEnum> createRepeated() =>
       $pb.PbList<WebpageConditionOperandEnum>();

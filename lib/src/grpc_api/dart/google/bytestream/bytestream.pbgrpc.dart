@@ -1,52 +1,53 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bytestream/bytestream.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'bytestream.pb.dart';
+import 'package:grpc/service_api.dart' as $grpc;
+import 'bytestream.pb.dart' as $0;
 export 'bytestream.pb.dart';
 
 class ByteStreamClient extends $grpc.Client {
-  static final _$read = $grpc.ClientMethod<ReadRequest, ReadResponse>(
+  static final _$read = $grpc.ClientMethod<$0.ReadRequest, $0.ReadResponse>(
       '/google.bytestream.ByteStream/Read',
-      (ReadRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => ReadResponse.fromBuffer(value));
-  static final _$write = $grpc.ClientMethod<WriteRequest, WriteResponse>(
+      ($0.ReadRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ReadResponse.fromBuffer(value));
+  static final _$write = $grpc.ClientMethod<$0.WriteRequest, $0.WriteResponse>(
       '/google.bytestream.ByteStream/Write',
-      (WriteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => WriteResponse.fromBuffer(value));
-  static final _$queryWriteStatus =
-      $grpc.ClientMethod<QueryWriteStatusRequest, QueryWriteStatusResponse>(
-          '/google.bytestream.ByteStream/QueryWriteStatus',
-          (QueryWriteStatusRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              QueryWriteStatusResponse.fromBuffer(value));
+      ($0.WriteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.WriteResponse.fromBuffer(value));
+  static final _$queryWriteStatus = $grpc.ClientMethod<
+          $0.QueryWriteStatusRequest, $0.QueryWriteStatusResponse>(
+      '/google.bytestream.ByteStream/QueryWriteStatus',
+      ($0.QueryWriteStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.QueryWriteStatusResponse.fromBuffer(value));
 
   ByteStreamClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseStream<ReadResponse> read(ReadRequest request,
+  $grpc.ResponseStream<$0.ReadResponse> read($0.ReadRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$read, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseStream(call);
   }
 
-  $grpc.ResponseFuture<WriteResponse> write($async.Stream<WriteRequest> request,
+  $grpc.ResponseFuture<$0.WriteResponse> write(
+      $async.Stream<$0.WriteRequest> request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$write, request, options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<QueryWriteStatusResponse> queryWriteStatus(
-      QueryWriteStatusRequest request,
+  $grpc.ResponseFuture<$0.QueryWriteStatusResponse> queryWriteStatus(
+      $0.QueryWriteStatusRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$queryWriteStatus, $async.Stream.fromIterable([request]),
@@ -59,44 +60,46 @@ abstract class ByteStreamServiceBase extends $grpc.Service {
   $core.String get $name => 'google.bytestream.ByteStream';
 
   ByteStreamServiceBase() {
-    $addMethod($grpc.ServiceMethod<ReadRequest, ReadResponse>(
+    $addMethod($grpc.ServiceMethod<$0.ReadRequest, $0.ReadResponse>(
         'Read',
         read_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => ReadRequest.fromBuffer(value),
-        (ReadResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<WriteRequest, WriteResponse>(
+        ($core.List<$core.int> value) => $0.ReadRequest.fromBuffer(value),
+        ($0.ReadResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.WriteRequest, $0.WriteResponse>(
         'Write',
         write,
         true,
         false,
-        ($core.List<$core.int> value) => WriteRequest.fromBuffer(value),
-        (WriteResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<QueryWriteStatusRequest, QueryWriteStatusResponse>(
-            'QueryWriteStatus',
-            queryWriteStatus_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                QueryWriteStatusRequest.fromBuffer(value),
-            (QueryWriteStatusResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.WriteRequest.fromBuffer(value),
+        ($0.WriteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.QueryWriteStatusRequest,
+            $0.QueryWriteStatusResponse>(
+        'QueryWriteStatus',
+        queryWriteStatus_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.QueryWriteStatusRequest.fromBuffer(value),
+        ($0.QueryWriteStatusResponse value) => value.writeToBuffer()));
   }
 
-  $async.Stream<ReadResponse> read_Pre(
-      $grpc.ServiceCall call, $async.Future request) async* {
-    yield* read(call, (await request) as ReadRequest);
+  $async.Stream<$0.ReadResponse> read_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.ReadRequest> request) async* {
+    yield* read(call, await request);
   }
 
-  $async.Future<QueryWriteStatusResponse> queryWriteStatus_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.QueryWriteStatusResponse> queryWriteStatus_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.QueryWriteStatusRequest> request) async {
     return queryWriteStatus(call, await request);
   }
 
-  $async.Stream<ReadResponse> read($grpc.ServiceCall call, ReadRequest request);
-  $async.Future<WriteResponse> write(
-      $grpc.ServiceCall call, $async.Stream<WriteRequest> request);
-  $async.Future<QueryWriteStatusResponse> queryWriteStatus(
-      $grpc.ServiceCall call, QueryWriteStatusRequest request);
+  $async.Stream<$0.ReadResponse> read(
+      $grpc.ServiceCall call, $0.ReadRequest request);
+  $async.Future<$0.WriteResponse> write(
+      $grpc.ServiceCall call, $async.Stream<$0.WriteRequest> request);
+  $async.Future<$0.QueryWriteStatusResponse> queryWriteStatus(
+      $grpc.ServiceCall call, $0.QueryWriteStatusRequest request);
 }

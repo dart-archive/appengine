@@ -1,25 +1,26 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/webhook.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'session.pb.dart' as $2;
+import 'session.pb.dart' as $6;
 import 'intent.pb.dart' as $3;
-import '../../../protobuf/struct.pb.dart' as $4;
-import 'context.pb.dart' as $5;
+import '../../../protobuf/struct.pb.dart' as $7;
+import 'context.pb.dart' as $0;
 
 class WebhookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebhookRequest',
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'responseId')
-    ..a<$2.QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
-        $2.QueryResult.getDefault, $2.QueryResult.create)
+    ..a<$6.QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
+        $6.QueryResult.getDefault, $6.QueryResult.create)
     ..a<OriginalDetectIntentRequest>(
         3,
         'originalDetectIntentRequest',
@@ -29,18 +30,20 @@ class WebhookRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'session')
     ..hasRequiredFields = false;
 
-  WebhookRequest() : super();
-  WebhookRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebhookRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebhookRequest._() : super();
+  factory WebhookRequest() => create();
+  factory WebhookRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebhookRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebhookRequest clone() => WebhookRequest()..mergeFromMessage(this);
   WebhookRequest copyWith(void Function(WebhookRequest) updates) =>
       super.copyWith((message) => updates(message as WebhookRequest));
   $pb.BuilderInfo get info_ => _i;
-  static WebhookRequest create() => WebhookRequest();
+  @$core.pragma('dart2js:noInline')
+  static WebhookRequest create() => WebhookRequest._();
   WebhookRequest createEmptyInstance() => create();
   static $pb.PbList<WebhookRequest> createRepeated() =>
       $pb.PbList<WebhookRequest>();
@@ -55,8 +58,8 @@ class WebhookRequest extends $pb.GeneratedMessage {
   $core.bool hasResponseId() => $_has(0);
   void clearResponseId() => clearField(1);
 
-  $2.QueryResult get queryResult => $_getN(1);
-  set queryResult($2.QueryResult v) {
+  $6.QueryResult get queryResult => $_getN(1);
+  set queryResult($6.QueryResult v) {
     setField(2, v);
   }
 
@@ -87,25 +90,27 @@ class WebhookResponse extends $pb.GeneratedMessage {
     ..pc<$3.Intent_Message>(
         2, 'fulfillmentMessages', $pb.PbFieldType.PM, $3.Intent_Message.create)
     ..aOS(3, 'source')
-    ..a<$4.Struct>(4, 'payload', $pb.PbFieldType.OM, $4.Struct.getDefault,
-        $4.Struct.create)
-    ..pc<$5.Context>(5, 'outputContexts', $pb.PbFieldType.PM, $5.Context.create)
-    ..a<$2.EventInput>(6, 'followupEventInput', $pb.PbFieldType.OM,
-        $2.EventInput.getDefault, $2.EventInput.create)
+    ..a<$7.Struct>(4, 'payload', $pb.PbFieldType.OM, $7.Struct.getDefault,
+        $7.Struct.create)
+    ..pc<$0.Context>(5, 'outputContexts', $pb.PbFieldType.PM, $0.Context.create)
+    ..a<$6.EventInput>(6, 'followupEventInput', $pb.PbFieldType.OM,
+        $6.EventInput.getDefault, $6.EventInput.create)
     ..hasRequiredFields = false;
 
-  WebhookResponse() : super();
-  WebhookResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WebhookResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WebhookResponse._() : super();
+  factory WebhookResponse() => create();
+  factory WebhookResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebhookResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WebhookResponse clone() => WebhookResponse()..mergeFromMessage(this);
   WebhookResponse copyWith(void Function(WebhookResponse) updates) =>
       super.copyWith((message) => updates(message as WebhookResponse));
   $pb.BuilderInfo get info_ => _i;
-  static WebhookResponse create() => WebhookResponse();
+  @$core.pragma('dart2js:noInline')
+  static WebhookResponse create() => WebhookResponse._();
   WebhookResponse createEmptyInstance() => create();
   static $pb.PbList<WebhookResponse> createRepeated() =>
       $pb.PbList<WebhookResponse>();
@@ -131,18 +136,18 @@ class WebhookResponse extends $pb.GeneratedMessage {
   $core.bool hasSource() => $_has(2);
   void clearSource() => clearField(3);
 
-  $4.Struct get payload => $_getN(3);
-  set payload($4.Struct v) {
+  $7.Struct get payload => $_getN(3);
+  set payload($7.Struct v) {
     setField(4, v);
   }
 
   $core.bool hasPayload() => $_has(3);
   void clearPayload() => clearField(4);
 
-  $core.List<$5.Context> get outputContexts => $_getList(4);
+  $core.List<$0.Context> get outputContexts => $_getList(4);
 
-  $2.EventInput get followupEventInput => $_getN(5);
-  set followupEventInput($2.EventInput v) {
+  $6.EventInput get followupEventInput => $_getN(5);
+  set followupEventInput($6.EventInput v) {
     setField(6, v);
   }
 
@@ -156,17 +161,18 @@ class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2'))
     ..aOS(1, 'source')
     ..aOS(2, 'version')
-    ..a<$4.Struct>(3, 'payload', $pb.PbFieldType.OM, $4.Struct.getDefault,
-        $4.Struct.create)
+    ..a<$7.Struct>(3, 'payload', $pb.PbFieldType.OM, $7.Struct.getDefault,
+        $7.Struct.create)
     ..hasRequiredFields = false;
 
-  OriginalDetectIntentRequest() : super();
-  OriginalDetectIntentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OriginalDetectIntentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OriginalDetectIntentRequest._() : super();
+  factory OriginalDetectIntentRequest() => create();
+  factory OriginalDetectIntentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OriginalDetectIntentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OriginalDetectIntentRequest clone() =>
       OriginalDetectIntentRequest()..mergeFromMessage(this);
   OriginalDetectIntentRequest copyWith(
@@ -174,7 +180,9 @@ class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as OriginalDetectIntentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static OriginalDetectIntentRequest create() => OriginalDetectIntentRequest();
+  @$core.pragma('dart2js:noInline')
+  static OriginalDetectIntentRequest create() =>
+      OriginalDetectIntentRequest._();
   OriginalDetectIntentRequest createEmptyInstance() => create();
   static $pb.PbList<OriginalDetectIntentRequest> createRepeated() =>
       $pb.PbList<OriginalDetectIntentRequest>();
@@ -198,8 +206,8 @@ class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
   $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  $4.Struct get payload => $_getN(2);
-  set payload($4.Struct v) {
+  $7.Struct get payload => $_getN(2);
+  set payload($7.Struct v) {
     setField(3, v);
   }
 

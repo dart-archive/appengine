@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/quota_controller.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'metric_value.pb.dart' as $0;
+import 'metric_value.pb.dart' as $1;
 
 import 'quota_controller.pbenum.dart';
 
@@ -24,19 +25,21 @@ class AllocateQuotaRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'serviceConfigId')
     ..hasRequiredFields = false;
 
-  AllocateQuotaRequest() : super();
-  AllocateQuotaRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AllocateQuotaRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AllocateQuotaRequest._() : super();
+  factory AllocateQuotaRequest() => create();
+  factory AllocateQuotaRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AllocateQuotaRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AllocateQuotaRequest clone() =>
       AllocateQuotaRequest()..mergeFromMessage(this);
   AllocateQuotaRequest copyWith(void Function(AllocateQuotaRequest) updates) =>
       super.copyWith((message) => updates(message as AllocateQuotaRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AllocateQuotaRequest create() => AllocateQuotaRequest();
+  @$core.pragma('dart2js:noInline')
+  static AllocateQuotaRequest create() => AllocateQuotaRequest._();
   AllocateQuotaRequest createEmptyInstance() => create();
   static $pb.PbList<AllocateQuotaRequest> createRepeated() =>
       $pb.PbList<AllocateQuotaRequest>();
@@ -85,8 +88,8 @@ class QuotaOperation extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..pc<$0.MetricValueSet>(
-        5, 'quotaMetrics', $pb.PbFieldType.PM, $0.MetricValueSet.create)
+    ..pc<$1.MetricValueSet>(
+        5, 'quotaMetrics', $pb.PbFieldType.PM, $1.MetricValueSet.create)
     ..e<QuotaOperation_QuotaMode>(
         6,
         'quotaMode',
@@ -96,18 +99,20 @@ class QuotaOperation extends $pb.GeneratedMessage {
         QuotaOperation_QuotaMode.values)
     ..hasRequiredFields = false;
 
-  QuotaOperation() : super();
-  QuotaOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaOperation._() : super();
+  factory QuotaOperation() => create();
+  factory QuotaOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuotaOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuotaOperation clone() => QuotaOperation()..mergeFromMessage(this);
   QuotaOperation copyWith(void Function(QuotaOperation) updates) =>
       super.copyWith((message) => updates(message as QuotaOperation));
   $pb.BuilderInfo get info_ => _i;
-  static QuotaOperation create() => QuotaOperation();
+  @$core.pragma('dart2js:noInline')
+  static QuotaOperation create() => QuotaOperation._();
   QuotaOperation createEmptyInstance() => create();
   static $pb.PbList<QuotaOperation> createRepeated() =>
       $pb.PbList<QuotaOperation>();
@@ -140,7 +145,7 @@ class QuotaOperation extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 
-  $core.List<$0.MetricValueSet> get quotaMetrics => $_getList(4);
+  $core.List<$1.MetricValueSet> get quotaMetrics => $_getList(4);
 
   QuotaOperation_QuotaMode get quotaMode => $_getN(5);
   set quotaMode(QuotaOperation_QuotaMode v) {
@@ -156,25 +161,27 @@ class AllocateQuotaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'operationId')
     ..pc<QuotaError>(2, 'allocateErrors', $pb.PbFieldType.PM, QuotaError.create)
-    ..pc<$0.MetricValueSet>(
-        3, 'quotaMetrics', $pb.PbFieldType.PM, $0.MetricValueSet.create)
+    ..pc<$1.MetricValueSet>(
+        3, 'quotaMetrics', $pb.PbFieldType.PM, $1.MetricValueSet.create)
     ..aOS(4, 'serviceConfigId')
     ..hasRequiredFields = false;
 
-  AllocateQuotaResponse() : super();
-  AllocateQuotaResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AllocateQuotaResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AllocateQuotaResponse._() : super();
+  factory AllocateQuotaResponse() => create();
+  factory AllocateQuotaResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AllocateQuotaResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AllocateQuotaResponse clone() =>
       AllocateQuotaResponse()..mergeFromMessage(this);
   AllocateQuotaResponse copyWith(
           void Function(AllocateQuotaResponse) updates) =>
       super.copyWith((message) => updates(message as AllocateQuotaResponse));
   $pb.BuilderInfo get info_ => _i;
-  static AllocateQuotaResponse create() => AllocateQuotaResponse();
+  @$core.pragma('dart2js:noInline')
+  static AllocateQuotaResponse create() => AllocateQuotaResponse._();
   AllocateQuotaResponse createEmptyInstance() => create();
   static $pb.PbList<AllocateQuotaResponse> createRepeated() =>
       $pb.PbList<AllocateQuotaResponse>();
@@ -192,7 +199,7 @@ class AllocateQuotaResponse extends $pb.GeneratedMessage {
 
   $core.List<QuotaError> get allocateErrors => $_getList(1);
 
-  $core.List<$0.MetricValueSet> get quotaMetrics => $_getList(2);
+  $core.List<$1.MetricValueSet> get quotaMetrics => $_getList(2);
 
   $core.String get serviceConfigId => $_getS(3, '');
   set serviceConfigId($core.String v) {
@@ -217,18 +224,20 @@ class QuotaError extends $pb.GeneratedMessage {
     ..aOS(3, 'description')
     ..hasRequiredFields = false;
 
-  QuotaError() : super();
-  QuotaError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaError._() : super();
+  factory QuotaError() => create();
+  factory QuotaError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuotaError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuotaError clone() => QuotaError()..mergeFromMessage(this);
   QuotaError copyWith(void Function(QuotaError) updates) =>
       super.copyWith((message) => updates(message as QuotaError));
   $pb.BuilderInfo get info_ => _i;
-  static QuotaError create() => QuotaError();
+  @$core.pragma('dart2js:noInline')
+  static QuotaError create() => QuotaError._();
   QuotaError createEmptyInstance() => create();
   static $pb.PbList<QuotaError> createRepeated() => $pb.PbList<QuotaError>();
   static QuotaError getDefault() => _defaultInstance ??= create()..freeze();

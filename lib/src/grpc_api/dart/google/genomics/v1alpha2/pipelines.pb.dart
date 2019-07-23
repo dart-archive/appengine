@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1alpha2/pipelines.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/duration.pb.dart' as $2;
-import '../../protobuf/timestamp.pb.dart' as $3;
+import '../../protobuf/duration.pb.dart' as $3;
+import '../../protobuf/timestamp.pb.dart' as $4;
 
-import '../../rpc/code.pbenum.dart' as $4;
+import '../../rpc/code.pbenum.dart' as $5;
 import 'pipelines.pbenum.dart';
 
 export 'pipelines.pbenum.dart';
@@ -27,18 +28,20 @@ class ComputeEngine extends $pb.GeneratedMessage {
     ..pPS(4, 'diskNames')
     ..hasRequiredFields = false;
 
-  ComputeEngine() : super();
-  ComputeEngine.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ComputeEngine.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ComputeEngine._() : super();
+  factory ComputeEngine() => create();
+  factory ComputeEngine.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ComputeEngine.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ComputeEngine clone() => ComputeEngine()..mergeFromMessage(this);
   ComputeEngine copyWith(void Function(ComputeEngine) updates) =>
       super.copyWith((message) => updates(message as ComputeEngine));
   $pb.BuilderInfo get info_ => _i;
-  static ComputeEngine create() => ComputeEngine();
+  @$core.pragma('dart2js:noInline')
+  static ComputeEngine create() => ComputeEngine._();
   ComputeEngine createEmptyInstance() => create();
   static $pb.PbList<ComputeEngine> createRepeated() =>
       $pb.PbList<ComputeEngine>();
@@ -79,18 +82,20 @@ class RuntimeMetadata extends $pb.GeneratedMessage {
         ComputeEngine.getDefault, ComputeEngine.create)
     ..hasRequiredFields = false;
 
-  RuntimeMetadata() : super();
-  RuntimeMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RuntimeMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RuntimeMetadata._() : super();
+  factory RuntimeMetadata() => create();
+  factory RuntimeMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RuntimeMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RuntimeMetadata clone() => RuntimeMetadata()..mergeFromMessage(this);
   RuntimeMetadata copyWith(void Function(RuntimeMetadata) updates) =>
       super.copyWith((message) => updates(message as RuntimeMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static RuntimeMetadata create() => RuntimeMetadata();
+  @$core.pragma('dart2js:noInline')
+  static RuntimeMetadata create() => RuntimeMetadata._();
   RuntimeMetadata createEmptyInstance() => create();
   static $pb.PbList<RuntimeMetadata> createRepeated() =>
       $pb.PbList<RuntimeMetadata>();
@@ -114,6 +119,7 @@ class Pipeline extends $pb.GeneratedMessage {
       {5: Pipeline_Executor.docker, 0: Pipeline_Executor.notSet};
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Pipeline',
       package: const $pb.PackageName('google.genomics.v1alpha2'))
+    ..oo(0, [5])
     ..aOS(1, 'projectId')
     ..aOS(2, 'name')
     ..aOS(3, 'description')
@@ -126,21 +132,22 @@ class Pipeline extends $pb.GeneratedMessage {
         8, 'inputParameters', $pb.PbFieldType.PM, PipelineParameter.create)
     ..pc<PipelineParameter>(
         9, 'outputParameters', $pb.PbFieldType.PM, PipelineParameter.create)
-    ..oo(0, [5])
     ..hasRequiredFields = false;
 
-  Pipeline() : super();
-  Pipeline.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Pipeline.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Pipeline._() : super();
+  factory Pipeline() => create();
+  factory Pipeline.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Pipeline.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Pipeline clone() => Pipeline()..mergeFromMessage(this);
   Pipeline copyWith(void Function(Pipeline) updates) =>
       super.copyWith((message) => updates(message as Pipeline));
   $pb.BuilderInfo get info_ => _i;
-  static Pipeline create() => Pipeline();
+  @$core.pragma('dart2js:noInline')
+  static Pipeline create() => Pipeline._();
   Pipeline createEmptyInstance() => create();
   static $pb.PbList<Pipeline> createRepeated() => $pb.PbList<Pipeline>();
   static Pipeline getDefault() => _defaultInstance ??= create()..freeze();
@@ -209,20 +216,22 @@ class CreatePipelineRequest extends $pb.GeneratedMessage {
         1, 'pipeline', $pb.PbFieldType.OM, Pipeline.getDefault, Pipeline.create)
     ..hasRequiredFields = false;
 
-  CreatePipelineRequest() : super();
-  CreatePipelineRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreatePipelineRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreatePipelineRequest._() : super();
+  factory CreatePipelineRequest() => create();
+  factory CreatePipelineRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreatePipelineRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreatePipelineRequest clone() =>
       CreatePipelineRequest()..mergeFromMessage(this);
   CreatePipelineRequest copyWith(
           void Function(CreatePipelineRequest) updates) =>
       super.copyWith((message) => updates(message as CreatePipelineRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreatePipelineRequest create() => CreatePipelineRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreatePipelineRequest create() => CreatePipelineRequest._();
   CreatePipelineRequest createEmptyInstance() => create();
   static $pb.PbList<CreatePipelineRequest> createRepeated() =>
       $pb.PbList<CreatePipelineRequest>();
@@ -270,8 +279,8 @@ class RunPipelineArgs extends $pb.GeneratedMessage {
         PipelineResources.getDefault, PipelineResources.create)
     ..a<LoggingOptions>(7, 'logging', $pb.PbFieldType.OM,
         LoggingOptions.getDefault, LoggingOptions.create)
-    ..a<$2.Duration>(8, 'keepVmAliveOnFailureDuration', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(8, 'keepVmAliveOnFailureDuration', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..m<$core.String, $core.String>(
         9,
         'labels',
@@ -284,18 +293,20 @@ class RunPipelineArgs extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1alpha2'))
     ..hasRequiredFields = false;
 
-  RunPipelineArgs() : super();
-  RunPipelineArgs.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunPipelineArgs.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunPipelineArgs._() : super();
+  factory RunPipelineArgs() => create();
+  factory RunPipelineArgs.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunPipelineArgs.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunPipelineArgs clone() => RunPipelineArgs()..mergeFromMessage(this);
   RunPipelineArgs copyWith(void Function(RunPipelineArgs) updates) =>
       super.copyWith((message) => updates(message as RunPipelineArgs));
   $pb.BuilderInfo get info_ => _i;
-  static RunPipelineArgs create() => RunPipelineArgs();
+  @$core.pragma('dart2js:noInline')
+  static RunPipelineArgs create() => RunPipelineArgs._();
   RunPipelineArgs createEmptyInstance() => create();
   static $pb.PbList<RunPipelineArgs> createRepeated() =>
       $pb.PbList<RunPipelineArgs>();
@@ -347,8 +358,8 @@ class RunPipelineArgs extends $pb.GeneratedMessage {
   $core.bool hasLogging() => $_has(6);
   void clearLogging() => clearField(7);
 
-  $2.Duration get keepVmAliveOnFailureDuration => $_getN(7);
-  set keepVmAliveOnFailureDuration($2.Duration v) {
+  $3.Duration get keepVmAliveOnFailureDuration => $_getN(7);
+  set keepVmAliveOnFailureDuration($3.Duration v) {
     setField(8, v);
   }
 
@@ -369,26 +380,28 @@ class RunPipelineRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunPipelineRequest',
       package: const $pb.PackageName('google.genomics.v1alpha2'))
+    ..oo(0, [1, 2])
     ..aOS(1, 'pipelineId')
     ..a<Pipeline>(2, 'ephemeralPipeline', $pb.PbFieldType.OM,
         Pipeline.getDefault, Pipeline.create)
     ..a<RunPipelineArgs>(3, 'pipelineArgs', $pb.PbFieldType.OM,
         RunPipelineArgs.getDefault, RunPipelineArgs.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  RunPipelineRequest() : super();
-  RunPipelineRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunPipelineRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunPipelineRequest._() : super();
+  factory RunPipelineRequest() => create();
+  factory RunPipelineRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunPipelineRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunPipelineRequest clone() => RunPipelineRequest()..mergeFromMessage(this);
   RunPipelineRequest copyWith(void Function(RunPipelineRequest) updates) =>
       super.copyWith((message) => updates(message as RunPipelineRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RunPipelineRequest create() => RunPipelineRequest();
+  @$core.pragma('dart2js:noInline')
+  static RunPipelineRequest create() => RunPipelineRequest._();
   RunPipelineRequest createEmptyInstance() => create();
   static $pb.PbList<RunPipelineRequest> createRepeated() =>
       $pb.PbList<RunPipelineRequest>();
@@ -431,18 +444,20 @@ class GetPipelineRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'pipelineId')
     ..hasRequiredFields = false;
 
-  GetPipelineRequest() : super();
-  GetPipelineRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetPipelineRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetPipelineRequest._() : super();
+  factory GetPipelineRequest() => create();
+  factory GetPipelineRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetPipelineRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetPipelineRequest clone() => GetPipelineRequest()..mergeFromMessage(this);
   GetPipelineRequest copyWith(void Function(GetPipelineRequest) updates) =>
       super.copyWith((message) => updates(message as GetPipelineRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetPipelineRequest create() => GetPipelineRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetPipelineRequest create() => GetPipelineRequest._();
   GetPipelineRequest createEmptyInstance() => create();
   static $pb.PbList<GetPipelineRequest> createRepeated() =>
       $pb.PbList<GetPipelineRequest>();
@@ -468,19 +483,21 @@ class ListPipelinesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListPipelinesRequest() : super();
-  ListPipelinesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListPipelinesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListPipelinesRequest._() : super();
+  factory ListPipelinesRequest() => create();
+  factory ListPipelinesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPipelinesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListPipelinesRequest clone() =>
       ListPipelinesRequest()..mergeFromMessage(this);
   ListPipelinesRequest copyWith(void Function(ListPipelinesRequest) updates) =>
       super.copyWith((message) => updates(message as ListPipelinesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListPipelinesRequest create() => ListPipelinesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListPipelinesRequest create() => ListPipelinesRequest._();
   ListPipelinesRequest createEmptyInstance() => create();
   static $pb.PbList<ListPipelinesRequest> createRepeated() =>
       $pb.PbList<ListPipelinesRequest>();
@@ -528,20 +545,22 @@ class ListPipelinesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListPipelinesResponse() : super();
-  ListPipelinesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListPipelinesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListPipelinesResponse._() : super();
+  factory ListPipelinesResponse() => create();
+  factory ListPipelinesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListPipelinesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListPipelinesResponse clone() =>
       ListPipelinesResponse()..mergeFromMessage(this);
   ListPipelinesResponse copyWith(
           void Function(ListPipelinesResponse) updates) =>
       super.copyWith((message) => updates(message as ListPipelinesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListPipelinesResponse create() => ListPipelinesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListPipelinesResponse create() => ListPipelinesResponse._();
   ListPipelinesResponse createEmptyInstance() => create();
   static $pb.PbList<ListPipelinesResponse> createRepeated() =>
       $pb.PbList<ListPipelinesResponse>();
@@ -566,20 +585,22 @@ class DeletePipelineRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'pipelineId')
     ..hasRequiredFields = false;
 
-  DeletePipelineRequest() : super();
-  DeletePipelineRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeletePipelineRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeletePipelineRequest._() : super();
+  factory DeletePipelineRequest() => create();
+  factory DeletePipelineRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeletePipelineRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeletePipelineRequest clone() =>
       DeletePipelineRequest()..mergeFromMessage(this);
   DeletePipelineRequest copyWith(
           void Function(DeletePipelineRequest) updates) =>
       super.copyWith((message) => updates(message as DeletePipelineRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeletePipelineRequest create() => DeletePipelineRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeletePipelineRequest create() => DeletePipelineRequest._();
   DeletePipelineRequest createEmptyInstance() => create();
   static $pb.PbList<DeletePipelineRequest> createRepeated() =>
       $pb.PbList<DeletePipelineRequest>();
@@ -604,13 +625,14 @@ class GetControllerConfigRequest extends $pb.GeneratedMessage {
     ..a<Int64>(2, 'validationToken', $pb.PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
 
-  GetControllerConfigRequest() : super();
-  GetControllerConfigRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetControllerConfigRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetControllerConfigRequest._() : super();
+  factory GetControllerConfigRequest() => create();
+  factory GetControllerConfigRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetControllerConfigRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetControllerConfigRequest clone() =>
       GetControllerConfigRequest()..mergeFromMessage(this);
   GetControllerConfigRequest copyWith(
@@ -618,7 +640,8 @@ class GetControllerConfigRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetControllerConfigRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetControllerConfigRequest create() => GetControllerConfigRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetControllerConfigRequest create() => GetControllerConfigRequest._();
   GetControllerConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetControllerConfigRequest> createRepeated() =>
       $pb.PbList<GetControllerConfigRequest>();
@@ -650,13 +673,14 @@ class ControllerConfig_RepeatedString extends $pb.GeneratedMessage {
     ..pPS(1, 'values')
     ..hasRequiredFields = false;
 
-  ControllerConfig_RepeatedString() : super();
-  ControllerConfig_RepeatedString.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ControllerConfig_RepeatedString.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ControllerConfig_RepeatedString._() : super();
+  factory ControllerConfig_RepeatedString() => create();
+  factory ControllerConfig_RepeatedString.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ControllerConfig_RepeatedString.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ControllerConfig_RepeatedString clone() =>
       ControllerConfig_RepeatedString()..mergeFromMessage(this);
   ControllerConfig_RepeatedString copyWith(
@@ -664,8 +688,9 @@ class ControllerConfig_RepeatedString extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ControllerConfig_RepeatedString));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ControllerConfig_RepeatedString create() =>
-      ControllerConfig_RepeatedString();
+      ControllerConfig_RepeatedString._();
   ControllerConfig_RepeatedString createEmptyInstance() => create();
   static $pb.PbList<ControllerConfig_RepeatedString> createRepeated() =>
       $pb.PbList<ControllerConfig_RepeatedString>();
@@ -725,18 +750,20 @@ class ControllerConfig extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1alpha2'))
     ..hasRequiredFields = false;
 
-  ControllerConfig() : super();
-  ControllerConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ControllerConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ControllerConfig._() : super();
+  factory ControllerConfig() => create();
+  factory ControllerConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ControllerConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ControllerConfig clone() => ControllerConfig()..mergeFromMessage(this);
   ControllerConfig copyWith(void Function(ControllerConfig) updates) =>
       super.copyWith((message) => updates(message as ControllerConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ControllerConfig create() => ControllerConfig();
+  @$core.pragma('dart2js:noInline')
+  static ControllerConfig create() => ControllerConfig._();
   ControllerConfig createEmptyInstance() => create();
   static $pb.PbList<ControllerConfig> createRepeated() =>
       $pb.PbList<ControllerConfig>();
@@ -791,22 +818,24 @@ class TimestampEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimestampEvent',
       package: const $pb.PackageName('google.genomics.v1alpha2'))
     ..aOS(1, 'description')
-    ..a<$3.Timestamp>(2, 'timestamp', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'timestamp', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
-  TimestampEvent() : super();
-  TimestampEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimestampEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimestampEvent._() : super();
+  factory TimestampEvent() => create();
+  factory TimestampEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimestampEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimestampEvent clone() => TimestampEvent()..mergeFromMessage(this);
   TimestampEvent copyWith(void Function(TimestampEvent) updates) =>
       super.copyWith((message) => updates(message as TimestampEvent));
   $pb.BuilderInfo get info_ => _i;
-  static TimestampEvent create() => TimestampEvent();
+  @$core.pragma('dart2js:noInline')
+  static TimestampEvent create() => TimestampEvent._();
   TimestampEvent createEmptyInstance() => create();
   static $pb.PbList<TimestampEvent> createRepeated() =>
       $pb.PbList<TimestampEvent>();
@@ -821,8 +850,8 @@ class TimestampEvent extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(0);
   void clearDescription() => clearField(1);
 
-  $3.Timestamp get timestamp => $_getN(1);
-  set timestamp($3.Timestamp v) {
+  $4.Timestamp get timestamp => $_getN(1);
+  set timestamp($4.Timestamp v) {
     setField(2, v);
   }
 
@@ -836,19 +865,20 @@ class SetOperationStatusRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'operationId')
     ..pc<TimestampEvent>(
         2, 'timestampEvents', $pb.PbFieldType.PM, TimestampEvent.create)
-    ..e<$4.Code>(3, 'errorCode', $pb.PbFieldType.OE, $4.Code.OK,
-        $4.Code.valueOf, $4.Code.values)
+    ..e<$5.Code>(3, 'errorCode', $pb.PbFieldType.OE, $5.Code.OK,
+        $5.Code.valueOf, $5.Code.values)
     ..aOS(4, 'errorMessage')
     ..a<Int64>(5, 'validationToken', $pb.PbFieldType.OU6, Int64.ZERO)
     ..hasRequiredFields = false;
 
-  SetOperationStatusRequest() : super();
-  SetOperationStatusRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SetOperationStatusRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SetOperationStatusRequest._() : super();
+  factory SetOperationStatusRequest() => create();
+  factory SetOperationStatusRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SetOperationStatusRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SetOperationStatusRequest clone() =>
       SetOperationStatusRequest()..mergeFromMessage(this);
   SetOperationStatusRequest copyWith(
@@ -856,7 +886,8 @@ class SetOperationStatusRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as SetOperationStatusRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SetOperationStatusRequest create() => SetOperationStatusRequest();
+  @$core.pragma('dart2js:noInline')
+  static SetOperationStatusRequest create() => SetOperationStatusRequest._();
   SetOperationStatusRequest createEmptyInstance() => create();
   static $pb.PbList<SetOperationStatusRequest> createRepeated() =>
       $pb.PbList<SetOperationStatusRequest>();
@@ -874,8 +905,8 @@ class SetOperationStatusRequest extends $pb.GeneratedMessage {
 
   $core.List<TimestampEvent> get timestampEvents => $_getList(1);
 
-  $4.Code get errorCode => $_getN(2);
-  set errorCode($4.Code v) {
+  $5.Code get errorCode => $_getN(2);
+  set errorCode($5.Code v) {
     setField(3, v);
   }
 
@@ -906,18 +937,20 @@ class ServiceAccount extends $pb.GeneratedMessage {
     ..pPS(2, 'scopes')
     ..hasRequiredFields = false;
 
-  ServiceAccount() : super();
-  ServiceAccount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ServiceAccount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ServiceAccount._() : super();
+  factory ServiceAccount() => create();
+  factory ServiceAccount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ServiceAccount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ServiceAccount clone() => ServiceAccount()..mergeFromMessage(this);
   ServiceAccount copyWith(void Function(ServiceAccount) updates) =>
       super.copyWith((message) => updates(message as ServiceAccount));
   $pb.BuilderInfo get info_ => _i;
-  static ServiceAccount create() => ServiceAccount();
+  @$core.pragma('dart2js:noInline')
+  static ServiceAccount create() => ServiceAccount._();
   ServiceAccount createEmptyInstance() => create();
   static $pb.PbList<ServiceAccount> createRepeated() =>
       $pb.PbList<ServiceAccount>();
@@ -941,18 +974,20 @@ class LoggingOptions extends $pb.GeneratedMessage {
     ..aOS(1, 'gcsPath')
     ..hasRequiredFields = false;
 
-  LoggingOptions() : super();
-  LoggingOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LoggingOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LoggingOptions._() : super();
+  factory LoggingOptions() => create();
+  factory LoggingOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LoggingOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LoggingOptions clone() => LoggingOptions()..mergeFromMessage(this);
   LoggingOptions copyWith(void Function(LoggingOptions) updates) =>
       super.copyWith((message) => updates(message as LoggingOptions));
   $pb.BuilderInfo get info_ => _i;
-  static LoggingOptions create() => LoggingOptions();
+  @$core.pragma('dart2js:noInline')
+  static LoggingOptions create() => LoggingOptions._();
   LoggingOptions createEmptyInstance() => create();
   static $pb.PbList<LoggingOptions> createRepeated() =>
       $pb.PbList<LoggingOptions>();
@@ -985,20 +1020,22 @@ class PipelineResources_Disk extends $pb.GeneratedMessage {
     ..aOS(8, 'mountPoint')
     ..hasRequiredFields = false;
 
-  PipelineResources_Disk() : super();
-  PipelineResources_Disk.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PipelineResources_Disk.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PipelineResources_Disk._() : super();
+  factory PipelineResources_Disk() => create();
+  factory PipelineResources_Disk.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PipelineResources_Disk.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PipelineResources_Disk clone() =>
       PipelineResources_Disk()..mergeFromMessage(this);
   PipelineResources_Disk copyWith(
           void Function(PipelineResources_Disk) updates) =>
       super.copyWith((message) => updates(message as PipelineResources_Disk));
   $pb.BuilderInfo get info_ => _i;
-  static PipelineResources_Disk create() => PipelineResources_Disk();
+  @$core.pragma('dart2js:noInline')
+  static PipelineResources_Disk create() => PipelineResources_Disk._();
   PipelineResources_Disk createEmptyInstance() => create();
   static $pb.PbList<PipelineResources_Disk> createRepeated() =>
       $pb.PbList<PipelineResources_Disk>();
@@ -1068,18 +1105,20 @@ class PipelineResources extends $pb.GeneratedMessage {
     ..aOB(7, 'noAddress')
     ..hasRequiredFields = false;
 
-  PipelineResources() : super();
-  PipelineResources.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PipelineResources.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PipelineResources._() : super();
+  factory PipelineResources() => create();
+  factory PipelineResources.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PipelineResources.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PipelineResources clone() => PipelineResources()..mergeFromMessage(this);
   PipelineResources copyWith(void Function(PipelineResources) updates) =>
       super.copyWith((message) => updates(message as PipelineResources));
   $pb.BuilderInfo get info_ => _i;
-  static PipelineResources create() => PipelineResources();
+  @$core.pragma('dart2js:noInline')
+  static PipelineResources create() => PipelineResources._();
   PipelineResources createEmptyInstance() => create();
   static $pb.PbList<PipelineResources> createRepeated() =>
       $pb.PbList<PipelineResources>();
@@ -1140,13 +1179,14 @@ class PipelineParameter_LocalCopy extends $pb.GeneratedMessage {
     ..aOS(2, 'disk')
     ..hasRequiredFields = false;
 
-  PipelineParameter_LocalCopy() : super();
-  PipelineParameter_LocalCopy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PipelineParameter_LocalCopy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PipelineParameter_LocalCopy._() : super();
+  factory PipelineParameter_LocalCopy() => create();
+  factory PipelineParameter_LocalCopy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PipelineParameter_LocalCopy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PipelineParameter_LocalCopy clone() =>
       PipelineParameter_LocalCopy()..mergeFromMessage(this);
   PipelineParameter_LocalCopy copyWith(
@@ -1154,7 +1194,9 @@ class PipelineParameter_LocalCopy extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PipelineParameter_LocalCopy));
   $pb.BuilderInfo get info_ => _i;
-  static PipelineParameter_LocalCopy create() => PipelineParameter_LocalCopy();
+  @$core.pragma('dart2js:noInline')
+  static PipelineParameter_LocalCopy create() =>
+      PipelineParameter_LocalCopy._();
   PipelineParameter_LocalCopy createEmptyInstance() => create();
   static $pb.PbList<PipelineParameter_LocalCopy> createRepeated() =>
       $pb.PbList<PipelineParameter_LocalCopy>();
@@ -1193,18 +1235,20 @@ class PipelineParameter extends $pb.GeneratedMessage {
         PipelineParameter_LocalCopy.create)
     ..hasRequiredFields = false;
 
-  PipelineParameter() : super();
-  PipelineParameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PipelineParameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PipelineParameter._() : super();
+  factory PipelineParameter() => create();
+  factory PipelineParameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PipelineParameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PipelineParameter clone() => PipelineParameter()..mergeFromMessage(this);
   PipelineParameter copyWith(void Function(PipelineParameter) updates) =>
       super.copyWith((message) => updates(message as PipelineParameter));
   $pb.BuilderInfo get info_ => _i;
-  static PipelineParameter create() => PipelineParameter();
+  @$core.pragma('dart2js:noInline')
+  static PipelineParameter create() => PipelineParameter._();
   PipelineParameter createEmptyInstance() => create();
   static $pb.PbList<PipelineParameter> createRepeated() =>
       $pb.PbList<PipelineParameter>();
@@ -1252,18 +1296,20 @@ class DockerExecutor extends $pb.GeneratedMessage {
     ..aOS(2, 'cmd')
     ..hasRequiredFields = false;
 
-  DockerExecutor() : super();
-  DockerExecutor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerExecutor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerExecutor._() : super();
+  factory DockerExecutor() => create();
+  factory DockerExecutor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DockerExecutor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DockerExecutor clone() => DockerExecutor()..mergeFromMessage(this);
   DockerExecutor copyWith(void Function(DockerExecutor) updates) =>
       super.copyWith((message) => updates(message as DockerExecutor));
   $pb.BuilderInfo get info_ => _i;
-  static DockerExecutor create() => DockerExecutor();
+  @$core.pragma('dart2js:noInline')
+  static DockerExecutor create() => DockerExecutor._();
   DockerExecutor createEmptyInstance() => create();
   static $pb.PbList<DockerExecutor> createRepeated() =>
       $pb.PbList<DockerExecutor>();

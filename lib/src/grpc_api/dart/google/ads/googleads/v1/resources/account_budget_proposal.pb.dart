@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/account_budget_proposal.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -79,6 +80,11 @@ class AccountBudgetProposal extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AccountBudgetProposal',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [7, 18])
+    ..oo(1, [9, 19])
+    ..oo(2, [21, 22])
+    ..oo(3, [10, 11])
+    ..oo(4, [23, 24])
     ..aOS(1, 'resourceName')
     ..a<$0.StringValue>(2, 'billingSetup', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
@@ -130,27 +136,24 @@ class AccountBudgetProposal extends $pb.GeneratedMessage {
     ..e<$2.TimeTypeEnum_TimeType>(22, 'approvedEndTimeType', $pb.PbFieldType.OE, $2.TimeTypeEnum_TimeType.UNSPECIFIED, $2.TimeTypeEnum_TimeType.valueOf, $2.TimeTypeEnum_TimeType.values)
     ..a<$0.Int64Value>(23, 'approvedSpendingLimitMicros', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..e<$3.SpendingLimitTypeEnum_SpendingLimitType>(24, 'approvedSpendingLimitType', $pb.PbFieldType.OE, $3.SpendingLimitTypeEnum_SpendingLimitType.UNSPECIFIED, $3.SpendingLimitTypeEnum_SpendingLimitType.valueOf, $3.SpendingLimitTypeEnum_SpendingLimitType.values)
-    ..oo(0, [7, 18])
-    ..oo(1, [9, 19])
-    ..oo(2, [21, 22])
-    ..oo(3, [10, 11])
-    ..oo(4, [23, 24])
     ..hasRequiredFields = false;
 
-  AccountBudgetProposal() : super();
-  AccountBudgetProposal.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AccountBudgetProposal.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AccountBudgetProposal._() : super();
+  factory AccountBudgetProposal() => create();
+  factory AccountBudgetProposal.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccountBudgetProposal.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AccountBudgetProposal clone() =>
       AccountBudgetProposal()..mergeFromMessage(this);
   AccountBudgetProposal copyWith(
           void Function(AccountBudgetProposal) updates) =>
       super.copyWith((message) => updates(message as AccountBudgetProposal));
   $pb.BuilderInfo get info_ => _i;
-  static AccountBudgetProposal create() => AccountBudgetProposal();
+  @$core.pragma('dart2js:noInline')
+  static AccountBudgetProposal create() => AccountBudgetProposal._();
   AccountBudgetProposal createEmptyInstance() => create();
   static $pb.PbList<AccountBudgetProposal> createRepeated() =>
       $pb.PbList<AccountBudgetProposal>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/customer_label.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class CustomerLabel extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CustomerLabel() : super();
-  CustomerLabel.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerLabel.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerLabel._() : super();
+  factory CustomerLabel() => create();
+  factory CustomerLabel.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerLabel.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerLabel clone() => CustomerLabel()..mergeFromMessage(this);
   CustomerLabel copyWith(void Function(CustomerLabel) updates) =>
       super.copyWith((message) => updates(message as CustomerLabel));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerLabel create() => CustomerLabel();
+  @$core.pragma('dart2js:noInline')
+  static CustomerLabel create() => CustomerLabel._();
   CustomerLabel createEmptyInstance() => create();
   static $pb.PbList<CustomerLabel> createRepeated() =>
       $pb.PbList<CustomerLabel>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1alpha/finding_addon.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class OutdatedLibrary extends $pb.GeneratedMessage {
     ..pPS(3, 'learnMoreUrls')
     ..hasRequiredFields = false;
 
-  OutdatedLibrary() : super();
-  OutdatedLibrary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutdatedLibrary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutdatedLibrary._() : super();
+  factory OutdatedLibrary() => create();
+  factory OutdatedLibrary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutdatedLibrary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutdatedLibrary clone() => OutdatedLibrary()..mergeFromMessage(this);
   OutdatedLibrary copyWith(void Function(OutdatedLibrary) updates) =>
       super.copyWith((message) => updates(message as OutdatedLibrary));
   $pb.BuilderInfo get info_ => _i;
-  static OutdatedLibrary create() => OutdatedLibrary();
+  @$core.pragma('dart2js:noInline')
+  static OutdatedLibrary create() => OutdatedLibrary._();
   OutdatedLibrary createEmptyInstance() => create();
   static $pb.PbList<OutdatedLibrary> createRepeated() =>
       $pb.PbList<OutdatedLibrary>();
@@ -62,18 +65,20 @@ class ViolatingResource extends $pb.GeneratedMessage {
     ..aOS(2, 'resourceUrl')
     ..hasRequiredFields = false;
 
-  ViolatingResource() : super();
-  ViolatingResource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ViolatingResource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ViolatingResource._() : super();
+  factory ViolatingResource() => create();
+  factory ViolatingResource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ViolatingResource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ViolatingResource clone() => ViolatingResource()..mergeFromMessage(this);
   ViolatingResource copyWith(void Function(ViolatingResource) updates) =>
       super.copyWith((message) => updates(message as ViolatingResource));
   $pb.BuilderInfo get info_ => _i;
-  static ViolatingResource create() => ViolatingResource();
+  @$core.pragma('dart2js:noInline')
+  static ViolatingResource create() => ViolatingResource._();
   ViolatingResource createEmptyInstance() => create();
   static $pb.PbList<ViolatingResource> createRepeated() =>
       $pb.PbList<ViolatingResource>();
@@ -104,19 +109,21 @@ class VulnerableParameters extends $pb.GeneratedMessage {
     ..pPS(1, 'parameterNames')
     ..hasRequiredFields = false;
 
-  VulnerableParameters() : super();
-  VulnerableParameters.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VulnerableParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VulnerableParameters._() : super();
+  factory VulnerableParameters() => create();
+  factory VulnerableParameters.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VulnerableParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VulnerableParameters clone() =>
       VulnerableParameters()..mergeFromMessage(this);
   VulnerableParameters copyWith(void Function(VulnerableParameters) updates) =>
       super.copyWith((message) => updates(message as VulnerableParameters));
   $pb.BuilderInfo get info_ => _i;
-  static VulnerableParameters create() => VulnerableParameters();
+  @$core.pragma('dart2js:noInline')
+  static VulnerableParameters create() => VulnerableParameters._();
   VulnerableParameters createEmptyInstance() => create();
   static $pb.PbList<VulnerableParameters> createRepeated() =>
       $pb.PbList<VulnerableParameters>();
@@ -134,18 +141,20 @@ class Xss extends $pb.GeneratedMessage {
     ..aOS(2, 'errorMessage')
     ..hasRequiredFields = false;
 
-  Xss() : super();
-  Xss.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Xss.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Xss._() : super();
+  factory Xss() => create();
+  factory Xss.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Xss.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Xss clone() => Xss()..mergeFromMessage(this);
   Xss copyWith(void Function(Xss) updates) =>
       super.copyWith((message) => updates(message as Xss));
   $pb.BuilderInfo get info_ => _i;
-  static Xss create() => Xss();
+  @$core.pragma('dart2js:noInline')
+  static Xss create() => Xss._();
   Xss createEmptyInstance() => create();
   static $pb.PbList<Xss> createRepeated() => $pb.PbList<Xss>();
   static Xss getDefault() => _defaultInstance ??= create()..freeze();

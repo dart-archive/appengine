@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/http.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class Http extends $pb.GeneratedMessage {
         ..aOB(2, 'fullyDecodeReservedExpansion')
         ..hasRequiredFields = false;
 
-  Http() : super();
-  Http.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Http.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Http._() : super();
+  factory Http() => create();
+  factory Http.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Http.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Http clone() => Http()..mergeFromMessage(this);
   Http copyWith(void Function(Http) updates) =>
       super.copyWith((message) => updates(message as Http));
   $pb.BuilderInfo get info_ => _i;
-  static Http create() => Http();
+  @$core.pragma('dart2js:noInline')
+  static Http create() => Http._();
   Http createEmptyInstance() => create();
   static $pb.PbList<Http> createRepeated() => $pb.PbList<Http>();
   static Http getDefault() => _defaultInstance ??= create()..freeze();
@@ -58,6 +61,7 @@ class HttpRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i =
       $pb.BuilderInfo('HttpRule', package: const $pb.PackageName('google.api'))
+        ..oo(0, [2, 3, 4, 5, 6, 8])
         ..aOS(1, 'selector')
         ..aOS(2, 'get')
         ..aOS(3, 'put')
@@ -70,21 +74,22 @@ class HttpRule extends $pb.GeneratedMessage {
         ..pc<HttpRule>(
             11, 'additionalBindings', $pb.PbFieldType.PM, HttpRule.create)
         ..aOS(12, 'responseBody')
-        ..oo(0, [2, 3, 4, 5, 6, 8])
         ..hasRequiredFields = false;
 
-  HttpRule() : super();
-  HttpRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HttpRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HttpRule._() : super();
+  factory HttpRule() => create();
+  factory HttpRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HttpRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HttpRule clone() => HttpRule()..mergeFromMessage(this);
   HttpRule copyWith(void Function(HttpRule) updates) =>
       super.copyWith((message) => updates(message as HttpRule));
   $pb.BuilderInfo get info_ => _i;
-  static HttpRule create() => HttpRule();
+  @$core.pragma('dart2js:noInline')
+  static HttpRule create() => HttpRule._();
   HttpRule createEmptyInstance() => create();
   static $pb.PbList<HttpRule> createRepeated() => $pb.PbList<HttpRule>();
   static HttpRule getDefault() => _defaultInstance ??= create()..freeze();
@@ -175,18 +180,20 @@ class CustomHttpPattern extends $pb.GeneratedMessage {
     ..aOS(2, 'path')
     ..hasRequiredFields = false;
 
-  CustomHttpPattern() : super();
-  CustomHttpPattern.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomHttpPattern.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomHttpPattern._() : super();
+  factory CustomHttpPattern() => create();
+  factory CustomHttpPattern.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomHttpPattern.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomHttpPattern clone() => CustomHttpPattern()..mergeFromMessage(this);
   CustomHttpPattern copyWith(void Function(CustomHttpPattern) updates) =>
       super.copyWith((message) => updates(message as CustomHttpPattern));
   $pb.BuilderInfo get info_ => _i;
-  static CustomHttpPattern create() => CustomHttpPattern();
+  @$core.pragma('dart2js:noInline')
+  static CustomHttpPattern create() => CustomHttpPattern._();
   CustomHttpPattern createEmptyInstance() => create();
   static $pb.PbList<CustomHttpPattern> createRepeated() =>
       $pb.PbList<CustomHttpPattern>();

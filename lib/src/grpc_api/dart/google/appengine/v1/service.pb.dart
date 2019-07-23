@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,18 +23,20 @@ class Service extends $pb.GeneratedMessage {
         TrafficSplit.create)
     ..hasRequiredFields = false;
 
-  Service() : super();
-  Service.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Service.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Service._() : super();
+  factory Service() => create();
+  factory Service.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Service.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Service clone() => Service()..mergeFromMessage(this);
   Service copyWith(void Function(Service) updates) =>
       super.copyWith((message) => updates(message as Service));
   $pb.BuilderInfo get info_ => _i;
-  static Service create() => Service();
+  @$core.pragma('dart2js:noInline')
+  static Service create() => Service._();
   Service createEmptyInstance() => create();
   static $pb.PbList<Service> createRepeated() => $pb.PbList<Service>();
   static Service getDefault() => _defaultInstance ??= create()..freeze();
@@ -86,18 +89,20 @@ class TrafficSplit extends $pb.GeneratedMessage {
         const $pb.PackageName('google.appengine.v1'))
     ..hasRequiredFields = false;
 
-  TrafficSplit() : super();
-  TrafficSplit.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TrafficSplit.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TrafficSplit._() : super();
+  factory TrafficSplit() => create();
+  factory TrafficSplit.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TrafficSplit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TrafficSplit clone() => TrafficSplit()..mergeFromMessage(this);
   TrafficSplit copyWith(void Function(TrafficSplit) updates) =>
       super.copyWith((message) => updates(message as TrafficSplit));
   $pb.BuilderInfo get info_ => _i;
-  static TrafficSplit create() => TrafficSplit();
+  @$core.pragma('dart2js:noInline')
+  static TrafficSplit create() => TrafficSplit._();
   TrafficSplit createEmptyInstance() => create();
   static $pb.PbList<TrafficSplit> createRepeated() =>
       $pb.PbList<TrafficSplit>();

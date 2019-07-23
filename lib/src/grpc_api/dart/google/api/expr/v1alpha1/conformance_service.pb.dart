@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/conformance_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'syntax.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
-import 'checked.pb.dart' as $2;
-import 'eval.pb.dart' as $3;
+import 'syntax.pb.dart' as $1;
+import '../../../rpc/status.pb.dart' as $2;
+import 'checked.pb.dart' as $3;
+import 'eval.pb.dart' as $4;
 
 import 'conformance_service.pbenum.dart';
 
@@ -28,18 +29,20 @@ class ParseRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'disableMacros')
     ..hasRequiredFields = false;
 
-  ParseRequest() : super();
-  ParseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ParseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ParseRequest._() : super();
+  factory ParseRequest() => create();
+  factory ParseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ParseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ParseRequest clone() => ParseRequest()..mergeFromMessage(this);
   ParseRequest copyWith(void Function(ParseRequest) updates) =>
       super.copyWith((message) => updates(message as ParseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ParseRequest create() => ParseRequest();
+  @$core.pragma('dart2js:noInline')
+  static ParseRequest create() => ParseRequest._();
   ParseRequest createEmptyInstance() => create();
   static $pb.PbList<ParseRequest> createRepeated() =>
       $pb.PbList<ParseRequest>();
@@ -82,77 +85,81 @@ class ParseRequest extends $pb.GeneratedMessage {
 class ParseResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ParseResponse',
       package: const $pb.PackageName('google.api.expr.v1alpha1'))
-    ..a<$0.ParsedExpr>(1, 'parsedExpr', $pb.PbFieldType.OM,
-        $0.ParsedExpr.getDefault, $0.ParsedExpr.create)
-    ..pc<$1.Status>(2, 'issues', $pb.PbFieldType.PM, $1.Status.create)
+    ..a<$1.ParsedExpr>(1, 'parsedExpr', $pb.PbFieldType.OM,
+        $1.ParsedExpr.getDefault, $1.ParsedExpr.create)
+    ..pc<$2.Status>(2, 'issues', $pb.PbFieldType.PM, $2.Status.create)
     ..hasRequiredFields = false;
 
-  ParseResponse() : super();
-  ParseResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ParseResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ParseResponse._() : super();
+  factory ParseResponse() => create();
+  factory ParseResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ParseResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ParseResponse clone() => ParseResponse()..mergeFromMessage(this);
   ParseResponse copyWith(void Function(ParseResponse) updates) =>
       super.copyWith((message) => updates(message as ParseResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ParseResponse create() => ParseResponse();
+  @$core.pragma('dart2js:noInline')
+  static ParseResponse create() => ParseResponse._();
   ParseResponse createEmptyInstance() => create();
   static $pb.PbList<ParseResponse> createRepeated() =>
       $pb.PbList<ParseResponse>();
   static ParseResponse getDefault() => _defaultInstance ??= create()..freeze();
   static ParseResponse _defaultInstance;
 
-  $0.ParsedExpr get parsedExpr => $_getN(0);
-  set parsedExpr($0.ParsedExpr v) {
+  $1.ParsedExpr get parsedExpr => $_getN(0);
+  set parsedExpr($1.ParsedExpr v) {
     setField(1, v);
   }
 
   $core.bool hasParsedExpr() => $_has(0);
   void clearParsedExpr() => clearField(1);
 
-  $core.List<$1.Status> get issues => $_getList(1);
+  $core.List<$2.Status> get issues => $_getList(1);
 }
 
 class CheckRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckRequest',
       package: const $pb.PackageName('google.api.expr.v1alpha1'))
-    ..a<$0.ParsedExpr>(1, 'parsedExpr', $pb.PbFieldType.OM,
-        $0.ParsedExpr.getDefault, $0.ParsedExpr.create)
-    ..pc<$2.Decl>(2, 'typeEnv', $pb.PbFieldType.PM, $2.Decl.create)
+    ..a<$1.ParsedExpr>(1, 'parsedExpr', $pb.PbFieldType.OM,
+        $1.ParsedExpr.getDefault, $1.ParsedExpr.create)
+    ..pc<$3.Decl>(2, 'typeEnv', $pb.PbFieldType.PM, $3.Decl.create)
     ..aOS(3, 'container')
     ..aOB(4, 'noStdEnv')
     ..hasRequiredFields = false;
 
-  CheckRequest() : super();
-  CheckRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckRequest._() : super();
+  factory CheckRequest() => create();
+  factory CheckRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckRequest clone() => CheckRequest()..mergeFromMessage(this);
   CheckRequest copyWith(void Function(CheckRequest) updates) =>
       super.copyWith((message) => updates(message as CheckRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CheckRequest create() => CheckRequest();
+  @$core.pragma('dart2js:noInline')
+  static CheckRequest create() => CheckRequest._();
   CheckRequest createEmptyInstance() => create();
   static $pb.PbList<CheckRequest> createRepeated() =>
       $pb.PbList<CheckRequest>();
   static CheckRequest getDefault() => _defaultInstance ??= create()..freeze();
   static CheckRequest _defaultInstance;
 
-  $0.ParsedExpr get parsedExpr => $_getN(0);
-  set parsedExpr($0.ParsedExpr v) {
+  $1.ParsedExpr get parsedExpr => $_getN(0);
+  set parsedExpr($1.ParsedExpr v) {
     setField(1, v);
   }
 
   $core.bool hasParsedExpr() => $_has(0);
   void clearParsedExpr() => clearField(1);
 
-  $core.List<$2.Decl> get typeEnv => $_getList(1);
+  $core.List<$3.Decl> get typeEnv => $_getList(1);
 
   $core.String get container => $_getS(2, '');
   set container($core.String v) {
@@ -174,38 +181,40 @@ class CheckRequest extends $pb.GeneratedMessage {
 class CheckResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckResponse',
       package: const $pb.PackageName('google.api.expr.v1alpha1'))
-    ..a<$2.CheckedExpr>(1, 'checkedExpr', $pb.PbFieldType.OM,
-        $2.CheckedExpr.getDefault, $2.CheckedExpr.create)
-    ..pc<$1.Status>(2, 'issues', $pb.PbFieldType.PM, $1.Status.create)
+    ..a<$3.CheckedExpr>(1, 'checkedExpr', $pb.PbFieldType.OM,
+        $3.CheckedExpr.getDefault, $3.CheckedExpr.create)
+    ..pc<$2.Status>(2, 'issues', $pb.PbFieldType.PM, $2.Status.create)
     ..hasRequiredFields = false;
 
-  CheckResponse() : super();
-  CheckResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckResponse._() : super();
+  factory CheckResponse() => create();
+  factory CheckResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckResponse clone() => CheckResponse()..mergeFromMessage(this);
   CheckResponse copyWith(void Function(CheckResponse) updates) =>
       super.copyWith((message) => updates(message as CheckResponse));
   $pb.BuilderInfo get info_ => _i;
-  static CheckResponse create() => CheckResponse();
+  @$core.pragma('dart2js:noInline')
+  static CheckResponse create() => CheckResponse._();
   CheckResponse createEmptyInstance() => create();
   static $pb.PbList<CheckResponse> createRepeated() =>
       $pb.PbList<CheckResponse>();
   static CheckResponse getDefault() => _defaultInstance ??= create()..freeze();
   static CheckResponse _defaultInstance;
 
-  $2.CheckedExpr get checkedExpr => $_getN(0);
-  set checkedExpr($2.CheckedExpr v) {
+  $3.CheckedExpr get checkedExpr => $_getN(0);
+  set checkedExpr($3.CheckedExpr v) {
     setField(1, v);
   }
 
   $core.bool hasCheckedExpr() => $_has(0);
   void clearCheckedExpr() => clearField(1);
 
-  $core.List<$1.Status> get issues => $_getList(1);
+  $core.List<$2.Status> get issues => $_getList(1);
 }
 
 enum EvalRequest_ExprKind { parsedExpr, checkedExpr, notSet }
@@ -219,36 +228,38 @@ class EvalRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EvalRequest',
       package: const $pb.PackageName('google.api.expr.v1alpha1'))
-    ..a<$0.ParsedExpr>(1, 'parsedExpr', $pb.PbFieldType.OM,
-        $0.ParsedExpr.getDefault, $0.ParsedExpr.create)
-    ..a<$2.CheckedExpr>(2, 'checkedExpr', $pb.PbFieldType.OM,
-        $2.CheckedExpr.getDefault, $2.CheckedExpr.create)
-    ..m<$core.String, $3.ExprValue>(
+    ..oo(0, [1, 2])
+    ..a<$1.ParsedExpr>(1, 'parsedExpr', $pb.PbFieldType.OM,
+        $1.ParsedExpr.getDefault, $1.ParsedExpr.create)
+    ..a<$3.CheckedExpr>(2, 'checkedExpr', $pb.PbFieldType.OM,
+        $3.CheckedExpr.getDefault, $3.CheckedExpr.create)
+    ..m<$core.String, $4.ExprValue>(
         3,
         'bindings',
         'EvalRequest.BindingsEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $3.ExprValue.create,
+        $4.ExprValue.create,
         null,
         null,
         const $pb.PackageName('google.api.expr.v1alpha1'))
     ..aOS(4, 'container')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  EvalRequest() : super();
-  EvalRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EvalRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EvalRequest._() : super();
+  factory EvalRequest() => create();
+  factory EvalRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EvalRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EvalRequest clone() => EvalRequest()..mergeFromMessage(this);
   EvalRequest copyWith(void Function(EvalRequest) updates) =>
       super.copyWith((message) => updates(message as EvalRequest));
   $pb.BuilderInfo get info_ => _i;
-  static EvalRequest create() => EvalRequest();
+  @$core.pragma('dart2js:noInline')
+  static EvalRequest create() => EvalRequest._();
   EvalRequest createEmptyInstance() => create();
   static $pb.PbList<EvalRequest> createRepeated() => $pb.PbList<EvalRequest>();
   static EvalRequest getDefault() => _defaultInstance ??= create()..freeze();
@@ -258,23 +269,23 @@ class EvalRequest extends $pb.GeneratedMessage {
       _EvalRequest_ExprKindByTag[$_whichOneof(0)];
   void clearExprKind() => clearField($_whichOneof(0));
 
-  $0.ParsedExpr get parsedExpr => $_getN(0);
-  set parsedExpr($0.ParsedExpr v) {
+  $1.ParsedExpr get parsedExpr => $_getN(0);
+  set parsedExpr($1.ParsedExpr v) {
     setField(1, v);
   }
 
   $core.bool hasParsedExpr() => $_has(0);
   void clearParsedExpr() => clearField(1);
 
-  $2.CheckedExpr get checkedExpr => $_getN(1);
-  set checkedExpr($2.CheckedExpr v) {
+  $3.CheckedExpr get checkedExpr => $_getN(1);
+  set checkedExpr($3.CheckedExpr v) {
     setField(2, v);
   }
 
   $core.bool hasCheckedExpr() => $_has(1);
   void clearCheckedExpr() => clearField(2);
 
-  $core.Map<$core.String, $3.ExprValue> get bindings => $_getMap(2);
+  $core.Map<$core.String, $4.ExprValue> get bindings => $_getMap(2);
 
   $core.String get container => $_getS(3, '');
   set container($core.String v) {
@@ -288,38 +299,40 @@ class EvalRequest extends $pb.GeneratedMessage {
 class EvalResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EvalResponse',
       package: const $pb.PackageName('google.api.expr.v1alpha1'))
-    ..a<$3.ExprValue>(1, 'result', $pb.PbFieldType.OM, $3.ExprValue.getDefault,
-        $3.ExprValue.create)
-    ..pc<$1.Status>(2, 'issues', $pb.PbFieldType.PM, $1.Status.create)
+    ..a<$4.ExprValue>(1, 'result', $pb.PbFieldType.OM, $4.ExprValue.getDefault,
+        $4.ExprValue.create)
+    ..pc<$2.Status>(2, 'issues', $pb.PbFieldType.PM, $2.Status.create)
     ..hasRequiredFields = false;
 
-  EvalResponse() : super();
-  EvalResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EvalResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EvalResponse._() : super();
+  factory EvalResponse() => create();
+  factory EvalResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EvalResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EvalResponse clone() => EvalResponse()..mergeFromMessage(this);
   EvalResponse copyWith(void Function(EvalResponse) updates) =>
       super.copyWith((message) => updates(message as EvalResponse));
   $pb.BuilderInfo get info_ => _i;
-  static EvalResponse create() => EvalResponse();
+  @$core.pragma('dart2js:noInline')
+  static EvalResponse create() => EvalResponse._();
   EvalResponse createEmptyInstance() => create();
   static $pb.PbList<EvalResponse> createRepeated() =>
       $pb.PbList<EvalResponse>();
   static EvalResponse getDefault() => _defaultInstance ??= create()..freeze();
   static EvalResponse _defaultInstance;
 
-  $3.ExprValue get result => $_getN(0);
-  set result($3.ExprValue v) {
+  $4.ExprValue get result => $_getN(0);
+  set result($4.ExprValue v) {
     setField(1, v);
   }
 
   $core.bool hasResult() => $_has(0);
   void clearResult() => clearField(1);
 
-  $core.List<$1.Status> get issues => $_getList(1);
+  $core.List<$2.Status> get issues => $_getList(1);
 }
 
 class IssueDetails extends $pb.GeneratedMessage {
@@ -332,23 +345,25 @@ class IssueDetails extends $pb.GeneratedMessage {
         IssueDetails_Severity.SEVERITY_UNSPECIFIED,
         IssueDetails_Severity.valueOf,
         IssueDetails_Severity.values)
-    ..a<$0.SourcePosition>(2, 'position', $pb.PbFieldType.OM,
-        $0.SourcePosition.getDefault, $0.SourcePosition.create)
+    ..a<$1.SourcePosition>(2, 'position', $pb.PbFieldType.OM,
+        $1.SourcePosition.getDefault, $1.SourcePosition.create)
     ..aInt64(3, 'id')
     ..hasRequiredFields = false;
 
-  IssueDetails() : super();
-  IssueDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IssueDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IssueDetails._() : super();
+  factory IssueDetails() => create();
+  factory IssueDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IssueDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IssueDetails clone() => IssueDetails()..mergeFromMessage(this);
   IssueDetails copyWith(void Function(IssueDetails) updates) =>
       super.copyWith((message) => updates(message as IssueDetails));
   $pb.BuilderInfo get info_ => _i;
-  static IssueDetails create() => IssueDetails();
+  @$core.pragma('dart2js:noInline')
+  static IssueDetails create() => IssueDetails._();
   IssueDetails createEmptyInstance() => create();
   static $pb.PbList<IssueDetails> createRepeated() =>
       $pb.PbList<IssueDetails>();
@@ -363,8 +378,8 @@ class IssueDetails extends $pb.GeneratedMessage {
   $core.bool hasSeverity() => $_has(0);
   void clearSeverity() => clearField(1);
 
-  $0.SourcePosition get position => $_getN(1);
-  set position($0.SourcePosition v) {
+  $1.SourcePosition get position => $_getN(1);
+  set position($1.SourcePosition v) {
     setField(2, v);
   }
 

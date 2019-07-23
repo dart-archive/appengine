@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/storage/v1beta1/avro.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -16,18 +17,20 @@ class AvroSchema extends $pb.GeneratedMessage {
     ..aOS(1, 'schema')
     ..hasRequiredFields = false;
 
-  AvroSchema() : super();
-  AvroSchema.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AvroSchema.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AvroSchema._() : super();
+  factory AvroSchema() => create();
+  factory AvroSchema.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AvroSchema.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AvroSchema clone() => AvroSchema()..mergeFromMessage(this);
   AvroSchema copyWith(void Function(AvroSchema) updates) =>
       super.copyWith((message) => updates(message as AvroSchema));
   $pb.BuilderInfo get info_ => _i;
-  static AvroSchema create() => AvroSchema();
+  @$core.pragma('dart2js:noInline')
+  static AvroSchema create() => AvroSchema._();
   AvroSchema createEmptyInstance() => create();
   static $pb.PbList<AvroSchema> createRepeated() => $pb.PbList<AvroSchema>();
   static AvroSchema getDefault() => _defaultInstance ??= create()..freeze();
@@ -49,18 +52,20 @@ class AvroRows extends $pb.GeneratedMessage {
     ..aInt64(2, 'rowCount')
     ..hasRequiredFields = false;
 
-  AvroRows() : super();
-  AvroRows.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AvroRows.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AvroRows._() : super();
+  factory AvroRows() => create();
+  factory AvroRows.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AvroRows.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AvroRows clone() => AvroRows()..mergeFromMessage(this);
   AvroRows copyWith(void Function(AvroRows) updates) =>
       super.copyWith((message) => updates(message as AvroRows));
   $pb.BuilderInfo get info_ => _i;
-  static AvroRows create() => AvroRows();
+  @$core.pragma('dart2js:noInline')
+  static AvroRows create() => AvroRows._();
   AvroRows createEmptyInstance() => create();
   static $pb.PbList<AvroRows> createRepeated() => $pb.PbList<AvroRows>();
   static AvroRows getDefault() => _defaultInstance ??= create()..freeze();

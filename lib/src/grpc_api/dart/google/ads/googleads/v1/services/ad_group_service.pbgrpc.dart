@@ -1,35 +1,36 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/ad_group_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'ad_group_service.pb.dart';
-import '../resources/ad_group.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'ad_group_service.pb.dart' as $0;
+import '../resources/ad_group.pb.dart' as $1;
 export 'ad_group_service.pb.dart';
 
 class AdGroupServiceClient extends $grpc.Client {
-  static final _$getAdGroup = $grpc.ClientMethod<GetAdGroupRequest, $0.AdGroup>(
-      '/google.ads.googleads.v1.services.AdGroupService/GetAdGroup',
-      (GetAdGroupRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.AdGroup.fromBuffer(value));
+  static final _$getAdGroup =
+      $grpc.ClientMethod<$0.GetAdGroupRequest, $1.AdGroup>(
+          '/google.ads.googleads.v1.services.AdGroupService/GetAdGroup',
+          ($0.GetAdGroupRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.AdGroup.fromBuffer(value));
   static final _$mutateAdGroups =
-      $grpc.ClientMethod<MutateAdGroupsRequest, MutateAdGroupsResponse>(
+      $grpc.ClientMethod<$0.MutateAdGroupsRequest, $0.MutateAdGroupsResponse>(
           '/google.ads.googleads.v1.services.AdGroupService/MutateAdGroups',
-          (MutateAdGroupsRequest value) => value.writeToBuffer(),
+          ($0.MutateAdGroupsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              MutateAdGroupsResponse.fromBuffer(value));
+              $0.MutateAdGroupsResponse.fromBuffer(value));
 
   AdGroupServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.AdGroup> getAdGroup(GetAdGroupRequest request,
+  $grpc.ResponseFuture<$1.AdGroup> getAdGroup($0.GetAdGroupRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getAdGroup, $async.Stream.fromIterable([request]),
@@ -37,8 +38,8 @@ class AdGroupServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<MutateAdGroupsResponse> mutateAdGroups(
-      MutateAdGroupsRequest request,
+  $grpc.ResponseFuture<$0.MutateAdGroupsResponse> mutateAdGroups(
+      $0.MutateAdGroupsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$mutateAdGroups, $async.Stream.fromIterable([request]),
@@ -51,36 +52,37 @@ abstract class AdGroupServiceBase extends $grpc.Service {
   $core.String get $name => 'google.ads.googleads.v1.services.AdGroupService';
 
   AdGroupServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetAdGroupRequest, $0.AdGroup>(
+    $addMethod($grpc.ServiceMethod<$0.GetAdGroupRequest, $1.AdGroup>(
         'GetAdGroup',
         getAdGroup_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetAdGroupRequest.fromBuffer(value),
-        ($0.AdGroup value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<MutateAdGroupsRequest, MutateAdGroupsResponse>(
-            'MutateAdGroups',
-            mutateAdGroups_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                MutateAdGroupsRequest.fromBuffer(value),
-            (MutateAdGroupsResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.GetAdGroupRequest.fromBuffer(value),
+        ($1.AdGroup value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateAdGroupsRequest,
+            $0.MutateAdGroupsResponse>(
+        'MutateAdGroups',
+        mutateAdGroups_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.MutateAdGroupsRequest.fromBuffer(value),
+        ($0.MutateAdGroupsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.AdGroup> getAdGroup_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.AdGroup> getAdGroup_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetAdGroupRequest> request) async {
     return getAdGroup(call, await request);
   }
 
-  $async.Future<MutateAdGroupsResponse> mutateAdGroups_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateAdGroupsResponse> mutateAdGroups_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.MutateAdGroupsRequest> request) async {
     return mutateAdGroups(call, await request);
   }
 
-  $async.Future<$0.AdGroup> getAdGroup(
-      $grpc.ServiceCall call, GetAdGroupRequest request);
-  $async.Future<MutateAdGroupsResponse> mutateAdGroups(
-      $grpc.ServiceCall call, MutateAdGroupsRequest request);
+  $async.Future<$1.AdGroup> getAdGroup(
+      $grpc.ServiceCall call, $0.GetAdGroupRequest request);
+  $async.Future<$0.MutateAdGroupsResponse> mutateAdGroups(
+      $grpc.ServiceCall call, $0.MutateAdGroupsRequest request);
 }

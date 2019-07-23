@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1alpha/scan_config.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,13 +24,15 @@ class ScanConfig_Authentication_GoogleAccount extends $pb.GeneratedMessage {
     ..aOS(2, 'password')
     ..hasRequiredFields = false;
 
-  ScanConfig_Authentication_GoogleAccount() : super();
-  ScanConfig_Authentication_GoogleAccount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig_Authentication_GoogleAccount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig_Authentication_GoogleAccount._() : super();
+  factory ScanConfig_Authentication_GoogleAccount() => create();
+  factory ScanConfig_Authentication_GoogleAccount.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfig_Authentication_GoogleAccount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfig_Authentication_GoogleAccount clone() =>
       ScanConfig_Authentication_GoogleAccount()..mergeFromMessage(this);
   ScanConfig_Authentication_GoogleAccount copyWith(
@@ -37,8 +40,9 @@ class ScanConfig_Authentication_GoogleAccount extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ScanConfig_Authentication_GoogleAccount));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ScanConfig_Authentication_GoogleAccount create() =>
-      ScanConfig_Authentication_GoogleAccount();
+      ScanConfig_Authentication_GoogleAccount._();
   ScanConfig_Authentication_GoogleAccount createEmptyInstance() => create();
   static $pb.PbList<ScanConfig_Authentication_GoogleAccount> createRepeated() =>
       $pb.PbList<ScanConfig_Authentication_GoogleAccount>();
@@ -72,13 +76,15 @@ class ScanConfig_Authentication_CustomAccount extends $pb.GeneratedMessage {
     ..aOS(3, 'loginUrl')
     ..hasRequiredFields = false;
 
-  ScanConfig_Authentication_CustomAccount() : super();
-  ScanConfig_Authentication_CustomAccount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig_Authentication_CustomAccount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig_Authentication_CustomAccount._() : super();
+  factory ScanConfig_Authentication_CustomAccount() => create();
+  factory ScanConfig_Authentication_CustomAccount.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfig_Authentication_CustomAccount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfig_Authentication_CustomAccount clone() =>
       ScanConfig_Authentication_CustomAccount()..mergeFromMessage(this);
   ScanConfig_Authentication_CustomAccount copyWith(
@@ -86,8 +92,9 @@ class ScanConfig_Authentication_CustomAccount extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ScanConfig_Authentication_CustomAccount));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ScanConfig_Authentication_CustomAccount create() =>
-      ScanConfig_Authentication_CustomAccount();
+      ScanConfig_Authentication_CustomAccount._();
   ScanConfig_Authentication_CustomAccount createEmptyInstance() => create();
   static $pb.PbList<ScanConfig_Authentication_CustomAccount> createRepeated() =>
       $pb.PbList<ScanConfig_Authentication_CustomAccount>();
@@ -135,6 +142,7 @@ class ScanConfig_Authentication extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanConfig.Authentication',
       package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+    ..oo(0, [1, 2])
     ..a<ScanConfig_Authentication_GoogleAccount>(
         1,
         'googleAccount',
@@ -147,16 +155,16 @@ class ScanConfig_Authentication extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         ScanConfig_Authentication_CustomAccount.getDefault,
         ScanConfig_Authentication_CustomAccount.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  ScanConfig_Authentication() : super();
-  ScanConfig_Authentication.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig_Authentication.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig_Authentication._() : super();
+  factory ScanConfig_Authentication() => create();
+  factory ScanConfig_Authentication.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfig_Authentication.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfig_Authentication clone() =>
       ScanConfig_Authentication()..mergeFromMessage(this);
   ScanConfig_Authentication copyWith(
@@ -164,7 +172,8 @@ class ScanConfig_Authentication extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ScanConfig_Authentication));
   $pb.BuilderInfo get info_ => _i;
-  static ScanConfig_Authentication create() => ScanConfig_Authentication();
+  @$core.pragma('dart2js:noInline')
+  static ScanConfig_Authentication create() => ScanConfig_Authentication._();
   ScanConfig_Authentication createEmptyInstance() => create();
   static $pb.PbList<ScanConfig_Authentication> createRepeated() =>
       $pb.PbList<ScanConfig_Authentication>();
@@ -201,18 +210,20 @@ class ScanConfig_Schedule extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'intervalDurationDays', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ScanConfig_Schedule() : super();
-  ScanConfig_Schedule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig_Schedule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig_Schedule._() : super();
+  factory ScanConfig_Schedule() => create();
+  factory ScanConfig_Schedule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfig_Schedule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfig_Schedule clone() => ScanConfig_Schedule()..mergeFromMessage(this);
   ScanConfig_Schedule copyWith(void Function(ScanConfig_Schedule) updates) =>
       super.copyWith((message) => updates(message as ScanConfig_Schedule));
   $pb.BuilderInfo get info_ => _i;
-  static ScanConfig_Schedule create() => ScanConfig_Schedule();
+  @$core.pragma('dart2js:noInline')
+  static ScanConfig_Schedule create() => ScanConfig_Schedule._();
   ScanConfig_Schedule createEmptyInstance() => create();
   static $pb.PbList<ScanConfig_Schedule> createRepeated() =>
       $pb.PbList<ScanConfig_Schedule>();
@@ -265,18 +276,20 @@ class ScanConfig extends $pb.GeneratedMessage {
         ScanConfig_TargetPlatform.values)
     ..hasRequiredFields = false;
 
-  ScanConfig() : super();
-  ScanConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanConfig._() : super();
+  factory ScanConfig() => create();
+  factory ScanConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanConfig clone() => ScanConfig()..mergeFromMessage(this);
   ScanConfig copyWith(void Function(ScanConfig) updates) =>
       super.copyWith((message) => updates(message as ScanConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ScanConfig create() => ScanConfig();
+  @$core.pragma('dart2js:noInline')
+  static ScanConfig create() => ScanConfig._();
   ScanConfig createEmptyInstance() => create();
   static $pb.PbList<ScanConfig> createRepeated() => $pb.PbList<ScanConfig>();
   static ScanConfig getDefault() => _defaultInstance ??= create()..freeze();

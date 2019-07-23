@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/dataset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const DataType$json = {
   '1': 'DataType',
@@ -11,7 +12,7 @@ const DataType$json = {
     {'1': 'IMAGE', '2': 1},
     {'1': 'VIDEO', '2': 2},
     {'1': 'TEXT', '2': 4},
-    {'1': 'AUDIO', '2': 5},
+    {'1': 'GENERAL_DATA', '2': 6},
   ],
 };
 
@@ -37,6 +38,14 @@ const Dataset$json = {
       '6': '.google.cloud.datalabeling.v1beta1.InputConfig',
       '10': 'inputConfigs'
     },
+    {
+      '1': 'blocking_resources',
+      '3': 6,
+      '4': 3,
+      '5': 9,
+      '10': 'blockingResources'
+    },
+    {'1': 'data_item_count', '3': 7, '4': 1, '5': 3, '10': 'dataItemCount'},
   ],
 };
 
@@ -44,13 +53,31 @@ const InputConfig$json = {
   '1': 'InputConfig',
   '2': [
     {
+      '1': 'text_metadata',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.TextMetadata',
+      '9': 0,
+      '10': 'textMetadata'
+    },
+    {
       '1': 'gcs_source',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datalabeling.v1beta1.GcsSource',
-      '9': 0,
+      '9': 1,
       '10': 'gcsSource'
+    },
+    {
+      '1': 'bigquery_source',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.BigQuerySource',
+      '9': 1,
+      '10': 'bigquerySource'
     },
     {
       '1': 'data_type',
@@ -60,9 +87,40 @@ const InputConfig$json = {
       '6': '.google.cloud.datalabeling.v1beta1.DataType',
       '10': 'dataType'
     },
+    {
+      '1': 'annotation_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationType',
+      '10': 'annotationType'
+    },
+    {
+      '1': 'classification_metadata',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.ClassificationMetadata',
+      '10': 'classificationMetadata'
+    },
   ],
   '8': [
+    {'1': 'data_type_metadata'},
     {'1': 'source'},
+  ],
+};
+
+const TextMetadata$json = {
+  '1': 'TextMetadata',
+  '2': [
+    {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
+  ],
+};
+
+const ClassificationMetadata$json = {
+  '1': 'ClassificationMetadata',
+  '2': [
+    {'1': 'is_multi_label', '3': 1, '4': 1, '5': 8, '10': 'isMultiLabel'},
   ],
 };
 
@@ -71,6 +129,13 @@ const GcsSource$json = {
   '2': [
     {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
     {'1': 'mime_type', '3': 2, '4': 1, '5': 9, '10': 'mimeType'},
+  ],
+};
+
+const BigQuerySource$json = {
+  '1': 'BigQuerySource',
+  '2': [
+    {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
   ],
 };
 
@@ -146,15 +211,6 @@ const DataItem$json = {
       '9': 0,
       '10': 'videoPayload'
     },
-    {
-      '1': 'audio_payload',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.AudioPayload',
-      '9': 0,
-      '10': 'audioPayload'
-    },
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
   '8': [
@@ -216,20 +272,43 @@ const AnnotatedDataset$json = {
       '6': '.google.cloud.datalabeling.v1beta1.AnnotatedDatasetMetadata',
       '10': 'metadata'
     },
+    {
+      '1': 'blocking_resources',
+      '3': 11,
+      '4': 3,
+      '5': 9,
+      '10': 'blockingResources'
+    },
   ],
+};
+
+const LabelStats$json = {
+  '1': 'LabelStats',
+  '2': [
+    {
+      '1': 'example_count',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.LabelStats.ExampleCountEntry',
+      '10': 'exampleCount'
+    },
+  ],
+  '3': [LabelStats_ExampleCountEntry$json],
+};
+
+const LabelStats_ExampleCountEntry$json = {
+  '1': 'ExampleCountEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 3, '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 const AnnotatedDatasetMetadata$json = {
   '1': 'AnnotatedDatasetMetadata',
   '2': [
-    {
-      '1': 'human_annotation_config',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.HumanAnnotationConfig',
-      '10': 'humanAnnotationConfig'
-    },
     {
       '1': 'image_classification_config',
       '3': 2,
@@ -320,34 +399,18 @@ const AnnotatedDatasetMetadata$json = {
       '9': 0,
       '10': 'textEntityExtractionConfig'
     },
+    {
+      '1': 'human_annotation_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.HumanAnnotationConfig',
+      '10': 'humanAnnotationConfig'
+    },
   ],
   '8': [
     {'1': 'annotation_request_config'},
   ],
-};
-
-const LabelStats$json = {
-  '1': 'LabelStats',
-  '2': [
-    {
-      '1': 'example_count',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.LabelStats.ExampleCountEntry',
-      '10': 'exampleCount'
-    },
-  ],
-  '3': [LabelStats_ExampleCountEntry$json],
-};
-
-const LabelStats_ExampleCountEntry$json = {
-  '1': 'ExampleCountEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 3, '10': 'value'},
-  ],
-  '7': {'7': true},
 };
 
 const Example$json = {
@@ -380,15 +443,6 @@ const Example$json = {
       '9': 0,
       '10': 'videoPayload'
     },
-    {
-      '1': 'audio_payload',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.AudioPayload',
-      '9': 0,
-      '10': 'audioPayload'
-    },
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {
       '1': 'annotations',
@@ -401,61 +455,5 @@ const Example$json = {
   ],
   '8': [
     {'1': 'payload'},
-  ],
-};
-
-const ImagePayload$json = {
-  '1': 'ImagePayload',
-  '2': [
-    {'1': 'mime_type', '3': 1, '4': 1, '5': 9, '10': 'mimeType'},
-    {'1': 'image_thumbnail', '3': 2, '4': 1, '5': 12, '10': 'imageThumbnail'},
-    {'1': 'image_uri', '3': 3, '4': 1, '5': 9, '10': 'imageUri'},
-  ],
-};
-
-const TextPayload$json = {
-  '1': 'TextPayload',
-  '2': [
-    {'1': 'text_content', '3': 1, '4': 1, '5': 9, '10': 'textContent'},
-  ],
-};
-
-const VideoThumbnail$json = {
-  '1': 'VideoThumbnail',
-  '2': [
-    {'1': 'thumbnail', '3': 1, '4': 1, '5': 12, '10': 'thumbnail'},
-    {
-      '1': 'time_offset',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Duration',
-      '10': 'timeOffset'
-    },
-  ],
-};
-
-const VideoPayload$json = {
-  '1': 'VideoPayload',
-  '2': [
-    {'1': 'mime_type', '3': 1, '4': 1, '5': 9, '10': 'mimeType'},
-    {'1': 'video_uri', '3': 2, '4': 1, '5': 9, '10': 'videoUri'},
-    {
-      '1': 'video_thumbnails',
-      '3': 3,
-      '4': 3,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.VideoThumbnail',
-      '10': 'videoThumbnails'
-    },
-    {'1': 'frame_rate', '3': 4, '4': 1, '5': 2, '10': 'frameRate'},
-  ],
-};
-
-const AudioPayload$json = {
-  '1': 'AudioPayload',
-  '2': [
-    {'1': 'audio_uri', '3': 1, '4': 1, '5': 9, '10': 'audioUri'},
-    {'1': 'sample_rate_hertz', '3': 3, '4': 1, '5': 5, '10': 'sampleRateHertz'},
   ],
 };

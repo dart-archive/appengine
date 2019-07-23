@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/v2/instance.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -45,18 +46,20 @@ class Instance extends $pb.GeneratedMessage {
         const $pb.PackageName('google.bigtable.admin.v2'))
     ..hasRequiredFields = false;
 
-  Instance() : super();
-  Instance.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Instance.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Instance._() : super();
+  factory Instance() => create();
+  factory Instance.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Instance.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Instance clone() => Instance()..mergeFromMessage(this);
   Instance copyWith(void Function(Instance) updates) =>
       super.copyWith((message) => updates(message as Instance));
   $pb.BuilderInfo get info_ => _i;
-  static Instance create() => Instance();
+  @$core.pragma('dart2js:noInline')
+  static Instance create() => Instance._();
   Instance createEmptyInstance() => create();
   static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
   static Instance getDefault() => _defaultInstance ??= create()..freeze();
@@ -119,18 +122,20 @@ class Cluster extends $pb.GeneratedMessage {
         $0.StorageType.values)
     ..hasRequiredFields = false;
 
-  Cluster() : super();
-  Cluster.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cluster.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Cluster._() : super();
+  factory Cluster() => create();
+  factory Cluster.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cluster.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Cluster clone() => Cluster()..mergeFromMessage(this);
   Cluster copyWith(void Function(Cluster) updates) =>
       super.copyWith((message) => updates(message as Cluster));
   $pb.BuilderInfo get info_ => _i;
-  static Cluster create() => Cluster();
+  @$core.pragma('dart2js:noInline')
+  static Cluster create() => Cluster._();
   Cluster createEmptyInstance() => create();
   static $pb.PbList<Cluster> createRepeated() => $pb.PbList<Cluster>();
   static Cluster getDefault() => _defaultInstance ??= create()..freeze();
@@ -183,13 +188,15 @@ class AppProfile_MultiClusterRoutingUseAny extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.v2'))
     ..hasRequiredFields = false;
 
-  AppProfile_MultiClusterRoutingUseAny() : super();
-  AppProfile_MultiClusterRoutingUseAny.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppProfile_MultiClusterRoutingUseAny.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppProfile_MultiClusterRoutingUseAny._() : super();
+  factory AppProfile_MultiClusterRoutingUseAny() => create();
+  factory AppProfile_MultiClusterRoutingUseAny.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppProfile_MultiClusterRoutingUseAny.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppProfile_MultiClusterRoutingUseAny clone() =>
       AppProfile_MultiClusterRoutingUseAny()..mergeFromMessage(this);
   AppProfile_MultiClusterRoutingUseAny copyWith(
@@ -197,8 +204,9 @@ class AppProfile_MultiClusterRoutingUseAny extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as AppProfile_MultiClusterRoutingUseAny));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AppProfile_MultiClusterRoutingUseAny create() =>
-      AppProfile_MultiClusterRoutingUseAny();
+      AppProfile_MultiClusterRoutingUseAny._();
   AppProfile_MultiClusterRoutingUseAny createEmptyInstance() => create();
   static $pb.PbList<AppProfile_MultiClusterRoutingUseAny> createRepeated() =>
       $pb.PbList<AppProfile_MultiClusterRoutingUseAny>();
@@ -215,13 +223,14 @@ class AppProfile_SingleClusterRouting extends $pb.GeneratedMessage {
     ..aOB(2, 'allowTransactionalWrites')
     ..hasRequiredFields = false;
 
-  AppProfile_SingleClusterRouting() : super();
-  AppProfile_SingleClusterRouting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppProfile_SingleClusterRouting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppProfile_SingleClusterRouting._() : super();
+  factory AppProfile_SingleClusterRouting() => create();
+  factory AppProfile_SingleClusterRouting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppProfile_SingleClusterRouting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppProfile_SingleClusterRouting clone() =>
       AppProfile_SingleClusterRouting()..mergeFromMessage(this);
   AppProfile_SingleClusterRouting copyWith(
@@ -229,8 +238,9 @@ class AppProfile_SingleClusterRouting extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AppProfile_SingleClusterRouting));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AppProfile_SingleClusterRouting create() =>
-      AppProfile_SingleClusterRouting();
+      AppProfile_SingleClusterRouting._();
   AppProfile_SingleClusterRouting createEmptyInstance() => create();
   static $pb.PbList<AppProfile_SingleClusterRouting> createRepeated() =>
       $pb.PbList<AppProfile_SingleClusterRouting>();
@@ -270,6 +280,7 @@ class AppProfile extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppProfile',
       package: const $pb.PackageName('google.bigtable.admin.v2'))
+    ..oo(0, [5, 6])
     ..aOS(1, 'name')
     ..aOS(2, 'etag')
     ..aOS(3, 'description')
@@ -285,21 +296,22 @@ class AppProfile extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         AppProfile_SingleClusterRouting.getDefault,
         AppProfile_SingleClusterRouting.create)
-    ..oo(0, [5, 6])
     ..hasRequiredFields = false;
 
-  AppProfile() : super();
-  AppProfile.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppProfile.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppProfile._() : super();
+  factory AppProfile() => create();
+  factory AppProfile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppProfile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppProfile clone() => AppProfile()..mergeFromMessage(this);
   AppProfile copyWith(void Function(AppProfile) updates) =>
       super.copyWith((message) => updates(message as AppProfile));
   $pb.BuilderInfo get info_ => _i;
-  static AppProfile create() => AppProfile();
+  @$core.pragma('dart2js:noInline')
+  static AppProfile create() => AppProfile._();
   AppProfile createEmptyInstance() => create();
   static $pb.PbList<AppProfile> createRepeated() => $pb.PbList<AppProfile>();
   static AppProfile getDefault() => _defaultInstance ??= create()..freeze();

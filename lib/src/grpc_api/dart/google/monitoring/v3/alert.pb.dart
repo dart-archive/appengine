@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/alert.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,13 +27,14 @@ class AlertPolicy_Documentation extends $pb.GeneratedMessage {
     ..aOS(2, 'mimeType')
     ..hasRequiredFields = false;
 
-  AlertPolicy_Documentation() : super();
-  AlertPolicy_Documentation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AlertPolicy_Documentation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AlertPolicy_Documentation._() : super();
+  factory AlertPolicy_Documentation() => create();
+  factory AlertPolicy_Documentation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AlertPolicy_Documentation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AlertPolicy_Documentation clone() =>
       AlertPolicy_Documentation()..mergeFromMessage(this);
   AlertPolicy_Documentation copyWith(
@@ -40,7 +42,8 @@ class AlertPolicy_Documentation extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as AlertPolicy_Documentation));
   $pb.BuilderInfo get info_ => _i;
-  static AlertPolicy_Documentation create() => AlertPolicy_Documentation();
+  @$core.pragma('dart2js:noInline')
+  static AlertPolicy_Documentation create() => AlertPolicy_Documentation._();
   AlertPolicy_Documentation createEmptyInstance() => create();
   static $pb.PbList<AlertPolicy_Documentation> createRepeated() =>
       $pb.PbList<AlertPolicy_Documentation>();
@@ -77,18 +80,19 @@ class AlertPolicy_Condition_Trigger extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AlertPolicy.Condition.Trigger',
       package: const $pb.PackageName('google.monitoring.v3'))
+    ..oo(0, [1, 2])
     ..a<$core.int>(1, 'count', $pb.PbFieldType.O3)
     ..a<$core.double>(2, 'percent', $pb.PbFieldType.OD)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  AlertPolicy_Condition_Trigger() : super();
-  AlertPolicy_Condition_Trigger.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AlertPolicy_Condition_Trigger.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AlertPolicy_Condition_Trigger._() : super();
+  factory AlertPolicy_Condition_Trigger() => create();
+  factory AlertPolicy_Condition_Trigger.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AlertPolicy_Condition_Trigger.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AlertPolicy_Condition_Trigger clone() =>
       AlertPolicy_Condition_Trigger()..mergeFromMessage(this);
   AlertPolicy_Condition_Trigger copyWith(
@@ -96,8 +100,9 @@ class AlertPolicy_Condition_Trigger extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AlertPolicy_Condition_Trigger));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AlertPolicy_Condition_Trigger create() =>
-      AlertPolicy_Condition_Trigger();
+      AlertPolicy_Condition_Trigger._();
   AlertPolicy_Condition_Trigger createEmptyInstance() => create();
   static $pb.PbList<AlertPolicy_Condition_Trigger> createRepeated() =>
       $pb.PbList<AlertPolicy_Condition_Trigger>();
@@ -154,13 +159,15 @@ class AlertPolicy_Condition_MetricThreshold extends $pb.GeneratedMessage {
         $3.Aggregation.create)
     ..hasRequiredFields = false;
 
-  AlertPolicy_Condition_MetricThreshold() : super();
-  AlertPolicy_Condition_MetricThreshold.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AlertPolicy_Condition_MetricThreshold.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AlertPolicy_Condition_MetricThreshold._() : super();
+  factory AlertPolicy_Condition_MetricThreshold() => create();
+  factory AlertPolicy_Condition_MetricThreshold.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AlertPolicy_Condition_MetricThreshold.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AlertPolicy_Condition_MetricThreshold clone() =>
       AlertPolicy_Condition_MetricThreshold()..mergeFromMessage(this);
   AlertPolicy_Condition_MetricThreshold copyWith(
@@ -168,8 +175,9 @@ class AlertPolicy_Condition_MetricThreshold extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as AlertPolicy_Condition_MetricThreshold));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AlertPolicy_Condition_MetricThreshold create() =>
-      AlertPolicy_Condition_MetricThreshold();
+      AlertPolicy_Condition_MetricThreshold._();
   AlertPolicy_Condition_MetricThreshold createEmptyInstance() => create();
   static $pb.PbList<AlertPolicy_Condition_MetricThreshold> createRepeated() =>
       $pb.PbList<AlertPolicy_Condition_MetricThreshold>();
@@ -247,13 +255,15 @@ class AlertPolicy_Condition_MetricAbsence extends $pb.GeneratedMessage {
         5, 'aggregations', $pb.PbFieldType.PM, $3.Aggregation.create)
     ..hasRequiredFields = false;
 
-  AlertPolicy_Condition_MetricAbsence() : super();
-  AlertPolicy_Condition_MetricAbsence.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AlertPolicy_Condition_MetricAbsence.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AlertPolicy_Condition_MetricAbsence._() : super();
+  factory AlertPolicy_Condition_MetricAbsence() => create();
+  factory AlertPolicy_Condition_MetricAbsence.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AlertPolicy_Condition_MetricAbsence.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AlertPolicy_Condition_MetricAbsence clone() =>
       AlertPolicy_Condition_MetricAbsence()..mergeFromMessage(this);
   AlertPolicy_Condition_MetricAbsence copyWith(
@@ -261,8 +271,9 @@ class AlertPolicy_Condition_MetricAbsence extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AlertPolicy_Condition_MetricAbsence));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AlertPolicy_Condition_MetricAbsence create() =>
-      AlertPolicy_Condition_MetricAbsence();
+      AlertPolicy_Condition_MetricAbsence._();
   AlertPolicy_Condition_MetricAbsence createEmptyInstance() => create();
   static $pb.PbList<AlertPolicy_Condition_MetricAbsence> createRepeated() =>
       $pb.PbList<AlertPolicy_Condition_MetricAbsence>();
@@ -312,6 +323,7 @@ class AlertPolicy_Condition extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AlertPolicy.Condition',
       package: const $pb.PackageName('google.monitoring.v3'))
+    ..oo(0, [1, 2])
     ..a<AlertPolicy_Condition_MetricThreshold>(
         1,
         'conditionThreshold',
@@ -326,23 +338,24 @@ class AlertPolicy_Condition extends $pb.GeneratedMessage {
         AlertPolicy_Condition_MetricAbsence.create)
     ..aOS(6, 'displayName')
     ..aOS(12, 'name')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  AlertPolicy_Condition() : super();
-  AlertPolicy_Condition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AlertPolicy_Condition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AlertPolicy_Condition._() : super();
+  factory AlertPolicy_Condition() => create();
+  factory AlertPolicy_Condition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AlertPolicy_Condition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AlertPolicy_Condition clone() =>
       AlertPolicy_Condition()..mergeFromMessage(this);
   AlertPolicy_Condition copyWith(
           void Function(AlertPolicy_Condition) updates) =>
       super.copyWith((message) => updates(message as AlertPolicy_Condition));
   $pb.BuilderInfo get info_ => _i;
-  static AlertPolicy_Condition create() => AlertPolicy_Condition();
+  @$core.pragma('dart2js:noInline')
+  static AlertPolicy_Condition create() => AlertPolicy_Condition._();
   AlertPolicy_Condition createEmptyInstance() => create();
   static $pb.PbList<AlertPolicy_Condition> createRepeated() =>
       $pb.PbList<AlertPolicy_Condition>();
@@ -422,18 +435,20 @@ class AlertPolicy extends $pb.GeneratedMessage {
         $1.BoolValue.getDefault, $1.BoolValue.create)
     ..hasRequiredFields = false;
 
-  AlertPolicy() : super();
-  AlertPolicy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AlertPolicy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AlertPolicy._() : super();
+  factory AlertPolicy() => create();
+  factory AlertPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AlertPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AlertPolicy clone() => AlertPolicy()..mergeFromMessage(this);
   AlertPolicy copyWith(void Function(AlertPolicy) updates) =>
       super.copyWith((message) => updates(message as AlertPolicy));
   $pb.BuilderInfo get info_ => _i;
-  static AlertPolicy create() => AlertPolicy();
+  @$core.pragma('dart2js:noInline')
+  static AlertPolicy create() => AlertPolicy._();
   AlertPolicy createEmptyInstance() => create();
   static $pb.PbList<AlertPolicy> createRepeated() => $pb.PbList<AlertPolicy>();
   static AlertPolicy getDefault() => _defaultInstance ??= create()..freeze();

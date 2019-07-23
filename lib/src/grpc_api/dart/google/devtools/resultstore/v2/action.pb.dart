@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/action.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -13,8 +14,9 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'common.pb.dart' as $0;
 import 'file.pb.dart' as $1;
 import 'coverage.pb.dart' as $2;
-import 'test_suite.pb.dart' as $3;
-import '../../../protobuf/duration.pb.dart' as $4;
+import 'file_processing_error.pb.dart' as $3;
+import 'test_suite.pb.dart' as $4;
+import '../../../protobuf/duration.pb.dart' as $5;
 
 import 'action.pbenum.dart';
 
@@ -29,18 +31,20 @@ class Action_Id extends $pb.GeneratedMessage {
     ..aOS(4, 'actionId')
     ..hasRequiredFields = false;
 
-  Action_Id() : super();
-  Action_Id.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action_Id.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action_Id._() : super();
+  factory Action_Id() => create();
+  factory Action_Id.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_Id.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action_Id clone() => Action_Id()..mergeFromMessage(this);
   Action_Id copyWith(void Function(Action_Id) updates) =>
       super.copyWith((message) => updates(message as Action_Id));
   $pb.BuilderInfo get info_ => _i;
-  static Action_Id create() => Action_Id();
+  @$core.pragma('dart2js:noInline')
+  static Action_Id create() => Action_Id._();
   Action_Id createEmptyInstance() => create();
   static $pb.PbList<Action_Id> createRepeated() => $pb.PbList<Action_Id>();
   static Action_Id getDefault() => _defaultInstance ??= create()..freeze();
@@ -90,6 +94,7 @@ class Action extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Action',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
+    ..oo(0, [9, 10])
     ..aOS(1, 'name')
     ..a<Action_Id>(
         2, 'id', $pb.PbFieldType.OM, Action_Id.getDefault, Action_Id.create)
@@ -107,25 +112,27 @@ class Action extends $pb.GeneratedMessage {
         TestAction.create)
     ..a<$2.ActionCoverage>(11, 'coverage', $pb.PbFieldType.OM,
         $2.ActionCoverage.getDefault, $2.ActionCoverage.create)
-    ..pc<FileProcessingErrors>(13, 'fileProcessingErrors', $pb.PbFieldType.PM,
-        FileProcessingErrors.create)
+    ..pc<$3.FileProcessingErrors>(13, 'fileProcessingErrors',
+        $pb.PbFieldType.PM, $3.FileProcessingErrors.create)
     ..pc<$0.Dependency>(
         14, 'actionDependencies', $pb.PbFieldType.PM, $0.Dependency.create)
-    ..oo(0, [9, 10])
+    ..pPS(15, 'fileSets')
     ..hasRequiredFields = false;
 
-  Action() : super();
-  Action.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action._() : super();
+  factory Action() => create();
+  factory Action.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action clone() => Action()..mergeFromMessage(this);
   Action copyWith(void Function(Action) updates) =>
       super.copyWith((message) => updates(message as Action));
   $pb.BuilderInfo get info_ => _i;
-  static Action create() => Action();
+  @$core.pragma('dart2js:noInline')
+  static Action create() => Action._();
   Action createEmptyInstance() => create();
   static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
   static Action getDefault() => _defaultInstance ??= create()..freeze();
@@ -203,9 +210,11 @@ class Action extends $pb.GeneratedMessage {
   $core.bool hasCoverage() => $_has(9);
   void clearCoverage() => clearField(11);
 
-  $core.List<FileProcessingErrors> get fileProcessingErrors => $_getList(10);
+  $core.List<$3.FileProcessingErrors> get fileProcessingErrors => $_getList(10);
 
   $core.List<$0.Dependency> get actionDependencies => $_getList(11);
+
+  $core.List<$core.String> get fileSets => $_getList(12);
 }
 
 class BuildAction extends $pb.GeneratedMessage {
@@ -216,18 +225,20 @@ class BuildAction extends $pb.GeneratedMessage {
     ..aOS(3, 'primaryOutputPath')
     ..hasRequiredFields = false;
 
-  BuildAction() : super();
-  BuildAction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildAction._() : super();
+  factory BuildAction() => create();
+  factory BuildAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildAction clone() => BuildAction()..mergeFromMessage(this);
   BuildAction copyWith(void Function(BuildAction) updates) =>
       super.copyWith((message) => updates(message as BuildAction));
   $pb.BuilderInfo get info_ => _i;
-  static BuildAction create() => BuildAction();
+  @$core.pragma('dart2js:noInline')
+  static BuildAction create() => BuildAction._();
   BuildAction createEmptyInstance() => create();
   static $pb.PbList<BuildAction> createRepeated() => $pb.PbList<BuildAction>();
   static BuildAction getDefault() => _defaultInstance ??= create()..freeze();
@@ -266,24 +277,26 @@ class TestAction extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'shardNumber', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'runNumber', $pb.PbFieldType.O3)
     ..a<$core.int>(4, 'attemptNumber', $pb.PbFieldType.O3)
-    ..a<$3.TestSuite>(5, 'testSuite', $pb.PbFieldType.OM,
-        $3.TestSuite.getDefault, $3.TestSuite.create)
+    ..a<$4.TestSuite>(5, 'testSuite', $pb.PbFieldType.OM,
+        $4.TestSuite.getDefault, $4.TestSuite.create)
     ..pc<TestWarning>(8, 'warnings', $pb.PbFieldType.PM, TestWarning.create)
     ..aInt64(10, 'estimatedMemoryBytes')
     ..hasRequiredFields = false;
 
-  TestAction() : super();
-  TestAction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAction._() : super();
+  factory TestAction() => create();
+  factory TestAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAction clone() => TestAction()..mergeFromMessage(this);
   TestAction copyWith(void Function(TestAction) updates) =>
       super.copyWith((message) => updates(message as TestAction));
   $pb.BuilderInfo get info_ => _i;
-  static TestAction create() => TestAction();
+  @$core.pragma('dart2js:noInline')
+  static TestAction create() => TestAction._();
   TestAction createEmptyInstance() => create();
   static $pb.PbList<TestAction> createRepeated() => $pb.PbList<TestAction>();
   static TestAction getDefault() => _defaultInstance ??= create()..freeze();
@@ -321,8 +334,8 @@ class TestAction extends $pb.GeneratedMessage {
   $core.bool hasAttemptNumber() => $_has(3);
   void clearAttemptNumber() => clearField(4);
 
-  $3.TestSuite get testSuite => $_getN(4);
-  set testSuite($3.TestSuite v) {
+  $4.TestSuite get testSuite => $_getN(4);
+  set testSuite($4.TestSuite v) {
     setField(5, v);
   }
 
@@ -356,18 +369,20 @@ class ActionAttributes extends $pb.GeneratedMessage {
         InputFileInfo.getDefault, InputFileInfo.create)
     ..hasRequiredFields = false;
 
-  ActionAttributes() : super();
-  ActionAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ActionAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ActionAttributes._() : super();
+  factory ActionAttributes() => create();
+  factory ActionAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ActionAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ActionAttributes clone() => ActionAttributes()..mergeFromMessage(this);
   ActionAttributes copyWith(void Function(ActionAttributes) updates) =>
       super.copyWith((message) => updates(message as ActionAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static ActionAttributes create() => ActionAttributes();
+  @$core.pragma('dart2js:noInline')
+  static ActionAttributes create() => ActionAttributes._();
   ActionAttributes createEmptyInstance() => create();
   static $pb.PbList<ActionAttributes> createRepeated() =>
       $pb.PbList<ActionAttributes>();
@@ -418,18 +433,20 @@ class InputFileInfo extends $pb.GeneratedMessage {
     ..aInt64(5, 'distinctByteLimit')
     ..hasRequiredFields = false;
 
-  InputFileInfo() : super();
-  InputFileInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InputFileInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InputFileInfo._() : super();
+  factory InputFileInfo() => create();
+  factory InputFileInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InputFileInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InputFileInfo clone() => InputFileInfo()..mergeFromMessage(this);
   InputFileInfo copyWith(void Function(InputFileInfo) updates) =>
       super.copyWith((message) => updates(message as InputFileInfo));
   $pb.BuilderInfo get info_ => _i;
-  static InputFileInfo create() => InputFileInfo();
+  @$core.pragma('dart2js:noInline')
+  static InputFileInfo create() => InputFileInfo._();
   InputFileInfo createEmptyInstance() => create();
   static $pb.PbList<InputFileInfo> createRepeated() =>
       $pb.PbList<InputFileInfo>();
@@ -480,22 +497,24 @@ class InputFileInfo extends $pb.GeneratedMessage {
 class LocalTestTiming extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocalTestTiming',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$4.Duration>(1, 'testProcessDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
+    ..a<$5.Duration>(1, 'testProcessDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..hasRequiredFields = false;
 
-  LocalTestTiming() : super();
-  LocalTestTiming.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LocalTestTiming.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LocalTestTiming._() : super();
+  factory LocalTestTiming() => create();
+  factory LocalTestTiming.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LocalTestTiming.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LocalTestTiming clone() => LocalTestTiming()..mergeFromMessage(this);
   LocalTestTiming copyWith(void Function(LocalTestTiming) updates) =>
       super.copyWith((message) => updates(message as LocalTestTiming));
   $pb.BuilderInfo get info_ => _i;
-  static LocalTestTiming create() => LocalTestTiming();
+  @$core.pragma('dart2js:noInline')
+  static LocalTestTiming create() => LocalTestTiming._();
   LocalTestTiming createEmptyInstance() => create();
   static $pb.PbList<LocalTestTiming> createRepeated() =>
       $pb.PbList<LocalTestTiming>();
@@ -503,8 +522,8 @@ class LocalTestTiming extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static LocalTestTiming _defaultInstance;
 
-  $4.Duration get testProcessDuration => $_getN(0);
-  set testProcessDuration($4.Duration v) {
+  $5.Duration get testProcessDuration => $_getN(0);
+  set testProcessDuration($5.Duration v) {
     setField(1, v);
   }
 
@@ -515,32 +534,34 @@ class LocalTestTiming extends $pb.GeneratedMessage {
 class RemoteTestAttemptTiming extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RemoteTestAttemptTiming',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$4.Duration>(1, 'queueDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
-    ..a<$4.Duration>(2, 'uploadDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
-    ..a<$4.Duration>(3, 'machineSetupDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
-    ..a<$4.Duration>(4, 'testProcessDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
-    ..a<$4.Duration>(5, 'downloadDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
+    ..a<$5.Duration>(1, 'queueDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$5.Duration>(2, 'uploadDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$5.Duration>(3, 'machineSetupDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$5.Duration>(4, 'testProcessDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$5.Duration>(5, 'downloadDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..hasRequiredFields = false;
 
-  RemoteTestAttemptTiming() : super();
-  RemoteTestAttemptTiming.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RemoteTestAttemptTiming.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RemoteTestAttemptTiming._() : super();
+  factory RemoteTestAttemptTiming() => create();
+  factory RemoteTestAttemptTiming.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemoteTestAttemptTiming.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RemoteTestAttemptTiming clone() =>
       RemoteTestAttemptTiming()..mergeFromMessage(this);
   RemoteTestAttemptTiming copyWith(
           void Function(RemoteTestAttemptTiming) updates) =>
       super.copyWith((message) => updates(message as RemoteTestAttemptTiming));
   $pb.BuilderInfo get info_ => _i;
-  static RemoteTestAttemptTiming create() => RemoteTestAttemptTiming();
+  @$core.pragma('dart2js:noInline')
+  static RemoteTestAttemptTiming create() => RemoteTestAttemptTiming._();
   RemoteTestAttemptTiming createEmptyInstance() => create();
   static $pb.PbList<RemoteTestAttemptTiming> createRepeated() =>
       $pb.PbList<RemoteTestAttemptTiming>();
@@ -548,40 +569,40 @@ class RemoteTestAttemptTiming extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RemoteTestAttemptTiming _defaultInstance;
 
-  $4.Duration get queueDuration => $_getN(0);
-  set queueDuration($4.Duration v) {
+  $5.Duration get queueDuration => $_getN(0);
+  set queueDuration($5.Duration v) {
     setField(1, v);
   }
 
   $core.bool hasQueueDuration() => $_has(0);
   void clearQueueDuration() => clearField(1);
 
-  $4.Duration get uploadDuration => $_getN(1);
-  set uploadDuration($4.Duration v) {
+  $5.Duration get uploadDuration => $_getN(1);
+  set uploadDuration($5.Duration v) {
     setField(2, v);
   }
 
   $core.bool hasUploadDuration() => $_has(1);
   void clearUploadDuration() => clearField(2);
 
-  $4.Duration get machineSetupDuration => $_getN(2);
-  set machineSetupDuration($4.Duration v) {
+  $5.Duration get machineSetupDuration => $_getN(2);
+  set machineSetupDuration($5.Duration v) {
     setField(3, v);
   }
 
   $core.bool hasMachineSetupDuration() => $_has(2);
   void clearMachineSetupDuration() => clearField(3);
 
-  $4.Duration get testProcessDuration => $_getN(3);
-  set testProcessDuration($4.Duration v) {
+  $5.Duration get testProcessDuration => $_getN(3);
+  set testProcessDuration($5.Duration v) {
     setField(4, v);
   }
 
   $core.bool hasTestProcessDuration() => $_has(3);
   void clearTestProcessDuration() => clearField(4);
 
-  $4.Duration get downloadDuration => $_getN(4);
-  set downloadDuration($4.Duration v) {
+  $5.Duration get downloadDuration => $_getN(4);
+  set downloadDuration($5.Duration v) {
     setField(5, v);
   }
 
@@ -592,24 +613,26 @@ class RemoteTestAttemptTiming extends $pb.GeneratedMessage {
 class RemoteTestTiming extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RemoteTestTiming',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$4.Duration>(1, 'localAnalysisDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
+    ..a<$5.Duration>(1, 'localAnalysisDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..pc<RemoteTestAttemptTiming>(
         2, 'attempts', $pb.PbFieldType.PM, RemoteTestAttemptTiming.create)
     ..hasRequiredFields = false;
 
-  RemoteTestTiming() : super();
-  RemoteTestTiming.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RemoteTestTiming.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RemoteTestTiming._() : super();
+  factory RemoteTestTiming() => create();
+  factory RemoteTestTiming.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemoteTestTiming.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RemoteTestTiming clone() => RemoteTestTiming()..mergeFromMessage(this);
   RemoteTestTiming copyWith(void Function(RemoteTestTiming) updates) =>
       super.copyWith((message) => updates(message as RemoteTestTiming));
   $pb.BuilderInfo get info_ => _i;
-  static RemoteTestTiming create() => RemoteTestTiming();
+  @$core.pragma('dart2js:noInline')
+  static RemoteTestTiming create() => RemoteTestTiming._();
   RemoteTestTiming createEmptyInstance() => create();
   static $pb.PbList<RemoteTestTiming> createRepeated() =>
       $pb.PbList<RemoteTestTiming>();
@@ -617,8 +640,8 @@ class RemoteTestTiming extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RemoteTestTiming _defaultInstance;
 
-  $4.Duration get localAnalysisDuration => $_getN(0);
-  set localAnalysisDuration($4.Duration v) {
+  $5.Duration get localAnalysisDuration => $_getN(0);
+  set localAnalysisDuration($5.Duration v) {
     setField(1, v);
   }
 
@@ -639,14 +662,15 @@ class TestTiming extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestTiming',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
+    ..oo(0, [1, 2])
     ..a<LocalTestTiming>(1, 'local', $pb.PbFieldType.OM,
         LocalTestTiming.getDefault, LocalTestTiming.create)
     ..a<RemoteTestTiming>(2, 'remote', $pb.PbFieldType.OM,
         RemoteTestTiming.getDefault, RemoteTestTiming.create)
-    ..a<$4.Duration>(3, 'systemTimeDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
-    ..a<$4.Duration>(4, 'userTimeDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
+    ..a<$5.Duration>(3, 'systemTimeDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$5.Duration>(4, 'userTimeDuration', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..e<TestCaching>(
         5,
         'testCaching',
@@ -654,21 +678,22 @@ class TestTiming extends $pb.GeneratedMessage {
         TestCaching.TEST_CACHING_UNSPECIFIED,
         TestCaching.valueOf,
         TestCaching.values)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  TestTiming() : super();
-  TestTiming.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestTiming.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestTiming._() : super();
+  factory TestTiming() => create();
+  factory TestTiming.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestTiming.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestTiming clone() => TestTiming()..mergeFromMessage(this);
   TestTiming copyWith(void Function(TestTiming) updates) =>
       super.copyWith((message) => updates(message as TestTiming));
   $pb.BuilderInfo get info_ => _i;
-  static TestTiming create() => TestTiming();
+  @$core.pragma('dart2js:noInline')
+  static TestTiming create() => TestTiming._();
   TestTiming createEmptyInstance() => create();
   static $pb.PbList<TestTiming> createRepeated() => $pb.PbList<TestTiming>();
   static TestTiming getDefault() => _defaultInstance ??= create()..freeze();
@@ -694,16 +719,16 @@ class TestTiming extends $pb.GeneratedMessage {
   $core.bool hasRemote() => $_has(1);
   void clearRemote() => clearField(2);
 
-  $4.Duration get systemTimeDuration => $_getN(2);
-  set systemTimeDuration($4.Duration v) {
+  $5.Duration get systemTimeDuration => $_getN(2);
+  set systemTimeDuration($5.Duration v) {
     setField(3, v);
   }
 
   $core.bool hasSystemTimeDuration() => $_has(2);
   void clearSystemTimeDuration() => clearField(3);
 
-  $4.Duration get userTimeDuration => $_getN(3);
-  set userTimeDuration($4.Duration v) {
+  $5.Duration get userTimeDuration => $_getN(3);
+  set userTimeDuration($5.Duration v) {
     setField(4, v);
   }
 
@@ -725,18 +750,20 @@ class TestWarning extends $pb.GeneratedMessage {
     ..aOS(1, 'warningMessage')
     ..hasRequiredFields = false;
 
-  TestWarning() : super();
-  TestWarning.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestWarning.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestWarning._() : super();
+  factory TestWarning() => create();
+  factory TestWarning.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestWarning.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestWarning clone() => TestWarning()..mergeFromMessage(this);
   TestWarning copyWith(void Function(TestWarning) updates) =>
       super.copyWith((message) => updates(message as TestWarning));
   $pb.BuilderInfo get info_ => _i;
-  static TestWarning create() => TestWarning();
+  @$core.pragma('dart2js:noInline')
+  static TestWarning create() => TestWarning._();
   TestWarning createEmptyInstance() => create();
   static $pb.PbList<TestWarning> createRepeated() => $pb.PbList<TestWarning>();
   static TestWarning getDefault() => _defaultInstance ??= create()..freeze();
@@ -749,92 +776,4 @@ class TestWarning extends $pb.GeneratedMessage {
 
   $core.bool hasWarningMessage() => $_has(0);
   void clearWarningMessage() => clearField(1);
-}
-
-class FileProcessingErrors extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileProcessingErrors',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..aOS(1, 'fileUid')
-    ..pc<FileProcessingError>(3, 'fileProcessingErrors', $pb.PbFieldType.PM,
-        FileProcessingError.create)
-    ..hasRequiredFields = false;
-
-  FileProcessingErrors() : super();
-  FileProcessingErrors.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileProcessingErrors.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  FileProcessingErrors clone() =>
-      FileProcessingErrors()..mergeFromMessage(this);
-  FileProcessingErrors copyWith(void Function(FileProcessingErrors) updates) =>
-      super.copyWith((message) => updates(message as FileProcessingErrors));
-  $pb.BuilderInfo get info_ => _i;
-  static FileProcessingErrors create() => FileProcessingErrors();
-  FileProcessingErrors createEmptyInstance() => create();
-  static $pb.PbList<FileProcessingErrors> createRepeated() =>
-      $pb.PbList<FileProcessingErrors>();
-  static FileProcessingErrors getDefault() =>
-      _defaultInstance ??= create()..freeze();
-  static FileProcessingErrors _defaultInstance;
-
-  $core.String get fileUid => $_getS(0, '');
-  set fileUid($core.String v) {
-    $_setString(0, v);
-  }
-
-  $core.bool hasFileUid() => $_has(0);
-  void clearFileUid() => clearField(1);
-
-  $core.List<FileProcessingError> get fileProcessingErrors => $_getList(1);
-}
-
-class FileProcessingError extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileProcessingError',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..e<FileProcessingErrorType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        FileProcessingErrorType.FILE_PROCESSING_ERROR_TYPE_UNSPECIFIED,
-        FileProcessingErrorType.valueOf,
-        FileProcessingErrorType.values)
-    ..aOS(2, 'message')
-    ..hasRequiredFields = false;
-
-  FileProcessingError() : super();
-  FileProcessingError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileProcessingError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
-  FileProcessingError clone() => FileProcessingError()..mergeFromMessage(this);
-  FileProcessingError copyWith(void Function(FileProcessingError) updates) =>
-      super.copyWith((message) => updates(message as FileProcessingError));
-  $pb.BuilderInfo get info_ => _i;
-  static FileProcessingError create() => FileProcessingError();
-  FileProcessingError createEmptyInstance() => create();
-  static $pb.PbList<FileProcessingError> createRepeated() =>
-      $pb.PbList<FileProcessingError>();
-  static FileProcessingError getDefault() =>
-      _defaultInstance ??= create()..freeze();
-  static FileProcessingError _defaultInstance;
-
-  FileProcessingErrorType get type => $_getN(0);
-  set type(FileProcessingErrorType v) {
-    setField(1, v);
-  }
-
-  $core.bool hasType() => $_has(0);
-  void clearType() => clearField(1);
-
-  $core.String get message => $_getS(1, '');
-  set message($core.String v) {
-    $_setString(1, v);
-  }
-
-  $core.bool hasMessage() => $_has(1);
-  void clearMessage() => clearField(2);
 }

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/span_context.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class SpanContext extends $pb.GeneratedMessage {
     ..aOS(1, 'spanName')
     ..hasRequiredFields = false;
 
-  SpanContext() : super();
-  SpanContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpanContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpanContext._() : super();
+  factory SpanContext() => create();
+  factory SpanContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpanContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpanContext clone() => SpanContext()..mergeFromMessage(this);
   SpanContext copyWith(void Function(SpanContext) updates) =>
       super.copyWith((message) => updates(message as SpanContext));
   $pb.BuilderInfo get info_ => _i;
-  static SpanContext create() => SpanContext();
+  @$core.pragma('dart2js:noInline')
+  static SpanContext create() => SpanContext._();
   SpanContext createEmptyInstance() => create();
   static $pb.PbList<SpanContext> createRepeated() => $pb.PbList<SpanContext>();
   static SpanContext getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/datatransfer/v1/datasource.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $2;
-import 'transfer.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $3;
-import 'datatransfer.pb.dart' as $4;
-import '../../../../protobuf/duration.pb.dart' as $5;
+import '../../../../protobuf/wrappers.pb.dart' as $4;
+import 'transfer.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $5;
+import 'datatransfer.pb.dart' as $0;
+import '../../../../protobuf/duration.pb.dart' as $6;
 
 import 'datasource.pbenum.dart';
 
@@ -41,13 +42,14 @@ class ImportedDataInfo_FieldSchema extends $pb.GeneratedMessage {
         ImportedDataInfo_RecordSchema.create)
     ..hasRequiredFields = false;
 
-  ImportedDataInfo_FieldSchema() : super();
-  ImportedDataInfo_FieldSchema.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportedDataInfo_FieldSchema.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportedDataInfo_FieldSchema._() : super();
+  factory ImportedDataInfo_FieldSchema() => create();
+  factory ImportedDataInfo_FieldSchema.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportedDataInfo_FieldSchema.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportedDataInfo_FieldSchema clone() =>
       ImportedDataInfo_FieldSchema()..mergeFromMessage(this);
   ImportedDataInfo_FieldSchema copyWith(
@@ -55,8 +57,9 @@ class ImportedDataInfo_FieldSchema extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportedDataInfo_FieldSchema));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImportedDataInfo_FieldSchema create() =>
-      ImportedDataInfo_FieldSchema();
+      ImportedDataInfo_FieldSchema._();
   ImportedDataInfo_FieldSchema createEmptyInstance() => create();
   static $pb.PbList<ImportedDataInfo_FieldSchema> createRepeated() =>
       $pb.PbList<ImportedDataInfo_FieldSchema>();
@@ -113,13 +116,14 @@ class ImportedDataInfo_RecordSchema extends $pb.GeneratedMessage {
         1, 'fields', $pb.PbFieldType.PM, ImportedDataInfo_FieldSchema.create)
     ..hasRequiredFields = false;
 
-  ImportedDataInfo_RecordSchema() : super();
-  ImportedDataInfo_RecordSchema.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportedDataInfo_RecordSchema.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportedDataInfo_RecordSchema._() : super();
+  factory ImportedDataInfo_RecordSchema() => create();
+  factory ImportedDataInfo_RecordSchema.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportedDataInfo_RecordSchema.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportedDataInfo_RecordSchema clone() =>
       ImportedDataInfo_RecordSchema()..mergeFromMessage(this);
   ImportedDataInfo_RecordSchema copyWith(
@@ -127,8 +131,9 @@ class ImportedDataInfo_RecordSchema extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportedDataInfo_RecordSchema));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImportedDataInfo_RecordSchema create() =>
-      ImportedDataInfo_RecordSchema();
+      ImportedDataInfo_RecordSchema._();
   ImportedDataInfo_RecordSchema createEmptyInstance() => create();
   static $pb.PbList<ImportedDataInfo_RecordSchema> createRepeated() =>
       $pb.PbList<ImportedDataInfo_RecordSchema>();
@@ -143,26 +148,27 @@ class ImportedDataInfo_TableDefinition_CsvOptions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImportedDataInfo.TableDefinition.CsvOptions',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..a<$2.StringValue>(1, 'fieldDelimiter', $pb.PbFieldType.OM,
-        $2.StringValue.getDefault, $2.StringValue.create)
-    ..a<$2.BoolValue>(2, 'allowQuotedNewlines', $pb.PbFieldType.OM,
-        $2.BoolValue.getDefault, $2.BoolValue.create)
-    ..a<$2.StringValue>(3, 'quoteChar', $pb.PbFieldType.OM,
-        $2.StringValue.getDefault, $2.StringValue.create)
-    ..a<$2.Int64Value>(4, 'skipLeadingRows', $pb.PbFieldType.OM,
-        $2.Int64Value.getDefault, $2.Int64Value.create)
-    ..a<$2.BoolValue>(5, 'allowJaggedRows', $pb.PbFieldType.OM,
-        $2.BoolValue.getDefault, $2.BoolValue.create)
+    ..a<$4.StringValue>(1, 'fieldDelimiter', $pb.PbFieldType.OM,
+        $4.StringValue.getDefault, $4.StringValue.create)
+    ..a<$4.BoolValue>(2, 'allowQuotedNewlines', $pb.PbFieldType.OM,
+        $4.BoolValue.getDefault, $4.BoolValue.create)
+    ..a<$4.StringValue>(3, 'quoteChar', $pb.PbFieldType.OM,
+        $4.StringValue.getDefault, $4.StringValue.create)
+    ..a<$4.Int64Value>(4, 'skipLeadingRows', $pb.PbFieldType.OM,
+        $4.Int64Value.getDefault, $4.Int64Value.create)
+    ..a<$4.BoolValue>(5, 'allowJaggedRows', $pb.PbFieldType.OM,
+        $4.BoolValue.getDefault, $4.BoolValue.create)
     ..hasRequiredFields = false;
 
-  ImportedDataInfo_TableDefinition_CsvOptions() : super();
-  ImportedDataInfo_TableDefinition_CsvOptions.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportedDataInfo_TableDefinition_CsvOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportedDataInfo_TableDefinition_CsvOptions._() : super();
+  factory ImportedDataInfo_TableDefinition_CsvOptions() => create();
+  factory ImportedDataInfo_TableDefinition_CsvOptions.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportedDataInfo_TableDefinition_CsvOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportedDataInfo_TableDefinition_CsvOptions clone() =>
       ImportedDataInfo_TableDefinition_CsvOptions()..mergeFromMessage(this);
   ImportedDataInfo_TableDefinition_CsvOptions copyWith(
@@ -170,8 +176,9 @@ class ImportedDataInfo_TableDefinition_CsvOptions extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ImportedDataInfo_TableDefinition_CsvOptions));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImportedDataInfo_TableDefinition_CsvOptions create() =>
-      ImportedDataInfo_TableDefinition_CsvOptions();
+      ImportedDataInfo_TableDefinition_CsvOptions._();
   ImportedDataInfo_TableDefinition_CsvOptions createEmptyInstance() => create();
   static $pb.PbList<ImportedDataInfo_TableDefinition_CsvOptions>
       createRepeated() =>
@@ -180,40 +187,40 @@ class ImportedDataInfo_TableDefinition_CsvOptions extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ImportedDataInfo_TableDefinition_CsvOptions _defaultInstance;
 
-  $2.StringValue get fieldDelimiter => $_getN(0);
-  set fieldDelimiter($2.StringValue v) {
+  $4.StringValue get fieldDelimiter => $_getN(0);
+  set fieldDelimiter($4.StringValue v) {
     setField(1, v);
   }
 
   $core.bool hasFieldDelimiter() => $_has(0);
   void clearFieldDelimiter() => clearField(1);
 
-  $2.BoolValue get allowQuotedNewlines => $_getN(1);
-  set allowQuotedNewlines($2.BoolValue v) {
+  $4.BoolValue get allowQuotedNewlines => $_getN(1);
+  set allowQuotedNewlines($4.BoolValue v) {
     setField(2, v);
   }
 
   $core.bool hasAllowQuotedNewlines() => $_has(1);
   void clearAllowQuotedNewlines() => clearField(2);
 
-  $2.StringValue get quoteChar => $_getN(2);
-  set quoteChar($2.StringValue v) {
+  $4.StringValue get quoteChar => $_getN(2);
+  set quoteChar($4.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasQuoteChar() => $_has(2);
   void clearQuoteChar() => clearField(3);
 
-  $2.Int64Value get skipLeadingRows => $_getN(3);
-  set skipLeadingRows($2.Int64Value v) {
+  $4.Int64Value get skipLeadingRows => $_getN(3);
+  set skipLeadingRows($4.Int64Value v) {
     setField(4, v);
   }
 
   $core.bool hasSkipLeadingRows() => $_has(3);
   void clearSkipLeadingRows() => clearField(4);
 
-  $2.BoolValue get allowJaggedRows => $_getN(4);
-  set allowJaggedRows($2.BoolValue v) {
+  $4.BoolValue get allowJaggedRows => $_getN(4);
+  set allowJaggedRows($4.BoolValue v) {
     setField(5, v);
   }
 
@@ -254,17 +261,18 @@ class ImportedDataInfo_TableDefinition extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         ImportedDataInfo_RecordSchema.getDefault,
         ImportedDataInfo_RecordSchema.create)
-    ..a<$2.BoolValue>(10, 'ignoreUnknownValues', $pb.PbFieldType.OM,
-        $2.BoolValue.getDefault, $2.BoolValue.create)
+    ..a<$4.BoolValue>(10, 'ignoreUnknownValues', $pb.PbFieldType.OM,
+        $4.BoolValue.getDefault, $4.BoolValue.create)
     ..hasRequiredFields = false;
 
-  ImportedDataInfo_TableDefinition() : super();
-  ImportedDataInfo_TableDefinition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportedDataInfo_TableDefinition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportedDataInfo_TableDefinition._() : super();
+  factory ImportedDataInfo_TableDefinition() => create();
+  factory ImportedDataInfo_TableDefinition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportedDataInfo_TableDefinition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportedDataInfo_TableDefinition clone() =>
       ImportedDataInfo_TableDefinition()..mergeFromMessage(this);
   ImportedDataInfo_TableDefinition copyWith(
@@ -272,8 +280,9 @@ class ImportedDataInfo_TableDefinition extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportedDataInfo_TableDefinition));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ImportedDataInfo_TableDefinition create() =>
-      ImportedDataInfo_TableDefinition();
+      ImportedDataInfo_TableDefinition._();
   ImportedDataInfo_TableDefinition createEmptyInstance() => create();
   static $pb.PbList<ImportedDataInfo_TableDefinition> createRepeated() =>
       $pb.PbList<ImportedDataInfo_TableDefinition>();
@@ -331,8 +340,8 @@ class ImportedDataInfo_TableDefinition extends $pb.GeneratedMessage {
   $core.bool hasSchema() => $_has(6);
   void clearSchema() => clearField(7);
 
-  $2.BoolValue get ignoreUnknownValues => $_getN(7);
-  set ignoreUnknownValues($2.BoolValue v) {
+  $4.BoolValue get ignoreUnknownValues => $_getN(7);
+  set ignoreUnknownValues($4.BoolValue v) {
     setField(10, v);
   }
 
@@ -358,18 +367,20 @@ class ImportedDataInfo extends $pb.GeneratedMessage {
     ..aOS(10, 'destinationTableDescription')
     ..hasRequiredFields = false;
 
-  ImportedDataInfo() : super();
-  ImportedDataInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportedDataInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportedDataInfo._() : super();
+  factory ImportedDataInfo() => create();
+  factory ImportedDataInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportedDataInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportedDataInfo clone() => ImportedDataInfo()..mergeFromMessage(this);
   ImportedDataInfo copyWith(void Function(ImportedDataInfo) updates) =>
       super.copyWith((message) => updates(message as ImportedDataInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ImportedDataInfo create() => ImportedDataInfo();
+  @$core.pragma('dart2js:noInline')
+  static ImportedDataInfo create() => ImportedDataInfo._();
   ImportedDataInfo createEmptyInstance() => create();
   static $pb.PbList<ImportedDataInfo> createRepeated() =>
       $pb.PbList<ImportedDataInfo>();
@@ -417,26 +428,28 @@ class ImportedDataInfo extends $pb.GeneratedMessage {
 class UpdateTransferRunRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTransferRunRequest',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..a<$0.TransferRun>(1, 'transferRun', $pb.PbFieldType.OM,
-        $0.TransferRun.getDefault, $0.TransferRun.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$1.TransferRun>(1, 'transferRun', $pb.PbFieldType.OM,
+        $1.TransferRun.getDefault, $1.TransferRun.create)
+    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateTransferRunRequest() : super();
-  UpdateTransferRunRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateTransferRunRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateTransferRunRequest._() : super();
+  factory UpdateTransferRunRequest() => create();
+  factory UpdateTransferRunRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateTransferRunRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateTransferRunRequest clone() =>
       UpdateTransferRunRequest()..mergeFromMessage(this);
   UpdateTransferRunRequest copyWith(
           void Function(UpdateTransferRunRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateTransferRunRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateTransferRunRequest create() => UpdateTransferRunRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTransferRunRequest create() => UpdateTransferRunRequest._();
   UpdateTransferRunRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTransferRunRequest> createRepeated() =>
       $pb.PbList<UpdateTransferRunRequest>();
@@ -444,16 +457,16 @@ class UpdateTransferRunRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateTransferRunRequest _defaultInstance;
 
-  $0.TransferRun get transferRun => $_getN(0);
-  set transferRun($0.TransferRun v) {
+  $1.TransferRun get transferRun => $_getN(0);
+  set transferRun($1.TransferRun v) {
     setField(1, v);
   }
 
   $core.bool hasTransferRun() => $_has(0);
   void clearTransferRun() => clearField(1);
 
-  $3.FieldMask get updateMask => $_getN(1);
-  set updateMask($3.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(1);
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -466,17 +479,18 @@ class LogTransferRunMessagesRequest extends $pb.GeneratedMessage {
       'LogTransferRunMessagesRequest',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..aOS(1, 'name')
-    ..pc<$0.TransferMessage>(
-        2, 'transferMessages', $pb.PbFieldType.PM, $0.TransferMessage.create)
+    ..pc<$1.TransferMessage>(
+        2, 'transferMessages', $pb.PbFieldType.PM, $1.TransferMessage.create)
     ..hasRequiredFields = false;
 
-  LogTransferRunMessagesRequest() : super();
-  LogTransferRunMessagesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogTransferRunMessagesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogTransferRunMessagesRequest._() : super();
+  factory LogTransferRunMessagesRequest() => create();
+  factory LogTransferRunMessagesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogTransferRunMessagesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogTransferRunMessagesRequest clone() =>
       LogTransferRunMessagesRequest()..mergeFromMessage(this);
   LogTransferRunMessagesRequest copyWith(
@@ -484,8 +498,9 @@ class LogTransferRunMessagesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LogTransferRunMessagesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static LogTransferRunMessagesRequest create() =>
-      LogTransferRunMessagesRequest();
+      LogTransferRunMessagesRequest._();
   LogTransferRunMessagesRequest createEmptyInstance() => create();
   static $pb.PbList<LogTransferRunMessagesRequest> createRepeated() =>
       $pb.PbList<LogTransferRunMessagesRequest>();
@@ -501,7 +516,7 @@ class LogTransferRunMessagesRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $core.List<$0.TransferMessage> get transferMessages => $_getList(1);
+  $core.List<$1.TransferMessage> get transferMessages => $_getList(1);
 }
 
 class StartBigQueryJobsRequest extends $pb.GeneratedMessage {
@@ -514,20 +529,22 @@ class StartBigQueryJobsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(8, 'maxParallelism', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  StartBigQueryJobsRequest() : super();
-  StartBigQueryJobsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StartBigQueryJobsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StartBigQueryJobsRequest._() : super();
+  factory StartBigQueryJobsRequest() => create();
+  factory StartBigQueryJobsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StartBigQueryJobsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StartBigQueryJobsRequest clone() =>
       StartBigQueryJobsRequest()..mergeFromMessage(this);
   StartBigQueryJobsRequest copyWith(
           void Function(StartBigQueryJobsRequest) updates) =>
       super.copyWith((message) => updates(message as StartBigQueryJobsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static StartBigQueryJobsRequest create() => StartBigQueryJobsRequest();
+  @$core.pragma('dart2js:noInline')
+  static StartBigQueryJobsRequest create() => StartBigQueryJobsRequest._();
   StartBigQueryJobsRequest createEmptyInstance() => create();
   static $pb.PbList<StartBigQueryJobsRequest> createRepeated() =>
       $pb.PbList<StartBigQueryJobsRequest>();
@@ -568,18 +585,20 @@ class FinishRunRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  FinishRunRequest() : super();
-  FinishRunRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FinishRunRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FinishRunRequest._() : super();
+  factory FinishRunRequest() => create();
+  factory FinishRunRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FinishRunRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FinishRunRequest clone() => FinishRunRequest()..mergeFromMessage(this);
   FinishRunRequest copyWith(void Function(FinishRunRequest) updates) =>
       super.copyWith((message) => updates(message as FinishRunRequest));
   $pb.BuilderInfo get info_ => _i;
-  static FinishRunRequest create() => FinishRunRequest();
+  @$core.pragma('dart2js:noInline')
+  static FinishRunRequest create() => FinishRunRequest._();
   FinishRunRequest createEmptyInstance() => create();
   static $pb.PbList<FinishRunRequest> createRepeated() =>
       $pb.PbList<FinishRunRequest>();
@@ -605,13 +624,14 @@ class CreateDataSourceDefinitionRequest extends $pb.GeneratedMessage {
         DataSourceDefinition.getDefault, DataSourceDefinition.create)
     ..hasRequiredFields = false;
 
-  CreateDataSourceDefinitionRequest() : super();
-  CreateDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDataSourceDefinitionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDataSourceDefinitionRequest._() : super();
+  factory CreateDataSourceDefinitionRequest() => create();
+  factory CreateDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDataSourceDefinitionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDataSourceDefinitionRequest clone() =>
       CreateDataSourceDefinitionRequest()..mergeFromMessage(this);
   CreateDataSourceDefinitionRequest copyWith(
@@ -619,8 +639,9 @@ class CreateDataSourceDefinitionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateDataSourceDefinitionRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateDataSourceDefinitionRequest create() =>
-      CreateDataSourceDefinitionRequest();
+      CreateDataSourceDefinitionRequest._();
   CreateDataSourceDefinitionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDataSourceDefinitionRequest> createRepeated() =>
       $pb.PbList<CreateDataSourceDefinitionRequest>();
@@ -651,17 +672,18 @@ class UpdateDataSourceDefinitionRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
     ..a<DataSourceDefinition>(1, 'dataSourceDefinition', $pb.PbFieldType.OM,
         DataSourceDefinition.getDefault, DataSourceDefinition.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateDataSourceDefinitionRequest() : super();
-  UpdateDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateDataSourceDefinitionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateDataSourceDefinitionRequest._() : super();
+  factory UpdateDataSourceDefinitionRequest() => create();
+  factory UpdateDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDataSourceDefinitionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateDataSourceDefinitionRequest clone() =>
       UpdateDataSourceDefinitionRequest()..mergeFromMessage(this);
   UpdateDataSourceDefinitionRequest copyWith(
@@ -669,8 +691,9 @@ class UpdateDataSourceDefinitionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateDataSourceDefinitionRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateDataSourceDefinitionRequest create() =>
-      UpdateDataSourceDefinitionRequest();
+      UpdateDataSourceDefinitionRequest._();
   UpdateDataSourceDefinitionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDataSourceDefinitionRequest> createRepeated() =>
       $pb.PbList<UpdateDataSourceDefinitionRequest>();
@@ -686,8 +709,8 @@ class UpdateDataSourceDefinitionRequest extends $pb.GeneratedMessage {
   $core.bool hasDataSourceDefinition() => $_has(0);
   void clearDataSourceDefinition() => clearField(1);
 
-  $3.FieldMask get updateMask => $_getN(1);
-  set updateMask($3.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(1);
+  set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
@@ -702,13 +725,14 @@ class DeleteDataSourceDefinitionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteDataSourceDefinitionRequest() : super();
-  DeleteDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteDataSourceDefinitionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteDataSourceDefinitionRequest._() : super();
+  factory DeleteDataSourceDefinitionRequest() => create();
+  factory DeleteDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteDataSourceDefinitionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteDataSourceDefinitionRequest clone() =>
       DeleteDataSourceDefinitionRequest()..mergeFromMessage(this);
   DeleteDataSourceDefinitionRequest copyWith(
@@ -716,8 +740,9 @@ class DeleteDataSourceDefinitionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteDataSourceDefinitionRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteDataSourceDefinitionRequest create() =>
-      DeleteDataSourceDefinitionRequest();
+      DeleteDataSourceDefinitionRequest._();
   DeleteDataSourceDefinitionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDataSourceDefinitionRequest> createRepeated() =>
       $pb.PbList<DeleteDataSourceDefinitionRequest>();
@@ -741,13 +766,14 @@ class GetDataSourceDefinitionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetDataSourceDefinitionRequest() : super();
-  GetDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDataSourceDefinitionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDataSourceDefinitionRequest._() : super();
+  factory GetDataSourceDefinitionRequest() => create();
+  factory GetDataSourceDefinitionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDataSourceDefinitionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDataSourceDefinitionRequest clone() =>
       GetDataSourceDefinitionRequest()..mergeFromMessage(this);
   GetDataSourceDefinitionRequest copyWith(
@@ -755,8 +781,9 @@ class GetDataSourceDefinitionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetDataSourceDefinitionRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetDataSourceDefinitionRequest create() =>
-      GetDataSourceDefinitionRequest();
+      GetDataSourceDefinitionRequest._();
   GetDataSourceDefinitionRequest createEmptyInstance() => create();
   static $pb.PbList<GetDataSourceDefinitionRequest> createRepeated() =>
       $pb.PbList<GetDataSourceDefinitionRequest>();
@@ -782,13 +809,14 @@ class ListDataSourceDefinitionsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListDataSourceDefinitionsRequest() : super();
-  ListDataSourceDefinitionsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDataSourceDefinitionsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDataSourceDefinitionsRequest._() : super();
+  factory ListDataSourceDefinitionsRequest() => create();
+  factory ListDataSourceDefinitionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDataSourceDefinitionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDataSourceDefinitionsRequest clone() =>
       ListDataSourceDefinitionsRequest()..mergeFromMessage(this);
   ListDataSourceDefinitionsRequest copyWith(
@@ -796,8 +824,9 @@ class ListDataSourceDefinitionsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListDataSourceDefinitionsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListDataSourceDefinitionsRequest create() =>
-      ListDataSourceDefinitionsRequest();
+      ListDataSourceDefinitionsRequest._();
   ListDataSourceDefinitionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDataSourceDefinitionsRequest> createRepeated() =>
       $pb.PbList<ListDataSourceDefinitionsRequest>();
@@ -839,13 +868,14 @@ class ListDataSourceDefinitionsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListDataSourceDefinitionsResponse() : super();
-  ListDataSourceDefinitionsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDataSourceDefinitionsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDataSourceDefinitionsResponse._() : super();
+  factory ListDataSourceDefinitionsResponse() => create();
+  factory ListDataSourceDefinitionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDataSourceDefinitionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDataSourceDefinitionsResponse clone() =>
       ListDataSourceDefinitionsResponse()..mergeFromMessage(this);
   ListDataSourceDefinitionsResponse copyWith(
@@ -853,8 +883,9 @@ class ListDataSourceDefinitionsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListDataSourceDefinitionsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListDataSourceDefinitionsResponse create() =>
-      ListDataSourceDefinitionsResponse();
+      ListDataSourceDefinitionsResponse._();
   ListDataSourceDefinitionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDataSourceDefinitionsResponse> createRepeated() =>
       $pb.PbList<ListDataSourceDefinitionsResponse>();
@@ -876,32 +907,34 @@ class ListDataSourceDefinitionsResponse extends $pb.GeneratedMessage {
 class DataSourceDefinition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DataSourceDefinition',
       package: const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..a<$4.DataSource>(1, 'dataSource', $pb.PbFieldType.OM,
-        $4.DataSource.getDefault, $4.DataSource.create)
+    ..a<$0.DataSource>(1, 'dataSource', $pb.PbFieldType.OM,
+        $0.DataSource.getDefault, $0.DataSource.create)
     ..aOS(2, 'serviceAccount')
     ..aOB(5, 'disabled')
     ..aOS(12, 'transferConfigPubsubTopic')
     ..aOS(13, 'transferRunPubsubTopic')
-    ..a<$5.Duration>(16, 'runTimeOffset', $pb.PbFieldType.OM,
-        $5.Duration.getDefault, $5.Duration.create)
+    ..a<$6.Duration>(16, 'runTimeOffset', $pb.PbFieldType.OM,
+        $6.Duration.getDefault, $6.Duration.create)
     ..aOS(21, 'name')
     ..aOS(22, 'supportEmail')
     ..pPS(23, 'supportedLocationIds')
     ..hasRequiredFields = false;
 
-  DataSourceDefinition() : super();
-  DataSourceDefinition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DataSourceDefinition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DataSourceDefinition._() : super();
+  factory DataSourceDefinition() => create();
+  factory DataSourceDefinition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataSourceDefinition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DataSourceDefinition clone() =>
       DataSourceDefinition()..mergeFromMessage(this);
   DataSourceDefinition copyWith(void Function(DataSourceDefinition) updates) =>
       super.copyWith((message) => updates(message as DataSourceDefinition));
   $pb.BuilderInfo get info_ => _i;
-  static DataSourceDefinition create() => DataSourceDefinition();
+  @$core.pragma('dart2js:noInline')
+  static DataSourceDefinition create() => DataSourceDefinition._();
   DataSourceDefinition createEmptyInstance() => create();
   static $pb.PbList<DataSourceDefinition> createRepeated() =>
       $pb.PbList<DataSourceDefinition>();
@@ -909,8 +942,8 @@ class DataSourceDefinition extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static DataSourceDefinition _defaultInstance;
 
-  $4.DataSource get dataSource => $_getN(0);
-  set dataSource($4.DataSource v) {
+  $0.DataSource get dataSource => $_getN(0);
+  set dataSource($0.DataSource v) {
     setField(1, v);
   }
 
@@ -949,8 +982,8 @@ class DataSourceDefinition extends $pb.GeneratedMessage {
   $core.bool hasTransferRunPubsubTopic() => $_has(4);
   void clearTransferRunPubsubTopic() => clearField(13);
 
-  $5.Duration get runTimeOffset => $_getN(5);
-  set runTimeOffset($5.Duration v) {
+  $6.Duration get runTimeOffset => $_getN(5);
+  set runTimeOffset($6.Duration v) {
     setField(16, v);
   }
 

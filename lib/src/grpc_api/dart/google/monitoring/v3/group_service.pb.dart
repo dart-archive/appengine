@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/group_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'group.pb.dart' as $0;
-import 'common.pb.dart' as $2;
-import '../../api/monitored_resource.pb.dart' as $3;
+import 'group.pb.dart' as $1;
+import 'common.pb.dart' as $3;
+import '../../api/monitored_resource.pb.dart' as $4;
 
 enum ListGroupsRequest_Filter {
   childrenOfGroup,
@@ -30,27 +31,29 @@ class ListGroupsRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupsRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
+    ..oo(0, [2, 3, 4])
     ..aOS(2, 'childrenOfGroup')
     ..aOS(3, 'ancestorsOfGroup')
     ..aOS(4, 'descendantsOfGroup')
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
     ..aOS(7, 'name')
-    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
-  ListGroupsRequest() : super();
-  ListGroupsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGroupsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGroupsRequest._() : super();
+  factory ListGroupsRequest() => create();
+  factory ListGroupsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGroupsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGroupsRequest clone() => ListGroupsRequest()..mergeFromMessage(this);
   ListGroupsRequest copyWith(void Function(ListGroupsRequest) updates) =>
       super.copyWith((message) => updates(message as ListGroupsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListGroupsRequest create() => ListGroupsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupsRequest create() => ListGroupsRequest._();
   ListGroupsRequest createEmptyInstance() => create();
   static $pb.PbList<ListGroupsRequest> createRepeated() =>
       $pb.PbList<ListGroupsRequest>();
@@ -114,22 +117,24 @@ class ListGroupsRequest extends $pb.GeneratedMessage {
 class ListGroupsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupsResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$0.Group>(1, 'group', $pb.PbFieldType.PM, $0.Group.create)
+    ..pc<$1.Group>(1, 'group', $pb.PbFieldType.PM, $1.Group.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListGroupsResponse() : super();
-  ListGroupsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGroupsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGroupsResponse._() : super();
+  factory ListGroupsResponse() => create();
+  factory ListGroupsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGroupsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGroupsResponse clone() => ListGroupsResponse()..mergeFromMessage(this);
   ListGroupsResponse copyWith(void Function(ListGroupsResponse) updates) =>
       super.copyWith((message) => updates(message as ListGroupsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListGroupsResponse create() => ListGroupsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupsResponse create() => ListGroupsResponse._();
   ListGroupsResponse createEmptyInstance() => create();
   static $pb.PbList<ListGroupsResponse> createRepeated() =>
       $pb.PbList<ListGroupsResponse>();
@@ -137,7 +142,7 @@ class ListGroupsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListGroupsResponse _defaultInstance;
 
-  $core.List<$0.Group> get group => $_getList(0);
+  $core.List<$1.Group> get group => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -154,18 +159,20 @@ class GetGroupRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
-  GetGroupRequest() : super();
-  GetGroupRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetGroupRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetGroupRequest._() : super();
+  factory GetGroupRequest() => create();
+  factory GetGroupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetGroupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetGroupRequest clone() => GetGroupRequest()..mergeFromMessage(this);
   GetGroupRequest copyWith(void Function(GetGroupRequest) updates) =>
       super.copyWith((message) => updates(message as GetGroupRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetGroupRequest create() => GetGroupRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetGroupRequest create() => GetGroupRequest._();
   GetGroupRequest createEmptyInstance() => create();
   static $pb.PbList<GetGroupRequest> createRepeated() =>
       $pb.PbList<GetGroupRequest>();
@@ -185,24 +192,26 @@ class GetGroupRequest extends $pb.GeneratedMessage {
 class CreateGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateGroupRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$0.Group>(
-        2, 'group', $pb.PbFieldType.OM, $0.Group.getDefault, $0.Group.create)
+    ..a<$1.Group>(
+        2, 'group', $pb.PbFieldType.OM, $1.Group.getDefault, $1.Group.create)
     ..aOB(3, 'validateOnly')
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
-  CreateGroupRequest() : super();
-  CreateGroupRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateGroupRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateGroupRequest._() : super();
+  factory CreateGroupRequest() => create();
+  factory CreateGroupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateGroupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateGroupRequest clone() => CreateGroupRequest()..mergeFromMessage(this);
   CreateGroupRequest copyWith(void Function(CreateGroupRequest) updates) =>
       super.copyWith((message) => updates(message as CreateGroupRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateGroupRequest create() => CreateGroupRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateGroupRequest create() => CreateGroupRequest._();
   CreateGroupRequest createEmptyInstance() => create();
   static $pb.PbList<CreateGroupRequest> createRepeated() =>
       $pb.PbList<CreateGroupRequest>();
@@ -210,8 +219,8 @@ class CreateGroupRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateGroupRequest _defaultInstance;
 
-  $0.Group get group => $_getN(0);
-  set group($0.Group v) {
+  $1.Group get group => $_getN(0);
+  set group($1.Group v) {
     setField(2, v);
   }
 
@@ -238,23 +247,25 @@ class CreateGroupRequest extends $pb.GeneratedMessage {
 class UpdateGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateGroupRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$0.Group>(
-        2, 'group', $pb.PbFieldType.OM, $0.Group.getDefault, $0.Group.create)
+    ..a<$1.Group>(
+        2, 'group', $pb.PbFieldType.OM, $1.Group.getDefault, $1.Group.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
-  UpdateGroupRequest() : super();
-  UpdateGroupRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateGroupRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateGroupRequest._() : super();
+  factory UpdateGroupRequest() => create();
+  factory UpdateGroupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateGroupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateGroupRequest clone() => UpdateGroupRequest()..mergeFromMessage(this);
   UpdateGroupRequest copyWith(void Function(UpdateGroupRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateGroupRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateGroupRequest create() => UpdateGroupRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateGroupRequest create() => UpdateGroupRequest._();
   UpdateGroupRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateGroupRequest> createRepeated() =>
       $pb.PbList<UpdateGroupRequest>();
@@ -262,8 +273,8 @@ class UpdateGroupRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateGroupRequest _defaultInstance;
 
-  $0.Group get group => $_getN(0);
-  set group($0.Group v) {
+  $1.Group get group => $_getN(0);
+  set group($1.Group v) {
     setField(2, v);
   }
 
@@ -285,18 +296,20 @@ class DeleteGroupRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
-  DeleteGroupRequest() : super();
-  DeleteGroupRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteGroupRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteGroupRequest._() : super();
+  factory DeleteGroupRequest() => create();
+  factory DeleteGroupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteGroupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteGroupRequest clone() => DeleteGroupRequest()..mergeFromMessage(this);
   DeleteGroupRequest copyWith(void Function(DeleteGroupRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteGroupRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteGroupRequest create() => DeleteGroupRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteGroupRequest create() => DeleteGroupRequest._();
   DeleteGroupRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteGroupRequest> createRepeated() =>
       $pb.PbList<DeleteGroupRequest>();
@@ -319,25 +332,27 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'filter')
-    ..a<$2.TimeInterval>(6, 'interval', $pb.PbFieldType.OM,
-        $2.TimeInterval.getDefault, $2.TimeInterval.create)
+    ..a<$3.TimeInterval>(6, 'interval', $pb.PbFieldType.OM,
+        $3.TimeInterval.getDefault, $3.TimeInterval.create)
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
-  ListGroupMembersRequest() : super();
-  ListGroupMembersRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGroupMembersRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGroupMembersRequest._() : super();
+  factory ListGroupMembersRequest() => create();
+  factory ListGroupMembersRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGroupMembersRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGroupMembersRequest clone() =>
       ListGroupMembersRequest()..mergeFromMessage(this);
   ListGroupMembersRequest copyWith(
           void Function(ListGroupMembersRequest) updates) =>
       super.copyWith((message) => updates(message as ListGroupMembersRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListGroupMembersRequest create() => ListGroupMembersRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupMembersRequest create() => ListGroupMembersRequest._();
   ListGroupMembersRequest createEmptyInstance() => create();
   static $pb.PbList<ListGroupMembersRequest> createRepeated() =>
       $pb.PbList<ListGroupMembersRequest>();
@@ -369,8 +384,8 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(2);
   void clearFilter() => clearField(5);
 
-  $2.TimeInterval get interval => $_getN(3);
-  set interval($2.TimeInterval v) {
+  $3.TimeInterval get interval => $_getN(3);
+  set interval($3.TimeInterval v) {
     setField(6, v);
   }
 
@@ -389,26 +404,28 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
 class ListGroupMembersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupMembersResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$3.MonitoredResource>(
-        1, 'members', $pb.PbFieldType.PM, $3.MonitoredResource.create)
+    ..pc<$4.MonitoredResource>(
+        1, 'members', $pb.PbFieldType.PM, $4.MonitoredResource.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListGroupMembersResponse() : super();
-  ListGroupMembersResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGroupMembersResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGroupMembersResponse._() : super();
+  factory ListGroupMembersResponse() => create();
+  factory ListGroupMembersResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGroupMembersResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGroupMembersResponse clone() =>
       ListGroupMembersResponse()..mergeFromMessage(this);
   ListGroupMembersResponse copyWith(
           void Function(ListGroupMembersResponse) updates) =>
       super.copyWith((message) => updates(message as ListGroupMembersResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListGroupMembersResponse create() => ListGroupMembersResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupMembersResponse create() => ListGroupMembersResponse._();
   ListGroupMembersResponse createEmptyInstance() => create();
   static $pb.PbList<ListGroupMembersResponse> createRepeated() =>
       $pb.PbList<ListGroupMembersResponse>();
@@ -416,7 +433,7 @@ class ListGroupMembersResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListGroupMembersResponse _defaultInstance;
 
-  $core.List<$3.MonitoredResource> get members => $_getList(0);
+  $core.List<$4.MonitoredResource> get members => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {

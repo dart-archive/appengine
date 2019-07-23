@@ -1,18 +1,19 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/conversion_adjustment_upload_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../rpc/status.pb.dart' as $0;
-import '../../../../protobuf/wrappers.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $1;
+import '../../../../protobuf/wrappers.pb.dart' as $2;
 
-import '../enums/conversion_adjustment_type.pbenum.dart' as $2;
+import '../enums/conversion_adjustment_type.pbenum.dart' as $3;
 
 class UploadConversionAdjustmentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -25,13 +26,14 @@ class UploadConversionAdjustmentsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  UploadConversionAdjustmentsRequest() : super();
-  UploadConversionAdjustmentsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UploadConversionAdjustmentsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UploadConversionAdjustmentsRequest._() : super();
+  factory UploadConversionAdjustmentsRequest() => create();
+  factory UploadConversionAdjustmentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UploadConversionAdjustmentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UploadConversionAdjustmentsRequest clone() =>
       UploadConversionAdjustmentsRequest()..mergeFromMessage(this);
   UploadConversionAdjustmentsRequest copyWith(
@@ -39,8 +41,9 @@ class UploadConversionAdjustmentsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UploadConversionAdjustmentsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UploadConversionAdjustmentsRequest create() =>
-      UploadConversionAdjustmentsRequest();
+      UploadConversionAdjustmentsRequest._();
   UploadConversionAdjustmentsRequest createEmptyInstance() => create();
   static $pb.PbList<UploadConversionAdjustmentsRequest> createRepeated() =>
       $pb.PbList<UploadConversionAdjustmentsRequest>();
@@ -79,19 +82,21 @@ class UploadConversionAdjustmentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UploadConversionAdjustmentsResponse',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.Status>(1, 'partialFailureError', $pb.PbFieldType.OM,
-        $0.Status.getDefault, $0.Status.create)
+    ..a<$1.Status>(1, 'partialFailureError', $pb.PbFieldType.OM,
+        $1.Status.getDefault, $1.Status.create)
     ..pc<ConversionAdjustmentResult>(
         2, 'results', $pb.PbFieldType.PM, ConversionAdjustmentResult.create)
     ..hasRequiredFields = false;
 
-  UploadConversionAdjustmentsResponse() : super();
-  UploadConversionAdjustmentsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UploadConversionAdjustmentsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UploadConversionAdjustmentsResponse._() : super();
+  factory UploadConversionAdjustmentsResponse() => create();
+  factory UploadConversionAdjustmentsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UploadConversionAdjustmentsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UploadConversionAdjustmentsResponse clone() =>
       UploadConversionAdjustmentsResponse()..mergeFromMessage(this);
   UploadConversionAdjustmentsResponse copyWith(
@@ -99,8 +104,9 @@ class UploadConversionAdjustmentsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UploadConversionAdjustmentsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UploadConversionAdjustmentsResponse create() =>
-      UploadConversionAdjustmentsResponse();
+      UploadConversionAdjustmentsResponse._();
   UploadConversionAdjustmentsResponse createEmptyInstance() => create();
   static $pb.PbList<UploadConversionAdjustmentsResponse> createRepeated() =>
       $pb.PbList<UploadConversionAdjustmentsResponse>();
@@ -108,8 +114,8 @@ class UploadConversionAdjustmentsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UploadConversionAdjustmentsResponse _defaultInstance;
 
-  $0.Status get partialFailureError => $_getN(0);
-  set partialFailureError($0.Status v) {
+  $1.Status get partialFailureError => $_getN(0);
+  set partialFailureError($1.Status v) {
     setField(1, v);
   }
 
@@ -134,39 +140,41 @@ class ConversionAdjustment extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConversionAdjustment',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
+    ..oo(0, [1, 2])
     ..a<GclidDateTimePair>(1, 'gclidDateTimePair', $pb.PbFieldType.OM,
         GclidDateTimePair.getDefault, GclidDateTimePair.create)
-    ..a<$1.StringValue>(2, 'orderId', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.StringValue>(3, 'conversionAction', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.StringValue>(4, 'adjustmentDateTime', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..e<$2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType>(
+    ..a<$2.StringValue>(2, 'orderId', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.StringValue>(3, 'conversionAction', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.StringValue>(4, 'adjustmentDateTime', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..e<$3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType>(
         5,
         'adjustmentType',
         $pb.PbFieldType.OE,
-        $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.UNSPECIFIED,
-        $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.valueOf,
-        $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.values)
+        $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.UNSPECIFIED,
+        $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.valueOf,
+        $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.values)
     ..a<RestatementValue>(6, 'restatementValue', $pb.PbFieldType.OM,
         RestatementValue.getDefault, RestatementValue.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  ConversionAdjustment() : super();
-  ConversionAdjustment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionAdjustment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionAdjustment._() : super();
+  factory ConversionAdjustment() => create();
+  factory ConversionAdjustment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionAdjustment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionAdjustment clone() =>
       ConversionAdjustment()..mergeFromMessage(this);
   ConversionAdjustment copyWith(void Function(ConversionAdjustment) updates) =>
       super.copyWith((message) => updates(message as ConversionAdjustment));
   $pb.BuilderInfo get info_ => _i;
-  static ConversionAdjustment create() => ConversionAdjustment();
+  @$core.pragma('dart2js:noInline')
+  static ConversionAdjustment create() => ConversionAdjustment._();
   ConversionAdjustment createEmptyInstance() => create();
   static $pb.PbList<ConversionAdjustment> createRepeated() =>
       $pb.PbList<ConversionAdjustment>();
@@ -186,34 +194,34 @@ class ConversionAdjustment extends $pb.GeneratedMessage {
   $core.bool hasGclidDateTimePair() => $_has(0);
   void clearGclidDateTimePair() => clearField(1);
 
-  $1.StringValue get orderId => $_getN(1);
-  set orderId($1.StringValue v) {
+  $2.StringValue get orderId => $_getN(1);
+  set orderId($2.StringValue v) {
     setField(2, v);
   }
 
   $core.bool hasOrderId() => $_has(1);
   void clearOrderId() => clearField(2);
 
-  $1.StringValue get conversionAction => $_getN(2);
-  set conversionAction($1.StringValue v) {
+  $2.StringValue get conversionAction => $_getN(2);
+  set conversionAction($2.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasConversionAction() => $_has(2);
   void clearConversionAction() => clearField(3);
 
-  $1.StringValue get adjustmentDateTime => $_getN(3);
-  set adjustmentDateTime($1.StringValue v) {
+  $2.StringValue get adjustmentDateTime => $_getN(3);
+  set adjustmentDateTime($2.StringValue v) {
     setField(4, v);
   }
 
   $core.bool hasAdjustmentDateTime() => $_has(3);
   void clearAdjustmentDateTime() => clearField(4);
 
-  $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType get adjustmentType =>
+  $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType get adjustmentType =>
       $_getN(4);
   set adjustmentType(
-      $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType v) {
+      $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType v) {
     setField(5, v);
   }
 
@@ -232,24 +240,26 @@ class ConversionAdjustment extends $pb.GeneratedMessage {
 class RestatementValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RestatementValue',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.DoubleValue>(1, 'adjustedValue', $pb.PbFieldType.OM,
-        $1.DoubleValue.getDefault, $1.DoubleValue.create)
-    ..a<$1.StringValue>(2, 'currencyCode', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$2.DoubleValue>(1, 'adjustedValue', $pb.PbFieldType.OM,
+        $2.DoubleValue.getDefault, $2.DoubleValue.create)
+    ..a<$2.StringValue>(2, 'currencyCode', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
     ..hasRequiredFields = false;
 
-  RestatementValue() : super();
-  RestatementValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RestatementValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RestatementValue._() : super();
+  factory RestatementValue() => create();
+  factory RestatementValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RestatementValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RestatementValue clone() => RestatementValue()..mergeFromMessage(this);
   RestatementValue copyWith(void Function(RestatementValue) updates) =>
       super.copyWith((message) => updates(message as RestatementValue));
   $pb.BuilderInfo get info_ => _i;
-  static RestatementValue create() => RestatementValue();
+  @$core.pragma('dart2js:noInline')
+  static RestatementValue create() => RestatementValue._();
   RestatementValue createEmptyInstance() => create();
   static $pb.PbList<RestatementValue> createRepeated() =>
       $pb.PbList<RestatementValue>();
@@ -257,16 +267,16 @@ class RestatementValue extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RestatementValue _defaultInstance;
 
-  $1.DoubleValue get adjustedValue => $_getN(0);
-  set adjustedValue($1.DoubleValue v) {
+  $2.DoubleValue get adjustedValue => $_getN(0);
+  set adjustedValue($2.DoubleValue v) {
     setField(1, v);
   }
 
   $core.bool hasAdjustedValue() => $_has(0);
   void clearAdjustedValue() => clearField(1);
 
-  $1.StringValue get currencyCode => $_getN(1);
-  set currencyCode($1.StringValue v) {
+  $2.StringValue get currencyCode => $_getN(1);
+  set currencyCode($2.StringValue v) {
     setField(2, v);
   }
 
@@ -277,24 +287,26 @@ class RestatementValue extends $pb.GeneratedMessage {
 class GclidDateTimePair extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GclidDateTimePair',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.StringValue>(1, 'gclid', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.StringValue>(2, 'conversionDateTime', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$2.StringValue>(1, 'gclid', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.StringValue>(2, 'conversionDateTime', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
     ..hasRequiredFields = false;
 
-  GclidDateTimePair() : super();
-  GclidDateTimePair.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GclidDateTimePair.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GclidDateTimePair._() : super();
+  factory GclidDateTimePair() => create();
+  factory GclidDateTimePair.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GclidDateTimePair.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GclidDateTimePair clone() => GclidDateTimePair()..mergeFromMessage(this);
   GclidDateTimePair copyWith(void Function(GclidDateTimePair) updates) =>
       super.copyWith((message) => updates(message as GclidDateTimePair));
   $pb.BuilderInfo get info_ => _i;
-  static GclidDateTimePair create() => GclidDateTimePair();
+  @$core.pragma('dart2js:noInline')
+  static GclidDateTimePair create() => GclidDateTimePair._();
   GclidDateTimePair createEmptyInstance() => create();
   static $pb.PbList<GclidDateTimePair> createRepeated() =>
       $pb.PbList<GclidDateTimePair>();
@@ -302,16 +314,16 @@ class GclidDateTimePair extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static GclidDateTimePair _defaultInstance;
 
-  $1.StringValue get gclid => $_getN(0);
-  set gclid($1.StringValue v) {
+  $2.StringValue get gclid => $_getN(0);
+  set gclid($2.StringValue v) {
     setField(1, v);
   }
 
   $core.bool hasGclid() => $_has(0);
   void clearGclid() => clearField(1);
 
-  $1.StringValue get conversionDateTime => $_getN(1);
-  set conversionDateTime($1.StringValue v) {
+  $2.StringValue get conversionDateTime => $_getN(1);
+  set conversionDateTime($2.StringValue v) {
     setField(2, v);
   }
 
@@ -336,31 +348,32 @@ class ConversionAdjustmentResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ConversionAdjustmentResult',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
+    ..oo(0, [1, 2])
     ..a<GclidDateTimePair>(1, 'gclidDateTimePair', $pb.PbFieldType.OM,
         GclidDateTimePair.getDefault, GclidDateTimePair.create)
-    ..a<$1.StringValue>(2, 'orderId', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.StringValue>(3, 'conversionAction', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..a<$1.StringValue>(4, 'adjustmentDateTime', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..e<$2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType>(
+    ..a<$2.StringValue>(2, 'orderId', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.StringValue>(3, 'conversionAction', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..a<$2.StringValue>(4, 'adjustmentDateTime', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..e<$3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType>(
         5,
         'adjustmentType',
         $pb.PbFieldType.OE,
-        $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.UNSPECIFIED,
-        $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.valueOf,
-        $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.values)
-    ..oo(0, [1, 2])
+        $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.UNSPECIFIED,
+        $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.valueOf,
+        $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType.values)
     ..hasRequiredFields = false;
 
-  ConversionAdjustmentResult() : super();
-  ConversionAdjustmentResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionAdjustmentResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionAdjustmentResult._() : super();
+  factory ConversionAdjustmentResult() => create();
+  factory ConversionAdjustmentResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionAdjustmentResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionAdjustmentResult clone() =>
       ConversionAdjustmentResult()..mergeFromMessage(this);
   ConversionAdjustmentResult copyWith(
@@ -368,7 +381,8 @@ class ConversionAdjustmentResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ConversionAdjustmentResult));
   $pb.BuilderInfo get info_ => _i;
-  static ConversionAdjustmentResult create() => ConversionAdjustmentResult();
+  @$core.pragma('dart2js:noInline')
+  static ConversionAdjustmentResult create() => ConversionAdjustmentResult._();
   ConversionAdjustmentResult createEmptyInstance() => create();
   static $pb.PbList<ConversionAdjustmentResult> createRepeated() =>
       $pb.PbList<ConversionAdjustmentResult>();
@@ -388,34 +402,34 @@ class ConversionAdjustmentResult extends $pb.GeneratedMessage {
   $core.bool hasGclidDateTimePair() => $_has(0);
   void clearGclidDateTimePair() => clearField(1);
 
-  $1.StringValue get orderId => $_getN(1);
-  set orderId($1.StringValue v) {
+  $2.StringValue get orderId => $_getN(1);
+  set orderId($2.StringValue v) {
     setField(2, v);
   }
 
   $core.bool hasOrderId() => $_has(1);
   void clearOrderId() => clearField(2);
 
-  $1.StringValue get conversionAction => $_getN(2);
-  set conversionAction($1.StringValue v) {
+  $2.StringValue get conversionAction => $_getN(2);
+  set conversionAction($2.StringValue v) {
     setField(3, v);
   }
 
   $core.bool hasConversionAction() => $_has(2);
   void clearConversionAction() => clearField(3);
 
-  $1.StringValue get adjustmentDateTime => $_getN(3);
-  set adjustmentDateTime($1.StringValue v) {
+  $2.StringValue get adjustmentDateTime => $_getN(3);
+  set adjustmentDateTime($2.StringValue v) {
     setField(4, v);
   }
 
   $core.bool hasAdjustmentDateTime() => $_has(3);
   void clearAdjustmentDateTime() => clearField(4);
 
-  $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType get adjustmentType =>
+  $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType get adjustmentType =>
       $_getN(4);
   set adjustmentType(
-      $2.ConversionAdjustmentTypeEnum_ConversionAdjustmentType v) {
+      $3.ConversionAdjustmentTypeEnum_ConversionAdjustmentType v) {
     setField(5, v);
   }
 
