@@ -41,9 +41,9 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
 /// You can provide a [port] if you want to run the HTTP server on a different
 /// port than the `8080` default.
 ///
-/// The optional argument [shared] argument specifies whether additional
-/// AppEngine servers can bind to the same `port`. If `shared` is `true` and
-/// more AppEngine servers from this isolate or other isolates are bound to the
+/// The optional [shared] argument specifies whether additional AppEngine
+/// servers can bind to the same `port`. If `shared` is `true` and more
+/// AppEngine servers from this isolate or other isolates are bound to the
 /// port, then the incoming connections will be distributed among all the bound
 /// servers. Connections can be distributed over multiple isolates this way.
 ///
