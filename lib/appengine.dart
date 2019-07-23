@@ -48,7 +48,9 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
 /// servers. Connections can be distributed over multiple isolates this way.
 ///
 /// The optional [onAcceptingConnections] callback, if provided, will be
-/// notified when the server is accepting connections on [port].
+/// notified when the server is accepting connections on [port]. The `address`
+/// and `port` arguments that are passed to the callback specify the address
+/// and port that the server is listening on.
 ///
 /// The returned `Future` will complete when the HTTP server has been shutdown
 /// and is no longer serving requests.
@@ -57,7 +59,7 @@ Future runAppEngine(
   Function onError,
   int port = 8080,
   bool shared = false,
-  void onAcceptingConnections(),
+  void onAcceptingConnections(InternetAddress address, int port),
 }) {
   var errorHandler;
   if (onError != null) {

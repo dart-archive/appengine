@@ -38,7 +38,7 @@ class AppEngineHttpServer {
 
   void run(
     applicationHandler(HttpRequest request, ClientContext context), {
-    void onAcceptingConnections(),
+    void onAcceptingConnections(InternetAddress address, int port),
   }) {
     final serviceHandlers = {
       '/_ah/start': _start,
@@ -50,7 +50,7 @@ class AppEngineHttpServer {
         .then((HttpServer server) {
       _httpServer = server;
       if (onAcceptingConnections != null) {
-        onAcceptingConnections();
+        onAcceptingConnections(server.address, server.port);
       }
 
       server.listen((HttpRequest request) {
