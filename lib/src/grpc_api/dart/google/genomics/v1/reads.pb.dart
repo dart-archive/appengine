@@ -1,19 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/reads.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'readgroupset.pb.dart' as $2;
-import '../../protobuf/field_mask.pb.dart' as $3;
-import 'range.pb.dart' as $4;
-import 'readalignment.pb.dart' as $5;
+import 'readgroupset.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $4;
+import 'range.pb.dart' as $5;
+import 'readalignment.pb.dart' as $6;
 
 import 'reads.pbenum.dart';
 
@@ -29,13 +30,14 @@ class SearchReadGroupSetsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchReadGroupSetsRequest() : super();
-  SearchReadGroupSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReadGroupSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReadGroupSetsRequest._() : super();
+  factory SearchReadGroupSetsRequest() => create();
+  factory SearchReadGroupSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReadGroupSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReadGroupSetsRequest clone() =>
       SearchReadGroupSetsRequest()..mergeFromMessage(this);
   SearchReadGroupSetsRequest copyWith(
@@ -43,7 +45,8 @@ class SearchReadGroupSetsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchReadGroupSetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReadGroupSetsRequest create() => SearchReadGroupSetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchReadGroupSetsRequest create() => SearchReadGroupSetsRequest._();
   SearchReadGroupSetsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchReadGroupSetsRequest> createRepeated() =>
       $pb.PbList<SearchReadGroupSetsRequest>();
@@ -82,18 +85,19 @@ class SearchReadGroupSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchReadGroupSetsResponse',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<$2.ReadGroupSet>(
-        1, 'readGroupSets', $pb.PbFieldType.PM, $2.ReadGroupSet.create)
+    ..pc<$3.ReadGroupSet>(
+        1, 'readGroupSets', $pb.PbFieldType.PM, $3.ReadGroupSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchReadGroupSetsResponse() : super();
-  SearchReadGroupSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReadGroupSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReadGroupSetsResponse._() : super();
+  factory SearchReadGroupSetsResponse() => create();
+  factory SearchReadGroupSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReadGroupSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReadGroupSetsResponse clone() =>
       SearchReadGroupSetsResponse()..mergeFromMessage(this);
   SearchReadGroupSetsResponse copyWith(
@@ -101,7 +105,9 @@ class SearchReadGroupSetsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchReadGroupSetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReadGroupSetsResponse create() => SearchReadGroupSetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchReadGroupSetsResponse create() =>
+      SearchReadGroupSetsResponse._();
   SearchReadGroupSetsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchReadGroupSetsResponse> createRepeated() =>
       $pb.PbList<SearchReadGroupSetsResponse>();
@@ -109,7 +115,7 @@ class SearchReadGroupSetsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchReadGroupSetsResponse _defaultInstance;
 
-  $core.List<$2.ReadGroupSet> get readGroupSets => $_getList(0);
+  $core.List<$3.ReadGroupSet> get readGroupSets => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -137,13 +143,14 @@ class ImportReadGroupSetsRequest extends $pb.GeneratedMessage {
         ImportReadGroupSetsRequest_PartitionStrategy.values)
     ..hasRequiredFields = false;
 
-  ImportReadGroupSetsRequest() : super();
-  ImportReadGroupSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportReadGroupSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportReadGroupSetsRequest._() : super();
+  factory ImportReadGroupSetsRequest() => create();
+  factory ImportReadGroupSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportReadGroupSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportReadGroupSetsRequest clone() =>
       ImportReadGroupSetsRequest()..mergeFromMessage(this);
   ImportReadGroupSetsRequest copyWith(
@@ -151,7 +158,8 @@ class ImportReadGroupSetsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportReadGroupSetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ImportReadGroupSetsRequest create() => ImportReadGroupSetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ImportReadGroupSetsRequest create() => ImportReadGroupSetsRequest._();
   ImportReadGroupSetsRequest createEmptyInstance() => create();
   static $pb.PbList<ImportReadGroupSetsRequest> createRepeated() =>
       $pb.PbList<ImportReadGroupSetsRequest>();
@@ -194,13 +202,14 @@ class ImportReadGroupSetsResponse extends $pb.GeneratedMessage {
     ..pPS(1, 'readGroupSetIds')
     ..hasRequiredFields = false;
 
-  ImportReadGroupSetsResponse() : super();
-  ImportReadGroupSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportReadGroupSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportReadGroupSetsResponse._() : super();
+  factory ImportReadGroupSetsResponse() => create();
+  factory ImportReadGroupSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportReadGroupSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportReadGroupSetsResponse clone() =>
       ImportReadGroupSetsResponse()..mergeFromMessage(this);
   ImportReadGroupSetsResponse copyWith(
@@ -208,7 +217,9 @@ class ImportReadGroupSetsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportReadGroupSetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ImportReadGroupSetsResponse create() => ImportReadGroupSetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ImportReadGroupSetsResponse create() =>
+      ImportReadGroupSetsResponse._();
   ImportReadGroupSetsResponse createEmptyInstance() => create();
   static $pb.PbList<ImportReadGroupSetsResponse> createRepeated() =>
       $pb.PbList<ImportReadGroupSetsResponse>();
@@ -228,13 +239,14 @@ class ExportReadGroupSetRequest extends $pb.GeneratedMessage {
     ..pPS(4, 'referenceNames')
     ..hasRequiredFields = false;
 
-  ExportReadGroupSetRequest() : super();
-  ExportReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportReadGroupSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportReadGroupSetRequest._() : super();
+  factory ExportReadGroupSetRequest() => create();
+  factory ExportReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportReadGroupSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportReadGroupSetRequest clone() =>
       ExportReadGroupSetRequest()..mergeFromMessage(this);
   ExportReadGroupSetRequest copyWith(
@@ -242,7 +254,8 @@ class ExportReadGroupSetRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ExportReadGroupSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportReadGroupSetRequest create() => ExportReadGroupSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportReadGroupSetRequest create() => ExportReadGroupSetRequest._();
   ExportReadGroupSetRequest createEmptyInstance() => create();
   static $pb.PbList<ExportReadGroupSetRequest> createRepeated() =>
       $pb.PbList<ExportReadGroupSetRequest>();
@@ -281,19 +294,20 @@ class UpdateReadGroupSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateReadGroupSetRequest',
       package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'readGroupSetId')
-    ..a<$2.ReadGroupSet>(2, 'readGroupSet', $pb.PbFieldType.OM,
-        $2.ReadGroupSet.getDefault, $2.ReadGroupSet.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$3.ReadGroupSet>(2, 'readGroupSet', $pb.PbFieldType.OM,
+        $3.ReadGroupSet.getDefault, $3.ReadGroupSet.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateReadGroupSetRequest() : super();
-  UpdateReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateReadGroupSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateReadGroupSetRequest._() : super();
+  factory UpdateReadGroupSetRequest() => create();
+  factory UpdateReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateReadGroupSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateReadGroupSetRequest clone() =>
       UpdateReadGroupSetRequest()..mergeFromMessage(this);
   UpdateReadGroupSetRequest copyWith(
@@ -301,7 +315,8 @@ class UpdateReadGroupSetRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as UpdateReadGroupSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateReadGroupSetRequest create() => UpdateReadGroupSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateReadGroupSetRequest create() => UpdateReadGroupSetRequest._();
   UpdateReadGroupSetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateReadGroupSetRequest> createRepeated() =>
       $pb.PbList<UpdateReadGroupSetRequest>();
@@ -317,16 +332,16 @@ class UpdateReadGroupSetRequest extends $pb.GeneratedMessage {
   $core.bool hasReadGroupSetId() => $_has(0);
   void clearReadGroupSetId() => clearField(1);
 
-  $2.ReadGroupSet get readGroupSet => $_getN(1);
-  set readGroupSet($2.ReadGroupSet v) {
+  $3.ReadGroupSet get readGroupSet => $_getN(1);
+  set readGroupSet($3.ReadGroupSet v) {
     setField(2, v);
   }
 
   $core.bool hasReadGroupSet() => $_has(1);
   void clearReadGroupSet() => clearField(2);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -340,13 +355,14 @@ class DeleteReadGroupSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'readGroupSetId')
     ..hasRequiredFields = false;
 
-  DeleteReadGroupSetRequest() : super();
-  DeleteReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteReadGroupSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteReadGroupSetRequest._() : super();
+  factory DeleteReadGroupSetRequest() => create();
+  factory DeleteReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteReadGroupSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteReadGroupSetRequest clone() =>
       DeleteReadGroupSetRequest()..mergeFromMessage(this);
   DeleteReadGroupSetRequest copyWith(
@@ -354,7 +370,8 @@ class DeleteReadGroupSetRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as DeleteReadGroupSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteReadGroupSetRequest create() => DeleteReadGroupSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteReadGroupSetRequest create() => DeleteReadGroupSetRequest._();
   DeleteReadGroupSetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteReadGroupSetRequest> createRepeated() =>
       $pb.PbList<DeleteReadGroupSetRequest>();
@@ -377,20 +394,22 @@ class GetReadGroupSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'readGroupSetId')
     ..hasRequiredFields = false;
 
-  GetReadGroupSetRequest() : super();
-  GetReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetReadGroupSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetReadGroupSetRequest._() : super();
+  factory GetReadGroupSetRequest() => create();
+  factory GetReadGroupSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetReadGroupSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetReadGroupSetRequest clone() =>
       GetReadGroupSetRequest()..mergeFromMessage(this);
   GetReadGroupSetRequest copyWith(
           void Function(GetReadGroupSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetReadGroupSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetReadGroupSetRequest create() => GetReadGroupSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetReadGroupSetRequest create() => GetReadGroupSetRequest._();
   GetReadGroupSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetReadGroupSetRequest> createRepeated() =>
       $pb.PbList<GetReadGroupSetRequest>();
@@ -420,13 +439,14 @@ class ListCoverageBucketsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(8, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListCoverageBucketsRequest() : super();
-  ListCoverageBucketsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListCoverageBucketsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListCoverageBucketsRequest._() : super();
+  factory ListCoverageBucketsRequest() => create();
+  factory ListCoverageBucketsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListCoverageBucketsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListCoverageBucketsRequest clone() =>
       ListCoverageBucketsRequest()..mergeFromMessage(this);
   ListCoverageBucketsRequest copyWith(
@@ -434,7 +454,8 @@ class ListCoverageBucketsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListCoverageBucketsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListCoverageBucketsRequest create() => ListCoverageBucketsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListCoverageBucketsRequest create() => ListCoverageBucketsRequest._();
   ListCoverageBucketsRequest createEmptyInstance() => create();
   static $pb.PbList<ListCoverageBucketsRequest> createRepeated() =>
       $pb.PbList<ListCoverageBucketsRequest>();
@@ -502,31 +523,33 @@ class ListCoverageBucketsRequest extends $pb.GeneratedMessage {
 class CoverageBucket extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CoverageBucket',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..a<$4.Range>(
-        1, 'range', $pb.PbFieldType.OM, $4.Range.getDefault, $4.Range.create)
+    ..a<$5.Range>(
+        1, 'range', $pb.PbFieldType.OM, $5.Range.getDefault, $5.Range.create)
     ..a<$core.double>(2, 'meanCoverage', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  CoverageBucket() : super();
-  CoverageBucket.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CoverageBucket.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CoverageBucket._() : super();
+  factory CoverageBucket() => create();
+  factory CoverageBucket.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CoverageBucket.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CoverageBucket clone() => CoverageBucket()..mergeFromMessage(this);
   CoverageBucket copyWith(void Function(CoverageBucket) updates) =>
       super.copyWith((message) => updates(message as CoverageBucket));
   $pb.BuilderInfo get info_ => _i;
-  static CoverageBucket create() => CoverageBucket();
+  @$core.pragma('dart2js:noInline')
+  static CoverageBucket create() => CoverageBucket._();
   CoverageBucket createEmptyInstance() => create();
   static $pb.PbList<CoverageBucket> createRepeated() =>
       $pb.PbList<CoverageBucket>();
   static CoverageBucket getDefault() => _defaultInstance ??= create()..freeze();
   static CoverageBucket _defaultInstance;
 
-  $4.Range get range => $_getN(0);
-  set range($4.Range v) {
+  $5.Range get range => $_getN(0);
+  set range($5.Range v) {
     setField(1, v);
   }
 
@@ -552,13 +575,14 @@ class ListCoverageBucketsResponse extends $pb.GeneratedMessage {
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListCoverageBucketsResponse() : super();
-  ListCoverageBucketsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListCoverageBucketsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListCoverageBucketsResponse._() : super();
+  factory ListCoverageBucketsResponse() => create();
+  factory ListCoverageBucketsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListCoverageBucketsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListCoverageBucketsResponse clone() =>
       ListCoverageBucketsResponse()..mergeFromMessage(this);
   ListCoverageBucketsResponse copyWith(
@@ -566,7 +590,9 @@ class ListCoverageBucketsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListCoverageBucketsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListCoverageBucketsResponse create() => ListCoverageBucketsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListCoverageBucketsResponse create() =>
+      ListCoverageBucketsResponse._();
   ListCoverageBucketsResponse createEmptyInstance() => create();
   static $pb.PbList<ListCoverageBucketsResponse> createRepeated() =>
       $pb.PbList<ListCoverageBucketsResponse>();
@@ -605,18 +631,20 @@ class SearchReadsRequest extends $pb.GeneratedMessage {
     ..aInt64(9, 'end')
     ..hasRequiredFields = false;
 
-  SearchReadsRequest() : super();
-  SearchReadsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReadsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReadsRequest._() : super();
+  factory SearchReadsRequest() => create();
+  factory SearchReadsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReadsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReadsRequest clone() => SearchReadsRequest()..mergeFromMessage(this);
   SearchReadsRequest copyWith(void Function(SearchReadsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchReadsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReadsRequest create() => SearchReadsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchReadsRequest create() => SearchReadsRequest._();
   SearchReadsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchReadsRequest> createRepeated() =>
       $pb.PbList<SearchReadsRequest>();
@@ -672,22 +700,24 @@ class SearchReadsRequest extends $pb.GeneratedMessage {
 class SearchReadsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchReadsResponse',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<$5.Read>(1, 'alignments', $pb.PbFieldType.PM, $5.Read.create)
+    ..pc<$6.Read>(1, 'alignments', $pb.PbFieldType.PM, $6.Read.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchReadsResponse() : super();
-  SearchReadsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReadsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReadsResponse._() : super();
+  factory SearchReadsResponse() => create();
+  factory SearchReadsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReadsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReadsResponse clone() => SearchReadsResponse()..mergeFromMessage(this);
   SearchReadsResponse copyWith(void Function(SearchReadsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchReadsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReadsResponse create() => SearchReadsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchReadsResponse create() => SearchReadsResponse._();
   SearchReadsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchReadsResponse> createRepeated() =>
       $pb.PbList<SearchReadsResponse>();
@@ -695,7 +725,7 @@ class SearchReadsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static SearchReadsResponse _defaultInstance;
 
-  $core.List<$5.Read> get alignments => $_getList(0);
+  $core.List<$6.Read> get alignments => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -718,18 +748,20 @@ class StreamReadsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(7, 'totalShards', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  StreamReadsRequest() : super();
-  StreamReadsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamReadsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamReadsRequest._() : super();
+  factory StreamReadsRequest() => create();
+  factory StreamReadsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamReadsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamReadsRequest clone() => StreamReadsRequest()..mergeFromMessage(this);
   StreamReadsRequest copyWith(void Function(StreamReadsRequest) updates) =>
       super.copyWith((message) => updates(message as StreamReadsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static StreamReadsRequest create() => StreamReadsRequest();
+  @$core.pragma('dart2js:noInline')
+  static StreamReadsRequest create() => StreamReadsRequest._();
   StreamReadsRequest createEmptyInstance() => create();
   static $pb.PbList<StreamReadsRequest> createRepeated() =>
       $pb.PbList<StreamReadsRequest>();
@@ -797,21 +829,23 @@ class StreamReadsRequest extends $pb.GeneratedMessage {
 class StreamReadsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamReadsResponse',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<$5.Read>(1, 'alignments', $pb.PbFieldType.PM, $5.Read.create)
+    ..pc<$6.Read>(1, 'alignments', $pb.PbFieldType.PM, $6.Read.create)
     ..hasRequiredFields = false;
 
-  StreamReadsResponse() : super();
-  StreamReadsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamReadsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamReadsResponse._() : super();
+  factory StreamReadsResponse() => create();
+  factory StreamReadsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamReadsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamReadsResponse clone() => StreamReadsResponse()..mergeFromMessage(this);
   StreamReadsResponse copyWith(void Function(StreamReadsResponse) updates) =>
       super.copyWith((message) => updates(message as StreamReadsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static StreamReadsResponse create() => StreamReadsResponse();
+  @$core.pragma('dart2js:noInline')
+  static StreamReadsResponse create() => StreamReadsResponse._();
   StreamReadsResponse createEmptyInstance() => create();
   static $pb.PbList<StreamReadsResponse> createRepeated() =>
       $pb.PbList<StreamReadsResponse>();
@@ -819,5 +853,5 @@ class StreamReadsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StreamReadsResponse _defaultInstance;
 
-  $core.List<$5.Read> get alignments => $_getList(0);
+  $core.List<$6.Read> get alignments => $_getList(0);
 }

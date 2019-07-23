@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1alpha1/image_basis.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,18 +28,20 @@ class DockerImage_Layer extends $pb.GeneratedMessage {
     ..aOS(2, 'arguments')
     ..hasRequiredFields = false;
 
-  DockerImage_Layer() : super();
-  DockerImage_Layer.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Layer.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Layer._() : super();
+  factory DockerImage_Layer() => create();
+  factory DockerImage_Layer.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DockerImage_Layer.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DockerImage_Layer clone() => DockerImage_Layer()..mergeFromMessage(this);
   DockerImage_Layer copyWith(void Function(DockerImage_Layer) updates) =>
       super.copyWith((message) => updates(message as DockerImage_Layer));
   $pb.BuilderInfo get info_ => _i;
-  static DockerImage_Layer create() => DockerImage_Layer();
+  @$core.pragma('dart2js:noInline')
+  static DockerImage_Layer create() => DockerImage_Layer._();
   DockerImage_Layer createEmptyInstance() => create();
   static $pb.PbList<DockerImage_Layer> createRepeated() =>
       $pb.PbList<DockerImage_Layer>();
@@ -72,20 +75,22 @@ class DockerImage_Fingerprint extends $pb.GeneratedMessage {
     ..aOS(3, 'v2Name')
     ..hasRequiredFields = false;
 
-  DockerImage_Fingerprint() : super();
-  DockerImage_Fingerprint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Fingerprint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Fingerprint._() : super();
+  factory DockerImage_Fingerprint() => create();
+  factory DockerImage_Fingerprint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DockerImage_Fingerprint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DockerImage_Fingerprint clone() =>
       DockerImage_Fingerprint()..mergeFromMessage(this);
   DockerImage_Fingerprint copyWith(
           void Function(DockerImage_Fingerprint) updates) =>
       super.copyWith((message) => updates(message as DockerImage_Fingerprint));
   $pb.BuilderInfo get info_ => _i;
-  static DockerImage_Fingerprint create() => DockerImage_Fingerprint();
+  @$core.pragma('dart2js:noInline')
+  static DockerImage_Fingerprint create() => DockerImage_Fingerprint._();
   DockerImage_Fingerprint createEmptyInstance() => create();
   static $pb.PbList<DockerImage_Fingerprint> createRepeated() =>
       $pb.PbList<DockerImage_Fingerprint>();
@@ -121,18 +126,20 @@ class DockerImage_Basis extends $pb.GeneratedMessage {
         DockerImage_Fingerprint.getDefault, DockerImage_Fingerprint.create)
     ..hasRequiredFields = false;
 
-  DockerImage_Basis() : super();
-  DockerImage_Basis.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Basis.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Basis._() : super();
+  factory DockerImage_Basis() => create();
+  factory DockerImage_Basis.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DockerImage_Basis.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DockerImage_Basis clone() => DockerImage_Basis()..mergeFromMessage(this);
   DockerImage_Basis copyWith(void Function(DockerImage_Basis) updates) =>
       super.copyWith((message) => updates(message as DockerImage_Basis));
   $pb.BuilderInfo get info_ => _i;
-  static DockerImage_Basis create() => DockerImage_Basis();
+  @$core.pragma('dart2js:noInline')
+  static DockerImage_Basis create() => DockerImage_Basis._();
   DockerImage_Basis createEmptyInstance() => create();
   static $pb.PbList<DockerImage_Basis> createRepeated() =>
       $pb.PbList<DockerImage_Basis>();
@@ -169,18 +176,20 @@ class DockerImage_Derived extends $pb.GeneratedMessage {
     ..aOS(4, 'baseResourceUrl')
     ..hasRequiredFields = false;
 
-  DockerImage_Derived() : super();
-  DockerImage_Derived.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage_Derived.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage_Derived._() : super();
+  factory DockerImage_Derived() => create();
+  factory DockerImage_Derived.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DockerImage_Derived.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DockerImage_Derived clone() => DockerImage_Derived()..mergeFromMessage(this);
   DockerImage_Derived copyWith(void Function(DockerImage_Derived) updates) =>
       super.copyWith((message) => updates(message as DockerImage_Derived));
   $pb.BuilderInfo get info_ => _i;
-  static DockerImage_Derived create() => DockerImage_Derived();
+  @$core.pragma('dart2js:noInline')
+  static DockerImage_Derived create() => DockerImage_Derived._();
   DockerImage_Derived createEmptyInstance() => create();
   static $pb.PbList<DockerImage_Derived> createRepeated() =>
       $pb.PbList<DockerImage_Derived>();
@@ -221,18 +230,20 @@ class DockerImage extends $pb.GeneratedMessage {
           const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
     ..hasRequiredFields = false;
 
-  DockerImage() : super();
-  DockerImage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DockerImage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DockerImage._() : super();
+  factory DockerImage() => create();
+  factory DockerImage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DockerImage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DockerImage clone() => DockerImage()..mergeFromMessage(this);
   DockerImage copyWith(void Function(DockerImage) updates) =>
       super.copyWith((message) => updates(message as DockerImage));
   $pb.BuilderInfo get info_ => _i;
-  static DockerImage create() => DockerImage();
+  @$core.pragma('dart2js:noInline')
+  static DockerImage create() => DockerImage._();
   DockerImage createEmptyInstance() => create();
   static $pb.PbList<DockerImage> createRepeated() => $pb.PbList<DockerImage>();
   static DockerImage getDefault() => _defaultInstance ??= create()..freeze();

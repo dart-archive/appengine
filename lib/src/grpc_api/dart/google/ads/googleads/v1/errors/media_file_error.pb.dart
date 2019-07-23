@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/media_file_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class MediaFileErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  MediaFileErrorEnum() : super();
-  MediaFileErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaFileErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaFileErrorEnum._() : super();
+  factory MediaFileErrorEnum() => create();
+  factory MediaFileErrorEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaFileErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaFileErrorEnum clone() => MediaFileErrorEnum()..mergeFromMessage(this);
   MediaFileErrorEnum copyWith(void Function(MediaFileErrorEnum) updates) =>
       super.copyWith((message) => updates(message as MediaFileErrorEnum));
   $pb.BuilderInfo get info_ => _i;
-  static MediaFileErrorEnum create() => MediaFileErrorEnum();
+  @$core.pragma('dart2js:noInline')
+  static MediaFileErrorEnum create() => MediaFileErrorEnum._();
   MediaFileErrorEnum createEmptyInstance() => create();
   static $pb.PbList<MediaFileErrorEnum> createRepeated() =>
       $pb.PbList<MediaFileErrorEnum>();

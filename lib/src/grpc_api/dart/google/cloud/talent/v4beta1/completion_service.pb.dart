@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/completion_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common.pb.dart' as $0;
+import 'common.pb.dart' as $1;
 
 import 'completion_service.pbenum.dart';
 
@@ -39,19 +40,21 @@ class CompleteQueryRequest extends $pb.GeneratedMessage {
         CompleteQueryRequest_CompletionType.values)
     ..hasRequiredFields = false;
 
-  CompleteQueryRequest() : super();
-  CompleteQueryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CompleteQueryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CompleteQueryRequest._() : super();
+  factory CompleteQueryRequest() => create();
+  factory CompleteQueryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompleteQueryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CompleteQueryRequest clone() =>
       CompleteQueryRequest()..mergeFromMessage(this);
   CompleteQueryRequest copyWith(void Function(CompleteQueryRequest) updates) =>
       super.copyWith((message) => updates(message as CompleteQueryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CompleteQueryRequest create() => CompleteQueryRequest();
+  @$core.pragma('dart2js:noInline')
+  static CompleteQueryRequest create() => CompleteQueryRequest._();
   CompleteQueryRequest createEmptyInstance() => create();
   static $pb.PbList<CompleteQueryRequest> createRepeated() =>
       $pb.PbList<CompleteQueryRequest>();
@@ -125,13 +128,15 @@ class CompleteQueryResponse_CompletionResult extends $pb.GeneratedMessage {
     ..aOS(3, 'imageUri')
     ..hasRequiredFields = false;
 
-  CompleteQueryResponse_CompletionResult() : super();
-  CompleteQueryResponse_CompletionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CompleteQueryResponse_CompletionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CompleteQueryResponse_CompletionResult._() : super();
+  factory CompleteQueryResponse_CompletionResult() => create();
+  factory CompleteQueryResponse_CompletionResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompleteQueryResponse_CompletionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CompleteQueryResponse_CompletionResult clone() =>
       CompleteQueryResponse_CompletionResult()..mergeFromMessage(this);
   CompleteQueryResponse_CompletionResult copyWith(
@@ -139,8 +144,9 @@ class CompleteQueryResponse_CompletionResult extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as CompleteQueryResponse_CompletionResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CompleteQueryResponse_CompletionResult create() =>
-      CompleteQueryResponse_CompletionResult();
+      CompleteQueryResponse_CompletionResult._();
   CompleteQueryResponse_CompletionResult createEmptyInstance() => create();
   static $pb.PbList<CompleteQueryResponse_CompletionResult> createRepeated() =>
       $pb.PbList<CompleteQueryResponse_CompletionResult>();
@@ -178,24 +184,26 @@ class CompleteQueryResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..pc<CompleteQueryResponse_CompletionResult>(1, 'completionResults',
         $pb.PbFieldType.PM, CompleteQueryResponse_CompletionResult.create)
-    ..a<$0.ResponseMetadata>(2, 'metadata', $pb.PbFieldType.OM,
-        $0.ResponseMetadata.getDefault, $0.ResponseMetadata.create)
+    ..a<$1.ResponseMetadata>(2, 'metadata', $pb.PbFieldType.OM,
+        $1.ResponseMetadata.getDefault, $1.ResponseMetadata.create)
     ..hasRequiredFields = false;
 
-  CompleteQueryResponse() : super();
-  CompleteQueryResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CompleteQueryResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CompleteQueryResponse._() : super();
+  factory CompleteQueryResponse() => create();
+  factory CompleteQueryResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompleteQueryResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CompleteQueryResponse clone() =>
       CompleteQueryResponse()..mergeFromMessage(this);
   CompleteQueryResponse copyWith(
           void Function(CompleteQueryResponse) updates) =>
       super.copyWith((message) => updates(message as CompleteQueryResponse));
   $pb.BuilderInfo get info_ => _i;
-  static CompleteQueryResponse create() => CompleteQueryResponse();
+  @$core.pragma('dart2js:noInline')
+  static CompleteQueryResponse create() => CompleteQueryResponse._();
   CompleteQueryResponse createEmptyInstance() => create();
   static $pb.PbList<CompleteQueryResponse> createRepeated() =>
       $pb.PbList<CompleteQueryResponse>();
@@ -206,8 +214,8 @@ class CompleteQueryResponse extends $pb.GeneratedMessage {
   $core.List<CompleteQueryResponse_CompletionResult> get completionResults =>
       $_getList(0);
 
-  $0.ResponseMetadata get metadata => $_getN(1);
-  set metadata($0.ResponseMetadata v) {
+  $1.ResponseMetadata get metadata => $_getN(1);
+  set metadata($1.ResponseMetadata v) {
     setField(2, v);
   }
 

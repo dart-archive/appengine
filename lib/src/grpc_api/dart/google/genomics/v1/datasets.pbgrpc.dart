@@ -1,75 +1,76 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/datasets.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'datasets.pb.dart';
-import '../../protobuf/empty.pb.dart' as $1;
-import '../../iam/v1/iam_policy.pb.dart' as $2;
-import '../../iam/v1/policy.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'datasets.pb.dart' as $2;
+import '../../protobuf/empty.pb.dart' as $3;
+import '../../iam/v1/iam_policy.pb.dart' as $0;
+import '../../iam/v1/policy.pb.dart' as $1;
 export 'datasets.pb.dart';
 
 class DatasetServiceV1Client extends $grpc.Client {
   static final _$listDatasets =
-      $grpc.ClientMethod<ListDatasetsRequest, ListDatasetsResponse>(
+      $grpc.ClientMethod<$2.ListDatasetsRequest, $2.ListDatasetsResponse>(
           '/google.genomics.v1.DatasetServiceV1/ListDatasets',
-          (ListDatasetsRequest value) => value.writeToBuffer(),
+          ($2.ListDatasetsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListDatasetsResponse.fromBuffer(value));
+              $2.ListDatasetsResponse.fromBuffer(value));
   static final _$createDataset =
-      $grpc.ClientMethod<CreateDatasetRequest, Dataset>(
+      $grpc.ClientMethod<$2.CreateDatasetRequest, $2.Dataset>(
           '/google.genomics.v1.DatasetServiceV1/CreateDataset',
-          (CreateDatasetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Dataset.fromBuffer(value));
-  static final _$getDataset = $grpc.ClientMethod<GetDatasetRequest, Dataset>(
-      '/google.genomics.v1.DatasetServiceV1/GetDataset',
-      (GetDatasetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Dataset.fromBuffer(value));
+          ($2.CreateDatasetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Dataset.fromBuffer(value));
+  static final _$getDataset =
+      $grpc.ClientMethod<$2.GetDatasetRequest, $2.Dataset>(
+          '/google.genomics.v1.DatasetServiceV1/GetDataset',
+          ($2.GetDatasetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Dataset.fromBuffer(value));
   static final _$updateDataset =
-      $grpc.ClientMethod<UpdateDatasetRequest, Dataset>(
+      $grpc.ClientMethod<$2.UpdateDatasetRequest, $2.Dataset>(
           '/google.genomics.v1.DatasetServiceV1/UpdateDataset',
-          (UpdateDatasetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Dataset.fromBuffer(value));
+          ($2.UpdateDatasetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Dataset.fromBuffer(value));
   static final _$deleteDataset =
-      $grpc.ClientMethod<DeleteDatasetRequest, $1.Empty>(
+      $grpc.ClientMethod<$2.DeleteDatasetRequest, $3.Empty>(
           '/google.genomics.v1.DatasetServiceV1/DeleteDataset',
-          (DeleteDatasetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+          ($2.DeleteDatasetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
   static final _$undeleteDataset =
-      $grpc.ClientMethod<UndeleteDatasetRequest, Dataset>(
+      $grpc.ClientMethod<$2.UndeleteDatasetRequest, $2.Dataset>(
           '/google.genomics.v1.DatasetServiceV1/UndeleteDataset',
-          (UndeleteDatasetRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => Dataset.fromBuffer(value));
+          ($2.UndeleteDatasetRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Dataset.fromBuffer(value));
   static final _$setIamPolicy =
-      $grpc.ClientMethod<$2.SetIamPolicyRequest, $0.Policy>(
+      $grpc.ClientMethod<$0.SetIamPolicyRequest, $1.Policy>(
           '/google.genomics.v1.DatasetServiceV1/SetIamPolicy',
-          ($2.SetIamPolicyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Policy.fromBuffer(value));
+          ($0.SetIamPolicyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
   static final _$getIamPolicy =
-      $grpc.ClientMethod<$2.GetIamPolicyRequest, $0.Policy>(
+      $grpc.ClientMethod<$0.GetIamPolicyRequest, $1.Policy>(
           '/google.genomics.v1.DatasetServiceV1/GetIamPolicy',
-          ($2.GetIamPolicyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Policy.fromBuffer(value));
+          ($0.GetIamPolicyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
   static final _$testIamPermissions = $grpc.ClientMethod<
-          $2.TestIamPermissionsRequest, $2.TestIamPermissionsResponse>(
+          $0.TestIamPermissionsRequest, $0.TestIamPermissionsResponse>(
       '/google.genomics.v1.DatasetServiceV1/TestIamPermissions',
-      ($2.TestIamPermissionsRequest value) => value.writeToBuffer(),
+      ($0.TestIamPermissionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $2.TestIamPermissionsResponse.fromBuffer(value));
+          $0.TestIamPermissionsResponse.fromBuffer(value));
 
   DatasetServiceV1Client($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ListDatasetsResponse> listDatasets(
-      ListDatasetsRequest request,
+  $grpc.ResponseFuture<$2.ListDatasetsResponse> listDatasets(
+      $2.ListDatasetsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listDatasets, $async.Stream.fromIterable([request]),
@@ -77,7 +78,8 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Dataset> createDataset(CreateDatasetRequest request,
+  $grpc.ResponseFuture<$2.Dataset> createDataset(
+      $2.CreateDatasetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createDataset, $async.Stream.fromIterable([request]),
@@ -85,7 +87,7 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Dataset> getDataset(GetDatasetRequest request,
+  $grpc.ResponseFuture<$2.Dataset> getDataset($2.GetDatasetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getDataset, $async.Stream.fromIterable([request]),
@@ -93,7 +95,8 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Dataset> updateDataset(UpdateDatasetRequest request,
+  $grpc.ResponseFuture<$2.Dataset> updateDataset(
+      $2.UpdateDatasetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateDataset, $async.Stream.fromIterable([request]),
@@ -101,7 +104,7 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> deleteDataset(DeleteDatasetRequest request,
+  $grpc.ResponseFuture<$3.Empty> deleteDataset($2.DeleteDatasetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteDataset, $async.Stream.fromIterable([request]),
@@ -109,7 +112,8 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Dataset> undeleteDataset(UndeleteDatasetRequest request,
+  $grpc.ResponseFuture<$2.Dataset> undeleteDataset(
+      $2.UndeleteDatasetRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$undeleteDataset, $async.Stream.fromIterable([request]),
@@ -117,7 +121,7 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Policy> setIamPolicy($2.SetIamPolicyRequest request,
+  $grpc.ResponseFuture<$1.Policy> setIamPolicy($0.SetIamPolicyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$setIamPolicy, $async.Stream.fromIterable([request]),
@@ -125,7 +129,7 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Policy> getIamPolicy($2.GetIamPolicyRequest request,
+  $grpc.ResponseFuture<$1.Policy> getIamPolicy($0.GetIamPolicyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getIamPolicy, $async.Stream.fromIterable([request]),
@@ -133,8 +137,8 @@ class DatasetServiceV1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$2.TestIamPermissionsResponse> testIamPermissions(
-      $2.TestIamPermissionsRequest request,
+  $grpc.ResponseFuture<$0.TestIamPermissionsResponse> testIamPermissions(
+      $0.TestIamPermissionsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$testIamPermissions, $async.Stream.fromIterable([request]),
@@ -147,137 +151,144 @@ abstract class DatasetServiceV1ServiceBase extends $grpc.Service {
   $core.String get $name => 'google.genomics.v1.DatasetServiceV1';
 
   DatasetServiceV1ServiceBase() {
-    $addMethod($grpc.ServiceMethod<ListDatasetsRequest, ListDatasetsResponse>(
-        'ListDatasets',
-        listDatasets_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListDatasetsRequest.fromBuffer(value),
-        (ListDatasetsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateDatasetRequest, Dataset>(
+    $addMethod(
+        $grpc.ServiceMethod<$2.ListDatasetsRequest, $2.ListDatasetsResponse>(
+            'ListDatasets',
+            listDatasets_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.ListDatasetsRequest.fromBuffer(value),
+            ($2.ListDatasetsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateDatasetRequest, $2.Dataset>(
         'CreateDataset',
         createDataset_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateDatasetRequest.fromBuffer(value),
-        (Dataset value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetDatasetRequest, Dataset>(
+        ($core.List<$core.int> value) =>
+            $2.CreateDatasetRequest.fromBuffer(value),
+        ($2.Dataset value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetDatasetRequest, $2.Dataset>(
         'GetDataset',
         getDataset_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetDatasetRequest.fromBuffer(value),
-        (Dataset value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateDatasetRequest, Dataset>(
+        ($core.List<$core.int> value) => $2.GetDatasetRequest.fromBuffer(value),
+        ($2.Dataset value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateDatasetRequest, $2.Dataset>(
         'UpdateDataset',
         updateDataset_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateDatasetRequest.fromBuffer(value),
-        (Dataset value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteDatasetRequest, $1.Empty>(
+        ($core.List<$core.int> value) =>
+            $2.UpdateDatasetRequest.fromBuffer(value),
+        ($2.Dataset value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteDatasetRequest, $3.Empty>(
         'DeleteDataset',
         deleteDataset_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteDatasetRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UndeleteDatasetRequest, Dataset>(
+        ($core.List<$core.int> value) =>
+            $2.DeleteDatasetRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UndeleteDatasetRequest, $2.Dataset>(
         'UndeleteDataset',
         undeleteDataset_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UndeleteDatasetRequest.fromBuffer(value),
-        (Dataset value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.SetIamPolicyRequest, $0.Policy>(
+            $2.UndeleteDatasetRequest.fromBuffer(value),
+        ($2.Dataset value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SetIamPolicyRequest, $1.Policy>(
         'SetIamPolicy',
         setIamPolicy_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.SetIamPolicyRequest.fromBuffer(value),
-        ($0.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetIamPolicyRequest, $0.Policy>(
+            $0.SetIamPolicyRequest.fromBuffer(value),
+        ($1.Policy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetIamPolicyRequest, $1.Policy>(
         'GetIamPolicy',
         getIamPolicy_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.GetIamPolicyRequest.fromBuffer(value),
-        ($0.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.TestIamPermissionsRequest,
-            $2.TestIamPermissionsResponse>(
+            $0.GetIamPolicyRequest.fromBuffer(value),
+        ($1.Policy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.TestIamPermissionsRequest,
+            $0.TestIamPermissionsResponse>(
         'TestIamPermissions',
         testIamPermissions_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.TestIamPermissionsRequest.fromBuffer(value),
-        ($2.TestIamPermissionsResponse value) => value.writeToBuffer()));
+            $0.TestIamPermissionsRequest.fromBuffer(value),
+        ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<ListDatasetsResponse> listDatasets_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListDatasetsResponse> listDatasets_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListDatasetsRequest> request) async {
     return listDatasets(call, await request);
   }
 
-  $async.Future<Dataset> createDataset_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Dataset> createDataset_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateDatasetRequest> request) async {
     return createDataset(call, await request);
   }
 
-  $async.Future<Dataset> getDataset_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Dataset> getDataset_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetDatasetRequest> request) async {
     return getDataset(call, await request);
   }
 
-  $async.Future<Dataset> updateDataset_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Dataset> updateDataset_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateDatasetRequest> request) async {
     return updateDataset(call, await request);
   }
 
-  $async.Future<$1.Empty> deleteDataset_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$3.Empty> deleteDataset_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteDatasetRequest> request) async {
     return deleteDataset(call, await request);
   }
 
-  $async.Future<Dataset> undeleteDataset_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Dataset> undeleteDataset_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UndeleteDatasetRequest> request) async {
     return undeleteDataset(call, await request);
   }
 
-  $async.Future<$0.Policy> setIamPolicy_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Policy> setIamPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$0.SetIamPolicyRequest> request) async {
     return setIamPolicy(call, await request);
   }
 
-  $async.Future<$0.Policy> getIamPolicy_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Policy> getIamPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetIamPolicyRequest> request) async {
     return getIamPolicy(call, await request);
   }
 
-  $async.Future<$2.TestIamPermissionsResponse> testIamPermissions_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.TestIamPermissionsRequest> request) async {
     return testIamPermissions(call, await request);
   }
 
-  $async.Future<ListDatasetsResponse> listDatasets(
-      $grpc.ServiceCall call, ListDatasetsRequest request);
-  $async.Future<Dataset> createDataset(
-      $grpc.ServiceCall call, CreateDatasetRequest request);
-  $async.Future<Dataset> getDataset(
-      $grpc.ServiceCall call, GetDatasetRequest request);
-  $async.Future<Dataset> updateDataset(
-      $grpc.ServiceCall call, UpdateDatasetRequest request);
-  $async.Future<$1.Empty> deleteDataset(
-      $grpc.ServiceCall call, DeleteDatasetRequest request);
-  $async.Future<Dataset> undeleteDataset(
-      $grpc.ServiceCall call, UndeleteDatasetRequest request);
-  $async.Future<$0.Policy> setIamPolicy(
-      $grpc.ServiceCall call, $2.SetIamPolicyRequest request);
-  $async.Future<$0.Policy> getIamPolicy(
-      $grpc.ServiceCall call, $2.GetIamPolicyRequest request);
-  $async.Future<$2.TestIamPermissionsResponse> testIamPermissions(
-      $grpc.ServiceCall call, $2.TestIamPermissionsRequest request);
+  $async.Future<$2.ListDatasetsResponse> listDatasets(
+      $grpc.ServiceCall call, $2.ListDatasetsRequest request);
+  $async.Future<$2.Dataset> createDataset(
+      $grpc.ServiceCall call, $2.CreateDatasetRequest request);
+  $async.Future<$2.Dataset> getDataset(
+      $grpc.ServiceCall call, $2.GetDatasetRequest request);
+  $async.Future<$2.Dataset> updateDataset(
+      $grpc.ServiceCall call, $2.UpdateDatasetRequest request);
+  $async.Future<$3.Empty> deleteDataset(
+      $grpc.ServiceCall call, $2.DeleteDatasetRequest request);
+  $async.Future<$2.Dataset> undeleteDataset(
+      $grpc.ServiceCall call, $2.UndeleteDatasetRequest request);
+  $async.Future<$1.Policy> setIamPolicy(
+      $grpc.ServiceCall call, $0.SetIamPolicyRequest request);
+  $async.Future<$1.Policy> getIamPolicy(
+      $grpc.ServiceCall call, $0.GetIamPolicyRequest request);
+  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
+      $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
 }

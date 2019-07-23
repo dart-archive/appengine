@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1beta/finding_type_stats.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class FindingTypeStats extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'findingCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  FindingTypeStats() : super();
-  FindingTypeStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FindingTypeStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FindingTypeStats._() : super();
+  factory FindingTypeStats() => create();
+  factory FindingTypeStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FindingTypeStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FindingTypeStats clone() => FindingTypeStats()..mergeFromMessage(this);
   FindingTypeStats copyWith(void Function(FindingTypeStats) updates) =>
       super.copyWith((message) => updates(message as FindingTypeStats));
   $pb.BuilderInfo get info_ => _i;
-  static FindingTypeStats create() => FindingTypeStats();
+  @$core.pragma('dart2js:noInline')
+  static FindingTypeStats create() => FindingTypeStats._();
   FindingTypeStats createEmptyInstance() => create();
   static $pb.PbList<FindingTypeStats> createRepeated() =>
       $pb.PbList<FindingTypeStats>();

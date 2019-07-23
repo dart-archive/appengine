@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/datastore/v1beta3/datastore.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity.pb.dart' as $0;
-import 'query.pb.dart' as $1;
+import 'entity.pb.dart' as $1;
+import 'query.pb.dart' as $2;
 
 import 'datastore.pbenum.dart';
 
@@ -22,22 +23,24 @@ class LookupRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.datastore.v1beta3'))
     ..a<ReadOptions>(1, 'readOptions', $pb.PbFieldType.OM,
         ReadOptions.getDefault, ReadOptions.create)
-    ..pc<$0.Key>(3, 'keys', $pb.PbFieldType.PM, $0.Key.create)
+    ..pc<$1.Key>(3, 'keys', $pb.PbFieldType.PM, $1.Key.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
-  LookupRequest() : super();
-  LookupRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LookupRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LookupRequest._() : super();
+  factory LookupRequest() => create();
+  factory LookupRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LookupRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LookupRequest clone() => LookupRequest()..mergeFromMessage(this);
   LookupRequest copyWith(void Function(LookupRequest) updates) =>
       super.copyWith((message) => updates(message as LookupRequest));
   $pb.BuilderInfo get info_ => _i;
-  static LookupRequest create() => LookupRequest();
+  @$core.pragma('dart2js:noInline')
+  static LookupRequest create() => LookupRequest._();
   LookupRequest createEmptyInstance() => create();
   static $pb.PbList<LookupRequest> createRepeated() =>
       $pb.PbList<LookupRequest>();
@@ -52,7 +55,7 @@ class LookupRequest extends $pb.GeneratedMessage {
   $core.bool hasReadOptions() => $_has(0);
   void clearReadOptions() => clearField(1);
 
-  $core.List<$0.Key> get keys => $_getList(1);
+  $core.List<$1.Key> get keys => $_getList(1);
 
   $core.String get projectId => $_getS(2, '');
   set projectId($core.String v) {
@@ -66,36 +69,38 @@ class LookupRequest extends $pb.GeneratedMessage {
 class LookupResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupResponse',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$1.EntityResult>(
-        1, 'found', $pb.PbFieldType.PM, $1.EntityResult.create)
-    ..pc<$1.EntityResult>(
-        2, 'missing', $pb.PbFieldType.PM, $1.EntityResult.create)
-    ..pc<$0.Key>(3, 'deferred', $pb.PbFieldType.PM, $0.Key.create)
+    ..pc<$2.EntityResult>(
+        1, 'found', $pb.PbFieldType.PM, $2.EntityResult.create)
+    ..pc<$2.EntityResult>(
+        2, 'missing', $pb.PbFieldType.PM, $2.EntityResult.create)
+    ..pc<$1.Key>(3, 'deferred', $pb.PbFieldType.PM, $1.Key.create)
     ..hasRequiredFields = false;
 
-  LookupResponse() : super();
-  LookupResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LookupResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LookupResponse._() : super();
+  factory LookupResponse() => create();
+  factory LookupResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LookupResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LookupResponse clone() => LookupResponse()..mergeFromMessage(this);
   LookupResponse copyWith(void Function(LookupResponse) updates) =>
       super.copyWith((message) => updates(message as LookupResponse));
   $pb.BuilderInfo get info_ => _i;
-  static LookupResponse create() => LookupResponse();
+  @$core.pragma('dart2js:noInline')
+  static LookupResponse create() => LookupResponse._();
   LookupResponse createEmptyInstance() => create();
   static $pb.PbList<LookupResponse> createRepeated() =>
       $pb.PbList<LookupResponse>();
   static LookupResponse getDefault() => _defaultInstance ??= create()..freeze();
   static LookupResponse _defaultInstance;
 
-  $core.List<$1.EntityResult> get found => $_getList(0);
+  $core.List<$2.EntityResult> get found => $_getList(0);
 
-  $core.List<$1.EntityResult> get missing => $_getList(1);
+  $core.List<$2.EntityResult> get missing => $_getList(1);
 
-  $core.List<$0.Key> get deferred => $_getList(2);
+  $core.List<$1.Key> get deferred => $_getList(2);
 }
 
 enum RunQueryRequest_QueryType { query, gqlQuery, notSet }
@@ -109,30 +114,32 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryRequest',
       package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..oo(0, [3, 7])
     ..a<ReadOptions>(1, 'readOptions', $pb.PbFieldType.OM,
         ReadOptions.getDefault, ReadOptions.create)
-    ..a<$0.PartitionId>(2, 'partitionId', $pb.PbFieldType.OM,
-        $0.PartitionId.getDefault, $0.PartitionId.create)
-    ..a<$1.Query>(
-        3, 'query', $pb.PbFieldType.OM, $1.Query.getDefault, $1.Query.create)
-    ..a<$1.GqlQuery>(7, 'gqlQuery', $pb.PbFieldType.OM, $1.GqlQuery.getDefault,
-        $1.GqlQuery.create)
+    ..a<$1.PartitionId>(2, 'partitionId', $pb.PbFieldType.OM,
+        $1.PartitionId.getDefault, $1.PartitionId.create)
+    ..a<$2.Query>(
+        3, 'query', $pb.PbFieldType.OM, $2.Query.getDefault, $2.Query.create)
+    ..a<$2.GqlQuery>(7, 'gqlQuery', $pb.PbFieldType.OM, $2.GqlQuery.getDefault,
+        $2.GqlQuery.create)
     ..aOS(8, 'projectId')
-    ..oo(0, [3, 7])
     ..hasRequiredFields = false;
 
-  RunQueryRequest() : super();
-  RunQueryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunQueryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunQueryRequest._() : super();
+  factory RunQueryRequest() => create();
+  factory RunQueryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunQueryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunQueryRequest clone() => RunQueryRequest()..mergeFromMessage(this);
   RunQueryRequest copyWith(void Function(RunQueryRequest) updates) =>
       super.copyWith((message) => updates(message as RunQueryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RunQueryRequest create() => RunQueryRequest();
+  @$core.pragma('dart2js:noInline')
+  static RunQueryRequest create() => RunQueryRequest._();
   RunQueryRequest createEmptyInstance() => create();
   static $pb.PbList<RunQueryRequest> createRepeated() =>
       $pb.PbList<RunQueryRequest>();
@@ -152,24 +159,24 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasReadOptions() => $_has(0);
   void clearReadOptions() => clearField(1);
 
-  $0.PartitionId get partitionId => $_getN(1);
-  set partitionId($0.PartitionId v) {
+  $1.PartitionId get partitionId => $_getN(1);
+  set partitionId($1.PartitionId v) {
     setField(2, v);
   }
 
   $core.bool hasPartitionId() => $_has(1);
   void clearPartitionId() => clearField(2);
 
-  $1.Query get query => $_getN(2);
-  set query($1.Query v) {
+  $2.Query get query => $_getN(2);
+  set query($2.Query v) {
     setField(3, v);
   }
 
   $core.bool hasQuery() => $_has(2);
   void clearQuery() => clearField(3);
 
-  $1.GqlQuery get gqlQuery => $_getN(3);
-  set gqlQuery($1.GqlQuery v) {
+  $2.GqlQuery get gqlQuery => $_getN(3);
+  set gqlQuery($2.GqlQuery v) {
     setField(7, v);
   }
 
@@ -188,24 +195,26 @@ class RunQueryRequest extends $pb.GeneratedMessage {
 class RunQueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryResponse',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..a<$1.QueryResultBatch>(1, 'batch', $pb.PbFieldType.OM,
-        $1.QueryResultBatch.getDefault, $1.QueryResultBatch.create)
-    ..a<$1.Query>(
-        2, 'query', $pb.PbFieldType.OM, $1.Query.getDefault, $1.Query.create)
+    ..a<$2.QueryResultBatch>(1, 'batch', $pb.PbFieldType.OM,
+        $2.QueryResultBatch.getDefault, $2.QueryResultBatch.create)
+    ..a<$2.Query>(
+        2, 'query', $pb.PbFieldType.OM, $2.Query.getDefault, $2.Query.create)
     ..hasRequiredFields = false;
 
-  RunQueryResponse() : super();
-  RunQueryResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunQueryResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunQueryResponse._() : super();
+  factory RunQueryResponse() => create();
+  factory RunQueryResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunQueryResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunQueryResponse clone() => RunQueryResponse()..mergeFromMessage(this);
   RunQueryResponse copyWith(void Function(RunQueryResponse) updates) =>
       super.copyWith((message) => updates(message as RunQueryResponse));
   $pb.BuilderInfo get info_ => _i;
-  static RunQueryResponse create() => RunQueryResponse();
+  @$core.pragma('dart2js:noInline')
+  static RunQueryResponse create() => RunQueryResponse._();
   RunQueryResponse createEmptyInstance() => create();
   static $pb.PbList<RunQueryResponse> createRepeated() =>
       $pb.PbList<RunQueryResponse>();
@@ -213,16 +222,16 @@ class RunQueryResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RunQueryResponse _defaultInstance;
 
-  $1.QueryResultBatch get batch => $_getN(0);
-  set batch($1.QueryResultBatch v) {
+  $2.QueryResultBatch get batch => $_getN(0);
+  set batch($2.QueryResultBatch v) {
     setField(1, v);
   }
 
   $core.bool hasBatch() => $_has(0);
   void clearBatch() => clearField(1);
 
-  $1.Query get query => $_getN(1);
-  set query($1.Query v) {
+  $2.Query get query => $_getN(1);
+  set query($2.Query v) {
     setField(2, v);
   }
 
@@ -238,20 +247,22 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
         TransactionOptions.getDefault, TransactionOptions.create)
     ..hasRequiredFields = false;
 
-  BeginTransactionRequest() : super();
-  BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BeginTransactionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BeginTransactionRequest._() : super();
+  factory BeginTransactionRequest() => create();
+  factory BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BeginTransactionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BeginTransactionRequest clone() =>
       BeginTransactionRequest()..mergeFromMessage(this);
   BeginTransactionRequest copyWith(
           void Function(BeginTransactionRequest) updates) =>
       super.copyWith((message) => updates(message as BeginTransactionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BeginTransactionRequest create() => BeginTransactionRequest();
+  @$core.pragma('dart2js:noInline')
+  static BeginTransactionRequest create() => BeginTransactionRequest._();
   BeginTransactionRequest createEmptyInstance() => create();
   static $pb.PbList<BeginTransactionRequest> createRepeated() =>
       $pb.PbList<BeginTransactionRequest>();
@@ -282,20 +293,22 @@ class BeginTransactionResponse extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  BeginTransactionResponse() : super();
-  BeginTransactionResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BeginTransactionResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BeginTransactionResponse._() : super();
+  factory BeginTransactionResponse() => create();
+  factory BeginTransactionResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BeginTransactionResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BeginTransactionResponse clone() =>
       BeginTransactionResponse()..mergeFromMessage(this);
   BeginTransactionResponse copyWith(
           void Function(BeginTransactionResponse) updates) =>
       super.copyWith((message) => updates(message as BeginTransactionResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BeginTransactionResponse create() => BeginTransactionResponse();
+  @$core.pragma('dart2js:noInline')
+  static BeginTransactionResponse create() => BeginTransactionResponse._();
   BeginTransactionResponse createEmptyInstance() => create();
   static $pb.PbList<BeginTransactionResponse> createRepeated() =>
       $pb.PbList<BeginTransactionResponse>();
@@ -319,18 +332,20 @@ class RollbackRequest extends $pb.GeneratedMessage {
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
-  RollbackRequest() : super();
-  RollbackRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RollbackRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RollbackRequest._() : super();
+  factory RollbackRequest() => create();
+  factory RollbackRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RollbackRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
   RollbackRequest copyWith(void Function(RollbackRequest) updates) =>
       super.copyWith((message) => updates(message as RollbackRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RollbackRequest create() => RollbackRequest();
+  @$core.pragma('dart2js:noInline')
+  static RollbackRequest create() => RollbackRequest._();
   RollbackRequest createEmptyInstance() => create();
   static $pb.PbList<RollbackRequest> createRepeated() =>
       $pb.PbList<RollbackRequest>();
@@ -360,18 +375,20 @@ class RollbackResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.datastore.v1beta3'))
     ..hasRequiredFields = false;
 
-  RollbackResponse() : super();
-  RollbackResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RollbackResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RollbackResponse._() : super();
+  factory RollbackResponse() => create();
+  factory RollbackResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RollbackResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RollbackResponse clone() => RollbackResponse()..mergeFromMessage(this);
   RollbackResponse copyWith(void Function(RollbackResponse) updates) =>
       super.copyWith((message) => updates(message as RollbackResponse));
   $pb.BuilderInfo get info_ => _i;
-  static RollbackResponse create() => RollbackResponse();
+  @$core.pragma('dart2js:noInline')
+  static RollbackResponse create() => RollbackResponse._();
   RollbackResponse createEmptyInstance() => create();
   static $pb.PbList<RollbackResponse> createRepeated() =>
       $pb.PbList<RollbackResponse>();
@@ -390,6 +407,7 @@ class CommitRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
       package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..oo(0, [1])
     ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..e<CommitRequest_Mode>(
         5,
@@ -400,21 +418,22 @@ class CommitRequest extends $pb.GeneratedMessage {
         CommitRequest_Mode.values)
     ..pc<Mutation>(6, 'mutations', $pb.PbFieldType.PM, Mutation.create)
     ..aOS(8, 'projectId')
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  CommitRequest() : super();
-  CommitRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommitRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommitRequest._() : super();
+  factory CommitRequest() => create();
+  factory CommitRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommitRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
   CommitRequest copyWith(void Function(CommitRequest) updates) =>
       super.copyWith((message) => updates(message as CommitRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CommitRequest create() => CommitRequest();
+  @$core.pragma('dart2js:noInline')
+  static CommitRequest create() => CommitRequest._();
   CommitRequest createEmptyInstance() => create();
   static $pb.PbList<CommitRequest> createRepeated() =>
       $pb.PbList<CommitRequest>();
@@ -460,18 +479,20 @@ class CommitResponse extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'indexUpdates', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  CommitResponse() : super();
-  CommitResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommitResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommitResponse._() : super();
+  factory CommitResponse() => create();
+  factory CommitResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommitResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
   CommitResponse copyWith(void Function(CommitResponse) updates) =>
       super.copyWith((message) => updates(message as CommitResponse));
   $pb.BuilderInfo get info_ => _i;
-  static CommitResponse create() => CommitResponse();
+  @$core.pragma('dart2js:noInline')
+  static CommitResponse create() => CommitResponse._();
   CommitResponse createEmptyInstance() => create();
   static $pb.PbList<CommitResponse> createRepeated() =>
       $pb.PbList<CommitResponse>();
@@ -492,22 +513,24 @@ class CommitResponse extends $pb.GeneratedMessage {
 class AllocateIdsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsRequest',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$0.Key>(1, 'keys', $pb.PbFieldType.PM, $0.Key.create)
+    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, $1.Key.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
-  AllocateIdsRequest() : super();
-  AllocateIdsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AllocateIdsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AllocateIdsRequest._() : super();
+  factory AllocateIdsRequest() => create();
+  factory AllocateIdsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AllocateIdsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AllocateIdsRequest clone() => AllocateIdsRequest()..mergeFromMessage(this);
   AllocateIdsRequest copyWith(void Function(AllocateIdsRequest) updates) =>
       super.copyWith((message) => updates(message as AllocateIdsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AllocateIdsRequest create() => AllocateIdsRequest();
+  @$core.pragma('dart2js:noInline')
+  static AllocateIdsRequest create() => AllocateIdsRequest._();
   AllocateIdsRequest createEmptyInstance() => create();
   static $pb.PbList<AllocateIdsRequest> createRepeated() =>
       $pb.PbList<AllocateIdsRequest>();
@@ -515,7 +538,7 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static AllocateIdsRequest _defaultInstance;
 
-  $core.List<$0.Key> get keys => $_getList(0);
+  $core.List<$1.Key> get keys => $_getList(0);
 
   $core.String get projectId => $_getS(1, '');
   set projectId($core.String v) {
@@ -529,21 +552,23 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
 class AllocateIdsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsResponse',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$0.Key>(1, 'keys', $pb.PbFieldType.PM, $0.Key.create)
+    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, $1.Key.create)
     ..hasRequiredFields = false;
 
-  AllocateIdsResponse() : super();
-  AllocateIdsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AllocateIdsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AllocateIdsResponse._() : super();
+  factory AllocateIdsResponse() => create();
+  factory AllocateIdsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AllocateIdsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AllocateIdsResponse clone() => AllocateIdsResponse()..mergeFromMessage(this);
   AllocateIdsResponse copyWith(void Function(AllocateIdsResponse) updates) =>
       super.copyWith((message) => updates(message as AllocateIdsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static AllocateIdsResponse create() => AllocateIdsResponse();
+  @$core.pragma('dart2js:noInline')
+  static AllocateIdsResponse create() => AllocateIdsResponse._();
   AllocateIdsResponse createEmptyInstance() => create();
   static $pb.PbList<AllocateIdsResponse> createRepeated() =>
       $pb.PbList<AllocateIdsResponse>();
@@ -551,29 +576,31 @@ class AllocateIdsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static AllocateIdsResponse _defaultInstance;
 
-  $core.List<$0.Key> get keys => $_getList(0);
+  $core.List<$1.Key> get keys => $_getList(0);
 }
 
 class ReserveIdsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsRequest',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$0.Key>(1, 'keys', $pb.PbFieldType.PM, $0.Key.create)
+    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, $1.Key.create)
     ..aOS(8, 'projectId')
     ..aOS(9, 'databaseId')
     ..hasRequiredFields = false;
 
-  ReserveIdsRequest() : super();
-  ReserveIdsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReserveIdsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReserveIdsRequest._() : super();
+  factory ReserveIdsRequest() => create();
+  factory ReserveIdsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReserveIdsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReserveIdsRequest clone() => ReserveIdsRequest()..mergeFromMessage(this);
   ReserveIdsRequest copyWith(void Function(ReserveIdsRequest) updates) =>
       super.copyWith((message) => updates(message as ReserveIdsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ReserveIdsRequest create() => ReserveIdsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ReserveIdsRequest create() => ReserveIdsRequest._();
   ReserveIdsRequest createEmptyInstance() => create();
   static $pb.PbList<ReserveIdsRequest> createRepeated() =>
       $pb.PbList<ReserveIdsRequest>();
@@ -581,7 +608,7 @@ class ReserveIdsRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ReserveIdsRequest _defaultInstance;
 
-  $core.List<$0.Key> get keys => $_getList(0);
+  $core.List<$1.Key> get keys => $_getList(0);
 
   $core.String get projectId => $_getS(1, '');
   set projectId($core.String v) {
@@ -605,18 +632,20 @@ class ReserveIdsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.datastore.v1beta3'))
     ..hasRequiredFields = false;
 
-  ReserveIdsResponse() : super();
-  ReserveIdsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReserveIdsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReserveIdsResponse._() : super();
+  factory ReserveIdsResponse() => create();
+  factory ReserveIdsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReserveIdsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReserveIdsResponse clone() => ReserveIdsResponse()..mergeFromMessage(this);
   ReserveIdsResponse copyWith(void Function(ReserveIdsResponse) updates) =>
       super.copyWith((message) => updates(message as ReserveIdsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ReserveIdsResponse create() => ReserveIdsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ReserveIdsResponse create() => ReserveIdsResponse._();
   ReserveIdsResponse createEmptyInstance() => create();
   static $pb.PbList<ReserveIdsResponse> createRepeated() =>
       $pb.PbList<ReserveIdsResponse>();
@@ -645,31 +674,33 @@ class Mutation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..a<$0.Entity>(
-        4, 'insert', $pb.PbFieldType.OM, $0.Entity.getDefault, $0.Entity.create)
-    ..a<$0.Entity>(
-        5, 'update', $pb.PbFieldType.OM, $0.Entity.getDefault, $0.Entity.create)
-    ..a<$0.Entity>(
-        6, 'upsert', $pb.PbFieldType.OM, $0.Entity.getDefault, $0.Entity.create)
-    ..a<$0.Key>(
-        7, 'delete', $pb.PbFieldType.OM, $0.Key.getDefault, $0.Key.create)
-    ..aInt64(8, 'baseVersion')
     ..oo(0, [4, 5, 6, 7])
     ..oo(1, [8])
+    ..a<$1.Entity>(
+        4, 'insert', $pb.PbFieldType.OM, $1.Entity.getDefault, $1.Entity.create)
+    ..a<$1.Entity>(
+        5, 'update', $pb.PbFieldType.OM, $1.Entity.getDefault, $1.Entity.create)
+    ..a<$1.Entity>(
+        6, 'upsert', $pb.PbFieldType.OM, $1.Entity.getDefault, $1.Entity.create)
+    ..a<$1.Key>(
+        7, 'delete', $pb.PbFieldType.OM, $1.Key.getDefault, $1.Key.create)
+    ..aInt64(8, 'baseVersion')
     ..hasRequiredFields = false;
 
-  Mutation() : super();
-  Mutation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation._() : super();
+  factory Mutation() => create();
+  factory Mutation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation clone() => Mutation()..mergeFromMessage(this);
   Mutation copyWith(void Function(Mutation) updates) =>
       super.copyWith((message) => updates(message as Mutation));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation create() => Mutation();
+  @$core.pragma('dart2js:noInline')
+  static Mutation create() => Mutation._();
   Mutation createEmptyInstance() => create();
   static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
   static Mutation getDefault() => _defaultInstance ??= create()..freeze();
@@ -683,32 +714,32 @@ class Mutation extends $pb.GeneratedMessage {
       _Mutation_ConflictDetectionStrategyByTag[$_whichOneof(1)];
   void clearConflictDetectionStrategy() => clearField($_whichOneof(1));
 
-  $0.Entity get insert => $_getN(0);
-  set insert($0.Entity v) {
+  $1.Entity get insert => $_getN(0);
+  set insert($1.Entity v) {
     setField(4, v);
   }
 
   $core.bool hasInsert() => $_has(0);
   void clearInsert() => clearField(4);
 
-  $0.Entity get update => $_getN(1);
-  set update($0.Entity v) {
+  $1.Entity get update => $_getN(1);
+  set update($1.Entity v) {
     setField(5, v);
   }
 
   $core.bool hasUpdate() => $_has(1);
   void clearUpdate() => clearField(5);
 
-  $0.Entity get upsert => $_getN(2);
-  set upsert($0.Entity v) {
+  $1.Entity get upsert => $_getN(2);
+  set upsert($1.Entity v) {
     setField(6, v);
   }
 
   $core.bool hasUpsert() => $_has(2);
   void clearUpsert() => clearField(6);
 
-  $0.Key get delete => $_getN(3);
-  set delete($0.Key v) {
+  $1.Key get delete => $_getN(3);
+  set delete($1.Key v) {
     setField(7, v);
   }
 
@@ -727,31 +758,33 @@ class Mutation extends $pb.GeneratedMessage {
 class MutationResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutationResult',
       package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..a<$0.Key>(3, 'key', $pb.PbFieldType.OM, $0.Key.getDefault, $0.Key.create)
+    ..a<$1.Key>(3, 'key', $pb.PbFieldType.OM, $1.Key.getDefault, $1.Key.create)
     ..aInt64(4, 'version')
     ..aOB(5, 'conflictDetected')
     ..hasRequiredFields = false;
 
-  MutationResult() : super();
-  MutationResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutationResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutationResult._() : super();
+  factory MutationResult() => create();
+  factory MutationResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutationResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutationResult clone() => MutationResult()..mergeFromMessage(this);
   MutationResult copyWith(void Function(MutationResult) updates) =>
       super.copyWith((message) => updates(message as MutationResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutationResult create() => MutationResult();
+  @$core.pragma('dart2js:noInline')
+  static MutationResult create() => MutationResult._();
   MutationResult createEmptyInstance() => create();
   static $pb.PbList<MutationResult> createRepeated() =>
       $pb.PbList<MutationResult>();
   static MutationResult getDefault() => _defaultInstance ??= create()..freeze();
   static MutationResult _defaultInstance;
 
-  $0.Key get key => $_getN(0);
-  set key($0.Key v) {
+  $1.Key get key => $_getN(0);
+  set key($1.Key v) {
     setField(3, v);
   }
 
@@ -786,6 +819,7 @@ class ReadOptions extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadOptions',
       package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..oo(0, [1, 2])
     ..e<ReadOptions_ReadConsistency>(
         1,
         'readConsistency',
@@ -794,21 +828,22 @@ class ReadOptions extends $pb.GeneratedMessage {
         ReadOptions_ReadConsistency.valueOf,
         ReadOptions_ReadConsistency.values)
     ..a<$core.List<$core.int>>(2, 'transaction', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  ReadOptions() : super();
-  ReadOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadOptions._() : super();
+  factory ReadOptions() => create();
+  factory ReadOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadOptions clone() => ReadOptions()..mergeFromMessage(this);
   ReadOptions copyWith(void Function(ReadOptions) updates) =>
       super.copyWith((message) => updates(message as ReadOptions));
   $pb.BuilderInfo get info_ => _i;
-  static ReadOptions create() => ReadOptions();
+  @$core.pragma('dart2js:noInline')
+  static ReadOptions create() => ReadOptions._();
   ReadOptions createEmptyInstance() => create();
   static $pb.PbList<ReadOptions> createRepeated() => $pb.PbList<ReadOptions>();
   static ReadOptions getDefault() => _defaultInstance ??= create()..freeze();
@@ -842,13 +877,14 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'previousTransaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  TransactionOptions_ReadWrite() : super();
-  TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_ReadWrite.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_ReadWrite._() : super();
+  factory TransactionOptions_ReadWrite() => create();
+  factory TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_ReadWrite.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_ReadWrite clone() =>
       TransactionOptions_ReadWrite()..mergeFromMessage(this);
   TransactionOptions_ReadWrite copyWith(
@@ -856,8 +892,9 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_ReadWrite));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadWrite create() =>
-      TransactionOptions_ReadWrite();
+      TransactionOptions_ReadWrite._();
   TransactionOptions_ReadWrite createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadWrite> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadWrite>();
@@ -880,13 +917,14 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.datastore.v1beta3'))
     ..hasRequiredFields = false;
 
-  TransactionOptions_ReadOnly() : super();
-  TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_ReadOnly.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_ReadOnly._() : super();
+  factory TransactionOptions_ReadOnly() => create();
+  factory TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_ReadOnly.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_ReadOnly clone() =>
       TransactionOptions_ReadOnly()..mergeFromMessage(this);
   TransactionOptions_ReadOnly copyWith(
@@ -894,7 +932,9 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_ReadOnly));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionOptions_ReadOnly create() => TransactionOptions_ReadOnly();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadOnly create() =>
+      TransactionOptions_ReadOnly._();
   TransactionOptions_ReadOnly createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadOnly> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadOnly>();
@@ -914,6 +954,7 @@ class TransactionOptions extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
       package: const $pb.PackageName('google.datastore.v1beta3'))
+    ..oo(0, [1, 2])
     ..a<TransactionOptions_ReadWrite>(
         1,
         'readWrite',
@@ -926,21 +967,22 @@ class TransactionOptions extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         TransactionOptions_ReadOnly.getDefault,
         TransactionOptions_ReadOnly.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  TransactionOptions() : super();
-  TransactionOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions._() : super();
+  factory TransactionOptions() => create();
+  factory TransactionOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions clone() => TransactionOptions()..mergeFromMessage(this);
   TransactionOptions copyWith(void Function(TransactionOptions) updates) =>
       super.copyWith((message) => updates(message as TransactionOptions));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionOptions create() => TransactionOptions();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions create() => TransactionOptions._();
   TransactionOptions createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions> createRepeated() =>
       $pb.PbList<TransactionOptions>();

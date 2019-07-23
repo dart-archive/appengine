@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/iam/v1/policy.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,18 +24,20 @@ class Policy extends $pb.GeneratedMessage {
         ..pc<Binding>(4, 'bindings', $pb.PbFieldType.PM, Binding.create)
         ..hasRequiredFields = false;
 
-  Policy() : super();
-  Policy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Policy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Policy._() : super();
+  factory Policy() => create();
+  factory Policy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Policy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Policy clone() => Policy()..mergeFromMessage(this);
   Policy copyWith(void Function(Policy) updates) =>
       super.copyWith((message) => updates(message as Policy));
   $pb.BuilderInfo get info_ => _i;
-  static Policy create() => Policy();
+  @$core.pragma('dart2js:noInline')
+  static Policy create() => Policy._();
   Policy createEmptyInstance() => create();
   static $pb.PbList<Policy> createRepeated() => $pb.PbList<Policy>();
   static Policy getDefault() => _defaultInstance ??= create()..freeze();
@@ -68,18 +71,20 @@ class Binding extends $pb.GeneratedMessage {
         3, 'condition', $pb.PbFieldType.OM, $0.Expr.getDefault, $0.Expr.create)
     ..hasRequiredFields = false;
 
-  Binding() : super();
-  Binding.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Binding.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Binding._() : super();
+  factory Binding() => create();
+  factory Binding.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Binding.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Binding clone() => Binding()..mergeFromMessage(this);
   Binding copyWith(void Function(Binding) updates) =>
       super.copyWith((message) => updates(message as Binding));
   $pb.BuilderInfo get info_ => _i;
-  static Binding create() => Binding();
+  @$core.pragma('dart2js:noInline')
+  static Binding create() => Binding._();
   Binding createEmptyInstance() => create();
   static $pb.PbList<Binding> createRepeated() => $pb.PbList<Binding>();
   static Binding getDefault() => _defaultInstance ??= create()..freeze();
@@ -113,18 +118,20 @@ class PolicyDelta extends $pb.GeneratedMessage {
         2, 'auditConfigDeltas', $pb.PbFieldType.PM, AuditConfigDelta.create)
     ..hasRequiredFields = false;
 
-  PolicyDelta() : super();
-  PolicyDelta.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyDelta.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyDelta._() : super();
+  factory PolicyDelta() => create();
+  factory PolicyDelta.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyDelta.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyDelta clone() => PolicyDelta()..mergeFromMessage(this);
   PolicyDelta copyWith(void Function(PolicyDelta) updates) =>
       super.copyWith((message) => updates(message as PolicyDelta));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyDelta create() => PolicyDelta();
+  @$core.pragma('dart2js:noInline')
+  static PolicyDelta create() => PolicyDelta._();
   PolicyDelta createEmptyInstance() => create();
   static $pb.PbList<PolicyDelta> createRepeated() => $pb.PbList<PolicyDelta>();
   static PolicyDelta getDefault() => _defaultInstance ??= create()..freeze();
@@ -151,18 +158,20 @@ class BindingDelta extends $pb.GeneratedMessage {
         4, 'condition', $pb.PbFieldType.OM, $0.Expr.getDefault, $0.Expr.create)
     ..hasRequiredFields = false;
 
-  BindingDelta() : super();
-  BindingDelta.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BindingDelta.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BindingDelta._() : super();
+  factory BindingDelta() => create();
+  factory BindingDelta.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BindingDelta.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BindingDelta clone() => BindingDelta()..mergeFromMessage(this);
   BindingDelta copyWith(void Function(BindingDelta) updates) =>
       super.copyWith((message) => updates(message as BindingDelta));
   $pb.BuilderInfo get info_ => _i;
-  static BindingDelta create() => BindingDelta();
+  @$core.pragma('dart2js:noInline')
+  static BindingDelta create() => BindingDelta._();
   BindingDelta createEmptyInstance() => create();
   static $pb.PbList<BindingDelta> createRepeated() =>
       $pb.PbList<BindingDelta>();
@@ -217,18 +226,20 @@ class AuditConfigDelta extends $pb.GeneratedMessage {
     ..aOS(4, 'logType')
     ..hasRequiredFields = false;
 
-  AuditConfigDelta() : super();
-  AuditConfigDelta.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AuditConfigDelta.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AuditConfigDelta._() : super();
+  factory AuditConfigDelta() => create();
+  factory AuditConfigDelta.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AuditConfigDelta.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AuditConfigDelta clone() => AuditConfigDelta()..mergeFromMessage(this);
   AuditConfigDelta copyWith(void Function(AuditConfigDelta) updates) =>
       super.copyWith((message) => updates(message as AuditConfigDelta));
   $pb.BuilderInfo get info_ => _i;
-  static AuditConfigDelta create() => AuditConfigDelta();
+  @$core.pragma('dart2js:noInline')
+  static AuditConfigDelta create() => AuditConfigDelta._();
   AuditConfigDelta createEmptyInstance() => create();
   static $pb.PbList<AuditConfigDelta> createRepeated() =>
       $pb.PbList<AuditConfigDelta>();

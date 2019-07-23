@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/customer.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -44,18 +45,20 @@ class Customer extends $pb.GeneratedMessage {
     ..pc<$1.CustomerPayPerConversionEligibilityFailureReasonEnum_CustomerPayPerConversionEligibilityFailureReason>(16, 'payPerConversionEligibilityFailureReasons', $pb.PbFieldType.PE, null, $1.CustomerPayPerConversionEligibilityFailureReasonEnum_CustomerPayPerConversionEligibilityFailureReason.valueOf, $1.CustomerPayPerConversionEligibilityFailureReasonEnum_CustomerPayPerConversionEligibilityFailureReason.values)
     ..hasRequiredFields = false;
 
-  Customer() : super();
-  Customer.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Customer.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Customer._() : super();
+  factory Customer() => create();
+  factory Customer.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Customer.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Customer clone() => Customer()..mergeFromMessage(this);
   Customer copyWith(void Function(Customer) updates) =>
       super.copyWith((message) => updates(message as Customer));
   $pb.BuilderInfo get info_ => _i;
-  static Customer create() => Customer();
+  @$core.pragma('dart2js:noInline')
+  static Customer create() => Customer._();
   Customer createEmptyInstance() => create();
   static $pb.PbList<Customer> createRepeated() => $pb.PbList<Customer>();
   static Customer getDefault() => _defaultInstance ??= create()..freeze();
@@ -189,19 +192,21 @@ class CallReportingSetting extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CallReportingSetting() : super();
-  CallReportingSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CallReportingSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CallReportingSetting._() : super();
+  factory CallReportingSetting() => create();
+  factory CallReportingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CallReportingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CallReportingSetting clone() =>
       CallReportingSetting()..mergeFromMessage(this);
   CallReportingSetting copyWith(void Function(CallReportingSetting) updates) =>
       super.copyWith((message) => updates(message as CallReportingSetting));
   $pb.BuilderInfo get info_ => _i;
-  static CallReportingSetting create() => CallReportingSetting();
+  @$core.pragma('dart2js:noInline')
+  static CallReportingSetting create() => CallReportingSetting._();
   CallReportingSetting createEmptyInstance() => create();
   static $pb.PbList<CallReportingSetting> createRepeated() =>
       $pb.PbList<CallReportingSetting>();
@@ -243,13 +248,14 @@ class ConversionTrackingSetting extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ConversionTrackingSetting() : super();
-  ConversionTrackingSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionTrackingSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionTrackingSetting._() : super();
+  factory ConversionTrackingSetting() => create();
+  factory ConversionTrackingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionTrackingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionTrackingSetting clone() =>
       ConversionTrackingSetting()..mergeFromMessage(this);
   ConversionTrackingSetting copyWith(
@@ -257,7 +263,8 @@ class ConversionTrackingSetting extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ConversionTrackingSetting));
   $pb.BuilderInfo get info_ => _i;
-  static ConversionTrackingSetting create() => ConversionTrackingSetting();
+  @$core.pragma('dart2js:noInline')
+  static ConversionTrackingSetting create() => ConversionTrackingSetting._();
   ConversionTrackingSetting createEmptyInstance() => create();
   static $pb.PbList<ConversionTrackingSetting> createRepeated() =>
       $pb.PbList<ConversionTrackingSetting>();
@@ -289,18 +296,20 @@ class RemarketingSetting extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  RemarketingSetting() : super();
-  RemarketingSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RemarketingSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RemarketingSetting._() : super();
+  factory RemarketingSetting() => create();
+  factory RemarketingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemarketingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RemarketingSetting clone() => RemarketingSetting()..mergeFromMessage(this);
   RemarketingSetting copyWith(void Function(RemarketingSetting) updates) =>
       super.copyWith((message) => updates(message as RemarketingSetting));
   $pb.BuilderInfo get info_ => _i;
-  static RemarketingSetting create() => RemarketingSetting();
+  @$core.pragma('dart2js:noInline')
+  static RemarketingSetting create() => RemarketingSetting._();
   RemarketingSetting createEmptyInstance() => create();
   static $pb.PbList<RemarketingSetting> createRepeated() =>
       $pb.PbList<RemarketingSetting>();

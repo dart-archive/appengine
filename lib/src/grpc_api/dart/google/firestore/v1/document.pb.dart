@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/v1/document.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -35,18 +36,20 @@ class Document extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Document() : super();
-  Document.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Document.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Document._() : super();
+  factory Document() => create();
+  factory Document.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Document.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Document clone() => Document()..mergeFromMessage(this);
   Document copyWith(void Function(Document) updates) =>
       super.copyWith((message) => updates(message as Document));
   $pb.BuilderInfo get info_ => _i;
-  static Document create() => Document();
+  @$core.pragma('dart2js:noInline')
+  static Document create() => Document._();
   Document createEmptyInstance() => create();
   static $pb.PbList<Document> createRepeated() => $pb.PbList<Document>();
   static Document getDefault() => _defaultInstance ??= create()..freeze();
@@ -111,6 +114,7 @@ class Value extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
       package: const $pb.PackageName('google.firestore.v1'))
+    ..oo(0, [1, 2, 3, 5, 6, 8, 9, 10, 11, 17, 18])
     ..aOB(1, 'booleanValue')
     ..aInt64(2, 'integerValue')
     ..a<$core.double>(3, 'doubleValue', $pb.PbFieldType.OD)
@@ -127,21 +131,22 @@ class Value extends $pb.GeneratedMessage {
         $2.NullValue.NULL_VALUE, $2.NullValue.valueOf, $2.NullValue.values)
     ..aOS(17, 'stringValue')
     ..a<$core.List<$core.int>>(18, 'bytesValue', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2, 3, 5, 6, 8, 9, 10, 11, 17, 18])
     ..hasRequiredFields = false;
 
-  Value() : super();
-  Value.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Value.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Value._() : super();
+  factory Value() => create();
+  factory Value.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Value.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Value clone() => Value()..mergeFromMessage(this);
   Value copyWith(void Function(Value) updates) =>
       super.copyWith((message) => updates(message as Value));
   $pb.BuilderInfo get info_ => _i;
-  static Value create() => Value();
+  @$core.pragma('dart2js:noInline')
+  static Value create() => Value._();
   Value createEmptyInstance() => create();
   static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
   static Value getDefault() => _defaultInstance ??= create()..freeze();
@@ -245,18 +250,20 @@ class ArrayValue extends $pb.GeneratedMessage {
     ..pc<Value>(1, 'values', $pb.PbFieldType.PM, Value.create)
     ..hasRequiredFields = false;
 
-  ArrayValue() : super();
-  ArrayValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ArrayValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ArrayValue._() : super();
+  factory ArrayValue() => create();
+  factory ArrayValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ArrayValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ArrayValue clone() => ArrayValue()..mergeFromMessage(this);
   ArrayValue copyWith(void Function(ArrayValue) updates) =>
       super.copyWith((message) => updates(message as ArrayValue));
   $pb.BuilderInfo get info_ => _i;
-  static ArrayValue create() => ArrayValue();
+  @$core.pragma('dart2js:noInline')
+  static ArrayValue create() => ArrayValue._();
   ArrayValue createEmptyInstance() => create();
   static $pb.PbList<ArrayValue> createRepeated() => $pb.PbList<ArrayValue>();
   static ArrayValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -280,18 +287,20 @@ class MapValue extends $pb.GeneratedMessage {
         const $pb.PackageName('google.firestore.v1'))
     ..hasRequiredFields = false;
 
-  MapValue() : super();
-  MapValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MapValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MapValue._() : super();
+  factory MapValue() => create();
+  factory MapValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MapValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MapValue clone() => MapValue()..mergeFromMessage(this);
   MapValue copyWith(void Function(MapValue) updates) =>
       super.copyWith((message) => updates(message as MapValue));
   $pb.BuilderInfo get info_ => _i;
-  static MapValue create() => MapValue();
+  @$core.pragma('dart2js:noInline')
+  static MapValue create() => MapValue._();
   MapValue createEmptyInstance() => create();
   static $pb.PbList<MapValue> createRepeated() => $pb.PbList<MapValue>();
   static MapValue getDefault() => _defaultInstance ??= create()..freeze();

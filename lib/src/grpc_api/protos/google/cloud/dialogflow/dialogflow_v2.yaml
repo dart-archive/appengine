@@ -81,9 +81,7 @@ backend:
     deadline: 230.0
   - selector: google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent
     deadline: 230.0
-  - selector: google.longrunning.Operations.GetOperation
-    deadline: 60.0
-  - selector: google.longrunning.Operations.WaitOperation
+  - selector: 'google.longrunning.Operations.*'
     deadline: 60.0
 
 authentication:
@@ -123,12 +121,7 @@ authentication:
       canonical_scopes: |-
         https://www.googleapis.com/auth/cloud-platform,
         https://www.googleapis.com/auth/dialogflow
-  - selector: google.longrunning.Operations.GetOperation
-    oauth:
-      canonical_scopes: |-
-        https://www.googleapis.com/auth/cloud-platform,
-        https://www.googleapis.com/auth/dialogflow
-  - selector: google.longrunning.Operations.WaitOperation
+  - selector: 'google.longrunning.Operations.*'
     oauth:
       canonical_scopes: |-
         https://www.googleapis.com/auth/cloud-platform,

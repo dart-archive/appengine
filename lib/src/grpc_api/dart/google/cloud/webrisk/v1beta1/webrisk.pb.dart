@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/webrisk/v1beta1/webrisk.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
+import '../../../protobuf/timestamp.pb.dart' as $1;
 
 import 'webrisk.pbenum.dart';
 
@@ -26,13 +27,15 @@ class ComputeThreatListDiffRequest_Constraints extends $pb.GeneratedMessage {
         CompressionType.valueOf, CompressionType.values)
     ..hasRequiredFields = false;
 
-  ComputeThreatListDiffRequest_Constraints() : super();
-  ComputeThreatListDiffRequest_Constraints.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ComputeThreatListDiffRequest_Constraints.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ComputeThreatListDiffRequest_Constraints._() : super();
+  factory ComputeThreatListDiffRequest_Constraints() => create();
+  factory ComputeThreatListDiffRequest_Constraints.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ComputeThreatListDiffRequest_Constraints.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ComputeThreatListDiffRequest_Constraints clone() =>
       ComputeThreatListDiffRequest_Constraints()..mergeFromMessage(this);
   ComputeThreatListDiffRequest_Constraints copyWith(
@@ -40,8 +43,9 @@ class ComputeThreatListDiffRequest_Constraints extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ComputeThreatListDiffRequest_Constraints));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ComputeThreatListDiffRequest_Constraints create() =>
-      ComputeThreatListDiffRequest_Constraints();
+      ComputeThreatListDiffRequest_Constraints._();
   ComputeThreatListDiffRequest_Constraints createEmptyInstance() => create();
   static $pb.PbList<ComputeThreatListDiffRequest_Constraints>
       createRepeated() =>
@@ -89,13 +93,14 @@ class ComputeThreatListDiffRequest extends $pb.GeneratedMessage {
         ComputeThreatListDiffRequest_Constraints.create)
     ..hasRequiredFields = false;
 
-  ComputeThreatListDiffRequest() : super();
-  ComputeThreatListDiffRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ComputeThreatListDiffRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ComputeThreatListDiffRequest._() : super();
+  factory ComputeThreatListDiffRequest() => create();
+  factory ComputeThreatListDiffRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ComputeThreatListDiffRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ComputeThreatListDiffRequest clone() =>
       ComputeThreatListDiffRequest()..mergeFromMessage(this);
   ComputeThreatListDiffRequest copyWith(
@@ -103,8 +108,9 @@ class ComputeThreatListDiffRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ComputeThreatListDiffRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ComputeThreatListDiffRequest create() =>
-      ComputeThreatListDiffRequest();
+      ComputeThreatListDiffRequest._();
   ComputeThreatListDiffRequest createEmptyInstance() => create();
   static $pb.PbList<ComputeThreatListDiffRequest> createRepeated() =>
       $pb.PbList<ComputeThreatListDiffRequest>();
@@ -144,13 +150,15 @@ class ComputeThreatListDiffResponse_Checksum extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'sha256', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  ComputeThreatListDiffResponse_Checksum() : super();
-  ComputeThreatListDiffResponse_Checksum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ComputeThreatListDiffResponse_Checksum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ComputeThreatListDiffResponse_Checksum._() : super();
+  factory ComputeThreatListDiffResponse_Checksum() => create();
+  factory ComputeThreatListDiffResponse_Checksum.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ComputeThreatListDiffResponse_Checksum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ComputeThreatListDiffResponse_Checksum clone() =>
       ComputeThreatListDiffResponse_Checksum()..mergeFromMessage(this);
   ComputeThreatListDiffResponse_Checksum copyWith(
@@ -158,8 +166,9 @@ class ComputeThreatListDiffResponse_Checksum extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ComputeThreatListDiffResponse_Checksum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ComputeThreatListDiffResponse_Checksum create() =>
-      ComputeThreatListDiffResponse_Checksum();
+      ComputeThreatListDiffResponse_Checksum._();
   ComputeThreatListDiffResponse_Checksum createEmptyInstance() => create();
   static $pb.PbList<ComputeThreatListDiffResponse_Checksum> createRepeated() =>
       $pb.PbList<ComputeThreatListDiffResponse_Checksum>();
@@ -180,8 +189,8 @@ class ComputeThreatListDiffResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ComputeThreatListDiffResponse',
       package: const $pb.PackageName('google.cloud.webrisk.v1beta1'))
-    ..a<$0.Timestamp>(2, 'recommendedNextDiff', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'recommendedNextDiff', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..e<ComputeThreatListDiffResponse_ResponseType>(
         4,
         'responseType',
@@ -202,13 +211,14 @@ class ComputeThreatListDiffResponse extends $pb.GeneratedMessage {
         ComputeThreatListDiffResponse_Checksum.create)
     ..hasRequiredFields = false;
 
-  ComputeThreatListDiffResponse() : super();
-  ComputeThreatListDiffResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ComputeThreatListDiffResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ComputeThreatListDiffResponse._() : super();
+  factory ComputeThreatListDiffResponse() => create();
+  factory ComputeThreatListDiffResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ComputeThreatListDiffResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ComputeThreatListDiffResponse clone() =>
       ComputeThreatListDiffResponse()..mergeFromMessage(this);
   ComputeThreatListDiffResponse copyWith(
@@ -216,8 +226,9 @@ class ComputeThreatListDiffResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ComputeThreatListDiffResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ComputeThreatListDiffResponse create() =>
-      ComputeThreatListDiffResponse();
+      ComputeThreatListDiffResponse._();
   ComputeThreatListDiffResponse createEmptyInstance() => create();
   static $pb.PbList<ComputeThreatListDiffResponse> createRepeated() =>
       $pb.PbList<ComputeThreatListDiffResponse>();
@@ -225,8 +236,8 @@ class ComputeThreatListDiffResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ComputeThreatListDiffResponse _defaultInstance;
 
-  $0.Timestamp get recommendedNextDiff => $_getN(0);
-  set recommendedNextDiff($0.Timestamp v) {
+  $1.Timestamp get recommendedNextDiff => $_getN(0);
+  set recommendedNextDiff($1.Timestamp v) {
     setField(2, v);
   }
 
@@ -282,18 +293,20 @@ class SearchUrisRequest extends $pb.GeneratedMessage {
         ThreatType.valueOf, ThreatType.values)
     ..hasRequiredFields = false;
 
-  SearchUrisRequest() : super();
-  SearchUrisRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchUrisRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchUrisRequest._() : super();
+  factory SearchUrisRequest() => create();
+  factory SearchUrisRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchUrisRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchUrisRequest clone() => SearchUrisRequest()..mergeFromMessage(this);
   SearchUrisRequest copyWith(void Function(SearchUrisRequest) updates) =>
       super.copyWith((message) => updates(message as SearchUrisRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchUrisRequest create() => SearchUrisRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchUrisRequest create() => SearchUrisRequest._();
   SearchUrisRequest createEmptyInstance() => create();
   static $pb.PbList<SearchUrisRequest> createRepeated() =>
       $pb.PbList<SearchUrisRequest>();
@@ -318,17 +331,18 @@ class SearchUrisResponse_ThreatUri extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.webrisk.v1beta1'))
     ..pc<ThreatType>(1, 'threatTypes', $pb.PbFieldType.PE, null,
         ThreatType.valueOf, ThreatType.values)
-    ..a<$0.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  SearchUrisResponse_ThreatUri() : super();
-  SearchUrisResponse_ThreatUri.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchUrisResponse_ThreatUri.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchUrisResponse_ThreatUri._() : super();
+  factory SearchUrisResponse_ThreatUri() => create();
+  factory SearchUrisResponse_ThreatUri.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchUrisResponse_ThreatUri.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchUrisResponse_ThreatUri clone() =>
       SearchUrisResponse_ThreatUri()..mergeFromMessage(this);
   SearchUrisResponse_ThreatUri copyWith(
@@ -336,8 +350,9 @@ class SearchUrisResponse_ThreatUri extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchUrisResponse_ThreatUri));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SearchUrisResponse_ThreatUri create() =>
-      SearchUrisResponse_ThreatUri();
+      SearchUrisResponse_ThreatUri._();
   SearchUrisResponse_ThreatUri createEmptyInstance() => create();
   static $pb.PbList<SearchUrisResponse_ThreatUri> createRepeated() =>
       $pb.PbList<SearchUrisResponse_ThreatUri>();
@@ -347,8 +362,8 @@ class SearchUrisResponse_ThreatUri extends $pb.GeneratedMessage {
 
   $core.List<ThreatType> get threatTypes => $_getList(0);
 
-  $0.Timestamp get expireTime => $_getN(1);
-  set expireTime($0.Timestamp v) {
+  $1.Timestamp get expireTime => $_getN(1);
+  set expireTime($1.Timestamp v) {
     setField(2, v);
   }
 
@@ -367,18 +382,20 @@ class SearchUrisResponse extends $pb.GeneratedMessage {
         SearchUrisResponse_ThreatUri.create)
     ..hasRequiredFields = false;
 
-  SearchUrisResponse() : super();
-  SearchUrisResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchUrisResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchUrisResponse._() : super();
+  factory SearchUrisResponse() => create();
+  factory SearchUrisResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchUrisResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchUrisResponse clone() => SearchUrisResponse()..mergeFromMessage(this);
   SearchUrisResponse copyWith(void Function(SearchUrisResponse) updates) =>
       super.copyWith((message) => updates(message as SearchUrisResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchUrisResponse create() => SearchUrisResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchUrisResponse create() => SearchUrisResponse._();
   SearchUrisResponse createEmptyInstance() => create();
   static $pb.PbList<SearchUrisResponse> createRepeated() =>
       $pb.PbList<SearchUrisResponse>();
@@ -403,18 +420,20 @@ class SearchHashesRequest extends $pb.GeneratedMessage {
         ThreatType.valueOf, ThreatType.values)
     ..hasRequiredFields = false;
 
-  SearchHashesRequest() : super();
-  SearchHashesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchHashesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchHashesRequest._() : super();
+  factory SearchHashesRequest() => create();
+  factory SearchHashesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchHashesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchHashesRequest clone() => SearchHashesRequest()..mergeFromMessage(this);
   SearchHashesRequest copyWith(void Function(SearchHashesRequest) updates) =>
       super.copyWith((message) => updates(message as SearchHashesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchHashesRequest create() => SearchHashesRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchHashesRequest create() => SearchHashesRequest._();
   SearchHashesRequest createEmptyInstance() => create();
   static $pb.PbList<SearchHashesRequest> createRepeated() =>
       $pb.PbList<SearchHashesRequest>();
@@ -440,17 +459,18 @@ class SearchHashesResponse_ThreatHash extends $pb.GeneratedMessage {
     ..pc<ThreatType>(1, 'threatTypes', $pb.PbFieldType.PE, null,
         ThreatType.valueOf, ThreatType.values)
     ..a<$core.List<$core.int>>(2, 'hash', $pb.PbFieldType.OY)
-    ..a<$0.Timestamp>(3, 'expireTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(3, 'expireTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  SearchHashesResponse_ThreatHash() : super();
-  SearchHashesResponse_ThreatHash.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchHashesResponse_ThreatHash.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchHashesResponse_ThreatHash._() : super();
+  factory SearchHashesResponse_ThreatHash() => create();
+  factory SearchHashesResponse_ThreatHash.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchHashesResponse_ThreatHash.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchHashesResponse_ThreatHash clone() =>
       SearchHashesResponse_ThreatHash()..mergeFromMessage(this);
   SearchHashesResponse_ThreatHash copyWith(
@@ -458,8 +478,9 @@ class SearchHashesResponse_ThreatHash extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchHashesResponse_ThreatHash));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SearchHashesResponse_ThreatHash create() =>
-      SearchHashesResponse_ThreatHash();
+      SearchHashesResponse_ThreatHash._();
   SearchHashesResponse_ThreatHash createEmptyInstance() => create();
   static $pb.PbList<SearchHashesResponse_ThreatHash> createRepeated() =>
       $pb.PbList<SearchHashesResponse_ThreatHash>();
@@ -477,8 +498,8 @@ class SearchHashesResponse_ThreatHash extends $pb.GeneratedMessage {
   $core.bool hasHash() => $_has(1);
   void clearHash() => clearField(2);
 
-  $0.Timestamp get expireTime => $_getN(2);
-  set expireTime($0.Timestamp v) {
+  $1.Timestamp get expireTime => $_getN(2);
+  set expireTime($1.Timestamp v) {
     setField(3, v);
   }
 
@@ -491,23 +512,25 @@ class SearchHashesResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.webrisk.v1beta1'))
     ..pc<SearchHashesResponse_ThreatHash>(1, 'threats', $pb.PbFieldType.PM,
         SearchHashesResponse_ThreatHash.create)
-    ..a<$0.Timestamp>(2, 'negativeExpireTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..a<$1.Timestamp>(2, 'negativeExpireTime', $pb.PbFieldType.OM,
+        $1.Timestamp.getDefault, $1.Timestamp.create)
     ..hasRequiredFields = false;
 
-  SearchHashesResponse() : super();
-  SearchHashesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchHashesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchHashesResponse._() : super();
+  factory SearchHashesResponse() => create();
+  factory SearchHashesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchHashesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchHashesResponse clone() =>
       SearchHashesResponse()..mergeFromMessage(this);
   SearchHashesResponse copyWith(void Function(SearchHashesResponse) updates) =>
       super.copyWith((message) => updates(message as SearchHashesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchHashesResponse create() => SearchHashesResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchHashesResponse create() => SearchHashesResponse._();
   SearchHashesResponse createEmptyInstance() => create();
   static $pb.PbList<SearchHashesResponse> createRepeated() =>
       $pb.PbList<SearchHashesResponse>();
@@ -517,8 +540,8 @@ class SearchHashesResponse extends $pb.GeneratedMessage {
 
   $core.List<SearchHashesResponse_ThreatHash> get threats => $_getList(0);
 
-  $0.Timestamp get negativeExpireTime => $_getN(1);
-  set negativeExpireTime($0.Timestamp v) {
+  $1.Timestamp get negativeExpireTime => $_getN(1);
+  set negativeExpireTime($1.Timestamp v) {
     setField(2, v);
   }
 
@@ -534,19 +557,21 @@ class ThreatEntryAdditions extends $pb.GeneratedMessage {
         RiceDeltaEncoding.getDefault, RiceDeltaEncoding.create)
     ..hasRequiredFields = false;
 
-  ThreatEntryAdditions() : super();
-  ThreatEntryAdditions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ThreatEntryAdditions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ThreatEntryAdditions._() : super();
+  factory ThreatEntryAdditions() => create();
+  factory ThreatEntryAdditions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ThreatEntryAdditions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ThreatEntryAdditions clone() =>
       ThreatEntryAdditions()..mergeFromMessage(this);
   ThreatEntryAdditions copyWith(void Function(ThreatEntryAdditions) updates) =>
       super.copyWith((message) => updates(message as ThreatEntryAdditions));
   $pb.BuilderInfo get info_ => _i;
-  static ThreatEntryAdditions create() => ThreatEntryAdditions();
+  @$core.pragma('dart2js:noInline')
+  static ThreatEntryAdditions create() => ThreatEntryAdditions._();
   ThreatEntryAdditions createEmptyInstance() => create();
   static $pb.PbList<ThreatEntryAdditions> createRepeated() =>
       $pb.PbList<ThreatEntryAdditions>();
@@ -574,18 +599,20 @@ class ThreatEntryRemovals extends $pb.GeneratedMessage {
         RiceDeltaEncoding.getDefault, RiceDeltaEncoding.create)
     ..hasRequiredFields = false;
 
-  ThreatEntryRemovals() : super();
-  ThreatEntryRemovals.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ThreatEntryRemovals.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ThreatEntryRemovals._() : super();
+  factory ThreatEntryRemovals() => create();
+  factory ThreatEntryRemovals.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ThreatEntryRemovals.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ThreatEntryRemovals clone() => ThreatEntryRemovals()..mergeFromMessage(this);
   ThreatEntryRemovals copyWith(void Function(ThreatEntryRemovals) updates) =>
       super.copyWith((message) => updates(message as ThreatEntryRemovals));
   $pb.BuilderInfo get info_ => _i;
-  static ThreatEntryRemovals create() => ThreatEntryRemovals();
+  @$core.pragma('dart2js:noInline')
+  static ThreatEntryRemovals create() => ThreatEntryRemovals._();
   ThreatEntryRemovals createEmptyInstance() => create();
   static $pb.PbList<ThreatEntryRemovals> createRepeated() =>
       $pb.PbList<ThreatEntryRemovals>();
@@ -616,18 +643,20 @@ class RawIndices extends $pb.GeneratedMessage {
     ..p<$core.int>(1, 'indices', $pb.PbFieldType.P3)
     ..hasRequiredFields = false;
 
-  RawIndices() : super();
-  RawIndices.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RawIndices.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RawIndices._() : super();
+  factory RawIndices() => create();
+  factory RawIndices.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RawIndices.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RawIndices clone() => RawIndices()..mergeFromMessage(this);
   RawIndices copyWith(void Function(RawIndices) updates) =>
       super.copyWith((message) => updates(message as RawIndices));
   $pb.BuilderInfo get info_ => _i;
-  static RawIndices create() => RawIndices();
+  @$core.pragma('dart2js:noInline')
+  static RawIndices create() => RawIndices._();
   RawIndices createEmptyInstance() => create();
   static $pb.PbList<RawIndices> createRepeated() => $pb.PbList<RawIndices>();
   static RawIndices getDefault() => _defaultInstance ??= create()..freeze();
@@ -643,18 +672,20 @@ class RawHashes extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'rawHashes', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  RawHashes() : super();
-  RawHashes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RawHashes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RawHashes._() : super();
+  factory RawHashes() => create();
+  factory RawHashes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RawHashes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RawHashes clone() => RawHashes()..mergeFromMessage(this);
   RawHashes copyWith(void Function(RawHashes) updates) =>
       super.copyWith((message) => updates(message as RawHashes));
   $pb.BuilderInfo get info_ => _i;
-  static RawHashes create() => RawHashes();
+  @$core.pragma('dart2js:noInline')
+  static RawHashes create() => RawHashes._();
   RawHashes createEmptyInstance() => create();
   static $pb.PbList<RawHashes> createRepeated() => $pb.PbList<RawHashes>();
   static RawHashes getDefault() => _defaultInstance ??= create()..freeze();
@@ -686,18 +717,20 @@ class RiceDeltaEncoding extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, 'encodedData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  RiceDeltaEncoding() : super();
-  RiceDeltaEncoding.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RiceDeltaEncoding.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RiceDeltaEncoding._() : super();
+  factory RiceDeltaEncoding() => create();
+  factory RiceDeltaEncoding.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RiceDeltaEncoding.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RiceDeltaEncoding clone() => RiceDeltaEncoding()..mergeFromMessage(this);
   RiceDeltaEncoding copyWith(void Function(RiceDeltaEncoding) updates) =>
       super.copyWith((message) => updates(message as RiceDeltaEncoding));
   $pb.BuilderInfo get info_ => _i;
-  static RiceDeltaEncoding create() => RiceDeltaEncoding();
+  @$core.pragma('dart2js:noInline')
+  static RiceDeltaEncoding create() => RiceDeltaEncoding._();
   RiceDeltaEncoding createEmptyInstance() => create();
   static $pb.PbList<RiceDeltaEncoding> createRepeated() =>
       $pb.PbList<RiceDeltaEncoding>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/tenant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,18 +29,20 @@ class Tenant extends $pb.GeneratedMessage {
     ..pPS(4, 'keywordSearchableProfileCustomAttributes')
     ..hasRequiredFields = false;
 
-  Tenant() : super();
-  Tenant.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Tenant.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Tenant._() : super();
+  factory Tenant() => create();
+  factory Tenant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Tenant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Tenant clone() => Tenant()..mergeFromMessage(this);
   Tenant copyWith(void Function(Tenant) updates) =>
       super.copyWith((message) => updates(message as Tenant));
   $pb.BuilderInfo get info_ => _i;
-  static Tenant create() => Tenant();
+  @$core.pragma('dart2js:noInline')
+  static Tenant create() => Tenant._();
   Tenant createEmptyInstance() => create();
   static $pb.PbList<Tenant> createRepeated() => $pb.PbList<Tenant>();
   static Tenant getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/protobuf/any.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class Any extends $pb.GeneratedMessage {
         ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
         ..hasRequiredFields = false;
 
-  Any() : super();
-  Any.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Any.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Any._() : super();
+  factory Any() => create();
+  factory Any.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Any.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Any clone() => Any()..mergeFromMessage(this);
   Any copyWith(void Function(Any) updates) =>
       super.copyWith((message) => updates(message as Any));
   $pb.BuilderInfo get info_ => _i;
-  static Any create() => Any();
+  @$core.pragma('dart2js:noInline')
+  static Any create() => Any._();
   Any createEmptyInstance() => create();
   static $pb.PbList<Any> createRepeated() => $pb.PbList<Any>();
   static Any getDefault() => _defaultInstance ??= create()..freeze();

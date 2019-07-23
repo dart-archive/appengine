@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/cloudprofiler/v2/profiler.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $0;
-import '../../../protobuf/duration.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $1;
+import '../../../protobuf/duration.pb.dart' as $2;
 
 import 'profiler.pbenum.dart';
 
@@ -26,19 +27,21 @@ class CreateProfileRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
-  CreateProfileRequest() : super();
-  CreateProfileRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateProfileRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateProfileRequest._() : super();
+  factory CreateProfileRequest() => create();
+  factory CreateProfileRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateProfileRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateProfileRequest clone() =>
       CreateProfileRequest()..mergeFromMessage(this);
   CreateProfileRequest copyWith(void Function(CreateProfileRequest) updates) =>
       super.copyWith((message) => updates(message as CreateProfileRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateProfileRequest create() => CreateProfileRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateProfileRequest create() => CreateProfileRequest._();
   CreateProfileRequest createEmptyInstance() => create();
   static $pb.PbList<CreateProfileRequest> createRepeated() =>
       $pb.PbList<CreateProfileRequest>();
@@ -74,13 +77,14 @@ class CreateOfflineProfileRequest extends $pb.GeneratedMessage {
         2, 'profile', $pb.PbFieldType.OM, Profile.getDefault, Profile.create)
     ..hasRequiredFields = false;
 
-  CreateOfflineProfileRequest() : super();
-  CreateOfflineProfileRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateOfflineProfileRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateOfflineProfileRequest._() : super();
+  factory CreateOfflineProfileRequest() => create();
+  factory CreateOfflineProfileRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateOfflineProfileRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateOfflineProfileRequest clone() =>
       CreateOfflineProfileRequest()..mergeFromMessage(this);
   CreateOfflineProfileRequest copyWith(
@@ -88,7 +92,9 @@ class CreateOfflineProfileRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateOfflineProfileRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateOfflineProfileRequest create() => CreateOfflineProfileRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateOfflineProfileRequest create() =>
+      CreateOfflineProfileRequest._();
   CreateOfflineProfileRequest createEmptyInstance() => create();
   static $pb.PbList<CreateOfflineProfileRequest> createRepeated() =>
       $pb.PbList<CreateOfflineProfileRequest>();
@@ -118,23 +124,25 @@ class UpdateProfileRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..a<Profile>(
         1, 'profile', $pb.PbFieldType.OM, Profile.getDefault, Profile.create)
-    ..a<$0.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $0.FieldMask.getDefault, $0.FieldMask.create)
+    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateProfileRequest() : super();
-  UpdateProfileRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateProfileRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateProfileRequest._() : super();
+  factory UpdateProfileRequest() => create();
+  factory UpdateProfileRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateProfileRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateProfileRequest clone() =>
       UpdateProfileRequest()..mergeFromMessage(this);
   UpdateProfileRequest copyWith(void Function(UpdateProfileRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateProfileRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateProfileRequest create() => UpdateProfileRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateProfileRequest create() => UpdateProfileRequest._();
   UpdateProfileRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateProfileRequest> createRepeated() =>
       $pb.PbList<UpdateProfileRequest>();
@@ -150,8 +158,8 @@ class UpdateProfileRequest extends $pb.GeneratedMessage {
   $core.bool hasProfile() => $_has(0);
   void clearProfile() => clearField(1);
 
-  $0.FieldMask get updateMask => $_getN(1);
-  set updateMask($0.FieldMask v) {
+  $1.FieldMask get updateMask => $_getN(1);
+  set updateMask($1.FieldMask v) {
     setField(2, v);
   }
 
@@ -172,8 +180,8 @@ class Profile extends $pb.GeneratedMessage {
         ProfileType.values)
     ..a<Deployment>(3, 'deployment', $pb.PbFieldType.OM, Deployment.getDefault,
         Deployment.create)
-    ..a<$1.Duration>(4, 'duration', $pb.PbFieldType.OM, $1.Duration.getDefault,
-        $1.Duration.create)
+    ..a<$2.Duration>(4, 'duration', $pb.PbFieldType.OM, $2.Duration.getDefault,
+        $2.Duration.create)
     ..a<$core.List<$core.int>>(5, 'profileBytes', $pb.PbFieldType.OY)
     ..m<$core.String, $core.String>(
         6,
@@ -187,18 +195,20 @@ class Profile extends $pb.GeneratedMessage {
         const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..hasRequiredFields = false;
 
-  Profile() : super();
-  Profile.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Profile.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Profile._() : super();
+  factory Profile() => create();
+  factory Profile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Profile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Profile clone() => Profile()..mergeFromMessage(this);
   Profile copyWith(void Function(Profile) updates) =>
       super.copyWith((message) => updates(message as Profile));
   $pb.BuilderInfo get info_ => _i;
-  static Profile create() => Profile();
+  @$core.pragma('dart2js:noInline')
+  static Profile create() => Profile._();
   Profile createEmptyInstance() => create();
   static $pb.PbList<Profile> createRepeated() => $pb.PbList<Profile>();
   static Profile getDefault() => _defaultInstance ??= create()..freeze();
@@ -228,8 +238,8 @@ class Profile extends $pb.GeneratedMessage {
   $core.bool hasDeployment() => $_has(2);
   void clearDeployment() => clearField(3);
 
-  $1.Duration get duration => $_getN(3);
-  set duration($1.Duration v) {
+  $2.Duration get duration => $_getN(3);
+  set duration($2.Duration v) {
     setField(4, v);
   }
 
@@ -264,18 +274,20 @@ class Deployment extends $pb.GeneratedMessage {
         const $pb.PackageName('google.devtools.cloudprofiler.v2'))
     ..hasRequiredFields = false;
 
-  Deployment() : super();
-  Deployment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Deployment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Deployment._() : super();
+  factory Deployment() => create();
+  factory Deployment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Deployment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Deployment clone() => Deployment()..mergeFromMessage(this);
   Deployment copyWith(void Function(Deployment) updates) =>
       super.copyWith((message) => updates(message as Deployment));
   $pb.BuilderInfo get info_ => _i;
-  static Deployment create() => Deployment();
+  @$core.pragma('dart2js:noInline')
+  static Deployment create() => Deployment._();
   Deployment createEmptyInstance() => create();
   static $pb.PbList<Deployment> createRepeated() => $pb.PbList<Deployment>();
   static Deployment getDefault() => _defaultInstance ??= create()..freeze();

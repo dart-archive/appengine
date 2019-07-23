@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/intent.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -113,4 +114,120 @@ class Intent_Message_Platform extends $pb.ProtobufEnum {
   static Intent_Message_Platform valueOf($core.int value) => _byValue[value];
 
   const Intent_Message_Platform._($core.int v, $core.String n) : super(v, n);
+}
+
+class Intent_Message_RbmCarouselCard_CardWidth extends $pb.ProtobufEnum {
+  static const Intent_Message_RbmCarouselCard_CardWidth CARD_WIDTH_UNSPECIFIED =
+      Intent_Message_RbmCarouselCard_CardWidth._(0, 'CARD_WIDTH_UNSPECIFIED');
+  static const Intent_Message_RbmCarouselCard_CardWidth SMALL =
+      Intent_Message_RbmCarouselCard_CardWidth._(1, 'SMALL');
+  static const Intent_Message_RbmCarouselCard_CardWidth MEDIUM =
+      Intent_Message_RbmCarouselCard_CardWidth._(2, 'MEDIUM');
+
+  static const $core.List<Intent_Message_RbmCarouselCard_CardWidth> values =
+      <Intent_Message_RbmCarouselCard_CardWidth>[
+    CARD_WIDTH_UNSPECIFIED,
+    SMALL,
+    MEDIUM,
+  ];
+
+  static final $core.Map<$core.int, Intent_Message_RbmCarouselCard_CardWidth>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_RbmCarouselCard_CardWidth valueOf($core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_RbmCarouselCard_CardWidth._($core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_RbmStandaloneCard_CardOrientation
+    extends $pb.ProtobufEnum {
+  static const Intent_Message_RbmStandaloneCard_CardOrientation
+      CARD_ORIENTATION_UNSPECIFIED =
+      Intent_Message_RbmStandaloneCard_CardOrientation._(
+          0, 'CARD_ORIENTATION_UNSPECIFIED');
+  static const Intent_Message_RbmStandaloneCard_CardOrientation HORIZONTAL =
+      Intent_Message_RbmStandaloneCard_CardOrientation._(1, 'HORIZONTAL');
+  static const Intent_Message_RbmStandaloneCard_CardOrientation VERTICAL =
+      Intent_Message_RbmStandaloneCard_CardOrientation._(2, 'VERTICAL');
+
+  static const $core.List<Intent_Message_RbmStandaloneCard_CardOrientation>
+      values = <Intent_Message_RbmStandaloneCard_CardOrientation>[
+    CARD_ORIENTATION_UNSPECIFIED,
+    HORIZONTAL,
+    VERTICAL,
+  ];
+
+  static final $core
+          .Map<$core.int, Intent_Message_RbmStandaloneCard_CardOrientation>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_RbmStandaloneCard_CardOrientation valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_RbmStandaloneCard_CardOrientation._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment
+    extends $pb.ProtobufEnum {
+  static const Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment
+      THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED =
+      Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment._(
+          0, 'THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED');
+  static const Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment LEFT =
+      Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment._(1, 'LEFT');
+  static const Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment RIGHT =
+      Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment._(2, 'RIGHT');
+
+  static const $core
+          .List<Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment>
+      values = <Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment>[
+    THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED,
+    LEFT,
+    RIGHT,
+  ];
+
+  static final $core.Map<$core.int,
+          Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_RbmStandaloneCard_ThumbnailImageAlignment._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_RbmCardContent_RbmMedia_Height extends $pb.ProtobufEnum {
+  static const Intent_Message_RbmCardContent_RbmMedia_Height
+      HEIGHT_UNSPECIFIED =
+      Intent_Message_RbmCardContent_RbmMedia_Height._(0, 'HEIGHT_UNSPECIFIED');
+  static const Intent_Message_RbmCardContent_RbmMedia_Height SHORT =
+      Intent_Message_RbmCardContent_RbmMedia_Height._(1, 'SHORT');
+  static const Intent_Message_RbmCardContent_RbmMedia_Height MEDIUM =
+      Intent_Message_RbmCardContent_RbmMedia_Height._(2, 'MEDIUM');
+  static const Intent_Message_RbmCardContent_RbmMedia_Height TALL =
+      Intent_Message_RbmCardContent_RbmMedia_Height._(3, 'TALL');
+
+  static const $core.List<Intent_Message_RbmCardContent_RbmMedia_Height>
+      values = <Intent_Message_RbmCardContent_RbmMedia_Height>[
+    HEIGHT_UNSPECIFIED,
+    SHORT,
+    MEDIUM,
+    TALL,
+  ];
+
+  static final $core
+          .Map<$core.int, Intent_Message_RbmCardContent_RbmMedia_Height>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_RbmCardContent_RbmMedia_Height valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_RbmCardContent_RbmMedia_Height._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/audio_config.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const AudioEncoding$json = {
   '1': 'AudioEncoding',
@@ -70,6 +71,7 @@ const InputAudioConfig$json = {
       '6': '.google.cloud.dialogflow.v2.SpeechModelVariant',
       '10': 'modelVariant'
     },
+    {'1': 'single_utterance', '3': 8, '4': 1, '5': 8, '10': 'singleUtterance'},
   ],
 };
 

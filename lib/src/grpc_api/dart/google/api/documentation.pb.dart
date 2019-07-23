@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/documentation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,18 +21,20 @@ class Documentation extends $pb.GeneratedMessage {
     ..pc<Page>(5, 'pages', $pb.PbFieldType.PM, Page.create)
     ..hasRequiredFields = false;
 
-  Documentation() : super();
-  Documentation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Documentation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Documentation._() : super();
+  factory Documentation() => create();
+  factory Documentation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Documentation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Documentation clone() => Documentation()..mergeFromMessage(this);
   Documentation copyWith(void Function(Documentation) updates) =>
       super.copyWith((message) => updates(message as Documentation));
   $pb.BuilderInfo get info_ => _i;
-  static Documentation create() => Documentation();
+  @$core.pragma('dart2js:noInline')
+  static Documentation create() => Documentation._();
   Documentation createEmptyInstance() => create();
   static $pb.PbList<Documentation> createRepeated() =>
       $pb.PbList<Documentation>();
@@ -75,18 +78,20 @@ class DocumentationRule extends $pb.GeneratedMessage {
     ..aOS(3, 'deprecationDescription')
     ..hasRequiredFields = false;
 
-  DocumentationRule() : super();
-  DocumentationRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentationRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentationRule._() : super();
+  factory DocumentationRule() => create();
+  factory DocumentationRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentationRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentationRule clone() => DocumentationRule()..mergeFromMessage(this);
   DocumentationRule copyWith(void Function(DocumentationRule) updates) =>
       super.copyWith((message) => updates(message as DocumentationRule));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentationRule create() => DocumentationRule();
+  @$core.pragma('dart2js:noInline')
+  static DocumentationRule create() => DocumentationRule._();
   DocumentationRule createEmptyInstance() => create();
   static $pb.PbList<DocumentationRule> createRepeated() =>
       $pb.PbList<DocumentationRule>();
@@ -127,18 +132,20 @@ class Page extends $pb.GeneratedMessage {
         ..pc<Page>(3, 'subpages', $pb.PbFieldType.PM, Page.create)
         ..hasRequiredFields = false;
 
-  Page() : super();
-  Page.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Page.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Page._() : super();
+  factory Page() => create();
+  factory Page.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Page.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Page clone() => Page()..mergeFromMessage(this);
   Page copyWith(void Function(Page) updates) =>
       super.copyWith((message) => updates(message as Page));
   $pb.BuilderInfo get info_ => _i;
-  static Page create() => Page();
+  @$core.pragma('dart2js:noInline')
+  static Page create() => Page._();
   Page createEmptyInstance() => create();
   static $pb.PbList<Page> createRepeated() => $pb.PbList<Page>();
   static Page getDefault() => _defaultInstance ??= create()..freeze();

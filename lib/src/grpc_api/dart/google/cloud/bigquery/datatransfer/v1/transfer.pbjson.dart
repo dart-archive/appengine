@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/datatransfer/v1/transfer.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const TransferType$json = {
   '1': 'TransferType',
@@ -119,15 +120,6 @@ const TransferConfig$json = {
     },
     {'1': 'user_id', '3': 11, '4': 1, '5': 3, '10': 'userId'},
     {'1': 'dataset_region', '3': 14, '4': 1, '5': 9, '10': 'datasetRegion'},
-    {'1': 'partner_token', '3': 22, '4': 1, '5': 9, '10': 'partnerToken'},
-    {
-      '1': 'partner_connection_info',
-      '3': 23,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Struct',
-      '10': 'partnerConnectionInfo'
-    },
   ],
 };
 
@@ -135,14 +127,6 @@ const TransferRun$json = {
   '1': 'TransferRun',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {
-      '1': 'labels',
-      '3': 22,
-      '4': 3,
-      '5': 11,
-      '6': '.google.cloud.bigquery.datatransfer.v1.TransferRun.LabelsEntry',
-      '10': 'labels'
-    },
     {
       '1': 'schedule_time',
       '3': 3,
@@ -217,18 +201,7 @@ const TransferRun$json = {
     },
     {'1': 'user_id', '3': 11, '4': 1, '5': 3, '10': 'userId'},
     {'1': 'schedule', '3': 12, '4': 1, '5': 9, '10': 'schedule'},
-    {'1': 'partner_token', '3': 28, '4': 1, '5': 9, '10': 'partnerToken'},
   ],
-  '3': [TransferRun_LabelsEntry$json],
-};
-
-const TransferRun_LabelsEntry$json = {
-  '1': 'LabelsEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
-  ],
-  '7': {'7': true},
 };
 
 const TransferMessage$json = {
@@ -263,6 +236,5 @@ const TransferMessage_MessageSeverity$json = {
     {'1': 'INFO', '2': 1},
     {'1': 'WARNING', '2': 2},
     {'1': 'ERROR', '2': 3},
-    {'1': 'DEBUG', '2': 4},
   ],
 };

@@ -1,55 +1,55 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouddebugger/v2/debugger.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'debugger.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'debugger.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 export 'debugger.pb.dart';
 
 class Debugger2Client extends $grpc.Client {
   static final _$setBreakpoint =
-      $grpc.ClientMethod<SetBreakpointRequest, SetBreakpointResponse>(
+      $grpc.ClientMethod<$0.SetBreakpointRequest, $0.SetBreakpointResponse>(
           '/google.devtools.clouddebugger.v2.Debugger2/SetBreakpoint',
-          (SetBreakpointRequest value) => value.writeToBuffer(),
+          ($0.SetBreakpointRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              SetBreakpointResponse.fromBuffer(value));
+              $0.SetBreakpointResponse.fromBuffer(value));
   static final _$getBreakpoint =
-      $grpc.ClientMethod<GetBreakpointRequest, GetBreakpointResponse>(
+      $grpc.ClientMethod<$0.GetBreakpointRequest, $0.GetBreakpointResponse>(
           '/google.devtools.clouddebugger.v2.Debugger2/GetBreakpoint',
-          (GetBreakpointRequest value) => value.writeToBuffer(),
+          ($0.GetBreakpointRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              GetBreakpointResponse.fromBuffer(value));
+              $0.GetBreakpointResponse.fromBuffer(value));
   static final _$deleteBreakpoint =
-      $grpc.ClientMethod<DeleteBreakpointRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.DeleteBreakpointRequest, $1.Empty>(
           '/google.devtools.clouddebugger.v2.Debugger2/DeleteBreakpoint',
-          (DeleteBreakpointRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($0.DeleteBreakpointRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$listBreakpoints =
-      $grpc.ClientMethod<ListBreakpointsRequest, ListBreakpointsResponse>(
+      $grpc.ClientMethod<$0.ListBreakpointsRequest, $0.ListBreakpointsResponse>(
           '/google.devtools.clouddebugger.v2.Debugger2/ListBreakpoints',
-          (ListBreakpointsRequest value) => value.writeToBuffer(),
+          ($0.ListBreakpointsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListBreakpointsResponse.fromBuffer(value));
+              $0.ListBreakpointsResponse.fromBuffer(value));
   static final _$listDebuggees =
-      $grpc.ClientMethod<ListDebuggeesRequest, ListDebuggeesResponse>(
+      $grpc.ClientMethod<$0.ListDebuggeesRequest, $0.ListDebuggeesResponse>(
           '/google.devtools.clouddebugger.v2.Debugger2/ListDebuggees',
-          (ListDebuggeesRequest value) => value.writeToBuffer(),
+          ($0.ListDebuggeesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListDebuggeesResponse.fromBuffer(value));
+              $0.ListDebuggeesResponse.fromBuffer(value));
 
   Debugger2Client($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<SetBreakpointResponse> setBreakpoint(
-      SetBreakpointRequest request,
+  $grpc.ResponseFuture<$0.SetBreakpointResponse> setBreakpoint(
+      $0.SetBreakpointRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$setBreakpoint, $async.Stream.fromIterable([request]),
@@ -57,8 +57,8 @@ class Debugger2Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<GetBreakpointResponse> getBreakpoint(
-      GetBreakpointRequest request,
+  $grpc.ResponseFuture<$0.GetBreakpointResponse> getBreakpoint(
+      $0.GetBreakpointRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getBreakpoint, $async.Stream.fromIterable([request]),
@@ -66,8 +66,8 @@ class Debugger2Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteBreakpoint(
-      DeleteBreakpointRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteBreakpoint(
+      $0.DeleteBreakpointRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteBreakpoint, $async.Stream.fromIterable([request]),
@@ -75,8 +75,8 @@ class Debugger2Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListBreakpointsResponse> listBreakpoints(
-      ListBreakpointsRequest request,
+  $grpc.ResponseFuture<$0.ListBreakpointsResponse> listBreakpoints(
+      $0.ListBreakpointsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listBreakpoints, $async.Stream.fromIterable([request]),
@@ -84,8 +84,8 @@ class Debugger2Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListDebuggeesResponse> listDebuggees(
-      ListDebuggeesRequest request,
+  $grpc.ResponseFuture<$0.ListDebuggeesResponse> listDebuggees(
+      $0.ListDebuggeesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listDebuggees, $async.Stream.fromIterable([request]),
@@ -98,79 +98,89 @@ abstract class Debugger2ServiceBase extends $grpc.Service {
   $core.String get $name => 'google.devtools.clouddebugger.v2.Debugger2';
 
   Debugger2ServiceBase() {
-    $addMethod($grpc.ServiceMethod<SetBreakpointRequest, SetBreakpointResponse>(
-        'SetBreakpoint',
-        setBreakpoint_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => SetBreakpointRequest.fromBuffer(value),
-        (SetBreakpointResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetBreakpointRequest, GetBreakpointResponse>(
-        'GetBreakpoint',
-        getBreakpoint_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => GetBreakpointRequest.fromBuffer(value),
-        (GetBreakpointResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteBreakpointRequest, $0.Empty>(
+    $addMethod(
+        $grpc.ServiceMethod<$0.SetBreakpointRequest, $0.SetBreakpointResponse>(
+            'SetBreakpoint',
+            setBreakpoint_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.SetBreakpointRequest.fromBuffer(value),
+            ($0.SetBreakpointResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetBreakpointRequest, $0.GetBreakpointResponse>(
+            'GetBreakpoint',
+            getBreakpoint_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetBreakpointRequest.fromBuffer(value),
+            ($0.GetBreakpointResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteBreakpointRequest, $1.Empty>(
         'DeleteBreakpoint',
         deleteBreakpoint_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteBreakpointRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+            $0.DeleteBreakpointRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListBreakpointsRequest,
+            $0.ListBreakpointsResponse>(
+        'ListBreakpoints',
+        listBreakpoints_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListBreakpointsRequest.fromBuffer(value),
+        ($0.ListBreakpointsResponse value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<ListBreakpointsRequest, ListBreakpointsResponse>(
-            'ListBreakpoints',
-            listBreakpoints_Pre,
+        $grpc.ServiceMethod<$0.ListDebuggeesRequest, $0.ListDebuggeesResponse>(
+            'ListDebuggees',
+            listDebuggees_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                ListBreakpointsRequest.fromBuffer(value),
-            (ListBreakpointsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListDebuggeesRequest, ListDebuggeesResponse>(
-        'ListDebuggees',
-        listDebuggees_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListDebuggeesRequest.fromBuffer(value),
-        (ListDebuggeesResponse value) => value.writeToBuffer()));
+                $0.ListDebuggeesRequest.fromBuffer(value),
+            ($0.ListDebuggeesResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<SetBreakpointResponse> setBreakpoint_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.SetBreakpointResponse> setBreakpoint_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.SetBreakpointRequest> request) async {
     return setBreakpoint(call, await request);
   }
 
-  $async.Future<GetBreakpointResponse> getBreakpoint_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.GetBreakpointResponse> getBreakpoint_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetBreakpointRequest> request) async {
     return getBreakpoint(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteBreakpoint_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteBreakpoint_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteBreakpointRequest> request) async {
     return deleteBreakpoint(call, await request);
   }
 
-  $async.Future<ListBreakpointsResponse> listBreakpoints_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListBreakpointsResponse> listBreakpoints_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListBreakpointsRequest> request) async {
     return listBreakpoints(call, await request);
   }
 
-  $async.Future<ListDebuggeesResponse> listDebuggees_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListDebuggeesResponse> listDebuggees_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListDebuggeesRequest> request) async {
     return listDebuggees(call, await request);
   }
 
-  $async.Future<SetBreakpointResponse> setBreakpoint(
-      $grpc.ServiceCall call, SetBreakpointRequest request);
-  $async.Future<GetBreakpointResponse> getBreakpoint(
-      $grpc.ServiceCall call, GetBreakpointRequest request);
-  $async.Future<$0.Empty> deleteBreakpoint(
-      $grpc.ServiceCall call, DeleteBreakpointRequest request);
-  $async.Future<ListBreakpointsResponse> listBreakpoints(
-      $grpc.ServiceCall call, ListBreakpointsRequest request);
-  $async.Future<ListDebuggeesResponse> listDebuggees(
-      $grpc.ServiceCall call, ListDebuggeesRequest request);
+  $async.Future<$0.SetBreakpointResponse> setBreakpoint(
+      $grpc.ServiceCall call, $0.SetBreakpointRequest request);
+  $async.Future<$0.GetBreakpointResponse> getBreakpoint(
+      $grpc.ServiceCall call, $0.GetBreakpointRequest request);
+  $async.Future<$1.Empty> deleteBreakpoint(
+      $grpc.ServiceCall call, $0.DeleteBreakpointRequest request);
+  $async.Future<$0.ListBreakpointsResponse> listBreakpoints(
+      $grpc.ServiceCall call, $0.ListBreakpointsRequest request);
+  $async.Future<$0.ListDebuggeesResponse> listDebuggees(
+      $grpc.ServiceCall call, $0.ListDebuggeesRequest request);
 }

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/protobuf/source_context.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class SourceContext extends $pb.GeneratedMessage {
     ..aOS(1, 'fileName')
     ..hasRequiredFields = false;
 
-  SourceContext() : super();
-  SourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceContext._() : super();
+  factory SourceContext() => create();
+  factory SourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceContext clone() => SourceContext()..mergeFromMessage(this);
   SourceContext copyWith(void Function(SourceContext) updates) =>
       super.copyWith((message) => updates(message as SourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static SourceContext create() => SourceContext();
+  @$core.pragma('dart2js:noInline')
+  static SourceContext create() => SourceContext._();
   SourceContext createEmptyInstance() => create();
   static $pb.PbList<SourceContext> createRepeated() =>
       $pb.PbList<SourceContext>();

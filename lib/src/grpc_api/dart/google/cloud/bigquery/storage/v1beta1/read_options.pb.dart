@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/storage/v1beta1/read_options.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class TableReadOptions extends $pb.GeneratedMessage {
     ..aOS(2, 'rowRestriction')
     ..hasRequiredFields = false;
 
-  TableReadOptions() : super();
-  TableReadOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TableReadOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TableReadOptions._() : super();
+  factory TableReadOptions() => create();
+  factory TableReadOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TableReadOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TableReadOptions clone() => TableReadOptions()..mergeFromMessage(this);
   TableReadOptions copyWith(void Function(TableReadOptions) updates) =>
       super.copyWith((message) => updates(message as TableReadOptions));
   $pb.BuilderInfo get info_ => _i;
-  static TableReadOptions create() => TableReadOptions();
+  @$core.pragma('dart2js:noInline')
+  static TableReadOptions create() => TableReadOptions._();
   TableReadOptions createEmptyInstance() => create();
   static $pb.PbList<TableReadOptions> createRepeated() =>
       $pb.PbList<TableReadOptions>();

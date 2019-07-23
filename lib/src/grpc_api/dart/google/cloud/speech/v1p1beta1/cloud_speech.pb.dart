@@ -1,18 +1,19 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/speech/v1p1beta1/cloud_speech.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import '../../../rpc/status.pb.dart' as $3;
-import '../../../protobuf/duration.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import '../../../rpc/status.pb.dart' as $4;
+import '../../../protobuf/duration.pb.dart' as $5;
 
 import 'cloud_speech.pbenum.dart';
 
@@ -27,18 +28,20 @@ class RecognizeRequest extends $pb.GeneratedMessage {
         RecognitionAudio.getDefault, RecognitionAudio.create)
     ..hasRequiredFields = false;
 
-  RecognizeRequest() : super();
-  RecognizeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecognizeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecognizeRequest._() : super();
+  factory RecognizeRequest() => create();
+  factory RecognizeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecognizeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecognizeRequest clone() => RecognizeRequest()..mergeFromMessage(this);
   RecognizeRequest copyWith(void Function(RecognizeRequest) updates) =>
       super.copyWith((message) => updates(message as RecognizeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RecognizeRequest create() => RecognizeRequest();
+  @$core.pragma('dart2js:noInline')
+  static RecognizeRequest create() => RecognizeRequest._();
   RecognizeRequest createEmptyInstance() => create();
   static $pb.PbList<RecognizeRequest> createRepeated() =>
       $pb.PbList<RecognizeRequest>();
@@ -73,13 +76,14 @@ class LongRunningRecognizeRequest extends $pb.GeneratedMessage {
         RecognitionAudio.getDefault, RecognitionAudio.create)
     ..hasRequiredFields = false;
 
-  LongRunningRecognizeRequest() : super();
-  LongRunningRecognizeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LongRunningRecognizeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LongRunningRecognizeRequest._() : super();
+  factory LongRunningRecognizeRequest() => create();
+  factory LongRunningRecognizeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LongRunningRecognizeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LongRunningRecognizeRequest clone() =>
       LongRunningRecognizeRequest()..mergeFromMessage(this);
   LongRunningRecognizeRequest copyWith(
@@ -87,7 +91,9 @@ class LongRunningRecognizeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LongRunningRecognizeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static LongRunningRecognizeRequest create() => LongRunningRecognizeRequest();
+  @$core.pragma('dart2js:noInline')
+  static LongRunningRecognizeRequest create() =>
+      LongRunningRecognizeRequest._();
   LongRunningRecognizeRequest createEmptyInstance() => create();
   static $pb.PbList<LongRunningRecognizeRequest> createRepeated() =>
       $pb.PbList<LongRunningRecognizeRequest>();
@@ -127,6 +133,7 @@ class StreamingRecognizeRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingRecognizeRequest',
       package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..oo(0, [1, 2])
     ..a<StreamingRecognitionConfig>(
         1,
         'streamingConfig',
@@ -134,16 +141,16 @@ class StreamingRecognizeRequest extends $pb.GeneratedMessage {
         StreamingRecognitionConfig.getDefault,
         StreamingRecognitionConfig.create)
     ..a<$core.List<$core.int>>(2, 'audioContent', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  StreamingRecognizeRequest() : super();
-  StreamingRecognizeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingRecognizeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingRecognizeRequest._() : super();
+  factory StreamingRecognizeRequest() => create();
+  factory StreamingRecognizeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingRecognizeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingRecognizeRequest clone() =>
       StreamingRecognizeRequest()..mergeFromMessage(this);
   StreamingRecognizeRequest copyWith(
@@ -151,7 +158,8 @@ class StreamingRecognizeRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as StreamingRecognizeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingRecognizeRequest create() => StreamingRecognizeRequest();
+  @$core.pragma('dart2js:noInline')
+  static StreamingRecognizeRequest create() => StreamingRecognizeRequest._();
   StreamingRecognizeRequest createEmptyInstance() => create();
   static $pb.PbList<StreamingRecognizeRequest> createRepeated() =>
       $pb.PbList<StreamingRecognizeRequest>();
@@ -190,13 +198,14 @@ class StreamingRecognitionConfig extends $pb.GeneratedMessage {
     ..aOB(3, 'interimResults')
     ..hasRequiredFields = false;
 
-  StreamingRecognitionConfig() : super();
-  StreamingRecognitionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingRecognitionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingRecognitionConfig._() : super();
+  factory StreamingRecognitionConfig() => create();
+  factory StreamingRecognitionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingRecognitionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingRecognitionConfig clone() =>
       StreamingRecognitionConfig()..mergeFromMessage(this);
   StreamingRecognitionConfig copyWith(
@@ -204,7 +213,8 @@ class StreamingRecognitionConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingRecognitionConfig));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingRecognitionConfig create() => StreamingRecognitionConfig();
+  @$core.pragma('dart2js:noInline')
+  static StreamingRecognitionConfig create() => StreamingRecognitionConfig._();
   StreamingRecognitionConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingRecognitionConfig> createRepeated() =>
       $pb.PbList<StreamingRecognitionConfig>();
@@ -267,18 +277,20 @@ class RecognitionConfig extends $pb.GeneratedMessage {
     ..pPS(18, 'alternativeLanguageCodes')
     ..hasRequiredFields = false;
 
-  RecognitionConfig() : super();
-  RecognitionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecognitionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecognitionConfig._() : super();
+  factory RecognitionConfig() => create();
+  factory RecognitionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecognitionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecognitionConfig clone() => RecognitionConfig()..mergeFromMessage(this);
   RecognitionConfig copyWith(void Function(RecognitionConfig) updates) =>
       super.copyWith((message) => updates(message as RecognitionConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RecognitionConfig create() => RecognitionConfig();
+  @$core.pragma('dart2js:noInline')
+  static RecognitionConfig create() => RecognitionConfig._();
   RecognitionConfig createEmptyInstance() => create();
   static $pb.PbList<RecognitionConfig> createRepeated() =>
       $pb.PbList<RecognitionConfig>();
@@ -450,18 +462,20 @@ class RecognitionMetadata extends $pb.GeneratedMessage {
     ..aOS(10, 'audioTopic')
     ..hasRequiredFields = false;
 
-  RecognitionMetadata() : super();
-  RecognitionMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecognitionMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecognitionMetadata._() : super();
+  factory RecognitionMetadata() => create();
+  factory RecognitionMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecognitionMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecognitionMetadata clone() => RecognitionMetadata()..mergeFromMessage(this);
   RecognitionMetadata copyWith(void Function(RecognitionMetadata) updates) =>
       super.copyWith((message) => updates(message as RecognitionMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static RecognitionMetadata create() => RecognitionMetadata();
+  @$core.pragma('dart2js:noInline')
+  static RecognitionMetadata create() => RecognitionMetadata._();
   RecognitionMetadata createEmptyInstance() => create();
   static $pb.PbList<RecognitionMetadata> createRepeated() =>
       $pb.PbList<RecognitionMetadata>();
@@ -549,18 +563,20 @@ class SpeechContext extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'boost', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  SpeechContext() : super();
-  SpeechContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechContext._() : super();
+  factory SpeechContext() => create();
+  factory SpeechContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
   SpeechContext copyWith(void Function(SpeechContext) updates) =>
       super.copyWith((message) => updates(message as SpeechContext));
   $pb.BuilderInfo get info_ => _i;
-  static SpeechContext create() => SpeechContext();
+  @$core.pragma('dart2js:noInline')
+  static SpeechContext create() => SpeechContext._();
   SpeechContext createEmptyInstance() => create();
   static $pb.PbList<SpeechContext> createRepeated() =>
       $pb.PbList<SpeechContext>();
@@ -589,23 +605,25 @@ class RecognitionAudio extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecognitionAudio',
       package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..oo(0, [1, 2])
     ..a<$core.List<$core.int>>(1, 'content', $pb.PbFieldType.OY)
     ..aOS(2, 'uri')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  RecognitionAudio() : super();
-  RecognitionAudio.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecognitionAudio.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecognitionAudio._() : super();
+  factory RecognitionAudio() => create();
+  factory RecognitionAudio.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecognitionAudio.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecognitionAudio clone() => RecognitionAudio()..mergeFromMessage(this);
   RecognitionAudio copyWith(void Function(RecognitionAudio) updates) =>
       super.copyWith((message) => updates(message as RecognitionAudio));
   $pb.BuilderInfo get info_ => _i;
-  static RecognitionAudio create() => RecognitionAudio();
+  @$core.pragma('dart2js:noInline')
+  static RecognitionAudio create() => RecognitionAudio._();
   RecognitionAudio createEmptyInstance() => create();
   static $pb.PbList<RecognitionAudio> createRepeated() =>
       $pb.PbList<RecognitionAudio>();
@@ -641,18 +659,20 @@ class RecognizeResponse extends $pb.GeneratedMessage {
         2, 'results', $pb.PbFieldType.PM, SpeechRecognitionResult.create)
     ..hasRequiredFields = false;
 
-  RecognizeResponse() : super();
-  RecognizeResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecognizeResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecognizeResponse._() : super();
+  factory RecognizeResponse() => create();
+  factory RecognizeResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecognizeResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecognizeResponse clone() => RecognizeResponse()..mergeFromMessage(this);
   RecognizeResponse copyWith(void Function(RecognizeResponse) updates) =>
       super.copyWith((message) => updates(message as RecognizeResponse));
   $pb.BuilderInfo get info_ => _i;
-  static RecognizeResponse create() => RecognizeResponse();
+  @$core.pragma('dart2js:noInline')
+  static RecognizeResponse create() => RecognizeResponse._();
   RecognizeResponse createEmptyInstance() => create();
   static $pb.PbList<RecognizeResponse> createRepeated() =>
       $pb.PbList<RecognizeResponse>();
@@ -671,13 +691,14 @@ class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
         2, 'results', $pb.PbFieldType.PM, SpeechRecognitionResult.create)
     ..hasRequiredFields = false;
 
-  LongRunningRecognizeResponse() : super();
-  LongRunningRecognizeResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LongRunningRecognizeResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LongRunningRecognizeResponse._() : super();
+  factory LongRunningRecognizeResponse() => create();
+  factory LongRunningRecognizeResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LongRunningRecognizeResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LongRunningRecognizeResponse clone() =>
       LongRunningRecognizeResponse()..mergeFromMessage(this);
   LongRunningRecognizeResponse copyWith(
@@ -685,8 +706,9 @@ class LongRunningRecognizeResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LongRunningRecognizeResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static LongRunningRecognizeResponse create() =>
-      LongRunningRecognizeResponse();
+      LongRunningRecognizeResponse._();
   LongRunningRecognizeResponse createEmptyInstance() => create();
   static $pb.PbList<LongRunningRecognizeResponse> createRepeated() =>
       $pb.PbList<LongRunningRecognizeResponse>();
@@ -702,19 +724,20 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
       'LongRunningRecognizeMetadata',
       package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
     ..a<$core.int>(1, 'progressPercent', $pb.PbFieldType.O3)
-    ..a<$2.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(3, 'lastUpdateTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'lastUpdateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  LongRunningRecognizeMetadata() : super();
-  LongRunningRecognizeMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LongRunningRecognizeMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LongRunningRecognizeMetadata._() : super();
+  factory LongRunningRecognizeMetadata() => create();
+  factory LongRunningRecognizeMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LongRunningRecognizeMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LongRunningRecognizeMetadata clone() =>
       LongRunningRecognizeMetadata()..mergeFromMessage(this);
   LongRunningRecognizeMetadata copyWith(
@@ -722,8 +745,9 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LongRunningRecognizeMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static LongRunningRecognizeMetadata create() =>
-      LongRunningRecognizeMetadata();
+      LongRunningRecognizeMetadata._();
   LongRunningRecognizeMetadata createEmptyInstance() => create();
   static $pb.PbList<LongRunningRecognizeMetadata> createRepeated() =>
       $pb.PbList<LongRunningRecognizeMetadata>();
@@ -739,16 +763,16 @@ class LongRunningRecognizeMetadata extends $pb.GeneratedMessage {
   $core.bool hasProgressPercent() => $_has(0);
   void clearProgressPercent() => clearField(1);
 
-  $2.Timestamp get startTime => $_getN(1);
-  set startTime($2.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(1);
+  set startTime($3.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasStartTime() => $_has(1);
   void clearStartTime() => clearField(2);
 
-  $2.Timestamp get lastUpdateTime => $_getN(2);
-  set lastUpdateTime($2.Timestamp v) {
+  $3.Timestamp get lastUpdateTime => $_getN(2);
+  set lastUpdateTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -760,8 +784,8 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StreamingRecognizeResponse',
       package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
-    ..a<$3.Status>(
-        1, 'error', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..a<$4.Status>(
+        1, 'error', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
     ..pc<StreamingRecognitionResult>(
         2, 'results', $pb.PbFieldType.PM, StreamingRecognitionResult.create)
     ..e<StreamingRecognizeResponse_SpeechEventType>(
@@ -773,13 +797,14 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
         StreamingRecognizeResponse_SpeechEventType.values)
     ..hasRequiredFields = false;
 
-  StreamingRecognizeResponse() : super();
-  StreamingRecognizeResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingRecognizeResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingRecognizeResponse._() : super();
+  factory StreamingRecognizeResponse() => create();
+  factory StreamingRecognizeResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingRecognizeResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingRecognizeResponse clone() =>
       StreamingRecognizeResponse()..mergeFromMessage(this);
   StreamingRecognizeResponse copyWith(
@@ -787,7 +812,8 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingRecognizeResponse));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingRecognizeResponse create() => StreamingRecognizeResponse();
+  @$core.pragma('dart2js:noInline')
+  static StreamingRecognizeResponse create() => StreamingRecognizeResponse._();
   StreamingRecognizeResponse createEmptyInstance() => create();
   static $pb.PbList<StreamingRecognizeResponse> createRepeated() =>
       $pb.PbList<StreamingRecognizeResponse>();
@@ -795,8 +821,8 @@ class StreamingRecognizeResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StreamingRecognizeResponse _defaultInstance;
 
-  $3.Status get error => $_getN(0);
-  set error($3.Status v) {
+  $4.Status get error => $_getN(0);
+  set error($4.Status v) {
     setField(1, v);
   }
 
@@ -822,19 +848,20 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
         SpeechRecognitionAlternative.create)
     ..aOB(2, 'isFinal')
     ..a<$core.double>(3, 'stability', $pb.PbFieldType.OF)
-    ..a<$4.Duration>(4, 'resultEndTime', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
+    ..a<$5.Duration>(4, 'resultEndTime', $pb.PbFieldType.OM,
+        $5.Duration.getDefault, $5.Duration.create)
     ..a<$core.int>(5, 'channelTag', $pb.PbFieldType.O3)
     ..aOS(6, 'languageCode')
     ..hasRequiredFields = false;
 
-  StreamingRecognitionResult() : super();
-  StreamingRecognitionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingRecognitionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingRecognitionResult._() : super();
+  factory StreamingRecognitionResult() => create();
+  factory StreamingRecognitionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingRecognitionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingRecognitionResult clone() =>
       StreamingRecognitionResult()..mergeFromMessage(this);
   StreamingRecognitionResult copyWith(
@@ -842,7 +869,8 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingRecognitionResult));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingRecognitionResult create() => StreamingRecognitionResult();
+  @$core.pragma('dart2js:noInline')
+  static StreamingRecognitionResult create() => StreamingRecognitionResult._();
   StreamingRecognitionResult createEmptyInstance() => create();
   static $pb.PbList<StreamingRecognitionResult> createRepeated() =>
       $pb.PbList<StreamingRecognitionResult>();
@@ -868,8 +896,8 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
   $core.bool hasStability() => $_has(2);
   void clearStability() => clearField(3);
 
-  $4.Duration get resultEndTime => $_getN(3);
-  set resultEndTime($4.Duration v) {
+  $5.Duration get resultEndTime => $_getN(3);
+  set resultEndTime($5.Duration v) {
     setField(4, v);
   }
 
@@ -902,20 +930,22 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
     ..aOS(5, 'languageCode')
     ..hasRequiredFields = false;
 
-  SpeechRecognitionResult() : super();
-  SpeechRecognitionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechRecognitionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechRecognitionResult._() : super();
+  factory SpeechRecognitionResult() => create();
+  factory SpeechRecognitionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechRecognitionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechRecognitionResult clone() =>
       SpeechRecognitionResult()..mergeFromMessage(this);
   SpeechRecognitionResult copyWith(
           void Function(SpeechRecognitionResult) updates) =>
       super.copyWith((message) => updates(message as SpeechRecognitionResult));
   $pb.BuilderInfo get info_ => _i;
-  static SpeechRecognitionResult create() => SpeechRecognitionResult();
+  @$core.pragma('dart2js:noInline')
+  static SpeechRecognitionResult create() => SpeechRecognitionResult._();
   SpeechRecognitionResult createEmptyInstance() => create();
   static $pb.PbList<SpeechRecognitionResult> createRepeated() =>
       $pb.PbList<SpeechRecognitionResult>();
@@ -951,13 +981,14 @@ class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
     ..pc<WordInfo>(3, 'words', $pb.PbFieldType.PM, WordInfo.create)
     ..hasRequiredFields = false;
 
-  SpeechRecognitionAlternative() : super();
-  SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechRecognitionAlternative.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechRecognitionAlternative._() : super();
+  factory SpeechRecognitionAlternative() => create();
+  factory SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechRecognitionAlternative.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechRecognitionAlternative clone() =>
       SpeechRecognitionAlternative()..mergeFromMessage(this);
   SpeechRecognitionAlternative copyWith(
@@ -965,8 +996,9 @@ class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SpeechRecognitionAlternative));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SpeechRecognitionAlternative create() =>
-      SpeechRecognitionAlternative();
+      SpeechRecognitionAlternative._();
   SpeechRecognitionAlternative createEmptyInstance() => create();
   static $pb.PbList<SpeechRecognitionAlternative> createRepeated() =>
       $pb.PbList<SpeechRecognitionAlternative>();
@@ -996,42 +1028,44 @@ class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
 class WordInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WordInfo',
       package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
-    ..a<$4.Duration>(1, 'startTime', $pb.PbFieldType.OM, $4.Duration.getDefault,
-        $4.Duration.create)
-    ..a<$4.Duration>(2, 'endTime', $pb.PbFieldType.OM, $4.Duration.getDefault,
-        $4.Duration.create)
+    ..a<$5.Duration>(1, 'startTime', $pb.PbFieldType.OM, $5.Duration.getDefault,
+        $5.Duration.create)
+    ..a<$5.Duration>(2, 'endTime', $pb.PbFieldType.OM, $5.Duration.getDefault,
+        $5.Duration.create)
     ..aOS(3, 'word')
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..a<$core.int>(5, 'speakerTag', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  WordInfo() : super();
-  WordInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WordInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WordInfo._() : super();
+  factory WordInfo() => create();
+  factory WordInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WordInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WordInfo clone() => WordInfo()..mergeFromMessage(this);
   WordInfo copyWith(void Function(WordInfo) updates) =>
       super.copyWith((message) => updates(message as WordInfo));
   $pb.BuilderInfo get info_ => _i;
-  static WordInfo create() => WordInfo();
+  @$core.pragma('dart2js:noInline')
+  static WordInfo create() => WordInfo._();
   WordInfo createEmptyInstance() => create();
   static $pb.PbList<WordInfo> createRepeated() => $pb.PbList<WordInfo>();
   static WordInfo getDefault() => _defaultInstance ??= create()..freeze();
   static WordInfo _defaultInstance;
 
-  $4.Duration get startTime => $_getN(0);
-  set startTime($4.Duration v) {
+  $5.Duration get startTime => $_getN(0);
+  set startTime($5.Duration v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $4.Duration get endTime => $_getN(1);
-  set endTime($4.Duration v) {
+  $5.Duration get endTime => $_getN(1);
+  set endTime($5.Duration v) {
     setField(2, v);
   }
 

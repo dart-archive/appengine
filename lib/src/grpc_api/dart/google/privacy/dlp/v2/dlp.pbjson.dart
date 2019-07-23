@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/privacy/dlp/v2/dlp.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ContentOption$json = {
   '1': 'ContentOption',
@@ -306,6 +307,7 @@ const ByteContentItem_BytesType$json = {
     {'1': 'IMAGE_PNG', '2': 3},
     {'1': 'IMAGE_SVG', '2': 4},
     {'1': 'TEXT_UTF8', '2': 5},
+    {'1': 'AVRO', '2': 11},
   ],
 };
 
@@ -3120,6 +3122,15 @@ const Action$json = {
       '10': 'publishSummaryToCscc'
     },
     {
+      '1': 'publish_findings_to_cloud_data_catalog',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.privacy.dlp.v2.Action.PublishFindingsToCloudDataCatalog',
+      '9': 0,
+      '10': 'publishFindingsToCloudDataCatalog'
+    },
+    {
       '1': 'job_notification_emails',
       '3': 8,
       '4': 1,
@@ -3133,6 +3144,7 @@ const Action$json = {
     Action_SaveFindings$json,
     Action_PublishToPubSub$json,
     Action_PublishSummaryToCscc$json,
+    Action_PublishFindingsToCloudDataCatalog$json,
     Action_JobNotificationEmails$json
   ],
   '8': [
@@ -3163,6 +3175,10 @@ const Action_PublishToPubSub$json = {
 
 const Action_PublishSummaryToCscc$json = {
   '1': 'PublishSummaryToCscc',
+};
+
+const Action_PublishFindingsToCloudDataCatalog$json = {
+  '1': 'PublishFindingsToCloudDataCatalog',
 };
 
 const Action_JobNotificationEmails$json = {

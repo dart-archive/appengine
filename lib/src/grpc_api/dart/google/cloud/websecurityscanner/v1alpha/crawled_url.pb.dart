@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1alpha/crawled_url.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class CrawledUrl extends $pb.GeneratedMessage {
     ..aOS(3, 'body')
     ..hasRequiredFields = false;
 
-  CrawledUrl() : super();
-  CrawledUrl.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CrawledUrl.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CrawledUrl._() : super();
+  factory CrawledUrl() => create();
+  factory CrawledUrl.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CrawledUrl.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CrawledUrl clone() => CrawledUrl()..mergeFromMessage(this);
   CrawledUrl copyWith(void Function(CrawledUrl) updates) =>
       super.copyWith((message) => updates(message as CrawledUrl));
   $pb.BuilderInfo get info_ => _i;
-  static CrawledUrl create() => CrawledUrl();
+  @$core.pragma('dart2js:noInline')
+  static CrawledUrl create() => CrawledUrl._();
   CrawledUrl createEmptyInstance() => create();
   static $pb.PbList<CrawledUrl> createRepeated() => $pb.PbList<CrawledUrl>();
   static CrawledUrl getDefault() => _defaultInstance ??= create()..freeze();

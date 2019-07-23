@@ -1,58 +1,59 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/profile_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'profile_service.pb.dart';
-import 'profile.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'profile_service.pb.dart' as $0;
+import 'profile.pb.dart' as $1;
+import '../../../protobuf/empty.pb.dart' as $2;
 export 'profile_service.pb.dart';
 
 class ProfileServiceClient extends $grpc.Client {
   static final _$listProfiles =
-      $grpc.ClientMethod<ListProfilesRequest, ListProfilesResponse>(
+      $grpc.ClientMethod<$0.ListProfilesRequest, $0.ListProfilesResponse>(
           '/google.cloud.talent.v4beta1.ProfileService/ListProfiles',
-          (ListProfilesRequest value) => value.writeToBuffer(),
+          ($0.ListProfilesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListProfilesResponse.fromBuffer(value));
+              $0.ListProfilesResponse.fromBuffer(value));
   static final _$createProfile =
-      $grpc.ClientMethod<CreateProfileRequest, $0.Profile>(
+      $grpc.ClientMethod<$0.CreateProfileRequest, $1.Profile>(
           '/google.cloud.talent.v4beta1.ProfileService/CreateProfile',
-          (CreateProfileRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Profile.fromBuffer(value));
-  static final _$getProfile = $grpc.ClientMethod<GetProfileRequest, $0.Profile>(
-      '/google.cloud.talent.v4beta1.ProfileService/GetProfile',
-      (GetProfileRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Profile.fromBuffer(value));
+          ($0.CreateProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Profile.fromBuffer(value));
+  static final _$getProfile =
+      $grpc.ClientMethod<$0.GetProfileRequest, $1.Profile>(
+          '/google.cloud.talent.v4beta1.ProfileService/GetProfile',
+          ($0.GetProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Profile.fromBuffer(value));
   static final _$updateProfile =
-      $grpc.ClientMethod<UpdateProfileRequest, $0.Profile>(
+      $grpc.ClientMethod<$0.UpdateProfileRequest, $1.Profile>(
           '/google.cloud.talent.v4beta1.ProfileService/UpdateProfile',
-          (UpdateProfileRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Profile.fromBuffer(value));
+          ($0.UpdateProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Profile.fromBuffer(value));
   static final _$deleteProfile =
-      $grpc.ClientMethod<DeleteProfileRequest, $1.Empty>(
+      $grpc.ClientMethod<$0.DeleteProfileRequest, $2.Empty>(
           '/google.cloud.talent.v4beta1.ProfileService/DeleteProfile',
-          (DeleteProfileRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+          ($0.DeleteProfileRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
   static final _$searchProfiles =
-      $grpc.ClientMethod<SearchProfilesRequest, SearchProfilesResponse>(
+      $grpc.ClientMethod<$0.SearchProfilesRequest, $0.SearchProfilesResponse>(
           '/google.cloud.talent.v4beta1.ProfileService/SearchProfiles',
-          (SearchProfilesRequest value) => value.writeToBuffer(),
+          ($0.SearchProfilesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              SearchProfilesResponse.fromBuffer(value));
+              $0.SearchProfilesResponse.fromBuffer(value));
 
   ProfileServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ListProfilesResponse> listProfiles(
-      ListProfilesRequest request,
+  $grpc.ResponseFuture<$0.ListProfilesResponse> listProfiles(
+      $0.ListProfilesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listProfiles, $async.Stream.fromIterable([request]),
@@ -60,7 +61,8 @@ class ProfileServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Profile> createProfile(CreateProfileRequest request,
+  $grpc.ResponseFuture<$1.Profile> createProfile(
+      $0.CreateProfileRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createProfile, $async.Stream.fromIterable([request]),
@@ -68,7 +70,7 @@ class ProfileServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Profile> getProfile(GetProfileRequest request,
+  $grpc.ResponseFuture<$1.Profile> getProfile($0.GetProfileRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getProfile, $async.Stream.fromIterable([request]),
@@ -76,7 +78,8 @@ class ProfileServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Profile> updateProfile(UpdateProfileRequest request,
+  $grpc.ResponseFuture<$1.Profile> updateProfile(
+      $0.UpdateProfileRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateProfile, $async.Stream.fromIterable([request]),
@@ -84,7 +87,7 @@ class ProfileServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> deleteProfile(DeleteProfileRequest request,
+  $grpc.ResponseFuture<$2.Empty> deleteProfile($0.DeleteProfileRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteProfile, $async.Stream.fromIterable([request]),
@@ -92,8 +95,8 @@ class ProfileServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<SearchProfilesResponse> searchProfiles(
-      SearchProfilesRequest request,
+  $grpc.ResponseFuture<$0.SearchProfilesResponse> searchProfiles(
+      $0.SearchProfilesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$searchProfiles, $async.Stream.fromIterable([request]),
@@ -106,92 +109,99 @@ abstract class ProfileServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.talent.v4beta1.ProfileService';
 
   ProfileServiceBase() {
-    $addMethod($grpc.ServiceMethod<ListProfilesRequest, ListProfilesResponse>(
-        'ListProfiles',
-        listProfiles_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListProfilesRequest.fromBuffer(value),
-        (ListProfilesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateProfileRequest, $0.Profile>(
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListProfilesRequest, $0.ListProfilesResponse>(
+            'ListProfiles',
+            listProfiles_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListProfilesRequest.fromBuffer(value),
+            ($0.ListProfilesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateProfileRequest, $1.Profile>(
         'CreateProfile',
         createProfile_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateProfileRequest.fromBuffer(value),
-        ($0.Profile value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetProfileRequest, $0.Profile>(
+        ($core.List<$core.int> value) =>
+            $0.CreateProfileRequest.fromBuffer(value),
+        ($1.Profile value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetProfileRequest, $1.Profile>(
         'GetProfile',
         getProfile_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetProfileRequest.fromBuffer(value),
-        ($0.Profile value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateProfileRequest, $0.Profile>(
+        ($core.List<$core.int> value) => $0.GetProfileRequest.fromBuffer(value),
+        ($1.Profile value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateProfileRequest, $1.Profile>(
         'UpdateProfile',
         updateProfile_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateProfileRequest.fromBuffer(value),
-        ($0.Profile value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteProfileRequest, $1.Empty>(
+        ($core.List<$core.int> value) =>
+            $0.UpdateProfileRequest.fromBuffer(value),
+        ($1.Profile value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteProfileRequest, $2.Empty>(
         'DeleteProfile',
         deleteProfile_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteProfileRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<SearchProfilesRequest, SearchProfilesResponse>(
-            'SearchProfiles',
-            searchProfiles_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                SearchProfilesRequest.fromBuffer(value),
-            (SearchProfilesResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) =>
+            $0.DeleteProfileRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SearchProfilesRequest,
+            $0.SearchProfilesResponse>(
+        'SearchProfiles',
+        searchProfiles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.SearchProfilesRequest.fromBuffer(value),
+        ($0.SearchProfilesResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<ListProfilesResponse> listProfiles_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListProfilesResponse> listProfiles_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListProfilesRequest> request) async {
     return listProfiles(call, await request);
   }
 
-  $async.Future<$0.Profile> createProfile_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Profile> createProfile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateProfileRequest> request) async {
     return createProfile(call, await request);
   }
 
-  $async.Future<$0.Profile> getProfile_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Profile> getProfile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetProfileRequest> request) async {
     return getProfile(call, await request);
   }
 
-  $async.Future<$0.Profile> updateProfile_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Profile> updateProfile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateProfileRequest> request) async {
     return updateProfile(call, await request);
   }
 
-  $async.Future<$1.Empty> deleteProfile_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Empty> deleteProfile_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteProfileRequest> request) async {
     return deleteProfile(call, await request);
   }
 
-  $async.Future<SearchProfilesResponse> searchProfiles_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.SearchProfilesResponse> searchProfiles_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.SearchProfilesRequest> request) async {
     return searchProfiles(call, await request);
   }
 
-  $async.Future<ListProfilesResponse> listProfiles(
-      $grpc.ServiceCall call, ListProfilesRequest request);
-  $async.Future<$0.Profile> createProfile(
-      $grpc.ServiceCall call, CreateProfileRequest request);
-  $async.Future<$0.Profile> getProfile(
-      $grpc.ServiceCall call, GetProfileRequest request);
-  $async.Future<$0.Profile> updateProfile(
-      $grpc.ServiceCall call, UpdateProfileRequest request);
-  $async.Future<$1.Empty> deleteProfile(
-      $grpc.ServiceCall call, DeleteProfileRequest request);
-  $async.Future<SearchProfilesResponse> searchProfiles(
-      $grpc.ServiceCall call, SearchProfilesRequest request);
+  $async.Future<$0.ListProfilesResponse> listProfiles(
+      $grpc.ServiceCall call, $0.ListProfilesRequest request);
+  $async.Future<$1.Profile> createProfile(
+      $grpc.ServiceCall call, $0.CreateProfileRequest request);
+  $async.Future<$1.Profile> getProfile(
+      $grpc.ServiceCall call, $0.GetProfileRequest request);
+  $async.Future<$1.Profile> updateProfile(
+      $grpc.ServiceCall call, $0.UpdateProfileRequest request);
+  $async.Future<$2.Empty> deleteProfile(
+      $grpc.ServiceCall call, $0.DeleteProfileRequest request);
+  $async.Future<$0.SearchProfilesResponse> searchProfiles(
+      $grpc.ServiceCall call, $0.SearchProfilesRequest request);
 }

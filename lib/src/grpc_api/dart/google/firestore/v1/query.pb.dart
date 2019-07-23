@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/v1/query.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,13 +25,14 @@ class StructuredQuery_CollectionSelector extends $pb.GeneratedMessage {
     ..aOB(3, 'allDescendants')
     ..hasRequiredFields = false;
 
-  StructuredQuery_CollectionSelector() : super();
-  StructuredQuery_CollectionSelector.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_CollectionSelector.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_CollectionSelector._() : super();
+  factory StructuredQuery_CollectionSelector() => create();
+  factory StructuredQuery_CollectionSelector.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_CollectionSelector.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_CollectionSelector clone() =>
       StructuredQuery_CollectionSelector()..mergeFromMessage(this);
   StructuredQuery_CollectionSelector copyWith(
@@ -38,8 +40,9 @@ class StructuredQuery_CollectionSelector extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StructuredQuery_CollectionSelector));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StructuredQuery_CollectionSelector create() =>
-      StructuredQuery_CollectionSelector();
+      StructuredQuery_CollectionSelector._();
   StructuredQuery_CollectionSelector createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_CollectionSelector> createRepeated() =>
       $pb.PbList<StructuredQuery_CollectionSelector>();
@@ -81,6 +84,7 @@ class StructuredQuery_Filter extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StructuredQuery.Filter',
       package: const $pb.PackageName('google.firestore.v1'))
+    ..oo(0, [1, 2, 3])
     ..a<StructuredQuery_CompositeFilter>(
         1,
         'compositeFilter',
@@ -99,23 +103,24 @@ class StructuredQuery_Filter extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         StructuredQuery_UnaryFilter.getDefault,
         StructuredQuery_UnaryFilter.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  StructuredQuery_Filter() : super();
-  StructuredQuery_Filter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_Filter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_Filter._() : super();
+  factory StructuredQuery_Filter() => create();
+  factory StructuredQuery_Filter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_Filter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_Filter clone() =>
       StructuredQuery_Filter()..mergeFromMessage(this);
   StructuredQuery_Filter copyWith(
           void Function(StructuredQuery_Filter) updates) =>
       super.copyWith((message) => updates(message as StructuredQuery_Filter));
   $pb.BuilderInfo get info_ => _i;
-  static StructuredQuery_Filter create() => StructuredQuery_Filter();
+  @$core.pragma('dart2js:noInline')
+  static StructuredQuery_Filter create() => StructuredQuery_Filter._();
   StructuredQuery_Filter createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_Filter> createRepeated() =>
       $pb.PbList<StructuredQuery_Filter>();
@@ -167,13 +172,14 @@ class StructuredQuery_CompositeFilter extends $pb.GeneratedMessage {
         2, 'filters', $pb.PbFieldType.PM, StructuredQuery_Filter.create)
     ..hasRequiredFields = false;
 
-  StructuredQuery_CompositeFilter() : super();
-  StructuredQuery_CompositeFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_CompositeFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_CompositeFilter._() : super();
+  factory StructuredQuery_CompositeFilter() => create();
+  factory StructuredQuery_CompositeFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_CompositeFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_CompositeFilter clone() =>
       StructuredQuery_CompositeFilter()..mergeFromMessage(this);
   StructuredQuery_CompositeFilter copyWith(
@@ -181,8 +187,9 @@ class StructuredQuery_CompositeFilter extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StructuredQuery_CompositeFilter));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StructuredQuery_CompositeFilter create() =>
-      StructuredQuery_CompositeFilter();
+      StructuredQuery_CompositeFilter._();
   StructuredQuery_CompositeFilter createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_CompositeFilter> createRepeated() =>
       $pb.PbList<StructuredQuery_CompositeFilter>();
@@ -222,13 +229,14 @@ class StructuredQuery_FieldFilter extends $pb.GeneratedMessage {
         3, 'value', $pb.PbFieldType.OM, $1.Value.getDefault, $1.Value.create)
     ..hasRequiredFields = false;
 
-  StructuredQuery_FieldFilter() : super();
-  StructuredQuery_FieldFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_FieldFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_FieldFilter._() : super();
+  factory StructuredQuery_FieldFilter() => create();
+  factory StructuredQuery_FieldFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_FieldFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_FieldFilter clone() =>
       StructuredQuery_FieldFilter()..mergeFromMessage(this);
   StructuredQuery_FieldFilter copyWith(
@@ -236,7 +244,9 @@ class StructuredQuery_FieldFilter extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StructuredQuery_FieldFilter));
   $pb.BuilderInfo get info_ => _i;
-  static StructuredQuery_FieldFilter create() => StructuredQuery_FieldFilter();
+  @$core.pragma('dart2js:noInline')
+  static StructuredQuery_FieldFilter create() =>
+      StructuredQuery_FieldFilter._();
   StructuredQuery_FieldFilter createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_FieldFilter> createRepeated() =>
       $pb.PbList<StructuredQuery_FieldFilter>();
@@ -280,6 +290,7 @@ class StructuredQuery_UnaryFilter extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StructuredQuery.UnaryFilter',
       package: const $pb.PackageName('google.firestore.v1'))
+    ..oo(0, [2])
     ..e<StructuredQuery_UnaryFilter_Operator>(
         1,
         'op',
@@ -293,16 +304,16 @@ class StructuredQuery_UnaryFilter extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         StructuredQuery_FieldReference.getDefault,
         StructuredQuery_FieldReference.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  StructuredQuery_UnaryFilter() : super();
-  StructuredQuery_UnaryFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_UnaryFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_UnaryFilter._() : super();
+  factory StructuredQuery_UnaryFilter() => create();
+  factory StructuredQuery_UnaryFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_UnaryFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_UnaryFilter clone() =>
       StructuredQuery_UnaryFilter()..mergeFromMessage(this);
   StructuredQuery_UnaryFilter copyWith(
@@ -310,7 +321,9 @@ class StructuredQuery_UnaryFilter extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StructuredQuery_UnaryFilter));
   $pb.BuilderInfo get info_ => _i;
-  static StructuredQuery_UnaryFilter create() => StructuredQuery_UnaryFilter();
+  @$core.pragma('dart2js:noInline')
+  static StructuredQuery_UnaryFilter create() =>
+      StructuredQuery_UnaryFilter._();
   StructuredQuery_UnaryFilter createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_UnaryFilter> createRepeated() =>
       $pb.PbList<StructuredQuery_UnaryFilter>();
@@ -346,13 +359,14 @@ class StructuredQuery_FieldReference extends $pb.GeneratedMessage {
     ..aOS(2, 'fieldPath')
     ..hasRequiredFields = false;
 
-  StructuredQuery_FieldReference() : super();
-  StructuredQuery_FieldReference.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_FieldReference.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_FieldReference._() : super();
+  factory StructuredQuery_FieldReference() => create();
+  factory StructuredQuery_FieldReference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_FieldReference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_FieldReference clone() =>
       StructuredQuery_FieldReference()..mergeFromMessage(this);
   StructuredQuery_FieldReference copyWith(
@@ -360,8 +374,9 @@ class StructuredQuery_FieldReference extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StructuredQuery_FieldReference));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StructuredQuery_FieldReference create() =>
-      StructuredQuery_FieldReference();
+      StructuredQuery_FieldReference._();
   StructuredQuery_FieldReference createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_FieldReference> createRepeated() =>
       $pb.PbList<StructuredQuery_FieldReference>();
@@ -396,20 +411,22 @@ class StructuredQuery_Order extends $pb.GeneratedMessage {
         StructuredQuery_Direction.values)
     ..hasRequiredFields = false;
 
-  StructuredQuery_Order() : super();
-  StructuredQuery_Order.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_Order.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_Order._() : super();
+  factory StructuredQuery_Order() => create();
+  factory StructuredQuery_Order.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_Order.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_Order clone() =>
       StructuredQuery_Order()..mergeFromMessage(this);
   StructuredQuery_Order copyWith(
           void Function(StructuredQuery_Order) updates) =>
       super.copyWith((message) => updates(message as StructuredQuery_Order));
   $pb.BuilderInfo get info_ => _i;
-  static StructuredQuery_Order create() => StructuredQuery_Order();
+  @$core.pragma('dart2js:noInline')
+  static StructuredQuery_Order create() => StructuredQuery_Order._();
   StructuredQuery_Order createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_Order> createRepeated() =>
       $pb.PbList<StructuredQuery_Order>();
@@ -442,13 +459,14 @@ class StructuredQuery_Projection extends $pb.GeneratedMessage {
         2, 'fields', $pb.PbFieldType.PM, StructuredQuery_FieldReference.create)
     ..hasRequiredFields = false;
 
-  StructuredQuery_Projection() : super();
-  StructuredQuery_Projection.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery_Projection.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery_Projection._() : super();
+  factory StructuredQuery_Projection() => create();
+  factory StructuredQuery_Projection.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery_Projection.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery_Projection clone() =>
       StructuredQuery_Projection()..mergeFromMessage(this);
   StructuredQuery_Projection copyWith(
@@ -456,7 +474,8 @@ class StructuredQuery_Projection extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StructuredQuery_Projection));
   $pb.BuilderInfo get info_ => _i;
-  static StructuredQuery_Projection create() => StructuredQuery_Projection();
+  @$core.pragma('dart2js:noInline')
+  static StructuredQuery_Projection create() => StructuredQuery_Projection._();
   StructuredQuery_Projection createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery_Projection> createRepeated() =>
       $pb.PbList<StructuredQuery_Projection>();
@@ -491,18 +510,20 @@ class StructuredQuery extends $pb.GeneratedMessage {
         8, 'endAt', $pb.PbFieldType.OM, Cursor.getDefault, Cursor.create)
     ..hasRequiredFields = false;
 
-  StructuredQuery() : super();
-  StructuredQuery.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructuredQuery.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructuredQuery._() : super();
+  factory StructuredQuery() => create();
+  factory StructuredQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructuredQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructuredQuery clone() => StructuredQuery()..mergeFromMessage(this);
   StructuredQuery copyWith(void Function(StructuredQuery) updates) =>
       super.copyWith((message) => updates(message as StructuredQuery));
   $pb.BuilderInfo get info_ => _i;
-  static StructuredQuery create() => StructuredQuery();
+  @$core.pragma('dart2js:noInline')
+  static StructuredQuery create() => StructuredQuery._();
   StructuredQuery createEmptyInstance() => create();
   static $pb.PbList<StructuredQuery> createRepeated() =>
       $pb.PbList<StructuredQuery>();
@@ -570,18 +591,20 @@ class Cursor extends $pb.GeneratedMessage {
     ..aOB(2, 'before')
     ..hasRequiredFields = false;
 
-  Cursor() : super();
-  Cursor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Cursor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Cursor._() : super();
+  factory Cursor() => create();
+  factory Cursor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Cursor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Cursor clone() => Cursor()..mergeFromMessage(this);
   Cursor copyWith(void Function(Cursor) updates) =>
       super.copyWith((message) => updates(message as Cursor));
   $pb.BuilderInfo get info_ => _i;
-  static Cursor create() => Cursor();
+  @$core.pragma('dart2js:noInline')
+  static Cursor create() => Cursor._();
   Cursor createEmptyInstance() => create();
   static $pb.PbList<Cursor> createRepeated() => $pb.PbList<Cursor>();
   static Cursor getDefault() => _defaultInstance ??= create()..freeze();

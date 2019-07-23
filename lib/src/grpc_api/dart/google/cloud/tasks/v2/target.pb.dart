@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2/target.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -39,19 +40,21 @@ class AppEngineHttpRequest extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(5, 'body', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  AppEngineHttpRequest() : super();
-  AppEngineHttpRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineHttpRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineHttpRequest._() : super();
+  factory AppEngineHttpRequest() => create();
+  factory AppEngineHttpRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineHttpRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineHttpRequest clone() =>
       AppEngineHttpRequest()..mergeFromMessage(this);
   AppEngineHttpRequest copyWith(void Function(AppEngineHttpRequest) updates) =>
       super.copyWith((message) => updates(message as AppEngineHttpRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineHttpRequest create() => AppEngineHttpRequest();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineHttpRequest create() => AppEngineHttpRequest._();
   AppEngineHttpRequest createEmptyInstance() => create();
   static $pb.PbList<AppEngineHttpRequest> createRepeated() =>
       $pb.PbList<AppEngineHttpRequest>();
@@ -103,18 +106,20 @@ class AppEngineRouting extends $pb.GeneratedMessage {
     ..aOS(4, 'host')
     ..hasRequiredFields = false;
 
-  AppEngineRouting() : super();
-  AppEngineRouting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineRouting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineRouting._() : super();
+  factory AppEngineRouting() => create();
+  factory AppEngineRouting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineRouting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineRouting clone() => AppEngineRouting()..mergeFromMessage(this);
   AppEngineRouting copyWith(void Function(AppEngineRouting) updates) =>
       super.copyWith((message) => updates(message as AppEngineRouting));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineRouting create() => AppEngineRouting();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineRouting create() => AppEngineRouting._();
   AppEngineRouting createEmptyInstance() => create();
   static $pb.PbList<AppEngineRouting> createRepeated() =>
       $pb.PbList<AppEngineRouting>();

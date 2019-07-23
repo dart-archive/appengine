@@ -1,40 +1,41 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_extension_setting_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'campaign_extension_setting_service.pb.dart';
-import '../resources/campaign_extension_setting.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'campaign_extension_setting_service.pb.dart' as $0;
+import '../resources/campaign_extension_setting.pb.dart' as $1;
 export 'campaign_extension_setting_service.pb.dart';
 
 class CampaignExtensionSettingServiceClient extends $grpc.Client {
   static final _$getCampaignExtensionSetting = $grpc.ClientMethod<
-          GetCampaignExtensionSettingRequest, $0.CampaignExtensionSetting>(
+          $0.GetCampaignExtensionSettingRequest, $1.CampaignExtensionSetting>(
       '/google.ads.googleads.v1.services.CampaignExtensionSettingService/GetCampaignExtensionSetting',
-      (GetCampaignExtensionSettingRequest value) => value.writeToBuffer(),
+      ($0.GetCampaignExtensionSettingRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.CampaignExtensionSetting.fromBuffer(value));
+          $1.CampaignExtensionSetting.fromBuffer(value));
   static final _$mutateCampaignExtensionSettings = $grpc.ClientMethod<
-          MutateCampaignExtensionSettingsRequest,
-          MutateCampaignExtensionSettingsResponse>(
+          $0.MutateCampaignExtensionSettingsRequest,
+          $0.MutateCampaignExtensionSettingsResponse>(
       '/google.ads.googleads.v1.services.CampaignExtensionSettingService/MutateCampaignExtensionSettings',
-      (MutateCampaignExtensionSettingsRequest value) => value.writeToBuffer(),
+      ($0.MutateCampaignExtensionSettingsRequest value) =>
+          value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          MutateCampaignExtensionSettingsResponse.fromBuffer(value));
+          $0.MutateCampaignExtensionSettingsResponse.fromBuffer(value));
 
   CampaignExtensionSettingServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.CampaignExtensionSetting> getCampaignExtensionSetting(
-      GetCampaignExtensionSettingRequest request,
+  $grpc.ResponseFuture<$1.CampaignExtensionSetting> getCampaignExtensionSetting(
+      $0.GetCampaignExtensionSettingRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getCampaignExtensionSetting, $async.Stream.fromIterable([request]),
@@ -42,9 +43,9 @@ class CampaignExtensionSettingServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<MutateCampaignExtensionSettingsResponse>
+  $grpc.ResponseFuture<$0.MutateCampaignExtensionSettingsResponse>
       mutateCampaignExtensionSettings(
-          MutateCampaignExtensionSettingsRequest request,
+          $0.MutateCampaignExtensionSettingsRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(_$mutateCampaignExtensionSettings,
         $async.Stream.fromIterable([request]),
@@ -58,41 +59,44 @@ abstract class CampaignExtensionSettingServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.CampaignExtensionSettingService';
 
   CampaignExtensionSettingServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetCampaignExtensionSettingRequest,
-            $0.CampaignExtensionSetting>(
+    $addMethod($grpc.ServiceMethod<$0.GetCampaignExtensionSettingRequest,
+            $1.CampaignExtensionSetting>(
         'GetCampaignExtensionSetting',
         getCampaignExtensionSetting_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetCampaignExtensionSettingRequest.fromBuffer(value),
-        ($0.CampaignExtensionSetting value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateCampaignExtensionSettingsRequest,
-            MutateCampaignExtensionSettingsResponse>(
+            $0.GetCampaignExtensionSettingRequest.fromBuffer(value),
+        ($1.CampaignExtensionSetting value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateCampaignExtensionSettingsRequest,
+            $0.MutateCampaignExtensionSettingsResponse>(
         'MutateCampaignExtensionSettings',
         mutateCampaignExtensionSettings_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            MutateCampaignExtensionSettingsRequest.fromBuffer(value),
-        (MutateCampaignExtensionSettingsResponse value) =>
+            $0.MutateCampaignExtensionSettingsRequest.fromBuffer(value),
+        ($0.MutateCampaignExtensionSettingsResponse value) =>
             value.writeToBuffer()));
   }
 
-  $async.Future<$0.CampaignExtensionSetting> getCampaignExtensionSetting_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.CampaignExtensionSetting> getCampaignExtensionSetting_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetCampaignExtensionSettingRequest> request) async {
     return getCampaignExtensionSetting(call, await request);
   }
 
-  $async.Future<MutateCampaignExtensionSettingsResponse>
+  $async.Future<$0.MutateCampaignExtensionSettingsResponse>
       mutateCampaignExtensionSettings_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+          $grpc.ServiceCall call,
+          $async.Future<$0.MutateCampaignExtensionSettingsRequest>
+              request) async {
     return mutateCampaignExtensionSettings(call, await request);
   }
 
-  $async.Future<$0.CampaignExtensionSetting> getCampaignExtensionSetting(
-      $grpc.ServiceCall call, GetCampaignExtensionSettingRequest request);
-  $async.Future<MutateCampaignExtensionSettingsResponse>
+  $async.Future<$1.CampaignExtensionSetting> getCampaignExtensionSetting(
+      $grpc.ServiceCall call, $0.GetCampaignExtensionSettingRequest request);
+  $async.Future<$0.MutateCampaignExtensionSettingsResponse>
       mutateCampaignExtensionSettings($grpc.ServiceCall call,
-          MutateCampaignExtensionSettingsRequest request);
+          $0.MutateCampaignExtensionSettingsRequest request);
 }

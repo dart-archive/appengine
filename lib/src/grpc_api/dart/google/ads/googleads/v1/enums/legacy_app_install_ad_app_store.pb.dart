@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/legacy_app_install_ad_app_store.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class LegacyAppInstallAdAppStoreEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  LegacyAppInstallAdAppStoreEnum() : super();
-  LegacyAppInstallAdAppStoreEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LegacyAppInstallAdAppStoreEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LegacyAppInstallAdAppStoreEnum._() : super();
+  factory LegacyAppInstallAdAppStoreEnum() => create();
+  factory LegacyAppInstallAdAppStoreEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LegacyAppInstallAdAppStoreEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LegacyAppInstallAdAppStoreEnum clone() =>
       LegacyAppInstallAdAppStoreEnum()..mergeFromMessage(this);
   LegacyAppInstallAdAppStoreEnum copyWith(
@@ -31,8 +33,9 @@ class LegacyAppInstallAdAppStoreEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LegacyAppInstallAdAppStoreEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static LegacyAppInstallAdAppStoreEnum create() =>
-      LegacyAppInstallAdAppStoreEnum();
+      LegacyAppInstallAdAppStoreEnum._();
   LegacyAppInstallAdAppStoreEnum createEmptyInstance() => create();
   static $pb.PbList<LegacyAppInstallAdAppStoreEnum> createRepeated() =>
       $pb.PbList<LegacyAppInstallAdAppStoreEnum>();

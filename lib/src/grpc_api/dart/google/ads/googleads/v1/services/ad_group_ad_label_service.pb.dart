@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/ad_group_ad_label_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/ad_group_ad_label.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
+import '../resources/ad_group_ad_label.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
 class GetAdGroupAdLabelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAdGroupAdLabelRequest',
@@ -18,20 +19,22 @@ class GetAdGroupAdLabelRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetAdGroupAdLabelRequest() : super();
-  GetAdGroupAdLabelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAdGroupAdLabelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAdGroupAdLabelRequest._() : super();
+  factory GetAdGroupAdLabelRequest() => create();
+  factory GetAdGroupAdLabelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAdGroupAdLabelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAdGroupAdLabelRequest clone() =>
       GetAdGroupAdLabelRequest()..mergeFromMessage(this);
   GetAdGroupAdLabelRequest copyWith(
           void Function(GetAdGroupAdLabelRequest) updates) =>
       super.copyWith((message) => updates(message as GetAdGroupAdLabelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAdGroupAdLabelRequest create() => GetAdGroupAdLabelRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAdGroupAdLabelRequest create() => GetAdGroupAdLabelRequest._();
   GetAdGroupAdLabelRequest createEmptyInstance() => create();
   static $pb.PbList<GetAdGroupAdLabelRequest> createRepeated() =>
       $pb.PbList<GetAdGroupAdLabelRequest>();
@@ -59,13 +62,14 @@ class MutateAdGroupAdLabelsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateAdGroupAdLabelsRequest() : super();
-  MutateAdGroupAdLabelsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupAdLabelsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupAdLabelsRequest._() : super();
+  factory MutateAdGroupAdLabelsRequest() => create();
+  factory MutateAdGroupAdLabelsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupAdLabelsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupAdLabelsRequest clone() =>
       MutateAdGroupAdLabelsRequest()..mergeFromMessage(this);
   MutateAdGroupAdLabelsRequest copyWith(
@@ -73,8 +77,9 @@ class MutateAdGroupAdLabelsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdGroupAdLabelsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAdGroupAdLabelsRequest create() =>
-      MutateAdGroupAdLabelsRequest();
+      MutateAdGroupAdLabelsRequest._();
   MutateAdGroupAdLabelsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdLabelsRequest> createRepeated() =>
       $pb.PbList<MutateAdGroupAdLabelsRequest>();
@@ -120,26 +125,28 @@ class AdGroupAdLabelOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupAdLabelOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.AdGroupAdLabel>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.AdGroupAdLabel.getDefault, $0.AdGroupAdLabel.create)
-    ..aOS(2, 'remove')
     ..oo(0, [1, 2])
+    ..a<$1.AdGroupAdLabel>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.AdGroupAdLabel.getDefault, $1.AdGroupAdLabel.create)
+    ..aOS(2, 'remove')
     ..hasRequiredFields = false;
 
-  AdGroupAdLabelOperation() : super();
-  AdGroupAdLabelOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupAdLabelOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupAdLabelOperation._() : super();
+  factory AdGroupAdLabelOperation() => create();
+  factory AdGroupAdLabelOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupAdLabelOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupAdLabelOperation clone() =>
       AdGroupAdLabelOperation()..mergeFromMessage(this);
   AdGroupAdLabelOperation copyWith(
           void Function(AdGroupAdLabelOperation) updates) =>
       super.copyWith((message) => updates(message as AdGroupAdLabelOperation));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupAdLabelOperation create() => AdGroupAdLabelOperation();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdLabelOperation create() => AdGroupAdLabelOperation._();
   AdGroupAdLabelOperation createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdLabelOperation> createRepeated() =>
       $pb.PbList<AdGroupAdLabelOperation>();
@@ -151,8 +158,8 @@ class AdGroupAdLabelOperation extends $pb.GeneratedMessage {
       _AdGroupAdLabelOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.AdGroupAdLabel get create_1 => $_getN(0);
-  set create_1($0.AdGroupAdLabel v) {
+  $1.AdGroupAdLabel get create_1 => $_getN(0);
+  set create_1($1.AdGroupAdLabel v) {
     setField(1, v);
   }
 
@@ -174,17 +181,18 @@ class MutateAdGroupAdLabelsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateAdGroupAdLabelResult>(
         2, 'results', $pb.PbFieldType.PM, MutateAdGroupAdLabelResult.create)
-    ..a<$1.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $1.Status.getDefault, $1.Status.create)
+    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  MutateAdGroupAdLabelsResponse() : super();
-  MutateAdGroupAdLabelsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupAdLabelsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupAdLabelsResponse._() : super();
+  factory MutateAdGroupAdLabelsResponse() => create();
+  factory MutateAdGroupAdLabelsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupAdLabelsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupAdLabelsResponse clone() =>
       MutateAdGroupAdLabelsResponse()..mergeFromMessage(this);
   MutateAdGroupAdLabelsResponse copyWith(
@@ -192,8 +200,9 @@ class MutateAdGroupAdLabelsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdGroupAdLabelsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAdGroupAdLabelsResponse create() =>
-      MutateAdGroupAdLabelsResponse();
+      MutateAdGroupAdLabelsResponse._();
   MutateAdGroupAdLabelsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdLabelsResponse> createRepeated() =>
       $pb.PbList<MutateAdGroupAdLabelsResponse>();
@@ -203,8 +212,8 @@ class MutateAdGroupAdLabelsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateAdGroupAdLabelResult> get results => $_getList(0);
 
-  $1.Status get partialFailureError => $_getN(1);
-  set partialFailureError($1.Status v) {
+  $2.Status get partialFailureError => $_getN(1);
+  set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
@@ -219,13 +228,14 @@ class MutateAdGroupAdLabelResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateAdGroupAdLabelResult() : super();
-  MutateAdGroupAdLabelResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdGroupAdLabelResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdGroupAdLabelResult._() : super();
+  factory MutateAdGroupAdLabelResult() => create();
+  factory MutateAdGroupAdLabelResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdGroupAdLabelResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdGroupAdLabelResult clone() =>
       MutateAdGroupAdLabelResult()..mergeFromMessage(this);
   MutateAdGroupAdLabelResult copyWith(
@@ -233,7 +243,8 @@ class MutateAdGroupAdLabelResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdGroupAdLabelResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdGroupAdLabelResult create() => MutateAdGroupAdLabelResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdLabelResult create() => MutateAdGroupAdLabelResult._();
   MutateAdGroupAdLabelResult createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdLabelResult> createRepeated() =>
       $pb.PbList<MutateAdGroupAdLabelResult>();

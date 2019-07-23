@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1beta1/attestation/attestation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,6 +24,7 @@ class PgpSignedAttestation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PgpSignedAttestation',
       package: const $pb.PackageName('grafeas.v1beta1.attestation'))
+    ..oo(0, [2])
     ..aOS(1, 'signature')
     ..aOS(2, 'pgpKeyId')
     ..e<PgpSignedAttestation_ContentType>(
@@ -32,22 +34,23 @@ class PgpSignedAttestation extends $pb.GeneratedMessage {
         PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED,
         PgpSignedAttestation_ContentType.valueOf,
         PgpSignedAttestation_ContentType.values)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  PgpSignedAttestation() : super();
-  PgpSignedAttestation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PgpSignedAttestation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PgpSignedAttestation._() : super();
+  factory PgpSignedAttestation() => create();
+  factory PgpSignedAttestation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PgpSignedAttestation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PgpSignedAttestation clone() =>
       PgpSignedAttestation()..mergeFromMessage(this);
   PgpSignedAttestation copyWith(void Function(PgpSignedAttestation) updates) =>
       super.copyWith((message) => updates(message as PgpSignedAttestation));
   $pb.BuilderInfo get info_ => _i;
-  static PgpSignedAttestation create() => PgpSignedAttestation();
+  @$core.pragma('dart2js:noInline')
+  static PgpSignedAttestation create() => PgpSignedAttestation._();
   PgpSignedAttestation createEmptyInstance() => create();
   static $pb.PbList<PgpSignedAttestation> createRepeated() =>
       $pb.PbList<PgpSignedAttestation>();
@@ -90,18 +93,20 @@ class Authority_Hint extends $pb.GeneratedMessage {
     ..aOS(1, 'humanReadableName')
     ..hasRequiredFields = false;
 
-  Authority_Hint() : super();
-  Authority_Hint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Authority_Hint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Authority_Hint._() : super();
+  factory Authority_Hint() => create();
+  factory Authority_Hint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Authority_Hint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Authority_Hint clone() => Authority_Hint()..mergeFromMessage(this);
   Authority_Hint copyWith(void Function(Authority_Hint) updates) =>
       super.copyWith((message) => updates(message as Authority_Hint));
   $pb.BuilderInfo get info_ => _i;
-  static Authority_Hint create() => Authority_Hint();
+  @$core.pragma('dart2js:noInline')
+  static Authority_Hint create() => Authority_Hint._();
   Authority_Hint createEmptyInstance() => create();
   static $pb.PbList<Authority_Hint> createRepeated() =>
       $pb.PbList<Authority_Hint>();
@@ -124,18 +129,20 @@ class Authority extends $pb.GeneratedMessage {
         Authority_Hint.getDefault, Authority_Hint.create)
     ..hasRequiredFields = false;
 
-  Authority() : super();
-  Authority.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Authority.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Authority._() : super();
+  factory Authority() => create();
+  factory Authority.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Authority.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Authority clone() => Authority()..mergeFromMessage(this);
   Authority copyWith(void Function(Authority) updates) =>
       super.copyWith((message) => updates(message as Authority));
   $pb.BuilderInfo get info_ => _i;
-  static Authority create() => Authority();
+  @$core.pragma('dart2js:noInline')
+  static Authority create() => Authority._();
   Authority createEmptyInstance() => create();
   static $pb.PbList<Authority> createRepeated() => $pb.PbList<Authority>();
   static Authority getDefault() => _defaultInstance ??= create()..freeze();
@@ -157,18 +164,20 @@ class Details extends $pb.GeneratedMessage {
         Attestation.getDefault, Attestation.create)
     ..hasRequiredFields = false;
 
-  Details() : super();
-  Details.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Details.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Details._() : super();
+  factory Details() => create();
+  factory Details.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Details.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Details clone() => Details()..mergeFromMessage(this);
   Details copyWith(void Function(Details) updates) =>
       super.copyWith((message) => updates(message as Details));
   $pb.BuilderInfo get info_ => _i;
-  static Details create() => Details();
+  @$core.pragma('dart2js:noInline')
+  static Details create() => Details._();
   Details createEmptyInstance() => create();
   static $pb.PbList<Details> createRepeated() => $pb.PbList<Details>();
   static Details getDefault() => _defaultInstance ??= create()..freeze();
@@ -193,23 +202,25 @@ class Attestation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Attestation',
       package: const $pb.PackageName('grafeas.v1beta1.attestation'))
+    ..oo(0, [1])
     ..a<PgpSignedAttestation>(1, 'pgpSignedAttestation', $pb.PbFieldType.OM,
         PgpSignedAttestation.getDefault, PgpSignedAttestation.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  Attestation() : super();
-  Attestation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Attestation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Attestation._() : super();
+  factory Attestation() => create();
+  factory Attestation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Attestation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Attestation clone() => Attestation()..mergeFromMessage(this);
   Attestation copyWith(void Function(Attestation) updates) =>
       super.copyWith((message) => updates(message as Attestation));
   $pb.BuilderInfo get info_ => _i;
-  static Attestation create() => Attestation();
+  @$core.pragma('dart2js:noInline')
+  static Attestation create() => Attestation._();
   Attestation createEmptyInstance() => create();
   static $pb.PbList<Attestation> createRepeated() => $pb.PbList<Attestation>();
   static Attestation getDefault() => _defaultInstance ??= create()..freeze();

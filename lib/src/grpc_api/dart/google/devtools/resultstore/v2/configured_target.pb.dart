@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/configured_target.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class ConfiguredTarget_Id extends $pb.GeneratedMessage {
     ..aOS(3, 'configurationId')
     ..hasRequiredFields = false;
 
-  ConfiguredTarget_Id() : super();
-  ConfiguredTarget_Id.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfiguredTarget_Id.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfiguredTarget_Id._() : super();
+  factory ConfiguredTarget_Id() => create();
+  factory ConfiguredTarget_Id.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfiguredTarget_Id.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfiguredTarget_Id clone() => ConfiguredTarget_Id()..mergeFromMessage(this);
   ConfiguredTarget_Id copyWith(void Function(ConfiguredTarget_Id) updates) =>
       super.copyWith((message) => updates(message as ConfiguredTarget_Id));
   $pb.BuilderInfo get info_ => _i;
-  static ConfiguredTarget_Id create() => ConfiguredTarget_Id();
+  @$core.pragma('dart2js:noInline')
+  static ConfiguredTarget_Id create() => ConfiguredTarget_Id._();
   ConfiguredTarget_Id createEmptyInstance() => create();
   static $pb.PbList<ConfiguredTarget_Id> createRepeated() =>
       $pb.PbList<ConfiguredTarget_Id>();
@@ -81,18 +84,20 @@ class ConfiguredTarget extends $pb.GeneratedMessage {
     ..pc<$1.File>(8, 'files', $pb.PbFieldType.PM, $1.File.create)
     ..hasRequiredFields = false;
 
-  ConfiguredTarget() : super();
-  ConfiguredTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfiguredTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfiguredTarget._() : super();
+  factory ConfiguredTarget() => create();
+  factory ConfiguredTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfiguredTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfiguredTarget clone() => ConfiguredTarget()..mergeFromMessage(this);
   ConfiguredTarget copyWith(void Function(ConfiguredTarget) updates) =>
       super.copyWith((message) => updates(message as ConfiguredTarget));
   $pb.BuilderInfo get info_ => _i;
-  static ConfiguredTarget create() => ConfiguredTarget();
+  @$core.pragma('dart2js:noInline')
+  static ConfiguredTarget create() => ConfiguredTarget._();
   ConfiguredTarget createEmptyInstance() => create();
   static $pb.PbList<ConfiguredTarget> createRepeated() =>
       $pb.PbList<ConfiguredTarget>();
@@ -154,20 +159,22 @@ class ConfiguredTestAttributes extends $pb.GeneratedMessage {
         $2.Duration.getDefault, $2.Duration.create)
     ..hasRequiredFields = false;
 
-  ConfiguredTestAttributes() : super();
-  ConfiguredTestAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfiguredTestAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfiguredTestAttributes._() : super();
+  factory ConfiguredTestAttributes() => create();
+  factory ConfiguredTestAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfiguredTestAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfiguredTestAttributes clone() =>
       ConfiguredTestAttributes()..mergeFromMessage(this);
   ConfiguredTestAttributes copyWith(
           void Function(ConfiguredTestAttributes) updates) =>
       super.copyWith((message) => updates(message as ConfiguredTestAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static ConfiguredTestAttributes create() => ConfiguredTestAttributes();
+  @$core.pragma('dart2js:noInline')
+  static ConfiguredTestAttributes create() => ConfiguredTestAttributes._();
   ConfiguredTestAttributes createEmptyInstance() => create();
   static $pb.PbList<ConfiguredTestAttributes> createRepeated() =>
       $pb.PbList<ConfiguredTestAttributes>();

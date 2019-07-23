@@ -1,37 +1,37 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/recaptchaenterprise/v1beta1/recaptchaenterprise.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'recaptchaenterprise.pb.dart';
+import 'package:grpc/service_api.dart' as $grpc;
+import 'recaptchaenterprise.pb.dart' as $0;
 export 'recaptchaenterprise.pb.dart';
 
 class RecaptchaEnterpriseServiceV1Beta1Client extends $grpc.Client {
-  static final _$createAssessment = $grpc.ClientMethod<CreateAssessmentRequest,
-          Assessment>(
+  static final _$createAssessment = $grpc.ClientMethod<
+          $0.CreateAssessmentRequest, $0.Assessment>(
       '/google.cloud.recaptchaenterprise.v1beta1.RecaptchaEnterpriseServiceV1Beta1/CreateAssessment',
-      (CreateAssessmentRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Assessment.fromBuffer(value));
+      ($0.CreateAssessmentRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Assessment.fromBuffer(value));
   static final _$annotateAssessment = $grpc.ClientMethod<
-          AnnotateAssessmentRequest, AnnotateAssessmentResponse>(
+          $0.AnnotateAssessmentRequest, $0.AnnotateAssessmentResponse>(
       '/google.cloud.recaptchaenterprise.v1beta1.RecaptchaEnterpriseServiceV1Beta1/AnnotateAssessment',
-      (AnnotateAssessmentRequest value) => value.writeToBuffer(),
+      ($0.AnnotateAssessmentRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          AnnotateAssessmentResponse.fromBuffer(value));
+          $0.AnnotateAssessmentResponse.fromBuffer(value));
 
   RecaptchaEnterpriseServiceV1Beta1Client($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<Assessment> createAssessment(
-      CreateAssessmentRequest request,
+  $grpc.ResponseFuture<$0.Assessment> createAssessment(
+      $0.CreateAssessmentRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createAssessment, $async.Stream.fromIterable([request]),
@@ -39,8 +39,8 @@ class RecaptchaEnterpriseServiceV1Beta1Client extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<AnnotateAssessmentResponse> annotateAssessment(
-      AnnotateAssessmentRequest request,
+  $grpc.ResponseFuture<$0.AnnotateAssessmentResponse> annotateAssessment(
+      $0.AnnotateAssessmentRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$annotateAssessment, $async.Stream.fromIterable([request]),
@@ -55,37 +55,38 @@ abstract class RecaptchaEnterpriseServiceV1Beta1ServiceBase
       'google.cloud.recaptchaenterprise.v1beta1.RecaptchaEnterpriseServiceV1Beta1';
 
   RecaptchaEnterpriseServiceV1Beta1ServiceBase() {
-    $addMethod($grpc.ServiceMethod<CreateAssessmentRequest, Assessment>(
+    $addMethod($grpc.ServiceMethod<$0.CreateAssessmentRequest, $0.Assessment>(
         'CreateAssessment',
         createAssessment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateAssessmentRequest.fromBuffer(value),
-        (Assessment value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<AnnotateAssessmentRequest,
-            AnnotateAssessmentResponse>(
+            $0.CreateAssessmentRequest.fromBuffer(value),
+        ($0.Assessment value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AnnotateAssessmentRequest,
+            $0.AnnotateAssessmentResponse>(
         'AnnotateAssessment',
         annotateAssessment_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            AnnotateAssessmentRequest.fromBuffer(value),
-        (AnnotateAssessmentResponse value) => value.writeToBuffer()));
+            $0.AnnotateAssessmentRequest.fromBuffer(value),
+        ($0.AnnotateAssessmentResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<Assessment> createAssessment_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Assessment> createAssessment_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateAssessmentRequest> request) async {
     return createAssessment(call, await request);
   }
 
-  $async.Future<AnnotateAssessmentResponse> annotateAssessment_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.AnnotateAssessmentResponse> annotateAssessment_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.AnnotateAssessmentRequest> request) async {
     return annotateAssessment(call, await request);
   }
 
-  $async.Future<Assessment> createAssessment(
-      $grpc.ServiceCall call, CreateAssessmentRequest request);
-  $async.Future<AnnotateAssessmentResponse> annotateAssessment(
-      $grpc.ServiceCall call, AnnotateAssessmentRequest request);
+  $async.Future<$0.Assessment> createAssessment(
+      $grpc.ServiceCall call, $0.CreateAssessmentRequest request);
+  $async.Future<$0.AnnotateAssessmentResponse> annotateAssessment(
+      $grpc.ServiceCall call, $0.AnnotateAssessmentRequest request);
 }

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/datatransfer/v1/transfer.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -28,18 +29,20 @@ class ScheduleOptions extends $pb.GeneratedMessage {
     ..aOB(3, 'disableAutoScheduling')
     ..hasRequiredFields = false;
 
-  ScheduleOptions() : super();
-  ScheduleOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScheduleOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScheduleOptions._() : super();
+  factory ScheduleOptions() => create();
+  factory ScheduleOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScheduleOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScheduleOptions clone() => ScheduleOptions()..mergeFromMessage(this);
   ScheduleOptions copyWith(void Function(ScheduleOptions) updates) =>
       super.copyWith((message) => updates(message as ScheduleOptions));
   $pb.BuilderInfo get info_ => _i;
-  static ScheduleOptions create() => ScheduleOptions();
+  @$core.pragma('dart2js:noInline')
+  static ScheduleOptions create() => ScheduleOptions._();
   ScheduleOptions createEmptyInstance() => create();
   static $pb.PbList<ScheduleOptions> createRepeated() =>
       $pb.PbList<ScheduleOptions>();
@@ -97,25 +100,24 @@ class TransferConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(12, 'dataRefreshWindowDays', $pb.PbFieldType.O3)
     ..aOB(13, 'disabled')
     ..aOS(14, 'datasetRegion')
-    ..aOS(22, 'partnerToken')
-    ..a<$1.Struct>(23, 'partnerConnectionInfo', $pb.PbFieldType.OM,
-        $1.Struct.getDefault, $1.Struct.create)
     ..a<ScheduleOptions>(24, 'scheduleOptions', $pb.PbFieldType.OM,
         ScheduleOptions.getDefault, ScheduleOptions.create)
     ..hasRequiredFields = false;
 
-  TransferConfig() : super();
-  TransferConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransferConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransferConfig._() : super();
+  factory TransferConfig() => create();
+  factory TransferConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransferConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransferConfig clone() => TransferConfig()..mergeFromMessage(this);
   TransferConfig copyWith(void Function(TransferConfig) updates) =>
       super.copyWith((message) => updates(message as TransferConfig));
   $pb.BuilderInfo get info_ => _i;
-  static TransferConfig create() => TransferConfig();
+  @$core.pragma('dart2js:noInline')
+  static TransferConfig create() => TransferConfig._();
   TransferConfig createEmptyInstance() => create();
   static $pb.PbList<TransferConfig> createRepeated() =>
       $pb.PbList<TransferConfig>();
@@ -226,28 +228,12 @@ class TransferConfig extends $pb.GeneratedMessage {
   $core.bool hasDatasetRegion() => $_has(12);
   void clearDatasetRegion() => clearField(14);
 
-  $core.String get partnerToken => $_getS(13, '');
-  set partnerToken($core.String v) {
-    $_setString(13, v);
-  }
-
-  $core.bool hasPartnerToken() => $_has(13);
-  void clearPartnerToken() => clearField(22);
-
-  $1.Struct get partnerConnectionInfo => $_getN(14);
-  set partnerConnectionInfo($1.Struct v) {
-    setField(23, v);
-  }
-
-  $core.bool hasPartnerConnectionInfo() => $_has(14);
-  void clearPartnerConnectionInfo() => clearField(23);
-
-  ScheduleOptions get scheduleOptions => $_getN(15);
+  ScheduleOptions get scheduleOptions => $_getN(13);
   set scheduleOptions(ScheduleOptions v) {
     setField(24, v);
   }
 
-  $core.bool hasScheduleOptions() => $_has(15);
+  $core.bool hasScheduleOptions() => $_has(13);
   void clearScheduleOptions() => clearField(24);
 }
 
@@ -280,31 +266,22 @@ class TransferRun extends $pb.GeneratedMessage {
     ..aOS(12, 'schedule')
     ..a<$2.Status>(21, 'errorStatus', $pb.PbFieldType.OM, $2.Status.getDefault,
         $2.Status.create)
-    ..m<$core.String, $core.String>(
-        22,
-        'labels',
-        'TransferRun.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.bigquery.datatransfer.v1'))
-    ..aOS(28, 'partnerToken')
     ..hasRequiredFields = false;
 
-  TransferRun() : super();
-  TransferRun.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransferRun.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransferRun._() : super();
+  factory TransferRun() => create();
+  factory TransferRun.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransferRun.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransferRun clone() => TransferRun()..mergeFromMessage(this);
   TransferRun copyWith(void Function(TransferRun) updates) =>
       super.copyWith((message) => updates(message as TransferRun));
   $pb.BuilderInfo get info_ => _i;
-  static TransferRun create() => TransferRun();
+  @$core.pragma('dart2js:noInline')
+  static TransferRun create() => TransferRun._();
   TransferRun createEmptyInstance() => create();
   static $pb.PbList<TransferRun> createRepeated() => $pb.PbList<TransferRun>();
   static TransferRun getDefault() => _defaultInstance ??= create()..freeze();
@@ -413,16 +390,6 @@ class TransferRun extends $pb.GeneratedMessage {
 
   $core.bool hasErrorStatus() => $_has(12);
   void clearErrorStatus() => clearField(21);
-
-  $core.Map<$core.String, $core.String> get labels => $_getMap(13);
-
-  $core.String get partnerToken => $_getS(14, '');
-  set partnerToken($core.String v) {
-    $_setString(14, v);
-  }
-
-  $core.bool hasPartnerToken() => $_has(14);
-  void clearPartnerToken() => clearField(28);
 }
 
 class TransferMessage extends $pb.GeneratedMessage {
@@ -440,18 +407,20 @@ class TransferMessage extends $pb.GeneratedMessage {
     ..aOS(3, 'messageText')
     ..hasRequiredFields = false;
 
-  TransferMessage() : super();
-  TransferMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransferMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransferMessage._() : super();
+  factory TransferMessage() => create();
+  factory TransferMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransferMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransferMessage clone() => TransferMessage()..mergeFromMessage(this);
   TransferMessage copyWith(void Function(TransferMessage) updates) =>
       super.copyWith((message) => updates(message as TransferMessage));
   $pb.BuilderInfo get info_ => _i;
-  static TransferMessage create() => TransferMessage();
+  @$core.pragma('dart2js:noInline')
+  static TransferMessage create() => TransferMessage._();
   TransferMessage createEmptyInstance() => create();
   static $pb.PbList<TransferMessage> createRepeated() =>
       $pb.PbList<TransferMessage>();

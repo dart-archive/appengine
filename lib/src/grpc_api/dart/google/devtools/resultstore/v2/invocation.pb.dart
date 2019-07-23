@@ -1,17 +1,20 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/invocation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'common.pb.dart' as $0;
 import 'file.pb.dart' as $1;
 import 'coverage_summary.pb.dart' as $2;
+import 'coverage.pb.dart' as $3;
+import 'file_processing_error.pb.dart' as $4;
 
 class Invocation_Id extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Invocation.Id',
@@ -19,18 +22,20 @@ class Invocation_Id extends $pb.GeneratedMessage {
     ..aOS(1, 'invocationId')
     ..hasRequiredFields = false;
 
-  Invocation_Id() : super();
-  Invocation_Id.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Invocation_Id.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Invocation_Id._() : super();
+  factory Invocation_Id() => create();
+  factory Invocation_Id.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Invocation_Id.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Invocation_Id clone() => Invocation_Id()..mergeFromMessage(this);
   Invocation_Id copyWith(void Function(Invocation_Id) updates) =>
       super.copyWith((message) => updates(message as Invocation_Id));
   $pb.BuilderInfo get info_ => _i;
-  static Invocation_Id create() => Invocation_Id();
+  @$core.pragma('dart2js:noInline')
+  static Invocation_Id create() => Invocation_Id._();
   Invocation_Id createEmptyInstance() => create();
   static $pb.PbList<Invocation_Id> createRepeated() =>
       $pb.PbList<Invocation_Id>();
@@ -64,20 +69,26 @@ class Invocation extends $pb.GeneratedMessage {
     ..pc<$1.File>(8, 'files', $pb.PbFieldType.PM, $1.File.create)
     ..pc<$2.LanguageCoverageSummary>(9, 'coverageSummaries', $pb.PbFieldType.PM,
         $2.LanguageCoverageSummary.create)
+    ..a<$3.AggregateCoverage>(10, 'aggregateCoverage', $pb.PbFieldType.OM,
+        $3.AggregateCoverage.getDefault, $3.AggregateCoverage.create)
+    ..pc<$4.FileProcessingErrors>(11, 'fileProcessingErrors',
+        $pb.PbFieldType.PM, $4.FileProcessingErrors.create)
     ..hasRequiredFields = false;
 
-  Invocation() : super();
-  Invocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Invocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Invocation._() : super();
+  factory Invocation() => create();
+  factory Invocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Invocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Invocation clone() => Invocation()..mergeFromMessage(this);
   Invocation copyWith(void Function(Invocation) updates) =>
       super.copyWith((message) => updates(message as Invocation));
   $pb.BuilderInfo get info_ => _i;
-  static Invocation create() => Invocation();
+  @$core.pragma('dart2js:noInline')
+  static Invocation create() => Invocation._();
   Invocation createEmptyInstance() => create();
   static $pb.PbList<Invocation> createRepeated() => $pb.PbList<Invocation>();
   static Invocation getDefault() => _defaultInstance ??= create()..freeze();
@@ -136,6 +147,16 @@ class Invocation extends $pb.GeneratedMessage {
   $core.List<$1.File> get files => $_getList(7);
 
   $core.List<$2.LanguageCoverageSummary> get coverageSummaries => $_getList(8);
+
+  $3.AggregateCoverage get aggregateCoverage => $_getN(9);
+  set aggregateCoverage($3.AggregateCoverage v) {
+    setField(10, v);
+  }
+
+  $core.bool hasAggregateCoverage() => $_has(9);
+  void clearAggregateCoverage() => clearField(10);
+
+  $core.List<$4.FileProcessingErrors> get fileProcessingErrors => $_getList(10);
 }
 
 class WorkspaceContext extends $pb.GeneratedMessage {
@@ -143,18 +164,20 @@ class WorkspaceContext extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
     ..hasRequiredFields = false;
 
-  WorkspaceContext() : super();
-  WorkspaceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkspaceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkspaceContext._() : super();
+  factory WorkspaceContext() => create();
+  factory WorkspaceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkspaceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkspaceContext clone() => WorkspaceContext()..mergeFromMessage(this);
   WorkspaceContext copyWith(void Function(WorkspaceContext) updates) =>
       super.copyWith((message) => updates(message as WorkspaceContext));
   $pb.BuilderInfo get info_ => _i;
-  static WorkspaceContext create() => WorkspaceContext();
+  @$core.pragma('dart2js:noInline')
+  static WorkspaceContext create() => WorkspaceContext._();
   WorkspaceContext createEmptyInstance() => create();
   static $pb.PbList<WorkspaceContext> createRepeated() =>
       $pb.PbList<WorkspaceContext>();
@@ -174,18 +197,20 @@ class WorkspaceInfo extends $pb.GeneratedMessage {
     ..pc<CommandLine>(7, 'commandLines', $pb.PbFieldType.PM, CommandLine.create)
     ..hasRequiredFields = false;
 
-  WorkspaceInfo() : super();
-  WorkspaceInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkspaceInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkspaceInfo._() : super();
+  factory WorkspaceInfo() => create();
+  factory WorkspaceInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkspaceInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkspaceInfo clone() => WorkspaceInfo()..mergeFromMessage(this);
   WorkspaceInfo copyWith(void Function(WorkspaceInfo) updates) =>
       super.copyWith((message) => updates(message as WorkspaceInfo));
   $pb.BuilderInfo get info_ => _i;
-  static WorkspaceInfo create() => WorkspaceInfo();
+  @$core.pragma('dart2js:noInline')
+  static WorkspaceInfo create() => WorkspaceInfo._();
   WorkspaceInfo createEmptyInstance() => create();
   static $pb.PbList<WorkspaceInfo> createRepeated() =>
       $pb.PbList<WorkspaceInfo>();
@@ -236,18 +261,20 @@ class CommandLine extends $pb.GeneratedMessage {
     ..aOS(4, 'command')
     ..hasRequiredFields = false;
 
-  CommandLine() : super();
-  CommandLine.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommandLine.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommandLine._() : super();
+  factory CommandLine() => create();
+  factory CommandLine.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommandLine.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommandLine clone() => CommandLine()..mergeFromMessage(this);
   CommandLine copyWith(void Function(CommandLine) updates) =>
       super.copyWith((message) => updates(message as CommandLine));
   $pb.BuilderInfo get info_ => _i;
-  static CommandLine create() => CommandLine();
+  @$core.pragma('dart2js:noInline')
+  static CommandLine create() => CommandLine._();
   CommandLine createEmptyInstance() => create();
   static $pb.PbList<CommandLine> createRepeated() => $pb.PbList<CommandLine>();
   static CommandLine getDefault() => _defaultInstance ??= create()..freeze();
@@ -291,19 +318,21 @@ class InvocationAttributes extends $pb.GeneratedMessage {
         6, 'invocationContexts', $pb.PbFieldType.PM, InvocationContext.create)
     ..hasRequiredFields = false;
 
-  InvocationAttributes() : super();
-  InvocationAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InvocationAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InvocationAttributes._() : super();
+  factory InvocationAttributes() => create();
+  factory InvocationAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InvocationAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InvocationAttributes clone() =>
       InvocationAttributes()..mergeFromMessage(this);
   InvocationAttributes copyWith(void Function(InvocationAttributes) updates) =>
       super.copyWith((message) => updates(message as InvocationAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static InvocationAttributes create() => InvocationAttributes();
+  @$core.pragma('dart2js:noInline')
+  static InvocationAttributes create() => InvocationAttributes._();
   InvocationAttributes createEmptyInstance() => create();
   static $pb.PbList<InvocationAttributes> createRepeated() =>
       $pb.PbList<InvocationAttributes>();
@@ -341,18 +370,20 @@ class InvocationContext extends $pb.GeneratedMessage {
     ..aOS(2, 'url')
     ..hasRequiredFields = false;
 
-  InvocationContext() : super();
-  InvocationContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InvocationContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InvocationContext._() : super();
+  factory InvocationContext() => create();
+  factory InvocationContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InvocationContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InvocationContext clone() => InvocationContext()..mergeFromMessage(this);
   InvocationContext copyWith(void Function(InvocationContext) updates) =>
       super.copyWith((message) => updates(message as InvocationContext));
   $pb.BuilderInfo get info_ => _i;
-  static InvocationContext create() => InvocationContext();
+  @$core.pragma('dart2js:noInline')
+  static InvocationContext create() => InvocationContext._();
   InvocationContext createEmptyInstance() => create();
   static $pb.PbList<InvocationContext> createRepeated() =>
       $pb.PbList<InvocationContext>();

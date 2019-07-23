@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/storage/v1beta1/table_reference.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,18 +20,20 @@ class TableReference extends $pb.GeneratedMessage {
     ..aOS(3, 'tableId')
     ..hasRequiredFields = false;
 
-  TableReference() : super();
-  TableReference.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TableReference.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TableReference._() : super();
+  factory TableReference() => create();
+  factory TableReference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TableReference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TableReference clone() => TableReference()..mergeFromMessage(this);
   TableReference copyWith(void Function(TableReference) updates) =>
       super.copyWith((message) => updates(message as TableReference));
   $pb.BuilderInfo get info_ => _i;
-  static TableReference create() => TableReference();
+  @$core.pragma('dart2js:noInline')
+  static TableReference create() => TableReference._();
   TableReference createEmptyInstance() => create();
   static $pb.PbList<TableReference> createRepeated() =>
       $pb.PbList<TableReference>();
@@ -69,18 +72,20 @@ class TableModifiers extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  TableModifiers() : super();
-  TableModifiers.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TableModifiers.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TableModifiers._() : super();
+  factory TableModifiers() => create();
+  factory TableModifiers.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TableModifiers.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TableModifiers clone() => TableModifiers()..mergeFromMessage(this);
   TableModifiers copyWith(void Function(TableModifiers) updates) =>
       super.copyWith((message) => updates(message as TableModifiers));
   $pb.BuilderInfo get info_ => _i;
-  static TableModifiers create() => TableModifiers();
+  @$core.pragma('dart2js:noInline')
+  static TableModifiers create() => TableModifiers._();
   TableModifiers createEmptyInstance() => create();
   static $pb.PbList<TableModifiers> createRepeated() =>
       $pb.PbList<TableModifiers>();

@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/customer_label_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/customer_label.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
+import '../resources/customer_label.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
 class GetCustomerLabelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCustomerLabelRequest',
@@ -18,20 +19,22 @@ class GetCustomerLabelRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCustomerLabelRequest() : super();
-  GetCustomerLabelRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCustomerLabelRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCustomerLabelRequest._() : super();
+  factory GetCustomerLabelRequest() => create();
+  factory GetCustomerLabelRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCustomerLabelRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCustomerLabelRequest clone() =>
       GetCustomerLabelRequest()..mergeFromMessage(this);
   GetCustomerLabelRequest copyWith(
           void Function(GetCustomerLabelRequest) updates) =>
       super.copyWith((message) => updates(message as GetCustomerLabelRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCustomerLabelRequest create() => GetCustomerLabelRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCustomerLabelRequest create() => GetCustomerLabelRequest._();
   GetCustomerLabelRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerLabelRequest> createRepeated() =>
       $pb.PbList<GetCustomerLabelRequest>();
@@ -59,13 +62,14 @@ class MutateCustomerLabelsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCustomerLabelsRequest() : super();
-  MutateCustomerLabelsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerLabelsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerLabelsRequest._() : super();
+  factory MutateCustomerLabelsRequest() => create();
+  factory MutateCustomerLabelsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerLabelsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerLabelsRequest clone() =>
       MutateCustomerLabelsRequest()..mergeFromMessage(this);
   MutateCustomerLabelsRequest copyWith(
@@ -73,7 +77,9 @@ class MutateCustomerLabelsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCustomerLabelsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCustomerLabelsRequest create() => MutateCustomerLabelsRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerLabelsRequest create() =>
+      MutateCustomerLabelsRequest._();
   MutateCustomerLabelsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerLabelsRequest> createRepeated() =>
       $pb.PbList<MutateCustomerLabelsRequest>();
@@ -119,26 +125,28 @@ class CustomerLabelOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomerLabelOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CustomerLabel>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.CustomerLabel.getDefault, $0.CustomerLabel.create)
-    ..aOS(2, 'remove')
     ..oo(0, [1, 2])
+    ..a<$1.CustomerLabel>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.CustomerLabel.getDefault, $1.CustomerLabel.create)
+    ..aOS(2, 'remove')
     ..hasRequiredFields = false;
 
-  CustomerLabelOperation() : super();
-  CustomerLabelOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerLabelOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerLabelOperation._() : super();
+  factory CustomerLabelOperation() => create();
+  factory CustomerLabelOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerLabelOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerLabelOperation clone() =>
       CustomerLabelOperation()..mergeFromMessage(this);
   CustomerLabelOperation copyWith(
           void Function(CustomerLabelOperation) updates) =>
       super.copyWith((message) => updates(message as CustomerLabelOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerLabelOperation create() => CustomerLabelOperation();
+  @$core.pragma('dart2js:noInline')
+  static CustomerLabelOperation create() => CustomerLabelOperation._();
   CustomerLabelOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerLabelOperation> createRepeated() =>
       $pb.PbList<CustomerLabelOperation>();
@@ -150,8 +158,8 @@ class CustomerLabelOperation extends $pb.GeneratedMessage {
       _CustomerLabelOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CustomerLabel get create_1 => $_getN(0);
-  set create_1($0.CustomerLabel v) {
+  $1.CustomerLabel get create_1 => $_getN(0);
+  set create_1($1.CustomerLabel v) {
     setField(1, v);
   }
 
@@ -173,17 +181,18 @@ class MutateCustomerLabelsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCustomerLabelResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCustomerLabelResult.create)
-    ..a<$1.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $1.Status.getDefault, $1.Status.create)
+    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCustomerLabelsResponse() : super();
-  MutateCustomerLabelsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerLabelsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerLabelsResponse._() : super();
+  factory MutateCustomerLabelsResponse() => create();
+  factory MutateCustomerLabelsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerLabelsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerLabelsResponse clone() =>
       MutateCustomerLabelsResponse()..mergeFromMessage(this);
   MutateCustomerLabelsResponse copyWith(
@@ -191,8 +200,9 @@ class MutateCustomerLabelsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCustomerLabelsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerLabelsResponse create() =>
-      MutateCustomerLabelsResponse();
+      MutateCustomerLabelsResponse._();
   MutateCustomerLabelsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerLabelsResponse> createRepeated() =>
       $pb.PbList<MutateCustomerLabelsResponse>();
@@ -202,8 +212,8 @@ class MutateCustomerLabelsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCustomerLabelResult> get results => $_getList(0);
 
-  $1.Status get partialFailureError => $_getN(1);
-  set partialFailureError($1.Status v) {
+  $2.Status get partialFailureError => $_getN(1);
+  set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
@@ -217,13 +227,14 @@ class MutateCustomerLabelResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCustomerLabelResult() : super();
-  MutateCustomerLabelResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerLabelResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerLabelResult._() : super();
+  factory MutateCustomerLabelResult() => create();
+  factory MutateCustomerLabelResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerLabelResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerLabelResult clone() =>
       MutateCustomerLabelResult()..mergeFromMessage(this);
   MutateCustomerLabelResult copyWith(
@@ -231,7 +242,8 @@ class MutateCustomerLabelResult extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as MutateCustomerLabelResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCustomerLabelResult create() => MutateCustomerLabelResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerLabelResult create() => MutateCustomerLabelResult._();
   MutateCustomerLabelResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerLabelResult> createRepeated() =>
       $pb.PbList<MutateCustomerLabelResult>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/range.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -18,18 +19,20 @@ class Range extends $pb.GeneratedMessage {
     ..aInt64(3, 'end')
     ..hasRequiredFields = false;
 
-  Range() : super();
-  Range.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Range.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Range._() : super();
+  factory Range() => create();
+  factory Range.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Range.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Range clone() => Range()..mergeFromMessage(this);
   Range copyWith(void Function(Range) updates) =>
       super.copyWith((message) => updates(message as Range));
   $pb.BuilderInfo get info_ => _i;
-  static Range create() => Range();
+  @$core.pragma('dart2js:noInline')
+  static Range create() => Range._();
   Range createEmptyInstance() => create();
   static $pb.PbList<Range> createRepeated() => $pb.PbList<Range>();
   static Range getDefault() => _defaultInstance ??= create()..freeze();

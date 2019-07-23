@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/privacy/dlp/v2/storage.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -39,12 +40,14 @@ class FileType extends $pb.ProtobufEnum {
   static const FileType BINARY_FILE = FileType._(1, 'BINARY_FILE');
   static const FileType TEXT_FILE = FileType._(2, 'TEXT_FILE');
   static const FileType IMAGE = FileType._(3, 'IMAGE');
+  static const FileType AVRO = FileType._(7, 'AVRO');
 
   static const $core.List<FileType> values = <FileType>[
     FILE_TYPE_UNSPECIFIED,
     BINARY_FILE,
     TEXT_FILE,
     IMAGE,
+    AVRO,
   ];
 
   static final $core.Map<$core.int, FileType> _byValue =

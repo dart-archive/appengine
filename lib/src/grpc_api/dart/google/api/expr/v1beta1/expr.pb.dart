@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1beta1/expr.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -23,18 +24,20 @@ class ParsedExpr extends $pb.GeneratedMessage {
     ..aOS(4, 'syntaxVersion')
     ..hasRequiredFields = false;
 
-  ParsedExpr() : super();
-  ParsedExpr.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ParsedExpr.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ParsedExpr._() : super();
+  factory ParsedExpr() => create();
+  factory ParsedExpr.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ParsedExpr.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ParsedExpr clone() => ParsedExpr()..mergeFromMessage(this);
   ParsedExpr copyWith(void Function(ParsedExpr) updates) =>
       super.copyWith((message) => updates(message as ParsedExpr));
   $pb.BuilderInfo get info_ => _i;
-  static ParsedExpr create() => ParsedExpr();
+  @$core.pragma('dart2js:noInline')
+  static ParsedExpr create() => ParsedExpr._();
   ParsedExpr createEmptyInstance() => create();
   static $pb.PbList<ParsedExpr> createRepeated() => $pb.PbList<ParsedExpr>();
   static ParsedExpr getDefault() => _defaultInstance ??= create()..freeze();
@@ -71,18 +74,20 @@ class Expr_Ident extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  Expr_Ident() : super();
-  Expr_Ident.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_Ident.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_Ident._() : super();
+  factory Expr_Ident() => create();
+  factory Expr_Ident.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_Ident.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_Ident clone() => Expr_Ident()..mergeFromMessage(this);
   Expr_Ident copyWith(void Function(Expr_Ident) updates) =>
       super.copyWith((message) => updates(message as Expr_Ident));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_Ident create() => Expr_Ident();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Ident create() => Expr_Ident._();
   Expr_Ident createEmptyInstance() => create();
   static $pb.PbList<Expr_Ident> createRepeated() => $pb.PbList<Expr_Ident>();
   static Expr_Ident getDefault() => _defaultInstance ??= create()..freeze();
@@ -105,18 +110,20 @@ class Expr_Select extends $pb.GeneratedMessage {
     ..aOB(3, 'testOnly')
     ..hasRequiredFields = false;
 
-  Expr_Select() : super();
-  Expr_Select.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_Select.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_Select._() : super();
+  factory Expr_Select() => create();
+  factory Expr_Select.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_Select.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_Select clone() => Expr_Select()..mergeFromMessage(this);
   Expr_Select copyWith(void Function(Expr_Select) updates) =>
       super.copyWith((message) => updates(message as Expr_Select));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_Select create() => Expr_Select();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Select create() => Expr_Select._();
   Expr_Select createEmptyInstance() => create();
   static $pb.PbList<Expr_Select> createRepeated() => $pb.PbList<Expr_Select>();
   static Expr_Select getDefault() => _defaultInstance ??= create()..freeze();
@@ -155,18 +162,20 @@ class Expr_Call extends $pb.GeneratedMessage {
     ..pc<Expr>(3, 'args', $pb.PbFieldType.PM, Expr.create)
     ..hasRequiredFields = false;
 
-  Expr_Call() : super();
-  Expr_Call.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_Call.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_Call._() : super();
+  factory Expr_Call() => create();
+  factory Expr_Call.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_Call.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_Call clone() => Expr_Call()..mergeFromMessage(this);
   Expr_Call copyWith(void Function(Expr_Call) updates) =>
       super.copyWith((message) => updates(message as Expr_Call));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_Call create() => Expr_Call();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Call create() => Expr_Call._();
   Expr_Call createEmptyInstance() => create();
   static $pb.PbList<Expr_Call> createRepeated() => $pb.PbList<Expr_Call>();
   static Expr_Call getDefault() => _defaultInstance ??= create()..freeze();
@@ -197,18 +206,20 @@ class Expr_CreateList extends $pb.GeneratedMessage {
     ..pc<Expr>(1, 'elements', $pb.PbFieldType.PM, Expr.create)
     ..hasRequiredFields = false;
 
-  Expr_CreateList() : super();
-  Expr_CreateList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_CreateList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_CreateList._() : super();
+  factory Expr_CreateList() => create();
+  factory Expr_CreateList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_CreateList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_CreateList clone() => Expr_CreateList()..mergeFromMessage(this);
   Expr_CreateList copyWith(void Function(Expr_CreateList) updates) =>
       super.copyWith((message) => updates(message as Expr_CreateList));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_CreateList create() => Expr_CreateList();
+  @$core.pragma('dart2js:noInline')
+  static Expr_CreateList create() => Expr_CreateList._();
   Expr_CreateList createEmptyInstance() => create();
   static $pb.PbList<Expr_CreateList> createRepeated() =>
       $pb.PbList<Expr_CreateList>();
@@ -230,27 +241,29 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.CreateStruct.Entry',
       package: const $pb.PackageName('google.api.expr.v1beta1'))
+    ..oo(0, [2, 3])
     ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
     ..aOS(2, 'fieldKey')
     ..a<Expr>(3, 'mapKey', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
     ..a<Expr>(4, 'value', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  Expr_CreateStruct_Entry() : super();
-  Expr_CreateStruct_Entry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_CreateStruct_Entry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_CreateStruct_Entry._() : super();
+  factory Expr_CreateStruct_Entry() => create();
+  factory Expr_CreateStruct_Entry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_CreateStruct_Entry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_CreateStruct_Entry clone() =>
       Expr_CreateStruct_Entry()..mergeFromMessage(this);
   Expr_CreateStruct_Entry copyWith(
           void Function(Expr_CreateStruct_Entry) updates) =>
       super.copyWith((message) => updates(message as Expr_CreateStruct_Entry));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_CreateStruct_Entry create() => Expr_CreateStruct_Entry();
+  @$core.pragma('dart2js:noInline')
+  static Expr_CreateStruct_Entry create() => Expr_CreateStruct_Entry._();
   Expr_CreateStruct_Entry createEmptyInstance() => create();
   static $pb.PbList<Expr_CreateStruct_Entry> createRepeated() =>
       $pb.PbList<Expr_CreateStruct_Entry>();
@@ -303,18 +316,20 @@ class Expr_CreateStruct extends $pb.GeneratedMessage {
         2, 'entries', $pb.PbFieldType.PM, Expr_CreateStruct_Entry.create)
     ..hasRequiredFields = false;
 
-  Expr_CreateStruct() : super();
-  Expr_CreateStruct.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_CreateStruct.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_CreateStruct._() : super();
+  factory Expr_CreateStruct() => create();
+  factory Expr_CreateStruct.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_CreateStruct.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_CreateStruct clone() => Expr_CreateStruct()..mergeFromMessage(this);
   Expr_CreateStruct copyWith(void Function(Expr_CreateStruct) updates) =>
       super.copyWith((message) => updates(message as Expr_CreateStruct));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_CreateStruct create() => Expr_CreateStruct();
+  @$core.pragma('dart2js:noInline')
+  static Expr_CreateStruct create() => Expr_CreateStruct._();
   Expr_CreateStruct createEmptyInstance() => create();
   static $pb.PbList<Expr_CreateStruct> createRepeated() =>
       $pb.PbList<Expr_CreateStruct>();
@@ -346,18 +361,20 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
     ..a<Expr>(7, 'result', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
     ..hasRequiredFields = false;
 
-  Expr_Comprehension() : super();
-  Expr_Comprehension.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr_Comprehension.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr_Comprehension._() : super();
+  factory Expr_Comprehension() => create();
+  factory Expr_Comprehension.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_Comprehension.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr_Comprehension clone() => Expr_Comprehension()..mergeFromMessage(this);
   Expr_Comprehension copyWith(void Function(Expr_Comprehension) updates) =>
       super.copyWith((message) => updates(message as Expr_Comprehension));
   $pb.BuilderInfo get info_ => _i;
-  static Expr_Comprehension create() => Expr_Comprehension();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Comprehension create() => Expr_Comprehension._();
   Expr_Comprehension createEmptyInstance() => create();
   static $pb.PbList<Expr_Comprehension> createRepeated() =>
       $pb.PbList<Expr_Comprehension>();
@@ -446,6 +463,7 @@ class Expr extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr',
       package: const $pb.PackageName('google.api.expr.v1beta1'))
+    ..oo(0, [3, 4, 5, 6, 7, 8, 9])
     ..a<$core.int>(2, 'id', $pb.PbFieldType.O3)
     ..a<Literal>(3, 'literalExpr', $pb.PbFieldType.OM, Literal.getDefault,
         Literal.create)
@@ -461,21 +479,22 @@ class Expr extends $pb.GeneratedMessage {
         Expr_CreateStruct.getDefault, Expr_CreateStruct.create)
     ..a<Expr_Comprehension>(9, 'comprehensionExpr', $pb.PbFieldType.OM,
         Expr_Comprehension.getDefault, Expr_Comprehension.create)
-    ..oo(0, [3, 4, 5, 6, 7, 8, 9])
     ..hasRequiredFields = false;
 
-  Expr() : super();
-  Expr.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr._() : super();
+  factory Expr() => create();
+  factory Expr.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr clone() => Expr()..mergeFromMessage(this);
   Expr copyWith(void Function(Expr) updates) =>
       super.copyWith((message) => updates(message as Expr));
   $pb.BuilderInfo get info_ => _i;
-  static Expr create() => Expr();
+  @$core.pragma('dart2js:noInline')
+  static Expr create() => Expr._();
   Expr createEmptyInstance() => create();
   static $pb.PbList<Expr> createRepeated() => $pb.PbList<Expr>();
   static Expr getDefault() => _defaultInstance ??= create()..freeze();
@@ -574,6 +593,7 @@ class Literal extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Literal',
       package: const $pb.PackageName('google.api.expr.v1beta1'))
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7])
     ..e<$1.NullValue>(1, 'nullValue', $pb.PbFieldType.OE,
         $1.NullValue.NULL_VALUE, $1.NullValue.valueOf, $1.NullValue.values)
     ..aOB(2, 'boolValue')
@@ -582,21 +602,22 @@ class Literal extends $pb.GeneratedMessage {
     ..a<$core.double>(5, 'doubleValue', $pb.PbFieldType.OD)
     ..aOS(6, 'stringValue')
     ..a<$core.List<$core.int>>(7, 'bytesValue', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7])
     ..hasRequiredFields = false;
 
-  Literal() : super();
-  Literal.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Literal.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Literal._() : super();
+  factory Literal() => create();
+  factory Literal.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Literal.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Literal clone() => Literal()..mergeFromMessage(this);
   Literal copyWith(void Function(Literal) updates) =>
       super.copyWith((message) => updates(message as Literal));
   $pb.BuilderInfo get info_ => _i;
-  static Literal create() => Literal();
+  @$core.pragma('dart2js:noInline')
+  static Literal create() => Literal._();
   Literal createEmptyInstance() => create();
   static $pb.PbList<Literal> createRepeated() => $pb.PbList<Literal>();
   static Literal getDefault() => _defaultInstance ??= create()..freeze();

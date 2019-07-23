@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/functions/v1beta2/operations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,20 +31,22 @@ class OperationMetadataV1Beta2 extends $pb.GeneratedMessage {
         3, 'request', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
     ..hasRequiredFields = false;
 
-  OperationMetadataV1Beta2() : super();
-  OperationMetadataV1Beta2.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadataV1Beta2.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadataV1Beta2._() : super();
+  factory OperationMetadataV1Beta2() => create();
+  factory OperationMetadataV1Beta2.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationMetadataV1Beta2.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationMetadataV1Beta2 clone() =>
       OperationMetadataV1Beta2()..mergeFromMessage(this);
   OperationMetadataV1Beta2 copyWith(
           void Function(OperationMetadataV1Beta2) updates) =>
       super.copyWith((message) => updates(message as OperationMetadataV1Beta2));
   $pb.BuilderInfo get info_ => _i;
-  static OperationMetadataV1Beta2 create() => OperationMetadataV1Beta2();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadataV1Beta2 create() => OperationMetadataV1Beta2._();
   OperationMetadataV1Beta2 createEmptyInstance() => create();
   static $pb.PbList<OperationMetadataV1Beta2> createRepeated() =>
       $pb.PbList<OperationMetadataV1Beta2>();

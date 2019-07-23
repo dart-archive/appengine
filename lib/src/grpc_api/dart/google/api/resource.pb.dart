@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/resource.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,18 +29,20 @@ class ResourceDescriptor extends $pb.GeneratedMessage {
         ResourceDescriptor_History.values)
     ..hasRequiredFields = false;
 
-  ResourceDescriptor() : super();
-  ResourceDescriptor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceDescriptor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceDescriptor._() : super();
+  factory ResourceDescriptor() => create();
+  factory ResourceDescriptor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceDescriptor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceDescriptor clone() => ResourceDescriptor()..mergeFromMessage(this);
   ResourceDescriptor copyWith(void Function(ResourceDescriptor) updates) =>
       super.copyWith((message) => updates(message as ResourceDescriptor));
   $pb.BuilderInfo get info_ => _i;
-  static ResourceDescriptor create() => ResourceDescriptor();
+  @$core.pragma('dart2js:noInline')
+  static ResourceDescriptor create() => ResourceDescriptor._();
   ResourceDescriptor createEmptyInstance() => create();
   static $pb.PbList<ResourceDescriptor> createRepeated() =>
       $pb.PbList<ResourceDescriptor>();
@@ -81,18 +84,20 @@ class ResourceReference extends $pb.GeneratedMessage {
     ..aOS(2, 'childType')
     ..hasRequiredFields = false;
 
-  ResourceReference() : super();
-  ResourceReference.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceReference.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceReference._() : super();
+  factory ResourceReference() => create();
+  factory ResourceReference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceReference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceReference clone() => ResourceReference()..mergeFromMessage(this);
   ResourceReference copyWith(void Function(ResourceReference) updates) =>
       super.copyWith((message) => updates(message as ResourceReference));
   $pb.BuilderInfo get info_ => _i;
-  static ResourceReference create() => ResourceReference();
+  @$core.pragma('dart2js:noInline')
+  static ResourceReference create() => ResourceReference._();
   ResourceReference createEmptyInstance() => create();
   static $pb.PbList<ResourceReference> createRepeated() =>
       $pb.PbList<ResourceReference>();

@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1beta1/firestore_admin.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $3;
-import 'index.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $4;
+import 'index.pb.dart' as $3;
 
 import 'firestore_admin.pbenum.dart';
 
@@ -20,10 +21,10 @@ export 'firestore_admin.pbenum.dart';
 class IndexOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('IndexOperationMetadata',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
-        $3.Timestamp.create)
+    ..a<$4.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $4.Timestamp.getDefault,
+        $4.Timestamp.create)
     ..aOS(3, 'index')
     ..e<IndexOperationMetadata_OperationType>(
         4,
@@ -37,20 +38,22 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
         Progress.getDefault, Progress.create)
     ..hasRequiredFields = false;
 
-  IndexOperationMetadata() : super();
-  IndexOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IndexOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IndexOperationMetadata._() : super();
+  factory IndexOperationMetadata() => create();
+  factory IndexOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IndexOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IndexOperationMetadata clone() =>
       IndexOperationMetadata()..mergeFromMessage(this);
   IndexOperationMetadata copyWith(
           void Function(IndexOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as IndexOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static IndexOperationMetadata create() => IndexOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static IndexOperationMetadata create() => IndexOperationMetadata._();
   IndexOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<IndexOperationMetadata> createRepeated() =>
       $pb.PbList<IndexOperationMetadata>();
@@ -58,16 +61,16 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static IndexOperationMetadata _defaultInstance;
 
-  $3.Timestamp get startTime => $_getN(0);
-  set startTime($3.Timestamp v) {
+  $4.Timestamp get startTime => $_getN(0);
+  set startTime($4.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $3.Timestamp get endTime => $_getN(1);
-  set endTime($3.Timestamp v) {
+  $4.Timestamp get endTime => $_getN(1);
+  set endTime($4.Timestamp v) {
     setField(2, v);
   }
 
@@ -114,18 +117,20 @@ class Progress extends $pb.GeneratedMessage {
     ..aInt64(2, 'workEstimated')
     ..hasRequiredFields = false;
 
-  Progress() : super();
-  Progress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Progress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Progress._() : super();
+  factory Progress() => create();
+  factory Progress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Progress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Progress clone() => Progress()..mergeFromMessage(this);
   Progress copyWith(void Function(Progress) updates) =>
       super.copyWith((message) => updates(message as Progress));
   $pb.BuilderInfo get info_ => _i;
-  static Progress create() => Progress();
+  @$core.pragma('dart2js:noInline')
+  static Progress create() => Progress._();
   Progress createEmptyInstance() => create();
   static $pb.PbList<Progress> createRepeated() => $pb.PbList<Progress>();
   static Progress getDefault() => _defaultInstance ??= create()..freeze();
@@ -152,22 +157,24 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIndexRequest',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$2.Index>(
-        2, 'index', $pb.PbFieldType.OM, $2.Index.getDefault, $2.Index.create)
+    ..a<$3.Index>(
+        2, 'index', $pb.PbFieldType.OM, $3.Index.getDefault, $3.Index.create)
     ..hasRequiredFields = false;
 
-  CreateIndexRequest() : super();
-  CreateIndexRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateIndexRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateIndexRequest._() : super();
+  factory CreateIndexRequest() => create();
+  factory CreateIndexRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateIndexRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateIndexRequest clone() => CreateIndexRequest()..mergeFromMessage(this);
   CreateIndexRequest copyWith(void Function(CreateIndexRequest) updates) =>
       super.copyWith((message) => updates(message as CreateIndexRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateIndexRequest create() => CreateIndexRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateIndexRequest create() => CreateIndexRequest._();
   CreateIndexRequest createEmptyInstance() => create();
   static $pb.PbList<CreateIndexRequest> createRepeated() =>
       $pb.PbList<CreateIndexRequest>();
@@ -183,8 +190,8 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $2.Index get index => $_getN(1);
-  set index($2.Index v) {
+  $3.Index get index => $_getN(1);
+  set index($3.Index v) {
     setField(2, v);
   }
 
@@ -198,18 +205,20 @@ class GetIndexRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetIndexRequest() : super();
-  GetIndexRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetIndexRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetIndexRequest._() : super();
+  factory GetIndexRequest() => create();
+  factory GetIndexRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetIndexRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetIndexRequest clone() => GetIndexRequest()..mergeFromMessage(this);
   GetIndexRequest copyWith(void Function(GetIndexRequest) updates) =>
       super.copyWith((message) => updates(message as GetIndexRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetIndexRequest create() => GetIndexRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetIndexRequest create() => GetIndexRequest._();
   GetIndexRequest createEmptyInstance() => create();
   static $pb.PbList<GetIndexRequest> createRepeated() =>
       $pb.PbList<GetIndexRequest>();
@@ -235,18 +244,20 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListIndexesRequest() : super();
-  ListIndexesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListIndexesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListIndexesRequest._() : super();
+  factory ListIndexesRequest() => create();
+  factory ListIndexesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListIndexesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListIndexesRequest clone() => ListIndexesRequest()..mergeFromMessage(this);
   ListIndexesRequest copyWith(void Function(ListIndexesRequest) updates) =>
       super.copyWith((message) => updates(message as ListIndexesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListIndexesRequest create() => ListIndexesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListIndexesRequest create() => ListIndexesRequest._();
   ListIndexesRequest createEmptyInstance() => create();
   static $pb.PbList<ListIndexesRequest> createRepeated() =>
       $pb.PbList<ListIndexesRequest>();
@@ -293,18 +304,20 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteIndexRequest() : super();
-  DeleteIndexRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteIndexRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteIndexRequest._() : super();
+  factory DeleteIndexRequest() => create();
+  factory DeleteIndexRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteIndexRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteIndexRequest clone() => DeleteIndexRequest()..mergeFromMessage(this);
   DeleteIndexRequest copyWith(void Function(DeleteIndexRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteIndexRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteIndexRequest create() => DeleteIndexRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteIndexRequest create() => DeleteIndexRequest._();
   DeleteIndexRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteIndexRequest> createRepeated() =>
       $pb.PbList<DeleteIndexRequest>();
@@ -324,22 +337,24 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
 class ListIndexesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIndexesResponse',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..pc<$2.Index>(1, 'indexes', $pb.PbFieldType.PM, $2.Index.create)
+    ..pc<$3.Index>(1, 'indexes', $pb.PbFieldType.PM, $3.Index.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListIndexesResponse() : super();
-  ListIndexesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListIndexesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListIndexesResponse._() : super();
+  factory ListIndexesResponse() => create();
+  factory ListIndexesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListIndexesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListIndexesResponse clone() => ListIndexesResponse()..mergeFromMessage(this);
   ListIndexesResponse copyWith(void Function(ListIndexesResponse) updates) =>
       super.copyWith((message) => updates(message as ListIndexesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListIndexesResponse create() => ListIndexesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListIndexesResponse create() => ListIndexesResponse._();
   ListIndexesResponse createEmptyInstance() => create();
   static $pb.PbList<ListIndexesResponse> createRepeated() =>
       $pb.PbList<ListIndexesResponse>();
@@ -347,7 +362,7 @@ class ListIndexesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListIndexesResponse _defaultInstance;
 
-  $core.List<$2.Index> get indexes => $_getList(0);
+  $core.List<$3.Index> get indexes => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -366,20 +381,22 @@ class ExportDocumentsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  ExportDocumentsRequest() : super();
-  ExportDocumentsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDocumentsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDocumentsRequest._() : super();
+  factory ExportDocumentsRequest() => create();
+  factory ExportDocumentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDocumentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDocumentsRequest clone() =>
       ExportDocumentsRequest()..mergeFromMessage(this);
   ExportDocumentsRequest copyWith(
           void Function(ExportDocumentsRequest) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDocumentsRequest create() => ExportDocumentsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentsRequest create() => ExportDocumentsRequest._();
   ExportDocumentsRequest createEmptyInstance() => create();
   static $pb.PbList<ExportDocumentsRequest> createRepeated() =>
       $pb.PbList<ExportDocumentsRequest>();
@@ -414,20 +431,22 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'inputUriPrefix')
     ..hasRequiredFields = false;
 
-  ImportDocumentsRequest() : super();
-  ImportDocumentsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportDocumentsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportDocumentsRequest._() : super();
+  factory ImportDocumentsRequest() => create();
+  factory ImportDocumentsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportDocumentsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportDocumentsRequest clone() =>
       ImportDocumentsRequest()..mergeFromMessage(this);
   ImportDocumentsRequest copyWith(
           void Function(ImportDocumentsRequest) updates) =>
       super.copyWith((message) => updates(message as ImportDocumentsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ImportDocumentsRequest create() => ImportDocumentsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ImportDocumentsRequest create() => ImportDocumentsRequest._();
   ImportDocumentsRequest createEmptyInstance() => create();
   static $pb.PbList<ImportDocumentsRequest> createRepeated() =>
       $pb.PbList<ImportDocumentsRequest>();
@@ -460,20 +479,22 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  ExportDocumentsResponse() : super();
-  ExportDocumentsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDocumentsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDocumentsResponse._() : super();
+  factory ExportDocumentsResponse() => create();
+  factory ExportDocumentsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDocumentsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDocumentsResponse clone() =>
       ExportDocumentsResponse()..mergeFromMessage(this);
   ExportDocumentsResponse copyWith(
           void Function(ExportDocumentsResponse) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDocumentsResponse create() => ExportDocumentsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentsResponse create() => ExportDocumentsResponse._();
   ExportDocumentsResponse createEmptyInstance() => create();
   static $pb.PbList<ExportDocumentsResponse> createRepeated() =>
       $pb.PbList<ExportDocumentsResponse>();
@@ -493,10 +514,10 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
 class ExportDocumentsMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportDocumentsMetadata',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
-        $3.Timestamp.create)
+    ..a<$4.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $4.Timestamp.getDefault,
+        $4.Timestamp.create)
     ..e<OperationState>(
         3,
         'operationState',
@@ -512,20 +533,22 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
     ..aOS(7, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  ExportDocumentsMetadata() : super();
-  ExportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDocumentsMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDocumentsMetadata._() : super();
+  factory ExportDocumentsMetadata() => create();
+  factory ExportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDocumentsMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDocumentsMetadata clone() =>
       ExportDocumentsMetadata()..mergeFromMessage(this);
   ExportDocumentsMetadata copyWith(
           void Function(ExportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDocumentsMetadata create() => ExportDocumentsMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentsMetadata create() => ExportDocumentsMetadata._();
   ExportDocumentsMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportDocumentsMetadata> createRepeated() =>
       $pb.PbList<ExportDocumentsMetadata>();
@@ -533,16 +556,16 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExportDocumentsMetadata _defaultInstance;
 
-  $3.Timestamp get startTime => $_getN(0);
-  set startTime($3.Timestamp v) {
+  $4.Timestamp get startTime => $_getN(0);
+  set startTime($4.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $3.Timestamp get endTime => $_getN(1);
-  set endTime($3.Timestamp v) {
+  $4.Timestamp get endTime => $_getN(1);
+  set endTime($4.Timestamp v) {
     setField(2, v);
   }
 
@@ -587,10 +610,10 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
 class ImportDocumentsMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDocumentsMetadata',
       package: const $pb.PackageName('google.firestore.admin.v1beta1'))
-    ..a<$3.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
-        $3.Timestamp.create)
+    ..a<$4.Timestamp>(1, 'startTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $4.Timestamp.getDefault,
+        $4.Timestamp.create)
     ..e<OperationState>(
         3,
         'operationState',
@@ -606,20 +629,22 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
     ..aOS(7, 'inputUriPrefix')
     ..hasRequiredFields = false;
 
-  ImportDocumentsMetadata() : super();
-  ImportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportDocumentsMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportDocumentsMetadata._() : super();
+  factory ImportDocumentsMetadata() => create();
+  factory ImportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportDocumentsMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportDocumentsMetadata clone() =>
       ImportDocumentsMetadata()..mergeFromMessage(this);
   ImportDocumentsMetadata copyWith(
           void Function(ImportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ImportDocumentsMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ImportDocumentsMetadata create() => ImportDocumentsMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ImportDocumentsMetadata create() => ImportDocumentsMetadata._();
   ImportDocumentsMetadata createEmptyInstance() => create();
   static $pb.PbList<ImportDocumentsMetadata> createRepeated() =>
       $pb.PbList<ImportDocumentsMetadata>();
@@ -627,16 +652,16 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ImportDocumentsMetadata _defaultInstance;
 
-  $3.Timestamp get startTime => $_getN(0);
-  set startTime($3.Timestamp v) {
+  $4.Timestamp get startTime => $_getN(0);
+  set startTime($4.Timestamp v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $3.Timestamp get endTime => $_getN(1);
-  set endTime($3.Timestamp v) {
+  $4.Timestamp get endTime => $_getN(1);
+  set endTime($4.Timestamp v) {
     setField(2, v);
   }
 

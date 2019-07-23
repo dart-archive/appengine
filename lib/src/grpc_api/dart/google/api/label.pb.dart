@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/label.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,18 +28,20 @@ class LabelDescriptor extends $pb.GeneratedMessage {
     ..aOS(3, 'description')
     ..hasRequiredFields = false;
 
-  LabelDescriptor() : super();
-  LabelDescriptor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LabelDescriptor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LabelDescriptor._() : super();
+  factory LabelDescriptor() => create();
+  factory LabelDescriptor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LabelDescriptor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LabelDescriptor clone() => LabelDescriptor()..mergeFromMessage(this);
   LabelDescriptor copyWith(void Function(LabelDescriptor) updates) =>
       super.copyWith((message) => updates(message as LabelDescriptor));
   $pb.BuilderInfo get info_ => _i;
-  static LabelDescriptor create() => LabelDescriptor();
+  @$core.pragma('dart2js:noInline')
+  static LabelDescriptor create() => LabelDescriptor._();
   LabelDescriptor createEmptyInstance() => create();
   static $pb.PbList<LabelDescriptor> createRepeated() =>
       $pb.PbList<LabelDescriptor>();

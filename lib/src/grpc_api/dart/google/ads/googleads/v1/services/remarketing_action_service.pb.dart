@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/remarketing_action_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/remarketing_action.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/remarketing_action.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetRemarketingActionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +21,14 @@ class GetRemarketingActionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetRemarketingActionRequest() : super();
-  GetRemarketingActionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetRemarketingActionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetRemarketingActionRequest._() : super();
+  factory GetRemarketingActionRequest() => create();
+  factory GetRemarketingActionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetRemarketingActionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetRemarketingActionRequest clone() =>
       GetRemarketingActionRequest()..mergeFromMessage(this);
   GetRemarketingActionRequest copyWith(
@@ -34,7 +36,9 @@ class GetRemarketingActionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetRemarketingActionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetRemarketingActionRequest create() => GetRemarketingActionRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetRemarketingActionRequest create() =>
+      GetRemarketingActionRequest._();
   GetRemarketingActionRequest createEmptyInstance() => create();
   static $pb.PbList<GetRemarketingActionRequest> createRepeated() =>
       $pb.PbList<GetRemarketingActionRequest>();
@@ -62,13 +66,14 @@ class MutateRemarketingActionsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateRemarketingActionsRequest() : super();
-  MutateRemarketingActionsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateRemarketingActionsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateRemarketingActionsRequest._() : super();
+  factory MutateRemarketingActionsRequest() => create();
+  factory MutateRemarketingActionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateRemarketingActionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateRemarketingActionsRequest clone() =>
       MutateRemarketingActionsRequest()..mergeFromMessage(this);
   MutateRemarketingActionsRequest copyWith(
@@ -76,8 +81,9 @@ class MutateRemarketingActionsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateRemarketingActionsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateRemarketingActionsRequest create() =>
-      MutateRemarketingActionsRequest();
+      MutateRemarketingActionsRequest._();
   MutateRemarketingActionsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateRemarketingActionsRequest> createRepeated() =>
       $pb.PbList<MutateRemarketingActionsRequest>();
@@ -124,22 +130,23 @@ class RemarketingActionOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RemarketingActionOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.RemarketingAction>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.RemarketingAction.getDefault, $0.RemarketingAction.create)
-    ..a<$0.RemarketingAction>(2, 'update', $pb.PbFieldType.OM,
-        $0.RemarketingAction.getDefault, $0.RemarketingAction.create)
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2])
+    ..a<$1.RemarketingAction>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.RemarketingAction.getDefault, $1.RemarketingAction.create)
+    ..a<$1.RemarketingAction>(2, 'update', $pb.PbFieldType.OM,
+        $1.RemarketingAction.getDefault, $1.RemarketingAction.create)
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  RemarketingActionOperation() : super();
-  RemarketingActionOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RemarketingActionOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RemarketingActionOperation._() : super();
+  factory RemarketingActionOperation() => create();
+  factory RemarketingActionOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RemarketingActionOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RemarketingActionOperation clone() =>
       RemarketingActionOperation()..mergeFromMessage(this);
   RemarketingActionOperation copyWith(
@@ -147,7 +154,8 @@ class RemarketingActionOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as RemarketingActionOperation));
   $pb.BuilderInfo get info_ => _i;
-  static RemarketingActionOperation create() => RemarketingActionOperation();
+  @$core.pragma('dart2js:noInline')
+  static RemarketingActionOperation create() => RemarketingActionOperation._();
   RemarketingActionOperation createEmptyInstance() => create();
   static $pb.PbList<RemarketingActionOperation> createRepeated() =>
       $pb.PbList<RemarketingActionOperation>();
@@ -159,24 +167,24 @@ class RemarketingActionOperation extends $pb.GeneratedMessage {
       _RemarketingActionOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.RemarketingAction get create_1 => $_getN(0);
-  set create_1($0.RemarketingAction v) {
+  $1.RemarketingAction get create_1 => $_getN(0);
+  set create_1($1.RemarketingAction v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.RemarketingAction get update => $_getN(1);
-  set update($0.RemarketingAction v) {
+  $1.RemarketingAction get update => $_getN(1);
+  set update($1.RemarketingAction v) {
     setField(2, v);
   }
 
   $core.bool hasUpdate() => $_has(1);
   void clearUpdate() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -190,17 +198,18 @@ class MutateRemarketingActionsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateRemarketingActionResult>(
         2, 'results', $pb.PbFieldType.PM, MutateRemarketingActionResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateRemarketingActionsResponse() : super();
-  MutateRemarketingActionsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateRemarketingActionsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateRemarketingActionsResponse._() : super();
+  factory MutateRemarketingActionsResponse() => create();
+  factory MutateRemarketingActionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateRemarketingActionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateRemarketingActionsResponse clone() =>
       MutateRemarketingActionsResponse()..mergeFromMessage(this);
   MutateRemarketingActionsResponse copyWith(
@@ -208,8 +217,9 @@ class MutateRemarketingActionsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateRemarketingActionsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateRemarketingActionsResponse create() =>
-      MutateRemarketingActionsResponse();
+      MutateRemarketingActionsResponse._();
   MutateRemarketingActionsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateRemarketingActionsResponse> createRepeated() =>
       $pb.PbList<MutateRemarketingActionsResponse>();
@@ -219,8 +229,8 @@ class MutateRemarketingActionsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateRemarketingActionResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -235,13 +245,14 @@ class MutateRemarketingActionResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateRemarketingActionResult() : super();
-  MutateRemarketingActionResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateRemarketingActionResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateRemarketingActionResult._() : super();
+  factory MutateRemarketingActionResult() => create();
+  factory MutateRemarketingActionResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateRemarketingActionResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateRemarketingActionResult clone() =>
       MutateRemarketingActionResult()..mergeFromMessage(this);
   MutateRemarketingActionResult copyWith(
@@ -249,8 +260,9 @@ class MutateRemarketingActionResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateRemarketingActionResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateRemarketingActionResult create() =>
-      MutateRemarketingActionResult();
+      MutateRemarketingActionResult._();
   MutateRemarketingActionResult createEmptyInstance() => create();
   static $pb.PbList<MutateRemarketingActionResult> createRepeated() =>
       $pb.PbList<MutateRemarketingActionResult>();

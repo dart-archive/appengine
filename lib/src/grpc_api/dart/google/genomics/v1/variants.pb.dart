@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/variants.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/struct.pb.dart' as $2;
-import '../../protobuf/field_mask.pb.dart' as $3;
+import '../../protobuf/struct.pb.dart' as $3;
+import '../../protobuf/field_mask.pb.dart' as $4;
 
 import 'variants.pbenum.dart';
 
@@ -22,13 +23,13 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'key')
     ..aOS(2, 'value')
-    ..m<$core.String, $2.ListValue>(
+    ..m<$core.String, $3.ListValue>(
         3,
         'info',
         'VariantSetMetadata.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $2.ListValue.create,
+        $3.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -44,18 +45,20 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
     ..aOS(8, 'number')
     ..hasRequiredFields = false;
 
-  VariantSetMetadata() : super();
-  VariantSetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantSetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VariantSetMetadata._() : super();
+  factory VariantSetMetadata() => create();
+  factory VariantSetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VariantSetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VariantSetMetadata clone() => VariantSetMetadata()..mergeFromMessage(this);
   VariantSetMetadata copyWith(void Function(VariantSetMetadata) updates) =>
       super.copyWith((message) => updates(message as VariantSetMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static VariantSetMetadata create() => VariantSetMetadata();
+  @$core.pragma('dart2js:noInline')
+  static VariantSetMetadata create() => VariantSetMetadata._();
   VariantSetMetadata createEmptyInstance() => create();
   static $pb.PbList<VariantSetMetadata> createRepeated() =>
       $pb.PbList<VariantSetMetadata>();
@@ -79,7 +82,7 @@ class VariantSetMetadata extends $pb.GeneratedMessage {
   $core.bool hasValue() => $_has(1);
   void clearValue() => clearField(2);
 
-  $core.Map<$core.String, $2.ListValue> get info => $_getMap(2);
+  $core.Map<$core.String, $3.ListValue> get info => $_getMap(2);
 
   $core.String get id => $_getS(3, '');
   set id($core.String v) {
@@ -128,18 +131,20 @@ class VariantSet extends $pb.GeneratedMessage {
     ..aOS(8, 'description')
     ..hasRequiredFields = false;
 
-  VariantSet() : super();
-  VariantSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VariantSet._() : super();
+  factory VariantSet() => create();
+  factory VariantSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VariantSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VariantSet clone() => VariantSet()..mergeFromMessage(this);
   VariantSet copyWith(void Function(VariantSet) updates) =>
       super.copyWith((message) => updates(message as VariantSet));
   $pb.BuilderInfo get info_ => _i;
-  static VariantSet create() => VariantSet();
+  @$core.pragma('dart2js:noInline')
+  static VariantSet create() => VariantSet._();
   VariantSet createEmptyInstance() => create();
   static $pb.PbList<VariantSet> createRepeated() => $pb.PbList<VariantSet>();
   static VariantSet getDefault() => _defaultInstance ??= create()..freeze();
@@ -199,13 +204,13 @@ class Variant extends $pb.GeneratedMessage {
     ..pPS(7, 'alternateBases')
     ..a<$core.double>(8, 'quality', $pb.PbFieldType.OD)
     ..pPS(9, 'filter')
-    ..m<$core.String, $2.ListValue>(
+    ..m<$core.String, $3.ListValue>(
         10,
         'info',
         'Variant.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $2.ListValue.create,
+        $3.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -217,18 +222,20 @@ class Variant extends $pb.GeneratedMessage {
     ..aInt64(16, 'start')
     ..hasRequiredFields = false;
 
-  Variant() : super();
-  Variant.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Variant.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Variant._() : super();
+  factory Variant() => create();
+  factory Variant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Variant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Variant clone() => Variant()..mergeFromMessage(this);
   Variant copyWith(void Function(Variant) updates) =>
       super.copyWith((message) => updates(message as Variant));
   $pb.BuilderInfo get info_ => _i;
-  static Variant create() => Variant();
+  @$core.pragma('dart2js:noInline')
+  static Variant create() => Variant._();
   Variant createEmptyInstance() => create();
   static $pb.PbList<Variant> createRepeated() => $pb.PbList<Variant>();
   static Variant getDefault() => _defaultInstance ??= create()..freeze();
@@ -264,7 +271,7 @@ class Variant extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get filter => $_getList(5);
 
-  $core.Map<$core.String, $2.ListValue> get info => $_getMap(6);
+  $core.Map<$core.String, $3.ListValue> get info => $_getMap(6);
 
   $core.List<VariantCall> get calls => $_getList(7);
 
@@ -312,13 +319,13 @@ class Variant extends $pb.GeneratedMessage {
 class VariantCall extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VariantCall',
       package: const $pb.PackageName('google.genomics.v1'))
-    ..m<$core.String, $2.ListValue>(
+    ..m<$core.String, $3.ListValue>(
         2,
         'info',
         'VariantCall.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $2.ListValue.create,
+        $3.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -329,24 +336,26 @@ class VariantCall extends $pb.GeneratedMessage {
     ..aOS(9, 'callSetName')
     ..hasRequiredFields = false;
 
-  VariantCall() : super();
-  VariantCall.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VariantCall.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VariantCall._() : super();
+  factory VariantCall() => create();
+  factory VariantCall.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VariantCall.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VariantCall clone() => VariantCall()..mergeFromMessage(this);
   VariantCall copyWith(void Function(VariantCall) updates) =>
       super.copyWith((message) => updates(message as VariantCall));
   $pb.BuilderInfo get info_ => _i;
-  static VariantCall create() => VariantCall();
+  @$core.pragma('dart2js:noInline')
+  static VariantCall create() => VariantCall._();
   VariantCall createEmptyInstance() => create();
   static $pb.PbList<VariantCall> createRepeated() => $pb.PbList<VariantCall>();
   static VariantCall getDefault() => _defaultInstance ??= create()..freeze();
   static VariantCall _defaultInstance;
 
-  $core.Map<$core.String, $2.ListValue> get info => $_getMap(0);
+  $core.Map<$core.String, $3.ListValue> get info => $_getMap(0);
 
   $core.String get phaseset => $_getS(1, '');
   set phaseset($core.String v) {
@@ -382,13 +391,13 @@ class CallSet extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.genomics.v1'))
     ..aOS(1, 'id')
     ..aOS(2, 'name')
-    ..m<$core.String, $2.ListValue>(
+    ..m<$core.String, $3.ListValue>(
         4,
         'info',
         'CallSet.InfoEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $2.ListValue.create,
+        $3.ListValue.create,
         null,
         null,
         const $pb.PackageName('google.genomics.v1'))
@@ -397,18 +406,20 @@ class CallSet extends $pb.GeneratedMessage {
     ..aOS(7, 'sampleId')
     ..hasRequiredFields = false;
 
-  CallSet() : super();
-  CallSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CallSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CallSet._() : super();
+  factory CallSet() => create();
+  factory CallSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CallSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CallSet clone() => CallSet()..mergeFromMessage(this);
   CallSet copyWith(void Function(CallSet) updates) =>
       super.copyWith((message) => updates(message as CallSet));
   $pb.BuilderInfo get info_ => _i;
-  static CallSet create() => CallSet();
+  @$core.pragma('dart2js:noInline')
+  static CallSet create() => CallSet._();
   CallSet createEmptyInstance() => create();
   static $pb.PbList<CallSet> createRepeated() => $pb.PbList<CallSet>();
   static CallSet getDefault() => _defaultInstance ??= create()..freeze();
@@ -430,7 +441,7 @@ class CallSet extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(1);
   void clearName() => clearField(2);
 
-  $core.Map<$core.String, $2.ListValue> get info => $_getMap(2);
+  $core.Map<$core.String, $3.ListValue> get info => $_getMap(2);
 
   Int64 get created => $_getI64(3);
   set created(Int64 v) {
@@ -458,18 +469,20 @@ class ReferenceBound extends $pb.GeneratedMessage {
     ..aInt64(2, 'upperBound')
     ..hasRequiredFields = false;
 
-  ReferenceBound() : super();
-  ReferenceBound.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReferenceBound.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReferenceBound._() : super();
+  factory ReferenceBound() => create();
+  factory ReferenceBound.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReferenceBound.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReferenceBound clone() => ReferenceBound()..mergeFromMessage(this);
   ReferenceBound copyWith(void Function(ReferenceBound) updates) =>
       super.copyWith((message) => updates(message as ReferenceBound));
   $pb.BuilderInfo get info_ => _i;
-  static ReferenceBound create() => ReferenceBound();
+  @$core.pragma('dart2js:noInline')
+  static ReferenceBound create() => ReferenceBound._();
   ReferenceBound createEmptyInstance() => create();
   static $pb.PbList<ReferenceBound> createRepeated() =>
       $pb.PbList<ReferenceBound>();
@@ -518,20 +531,22 @@ class ImportVariantsRequest extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  ImportVariantsRequest() : super();
-  ImportVariantsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportVariantsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportVariantsRequest._() : super();
+  factory ImportVariantsRequest() => create();
+  factory ImportVariantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportVariantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportVariantsRequest clone() =>
       ImportVariantsRequest()..mergeFromMessage(this);
   ImportVariantsRequest copyWith(
           void Function(ImportVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as ImportVariantsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ImportVariantsRequest create() => ImportVariantsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ImportVariantsRequest create() => ImportVariantsRequest._();
   ImportVariantsRequest createEmptyInstance() => create();
   static $pb.PbList<ImportVariantsRequest> createRepeated() =>
       $pb.PbList<ImportVariantsRequest>();
@@ -575,20 +590,22 @@ class ImportVariantsResponse extends $pb.GeneratedMessage {
     ..pPS(1, 'callSetIds')
     ..hasRequiredFields = false;
 
-  ImportVariantsResponse() : super();
-  ImportVariantsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportVariantsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportVariantsResponse._() : super();
+  factory ImportVariantsResponse() => create();
+  factory ImportVariantsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportVariantsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportVariantsResponse clone() =>
       ImportVariantsResponse()..mergeFromMessage(this);
   ImportVariantsResponse copyWith(
           void Function(ImportVariantsResponse) updates) =>
       super.copyWith((message) => updates(message as ImportVariantsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ImportVariantsResponse create() => ImportVariantsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ImportVariantsResponse create() => ImportVariantsResponse._();
   ImportVariantsResponse createEmptyInstance() => create();
   static $pb.PbList<ImportVariantsResponse> createRepeated() =>
       $pb.PbList<ImportVariantsResponse>();
@@ -606,20 +623,22 @@ class CreateVariantSetRequest extends $pb.GeneratedMessage {
         VariantSet.create)
     ..hasRequiredFields = false;
 
-  CreateVariantSetRequest() : super();
-  CreateVariantSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateVariantSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateVariantSetRequest._() : super();
+  factory CreateVariantSetRequest() => create();
+  factory CreateVariantSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateVariantSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateVariantSetRequest clone() =>
       CreateVariantSetRequest()..mergeFromMessage(this);
   CreateVariantSetRequest copyWith(
           void Function(CreateVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVariantSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateVariantSetRequest create() => CreateVariantSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateVariantSetRequest create() => CreateVariantSetRequest._();
   CreateVariantSetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateVariantSetRequest> createRepeated() =>
       $pb.PbList<CreateVariantSetRequest>();
@@ -653,20 +672,22 @@ class ExportVariantSetRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'bigqueryTable')
     ..hasRequiredFields = false;
 
-  ExportVariantSetRequest() : super();
-  ExportVariantSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportVariantSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportVariantSetRequest._() : super();
+  factory ExportVariantSetRequest() => create();
+  factory ExportVariantSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportVariantSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportVariantSetRequest clone() =>
       ExportVariantSetRequest()..mergeFromMessage(this);
   ExportVariantSetRequest copyWith(
           void Function(ExportVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as ExportVariantSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExportVariantSetRequest create() => ExportVariantSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExportVariantSetRequest create() => ExportVariantSetRequest._();
   ExportVariantSetRequest createEmptyInstance() => create();
   static $pb.PbList<ExportVariantSetRequest> createRepeated() =>
       $pb.PbList<ExportVariantSetRequest>();
@@ -723,19 +744,21 @@ class GetVariantSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantSetId')
     ..hasRequiredFields = false;
 
-  GetVariantSetRequest() : super();
-  GetVariantSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVariantSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetVariantSetRequest._() : super();
+  factory GetVariantSetRequest() => create();
+  factory GetVariantSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetVariantSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetVariantSetRequest clone() =>
       GetVariantSetRequest()..mergeFromMessage(this);
   GetVariantSetRequest copyWith(void Function(GetVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetVariantSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetVariantSetRequest create() => GetVariantSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetVariantSetRequest create() => GetVariantSetRequest._();
   GetVariantSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetVariantSetRequest> createRepeated() =>
       $pb.PbList<GetVariantSetRequest>();
@@ -760,20 +783,22 @@ class SearchVariantSetsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchVariantSetsRequest() : super();
-  SearchVariantSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchVariantSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchVariantSetsRequest._() : super();
+  factory SearchVariantSetsRequest() => create();
+  factory SearchVariantSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchVariantSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchVariantSetsRequest clone() =>
       SearchVariantSetsRequest()..mergeFromMessage(this);
   SearchVariantSetsRequest copyWith(
           void Function(SearchVariantSetsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchVariantSetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchVariantSetsRequest create() => SearchVariantSetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchVariantSetsRequest create() => SearchVariantSetsRequest._();
   SearchVariantSetsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchVariantSetsRequest> createRepeated() =>
       $pb.PbList<SearchVariantSetsRequest>();
@@ -807,13 +832,14 @@ class SearchVariantSetsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchVariantSetsResponse() : super();
-  SearchVariantSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchVariantSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchVariantSetsResponse._() : super();
+  factory SearchVariantSetsResponse() => create();
+  factory SearchVariantSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchVariantSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchVariantSetsResponse clone() =>
       SearchVariantSetsResponse()..mergeFromMessage(this);
   SearchVariantSetsResponse copyWith(
@@ -821,7 +847,8 @@ class SearchVariantSetsResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as SearchVariantSetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchVariantSetsResponse create() => SearchVariantSetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchVariantSetsResponse create() => SearchVariantSetsResponse._();
   SearchVariantSetsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchVariantSetsResponse> createRepeated() =>
       $pb.PbList<SearchVariantSetsResponse>();
@@ -846,20 +873,22 @@ class DeleteVariantSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantSetId')
     ..hasRequiredFields = false;
 
-  DeleteVariantSetRequest() : super();
-  DeleteVariantSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteVariantSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteVariantSetRequest._() : super();
+  factory DeleteVariantSetRequest() => create();
+  factory DeleteVariantSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteVariantSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteVariantSetRequest clone() =>
       DeleteVariantSetRequest()..mergeFromMessage(this);
   DeleteVariantSetRequest copyWith(
           void Function(DeleteVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVariantSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteVariantSetRequest create() => DeleteVariantSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteVariantSetRequest create() => DeleteVariantSetRequest._();
   DeleteVariantSetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteVariantSetRequest> createRepeated() =>
       $pb.PbList<DeleteVariantSetRequest>();
@@ -882,24 +911,26 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantSetId')
     ..a<VariantSet>(2, 'variantSet', $pb.PbFieldType.OM, VariantSet.getDefault,
         VariantSet.create)
-    ..a<$3.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateVariantSetRequest() : super();
-  UpdateVariantSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateVariantSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateVariantSetRequest._() : super();
+  factory UpdateVariantSetRequest() => create();
+  factory UpdateVariantSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateVariantSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateVariantSetRequest clone() =>
       UpdateVariantSetRequest()..mergeFromMessage(this);
   UpdateVariantSetRequest copyWith(
           void Function(UpdateVariantSetRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateVariantSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateVariantSetRequest create() => UpdateVariantSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateVariantSetRequest create() => UpdateVariantSetRequest._();
   UpdateVariantSetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateVariantSetRequest> createRepeated() =>
       $pb.PbList<UpdateVariantSetRequest>();
@@ -923,8 +954,8 @@ class UpdateVariantSetRequest extends $pb.GeneratedMessage {
   $core.bool hasVariantSet() => $_has(1);
   void clearVariantSet() => clearField(2);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(5, v);
   }
 
@@ -946,20 +977,22 @@ class SearchVariantsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(9, 'maxCalls', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchVariantsRequest() : super();
-  SearchVariantsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchVariantsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchVariantsRequest._() : super();
+  factory SearchVariantsRequest() => create();
+  factory SearchVariantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchVariantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchVariantsRequest clone() =>
       SearchVariantsRequest()..mergeFromMessage(this);
   SearchVariantsRequest copyWith(
           void Function(SearchVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchVariantsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchVariantsRequest create() => SearchVariantsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchVariantsRequest create() => SearchVariantsRequest._();
   SearchVariantsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchVariantsRequest> createRepeated() =>
       $pb.PbList<SearchVariantsRequest>();
@@ -1035,20 +1068,22 @@ class SearchVariantsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchVariantsResponse() : super();
-  SearchVariantsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchVariantsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchVariantsResponse._() : super();
+  factory SearchVariantsResponse() => create();
+  factory SearchVariantsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchVariantsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchVariantsResponse clone() =>
       SearchVariantsResponse()..mergeFromMessage(this);
   SearchVariantsResponse copyWith(
           void Function(SearchVariantsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchVariantsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchVariantsResponse create() => SearchVariantsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchVariantsResponse create() => SearchVariantsResponse._();
   SearchVariantsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchVariantsResponse> createRepeated() =>
       $pb.PbList<SearchVariantsResponse>();
@@ -1074,19 +1109,21 @@ class CreateVariantRequest extends $pb.GeneratedMessage {
         1, 'variant', $pb.PbFieldType.OM, Variant.getDefault, Variant.create)
     ..hasRequiredFields = false;
 
-  CreateVariantRequest() : super();
-  CreateVariantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateVariantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateVariantRequest._() : super();
+  factory CreateVariantRequest() => create();
+  factory CreateVariantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateVariantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateVariantRequest clone() =>
       CreateVariantRequest()..mergeFromMessage(this);
   CreateVariantRequest copyWith(void Function(CreateVariantRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVariantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateVariantRequest create() => CreateVariantRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateVariantRequest create() => CreateVariantRequest._();
   CreateVariantRequest createEmptyInstance() => create();
   static $pb.PbList<CreateVariantRequest> createRepeated() =>
       $pb.PbList<CreateVariantRequest>();
@@ -1109,23 +1146,25 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantId')
     ..a<Variant>(
         2, 'variant', $pb.PbFieldType.OM, Variant.getDefault, Variant.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateVariantRequest() : super();
-  UpdateVariantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateVariantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateVariantRequest._() : super();
+  factory UpdateVariantRequest() => create();
+  factory UpdateVariantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateVariantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateVariantRequest clone() =>
       UpdateVariantRequest()..mergeFromMessage(this);
   UpdateVariantRequest copyWith(void Function(UpdateVariantRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateVariantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateVariantRequest create() => UpdateVariantRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateVariantRequest create() => UpdateVariantRequest._();
   UpdateVariantRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateVariantRequest> createRepeated() =>
       $pb.PbList<UpdateVariantRequest>();
@@ -1149,8 +1188,8 @@ class UpdateVariantRequest extends $pb.GeneratedMessage {
   $core.bool hasVariant() => $_has(1);
   void clearVariant() => clearField(2);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -1164,19 +1203,21 @@ class DeleteVariantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantId')
     ..hasRequiredFields = false;
 
-  DeleteVariantRequest() : super();
-  DeleteVariantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteVariantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteVariantRequest._() : super();
+  factory DeleteVariantRequest() => create();
+  factory DeleteVariantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteVariantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteVariantRequest clone() =>
       DeleteVariantRequest()..mergeFromMessage(this);
   DeleteVariantRequest copyWith(void Function(DeleteVariantRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVariantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteVariantRequest create() => DeleteVariantRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteVariantRequest create() => DeleteVariantRequest._();
   DeleteVariantRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteVariantRequest> createRepeated() =>
       $pb.PbList<DeleteVariantRequest>();
@@ -1199,18 +1240,20 @@ class GetVariantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'variantId')
     ..hasRequiredFields = false;
 
-  GetVariantRequest() : super();
-  GetVariantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVariantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetVariantRequest._() : super();
+  factory GetVariantRequest() => create();
+  factory GetVariantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetVariantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetVariantRequest clone() => GetVariantRequest()..mergeFromMessage(this);
   GetVariantRequest copyWith(void Function(GetVariantRequest) updates) =>
       super.copyWith((message) => updates(message as GetVariantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetVariantRequest create() => GetVariantRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetVariantRequest create() => GetVariantRequest._();
   GetVariantRequest createEmptyInstance() => create();
   static $pb.PbList<GetVariantRequest> createRepeated() =>
       $pb.PbList<GetVariantRequest>();
@@ -1244,19 +1287,21 @@ class MergeVariantsRequest extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  MergeVariantsRequest() : super();
-  MergeVariantsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MergeVariantsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MergeVariantsRequest._() : super();
+  factory MergeVariantsRequest() => create();
+  factory MergeVariantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MergeVariantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MergeVariantsRequest clone() =>
       MergeVariantsRequest()..mergeFromMessage(this);
   MergeVariantsRequest copyWith(void Function(MergeVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as MergeVariantsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MergeVariantsRequest create() => MergeVariantsRequest();
+  @$core.pragma('dart2js:noInline')
+  static MergeVariantsRequest create() => MergeVariantsRequest._();
   MergeVariantsRequest createEmptyInstance() => create();
   static $pb.PbList<MergeVariantsRequest> createRepeated() =>
       $pb.PbList<MergeVariantsRequest>();
@@ -1287,20 +1332,22 @@ class SearchCallSetsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchCallSetsRequest() : super();
-  SearchCallSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchCallSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchCallSetsRequest._() : super();
+  factory SearchCallSetsRequest() => create();
+  factory SearchCallSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchCallSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchCallSetsRequest clone() =>
       SearchCallSetsRequest()..mergeFromMessage(this);
   SearchCallSetsRequest copyWith(
           void Function(SearchCallSetsRequest) updates) =>
       super.copyWith((message) => updates(message as SearchCallSetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchCallSetsRequest create() => SearchCallSetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchCallSetsRequest create() => SearchCallSetsRequest._();
   SearchCallSetsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchCallSetsRequest> createRepeated() =>
       $pb.PbList<SearchCallSetsRequest>();
@@ -1342,20 +1389,22 @@ class SearchCallSetsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchCallSetsResponse() : super();
-  SearchCallSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchCallSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchCallSetsResponse._() : super();
+  factory SearchCallSetsResponse() => create();
+  factory SearchCallSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchCallSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchCallSetsResponse clone() =>
       SearchCallSetsResponse()..mergeFromMessage(this);
   SearchCallSetsResponse copyWith(
           void Function(SearchCallSetsResponse) updates) =>
       super.copyWith((message) => updates(message as SearchCallSetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchCallSetsResponse create() => SearchCallSetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchCallSetsResponse create() => SearchCallSetsResponse._();
   SearchCallSetsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchCallSetsResponse> createRepeated() =>
       $pb.PbList<SearchCallSetsResponse>();
@@ -1381,19 +1430,21 @@ class CreateCallSetRequest extends $pb.GeneratedMessage {
         1, 'callSet', $pb.PbFieldType.OM, CallSet.getDefault, CallSet.create)
     ..hasRequiredFields = false;
 
-  CreateCallSetRequest() : super();
-  CreateCallSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateCallSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateCallSetRequest._() : super();
+  factory CreateCallSetRequest() => create();
+  factory CreateCallSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateCallSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateCallSetRequest clone() =>
       CreateCallSetRequest()..mergeFromMessage(this);
   CreateCallSetRequest copyWith(void Function(CreateCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateCallSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateCallSetRequest create() => CreateCallSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateCallSetRequest create() => CreateCallSetRequest._();
   CreateCallSetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCallSetRequest> createRepeated() =>
       $pb.PbList<CreateCallSetRequest>();
@@ -1416,23 +1467,25 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'callSetId')
     ..a<CallSet>(
         2, 'callSet', $pb.PbFieldType.OM, CallSet.getDefault, CallSet.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateCallSetRequest() : super();
-  UpdateCallSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateCallSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateCallSetRequest._() : super();
+  factory UpdateCallSetRequest() => create();
+  factory UpdateCallSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateCallSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateCallSetRequest clone() =>
       UpdateCallSetRequest()..mergeFromMessage(this);
   UpdateCallSetRequest copyWith(void Function(UpdateCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateCallSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateCallSetRequest create() => UpdateCallSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateCallSetRequest create() => UpdateCallSetRequest._();
   UpdateCallSetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateCallSetRequest> createRepeated() =>
       $pb.PbList<UpdateCallSetRequest>();
@@ -1456,8 +1509,8 @@ class UpdateCallSetRequest extends $pb.GeneratedMessage {
   $core.bool hasCallSet() => $_has(1);
   void clearCallSet() => clearField(2);
 
-  $3.FieldMask get updateMask => $_getN(2);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(2);
+  set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
@@ -1471,19 +1524,21 @@ class DeleteCallSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'callSetId')
     ..hasRequiredFields = false;
 
-  DeleteCallSetRequest() : super();
-  DeleteCallSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteCallSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteCallSetRequest._() : super();
+  factory DeleteCallSetRequest() => create();
+  factory DeleteCallSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteCallSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteCallSetRequest clone() =>
       DeleteCallSetRequest()..mergeFromMessage(this);
   DeleteCallSetRequest copyWith(void Function(DeleteCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteCallSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteCallSetRequest create() => DeleteCallSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteCallSetRequest create() => DeleteCallSetRequest._();
   DeleteCallSetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteCallSetRequest> createRepeated() =>
       $pb.PbList<DeleteCallSetRequest>();
@@ -1506,18 +1561,20 @@ class GetCallSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'callSetId')
     ..hasRequiredFields = false;
 
-  GetCallSetRequest() : super();
-  GetCallSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCallSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCallSetRequest._() : super();
+  factory GetCallSetRequest() => create();
+  factory GetCallSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCallSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCallSetRequest clone() => GetCallSetRequest()..mergeFromMessage(this);
   GetCallSetRequest copyWith(void Function(GetCallSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetCallSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCallSetRequest create() => GetCallSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCallSetRequest create() => GetCallSetRequest._();
   GetCallSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetCallSetRequest> createRepeated() =>
       $pb.PbList<GetCallSetRequest>();
@@ -1545,20 +1602,22 @@ class StreamVariantsRequest extends $pb.GeneratedMessage {
     ..aInt64(6, 'end')
     ..hasRequiredFields = false;
 
-  StreamVariantsRequest() : super();
-  StreamVariantsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamVariantsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamVariantsRequest._() : super();
+  factory StreamVariantsRequest() => create();
+  factory StreamVariantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamVariantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamVariantsRequest clone() =>
       StreamVariantsRequest()..mergeFromMessage(this);
   StreamVariantsRequest copyWith(
           void Function(StreamVariantsRequest) updates) =>
       super.copyWith((message) => updates(message as StreamVariantsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static StreamVariantsRequest create() => StreamVariantsRequest();
+  @$core.pragma('dart2js:noInline')
+  static StreamVariantsRequest create() => StreamVariantsRequest._();
   StreamVariantsRequest createEmptyInstance() => create();
   static $pb.PbList<StreamVariantsRequest> createRepeated() =>
       $pb.PbList<StreamVariantsRequest>();
@@ -1615,20 +1674,22 @@ class StreamVariantsResponse extends $pb.GeneratedMessage {
     ..pc<Variant>(1, 'variants', $pb.PbFieldType.PM, Variant.create)
     ..hasRequiredFields = false;
 
-  StreamVariantsResponse() : super();
-  StreamVariantsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamVariantsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamVariantsResponse._() : super();
+  factory StreamVariantsResponse() => create();
+  factory StreamVariantsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamVariantsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamVariantsResponse clone() =>
       StreamVariantsResponse()..mergeFromMessage(this);
   StreamVariantsResponse copyWith(
           void Function(StreamVariantsResponse) updates) =>
       super.copyWith((message) => updates(message as StreamVariantsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static StreamVariantsResponse create() => StreamVariantsResponse();
+  @$core.pragma('dart2js:noInline')
+  static StreamVariantsResponse create() => StreamVariantsResponse._();
   StreamVariantsResponse createEmptyInstance() => create();
   static $pb.PbList<StreamVariantsResponse> createRepeated() =>
       $pb.PbList<StreamVariantsResponse>();

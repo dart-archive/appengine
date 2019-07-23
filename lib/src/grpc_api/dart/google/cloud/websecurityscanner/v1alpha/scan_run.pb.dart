@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1alpha/scan_run.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -44,18 +45,20 @@ class ScanRun extends $pb.GeneratedMessage {
     ..a<$core.int>(9, 'progressPercent', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ScanRun() : super();
-  ScanRun.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanRun.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanRun._() : super();
+  factory ScanRun() => create();
+  factory ScanRun.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanRun.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanRun clone() => ScanRun()..mergeFromMessage(this);
   ScanRun copyWith(void Function(ScanRun) updates) =>
       super.copyWith((message) => updates(message as ScanRun));
   $pb.BuilderInfo get info_ => _i;
-  static ScanRun create() => ScanRun();
+  @$core.pragma('dart2js:noInline')
+  static ScanRun create() => ScanRun._();
   ScanRun createEmptyInstance() => create();
   static $pb.PbList<ScanRun> createRepeated() => $pb.PbList<ScanRun>();
   static ScanRun getDefault() => _defaultInstance ??= create()..freeze();

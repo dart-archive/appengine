@@ -1,18 +1,19 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/keyword_plan_idea_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $0;
-import '../common/keyword_plan_common.pb.dart' as $1;
+import '../../../../protobuf/wrappers.pb.dart' as $1;
+import '../common/keyword_plan_common.pb.dart' as $2;
 
-import '../enums/keyword_plan_network.pbenum.dart' as $2;
+import '../enums/keyword_plan_network.pbenum.dart' as $3;
 
 enum GenerateKeywordIdeasRequest_Seed {
   keywordAndUrlSeed,
@@ -32,6 +33,7 @@ class GenerateKeywordIdeasRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GenerateKeywordIdeasRequest',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
+    ..oo(0, [2, 3, 5])
     ..aOS(1, 'customerId')
     ..a<KeywordAndUrlSeed>(2, 'keywordAndUrlSeed', $pb.PbFieldType.OM,
         KeywordAndUrlSeed.getDefault, KeywordAndUrlSeed.create)
@@ -39,27 +41,27 @@ class GenerateKeywordIdeasRequest extends $pb.GeneratedMessage {
         KeywordSeed.getDefault, KeywordSeed.create)
     ..a<UrlSeed>(
         5, 'urlSeed', $pb.PbFieldType.OM, UrlSeed.getDefault, UrlSeed.create)
-    ..a<$0.StringValue>(7, 'language', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<$0.StringValue>(
-        8, 'geoTargetConstants', $pb.PbFieldType.PM, $0.StringValue.create)
-    ..e<$2.KeywordPlanNetworkEnum_KeywordPlanNetwork>(
+    ..a<$1.StringValue>(7, 'language', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
+    ..pc<$1.StringValue>(
+        8, 'geoTargetConstants', $pb.PbFieldType.PM, $1.StringValue.create)
+    ..e<$3.KeywordPlanNetworkEnum_KeywordPlanNetwork>(
         9,
         'keywordPlanNetwork',
         $pb.PbFieldType.OE,
-        $2.KeywordPlanNetworkEnum_KeywordPlanNetwork.UNSPECIFIED,
-        $2.KeywordPlanNetworkEnum_KeywordPlanNetwork.valueOf,
-        $2.KeywordPlanNetworkEnum_KeywordPlanNetwork.values)
-    ..oo(0, [2, 3, 5])
+        $3.KeywordPlanNetworkEnum_KeywordPlanNetwork.UNSPECIFIED,
+        $3.KeywordPlanNetworkEnum_KeywordPlanNetwork.valueOf,
+        $3.KeywordPlanNetworkEnum_KeywordPlanNetwork.values)
     ..hasRequiredFields = false;
 
-  GenerateKeywordIdeasRequest() : super();
-  GenerateKeywordIdeasRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateKeywordIdeasRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateKeywordIdeasRequest._() : super();
+  factory GenerateKeywordIdeasRequest() => create();
+  factory GenerateKeywordIdeasRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateKeywordIdeasRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateKeywordIdeasRequest clone() =>
       GenerateKeywordIdeasRequest()..mergeFromMessage(this);
   GenerateKeywordIdeasRequest copyWith(
@@ -67,7 +69,9 @@ class GenerateKeywordIdeasRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GenerateKeywordIdeasRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateKeywordIdeasRequest create() => GenerateKeywordIdeasRequest();
+  @$core.pragma('dart2js:noInline')
+  static GenerateKeywordIdeasRequest create() =>
+      GenerateKeywordIdeasRequest._();
   GenerateKeywordIdeasRequest createEmptyInstance() => create();
   static $pb.PbList<GenerateKeywordIdeasRequest> createRepeated() =>
       $pb.PbList<GenerateKeywordIdeasRequest>();
@@ -111,19 +115,19 @@ class GenerateKeywordIdeasRequest extends $pb.GeneratedMessage {
   $core.bool hasUrlSeed() => $_has(3);
   void clearUrlSeed() => clearField(5);
 
-  $0.StringValue get language => $_getN(4);
-  set language($0.StringValue v) {
+  $1.StringValue get language => $_getN(4);
+  set language($1.StringValue v) {
     setField(7, v);
   }
 
   $core.bool hasLanguage() => $_has(4);
   void clearLanguage() => clearField(7);
 
-  $core.List<$0.StringValue> get geoTargetConstants => $_getList(5);
+  $core.List<$1.StringValue> get geoTargetConstants => $_getList(5);
 
-  $2.KeywordPlanNetworkEnum_KeywordPlanNetwork get keywordPlanNetwork =>
+  $3.KeywordPlanNetworkEnum_KeywordPlanNetwork get keywordPlanNetwork =>
       $_getN(6);
-  set keywordPlanNetwork($2.KeywordPlanNetworkEnum_KeywordPlanNetwork v) {
+  set keywordPlanNetwork($3.KeywordPlanNetworkEnum_KeywordPlanNetwork v) {
     setField(9, v);
   }
 
@@ -134,24 +138,26 @@ class GenerateKeywordIdeasRequest extends $pb.GeneratedMessage {
 class KeywordAndUrlSeed extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeywordAndUrlSeed',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.StringValue>(1, 'url', $pb.PbFieldType.OM, $0.StringValue.getDefault,
-        $0.StringValue.create)
-    ..pc<$0.StringValue>(
-        2, 'keywords', $pb.PbFieldType.PM, $0.StringValue.create)
+    ..a<$1.StringValue>(1, 'url', $pb.PbFieldType.OM, $1.StringValue.getDefault,
+        $1.StringValue.create)
+    ..pc<$1.StringValue>(
+        2, 'keywords', $pb.PbFieldType.PM, $1.StringValue.create)
     ..hasRequiredFields = false;
 
-  KeywordAndUrlSeed() : super();
-  KeywordAndUrlSeed.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordAndUrlSeed.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordAndUrlSeed._() : super();
+  factory KeywordAndUrlSeed() => create();
+  factory KeywordAndUrlSeed.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordAndUrlSeed.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordAndUrlSeed clone() => KeywordAndUrlSeed()..mergeFromMessage(this);
   KeywordAndUrlSeed copyWith(void Function(KeywordAndUrlSeed) updates) =>
       super.copyWith((message) => updates(message as KeywordAndUrlSeed));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordAndUrlSeed create() => KeywordAndUrlSeed();
+  @$core.pragma('dart2js:noInline')
+  static KeywordAndUrlSeed create() => KeywordAndUrlSeed._();
   KeywordAndUrlSeed createEmptyInstance() => create();
   static $pb.PbList<KeywordAndUrlSeed> createRepeated() =>
       $pb.PbList<KeywordAndUrlSeed>();
@@ -159,70 +165,74 @@ class KeywordAndUrlSeed extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static KeywordAndUrlSeed _defaultInstance;
 
-  $0.StringValue get url => $_getN(0);
-  set url($0.StringValue v) {
+  $1.StringValue get url => $_getN(0);
+  set url($1.StringValue v) {
     setField(1, v);
   }
 
   $core.bool hasUrl() => $_has(0);
   void clearUrl() => clearField(1);
 
-  $core.List<$0.StringValue> get keywords => $_getList(1);
+  $core.List<$1.StringValue> get keywords => $_getList(1);
 }
 
 class KeywordSeed extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeywordSeed',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$0.StringValue>(
-        1, 'keywords', $pb.PbFieldType.PM, $0.StringValue.create)
+    ..pc<$1.StringValue>(
+        1, 'keywords', $pb.PbFieldType.PM, $1.StringValue.create)
     ..hasRequiredFields = false;
 
-  KeywordSeed() : super();
-  KeywordSeed.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordSeed.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordSeed._() : super();
+  factory KeywordSeed() => create();
+  factory KeywordSeed.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordSeed.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordSeed clone() => KeywordSeed()..mergeFromMessage(this);
   KeywordSeed copyWith(void Function(KeywordSeed) updates) =>
       super.copyWith((message) => updates(message as KeywordSeed));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordSeed create() => KeywordSeed();
+  @$core.pragma('dart2js:noInline')
+  static KeywordSeed create() => KeywordSeed._();
   KeywordSeed createEmptyInstance() => create();
   static $pb.PbList<KeywordSeed> createRepeated() => $pb.PbList<KeywordSeed>();
   static KeywordSeed getDefault() => _defaultInstance ??= create()..freeze();
   static KeywordSeed _defaultInstance;
 
-  $core.List<$0.StringValue> get keywords => $_getList(0);
+  $core.List<$1.StringValue> get keywords => $_getList(0);
 }
 
 class UrlSeed extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UrlSeed',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.StringValue>(1, 'url', $pb.PbFieldType.OM, $0.StringValue.getDefault,
-        $0.StringValue.create)
+    ..a<$1.StringValue>(1, 'url', $pb.PbFieldType.OM, $1.StringValue.getDefault,
+        $1.StringValue.create)
     ..hasRequiredFields = false;
 
-  UrlSeed() : super();
-  UrlSeed.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UrlSeed.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UrlSeed._() : super();
+  factory UrlSeed() => create();
+  factory UrlSeed.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UrlSeed.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UrlSeed clone() => UrlSeed()..mergeFromMessage(this);
   UrlSeed copyWith(void Function(UrlSeed) updates) =>
       super.copyWith((message) => updates(message as UrlSeed));
   $pb.BuilderInfo get info_ => _i;
-  static UrlSeed create() => UrlSeed();
+  @$core.pragma('dart2js:noInline')
+  static UrlSeed create() => UrlSeed._();
   UrlSeed createEmptyInstance() => create();
   static $pb.PbList<UrlSeed> createRepeated() => $pb.PbList<UrlSeed>();
   static UrlSeed getDefault() => _defaultInstance ??= create()..freeze();
   static UrlSeed _defaultInstance;
 
-  $0.StringValue get url => $_getN(0);
-  set url($0.StringValue v) {
+  $1.StringValue get url => $_getN(0);
+  set url($1.StringValue v) {
     setField(1, v);
   }
 
@@ -238,13 +248,14 @@ class GenerateKeywordIdeaResponse extends $pb.GeneratedMessage {
         1, 'results', $pb.PbFieldType.PM, GenerateKeywordIdeaResult.create)
     ..hasRequiredFields = false;
 
-  GenerateKeywordIdeaResponse() : super();
-  GenerateKeywordIdeaResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateKeywordIdeaResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateKeywordIdeaResponse._() : super();
+  factory GenerateKeywordIdeaResponse() => create();
+  factory GenerateKeywordIdeaResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateKeywordIdeaResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateKeywordIdeaResponse clone() =>
       GenerateKeywordIdeaResponse()..mergeFromMessage(this);
   GenerateKeywordIdeaResponse copyWith(
@@ -252,7 +263,9 @@ class GenerateKeywordIdeaResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GenerateKeywordIdeaResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateKeywordIdeaResponse create() => GenerateKeywordIdeaResponse();
+  @$core.pragma('dart2js:noInline')
+  static GenerateKeywordIdeaResponse create() =>
+      GenerateKeywordIdeaResponse._();
   GenerateKeywordIdeaResponse createEmptyInstance() => create();
   static $pb.PbList<GenerateKeywordIdeaResponse> createRepeated() =>
       $pb.PbList<GenerateKeywordIdeaResponse>();
@@ -266,23 +279,24 @@ class GenerateKeywordIdeaResponse extends $pb.GeneratedMessage {
 class GenerateKeywordIdeaResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GenerateKeywordIdeaResult',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.StringValue>(2, 'text', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$1.KeywordPlanHistoricalMetrics>(
+    ..a<$1.StringValue>(2, 'text', $pb.PbFieldType.OM,
+        $1.StringValue.getDefault, $1.StringValue.create)
+    ..a<$2.KeywordPlanHistoricalMetrics>(
         3,
         'keywordIdeaMetrics',
         $pb.PbFieldType.OM,
-        $1.KeywordPlanHistoricalMetrics.getDefault,
-        $1.KeywordPlanHistoricalMetrics.create)
+        $2.KeywordPlanHistoricalMetrics.getDefault,
+        $2.KeywordPlanHistoricalMetrics.create)
     ..hasRequiredFields = false;
 
-  GenerateKeywordIdeaResult() : super();
-  GenerateKeywordIdeaResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GenerateKeywordIdeaResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GenerateKeywordIdeaResult._() : super();
+  factory GenerateKeywordIdeaResult() => create();
+  factory GenerateKeywordIdeaResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GenerateKeywordIdeaResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GenerateKeywordIdeaResult clone() =>
       GenerateKeywordIdeaResult()..mergeFromMessage(this);
   GenerateKeywordIdeaResult copyWith(
@@ -290,7 +304,8 @@ class GenerateKeywordIdeaResult extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as GenerateKeywordIdeaResult));
   $pb.BuilderInfo get info_ => _i;
-  static GenerateKeywordIdeaResult create() => GenerateKeywordIdeaResult();
+  @$core.pragma('dart2js:noInline')
+  static GenerateKeywordIdeaResult create() => GenerateKeywordIdeaResult._();
   GenerateKeywordIdeaResult createEmptyInstance() => create();
   static $pb.PbList<GenerateKeywordIdeaResult> createRepeated() =>
       $pb.PbList<GenerateKeywordIdeaResult>();
@@ -298,16 +313,16 @@ class GenerateKeywordIdeaResult extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static GenerateKeywordIdeaResult _defaultInstance;
 
-  $0.StringValue get text => $_getN(0);
-  set text($0.StringValue v) {
+  $1.StringValue get text => $_getN(0);
+  set text($1.StringValue v) {
     setField(2, v);
   }
 
   $core.bool hasText() => $_has(0);
   void clearText() => clearField(2);
 
-  $1.KeywordPlanHistoricalMetrics get keywordIdeaMetrics => $_getN(1);
-  set keywordIdeaMetrics($1.KeywordPlanHistoricalMetrics v) {
+  $2.KeywordPlanHistoricalMetrics get keywordIdeaMetrics => $_getN(1);
+  set keywordIdeaMetrics($2.KeywordPlanHistoricalMetrics v) {
     setField(3, v);
   }
 

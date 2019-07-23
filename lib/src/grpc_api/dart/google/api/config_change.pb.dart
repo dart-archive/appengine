@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/config_change.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,18 +30,20 @@ class ConfigChange extends $pb.GeneratedMessage {
     ..pc<Advice>(5, 'advices', $pb.PbFieldType.PM, Advice.create)
     ..hasRequiredFields = false;
 
-  ConfigChange() : super();
-  ConfigChange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfigChange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfigChange._() : super();
+  factory ConfigChange() => create();
+  factory ConfigChange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfigChange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfigChange clone() => ConfigChange()..mergeFromMessage(this);
   ConfigChange copyWith(void Function(ConfigChange) updates) =>
       super.copyWith((message) => updates(message as ConfigChange));
   $pb.BuilderInfo get info_ => _i;
-  static ConfigChange create() => ConfigChange();
+  @$core.pragma('dart2js:noInline')
+  static ConfigChange create() => ConfigChange._();
   ConfigChange createEmptyInstance() => create();
   static $pb.PbList<ConfigChange> createRepeated() =>
       $pb.PbList<ConfigChange>();
@@ -88,18 +91,20 @@ class Advice extends $pb.GeneratedMessage {
         ..aOS(2, 'description')
         ..hasRequiredFields = false;
 
-  Advice() : super();
-  Advice.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Advice.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Advice._() : super();
+  factory Advice() => create();
+  factory Advice.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Advice.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Advice clone() => Advice()..mergeFromMessage(this);
   Advice copyWith(void Function(Advice) updates) =>
       super.copyWith((message) => updates(message as Advice));
   $pb.BuilderInfo get info_ => _i;
-  static Advice create() => Advice();
+  @$core.pragma('dart2js:noInline')
+  static Advice create() => Advice._();
   Advice createEmptyInstance() => create();
   static $pb.PbList<Advice> createRepeated() => $pb.PbList<Advice>();
   static Advice getDefault() => _defaultInstance ??= create()..freeze();

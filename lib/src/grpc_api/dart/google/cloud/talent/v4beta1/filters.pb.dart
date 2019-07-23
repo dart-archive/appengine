@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/filters.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -46,18 +47,20 @@ class JobQuery extends $pb.GeneratedMessage {
     ..pPS(13, 'excludedJobs')
     ..hasRequiredFields = false;
 
-  JobQuery() : super();
-  JobQuery.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobQuery.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobQuery._() : super();
+  factory JobQuery() => create();
+  factory JobQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobQuery clone() => JobQuery()..mergeFromMessage(this);
   JobQuery copyWith(void Function(JobQuery) updates) =>
       super.copyWith((message) => updates(message as JobQuery));
   $pb.BuilderInfo get info_ => _i;
-  static JobQuery create() => JobQuery();
+  @$core.pragma('dart2js:noInline')
+  static JobQuery create() => JobQuery._();
   JobQuery createEmptyInstance() => create();
   static $pb.PbList<JobQuery> createRepeated() => $pb.PbList<JobQuery>();
   static JobQuery getDefault() => _defaultInstance ??= create()..freeze();
@@ -151,20 +154,30 @@ class ProfileQuery extends $pb.GeneratedMessage {
     ..pc<ApplicationJobFilter>(13, 'applicationJobFilters', $pb.PbFieldType.PM,
         ApplicationJobFilter.create)
     ..aOS(15, 'customAttributeFilter')
+    ..a<CandidateAvailabilityFilter>(
+        16,
+        'candidateAvailabilityFilter',
+        $pb.PbFieldType.OM,
+        CandidateAvailabilityFilter.getDefault,
+        CandidateAvailabilityFilter.create)
+    ..pc<PersonNameFilter>(
+        17, 'personNameFilters', $pb.PbFieldType.PM, PersonNameFilter.create)
     ..hasRequiredFields = false;
 
-  ProfileQuery() : super();
-  ProfileQuery.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProfileQuery.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProfileQuery._() : super();
+  factory ProfileQuery() => create();
+  factory ProfileQuery.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProfileQuery.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProfileQuery clone() => ProfileQuery()..mergeFromMessage(this);
   ProfileQuery copyWith(void Function(ProfileQuery) updates) =>
       super.copyWith((message) => updates(message as ProfileQuery));
   $pb.BuilderInfo get info_ => _i;
-  static ProfileQuery create() => ProfileQuery();
+  @$core.pragma('dart2js:noInline')
+  static ProfileQuery create() => ProfileQuery._();
   ProfileQuery createEmptyInstance() => create();
   static $pb.PbList<ProfileQuery> createRepeated() =>
       $pb.PbList<ProfileQuery>();
@@ -215,6 +228,16 @@ class ProfileQuery extends $pb.GeneratedMessage {
 
   $core.bool hasCustomAttributeFilter() => $_has(12);
   void clearCustomAttributeFilter() => clearField(15);
+
+  CandidateAvailabilityFilter get candidateAvailabilityFilter => $_getN(13);
+  set candidateAvailabilityFilter(CandidateAvailabilityFilter v) {
+    setField(16, v);
+  }
+
+  $core.bool hasCandidateAvailabilityFilter() => $_has(13);
+  void clearCandidateAvailabilityFilter() => clearField(16);
+
+  $core.List<PersonNameFilter> get personNameFilters => $_getList(14);
 }
 
 class LocationFilter extends $pb.GeneratedMessage {
@@ -235,18 +258,20 @@ class LocationFilter extends $pb.GeneratedMessage {
     ..aOB(6, 'negated')
     ..hasRequiredFields = false;
 
-  LocationFilter() : super();
-  LocationFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LocationFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LocationFilter._() : super();
+  factory LocationFilter() => create();
+  factory LocationFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LocationFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LocationFilter clone() => LocationFilter()..mergeFromMessage(this);
   LocationFilter copyWith(void Function(LocationFilter) updates) =>
       super.copyWith((message) => updates(message as LocationFilter));
   $pb.BuilderInfo get info_ => _i;
-  static LocationFilter create() => LocationFilter();
+  @$core.pragma('dart2js:noInline')
+  static LocationFilter create() => LocationFilter._();
   LocationFilter createEmptyInstance() => create();
   static $pb.PbList<LocationFilter> createRepeated() =>
       $pb.PbList<LocationFilter>();
@@ -328,18 +353,20 @@ class CompensationFilter extends $pb.GeneratedMessage {
     ..aOB(4, 'includeJobsWithUnspecifiedCompensationRange')
     ..hasRequiredFields = false;
 
-  CompensationFilter() : super();
-  CompensationFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CompensationFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CompensationFilter._() : super();
+  factory CompensationFilter() => create();
+  factory CompensationFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CompensationFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CompensationFilter clone() => CompensationFilter()..mergeFromMessage(this);
   CompensationFilter copyWith(void Function(CompensationFilter) updates) =>
       super.copyWith((message) => updates(message as CompensationFilter));
   $pb.BuilderInfo get info_ => _i;
-  static CompensationFilter create() => CompensationFilter();
+  @$core.pragma('dart2js:noInline')
+  static CompensationFilter create() => CompensationFilter._();
   CompensationFilter createEmptyInstance() => create();
   static $pb.PbList<CompensationFilter> createRepeated() =>
       $pb.PbList<CompensationFilter>();
@@ -385,6 +412,7 @@ class CommuteFilter extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommuteFilter',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+    ..oo(0, [5, 6])
     ..e<$0.CommuteMethod>(
         1,
         'commuteMethod',
@@ -406,21 +434,22 @@ class CommuteFilter extends $pb.GeneratedMessage {
         CommuteFilter_RoadTraffic.values)
     ..a<$4.TimeOfDay>(6, 'departureTime', $pb.PbFieldType.OM,
         $4.TimeOfDay.getDefault, $4.TimeOfDay.create)
-    ..oo(0, [5, 6])
     ..hasRequiredFields = false;
 
-  CommuteFilter() : super();
-  CommuteFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommuteFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommuteFilter._() : super();
+  factory CommuteFilter() => create();
+  factory CommuteFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommuteFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommuteFilter clone() => CommuteFilter()..mergeFromMessage(this);
   CommuteFilter copyWith(void Function(CommuteFilter) updates) =>
       super.copyWith((message) => updates(message as CommuteFilter));
   $pb.BuilderInfo get info_ => _i;
-  static CommuteFilter create() => CommuteFilter();
+  @$core.pragma('dart2js:noInline')
+  static CommuteFilter create() => CommuteFilter._();
   CommuteFilter createEmptyInstance() => create();
   static $pb.PbList<CommuteFilter> createRepeated() =>
       $pb.PbList<CommuteFilter>();
@@ -487,18 +516,20 @@ class JobTitleFilter extends $pb.GeneratedMessage {
     ..aOB(2, 'negated')
     ..hasRequiredFields = false;
 
-  JobTitleFilter() : super();
-  JobTitleFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobTitleFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobTitleFilter._() : super();
+  factory JobTitleFilter() => create();
+  factory JobTitleFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobTitleFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobTitleFilter clone() => JobTitleFilter()..mergeFromMessage(this);
   JobTitleFilter copyWith(void Function(JobTitleFilter) updates) =>
       super.copyWith((message) => updates(message as JobTitleFilter));
   $pb.BuilderInfo get info_ => _i;
-  static JobTitleFilter create() => JobTitleFilter();
+  @$core.pragma('dart2js:noInline')
+  static JobTitleFilter create() => JobTitleFilter._();
   JobTitleFilter createEmptyInstance() => create();
   static $pb.PbList<JobTitleFilter> createRepeated() =>
       $pb.PbList<JobTitleFilter>();
@@ -529,18 +560,20 @@ class SkillFilter extends $pb.GeneratedMessage {
     ..aOB(2, 'negated')
     ..hasRequiredFields = false;
 
-  SkillFilter() : super();
-  SkillFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SkillFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SkillFilter._() : super();
+  factory SkillFilter() => create();
+  factory SkillFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SkillFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SkillFilter clone() => SkillFilter()..mergeFromMessage(this);
   SkillFilter copyWith(void Function(SkillFilter) updates) =>
       super.copyWith((message) => updates(message as SkillFilter));
   $pb.BuilderInfo get info_ => _i;
-  static SkillFilter create() => SkillFilter();
+  @$core.pragma('dart2js:noInline')
+  static SkillFilter create() => SkillFilter._();
   SkillFilter createEmptyInstance() => create();
   static $pb.PbList<SkillFilter> createRepeated() => $pb.PbList<SkillFilter>();
   static SkillFilter getDefault() => _defaultInstance ??= create()..freeze();
@@ -577,18 +610,20 @@ class EmployerFilter extends $pb.GeneratedMessage {
     ..aOB(3, 'negated')
     ..hasRequiredFields = false;
 
-  EmployerFilter() : super();
-  EmployerFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EmployerFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EmployerFilter._() : super();
+  factory EmployerFilter() => create();
+  factory EmployerFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EmployerFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EmployerFilter clone() => EmployerFilter()..mergeFromMessage(this);
   EmployerFilter copyWith(void Function(EmployerFilter) updates) =>
       super.copyWith((message) => updates(message as EmployerFilter));
   $pb.BuilderInfo get info_ => _i;
-  static EmployerFilter create() => EmployerFilter();
+  @$core.pragma('dart2js:noInline')
+  static EmployerFilter create() => EmployerFilter._();
   EmployerFilter createEmptyInstance() => create();
   static $pb.PbList<EmployerFilter> createRepeated() =>
       $pb.PbList<EmployerFilter>();
@@ -635,18 +670,20 @@ class EducationFilter extends $pb.GeneratedMessage {
     ..aOB(6, 'negated')
     ..hasRequiredFields = false;
 
-  EducationFilter() : super();
-  EducationFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EducationFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EducationFilter._() : super();
+  factory EducationFilter() => create();
+  factory EducationFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EducationFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EducationFilter clone() => EducationFilter()..mergeFromMessage(this);
   EducationFilter copyWith(void Function(EducationFilter) updates) =>
       super.copyWith((message) => updates(message as EducationFilter));
   $pb.BuilderInfo get info_ => _i;
-  static EducationFilter create() => EducationFilter();
+  @$core.pragma('dart2js:noInline')
+  static EducationFilter create() => EducationFilter._();
   EducationFilter createEmptyInstance() => create();
   static $pb.PbList<EducationFilter> createRepeated() =>
       $pb.PbList<EducationFilter>();
@@ -696,19 +733,21 @@ class WorkExperienceFilter extends $pb.GeneratedMessage {
         $3.Duration.getDefault, $3.Duration.create)
     ..hasRequiredFields = false;
 
-  WorkExperienceFilter() : super();
-  WorkExperienceFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WorkExperienceFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WorkExperienceFilter._() : super();
+  factory WorkExperienceFilter() => create();
+  factory WorkExperienceFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WorkExperienceFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WorkExperienceFilter clone() =>
       WorkExperienceFilter()..mergeFromMessage(this);
   WorkExperienceFilter copyWith(void Function(WorkExperienceFilter) updates) =>
       super.copyWith((message) => updates(message as WorkExperienceFilter));
   $pb.BuilderInfo get info_ => _i;
-  static WorkExperienceFilter create() => WorkExperienceFilter();
+  @$core.pragma('dart2js:noInline')
+  static WorkExperienceFilter create() => WorkExperienceFilter._();
   WorkExperienceFilter createEmptyInstance() => create();
   static $pb.PbList<WorkExperienceFilter> createRepeated() =>
       $pb.PbList<WorkExperienceFilter>();
@@ -742,20 +781,22 @@ class ApplicationDateFilter extends $pb.GeneratedMessage {
         2, 'endDate', $pb.PbFieldType.OM, $5.Date.getDefault, $5.Date.create)
     ..hasRequiredFields = false;
 
-  ApplicationDateFilter() : super();
-  ApplicationDateFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplicationDateFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplicationDateFilter._() : super();
+  factory ApplicationDateFilter() => create();
+  factory ApplicationDateFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplicationDateFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplicationDateFilter clone() =>
       ApplicationDateFilter()..mergeFromMessage(this);
   ApplicationDateFilter copyWith(
           void Function(ApplicationDateFilter) updates) =>
       super.copyWith((message) => updates(message as ApplicationDateFilter));
   $pb.BuilderInfo get info_ => _i;
-  static ApplicationDateFilter create() => ApplicationDateFilter();
+  @$core.pragma('dart2js:noInline')
+  static ApplicationDateFilter create() => ApplicationDateFilter._();
   ApplicationDateFilter createEmptyInstance() => create();
   static $pb.PbList<ApplicationDateFilter> createRepeated() =>
       $pb.PbList<ApplicationDateFilter>();
@@ -788,13 +829,14 @@ class ApplicationOutcomeNotesFilter extends $pb.GeneratedMessage {
     ..aOB(2, 'negated')
     ..hasRequiredFields = false;
 
-  ApplicationOutcomeNotesFilter() : super();
-  ApplicationOutcomeNotesFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplicationOutcomeNotesFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplicationOutcomeNotesFilter._() : super();
+  factory ApplicationOutcomeNotesFilter() => create();
+  factory ApplicationOutcomeNotesFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplicationOutcomeNotesFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplicationOutcomeNotesFilter clone() =>
       ApplicationOutcomeNotesFilter()..mergeFromMessage(this);
   ApplicationOutcomeNotesFilter copyWith(
@@ -802,8 +844,9 @@ class ApplicationOutcomeNotesFilter extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ApplicationOutcomeNotesFilter));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplicationOutcomeNotesFilter create() =>
-      ApplicationOutcomeNotesFilter();
+      ApplicationOutcomeNotesFilter._();
   ApplicationOutcomeNotesFilter createEmptyInstance() => create();
   static $pb.PbList<ApplicationOutcomeNotesFilter> createRepeated() =>
       $pb.PbList<ApplicationOutcomeNotesFilter>();
@@ -836,19 +879,21 @@ class ApplicationJobFilter extends $pb.GeneratedMessage {
     ..aOB(4, 'negated')
     ..hasRequiredFields = false;
 
-  ApplicationJobFilter() : super();
-  ApplicationJobFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplicationJobFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplicationJobFilter._() : super();
+  factory ApplicationJobFilter() => create();
+  factory ApplicationJobFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplicationJobFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplicationJobFilter clone() =>
       ApplicationJobFilter()..mergeFromMessage(this);
   ApplicationJobFilter copyWith(void Function(ApplicationJobFilter) updates) =>
       super.copyWith((message) => updates(message as ApplicationJobFilter));
   $pb.BuilderInfo get info_ => _i;
-  static ApplicationJobFilter create() => ApplicationJobFilter();
+  @$core.pragma('dart2js:noInline')
+  static ApplicationJobFilter create() => ApplicationJobFilter._();
   ApplicationJobFilter createEmptyInstance() => create();
   static $pb.PbList<ApplicationJobFilter> createRepeated() =>
       $pb.PbList<ApplicationJobFilter>();
@@ -897,18 +942,20 @@ class TimeFilter extends $pb.GeneratedMessage {
         TimeFilter_TimeField.values)
     ..hasRequiredFields = false;
 
-  TimeFilter() : super();
-  TimeFilter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimeFilter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimeFilter._() : super();
+  factory TimeFilter() => create();
+  factory TimeFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimeFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimeFilter clone() => TimeFilter()..mergeFromMessage(this);
   TimeFilter copyWith(void Function(TimeFilter) updates) =>
       super.copyWith((message) => updates(message as TimeFilter));
   $pb.BuilderInfo get info_ => _i;
-  static TimeFilter create() => TimeFilter();
+  @$core.pragma('dart2js:noInline')
+  static TimeFilter create() => TimeFilter._();
   TimeFilter createEmptyInstance() => create();
   static $pb.PbList<TimeFilter> createRepeated() => $pb.PbList<TimeFilter>();
   static TimeFilter getDefault() => _defaultInstance ??= create()..freeze();
@@ -937,4 +984,81 @@ class TimeFilter extends $pb.GeneratedMessage {
 
   $core.bool hasTimeField() => $_has(2);
   void clearTimeField() => clearField(3);
+}
+
+class CandidateAvailabilityFilter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'CandidateAvailabilityFilter',
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+    ..aOB(1, 'negated')
+    ..hasRequiredFields = false;
+
+  CandidateAvailabilityFilter._() : super();
+  factory CandidateAvailabilityFilter() => create();
+  factory CandidateAvailabilityFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CandidateAvailabilityFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  CandidateAvailabilityFilter clone() =>
+      CandidateAvailabilityFilter()..mergeFromMessage(this);
+  CandidateAvailabilityFilter copyWith(
+          void Function(CandidateAvailabilityFilter) updates) =>
+      super.copyWith(
+          (message) => updates(message as CandidateAvailabilityFilter));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static CandidateAvailabilityFilter create() =>
+      CandidateAvailabilityFilter._();
+  CandidateAvailabilityFilter createEmptyInstance() => create();
+  static $pb.PbList<CandidateAvailabilityFilter> createRepeated() =>
+      $pb.PbList<CandidateAvailabilityFilter>();
+  static CandidateAvailabilityFilter getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static CandidateAvailabilityFilter _defaultInstance;
+
+  $core.bool get negated => $_get(0, false);
+  set negated($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasNegated() => $_has(0);
+  void clearNegated() => clearField(1);
+}
+
+class PersonNameFilter extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PersonNameFilter',
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+    ..aOS(1, 'personName')
+    ..hasRequiredFields = false;
+
+  PersonNameFilter._() : super();
+  factory PersonNameFilter() => create();
+  factory PersonNameFilter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PersonNameFilter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  PersonNameFilter clone() => PersonNameFilter()..mergeFromMessage(this);
+  PersonNameFilter copyWith(void Function(PersonNameFilter) updates) =>
+      super.copyWith((message) => updates(message as PersonNameFilter));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PersonNameFilter create() => PersonNameFilter._();
+  PersonNameFilter createEmptyInstance() => create();
+  static $pb.PbList<PersonNameFilter> createRepeated() =>
+      $pb.PbList<PersonNameFilter>();
+  static PersonNameFilter getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static PersonNameFilter _defaultInstance;
+
+  $core.String get personName => $_getS(0, '');
+  set personName($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasPersonName() => $_has(0);
+  void clearPersonName() => clearField(1);
 }

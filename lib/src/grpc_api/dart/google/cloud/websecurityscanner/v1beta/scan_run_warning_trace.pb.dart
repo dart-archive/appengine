@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/websecurityscanner/v1beta/scan_run_warning_trace.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -25,18 +26,20 @@ class ScanRunWarningTrace extends $pb.GeneratedMessage {
         ScanRunWarningTrace_Code.values)
     ..hasRequiredFields = false;
 
-  ScanRunWarningTrace() : super();
-  ScanRunWarningTrace.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ScanRunWarningTrace.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ScanRunWarningTrace._() : super();
+  factory ScanRunWarningTrace() => create();
+  factory ScanRunWarningTrace.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScanRunWarningTrace.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ScanRunWarningTrace clone() => ScanRunWarningTrace()..mergeFromMessage(this);
   ScanRunWarningTrace copyWith(void Function(ScanRunWarningTrace) updates) =>
       super.copyWith((message) => updates(message as ScanRunWarningTrace));
   $pb.BuilderInfo get info_ => _i;
-  static ScanRunWarningTrace create() => ScanRunWarningTrace();
+  @$core.pragma('dart2js:noInline')
+  static ScanRunWarningTrace create() => ScanRunWarningTrace._();
   ScanRunWarningTrace createEmptyInstance() => create();
   static $pb.PbList<ScanRunWarningTrace> createRepeated() =>
       $pb.PbList<ScanRunWarningTrace>();

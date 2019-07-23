@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/datasets.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $3;
-import '../../protobuf/field_mask.pb.dart' as $4;
+import '../../protobuf/timestamp.pb.dart' as $4;
+import '../../protobuf/field_mask.pb.dart' as $5;
 
 class Dataset extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
@@ -18,22 +19,24 @@ class Dataset extends $pb.GeneratedMessage {
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
     ..aOS(3, 'name')
-    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$4.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Dataset() : super();
-  Dataset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Dataset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Dataset._() : super();
+  factory Dataset() => create();
+  factory Dataset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Dataset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Dataset clone() => Dataset()..mergeFromMessage(this);
   Dataset copyWith(void Function(Dataset) updates) =>
       super.copyWith((message) => updates(message as Dataset));
   $pb.BuilderInfo get info_ => _i;
-  static Dataset create() => Dataset();
+  @$core.pragma('dart2js:noInline')
+  static Dataset create() => Dataset._();
   Dataset createEmptyInstance() => create();
   static $pb.PbList<Dataset> createRepeated() => $pb.PbList<Dataset>();
   static Dataset getDefault() => _defaultInstance ??= create()..freeze();
@@ -63,8 +66,8 @@ class Dataset extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(2);
   void clearName() => clearField(3);
 
-  $3.Timestamp get createTime => $_getN(3);
-  set createTime($3.Timestamp v) {
+  $4.Timestamp get createTime => $_getN(3);
+  set createTime($4.Timestamp v) {
     setField(4, v);
   }
 
@@ -80,18 +83,20 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListDatasetsRequest() : super();
-  ListDatasetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDatasetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDatasetsRequest._() : super();
+  factory ListDatasetsRequest() => create();
+  factory ListDatasetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatasetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDatasetsRequest clone() => ListDatasetsRequest()..mergeFromMessage(this);
   ListDatasetsRequest copyWith(void Function(ListDatasetsRequest) updates) =>
       super.copyWith((message) => updates(message as ListDatasetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListDatasetsRequest create() => ListDatasetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsRequest create() => ListDatasetsRequest._();
   ListDatasetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsRequest> createRepeated() =>
       $pb.PbList<ListDatasetsRequest>();
@@ -131,19 +136,21 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListDatasetsResponse() : super();
-  ListDatasetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDatasetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDatasetsResponse._() : super();
+  factory ListDatasetsResponse() => create();
+  factory ListDatasetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatasetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDatasetsResponse clone() =>
       ListDatasetsResponse()..mergeFromMessage(this);
   ListDatasetsResponse copyWith(void Function(ListDatasetsResponse) updates) =>
       super.copyWith((message) => updates(message as ListDatasetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListDatasetsResponse create() => ListDatasetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsResponse create() => ListDatasetsResponse._();
   ListDatasetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsResponse> createRepeated() =>
       $pb.PbList<ListDatasetsResponse>();
@@ -169,19 +176,21 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
         1, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
     ..hasRequiredFields = false;
 
-  CreateDatasetRequest() : super();
-  CreateDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDatasetRequest._() : super();
+  factory CreateDatasetRequest() => create();
+  factory CreateDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDatasetRequest clone() =>
       CreateDatasetRequest()..mergeFromMessage(this);
   CreateDatasetRequest copyWith(void Function(CreateDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as CreateDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateDatasetRequest create() => CreateDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateDatasetRequest create() => CreateDatasetRequest._();
   CreateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDatasetRequest> createRepeated() =>
       $pb.PbList<CreateDatasetRequest>();
@@ -204,23 +213,25 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'datasetId')
     ..a<Dataset>(
         2, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
-    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..a<$5.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $5.FieldMask.getDefault, $5.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateDatasetRequest() : super();
-  UpdateDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateDatasetRequest._() : super();
+  factory UpdateDatasetRequest() => create();
+  factory UpdateDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateDatasetRequest clone() =>
       UpdateDatasetRequest()..mergeFromMessage(this);
   UpdateDatasetRequest copyWith(void Function(UpdateDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateDatasetRequest create() => UpdateDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatasetRequest create() => UpdateDatasetRequest._();
   UpdateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDatasetRequest> createRepeated() =>
       $pb.PbList<UpdateDatasetRequest>();
@@ -244,8 +255,8 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
   $core.bool hasDataset() => $_has(1);
   void clearDataset() => clearField(2);
 
-  $4.FieldMask get updateMask => $_getN(2);
-  set updateMask($4.FieldMask v) {
+  $5.FieldMask get updateMask => $_getN(2);
+  set updateMask($5.FieldMask v) {
     setField(3, v);
   }
 
@@ -259,19 +270,21 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
-  DeleteDatasetRequest() : super();
-  DeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteDatasetRequest._() : super();
+  factory DeleteDatasetRequest() => create();
+  factory DeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteDatasetRequest clone() =>
       DeleteDatasetRequest()..mergeFromMessage(this);
   DeleteDatasetRequest copyWith(void Function(DeleteDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteDatasetRequest create() => DeleteDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDatasetRequest create() => DeleteDatasetRequest._();
   DeleteDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDatasetRequest> createRepeated() =>
       $pb.PbList<DeleteDatasetRequest>();
@@ -294,20 +307,22 @@ class UndeleteDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
-  UndeleteDatasetRequest() : super();
-  UndeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeleteDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UndeleteDatasetRequest._() : super();
+  factory UndeleteDatasetRequest() => create();
+  factory UndeleteDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UndeleteDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UndeleteDatasetRequest clone() =>
       UndeleteDatasetRequest()..mergeFromMessage(this);
   UndeleteDatasetRequest copyWith(
           void Function(UndeleteDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as UndeleteDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UndeleteDatasetRequest create() => UndeleteDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static UndeleteDatasetRequest create() => UndeleteDatasetRequest._();
   UndeleteDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<UndeleteDatasetRequest> createRepeated() =>
       $pb.PbList<UndeleteDatasetRequest>();
@@ -330,18 +345,20 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
-  GetDatasetRequest() : super();
-  GetDatasetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDatasetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDatasetRequest._() : super();
+  factory GetDatasetRequest() => create();
+  factory GetDatasetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDatasetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDatasetRequest clone() => GetDatasetRequest()..mergeFromMessage(this);
   GetDatasetRequest copyWith(void Function(GetDatasetRequest) updates) =>
       super.copyWith((message) => updates(message as GetDatasetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetDatasetRequest create() => GetDatasetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetDatasetRequest create() => GetDatasetRequest._();
   GetDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<GetDatasetRequest> createRepeated() =>
       $pb.PbList<GetDatasetRequest>();

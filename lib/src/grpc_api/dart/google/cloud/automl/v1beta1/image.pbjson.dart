@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/image.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ImageClassificationDatasetMetadata$json = {
   '1': 'ImageClassificationDatasetMetadata',
@@ -39,6 +40,21 @@ const ImageObjectDetectionModelMetadata$json = {
     {'1': 'model_type', '3': 1, '4': 1, '5': 9, '10': 'modelType'},
     {'1': 'node_count', '3': 3, '4': 1, '5': 3, '10': 'nodeCount'},
     {'1': 'node_qps', '3': 4, '4': 1, '5': 1, '10': 'nodeQps'},
+    {'1': 'stop_reason', '3': 5, '4': 1, '5': 9, '10': 'stopReason'},
+    {
+      '1': 'train_budget_milli_node_hours',
+      '3': 6,
+      '4': 1,
+      '5': 3,
+      '10': 'trainBudgetMilliNodeHours'
+    },
+    {
+      '1': 'train_cost_milli_node_hours',
+      '3': 7,
+      '4': 1,
+      '5': 3,
+      '10': 'trainCostMilliNodeHours'
+    },
   ],
 };
 

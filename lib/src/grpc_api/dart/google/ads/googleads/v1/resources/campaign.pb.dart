@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -45,20 +46,22 @@ class Campaign_NetworkSettings extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  Campaign_NetworkSettings() : super();
-  Campaign_NetworkSettings.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_NetworkSettings.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_NetworkSettings._() : super();
+  factory Campaign_NetworkSettings() => create();
+  factory Campaign_NetworkSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_NetworkSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_NetworkSettings clone() =>
       Campaign_NetworkSettings()..mergeFromMessage(this);
   Campaign_NetworkSettings copyWith(
           void Function(Campaign_NetworkSettings) updates) =>
       super.copyWith((message) => updates(message as Campaign_NetworkSettings));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign_NetworkSettings create() => Campaign_NetworkSettings();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_NetworkSettings create() => Campaign_NetworkSettings._();
   Campaign_NetworkSettings createEmptyInstance() => create();
   static $pb.PbList<Campaign_NetworkSettings> createRepeated() =>
       $pb.PbList<Campaign_NetworkSettings>();
@@ -106,13 +109,14 @@ class Campaign_HotelSettingInfo extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Campaign_HotelSettingInfo() : super();
-  Campaign_HotelSettingInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_HotelSettingInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_HotelSettingInfo._() : super();
+  factory Campaign_HotelSettingInfo() => create();
+  factory Campaign_HotelSettingInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_HotelSettingInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_HotelSettingInfo clone() =>
       Campaign_HotelSettingInfo()..mergeFromMessage(this);
   Campaign_HotelSettingInfo copyWith(
@@ -120,7 +124,8 @@ class Campaign_HotelSettingInfo extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Campaign_HotelSettingInfo));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign_HotelSettingInfo create() => Campaign_HotelSettingInfo();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_HotelSettingInfo create() => Campaign_HotelSettingInfo._();
   Campaign_HotelSettingInfo createEmptyInstance() => create();
   static $pb.PbList<Campaign_HotelSettingInfo> createRepeated() =>
       $pb.PbList<Campaign_HotelSettingInfo>();
@@ -157,20 +162,22 @@ class Campaign_VanityPharma extends $pb.GeneratedMessage {
         $16.VanityPharmaTextEnum_VanityPharmaText.values)
     ..hasRequiredFields = false;
 
-  Campaign_VanityPharma() : super();
-  Campaign_VanityPharma.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_VanityPharma.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_VanityPharma._() : super();
+  factory Campaign_VanityPharma() => create();
+  factory Campaign_VanityPharma.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_VanityPharma.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_VanityPharma clone() =>
       Campaign_VanityPharma()..mergeFromMessage(this);
   Campaign_VanityPharma copyWith(
           void Function(Campaign_VanityPharma) updates) =>
       super.copyWith((message) => updates(message as Campaign_VanityPharma));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign_VanityPharma create() => Campaign_VanityPharma();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_VanityPharma create() => Campaign_VanityPharma._();
   Campaign_VanityPharma createEmptyInstance() => create();
   static $pb.PbList<Campaign_VanityPharma> createRepeated() =>
       $pb.PbList<Campaign_VanityPharma>();
@@ -210,13 +217,14 @@ class Campaign_DynamicSearchAdsSetting extends $pb.GeneratedMessage {
     ..pc<$0.StringValue>(5, 'feeds', $pb.PbFieldType.PM, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Campaign_DynamicSearchAdsSetting() : super();
-  Campaign_DynamicSearchAdsSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_DynamicSearchAdsSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_DynamicSearchAdsSetting._() : super();
+  factory Campaign_DynamicSearchAdsSetting() => create();
+  factory Campaign_DynamicSearchAdsSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_DynamicSearchAdsSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_DynamicSearchAdsSetting clone() =>
       Campaign_DynamicSearchAdsSetting()..mergeFromMessage(this);
   Campaign_DynamicSearchAdsSetting copyWith(
@@ -224,8 +232,9 @@ class Campaign_DynamicSearchAdsSetting extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Campaign_DynamicSearchAdsSetting));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Campaign_DynamicSearchAdsSetting create() =>
-      Campaign_DynamicSearchAdsSetting();
+      Campaign_DynamicSearchAdsSetting._();
   Campaign_DynamicSearchAdsSetting createEmptyInstance() => create();
   static $pb.PbList<Campaign_DynamicSearchAdsSetting> createRepeated() =>
       $pb.PbList<Campaign_DynamicSearchAdsSetting>();
@@ -273,20 +282,22 @@ class Campaign_ShoppingSetting extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  Campaign_ShoppingSetting() : super();
-  Campaign_ShoppingSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_ShoppingSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_ShoppingSetting._() : super();
+  factory Campaign_ShoppingSetting() => create();
+  factory Campaign_ShoppingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_ShoppingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_ShoppingSetting clone() =>
       Campaign_ShoppingSetting()..mergeFromMessage(this);
   Campaign_ShoppingSetting copyWith(
           void Function(Campaign_ShoppingSetting) updates) =>
       super.copyWith((message) => updates(message as Campaign_ShoppingSetting));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign_ShoppingSetting create() => Campaign_ShoppingSetting();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_ShoppingSetting create() => Campaign_ShoppingSetting._();
   Campaign_ShoppingSetting createEmptyInstance() => create();
   static $pb.PbList<Campaign_ShoppingSetting> createRepeated() =>
       $pb.PbList<Campaign_ShoppingSetting>();
@@ -334,20 +345,22 @@ class Campaign_TrackingSetting extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Campaign_TrackingSetting() : super();
-  Campaign_TrackingSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_TrackingSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_TrackingSetting._() : super();
+  factory Campaign_TrackingSetting() => create();
+  factory Campaign_TrackingSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_TrackingSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_TrackingSetting clone() =>
       Campaign_TrackingSetting()..mergeFromMessage(this);
   Campaign_TrackingSetting copyWith(
           void Function(Campaign_TrackingSetting) updates) =>
       super.copyWith((message) => updates(message as Campaign_TrackingSetting));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign_TrackingSetting create() => Campaign_TrackingSetting();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_TrackingSetting create() => Campaign_TrackingSetting._();
   Campaign_TrackingSetting createEmptyInstance() => create();
   static $pb.PbList<Campaign_TrackingSetting> createRepeated() =>
       $pb.PbList<Campaign_TrackingSetting>();
@@ -372,13 +385,14 @@ class Campaign_SelectiveOptimization extends $pb.GeneratedMessage {
         1, 'conversionActions', $pb.PbFieldType.PM, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Campaign_SelectiveOptimization() : super();
-  Campaign_SelectiveOptimization.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_SelectiveOptimization.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_SelectiveOptimization._() : super();
+  factory Campaign_SelectiveOptimization() => create();
+  factory Campaign_SelectiveOptimization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_SelectiveOptimization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_SelectiveOptimization clone() =>
       Campaign_SelectiveOptimization()..mergeFromMessage(this);
   Campaign_SelectiveOptimization copyWith(
@@ -386,8 +400,9 @@ class Campaign_SelectiveOptimization extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Campaign_SelectiveOptimization));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Campaign_SelectiveOptimization create() =>
-      Campaign_SelectiveOptimization();
+      Campaign_SelectiveOptimization._();
   Campaign_SelectiveOptimization createEmptyInstance() => create();
   static $pb.PbList<Campaign_SelectiveOptimization> createRepeated() =>
       $pb.PbList<Campaign_SelectiveOptimization>();
@@ -423,13 +438,14 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
         $18.AppCampaignAppStoreEnum_AppCampaignAppStore.values)
     ..hasRequiredFields = false;
 
-  Campaign_AppCampaignSetting() : super();
-  Campaign_AppCampaignSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_AppCampaignSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_AppCampaignSetting._() : super();
+  factory Campaign_AppCampaignSetting() => create();
+  factory Campaign_AppCampaignSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_AppCampaignSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_AppCampaignSetting clone() =>
       Campaign_AppCampaignSetting()..mergeFromMessage(this);
   Campaign_AppCampaignSetting copyWith(
@@ -437,7 +453,9 @@ class Campaign_AppCampaignSetting extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Campaign_AppCampaignSetting));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign_AppCampaignSetting create() => Campaign_AppCampaignSetting();
+  @$core.pragma('dart2js:noInline')
+  static Campaign_AppCampaignSetting create() =>
+      Campaign_AppCampaignSetting._();
   Campaign_AppCampaignSetting createEmptyInstance() => create();
   static $pb.PbList<Campaign_AppCampaignSetting> createRepeated() =>
       $pb.PbList<Campaign_AppCampaignSetting>();
@@ -493,13 +511,14 @@ class Campaign_GeoTargetTypeSetting extends $pb.GeneratedMessage {
         $20.NegativeGeoTargetTypeEnum_NegativeGeoTargetType.values)
     ..hasRequiredFields = false;
 
-  Campaign_GeoTargetTypeSetting() : super();
-  Campaign_GeoTargetTypeSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign_GeoTargetTypeSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign_GeoTargetTypeSetting._() : super();
+  factory Campaign_GeoTargetTypeSetting() => create();
+  factory Campaign_GeoTargetTypeSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign_GeoTargetTypeSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign_GeoTargetTypeSetting clone() =>
       Campaign_GeoTargetTypeSetting()..mergeFromMessage(this);
   Campaign_GeoTargetTypeSetting copyWith(
@@ -507,8 +526,9 @@ class Campaign_GeoTargetTypeSetting extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Campaign_GeoTargetTypeSetting));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Campaign_GeoTargetTypeSetting create() =>
-      Campaign_GeoTargetTypeSetting();
+      Campaign_GeoTargetTypeSetting._();
   Campaign_GeoTargetTypeSetting createEmptyInstance() => create();
   static $pb.PbList<Campaign_GeoTargetTypeSetting> createRepeated() =>
       $pb.PbList<Campaign_GeoTargetTypeSetting>();
@@ -574,6 +594,7 @@ class Campaign extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Campaign',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [23, 24, 25, 26, 27, 29, 30, 31, 34, 37, 41, 48, 49])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(3, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -649,21 +670,22 @@ class Campaign extends $pb.GeneratedMessage {
     ..a<Campaign_AppCampaignSetting>(51, 'appCampaignSetting', $pb.PbFieldType.OM, Campaign_AppCampaignSetting.getDefault, Campaign_AppCampaignSetting.create)
     ..e<$14.PaymentModeEnum_PaymentMode>(52, 'paymentMode', $pb.PbFieldType.OE, $14.PaymentModeEnum_PaymentMode.UNSPECIFIED, $14.PaymentModeEnum_PaymentMode.valueOf, $14.PaymentModeEnum_PaymentMode.values)
     ..pc<$0.StringValue>(53, 'labels', $pb.PbFieldType.PM, $0.StringValue.create)
-    ..oo(0, [23, 24, 25, 26, 27, 29, 30, 31, 34, 37, 41, 48, 49])
     ..hasRequiredFields = false;
 
-  Campaign() : super();
-  Campaign.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Campaign.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Campaign._() : super();
+  factory Campaign() => create();
+  factory Campaign.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Campaign.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Campaign clone() => Campaign()..mergeFromMessage(this);
   Campaign copyWith(void Function(Campaign) updates) =>
       super.copyWith((message) => updates(message as Campaign));
   $pb.BuilderInfo get info_ => _i;
-  static Campaign create() => Campaign();
+  @$core.pragma('dart2js:noInline')
+  static Campaign create() => Campaign._();
   Campaign createEmptyInstance() => create();
   static $pb.PbList<Campaign> createRepeated() => $pb.PbList<Campaign>();
   static Campaign getDefault() => _defaultInstance ??= create()..freeze();

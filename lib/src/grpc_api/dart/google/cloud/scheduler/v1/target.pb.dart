@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/scheduler/v1/target.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,6 +25,7 @@ class HttpTarget extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HttpTarget',
       package: const $pb.PackageName('google.cloud.scheduler.v1'))
+    ..oo(0, [5, 6])
     ..aOS(1, 'uri')
     ..e<HttpMethod>(
         2,
@@ -47,21 +49,22 @@ class HttpTarget extends $pb.GeneratedMessage {
         OAuthToken.create)
     ..a<OidcToken>(6, 'oidcToken', $pb.PbFieldType.OM, OidcToken.getDefault,
         OidcToken.create)
-    ..oo(0, [5, 6])
     ..hasRequiredFields = false;
 
-  HttpTarget() : super();
-  HttpTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HttpTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HttpTarget._() : super();
+  factory HttpTarget() => create();
+  factory HttpTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HttpTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HttpTarget clone() => HttpTarget()..mergeFromMessage(this);
   HttpTarget copyWith(void Function(HttpTarget) updates) =>
       super.copyWith((message) => updates(message as HttpTarget));
   $pb.BuilderInfo get info_ => _i;
-  static HttpTarget create() => HttpTarget();
+  @$core.pragma('dart2js:noInline')
+  static HttpTarget create() => HttpTarget._();
   HttpTarget createEmptyInstance() => create();
   static $pb.PbList<HttpTarget> createRepeated() => $pb.PbList<HttpTarget>();
   static HttpTarget getDefault() => _defaultInstance ??= create()..freeze();
@@ -140,18 +143,20 @@ class AppEngineHttpTarget extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(5, 'body', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  AppEngineHttpTarget() : super();
-  AppEngineHttpTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineHttpTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineHttpTarget._() : super();
+  factory AppEngineHttpTarget() => create();
+  factory AppEngineHttpTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineHttpTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineHttpTarget clone() => AppEngineHttpTarget()..mergeFromMessage(this);
   AppEngineHttpTarget copyWith(void Function(AppEngineHttpTarget) updates) =>
       super.copyWith((message) => updates(message as AppEngineHttpTarget));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineHttpTarget create() => AppEngineHttpTarget();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineHttpTarget create() => AppEngineHttpTarget._();
   AppEngineHttpTarget createEmptyInstance() => create();
   static $pb.PbList<AppEngineHttpTarget> createRepeated() =>
       $pb.PbList<AppEngineHttpTarget>();
@@ -211,18 +216,20 @@ class PubsubTarget extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.scheduler.v1'))
     ..hasRequiredFields = false;
 
-  PubsubTarget() : super();
-  PubsubTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PubsubTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PubsubTarget._() : super();
+  factory PubsubTarget() => create();
+  factory PubsubTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PubsubTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PubsubTarget clone() => PubsubTarget()..mergeFromMessage(this);
   PubsubTarget copyWith(void Function(PubsubTarget) updates) =>
       super.copyWith((message) => updates(message as PubsubTarget));
   $pb.BuilderInfo get info_ => _i;
-  static PubsubTarget create() => PubsubTarget();
+  @$core.pragma('dart2js:noInline')
+  static PubsubTarget create() => PubsubTarget._();
   PubsubTarget createEmptyInstance() => create();
   static $pb.PbList<PubsubTarget> createRepeated() =>
       $pb.PbList<PubsubTarget>();
@@ -257,18 +264,20 @@ class AppEngineRouting extends $pb.GeneratedMessage {
     ..aOS(4, 'host')
     ..hasRequiredFields = false;
 
-  AppEngineRouting() : super();
-  AppEngineRouting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineRouting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineRouting._() : super();
+  factory AppEngineRouting() => create();
+  factory AppEngineRouting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineRouting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineRouting clone() => AppEngineRouting()..mergeFromMessage(this);
   AppEngineRouting copyWith(void Function(AppEngineRouting) updates) =>
       super.copyWith((message) => updates(message as AppEngineRouting));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineRouting create() => AppEngineRouting();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineRouting create() => AppEngineRouting._();
   AppEngineRouting createEmptyInstance() => create();
   static $pb.PbList<AppEngineRouting> createRepeated() =>
       $pb.PbList<AppEngineRouting>();
@@ -316,18 +325,20 @@ class OAuthToken extends $pb.GeneratedMessage {
     ..aOS(2, 'scope')
     ..hasRequiredFields = false;
 
-  OAuthToken() : super();
-  OAuthToken.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OAuthToken.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OAuthToken._() : super();
+  factory OAuthToken() => create();
+  factory OAuthToken.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OAuthToken.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OAuthToken clone() => OAuthToken()..mergeFromMessage(this);
   OAuthToken copyWith(void Function(OAuthToken) updates) =>
       super.copyWith((message) => updates(message as OAuthToken));
   $pb.BuilderInfo get info_ => _i;
-  static OAuthToken create() => OAuthToken();
+  @$core.pragma('dart2js:noInline')
+  static OAuthToken create() => OAuthToken._();
   OAuthToken createEmptyInstance() => create();
   static $pb.PbList<OAuthToken> createRepeated() => $pb.PbList<OAuthToken>();
   static OAuthToken getDefault() => _defaultInstance ??= create()..freeze();
@@ -357,18 +368,20 @@ class OidcToken extends $pb.GeneratedMessage {
     ..aOS(2, 'audience')
     ..hasRequiredFields = false;
 
-  OidcToken() : super();
-  OidcToken.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OidcToken.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OidcToken._() : super();
+  factory OidcToken() => create();
+  factory OidcToken.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OidcToken.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OidcToken clone() => OidcToken()..mergeFromMessage(this);
   OidcToken copyWith(void Function(OidcToken) updates) =>
       super.copyWith((message) => updates(message as OidcToken));
   $pb.BuilderInfo get info_ => _i;
-  static OidcToken create() => OidcToken();
+  @$core.pragma('dart2js:noInline')
+  static OidcToken create() => OidcToken._();
   OidcToken createEmptyInstance() => create();
   static $pb.PbList<OidcToken> createRepeated() => $pb.PbList<OidcToken>();
   static OidcToken getDefault() => _defaultInstance ??= create()..freeze();

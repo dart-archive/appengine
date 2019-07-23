@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/position.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -18,18 +19,20 @@ class Position extends $pb.GeneratedMessage {
     ..aOB(3, 'reverseStrand')
     ..hasRequiredFields = false;
 
-  Position() : super();
-  Position.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Position.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Position._() : super();
+  factory Position() => create();
+  factory Position.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Position.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Position clone() => Position()..mergeFromMessage(this);
   Position copyWith(void Function(Position) updates) =>
       super.copyWith((message) => updates(message as Position));
   $pb.BuilderInfo get info_ => _i;
-  static Position create() => Position();
+  @$core.pragma('dart2js:noInline')
+  static Position create() => Position._();
   Position createEmptyInstance() => create();
   static $pb.PbList<Position> createRepeated() => $pb.PbList<Position>();
   static Position getDefault() => _defaultInstance ??= create()..freeze();

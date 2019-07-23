@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/data_types.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,6 +25,7 @@ class DataType extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DataType',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [2, 3, 5])
     ..e<TypeCode>(1, 'typeCode', $pb.PbFieldType.OE,
         TypeCode.TYPE_CODE_UNSPECIFIED, TypeCode.valueOf, TypeCode.values)
     ..a<DataType>(2, 'listElementType', $pb.PbFieldType.OM, DataType.getDefault,
@@ -32,21 +34,22 @@ class DataType extends $pb.GeneratedMessage {
         StructType.create)
     ..aOB(4, 'nullable')
     ..aOS(5, 'timeFormat')
-    ..oo(0, [2, 3, 5])
     ..hasRequiredFields = false;
 
-  DataType() : super();
-  DataType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DataType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DataType._() : super();
+  factory DataType() => create();
+  factory DataType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DataType clone() => DataType()..mergeFromMessage(this);
   DataType copyWith(void Function(DataType) updates) =>
       super.copyWith((message) => updates(message as DataType));
   $pb.BuilderInfo get info_ => _i;
-  static DataType create() => DataType();
+  @$core.pragma('dart2js:noInline')
+  static DataType create() => DataType._();
   DataType createEmptyInstance() => create();
   static $pb.PbList<DataType> createRepeated() => $pb.PbList<DataType>();
   static DataType getDefault() => _defaultInstance ??= create()..freeze();
@@ -111,18 +114,20 @@ class StructType extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  StructType() : super();
-  StructType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructType._() : super();
+  factory StructType() => create();
+  factory StructType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructType clone() => StructType()..mergeFromMessage(this);
   StructType copyWith(void Function(StructType) updates) =>
       super.copyWith((message) => updates(message as StructType));
   $pb.BuilderInfo get info_ => _i;
-  static StructType create() => StructType();
+  @$core.pragma('dart2js:noInline')
+  static StructType create() => StructType._();
   StructType createEmptyInstance() => create();
   static $pb.PbList<StructType> createRepeated() => $pb.PbList<StructType>();
   static StructType getDefault() => _defaultInstance ??= create()..freeze();

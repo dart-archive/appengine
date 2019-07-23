@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/language_constant_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,13 +17,14 @@ class GetLanguageConstantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetLanguageConstantRequest() : super();
-  GetLanguageConstantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetLanguageConstantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetLanguageConstantRequest._() : super();
+  factory GetLanguageConstantRequest() => create();
+  factory GetLanguageConstantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetLanguageConstantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetLanguageConstantRequest clone() =>
       GetLanguageConstantRequest()..mergeFromMessage(this);
   GetLanguageConstantRequest copyWith(
@@ -30,7 +32,8 @@ class GetLanguageConstantRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetLanguageConstantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetLanguageConstantRequest create() => GetLanguageConstantRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetLanguageConstantRequest create() => GetLanguageConstantRequest._();
   GetLanguageConstantRequest createEmptyInstance() => create();
   static $pb.PbList<GetLanguageConstantRequest> createRepeated() =>
       $pb.PbList<GetLanguageConstantRequest>();

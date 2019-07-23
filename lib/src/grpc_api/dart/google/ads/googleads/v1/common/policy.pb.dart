@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/policy.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class PolicyViolationKey extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  PolicyViolationKey() : super();
-  PolicyViolationKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyViolationKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyViolationKey._() : super();
+  factory PolicyViolationKey() => create();
+  factory PolicyViolationKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyViolationKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyViolationKey clone() => PolicyViolationKey()..mergeFromMessage(this);
   PolicyViolationKey copyWith(void Function(PolicyViolationKey) updates) =>
       super.copyWith((message) => updates(message as PolicyViolationKey));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyViolationKey create() => PolicyViolationKey();
+  @$core.pragma('dart2js:noInline')
+  static PolicyViolationKey create() => PolicyViolationKey._();
   PolicyViolationKey createEmptyInstance() => create();
   static $pb.PbList<PolicyViolationKey> createRepeated() =>
       $pb.PbList<PolicyViolationKey>();
@@ -71,13 +74,14 @@ class PolicyValidationParameter extends $pb.GeneratedMessage {
         PolicyViolationKey.create)
     ..hasRequiredFields = false;
 
-  PolicyValidationParameter() : super();
-  PolicyValidationParameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyValidationParameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyValidationParameter._() : super();
+  factory PolicyValidationParameter() => create();
+  factory PolicyValidationParameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyValidationParameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyValidationParameter clone() =>
       PolicyValidationParameter()..mergeFromMessage(this);
   PolicyValidationParameter copyWith(
@@ -85,7 +89,8 @@ class PolicyValidationParameter extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as PolicyValidationParameter));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyValidationParameter create() => PolicyValidationParameter();
+  @$core.pragma('dart2js:noInline')
+  static PolicyValidationParameter create() => PolicyValidationParameter._();
   PolicyValidationParameter createEmptyInstance() => create();
   static $pb.PbList<PolicyValidationParameter> createRepeated() =>
       $pb.PbList<PolicyValidationParameter>();
@@ -116,18 +121,20 @@ class PolicyTopicEntry extends $pb.GeneratedMessage {
         4, 'constraints', $pb.PbFieldType.PM, PolicyTopicConstraint.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicEntry() : super();
-  PolicyTopicEntry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEntry._() : super();
+  factory PolicyTopicEntry() => create();
+  factory PolicyTopicEntry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEntry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEntry clone() => PolicyTopicEntry()..mergeFromMessage(this);
   PolicyTopicEntry copyWith(void Function(PolicyTopicEntry) updates) =>
       super.copyWith((message) => updates(message as PolicyTopicEntry));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyTopicEntry create() => PolicyTopicEntry();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicEntry create() => PolicyTopicEntry._();
   PolicyTopicEntry createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEntry> createRepeated() =>
       $pb.PbList<PolicyTopicEntry>();
@@ -163,13 +170,14 @@ class PolicyTopicEvidence_TextList extends $pb.GeneratedMessage {
     ..pc<$0.StringValue>(1, 'texts', $pb.PbFieldType.PM, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicEvidence_TextList() : super();
-  PolicyTopicEvidence_TextList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEvidence_TextList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEvidence_TextList._() : super();
+  factory PolicyTopicEvidence_TextList() => create();
+  factory PolicyTopicEvidence_TextList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEvidence_TextList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEvidence_TextList clone() =>
       PolicyTopicEvidence_TextList()..mergeFromMessage(this);
   PolicyTopicEvidence_TextList copyWith(
@@ -177,8 +185,9 @@ class PolicyTopicEvidence_TextList extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PolicyTopicEvidence_TextList));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_TextList create() =>
-      PolicyTopicEvidence_TextList();
+      PolicyTopicEvidence_TextList._();
   PolicyTopicEvidence_TextList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_TextList> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_TextList>();
@@ -197,13 +206,14 @@ class PolicyTopicEvidence_WebsiteList extends $pb.GeneratedMessage {
         1, 'websites', $pb.PbFieldType.PM, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicEvidence_WebsiteList() : super();
-  PolicyTopicEvidence_WebsiteList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEvidence_WebsiteList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEvidence_WebsiteList._() : super();
+  factory PolicyTopicEvidence_WebsiteList() => create();
+  factory PolicyTopicEvidence_WebsiteList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEvidence_WebsiteList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEvidence_WebsiteList clone() =>
       PolicyTopicEvidence_WebsiteList()..mergeFromMessage(this);
   PolicyTopicEvidence_WebsiteList copyWith(
@@ -211,8 +221,9 @@ class PolicyTopicEvidence_WebsiteList extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PolicyTopicEvidence_WebsiteList));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_WebsiteList create() =>
-      PolicyTopicEvidence_WebsiteList();
+      PolicyTopicEvidence_WebsiteList._();
   PolicyTopicEvidence_WebsiteList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_WebsiteList> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_WebsiteList>();
@@ -231,13 +242,15 @@ class PolicyTopicEvidence_DestinationTextList extends $pb.GeneratedMessage {
         1, 'destinationTexts', $pb.PbFieldType.PM, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicEvidence_DestinationTextList() : super();
-  PolicyTopicEvidence_DestinationTextList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEvidence_DestinationTextList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEvidence_DestinationTextList._() : super();
+  factory PolicyTopicEvidence_DestinationTextList() => create();
+  factory PolicyTopicEvidence_DestinationTextList.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEvidence_DestinationTextList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEvidence_DestinationTextList clone() =>
       PolicyTopicEvidence_DestinationTextList()..mergeFromMessage(this);
   PolicyTopicEvidence_DestinationTextList copyWith(
@@ -245,8 +258,9 @@ class PolicyTopicEvidence_DestinationTextList extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PolicyTopicEvidence_DestinationTextList));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_DestinationTextList create() =>
-      PolicyTopicEvidence_DestinationTextList();
+      PolicyTopicEvidence_DestinationTextList._();
   PolicyTopicEvidence_DestinationTextList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_DestinationTextList> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_DestinationTextList>();
@@ -272,13 +286,15 @@ class PolicyTopicEvidence_DestinationMismatch extends $pb.GeneratedMessage {
             .values)
     ..hasRequiredFields = false;
 
-  PolicyTopicEvidence_DestinationMismatch() : super();
-  PolicyTopicEvidence_DestinationMismatch.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEvidence_DestinationMismatch.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEvidence_DestinationMismatch._() : super();
+  factory PolicyTopicEvidence_DestinationMismatch() => create();
+  factory PolicyTopicEvidence_DestinationMismatch.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEvidence_DestinationMismatch.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEvidence_DestinationMismatch clone() =>
       PolicyTopicEvidence_DestinationMismatch()..mergeFromMessage(this);
   PolicyTopicEvidence_DestinationMismatch copyWith(
@@ -286,8 +302,9 @@ class PolicyTopicEvidence_DestinationMismatch extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PolicyTopicEvidence_DestinationMismatch));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_DestinationMismatch create() =>
-      PolicyTopicEvidence_DestinationMismatch();
+      PolicyTopicEvidence_DestinationMismatch._();
   PolicyTopicEvidence_DestinationMismatch createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_DestinationMismatch> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_DestinationMismatch>();
@@ -320,13 +337,15 @@ class PolicyTopicEvidence_DestinationNotWorking extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicEvidence_DestinationNotWorking() : super();
-  PolicyTopicEvidence_DestinationNotWorking.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEvidence_DestinationNotWorking.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEvidence_DestinationNotWorking._() : super();
+  factory PolicyTopicEvidence_DestinationNotWorking() => create();
+  factory PolicyTopicEvidence_DestinationNotWorking.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEvidence_DestinationNotWorking.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEvidence_DestinationNotWorking clone() =>
       PolicyTopicEvidence_DestinationNotWorking()..mergeFromMessage(this);
   PolicyTopicEvidence_DestinationNotWorking copyWith(
@@ -334,8 +353,9 @@ class PolicyTopicEvidence_DestinationNotWorking extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PolicyTopicEvidence_DestinationNotWorking));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_DestinationNotWorking create() =>
-      PolicyTopicEvidence_DestinationNotWorking();
+      PolicyTopicEvidence_DestinationNotWorking._();
   PolicyTopicEvidence_DestinationNotWorking createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_DestinationNotWorking>
       createRepeated() =>
@@ -397,6 +417,7 @@ class PolicyTopicEvidence extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyTopicEvidence',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [2, 3, 4, 5, 6, 7, 8])
     ..a<$0.Int32Value>(2, 'httpCode', $pb.PbFieldType.OM,
         $0.Int32Value.getDefault, $0.Int32Value.create)
     ..a<PolicyTopicEvidence_WebsiteList>(
@@ -431,21 +452,22 @@ class PolicyTopicEvidence extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         PolicyTopicEvidence_DestinationNotWorking.getDefault,
         PolicyTopicEvidence_DestinationNotWorking.create)
-    ..oo(0, [2, 3, 4, 5, 6, 7, 8])
     ..hasRequiredFields = false;
 
-  PolicyTopicEvidence() : super();
-  PolicyTopicEvidence.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicEvidence.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicEvidence._() : super();
+  factory PolicyTopicEvidence() => create();
+  factory PolicyTopicEvidence.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicEvidence.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicEvidence clone() => PolicyTopicEvidence()..mergeFromMessage(this);
   PolicyTopicEvidence copyWith(void Function(PolicyTopicEvidence) updates) =>
       super.copyWith((message) => updates(message as PolicyTopicEvidence));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyTopicEvidence create() => PolicyTopicEvidence();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicEvidence create() => PolicyTopicEvidence._();
   PolicyTopicEvidence createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence>();
@@ -525,14 +547,15 @@ class PolicyTopicConstraint_CountryConstraintList extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, PolicyTopicConstraint_CountryConstraint.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicConstraint_CountryConstraintList() : super();
-  PolicyTopicConstraint_CountryConstraintList.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicConstraint_CountryConstraintList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicConstraint_CountryConstraintList._() : super();
+  factory PolicyTopicConstraint_CountryConstraintList() => create();
+  factory PolicyTopicConstraint_CountryConstraintList.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicConstraint_CountryConstraintList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicConstraint_CountryConstraintList clone() =>
       PolicyTopicConstraint_CountryConstraintList()..mergeFromMessage(this);
   PolicyTopicConstraint_CountryConstraintList copyWith(
@@ -540,8 +563,9 @@ class PolicyTopicConstraint_CountryConstraintList extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PolicyTopicConstraint_CountryConstraintList));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicConstraint_CountryConstraintList create() =>
-      PolicyTopicConstraint_CountryConstraintList();
+      PolicyTopicConstraint_CountryConstraintList._();
   PolicyTopicConstraint_CountryConstraintList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicConstraint_CountryConstraintList>
       createRepeated() =>
@@ -568,13 +592,15 @@ class PolicyTopicConstraint_ResellerConstraint extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  PolicyTopicConstraint_ResellerConstraint() : super();
-  PolicyTopicConstraint_ResellerConstraint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicConstraint_ResellerConstraint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicConstraint_ResellerConstraint._() : super();
+  factory PolicyTopicConstraint_ResellerConstraint() => create();
+  factory PolicyTopicConstraint_ResellerConstraint.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicConstraint_ResellerConstraint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicConstraint_ResellerConstraint clone() =>
       PolicyTopicConstraint_ResellerConstraint()..mergeFromMessage(this);
   PolicyTopicConstraint_ResellerConstraint copyWith(
@@ -582,8 +608,9 @@ class PolicyTopicConstraint_ResellerConstraint extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PolicyTopicConstraint_ResellerConstraint));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicConstraint_ResellerConstraint create() =>
-      PolicyTopicConstraint_ResellerConstraint();
+      PolicyTopicConstraint_ResellerConstraint._();
   PolicyTopicConstraint_ResellerConstraint createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicConstraint_ResellerConstraint>
       createRepeated() =>
@@ -601,13 +628,15 @@ class PolicyTopicConstraint_CountryConstraint extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  PolicyTopicConstraint_CountryConstraint() : super();
-  PolicyTopicConstraint_CountryConstraint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicConstraint_CountryConstraint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicConstraint_CountryConstraint._() : super();
+  factory PolicyTopicConstraint_CountryConstraint() => create();
+  factory PolicyTopicConstraint_CountryConstraint.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicConstraint_CountryConstraint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicConstraint_CountryConstraint clone() =>
       PolicyTopicConstraint_CountryConstraint()..mergeFromMessage(this);
   PolicyTopicConstraint_CountryConstraint copyWith(
@@ -615,8 +644,9 @@ class PolicyTopicConstraint_CountryConstraint extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PolicyTopicConstraint_CountryConstraint));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicConstraint_CountryConstraint create() =>
-      PolicyTopicConstraint_CountryConstraint();
+      PolicyTopicConstraint_CountryConstraint._();
   PolicyTopicConstraint_CountryConstraint createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicConstraint_CountryConstraint> createRepeated() =>
       $pb.PbList<PolicyTopicConstraint_CountryConstraint>();
@@ -652,6 +682,7 @@ class PolicyTopicConstraint extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyTopicConstraint',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [1, 2, 3, 4])
     ..a<PolicyTopicConstraint_CountryConstraintList>(
         1,
         'countryConstraintList',
@@ -676,23 +707,24 @@ class PolicyTopicConstraint extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         PolicyTopicConstraint_CountryConstraintList.getDefault,
         PolicyTopicConstraint_CountryConstraintList.create)
-    ..oo(0, [1, 2, 3, 4])
     ..hasRequiredFields = false;
 
-  PolicyTopicConstraint() : super();
-  PolicyTopicConstraint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PolicyTopicConstraint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PolicyTopicConstraint._() : super();
+  factory PolicyTopicConstraint() => create();
+  factory PolicyTopicConstraint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PolicyTopicConstraint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PolicyTopicConstraint clone() =>
       PolicyTopicConstraint()..mergeFromMessage(this);
   PolicyTopicConstraint copyWith(
           void Function(PolicyTopicConstraint) updates) =>
       super.copyWith((message) => updates(message as PolicyTopicConstraint));
   $pb.BuilderInfo get info_ => _i;
-  static PolicyTopicConstraint create() => PolicyTopicConstraint();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicConstraint create() => PolicyTopicConstraint._();
   PolicyTopicConstraint createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicConstraint> createRepeated() =>
       $pb.PbList<PolicyTopicConstraint>();

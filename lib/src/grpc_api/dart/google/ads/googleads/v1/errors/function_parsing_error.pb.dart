@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/function_parsing_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,20 +17,22 @@ class FunctionParsingErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  FunctionParsingErrorEnum() : super();
-  FunctionParsingErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FunctionParsingErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FunctionParsingErrorEnum._() : super();
+  factory FunctionParsingErrorEnum() => create();
+  factory FunctionParsingErrorEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FunctionParsingErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FunctionParsingErrorEnum clone() =>
       FunctionParsingErrorEnum()..mergeFromMessage(this);
   FunctionParsingErrorEnum copyWith(
           void Function(FunctionParsingErrorEnum) updates) =>
       super.copyWith((message) => updates(message as FunctionParsingErrorEnum));
   $pb.BuilderInfo get info_ => _i;
-  static FunctionParsingErrorEnum create() => FunctionParsingErrorEnum();
+  @$core.pragma('dart2js:noInline')
+  static FunctionParsingErrorEnum create() => FunctionParsingErrorEnum._();
   FunctionParsingErrorEnum createEmptyInstance() => create();
   static $pb.PbList<FunctionParsingErrorEnum> createRepeated() =>
       $pb.PbList<FunctionParsingErrorEnum>();

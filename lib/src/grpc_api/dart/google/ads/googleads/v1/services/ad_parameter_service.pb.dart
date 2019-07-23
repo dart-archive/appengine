@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/ad_parameter_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/ad_parameter.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/ad_parameter.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetAdParameterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAdParameterRequest',
@@ -19,20 +20,22 @@ class GetAdParameterRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetAdParameterRequest() : super();
-  GetAdParameterRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAdParameterRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAdParameterRequest._() : super();
+  factory GetAdParameterRequest() => create();
+  factory GetAdParameterRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAdParameterRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAdParameterRequest clone() =>
       GetAdParameterRequest()..mergeFromMessage(this);
   GetAdParameterRequest copyWith(
           void Function(GetAdParameterRequest) updates) =>
       super.copyWith((message) => updates(message as GetAdParameterRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAdParameterRequest create() => GetAdParameterRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAdParameterRequest create() => GetAdParameterRequest._();
   GetAdParameterRequest createEmptyInstance() => create();
   static $pb.PbList<GetAdParameterRequest> createRepeated() =>
       $pb.PbList<GetAdParameterRequest>();
@@ -59,13 +62,14 @@ class MutateAdParametersRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateAdParametersRequest() : super();
-  MutateAdParametersRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdParametersRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdParametersRequest._() : super();
+  factory MutateAdParametersRequest() => create();
+  factory MutateAdParametersRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdParametersRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdParametersRequest clone() =>
       MutateAdParametersRequest()..mergeFromMessage(this);
   MutateAdParametersRequest copyWith(
@@ -73,7 +77,8 @@ class MutateAdParametersRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as MutateAdParametersRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdParametersRequest create() => MutateAdParametersRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdParametersRequest create() => MutateAdParametersRequest._();
   MutateAdParametersRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAdParametersRequest> createRepeated() =>
       $pb.PbList<MutateAdParametersRequest>();
@@ -120,29 +125,31 @@ class AdParameterOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdParameterOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.AdParameter>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.AdParameter.getDefault, $0.AdParameter.create)
-    ..a<$0.AdParameter>(2, 'update', $pb.PbFieldType.OM,
-        $0.AdParameter.getDefault, $0.AdParameter.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.AdParameter>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.AdParameter.getDefault, $1.AdParameter.create)
+    ..a<$1.AdParameter>(2, 'update', $pb.PbFieldType.OM,
+        $1.AdParameter.getDefault, $1.AdParameter.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  AdParameterOperation() : super();
-  AdParameterOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdParameterOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdParameterOperation._() : super();
+  factory AdParameterOperation() => create();
+  factory AdParameterOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdParameterOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdParameterOperation clone() =>
       AdParameterOperation()..mergeFromMessage(this);
   AdParameterOperation copyWith(void Function(AdParameterOperation) updates) =>
       super.copyWith((message) => updates(message as AdParameterOperation));
   $pb.BuilderInfo get info_ => _i;
-  static AdParameterOperation create() => AdParameterOperation();
+  @$core.pragma('dart2js:noInline')
+  static AdParameterOperation create() => AdParameterOperation._();
   AdParameterOperation createEmptyInstance() => create();
   static $pb.PbList<AdParameterOperation> createRepeated() =>
       $pb.PbList<AdParameterOperation>();
@@ -154,16 +161,16 @@ class AdParameterOperation extends $pb.GeneratedMessage {
       _AdParameterOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.AdParameter get create_1 => $_getN(0);
-  set create_1($0.AdParameter v) {
+  $1.AdParameter get create_1 => $_getN(0);
+  set create_1($1.AdParameter v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.AdParameter get update => $_getN(1);
-  set update($0.AdParameter v) {
+  $1.AdParameter get update => $_getN(1);
+  set update($1.AdParameter v) {
     setField(2, v);
   }
 
@@ -178,8 +185,8 @@ class AdParameterOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -193,17 +200,18 @@ class MutateAdParametersResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateAdParameterResult>(
         2, 'results', $pb.PbFieldType.PM, MutateAdParameterResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateAdParametersResponse() : super();
-  MutateAdParametersResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdParametersResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdParametersResponse._() : super();
+  factory MutateAdParametersResponse() => create();
+  factory MutateAdParametersResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdParametersResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdParametersResponse clone() =>
       MutateAdParametersResponse()..mergeFromMessage(this);
   MutateAdParametersResponse copyWith(
@@ -211,7 +219,8 @@ class MutateAdParametersResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAdParametersResponse));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdParametersResponse create() => MutateAdParametersResponse();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdParametersResponse create() => MutateAdParametersResponse._();
   MutateAdParametersResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAdParametersResponse> createRepeated() =>
       $pb.PbList<MutateAdParametersResponse>();
@@ -221,8 +230,8 @@ class MutateAdParametersResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateAdParameterResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -236,20 +245,22 @@ class MutateAdParameterResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateAdParameterResult() : super();
-  MutateAdParameterResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAdParameterResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAdParameterResult._() : super();
+  factory MutateAdParameterResult() => create();
+  factory MutateAdParameterResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAdParameterResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAdParameterResult clone() =>
       MutateAdParameterResult()..mergeFromMessage(this);
   MutateAdParameterResult copyWith(
           void Function(MutateAdParameterResult) updates) =>
       super.copyWith((message) => updates(message as MutateAdParameterResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateAdParameterResult create() => MutateAdParameterResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdParameterResult create() => MutateAdParameterResult._();
   MutateAdParameterResult createEmptyInstance() => create();
   static $pb.PbList<MutateAdParameterResult> createRepeated() =>
       $pb.PbList<MutateAdParameterResult>();

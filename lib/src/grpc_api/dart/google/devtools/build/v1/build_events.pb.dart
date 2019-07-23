@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/build/v1/build_events.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -27,13 +28,15 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
         2, 'details', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..hasRequiredFields = false;
 
-  BuildEvent_InvocationAttemptStarted() : super();
-  BuildEvent_InvocationAttemptStarted.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent_InvocationAttemptStarted.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent_InvocationAttemptStarted._() : super();
+  factory BuildEvent_InvocationAttemptStarted() => create();
+  factory BuildEvent_InvocationAttemptStarted.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_InvocationAttemptStarted.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent_InvocationAttemptStarted clone() =>
       BuildEvent_InvocationAttemptStarted()..mergeFromMessage(this);
   BuildEvent_InvocationAttemptStarted copyWith(
@@ -41,8 +44,9 @@ class BuildEvent_InvocationAttemptStarted extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BuildEvent_InvocationAttemptStarted));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BuildEvent_InvocationAttemptStarted create() =>
-      BuildEvent_InvocationAttemptStarted();
+      BuildEvent_InvocationAttemptStarted._();
   BuildEvent_InvocationAttemptStarted createEmptyInstance() => create();
   static $pb.PbList<BuildEvent_InvocationAttemptStarted> createRepeated() =>
       $pb.PbList<BuildEvent_InvocationAttemptStarted>();
@@ -75,13 +79,15 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
         $2.BuildStatus.getDefault, $2.BuildStatus.create)
     ..hasRequiredFields = false;
 
-  BuildEvent_InvocationAttemptFinished() : super();
-  BuildEvent_InvocationAttemptFinished.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent_InvocationAttemptFinished.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent_InvocationAttemptFinished._() : super();
+  factory BuildEvent_InvocationAttemptFinished() => create();
+  factory BuildEvent_InvocationAttemptFinished.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_InvocationAttemptFinished.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent_InvocationAttemptFinished clone() =>
       BuildEvent_InvocationAttemptFinished()..mergeFromMessage(this);
   BuildEvent_InvocationAttemptFinished copyWith(
@@ -89,8 +95,9 @@ class BuildEvent_InvocationAttemptFinished extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as BuildEvent_InvocationAttemptFinished));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BuildEvent_InvocationAttemptFinished create() =>
-      BuildEvent_InvocationAttemptFinished();
+      BuildEvent_InvocationAttemptFinished._();
   BuildEvent_InvocationAttemptFinished createEmptyInstance() => create();
   static $pb.PbList<BuildEvent_InvocationAttemptFinished> createRepeated() =>
       $pb.PbList<BuildEvent_InvocationAttemptFinished>();
@@ -114,20 +121,22 @@ class BuildEvent_BuildEnqueued extends $pb.GeneratedMessage {
         1, 'details', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..hasRequiredFields = false;
 
-  BuildEvent_BuildEnqueued() : super();
-  BuildEvent_BuildEnqueued.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent_BuildEnqueued.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent_BuildEnqueued._() : super();
+  factory BuildEvent_BuildEnqueued() => create();
+  factory BuildEvent_BuildEnqueued.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_BuildEnqueued.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent_BuildEnqueued clone() =>
       BuildEvent_BuildEnqueued()..mergeFromMessage(this);
   BuildEvent_BuildEnqueued copyWith(
           void Function(BuildEvent_BuildEnqueued) updates) =>
       super.copyWith((message) => updates(message as BuildEvent_BuildEnqueued));
   $pb.BuilderInfo get info_ => _i;
-  static BuildEvent_BuildEnqueued create() => BuildEvent_BuildEnqueued();
+  @$core.pragma('dart2js:noInline')
+  static BuildEvent_BuildEnqueued create() => BuildEvent_BuildEnqueued._();
   BuildEvent_BuildEnqueued createEmptyInstance() => create();
   static $pb.PbList<BuildEvent_BuildEnqueued> createRepeated() =>
       $pb.PbList<BuildEvent_BuildEnqueued>();
@@ -151,20 +160,22 @@ class BuildEvent_BuildFinished extends $pb.GeneratedMessage {
         $2.BuildStatus.getDefault, $2.BuildStatus.create)
     ..hasRequiredFields = false;
 
-  BuildEvent_BuildFinished() : super();
-  BuildEvent_BuildFinished.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent_BuildFinished.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent_BuildFinished._() : super();
+  factory BuildEvent_BuildFinished() => create();
+  factory BuildEvent_BuildFinished.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_BuildFinished.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent_BuildFinished clone() =>
       BuildEvent_BuildFinished()..mergeFromMessage(this);
   BuildEvent_BuildFinished copyWith(
           void Function(BuildEvent_BuildFinished) updates) =>
       super.copyWith((message) => updates(message as BuildEvent_BuildFinished));
   $pb.BuilderInfo get info_ => _i;
-  static BuildEvent_BuildFinished create() => BuildEvent_BuildFinished();
+  @$core.pragma('dart2js:noInline')
+  static BuildEvent_BuildFinished create() => BuildEvent_BuildFinished._();
   BuildEvent_BuildFinished createEmptyInstance() => create();
   static $pb.PbList<BuildEvent_BuildFinished> createRepeated() =>
       $pb.PbList<BuildEvent_BuildFinished>();
@@ -192,6 +203,7 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildEvent.ConsoleOutput',
       package: const $pb.PackageName('google.devtools.build.v1'))
+    ..oo(0, [2, 3])
     ..e<ConsoleOutputStream>(
         1,
         'type',
@@ -201,23 +213,24 @@ class BuildEvent_ConsoleOutput extends $pb.GeneratedMessage {
         ConsoleOutputStream.values)
     ..aOS(2, 'textOutput')
     ..a<$core.List<$core.int>>(3, 'binaryOutput', $pb.PbFieldType.OY)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  BuildEvent_ConsoleOutput() : super();
-  BuildEvent_ConsoleOutput.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent_ConsoleOutput.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent_ConsoleOutput._() : super();
+  factory BuildEvent_ConsoleOutput() => create();
+  factory BuildEvent_ConsoleOutput.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_ConsoleOutput.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent_ConsoleOutput clone() =>
       BuildEvent_ConsoleOutput()..mergeFromMessage(this);
   BuildEvent_ConsoleOutput copyWith(
           void Function(BuildEvent_ConsoleOutput) updates) =>
       super.copyWith((message) => updates(message as BuildEvent_ConsoleOutput));
   $pb.BuilderInfo get info_ => _i;
-  static BuildEvent_ConsoleOutput create() => BuildEvent_ConsoleOutput();
+  @$core.pragma('dart2js:noInline')
+  static BuildEvent_ConsoleOutput create() => BuildEvent_ConsoleOutput._();
   BuildEvent_ConsoleOutput createEmptyInstance() => create();
   static $pb.PbList<BuildEvent_ConsoleOutput> createRepeated() =>
       $pb.PbList<BuildEvent_ConsoleOutput>();
@@ -268,13 +281,15 @@ class BuildEvent_BuildComponentStreamFinished extends $pb.GeneratedMessage {
         BuildEvent_BuildComponentStreamFinished_FinishType.values)
     ..hasRequiredFields = false;
 
-  BuildEvent_BuildComponentStreamFinished() : super();
-  BuildEvent_BuildComponentStreamFinished.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent_BuildComponentStreamFinished.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent_BuildComponentStreamFinished._() : super();
+  factory BuildEvent_BuildComponentStreamFinished() => create();
+  factory BuildEvent_BuildComponentStreamFinished.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent_BuildComponentStreamFinished.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent_BuildComponentStreamFinished clone() =>
       BuildEvent_BuildComponentStreamFinished()..mergeFromMessage(this);
   BuildEvent_BuildComponentStreamFinished copyWith(
@@ -282,8 +297,9 @@ class BuildEvent_BuildComponentStreamFinished extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as BuildEvent_BuildComponentStreamFinished));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BuildEvent_BuildComponentStreamFinished create() =>
-      BuildEvent_BuildComponentStreamFinished();
+      BuildEvent_BuildComponentStreamFinished._();
   BuildEvent_BuildComponentStreamFinished createEmptyInstance() => create();
   static $pb.PbList<BuildEvent_BuildComponentStreamFinished> createRepeated() =>
       $pb.PbList<BuildEvent_BuildComponentStreamFinished>();
@@ -328,6 +344,7 @@ class BuildEvent extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildEvent',
       package: const $pb.PackageName('google.devtools.build.v1'))
+    ..oo(0, [51, 52, 53, 55, 56, 59, 60, 61, 62])
     ..a<$0.Timestamp>(1, 'eventTime', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..a<BuildEvent_InvocationAttemptStarted>(
@@ -360,21 +377,22 @@ class BuildEvent extends $pb.GeneratedMessage {
         $1.Any.getDefault, $1.Any.create)
     ..a<$1.Any>(62, 'sourceFetchEvent', $pb.PbFieldType.OM, $1.Any.getDefault,
         $1.Any.create)
-    ..oo(0, [51, 52, 53, 55, 56, 59, 60, 61, 62])
     ..hasRequiredFields = false;
 
-  BuildEvent() : super();
-  BuildEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BuildEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BuildEvent._() : super();
+  factory BuildEvent() => create();
+  factory BuildEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BuildEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BuildEvent clone() => BuildEvent()..mergeFromMessage(this);
   BuildEvent copyWith(void Function(BuildEvent) updates) =>
       super.copyWith((message) => updates(message as BuildEvent));
   $pb.BuilderInfo get info_ => _i;
-  static BuildEvent create() => BuildEvent();
+  @$core.pragma('dart2js:noInline')
+  static BuildEvent create() => BuildEvent._();
   BuildEvent createEmptyInstance() => create();
   static $pb.PbList<BuildEvent> createRepeated() => $pb.PbList<BuildEvent>();
   static BuildEvent getDefault() => _defaultInstance ??= create()..freeze();
@@ -480,18 +498,20 @@ class StreamId extends $pb.GeneratedMessage {
     ..aOS(6, 'invocationId')
     ..hasRequiredFields = false;
 
-  StreamId() : super();
-  StreamId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamId._() : super();
+  factory StreamId() => create();
+  factory StreamId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamId clone() => StreamId()..mergeFromMessage(this);
   StreamId copyWith(void Function(StreamId) updates) =>
       super.copyWith((message) => updates(message as StreamId));
   $pb.BuilderInfo get info_ => _i;
-  static StreamId create() => StreamId();
+  @$core.pragma('dart2js:noInline')
+  static StreamId create() => StreamId._();
   StreamId createEmptyInstance() => create();
   static $pb.PbList<StreamId> createRepeated() => $pb.PbList<StreamId>();
   static StreamId getDefault() => _defaultInstance ??= create()..freeze();

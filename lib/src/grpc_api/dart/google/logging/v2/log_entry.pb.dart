@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/logging/v2/log_entry.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -29,6 +30,7 @@ class LogEntry extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogEntry',
       package: const $pb.PackageName('google.logging.v2'))
+    ..oo(0, [2, 3, 6])
     ..a<$0.Any>(
         2, 'protoPayload', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
     ..aOS(3, 'textPayload')
@@ -64,21 +66,22 @@ class LogEntry extends $pb.GeneratedMessage {
     ..a<$3.MonitoredResourceMetadata>(25, 'metadata', $pb.PbFieldType.OM, $3.MonitoredResourceMetadata.getDefault, $3.MonitoredResourceMetadata.create)
     ..aOS(27, 'spanId')
     ..aOB(30, 'traceSampled')
-    ..oo(0, [2, 3, 6])
     ..hasRequiredFields = false;
 
-  LogEntry() : super();
-  LogEntry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogEntry._() : super();
+  factory LogEntry() => create();
+  factory LogEntry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogEntry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogEntry clone() => LogEntry()..mergeFromMessage(this);
   LogEntry copyWith(void Function(LogEntry) updates) =>
       super.copyWith((message) => updates(message as LogEntry));
   $pb.BuilderInfo get info_ => _i;
-  static LogEntry create() => LogEntry();
+  @$core.pragma('dart2js:noInline')
+  static LogEntry create() => LogEntry._();
   LogEntry createEmptyInstance() => create();
   static $pb.PbList<LogEntry> createRepeated() => $pb.PbList<LogEntry>();
   static LogEntry getDefault() => _defaultInstance ??= create()..freeze();
@@ -227,18 +230,20 @@ class LogEntryOperation extends $pb.GeneratedMessage {
     ..aOB(4, 'last')
     ..hasRequiredFields = false;
 
-  LogEntryOperation() : super();
-  LogEntryOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogEntryOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogEntryOperation._() : super();
+  factory LogEntryOperation() => create();
+  factory LogEntryOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogEntryOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogEntryOperation clone() => LogEntryOperation()..mergeFromMessage(this);
   LogEntryOperation copyWith(void Function(LogEntryOperation) updates) =>
       super.copyWith((message) => updates(message as LogEntryOperation));
   $pb.BuilderInfo get info_ => _i;
-  static LogEntryOperation create() => LogEntryOperation();
+  @$core.pragma('dart2js:noInline')
+  static LogEntryOperation create() => LogEntryOperation._();
   LogEntryOperation createEmptyInstance() => create();
   static $pb.PbList<LogEntryOperation> createRepeated() =>
       $pb.PbList<LogEntryOperation>();
@@ -287,20 +292,22 @@ class LogEntrySourceLocation extends $pb.GeneratedMessage {
     ..aOS(3, 'function')
     ..hasRequiredFields = false;
 
-  LogEntrySourceLocation() : super();
-  LogEntrySourceLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogEntrySourceLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogEntrySourceLocation._() : super();
+  factory LogEntrySourceLocation() => create();
+  factory LogEntrySourceLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogEntrySourceLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogEntrySourceLocation clone() =>
       LogEntrySourceLocation()..mergeFromMessage(this);
   LogEntrySourceLocation copyWith(
           void Function(LogEntrySourceLocation) updates) =>
       super.copyWith((message) => updates(message as LogEntrySourceLocation));
   $pb.BuilderInfo get info_ => _i;
-  static LogEntrySourceLocation create() => LogEntrySourceLocation();
+  @$core.pragma('dart2js:noInline')
+  static LogEntrySourceLocation create() => LogEntrySourceLocation._();
   LogEntrySourceLocation createEmptyInstance() => create();
   static $pb.PbList<LogEntrySourceLocation> createRepeated() =>
       $pb.PbList<LogEntrySourceLocation>();

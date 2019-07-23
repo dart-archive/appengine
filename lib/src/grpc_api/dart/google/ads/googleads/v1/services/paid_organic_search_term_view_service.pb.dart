@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/paid_organic_search_term_view_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,13 +17,15 @@ class GetPaidOrganicSearchTermViewRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetPaidOrganicSearchTermViewRequest() : super();
-  GetPaidOrganicSearchTermViewRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetPaidOrganicSearchTermViewRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetPaidOrganicSearchTermViewRequest._() : super();
+  factory GetPaidOrganicSearchTermViewRequest() => create();
+  factory GetPaidOrganicSearchTermViewRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetPaidOrganicSearchTermViewRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetPaidOrganicSearchTermViewRequest clone() =>
       GetPaidOrganicSearchTermViewRequest()..mergeFromMessage(this);
   GetPaidOrganicSearchTermViewRequest copyWith(
@@ -30,8 +33,9 @@ class GetPaidOrganicSearchTermViewRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetPaidOrganicSearchTermViewRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetPaidOrganicSearchTermViewRequest create() =>
-      GetPaidOrganicSearchTermViewRequest();
+      GetPaidOrganicSearchTermViewRequest._();
   GetPaidOrganicSearchTermViewRequest createEmptyInstance() => create();
   static $pb.PbList<GetPaidOrganicSearchTermViewRequest> createRepeated() =>
       $pb.PbList<GetPaidOrganicSearchTermViewRequest>();

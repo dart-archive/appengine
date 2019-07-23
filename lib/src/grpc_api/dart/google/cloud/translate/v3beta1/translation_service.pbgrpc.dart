@@ -1,69 +1,70 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/translate/v3beta1/translation_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'translation_service.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'translation_service.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $0;
 export 'translation_service.pb.dart';
 
 class TranslationServiceClient extends $grpc.Client {
   static final _$translateText =
-      $grpc.ClientMethod<TranslateTextRequest, TranslateTextResponse>(
+      $grpc.ClientMethod<$2.TranslateTextRequest, $2.TranslateTextResponse>(
           '/google.cloud.translation.v3beta1.TranslationService/TranslateText',
-          (TranslateTextRequest value) => value.writeToBuffer(),
+          ($2.TranslateTextRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              TranslateTextResponse.fromBuffer(value));
+              $2.TranslateTextResponse.fromBuffer(value));
   static final _$detectLanguage =
-      $grpc.ClientMethod<DetectLanguageRequest, DetectLanguageResponse>(
+      $grpc.ClientMethod<$2.DetectLanguageRequest, $2.DetectLanguageResponse>(
           '/google.cloud.translation.v3beta1.TranslationService/DetectLanguage',
-          (DetectLanguageRequest value) => value.writeToBuffer(),
+          ($2.DetectLanguageRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              DetectLanguageResponse.fromBuffer(value));
+              $2.DetectLanguageResponse.fromBuffer(value));
   static final _$getSupportedLanguages = $grpc.ClientMethod<
-          GetSupportedLanguagesRequest, SupportedLanguages>(
+          $2.GetSupportedLanguagesRequest, $2.SupportedLanguages>(
       '/google.cloud.translation.v3beta1.TranslationService/GetSupportedLanguages',
-      (GetSupportedLanguagesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => SupportedLanguages.fromBuffer(value));
+      ($2.GetSupportedLanguagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.SupportedLanguages.fromBuffer(value));
   static final _$batchTranslateText = $grpc.ClientMethod<
-          BatchTranslateTextRequest, $1.Operation>(
+          $2.BatchTranslateTextRequest, $0.Operation>(
       '/google.cloud.translation.v3beta1.TranslationService/BatchTranslateText',
-      (BatchTranslateTextRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+      ($2.BatchTranslateTextRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$createGlossary =
-      $grpc.ClientMethod<CreateGlossaryRequest, $1.Operation>(
+      $grpc.ClientMethod<$2.CreateGlossaryRequest, $0.Operation>(
           '/google.cloud.translation.v3beta1.TranslationService/CreateGlossary',
-          (CreateGlossaryRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+          ($2.CreateGlossaryRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$listGlossaries =
-      $grpc.ClientMethod<ListGlossariesRequest, ListGlossariesResponse>(
+      $grpc.ClientMethod<$2.ListGlossariesRequest, $2.ListGlossariesResponse>(
           '/google.cloud.translation.v3beta1.TranslationService/ListGlossaries',
-          (ListGlossariesRequest value) => value.writeToBuffer(),
+          ($2.ListGlossariesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListGlossariesResponse.fromBuffer(value));
-  static final _$getGlossary = $grpc.ClientMethod<GetGlossaryRequest, Glossary>(
-      '/google.cloud.translation.v3beta1.TranslationService/GetGlossary',
-      (GetGlossaryRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Glossary.fromBuffer(value));
+              $2.ListGlossariesResponse.fromBuffer(value));
+  static final _$getGlossary =
+      $grpc.ClientMethod<$2.GetGlossaryRequest, $2.Glossary>(
+          '/google.cloud.translation.v3beta1.TranslationService/GetGlossary',
+          ($2.GetGlossaryRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Glossary.fromBuffer(value));
   static final _$deleteGlossary =
-      $grpc.ClientMethod<DeleteGlossaryRequest, $1.Operation>(
+      $grpc.ClientMethod<$2.DeleteGlossaryRequest, $0.Operation>(
           '/google.cloud.translation.v3beta1.TranslationService/DeleteGlossary',
-          (DeleteGlossaryRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+          ($2.DeleteGlossaryRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   TranslationServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<TranslateTextResponse> translateText(
-      TranslateTextRequest request,
+  $grpc.ResponseFuture<$2.TranslateTextResponse> translateText(
+      $2.TranslateTextRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$translateText, $async.Stream.fromIterable([request]),
@@ -71,8 +72,8 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<DetectLanguageResponse> detectLanguage(
-      DetectLanguageRequest request,
+  $grpc.ResponseFuture<$2.DetectLanguageResponse> detectLanguage(
+      $2.DetectLanguageRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$detectLanguage, $async.Stream.fromIterable([request]),
@@ -80,8 +81,8 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<SupportedLanguages> getSupportedLanguages(
-      GetSupportedLanguagesRequest request,
+  $grpc.ResponseFuture<$2.SupportedLanguages> getSupportedLanguages(
+      $2.GetSupportedLanguagesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getSupportedLanguages, $async.Stream.fromIterable([request]),
@@ -89,8 +90,8 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> batchTranslateText(
-      BatchTranslateTextRequest request,
+  $grpc.ResponseFuture<$0.Operation> batchTranslateText(
+      $2.BatchTranslateTextRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$batchTranslateText, $async.Stream.fromIterable([request]),
@@ -98,8 +99,8 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> createGlossary(
-      CreateGlossaryRequest request,
+  $grpc.ResponseFuture<$0.Operation> createGlossary(
+      $2.CreateGlossaryRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createGlossary, $async.Stream.fromIterable([request]),
@@ -107,8 +108,8 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListGlossariesResponse> listGlossaries(
-      ListGlossariesRequest request,
+  $grpc.ResponseFuture<$2.ListGlossariesResponse> listGlossaries(
+      $2.ListGlossariesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listGlossaries, $async.Stream.fromIterable([request]),
@@ -116,7 +117,7 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Glossary> getGlossary(GetGlossaryRequest request,
+  $grpc.ResponseFuture<$2.Glossary> getGlossary($2.GetGlossaryRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getGlossary, $async.Stream.fromIterable([request]),
@@ -124,8 +125,8 @@ class TranslationServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> deleteGlossary(
-      DeleteGlossaryRequest request,
+  $grpc.ResponseFuture<$0.Operation> deleteGlossary(
+      $2.DeleteGlossaryRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteGlossary, $async.Stream.fromIterable([request]),
@@ -139,127 +140,134 @@ abstract class TranslationServiceBase extends $grpc.Service {
       'google.cloud.translation.v3beta1.TranslationService';
 
   TranslationServiceBase() {
-    $addMethod($grpc.ServiceMethod<TranslateTextRequest, TranslateTextResponse>(
-        'TranslateText',
-        translateText_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => TranslateTextRequest.fromBuffer(value),
-        (TranslateTextResponse value) => value.writeToBuffer()));
     $addMethod(
-        $grpc.ServiceMethod<DetectLanguageRequest, DetectLanguageResponse>(
-            'DetectLanguage',
-            detectLanguage_Pre,
+        $grpc.ServiceMethod<$2.TranslateTextRequest, $2.TranslateTextResponse>(
+            'TranslateText',
+            translateText_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                DetectLanguageRequest.fromBuffer(value),
-            (DetectLanguageResponse value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<GetSupportedLanguagesRequest, SupportedLanguages>(
-            'GetSupportedLanguages',
-            getSupportedLanguages_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                GetSupportedLanguagesRequest.fromBuffer(value),
-            (SupportedLanguages value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<BatchTranslateTextRequest, $1.Operation>(
+                $2.TranslateTextRequest.fromBuffer(value),
+            ($2.TranslateTextResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DetectLanguageRequest,
+            $2.DetectLanguageResponse>(
+        'DetectLanguage',
+        detectLanguage_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.DetectLanguageRequest.fromBuffer(value),
+        ($2.DetectLanguageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSupportedLanguagesRequest,
+            $2.SupportedLanguages>(
+        'GetSupportedLanguages',
+        getSupportedLanguages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetSupportedLanguagesRequest.fromBuffer(value),
+        ($2.SupportedLanguages value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.BatchTranslateTextRequest, $0.Operation>(
         'BatchTranslateText',
         batchTranslateText_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            BatchTranslateTextRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateGlossaryRequest, $1.Operation>(
+            $2.BatchTranslateTextRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateGlossaryRequest, $0.Operation>(
         'CreateGlossary',
         createGlossary_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateGlossaryRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<ListGlossariesRequest, ListGlossariesResponse>(
-            'ListGlossaries',
-            listGlossaries_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                ListGlossariesRequest.fromBuffer(value),
-            (ListGlossariesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetGlossaryRequest, Glossary>(
+            $2.CreateGlossaryRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListGlossariesRequest,
+            $2.ListGlossariesResponse>(
+        'ListGlossaries',
+        listGlossaries_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ListGlossariesRequest.fromBuffer(value),
+        ($2.ListGlossariesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetGlossaryRequest, $2.Glossary>(
         'GetGlossary',
         getGlossary_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetGlossaryRequest.fromBuffer(value),
-        (Glossary value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteGlossaryRequest, $1.Operation>(
+        ($core.List<$core.int> value) =>
+            $2.GetGlossaryRequest.fromBuffer(value),
+        ($2.Glossary value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteGlossaryRequest, $0.Operation>(
         'DeleteGlossary',
         deleteGlossary_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteGlossaryRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
+            $2.DeleteGlossaryRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
-  $async.Future<TranslateTextResponse> translateText_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.TranslateTextResponse> translateText_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.TranslateTextRequest> request) async {
     return translateText(call, await request);
   }
 
-  $async.Future<DetectLanguageResponse> detectLanguage_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.DetectLanguageResponse> detectLanguage_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.DetectLanguageRequest> request) async {
     return detectLanguage(call, await request);
   }
 
-  $async.Future<SupportedLanguages> getSupportedLanguages_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.SupportedLanguages> getSupportedLanguages_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.GetSupportedLanguagesRequest> request) async {
     return getSupportedLanguages(call, await request);
   }
 
-  $async.Future<$1.Operation> batchTranslateText_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> batchTranslateText_Pre($grpc.ServiceCall call,
+      $async.Future<$2.BatchTranslateTextRequest> request) async {
     return batchTranslateText(call, await request);
   }
 
-  $async.Future<$1.Operation> createGlossary_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> createGlossary_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateGlossaryRequest> request) async {
     return createGlossary(call, await request);
   }
 
-  $async.Future<ListGlossariesResponse> listGlossaries_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListGlossariesResponse> listGlossaries_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListGlossariesRequest> request) async {
     return listGlossaries(call, await request);
   }
 
-  $async.Future<Glossary> getGlossary_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Glossary> getGlossary_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetGlossaryRequest> request) async {
     return getGlossary(call, await request);
   }
 
-  $async.Future<$1.Operation> deleteGlossary_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> deleteGlossary_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteGlossaryRequest> request) async {
     return deleteGlossary(call, await request);
   }
 
-  $async.Future<TranslateTextResponse> translateText(
-      $grpc.ServiceCall call, TranslateTextRequest request);
-  $async.Future<DetectLanguageResponse> detectLanguage(
-      $grpc.ServiceCall call, DetectLanguageRequest request);
-  $async.Future<SupportedLanguages> getSupportedLanguages(
-      $grpc.ServiceCall call, GetSupportedLanguagesRequest request);
-  $async.Future<$1.Operation> batchTranslateText(
-      $grpc.ServiceCall call, BatchTranslateTextRequest request);
-  $async.Future<$1.Operation> createGlossary(
-      $grpc.ServiceCall call, CreateGlossaryRequest request);
-  $async.Future<ListGlossariesResponse> listGlossaries(
-      $grpc.ServiceCall call, ListGlossariesRequest request);
-  $async.Future<Glossary> getGlossary(
-      $grpc.ServiceCall call, GetGlossaryRequest request);
-  $async.Future<$1.Operation> deleteGlossary(
-      $grpc.ServiceCall call, DeleteGlossaryRequest request);
+  $async.Future<$2.TranslateTextResponse> translateText(
+      $grpc.ServiceCall call, $2.TranslateTextRequest request);
+  $async.Future<$2.DetectLanguageResponse> detectLanguage(
+      $grpc.ServiceCall call, $2.DetectLanguageRequest request);
+  $async.Future<$2.SupportedLanguages> getSupportedLanguages(
+      $grpc.ServiceCall call, $2.GetSupportedLanguagesRequest request);
+  $async.Future<$0.Operation> batchTranslateText(
+      $grpc.ServiceCall call, $2.BatchTranslateTextRequest request);
+  $async.Future<$0.Operation> createGlossary(
+      $grpc.ServiceCall call, $2.CreateGlossaryRequest request);
+  $async.Future<$2.ListGlossariesResponse> listGlossaries(
+      $grpc.ServiceCall call, $2.ListGlossariesRequest request);
+  $async.Future<$2.Glossary> getGlossary(
+      $grpc.ServiceCall call, $2.GetGlossaryRequest request);
+  $async.Future<$0.Operation> deleteGlossary(
+      $grpc.ServiceCall call, $2.DeleteGlossaryRequest request);
 }

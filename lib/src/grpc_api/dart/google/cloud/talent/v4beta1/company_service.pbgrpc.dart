@@ -1,51 +1,53 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/company_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'company_service.pb.dart';
-import 'company.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'company_service.pb.dart' as $0;
+import 'company.pb.dart' as $1;
+import '../../../protobuf/empty.pb.dart' as $2;
 export 'company_service.pb.dart';
 
 class CompanyServiceClient extends $grpc.Client {
   static final _$createCompany =
-      $grpc.ClientMethod<CreateCompanyRequest, $0.Company>(
+      $grpc.ClientMethod<$0.CreateCompanyRequest, $1.Company>(
           '/google.cloud.talent.v4beta1.CompanyService/CreateCompany',
-          (CreateCompanyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Company.fromBuffer(value));
-  static final _$getCompany = $grpc.ClientMethod<GetCompanyRequest, $0.Company>(
-      '/google.cloud.talent.v4beta1.CompanyService/GetCompany',
-      (GetCompanyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Company.fromBuffer(value));
+          ($0.CreateCompanyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Company.fromBuffer(value));
+  static final _$getCompany =
+      $grpc.ClientMethod<$0.GetCompanyRequest, $1.Company>(
+          '/google.cloud.talent.v4beta1.CompanyService/GetCompany',
+          ($0.GetCompanyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Company.fromBuffer(value));
   static final _$updateCompany =
-      $grpc.ClientMethod<UpdateCompanyRequest, $0.Company>(
+      $grpc.ClientMethod<$0.UpdateCompanyRequest, $1.Company>(
           '/google.cloud.talent.v4beta1.CompanyService/UpdateCompany',
-          (UpdateCompanyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Company.fromBuffer(value));
+          ($0.UpdateCompanyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Company.fromBuffer(value));
   static final _$deleteCompany =
-      $grpc.ClientMethod<DeleteCompanyRequest, $1.Empty>(
+      $grpc.ClientMethod<$0.DeleteCompanyRequest, $2.Empty>(
           '/google.cloud.talent.v4beta1.CompanyService/DeleteCompany',
-          (DeleteCompanyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+          ($0.DeleteCompanyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
   static final _$listCompanies =
-      $grpc.ClientMethod<ListCompaniesRequest, ListCompaniesResponse>(
+      $grpc.ClientMethod<$0.ListCompaniesRequest, $0.ListCompaniesResponse>(
           '/google.cloud.talent.v4beta1.CompanyService/ListCompanies',
-          (ListCompaniesRequest value) => value.writeToBuffer(),
+          ($0.ListCompaniesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListCompaniesResponse.fromBuffer(value));
+              $0.ListCompaniesResponse.fromBuffer(value));
 
   CompanyServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.Company> createCompany(CreateCompanyRequest request,
+  $grpc.ResponseFuture<$1.Company> createCompany(
+      $0.CreateCompanyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createCompany, $async.Stream.fromIterable([request]),
@@ -53,7 +55,7 @@ class CompanyServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Company> getCompany(GetCompanyRequest request,
+  $grpc.ResponseFuture<$1.Company> getCompany($0.GetCompanyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getCompany, $async.Stream.fromIterable([request]),
@@ -61,7 +63,8 @@ class CompanyServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Company> updateCompany(UpdateCompanyRequest request,
+  $grpc.ResponseFuture<$1.Company> updateCompany(
+      $0.UpdateCompanyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateCompany, $async.Stream.fromIterable([request]),
@@ -69,7 +72,7 @@ class CompanyServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> deleteCompany(DeleteCompanyRequest request,
+  $grpc.ResponseFuture<$2.Empty> deleteCompany($0.DeleteCompanyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteCompany, $async.Stream.fromIterable([request]),
@@ -77,8 +80,8 @@ class CompanyServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListCompaniesResponse> listCompanies(
-      ListCompaniesRequest request,
+  $grpc.ResponseFuture<$0.ListCompaniesResponse> listCompanies(
+      $0.ListCompaniesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listCompanies, $async.Stream.fromIterable([request]),
@@ -91,76 +94,82 @@ abstract class CompanyServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.talent.v4beta1.CompanyService';
 
   CompanyServiceBase() {
-    $addMethod($grpc.ServiceMethod<CreateCompanyRequest, $0.Company>(
+    $addMethod($grpc.ServiceMethod<$0.CreateCompanyRequest, $1.Company>(
         'CreateCompany',
         createCompany_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateCompanyRequest.fromBuffer(value),
-        ($0.Company value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetCompanyRequest, $0.Company>(
+        ($core.List<$core.int> value) =>
+            $0.CreateCompanyRequest.fromBuffer(value),
+        ($1.Company value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetCompanyRequest, $1.Company>(
         'GetCompany',
         getCompany_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetCompanyRequest.fromBuffer(value),
-        ($0.Company value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateCompanyRequest, $0.Company>(
+        ($core.List<$core.int> value) => $0.GetCompanyRequest.fromBuffer(value),
+        ($1.Company value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateCompanyRequest, $1.Company>(
         'UpdateCompany',
         updateCompany_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateCompanyRequest.fromBuffer(value),
-        ($0.Company value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteCompanyRequest, $1.Empty>(
+        ($core.List<$core.int> value) =>
+            $0.UpdateCompanyRequest.fromBuffer(value),
+        ($1.Company value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteCompanyRequest, $2.Empty>(
         'DeleteCompany',
         deleteCompany_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteCompanyRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListCompaniesRequest, ListCompaniesResponse>(
-        'ListCompanies',
-        listCompanies_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListCompaniesRequest.fromBuffer(value),
-        (ListCompaniesResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) =>
+            $0.DeleteCompanyRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListCompaniesRequest, $0.ListCompaniesResponse>(
+            'ListCompanies',
+            listCompanies_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListCompaniesRequest.fromBuffer(value),
+            ($0.ListCompaniesResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Company> createCompany_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Company> createCompany_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateCompanyRequest> request) async {
     return createCompany(call, await request);
   }
 
-  $async.Future<$0.Company> getCompany_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Company> getCompany_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetCompanyRequest> request) async {
     return getCompany(call, await request);
   }
 
-  $async.Future<$0.Company> updateCompany_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Company> updateCompany_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateCompanyRequest> request) async {
     return updateCompany(call, await request);
   }
 
-  $async.Future<$1.Empty> deleteCompany_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Empty> deleteCompany_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteCompanyRequest> request) async {
     return deleteCompany(call, await request);
   }
 
-  $async.Future<ListCompaniesResponse> listCompanies_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListCompaniesResponse> listCompanies_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListCompaniesRequest> request) async {
     return listCompanies(call, await request);
   }
 
-  $async.Future<$0.Company> createCompany(
-      $grpc.ServiceCall call, CreateCompanyRequest request);
-  $async.Future<$0.Company> getCompany(
-      $grpc.ServiceCall call, GetCompanyRequest request);
-  $async.Future<$0.Company> updateCompany(
-      $grpc.ServiceCall call, UpdateCompanyRequest request);
-  $async.Future<$1.Empty> deleteCompany(
-      $grpc.ServiceCall call, DeleteCompanyRequest request);
-  $async.Future<ListCompaniesResponse> listCompanies(
-      $grpc.ServiceCall call, ListCompaniesRequest request);
+  $async.Future<$1.Company> createCompany(
+      $grpc.ServiceCall call, $0.CreateCompanyRequest request);
+  $async.Future<$1.Company> getCompany(
+      $grpc.ServiceCall call, $0.GetCompanyRequest request);
+  $async.Future<$1.Company> updateCompany(
+      $grpc.ServiceCall call, $0.UpdateCompanyRequest request);
+  $async.Future<$2.Empty> deleteCompany(
+      $grpc.ServiceCall call, $0.DeleteCompanyRequest request);
+  $async.Future<$0.ListCompaniesResponse> listCompanies(
+      $grpc.ServiceCall call, $0.ListCompaniesRequest request);
 }

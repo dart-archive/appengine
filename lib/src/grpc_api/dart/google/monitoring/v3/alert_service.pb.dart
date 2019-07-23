@@ -1,39 +1,42 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/alert_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'alert.pb.dart' as $0;
-import '../../protobuf/field_mask.pb.dart' as $2;
+import 'alert.pb.dart' as $1;
+import '../../protobuf/field_mask.pb.dart' as $3;
 
 class CreateAlertPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAlertPolicyRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$0.AlertPolicy>(2, 'alertPolicy', $pb.PbFieldType.OM,
-        $0.AlertPolicy.getDefault, $0.AlertPolicy.create)
+    ..a<$1.AlertPolicy>(2, 'alertPolicy', $pb.PbFieldType.OM,
+        $1.AlertPolicy.getDefault, $1.AlertPolicy.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
-  CreateAlertPolicyRequest() : super();
-  CreateAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateAlertPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateAlertPolicyRequest._() : super();
+  factory CreateAlertPolicyRequest() => create();
+  factory CreateAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateAlertPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateAlertPolicyRequest clone() =>
       CreateAlertPolicyRequest()..mergeFromMessage(this);
   CreateAlertPolicyRequest copyWith(
           void Function(CreateAlertPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as CreateAlertPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateAlertPolicyRequest create() => CreateAlertPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateAlertPolicyRequest create() => CreateAlertPolicyRequest._();
   CreateAlertPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAlertPolicyRequest> createRepeated() =>
       $pb.PbList<CreateAlertPolicyRequest>();
@@ -41,8 +44,8 @@ class CreateAlertPolicyRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CreateAlertPolicyRequest _defaultInstance;
 
-  $0.AlertPolicy get alertPolicy => $_getN(0);
-  set alertPolicy($0.AlertPolicy v) {
+  $1.AlertPolicy get alertPolicy => $_getN(0);
+  set alertPolicy($1.AlertPolicy v) {
     setField(2, v);
   }
 
@@ -64,20 +67,22 @@ class GetAlertPolicyRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
-  GetAlertPolicyRequest() : super();
-  GetAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAlertPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAlertPolicyRequest._() : super();
+  factory GetAlertPolicyRequest() => create();
+  factory GetAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAlertPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAlertPolicyRequest clone() =>
       GetAlertPolicyRequest()..mergeFromMessage(this);
   GetAlertPolicyRequest copyWith(
           void Function(GetAlertPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as GetAlertPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetAlertPolicyRequest create() => GetAlertPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetAlertPolicyRequest create() => GetAlertPolicyRequest._();
   GetAlertPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<GetAlertPolicyRequest> createRepeated() =>
       $pb.PbList<GetAlertPolicyRequest>();
@@ -104,20 +109,22 @@ class ListAlertPoliciesRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'orderBy')
     ..hasRequiredFields = false;
 
-  ListAlertPoliciesRequest() : super();
-  ListAlertPoliciesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAlertPoliciesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAlertPoliciesRequest._() : super();
+  factory ListAlertPoliciesRequest() => create();
+  factory ListAlertPoliciesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAlertPoliciesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAlertPoliciesRequest clone() =>
       ListAlertPoliciesRequest()..mergeFromMessage(this);
   ListAlertPoliciesRequest copyWith(
           void Function(ListAlertPoliciesRequest) updates) =>
       super.copyWith((message) => updates(message as ListAlertPoliciesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListAlertPoliciesRequest create() => ListAlertPoliciesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListAlertPoliciesRequest create() => ListAlertPoliciesRequest._();
   ListAlertPoliciesRequest createEmptyInstance() => create();
   static $pb.PbList<ListAlertPoliciesRequest> createRepeated() =>
       $pb.PbList<ListAlertPoliciesRequest>();
@@ -170,17 +177,18 @@ class ListAlertPoliciesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAlertPoliciesResponse',
       package: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(2, 'nextPageToken')
-    ..pc<$0.AlertPolicy>(
-        3, 'alertPolicies', $pb.PbFieldType.PM, $0.AlertPolicy.create)
+    ..pc<$1.AlertPolicy>(
+        3, 'alertPolicies', $pb.PbFieldType.PM, $1.AlertPolicy.create)
     ..hasRequiredFields = false;
 
-  ListAlertPoliciesResponse() : super();
-  ListAlertPoliciesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAlertPoliciesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAlertPoliciesResponse._() : super();
+  factory ListAlertPoliciesResponse() => create();
+  factory ListAlertPoliciesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAlertPoliciesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAlertPoliciesResponse clone() =>
       ListAlertPoliciesResponse()..mergeFromMessage(this);
   ListAlertPoliciesResponse copyWith(
@@ -188,7 +196,8 @@ class ListAlertPoliciesResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ListAlertPoliciesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListAlertPoliciesResponse create() => ListAlertPoliciesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListAlertPoliciesResponse create() => ListAlertPoliciesResponse._();
   ListAlertPoliciesResponse createEmptyInstance() => create();
   static $pb.PbList<ListAlertPoliciesResponse> createRepeated() =>
       $pb.PbList<ListAlertPoliciesResponse>();
@@ -204,32 +213,34 @@ class ListAlertPoliciesResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(0);
   void clearNextPageToken() => clearField(2);
 
-  $core.List<$0.AlertPolicy> get alertPolicies => $_getList(1);
+  $core.List<$1.AlertPolicy> get alertPolicies => $_getList(1);
 }
 
 class UpdateAlertPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAlertPolicyRequest',
       package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
-    ..a<$0.AlertPolicy>(3, 'alertPolicy', $pb.PbFieldType.OM,
-        $0.AlertPolicy.getDefault, $0.AlertPolicy.create)
+    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$1.AlertPolicy>(3, 'alertPolicy', $pb.PbFieldType.OM,
+        $1.AlertPolicy.getDefault, $1.AlertPolicy.create)
     ..hasRequiredFields = false;
 
-  UpdateAlertPolicyRequest() : super();
-  UpdateAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateAlertPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateAlertPolicyRequest._() : super();
+  factory UpdateAlertPolicyRequest() => create();
+  factory UpdateAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAlertPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateAlertPolicyRequest clone() =>
       UpdateAlertPolicyRequest()..mergeFromMessage(this);
   UpdateAlertPolicyRequest copyWith(
           void Function(UpdateAlertPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateAlertPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateAlertPolicyRequest create() => UpdateAlertPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAlertPolicyRequest create() => UpdateAlertPolicyRequest._();
   UpdateAlertPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAlertPolicyRequest> createRepeated() =>
       $pb.PbList<UpdateAlertPolicyRequest>();
@@ -237,16 +248,16 @@ class UpdateAlertPolicyRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateAlertPolicyRequest _defaultInstance;
 
-  $2.FieldMask get updateMask => $_getN(0);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(0);
+  set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
   $core.bool hasUpdateMask() => $_has(0);
   void clearUpdateMask() => clearField(2);
 
-  $0.AlertPolicy get alertPolicy => $_getN(1);
-  set alertPolicy($0.AlertPolicy v) {
+  $1.AlertPolicy get alertPolicy => $_getN(1);
+  set alertPolicy($1.AlertPolicy v) {
     setField(3, v);
   }
 
@@ -260,20 +271,22 @@ class DeleteAlertPolicyRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
-  DeleteAlertPolicyRequest() : super();
-  DeleteAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteAlertPolicyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteAlertPolicyRequest._() : super();
+  factory DeleteAlertPolicyRequest() => create();
+  factory DeleteAlertPolicyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteAlertPolicyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteAlertPolicyRequest clone() =>
       DeleteAlertPolicyRequest()..mergeFromMessage(this);
   DeleteAlertPolicyRequest copyWith(
           void Function(DeleteAlertPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteAlertPolicyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteAlertPolicyRequest create() => DeleteAlertPolicyRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAlertPolicyRequest create() => DeleteAlertPolicyRequest._();
   DeleteAlertPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAlertPolicyRequest> createRepeated() =>
       $pb.PbList<DeleteAlertPolicyRequest>();

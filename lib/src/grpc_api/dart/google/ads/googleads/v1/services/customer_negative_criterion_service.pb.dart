@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/customer_negative_criterion_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/customer_negative_criterion.pb.dart' as $0;
-import '../../../../rpc/status.pb.dart' as $1;
+import '../resources/customer_negative_criterion.pb.dart' as $1;
+import '../../../../rpc/status.pb.dart' as $2;
 
 class GetCustomerNegativeCriterionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,15 @@ class GetCustomerNegativeCriterionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCustomerNegativeCriterionRequest() : super();
-  GetCustomerNegativeCriterionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCustomerNegativeCriterionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCustomerNegativeCriterionRequest._() : super();
+  factory GetCustomerNegativeCriterionRequest() => create();
+  factory GetCustomerNegativeCriterionRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCustomerNegativeCriterionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCustomerNegativeCriterionRequest clone() =>
       GetCustomerNegativeCriterionRequest()..mergeFromMessage(this);
   GetCustomerNegativeCriterionRequest copyWith(
@@ -33,8 +36,9 @@ class GetCustomerNegativeCriterionRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetCustomerNegativeCriterionRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetCustomerNegativeCriterionRequest create() =>
-      GetCustomerNegativeCriterionRequest();
+      GetCustomerNegativeCriterionRequest._();
   GetCustomerNegativeCriterionRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerNegativeCriterionRequest> createRepeated() =>
       $pb.PbList<GetCustomerNegativeCriterionRequest>();
@@ -62,13 +66,15 @@ class MutateCustomerNegativeCriteriaRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCustomerNegativeCriteriaRequest() : super();
-  MutateCustomerNegativeCriteriaRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerNegativeCriteriaRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerNegativeCriteriaRequest._() : super();
+  factory MutateCustomerNegativeCriteriaRequest() => create();
+  factory MutateCustomerNegativeCriteriaRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerNegativeCriteriaRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerNegativeCriteriaRequest clone() =>
       MutateCustomerNegativeCriteriaRequest()..mergeFromMessage(this);
   MutateCustomerNegativeCriteriaRequest copyWith(
@@ -76,8 +82,9 @@ class MutateCustomerNegativeCriteriaRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateCustomerNegativeCriteriaRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerNegativeCriteriaRequest create() =>
-      MutateCustomerNegativeCriteriaRequest();
+      MutateCustomerNegativeCriteriaRequest._();
   MutateCustomerNegativeCriteriaRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerNegativeCriteriaRequest> createRepeated() =>
       $pb.PbList<MutateCustomerNegativeCriteriaRequest>();
@@ -125,23 +132,24 @@ class CustomerNegativeCriterionOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CustomerNegativeCriterionOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CustomerNegativeCriterion>(
+    ..oo(0, [1, 2])
+    ..a<$1.CustomerNegativeCriterion>(
         1,
         'create_1',
         $pb.PbFieldType.OM,
-        $0.CustomerNegativeCriterion.getDefault,
-        $0.CustomerNegativeCriterion.create)
+        $1.CustomerNegativeCriterion.getDefault,
+        $1.CustomerNegativeCriterion.create)
     ..aOS(2, 'remove')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  CustomerNegativeCriterionOperation() : super();
-  CustomerNegativeCriterionOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerNegativeCriterionOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerNegativeCriterionOperation._() : super();
+  factory CustomerNegativeCriterionOperation() => create();
+  factory CustomerNegativeCriterionOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerNegativeCriterionOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerNegativeCriterionOperation clone() =>
       CustomerNegativeCriterionOperation()..mergeFromMessage(this);
   CustomerNegativeCriterionOperation copyWith(
@@ -149,8 +157,9 @@ class CustomerNegativeCriterionOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CustomerNegativeCriterionOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CustomerNegativeCriterionOperation create() =>
-      CustomerNegativeCriterionOperation();
+      CustomerNegativeCriterionOperation._();
   CustomerNegativeCriterionOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerNegativeCriterionOperation> createRepeated() =>
       $pb.PbList<CustomerNegativeCriterionOperation>();
@@ -162,8 +171,8 @@ class CustomerNegativeCriterionOperation extends $pb.GeneratedMessage {
       _CustomerNegativeCriterionOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CustomerNegativeCriterion get create_1 => $_getN(0);
-  set create_1($0.CustomerNegativeCriterion v) {
+  $1.CustomerNegativeCriterion get create_1 => $_getN(0);
+  set create_1($1.CustomerNegativeCriterion v) {
     setField(1, v);
   }
 
@@ -185,17 +194,19 @@ class MutateCustomerNegativeCriteriaResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCustomerNegativeCriteriaResult>(2, 'results', $pb.PbFieldType.PM,
         MutateCustomerNegativeCriteriaResult.create)
-    ..a<$1.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $1.Status.getDefault, $1.Status.create)
+    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCustomerNegativeCriteriaResponse() : super();
-  MutateCustomerNegativeCriteriaResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerNegativeCriteriaResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerNegativeCriteriaResponse._() : super();
+  factory MutateCustomerNegativeCriteriaResponse() => create();
+  factory MutateCustomerNegativeCriteriaResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerNegativeCriteriaResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerNegativeCriteriaResponse clone() =>
       MutateCustomerNegativeCriteriaResponse()..mergeFromMessage(this);
   MutateCustomerNegativeCriteriaResponse copyWith(
@@ -203,8 +214,9 @@ class MutateCustomerNegativeCriteriaResponse extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateCustomerNegativeCriteriaResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerNegativeCriteriaResponse create() =>
-      MutateCustomerNegativeCriteriaResponse();
+      MutateCustomerNegativeCriteriaResponse._();
   MutateCustomerNegativeCriteriaResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerNegativeCriteriaResponse> createRepeated() =>
       $pb.PbList<MutateCustomerNegativeCriteriaResponse>();
@@ -214,8 +226,8 @@ class MutateCustomerNegativeCriteriaResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCustomerNegativeCriteriaResult> get results => $_getList(0);
 
-  $1.Status get partialFailureError => $_getN(1);
-  set partialFailureError($1.Status v) {
+  $2.Status get partialFailureError => $_getN(1);
+  set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
@@ -230,13 +242,15 @@ class MutateCustomerNegativeCriteriaResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCustomerNegativeCriteriaResult() : super();
-  MutateCustomerNegativeCriteriaResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerNegativeCriteriaResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerNegativeCriteriaResult._() : super();
+  factory MutateCustomerNegativeCriteriaResult() => create();
+  factory MutateCustomerNegativeCriteriaResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerNegativeCriteriaResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerNegativeCriteriaResult clone() =>
       MutateCustomerNegativeCriteriaResult()..mergeFromMessage(this);
   MutateCustomerNegativeCriteriaResult copyWith(
@@ -244,8 +258,9 @@ class MutateCustomerNegativeCriteriaResult extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateCustomerNegativeCriteriaResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerNegativeCriteriaResult create() =>
-      MutateCustomerNegativeCriteriaResult();
+      MutateCustomerNegativeCriteriaResult._();
   MutateCustomerNegativeCriteriaResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerNegativeCriteriaResult> createRepeated() =>
       $pb.PbList<MutateCustomerNegativeCriteriaResult>();

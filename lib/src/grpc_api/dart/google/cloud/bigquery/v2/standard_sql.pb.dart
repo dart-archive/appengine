@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/v2/standard_sql.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,6 +25,7 @@ class StandardSqlDataType extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StandardSqlDataType',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
+    ..oo(0, [2, 3])
     ..e<StandardSqlDataType_TypeKind>(
         1,
         'typeKind',
@@ -35,21 +37,22 @@ class StandardSqlDataType extends $pb.GeneratedMessage {
         StandardSqlDataType.getDefault, StandardSqlDataType.create)
     ..a<StandardSqlStructType>(3, 'structType', $pb.PbFieldType.OM,
         StandardSqlStructType.getDefault, StandardSqlStructType.create)
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  StandardSqlDataType() : super();
-  StandardSqlDataType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StandardSqlDataType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StandardSqlDataType._() : super();
+  factory StandardSqlDataType() => create();
+  factory StandardSqlDataType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StandardSqlDataType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StandardSqlDataType clone() => StandardSqlDataType()..mergeFromMessage(this);
   StandardSqlDataType copyWith(void Function(StandardSqlDataType) updates) =>
       super.copyWith((message) => updates(message as StandardSqlDataType));
   $pb.BuilderInfo get info_ => _i;
-  static StandardSqlDataType create() => StandardSqlDataType();
+  @$core.pragma('dart2js:noInline')
+  static StandardSqlDataType create() => StandardSqlDataType._();
   StandardSqlDataType createEmptyInstance() => create();
   static $pb.PbList<StandardSqlDataType> createRepeated() =>
       $pb.PbList<StandardSqlDataType>();
@@ -94,18 +97,20 @@ class StandardSqlField extends $pb.GeneratedMessage {
         StandardSqlDataType.getDefault, StandardSqlDataType.create)
     ..hasRequiredFields = false;
 
-  StandardSqlField() : super();
-  StandardSqlField.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StandardSqlField.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StandardSqlField._() : super();
+  factory StandardSqlField() => create();
+  factory StandardSqlField.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StandardSqlField.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StandardSqlField clone() => StandardSqlField()..mergeFromMessage(this);
   StandardSqlField copyWith(void Function(StandardSqlField) updates) =>
       super.copyWith((message) => updates(message as StandardSqlField));
   $pb.BuilderInfo get info_ => _i;
-  static StandardSqlField create() => StandardSqlField();
+  @$core.pragma('dart2js:noInline')
+  static StandardSqlField create() => StandardSqlField._();
   StandardSqlField createEmptyInstance() => create();
   static $pb.PbList<StandardSqlField> createRepeated() =>
       $pb.PbList<StandardSqlField>();
@@ -137,20 +142,22 @@ class StandardSqlStructType extends $pb.GeneratedMessage {
         1, 'fields', $pb.PbFieldType.PM, StandardSqlField.create)
     ..hasRequiredFields = false;
 
-  StandardSqlStructType() : super();
-  StandardSqlStructType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StandardSqlStructType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StandardSqlStructType._() : super();
+  factory StandardSqlStructType() => create();
+  factory StandardSqlStructType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StandardSqlStructType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StandardSqlStructType clone() =>
       StandardSqlStructType()..mergeFromMessage(this);
   StandardSqlStructType copyWith(
           void Function(StandardSqlStructType) updates) =>
       super.copyWith((message) => updates(message as StandardSqlStructType));
   $pb.BuilderInfo get info_ => _i;
-  static StandardSqlStructType create() => StandardSqlStructType();
+  @$core.pragma('dart2js:noInline')
+  static StandardSqlStructType create() => StandardSqlStructType._();
   StandardSqlStructType createEmptyInstance() => create();
   static $pb.PbList<StandardSqlStructType> createRepeated() =>
       $pb.PbList<StandardSqlStructType>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/label.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -33,18 +34,20 @@ class Label extends $pb.GeneratedMessage {
         $1.TextLabel.getDefault, $1.TextLabel.create)
     ..hasRequiredFields = false;
 
-  Label() : super();
-  Label.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Label.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Label._() : super();
+  factory Label() => create();
+  factory Label.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Label.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Label clone() => Label()..mergeFromMessage(this);
   Label copyWith(void Function(Label) updates) =>
       super.copyWith((message) => updates(message as Label));
   $pb.BuilderInfo get info_ => _i;
-  static Label create() => Label();
+  @$core.pragma('dart2js:noInline')
+  static Label create() => Label._();
   Label createEmptyInstance() => create();
   static $pb.PbList<Label> createRepeated() => $pb.PbList<Label>();
   static Label getDefault() => _defaultInstance ??= create()..freeze();

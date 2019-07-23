@@ -1,23 +1,24 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/spanner.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $3;
-import 'transaction.pb.dart' as $2;
-import '../../protobuf/struct.pb.dart' as $4;
-import 'type.pb.dart' as $5;
-import 'result_set.pb.dart' as $1;
-import '../../rpc/status.pb.dart' as $6;
-import 'keys.pb.dart' as $7;
-import 'mutation.pb.dart' as $8;
+import '../../protobuf/timestamp.pb.dart' as $4;
+import 'transaction.pb.dart' as $3;
+import '../../protobuf/struct.pb.dart' as $5;
+import 'type.pb.dart' as $6;
+import 'result_set.pb.dart' as $2;
+import '../../rpc/status.pb.dart' as $7;
+import 'keys.pb.dart' as $8;
+import 'mutation.pb.dart' as $9;
 
 import 'spanner.pbenum.dart';
 
@@ -31,19 +32,21 @@ class CreateSessionRequest extends $pb.GeneratedMessage {
         2, 'session', $pb.PbFieldType.OM, Session.getDefault, Session.create)
     ..hasRequiredFields = false;
 
-  CreateSessionRequest() : super();
-  CreateSessionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateSessionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateSessionRequest._() : super();
+  factory CreateSessionRequest() => create();
+  factory CreateSessionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateSessionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateSessionRequest clone() =>
       CreateSessionRequest()..mergeFromMessage(this);
   CreateSessionRequest copyWith(void Function(CreateSessionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateSessionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateSessionRequest create() => CreateSessionRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateSessionRequest create() => CreateSessionRequest._();
   CreateSessionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSessionRequest> createRepeated() =>
       $pb.PbList<CreateSessionRequest>();
@@ -82,24 +85,26 @@ class Session extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
-    ..a<$3.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(4, 'approximateLastUseTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$4.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$4.Timestamp>(4, 'approximateLastUseTime', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Session() : super();
-  Session.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Session.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Session._() : super();
+  factory Session() => create();
+  factory Session.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Session.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Session clone() => Session()..mergeFromMessage(this);
   Session copyWith(void Function(Session) updates) =>
       super.copyWith((message) => updates(message as Session));
   $pb.BuilderInfo get info_ => _i;
-  static Session create() => Session();
+  @$core.pragma('dart2js:noInline')
+  static Session create() => Session._();
   Session createEmptyInstance() => create();
   static $pb.PbList<Session> createRepeated() => $pb.PbList<Session>();
   static Session getDefault() => _defaultInstance ??= create()..freeze();
@@ -115,16 +120,16 @@ class Session extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
-  $3.Timestamp get createTime => $_getN(2);
-  set createTime($3.Timestamp v) {
+  $4.Timestamp get createTime => $_getN(2);
+  set createTime($4.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasCreateTime() => $_has(2);
   void clearCreateTime() => clearField(3);
 
-  $3.Timestamp get approximateLastUseTime => $_getN(3);
-  set approximateLastUseTime($3.Timestamp v) {
+  $4.Timestamp get approximateLastUseTime => $_getN(3);
+  set approximateLastUseTime($4.Timestamp v) {
     setField(4, v);
   }
 
@@ -138,18 +143,20 @@ class GetSessionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetSessionRequest() : super();
-  GetSessionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetSessionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetSessionRequest._() : super();
+  factory GetSessionRequest() => create();
+  factory GetSessionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSessionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetSessionRequest clone() => GetSessionRequest()..mergeFromMessage(this);
   GetSessionRequest copyWith(void Function(GetSessionRequest) updates) =>
       super.copyWith((message) => updates(message as GetSessionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetSessionRequest create() => GetSessionRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetSessionRequest create() => GetSessionRequest._();
   GetSessionRequest createEmptyInstance() => create();
   static $pb.PbList<GetSessionRequest> createRepeated() =>
       $pb.PbList<GetSessionRequest>();
@@ -175,18 +182,20 @@ class ListSessionsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'filter')
     ..hasRequiredFields = false;
 
-  ListSessionsRequest() : super();
-  ListSessionsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListSessionsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListSessionsRequest._() : super();
+  factory ListSessionsRequest() => create();
+  factory ListSessionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSessionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListSessionsRequest clone() => ListSessionsRequest()..mergeFromMessage(this);
   ListSessionsRequest copyWith(void Function(ListSessionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListSessionsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListSessionsRequest create() => ListSessionsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListSessionsRequest create() => ListSessionsRequest._();
   ListSessionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListSessionsRequest> createRepeated() =>
       $pb.PbList<ListSessionsRequest>();
@@ -234,19 +243,21 @@ class ListSessionsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListSessionsResponse() : super();
-  ListSessionsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListSessionsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListSessionsResponse._() : super();
+  factory ListSessionsResponse() => create();
+  factory ListSessionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSessionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListSessionsResponse clone() =>
       ListSessionsResponse()..mergeFromMessage(this);
   ListSessionsResponse copyWith(void Function(ListSessionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListSessionsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListSessionsResponse create() => ListSessionsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListSessionsResponse create() => ListSessionsResponse._();
   ListSessionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListSessionsResponse> createRepeated() =>
       $pb.PbList<ListSessionsResponse>();
@@ -271,19 +282,21 @@ class DeleteSessionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteSessionRequest() : super();
-  DeleteSessionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteSessionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteSessionRequest._() : super();
+  factory DeleteSessionRequest() => create();
+  factory DeleteSessionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteSessionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteSessionRequest clone() =>
       DeleteSessionRequest()..mergeFromMessage(this);
   DeleteSessionRequest copyWith(void Function(DeleteSessionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteSessionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteSessionRequest create() => DeleteSessionRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSessionRequest create() => DeleteSessionRequest._();
   DeleteSessionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSessionRequest> createRepeated() =>
       $pb.PbList<DeleteSessionRequest>();
@@ -304,18 +317,18 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteSqlRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
+    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$4.Struct>(
-        4, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
-    ..m<$core.String, $5.Type>(
+    ..a<$5.Struct>(
+        4, 'params', $pb.PbFieldType.OM, $5.Struct.getDefault, $5.Struct.create)
+    ..m<$core.String, $6.Type>(
         5,
         'paramTypes',
         'ExecuteSqlRequest.ParamTypesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $5.Type.create,
+        $6.Type.create,
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
@@ -331,18 +344,20 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
     ..aInt64(9, 'seqno')
     ..hasRequiredFields = false;
 
-  ExecuteSqlRequest() : super();
-  ExecuteSqlRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExecuteSqlRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExecuteSqlRequest._() : super();
+  factory ExecuteSqlRequest() => create();
+  factory ExecuteSqlRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExecuteSqlRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExecuteSqlRequest clone() => ExecuteSqlRequest()..mergeFromMessage(this);
   ExecuteSqlRequest copyWith(void Function(ExecuteSqlRequest) updates) =>
       super.copyWith((message) => updates(message as ExecuteSqlRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExecuteSqlRequest create() => ExecuteSqlRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteSqlRequest create() => ExecuteSqlRequest._();
   ExecuteSqlRequest createEmptyInstance() => create();
   static $pb.PbList<ExecuteSqlRequest> createRepeated() =>
       $pb.PbList<ExecuteSqlRequest>();
@@ -358,8 +373,8 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $2.TransactionSelector get transaction => $_getN(1);
-  set transaction($2.TransactionSelector v) {
+  $3.TransactionSelector get transaction => $_getN(1);
+  set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -374,15 +389,15 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   $core.bool hasSql() => $_has(2);
   void clearSql() => clearField(3);
 
-  $4.Struct get params => $_getN(3);
-  set params($4.Struct v) {
+  $5.Struct get params => $_getN(3);
+  set params($5.Struct v) {
     setField(4, v);
   }
 
   $core.bool hasParams() => $_has(3);
   void clearParams() => clearField(4);
 
-  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(4);
+  $core.Map<$core.String, $6.Type> get paramTypes => $_getMap(4);
 
   $core.List<$core.int> get resumeToken => $_getN(5);
   set resumeToken($core.List<$core.int> v) {
@@ -422,27 +437,28 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
       'ExecuteBatchDmlRequest.Statement',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'sql')
-    ..a<$4.Struct>(
-        2, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
-    ..m<$core.String, $5.Type>(
+    ..a<$5.Struct>(
+        2, 'params', $pb.PbFieldType.OM, $5.Struct.getDefault, $5.Struct.create)
+    ..m<$core.String, $6.Type>(
         3,
         'paramTypes',
         'ExecuteBatchDmlRequest.Statement.ParamTypesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $5.Type.create,
+        $6.Type.create,
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
-  ExecuteBatchDmlRequest_Statement() : super();
-  ExecuteBatchDmlRequest_Statement.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExecuteBatchDmlRequest_Statement.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExecuteBatchDmlRequest_Statement._() : super();
+  factory ExecuteBatchDmlRequest_Statement() => create();
+  factory ExecuteBatchDmlRequest_Statement.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExecuteBatchDmlRequest_Statement.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExecuteBatchDmlRequest_Statement clone() =>
       ExecuteBatchDmlRequest_Statement()..mergeFromMessage(this);
   ExecuteBatchDmlRequest_Statement copyWith(
@@ -450,8 +466,9 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExecuteBatchDmlRequest_Statement));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExecuteBatchDmlRequest_Statement create() =>
-      ExecuteBatchDmlRequest_Statement();
+      ExecuteBatchDmlRequest_Statement._();
   ExecuteBatchDmlRequest_Statement createEmptyInstance() => create();
   static $pb.PbList<ExecuteBatchDmlRequest_Statement> createRepeated() =>
       $pb.PbList<ExecuteBatchDmlRequest_Statement>();
@@ -467,42 +484,44 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
   $core.bool hasSql() => $_has(0);
   void clearSql() => clearField(1);
 
-  $4.Struct get params => $_getN(1);
-  set params($4.Struct v) {
+  $5.Struct get params => $_getN(1);
+  set params($5.Struct v) {
     setField(2, v);
   }
 
   $core.bool hasParams() => $_has(1);
   void clearParams() => clearField(2);
 
-  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(2);
+  $core.Map<$core.String, $6.Type> get paramTypes => $_getMap(2);
 }
 
 class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
+    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
     ..pc<ExecuteBatchDmlRequest_Statement>(3, 'statements', $pb.PbFieldType.PM,
         ExecuteBatchDmlRequest_Statement.create)
     ..aInt64(4, 'seqno')
     ..hasRequiredFields = false;
 
-  ExecuteBatchDmlRequest() : super();
-  ExecuteBatchDmlRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExecuteBatchDmlRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExecuteBatchDmlRequest._() : super();
+  factory ExecuteBatchDmlRequest() => create();
+  factory ExecuteBatchDmlRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExecuteBatchDmlRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExecuteBatchDmlRequest clone() =>
       ExecuteBatchDmlRequest()..mergeFromMessage(this);
   ExecuteBatchDmlRequest copyWith(
           void Function(ExecuteBatchDmlRequest) updates) =>
       super.copyWith((message) => updates(message as ExecuteBatchDmlRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ExecuteBatchDmlRequest create() => ExecuteBatchDmlRequest();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteBatchDmlRequest create() => ExecuteBatchDmlRequest._();
   ExecuteBatchDmlRequest createEmptyInstance() => create();
   static $pb.PbList<ExecuteBatchDmlRequest> createRepeated() =>
       $pb.PbList<ExecuteBatchDmlRequest>();
@@ -518,8 +537,8 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $2.TransactionSelector get transaction => $_getN(1);
-  set transaction($2.TransactionSelector v) {
+  $3.TransactionSelector get transaction => $_getN(1);
+  set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -540,25 +559,27 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
 class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlResponse',
       package: const $pb.PackageName('google.spanner.v1'))
-    ..pc<$1.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM, $1.ResultSet.create)
-    ..a<$6.Status>(
-        2, 'status', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
+    ..pc<$2.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM, $2.ResultSet.create)
+    ..a<$7.Status>(
+        2, 'status', $pb.PbFieldType.OM, $7.Status.getDefault, $7.Status.create)
     ..hasRequiredFields = false;
 
-  ExecuteBatchDmlResponse() : super();
-  ExecuteBatchDmlResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExecuteBatchDmlResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExecuteBatchDmlResponse._() : super();
+  factory ExecuteBatchDmlResponse() => create();
+  factory ExecuteBatchDmlResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExecuteBatchDmlResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExecuteBatchDmlResponse clone() =>
       ExecuteBatchDmlResponse()..mergeFromMessage(this);
   ExecuteBatchDmlResponse copyWith(
           void Function(ExecuteBatchDmlResponse) updates) =>
       super.copyWith((message) => updates(message as ExecuteBatchDmlResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ExecuteBatchDmlResponse create() => ExecuteBatchDmlResponse();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteBatchDmlResponse create() => ExecuteBatchDmlResponse._();
   ExecuteBatchDmlResponse createEmptyInstance() => create();
   static $pb.PbList<ExecuteBatchDmlResponse> createRepeated() =>
       $pb.PbList<ExecuteBatchDmlResponse>();
@@ -566,10 +587,10 @@ class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExecuteBatchDmlResponse _defaultInstance;
 
-  $core.List<$1.ResultSet> get resultSets => $_getList(0);
+  $core.List<$2.ResultSet> get resultSets => $_getList(0);
 
-  $6.Status get status => $_getN(1);
-  set status($6.Status v) {
+  $7.Status get status => $_getN(1);
+  set status($7.Status v) {
     setField(2, v);
   }
 
@@ -584,18 +605,20 @@ class PartitionOptions extends $pb.GeneratedMessage {
     ..aInt64(2, 'maxPartitions')
     ..hasRequiredFields = false;
 
-  PartitionOptions() : super();
-  PartitionOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartitionOptions._() : super();
+  factory PartitionOptions() => create();
+  factory PartitionOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartitionOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PartitionOptions clone() => PartitionOptions()..mergeFromMessage(this);
   PartitionOptions copyWith(void Function(PartitionOptions) updates) =>
       super.copyWith((message) => updates(message as PartitionOptions));
   $pb.BuilderInfo get info_ => _i;
-  static PartitionOptions create() => PartitionOptions();
+  @$core.pragma('dart2js:noInline')
+  static PartitionOptions create() => PartitionOptions._();
   PartitionOptions createEmptyInstance() => create();
   static $pb.PbList<PartitionOptions> createRepeated() =>
       $pb.PbList<PartitionOptions>();
@@ -624,18 +647,18 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionQueryRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
+    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$4.Struct>(
-        4, 'params', $pb.PbFieldType.OM, $4.Struct.getDefault, $4.Struct.create)
-    ..m<$core.String, $5.Type>(
+    ..a<$5.Struct>(
+        4, 'params', $pb.PbFieldType.OM, $5.Struct.getDefault, $5.Struct.create)
+    ..m<$core.String, $6.Type>(
         5,
         'paramTypes',
         'PartitionQueryRequest.ParamTypesEntry',
         $pb.PbFieldType.OS,
         $pb.PbFieldType.OM,
-        $5.Type.create,
+        $6.Type.create,
         null,
         null,
         const $pb.PackageName('google.spanner.v1'))
@@ -643,20 +666,22 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
         PartitionOptions.getDefault, PartitionOptions.create)
     ..hasRequiredFields = false;
 
-  PartitionQueryRequest() : super();
-  PartitionQueryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionQueryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartitionQueryRequest._() : super();
+  factory PartitionQueryRequest() => create();
+  factory PartitionQueryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartitionQueryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PartitionQueryRequest clone() =>
       PartitionQueryRequest()..mergeFromMessage(this);
   PartitionQueryRequest copyWith(
           void Function(PartitionQueryRequest) updates) =>
       super.copyWith((message) => updates(message as PartitionQueryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PartitionQueryRequest create() => PartitionQueryRequest();
+  @$core.pragma('dart2js:noInline')
+  static PartitionQueryRequest create() => PartitionQueryRequest._();
   PartitionQueryRequest createEmptyInstance() => create();
   static $pb.PbList<PartitionQueryRequest> createRepeated() =>
       $pb.PbList<PartitionQueryRequest>();
@@ -672,8 +697,8 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $2.TransactionSelector get transaction => $_getN(1);
-  set transaction($2.TransactionSelector v) {
+  $3.TransactionSelector get transaction => $_getN(1);
+  set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -688,15 +713,15 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   $core.bool hasSql() => $_has(2);
   void clearSql() => clearField(3);
 
-  $4.Struct get params => $_getN(3);
-  set params($4.Struct v) {
+  $5.Struct get params => $_getN(3);
+  set params($5.Struct v) {
     setField(4, v);
   }
 
   $core.bool hasParams() => $_has(3);
   void clearParams() => clearField(4);
 
-  $core.Map<$core.String, $5.Type> get paramTypes => $_getMap(4);
+  $core.Map<$core.String, $6.Type> get paramTypes => $_getMap(4);
 
   PartitionOptions get partitionOptions => $_getN(5);
   set partitionOptions(PartitionOptions v) {
@@ -711,30 +736,32 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionReadRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
+    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<$7.KeySet>(
-        6, 'keySet', $pb.PbFieldType.OM, $7.KeySet.getDefault, $7.KeySet.create)
+    ..a<$8.KeySet>(
+        6, 'keySet', $pb.PbFieldType.OM, $8.KeySet.getDefault, $8.KeySet.create)
     ..a<PartitionOptions>(9, 'partitionOptions', $pb.PbFieldType.OM,
         PartitionOptions.getDefault, PartitionOptions.create)
     ..hasRequiredFields = false;
 
-  PartitionReadRequest() : super();
-  PartitionReadRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionReadRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartitionReadRequest._() : super();
+  factory PartitionReadRequest() => create();
+  factory PartitionReadRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartitionReadRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PartitionReadRequest clone() =>
       PartitionReadRequest()..mergeFromMessage(this);
   PartitionReadRequest copyWith(void Function(PartitionReadRequest) updates) =>
       super.copyWith((message) => updates(message as PartitionReadRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PartitionReadRequest create() => PartitionReadRequest();
+  @$core.pragma('dart2js:noInline')
+  static PartitionReadRequest create() => PartitionReadRequest._();
   PartitionReadRequest createEmptyInstance() => create();
   static $pb.PbList<PartitionReadRequest> createRepeated() =>
       $pb.PbList<PartitionReadRequest>();
@@ -750,8 +777,8 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $2.TransactionSelector get transaction => $_getN(1);
-  set transaction($2.TransactionSelector v) {
+  $3.TransactionSelector get transaction => $_getN(1);
+  set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -776,8 +803,8 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get columns => $_getList(4);
 
-  $7.KeySet get keySet => $_getN(5);
-  set keySet($7.KeySet v) {
+  $8.KeySet get keySet => $_getN(5);
+  set keySet($8.KeySet v) {
     setField(6, v);
   }
 
@@ -799,18 +826,20 @@ class Partition extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'partitionToken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  Partition() : super();
-  Partition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Partition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Partition._() : super();
+  factory Partition() => create();
+  factory Partition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Partition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Partition clone() => Partition()..mergeFromMessage(this);
   Partition copyWith(void Function(Partition) updates) =>
       super.copyWith((message) => updates(message as Partition));
   $pb.BuilderInfo get info_ => _i;
-  static Partition create() => Partition();
+  @$core.pragma('dart2js:noInline')
+  static Partition create() => Partition._();
   Partition createEmptyInstance() => create();
   static $pb.PbList<Partition> createRepeated() => $pb.PbList<Partition>();
   static Partition getDefault() => _defaultInstance ??= create()..freeze();
@@ -829,22 +858,24 @@ class PartitionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionResponse',
       package: const $pb.PackageName('google.spanner.v1'))
     ..pc<Partition>(1, 'partitions', $pb.PbFieldType.PM, Partition.create)
-    ..a<$2.Transaction>(2, 'transaction', $pb.PbFieldType.OM,
-        $2.Transaction.getDefault, $2.Transaction.create)
+    ..a<$3.Transaction>(2, 'transaction', $pb.PbFieldType.OM,
+        $3.Transaction.getDefault, $3.Transaction.create)
     ..hasRequiredFields = false;
 
-  PartitionResponse() : super();
-  PartitionResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartitionResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartitionResponse._() : super();
+  factory PartitionResponse() => create();
+  factory PartitionResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartitionResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PartitionResponse clone() => PartitionResponse()..mergeFromMessage(this);
   PartitionResponse copyWith(void Function(PartitionResponse) updates) =>
       super.copyWith((message) => updates(message as PartitionResponse));
   $pb.BuilderInfo get info_ => _i;
-  static PartitionResponse create() => PartitionResponse();
+  @$core.pragma('dart2js:noInline')
+  static PartitionResponse create() => PartitionResponse._();
   PartitionResponse createEmptyInstance() => create();
   static $pb.PbList<PartitionResponse> createRepeated() =>
       $pb.PbList<PartitionResponse>();
@@ -854,8 +885,8 @@ class PartitionResponse extends $pb.GeneratedMessage {
 
   $core.List<Partition> get partitions => $_getList(0);
 
-  $2.Transaction get transaction => $_getN(1);
-  set transaction($2.Transaction v) {
+  $3.Transaction get transaction => $_getN(1);
+  set transaction($3.Transaction v) {
     setField(2, v);
   }
 
@@ -867,30 +898,32 @@ class ReadRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$2.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $2.TransactionSelector.getDefault, $2.TransactionSelector.create)
+    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
+        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<$7.KeySet>(
-        6, 'keySet', $pb.PbFieldType.OM, $7.KeySet.getDefault, $7.KeySet.create)
+    ..a<$8.KeySet>(
+        6, 'keySet', $pb.PbFieldType.OM, $8.KeySet.getDefault, $8.KeySet.create)
     ..aInt64(8, 'limit')
     ..a<$core.List<$core.int>>(9, 'resumeToken', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(10, 'partitionToken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  ReadRequest() : super();
-  ReadRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadRequest._() : super();
+  factory ReadRequest() => create();
+  factory ReadRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadRequest clone() => ReadRequest()..mergeFromMessage(this);
   ReadRequest copyWith(void Function(ReadRequest) updates) =>
       super.copyWith((message) => updates(message as ReadRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ReadRequest create() => ReadRequest();
+  @$core.pragma('dart2js:noInline')
+  static ReadRequest create() => ReadRequest._();
   ReadRequest createEmptyInstance() => create();
   static $pb.PbList<ReadRequest> createRepeated() => $pb.PbList<ReadRequest>();
   static ReadRequest getDefault() => _defaultInstance ??= create()..freeze();
@@ -904,8 +937,8 @@ class ReadRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $2.TransactionSelector get transaction => $_getN(1);
-  set transaction($2.TransactionSelector v) {
+  $3.TransactionSelector get transaction => $_getN(1);
+  set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
@@ -930,8 +963,8 @@ class ReadRequest extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get columns => $_getList(4);
 
-  $7.KeySet get keySet => $_getN(5);
-  set keySet($7.KeySet v) {
+  $8.KeySet get keySet => $_getN(5);
+  set keySet($8.KeySet v) {
     setField(6, v);
   }
 
@@ -967,24 +1000,26 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
       package: const $pb.PackageName('google.spanner.v1'))
     ..aOS(1, 'session')
-    ..a<$2.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
-        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
+    ..a<$3.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
+        $3.TransactionOptions.getDefault, $3.TransactionOptions.create)
     ..hasRequiredFields = false;
 
-  BeginTransactionRequest() : super();
-  BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BeginTransactionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BeginTransactionRequest._() : super();
+  factory BeginTransactionRequest() => create();
+  factory BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BeginTransactionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BeginTransactionRequest clone() =>
       BeginTransactionRequest()..mergeFromMessage(this);
   BeginTransactionRequest copyWith(
           void Function(BeginTransactionRequest) updates) =>
       super.copyWith((message) => updates(message as BeginTransactionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BeginTransactionRequest create() => BeginTransactionRequest();
+  @$core.pragma('dart2js:noInline')
+  static BeginTransactionRequest create() => BeginTransactionRequest._();
   BeginTransactionRequest createEmptyInstance() => create();
   static $pb.PbList<BeginTransactionRequest> createRepeated() =>
       $pb.PbList<BeginTransactionRequest>();
@@ -1000,8 +1035,8 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   $core.bool hasSession() => $_has(0);
   void clearSession() => clearField(1);
 
-  $2.TransactionOptions get options => $_getN(1);
-  set options($2.TransactionOptions v) {
+  $3.TransactionOptions get options => $_getN(1);
+  set options($3.TransactionOptions v) {
     setField(2, v);
   }
 
@@ -1020,26 +1055,28 @@ class CommitRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [2, 3])
     ..aOS(1, 'session')
     ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
-    ..a<$2.TransactionOptions>(3, 'singleUseTransaction', $pb.PbFieldType.OM,
-        $2.TransactionOptions.getDefault, $2.TransactionOptions.create)
-    ..pc<$8.Mutation>(4, 'mutations', $pb.PbFieldType.PM, $8.Mutation.create)
-    ..oo(0, [2, 3])
+    ..a<$3.TransactionOptions>(3, 'singleUseTransaction', $pb.PbFieldType.OM,
+        $3.TransactionOptions.getDefault, $3.TransactionOptions.create)
+    ..pc<$9.Mutation>(4, 'mutations', $pb.PbFieldType.PM, $9.Mutation.create)
     ..hasRequiredFields = false;
 
-  CommitRequest() : super();
-  CommitRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommitRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommitRequest._() : super();
+  factory CommitRequest() => create();
+  factory CommitRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommitRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
   CommitRequest copyWith(void Function(CommitRequest) updates) =>
       super.copyWith((message) => updates(message as CommitRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CommitRequest create() => CommitRequest();
+  @$core.pragma('dart2js:noInline')
+  static CommitRequest create() => CommitRequest._();
   CommitRequest createEmptyInstance() => create();
   static $pb.PbList<CommitRequest> createRepeated() =>
       $pb.PbList<CommitRequest>();
@@ -1066,44 +1103,46 @@ class CommitRequest extends $pb.GeneratedMessage {
   $core.bool hasTransactionId() => $_has(1);
   void clearTransactionId() => clearField(2);
 
-  $2.TransactionOptions get singleUseTransaction => $_getN(2);
-  set singleUseTransaction($2.TransactionOptions v) {
+  $3.TransactionOptions get singleUseTransaction => $_getN(2);
+  set singleUseTransaction($3.TransactionOptions v) {
     setField(3, v);
   }
 
   $core.bool hasSingleUseTransaction() => $_has(2);
   void clearSingleUseTransaction() => clearField(3);
 
-  $core.List<$8.Mutation> get mutations => $_getList(3);
+  $core.List<$9.Mutation> get mutations => $_getList(3);
 }
 
 class CommitResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
       package: const $pb.PackageName('google.spanner.v1'))
-    ..a<$3.Timestamp>(1, 'commitTimestamp', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$4.Timestamp>(1, 'commitTimestamp', $pb.PbFieldType.OM,
+        $4.Timestamp.getDefault, $4.Timestamp.create)
     ..hasRequiredFields = false;
 
-  CommitResponse() : super();
-  CommitResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CommitResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CommitResponse._() : super();
+  factory CommitResponse() => create();
+  factory CommitResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CommitResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
   CommitResponse copyWith(void Function(CommitResponse) updates) =>
       super.copyWith((message) => updates(message as CommitResponse));
   $pb.BuilderInfo get info_ => _i;
-  static CommitResponse create() => CommitResponse();
+  @$core.pragma('dart2js:noInline')
+  static CommitResponse create() => CommitResponse._();
   CommitResponse createEmptyInstance() => create();
   static $pb.PbList<CommitResponse> createRepeated() =>
       $pb.PbList<CommitResponse>();
   static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
   static CommitResponse _defaultInstance;
 
-  $3.Timestamp get commitTimestamp => $_getN(0);
-  set commitTimestamp($3.Timestamp v) {
+  $4.Timestamp get commitTimestamp => $_getN(0);
+  set commitTimestamp($4.Timestamp v) {
     setField(1, v);
   }
 
@@ -1118,18 +1157,20 @@ class RollbackRequest extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  RollbackRequest() : super();
-  RollbackRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RollbackRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RollbackRequest._() : super();
+  factory RollbackRequest() => create();
+  factory RollbackRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RollbackRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
   RollbackRequest copyWith(void Function(RollbackRequest) updates) =>
       super.copyWith((message) => updates(message as RollbackRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RollbackRequest create() => RollbackRequest();
+  @$core.pragma('dart2js:noInline')
+  static RollbackRequest create() => RollbackRequest._();
   RollbackRequest createEmptyInstance() => create();
   static $pb.PbList<RollbackRequest> createRepeated() =>
       $pb.PbList<RollbackRequest>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/mutation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,18 +21,20 @@ class Mutation_Write extends $pb.GeneratedMessage {
     ..pc<$0.ListValue>(3, 'values', $pb.PbFieldType.PM, $0.ListValue.create)
     ..hasRequiredFields = false;
 
-  Mutation_Write() : super();
-  Mutation_Write.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_Write.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_Write._() : super();
+  factory Mutation_Write() => create();
+  factory Mutation_Write.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation_Write.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation_Write clone() => Mutation_Write()..mergeFromMessage(this);
   Mutation_Write copyWith(void Function(Mutation_Write) updates) =>
       super.copyWith((message) => updates(message as Mutation_Write));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation_Write create() => Mutation_Write();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_Write create() => Mutation_Write._();
   Mutation_Write createEmptyInstance() => create();
   static $pb.PbList<Mutation_Write> createRepeated() =>
       $pb.PbList<Mutation_Write>();
@@ -59,18 +62,20 @@ class Mutation_Delete extends $pb.GeneratedMessage {
         2, 'keySet', $pb.PbFieldType.OM, $1.KeySet.getDefault, $1.KeySet.create)
     ..hasRequiredFields = false;
 
-  Mutation_Delete() : super();
-  Mutation_Delete.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation_Delete.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation_Delete._() : super();
+  factory Mutation_Delete() => create();
+  factory Mutation_Delete.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation_Delete.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation_Delete clone() => Mutation_Delete()..mergeFromMessage(this);
   Mutation_Delete copyWith(void Function(Mutation_Delete) updates) =>
       super.copyWith((message) => updates(message as Mutation_Delete));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation_Delete create() => Mutation_Delete();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_Delete create() => Mutation_Delete._();
   Mutation_Delete createEmptyInstance() => create();
   static $pb.PbList<Mutation_Delete> createRepeated() =>
       $pb.PbList<Mutation_Delete>();
@@ -116,6 +121,7 @@ class Mutation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [1, 2, 3, 4, 5])
     ..a<Mutation_Write>(1, 'insert', $pb.PbFieldType.OM,
         Mutation_Write.getDefault, Mutation_Write.create)
     ..a<Mutation_Write>(2, 'update', $pb.PbFieldType.OM,
@@ -126,21 +132,22 @@ class Mutation extends $pb.GeneratedMessage {
         Mutation_Write.getDefault, Mutation_Write.create)
     ..a<Mutation_Delete>(5, 'delete', $pb.PbFieldType.OM,
         Mutation_Delete.getDefault, Mutation_Delete.create)
-    ..oo(0, [1, 2, 3, 4, 5])
     ..hasRequiredFields = false;
 
-  Mutation() : super();
-  Mutation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mutation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mutation._() : super();
+  factory Mutation() => create();
+  factory Mutation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mutation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mutation clone() => Mutation()..mergeFromMessage(this);
   Mutation copyWith(void Function(Mutation) updates) =>
       super.copyWith((message) => updates(message as Mutation));
   $pb.BuilderInfo get info_ => _i;
-  static Mutation create() => Mutation();
+  @$core.pragma('dart2js:noInline')
+  static Mutation create() => Mutation._();
   Mutation createEmptyInstance() => create();
   static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
   static Mutation getDefault() => _defaultInstance ??= create()..freeze();

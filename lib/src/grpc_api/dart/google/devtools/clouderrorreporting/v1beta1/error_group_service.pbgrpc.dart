@@ -1,42 +1,43 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouderrorreporting/v1beta1/error_group_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'error_group_service.pb.dart';
-import 'common.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'error_group_service.pb.dart' as $0;
+import 'common.pb.dart' as $1;
 export 'error_group_service.pb.dart';
 
 class ErrorGroupServiceClient extends $grpc.Client {
-  static final _$getGroup = $grpc.ClientMethod<GetGroupRequest, $0.ErrorGroup>(
+  static final _$getGroup = $grpc.ClientMethod<$0.GetGroupRequest,
+          $1.ErrorGroup>(
       '/google.devtools.clouderrorreporting.v1beta1.ErrorGroupService/GetGroup',
-      (GetGroupRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.ErrorGroup.fromBuffer(value));
-  static final _$updateGroup = $grpc.ClientMethod<UpdateGroupRequest,
-          $0.ErrorGroup>(
+      ($0.GetGroupRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ErrorGroup.fromBuffer(value));
+  static final _$updateGroup = $grpc.ClientMethod<$0.UpdateGroupRequest,
+          $1.ErrorGroup>(
       '/google.devtools.clouderrorreporting.v1beta1.ErrorGroupService/UpdateGroup',
-      (UpdateGroupRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.ErrorGroup.fromBuffer(value));
+      ($0.UpdateGroupRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ErrorGroup.fromBuffer(value));
 
   ErrorGroupServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.ErrorGroup> getGroup(GetGroupRequest request,
+  $grpc.ResponseFuture<$1.ErrorGroup> getGroup($0.GetGroupRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getGroup, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.ErrorGroup> updateGroup(UpdateGroupRequest request,
+  $grpc.ResponseFuture<$1.ErrorGroup> updateGroup($0.UpdateGroupRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateGroup, $async.Stream.fromIterable([request]),
@@ -50,34 +51,35 @@ abstract class ErrorGroupServiceBase extends $grpc.Service {
       'google.devtools.clouderrorreporting.v1beta1.ErrorGroupService';
 
   ErrorGroupServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetGroupRequest, $0.ErrorGroup>(
+    $addMethod($grpc.ServiceMethod<$0.GetGroupRequest, $1.ErrorGroup>(
         'GetGroup',
         getGroup_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetGroupRequest.fromBuffer(value),
-        ($0.ErrorGroup value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateGroupRequest, $0.ErrorGroup>(
+        ($core.List<$core.int> value) => $0.GetGroupRequest.fromBuffer(value),
+        ($1.ErrorGroup value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateGroupRequest, $1.ErrorGroup>(
         'UpdateGroup',
         updateGroup_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateGroupRequest.fromBuffer(value),
-        ($0.ErrorGroup value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) =>
+            $0.UpdateGroupRequest.fromBuffer(value),
+        ($1.ErrorGroup value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.ErrorGroup> getGroup_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.ErrorGroup> getGroup_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.GetGroupRequest> request) async {
     return getGroup(call, await request);
   }
 
-  $async.Future<$0.ErrorGroup> updateGroup_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.ErrorGroup> updateGroup_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateGroupRequest> request) async {
     return updateGroup(call, await request);
   }
 
-  $async.Future<$0.ErrorGroup> getGroup(
-      $grpc.ServiceCall call, GetGroupRequest request);
-  $async.Future<$0.ErrorGroup> updateGroup(
-      $grpc.ServiceCall call, UpdateGroupRequest request);
+  $async.Future<$1.ErrorGroup> getGroup(
+      $grpc.ServiceCall call, $0.GetGroupRequest request);
+  $async.Future<$1.ErrorGroup> updateGroup(
+      $grpc.ServiceCall call, $0.UpdateGroupRequest request);
 }

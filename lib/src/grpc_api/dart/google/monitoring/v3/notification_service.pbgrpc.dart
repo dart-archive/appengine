@@ -1,93 +1,95 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/monitoring/v3/notification_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'notification_service.pb.dart';
-import 'notification.pb.dart' as $0;
-import '../../protobuf/empty.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'notification_service.pb.dart' as $0;
+import 'notification.pb.dart' as $1;
+import '../../protobuf/empty.pb.dart' as $2;
 export 'notification_service.pb.dart';
 
 class NotificationChannelServiceClient extends $grpc.Client {
   static final _$listNotificationChannelDescriptors = $grpc.ClientMethod<
-          ListNotificationChannelDescriptorsRequest,
-          ListNotificationChannelDescriptorsResponse>(
+          $0.ListNotificationChannelDescriptorsRequest,
+          $0.ListNotificationChannelDescriptorsResponse>(
       '/google.monitoring.v3.NotificationChannelService/ListNotificationChannelDescriptors',
-      (ListNotificationChannelDescriptorsRequest value) =>
+      ($0.ListNotificationChannelDescriptorsRequest value) =>
           value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListNotificationChannelDescriptorsResponse.fromBuffer(value));
+          $0.ListNotificationChannelDescriptorsResponse.fromBuffer(value));
   static final _$getNotificationChannelDescriptor = $grpc.ClientMethod<
-          GetNotificationChannelDescriptorRequest,
-          $0.NotificationChannelDescriptor>(
+          $0.GetNotificationChannelDescriptorRequest,
+          $1.NotificationChannelDescriptor>(
       '/google.monitoring.v3.NotificationChannelService/GetNotificationChannelDescriptor',
-      (GetNotificationChannelDescriptorRequest value) => value.writeToBuffer(),
+      ($0.GetNotificationChannelDescriptorRequest value) =>
+          value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.NotificationChannelDescriptor.fromBuffer(value));
+          $1.NotificationChannelDescriptor.fromBuffer(value));
   static final _$listNotificationChannels = $grpc.ClientMethod<
-          ListNotificationChannelsRequest, ListNotificationChannelsResponse>(
+          $0.ListNotificationChannelsRequest,
+          $0.ListNotificationChannelsResponse>(
       '/google.monitoring.v3.NotificationChannelService/ListNotificationChannels',
-      (ListNotificationChannelsRequest value) => value.writeToBuffer(),
+      ($0.ListNotificationChannelsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListNotificationChannelsResponse.fromBuffer(value));
+          $0.ListNotificationChannelsResponse.fromBuffer(value));
   static final _$getNotificationChannel = $grpc.ClientMethod<
-          GetNotificationChannelRequest, $0.NotificationChannel>(
+          $0.GetNotificationChannelRequest, $1.NotificationChannel>(
       '/google.monitoring.v3.NotificationChannelService/GetNotificationChannel',
-      (GetNotificationChannelRequest value) => value.writeToBuffer(),
+      ($0.GetNotificationChannelRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.NotificationChannel.fromBuffer(value));
+          $1.NotificationChannel.fromBuffer(value));
   static final _$createNotificationChannel = $grpc.ClientMethod<
-          CreateNotificationChannelRequest, $0.NotificationChannel>(
+          $0.CreateNotificationChannelRequest, $1.NotificationChannel>(
       '/google.monitoring.v3.NotificationChannelService/CreateNotificationChannel',
-      (CreateNotificationChannelRequest value) => value.writeToBuffer(),
+      ($0.CreateNotificationChannelRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.NotificationChannel.fromBuffer(value));
+          $1.NotificationChannel.fromBuffer(value));
   static final _$updateNotificationChannel = $grpc.ClientMethod<
-          UpdateNotificationChannelRequest, $0.NotificationChannel>(
+          $0.UpdateNotificationChannelRequest, $1.NotificationChannel>(
       '/google.monitoring.v3.NotificationChannelService/UpdateNotificationChannel',
-      (UpdateNotificationChannelRequest value) => value.writeToBuffer(),
+      ($0.UpdateNotificationChannelRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.NotificationChannel.fromBuffer(value));
+          $1.NotificationChannel.fromBuffer(value));
   static final _$deleteNotificationChannel = $grpc.ClientMethod<
-          DeleteNotificationChannelRequest, $1.Empty>(
+          $0.DeleteNotificationChannelRequest, $2.Empty>(
       '/google.monitoring.v3.NotificationChannelService/DeleteNotificationChannel',
-      (DeleteNotificationChannelRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+      ($0.DeleteNotificationChannelRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
   static final _$sendNotificationChannelVerificationCode = $grpc.ClientMethod<
-          SendNotificationChannelVerificationCodeRequest, $1.Empty>(
+          $0.SendNotificationChannelVerificationCodeRequest, $2.Empty>(
       '/google.monitoring.v3.NotificationChannelService/SendNotificationChannelVerificationCode',
-      (SendNotificationChannelVerificationCodeRequest value) =>
+      ($0.SendNotificationChannelVerificationCodeRequest value) =>
           value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
   static final _$getNotificationChannelVerificationCode = $grpc.ClientMethod<
-          GetNotificationChannelVerificationCodeRequest,
-          GetNotificationChannelVerificationCodeResponse>(
+          $0.GetNotificationChannelVerificationCodeRequest,
+          $0.GetNotificationChannelVerificationCodeResponse>(
       '/google.monitoring.v3.NotificationChannelService/GetNotificationChannelVerificationCode',
-      (GetNotificationChannelVerificationCodeRequest value) =>
+      ($0.GetNotificationChannelVerificationCodeRequest value) =>
           value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          GetNotificationChannelVerificationCodeResponse.fromBuffer(value));
+          $0.GetNotificationChannelVerificationCodeResponse.fromBuffer(value));
   static final _$verifyNotificationChannel = $grpc.ClientMethod<
-          VerifyNotificationChannelRequest, $0.NotificationChannel>(
+          $0.VerifyNotificationChannelRequest, $1.NotificationChannel>(
       '/google.monitoring.v3.NotificationChannelService/VerifyNotificationChannel',
-      (VerifyNotificationChannelRequest value) => value.writeToBuffer(),
+      ($0.VerifyNotificationChannelRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.NotificationChannel.fromBuffer(value));
+          $1.NotificationChannel.fromBuffer(value));
 
   NotificationChannelServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ListNotificationChannelDescriptorsResponse>
+  $grpc.ResponseFuture<$0.ListNotificationChannelDescriptorsResponse>
       listNotificationChannelDescriptors(
-          ListNotificationChannelDescriptorsRequest request,
+          $0.ListNotificationChannelDescriptorsRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(_$listNotificationChannelDescriptors,
         $async.Stream.fromIterable([request]),
@@ -95,9 +97,9 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.NotificationChannelDescriptor>
+  $grpc.ResponseFuture<$1.NotificationChannelDescriptor>
       getNotificationChannelDescriptor(
-          GetNotificationChannelDescriptorRequest request,
+          $0.GetNotificationChannelDescriptorRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(_$getNotificationChannelDescriptor,
         $async.Stream.fromIterable([request]),
@@ -105,8 +107,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListNotificationChannelsResponse>
-      listNotificationChannels(ListNotificationChannelsRequest request,
+  $grpc.ResponseFuture<$0.ListNotificationChannelsResponse>
+      listNotificationChannels($0.ListNotificationChannelsRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listNotificationChannels, $async.Stream.fromIterable([request]),
@@ -114,8 +116,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.NotificationChannel> getNotificationChannel(
-      GetNotificationChannelRequest request,
+  $grpc.ResponseFuture<$1.NotificationChannel> getNotificationChannel(
+      $0.GetNotificationChannelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getNotificationChannel, $async.Stream.fromIterable([request]),
@@ -123,8 +125,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.NotificationChannel> createNotificationChannel(
-      CreateNotificationChannelRequest request,
+  $grpc.ResponseFuture<$1.NotificationChannel> createNotificationChannel(
+      $0.CreateNotificationChannelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createNotificationChannel, $async.Stream.fromIterable([request]),
@@ -132,8 +134,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.NotificationChannel> updateNotificationChannel(
-      UpdateNotificationChannelRequest request,
+  $grpc.ResponseFuture<$1.NotificationChannel> updateNotificationChannel(
+      $0.UpdateNotificationChannelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateNotificationChannel, $async.Stream.fromIterable([request]),
@@ -141,8 +143,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> deleteNotificationChannel(
-      DeleteNotificationChannelRequest request,
+  $grpc.ResponseFuture<$2.Empty> deleteNotificationChannel(
+      $0.DeleteNotificationChannelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteNotificationChannel, $async.Stream.fromIterable([request]),
@@ -150,8 +152,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> sendNotificationChannelVerificationCode(
-      SendNotificationChannelVerificationCodeRequest request,
+  $grpc.ResponseFuture<$2.Empty> sendNotificationChannelVerificationCode(
+      $0.SendNotificationChannelVerificationCodeRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$sendNotificationChannelVerificationCode,
         $async.Stream.fromIterable([request]),
@@ -159,9 +161,9 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<GetNotificationChannelVerificationCodeResponse>
+  $grpc.ResponseFuture<$0.GetNotificationChannelVerificationCodeResponse>
       getNotificationChannelVerificationCode(
-          GetNotificationChannelVerificationCodeRequest request,
+          $0.GetNotificationChannelVerificationCodeRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(_$getNotificationChannelVerificationCode,
         $async.Stream.fromIterable([request]),
@@ -169,8 +171,8 @@ class NotificationChannelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.NotificationChannel> verifyNotificationChannel(
-      VerifyNotificationChannelRequest request,
+  $grpc.ResponseFuture<$1.NotificationChannel> verifyNotificationChannel(
+      $0.VerifyNotificationChannelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$verifyNotificationChannel, $async.Stream.fromIterable([request]),
@@ -183,175 +185,189 @@ abstract class NotificationChannelServiceBase extends $grpc.Service {
   $core.String get $name => 'google.monitoring.v3.NotificationChannelService';
 
   NotificationChannelServiceBase() {
-    $addMethod($grpc.ServiceMethod<ListNotificationChannelDescriptorsRequest,
-            ListNotificationChannelDescriptorsResponse>(
+    $addMethod($grpc.ServiceMethod<$0.ListNotificationChannelDescriptorsRequest,
+            $0.ListNotificationChannelDescriptorsResponse>(
         'ListNotificationChannelDescriptors',
         listNotificationChannelDescriptors_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListNotificationChannelDescriptorsRequest.fromBuffer(value),
-        (ListNotificationChannelDescriptorsResponse value) =>
+            $0.ListNotificationChannelDescriptorsRequest.fromBuffer(value),
+        ($0.ListNotificationChannelDescriptorsResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetNotificationChannelDescriptorRequest,
-            $0.NotificationChannelDescriptor>(
+    $addMethod($grpc.ServiceMethod<$0.GetNotificationChannelDescriptorRequest,
+            $1.NotificationChannelDescriptor>(
         'GetNotificationChannelDescriptor',
         getNotificationChannelDescriptor_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetNotificationChannelDescriptorRequest.fromBuffer(value),
-        ($0.NotificationChannelDescriptor value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListNotificationChannelsRequest,
-            ListNotificationChannelsResponse>(
+            $0.GetNotificationChannelDescriptorRequest.fromBuffer(value),
+        ($1.NotificationChannelDescriptor value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListNotificationChannelsRequest,
+            $0.ListNotificationChannelsResponse>(
         'ListNotificationChannels',
         listNotificationChannels_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListNotificationChannelsRequest.fromBuffer(value),
-        (ListNotificationChannelsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetNotificationChannelRequest,
-            $0.NotificationChannel>(
+            $0.ListNotificationChannelsRequest.fromBuffer(value),
+        ($0.ListNotificationChannelsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetNotificationChannelRequest,
+            $1.NotificationChannel>(
         'GetNotificationChannel',
         getNotificationChannel_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetNotificationChannelRequest.fromBuffer(value),
-        ($0.NotificationChannel value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateNotificationChannelRequest,
-            $0.NotificationChannel>(
+            $0.GetNotificationChannelRequest.fromBuffer(value),
+        ($1.NotificationChannel value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateNotificationChannelRequest,
+            $1.NotificationChannel>(
         'CreateNotificationChannel',
         createNotificationChannel_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateNotificationChannelRequest.fromBuffer(value),
-        ($0.NotificationChannel value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateNotificationChannelRequest,
-            $0.NotificationChannel>(
+            $0.CreateNotificationChannelRequest.fromBuffer(value),
+        ($1.NotificationChannel value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateNotificationChannelRequest,
+            $1.NotificationChannel>(
         'UpdateNotificationChannel',
         updateNotificationChannel_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateNotificationChannelRequest.fromBuffer(value),
-        ($0.NotificationChannel value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteNotificationChannelRequest, $1.Empty>(
-        'DeleteNotificationChannel',
-        deleteNotificationChannel_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            DeleteNotificationChannelRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
+            $0.UpdateNotificationChannelRequest.fromBuffer(value),
+        ($1.NotificationChannel value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.DeleteNotificationChannelRequest, $2.Empty>(
+            'DeleteNotificationChannel',
+            deleteNotificationChannel_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.DeleteNotificationChannelRequest.fromBuffer(value),
+            ($2.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<
-            SendNotificationChannelVerificationCodeRequest, $1.Empty>(
+            $0.SendNotificationChannelVerificationCodeRequest, $2.Empty>(
         'SendNotificationChannelVerificationCode',
         sendNotificationChannelVerificationCode_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            SendNotificationChannelVerificationCodeRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
+            $0.SendNotificationChannelVerificationCodeRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<
-            GetNotificationChannelVerificationCodeRequest,
-            GetNotificationChannelVerificationCodeResponse>(
+            $0.GetNotificationChannelVerificationCodeRequest,
+            $0.GetNotificationChannelVerificationCodeResponse>(
         'GetNotificationChannelVerificationCode',
         getNotificationChannelVerificationCode_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetNotificationChannelVerificationCodeRequest.fromBuffer(value),
-        (GetNotificationChannelVerificationCodeResponse value) =>
+            $0.GetNotificationChannelVerificationCodeRequest.fromBuffer(value),
+        ($0.GetNotificationChannelVerificationCodeResponse value) =>
             value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<VerifyNotificationChannelRequest,
-            $0.NotificationChannel>(
+    $addMethod($grpc.ServiceMethod<$0.VerifyNotificationChannelRequest,
+            $1.NotificationChannel>(
         'VerifyNotificationChannel',
         verifyNotificationChannel_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            VerifyNotificationChannelRequest.fromBuffer(value),
-        ($0.NotificationChannel value) => value.writeToBuffer()));
+            $0.VerifyNotificationChannelRequest.fromBuffer(value),
+        ($1.NotificationChannel value) => value.writeToBuffer()));
   }
 
-  $async.Future<ListNotificationChannelDescriptorsResponse>
+  $async.Future<$0.ListNotificationChannelDescriptorsResponse>
       listNotificationChannelDescriptors_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+          $grpc.ServiceCall call,
+          $async.Future<$0.ListNotificationChannelDescriptorsRequest>
+              request) async {
     return listNotificationChannelDescriptors(call, await request);
   }
 
-  $async.Future<$0.NotificationChannelDescriptor>
+  $async.Future<$1.NotificationChannelDescriptor>
       getNotificationChannelDescriptor_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+          $grpc.ServiceCall call,
+          $async.Future<$0.GetNotificationChannelDescriptorRequest>
+              request) async {
     return getNotificationChannelDescriptor(call, await request);
   }
 
-  $async.Future<ListNotificationChannelsResponse> listNotificationChannels_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListNotificationChannelsResponse>
+      listNotificationChannels_Pre($grpc.ServiceCall call,
+          $async.Future<$0.ListNotificationChannelsRequest> request) async {
     return listNotificationChannels(call, await request);
   }
 
-  $async.Future<$0.NotificationChannel> getNotificationChannel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.NotificationChannel> getNotificationChannel_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetNotificationChannelRequest> request) async {
     return getNotificationChannel(call, await request);
   }
 
-  $async.Future<$0.NotificationChannel> createNotificationChannel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.NotificationChannel> createNotificationChannel_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.CreateNotificationChannelRequest> request) async {
     return createNotificationChannel(call, await request);
   }
 
-  $async.Future<$0.NotificationChannel> updateNotificationChannel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.NotificationChannel> updateNotificationChannel_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.UpdateNotificationChannelRequest> request) async {
     return updateNotificationChannel(call, await request);
   }
 
-  $async.Future<$1.Empty> deleteNotificationChannel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Empty> deleteNotificationChannel_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteNotificationChannelRequest> request) async {
     return deleteNotificationChannel(call, await request);
   }
 
-  $async.Future<$1.Empty> sendNotificationChannelVerificationCode_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Empty> sendNotificationChannelVerificationCode_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.SendNotificationChannelVerificationCodeRequest>
+          request) async {
     return sendNotificationChannelVerificationCode(call, await request);
   }
 
-  $async.Future<GetNotificationChannelVerificationCodeResponse>
+  $async.Future<$0.GetNotificationChannelVerificationCodeResponse>
       getNotificationChannelVerificationCode_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+          $grpc.ServiceCall call,
+          $async.Future<$0.GetNotificationChannelVerificationCodeRequest>
+              request) async {
     return getNotificationChannelVerificationCode(call, await request);
   }
 
-  $async.Future<$0.NotificationChannel> verifyNotificationChannel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.NotificationChannel> verifyNotificationChannel_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.VerifyNotificationChannelRequest> request) async {
     return verifyNotificationChannel(call, await request);
   }
 
-  $async.Future<ListNotificationChannelDescriptorsResponse>
+  $async.Future<$0.ListNotificationChannelDescriptorsResponse>
       listNotificationChannelDescriptors($grpc.ServiceCall call,
-          ListNotificationChannelDescriptorsRequest request);
-  $async.Future<$0.NotificationChannelDescriptor>
+          $0.ListNotificationChannelDescriptorsRequest request);
+  $async.Future<$1.NotificationChannelDescriptor>
       getNotificationChannelDescriptor($grpc.ServiceCall call,
-          GetNotificationChannelDescriptorRequest request);
-  $async.Future<ListNotificationChannelsResponse> listNotificationChannels(
-      $grpc.ServiceCall call, ListNotificationChannelsRequest request);
-  $async.Future<$0.NotificationChannel> getNotificationChannel(
-      $grpc.ServiceCall call, GetNotificationChannelRequest request);
-  $async.Future<$0.NotificationChannel> createNotificationChannel(
-      $grpc.ServiceCall call, CreateNotificationChannelRequest request);
-  $async.Future<$0.NotificationChannel> updateNotificationChannel(
-      $grpc.ServiceCall call, UpdateNotificationChannelRequest request);
-  $async.Future<$1.Empty> deleteNotificationChannel(
-      $grpc.ServiceCall call, DeleteNotificationChannelRequest request);
-  $async.Future<$1.Empty> sendNotificationChannelVerificationCode(
+          $0.GetNotificationChannelDescriptorRequest request);
+  $async.Future<$0.ListNotificationChannelsResponse> listNotificationChannels(
+      $grpc.ServiceCall call, $0.ListNotificationChannelsRequest request);
+  $async.Future<$1.NotificationChannel> getNotificationChannel(
+      $grpc.ServiceCall call, $0.GetNotificationChannelRequest request);
+  $async.Future<$1.NotificationChannel> createNotificationChannel(
+      $grpc.ServiceCall call, $0.CreateNotificationChannelRequest request);
+  $async.Future<$1.NotificationChannel> updateNotificationChannel(
+      $grpc.ServiceCall call, $0.UpdateNotificationChannelRequest request);
+  $async.Future<$2.Empty> deleteNotificationChannel(
+      $grpc.ServiceCall call, $0.DeleteNotificationChannelRequest request);
+  $async.Future<$2.Empty> sendNotificationChannelVerificationCode(
       $grpc.ServiceCall call,
-      SendNotificationChannelVerificationCodeRequest request);
-  $async.Future<GetNotificationChannelVerificationCodeResponse>
+      $0.SendNotificationChannelVerificationCodeRequest request);
+  $async.Future<$0.GetNotificationChannelVerificationCodeResponse>
       getNotificationChannelVerificationCode($grpc.ServiceCall call,
-          GetNotificationChannelVerificationCodeRequest request);
-  $async.Future<$0.NotificationChannel> verifyNotificationChannel(
-      $grpc.ServiceCall call, VerifyNotificationChannelRequest request);
+          $0.GetNotificationChannelVerificationCodeRequest request);
+  $async.Future<$1.NotificationChannel> verifyNotificationChannel(
+      $grpc.ServiceCall call, $0.VerifyNotificationChannelRequest request);
 }

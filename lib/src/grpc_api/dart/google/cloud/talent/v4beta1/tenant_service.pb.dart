@@ -1,38 +1,41 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/tenant_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'tenant.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $2;
-import 'common.pb.dart' as $3;
+import 'tenant.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $3;
+import 'common.pb.dart' as $4;
 
 class CreateTenantRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTenantRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Tenant>(
-        2, 'tenant', $pb.PbFieldType.OM, $0.Tenant.getDefault, $0.Tenant.create)
+    ..a<$1.Tenant>(
+        2, 'tenant', $pb.PbFieldType.OM, $1.Tenant.getDefault, $1.Tenant.create)
     ..hasRequiredFields = false;
 
-  CreateTenantRequest() : super();
-  CreateTenantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateTenantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateTenantRequest._() : super();
+  factory CreateTenantRequest() => create();
+  factory CreateTenantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateTenantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateTenantRequest clone() => CreateTenantRequest()..mergeFromMessage(this);
   CreateTenantRequest copyWith(void Function(CreateTenantRequest) updates) =>
       super.copyWith((message) => updates(message as CreateTenantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateTenantRequest create() => CreateTenantRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateTenantRequest create() => CreateTenantRequest._();
   CreateTenantRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTenantRequest> createRepeated() =>
       $pb.PbList<CreateTenantRequest>();
@@ -48,8 +51,8 @@ class CreateTenantRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Tenant get tenant => $_getN(1);
-  set tenant($0.Tenant v) {
+  $1.Tenant get tenant => $_getN(1);
+  set tenant($1.Tenant v) {
     setField(2, v);
   }
 
@@ -63,18 +66,20 @@ class GetTenantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetTenantRequest() : super();
-  GetTenantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTenantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTenantRequest._() : super();
+  factory GetTenantRequest() => create();
+  factory GetTenantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTenantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTenantRequest clone() => GetTenantRequest()..mergeFromMessage(this);
   GetTenantRequest copyWith(void Function(GetTenantRequest) updates) =>
       super.copyWith((message) => updates(message as GetTenantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTenantRequest create() => GetTenantRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTenantRequest create() => GetTenantRequest._();
   GetTenantRequest createEmptyInstance() => create();
   static $pb.PbList<GetTenantRequest> createRepeated() =>
       $pb.PbList<GetTenantRequest>();
@@ -94,24 +99,26 @@ class GetTenantRequest extends $pb.GeneratedMessage {
 class UpdateTenantRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTenantRequest',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..a<$0.Tenant>(
-        1, 'tenant', $pb.PbFieldType.OM, $0.Tenant.getDefault, $0.Tenant.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$1.Tenant>(
+        1, 'tenant', $pb.PbFieldType.OM, $1.Tenant.getDefault, $1.Tenant.create)
+    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateTenantRequest() : super();
-  UpdateTenantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateTenantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateTenantRequest._() : super();
+  factory UpdateTenantRequest() => create();
+  factory UpdateTenantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateTenantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateTenantRequest clone() => UpdateTenantRequest()..mergeFromMessage(this);
   UpdateTenantRequest copyWith(void Function(UpdateTenantRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateTenantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateTenantRequest create() => UpdateTenantRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTenantRequest create() => UpdateTenantRequest._();
   UpdateTenantRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTenantRequest> createRepeated() =>
       $pb.PbList<UpdateTenantRequest>();
@@ -119,16 +126,16 @@ class UpdateTenantRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateTenantRequest _defaultInstance;
 
-  $0.Tenant get tenant => $_getN(0);
-  set tenant($0.Tenant v) {
+  $1.Tenant get tenant => $_getN(0);
+  set tenant($1.Tenant v) {
     setField(1, v);
   }
 
   $core.bool hasTenant() => $_has(0);
   void clearTenant() => clearField(1);
 
-  $2.FieldMask get updateMask => $_getN(1);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(1);
+  set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
@@ -142,18 +149,20 @@ class DeleteTenantRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteTenantRequest() : super();
-  DeleteTenantRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteTenantRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteTenantRequest._() : super();
+  factory DeleteTenantRequest() => create();
+  factory DeleteTenantRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteTenantRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteTenantRequest clone() => DeleteTenantRequest()..mergeFromMessage(this);
   DeleteTenantRequest copyWith(void Function(DeleteTenantRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteTenantRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteTenantRequest create() => DeleteTenantRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTenantRequest create() => DeleteTenantRequest._();
   DeleteTenantRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTenantRequest> createRepeated() =>
       $pb.PbList<DeleteTenantRequest>();
@@ -178,18 +187,20 @@ class ListTenantsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListTenantsRequest() : super();
-  ListTenantsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTenantsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTenantsRequest._() : super();
+  factory ListTenantsRequest() => create();
+  factory ListTenantsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTenantsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTenantsRequest clone() => ListTenantsRequest()..mergeFromMessage(this);
   ListTenantsRequest copyWith(void Function(ListTenantsRequest) updates) =>
       super.copyWith((message) => updates(message as ListTenantsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListTenantsRequest create() => ListTenantsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListTenantsRequest create() => ListTenantsRequest._();
   ListTenantsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTenantsRequest> createRepeated() =>
       $pb.PbList<ListTenantsRequest>();
@@ -225,24 +236,26 @@ class ListTenantsRequest extends $pb.GeneratedMessage {
 class ListTenantsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTenantsResponse',
       package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..pc<$0.Tenant>(1, 'tenants', $pb.PbFieldType.PM, $0.Tenant.create)
+    ..pc<$1.Tenant>(1, 'tenants', $pb.PbFieldType.PM, $1.Tenant.create)
     ..aOS(2, 'nextPageToken')
-    ..a<$3.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
-        $3.ResponseMetadata.getDefault, $3.ResponseMetadata.create)
+    ..a<$4.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
+        $4.ResponseMetadata.getDefault, $4.ResponseMetadata.create)
     ..hasRequiredFields = false;
 
-  ListTenantsResponse() : super();
-  ListTenantsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTenantsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTenantsResponse._() : super();
+  factory ListTenantsResponse() => create();
+  factory ListTenantsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTenantsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTenantsResponse clone() => ListTenantsResponse()..mergeFromMessage(this);
   ListTenantsResponse copyWith(void Function(ListTenantsResponse) updates) =>
       super.copyWith((message) => updates(message as ListTenantsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListTenantsResponse create() => ListTenantsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListTenantsResponse create() => ListTenantsResponse._();
   ListTenantsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTenantsResponse> createRepeated() =>
       $pb.PbList<ListTenantsResponse>();
@@ -250,7 +263,7 @@ class ListTenantsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTenantsResponse _defaultInstance;
 
-  $core.List<$0.Tenant> get tenants => $_getList(0);
+  $core.List<$1.Tenant> get tenants => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -260,8 +273,8 @@ class ListTenantsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(1);
   void clearNextPageToken() => clearField(2);
 
-  $3.ResponseMetadata get metadata => $_getN(2);
-  set metadata($3.ResponseMetadata v) {
+  $4.ResponseMetadata get metadata => $_getN(2);
+  set metadata($4.ResponseMetadata v) {
     setField(3, v);
   }
 

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/version.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -30,6 +31,7 @@ class Version extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Version',
       package: const $pb.PackageName('google.appengine.v1'))
+    ..oo(0, [3, 4, 5])
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<AutomaticScaling>(3, 'automaticScaling', $pb.PbFieldType.OM,
@@ -83,21 +85,22 @@ class Version extends $pb.GeneratedMessage {
     ..aOS(107, 'nobuildFilesRegex')
     ..a<$3.Deployment>(108, 'deployment', $pb.PbFieldType.OM, $3.Deployment.getDefault, $3.Deployment.create)
     ..aOS(109, 'versionUrl')
-    ..oo(0, [3, 4, 5])
     ..hasRequiredFields = false;
 
-  Version() : super();
-  Version.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Version.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Version._() : super();
+  factory Version() => create();
+  factory Version.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Version.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Version clone() => Version()..mergeFromMessage(this);
   Version copyWith(void Function(Version) updates) =>
       super.copyWith((message) => updates(message as Version));
   $pb.BuilderInfo get info_ => _i;
-  static Version create() => Version();
+  @$core.pragma('dart2js:noInline')
+  static Version create() => Version._();
   Version createEmptyInstance() => create();
   static $pb.PbList<Version> createRepeated() => $pb.PbList<Version>();
   static Version getDefault() => _defaultInstance ??= create()..freeze();
@@ -319,18 +322,20 @@ class AutomaticScaling extends $pb.GeneratedMessage {
         NetworkUtilization.getDefault, NetworkUtilization.create)
     ..hasRequiredFields = false;
 
-  AutomaticScaling() : super();
-  AutomaticScaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AutomaticScaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AutomaticScaling._() : super();
+  factory AutomaticScaling() => create();
+  factory AutomaticScaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AutomaticScaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AutomaticScaling clone() => AutomaticScaling()..mergeFromMessage(this);
   AutomaticScaling copyWith(void Function(AutomaticScaling) updates) =>
       super.copyWith((message) => updates(message as AutomaticScaling));
   $pb.BuilderInfo get info_ => _i;
-  static AutomaticScaling create() => AutomaticScaling();
+  @$core.pragma('dart2js:noInline')
+  static AutomaticScaling create() => AutomaticScaling._();
   AutomaticScaling createEmptyInstance() => create();
   static $pb.PbList<AutomaticScaling> createRepeated() =>
       $pb.PbList<AutomaticScaling>();
@@ -443,18 +448,20 @@ class BasicScaling extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'maxInstances', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  BasicScaling() : super();
-  BasicScaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BasicScaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BasicScaling._() : super();
+  factory BasicScaling() => create();
+  factory BasicScaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BasicScaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BasicScaling clone() => BasicScaling()..mergeFromMessage(this);
   BasicScaling copyWith(void Function(BasicScaling) updates) =>
       super.copyWith((message) => updates(message as BasicScaling));
   $pb.BuilderInfo get info_ => _i;
-  static BasicScaling create() => BasicScaling();
+  @$core.pragma('dart2js:noInline')
+  static BasicScaling create() => BasicScaling._();
   BasicScaling createEmptyInstance() => create();
   static $pb.PbList<BasicScaling> createRepeated() =>
       $pb.PbList<BasicScaling>();
@@ -484,18 +491,20 @@ class ManualScaling extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'instances', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ManualScaling() : super();
-  ManualScaling.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManualScaling.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManualScaling._() : super();
+  factory ManualScaling() => create();
+  factory ManualScaling.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManualScaling.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManualScaling clone() => ManualScaling()..mergeFromMessage(this);
   ManualScaling copyWith(void Function(ManualScaling) updates) =>
       super.copyWith((message) => updates(message as ManualScaling));
   $pb.BuilderInfo get info_ => _i;
-  static ManualScaling create() => ManualScaling();
+  @$core.pragma('dart2js:noInline')
+  static ManualScaling create() => ManualScaling._();
   ManualScaling createEmptyInstance() => create();
   static $pb.PbList<ManualScaling> createRepeated() =>
       $pb.PbList<ManualScaling>();
@@ -519,18 +528,20 @@ class CpuUtilization extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'targetUtilization', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  CpuUtilization() : super();
-  CpuUtilization.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CpuUtilization.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CpuUtilization._() : super();
+  factory CpuUtilization() => create();
+  factory CpuUtilization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CpuUtilization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CpuUtilization clone() => CpuUtilization()..mergeFromMessage(this);
   CpuUtilization copyWith(void Function(CpuUtilization) updates) =>
       super.copyWith((message) => updates(message as CpuUtilization));
   $pb.BuilderInfo get info_ => _i;
-  static CpuUtilization create() => CpuUtilization();
+  @$core.pragma('dart2js:noInline')
+  static CpuUtilization create() => CpuUtilization._();
   CpuUtilization createEmptyInstance() => create();
   static $pb.PbList<CpuUtilization> createRepeated() =>
       $pb.PbList<CpuUtilization>();
@@ -561,18 +572,20 @@ class RequestUtilization extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'targetConcurrentRequests', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  RequestUtilization() : super();
-  RequestUtilization.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RequestUtilization.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RequestUtilization._() : super();
+  factory RequestUtilization() => create();
+  factory RequestUtilization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RequestUtilization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RequestUtilization clone() => RequestUtilization()..mergeFromMessage(this);
   RequestUtilization copyWith(void Function(RequestUtilization) updates) =>
       super.copyWith((message) => updates(message as RequestUtilization));
   $pb.BuilderInfo get info_ => _i;
-  static RequestUtilization create() => RequestUtilization();
+  @$core.pragma('dart2js:noInline')
+  static RequestUtilization create() => RequestUtilization._();
   RequestUtilization createEmptyInstance() => create();
   static $pb.PbList<RequestUtilization> createRepeated() =>
       $pb.PbList<RequestUtilization>();
@@ -606,18 +619,20 @@ class DiskUtilization extends $pb.GeneratedMessage {
     ..a<$core.int>(17, 'targetReadOpsPerSecond', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  DiskUtilization() : super();
-  DiskUtilization.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DiskUtilization.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DiskUtilization._() : super();
+  factory DiskUtilization() => create();
+  factory DiskUtilization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DiskUtilization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DiskUtilization clone() => DiskUtilization()..mergeFromMessage(this);
   DiskUtilization copyWith(void Function(DiskUtilization) updates) =>
       super.copyWith((message) => updates(message as DiskUtilization));
   $pb.BuilderInfo get info_ => _i;
-  static DiskUtilization create() => DiskUtilization();
+  @$core.pragma('dart2js:noInline')
+  static DiskUtilization create() => DiskUtilization._();
   DiskUtilization createEmptyInstance() => create();
   static $pb.PbList<DiskUtilization> createRepeated() =>
       $pb.PbList<DiskUtilization>();
@@ -667,18 +682,20 @@ class NetworkUtilization extends $pb.GeneratedMessage {
     ..a<$core.int>(13, 'targetReceivedPacketsPerSecond', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  NetworkUtilization() : super();
-  NetworkUtilization.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NetworkUtilization.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NetworkUtilization._() : super();
+  factory NetworkUtilization() => create();
+  factory NetworkUtilization.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NetworkUtilization.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NetworkUtilization clone() => NetworkUtilization()..mergeFromMessage(this);
   NetworkUtilization copyWith(void Function(NetworkUtilization) updates) =>
       super.copyWith((message) => updates(message as NetworkUtilization));
   $pb.BuilderInfo get info_ => _i;
-  static NetworkUtilization create() => NetworkUtilization();
+  @$core.pragma('dart2js:noInline')
+  static NetworkUtilization create() => NetworkUtilization._();
   NetworkUtilization createEmptyInstance() => create();
   static $pb.PbList<NetworkUtilization> createRepeated() =>
       $pb.PbList<NetworkUtilization>();
@@ -727,18 +744,20 @@ class Network extends $pb.GeneratedMessage {
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
-  Network() : super();
-  Network.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Network.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Network._() : super();
+  factory Network() => create();
+  factory Network.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Network.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Network clone() => Network()..mergeFromMessage(this);
   Network copyWith(void Function(Network) updates) =>
       super.copyWith((message) => updates(message as Network));
   $pb.BuilderInfo get info_ => _i;
-  static Network create() => Network();
+  @$core.pragma('dart2js:noInline')
+  static Network create() => Network._();
   Network createEmptyInstance() => create();
   static $pb.PbList<Network> createRepeated() => $pb.PbList<Network>();
   static Network getDefault() => _defaultInstance ??= create()..freeze();
@@ -771,18 +790,20 @@ class Resources extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'memoryGb', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Resources() : super();
-  Resources.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Resources.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Resources._() : super();
+  factory Resources() => create();
+  factory Resources.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Resources.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Resources clone() => Resources()..mergeFromMessage(this);
   Resources copyWith(void Function(Resources) updates) =>
       super.copyWith((message) => updates(message as Resources));
   $pb.BuilderInfo get info_ => _i;
-  static Resources create() => Resources();
+  @$core.pragma('dart2js:noInline')
+  static Resources create() => Resources._();
   Resources createEmptyInstance() => create();
   static $pb.PbList<Resources> createRepeated() => $pb.PbList<Resources>();
   static Resources getDefault() => _defaultInstance ??= create()..freeze();

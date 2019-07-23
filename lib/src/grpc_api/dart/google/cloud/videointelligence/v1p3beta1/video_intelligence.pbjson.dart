@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/videointelligence/v1p3beta1/video_intelligence.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Feature$json = {
   '1': 'Feature',
@@ -48,6 +49,8 @@ const StreamingFeature$json = {
     {'1': 'STREAMING_SHOT_CHANGE_DETECTION', '2': 2},
     {'1': 'STREAMING_EXPLICIT_CONTENT_DETECTION', '2': 3},
     {'1': 'STREAMING_OBJECT_TRACKING', '2': 4},
+    {'1': 'STREAMING_AUTOML_CLASSIFICATION', '2': 21},
+    {'1': 'STREAMING_AUTOML_OBJECT_TRACKING', '2': 22},
   ],
 };
 
@@ -899,6 +902,20 @@ const StreamingAnnotateVideoResponse$json = {
   ],
 };
 
+const StreamingAutomlClassificationConfig$json = {
+  '1': 'StreamingAutomlClassificationConfig',
+  '2': [
+    {'1': 'model_name', '3': 1, '4': 1, '5': 9, '10': 'modelName'},
+  ],
+};
+
+const StreamingAutomlObjectTrackingConfig$json = {
+  '1': 'StreamingAutomlObjectTrackingConfig',
+  '2': [
+    {'1': 'model_name', '3': 1, '4': 1, '5': 9, '10': 'modelName'},
+  ],
+};
+
 const StreamingExplicitContentDetectionConfig$json = {
   '1': 'StreamingExplicitContentDetectionConfig',
 };
@@ -1033,6 +1050,26 @@ const StreamingVideoConfig$json = {
           '.google.cloud.videointelligence.v1p3beta1.StreamingObjectTrackingConfig',
       '9': 0,
       '10': 'objectTrackingConfig'
+    },
+    {
+      '1': 'automl_classification_config',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.videointelligence.v1p3beta1.StreamingAutomlClassificationConfig',
+      '9': 0,
+      '10': 'automlClassificationConfig'
+    },
+    {
+      '1': 'automl_object_tracking_config',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.videointelligence.v1p3beta1.StreamingAutomlObjectTrackingConfig',
+      '9': 0,
+      '10': 'automlObjectTrackingConfig'
     },
     {
       '1': 'storage_config',

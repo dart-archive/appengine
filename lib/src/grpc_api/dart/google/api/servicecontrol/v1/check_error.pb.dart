@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/check_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,18 +27,20 @@ class CheckError extends $pb.GeneratedMessage {
     ..aOS(2, 'detail')
     ..hasRequiredFields = false;
 
-  CheckError() : super();
-  CheckError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckError._() : super();
+  factory CheckError() => create();
+  factory CheckError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckError clone() => CheckError()..mergeFromMessage(this);
   CheckError copyWith(void Function(CheckError) updates) =>
       super.copyWith((message) => updates(message as CheckError));
   $pb.BuilderInfo get info_ => _i;
-  static CheckError create() => CheckError();
+  @$core.pragma('dart2js:noInline')
+  static CheckError create() => CheckError._();
   CheckError createEmptyInstance() => create();
   static $pb.PbList<CheckError> createRepeated() => $pb.PbList<CheckError>();
   static CheckError getDefault() => _defaultInstance ??= create()..freeze();

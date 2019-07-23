@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group_criterion_simulation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class AdGroupCriterionSimulation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AdGroupCriterionSimulation',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [8])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'adGroupId', $pb.PbFieldType.OM,
         $0.Int64Value.getDefault, $0.Int64Value.create)
@@ -57,16 +59,16 @@ class AdGroupCriterionSimulation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $1.CpcBidSimulationPointList.getDefault,
         $1.CpcBidSimulationPointList.create)
-    ..oo(0, [8])
     ..hasRequiredFields = false;
 
-  AdGroupCriterionSimulation() : super();
-  AdGroupCriterionSimulation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupCriterionSimulation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupCriterionSimulation._() : super();
+  factory AdGroupCriterionSimulation() => create();
+  factory AdGroupCriterionSimulation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupCriterionSimulation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupCriterionSimulation clone() =>
       AdGroupCriterionSimulation()..mergeFromMessage(this);
   AdGroupCriterionSimulation copyWith(
@@ -74,7 +76,8 @@ class AdGroupCriterionSimulation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AdGroupCriterionSimulation));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupCriterionSimulation create() => AdGroupCriterionSimulation();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupCriterionSimulation create() => AdGroupCriterionSimulation._();
   AdGroupCriterionSimulation createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterionSimulation> createRepeated() =>
       $pb.PbList<AdGroupCriterionSimulation>();

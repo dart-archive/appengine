@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/logging/type/http_request.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -33,18 +34,20 @@ class HttpRequest extends $pb.GeneratedMessage {
     ..aOS(15, 'protocol')
     ..hasRequiredFields = false;
 
-  HttpRequest() : super();
-  HttpRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HttpRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HttpRequest._() : super();
+  factory HttpRequest() => create();
+  factory HttpRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HttpRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HttpRequest clone() => HttpRequest()..mergeFromMessage(this);
   HttpRequest copyWith(void Function(HttpRequest) updates) =>
       super.copyWith((message) => updates(message as HttpRequest));
   $pb.BuilderInfo get info_ => _i;
-  static HttpRequest create() => HttpRequest();
+  @$core.pragma('dart2js:noInline')
+  static HttpRequest create() => HttpRequest._();
   HttpRequest createEmptyInstance() => create();
   static $pb.PbList<HttpRequest> createRepeated() => $pb.PbList<HttpRequest>();
   static HttpRequest getDefault() => _defaultInstance ??= create()..freeze();

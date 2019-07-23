@@ -1,18 +1,19 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/appengine.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'service.pb.dart' as $5;
-import '../../protobuf/field_mask.pb.dart' as $7;
-import 'version.pb.dart' as $4;
-import 'instance.pb.dart' as $2;
+import 'service.pb.dart' as $7;
+import '../../protobuf/field_mask.pb.dart' as $9;
+import 'version.pb.dart' as $6;
+import 'instance.pb.dart' as $5;
 
 import 'appengine.pbenum.dart';
 
@@ -24,20 +25,22 @@ class GetApplicationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetApplicationRequest() : super();
-  GetApplicationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetApplicationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetApplicationRequest._() : super();
+  factory GetApplicationRequest() => create();
+  factory GetApplicationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetApplicationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetApplicationRequest clone() =>
       GetApplicationRequest()..mergeFromMessage(this);
   GetApplicationRequest copyWith(
           void Function(GetApplicationRequest) updates) =>
       super.copyWith((message) => updates(message as GetApplicationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetApplicationRequest create() => GetApplicationRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetApplicationRequest create() => GetApplicationRequest._();
   GetApplicationRequest createEmptyInstance() => create();
   static $pb.PbList<GetApplicationRequest> createRepeated() =>
       $pb.PbList<GetApplicationRequest>();
@@ -60,20 +63,22 @@ class RepairApplicationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  RepairApplicationRequest() : super();
-  RepairApplicationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RepairApplicationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RepairApplicationRequest._() : super();
+  factory RepairApplicationRequest() => create();
+  factory RepairApplicationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RepairApplicationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RepairApplicationRequest clone() =>
       RepairApplicationRequest()..mergeFromMessage(this);
   RepairApplicationRequest copyWith(
           void Function(RepairApplicationRequest) updates) =>
       super.copyWith((message) => updates(message as RepairApplicationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RepairApplicationRequest create() => RepairApplicationRequest();
+  @$core.pragma('dart2js:noInline')
+  static RepairApplicationRequest create() => RepairApplicationRequest._();
   RepairApplicationRequest createEmptyInstance() => create();
   static $pb.PbList<RepairApplicationRequest> createRepeated() =>
       $pb.PbList<RepairApplicationRequest>();
@@ -98,18 +103,20 @@ class ListServicesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListServicesRequest() : super();
-  ListServicesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServicesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListServicesRequest._() : super();
+  factory ListServicesRequest() => create();
+  factory ListServicesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListServicesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListServicesRequest clone() => ListServicesRequest()..mergeFromMessage(this);
   ListServicesRequest copyWith(void Function(ListServicesRequest) updates) =>
       super.copyWith((message) => updates(message as ListServicesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListServicesRequest create() => ListServicesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListServicesRequest create() => ListServicesRequest._();
   ListServicesRequest createEmptyInstance() => create();
   static $pb.PbList<ListServicesRequest> createRepeated() =>
       $pb.PbList<ListServicesRequest>();
@@ -145,23 +152,25 @@ class ListServicesRequest extends $pb.GeneratedMessage {
 class ListServicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesResponse',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$5.Service>(1, 'services', $pb.PbFieldType.PM, $5.Service.create)
+    ..pc<$7.Service>(1, 'services', $pb.PbFieldType.PM, $7.Service.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListServicesResponse() : super();
-  ListServicesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListServicesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListServicesResponse._() : super();
+  factory ListServicesResponse() => create();
+  factory ListServicesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListServicesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListServicesResponse clone() =>
       ListServicesResponse()..mergeFromMessage(this);
   ListServicesResponse copyWith(void Function(ListServicesResponse) updates) =>
       super.copyWith((message) => updates(message as ListServicesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListServicesResponse create() => ListServicesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListServicesResponse create() => ListServicesResponse._();
   ListServicesResponse createEmptyInstance() => create();
   static $pb.PbList<ListServicesResponse> createRepeated() =>
       $pb.PbList<ListServicesResponse>();
@@ -169,7 +178,7 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListServicesResponse _defaultInstance;
 
-  $core.List<$5.Service> get services => $_getList(0);
+  $core.List<$7.Service> get services => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -186,18 +195,20 @@ class GetServiceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetServiceRequest() : super();
-  GetServiceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetServiceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetServiceRequest._() : super();
+  factory GetServiceRequest() => create();
+  factory GetServiceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetServiceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetServiceRequest clone() => GetServiceRequest()..mergeFromMessage(this);
   GetServiceRequest copyWith(void Function(GetServiceRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetServiceRequest create() => GetServiceRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetServiceRequest create() => GetServiceRequest._();
   GetServiceRequest createEmptyInstance() => create();
   static $pb.PbList<GetServiceRequest> createRepeated() =>
       $pb.PbList<GetServiceRequest>();
@@ -218,26 +229,28 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateServiceRequest',
       package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'name')
-    ..a<$5.Service>(2, 'service', $pb.PbFieldType.OM, $5.Service.getDefault,
-        $5.Service.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$7.Service>(2, 'service', $pb.PbFieldType.OM, $7.Service.getDefault,
+        $7.Service.create)
+    ..a<$9.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..aOB(4, 'migrateTraffic')
     ..hasRequiredFields = false;
 
-  UpdateServiceRequest() : super();
-  UpdateServiceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateServiceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateServiceRequest._() : super();
+  factory UpdateServiceRequest() => create();
+  factory UpdateServiceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateServiceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateServiceRequest clone() =>
       UpdateServiceRequest()..mergeFromMessage(this);
   UpdateServiceRequest copyWith(void Function(UpdateServiceRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateServiceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateServiceRequest create() => UpdateServiceRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateServiceRequest create() => UpdateServiceRequest._();
   UpdateServiceRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateServiceRequest> createRepeated() =>
       $pb.PbList<UpdateServiceRequest>();
@@ -253,16 +266,16 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $5.Service get service => $_getN(1);
-  set service($5.Service v) {
+  $7.Service get service => $_getN(1);
+  set service($7.Service v) {
     setField(2, v);
   }
 
   $core.bool hasService() => $_has(1);
   void clearService() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $9.FieldMask get updateMask => $_getN(2);
+  set updateMask($9.FieldMask v) {
     setField(3, v);
   }
 
@@ -284,19 +297,21 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteServiceRequest() : super();
-  DeleteServiceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteServiceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteServiceRequest._() : super();
+  factory DeleteServiceRequest() => create();
+  factory DeleteServiceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteServiceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteServiceRequest clone() =>
       DeleteServiceRequest()..mergeFromMessage(this);
   DeleteServiceRequest copyWith(void Function(DeleteServiceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteServiceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteServiceRequest create() => DeleteServiceRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteServiceRequest create() => DeleteServiceRequest._();
   DeleteServiceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteServiceRequest> createRepeated() =>
       $pb.PbList<DeleteServiceRequest>();
@@ -323,18 +338,20 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListVersionsRequest() : super();
-  ListVersionsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListVersionsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListVersionsRequest._() : super();
+  factory ListVersionsRequest() => create();
+  factory ListVersionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListVersionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListVersionsRequest clone() => ListVersionsRequest()..mergeFromMessage(this);
   ListVersionsRequest copyWith(void Function(ListVersionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListVersionsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListVersionsRequest create() => ListVersionsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListVersionsRequest create() => ListVersionsRequest._();
   ListVersionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListVersionsRequest> createRepeated() =>
       $pb.PbList<ListVersionsRequest>();
@@ -378,23 +395,25 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
 class ListVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsResponse',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$4.Version>(1, 'versions', $pb.PbFieldType.PM, $4.Version.create)
+    ..pc<$6.Version>(1, 'versions', $pb.PbFieldType.PM, $6.Version.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListVersionsResponse() : super();
-  ListVersionsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListVersionsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListVersionsResponse._() : super();
+  factory ListVersionsResponse() => create();
+  factory ListVersionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListVersionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListVersionsResponse clone() =>
       ListVersionsResponse()..mergeFromMessage(this);
   ListVersionsResponse copyWith(void Function(ListVersionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListVersionsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListVersionsResponse create() => ListVersionsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListVersionsResponse create() => ListVersionsResponse._();
   ListVersionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListVersionsResponse> createRepeated() =>
       $pb.PbList<ListVersionsResponse>();
@@ -402,7 +421,7 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListVersionsResponse _defaultInstance;
 
-  $core.List<$4.Version> get versions => $_getList(0);
+  $core.List<$6.Version> get versions => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -421,18 +440,20 @@ class GetVersionRequest extends $pb.GeneratedMessage {
         VersionView.valueOf, VersionView.values)
     ..hasRequiredFields = false;
 
-  GetVersionRequest() : super();
-  GetVersionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetVersionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetVersionRequest._() : super();
+  factory GetVersionRequest() => create();
+  factory GetVersionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetVersionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetVersionRequest clone() => GetVersionRequest()..mergeFromMessage(this);
   GetVersionRequest copyWith(void Function(GetVersionRequest) updates) =>
       super.copyWith((message) => updates(message as GetVersionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetVersionRequest create() => GetVersionRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetVersionRequest create() => GetVersionRequest._();
   GetVersionRequest createEmptyInstance() => create();
   static $pb.PbList<GetVersionRequest> createRepeated() =>
       $pb.PbList<GetVersionRequest>();
@@ -461,23 +482,25 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionRequest',
       package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'parent')
-    ..a<$4.Version>(2, 'version', $pb.PbFieldType.OM, $4.Version.getDefault,
-        $4.Version.create)
+    ..a<$6.Version>(2, 'version', $pb.PbFieldType.OM, $6.Version.getDefault,
+        $6.Version.create)
     ..hasRequiredFields = false;
 
-  CreateVersionRequest() : super();
-  CreateVersionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateVersionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateVersionRequest._() : super();
+  factory CreateVersionRequest() => create();
+  factory CreateVersionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateVersionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateVersionRequest clone() =>
       CreateVersionRequest()..mergeFromMessage(this);
   CreateVersionRequest copyWith(void Function(CreateVersionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVersionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateVersionRequest create() => CreateVersionRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateVersionRequest create() => CreateVersionRequest._();
   CreateVersionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateVersionRequest> createRepeated() =>
       $pb.PbList<CreateVersionRequest>();
@@ -493,8 +516,8 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $4.Version get version => $_getN(1);
-  set version($4.Version v) {
+  $6.Version get version => $_getN(1);
+  set version($6.Version v) {
     setField(2, v);
   }
 
@@ -506,25 +529,27 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVersionRequest',
       package: const $pb.PackageName('google.appengine.v1'))
     ..aOS(1, 'name')
-    ..a<$4.Version>(2, 'version', $pb.PbFieldType.OM, $4.Version.getDefault,
-        $4.Version.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$6.Version>(2, 'version', $pb.PbFieldType.OM, $6.Version.getDefault,
+        $6.Version.create)
+    ..a<$9.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $9.FieldMask.getDefault, $9.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateVersionRequest() : super();
-  UpdateVersionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateVersionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateVersionRequest._() : super();
+  factory UpdateVersionRequest() => create();
+  factory UpdateVersionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateVersionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateVersionRequest clone() =>
       UpdateVersionRequest()..mergeFromMessage(this);
   UpdateVersionRequest copyWith(void Function(UpdateVersionRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateVersionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateVersionRequest create() => UpdateVersionRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateVersionRequest create() => UpdateVersionRequest._();
   UpdateVersionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateVersionRequest> createRepeated() =>
       $pb.PbList<UpdateVersionRequest>();
@@ -540,16 +565,16 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $4.Version get version => $_getN(1);
-  set version($4.Version v) {
+  $6.Version get version => $_getN(1);
+  set version($6.Version v) {
     setField(2, v);
   }
 
   $core.bool hasVersion() => $_has(1);
   void clearVersion() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $9.FieldMask get updateMask => $_getN(2);
+  set updateMask($9.FieldMask v) {
     setField(3, v);
   }
 
@@ -563,19 +588,21 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteVersionRequest() : super();
-  DeleteVersionRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteVersionRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteVersionRequest._() : super();
+  factory DeleteVersionRequest() => create();
+  factory DeleteVersionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteVersionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteVersionRequest clone() =>
       DeleteVersionRequest()..mergeFromMessage(this);
   DeleteVersionRequest copyWith(void Function(DeleteVersionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVersionRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteVersionRequest create() => DeleteVersionRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteVersionRequest create() => DeleteVersionRequest._();
   DeleteVersionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteVersionRequest> createRepeated() =>
       $pb.PbList<DeleteVersionRequest>();
@@ -600,19 +627,21 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListInstancesRequest() : super();
-  ListInstancesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInstancesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListInstancesRequest._() : super();
+  factory ListInstancesRequest() => create();
+  factory ListInstancesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListInstancesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListInstancesRequest clone() =>
       ListInstancesRequest()..mergeFromMessage(this);
   ListInstancesRequest copyWith(void Function(ListInstancesRequest) updates) =>
       super.copyWith((message) => updates(message as ListInstancesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListInstancesRequest create() => ListInstancesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesRequest create() => ListInstancesRequest._();
   ListInstancesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInstancesRequest> createRepeated() =>
       $pb.PbList<ListInstancesRequest>();
@@ -648,24 +677,26 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
 class ListInstancesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse',
       package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$2.Instance>(1, 'instances', $pb.PbFieldType.PM, $2.Instance.create)
+    ..pc<$5.Instance>(1, 'instances', $pb.PbFieldType.PM, $5.Instance.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListInstancesResponse() : super();
-  ListInstancesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInstancesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListInstancesResponse._() : super();
+  factory ListInstancesResponse() => create();
+  factory ListInstancesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListInstancesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListInstancesResponse clone() =>
       ListInstancesResponse()..mergeFromMessage(this);
   ListInstancesResponse copyWith(
           void Function(ListInstancesResponse) updates) =>
       super.copyWith((message) => updates(message as ListInstancesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListInstancesResponse create() => ListInstancesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesResponse create() => ListInstancesResponse._();
   ListInstancesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInstancesResponse> createRepeated() =>
       $pb.PbList<ListInstancesResponse>();
@@ -673,7 +704,7 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListInstancesResponse _defaultInstance;
 
-  $core.List<$2.Instance> get instances => $_getList(0);
+  $core.List<$5.Instance> get instances => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -690,18 +721,20 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetInstanceRequest() : super();
-  GetInstanceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetInstanceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetInstanceRequest._() : super();
+  factory GetInstanceRequest() => create();
+  factory GetInstanceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetInstanceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetInstanceRequest clone() => GetInstanceRequest()..mergeFromMessage(this);
   GetInstanceRequest copyWith(void Function(GetInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as GetInstanceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetInstanceRequest create() => GetInstanceRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetInstanceRequest create() => GetInstanceRequest._();
   GetInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<GetInstanceRequest> createRepeated() =>
       $pb.PbList<GetInstanceRequest>();
@@ -724,20 +757,22 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteInstanceRequest() : super();
-  DeleteInstanceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteInstanceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteInstanceRequest._() : super();
+  factory DeleteInstanceRequest() => create();
+  factory DeleteInstanceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteInstanceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteInstanceRequest clone() =>
       DeleteInstanceRequest()..mergeFromMessage(this);
   DeleteInstanceRequest copyWith(
           void Function(DeleteInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteInstanceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteInstanceRequest create() => DeleteInstanceRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteInstanceRequest create() => DeleteInstanceRequest._();
   DeleteInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInstanceRequest> createRepeated() =>
       $pb.PbList<DeleteInstanceRequest>();
@@ -760,19 +795,21 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DebugInstanceRequest() : super();
-  DebugInstanceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DebugInstanceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DebugInstanceRequest._() : super();
+  factory DebugInstanceRequest() => create();
+  factory DebugInstanceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DebugInstanceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DebugInstanceRequest clone() =>
       DebugInstanceRequest()..mergeFromMessage(this);
   DebugInstanceRequest copyWith(void Function(DebugInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as DebugInstanceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DebugInstanceRequest create() => DebugInstanceRequest();
+  @$core.pragma('dart2js:noInline')
+  static DebugInstanceRequest create() => DebugInstanceRequest._();
   DebugInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<DebugInstanceRequest> createRepeated() =>
       $pb.PbList<DebugInstanceRequest>();

@@ -1,32 +1,32 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/user_interest_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'user_interest_service.pb.dart';
-import '../resources/user_interest.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'user_interest_service.pb.dart' as $0;
+import '../resources/user_interest.pb.dart' as $1;
 export 'user_interest_service.pb.dart';
 
 class UserInterestServiceClient extends $grpc.Client {
-  static final _$getUserInterest = $grpc.ClientMethod<GetUserInterestRequest,
-          $0.UserInterest>(
+  static final _$getUserInterest = $grpc.ClientMethod<$0.GetUserInterestRequest,
+          $1.UserInterest>(
       '/google.ads.googleads.v1.services.UserInterestService/GetUserInterest',
-      (GetUserInterestRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.UserInterest.fromBuffer(value));
+      ($0.GetUserInterestRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UserInterest.fromBuffer(value));
 
   UserInterestServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.UserInterest> getUserInterest(
-      GetUserInterestRequest request,
+  $grpc.ResponseFuture<$1.UserInterest> getUserInterest(
+      $0.GetUserInterestRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getUserInterest, $async.Stream.fromIterable([request]),
@@ -40,21 +40,21 @@ abstract class UserInterestServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.UserInterestService';
 
   UserInterestServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetUserInterestRequest, $0.UserInterest>(
+    $addMethod($grpc.ServiceMethod<$0.GetUserInterestRequest, $1.UserInterest>(
         'GetUserInterest',
         getUserInterest_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetUserInterestRequest.fromBuffer(value),
-        ($0.UserInterest value) => value.writeToBuffer()));
+            $0.GetUserInterestRequest.fromBuffer(value),
+        ($1.UserInterest value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.UserInterest> getUserInterest_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.UserInterest> getUserInterest_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetUserInterestRequest> request) async {
     return getUserInterest(call, await request);
   }
 
-  $async.Future<$0.UserInterest> getUserInterest(
-      $grpc.ServiceCall call, GetUserInterestRequest request);
+  $async.Future<$1.UserInterest> getUserInterest(
+      $grpc.ServiceCall call, $0.GetUserInterestRequest request);
 }

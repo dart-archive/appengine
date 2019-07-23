@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/annotation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -69,12 +70,12 @@ class AnnotationType extends $pb.ProtobufEnum {
       AnnotationType._(5, 'VIDEO_OBJECT_DETECTION_ANNOTATION');
   static const AnnotationType VIDEO_EVENT_ANNOTATION =
       AnnotationType._(6, 'VIDEO_EVENT_ANNOTATION');
-  static const AnnotationType AUDIO_TRANSCRIPTION_ANNOTATION =
-      AnnotationType._(7, 'AUDIO_TRANSCRIPTION_ANNOTATION');
   static const AnnotationType TEXT_CLASSIFICATION_ANNOTATION =
       AnnotationType._(8, 'TEXT_CLASSIFICATION_ANNOTATION');
   static const AnnotationType TEXT_ENTITY_EXTRACTION_ANNOTATION =
       AnnotationType._(9, 'TEXT_ENTITY_EXTRACTION_ANNOTATION');
+  static const AnnotationType GENERAL_CLASSIFICATION_ANNOTATION =
+      AnnotationType._(14, 'GENERAL_CLASSIFICATION_ANNOTATION');
 
   static const $core.List<AnnotationType> values = <AnnotationType>[
     ANNOTATION_TYPE_UNSPECIFIED,
@@ -88,9 +89,9 @@ class AnnotationType extends $pb.ProtobufEnum {
     VIDEO_OBJECT_TRACKING_ANNOTATION,
     VIDEO_OBJECT_DETECTION_ANNOTATION,
     VIDEO_EVENT_ANNOTATION,
-    AUDIO_TRANSCRIPTION_ANNOTATION,
     TEXT_CLASSIFICATION_ANNOTATION,
     TEXT_ENTITY_EXTRACTION_ANNOTATION,
+    GENERAL_CLASSIFICATION_ANNOTATION,
   ];
 
   static final $core.Map<$core.int, AnnotationType> _byValue =

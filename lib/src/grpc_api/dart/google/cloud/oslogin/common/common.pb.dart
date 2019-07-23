@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/oslogin/common/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -24,18 +25,20 @@ class PosixAccount extends $pb.GeneratedMessage {
     ..aOS(9, 'accountId')
     ..hasRequiredFields = false;
 
-  PosixAccount() : super();
-  PosixAccount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PosixAccount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PosixAccount._() : super();
+  factory PosixAccount() => create();
+  factory PosixAccount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PosixAccount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PosixAccount clone() => PosixAccount()..mergeFromMessage(this);
   PosixAccount copyWith(void Function(PosixAccount) updates) =>
       super.copyWith((message) => updates(message as PosixAccount));
   $pb.BuilderInfo get info_ => _i;
-  static PosixAccount create() => PosixAccount();
+  @$core.pragma('dart2js:noInline')
+  static PosixAccount create() => PosixAccount._();
   PosixAccount createEmptyInstance() => create();
   static $pb.PbList<PosixAccount> createRepeated() =>
       $pb.PbList<PosixAccount>();
@@ -123,18 +126,20 @@ class SshPublicKey extends $pb.GeneratedMessage {
     ..aOS(3, 'fingerprint')
     ..hasRequiredFields = false;
 
-  SshPublicKey() : super();
-  SshPublicKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SshPublicKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SshPublicKey._() : super();
+  factory SshPublicKey() => create();
+  factory SshPublicKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SshPublicKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SshPublicKey clone() => SshPublicKey()..mergeFromMessage(this);
   SshPublicKey copyWith(void Function(SshPublicKey) updates) =>
       super.copyWith((message) => updates(message as SshPublicKey));
   $pb.BuilderInfo get info_ => _i;
-  static SshPublicKey create() => SshPublicKey();
+  @$core.pragma('dart2js:noInline')
+  static SshPublicKey create() => SshPublicKey._();
   SshPublicKey createEmptyInstance() => create();
   static $pb.PbList<SshPublicKey> createRepeated() =>
       $pb.PbList<SshPublicKey>();

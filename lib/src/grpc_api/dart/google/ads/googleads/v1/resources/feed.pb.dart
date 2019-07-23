@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/feed.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -31,13 +32,15 @@ class Feed_PlacesLocationFeedData_OAuthInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Feed_PlacesLocationFeedData_OAuthInfo() : super();
-  Feed_PlacesLocationFeedData_OAuthInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Feed_PlacesLocationFeedData_OAuthInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Feed_PlacesLocationFeedData_OAuthInfo._() : super();
+  factory Feed_PlacesLocationFeedData_OAuthInfo() => create();
+  factory Feed_PlacesLocationFeedData_OAuthInfo.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Feed_PlacesLocationFeedData_OAuthInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Feed_PlacesLocationFeedData_OAuthInfo clone() =>
       Feed_PlacesLocationFeedData_OAuthInfo()..mergeFromMessage(this);
   Feed_PlacesLocationFeedData_OAuthInfo copyWith(
@@ -45,8 +48,9 @@ class Feed_PlacesLocationFeedData_OAuthInfo extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Feed_PlacesLocationFeedData_OAuthInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Feed_PlacesLocationFeedData_OAuthInfo create() =>
-      Feed_PlacesLocationFeedData_OAuthInfo();
+      Feed_PlacesLocationFeedData_OAuthInfo._();
   Feed_PlacesLocationFeedData_OAuthInfo createEmptyInstance() => create();
   static $pb.PbList<Feed_PlacesLocationFeedData_OAuthInfo> createRepeated() =>
       $pb.PbList<Feed_PlacesLocationFeedData_OAuthInfo>();
@@ -101,13 +105,14 @@ class Feed_PlacesLocationFeedData extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  Feed_PlacesLocationFeedData() : super();
-  Feed_PlacesLocationFeedData.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Feed_PlacesLocationFeedData.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Feed_PlacesLocationFeedData._() : super();
+  factory Feed_PlacesLocationFeedData() => create();
+  factory Feed_PlacesLocationFeedData.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Feed_PlacesLocationFeedData.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Feed_PlacesLocationFeedData clone() =>
       Feed_PlacesLocationFeedData()..mergeFromMessage(this);
   Feed_PlacesLocationFeedData copyWith(
@@ -115,7 +120,9 @@ class Feed_PlacesLocationFeedData extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Feed_PlacesLocationFeedData));
   $pb.BuilderInfo get info_ => _i;
-  static Feed_PlacesLocationFeedData create() => Feed_PlacesLocationFeedData();
+  @$core.pragma('dart2js:noInline')
+  static Feed_PlacesLocationFeedData create() =>
+      Feed_PlacesLocationFeedData._();
   Feed_PlacesLocationFeedData createEmptyInstance() => create();
   static $pb.PbList<Feed_PlacesLocationFeedData> createRepeated() =>
       $pb.PbList<Feed_PlacesLocationFeedData>();
@@ -177,13 +184,14 @@ class Feed_AffiliateLocationFeedData extends $pb.GeneratedMessage {
             .values)
     ..hasRequiredFields = false;
 
-  Feed_AffiliateLocationFeedData() : super();
-  Feed_AffiliateLocationFeedData.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Feed_AffiliateLocationFeedData.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Feed_AffiliateLocationFeedData._() : super();
+  factory Feed_AffiliateLocationFeedData() => create();
+  factory Feed_AffiliateLocationFeedData.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Feed_AffiliateLocationFeedData.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Feed_AffiliateLocationFeedData clone() =>
       Feed_AffiliateLocationFeedData()..mergeFromMessage(this);
   Feed_AffiliateLocationFeedData copyWith(
@@ -191,8 +199,9 @@ class Feed_AffiliateLocationFeedData extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Feed_AffiliateLocationFeedData));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Feed_AffiliateLocationFeedData create() =>
-      Feed_AffiliateLocationFeedData();
+      Feed_AffiliateLocationFeedData._();
   Feed_AffiliateLocationFeedData createEmptyInstance() => create();
   static $pb.PbList<Feed_AffiliateLocationFeedData> createRepeated() =>
       $pb.PbList<Feed_AffiliateLocationFeedData>();
@@ -229,6 +238,7 @@ class Feed extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Feed',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [6, 7])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -264,21 +274,22 @@ class Feed extends $pb.GeneratedMessage {
         $2.FeedStatusEnum_FeedStatus.values)
     ..pc<FeedAttributeOperation>(9, 'attributeOperations', $pb.PbFieldType.PM,
         FeedAttributeOperation.create)
-    ..oo(0, [6, 7])
     ..hasRequiredFields = false;
 
-  Feed() : super();
-  Feed.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Feed.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Feed._() : super();
+  factory Feed() => create();
+  factory Feed.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Feed.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Feed clone() => Feed()..mergeFromMessage(this);
   Feed copyWith(void Function(Feed) updates) =>
       super.copyWith((message) => updates(message as Feed));
   $pb.BuilderInfo get info_ => _i;
-  static Feed create() => Feed();
+  @$core.pragma('dart2js:noInline')
+  static Feed create() => Feed._();
   Feed createEmptyInstance() => create();
   static $pb.PbList<Feed> createRepeated() => $pb.PbList<Feed>();
   static Feed getDefault() => _defaultInstance ??= create()..freeze();
@@ -367,18 +378,20 @@ class FeedAttribute extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  FeedAttribute() : super();
-  FeedAttribute.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedAttribute.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedAttribute._() : super();
+  factory FeedAttribute() => create();
+  factory FeedAttribute.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedAttribute.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedAttribute clone() => FeedAttribute()..mergeFromMessage(this);
   FeedAttribute copyWith(void Function(FeedAttribute) updates) =>
       super.copyWith((message) => updates(message as FeedAttribute));
   $pb.BuilderInfo get info_ => _i;
-  static FeedAttribute create() => FeedAttribute();
+  @$core.pragma('dart2js:noInline')
+  static FeedAttribute create() => FeedAttribute._();
   FeedAttribute createEmptyInstance() => create();
   static $pb.PbList<FeedAttribute> createRepeated() =>
       $pb.PbList<FeedAttribute>();
@@ -432,20 +445,22 @@ class FeedAttributeOperation extends $pb.GeneratedMessage {
         FeedAttribute.create)
     ..hasRequiredFields = false;
 
-  FeedAttributeOperation() : super();
-  FeedAttributeOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FeedAttributeOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FeedAttributeOperation._() : super();
+  factory FeedAttributeOperation() => create();
+  factory FeedAttributeOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FeedAttributeOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FeedAttributeOperation clone() =>
       FeedAttributeOperation()..mergeFromMessage(this);
   FeedAttributeOperation copyWith(
           void Function(FeedAttributeOperation) updates) =>
       super.copyWith((message) => updates(message as FeedAttributeOperation));
   $pb.BuilderInfo get info_ => _i;
-  static FeedAttributeOperation create() => FeedAttributeOperation();
+  @$core.pragma('dart2js:noInline')
+  static FeedAttributeOperation create() => FeedAttributeOperation._();
   FeedAttributeOperation createEmptyInstance() => create();
   static $pb.PbList<FeedAttributeOperation> createRepeated() =>
       $pb.PbList<FeedAttributeOperation>();

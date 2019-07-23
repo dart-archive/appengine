@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/custom_interest_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,20 +17,22 @@ class CustomInterestErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  CustomInterestErrorEnum() : super();
-  CustomInterestErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomInterestErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomInterestErrorEnum._() : super();
+  factory CustomInterestErrorEnum() => create();
+  factory CustomInterestErrorEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomInterestErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomInterestErrorEnum clone() =>
       CustomInterestErrorEnum()..mergeFromMessage(this);
   CustomInterestErrorEnum copyWith(
           void Function(CustomInterestErrorEnum) updates) =>
       super.copyWith((message) => updates(message as CustomInterestErrorEnum));
   $pb.BuilderInfo get info_ => _i;
-  static CustomInterestErrorEnum create() => CustomInterestErrorEnum();
+  @$core.pragma('dart2js:noInline')
+  static CustomInterestErrorEnum create() => CustomInterestErrorEnum._();
   CustomInterestErrorEnum createEmptyInstance() => create();
   static $pb.PbList<CustomInterestErrorEnum> createRepeated() =>
       $pb.PbList<CustomInterestErrorEnum>();

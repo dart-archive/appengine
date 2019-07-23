@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/filters.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const JobQuery$json = {
   '1': 'JobQuery',
@@ -181,6 +182,22 @@ const ProfileQuery$json = {
       '4': 1,
       '5': 9,
       '10': 'customAttributeFilter'
+    },
+    {
+      '1': 'candidate_availability_filter',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.CandidateAvailabilityFilter',
+      '10': 'candidateAvailabilityFilter'
+    },
+    {
+      '1': 'person_name_filters',
+      '3': 17,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.PersonNameFilter',
+      '10': 'personNameFilters'
     },
   ],
 };
@@ -502,5 +519,19 @@ const TimeFilter_TimeField$json = {
     {'1': 'TIME_FIELD_UNSPECIFIED', '2': 0},
     {'1': 'CREATE_TIME', '2': 1},
     {'1': 'UPDATE_TIME', '2': 2},
+  ],
+};
+
+const CandidateAvailabilityFilter$json = {
+  '1': 'CandidateAvailabilityFilter',
+  '2': [
+    {'1': 'negated', '3': 1, '4': 1, '5': 8, '10': 'negated'},
+  ],
+};
+
+const PersonNameFilter$json = {
+  '1': 'PersonNameFilter',
+  '2': [
+    {'1': 'person_name', '3': 1, '4': 1, '5': 9, '10': 'personName'},
   ],
 };

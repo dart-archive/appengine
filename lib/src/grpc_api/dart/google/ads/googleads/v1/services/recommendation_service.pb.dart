@@ -1,20 +1,21 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/recommendation_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/wrappers.pb.dart' as $1;
-import '../resources/ad.pb.dart' as $2;
-import '../common/extensions.pb.dart' as $3;
-import '../../../../rpc/status.pb.dart' as $4;
+import '../../../../protobuf/wrappers.pb.dart' as $2;
+import '../resources/ad.pb.dart' as $3;
+import '../common/extensions.pb.dart' as $4;
+import '../../../../rpc/status.pb.dart' as $5;
 
-import '../enums/keyword_match_type.pbenum.dart' as $5;
+import '../enums/keyword_match_type.pbenum.dart' as $6;
 
 class GetRecommendationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetRecommendationRequest',
@@ -22,20 +23,22 @@ class GetRecommendationRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetRecommendationRequest() : super();
-  GetRecommendationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetRecommendationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetRecommendationRequest._() : super();
+  factory GetRecommendationRequest() => create();
+  factory GetRecommendationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetRecommendationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetRecommendationRequest clone() =>
       GetRecommendationRequest()..mergeFromMessage(this);
   GetRecommendationRequest copyWith(
           void Function(GetRecommendationRequest) updates) =>
       super.copyWith((message) => updates(message as GetRecommendationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetRecommendationRequest create() => GetRecommendationRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetRecommendationRequest create() => GetRecommendationRequest._();
   GetRecommendationRequest createEmptyInstance() => create();
   static $pb.PbList<GetRecommendationRequest> createRepeated() =>
       $pb.PbList<GetRecommendationRequest>();
@@ -62,13 +65,14 @@ class ApplyRecommendationRequest extends $pb.GeneratedMessage {
     ..aOB(3, 'partialFailure')
     ..hasRequiredFields = false;
 
-  ApplyRecommendationRequest() : super();
-  ApplyRecommendationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationRequest._() : super();
+  factory ApplyRecommendationRequest() => create();
+  factory ApplyRecommendationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationRequest clone() =>
       ApplyRecommendationRequest()..mergeFromMessage(this);
   ApplyRecommendationRequest copyWith(
@@ -76,7 +80,8 @@ class ApplyRecommendationRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ApplyRecommendationRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ApplyRecommendationRequest create() => ApplyRecommendationRequest();
+  @$core.pragma('dart2js:noInline')
+  static ApplyRecommendationRequest create() => ApplyRecommendationRequest._();
   ApplyRecommendationRequest createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationRequest> createRepeated() =>
       $pb.PbList<ApplyRecommendationRequest>();
@@ -108,18 +113,20 @@ class ApplyRecommendationOperation_CampaignBudgetParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.CampaignBudgetParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.Int64Value>(1, 'newBudgetAmountMicros', $pb.PbFieldType.OM,
-        $1.Int64Value.getDefault, $1.Int64Value.create)
+    ..a<$2.Int64Value>(1, 'newBudgetAmountMicros', $pb.PbFieldType.OM,
+        $2.Int64Value.getDefault, $2.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_CampaignBudgetParameters() : super();
-  ApplyRecommendationOperation_CampaignBudgetParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_CampaignBudgetParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_CampaignBudgetParameters._() : super();
+  factory ApplyRecommendationOperation_CampaignBudgetParameters() => create();
+  factory ApplyRecommendationOperation_CampaignBudgetParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_CampaignBudgetParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_CampaignBudgetParameters clone() =>
       ApplyRecommendationOperation_CampaignBudgetParameters()
         ..mergeFromMessage(this);
@@ -129,8 +136,9 @@ class ApplyRecommendationOperation_CampaignBudgetParameters
       super.copyWith((message) => updates(
           message as ApplyRecommendationOperation_CampaignBudgetParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_CampaignBudgetParameters create() =>
-      ApplyRecommendationOperation_CampaignBudgetParameters();
+      ApplyRecommendationOperation_CampaignBudgetParameters._();
   ApplyRecommendationOperation_CampaignBudgetParameters createEmptyInstance() =>
       create();
   static $pb.PbList<ApplyRecommendationOperation_CampaignBudgetParameters>
@@ -140,8 +148,8 @@ class ApplyRecommendationOperation_CampaignBudgetParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_CampaignBudgetParameters _defaultInstance;
 
-  $1.Int64Value get newBudgetAmountMicros => $_getN(0);
-  set newBudgetAmountMicros($1.Int64Value v) {
+  $2.Int64Value get newBudgetAmountMicros => $_getN(0);
+  set newBudgetAmountMicros($2.Int64Value v) {
     setField(1, v);
   }
 
@@ -154,17 +162,18 @@ class ApplyRecommendationOperation_TextAdParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.TextAdParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$2.Ad>(1, 'ad', $pb.PbFieldType.OM, $2.Ad.getDefault, $2.Ad.create)
+    ..a<$3.Ad>(1, 'ad', $pb.PbFieldType.OM, $3.Ad.getDefault, $3.Ad.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_TextAdParameters() : super();
-  ApplyRecommendationOperation_TextAdParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_TextAdParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_TextAdParameters._() : super();
+  factory ApplyRecommendationOperation_TextAdParameters() => create();
+  factory ApplyRecommendationOperation_TextAdParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_TextAdParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_TextAdParameters clone() =>
       ApplyRecommendationOperation_TextAdParameters()..mergeFromMessage(this);
   ApplyRecommendationOperation_TextAdParameters copyWith(
@@ -173,8 +182,9 @@ class ApplyRecommendationOperation_TextAdParameters
       super.copyWith((message) =>
           updates(message as ApplyRecommendationOperation_TextAdParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_TextAdParameters create() =>
-      ApplyRecommendationOperation_TextAdParameters();
+      ApplyRecommendationOperation_TextAdParameters._();
   ApplyRecommendationOperation_TextAdParameters createEmptyInstance() =>
       create();
   static $pb.PbList<ApplyRecommendationOperation_TextAdParameters>
@@ -184,8 +194,8 @@ class ApplyRecommendationOperation_TextAdParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_TextAdParameters _defaultInstance;
 
-  $2.Ad get ad => $_getN(0);
-  set ad($2.Ad v) {
+  $3.Ad get ad => $_getN(0);
+  set ad($3.Ad v) {
     setField(1, v);
   }
 
@@ -198,27 +208,29 @@ class ApplyRecommendationOperation_KeywordParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.KeywordParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.StringValue>(1, 'adGroup', $pb.PbFieldType.OM,
-        $1.StringValue.getDefault, $1.StringValue.create)
-    ..e<$5.KeywordMatchTypeEnum_KeywordMatchType>(
+    ..a<$2.StringValue>(1, 'adGroup', $pb.PbFieldType.OM,
+        $2.StringValue.getDefault, $2.StringValue.create)
+    ..e<$6.KeywordMatchTypeEnum_KeywordMatchType>(
         2,
         'matchType',
         $pb.PbFieldType.OE,
-        $5.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
-        $5.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
-        $5.KeywordMatchTypeEnum_KeywordMatchType.values)
-    ..a<$1.Int64Value>(3, 'cpcBidMicros', $pb.PbFieldType.OM,
-        $1.Int64Value.getDefault, $1.Int64Value.create)
+        $6.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
+        $6.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
+        $6.KeywordMatchTypeEnum_KeywordMatchType.values)
+    ..a<$2.Int64Value>(3, 'cpcBidMicros', $pb.PbFieldType.OM,
+        $2.Int64Value.getDefault, $2.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_KeywordParameters() : super();
-  ApplyRecommendationOperation_KeywordParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_KeywordParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_KeywordParameters._() : super();
+  factory ApplyRecommendationOperation_KeywordParameters() => create();
+  factory ApplyRecommendationOperation_KeywordParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_KeywordParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_KeywordParameters clone() =>
       ApplyRecommendationOperation_KeywordParameters()..mergeFromMessage(this);
   ApplyRecommendationOperation_KeywordParameters copyWith(
@@ -227,8 +239,9 @@ class ApplyRecommendationOperation_KeywordParameters
       super.copyWith((message) =>
           updates(message as ApplyRecommendationOperation_KeywordParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_KeywordParameters create() =>
-      ApplyRecommendationOperation_KeywordParameters();
+      ApplyRecommendationOperation_KeywordParameters._();
   ApplyRecommendationOperation_KeywordParameters createEmptyInstance() =>
       create();
   static $pb.PbList<ApplyRecommendationOperation_KeywordParameters>
@@ -238,24 +251,24 @@ class ApplyRecommendationOperation_KeywordParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_KeywordParameters _defaultInstance;
 
-  $1.StringValue get adGroup => $_getN(0);
-  set adGroup($1.StringValue v) {
+  $2.StringValue get adGroup => $_getN(0);
+  set adGroup($2.StringValue v) {
     setField(1, v);
   }
 
   $core.bool hasAdGroup() => $_has(0);
   void clearAdGroup() => clearField(1);
 
-  $5.KeywordMatchTypeEnum_KeywordMatchType get matchType => $_getN(1);
-  set matchType($5.KeywordMatchTypeEnum_KeywordMatchType v) {
+  $6.KeywordMatchTypeEnum_KeywordMatchType get matchType => $_getN(1);
+  set matchType($6.KeywordMatchTypeEnum_KeywordMatchType v) {
     setField(2, v);
   }
 
   $core.bool hasMatchType() => $_has(1);
   void clearMatchType() => clearField(2);
 
-  $1.Int64Value get cpcBidMicros => $_getN(2);
-  set cpcBidMicros($1.Int64Value v) {
+  $2.Int64Value get cpcBidMicros => $_getN(2);
+  set cpcBidMicros($2.Int64Value v) {
     setField(3, v);
   }
 
@@ -268,20 +281,22 @@ class ApplyRecommendationOperation_TargetCpaOptInParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.TargetCpaOptInParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.Int64Value>(1, 'targetCpaMicros', $pb.PbFieldType.OM,
-        $1.Int64Value.getDefault, $1.Int64Value.create)
-    ..a<$1.Int64Value>(2, 'newCampaignBudgetAmountMicros', $pb.PbFieldType.OM,
-        $1.Int64Value.getDefault, $1.Int64Value.create)
+    ..a<$2.Int64Value>(1, 'targetCpaMicros', $pb.PbFieldType.OM,
+        $2.Int64Value.getDefault, $2.Int64Value.create)
+    ..a<$2.Int64Value>(2, 'newCampaignBudgetAmountMicros', $pb.PbFieldType.OM,
+        $2.Int64Value.getDefault, $2.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_TargetCpaOptInParameters() : super();
-  ApplyRecommendationOperation_TargetCpaOptInParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_TargetCpaOptInParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_TargetCpaOptInParameters._() : super();
+  factory ApplyRecommendationOperation_TargetCpaOptInParameters() => create();
+  factory ApplyRecommendationOperation_TargetCpaOptInParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_TargetCpaOptInParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_TargetCpaOptInParameters clone() =>
       ApplyRecommendationOperation_TargetCpaOptInParameters()
         ..mergeFromMessage(this);
@@ -291,8 +306,9 @@ class ApplyRecommendationOperation_TargetCpaOptInParameters
       super.copyWith((message) => updates(
           message as ApplyRecommendationOperation_TargetCpaOptInParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_TargetCpaOptInParameters create() =>
-      ApplyRecommendationOperation_TargetCpaOptInParameters();
+      ApplyRecommendationOperation_TargetCpaOptInParameters._();
   ApplyRecommendationOperation_TargetCpaOptInParameters createEmptyInstance() =>
       create();
   static $pb.PbList<ApplyRecommendationOperation_TargetCpaOptInParameters>
@@ -302,16 +318,16 @@ class ApplyRecommendationOperation_TargetCpaOptInParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_TargetCpaOptInParameters _defaultInstance;
 
-  $1.Int64Value get targetCpaMicros => $_getN(0);
-  set targetCpaMicros($1.Int64Value v) {
+  $2.Int64Value get targetCpaMicros => $_getN(0);
+  set targetCpaMicros($2.Int64Value v) {
     setField(1, v);
   }
 
   $core.bool hasTargetCpaMicros() => $_has(0);
   void clearTargetCpaMicros() => clearField(1);
 
-  $1.Int64Value get newCampaignBudgetAmountMicros => $_getN(1);
-  set newCampaignBudgetAmountMicros($1.Int64Value v) {
+  $2.Int64Value get newCampaignBudgetAmountMicros => $_getN(1);
+  set newCampaignBudgetAmountMicros($2.Int64Value v) {
     setField(2, v);
   }
 
@@ -324,19 +340,20 @@ class ApplyRecommendationOperation_CalloutExtensionParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.CalloutExtensionParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$3.CalloutFeedItem>(
-        1, 'calloutExtensions', $pb.PbFieldType.PM, $3.CalloutFeedItem.create)
+    ..pc<$4.CalloutFeedItem>(
+        1, 'calloutExtensions', $pb.PbFieldType.PM, $4.CalloutFeedItem.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_CalloutExtensionParameters() : super();
-  ApplyRecommendationOperation_CalloutExtensionParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_CalloutExtensionParameters.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_CalloutExtensionParameters._() : super();
+  factory ApplyRecommendationOperation_CalloutExtensionParameters() => create();
+  factory ApplyRecommendationOperation_CalloutExtensionParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_CalloutExtensionParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_CalloutExtensionParameters clone() =>
       ApplyRecommendationOperation_CalloutExtensionParameters()
         ..mergeFromMessage(this);
@@ -346,8 +363,9 @@ class ApplyRecommendationOperation_CalloutExtensionParameters
       super.copyWith((message) => updates(
           message as ApplyRecommendationOperation_CalloutExtensionParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_CalloutExtensionParameters create() =>
-      ApplyRecommendationOperation_CalloutExtensionParameters();
+      ApplyRecommendationOperation_CalloutExtensionParameters._();
   ApplyRecommendationOperation_CalloutExtensionParameters
       createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationOperation_CalloutExtensionParameters>
@@ -358,7 +376,7 @@ class ApplyRecommendationOperation_CalloutExtensionParameters
   static ApplyRecommendationOperation_CalloutExtensionParameters
       _defaultInstance;
 
-  $core.List<$3.CalloutFeedItem> get calloutExtensions => $_getList(0);
+  $core.List<$4.CalloutFeedItem> get calloutExtensions => $_getList(0);
 }
 
 class ApplyRecommendationOperation_CallExtensionParameters
@@ -366,18 +384,20 @@ class ApplyRecommendationOperation_CallExtensionParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.CallExtensionParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$3.CallFeedItem>(
-        1, 'callExtensions', $pb.PbFieldType.PM, $3.CallFeedItem.create)
+    ..pc<$4.CallFeedItem>(
+        1, 'callExtensions', $pb.PbFieldType.PM, $4.CallFeedItem.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_CallExtensionParameters() : super();
-  ApplyRecommendationOperation_CallExtensionParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_CallExtensionParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_CallExtensionParameters._() : super();
+  factory ApplyRecommendationOperation_CallExtensionParameters() => create();
+  factory ApplyRecommendationOperation_CallExtensionParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_CallExtensionParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_CallExtensionParameters clone() =>
       ApplyRecommendationOperation_CallExtensionParameters()
         ..mergeFromMessage(this);
@@ -387,8 +407,9 @@ class ApplyRecommendationOperation_CallExtensionParameters
       super.copyWith((message) => updates(
           message as ApplyRecommendationOperation_CallExtensionParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_CallExtensionParameters create() =>
-      ApplyRecommendationOperation_CallExtensionParameters();
+      ApplyRecommendationOperation_CallExtensionParameters._();
   ApplyRecommendationOperation_CallExtensionParameters createEmptyInstance() =>
       create();
   static $pb.PbList<ApplyRecommendationOperation_CallExtensionParameters>
@@ -398,7 +419,7 @@ class ApplyRecommendationOperation_CallExtensionParameters
       _defaultInstance ??= create()..freeze();
   static ApplyRecommendationOperation_CallExtensionParameters _defaultInstance;
 
-  $core.List<$3.CallFeedItem> get callExtensions => $_getList(0);
+  $core.List<$4.CallFeedItem> get callExtensions => $_getList(0);
 }
 
 class ApplyRecommendationOperation_SitelinkExtensionParameters
@@ -406,19 +427,21 @@ class ApplyRecommendationOperation_SitelinkExtensionParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.SitelinkExtensionParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<$3.SitelinkFeedItem>(
-        1, 'sitelinkExtensions', $pb.PbFieldType.PM, $3.SitelinkFeedItem.create)
+    ..pc<$4.SitelinkFeedItem>(
+        1, 'sitelinkExtensions', $pb.PbFieldType.PM, $4.SitelinkFeedItem.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_SitelinkExtensionParameters() : super();
-  ApplyRecommendationOperation_SitelinkExtensionParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_SitelinkExtensionParameters.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_SitelinkExtensionParameters._() : super();
+  factory ApplyRecommendationOperation_SitelinkExtensionParameters() =>
+      create();
+  factory ApplyRecommendationOperation_SitelinkExtensionParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_SitelinkExtensionParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_SitelinkExtensionParameters clone() =>
       ApplyRecommendationOperation_SitelinkExtensionParameters()
         ..mergeFromMessage(this);
@@ -429,8 +452,9 @@ class ApplyRecommendationOperation_SitelinkExtensionParameters
       super.copyWith((message) => updates(
           message as ApplyRecommendationOperation_SitelinkExtensionParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_SitelinkExtensionParameters create() =>
-      ApplyRecommendationOperation_SitelinkExtensionParameters();
+      ApplyRecommendationOperation_SitelinkExtensionParameters._();
   ApplyRecommendationOperation_SitelinkExtensionParameters
       createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationOperation_SitelinkExtensionParameters>
@@ -441,7 +465,7 @@ class ApplyRecommendationOperation_SitelinkExtensionParameters
   static ApplyRecommendationOperation_SitelinkExtensionParameters
       _defaultInstance;
 
-  $core.List<$3.SitelinkFeedItem> get sitelinkExtensions => $_getList(0);
+  $core.List<$4.SitelinkFeedItem> get sitelinkExtensions => $_getList(0);
 }
 
 class ApplyRecommendationOperation_MoveUnusedBudgetParameters
@@ -449,19 +473,20 @@ class ApplyRecommendationOperation_MoveUnusedBudgetParameters
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation.MoveUnusedBudgetParameters',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$1.Int64Value>(1, 'budgetMicrosToMove', $pb.PbFieldType.OM,
-        $1.Int64Value.getDefault, $1.Int64Value.create)
+    ..a<$2.Int64Value>(1, 'budgetMicrosToMove', $pb.PbFieldType.OM,
+        $2.Int64Value.getDefault, $2.Int64Value.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation_MoveUnusedBudgetParameters() : super();
-  ApplyRecommendationOperation_MoveUnusedBudgetParameters.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation_MoveUnusedBudgetParameters.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation_MoveUnusedBudgetParameters._() : super();
+  factory ApplyRecommendationOperation_MoveUnusedBudgetParameters() => create();
+  factory ApplyRecommendationOperation_MoveUnusedBudgetParameters.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation_MoveUnusedBudgetParameters.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation_MoveUnusedBudgetParameters clone() =>
       ApplyRecommendationOperation_MoveUnusedBudgetParameters()
         ..mergeFromMessage(this);
@@ -471,8 +496,9 @@ class ApplyRecommendationOperation_MoveUnusedBudgetParameters
       super.copyWith((message) => updates(
           message as ApplyRecommendationOperation_MoveUnusedBudgetParameters));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation_MoveUnusedBudgetParameters create() =>
-      ApplyRecommendationOperation_MoveUnusedBudgetParameters();
+      ApplyRecommendationOperation_MoveUnusedBudgetParameters._();
   ApplyRecommendationOperation_MoveUnusedBudgetParameters
       createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationOperation_MoveUnusedBudgetParameters>
@@ -483,8 +509,8 @@ class ApplyRecommendationOperation_MoveUnusedBudgetParameters
   static ApplyRecommendationOperation_MoveUnusedBudgetParameters
       _defaultInstance;
 
-  $1.Int64Value get budgetMicrosToMove => $_getN(0);
-  set budgetMicrosToMove($1.Int64Value v) {
+  $2.Int64Value get budgetMicrosToMove => $_getN(0);
+  set budgetMicrosToMove($2.Int64Value v) {
     setField(1, v);
   }
 
@@ -521,6 +547,7 @@ class ApplyRecommendationOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ApplyRecommendationOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
+    ..oo(0, [2, 3, 4, 5, 6, 7, 8, 9])
     ..aOS(1, 'resourceName')
     ..a<ApplyRecommendationOperation_CampaignBudgetParameters>(
         2,
@@ -570,16 +597,16 @@ class ApplyRecommendationOperation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         ApplyRecommendationOperation_MoveUnusedBudgetParameters.getDefault,
         ApplyRecommendationOperation_MoveUnusedBudgetParameters.create)
-    ..oo(0, [2, 3, 4, 5, 6, 7, 8, 9])
     ..hasRequiredFields = false;
 
-  ApplyRecommendationOperation() : super();
-  ApplyRecommendationOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationOperation._() : super();
+  factory ApplyRecommendationOperation() => create();
+  factory ApplyRecommendationOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationOperation clone() =>
       ApplyRecommendationOperation()..mergeFromMessage(this);
   ApplyRecommendationOperation copyWith(
@@ -587,8 +614,9 @@ class ApplyRecommendationOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ApplyRecommendationOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ApplyRecommendationOperation create() =>
-      ApplyRecommendationOperation();
+      ApplyRecommendationOperation._();
   ApplyRecommendationOperation createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationOperation> createRepeated() =>
       $pb.PbList<ApplyRecommendationOperation>();
@@ -688,17 +716,18 @@ class ApplyRecommendationResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<ApplyRecommendationResult>(
         1, 'results', $pb.PbFieldType.PM, ApplyRecommendationResult.create)
-    ..a<$4.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
-        $4.Status.getDefault, $4.Status.create)
+    ..a<$5.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
+        $5.Status.getDefault, $5.Status.create)
     ..hasRequiredFields = false;
 
-  ApplyRecommendationResponse() : super();
-  ApplyRecommendationResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationResponse._() : super();
+  factory ApplyRecommendationResponse() => create();
+  factory ApplyRecommendationResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationResponse clone() =>
       ApplyRecommendationResponse()..mergeFromMessage(this);
   ApplyRecommendationResponse copyWith(
@@ -706,7 +735,9 @@ class ApplyRecommendationResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ApplyRecommendationResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ApplyRecommendationResponse create() => ApplyRecommendationResponse();
+  @$core.pragma('dart2js:noInline')
+  static ApplyRecommendationResponse create() =>
+      ApplyRecommendationResponse._();
   ApplyRecommendationResponse createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationResponse> createRepeated() =>
       $pb.PbList<ApplyRecommendationResponse>();
@@ -716,8 +747,8 @@ class ApplyRecommendationResponse extends $pb.GeneratedMessage {
 
   $core.List<ApplyRecommendationResult> get results => $_getList(0);
 
-  $4.Status get partialFailureError => $_getN(1);
-  set partialFailureError($4.Status v) {
+  $5.Status get partialFailureError => $_getN(1);
+  set partialFailureError($5.Status v) {
     setField(2, v);
   }
 
@@ -731,13 +762,14 @@ class ApplyRecommendationResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  ApplyRecommendationResult() : super();
-  ApplyRecommendationResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ApplyRecommendationResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ApplyRecommendationResult._() : super();
+  factory ApplyRecommendationResult() => create();
+  factory ApplyRecommendationResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ApplyRecommendationResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ApplyRecommendationResult clone() =>
       ApplyRecommendationResult()..mergeFromMessage(this);
   ApplyRecommendationResult copyWith(
@@ -745,7 +777,8 @@ class ApplyRecommendationResult extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ApplyRecommendationResult));
   $pb.BuilderInfo get info_ => _i;
-  static ApplyRecommendationResult create() => ApplyRecommendationResult();
+  @$core.pragma('dart2js:noInline')
+  static ApplyRecommendationResult create() => ApplyRecommendationResult._();
   ApplyRecommendationResult createEmptyInstance() => create();
   static $pb.PbList<ApplyRecommendationResult> createRepeated() =>
       $pb.PbList<ApplyRecommendationResult>();
@@ -770,15 +803,17 @@ class DismissRecommendationRequest_DismissRecommendationOperation
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  DismissRecommendationRequest_DismissRecommendationOperation() : super();
-  DismissRecommendationRequest_DismissRecommendationOperation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DismissRecommendationRequest_DismissRecommendationOperation.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DismissRecommendationRequest_DismissRecommendationOperation._() : super();
+  factory DismissRecommendationRequest_DismissRecommendationOperation() =>
+      create();
+  factory DismissRecommendationRequest_DismissRecommendationOperation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DismissRecommendationRequest_DismissRecommendationOperation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DismissRecommendationRequest_DismissRecommendationOperation clone() =>
       DismissRecommendationRequest_DismissRecommendationOperation()
         ..mergeFromMessage(this);
@@ -789,8 +824,9 @@ class DismissRecommendationRequest_DismissRecommendationOperation
       super.copyWith((message) => updates(message
           as DismissRecommendationRequest_DismissRecommendationOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DismissRecommendationRequest_DismissRecommendationOperation create() =>
-      DismissRecommendationRequest_DismissRecommendationOperation();
+      DismissRecommendationRequest_DismissRecommendationOperation._();
   DismissRecommendationRequest_DismissRecommendationOperation
       createEmptyInstance() => create();
   static $pb.PbList<DismissRecommendationRequest_DismissRecommendationOperation>
@@ -823,13 +859,14 @@ class DismissRecommendationRequest extends $pb.GeneratedMessage {
         DismissRecommendationRequest_DismissRecommendationOperation.create)
     ..hasRequiredFields = false;
 
-  DismissRecommendationRequest() : super();
-  DismissRecommendationRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DismissRecommendationRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DismissRecommendationRequest._() : super();
+  factory DismissRecommendationRequest() => create();
+  factory DismissRecommendationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DismissRecommendationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DismissRecommendationRequest clone() =>
       DismissRecommendationRequest()..mergeFromMessage(this);
   DismissRecommendationRequest copyWith(
@@ -837,8 +874,9 @@ class DismissRecommendationRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DismissRecommendationRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DismissRecommendationRequest create() =>
-      DismissRecommendationRequest();
+      DismissRecommendationRequest._();
   DismissRecommendationRequest createEmptyInstance() => create();
   static $pb.PbList<DismissRecommendationRequest> createRepeated() =>
       $pb.PbList<DismissRecommendationRequest>();
@@ -874,15 +912,17 @@ class DismissRecommendationResponse_DismissRecommendationResult
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  DismissRecommendationResponse_DismissRecommendationResult() : super();
-  DismissRecommendationResponse_DismissRecommendationResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DismissRecommendationResponse_DismissRecommendationResult.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DismissRecommendationResponse_DismissRecommendationResult._() : super();
+  factory DismissRecommendationResponse_DismissRecommendationResult() =>
+      create();
+  factory DismissRecommendationResponse_DismissRecommendationResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DismissRecommendationResponse_DismissRecommendationResult.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DismissRecommendationResponse_DismissRecommendationResult clone() =>
       DismissRecommendationResponse_DismissRecommendationResult()
         ..mergeFromMessage(this);
@@ -893,8 +933,9 @@ class DismissRecommendationResponse_DismissRecommendationResult
       super.copyWith((message) => updates(message
           as DismissRecommendationResponse_DismissRecommendationResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DismissRecommendationResponse_DismissRecommendationResult create() =>
-      DismissRecommendationResponse_DismissRecommendationResult();
+      DismissRecommendationResponse_DismissRecommendationResult._();
   DismissRecommendationResponse_DismissRecommendationResult
       createEmptyInstance() => create();
   static $pb.PbList<DismissRecommendationResponse_DismissRecommendationResult>
@@ -923,17 +964,18 @@ class DismissRecommendationResponse extends $pb.GeneratedMessage {
         'results',
         $pb.PbFieldType.PM,
         DismissRecommendationResponse_DismissRecommendationResult.create)
-    ..a<$4.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
-        $4.Status.getDefault, $4.Status.create)
+    ..a<$5.Status>(2, 'partialFailureError', $pb.PbFieldType.OM,
+        $5.Status.getDefault, $5.Status.create)
     ..hasRequiredFields = false;
 
-  DismissRecommendationResponse() : super();
-  DismissRecommendationResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DismissRecommendationResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DismissRecommendationResponse._() : super();
+  factory DismissRecommendationResponse() => create();
+  factory DismissRecommendationResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DismissRecommendationResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DismissRecommendationResponse clone() =>
       DismissRecommendationResponse()..mergeFromMessage(this);
   DismissRecommendationResponse copyWith(
@@ -941,8 +983,9 @@ class DismissRecommendationResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DismissRecommendationResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DismissRecommendationResponse create() =>
-      DismissRecommendationResponse();
+      DismissRecommendationResponse._();
   DismissRecommendationResponse createEmptyInstance() => create();
   static $pb.PbList<DismissRecommendationResponse> createRepeated() =>
       $pb.PbList<DismissRecommendationResponse>();
@@ -953,8 +996,8 @@ class DismissRecommendationResponse extends $pb.GeneratedMessage {
   $core.List<DismissRecommendationResponse_DismissRecommendationResult>
       get results => $_getList(0);
 
-  $4.Status get partialFailureError => $_getN(1);
-  set partialFailureError($4.Status v) {
+  $5.Status get partialFailureError => $_getN(1);
+  set partialFailureError($5.Status v) {
     setField(2, v);
   }
 

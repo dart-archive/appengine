@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Language$json = {
   '1': 'Language',
@@ -48,6 +49,16 @@ const Status$json = {
     {'1': 'FLAKY', '2': 11},
     {'1': 'UNKNOWN', '2': 12},
     {'1': 'SKIPPED', '2': 13},
+  ],
+};
+
+const UploadStatus$json = {
+  '1': 'UploadStatus',
+  '2': [
+    {'1': 'UPLOAD_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'UPLOADING', '2': 1},
+    {'1': 'POST_PROCESSING', '2': 2},
+    {'1': 'IMMUTABLE', '2': 3},
   ],
 };
 

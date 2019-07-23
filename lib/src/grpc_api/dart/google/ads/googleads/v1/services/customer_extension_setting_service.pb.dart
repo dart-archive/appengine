@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/customer_extension_setting_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/customer_extension_setting.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/customer_extension_setting.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetCustomerExtensionSettingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -20,13 +21,14 @@ class GetCustomerExtensionSettingRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCustomerExtensionSettingRequest() : super();
-  GetCustomerExtensionSettingRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCustomerExtensionSettingRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCustomerExtensionSettingRequest._() : super();
+  factory GetCustomerExtensionSettingRequest() => create();
+  factory GetCustomerExtensionSettingRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCustomerExtensionSettingRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCustomerExtensionSettingRequest clone() =>
       GetCustomerExtensionSettingRequest()..mergeFromMessage(this);
   GetCustomerExtensionSettingRequest copyWith(
@@ -34,8 +36,9 @@ class GetCustomerExtensionSettingRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetCustomerExtensionSettingRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetCustomerExtensionSettingRequest create() =>
-      GetCustomerExtensionSettingRequest();
+      GetCustomerExtensionSettingRequest._();
   GetCustomerExtensionSettingRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerExtensionSettingRequest> createRepeated() =>
       $pb.PbList<GetCustomerExtensionSettingRequest>();
@@ -63,13 +66,15 @@ class MutateCustomerExtensionSettingsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCustomerExtensionSettingsRequest() : super();
-  MutateCustomerExtensionSettingsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerExtensionSettingsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerExtensionSettingsRequest._() : super();
+  factory MutateCustomerExtensionSettingsRequest() => create();
+  factory MutateCustomerExtensionSettingsRequest.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerExtensionSettingsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerExtensionSettingsRequest clone() =>
       MutateCustomerExtensionSettingsRequest()..mergeFromMessage(this);
   MutateCustomerExtensionSettingsRequest copyWith(
@@ -77,8 +82,9 @@ class MutateCustomerExtensionSettingsRequest extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateCustomerExtensionSettingsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerExtensionSettingsRequest create() =>
-      MutateCustomerExtensionSettingsRequest();
+      MutateCustomerExtensionSettingsRequest._();
   MutateCustomerExtensionSettingsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerExtensionSettingsRequest> createRepeated() =>
       $pb.PbList<MutateCustomerExtensionSettingsRequest>();
@@ -131,31 +137,32 @@ class CustomerExtensionSettingOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CustomerExtensionSettingOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CustomerExtensionSetting>(
+    ..oo(0, [1, 2, 3])
+    ..a<$1.CustomerExtensionSetting>(
         1,
         'create_1',
         $pb.PbFieldType.OM,
-        $0.CustomerExtensionSetting.getDefault,
-        $0.CustomerExtensionSetting.create)
-    ..a<$0.CustomerExtensionSetting>(
+        $1.CustomerExtensionSetting.getDefault,
+        $1.CustomerExtensionSetting.create)
+    ..a<$1.CustomerExtensionSetting>(
         2,
         'update',
         $pb.PbFieldType.OM,
-        $0.CustomerExtensionSetting.getDefault,
-        $0.CustomerExtensionSetting.create)
+        $1.CustomerExtensionSetting.getDefault,
+        $1.CustomerExtensionSetting.create)
     ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
-    ..oo(0, [1, 2, 3])
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CustomerExtensionSettingOperation() : super();
-  CustomerExtensionSettingOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerExtensionSettingOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerExtensionSettingOperation._() : super();
+  factory CustomerExtensionSettingOperation() => create();
+  factory CustomerExtensionSettingOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerExtensionSettingOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerExtensionSettingOperation clone() =>
       CustomerExtensionSettingOperation()..mergeFromMessage(this);
   CustomerExtensionSettingOperation copyWith(
@@ -163,8 +170,9 @@ class CustomerExtensionSettingOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CustomerExtensionSettingOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CustomerExtensionSettingOperation create() =>
-      CustomerExtensionSettingOperation();
+      CustomerExtensionSettingOperation._();
   CustomerExtensionSettingOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerExtensionSettingOperation> createRepeated() =>
       $pb.PbList<CustomerExtensionSettingOperation>();
@@ -176,16 +184,16 @@ class CustomerExtensionSettingOperation extends $pb.GeneratedMessage {
       _CustomerExtensionSettingOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CustomerExtensionSetting get create_1 => $_getN(0);
-  set create_1($0.CustomerExtensionSetting v) {
+  $1.CustomerExtensionSetting get create_1 => $_getN(0);
+  set create_1($1.CustomerExtensionSetting v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.CustomerExtensionSetting get update => $_getN(1);
-  set update($0.CustomerExtensionSetting v) {
+  $1.CustomerExtensionSetting get update => $_getN(1);
+  set update($1.CustomerExtensionSetting v) {
     setField(2, v);
   }
 
@@ -200,8 +208,8 @@ class CustomerExtensionSettingOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -215,17 +223,19 @@ class MutateCustomerExtensionSettingsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCustomerExtensionSettingResult>(2, 'results', $pb.PbFieldType.PM,
         MutateCustomerExtensionSettingResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCustomerExtensionSettingsResponse() : super();
-  MutateCustomerExtensionSettingsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerExtensionSettingsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerExtensionSettingsResponse._() : super();
+  factory MutateCustomerExtensionSettingsResponse() => create();
+  factory MutateCustomerExtensionSettingsResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerExtensionSettingsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerExtensionSettingsResponse clone() =>
       MutateCustomerExtensionSettingsResponse()..mergeFromMessage(this);
   MutateCustomerExtensionSettingsResponse copyWith(
@@ -233,8 +243,9 @@ class MutateCustomerExtensionSettingsResponse extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateCustomerExtensionSettingsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerExtensionSettingsResponse create() =>
-      MutateCustomerExtensionSettingsResponse();
+      MutateCustomerExtensionSettingsResponse._();
   MutateCustomerExtensionSettingsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerExtensionSettingsResponse> createRepeated() =>
       $pb.PbList<MutateCustomerExtensionSettingsResponse>();
@@ -244,8 +255,8 @@ class MutateCustomerExtensionSettingsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCustomerExtensionSettingResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -260,13 +271,15 @@ class MutateCustomerExtensionSettingResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCustomerExtensionSettingResult() : super();
-  MutateCustomerExtensionSettingResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerExtensionSettingResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerExtensionSettingResult._() : super();
+  factory MutateCustomerExtensionSettingResult() => create();
+  factory MutateCustomerExtensionSettingResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerExtensionSettingResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerExtensionSettingResult clone() =>
       MutateCustomerExtensionSettingResult()..mergeFromMessage(this);
   MutateCustomerExtensionSettingResult copyWith(
@@ -274,8 +287,9 @@ class MutateCustomerExtensionSettingResult extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as MutateCustomerExtensionSettingResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCustomerExtensionSettingResult create() =>
-      MutateCustomerExtensionSettingResult();
+      MutateCustomerExtensionSettingResult._();
   MutateCustomerExtensionSettingResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerExtensionSettingResult> createRepeated() =>
       $pb.PbList<MutateCustomerExtensionSettingResult>();

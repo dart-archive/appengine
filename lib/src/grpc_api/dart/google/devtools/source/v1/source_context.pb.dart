@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/source/v1/source_context.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class SourceContext extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceContext',
       package: const $pb.PackageName('google.devtools.source.v1'))
+    ..oo(0, [1, 2, 3, 6])
     ..a<CloudRepoSourceContext>(1, 'cloudRepo', $pb.PbFieldType.OM,
         CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
     ..a<CloudWorkspaceSourceContext>(
@@ -38,21 +40,22 @@ class SourceContext extends $pb.GeneratedMessage {
         GerritSourceContext.getDefault, GerritSourceContext.create)
     ..a<GitSourceContext>(6, 'git', $pb.PbFieldType.OM,
         GitSourceContext.getDefault, GitSourceContext.create)
-    ..oo(0, [1, 2, 3, 6])
     ..hasRequiredFields = false;
 
-  SourceContext() : super();
-  SourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceContext._() : super();
+  factory SourceContext() => create();
+  factory SourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceContext clone() => SourceContext()..mergeFromMessage(this);
   SourceContext copyWith(void Function(SourceContext) updates) =>
       super.copyWith((message) => updates(message as SourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static SourceContext create() => SourceContext();
+  @$core.pragma('dart2js:noInline')
+  static SourceContext create() => SourceContext._();
   SourceContext createEmptyInstance() => create();
   static $pb.PbList<SourceContext> createRepeated() =>
       $pb.PbList<SourceContext>();
@@ -113,20 +116,22 @@ class ExtendedSourceContext extends $pb.GeneratedMessage {
         const $pb.PackageName('google.devtools.source.v1'))
     ..hasRequiredFields = false;
 
-  ExtendedSourceContext() : super();
-  ExtendedSourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExtendedSourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExtendedSourceContext._() : super();
+  factory ExtendedSourceContext() => create();
+  factory ExtendedSourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExtendedSourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExtendedSourceContext clone() =>
       ExtendedSourceContext()..mergeFromMessage(this);
   ExtendedSourceContext copyWith(
           void Function(ExtendedSourceContext) updates) =>
       super.copyWith((message) => updates(message as ExtendedSourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static ExtendedSourceContext create() => ExtendedSourceContext();
+  @$core.pragma('dart2js:noInline')
+  static ExtendedSourceContext create() => ExtendedSourceContext._();
   ExtendedSourceContext createEmptyInstance() => create();
   static $pb.PbList<ExtendedSourceContext> createRepeated() =>
       $pb.PbList<ExtendedSourceContext>();
@@ -153,18 +158,20 @@ class AliasContext extends $pb.GeneratedMessage {
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
-  AliasContext() : super();
-  AliasContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AliasContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AliasContext._() : super();
+  factory AliasContext() => create();
+  factory AliasContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AliasContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AliasContext clone() => AliasContext()..mergeFromMessage(this);
   AliasContext copyWith(void Function(AliasContext) updates) =>
       super.copyWith((message) => updates(message as AliasContext));
   $pb.BuilderInfo get info_ => _i;
-  static AliasContext create() => AliasContext();
+  @$core.pragma('dart2js:noInline')
+  static AliasContext create() => AliasContext._();
   AliasContext createEmptyInstance() => create();
   static $pb.PbList<AliasContext> createRepeated() =>
       $pb.PbList<AliasContext>();
@@ -205,29 +212,31 @@ class CloudRepoSourceContext extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CloudRepoSourceContext',
       package: const $pb.PackageName('google.devtools.source.v1'))
+    ..oo(0, [2, 3, 4])
     ..a<RepoId>(
         1, 'repoId', $pb.PbFieldType.OM, RepoId.getDefault, RepoId.create)
     ..aOS(2, 'revisionId')
     ..aOS(3, 'aliasName')
     ..a<AliasContext>(4, 'aliasContext', $pb.PbFieldType.OM,
         AliasContext.getDefault, AliasContext.create)
-    ..oo(0, [2, 3, 4])
     ..hasRequiredFields = false;
 
-  CloudRepoSourceContext() : super();
-  CloudRepoSourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CloudRepoSourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CloudRepoSourceContext._() : super();
+  factory CloudRepoSourceContext() => create();
+  factory CloudRepoSourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudRepoSourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CloudRepoSourceContext clone() =>
       CloudRepoSourceContext()..mergeFromMessage(this);
   CloudRepoSourceContext copyWith(
           void Function(CloudRepoSourceContext) updates) =>
       super.copyWith((message) => updates(message as CloudRepoSourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static CloudRepoSourceContext create() => CloudRepoSourceContext();
+  @$core.pragma('dart2js:noInline')
+  static CloudRepoSourceContext create() => CloudRepoSourceContext._();
   CloudRepoSourceContext createEmptyInstance() => create();
   static $pb.PbList<CloudRepoSourceContext> createRepeated() =>
       $pb.PbList<CloudRepoSourceContext>();
@@ -285,13 +294,14 @@ class CloudWorkspaceSourceContext extends $pb.GeneratedMessage {
     ..aOS(2, 'snapshotId')
     ..hasRequiredFields = false;
 
-  CloudWorkspaceSourceContext() : super();
-  CloudWorkspaceSourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CloudWorkspaceSourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CloudWorkspaceSourceContext._() : super();
+  factory CloudWorkspaceSourceContext() => create();
+  factory CloudWorkspaceSourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudWorkspaceSourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CloudWorkspaceSourceContext clone() =>
       CloudWorkspaceSourceContext()..mergeFromMessage(this);
   CloudWorkspaceSourceContext copyWith(
@@ -299,7 +309,9 @@ class CloudWorkspaceSourceContext extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CloudWorkspaceSourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static CloudWorkspaceSourceContext create() => CloudWorkspaceSourceContext();
+  @$core.pragma('dart2js:noInline')
+  static CloudWorkspaceSourceContext create() =>
+      CloudWorkspaceSourceContext._();
   CloudWorkspaceSourceContext createEmptyInstance() => create();
   static $pb.PbList<CloudWorkspaceSourceContext> createRepeated() =>
       $pb.PbList<CloudWorkspaceSourceContext>();
@@ -341,27 +353,29 @@ class GerritSourceContext extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GerritSourceContext',
       package: const $pb.PackageName('google.devtools.source.v1'))
+    ..oo(0, [3, 4, 5])
     ..aOS(1, 'hostUri')
     ..aOS(2, 'gerritProject')
     ..aOS(3, 'revisionId')
     ..aOS(4, 'aliasName')
     ..a<AliasContext>(5, 'aliasContext', $pb.PbFieldType.OM,
         AliasContext.getDefault, AliasContext.create)
-    ..oo(0, [3, 4, 5])
     ..hasRequiredFields = false;
 
-  GerritSourceContext() : super();
-  GerritSourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GerritSourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GerritSourceContext._() : super();
+  factory GerritSourceContext() => create();
+  factory GerritSourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GerritSourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GerritSourceContext clone() => GerritSourceContext()..mergeFromMessage(this);
   GerritSourceContext copyWith(void Function(GerritSourceContext) updates) =>
       super.copyWith((message) => updates(message as GerritSourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static GerritSourceContext create() => GerritSourceContext();
+  @$core.pragma('dart2js:noInline')
+  static GerritSourceContext create() => GerritSourceContext._();
   GerritSourceContext createEmptyInstance() => create();
   static $pb.PbList<GerritSourceContext> createRepeated() =>
       $pb.PbList<GerritSourceContext>();
@@ -425,18 +439,20 @@ class GitSourceContext extends $pb.GeneratedMessage {
     ..aOS(2, 'revisionId')
     ..hasRequiredFields = false;
 
-  GitSourceContext() : super();
-  GitSourceContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GitSourceContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GitSourceContext._() : super();
+  factory GitSourceContext() => create();
+  factory GitSourceContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GitSourceContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GitSourceContext clone() => GitSourceContext()..mergeFromMessage(this);
   GitSourceContext copyWith(void Function(GitSourceContext) updates) =>
       super.copyWith((message) => updates(message as GitSourceContext));
   $pb.BuilderInfo get info_ => _i;
-  static GitSourceContext create() => GitSourceContext();
+  @$core.pragma('dart2js:noInline')
+  static GitSourceContext create() => GitSourceContext._();
   GitSourceContext createEmptyInstance() => create();
   static $pb.PbList<GitSourceContext> createRepeated() =>
       $pb.PbList<GitSourceContext>();
@@ -471,24 +487,26 @@ class RepoId extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RepoId',
       package: const $pb.PackageName('google.devtools.source.v1'))
+    ..oo(0, [1, 2])
     ..a<ProjectRepoId>(1, 'projectRepoId', $pb.PbFieldType.OM,
         ProjectRepoId.getDefault, ProjectRepoId.create)
     ..aOS(2, 'uid')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  RepoId() : super();
-  RepoId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RepoId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RepoId._() : super();
+  factory RepoId() => create();
+  factory RepoId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RepoId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RepoId clone() => RepoId()..mergeFromMessage(this);
   RepoId copyWith(void Function(RepoId) updates) =>
       super.copyWith((message) => updates(message as RepoId));
   $pb.BuilderInfo get info_ => _i;
-  static RepoId create() => RepoId();
+  @$core.pragma('dart2js:noInline')
+  static RepoId create() => RepoId._();
   RepoId createEmptyInstance() => create();
   static $pb.PbList<RepoId> createRepeated() => $pb.PbList<RepoId>();
   static RepoId getDefault() => _defaultInstance ??= create()..freeze();
@@ -521,18 +539,20 @@ class ProjectRepoId extends $pb.GeneratedMessage {
     ..aOS(2, 'repoName')
     ..hasRequiredFields = false;
 
-  ProjectRepoId() : super();
-  ProjectRepoId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProjectRepoId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProjectRepoId._() : super();
+  factory ProjectRepoId() => create();
+  factory ProjectRepoId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProjectRepoId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProjectRepoId clone() => ProjectRepoId()..mergeFromMessage(this);
   ProjectRepoId copyWith(void Function(ProjectRepoId) updates) =>
       super.copyWith((message) => updates(message as ProjectRepoId));
   $pb.BuilderInfo get info_ => _i;
-  static ProjectRepoId create() => ProjectRepoId();
+  @$core.pragma('dart2js:noInline')
+  static ProjectRepoId create() => ProjectRepoId._();
   ProjectRepoId createEmptyInstance() => create();
   static $pb.PbList<ProjectRepoId> createRepeated() =>
       $pb.PbList<ProjectRepoId>();
@@ -564,18 +584,20 @@ class CloudWorkspaceId extends $pb.GeneratedMessage {
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
-  CloudWorkspaceId() : super();
-  CloudWorkspaceId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CloudWorkspaceId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CloudWorkspaceId._() : super();
+  factory CloudWorkspaceId() => create();
+  factory CloudWorkspaceId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CloudWorkspaceId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CloudWorkspaceId clone() => CloudWorkspaceId()..mergeFromMessage(this);
   CloudWorkspaceId copyWith(void Function(CloudWorkspaceId) updates) =>
       super.copyWith((message) => updates(message as CloudWorkspaceId));
   $pb.BuilderInfo get info_ => _i;
-  static CloudWorkspaceId create() => CloudWorkspaceId();
+  @$core.pragma('dart2js:noInline')
+  static CloudWorkspaceId create() => CloudWorkspaceId._();
   CloudWorkspaceId createEmptyInstance() => create();
   static $pb.PbList<CloudWorkspaceId> createRepeated() =>
       $pb.PbList<CloudWorkspaceId>();

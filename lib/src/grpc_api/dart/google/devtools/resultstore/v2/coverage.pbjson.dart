@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/coverage.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const LineCoverage$json = {
   '1': 'LineCoverage',
@@ -57,6 +58,20 @@ const ActionCoverage$json = {
     {
       '1': 'file_coverages',
       '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.FileCoverage',
+      '10': 'fileCoverages'
+    },
+  ],
+};
+
+const AggregateCoverage$json = {
+  '1': 'AggregateCoverage',
+  '2': [
+    {
+      '1': 'file_coverages',
+      '3': 1,
       '4': 3,
       '5': 11,
       '6': '.google.devtools.resultstore.v2.FileCoverage',

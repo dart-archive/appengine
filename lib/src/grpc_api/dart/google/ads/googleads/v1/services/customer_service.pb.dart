@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/customer_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/customer.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
+import '../resources/customer.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
 
 class GetCustomerRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCustomerRequest',
@@ -18,18 +19,20 @@ class GetCustomerRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCustomerRequest() : super();
-  GetCustomerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCustomerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCustomerRequest._() : super();
+  factory GetCustomerRequest() => create();
+  factory GetCustomerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCustomerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCustomerRequest clone() => GetCustomerRequest()..mergeFromMessage(this);
   GetCustomerRequest copyWith(void Function(GetCustomerRequest) updates) =>
       super.copyWith((message) => updates(message as GetCustomerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCustomerRequest create() => GetCustomerRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCustomerRequest create() => GetCustomerRequest._();
   GetCustomerRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerRequest> createRepeated() =>
       $pb.PbList<GetCustomerRequest>();
@@ -55,20 +58,22 @@ class MutateCustomerRequest extends $pb.GeneratedMessage {
     ..aOB(5, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCustomerRequest() : super();
-  MutateCustomerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerRequest._() : super();
+  factory MutateCustomerRequest() => create();
+  factory MutateCustomerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerRequest clone() =>
       MutateCustomerRequest()..mergeFromMessage(this);
   MutateCustomerRequest copyWith(
           void Function(MutateCustomerRequest) updates) =>
       super.copyWith((message) => updates(message as MutateCustomerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCustomerRequest create() => MutateCustomerRequest();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerRequest create() => MutateCustomerRequest._();
   MutateCustomerRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerRequest> createRepeated() =>
       $pb.PbList<MutateCustomerRequest>();
@@ -106,17 +111,18 @@ class CreateCustomerClientRequest extends $pb.GeneratedMessage {
       'CreateCustomerClientRequest',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..aOS(1, 'customerId')
-    ..a<$0.Customer>(2, 'customerClient', $pb.PbFieldType.OM,
-        $0.Customer.getDefault, $0.Customer.create)
+    ..a<$1.Customer>(2, 'customerClient', $pb.PbFieldType.OM,
+        $1.Customer.getDefault, $1.Customer.create)
     ..hasRequiredFields = false;
 
-  CreateCustomerClientRequest() : super();
-  CreateCustomerClientRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateCustomerClientRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateCustomerClientRequest._() : super();
+  factory CreateCustomerClientRequest() => create();
+  factory CreateCustomerClientRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateCustomerClientRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateCustomerClientRequest clone() =>
       CreateCustomerClientRequest()..mergeFromMessage(this);
   CreateCustomerClientRequest copyWith(
@@ -124,7 +130,9 @@ class CreateCustomerClientRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateCustomerClientRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateCustomerClientRequest create() => CreateCustomerClientRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateCustomerClientRequest create() =>
+      CreateCustomerClientRequest._();
   CreateCustomerClientRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCustomerClientRequest> createRepeated() =>
       $pb.PbList<CreateCustomerClientRequest>();
@@ -140,8 +148,8 @@ class CreateCustomerClientRequest extends $pb.GeneratedMessage {
   $core.bool hasCustomerId() => $_has(0);
   void clearCustomerId() => clearField(1);
 
-  $0.Customer get customerClient => $_getN(1);
-  set customerClient($0.Customer v) {
+  $1.Customer get customerClient => $_getN(1);
+  set customerClient($1.Customer v) {
     setField(2, v);
   }
 
@@ -152,24 +160,26 @@ class CreateCustomerClientRequest extends $pb.GeneratedMessage {
 class CustomerOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomerOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.Customer>(1, 'update', $pb.PbFieldType.OM, $0.Customer.getDefault,
-        $0.Customer.create)
-    ..a<$1.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
+    ..a<$1.Customer>(1, 'update', $pb.PbFieldType.OM, $1.Customer.getDefault,
+        $1.Customer.create)
+    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CustomerOperation() : super();
-  CustomerOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerOperation._() : super();
+  factory CustomerOperation() => create();
+  factory CustomerOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerOperation clone() => CustomerOperation()..mergeFromMessage(this);
   CustomerOperation copyWith(void Function(CustomerOperation) updates) =>
       super.copyWith((message) => updates(message as CustomerOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerOperation create() => CustomerOperation();
+  @$core.pragma('dart2js:noInline')
+  static CustomerOperation create() => CustomerOperation._();
   CustomerOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerOperation> createRepeated() =>
       $pb.PbList<CustomerOperation>();
@@ -177,16 +187,16 @@ class CustomerOperation extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static CustomerOperation _defaultInstance;
 
-  $0.Customer get update => $_getN(0);
-  set update($0.Customer v) {
+  $1.Customer get update => $_getN(0);
+  set update($1.Customer v) {
     setField(1, v);
   }
 
   $core.bool hasUpdate() => $_has(0);
   void clearUpdate() => clearField(1);
 
-  $1.FieldMask get updateMask => $_getN(1);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(1);
+  set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
@@ -201,13 +211,14 @@ class CreateCustomerClientResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'resourceName')
     ..hasRequiredFields = false;
 
-  CreateCustomerClientResponse() : super();
-  CreateCustomerClientResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateCustomerClientResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateCustomerClientResponse._() : super();
+  factory CreateCustomerClientResponse() => create();
+  factory CreateCustomerClientResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateCustomerClientResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateCustomerClientResponse clone() =>
       CreateCustomerClientResponse()..mergeFromMessage(this);
   CreateCustomerClientResponse copyWith(
@@ -215,8 +226,9 @@ class CreateCustomerClientResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateCustomerClientResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateCustomerClientResponse create() =>
-      CreateCustomerClientResponse();
+      CreateCustomerClientResponse._();
   CreateCustomerClientResponse createEmptyInstance() => create();
   static $pb.PbList<CreateCustomerClientResponse> createRepeated() =>
       $pb.PbList<CreateCustomerClientResponse>();
@@ -240,20 +252,22 @@ class MutateCustomerResponse extends $pb.GeneratedMessage {
         MutateCustomerResult.getDefault, MutateCustomerResult.create)
     ..hasRequiredFields = false;
 
-  MutateCustomerResponse() : super();
-  MutateCustomerResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerResponse._() : super();
+  factory MutateCustomerResponse() => create();
+  factory MutateCustomerResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerResponse clone() =>
       MutateCustomerResponse()..mergeFromMessage(this);
   MutateCustomerResponse copyWith(
           void Function(MutateCustomerResponse) updates) =>
       super.copyWith((message) => updates(message as MutateCustomerResponse));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCustomerResponse create() => MutateCustomerResponse();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerResponse create() => MutateCustomerResponse._();
   MutateCustomerResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerResponse> createRepeated() =>
       $pb.PbList<MutateCustomerResponse>();
@@ -276,19 +290,21 @@ class MutateCustomerResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCustomerResult() : super();
-  MutateCustomerResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCustomerResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCustomerResult._() : super();
+  factory MutateCustomerResult() => create();
+  factory MutateCustomerResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCustomerResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCustomerResult clone() =>
       MutateCustomerResult()..mergeFromMessage(this);
   MutateCustomerResult copyWith(void Function(MutateCustomerResult) updates) =>
       super.copyWith((message) => updates(message as MutateCustomerResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCustomerResult create() => MutateCustomerResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerResult create() => MutateCustomerResult._();
   MutateCustomerResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerResult> createRepeated() =>
       $pb.PbList<MutateCustomerResult>();
@@ -311,13 +327,14 @@ class ListAccessibleCustomersRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..hasRequiredFields = false;
 
-  ListAccessibleCustomersRequest() : super();
-  ListAccessibleCustomersRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAccessibleCustomersRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAccessibleCustomersRequest._() : super();
+  factory ListAccessibleCustomersRequest() => create();
+  factory ListAccessibleCustomersRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAccessibleCustomersRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAccessibleCustomersRequest clone() =>
       ListAccessibleCustomersRequest()..mergeFromMessage(this);
   ListAccessibleCustomersRequest copyWith(
@@ -325,8 +342,9 @@ class ListAccessibleCustomersRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListAccessibleCustomersRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListAccessibleCustomersRequest create() =>
-      ListAccessibleCustomersRequest();
+      ListAccessibleCustomersRequest._();
   ListAccessibleCustomersRequest createEmptyInstance() => create();
   static $pb.PbList<ListAccessibleCustomersRequest> createRepeated() =>
       $pb.PbList<ListAccessibleCustomersRequest>();
@@ -342,13 +360,14 @@ class ListAccessibleCustomersResponse extends $pb.GeneratedMessage {
     ..pPS(1, 'resourceNames')
     ..hasRequiredFields = false;
 
-  ListAccessibleCustomersResponse() : super();
-  ListAccessibleCustomersResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListAccessibleCustomersResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListAccessibleCustomersResponse._() : super();
+  factory ListAccessibleCustomersResponse() => create();
+  factory ListAccessibleCustomersResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListAccessibleCustomersResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListAccessibleCustomersResponse clone() =>
       ListAccessibleCustomersResponse()..mergeFromMessage(this);
   ListAccessibleCustomersResponse copyWith(
@@ -356,8 +375,9 @@ class ListAccessibleCustomersResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListAccessibleCustomersResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListAccessibleCustomersResponse create() =>
-      ListAccessibleCustomersResponse();
+      ListAccessibleCustomersResponse._();
   ListAccessibleCustomersResponse createEmptyInstance() => create();
   static $pb.PbList<ListAccessibleCustomersResponse> createRepeated() =>
       $pb.PbList<ListAccessibleCustomersResponse>();

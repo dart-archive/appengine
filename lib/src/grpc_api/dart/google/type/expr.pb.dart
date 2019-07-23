@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/type/expr.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class Expr extends $pb.GeneratedMessage {
         ..aOS(4, 'location')
         ..hasRequiredFields = false;
 
-  Expr() : super();
-  Expr.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Expr.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Expr._() : super();
+  factory Expr() => create();
+  factory Expr.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Expr clone() => Expr()..mergeFromMessage(this);
   Expr copyWith(void Function(Expr) updates) =>
       super.copyWith((message) => updates(message as Expr));
   $pb.BuilderInfo get info_ => _i;
-  static Expr create() => Expr();
+  @$core.pragma('dart2js:noInline')
+  static Expr create() => Expr._();
   Expr createEmptyInstance() => create();
   static $pb.PbList<Expr> createRepeated() => $pb.PbList<Expr>();
   static Expr getDefault() => _defaultInstance ??= create()..freeze();

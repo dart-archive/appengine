@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/file_set.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class FileSet_Id extends $pb.GeneratedMessage {
     ..aOS(2, 'fileSetId')
     ..hasRequiredFields = false;
 
-  FileSet_Id() : super();
-  FileSet_Id.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileSet_Id.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileSet_Id._() : super();
+  factory FileSet_Id() => create();
+  factory FileSet_Id.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FileSet_Id.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FileSet_Id clone() => FileSet_Id()..mergeFromMessage(this);
   FileSet_Id copyWith(void Function(FileSet_Id) updates) =>
       super.copyWith((message) => updates(message as FileSet_Id));
   $pb.BuilderInfo get info_ => _i;
-  static FileSet_Id create() => FileSet_Id();
+  @$core.pragma('dart2js:noInline')
+  static FileSet_Id create() => FileSet_Id._();
   FileSet_Id createEmptyInstance() => create();
   static $pb.PbList<FileSet_Id> createRepeated() => $pb.PbList<FileSet_Id>();
   static FileSet_Id getDefault() => _defaultInstance ??= create()..freeze();
@@ -62,18 +65,20 @@ class FileSet extends $pb.GeneratedMessage {
     ..pc<$0.File>(4, 'files', $pb.PbFieldType.PM, $0.File.create)
     ..hasRequiredFields = false;
 
-  FileSet() : super();
-  FileSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileSet._() : super();
+  factory FileSet() => create();
+  factory FileSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FileSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FileSet clone() => FileSet()..mergeFromMessage(this);
   FileSet copyWith(void Function(FileSet) updates) =>
       super.copyWith((message) => updates(message as FileSet));
   $pb.BuilderInfo get info_ => _i;
-  static FileSet create() => FileSet();
+  @$core.pragma('dart2js:noInline')
+  static FileSet create() => FileSet._();
   FileSet createEmptyInstance() => create();
   static $pb.PbList<FileSet> createRepeated() => $pb.PbList<FileSet>();
   static FileSet getDefault() => _defaultInstance ??= create()..freeze();

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/bigquery/datatransfer/v1/datatransfer.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const DataSourceParameter$json = {
   '1': 'DataSourceParameter',
@@ -62,6 +63,7 @@ const DataSourceParameter$json = {
     },
     {'1': 'immutable', '3': 14, '4': 1, '5': 8, '10': 'immutable'},
     {'1': 'recurse', '3': 15, '4': 1, '5': 8, '10': 'recurse'},
+    {'1': 'deprecated', '3': 20, '4': 1, '5': 8, '10': 'deprecated'},
   ],
   '4': [DataSourceParameter_Type$json],
 };
@@ -168,14 +170,6 @@ const DataSource$json = {
       '6': '.google.protobuf.Duration',
       '10': 'minimumScheduleInterval'
     },
-    {
-      '1': 'partner_legal_name',
-      '3': 22,
-      '4': 1,
-      '5': 9,
-      '10': 'partnerLegalName'
-    },
-    {'1': 'redirect_url', '3': 23, '4': 1, '5': 9, '10': 'redirectUrl'},
   ],
   '4': [DataSource_AuthorizationType$json, DataSource_DataRefreshType$json],
 };
@@ -437,15 +431,6 @@ const ScheduleTransferRunsRequest$json = {
   '2': [
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     {
-      '1': 'labels',
-      '3': 6,
-      '4': 3,
-      '5': 11,
-      '6':
-          '.google.cloud.bigquery.datatransfer.v1.ScheduleTransferRunsRequest.LabelsEntry',
-      '10': 'labels'
-    },
-    {
       '1': 'start_time',
       '3': 2,
       '4': 1,
@@ -462,16 +447,6 @@ const ScheduleTransferRunsRequest$json = {
       '10': 'endTime'
     },
   ],
-  '3': [ScheduleTransferRunsRequest_LabelsEntry$json],
-};
-
-const ScheduleTransferRunsRequest_LabelsEntry$json = {
-  '1': 'LabelsEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
-  ],
-  '7': {'7': true},
 };
 
 const ScheduleTransferRunsResponse$json = {
@@ -493,15 +468,6 @@ const StartManualTransferRunsRequest$json = {
   '2': [
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     {
-      '1': 'labels',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6':
-          '.google.cloud.bigquery.datatransfer.v1.StartManualTransferRunsRequest.LabelsEntry',
-      '10': 'labels'
-    },
-    {
       '1': 'requested_time_range',
       '3': 3,
       '4': 1,
@@ -521,10 +487,7 @@ const StartManualTransferRunsRequest$json = {
       '10': 'requestedRunTime'
     },
   ],
-  '3': [
-    StartManualTransferRunsRequest_TimeRange$json,
-    StartManualTransferRunsRequest_LabelsEntry$json
-  ],
+  '3': [StartManualTransferRunsRequest_TimeRange$json],
   '8': [
     {'1': 'time'},
   ],
@@ -552,15 +515,6 @@ const StartManualTransferRunsRequest_TimeRange$json = {
   ],
 };
 
-const StartManualTransferRunsRequest_LabelsEntry$json = {
-  '1': 'LabelsEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
-  ],
-  '7': {'7': true},
-};
-
 const StartManualTransferRunsResponse$json = {
   '1': 'StartManualTransferRunsResponse',
   '2': [
@@ -572,27 +526,5 @@ const StartManualTransferRunsResponse$json = {
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferRun',
       '10': 'runs'
     },
-  ],
-};
-
-const EnableDataTransferServiceRequest$json = {
-  '1': 'EnableDataTransferServiceRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-  ],
-};
-
-const IsDataTransferServiceEnabledRequest$json = {
-  '1': 'IsDataTransferServiceEnabledRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-  ],
-};
-
-const IsDataTransferServiceEnabledResponse$json = {
-  '1': 'IsDataTransferServiceEnabledResponse',
-  '2': [
-    {'1': 'enabled', '3': 1, '4': 1, '5': 8, '10': 'enabled'},
-    {'1': 'reason', '3': 2, '4': 1, '5': 9, '10': 'reason'},
   ],
 };

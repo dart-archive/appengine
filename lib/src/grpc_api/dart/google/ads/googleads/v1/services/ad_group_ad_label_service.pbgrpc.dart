@@ -1,38 +1,38 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/ad_group_ad_label_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'ad_group_ad_label_service.pb.dart';
-import '../resources/ad_group_ad_label.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'ad_group_ad_label_service.pb.dart' as $0;
+import '../resources/ad_group_ad_label.pb.dart' as $1;
 export 'ad_group_ad_label_service.pb.dart';
 
 class AdGroupAdLabelServiceClient extends $grpc.Client {
   static final _$getAdGroupAdLabel = $grpc.ClientMethod<
-          GetAdGroupAdLabelRequest, $0.AdGroupAdLabel>(
+          $0.GetAdGroupAdLabelRequest, $1.AdGroupAdLabel>(
       '/google.ads.googleads.v1.services.AdGroupAdLabelService/GetAdGroupAdLabel',
-      (GetAdGroupAdLabelRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.AdGroupAdLabel.fromBuffer(value));
+      ($0.GetAdGroupAdLabelRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.AdGroupAdLabel.fromBuffer(value));
   static final _$mutateAdGroupAdLabels = $grpc.ClientMethod<
-          MutateAdGroupAdLabelsRequest, MutateAdGroupAdLabelsResponse>(
+          $0.MutateAdGroupAdLabelsRequest, $0.MutateAdGroupAdLabelsResponse>(
       '/google.ads.googleads.v1.services.AdGroupAdLabelService/MutateAdGroupAdLabels',
-      (MutateAdGroupAdLabelsRequest value) => value.writeToBuffer(),
+      ($0.MutateAdGroupAdLabelsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          MutateAdGroupAdLabelsResponse.fromBuffer(value));
+          $0.MutateAdGroupAdLabelsResponse.fromBuffer(value));
 
   AdGroupAdLabelServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.AdGroupAdLabel> getAdGroupAdLabel(
-      GetAdGroupAdLabelRequest request,
+  $grpc.ResponseFuture<$1.AdGroupAdLabel> getAdGroupAdLabel(
+      $0.GetAdGroupAdLabelRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getAdGroupAdLabel, $async.Stream.fromIterable([request]),
@@ -40,8 +40,8 @@ class AdGroupAdLabelServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<MutateAdGroupAdLabelsResponse> mutateAdGroupAdLabels(
-      MutateAdGroupAdLabelsRequest request,
+  $grpc.ResponseFuture<$0.MutateAdGroupAdLabelsResponse> mutateAdGroupAdLabels(
+      $0.MutateAdGroupAdLabelsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$mutateAdGroupAdLabels, $async.Stream.fromIterable([request]),
@@ -55,37 +55,39 @@ abstract class AdGroupAdLabelServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.AdGroupAdLabelService';
 
   AdGroupAdLabelServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetAdGroupAdLabelRequest, $0.AdGroupAdLabel>(
-        'GetAdGroupAdLabel',
-        getAdGroupAdLabel_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            GetAdGroupAdLabelRequest.fromBuffer(value),
-        ($0.AdGroupAdLabel value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateAdGroupAdLabelsRequest,
-            MutateAdGroupAdLabelsResponse>(
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetAdGroupAdLabelRequest, $1.AdGroupAdLabel>(
+            'GetAdGroupAdLabel',
+            getAdGroupAdLabel_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetAdGroupAdLabelRequest.fromBuffer(value),
+            ($1.AdGroupAdLabel value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateAdGroupAdLabelsRequest,
+            $0.MutateAdGroupAdLabelsResponse>(
         'MutateAdGroupAdLabels',
         mutateAdGroupAdLabels_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            MutateAdGroupAdLabelsRequest.fromBuffer(value),
-        (MutateAdGroupAdLabelsResponse value) => value.writeToBuffer()));
+            $0.MutateAdGroupAdLabelsRequest.fromBuffer(value),
+        ($0.MutateAdGroupAdLabelsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.AdGroupAdLabel> getAdGroupAdLabel_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.AdGroupAdLabel> getAdGroupAdLabel_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetAdGroupAdLabelRequest> request) async {
     return getAdGroupAdLabel(call, await request);
   }
 
-  $async.Future<MutateAdGroupAdLabelsResponse> mutateAdGroupAdLabels_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateAdGroupAdLabelsResponse> mutateAdGroupAdLabels_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.MutateAdGroupAdLabelsRequest> request) async {
     return mutateAdGroupAdLabels(call, await request);
   }
 
-  $async.Future<$0.AdGroupAdLabel> getAdGroupAdLabel(
-      $grpc.ServiceCall call, GetAdGroupAdLabelRequest request);
-  $async.Future<MutateAdGroupAdLabelsResponse> mutateAdGroupAdLabels(
-      $grpc.ServiceCall call, MutateAdGroupAdLabelsRequest request);
+  $async.Future<$1.AdGroupAdLabel> getAdGroupAdLabel(
+      $grpc.ServiceCall call, $0.GetAdGroupAdLabelRequest request);
+  $async.Future<$0.MutateAdGroupAdLabelsResponse> mutateAdGroupAdLabels(
+      $grpc.ServiceCall call, $0.MutateAdGroupAdLabelsRequest request);
 }

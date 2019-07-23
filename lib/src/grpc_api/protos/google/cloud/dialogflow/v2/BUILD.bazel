@@ -20,6 +20,7 @@ proto_library(
     ],
     deps = [
         "//google/api:annotations_proto",
+        "//google/api:client_proto",
         "//google/api:resource_proto",
         "//google/longrunning:operations_proto",
         "//google/rpc:status_proto",
@@ -168,5 +169,73 @@ go_gapic_assembly_pkg(
         ":dialogflow_go_gapic_srcjar-smoke-test.srcjar",
         ":dialogflow_go_gapic_srcjar-test.srcjar",
         ":dialogflow_go_proto",
+    ],
+)
+
+##############################################################################
+# PHP
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "php_proto_library",
+    "php_grpc_library",
+    "php_gapic_library",
+    "php_gapic_assembly_pkg",
+)
+
+php_proto_library(
+    name = "dialogflow_php_proto",
+    deps = [":dialogflow_proto"],
+)
+
+php_grpc_library(
+    name = "dialogflow_php_grpc",
+    srcs = [":dialogflow_proto"],
+    deps = [":dialogflow_php_proto"],
+)
+
+php_gapic_library(
+    name = "dialogflow_php_gapic",
+    src = ":dialogflow_proto_with_info",
+    gapic_yaml = "dialogflow_gapic.yaml",
+    service_yaml = "//google/cloud/dialogflow:dialogflow_v2.yaml",
+    deps = [
+        ":dialogflow_php_grpc",
+        ":dialogflow_php_proto",
+    ],
+)
+
+# Opensource Packages
+php_gapic_assembly_pkg(
+    name = "google-cloud-dialogflow-v2-php",
+    deps = [
+        ":dialogflow_php_gapic",
+        ":dialogflow_php_grpc",
+        ":dialogflow_php_proto",
+    ],
+)
+
+##############################################################################
+# Node.js
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "nodejs_gapic_library",
+    "nodejs_gapic_assembly_pkg",
+)
+
+nodejs_gapic_library(
+    name = "dialogflow_nodejs_gapic",
+    src = ":dialogflow_proto_with_info",
+    gapic_yaml = "dialogflow_gapic.yaml",
+    service_yaml = "//google/cloud/dialogflow:dialogflow_v2.yaml",
+    deps = [],
+)
+
+nodejs_gapic_assembly_pkg(
+    name = "dialogflow-v2-nodejs",
+    deps = [
+        ":dialogflow_nodejs_gapic",
+        ":dialogflow_proto",
     ],
 )

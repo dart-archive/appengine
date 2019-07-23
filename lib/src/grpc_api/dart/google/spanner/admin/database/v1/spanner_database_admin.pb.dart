@@ -1,15 +1,16 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/admin/database/v1/spanner_database_admin.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../protobuf/timestamp.pb.dart' as $4;
+import '../../../../protobuf/timestamp.pb.dart' as $5;
 
 import 'spanner_database_admin.pbenum.dart';
 
@@ -28,18 +29,20 @@ class Database extends $pb.GeneratedMessage {
         Database_State.values)
     ..hasRequiredFields = false;
 
-  Database() : super();
-  Database.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Database.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Database._() : super();
+  factory Database() => create();
+  factory Database.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Database.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Database clone() => Database()..mergeFromMessage(this);
   Database copyWith(void Function(Database) updates) =>
       super.copyWith((message) => updates(message as Database));
   $pb.BuilderInfo get info_ => _i;
-  static Database create() => Database();
+  @$core.pragma('dart2js:noInline')
+  static Database create() => Database._();
   Database createEmptyInstance() => create();
   static $pb.PbList<Database> createRepeated() => $pb.PbList<Database>();
   static Database getDefault() => _defaultInstance ??= create()..freeze();
@@ -70,19 +73,21 @@ class ListDatabasesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListDatabasesRequest() : super();
-  ListDatabasesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDatabasesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDatabasesRequest._() : super();
+  factory ListDatabasesRequest() => create();
+  factory ListDatabasesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatabasesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDatabasesRequest clone() =>
       ListDatabasesRequest()..mergeFromMessage(this);
   ListDatabasesRequest copyWith(void Function(ListDatabasesRequest) updates) =>
       super.copyWith((message) => updates(message as ListDatabasesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListDatabasesRequest create() => ListDatabasesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListDatabasesRequest create() => ListDatabasesRequest._();
   ListDatabasesRequest createEmptyInstance() => create();
   static $pb.PbList<ListDatabasesRequest> createRepeated() =>
       $pb.PbList<ListDatabasesRequest>();
@@ -122,20 +127,22 @@ class ListDatabasesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListDatabasesResponse() : super();
-  ListDatabasesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDatabasesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDatabasesResponse._() : super();
+  factory ListDatabasesResponse() => create();
+  factory ListDatabasesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDatabasesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDatabasesResponse clone() =>
       ListDatabasesResponse()..mergeFromMessage(this);
   ListDatabasesResponse copyWith(
           void Function(ListDatabasesResponse) updates) =>
       super.copyWith((message) => updates(message as ListDatabasesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListDatabasesResponse create() => ListDatabasesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListDatabasesResponse create() => ListDatabasesResponse._();
   ListDatabasesResponse createEmptyInstance() => create();
   static $pb.PbList<ListDatabasesResponse> createRepeated() =>
       $pb.PbList<ListDatabasesResponse>();
@@ -162,20 +169,22 @@ class CreateDatabaseRequest extends $pb.GeneratedMessage {
     ..pPS(3, 'extraStatements')
     ..hasRequiredFields = false;
 
-  CreateDatabaseRequest() : super();
-  CreateDatabaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDatabaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDatabaseRequest._() : super();
+  factory CreateDatabaseRequest() => create();
+  factory CreateDatabaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDatabaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDatabaseRequest clone() =>
       CreateDatabaseRequest()..mergeFromMessage(this);
   CreateDatabaseRequest copyWith(
           void Function(CreateDatabaseRequest) updates) =>
       super.copyWith((message) => updates(message as CreateDatabaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateDatabaseRequest create() => CreateDatabaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateDatabaseRequest create() => CreateDatabaseRequest._();
   CreateDatabaseRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDatabaseRequest> createRepeated() =>
       $pb.PbList<CreateDatabaseRequest>();
@@ -208,20 +217,22 @@ class CreateDatabaseMetadata extends $pb.GeneratedMessage {
     ..aOS(1, 'database')
     ..hasRequiredFields = false;
 
-  CreateDatabaseMetadata() : super();
-  CreateDatabaseMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDatabaseMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDatabaseMetadata._() : super();
+  factory CreateDatabaseMetadata() => create();
+  factory CreateDatabaseMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDatabaseMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDatabaseMetadata clone() =>
       CreateDatabaseMetadata()..mergeFromMessage(this);
   CreateDatabaseMetadata copyWith(
           void Function(CreateDatabaseMetadata) updates) =>
       super.copyWith((message) => updates(message as CreateDatabaseMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static CreateDatabaseMetadata create() => CreateDatabaseMetadata();
+  @$core.pragma('dart2js:noInline')
+  static CreateDatabaseMetadata create() => CreateDatabaseMetadata._();
   CreateDatabaseMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateDatabaseMetadata> createRepeated() =>
       $pb.PbList<CreateDatabaseMetadata>();
@@ -244,18 +255,20 @@ class GetDatabaseRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetDatabaseRequest() : super();
-  GetDatabaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDatabaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDatabaseRequest._() : super();
+  factory GetDatabaseRequest() => create();
+  factory GetDatabaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDatabaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDatabaseRequest clone() => GetDatabaseRequest()..mergeFromMessage(this);
   GetDatabaseRequest copyWith(void Function(GetDatabaseRequest) updates) =>
       super.copyWith((message) => updates(message as GetDatabaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetDatabaseRequest create() => GetDatabaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetDatabaseRequest create() => GetDatabaseRequest._();
   GetDatabaseRequest createEmptyInstance() => create();
   static $pb.PbList<GetDatabaseRequest> createRepeated() =>
       $pb.PbList<GetDatabaseRequest>();
@@ -280,20 +293,22 @@ class UpdateDatabaseDdlRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'operationId')
     ..hasRequiredFields = false;
 
-  UpdateDatabaseDdlRequest() : super();
-  UpdateDatabaseDdlRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateDatabaseDdlRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateDatabaseDdlRequest._() : super();
+  factory UpdateDatabaseDdlRequest() => create();
+  factory UpdateDatabaseDdlRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatabaseDdlRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateDatabaseDdlRequest clone() =>
       UpdateDatabaseDdlRequest()..mergeFromMessage(this);
   UpdateDatabaseDdlRequest copyWith(
           void Function(UpdateDatabaseDdlRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateDatabaseDdlRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateDatabaseDdlRequest create() => UpdateDatabaseDdlRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseDdlRequest create() => UpdateDatabaseDdlRequest._();
   UpdateDatabaseDdlRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDatabaseDdlRequest> createRepeated() =>
       $pb.PbList<UpdateDatabaseDdlRequest>();
@@ -325,17 +340,18 @@ class UpdateDatabaseDdlMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.admin.database.v1'))
     ..aOS(1, 'database')
     ..pPS(2, 'statements')
-    ..pc<$4.Timestamp>(
-        3, 'commitTimestamps', $pb.PbFieldType.PM, $4.Timestamp.create)
+    ..pc<$5.Timestamp>(
+        3, 'commitTimestamps', $pb.PbFieldType.PM, $5.Timestamp.create)
     ..hasRequiredFields = false;
 
-  UpdateDatabaseDdlMetadata() : super();
-  UpdateDatabaseDdlMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateDatabaseDdlMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateDatabaseDdlMetadata._() : super();
+  factory UpdateDatabaseDdlMetadata() => create();
+  factory UpdateDatabaseDdlMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDatabaseDdlMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateDatabaseDdlMetadata clone() =>
       UpdateDatabaseDdlMetadata()..mergeFromMessage(this);
   UpdateDatabaseDdlMetadata copyWith(
@@ -343,7 +359,8 @@ class UpdateDatabaseDdlMetadata extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as UpdateDatabaseDdlMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateDatabaseDdlMetadata create() => UpdateDatabaseDdlMetadata();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatabaseDdlMetadata create() => UpdateDatabaseDdlMetadata._();
   UpdateDatabaseDdlMetadata createEmptyInstance() => create();
   static $pb.PbList<UpdateDatabaseDdlMetadata> createRepeated() =>
       $pb.PbList<UpdateDatabaseDdlMetadata>();
@@ -361,7 +378,7 @@ class UpdateDatabaseDdlMetadata extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get statements => $_getList(1);
 
-  $core.List<$4.Timestamp> get commitTimestamps => $_getList(2);
+  $core.List<$5.Timestamp> get commitTimestamps => $_getList(2);
 }
 
 class DropDatabaseRequest extends $pb.GeneratedMessage {
@@ -370,18 +387,20 @@ class DropDatabaseRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'database')
     ..hasRequiredFields = false;
 
-  DropDatabaseRequest() : super();
-  DropDatabaseRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DropDatabaseRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DropDatabaseRequest._() : super();
+  factory DropDatabaseRequest() => create();
+  factory DropDatabaseRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DropDatabaseRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DropDatabaseRequest clone() => DropDatabaseRequest()..mergeFromMessage(this);
   DropDatabaseRequest copyWith(void Function(DropDatabaseRequest) updates) =>
       super.copyWith((message) => updates(message as DropDatabaseRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DropDatabaseRequest create() => DropDatabaseRequest();
+  @$core.pragma('dart2js:noInline')
+  static DropDatabaseRequest create() => DropDatabaseRequest._();
   DropDatabaseRequest createEmptyInstance() => create();
   static $pb.PbList<DropDatabaseRequest> createRepeated() =>
       $pb.PbList<DropDatabaseRequest>();
@@ -404,20 +423,22 @@ class GetDatabaseDdlRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'database')
     ..hasRequiredFields = false;
 
-  GetDatabaseDdlRequest() : super();
-  GetDatabaseDdlRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDatabaseDdlRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDatabaseDdlRequest._() : super();
+  factory GetDatabaseDdlRequest() => create();
+  factory GetDatabaseDdlRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDatabaseDdlRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDatabaseDdlRequest clone() =>
       GetDatabaseDdlRequest()..mergeFromMessage(this);
   GetDatabaseDdlRequest copyWith(
           void Function(GetDatabaseDdlRequest) updates) =>
       super.copyWith((message) => updates(message as GetDatabaseDdlRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetDatabaseDdlRequest create() => GetDatabaseDdlRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetDatabaseDdlRequest create() => GetDatabaseDdlRequest._();
   GetDatabaseDdlRequest createEmptyInstance() => create();
   static $pb.PbList<GetDatabaseDdlRequest> createRepeated() =>
       $pb.PbList<GetDatabaseDdlRequest>();
@@ -440,20 +461,22 @@ class GetDatabaseDdlResponse extends $pb.GeneratedMessage {
     ..pPS(1, 'statements')
     ..hasRequiredFields = false;
 
-  GetDatabaseDdlResponse() : super();
-  GetDatabaseDdlResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDatabaseDdlResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDatabaseDdlResponse._() : super();
+  factory GetDatabaseDdlResponse() => create();
+  factory GetDatabaseDdlResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDatabaseDdlResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDatabaseDdlResponse clone() =>
       GetDatabaseDdlResponse()..mergeFromMessage(this);
   GetDatabaseDdlResponse copyWith(
           void Function(GetDatabaseDdlResponse) updates) =>
       super.copyWith((message) => updates(message as GetDatabaseDdlResponse));
   $pb.BuilderInfo get info_ => _i;
-  static GetDatabaseDdlResponse create() => GetDatabaseDdlResponse();
+  @$core.pragma('dart2js:noInline')
+  static GetDatabaseDdlResponse create() => GetDatabaseDdlResponse._();
   GetDatabaseDdlResponse createEmptyInstance() => create();
   static $pb.PbList<GetDatabaseDdlResponse> createRepeated() =>
       $pb.PbList<GetDatabaseDdlResponse>();

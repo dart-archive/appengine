@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1beta1/decl.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,6 +22,7 @@ class Decl extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Decl',
       package: const $pb.PackageName('google.api.expr.v1beta1'))
+    ..oo(0, [4, 5])
     ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
     ..aOS(2, 'name')
     ..aOS(3, 'doc')
@@ -28,21 +30,22 @@ class Decl extends $pb.GeneratedMessage {
         4, 'ident', $pb.PbFieldType.OM, IdentDecl.getDefault, IdentDecl.create)
     ..a<FunctionDecl>(5, 'function', $pb.PbFieldType.OM,
         FunctionDecl.getDefault, FunctionDecl.create)
-    ..oo(0, [4, 5])
     ..hasRequiredFields = false;
 
-  Decl() : super();
-  Decl.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Decl.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Decl._() : super();
+  factory Decl() => create();
+  factory Decl.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Decl.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Decl clone() => Decl()..mergeFromMessage(this);
   Decl copyWith(void Function(Decl) updates) =>
       super.copyWith((message) => updates(message as Decl));
   $pb.BuilderInfo get info_ => _i;
-  static Decl create() => Decl();
+  @$core.pragma('dart2js:noInline')
+  static Decl create() => Decl._();
   Decl createEmptyInstance() => create();
   static $pb.PbList<Decl> createRepeated() => $pb.PbList<Decl>();
   static Decl getDefault() => _defaultInstance ??= create()..freeze();
@@ -100,18 +103,20 @@ class DeclType extends $pb.GeneratedMessage {
     ..pc<DeclType>(4, 'typeParams', $pb.PbFieldType.PM, DeclType.create)
     ..hasRequiredFields = false;
 
-  DeclType() : super();
-  DeclType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeclType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeclType._() : super();
+  factory DeclType() => create();
+  factory DeclType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeclType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeclType clone() => DeclType()..mergeFromMessage(this);
   DeclType copyWith(void Function(DeclType) updates) =>
       super.copyWith((message) => updates(message as DeclType));
   $pb.BuilderInfo get info_ => _i;
-  static DeclType create() => DeclType();
+  @$core.pragma('dart2js:noInline')
+  static DeclType create() => DeclType._();
   DeclType createEmptyInstance() => create();
   static $pb.PbList<DeclType> createRepeated() => $pb.PbList<DeclType>();
   static DeclType getDefault() => _defaultInstance ??= create()..freeze();
@@ -145,18 +150,20 @@ class IdentDecl extends $pb.GeneratedMessage {
         4, 'value', $pb.PbFieldType.OM, $0.Expr.getDefault, $0.Expr.create)
     ..hasRequiredFields = false;
 
-  IdentDecl() : super();
-  IdentDecl.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IdentDecl.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IdentDecl._() : super();
+  factory IdentDecl() => create();
+  factory IdentDecl.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IdentDecl.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IdentDecl clone() => IdentDecl()..mergeFromMessage(this);
   IdentDecl copyWith(void Function(IdentDecl) updates) =>
       super.copyWith((message) => updates(message as IdentDecl));
   $pb.BuilderInfo get info_ => _i;
-  static IdentDecl create() => IdentDecl();
+  @$core.pragma('dart2js:noInline')
+  static IdentDecl create() => IdentDecl._();
   IdentDecl createEmptyInstance() => create();
   static $pb.PbList<IdentDecl> createRepeated() => $pb.PbList<IdentDecl>();
   static IdentDecl getDefault() => _defaultInstance ??= create()..freeze();
@@ -188,18 +195,20 @@ class FunctionDecl extends $pb.GeneratedMessage {
     ..aOB(3, 'receiverFunction')
     ..hasRequiredFields = false;
 
-  FunctionDecl() : super();
-  FunctionDecl.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FunctionDecl.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FunctionDecl._() : super();
+  factory FunctionDecl() => create();
+  factory FunctionDecl.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FunctionDecl.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FunctionDecl clone() => FunctionDecl()..mergeFromMessage(this);
   FunctionDecl copyWith(void Function(FunctionDecl) updates) =>
       super.copyWith((message) => updates(message as FunctionDecl));
   $pb.BuilderInfo get info_ => _i;
-  static FunctionDecl create() => FunctionDecl();
+  @$core.pragma('dart2js:noInline')
+  static FunctionDecl create() => FunctionDecl._();
   FunctionDecl createEmptyInstance() => create();
   static $pb.PbList<FunctionDecl> createRepeated() =>
       $pb.PbList<FunctionDecl>();

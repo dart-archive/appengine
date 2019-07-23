@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/table_spec.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -24,18 +25,20 @@ class TableSpec extends $pb.GeneratedMessage {
     ..aInt64(7, 'columnCount')
     ..hasRequiredFields = false;
 
-  TableSpec() : super();
-  TableSpec.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TableSpec.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TableSpec._() : super();
+  factory TableSpec() => create();
+  factory TableSpec.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TableSpec.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TableSpec clone() => TableSpec()..mergeFromMessage(this);
   TableSpec copyWith(void Function(TableSpec) updates) =>
       super.copyWith((message) => updates(message as TableSpec));
   $pb.BuilderInfo get info_ => _i;
-  static TableSpec create() => TableSpec();
+  @$core.pragma('dart2js:noInline')
+  static TableSpec create() => TableSpec._();
   TableSpec createEmptyInstance() => create();
   static $pb.PbList<TableSpec> createRepeated() => $pb.PbList<TableSpec>();
   static TableSpec getDefault() => _defaultInstance ??= create()..freeze();

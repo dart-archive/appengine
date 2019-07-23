@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/build/v1/publish_build_event.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $1;
-import 'build_events.pb.dart' as $2;
+import '../../../protobuf/duration.pb.dart' as $2;
+import 'build_events.pb.dart' as $3;
 
 import 'publish_build_event.pbenum.dart';
 
@@ -30,19 +31,20 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
         PublishLifecycleEventRequest_ServiceLevel.values)
     ..a<OrderedBuildEvent>(2, 'buildEvent', $pb.PbFieldType.OM,
         OrderedBuildEvent.getDefault, OrderedBuildEvent.create)
-    ..a<$1.Duration>(3, 'streamTimeout', $pb.PbFieldType.OM,
-        $1.Duration.getDefault, $1.Duration.create)
+    ..a<$2.Duration>(3, 'streamTimeout', $pb.PbFieldType.OM,
+        $2.Duration.getDefault, $2.Duration.create)
     ..pPS(4, 'notificationKeywords')
     ..aOS(6, 'projectId')
     ..hasRequiredFields = false;
 
-  PublishLifecycleEventRequest() : super();
-  PublishLifecycleEventRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PublishLifecycleEventRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PublishLifecycleEventRequest._() : super();
+  factory PublishLifecycleEventRequest() => create();
+  factory PublishLifecycleEventRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublishLifecycleEventRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PublishLifecycleEventRequest clone() =>
       PublishLifecycleEventRequest()..mergeFromMessage(this);
   PublishLifecycleEventRequest copyWith(
@@ -50,8 +52,9 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PublishLifecycleEventRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PublishLifecycleEventRequest create() =>
-      PublishLifecycleEventRequest();
+      PublishLifecycleEventRequest._();
   PublishLifecycleEventRequest createEmptyInstance() => create();
   static $pb.PbList<PublishLifecycleEventRequest> createRepeated() =>
       $pb.PbList<PublishLifecycleEventRequest>();
@@ -75,8 +78,8 @@ class PublishLifecycleEventRequest extends $pb.GeneratedMessage {
   $core.bool hasBuildEvent() => $_has(1);
   void clearBuildEvent() => clearField(2);
 
-  $1.Duration get streamTimeout => $_getN(2);
-  set streamTimeout($1.Duration v) {
+  $2.Duration get streamTimeout => $_getN(2);
+  set streamTimeout($2.Duration v) {
     setField(3, v);
   }
 
@@ -98,18 +101,20 @@ class PublishBuildToolEventStreamResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PublishBuildToolEventStreamResponse',
       package: const $pb.PackageName('google.devtools.build.v1'))
-    ..a<$2.StreamId>(1, 'streamId', $pb.PbFieldType.OM, $2.StreamId.getDefault,
-        $2.StreamId.create)
+    ..a<$3.StreamId>(1, 'streamId', $pb.PbFieldType.OM, $3.StreamId.getDefault,
+        $3.StreamId.create)
     ..aInt64(2, 'sequenceNumber')
     ..hasRequiredFields = false;
 
-  PublishBuildToolEventStreamResponse() : super();
-  PublishBuildToolEventStreamResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PublishBuildToolEventStreamResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PublishBuildToolEventStreamResponse._() : super();
+  factory PublishBuildToolEventStreamResponse() => create();
+  factory PublishBuildToolEventStreamResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublishBuildToolEventStreamResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PublishBuildToolEventStreamResponse clone() =>
       PublishBuildToolEventStreamResponse()..mergeFromMessage(this);
   PublishBuildToolEventStreamResponse copyWith(
@@ -117,8 +122,9 @@ class PublishBuildToolEventStreamResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PublishBuildToolEventStreamResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PublishBuildToolEventStreamResponse create() =>
-      PublishBuildToolEventStreamResponse();
+      PublishBuildToolEventStreamResponse._();
   PublishBuildToolEventStreamResponse createEmptyInstance() => create();
   static $pb.PbList<PublishBuildToolEventStreamResponse> createRepeated() =>
       $pb.PbList<PublishBuildToolEventStreamResponse>();
@@ -126,8 +132,8 @@ class PublishBuildToolEventStreamResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PublishBuildToolEventStreamResponse _defaultInstance;
 
-  $2.StreamId get streamId => $_getN(0);
-  set streamId($2.StreamId v) {
+  $3.StreamId get streamId => $_getN(0);
+  set streamId($3.StreamId v) {
     setField(1, v);
   }
 
@@ -146,25 +152,27 @@ class PublishBuildToolEventStreamResponse extends $pb.GeneratedMessage {
 class OrderedBuildEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OrderedBuildEvent',
       package: const $pb.PackageName('google.devtools.build.v1'))
-    ..a<$2.StreamId>(1, 'streamId', $pb.PbFieldType.OM, $2.StreamId.getDefault,
-        $2.StreamId.create)
+    ..a<$3.StreamId>(1, 'streamId', $pb.PbFieldType.OM, $3.StreamId.getDefault,
+        $3.StreamId.create)
     ..aInt64(2, 'sequenceNumber')
-    ..a<$2.BuildEvent>(3, 'event', $pb.PbFieldType.OM, $2.BuildEvent.getDefault,
-        $2.BuildEvent.create)
+    ..a<$3.BuildEvent>(3, 'event', $pb.PbFieldType.OM, $3.BuildEvent.getDefault,
+        $3.BuildEvent.create)
     ..hasRequiredFields = false;
 
-  OrderedBuildEvent() : super();
-  OrderedBuildEvent.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OrderedBuildEvent.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OrderedBuildEvent._() : super();
+  factory OrderedBuildEvent() => create();
+  factory OrderedBuildEvent.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OrderedBuildEvent.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OrderedBuildEvent clone() => OrderedBuildEvent()..mergeFromMessage(this);
   OrderedBuildEvent copyWith(void Function(OrderedBuildEvent) updates) =>
       super.copyWith((message) => updates(message as OrderedBuildEvent));
   $pb.BuilderInfo get info_ => _i;
-  static OrderedBuildEvent create() => OrderedBuildEvent();
+  @$core.pragma('dart2js:noInline')
+  static OrderedBuildEvent create() => OrderedBuildEvent._();
   OrderedBuildEvent createEmptyInstance() => create();
   static $pb.PbList<OrderedBuildEvent> createRepeated() =>
       $pb.PbList<OrderedBuildEvent>();
@@ -172,8 +180,8 @@ class OrderedBuildEvent extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static OrderedBuildEvent _defaultInstance;
 
-  $2.StreamId get streamId => $_getN(0);
-  set streamId($2.StreamId v) {
+  $3.StreamId get streamId => $_getN(0);
+  set streamId($3.StreamId v) {
     setField(1, v);
   }
 
@@ -188,8 +196,8 @@ class OrderedBuildEvent extends $pb.GeneratedMessage {
   $core.bool hasSequenceNumber() => $_has(1);
   void clearSequenceNumber() => clearField(2);
 
-  $2.BuildEvent get event => $_getN(2);
-  set event($2.BuildEvent v) {
+  $3.BuildEvent get event => $_getN(2);
+  set event($3.BuildEvent v) {
     setField(3, v);
   }
 
@@ -207,13 +215,14 @@ class PublishBuildToolEventStreamRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'projectId')
     ..hasRequiredFields = false;
 
-  PublishBuildToolEventStreamRequest() : super();
-  PublishBuildToolEventStreamRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PublishBuildToolEventStreamRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PublishBuildToolEventStreamRequest._() : super();
+  factory PublishBuildToolEventStreamRequest() => create();
+  factory PublishBuildToolEventStreamRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PublishBuildToolEventStreamRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PublishBuildToolEventStreamRequest clone() =>
       PublishBuildToolEventStreamRequest()..mergeFromMessage(this);
   PublishBuildToolEventStreamRequest copyWith(
@@ -221,8 +230,9 @@ class PublishBuildToolEventStreamRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PublishBuildToolEventStreamRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PublishBuildToolEventStreamRequest create() =>
-      PublishBuildToolEventStreamRequest();
+      PublishBuildToolEventStreamRequest._();
   PublishBuildToolEventStreamRequest createEmptyInstance() => create();
   static $pb.PbList<PublishBuildToolEventStreamRequest> createRepeated() =>
       $pb.PbList<PublishBuildToolEventStreamRequest>();

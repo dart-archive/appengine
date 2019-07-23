@@ -1,70 +1,71 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/support/v1alpha1/cloud_support.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'cloud_support.pb.dart';
-import '../common.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'cloud_support.pb.dart' as $0;
+import '../common.pb.dart' as $1;
 export 'cloud_support.pb.dart';
 
 class CloudSupportClient extends $grpc.Client {
   static final _$getSupportAccount =
-      $grpc.ClientMethod<GetSupportAccountRequest, $0.SupportAccount>(
+      $grpc.ClientMethod<$0.GetSupportAccountRequest, $1.SupportAccount>(
           '/google.cloud.support.v1alpha1.CloudSupport/GetSupportAccount',
-          (GetSupportAccountRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.SupportAccount.fromBuffer(value));
+          ($0.GetSupportAccountRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.SupportAccount.fromBuffer(value));
   static final _$listSupportAccounts = $grpc.ClientMethod<
-          ListSupportAccountsRequest, ListSupportAccountsResponse>(
+          $0.ListSupportAccountsRequest, $0.ListSupportAccountsResponse>(
       '/google.cloud.support.v1alpha1.CloudSupport/ListSupportAccounts',
-      (ListSupportAccountsRequest value) => value.writeToBuffer(),
+      ($0.ListSupportAccountsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListSupportAccountsResponse.fromBuffer(value));
-  static final _$getCase = $grpc.ClientMethod<GetCaseRequest, $0.Case>(
+          $0.ListSupportAccountsResponse.fromBuffer(value));
+  static final _$getCase = $grpc.ClientMethod<$0.GetCaseRequest, $1.Case>(
       '/google.cloud.support.v1alpha1.CloudSupport/GetCase',
-      (GetCaseRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Case.fromBuffer(value));
+      ($0.GetCaseRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Case.fromBuffer(value));
   static final _$listCases =
-      $grpc.ClientMethod<ListCasesRequest, ListCasesResponse>(
+      $grpc.ClientMethod<$0.ListCasesRequest, $0.ListCasesResponse>(
           '/google.cloud.support.v1alpha1.CloudSupport/ListCases',
-          (ListCasesRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => ListCasesResponse.fromBuffer(value));
-  static final _$listComments =
-      $grpc.ClientMethod<ListCommentsRequest, ListCommentsResponse>(
-          '/google.cloud.support.v1alpha1.CloudSupport/ListComments',
-          (ListCommentsRequest value) => value.writeToBuffer(),
+          ($0.ListCasesRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListCommentsResponse.fromBuffer(value));
-  static final _$createCase = $grpc.ClientMethod<CreateCaseRequest, $0.Case>(
+              $0.ListCasesResponse.fromBuffer(value));
+  static final _$listComments =
+      $grpc.ClientMethod<$0.ListCommentsRequest, $0.ListCommentsResponse>(
+          '/google.cloud.support.v1alpha1.CloudSupport/ListComments',
+          ($0.ListCommentsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.ListCommentsResponse.fromBuffer(value));
+  static final _$createCase = $grpc.ClientMethod<$0.CreateCaseRequest, $1.Case>(
       '/google.cloud.support.v1alpha1.CloudSupport/CreateCase',
-      (CreateCaseRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Case.fromBuffer(value));
-  static final _$updateCase = $grpc.ClientMethod<UpdateCaseRequest, $0.Case>(
+      ($0.CreateCaseRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Case.fromBuffer(value));
+  static final _$updateCase = $grpc.ClientMethod<$0.UpdateCaseRequest, $1.Case>(
       '/google.cloud.support.v1alpha1.CloudSupport/UpdateCase',
-      (UpdateCaseRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Case.fromBuffer(value));
+      ($0.UpdateCaseRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Case.fromBuffer(value));
   static final _$createComment =
-      $grpc.ClientMethod<CreateCommentRequest, $0.Comment>(
+      $grpc.ClientMethod<$0.CreateCommentRequest, $1.Comment>(
           '/google.cloud.support.v1alpha1.CloudSupport/CreateComment',
-          (CreateCommentRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Comment.fromBuffer(value));
+          ($0.CreateCommentRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Comment.fromBuffer(value));
   static final _$getIssueTaxonomy =
-      $grpc.ClientMethod<GetIssueTaxonomyRequest, $0.IssueTaxonomy>(
+      $grpc.ClientMethod<$0.GetIssueTaxonomyRequest, $1.IssueTaxonomy>(
           '/google.cloud.support.v1alpha1.CloudSupport/GetIssueTaxonomy',
-          (GetIssueTaxonomyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.IssueTaxonomy.fromBuffer(value));
+          ($0.GetIssueTaxonomyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.IssueTaxonomy.fromBuffer(value));
 
   CloudSupportClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.SupportAccount> getSupportAccount(
-      GetSupportAccountRequest request,
+  $grpc.ResponseFuture<$1.SupportAccount> getSupportAccount(
+      $0.GetSupportAccountRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getSupportAccount, $async.Stream.fromIterable([request]),
@@ -72,8 +73,8 @@ class CloudSupportClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListSupportAccountsResponse> listSupportAccounts(
-      ListSupportAccountsRequest request,
+  $grpc.ResponseFuture<$0.ListSupportAccountsResponse> listSupportAccounts(
+      $0.ListSupportAccountsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listSupportAccounts, $async.Stream.fromIterable([request]),
@@ -81,22 +82,23 @@ class CloudSupportClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Case> getCase(GetCaseRequest request,
+  $grpc.ResponseFuture<$1.Case> getCase($0.GetCaseRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getCase, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListCasesResponse> listCases(ListCasesRequest request,
+  $grpc.ResponseFuture<$0.ListCasesResponse> listCases(
+      $0.ListCasesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$listCases, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListCommentsResponse> listComments(
-      ListCommentsRequest request,
+  $grpc.ResponseFuture<$0.ListCommentsResponse> listComments(
+      $0.ListCommentsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listComments, $async.Stream.fromIterable([request]),
@@ -104,7 +106,7 @@ class CloudSupportClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Case> createCase(CreateCaseRequest request,
+  $grpc.ResponseFuture<$1.Case> createCase($0.CreateCaseRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createCase, $async.Stream.fromIterable([request]),
@@ -112,7 +114,7 @@ class CloudSupportClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Case> updateCase(UpdateCaseRequest request,
+  $grpc.ResponseFuture<$1.Case> updateCase($0.UpdateCaseRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateCase, $async.Stream.fromIterable([request]),
@@ -120,7 +122,8 @@ class CloudSupportClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Comment> createComment(CreateCommentRequest request,
+  $grpc.ResponseFuture<$1.Comment> createComment(
+      $0.CreateCommentRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createComment, $async.Stream.fromIterable([request]),
@@ -128,8 +131,8 @@ class CloudSupportClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.IssueTaxonomy> getIssueTaxonomy(
-      GetIssueTaxonomyRequest request,
+  $grpc.ResponseFuture<$1.IssueTaxonomy> getIssueTaxonomy(
+      $0.GetIssueTaxonomyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getIssueTaxonomy, $async.Stream.fromIterable([request]),
@@ -142,136 +145,143 @@ abstract class CloudSupportServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.support.v1alpha1.CloudSupport';
 
   CloudSupportServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetSupportAccountRequest, $0.SupportAccount>(
-        'GetSupportAccount',
-        getSupportAccount_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            GetSupportAccountRequest.fromBuffer(value),
-        ($0.SupportAccount value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListSupportAccountsRequest,
-            ListSupportAccountsResponse>(
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetSupportAccountRequest, $1.SupportAccount>(
+            'GetSupportAccount',
+            getSupportAccount_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetSupportAccountRequest.fromBuffer(value),
+            ($1.SupportAccount value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListSupportAccountsRequest,
+            $0.ListSupportAccountsResponse>(
         'ListSupportAccounts',
         listSupportAccounts_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListSupportAccountsRequest.fromBuffer(value),
-        (ListSupportAccountsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetCaseRequest, $0.Case>(
+            $0.ListSupportAccountsRequest.fromBuffer(value),
+        ($0.ListSupportAccountsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetCaseRequest, $1.Case>(
         'GetCase',
         getCase_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetCaseRequest.fromBuffer(value),
-        ($0.Case value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListCasesRequest, ListCasesResponse>(
+        ($core.List<$core.int> value) => $0.GetCaseRequest.fromBuffer(value),
+        ($1.Case value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListCasesRequest, $0.ListCasesResponse>(
         'ListCases',
         listCases_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ListCasesRequest.fromBuffer(value),
-        (ListCasesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListCommentsRequest, ListCommentsResponse>(
-        'ListComments',
-        listComments_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListCommentsRequest.fromBuffer(value),
-        (ListCommentsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateCaseRequest, $0.Case>(
+        ($core.List<$core.int> value) => $0.ListCasesRequest.fromBuffer(value),
+        ($0.ListCasesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListCommentsRequest, $0.ListCommentsResponse>(
+            'ListComments',
+            listComments_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListCommentsRequest.fromBuffer(value),
+            ($0.ListCommentsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateCaseRequest, $1.Case>(
         'CreateCase',
         createCase_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateCaseRequest.fromBuffer(value),
-        ($0.Case value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateCaseRequest, $0.Case>(
+        ($core.List<$core.int> value) => $0.CreateCaseRequest.fromBuffer(value),
+        ($1.Case value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateCaseRequest, $1.Case>(
         'UpdateCase',
         updateCase_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateCaseRequest.fromBuffer(value),
-        ($0.Case value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateCommentRequest, $0.Comment>(
+        ($core.List<$core.int> value) => $0.UpdateCaseRequest.fromBuffer(value),
+        ($1.Case value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateCommentRequest, $1.Comment>(
         'CreateComment',
         createComment_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateCommentRequest.fromBuffer(value),
-        ($0.Comment value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetIssueTaxonomyRequest, $0.IssueTaxonomy>(
-        'GetIssueTaxonomy',
-        getIssueTaxonomy_Pre,
-        false,
-        false,
         ($core.List<$core.int> value) =>
-            GetIssueTaxonomyRequest.fromBuffer(value),
-        ($0.IssueTaxonomy value) => value.writeToBuffer()));
+            $0.CreateCommentRequest.fromBuffer(value),
+        ($1.Comment value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.GetIssueTaxonomyRequest, $1.IssueTaxonomy>(
+            'GetIssueTaxonomy',
+            getIssueTaxonomy_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.GetIssueTaxonomyRequest.fromBuffer(value),
+            ($1.IssueTaxonomy value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.SupportAccount> getSupportAccount_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.SupportAccount> getSupportAccount_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetSupportAccountRequest> request) async {
     return getSupportAccount(call, await request);
   }
 
-  $async.Future<ListSupportAccountsResponse> listSupportAccounts_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListSupportAccountsResponse> listSupportAccounts_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListSupportAccountsRequest> request) async {
     return listSupportAccounts(call, await request);
   }
 
-  $async.Future<$0.Case> getCase_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Case> getCase_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.GetCaseRequest> request) async {
     return getCase(call, await request);
   }
 
-  $async.Future<ListCasesResponse> listCases_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListCasesResponse> listCases_Pre($grpc.ServiceCall call,
+      $async.Future<$0.ListCasesRequest> request) async {
     return listCases(call, await request);
   }
 
-  $async.Future<ListCommentsResponse> listComments_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListCommentsResponse> listComments_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListCommentsRequest> request) async {
     return listComments(call, await request);
   }
 
-  $async.Future<$0.Case> createCase_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Case> createCase_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateCaseRequest> request) async {
     return createCase(call, await request);
   }
 
-  $async.Future<$0.Case> updateCase_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Case> updateCase_Pre($grpc.ServiceCall call,
+      $async.Future<$0.UpdateCaseRequest> request) async {
     return updateCase(call, await request);
   }
 
-  $async.Future<$0.Comment> createComment_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Comment> createComment_Pre($grpc.ServiceCall call,
+      $async.Future<$0.CreateCommentRequest> request) async {
     return createComment(call, await request);
   }
 
-  $async.Future<$0.IssueTaxonomy> getIssueTaxonomy_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.IssueTaxonomy> getIssueTaxonomy_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetIssueTaxonomyRequest> request) async {
     return getIssueTaxonomy(call, await request);
   }
 
-  $async.Future<$0.SupportAccount> getSupportAccount(
-      $grpc.ServiceCall call, GetSupportAccountRequest request);
-  $async.Future<ListSupportAccountsResponse> listSupportAccounts(
-      $grpc.ServiceCall call, ListSupportAccountsRequest request);
-  $async.Future<$0.Case> getCase(
-      $grpc.ServiceCall call, GetCaseRequest request);
-  $async.Future<ListCasesResponse> listCases(
-      $grpc.ServiceCall call, ListCasesRequest request);
-  $async.Future<ListCommentsResponse> listComments(
-      $grpc.ServiceCall call, ListCommentsRequest request);
-  $async.Future<$0.Case> createCase(
-      $grpc.ServiceCall call, CreateCaseRequest request);
-  $async.Future<$0.Case> updateCase(
-      $grpc.ServiceCall call, UpdateCaseRequest request);
-  $async.Future<$0.Comment> createComment(
-      $grpc.ServiceCall call, CreateCommentRequest request);
-  $async.Future<$0.IssueTaxonomy> getIssueTaxonomy(
-      $grpc.ServiceCall call, GetIssueTaxonomyRequest request);
+  $async.Future<$1.SupportAccount> getSupportAccount(
+      $grpc.ServiceCall call, $0.GetSupportAccountRequest request);
+  $async.Future<$0.ListSupportAccountsResponse> listSupportAccounts(
+      $grpc.ServiceCall call, $0.ListSupportAccountsRequest request);
+  $async.Future<$1.Case> getCase(
+      $grpc.ServiceCall call, $0.GetCaseRequest request);
+  $async.Future<$0.ListCasesResponse> listCases(
+      $grpc.ServiceCall call, $0.ListCasesRequest request);
+  $async.Future<$0.ListCommentsResponse> listComments(
+      $grpc.ServiceCall call, $0.ListCommentsRequest request);
+  $async.Future<$1.Case> createCase(
+      $grpc.ServiceCall call, $0.CreateCaseRequest request);
+  $async.Future<$1.Case> updateCase(
+      $grpc.ServiceCall call, $0.UpdateCaseRequest request);
+  $async.Future<$1.Comment> createComment(
+      $grpc.ServiceCall call, $0.CreateCommentRequest request);
+  $async.Future<$1.IssueTaxonomy> getIssueTaxonomy(
+      $grpc.ServiceCall call, $0.GetIssueTaxonomyRequest request);
 }

@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/data_labeling_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -90,23 +91,4 @@ class LabelTextRequest_Feature extends $pb.ProtobufEnum {
   static LabelTextRequest_Feature valueOf($core.int value) => _byValue[value];
 
   const LabelTextRequest_Feature._($core.int v, $core.String n) : super(v, n);
-}
-
-class LabelAudioRequest_Feature extends $pb.ProtobufEnum {
-  static const LabelAudioRequest_Feature FEATURE_UNSPECIFIED =
-      LabelAudioRequest_Feature._(0, 'FEATURE_UNSPECIFIED');
-  static const LabelAudioRequest_Feature AUDIO_TRANSCRIPTION =
-      LabelAudioRequest_Feature._(1, 'AUDIO_TRANSCRIPTION');
-
-  static const $core.List<LabelAudioRequest_Feature> values =
-      <LabelAudioRequest_Feature>[
-    FEATURE_UNSPECIFIED,
-    AUDIO_TRANSCRIPTION,
-  ];
-
-  static final $core.Map<$core.int, LabelAudioRequest_Feature> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static LabelAudioRequest_Feature valueOf($core.int value) => _byValue[value];
-
-  const LabelAudioRequest_Feature._($core.int v, $core.String n) : super(v, n);
 }

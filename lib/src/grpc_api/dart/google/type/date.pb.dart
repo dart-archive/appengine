@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/type/date.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class Date extends $pb.GeneratedMessage {
         ..a<$core.int>(3, 'day', $pb.PbFieldType.O3)
         ..hasRequiredFields = false;
 
-  Date() : super();
-  Date.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Date.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Date._() : super();
+  factory Date() => create();
+  factory Date.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Date.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Date clone() => Date()..mergeFromMessage(this);
   Date copyWith(void Function(Date) updates) =>
       super.copyWith((message) => updates(message as Date));
   $pb.BuilderInfo get info_ => _i;
-  static Date create() => Date();
+  @$core.pragma('dart2js:noInline')
+  static Date create() => Date._();
   Date createEmptyInstance() => create();
   static $pb.PbList<Date> createRepeated() => $pb.PbList<Date>();
   static Date getDefault() => _defaultInstance ??= create()..freeze();

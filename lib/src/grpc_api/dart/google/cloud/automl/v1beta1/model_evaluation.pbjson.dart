@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/model_evaluation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ModelEvaluation$json = {
   '1': 'ModelEvaluation',
@@ -42,6 +43,15 @@ const ModelEvaluation$json = {
       '6': '.google.cloud.automl.v1beta1.ImageObjectDetectionEvaluationMetrics',
       '9': 0,
       '10': 'imageObjectDetectionEvaluationMetrics'
+    },
+    {
+      '1': 'video_object_tracking_evaluation_metrics',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.VideoObjectTrackingEvaluationMetrics',
+      '9': 0,
+      '10': 'videoObjectTrackingEvaluationMetrics'
     },
     {
       '1': 'text_sentiment_evaluation_metrics',

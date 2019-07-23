@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/ranges.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class DoubleRange extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'end', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  DoubleRange() : super();
-  DoubleRange.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DoubleRange.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DoubleRange._() : super();
+  factory DoubleRange() => create();
+  factory DoubleRange.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DoubleRange.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DoubleRange clone() => DoubleRange()..mergeFromMessage(this);
   DoubleRange copyWith(void Function(DoubleRange) updates) =>
       super.copyWith((message) => updates(message as DoubleRange));
   $pb.BuilderInfo get info_ => _i;
-  static DoubleRange create() => DoubleRange();
+  @$core.pragma('dart2js:noInline')
+  static DoubleRange create() => DoubleRange._();
   DoubleRange createEmptyInstance() => create();
   static $pb.PbList<DoubleRange> createRepeated() => $pb.PbList<DoubleRange>();
   static DoubleRange getDefault() => _defaultInstance ??= create()..freeze();

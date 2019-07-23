@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/annotation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const AnnotationSource$json = {
   '1': 'AnnotationSource',
@@ -35,9 +36,9 @@ const AnnotationType$json = {
     {'1': 'VIDEO_OBJECT_TRACKING_ANNOTATION', '2': 4},
     {'1': 'VIDEO_OBJECT_DETECTION_ANNOTATION', '2': 5},
     {'1': 'VIDEO_EVENT_ANNOTATION', '2': 6},
-    {'1': 'AUDIO_TRANSCRIPTION_ANNOTATION', '2': 7},
     {'1': 'TEXT_CLASSIFICATION_ANNOTATION', '2': 8},
     {'1': 'TEXT_ENTITY_EXTRACTION_ANNOTATION', '2': 9},
+    {'1': 'GENERAL_CLASSIFICATION_ANNOTATION', '2': 14},
   ],
 };
 
@@ -129,6 +130,15 @@ const AnnotationValue$json = {
       '10': 'textClassificationAnnotation'
     },
     {
+      '1': 'text_entity_extraction_annotation',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.TextEntityExtractionAnnotation',
+      '9': 0,
+      '10': 'textEntityExtractionAnnotation'
+    },
+    {
       '1': 'video_classification_annotation',
       '3': 4,
       '4': 1,
@@ -154,15 +164,6 @@ const AnnotationValue$json = {
       '6': '.google.cloud.datalabeling.v1beta1.VideoEventAnnotation',
       '9': 0,
       '10': 'videoEventAnnotation'
-    },
-    {
-      '1': 'audio_recognition_annotation',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.AudioRecognitionAnnotation',
-      '9': 0,
-      '10': 'audioRecognitionAnnotation'
     },
   ],
   '8': [
@@ -374,6 +375,36 @@ const TextClassificationAnnotation$json = {
   ],
 };
 
+const TextEntityExtractionAnnotation$json = {
+  '1': 'TextEntityExtractionAnnotation',
+  '2': [
+    {
+      '1': 'annotation_spec',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.AnnotationSpec',
+      '10': 'annotationSpec'
+    },
+    {
+      '1': 'sequential_segment',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datalabeling.v1beta1.SequentialSegment',
+      '10': 'sequentialSegment'
+    },
+  ],
+};
+
+const SequentialSegment$json = {
+  '1': 'SequentialSegment',
+  '2': [
+    {'1': 'start', '3': 1, '4': 1, '5': 5, '10': 'start'},
+    {'1': 'end', '3': 2, '4': 1, '5': 5, '10': 'end'},
+  ],
+};
+
 const TimeSegment$json = {
   '1': 'TimeSegment',
   '2': [
@@ -501,29 +532,6 @@ const VideoEventAnnotation$json = {
       '5': 11,
       '6': '.google.cloud.datalabeling.v1beta1.TimeSegment',
       '10': 'timeSegment'
-    },
-  ],
-};
-
-const AudioRecognitionAnnotation$json = {
-  '1': 'AudioRecognitionAnnotation',
-  '2': [
-    {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
-    {
-      '1': 'start_offset',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Duration',
-      '10': 'startOffset'
-    },
-    {
-      '1': 'end_offset',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Duration',
-      '10': 'endOffset'
     },
   ],
 };

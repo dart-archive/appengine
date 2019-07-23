@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/ad_type_infos.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,18 +30,20 @@ class TextAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  TextAdInfo() : super();
-  TextAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAdInfo._() : super();
+  factory TextAdInfo() => create();
+  factory TextAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAdInfo clone() => TextAdInfo()..mergeFromMessage(this);
   TextAdInfo copyWith(void Function(TextAdInfo) updates) =>
       super.copyWith((message) => updates(message as TextAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static TextAdInfo create() => TextAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static TextAdInfo create() => TextAdInfo._();
   TextAdInfo createEmptyInstance() => create();
   static $pb.PbList<TextAdInfo> createRepeated() => $pb.PbList<TextAdInfo>();
   static TextAdInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -90,18 +93,20 @@ class ExpandedTextAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ExpandedTextAdInfo() : super();
-  ExpandedTextAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExpandedTextAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExpandedTextAdInfo._() : super();
+  factory ExpandedTextAdInfo() => create();
+  factory ExpandedTextAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExpandedTextAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExpandedTextAdInfo clone() => ExpandedTextAdInfo()..mergeFromMessage(this);
   ExpandedTextAdInfo copyWith(void Function(ExpandedTextAdInfo) updates) =>
       super.copyWith((message) => updates(message as ExpandedTextAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ExpandedTextAdInfo create() => ExpandedTextAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ExpandedTextAdInfo create() => ExpandedTextAdInfo._();
   ExpandedTextAdInfo createEmptyInstance() => create();
   static $pb.PbList<ExpandedTextAdInfo> createRepeated() =>
       $pb.PbList<ExpandedTextAdInfo>();
@@ -200,18 +205,20 @@ class CallOnlyAdInfo extends $pb.GeneratedMessage {
     ..a<$0.StringValue>(12, 'headline2', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  CallOnlyAdInfo() : super();
-  CallOnlyAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CallOnlyAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CallOnlyAdInfo._() : super();
+  factory CallOnlyAdInfo() => create();
+  factory CallOnlyAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CallOnlyAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CallOnlyAdInfo clone() => CallOnlyAdInfo()..mergeFromMessage(this);
   CallOnlyAdInfo copyWith(void Function(CallOnlyAdInfo) updates) =>
       super.copyWith((message) => updates(message as CallOnlyAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static CallOnlyAdInfo create() => CallOnlyAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static CallOnlyAdInfo create() => CallOnlyAdInfo._();
   CallOnlyAdInfo createEmptyInstance() => create();
   static $pb.PbList<CallOnlyAdInfo> createRepeated() =>
       $pb.PbList<CallOnlyAdInfo>();
@@ -325,13 +332,14 @@ class ExpandedDynamicSearchAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ExpandedDynamicSearchAdInfo() : super();
-  ExpandedDynamicSearchAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExpandedDynamicSearchAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExpandedDynamicSearchAdInfo._() : super();
+  factory ExpandedDynamicSearchAdInfo() => create();
+  factory ExpandedDynamicSearchAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExpandedDynamicSearchAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExpandedDynamicSearchAdInfo clone() =>
       ExpandedDynamicSearchAdInfo()..mergeFromMessage(this);
   ExpandedDynamicSearchAdInfo copyWith(
@@ -339,7 +347,9 @@ class ExpandedDynamicSearchAdInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExpandedDynamicSearchAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ExpandedDynamicSearchAdInfo create() => ExpandedDynamicSearchAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ExpandedDynamicSearchAdInfo create() =>
+      ExpandedDynamicSearchAdInfo._();
   ExpandedDynamicSearchAdInfo createEmptyInstance() => create();
   static $pb.PbList<ExpandedDynamicSearchAdInfo> createRepeated() =>
       $pb.PbList<ExpandedDynamicSearchAdInfo>();
@@ -361,18 +371,20 @@ class HotelAdInfo extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  HotelAdInfo() : super();
-  HotelAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  HotelAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  HotelAdInfo._() : super();
+  factory HotelAdInfo() => create();
+  factory HotelAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory HotelAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   HotelAdInfo clone() => HotelAdInfo()..mergeFromMessage(this);
   HotelAdInfo copyWith(void Function(HotelAdInfo) updates) =>
       super.copyWith((message) => updates(message as HotelAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static HotelAdInfo create() => HotelAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static HotelAdInfo create() => HotelAdInfo._();
   HotelAdInfo createEmptyInstance() => create();
   static $pb.PbList<HotelAdInfo> createRepeated() => $pb.PbList<HotelAdInfo>();
   static HotelAdInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -384,18 +396,20 @@ class ShoppingSmartAdInfo extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  ShoppingSmartAdInfo() : super();
-  ShoppingSmartAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ShoppingSmartAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ShoppingSmartAdInfo._() : super();
+  factory ShoppingSmartAdInfo() => create();
+  factory ShoppingSmartAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ShoppingSmartAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ShoppingSmartAdInfo clone() => ShoppingSmartAdInfo()..mergeFromMessage(this);
   ShoppingSmartAdInfo copyWith(void Function(ShoppingSmartAdInfo) updates) =>
       super.copyWith((message) => updates(message as ShoppingSmartAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ShoppingSmartAdInfo create() => ShoppingSmartAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ShoppingSmartAdInfo create() => ShoppingSmartAdInfo._();
   ShoppingSmartAdInfo createEmptyInstance() => create();
   static $pb.PbList<ShoppingSmartAdInfo> createRepeated() =>
       $pb.PbList<ShoppingSmartAdInfo>();
@@ -409,20 +423,22 @@ class ShoppingProductAdInfo extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  ShoppingProductAdInfo() : super();
-  ShoppingProductAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ShoppingProductAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ShoppingProductAdInfo._() : super();
+  factory ShoppingProductAdInfo() => create();
+  factory ShoppingProductAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ShoppingProductAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ShoppingProductAdInfo clone() =>
       ShoppingProductAdInfo()..mergeFromMessage(this);
   ShoppingProductAdInfo copyWith(
           void Function(ShoppingProductAdInfo) updates) =>
       super.copyWith((message) => updates(message as ShoppingProductAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ShoppingProductAdInfo create() => ShoppingProductAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ShoppingProductAdInfo create() => ShoppingProductAdInfo._();
   ShoppingProductAdInfo createEmptyInstance() => create();
   static $pb.PbList<ShoppingProductAdInfo> createRepeated() =>
       $pb.PbList<ShoppingProductAdInfo>();
@@ -439,13 +455,14 @@ class ShoppingComparisonListingAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ShoppingComparisonListingAdInfo() : super();
-  ShoppingComparisonListingAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ShoppingComparisonListingAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ShoppingComparisonListingAdInfo._() : super();
+  factory ShoppingComparisonListingAdInfo() => create();
+  factory ShoppingComparisonListingAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ShoppingComparisonListingAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ShoppingComparisonListingAdInfo clone() =>
       ShoppingComparisonListingAdInfo()..mergeFromMessage(this);
   ShoppingComparisonListingAdInfo copyWith(
@@ -453,8 +470,9 @@ class ShoppingComparisonListingAdInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ShoppingComparisonListingAdInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ShoppingComparisonListingAdInfo create() =>
-      ShoppingComparisonListingAdInfo();
+      ShoppingComparisonListingAdInfo._();
   ShoppingComparisonListingAdInfo createEmptyInstance() => create();
   static $pb.PbList<ShoppingComparisonListingAdInfo> createRepeated() =>
       $pb.PbList<ShoppingComparisonListingAdInfo>();
@@ -496,18 +514,20 @@ class GmailAdInfo extends $pb.GeneratedMessage {
         8, 'productVideos', $pb.PbFieldType.PM, ProductVideo.create)
     ..hasRequiredFields = false;
 
-  GmailAdInfo() : super();
-  GmailAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GmailAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GmailAdInfo._() : super();
+  factory GmailAdInfo() => create();
+  factory GmailAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GmailAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GmailAdInfo clone() => GmailAdInfo()..mergeFromMessage(this);
   GmailAdInfo copyWith(void Function(GmailAdInfo) updates) =>
       super.copyWith((message) => updates(message as GmailAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static GmailAdInfo create() => GmailAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static GmailAdInfo create() => GmailAdInfo._();
   GmailAdInfo createEmptyInstance() => create();
   static $pb.PbList<GmailAdInfo> createRepeated() => $pb.PbList<GmailAdInfo>();
   static GmailAdInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -579,18 +599,20 @@ class GmailTeaser extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  GmailTeaser() : super();
-  GmailTeaser.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GmailTeaser.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GmailTeaser._() : super();
+  factory GmailTeaser() => create();
+  factory GmailTeaser.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GmailTeaser.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GmailTeaser clone() => GmailTeaser()..mergeFromMessage(this);
   GmailTeaser copyWith(void Function(GmailTeaser) updates) =>
       super.copyWith((message) => updates(message as GmailTeaser));
   $pb.BuilderInfo get info_ => _i;
-  static GmailTeaser create() => GmailTeaser();
+  @$core.pragma('dart2js:noInline')
+  static GmailTeaser create() => GmailTeaser._();
   GmailTeaser createEmptyInstance() => create();
   static $pb.PbList<GmailTeaser> createRepeated() => $pb.PbList<GmailTeaser>();
   static GmailTeaser getDefault() => _defaultInstance ??= create()..freeze();
@@ -640,18 +662,20 @@ class DisplayCallToAction extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  DisplayCallToAction() : super();
-  DisplayCallToAction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DisplayCallToAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DisplayCallToAction._() : super();
+  factory DisplayCallToAction() => create();
+  factory DisplayCallToAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DisplayCallToAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DisplayCallToAction clone() => DisplayCallToAction()..mergeFromMessage(this);
   DisplayCallToAction copyWith(void Function(DisplayCallToAction) updates) =>
       super.copyWith((message) => updates(message as DisplayCallToAction));
   $pb.BuilderInfo get info_ => _i;
-  static DisplayCallToAction create() => DisplayCallToAction();
+  @$core.pragma('dart2js:noInline')
+  static DisplayCallToAction create() => DisplayCallToAction._();
   DisplayCallToAction createEmptyInstance() => create();
   static $pb.PbList<DisplayCallToAction> createRepeated() =>
       $pb.PbList<DisplayCallToAction>();
@@ -695,18 +719,20 @@ class ProductImage extends $pb.GeneratedMessage {
         DisplayCallToAction.getDefault, DisplayCallToAction.create)
     ..hasRequiredFields = false;
 
-  ProductImage() : super();
-  ProductImage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProductImage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProductImage._() : super();
+  factory ProductImage() => create();
+  factory ProductImage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProductImage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProductImage clone() => ProductImage()..mergeFromMessage(this);
   ProductImage copyWith(void Function(ProductImage) updates) =>
       super.copyWith((message) => updates(message as ProductImage));
   $pb.BuilderInfo get info_ => _i;
-  static ProductImage create() => ProductImage();
+  @$core.pragma('dart2js:noInline')
+  static ProductImage create() => ProductImage._();
   ProductImage createEmptyInstance() => create();
   static $pb.PbList<ProductImage> createRepeated() =>
       $pb.PbList<ProductImage>();
@@ -745,18 +771,20 @@ class ProductVideo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ProductVideo() : super();
-  ProductVideo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProductVideo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProductVideo._() : super();
+  factory ProductVideo() => create();
+  factory ProductVideo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProductVideo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProductVideo clone() => ProductVideo()..mergeFromMessage(this);
   ProductVideo copyWith(void Function(ProductVideo) updates) =>
       super.copyWith((message) => updates(message as ProductVideo));
   $pb.BuilderInfo get info_ => _i;
-  static ProductVideo create() => ProductVideo();
+  @$core.pragma('dart2js:noInline')
+  static ProductVideo create() => ProductVideo._();
   ProductVideo createEmptyInstance() => create();
   static $pb.PbList<ProductVideo> createRepeated() =>
       $pb.PbList<ProductVideo>();
@@ -784,6 +812,7 @@ class ImageAdInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImageAdInfo',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [1, 2, 3])
     ..a<$0.StringValue>(1, 'mediaFile', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
     ..a<$0.BytesValue>(2, 'data', $pb.PbFieldType.OM, $0.BytesValue.getDefault,
@@ -811,21 +840,22 @@ class ImageAdInfo extends $pb.GeneratedMessage {
         $3.MimeTypeEnum_MimeType.values)
     ..a<$0.StringValue>(
         11, 'name', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  ImageAdInfo() : super();
-  ImageAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageAdInfo._() : super();
+  factory ImageAdInfo() => create();
+  factory ImageAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageAdInfo clone() => ImageAdInfo()..mergeFromMessage(this);
   ImageAdInfo copyWith(void Function(ImageAdInfo) updates) =>
       super.copyWith((message) => updates(message as ImageAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ImageAdInfo create() => ImageAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ImageAdInfo create() => ImageAdInfo._();
   ImageAdInfo createEmptyInstance() => create();
   static $pb.PbList<ImageAdInfo> createRepeated() => $pb.PbList<ImageAdInfo>();
   static ImageAdInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -928,13 +958,14 @@ class VideoBumperInStreamAdInfo extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  VideoBumperInStreamAdInfo() : super();
-  VideoBumperInStreamAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoBumperInStreamAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoBumperInStreamAdInfo._() : super();
+  factory VideoBumperInStreamAdInfo() => create();
+  factory VideoBumperInStreamAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoBumperInStreamAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoBumperInStreamAdInfo clone() =>
       VideoBumperInStreamAdInfo()..mergeFromMessage(this);
   VideoBumperInStreamAdInfo copyWith(
@@ -942,7 +973,8 @@ class VideoBumperInStreamAdInfo extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as VideoBumperInStreamAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static VideoBumperInStreamAdInfo create() => VideoBumperInStreamAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static VideoBumperInStreamAdInfo create() => VideoBumperInStreamAdInfo._();
   VideoBumperInStreamAdInfo createEmptyInstance() => create();
   static $pb.PbList<VideoBumperInStreamAdInfo> createRepeated() =>
       $pb.PbList<VideoBumperInStreamAdInfo>();
@@ -957,13 +989,14 @@ class VideoNonSkippableInStreamAdInfo extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  VideoNonSkippableInStreamAdInfo() : super();
-  VideoNonSkippableInStreamAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoNonSkippableInStreamAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoNonSkippableInStreamAdInfo._() : super();
+  factory VideoNonSkippableInStreamAdInfo() => create();
+  factory VideoNonSkippableInStreamAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoNonSkippableInStreamAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoNonSkippableInStreamAdInfo clone() =>
       VideoNonSkippableInStreamAdInfo()..mergeFromMessage(this);
   VideoNonSkippableInStreamAdInfo copyWith(
@@ -971,8 +1004,9 @@ class VideoNonSkippableInStreamAdInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as VideoNonSkippableInStreamAdInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static VideoNonSkippableInStreamAdInfo create() =>
-      VideoNonSkippableInStreamAdInfo();
+      VideoNonSkippableInStreamAdInfo._();
   VideoNonSkippableInStreamAdInfo createEmptyInstance() => create();
   static $pb.PbList<VideoNonSkippableInStreamAdInfo> createRepeated() =>
       $pb.PbList<VideoNonSkippableInStreamAdInfo>();
@@ -993,13 +1027,14 @@ class VideoTrueViewInStreamAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  VideoTrueViewInStreamAdInfo() : super();
-  VideoTrueViewInStreamAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoTrueViewInStreamAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoTrueViewInStreamAdInfo._() : super();
+  factory VideoTrueViewInStreamAdInfo() => create();
+  factory VideoTrueViewInStreamAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoTrueViewInStreamAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoTrueViewInStreamAdInfo clone() =>
       VideoTrueViewInStreamAdInfo()..mergeFromMessage(this);
   VideoTrueViewInStreamAdInfo copyWith(
@@ -1007,7 +1042,9 @@ class VideoTrueViewInStreamAdInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as VideoTrueViewInStreamAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static VideoTrueViewInStreamAdInfo create() => VideoTrueViewInStreamAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static VideoTrueViewInStreamAdInfo create() =>
+      VideoTrueViewInStreamAdInfo._();
   VideoTrueViewInStreamAdInfo createEmptyInstance() => create();
   static $pb.PbList<VideoTrueViewInStreamAdInfo> createRepeated() =>
       $pb.PbList<VideoTrueViewInStreamAdInfo>();
@@ -1049,19 +1086,21 @@ class VideoOutstreamAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  VideoOutstreamAdInfo() : super();
-  VideoOutstreamAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoOutstreamAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoOutstreamAdInfo._() : super();
+  factory VideoOutstreamAdInfo() => create();
+  factory VideoOutstreamAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoOutstreamAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoOutstreamAdInfo clone() =>
       VideoOutstreamAdInfo()..mergeFromMessage(this);
   VideoOutstreamAdInfo copyWith(void Function(VideoOutstreamAdInfo) updates) =>
       super.copyWith((message) => updates(message as VideoOutstreamAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static VideoOutstreamAdInfo create() => VideoOutstreamAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static VideoOutstreamAdInfo create() => VideoOutstreamAdInfo._();
   VideoOutstreamAdInfo createEmptyInstance() => create();
   static $pb.PbList<VideoOutstreamAdInfo> createRepeated() =>
       $pb.PbList<VideoOutstreamAdInfo>();
@@ -1099,6 +1138,7 @@ class VideoAdInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoAdInfo',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [2, 3, 4, 5])
     ..a<$0.StringValue>(1, 'mediaFile', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
     ..a<VideoTrueViewInStreamAdInfo>(
@@ -1117,21 +1157,22 @@ class VideoAdInfo extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         VideoNonSkippableInStreamAdInfo.getDefault,
         VideoNonSkippableInStreamAdInfo.create)
-    ..oo(0, [2, 3, 4, 5])
     ..hasRequiredFields = false;
 
-  VideoAdInfo() : super();
-  VideoAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoAdInfo._() : super();
+  factory VideoAdInfo() => create();
+  factory VideoAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoAdInfo clone() => VideoAdInfo()..mergeFromMessage(this);
   VideoAdInfo copyWith(void Function(VideoAdInfo) updates) =>
       super.copyWith((message) => updates(message as VideoAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static VideoAdInfo create() => VideoAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static VideoAdInfo create() => VideoAdInfo._();
   VideoAdInfo createEmptyInstance() => create();
   static $pb.PbList<VideoAdInfo> createRepeated() => $pb.PbList<VideoAdInfo>();
   static VideoAdInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -1194,20 +1235,22 @@ class ResponsiveSearchAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ResponsiveSearchAdInfo() : super();
-  ResponsiveSearchAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResponsiveSearchAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResponsiveSearchAdInfo._() : super();
+  factory ResponsiveSearchAdInfo() => create();
+  factory ResponsiveSearchAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResponsiveSearchAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResponsiveSearchAdInfo clone() =>
       ResponsiveSearchAdInfo()..mergeFromMessage(this);
   ResponsiveSearchAdInfo copyWith(
           void Function(ResponsiveSearchAdInfo) updates) =>
       super.copyWith((message) => updates(message as ResponsiveSearchAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ResponsiveSearchAdInfo create() => ResponsiveSearchAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ResponsiveSearchAdInfo create() => ResponsiveSearchAdInfo._();
   ResponsiveSearchAdInfo createEmptyInstance() => create();
   static $pb.PbList<ResponsiveSearchAdInfo> createRepeated() =>
       $pb.PbList<ResponsiveSearchAdInfo>();
@@ -1267,13 +1310,14 @@ class LegacyResponsiveDisplayAdInfo extends $pb.GeneratedMessage {
     ..a<$0.StringValue>(15, 'promoText', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  LegacyResponsiveDisplayAdInfo() : super();
-  LegacyResponsiveDisplayAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LegacyResponsiveDisplayAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LegacyResponsiveDisplayAdInfo._() : super();
+  factory LegacyResponsiveDisplayAdInfo() => create();
+  factory LegacyResponsiveDisplayAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LegacyResponsiveDisplayAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LegacyResponsiveDisplayAdInfo clone() =>
       LegacyResponsiveDisplayAdInfo()..mergeFromMessage(this);
   LegacyResponsiveDisplayAdInfo copyWith(
@@ -1281,8 +1325,9 @@ class LegacyResponsiveDisplayAdInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LegacyResponsiveDisplayAdInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static LegacyResponsiveDisplayAdInfo create() =>
-      LegacyResponsiveDisplayAdInfo();
+      LegacyResponsiveDisplayAdInfo._();
   LegacyResponsiveDisplayAdInfo createEmptyInstance() => create();
   static $pb.PbList<LegacyResponsiveDisplayAdInfo> createRepeated() =>
       $pb.PbList<LegacyResponsiveDisplayAdInfo>();
@@ -1429,18 +1474,20 @@ class AppAdInfo extends $pb.GeneratedMessage {
         $1.AdMediaBundleAsset.create)
     ..hasRequiredFields = false;
 
-  AppAdInfo() : super();
-  AppAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppAdInfo._() : super();
+  factory AppAdInfo() => create();
+  factory AppAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppAdInfo clone() => AppAdInfo()..mergeFromMessage(this);
   AppAdInfo copyWith(void Function(AppAdInfo) updates) =>
       super.copyWith((message) => updates(message as AppAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static AppAdInfo create() => AppAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static AppAdInfo create() => AppAdInfo._();
   AppAdInfo createEmptyInstance() => create();
   static $pb.PbList<AppAdInfo> createRepeated() => $pb.PbList<AppAdInfo>();
   static AppAdInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -1478,18 +1525,20 @@ class AppEngagementAdInfo extends $pb.GeneratedMessage {
         4, 'videos', $pb.PbFieldType.PM, $1.AdVideoAsset.create)
     ..hasRequiredFields = false;
 
-  AppEngagementAdInfo() : super();
-  AppEngagementAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngagementAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngagementAdInfo._() : super();
+  factory AppEngagementAdInfo() => create();
+  factory AppEngagementAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngagementAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngagementAdInfo clone() => AppEngagementAdInfo()..mergeFromMessage(this);
   AppEngagementAdInfo copyWith(void Function(AppEngagementAdInfo) updates) =>
       super.copyWith((message) => updates(message as AppEngagementAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngagementAdInfo create() => AppEngagementAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static AppEngagementAdInfo create() => AppEngagementAdInfo._();
   AppEngagementAdInfo createEmptyInstance() => create();
   static $pb.PbList<AppEngagementAdInfo> createRepeated() =>
       $pb.PbList<AppEngagementAdInfo>();
@@ -1527,20 +1576,22 @@ class LegacyAppInstallAdInfo extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  LegacyAppInstallAdInfo() : super();
-  LegacyAppInstallAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LegacyAppInstallAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LegacyAppInstallAdInfo._() : super();
+  factory LegacyAppInstallAdInfo() => create();
+  factory LegacyAppInstallAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LegacyAppInstallAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LegacyAppInstallAdInfo clone() =>
       LegacyAppInstallAdInfo()..mergeFromMessage(this);
   LegacyAppInstallAdInfo copyWith(
           void Function(LegacyAppInstallAdInfo) updates) =>
       super.copyWith((message) => updates(message as LegacyAppInstallAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static LegacyAppInstallAdInfo create() => LegacyAppInstallAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static LegacyAppInstallAdInfo create() => LegacyAppInstallAdInfo._();
   LegacyAppInstallAdInfo createEmptyInstance() => create();
   static $pb.PbList<LegacyAppInstallAdInfo> createRepeated() =>
       $pb.PbList<LegacyAppInstallAdInfo>();
@@ -1623,20 +1674,22 @@ class ResponsiveDisplayAdInfo extends $pb.GeneratedMessage {
     ..e<$4.DisplayAdFormatSettingEnum_DisplayAdFormatSetting>(16, 'formatSetting', $pb.PbFieldType.OE, $4.DisplayAdFormatSettingEnum_DisplayAdFormatSetting.UNSPECIFIED, $4.DisplayAdFormatSettingEnum_DisplayAdFormatSetting.valueOf, $4.DisplayAdFormatSettingEnum_DisplayAdFormatSetting.values)
     ..hasRequiredFields = false;
 
-  ResponsiveDisplayAdInfo() : super();
-  ResponsiveDisplayAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResponsiveDisplayAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResponsiveDisplayAdInfo._() : super();
+  factory ResponsiveDisplayAdInfo() => create();
+  factory ResponsiveDisplayAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResponsiveDisplayAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResponsiveDisplayAdInfo clone() =>
       ResponsiveDisplayAdInfo()..mergeFromMessage(this);
   ResponsiveDisplayAdInfo copyWith(
           void Function(ResponsiveDisplayAdInfo) updates) =>
       super.copyWith((message) => updates(message as ResponsiveDisplayAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static ResponsiveDisplayAdInfo create() => ResponsiveDisplayAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static ResponsiveDisplayAdInfo create() => ResponsiveDisplayAdInfo._();
   ResponsiveDisplayAdInfo createEmptyInstance() => create();
   static $pb.PbList<ResponsiveDisplayAdInfo> createRepeated() =>
       $pb.PbList<ResponsiveDisplayAdInfo>();
@@ -1742,6 +1795,7 @@ class DisplayUploadAdInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DisplayUploadAdInfo',
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
+    ..oo(0, [2])
     ..e<$6.DisplayUploadProductTypeEnum_DisplayUploadProductType>(
         1,
         'displayUploadProductType',
@@ -1751,21 +1805,22 @@ class DisplayUploadAdInfo extends $pb.GeneratedMessage {
         $6.DisplayUploadProductTypeEnum_DisplayUploadProductType.values)
     ..a<$1.AdMediaBundleAsset>(2, 'mediaBundle', $pb.PbFieldType.OM,
         $1.AdMediaBundleAsset.getDefault, $1.AdMediaBundleAsset.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  DisplayUploadAdInfo() : super();
-  DisplayUploadAdInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DisplayUploadAdInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DisplayUploadAdInfo._() : super();
+  factory DisplayUploadAdInfo() => create();
+  factory DisplayUploadAdInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DisplayUploadAdInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DisplayUploadAdInfo clone() => DisplayUploadAdInfo()..mergeFromMessage(this);
   DisplayUploadAdInfo copyWith(void Function(DisplayUploadAdInfo) updates) =>
       super.copyWith((message) => updates(message as DisplayUploadAdInfo));
   $pb.BuilderInfo get info_ => _i;
-  static DisplayUploadAdInfo create() => DisplayUploadAdInfo();
+  @$core.pragma('dart2js:noInline')
+  static DisplayUploadAdInfo create() => DisplayUploadAdInfo._();
   DisplayUploadAdInfo createEmptyInstance() => create();
   static $pb.PbList<DisplayUploadAdInfo> createRepeated() =>
       $pb.PbList<DisplayUploadAdInfo>();

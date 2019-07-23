@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/transaction.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,13 +19,14 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
-  TransactionOptions_ReadWrite() : super();
-  TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_ReadWrite.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_ReadWrite._() : super();
+  factory TransactionOptions_ReadWrite() => create();
+  factory TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_ReadWrite.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_ReadWrite clone() =>
       TransactionOptions_ReadWrite()..mergeFromMessage(this);
   TransactionOptions_ReadWrite copyWith(
@@ -32,8 +34,9 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_ReadWrite));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadWrite create() =>
-      TransactionOptions_ReadWrite();
+      TransactionOptions_ReadWrite._();
   TransactionOptions_ReadWrite createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadWrite> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadWrite>();
@@ -48,13 +51,14 @@ class TransactionOptions_PartitionedDml extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
-  TransactionOptions_PartitionedDml() : super();
-  TransactionOptions_PartitionedDml.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_PartitionedDml.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_PartitionedDml._() : super();
+  factory TransactionOptions_PartitionedDml() => create();
+  factory TransactionOptions_PartitionedDml.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_PartitionedDml.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_PartitionedDml clone() =>
       TransactionOptions_PartitionedDml()..mergeFromMessage(this);
   TransactionOptions_PartitionedDml copyWith(
@@ -62,8 +66,9 @@ class TransactionOptions_PartitionedDml extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_PartitionedDml));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TransactionOptions_PartitionedDml create() =>
-      TransactionOptions_PartitionedDml();
+      TransactionOptions_PartitionedDml._();
   TransactionOptions_PartitionedDml createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_PartitionedDml> createRepeated() =>
       $pb.PbList<TransactionOptions_PartitionedDml>();
@@ -94,6 +99,7 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.ReadOnly',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [1, 2, 3, 4, 5])
     ..aOB(1, 'strong')
     ..a<$0.Timestamp>(2, 'minReadTimestamp', $pb.PbFieldType.OM,
         $0.Timestamp.getDefault, $0.Timestamp.create)
@@ -104,16 +110,16 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
     ..a<$1.Duration>(5, 'exactStaleness', $pb.PbFieldType.OM,
         $1.Duration.getDefault, $1.Duration.create)
     ..aOB(6, 'returnReadTimestamp')
-    ..oo(0, [1, 2, 3, 4, 5])
     ..hasRequiredFields = false;
 
-  TransactionOptions_ReadOnly() : super();
-  TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions_ReadOnly.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions_ReadOnly._() : super();
+  factory TransactionOptions_ReadOnly() => create();
+  factory TransactionOptions_ReadOnly.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions_ReadOnly.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions_ReadOnly clone() =>
       TransactionOptions_ReadOnly()..mergeFromMessage(this);
   TransactionOptions_ReadOnly copyWith(
@@ -121,7 +127,9 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransactionOptions_ReadOnly));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionOptions_ReadOnly create() => TransactionOptions_ReadOnly();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadOnly create() =>
+      TransactionOptions_ReadOnly._();
   TransactionOptions_ReadOnly createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadOnly> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadOnly>();
@@ -194,6 +202,7 @@ class TransactionOptions extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [1, 2, 3])
     ..a<TransactionOptions_ReadWrite>(
         1,
         'readWrite',
@@ -212,21 +221,22 @@ class TransactionOptions extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         TransactionOptions_PartitionedDml.getDefault,
         TransactionOptions_PartitionedDml.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  TransactionOptions() : super();
-  TransactionOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionOptions._() : super();
+  factory TransactionOptions() => create();
+  factory TransactionOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionOptions clone() => TransactionOptions()..mergeFromMessage(this);
   TransactionOptions copyWith(void Function(TransactionOptions) updates) =>
       super.copyWith((message) => updates(message as TransactionOptions));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionOptions create() => TransactionOptions();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions create() => TransactionOptions._();
   TransactionOptions createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions> createRepeated() =>
       $pb.PbList<TransactionOptions>();
@@ -271,18 +281,20 @@ class Transaction extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Transaction() : super();
-  Transaction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Transaction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Transaction._() : super();
+  factory Transaction() => create();
+  factory Transaction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Transaction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Transaction clone() => Transaction()..mergeFromMessage(this);
   Transaction copyWith(void Function(Transaction) updates) =>
       super.copyWith((message) => updates(message as Transaction));
   $pb.BuilderInfo get info_ => _i;
-  static Transaction create() => Transaction();
+  @$core.pragma('dart2js:noInline')
+  static Transaction create() => Transaction._();
   Transaction createEmptyInstance() => create();
   static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
   static Transaction getDefault() => _defaultInstance ??= create()..freeze();
@@ -317,26 +329,28 @@ class TransactionSelector extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionSelector',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [1, 2, 3])
     ..a<TransactionOptions>(1, 'singleUse', $pb.PbFieldType.OM,
         TransactionOptions.getDefault, TransactionOptions.create)
     ..a<$core.List<$core.int>>(2, 'id', $pb.PbFieldType.OY)
     ..a<TransactionOptions>(3, 'begin', $pb.PbFieldType.OM,
         TransactionOptions.getDefault, TransactionOptions.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  TransactionSelector() : super();
-  TransactionSelector.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransactionSelector.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransactionSelector._() : super();
+  factory TransactionSelector() => create();
+  factory TransactionSelector.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransactionSelector.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransactionSelector clone() => TransactionSelector()..mergeFromMessage(this);
   TransactionSelector copyWith(void Function(TransactionSelector) updates) =>
       super.copyWith((message) => updates(message as TransactionSelector));
   $pb.BuilderInfo get info_ => _i;
-  static TransactionSelector create() => TransactionSelector();
+  @$core.pragma('dart2js:noInline')
+  static TransactionSelector create() => TransactionSelector._();
   TransactionSelector createEmptyInstance() => create();
   static $pb.PbList<TransactionSelector> createRepeated() =>
       $pb.PbList<TransactionSelector>();

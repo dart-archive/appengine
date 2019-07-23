@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/model.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Model$json = {
   '1': 'Model',
@@ -51,6 +52,15 @@ const Model$json = {
       '6': '.google.cloud.automl.v1beta1.VideoClassificationModelMetadata',
       '9': 0,
       '10': 'videoClassificationModelMetadata'
+    },
+    {
+      '1': 'video_object_tracking_model_metadata',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.VideoObjectTrackingModelMetadata',
+      '9': 0,
+      '10': 'videoObjectTrackingModelMetadata'
     },
     {
       '1': 'text_extraction_model_metadata',

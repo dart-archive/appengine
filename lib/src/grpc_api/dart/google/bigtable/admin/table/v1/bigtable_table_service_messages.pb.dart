@@ -1,38 +1,41 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/bigtable/admin/table/v1/bigtable_table_service_messages.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'bigtable_table_data.pb.dart' as $1;
+import 'bigtable_table_data.pb.dart' as $2;
 
 class CreateTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTableRequest',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'tableId')
-    ..a<$1.Table>(
-        3, 'table', $pb.PbFieldType.OM, $1.Table.getDefault, $1.Table.create)
+    ..a<$2.Table>(
+        3, 'table', $pb.PbFieldType.OM, $2.Table.getDefault, $2.Table.create)
     ..pPS(4, 'initialSplitKeys')
     ..hasRequiredFields = false;
 
-  CreateTableRequest() : super();
-  CreateTableRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateTableRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateTableRequest._() : super();
+  factory CreateTableRequest() => create();
+  factory CreateTableRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateTableRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateTableRequest clone() => CreateTableRequest()..mergeFromMessage(this);
   CreateTableRequest copyWith(void Function(CreateTableRequest) updates) =>
       super.copyWith((message) => updates(message as CreateTableRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateTableRequest create() => CreateTableRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateTableRequest create() => CreateTableRequest._();
   CreateTableRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTableRequest> createRepeated() =>
       $pb.PbList<CreateTableRequest>();
@@ -56,8 +59,8 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   $core.bool hasTableId() => $_has(1);
   void clearTableId() => clearField(2);
 
-  $1.Table get table => $_getN(2);
-  set table($1.Table v) {
+  $2.Table get table => $_getN(2);
+  set table($2.Table v) {
     setField(3, v);
   }
 
@@ -73,18 +76,20 @@ class ListTablesRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  ListTablesRequest() : super();
-  ListTablesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTablesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTablesRequest._() : super();
+  factory ListTablesRequest() => create();
+  factory ListTablesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTablesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTablesRequest clone() => ListTablesRequest()..mergeFromMessage(this);
   ListTablesRequest copyWith(void Function(ListTablesRequest) updates) =>
       super.copyWith((message) => updates(message as ListTablesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListTablesRequest create() => ListTablesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListTablesRequest create() => ListTablesRequest._();
   ListTablesRequest createEmptyInstance() => create();
   static $pb.PbList<ListTablesRequest> createRepeated() =>
       $pb.PbList<ListTablesRequest>();
@@ -104,21 +109,23 @@ class ListTablesRequest extends $pb.GeneratedMessage {
 class ListTablesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesResponse',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
-    ..pc<$1.Table>(1, 'tables', $pb.PbFieldType.PM, $1.Table.create)
+    ..pc<$2.Table>(1, 'tables', $pb.PbFieldType.PM, $2.Table.create)
     ..hasRequiredFields = false;
 
-  ListTablesResponse() : super();
-  ListTablesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListTablesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListTablesResponse._() : super();
+  factory ListTablesResponse() => create();
+  factory ListTablesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListTablesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListTablesResponse clone() => ListTablesResponse()..mergeFromMessage(this);
   ListTablesResponse copyWith(void Function(ListTablesResponse) updates) =>
       super.copyWith((message) => updates(message as ListTablesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListTablesResponse create() => ListTablesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListTablesResponse create() => ListTablesResponse._();
   ListTablesResponse createEmptyInstance() => create();
   static $pb.PbList<ListTablesResponse> createRepeated() =>
       $pb.PbList<ListTablesResponse>();
@@ -126,7 +133,7 @@ class ListTablesResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListTablesResponse _defaultInstance;
 
-  $core.List<$1.Table> get tables => $_getList(0);
+  $core.List<$2.Table> get tables => $_getList(0);
 }
 
 class GetTableRequest extends $pb.GeneratedMessage {
@@ -135,18 +142,20 @@ class GetTableRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetTableRequest() : super();
-  GetTableRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetTableRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetTableRequest._() : super();
+  factory GetTableRequest() => create();
+  factory GetTableRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetTableRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetTableRequest clone() => GetTableRequest()..mergeFromMessage(this);
   GetTableRequest copyWith(void Function(GetTableRequest) updates) =>
       super.copyWith((message) => updates(message as GetTableRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetTableRequest create() => GetTableRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetTableRequest create() => GetTableRequest._();
   GetTableRequest createEmptyInstance() => create();
   static $pb.PbList<GetTableRequest> createRepeated() =>
       $pb.PbList<GetTableRequest>();
@@ -169,18 +178,20 @@ class DeleteTableRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteTableRequest() : super();
-  DeleteTableRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteTableRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteTableRequest._() : super();
+  factory DeleteTableRequest() => create();
+  factory DeleteTableRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteTableRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteTableRequest clone() => DeleteTableRequest()..mergeFromMessage(this);
   DeleteTableRequest copyWith(void Function(DeleteTableRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteTableRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteTableRequest create() => DeleteTableRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTableRequest create() => DeleteTableRequest._();
   DeleteTableRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTableRequest> createRepeated() =>
       $pb.PbList<DeleteTableRequest>();
@@ -204,18 +215,20 @@ class RenameTableRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'newId')
     ..hasRequiredFields = false;
 
-  RenameTableRequest() : super();
-  RenameTableRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RenameTableRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RenameTableRequest._() : super();
+  factory RenameTableRequest() => create();
+  factory RenameTableRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RenameTableRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RenameTableRequest clone() => RenameTableRequest()..mergeFromMessage(this);
   RenameTableRequest copyWith(void Function(RenameTableRequest) updates) =>
       super.copyWith((message) => updates(message as RenameTableRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RenameTableRequest create() => RenameTableRequest();
+  @$core.pragma('dart2js:noInline')
+  static RenameTableRequest create() => RenameTableRequest._();
   RenameTableRequest createEmptyInstance() => create();
   static $pb.PbList<RenameTableRequest> createRepeated() =>
       $pb.PbList<RenameTableRequest>();
@@ -245,17 +258,18 @@ class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
     ..aOS(1, 'name')
     ..aOS(2, 'columnFamilyId')
-    ..a<$1.ColumnFamily>(3, 'columnFamily', $pb.PbFieldType.OM,
-        $1.ColumnFamily.getDefault, $1.ColumnFamily.create)
+    ..a<$2.ColumnFamily>(3, 'columnFamily', $pb.PbFieldType.OM,
+        $2.ColumnFamily.getDefault, $2.ColumnFamily.create)
     ..hasRequiredFields = false;
 
-  CreateColumnFamilyRequest() : super();
-  CreateColumnFamilyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateColumnFamilyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateColumnFamilyRequest._() : super();
+  factory CreateColumnFamilyRequest() => create();
+  factory CreateColumnFamilyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateColumnFamilyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateColumnFamilyRequest clone() =>
       CreateColumnFamilyRequest()..mergeFromMessage(this);
   CreateColumnFamilyRequest copyWith(
@@ -263,7 +277,8 @@ class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CreateColumnFamilyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateColumnFamilyRequest create() => CreateColumnFamilyRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateColumnFamilyRequest create() => CreateColumnFamilyRequest._();
   CreateColumnFamilyRequest createEmptyInstance() => create();
   static $pb.PbList<CreateColumnFamilyRequest> createRepeated() =>
       $pb.PbList<CreateColumnFamilyRequest>();
@@ -287,8 +302,8 @@ class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
   $core.bool hasColumnFamilyId() => $_has(1);
   void clearColumnFamilyId() => clearField(2);
 
-  $1.ColumnFamily get columnFamily => $_getN(2);
-  set columnFamily($1.ColumnFamily v) {
+  $2.ColumnFamily get columnFamily => $_getN(2);
+  set columnFamily($2.ColumnFamily v) {
     setField(3, v);
   }
 
@@ -302,13 +317,14 @@ class DeleteColumnFamilyRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteColumnFamilyRequest() : super();
-  DeleteColumnFamilyRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteColumnFamilyRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteColumnFamilyRequest._() : super();
+  factory DeleteColumnFamilyRequest() => create();
+  factory DeleteColumnFamilyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteColumnFamilyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteColumnFamilyRequest clone() =>
       DeleteColumnFamilyRequest()..mergeFromMessage(this);
   DeleteColumnFamilyRequest copyWith(
@@ -316,7 +332,8 @@ class DeleteColumnFamilyRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as DeleteColumnFamilyRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteColumnFamilyRequest create() => DeleteColumnFamilyRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteColumnFamilyRequest create() => DeleteColumnFamilyRequest._();
   DeleteColumnFamilyRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteColumnFamilyRequest> createRepeated() =>
       $pb.PbList<DeleteColumnFamilyRequest>();
@@ -348,26 +365,28 @@ class BulkDeleteRowsRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BulkDeleteRowsRequest',
       package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+    ..oo(0, [2, 3])
     ..aOS(1, 'tableName')
     ..a<$core.List<$core.int>>(2, 'rowKeyPrefix', $pb.PbFieldType.OY)
     ..aOB(3, 'deleteAllDataFromTable')
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  BulkDeleteRowsRequest() : super();
-  BulkDeleteRowsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BulkDeleteRowsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BulkDeleteRowsRequest._() : super();
+  factory BulkDeleteRowsRequest() => create();
+  factory BulkDeleteRowsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BulkDeleteRowsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BulkDeleteRowsRequest clone() =>
       BulkDeleteRowsRequest()..mergeFromMessage(this);
   BulkDeleteRowsRequest copyWith(
           void Function(BulkDeleteRowsRequest) updates) =>
       super.copyWith((message) => updates(message as BulkDeleteRowsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BulkDeleteRowsRequest create() => BulkDeleteRowsRequest();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteRowsRequest create() => BulkDeleteRowsRequest._();
   BulkDeleteRowsRequest createEmptyInstance() => create();
   static $pb.PbList<BulkDeleteRowsRequest> createRepeated() =>
       $pb.PbList<BulkDeleteRowsRequest>();

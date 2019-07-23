@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/domain_category_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,20 +16,22 @@ class GetDomainCategoryRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetDomainCategoryRequest() : super();
-  GetDomainCategoryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDomainCategoryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDomainCategoryRequest._() : super();
+  factory GetDomainCategoryRequest() => create();
+  factory GetDomainCategoryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDomainCategoryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDomainCategoryRequest clone() =>
       GetDomainCategoryRequest()..mergeFromMessage(this);
   GetDomainCategoryRequest copyWith(
           void Function(GetDomainCategoryRequest) updates) =>
       super.copyWith((message) => updates(message as GetDomainCategoryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetDomainCategoryRequest create() => GetDomainCategoryRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetDomainCategoryRequest create() => GetDomainCategoryRequest._();
   GetDomainCategoryRequest createEmptyInstance() => create();
   static $pb.PbList<GetDomainCategoryRequest> createRepeated() =>
       $pb.PbList<GetDomainCategoryRequest>();

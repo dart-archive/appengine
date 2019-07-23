@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/target.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class Target_Id extends $pb.GeneratedMessage {
     ..aOS(2, 'targetId')
     ..hasRequiredFields = false;
 
-  Target_Id() : super();
-  Target_Id.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Target_Id.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Target_Id._() : super();
+  factory Target_Id() => create();
+  factory Target_Id.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Target_Id.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Target_Id clone() => Target_Id()..mergeFromMessage(this);
   Target_Id copyWith(void Function(Target_Id) updates) =>
       super.copyWith((message) => updates(message as Target_Id));
   $pb.BuilderInfo get info_ => _i;
-  static Target_Id create() => Target_Id();
+  @$core.pragma('dart2js:noInline')
+  static Target_Id create() => Target_Id._();
   Target_Id createEmptyInstance() => create();
   static $pb.PbList<Target_Id> createRepeated() => $pb.PbList<Target_Id>();
   static Target_Id getDefault() => _defaultInstance ??= create()..freeze();
@@ -77,18 +80,20 @@ class Target extends $pb.GeneratedMessage {
     ..aOB(10, 'visible')
     ..hasRequiredFields = false;
 
-  Target() : super();
-  Target.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Target.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Target._() : super();
+  factory Target() => create();
+  factory Target.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Target.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Target clone() => Target()..mergeFromMessage(this);
   Target copyWith(void Function(Target) updates) =>
       super.copyWith((message) => updates(message as Target));
   $pb.BuilderInfo get info_ => _i;
-  static Target create() => Target();
+  @$core.pragma('dart2js:noInline')
+  static Target create() => Target._();
   Target createEmptyInstance() => create();
   static $pb.PbList<Target> createRepeated() => $pb.PbList<Target>();
   static Target getDefault() => _defaultInstance ??= create()..freeze();
@@ -175,18 +180,20 @@ class TargetAttributes extends $pb.GeneratedMessage {
     ..pPS(3, 'tags')
     ..hasRequiredFields = false;
 
-  TargetAttributes() : super();
-  TargetAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetAttributes._() : super();
+  factory TargetAttributes() => create();
+  factory TargetAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetAttributes clone() => TargetAttributes()..mergeFromMessage(this);
   TargetAttributes copyWith(void Function(TargetAttributes) updates) =>
       super.copyWith((message) => updates(message as TargetAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static TargetAttributes create() => TargetAttributes();
+  @$core.pragma('dart2js:noInline')
+  static TargetAttributes create() => TargetAttributes._();
   TargetAttributes createEmptyInstance() => create();
   static $pb.PbList<TargetAttributes> createRepeated() =>
       $pb.PbList<TargetAttributes>();
@@ -220,18 +227,20 @@ class TestAttributes extends $pb.GeneratedMessage {
         TestSize.valueOf, TestSize.values)
     ..hasRequiredFields = false;
 
-  TestAttributes() : super();
-  TestAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestAttributes._() : super();
+  factory TestAttributes() => create();
+  factory TestAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestAttributes clone() => TestAttributes()..mergeFromMessage(this);
   TestAttributes copyWith(void Function(TestAttributes) updates) =>
       super.copyWith((message) => updates(message as TestAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static TestAttributes create() => TestAttributes();
+  @$core.pragma('dart2js:noInline')
+  static TestAttributes create() => TestAttributes._();
   TestAttributes createEmptyInstance() => create();
   static $pb.PbList<TestAttributes> createRepeated() =>
       $pb.PbList<TestAttributes>();

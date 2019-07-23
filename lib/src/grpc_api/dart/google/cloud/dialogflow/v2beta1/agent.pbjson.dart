@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/agent.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Agent$json = {
   '1': 'Agent',
@@ -42,8 +43,24 @@ const Agent$json = {
       '5': 2,
       '10': 'classificationThreshold'
     },
+    {
+      '1': 'api_version',
+      '3': 14,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.dialogflow.v2beta1.Agent.ApiVersion',
+      '10': 'apiVersion'
+    },
+    {
+      '1': 'tier',
+      '3': 15,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.dialogflow.v2beta1.Agent.Tier',
+      '10': 'tier'
+    },
   ],
-  '4': [Agent_MatchMode$json],
+  '4': [Agent_MatchMode$json, Agent_ApiVersion$json, Agent_Tier$json],
 };
 
 const Agent_MatchMode$json = {
@@ -55,8 +72,57 @@ const Agent_MatchMode$json = {
   ],
 };
 
+const Agent_ApiVersion$json = {
+  '1': 'ApiVersion',
+  '2': [
+    {'1': 'API_VERSION_UNSPECIFIED', '2': 0},
+    {'1': 'API_VERSION_V1', '2': 1},
+    {'1': 'API_VERSION_V2', '2': 2},
+    {'1': 'API_VERSION_V2_BETA_1', '2': 3},
+  ],
+};
+
+const Agent_Tier$json = {
+  '1': 'Tier',
+  '2': [
+    {'1': 'TIER_UNSPECIFIED', '2': 0},
+    {'1': 'TIER_STANDARD', '2': 1},
+    {'1': 'TIER_ENTERPRISE', '2': 2},
+    {'1': 'TIER_ENTERPRISE_PLUS', '2': 3},
+  ],
+};
+
 const GetAgentRequest$json = {
   '1': 'GetAgentRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+  ],
+};
+
+const SetAgentRequest$json = {
+  '1': 'SetAgentRequest',
+  '2': [
+    {
+      '1': 'agent',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Agent',
+      '10': 'agent'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
+  ],
+};
+
+const DeleteAgentRequest$json = {
+  '1': 'DeleteAgentRequest',
   '2': [
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
   ],

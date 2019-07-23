@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2beta2/target.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class PullTarget extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..hasRequiredFields = false;
 
-  PullTarget() : super();
-  PullTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PullTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PullTarget._() : super();
+  factory PullTarget() => create();
+  factory PullTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PullTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PullTarget clone() => PullTarget()..mergeFromMessage(this);
   PullTarget copyWith(void Function(PullTarget) updates) =>
       super.copyWith((message) => updates(message as PullTarget));
   $pb.BuilderInfo get info_ => _i;
-  static PullTarget create() => PullTarget();
+  @$core.pragma('dart2js:noInline')
+  static PullTarget create() => PullTarget._();
   PullTarget createEmptyInstance() => create();
   static $pb.PbList<PullTarget> createRepeated() => $pb.PbList<PullTarget>();
   static PullTarget getDefault() => _defaultInstance ??= create()..freeze();
@@ -43,18 +46,20 @@ class PullMessage extends $pb.GeneratedMessage {
     ..aOS(2, 'tag')
     ..hasRequiredFields = false;
 
-  PullMessage() : super();
-  PullMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PullMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PullMessage._() : super();
+  factory PullMessage() => create();
+  factory PullMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PullMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PullMessage clone() => PullMessage()..mergeFromMessage(this);
   PullMessage copyWith(void Function(PullMessage) updates) =>
       super.copyWith((message) => updates(message as PullMessage));
   $pb.BuilderInfo get info_ => _i;
-  static PullMessage create() => PullMessage();
+  @$core.pragma('dart2js:noInline')
+  static PullMessage create() => PullMessage._();
   PullMessage createEmptyInstance() => create();
   static $pb.PbList<PullMessage> createRepeated() => $pb.PbList<PullMessage>();
   static PullMessage getDefault() => _defaultInstance ??= create()..freeze();
@@ -84,18 +89,20 @@ class AppEngineHttpTarget extends $pb.GeneratedMessage {
         AppEngineRouting.getDefault, AppEngineRouting.create)
     ..hasRequiredFields = false;
 
-  AppEngineHttpTarget() : super();
-  AppEngineHttpTarget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineHttpTarget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineHttpTarget._() : super();
+  factory AppEngineHttpTarget() => create();
+  factory AppEngineHttpTarget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineHttpTarget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineHttpTarget clone() => AppEngineHttpTarget()..mergeFromMessage(this);
   AppEngineHttpTarget copyWith(void Function(AppEngineHttpTarget) updates) =>
       super.copyWith((message) => updates(message as AppEngineHttpTarget));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineHttpTarget create() => AppEngineHttpTarget();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineHttpTarget create() => AppEngineHttpTarget._();
   AppEngineHttpTarget createEmptyInstance() => create();
   static $pb.PbList<AppEngineHttpTarget> createRepeated() =>
       $pb.PbList<AppEngineHttpTarget>();
@@ -138,19 +145,21 @@ class AppEngineHttpRequest extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(5, 'payload', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  AppEngineHttpRequest() : super();
-  AppEngineHttpRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineHttpRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineHttpRequest._() : super();
+  factory AppEngineHttpRequest() => create();
+  factory AppEngineHttpRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineHttpRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineHttpRequest clone() =>
       AppEngineHttpRequest()..mergeFromMessage(this);
   AppEngineHttpRequest copyWith(void Function(AppEngineHttpRequest) updates) =>
       super.copyWith((message) => updates(message as AppEngineHttpRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineHttpRequest create() => AppEngineHttpRequest();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineHttpRequest create() => AppEngineHttpRequest._();
   AppEngineHttpRequest createEmptyInstance() => create();
   static $pb.PbList<AppEngineHttpRequest> createRepeated() =>
       $pb.PbList<AppEngineHttpRequest>();
@@ -202,18 +211,20 @@ class AppEngineRouting extends $pb.GeneratedMessage {
     ..aOS(4, 'host')
     ..hasRequiredFields = false;
 
-  AppEngineRouting() : super();
-  AppEngineRouting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AppEngineRouting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AppEngineRouting._() : super();
+  factory AppEngineRouting() => create();
+  factory AppEngineRouting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AppEngineRouting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AppEngineRouting clone() => AppEngineRouting()..mergeFromMessage(this);
   AppEngineRouting copyWith(void Function(AppEngineRouting) updates) =>
       super.copyWith((message) => updates(message as AppEngineRouting));
   $pb.BuilderInfo get info_ => _i;
-  static AppEngineRouting create() => AppEngineRouting();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineRouting create() => AppEngineRouting._();
   AppEngineRouting createEmptyInstance() => create();
   static $pb.PbList<AppEngineRouting> createRepeated() =>
       $pb.PbList<AppEngineRouting>();

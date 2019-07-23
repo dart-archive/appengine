@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/references.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -22,18 +23,20 @@ class Reference extends $pb.GeneratedMessage {
     ..a<$core.int>(7, 'ncbiTaxonId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  Reference() : super();
-  Reference.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Reference.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Reference._() : super();
+  factory Reference() => create();
+  factory Reference.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Reference.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Reference clone() => Reference()..mergeFromMessage(this);
   Reference copyWith(void Function(Reference) updates) =>
       super.copyWith((message) => updates(message as Reference));
   $pb.BuilderInfo get info_ => _i;
-  static Reference create() => Reference();
+  @$core.pragma('dart2js:noInline')
+  static Reference create() => Reference._();
   Reference createEmptyInstance() => create();
   static $pb.PbList<Reference> createRepeated() => $pb.PbList<Reference>();
   static Reference getDefault() => _defaultInstance ??= create()..freeze();
@@ -103,18 +106,20 @@ class ReferenceSet extends $pb.GeneratedMessage {
     ..pPS(8, 'sourceAccessions')
     ..hasRequiredFields = false;
 
-  ReferenceSet() : super();
-  ReferenceSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReferenceSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReferenceSet._() : super();
+  factory ReferenceSet() => create();
+  factory ReferenceSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReferenceSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReferenceSet clone() => ReferenceSet()..mergeFromMessage(this);
   ReferenceSet copyWith(void Function(ReferenceSet) updates) =>
       super.copyWith((message) => updates(message as ReferenceSet));
   $pb.BuilderInfo get info_ => _i;
-  static ReferenceSet create() => ReferenceSet();
+  @$core.pragma('dart2js:noInline')
+  static ReferenceSet create() => ReferenceSet._();
   ReferenceSet createEmptyInstance() => create();
   static $pb.PbList<ReferenceSet> createRepeated() =>
       $pb.PbList<ReferenceSet>();
@@ -185,13 +190,14 @@ class SearchReferenceSetsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchReferenceSetsRequest() : super();
-  SearchReferenceSetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReferenceSetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReferenceSetsRequest._() : super();
+  factory SearchReferenceSetsRequest() => create();
+  factory SearchReferenceSetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReferenceSetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReferenceSetsRequest clone() =>
       SearchReferenceSetsRequest()..mergeFromMessage(this);
   SearchReferenceSetsRequest copyWith(
@@ -199,7 +205,8 @@ class SearchReferenceSetsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchReferenceSetsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReferenceSetsRequest create() => SearchReferenceSetsRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferenceSetsRequest create() => SearchReferenceSetsRequest._();
   SearchReferenceSetsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchReferenceSetsRequest> createRepeated() =>
       $pb.PbList<SearchReferenceSetsRequest>();
@@ -245,13 +252,14 @@ class SearchReferenceSetsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchReferenceSetsResponse() : super();
-  SearchReferenceSetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReferenceSetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReferenceSetsResponse._() : super();
+  factory SearchReferenceSetsResponse() => create();
+  factory SearchReferenceSetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReferenceSetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReferenceSetsResponse clone() =>
       SearchReferenceSetsResponse()..mergeFromMessage(this);
   SearchReferenceSetsResponse copyWith(
@@ -259,7 +267,9 @@ class SearchReferenceSetsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SearchReferenceSetsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReferenceSetsResponse create() => SearchReferenceSetsResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferenceSetsResponse create() =>
+      SearchReferenceSetsResponse._();
   SearchReferenceSetsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchReferenceSetsResponse> createRepeated() =>
       $pb.PbList<SearchReferenceSetsResponse>();
@@ -284,20 +294,22 @@ class GetReferenceSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'referenceSetId')
     ..hasRequiredFields = false;
 
-  GetReferenceSetRequest() : super();
-  GetReferenceSetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetReferenceSetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetReferenceSetRequest._() : super();
+  factory GetReferenceSetRequest() => create();
+  factory GetReferenceSetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetReferenceSetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetReferenceSetRequest clone() =>
       GetReferenceSetRequest()..mergeFromMessage(this);
   GetReferenceSetRequest copyWith(
           void Function(GetReferenceSetRequest) updates) =>
       super.copyWith((message) => updates(message as GetReferenceSetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetReferenceSetRequest create() => GetReferenceSetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetReferenceSetRequest create() => GetReferenceSetRequest._();
   GetReferenceSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetReferenceSetRequest> createRepeated() =>
       $pb.PbList<GetReferenceSetRequest>();
@@ -324,20 +336,22 @@ class SearchReferencesRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SearchReferencesRequest() : super();
-  SearchReferencesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReferencesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReferencesRequest._() : super();
+  factory SearchReferencesRequest() => create();
+  factory SearchReferencesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReferencesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReferencesRequest clone() =>
       SearchReferencesRequest()..mergeFromMessage(this);
   SearchReferencesRequest copyWith(
           void Function(SearchReferencesRequest) updates) =>
       super.copyWith((message) => updates(message as SearchReferencesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReferencesRequest create() => SearchReferencesRequest();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferencesRequest create() => SearchReferencesRequest._();
   SearchReferencesRequest createEmptyInstance() => create();
   static $pb.PbList<SearchReferencesRequest> createRepeated() =>
       $pb.PbList<SearchReferencesRequest>();
@@ -381,20 +395,22 @@ class SearchReferencesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  SearchReferencesResponse() : super();
-  SearchReferencesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SearchReferencesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SearchReferencesResponse._() : super();
+  factory SearchReferencesResponse() => create();
+  factory SearchReferencesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SearchReferencesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SearchReferencesResponse clone() =>
       SearchReferencesResponse()..mergeFromMessage(this);
   SearchReferencesResponse copyWith(
           void Function(SearchReferencesResponse) updates) =>
       super.copyWith((message) => updates(message as SearchReferencesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static SearchReferencesResponse create() => SearchReferencesResponse();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferencesResponse create() => SearchReferencesResponse._();
   SearchReferencesResponse createEmptyInstance() => create();
   static $pb.PbList<SearchReferencesResponse> createRepeated() =>
       $pb.PbList<SearchReferencesResponse>();
@@ -419,18 +435,20 @@ class GetReferenceRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'referenceId')
     ..hasRequiredFields = false;
 
-  GetReferenceRequest() : super();
-  GetReferenceRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetReferenceRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetReferenceRequest._() : super();
+  factory GetReferenceRequest() => create();
+  factory GetReferenceRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetReferenceRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetReferenceRequest clone() => GetReferenceRequest()..mergeFromMessage(this);
   GetReferenceRequest copyWith(void Function(GetReferenceRequest) updates) =>
       super.copyWith((message) => updates(message as GetReferenceRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetReferenceRequest create() => GetReferenceRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetReferenceRequest create() => GetReferenceRequest._();
   GetReferenceRequest createEmptyInstance() => create();
   static $pb.PbList<GetReferenceRequest> createRepeated() =>
       $pb.PbList<GetReferenceRequest>();
@@ -457,18 +475,20 @@ class ListBasesRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListBasesRequest() : super();
-  ListBasesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBasesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListBasesRequest._() : super();
+  factory ListBasesRequest() => create();
+  factory ListBasesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListBasesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListBasesRequest clone() => ListBasesRequest()..mergeFromMessage(this);
   ListBasesRequest copyWith(void Function(ListBasesRequest) updates) =>
       super.copyWith((message) => updates(message as ListBasesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListBasesRequest create() => ListBasesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListBasesRequest create() => ListBasesRequest._();
   ListBasesRequest createEmptyInstance() => create();
   static $pb.PbList<ListBasesRequest> createRepeated() =>
       $pb.PbList<ListBasesRequest>();
@@ -525,18 +545,20 @@ class ListBasesResponse extends $pb.GeneratedMessage {
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListBasesResponse() : super();
-  ListBasesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListBasesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListBasesResponse._() : super();
+  factory ListBasesResponse() => create();
+  factory ListBasesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListBasesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListBasesResponse clone() => ListBasesResponse()..mergeFromMessage(this);
   ListBasesResponse copyWith(void Function(ListBasesResponse) updates) =>
       super.copyWith((message) => updates(message as ListBasesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListBasesResponse create() => ListBasesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListBasesResponse create() => ListBasesResponse._();
   ListBasesResponse createEmptyInstance() => create();
   static $pb.PbList<ListBasesResponse> createRepeated() =>
       $pb.PbList<ListBasesResponse>();

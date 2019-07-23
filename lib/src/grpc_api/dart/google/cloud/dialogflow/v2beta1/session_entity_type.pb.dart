@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/session_entity_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity_type.pb.dart' as $2;
-import '../../../protobuf/field_mask.pb.dart' as $3;
+import '../../../protobuf/field_mask.pb.dart' as $4;
 
 import 'session_entity_type.pbenum.dart';
 
@@ -31,18 +32,20 @@ class SessionEntityType extends $pb.GeneratedMessage {
         3, 'entities', $pb.PbFieldType.PM, $2.EntityType_Entity.create)
     ..hasRequiredFields = false;
 
-  SessionEntityType() : super();
-  SessionEntityType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SessionEntityType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SessionEntityType._() : super();
+  factory SessionEntityType() => create();
+  factory SessionEntityType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SessionEntityType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SessionEntityType clone() => SessionEntityType()..mergeFromMessage(this);
   SessionEntityType copyWith(void Function(SessionEntityType) updates) =>
       super.copyWith((message) => updates(message as SessionEntityType));
   $pb.BuilderInfo get info_ => _i;
-  static SessionEntityType create() => SessionEntityType();
+  @$core.pragma('dart2js:noInline')
+  static SessionEntityType create() => SessionEntityType._();
   SessionEntityType createEmptyInstance() => create();
   static $pb.PbList<SessionEntityType> createRepeated() =>
       $pb.PbList<SessionEntityType>();
@@ -78,13 +81,14 @@ class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListSessionEntityTypesRequest() : super();
-  ListSessionEntityTypesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListSessionEntityTypesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListSessionEntityTypesRequest._() : super();
+  factory ListSessionEntityTypesRequest() => create();
+  factory ListSessionEntityTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSessionEntityTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListSessionEntityTypesRequest clone() =>
       ListSessionEntityTypesRequest()..mergeFromMessage(this);
   ListSessionEntityTypesRequest copyWith(
@@ -92,8 +96,9 @@ class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListSessionEntityTypesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListSessionEntityTypesRequest create() =>
-      ListSessionEntityTypesRequest();
+      ListSessionEntityTypesRequest._();
   ListSessionEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListSessionEntityTypesRequest> createRepeated() =>
       $pb.PbList<ListSessionEntityTypesRequest>();
@@ -135,13 +140,14 @@ class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListSessionEntityTypesResponse() : super();
-  ListSessionEntityTypesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListSessionEntityTypesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListSessionEntityTypesResponse._() : super();
+  factory ListSessionEntityTypesResponse() => create();
+  factory ListSessionEntityTypesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListSessionEntityTypesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListSessionEntityTypesResponse clone() =>
       ListSessionEntityTypesResponse()..mergeFromMessage(this);
   ListSessionEntityTypesResponse copyWith(
@@ -149,8 +155,9 @@ class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListSessionEntityTypesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListSessionEntityTypesResponse create() =>
-      ListSessionEntityTypesResponse();
+      ListSessionEntityTypesResponse._();
   ListSessionEntityTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListSessionEntityTypesResponse> createRepeated() =>
       $pb.PbList<ListSessionEntityTypesResponse>();
@@ -176,13 +183,14 @@ class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetSessionEntityTypeRequest() : super();
-  GetSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetSessionEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetSessionEntityTypeRequest._() : super();
+  factory GetSessionEntityTypeRequest() => create();
+  factory GetSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetSessionEntityTypeRequest clone() =>
       GetSessionEntityTypeRequest()..mergeFromMessage(this);
   GetSessionEntityTypeRequest copyWith(
@@ -190,7 +198,9 @@ class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetSessionEntityTypeRequest create() => GetSessionEntityTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetSessionEntityTypeRequest create() =>
+      GetSessionEntityTypeRequest._();
   GetSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<GetSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<GetSessionEntityTypeRequest>();
@@ -216,13 +226,14 @@ class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
         SessionEntityType.getDefault, SessionEntityType.create)
     ..hasRequiredFields = false;
 
-  CreateSessionEntityTypeRequest() : super();
-  CreateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateSessionEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateSessionEntityTypeRequest._() : super();
+  factory CreateSessionEntityTypeRequest() => create();
+  factory CreateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateSessionEntityTypeRequest clone() =>
       CreateSessionEntityTypeRequest()..mergeFromMessage(this);
   CreateSessionEntityTypeRequest copyWith(
@@ -230,8 +241,9 @@ class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateSessionEntityTypeRequest create() =>
-      CreateSessionEntityTypeRequest();
+      CreateSessionEntityTypeRequest._();
   CreateSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<CreateSessionEntityTypeRequest>();
@@ -262,17 +274,18 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
     ..a<SessionEntityType>(1, 'sessionEntityType', $pb.PbFieldType.OM,
         SessionEntityType.getDefault, SessionEntityType.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $4.FieldMask.getDefault, $4.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateSessionEntityTypeRequest() : super();
-  UpdateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateSessionEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateSessionEntityTypeRequest._() : super();
+  factory UpdateSessionEntityTypeRequest() => create();
+  factory UpdateSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateSessionEntityTypeRequest clone() =>
       UpdateSessionEntityTypeRequest()..mergeFromMessage(this);
   UpdateSessionEntityTypeRequest copyWith(
@@ -280,8 +293,9 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateSessionEntityTypeRequest create() =>
-      UpdateSessionEntityTypeRequest();
+      UpdateSessionEntityTypeRequest._();
   UpdateSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<UpdateSessionEntityTypeRequest>();
@@ -297,8 +311,8 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   $core.bool hasSessionEntityType() => $_has(0);
   void clearSessionEntityType() => clearField(1);
 
-  $3.FieldMask get updateMask => $_getN(1);
-  set updateMask($3.FieldMask v) {
+  $4.FieldMask get updateMask => $_getN(1);
+  set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
@@ -313,13 +327,14 @@ class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteSessionEntityTypeRequest() : super();
-  DeleteSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteSessionEntityTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteSessionEntityTypeRequest._() : super();
+  factory DeleteSessionEntityTypeRequest() => create();
+  factory DeleteSessionEntityTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteSessionEntityTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteSessionEntityTypeRequest clone() =>
       DeleteSessionEntityTypeRequest()..mergeFromMessage(this);
   DeleteSessionEntityTypeRequest copyWith(
@@ -327,8 +342,9 @@ class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteSessionEntityTypeRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteSessionEntityTypeRequest create() =>
-      DeleteSessionEntityTypeRequest();
+      DeleteSessionEntityTypeRequest._();
   DeleteSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<DeleteSessionEntityTypeRequest>();

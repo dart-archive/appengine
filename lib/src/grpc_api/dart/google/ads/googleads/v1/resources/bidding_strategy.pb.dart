@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/bidding_strategy.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -40,6 +41,7 @@ class BiddingStrategy extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BiddingStrategy',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [7, 8, 9, 10, 11, 12, 48])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(3, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -69,21 +71,22 @@ class BiddingStrategy extends $pb.GeneratedMessage {
     ..a<$0.Int64Value>(14, 'nonRemovedCampaignCount', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..e<$3.BiddingStrategyStatusEnum_BiddingStrategyStatus>(15, 'status', $pb.PbFieldType.OE, $3.BiddingStrategyStatusEnum_BiddingStrategyStatus.UNSPECIFIED, $3.BiddingStrategyStatusEnum_BiddingStrategyStatus.valueOf, $3.BiddingStrategyStatusEnum_BiddingStrategyStatus.values)
     ..a<$1.TargetImpressionShare>(48, 'targetImpressionShare', $pb.PbFieldType.OM, $1.TargetImpressionShare.getDefault, $1.TargetImpressionShare.create)
-    ..oo(0, [7, 8, 9, 10, 11, 12, 48])
     ..hasRequiredFields = false;
 
-  BiddingStrategy() : super();
-  BiddingStrategy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BiddingStrategy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BiddingStrategy._() : super();
+  factory BiddingStrategy() => create();
+  factory BiddingStrategy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BiddingStrategy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BiddingStrategy clone() => BiddingStrategy()..mergeFromMessage(this);
   BiddingStrategy copyWith(void Function(BiddingStrategy) updates) =>
       super.copyWith((message) => updates(message as BiddingStrategy));
   $pb.BuilderInfo get info_ => _i;
-  static BiddingStrategy create() => BiddingStrategy();
+  @$core.pragma('dart2js:noInline')
+  static BiddingStrategy create() => BiddingStrategy._();
   BiddingStrategy createEmptyInstance() => create();
   static $pb.PbList<BiddingStrategy> createRepeated() =>
       $pb.PbList<BiddingStrategy>();

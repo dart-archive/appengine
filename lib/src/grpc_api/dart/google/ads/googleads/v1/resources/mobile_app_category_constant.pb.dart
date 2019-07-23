@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/mobile_app_category_constant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,13 +22,14 @@ class MobileAppCategoryConstant extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  MobileAppCategoryConstant() : super();
-  MobileAppCategoryConstant.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MobileAppCategoryConstant.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MobileAppCategoryConstant._() : super();
+  factory MobileAppCategoryConstant() => create();
+  factory MobileAppCategoryConstant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MobileAppCategoryConstant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MobileAppCategoryConstant clone() =>
       MobileAppCategoryConstant()..mergeFromMessage(this);
   MobileAppCategoryConstant copyWith(
@@ -35,7 +37,8 @@ class MobileAppCategoryConstant extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as MobileAppCategoryConstant));
   $pb.BuilderInfo get info_ => _i;
-  static MobileAppCategoryConstant create() => MobileAppCategoryConstant();
+  @$core.pragma('dart2js:noInline')
+  static MobileAppCategoryConstant create() => MobileAppCategoryConstant._();
   MobileAppCategoryConstant createEmptyInstance() => create();
   static $pb.PbList<MobileAppCategoryConstant> createRepeated() =>
       $pb.PbList<MobileAppCategoryConstant>();

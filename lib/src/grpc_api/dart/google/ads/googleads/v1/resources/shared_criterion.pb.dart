@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/shared_criterion.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -37,6 +38,7 @@ class SharedCriterion extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SharedCriterion',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [3, 5, 6, 7, 8, 9])
     ..aOS(1, 'resourceName')
     ..a<$0.StringValue>(2, 'sharedSet', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
@@ -61,21 +63,22 @@ class SharedCriterion extends $pb.GeneratedMessage {
         $1.MobileApplicationInfo.getDefault, $1.MobileApplicationInfo.create)
     ..a<$0.Int64Value>(26, 'criterionId', $pb.PbFieldType.OM,
         $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..oo(0, [3, 5, 6, 7, 8, 9])
     ..hasRequiredFields = false;
 
-  SharedCriterion() : super();
-  SharedCriterion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SharedCriterion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SharedCriterion._() : super();
+  factory SharedCriterion() => create();
+  factory SharedCriterion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SharedCriterion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SharedCriterion clone() => SharedCriterion()..mergeFromMessage(this);
   SharedCriterion copyWith(void Function(SharedCriterion) updates) =>
       super.copyWith((message) => updates(message as SharedCriterion));
   $pb.BuilderInfo get info_ => _i;
-  static SharedCriterion create() => SharedCriterion();
+  @$core.pragma('dart2js:noInline')
+  static SharedCriterion create() => SharedCriterion._();
   SharedCriterion createEmptyInstance() => create();
   static $pb.PbList<SharedCriterion> createRepeated() =>
       $pb.PbList<SharedCriterion>();

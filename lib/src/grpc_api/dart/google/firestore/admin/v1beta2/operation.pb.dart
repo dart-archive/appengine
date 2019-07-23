@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/firestore/admin/v1beta2/operation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -38,20 +39,22 @@ class IndexOperationMetadata extends $pb.GeneratedMessage {
         Progress.create)
     ..hasRequiredFields = false;
 
-  IndexOperationMetadata() : super();
-  IndexOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IndexOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IndexOperationMetadata._() : super();
+  factory IndexOperationMetadata() => create();
+  factory IndexOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IndexOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IndexOperationMetadata clone() =>
       IndexOperationMetadata()..mergeFromMessage(this);
   IndexOperationMetadata copyWith(
           void Function(IndexOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as IndexOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static IndexOperationMetadata create() => IndexOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static IndexOperationMetadata create() => IndexOperationMetadata._();
   IndexOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<IndexOperationMetadata> createRepeated() =>
       $pb.PbList<IndexOperationMetadata>();
@@ -124,13 +127,15 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
         2, 'index', $pb.PbFieldType.OM, $1.Index.getDefault, $1.Index.create)
     ..hasRequiredFields = false;
 
-  FieldOperationMetadata_IndexConfigDelta() : super();
-  FieldOperationMetadata_IndexConfigDelta.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FieldOperationMetadata_IndexConfigDelta.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FieldOperationMetadata_IndexConfigDelta._() : super();
+  factory FieldOperationMetadata_IndexConfigDelta() => create();
+  factory FieldOperationMetadata_IndexConfigDelta.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FieldOperationMetadata_IndexConfigDelta.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FieldOperationMetadata_IndexConfigDelta clone() =>
       FieldOperationMetadata_IndexConfigDelta()..mergeFromMessage(this);
   FieldOperationMetadata_IndexConfigDelta copyWith(
@@ -138,8 +143,9 @@ class FieldOperationMetadata_IndexConfigDelta extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as FieldOperationMetadata_IndexConfigDelta));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static FieldOperationMetadata_IndexConfigDelta create() =>
-      FieldOperationMetadata_IndexConfigDelta();
+      FieldOperationMetadata_IndexConfigDelta._();
   FieldOperationMetadata_IndexConfigDelta createEmptyInstance() => create();
   static $pb.PbList<FieldOperationMetadata_IndexConfigDelta> createRepeated() =>
       $pb.PbList<FieldOperationMetadata_IndexConfigDelta>();
@@ -188,20 +194,22 @@ class FieldOperationMetadata extends $pb.GeneratedMessage {
         Progress.create)
     ..hasRequiredFields = false;
 
-  FieldOperationMetadata() : super();
-  FieldOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FieldOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FieldOperationMetadata._() : super();
+  factory FieldOperationMetadata() => create();
+  factory FieldOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FieldOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FieldOperationMetadata clone() =>
       FieldOperationMetadata()..mergeFromMessage(this);
   FieldOperationMetadata copyWith(
           void Function(FieldOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as FieldOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static FieldOperationMetadata create() => FieldOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static FieldOperationMetadata create() => FieldOperationMetadata._();
   FieldOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<FieldOperationMetadata> createRepeated() =>
       $pb.PbList<FieldOperationMetadata>();
@@ -283,20 +291,22 @@ class ExportDocumentsMetadata extends $pb.GeneratedMessage {
     ..aOS(7, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  ExportDocumentsMetadata() : super();
-  ExportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDocumentsMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDocumentsMetadata._() : super();
+  factory ExportDocumentsMetadata() => create();
+  factory ExportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDocumentsMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDocumentsMetadata clone() =>
       ExportDocumentsMetadata()..mergeFromMessage(this);
   ExportDocumentsMetadata copyWith(
           void Function(ExportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDocumentsMetadata create() => ExportDocumentsMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentsMetadata create() => ExportDocumentsMetadata._();
   ExportDocumentsMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportDocumentsMetadata> createRepeated() =>
       $pb.PbList<ExportDocumentsMetadata>();
@@ -377,20 +387,22 @@ class ImportDocumentsMetadata extends $pb.GeneratedMessage {
     ..aOS(7, 'inputUriPrefix')
     ..hasRequiredFields = false;
 
-  ImportDocumentsMetadata() : super();
-  ImportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportDocumentsMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportDocumentsMetadata._() : super();
+  factory ImportDocumentsMetadata() => create();
+  factory ImportDocumentsMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportDocumentsMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportDocumentsMetadata clone() =>
       ImportDocumentsMetadata()..mergeFromMessage(this);
   ImportDocumentsMetadata copyWith(
           void Function(ImportDocumentsMetadata) updates) =>
       super.copyWith((message) => updates(message as ImportDocumentsMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ImportDocumentsMetadata create() => ImportDocumentsMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ImportDocumentsMetadata create() => ImportDocumentsMetadata._();
   ImportDocumentsMetadata createEmptyInstance() => create();
   static $pb.PbList<ImportDocumentsMetadata> createRepeated() =>
       $pb.PbList<ImportDocumentsMetadata>();
@@ -455,20 +467,22 @@ class ExportDocumentsResponse extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  ExportDocumentsResponse() : super();
-  ExportDocumentsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDocumentsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDocumentsResponse._() : super();
+  factory ExportDocumentsResponse() => create();
+  factory ExportDocumentsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDocumentsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDocumentsResponse clone() =>
       ExportDocumentsResponse()..mergeFromMessage(this);
   ExportDocumentsResponse copyWith(
           void Function(ExportDocumentsResponse) updates) =>
       super.copyWith((message) => updates(message as ExportDocumentsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDocumentsResponse create() => ExportDocumentsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentsResponse create() => ExportDocumentsResponse._();
   ExportDocumentsResponse createEmptyInstance() => create();
   static $pb.PbList<ExportDocumentsResponse> createRepeated() =>
       $pb.PbList<ExportDocumentsResponse>();
@@ -492,18 +506,20 @@ class Progress extends $pb.GeneratedMessage {
     ..aInt64(2, 'completedWork')
     ..hasRequiredFields = false;
 
-  Progress() : super();
-  Progress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Progress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Progress._() : super();
+  factory Progress() => create();
+  factory Progress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Progress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Progress clone() => Progress()..mergeFromMessage(this);
   Progress copyWith(void Function(Progress) updates) =>
       super.copyWith((message) => updates(message as Progress));
   $pb.BuilderInfo get info_ => _i;
-  static Progress create() => Progress();
+  @$core.pragma('dart2js:noInline')
+  static Progress create() => Progress._();
   Progress createEmptyInstance() => create();
   static $pb.PbList<Progress> createRepeated() => $pb.PbList<Progress>();
   static Progress getDefault() => _defaultInstance ??= create()..freeze();

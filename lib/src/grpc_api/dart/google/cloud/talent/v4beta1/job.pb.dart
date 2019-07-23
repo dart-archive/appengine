@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/job.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,18 +23,20 @@ class Job_ApplicationInfo extends $pb.GeneratedMessage {
     ..pPS(3, 'uris')
     ..hasRequiredFields = false;
 
-  Job_ApplicationInfo() : super();
-  Job_ApplicationInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Job_ApplicationInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Job_ApplicationInfo._() : super();
+  factory Job_ApplicationInfo() => create();
+  factory Job_ApplicationInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Job_ApplicationInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Job_ApplicationInfo clone() => Job_ApplicationInfo()..mergeFromMessage(this);
   Job_ApplicationInfo copyWith(void Function(Job_ApplicationInfo) updates) =>
       super.copyWith((message) => updates(message as Job_ApplicationInfo));
   $pb.BuilderInfo get info_ => _i;
-  static Job_ApplicationInfo create() => Job_ApplicationInfo();
+  @$core.pragma('dart2js:noInline')
+  static Job_ApplicationInfo create() => Job_ApplicationInfo._();
   Job_ApplicationInfo createEmptyInstance() => create();
   static $pb.PbList<Job_ApplicationInfo> createRepeated() =>
       $pb.PbList<Job_ApplicationInfo>();
@@ -62,18 +65,20 @@ class Job_DerivedInfo extends $pb.GeneratedMessage {
         $0.JobCategory.valueOf, $0.JobCategory.values)
     ..hasRequiredFields = false;
 
-  Job_DerivedInfo() : super();
-  Job_DerivedInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Job_DerivedInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Job_DerivedInfo._() : super();
+  factory Job_DerivedInfo() => create();
+  factory Job_DerivedInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Job_DerivedInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Job_DerivedInfo clone() => Job_DerivedInfo()..mergeFromMessage(this);
   Job_DerivedInfo copyWith(void Function(Job_DerivedInfo) updates) =>
       super.copyWith((message) => updates(message as Job_DerivedInfo));
   $pb.BuilderInfo get info_ => _i;
-  static Job_DerivedInfo create() => Job_DerivedInfo();
+  @$core.pragma('dart2js:noInline')
+  static Job_DerivedInfo create() => Job_DerivedInfo._();
   Job_DerivedInfo createEmptyInstance() => create();
   static $pb.PbList<Job_DerivedInfo> createRepeated() =>
       $pb.PbList<Job_DerivedInfo>();
@@ -99,20 +104,22 @@ class Job_ProcessingOptions extends $pb.GeneratedMessage {
         $0.HtmlSanitization.values)
     ..hasRequiredFields = false;
 
-  Job_ProcessingOptions() : super();
-  Job_ProcessingOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Job_ProcessingOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Job_ProcessingOptions._() : super();
+  factory Job_ProcessingOptions() => create();
+  factory Job_ProcessingOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Job_ProcessingOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Job_ProcessingOptions clone() =>
       Job_ProcessingOptions()..mergeFromMessage(this);
   Job_ProcessingOptions copyWith(
           void Function(Job_ProcessingOptions) updates) =>
       super.copyWith((message) => updates(message as Job_ProcessingOptions));
   $pb.BuilderInfo get info_ => _i;
-  static Job_ProcessingOptions create() => Job_ProcessingOptions();
+  @$core.pragma('dart2js:noInline')
+  static Job_ProcessingOptions create() => Job_ProcessingOptions._();
   Job_ProcessingOptions createEmptyInstance() => create();
   static $pb.PbList<Job_ProcessingOptions> createRepeated() =>
       $pb.PbList<Job_ProcessingOptions>();
@@ -204,18 +211,20 @@ class Job extends $pb.GeneratedMessage {
     ..a<Job_ProcessingOptions>(30, 'processingOptions', $pb.PbFieldType.OM, Job_ProcessingOptions.getDefault, Job_ProcessingOptions.create)
     ..hasRequiredFields = false;
 
-  Job() : super();
-  Job.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Job.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Job._() : super();
+  factory Job() => create();
+  factory Job.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Job.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Job clone() => Job()..mergeFromMessage(this);
   Job copyWith(void Function(Job) updates) =>
       super.copyWith((message) => updates(message as Job));
   $pb.BuilderInfo get info_ => _i;
-  static Job create() => Job();
+  @$core.pragma('dart2js:noInline')
+  static Job create() => Job._();
   Job createEmptyInstance() => create();
   static $pb.PbList<Job> createRepeated() => $pb.PbList<Job>();
   static Job getDefault() => _defaultInstance ??= create()..freeze();

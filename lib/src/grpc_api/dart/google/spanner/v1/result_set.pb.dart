@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/result_set.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -25,18 +26,20 @@ class ResultSet extends $pb.GeneratedMessage {
         ResultSetStats.getDefault, ResultSetStats.create)
     ..hasRequiredFields = false;
 
-  ResultSet() : super();
-  ResultSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResultSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResultSet._() : super();
+  factory ResultSet() => create();
+  factory ResultSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResultSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResultSet clone() => ResultSet()..mergeFromMessage(this);
   ResultSet copyWith(void Function(ResultSet) updates) =>
       super.copyWith((message) => updates(message as ResultSet));
   $pb.BuilderInfo get info_ => _i;
-  static ResultSet create() => ResultSet();
+  @$core.pragma('dart2js:noInline')
+  static ResultSet create() => ResultSet._();
   ResultSet createEmptyInstance() => create();
   static $pb.PbList<ResultSet> createRepeated() => $pb.PbList<ResultSet>();
   static ResultSet getDefault() => _defaultInstance ??= create()..freeze();
@@ -73,18 +76,20 @@ class PartialResultSet extends $pb.GeneratedMessage {
         ResultSetStats.getDefault, ResultSetStats.create)
     ..hasRequiredFields = false;
 
-  PartialResultSet() : super();
-  PartialResultSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PartialResultSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PartialResultSet._() : super();
+  factory PartialResultSet() => create();
+  factory PartialResultSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PartialResultSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PartialResultSet clone() => PartialResultSet()..mergeFromMessage(this);
   PartialResultSet copyWith(void Function(PartialResultSet) updates) =>
       super.copyWith((message) => updates(message as PartialResultSet));
   $pb.BuilderInfo get info_ => _i;
-  static PartialResultSet create() => PartialResultSet();
+  @$core.pragma('dart2js:noInline')
+  static PartialResultSet create() => PartialResultSet._();
   PartialResultSet createEmptyInstance() => create();
   static $pb.PbList<PartialResultSet> createRepeated() =>
       $pb.PbList<PartialResultSet>();
@@ -136,18 +141,20 @@ class ResultSetMetadata extends $pb.GeneratedMessage {
         $2.Transaction.getDefault, $2.Transaction.create)
     ..hasRequiredFields = false;
 
-  ResultSetMetadata() : super();
-  ResultSetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResultSetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResultSetMetadata._() : super();
+  factory ResultSetMetadata() => create();
+  factory ResultSetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResultSetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResultSetMetadata clone() => ResultSetMetadata()..mergeFromMessage(this);
   ResultSetMetadata copyWith(void Function(ResultSetMetadata) updates) =>
       super.copyWith((message) => updates(message as ResultSetMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ResultSetMetadata create() => ResultSetMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ResultSetMetadata create() => ResultSetMetadata._();
   ResultSetMetadata createEmptyInstance() => create();
   static $pb.PbList<ResultSetMetadata> createRepeated() =>
       $pb.PbList<ResultSetMetadata>();
@@ -183,27 +190,29 @@ class ResultSetStats extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ResultSetStats',
       package: const $pb.PackageName('google.spanner.v1'))
+    ..oo(0, [3, 4])
     ..a<$3.QueryPlan>(1, 'queryPlan', $pb.PbFieldType.OM,
         $3.QueryPlan.getDefault, $3.QueryPlan.create)
     ..a<$0.Struct>(2, 'queryStats', $pb.PbFieldType.OM, $0.Struct.getDefault,
         $0.Struct.create)
     ..aInt64(3, 'rowCountExact')
     ..aInt64(4, 'rowCountLowerBound')
-    ..oo(0, [3, 4])
     ..hasRequiredFields = false;
 
-  ResultSetStats() : super();
-  ResultSetStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResultSetStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResultSetStats._() : super();
+  factory ResultSetStats() => create();
+  factory ResultSetStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResultSetStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResultSetStats clone() => ResultSetStats()..mergeFromMessage(this);
   ResultSetStats copyWith(void Function(ResultSetStats) updates) =>
       super.copyWith((message) => updates(message as ResultSetStats));
   $pb.BuilderInfo get info_ => _i;
-  static ResultSetStats create() => ResultSetStats();
+  @$core.pragma('dart2js:noInline')
+  static ResultSetStats create() => ResultSetStats._();
   ResultSetStats createEmptyInstance() => create();
   static $pb.PbList<ResultSetStats> createRepeated() =>
       $pb.PbList<ResultSetStats>();

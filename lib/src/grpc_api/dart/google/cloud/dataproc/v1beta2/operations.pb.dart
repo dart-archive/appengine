@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dataproc/v1beta2/operations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -31,20 +32,22 @@ class ClusterOperationStatus extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  ClusterOperationStatus() : super();
-  ClusterOperationStatus.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterOperationStatus.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClusterOperationStatus._() : super();
+  factory ClusterOperationStatus() => create();
+  factory ClusterOperationStatus.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClusterOperationStatus.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClusterOperationStatus clone() =>
       ClusterOperationStatus()..mergeFromMessage(this);
   ClusterOperationStatus copyWith(
           void Function(ClusterOperationStatus) updates) =>
       super.copyWith((message) => updates(message as ClusterOperationStatus));
   $pb.BuilderInfo get info_ => _i;
-  static ClusterOperationStatus create() => ClusterOperationStatus();
+  @$core.pragma('dart2js:noInline')
+  static ClusterOperationStatus create() => ClusterOperationStatus._();
   ClusterOperationStatus createEmptyInstance() => create();
   static $pb.PbList<ClusterOperationStatus> createRepeated() =>
       $pb.PbList<ClusterOperationStatus>();
@@ -109,20 +112,22 @@ class ClusterOperationMetadata extends $pb.GeneratedMessage {
     ..pPS(14, 'warnings')
     ..hasRequiredFields = false;
 
-  ClusterOperationMetadata() : super();
-  ClusterOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClusterOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClusterOperationMetadata._() : super();
+  factory ClusterOperationMetadata() => create();
+  factory ClusterOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClusterOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClusterOperationMetadata clone() =>
       ClusterOperationMetadata()..mergeFromMessage(this);
   ClusterOperationMetadata copyWith(
           void Function(ClusterOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as ClusterOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ClusterOperationMetadata create() => ClusterOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ClusterOperationMetadata create() => ClusterOperationMetadata._();
   ClusterOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ClusterOperationMetadata> createRepeated() =>
       $pb.PbList<ClusterOperationMetadata>();

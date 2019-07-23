@@ -1,59 +1,59 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/functions/v1beta2/functions.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'functions.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'functions.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $0;
 export 'functions.pb.dart';
 
 class CloudFunctionsServiceClient extends $grpc.Client {
   static final _$listFunctions =
-      $grpc.ClientMethod<ListFunctionsRequest, ListFunctionsResponse>(
+      $grpc.ClientMethod<$2.ListFunctionsRequest, $2.ListFunctionsResponse>(
           '/google.cloud.functions.v1beta2.CloudFunctionsService/ListFunctions',
-          (ListFunctionsRequest value) => value.writeToBuffer(),
+          ($2.ListFunctionsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              ListFunctionsResponse.fromBuffer(value));
+              $2.ListFunctionsResponse.fromBuffer(value));
   static final _$getFunction =
-      $grpc.ClientMethod<GetFunctionRequest, CloudFunction>(
+      $grpc.ClientMethod<$2.GetFunctionRequest, $2.CloudFunction>(
           '/google.cloud.functions.v1beta2.CloudFunctionsService/GetFunction',
-          (GetFunctionRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => CloudFunction.fromBuffer(value));
-  static final _$createFunction = $grpc.ClientMethod<CreateFunctionRequest,
-          $1.Operation>(
+          ($2.GetFunctionRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.CloudFunction.fromBuffer(value));
+  static final _$createFunction = $grpc.ClientMethod<$2.CreateFunctionRequest,
+          $0.Operation>(
       '/google.cloud.functions.v1beta2.CloudFunctionsService/CreateFunction',
-      (CreateFunctionRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
-  static final _$updateFunction = $grpc.ClientMethod<UpdateFunctionRequest,
-          $1.Operation>(
+      ($2.CreateFunctionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$updateFunction = $grpc.ClientMethod<$2.UpdateFunctionRequest,
+          $0.Operation>(
       '/google.cloud.functions.v1beta2.CloudFunctionsService/UpdateFunction',
-      (UpdateFunctionRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
-  static final _$deleteFunction = $grpc.ClientMethod<DeleteFunctionRequest,
-          $1.Operation>(
+      ($2.UpdateFunctionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$deleteFunction = $grpc.ClientMethod<$2.DeleteFunctionRequest,
+          $0.Operation>(
       '/google.cloud.functions.v1beta2.CloudFunctionsService/DeleteFunction',
-      (DeleteFunctionRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
+      ($2.DeleteFunctionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
   static final _$callFunction =
-      $grpc.ClientMethod<CallFunctionRequest, CallFunctionResponse>(
+      $grpc.ClientMethod<$2.CallFunctionRequest, $2.CallFunctionResponse>(
           '/google.cloud.functions.v1beta2.CloudFunctionsService/CallFunction',
-          (CallFunctionRequest value) => value.writeToBuffer(),
+          ($2.CallFunctionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              CallFunctionResponse.fromBuffer(value));
+              $2.CallFunctionResponse.fromBuffer(value));
 
   CloudFunctionsServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ListFunctionsResponse> listFunctions(
-      ListFunctionsRequest request,
+  $grpc.ResponseFuture<$2.ListFunctionsResponse> listFunctions(
+      $2.ListFunctionsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listFunctions, $async.Stream.fromIterable([request]),
@@ -61,7 +61,8 @@ class CloudFunctionsServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<CloudFunction> getFunction(GetFunctionRequest request,
+  $grpc.ResponseFuture<$2.CloudFunction> getFunction(
+      $2.GetFunctionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getFunction, $async.Stream.fromIterable([request]),
@@ -69,8 +70,8 @@ class CloudFunctionsServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> createFunction(
-      CreateFunctionRequest request,
+  $grpc.ResponseFuture<$0.Operation> createFunction(
+      $2.CreateFunctionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createFunction, $async.Stream.fromIterable([request]),
@@ -78,8 +79,8 @@ class CloudFunctionsServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> updateFunction(
-      UpdateFunctionRequest request,
+  $grpc.ResponseFuture<$0.Operation> updateFunction(
+      $2.UpdateFunctionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateFunction, $async.Stream.fromIterable([request]),
@@ -87,8 +88,8 @@ class CloudFunctionsServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> deleteFunction(
-      DeleteFunctionRequest request,
+  $grpc.ResponseFuture<$0.Operation> deleteFunction(
+      $2.DeleteFunctionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteFunction, $async.Stream.fromIterable([request]),
@@ -96,8 +97,8 @@ class CloudFunctionsServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<CallFunctionResponse> callFunction(
-      CallFunctionRequest request,
+  $grpc.ResponseFuture<$2.CallFunctionResponse> callFunction(
+      $2.CallFunctionRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$callFunction, $async.Stream.fromIterable([request]),
@@ -111,93 +112,100 @@ abstract class CloudFunctionsServiceBase extends $grpc.Service {
       'google.cloud.functions.v1beta2.CloudFunctionsService';
 
   CloudFunctionsServiceBase() {
-    $addMethod($grpc.ServiceMethod<ListFunctionsRequest, ListFunctionsResponse>(
-        'ListFunctions',
-        listFunctions_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => ListFunctionsRequest.fromBuffer(value),
-        (ListFunctionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetFunctionRequest, CloudFunction>(
+    $addMethod(
+        $grpc.ServiceMethod<$2.ListFunctionsRequest, $2.ListFunctionsResponse>(
+            'ListFunctions',
+            listFunctions_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.ListFunctionsRequest.fromBuffer(value),
+            ($2.ListFunctionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetFunctionRequest, $2.CloudFunction>(
         'GetFunction',
         getFunction_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetFunctionRequest.fromBuffer(value),
-        (CloudFunction value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateFunctionRequest, $1.Operation>(
+        ($core.List<$core.int> value) =>
+            $2.GetFunctionRequest.fromBuffer(value),
+        ($2.CloudFunction value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateFunctionRequest, $0.Operation>(
         'CreateFunction',
         createFunction_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateFunctionRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateFunctionRequest, $1.Operation>(
+            $2.CreateFunctionRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateFunctionRequest, $0.Operation>(
         'UpdateFunction',
         updateFunction_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateFunctionRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteFunctionRequest, $1.Operation>(
+            $2.UpdateFunctionRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteFunctionRequest, $0.Operation>(
         'DeleteFunction',
         deleteFunction_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteFunctionRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CallFunctionRequest, CallFunctionResponse>(
-        'CallFunction',
-        callFunction_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => CallFunctionRequest.fromBuffer(value),
-        (CallFunctionResponse value) => value.writeToBuffer()));
+            $2.DeleteFunctionRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.CallFunctionRequest, $2.CallFunctionResponse>(
+            'CallFunction',
+            callFunction_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.CallFunctionRequest.fromBuffer(value),
+            ($2.CallFunctionResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<ListFunctionsResponse> listFunctions_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.ListFunctionsResponse> listFunctions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListFunctionsRequest> request) async {
     return listFunctions(call, await request);
   }
 
-  $async.Future<CloudFunction> getFunction_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.CloudFunction> getFunction_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetFunctionRequest> request) async {
     return getFunction(call, await request);
   }
 
-  $async.Future<$1.Operation> createFunction_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> createFunction_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateFunctionRequest> request) async {
     return createFunction(call, await request);
   }
 
-  $async.Future<$1.Operation> updateFunction_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> updateFunction_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateFunctionRequest> request) async {
     return updateFunction(call, await request);
   }
 
-  $async.Future<$1.Operation> deleteFunction_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> deleteFunction_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteFunctionRequest> request) async {
     return deleteFunction(call, await request);
   }
 
-  $async.Future<CallFunctionResponse> callFunction_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.CallFunctionResponse> callFunction_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.CallFunctionRequest> request) async {
     return callFunction(call, await request);
   }
 
-  $async.Future<ListFunctionsResponse> listFunctions(
-      $grpc.ServiceCall call, ListFunctionsRequest request);
-  $async.Future<CloudFunction> getFunction(
-      $grpc.ServiceCall call, GetFunctionRequest request);
-  $async.Future<$1.Operation> createFunction(
-      $grpc.ServiceCall call, CreateFunctionRequest request);
-  $async.Future<$1.Operation> updateFunction(
-      $grpc.ServiceCall call, UpdateFunctionRequest request);
-  $async.Future<$1.Operation> deleteFunction(
-      $grpc.ServiceCall call, DeleteFunctionRequest request);
-  $async.Future<CallFunctionResponse> callFunction(
-      $grpc.ServiceCall call, CallFunctionRequest request);
+  $async.Future<$2.ListFunctionsResponse> listFunctions(
+      $grpc.ServiceCall call, $2.ListFunctionsRequest request);
+  $async.Future<$2.CloudFunction> getFunction(
+      $grpc.ServiceCall call, $2.GetFunctionRequest request);
+  $async.Future<$0.Operation> createFunction(
+      $grpc.ServiceCall call, $2.CreateFunctionRequest request);
+  $async.Future<$0.Operation> updateFunction(
+      $grpc.ServiceCall call, $2.UpdateFunctionRequest request);
+  $async.Future<$0.Operation> deleteFunction(
+      $grpc.ServiceCall call, $2.DeleteFunctionRequest request);
+  $async.Future<$2.CallFunctionResponse> callFunction(
+      $grpc.ServiceCall call, $2.CallFunctionRequest request);
 }

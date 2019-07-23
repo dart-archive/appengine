@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/securitycenter/v1beta1/security_marks.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -25,18 +26,20 @@ class SecurityMarks extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.securitycenter.v1beta1'))
     ..hasRequiredFields = false;
 
-  SecurityMarks() : super();
-  SecurityMarks.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SecurityMarks.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SecurityMarks._() : super();
+  factory SecurityMarks() => create();
+  factory SecurityMarks.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SecurityMarks.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SecurityMarks clone() => SecurityMarks()..mergeFromMessage(this);
   SecurityMarks copyWith(void Function(SecurityMarks) updates) =>
       super.copyWith((message) => updates(message as SecurityMarks));
   $pb.BuilderInfo get info_ => _i;
-  static SecurityMarks create() => SecurityMarks();
+  @$core.pragma('dart2js:noInline')
+  static SecurityMarks create() => SecurityMarks._();
   SecurityMarks createEmptyInstance() => create();
   static $pb.PbList<SecurityMarks> createRepeated() =>
       $pb.PbList<SecurityMarks>();

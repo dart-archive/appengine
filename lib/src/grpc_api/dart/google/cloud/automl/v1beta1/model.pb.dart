@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/model.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ enum Model_ModelMetadata {
   translationModelMetadata,
   textExtractionModelMetadata,
   imageObjectDetectionModelMetadata,
+  videoObjectTrackingModelMetadata,
   textSentimentModelMetadata,
   videoClassificationModelMetadata,
   tablesModelMetadata,
@@ -40,6 +42,7 @@ class Model extends $pb.GeneratedMessage {
     15: Model_ModelMetadata.translationModelMetadata,
     19: Model_ModelMetadata.textExtractionModelMetadata,
     20: Model_ModelMetadata.imageObjectDetectionModelMetadata,
+    21: Model_ModelMetadata.videoObjectTrackingModelMetadata,
     22: Model_ModelMetadata.textSentimentModelMetadata,
     23: Model_ModelMetadata.videoClassificationModelMetadata,
     24: Model_ModelMetadata.tablesModelMetadata,
@@ -47,6 +50,7 @@ class Model extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [13, 14, 15, 19, 20, 21, 22, 23, 24])
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'datasetId')
@@ -91,6 +95,12 @@ class Model extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $1.ImageObjectDetectionModelMetadata.getDefault,
         $1.ImageObjectDetectionModelMetadata.create)
+    ..a<$4.VideoObjectTrackingModelMetadata>(
+        21,
+        'videoObjectTrackingModelMetadata',
+        $pb.PbFieldType.OM,
+        $4.VideoObjectTrackingModelMetadata.getDefault,
+        $4.VideoObjectTrackingModelMetadata.create)
     ..a<$2.TextSentimentModelMetadata>(
         22,
         'textSentimentModelMetadata',
@@ -98,28 +108,24 @@ class Model extends $pb.GeneratedMessage {
         $2.TextSentimentModelMetadata.getDefault,
         $2.TextSentimentModelMetadata.create)
     ..a<$4.VideoClassificationModelMetadata>(
-        23,
-        'videoClassificationModelMetadata',
-        $pb.PbFieldType.OM,
-        $4.VideoClassificationModelMetadata.getDefault,
-        $4.VideoClassificationModelMetadata.create)
-    ..a<$5.TablesModelMetadata>(
-        24, 'tablesModelMetadata', $pb.PbFieldType.OM, $5.TablesModelMetadata.getDefault, $5.TablesModelMetadata.create)
-    ..oo(0, [13, 14, 15, 19, 20, 22, 23, 24])
+        23, 'videoClassificationModelMetadata', $pb.PbFieldType.OM, $4.VideoClassificationModelMetadata.getDefault, $4.VideoClassificationModelMetadata.create)
+    ..a<$5.TablesModelMetadata>(24, 'tablesModelMetadata', $pb.PbFieldType.OM, $5.TablesModelMetadata.getDefault, $5.TablesModelMetadata.create)
     ..hasRequiredFields = false;
 
-  Model() : super();
-  Model.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Model.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Model._() : super();
+  factory Model() => create();
+  factory Model.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Model.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Model clone() => Model()..mergeFromMessage(this);
   Model copyWith(void Function(Model) updates) =>
       super.copyWith((message) => updates(message as Model));
   $pb.BuilderInfo get info_ => _i;
-  static Model create() => Model();
+  @$core.pragma('dart2js:noInline')
+  static Model create() => Model._();
   Model createEmptyInstance() => create();
   static $pb.PbList<Model> createRepeated() => $pb.PbList<Model>();
   static Model getDefault() => _defaultInstance ??= create()..freeze();
@@ -221,28 +227,37 @@ class Model extends $pb.GeneratedMessage {
   $core.bool hasImageObjectDetectionModelMetadata() => $_has(10);
   void clearImageObjectDetectionModelMetadata() => clearField(20);
 
-  $2.TextSentimentModelMetadata get textSentimentModelMetadata => $_getN(11);
+  $4.VideoObjectTrackingModelMetadata get videoObjectTrackingModelMetadata =>
+      $_getN(11);
+  set videoObjectTrackingModelMetadata($4.VideoObjectTrackingModelMetadata v) {
+    setField(21, v);
+  }
+
+  $core.bool hasVideoObjectTrackingModelMetadata() => $_has(11);
+  void clearVideoObjectTrackingModelMetadata() => clearField(21);
+
+  $2.TextSentimentModelMetadata get textSentimentModelMetadata => $_getN(12);
   set textSentimentModelMetadata($2.TextSentimentModelMetadata v) {
     setField(22, v);
   }
 
-  $core.bool hasTextSentimentModelMetadata() => $_has(11);
+  $core.bool hasTextSentimentModelMetadata() => $_has(12);
   void clearTextSentimentModelMetadata() => clearField(22);
 
   $4.VideoClassificationModelMetadata get videoClassificationModelMetadata =>
-      $_getN(12);
+      $_getN(13);
   set videoClassificationModelMetadata($4.VideoClassificationModelMetadata v) {
     setField(23, v);
   }
 
-  $core.bool hasVideoClassificationModelMetadata() => $_has(12);
+  $core.bool hasVideoClassificationModelMetadata() => $_has(13);
   void clearVideoClassificationModelMetadata() => clearField(23);
 
-  $5.TablesModelMetadata get tablesModelMetadata => $_getN(13);
+  $5.TablesModelMetadata get tablesModelMetadata => $_getN(14);
   set tablesModelMetadata($5.TablesModelMetadata v) {
     setField(24, v);
   }
 
-  $core.bool hasTablesModelMetadata() => $_has(13);
+  $core.bool hasTablesModelMetadata() => $_has(14);
   void clearTablesModelMetadata() => clearField(24);
 }

@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/account_budget_proposal_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/account_budget_proposal.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
+import '../resources/account_budget_proposal.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
 
 class GetAccountBudgetProposalRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -19,13 +20,14 @@ class GetAccountBudgetProposalRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetAccountBudgetProposalRequest() : super();
-  GetAccountBudgetProposalRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetAccountBudgetProposalRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetAccountBudgetProposalRequest._() : super();
+  factory GetAccountBudgetProposalRequest() => create();
+  factory GetAccountBudgetProposalRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetAccountBudgetProposalRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetAccountBudgetProposalRequest clone() =>
       GetAccountBudgetProposalRequest()..mergeFromMessage(this);
   GetAccountBudgetProposalRequest copyWith(
@@ -33,8 +35,9 @@ class GetAccountBudgetProposalRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetAccountBudgetProposalRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetAccountBudgetProposalRequest create() =>
-      GetAccountBudgetProposalRequest();
+      GetAccountBudgetProposalRequest._();
   GetAccountBudgetProposalRequest createEmptyInstance() => create();
   static $pb.PbList<GetAccountBudgetProposalRequest> createRepeated() =>
       $pb.PbList<GetAccountBudgetProposalRequest>();
@@ -65,13 +68,14 @@ class MutateAccountBudgetProposalRequest extends $pb.GeneratedMessage {
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateAccountBudgetProposalRequest() : super();
-  MutateAccountBudgetProposalRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAccountBudgetProposalRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAccountBudgetProposalRequest._() : super();
+  factory MutateAccountBudgetProposalRequest() => create();
+  factory MutateAccountBudgetProposalRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAccountBudgetProposalRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAccountBudgetProposalRequest clone() =>
       MutateAccountBudgetProposalRequest()..mergeFromMessage(this);
   MutateAccountBudgetProposalRequest copyWith(
@@ -79,8 +83,9 @@ class MutateAccountBudgetProposalRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAccountBudgetProposalRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAccountBudgetProposalRequest create() =>
-      MutateAccountBudgetProposalRequest();
+      MutateAccountBudgetProposalRequest._();
   MutateAccountBudgetProposalRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAccountBudgetProposalRequest> createRepeated() =>
       $pb.PbList<MutateAccountBudgetProposalRequest>();
@@ -125,21 +130,22 @@ class AccountBudgetProposalOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AccountBudgetProposalOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..aOS(1, 'remove')
-    ..a<$0.AccountBudgetProposal>(2, 'create_2', $pb.PbFieldType.OM,
-        $0.AccountBudgetProposal.getDefault, $0.AccountBudgetProposal.create)
-    ..a<$1.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2])
+    ..aOS(1, 'remove')
+    ..a<$1.AccountBudgetProposal>(2, 'create_2', $pb.PbFieldType.OM,
+        $1.AccountBudgetProposal.getDefault, $1.AccountBudgetProposal.create)
+    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  AccountBudgetProposalOperation() : super();
-  AccountBudgetProposalOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AccountBudgetProposalOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AccountBudgetProposalOperation._() : super();
+  factory AccountBudgetProposalOperation() => create();
+  factory AccountBudgetProposalOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccountBudgetProposalOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AccountBudgetProposalOperation clone() =>
       AccountBudgetProposalOperation()..mergeFromMessage(this);
   AccountBudgetProposalOperation copyWith(
@@ -147,8 +153,9 @@ class AccountBudgetProposalOperation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AccountBudgetProposalOperation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AccountBudgetProposalOperation create() =>
-      AccountBudgetProposalOperation();
+      AccountBudgetProposalOperation._();
   AccountBudgetProposalOperation createEmptyInstance() => create();
   static $pb.PbList<AccountBudgetProposalOperation> createRepeated() =>
       $pb.PbList<AccountBudgetProposalOperation>();
@@ -168,16 +175,16 @@ class AccountBudgetProposalOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(0);
   void clearRemove() => clearField(1);
 
-  $0.AccountBudgetProposal get create_2 => $_getN(1);
-  set create_2($0.AccountBudgetProposal v) {
+  $1.AccountBudgetProposal get create_2 => $_getN(1);
+  set create_2($1.AccountBudgetProposal v) {
     setField(2, v);
   }
 
   $core.bool hasCreate_2() => $_has(1);
   void clearCreate_2() => clearField(2);
 
-  $1.FieldMask get updateMask => $_getN(2);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(2);
+  set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
@@ -197,13 +204,15 @@ class MutateAccountBudgetProposalResponse extends $pb.GeneratedMessage {
         MutateAccountBudgetProposalResult.create)
     ..hasRequiredFields = false;
 
-  MutateAccountBudgetProposalResponse() : super();
-  MutateAccountBudgetProposalResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAccountBudgetProposalResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAccountBudgetProposalResponse._() : super();
+  factory MutateAccountBudgetProposalResponse() => create();
+  factory MutateAccountBudgetProposalResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAccountBudgetProposalResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAccountBudgetProposalResponse clone() =>
       MutateAccountBudgetProposalResponse()..mergeFromMessage(this);
   MutateAccountBudgetProposalResponse copyWith(
@@ -211,8 +220,9 @@ class MutateAccountBudgetProposalResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAccountBudgetProposalResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAccountBudgetProposalResponse create() =>
-      MutateAccountBudgetProposalResponse();
+      MutateAccountBudgetProposalResponse._();
   MutateAccountBudgetProposalResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAccountBudgetProposalResponse> createRepeated() =>
       $pb.PbList<MutateAccountBudgetProposalResponse>();
@@ -236,13 +246,14 @@ class MutateAccountBudgetProposalResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateAccountBudgetProposalResult() : super();
-  MutateAccountBudgetProposalResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateAccountBudgetProposalResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateAccountBudgetProposalResult._() : super();
+  factory MutateAccountBudgetProposalResult() => create();
+  factory MutateAccountBudgetProposalResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateAccountBudgetProposalResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateAccountBudgetProposalResult clone() =>
       MutateAccountBudgetProposalResult()..mergeFromMessage(this);
   MutateAccountBudgetProposalResult copyWith(
@@ -250,8 +261,9 @@ class MutateAccountBudgetProposalResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateAccountBudgetProposalResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateAccountBudgetProposalResult create() =>
-      MutateAccountBudgetProposalResult();
+      MutateAccountBudgetProposalResult._();
   MutateAccountBudgetProposalResult createEmptyInstance() => create();
   static $pb.PbList<MutateAccountBudgetProposalResult> createRepeated() =>
       $pb.PbList<MutateAccountBudgetProposalResult>();

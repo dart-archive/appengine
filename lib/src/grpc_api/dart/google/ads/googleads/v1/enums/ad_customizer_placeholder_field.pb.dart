@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/ad_customizer_placeholder_field.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class AdCustomizerPlaceholderFieldEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  AdCustomizerPlaceholderFieldEnum() : super();
-  AdCustomizerPlaceholderFieldEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdCustomizerPlaceholderFieldEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdCustomizerPlaceholderFieldEnum._() : super();
+  factory AdCustomizerPlaceholderFieldEnum() => create();
+  factory AdCustomizerPlaceholderFieldEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdCustomizerPlaceholderFieldEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdCustomizerPlaceholderFieldEnum clone() =>
       AdCustomizerPlaceholderFieldEnum()..mergeFromMessage(this);
   AdCustomizerPlaceholderFieldEnum copyWith(
@@ -31,8 +33,9 @@ class AdCustomizerPlaceholderFieldEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AdCustomizerPlaceholderFieldEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AdCustomizerPlaceholderFieldEnum create() =>
-      AdCustomizerPlaceholderFieldEnum();
+      AdCustomizerPlaceholderFieldEnum._();
   AdCustomizerPlaceholderFieldEnum createEmptyInstance() => create();
   static $pb.PbList<AdCustomizerPlaceholderFieldEnum> createRepeated() =>
       $pb.PbList<AdCustomizerPlaceholderFieldEnum>();

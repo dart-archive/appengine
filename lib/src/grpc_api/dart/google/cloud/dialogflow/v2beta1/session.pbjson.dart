@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/session.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const DetectIntentRequest$json = {
   '1': 'DetectIntentRequest',
@@ -404,6 +405,23 @@ const StreamingRecognitionResult$json = {
     {'1': 'transcript', '3': 2, '4': 1, '5': 9, '10': 'transcript'},
     {'1': 'is_final', '3': 3, '4': 1, '5': 8, '10': 'isFinal'},
     {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
+    {'1': 'stability', '3': 6, '4': 1, '5': 2, '10': 'stability'},
+    {
+      '1': 'speech_word_info',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.SpeechWordInfo',
+      '10': 'speechWordInfo'
+    },
+    {
+      '1': 'speech_end_offset',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'speechEndOffset'
+    },
   ],
   '4': [StreamingRecognitionResult_MessageType$json],
 };

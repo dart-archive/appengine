@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/errors/resource_count_limit_exceeded_error.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,15 @@ class ResourceCountLimitExceededErrorEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.errors'))
     ..hasRequiredFields = false;
 
-  ResourceCountLimitExceededErrorEnum() : super();
-  ResourceCountLimitExceededErrorEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResourceCountLimitExceededErrorEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResourceCountLimitExceededErrorEnum._() : super();
+  factory ResourceCountLimitExceededErrorEnum() => create();
+  factory ResourceCountLimitExceededErrorEnum.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResourceCountLimitExceededErrorEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResourceCountLimitExceededErrorEnum clone() =>
       ResourceCountLimitExceededErrorEnum()..mergeFromMessage(this);
   ResourceCountLimitExceededErrorEnum copyWith(
@@ -31,8 +34,9 @@ class ResourceCountLimitExceededErrorEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ResourceCountLimitExceededErrorEnum));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ResourceCountLimitExceededErrorEnum create() =>
-      ResourceCountLimitExceededErrorEnum();
+      ResourceCountLimitExceededErrorEnum._();
   ResourceCountLimitExceededErrorEnum createEmptyInstance() => create();
   static $pb.PbList<ResourceCountLimitExceededErrorEnum> createRepeated() =>
       $pb.PbList<ResourceCountLimitExceededErrorEnum>();

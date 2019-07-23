@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouddebugger/v2/data.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class FormatMessage extends $pb.GeneratedMessage {
     ..pPS(2, 'parameters')
     ..hasRequiredFields = false;
 
-  FormatMessage() : super();
-  FormatMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FormatMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FormatMessage._() : super();
+  factory FormatMessage() => create();
+  factory FormatMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FormatMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FormatMessage clone() => FormatMessage()..mergeFromMessage(this);
   FormatMessage copyWith(void Function(FormatMessage) updates) =>
       super.copyWith((message) => updates(message as FormatMessage));
   $pb.BuilderInfo get info_ => _i;
-  static FormatMessage create() => FormatMessage();
+  @$core.pragma('dart2js:noInline')
+  static FormatMessage create() => FormatMessage._();
   FormatMessage createEmptyInstance() => create();
   static $pb.PbList<FormatMessage> createRepeated() =>
       $pb.PbList<FormatMessage>();
@@ -68,18 +71,20 @@ class StatusMessage extends $pb.GeneratedMessage {
         FormatMessage.getDefault, FormatMessage.create)
     ..hasRequiredFields = false;
 
-  StatusMessage() : super();
-  StatusMessage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StatusMessage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StatusMessage._() : super();
+  factory StatusMessage() => create();
+  factory StatusMessage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StatusMessage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StatusMessage clone() => StatusMessage()..mergeFromMessage(this);
   StatusMessage copyWith(void Function(StatusMessage) updates) =>
       super.copyWith((message) => updates(message as StatusMessage));
   $pb.BuilderInfo get info_ => _i;
-  static StatusMessage create() => StatusMessage();
+  @$core.pragma('dart2js:noInline')
+  static StatusMessage create() => StatusMessage._();
   StatusMessage createEmptyInstance() => create();
   static $pb.PbList<StatusMessage> createRepeated() =>
       $pb.PbList<StatusMessage>();
@@ -119,18 +124,20 @@ class SourceLocation extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'column', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  SourceLocation() : super();
-  SourceLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SourceLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SourceLocation._() : super();
+  factory SourceLocation() => create();
+  factory SourceLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
   SourceLocation copyWith(void Function(SourceLocation) updates) =>
       super.copyWith((message) => updates(message as SourceLocation));
   $pb.BuilderInfo get info_ => _i;
-  static SourceLocation create() => SourceLocation();
+  @$core.pragma('dart2js:noInline')
+  static SourceLocation create() => SourceLocation._();
   SourceLocation createEmptyInstance() => create();
   static $pb.PbList<SourceLocation> createRepeated() =>
       $pb.PbList<SourceLocation>();
@@ -175,18 +182,20 @@ class Variable extends $pb.GeneratedMessage {
     ..aOS(6, 'type')
     ..hasRequiredFields = false;
 
-  Variable() : super();
-  Variable.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Variable.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Variable._() : super();
+  factory Variable() => create();
+  factory Variable.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Variable.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Variable clone() => Variable()..mergeFromMessage(this);
   Variable copyWith(void Function(Variable) updates) =>
       super.copyWith((message) => updates(message as Variable));
   $pb.BuilderInfo get info_ => _i;
-  static Variable create() => Variable();
+  @$core.pragma('dart2js:noInline')
+  static Variable create() => Variable._();
   Variable createEmptyInstance() => create();
   static $pb.PbList<Variable> createRepeated() => $pb.PbList<Variable>();
   static Variable getDefault() => _defaultInstance ??= create()..freeze();
@@ -245,18 +254,20 @@ class StackFrame extends $pb.GeneratedMessage {
     ..pc<Variable>(4, 'locals', $pb.PbFieldType.PM, Variable.create)
     ..hasRequiredFields = false;
 
-  StackFrame() : super();
-  StackFrame.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StackFrame.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StackFrame._() : super();
+  factory StackFrame() => create();
+  factory StackFrame.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StackFrame.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StackFrame clone() => StackFrame()..mergeFromMessage(this);
   StackFrame copyWith(void Function(StackFrame) updates) =>
       super.copyWith((message) => updates(message as StackFrame));
   $pb.BuilderInfo get info_ => _i;
-  static StackFrame create() => StackFrame();
+  @$core.pragma('dart2js:noInline')
+  static StackFrame create() => StackFrame._();
   StackFrame createEmptyInstance() => create();
   static $pb.PbList<StackFrame> createRepeated() => $pb.PbList<StackFrame>();
   static StackFrame getDefault() => _defaultInstance ??= create()..freeze();
@@ -330,18 +341,20 @@ class Breakpoint extends $pb.GeneratedMessage {
         const $pb.PackageName('google.devtools.clouddebugger.v2'))
     ..hasRequiredFields = false;
 
-  Breakpoint() : super();
-  Breakpoint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Breakpoint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Breakpoint._() : super();
+  factory Breakpoint() => create();
+  factory Breakpoint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Breakpoint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Breakpoint clone() => Breakpoint()..mergeFromMessage(this);
   Breakpoint copyWith(void Function(Breakpoint) updates) =>
       super.copyWith((message) => updates(message as Breakpoint));
   $pb.BuilderInfo get info_ => _i;
-  static Breakpoint create() => Breakpoint();
+  @$core.pragma('dart2js:noInline')
+  static Breakpoint create() => Breakpoint._();
   Breakpoint createEmptyInstance() => create();
   static $pb.PbList<Breakpoint> createRepeated() => $pb.PbList<Breakpoint>();
   static Breakpoint getDefault() => _defaultInstance ??= create()..freeze();
@@ -474,18 +487,20 @@ class Debuggee extends $pb.GeneratedMessage {
         $2.ExtendedSourceContext.create)
     ..hasRequiredFields = false;
 
-  Debuggee() : super();
-  Debuggee.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Debuggee.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Debuggee._() : super();
+  factory Debuggee() => create();
+  factory Debuggee.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Debuggee.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Debuggee clone() => Debuggee()..mergeFromMessage(this);
   Debuggee copyWith(void Function(Debuggee) updates) =>
       super.copyWith((message) => updates(message as Debuggee));
   $pb.BuilderInfo get info_ => _i;
-  static Debuggee create() => Debuggee();
+  @$core.pragma('dart2js:noInline')
+  static Debuggee create() => Debuggee._();
   Debuggee createEmptyInstance() => create();
   static $pb.PbList<Debuggee> createRepeated() => $pb.PbList<Debuggee>();
   static Debuggee getDefault() => _defaultInstance ??= create()..freeze();

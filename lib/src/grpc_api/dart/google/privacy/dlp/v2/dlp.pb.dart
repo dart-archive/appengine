@@ -1,48 +1,51 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/privacy/dlp/v2/dlp.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'storage.pb.dart' as $1;
-import '../../../protobuf/timestamp.pb.dart' as $2;
-import '../../../protobuf/empty.pb.dart' as $0;
-import '../../../type/timeofday.pb.dart' as $3;
-import '../../../type/date.pb.dart' as $4;
-import '../../../protobuf/duration.pb.dart' as $5;
-import '../../../rpc/status.pb.dart' as $6;
-import '../../../protobuf/field_mask.pb.dart' as $7;
+import 'storage.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
+import '../../../protobuf/empty.pb.dart' as $1;
+import '../../../type/timeofday.pb.dart' as $4;
+import '../../../type/date.pb.dart' as $5;
+import '../../../protobuf/duration.pb.dart' as $6;
+import '../../../rpc/status.pb.dart' as $7;
+import '../../../protobuf/field_mask.pb.dart' as $8;
 
 import 'dlp.pbenum.dart';
-import 'storage.pbenum.dart' as $1;
-import '../../../type/dayofweek.pbenum.dart' as $8;
+import 'storage.pbenum.dart' as $2;
+import '../../../type/dayofweek.pbenum.dart' as $9;
 
 export 'dlp.pbenum.dart';
 
 class ExcludeInfoTypes extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExcludeInfoTypes',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
     ..hasRequiredFields = false;
 
-  ExcludeInfoTypes() : super();
-  ExcludeInfoTypes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExcludeInfoTypes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExcludeInfoTypes._() : super();
+  factory ExcludeInfoTypes() => create();
+  factory ExcludeInfoTypes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExcludeInfoTypes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExcludeInfoTypes clone() => ExcludeInfoTypes()..mergeFromMessage(this);
   ExcludeInfoTypes copyWith(void Function(ExcludeInfoTypes) updates) =>
       super.copyWith((message) => updates(message as ExcludeInfoTypes));
   $pb.BuilderInfo get info_ => _i;
-  static ExcludeInfoTypes create() => ExcludeInfoTypes();
+  @$core.pragma('dart2js:noInline')
+  static ExcludeInfoTypes create() => ExcludeInfoTypes._();
   ExcludeInfoTypes createEmptyInstance() => create();
   static $pb.PbList<ExcludeInfoTypes> createRepeated() =>
       $pb.PbList<ExcludeInfoTypes>();
@@ -50,7 +53,7 @@ class ExcludeInfoTypes extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExcludeInfoTypes _defaultInstance;
 
-  $core.List<$1.InfoType> get infoTypes => $_getList(0);
+  $core.List<$2.InfoType> get infoTypes => $_getList(0);
 }
 
 enum ExclusionRule_Type { dictionary, regex, excludeInfoTypes, notSet }
@@ -65,14 +68,15 @@ class ExclusionRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExclusionRule',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.CustomInfoType_Dictionary>(
+    ..oo(0, [1, 2, 3])
+    ..a<$2.CustomInfoType_Dictionary>(
         1,
         'dictionary',
         $pb.PbFieldType.OM,
-        $1.CustomInfoType_Dictionary.getDefault,
-        $1.CustomInfoType_Dictionary.create)
-    ..a<$1.CustomInfoType_Regex>(2, 'regex', $pb.PbFieldType.OM,
-        $1.CustomInfoType_Regex.getDefault, $1.CustomInfoType_Regex.create)
+        $2.CustomInfoType_Dictionary.getDefault,
+        $2.CustomInfoType_Dictionary.create)
+    ..a<$2.CustomInfoType_Regex>(2, 'regex', $pb.PbFieldType.OM,
+        $2.CustomInfoType_Regex.getDefault, $2.CustomInfoType_Regex.create)
     ..a<ExcludeInfoTypes>(3, 'excludeInfoTypes', $pb.PbFieldType.OM,
         ExcludeInfoTypes.getDefault, ExcludeInfoTypes.create)
     ..e<MatchingType>(
@@ -82,21 +86,22 @@ class ExclusionRule extends $pb.GeneratedMessage {
         MatchingType.MATCHING_TYPE_UNSPECIFIED,
         MatchingType.valueOf,
         MatchingType.values)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  ExclusionRule() : super();
-  ExclusionRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExclusionRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExclusionRule._() : super();
+  factory ExclusionRule() => create();
+  factory ExclusionRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExclusionRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExclusionRule clone() => ExclusionRule()..mergeFromMessage(this);
   ExclusionRule copyWith(void Function(ExclusionRule) updates) =>
       super.copyWith((message) => updates(message as ExclusionRule));
   $pb.BuilderInfo get info_ => _i;
-  static ExclusionRule create() => ExclusionRule();
+  @$core.pragma('dart2js:noInline')
+  static ExclusionRule create() => ExclusionRule._();
   ExclusionRule createEmptyInstance() => create();
   static $pb.PbList<ExclusionRule> createRepeated() =>
       $pb.PbList<ExclusionRule>();
@@ -106,16 +111,16 @@ class ExclusionRule extends $pb.GeneratedMessage {
   ExclusionRule_Type whichType() => _ExclusionRule_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $1.CustomInfoType_Dictionary get dictionary => $_getN(0);
-  set dictionary($1.CustomInfoType_Dictionary v) {
+  $2.CustomInfoType_Dictionary get dictionary => $_getN(0);
+  set dictionary($2.CustomInfoType_Dictionary v) {
     setField(1, v);
   }
 
   $core.bool hasDictionary() => $_has(0);
   void clearDictionary() => clearField(1);
 
-  $1.CustomInfoType_Regex get regex => $_getN(1);
-  set regex($1.CustomInfoType_Regex v) {
+  $2.CustomInfoType_Regex get regex => $_getN(1);
+  set regex($2.CustomInfoType_Regex v) {
     setField(2, v);
   }
 
@@ -150,29 +155,31 @@ class InspectionRule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectionRule',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.CustomInfoType_DetectionRule_HotwordRule>(
+    ..oo(0, [1, 2])
+    ..a<$2.CustomInfoType_DetectionRule_HotwordRule>(
         1,
         'hotwordRule',
         $pb.PbFieldType.OM,
-        $1.CustomInfoType_DetectionRule_HotwordRule.getDefault,
-        $1.CustomInfoType_DetectionRule_HotwordRule.create)
+        $2.CustomInfoType_DetectionRule_HotwordRule.getDefault,
+        $2.CustomInfoType_DetectionRule_HotwordRule.create)
     ..a<ExclusionRule>(2, 'exclusionRule', $pb.PbFieldType.OM,
         ExclusionRule.getDefault, ExclusionRule.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  InspectionRule() : super();
-  InspectionRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectionRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectionRule._() : super();
+  factory InspectionRule() => create();
+  factory InspectionRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectionRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectionRule clone() => InspectionRule()..mergeFromMessage(this);
   InspectionRule copyWith(void Function(InspectionRule) updates) =>
       super.copyWith((message) => updates(message as InspectionRule));
   $pb.BuilderInfo get info_ => _i;
-  static InspectionRule create() => InspectionRule();
+  @$core.pragma('dart2js:noInline')
+  static InspectionRule create() => InspectionRule._();
   InspectionRule createEmptyInstance() => create();
   static $pb.PbList<InspectionRule> createRepeated() =>
       $pb.PbList<InspectionRule>();
@@ -182,8 +189,8 @@ class InspectionRule extends $pb.GeneratedMessage {
   InspectionRule_Type whichType() => _InspectionRule_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $1.CustomInfoType_DetectionRule_HotwordRule get hotwordRule => $_getN(0);
-  set hotwordRule($1.CustomInfoType_DetectionRule_HotwordRule v) {
+  $2.CustomInfoType_DetectionRule_HotwordRule get hotwordRule => $_getN(0);
+  set hotwordRule($2.CustomInfoType_DetectionRule_HotwordRule v) {
     setField(1, v);
   }
 
@@ -202,22 +209,24 @@ class InspectionRule extends $pb.GeneratedMessage {
 class InspectionRuleSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectionRuleSet',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
     ..pc<InspectionRule>(2, 'rules', $pb.PbFieldType.PM, InspectionRule.create)
     ..hasRequiredFields = false;
 
-  InspectionRuleSet() : super();
-  InspectionRuleSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectionRuleSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectionRuleSet._() : super();
+  factory InspectionRuleSet() => create();
+  factory InspectionRuleSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectionRuleSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectionRuleSet clone() => InspectionRuleSet()..mergeFromMessage(this);
   InspectionRuleSet copyWith(void Function(InspectionRuleSet) updates) =>
       super.copyWith((message) => updates(message as InspectionRuleSet));
   $pb.BuilderInfo get info_ => _i;
-  static InspectionRuleSet create() => InspectionRuleSet();
+  @$core.pragma('dart2js:noInline')
+  static InspectionRuleSet create() => InspectionRuleSet._();
   InspectionRuleSet createEmptyInstance() => create();
   static $pb.PbList<InspectionRuleSet> createRepeated() =>
       $pb.PbList<InspectionRuleSet>();
@@ -225,7 +234,7 @@ class InspectionRuleSet extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static InspectionRuleSet _defaultInstance;
 
-  $core.List<$1.InfoType> get infoTypes => $_getList(0);
+  $core.List<$2.InfoType> get infoTypes => $_getList(0);
 
   $core.List<InspectionRule> get rules => $_getList(1);
 }
@@ -234,18 +243,20 @@ class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InspectConfig.FindingLimits.InfoTypeLimit',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
+    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
     ..a<$core.int>(2, 'maxFindings', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  InspectConfig_FindingLimits_InfoTypeLimit() : super();
-  InspectConfig_FindingLimits_InfoTypeLimit.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectConfig_FindingLimits_InfoTypeLimit.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectConfig_FindingLimits_InfoTypeLimit._() : super();
+  factory InspectConfig_FindingLimits_InfoTypeLimit() => create();
+  factory InspectConfig_FindingLimits_InfoTypeLimit.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectConfig_FindingLimits_InfoTypeLimit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectConfig_FindingLimits_InfoTypeLimit clone() =>
       InspectConfig_FindingLimits_InfoTypeLimit()..mergeFromMessage(this);
   InspectConfig_FindingLimits_InfoTypeLimit copyWith(
@@ -253,8 +264,9 @@ class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as InspectConfig_FindingLimits_InfoTypeLimit));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InspectConfig_FindingLimits_InfoTypeLimit create() =>
-      InspectConfig_FindingLimits_InfoTypeLimit();
+      InspectConfig_FindingLimits_InfoTypeLimit._();
   InspectConfig_FindingLimits_InfoTypeLimit createEmptyInstance() => create();
   static $pb.PbList<InspectConfig_FindingLimits_InfoTypeLimit>
       createRepeated() =>
@@ -263,8 +275,8 @@ class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static InspectConfig_FindingLimits_InfoTypeLimit _defaultInstance;
 
-  $1.InfoType get infoType => $_getN(0);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(0);
+  set infoType($2.InfoType v) {
     setField(1, v);
   }
 
@@ -290,13 +302,14 @@ class InspectConfig_FindingLimits extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, InspectConfig_FindingLimits_InfoTypeLimit.create)
     ..hasRequiredFields = false;
 
-  InspectConfig_FindingLimits() : super();
-  InspectConfig_FindingLimits.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectConfig_FindingLimits.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectConfig_FindingLimits._() : super();
+  factory InspectConfig_FindingLimits() => create();
+  factory InspectConfig_FindingLimits.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectConfig_FindingLimits.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectConfig_FindingLimits clone() =>
       InspectConfig_FindingLimits()..mergeFromMessage(this);
   InspectConfig_FindingLimits copyWith(
@@ -304,7 +317,9 @@ class InspectConfig_FindingLimits extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as InspectConfig_FindingLimits));
   $pb.BuilderInfo get info_ => _i;
-  static InspectConfig_FindingLimits create() => InspectConfig_FindingLimits();
+  @$core.pragma('dart2js:noInline')
+  static InspectConfig_FindingLimits create() =>
+      InspectConfig_FindingLimits._();
   InspectConfig_FindingLimits createEmptyInstance() => create();
   static $pb.PbList<InspectConfig_FindingLimits> createRepeated() =>
       $pb.PbList<InspectConfig_FindingLimits>();
@@ -335,14 +350,14 @@ class InspectConfig_FindingLimits extends $pb.GeneratedMessage {
 class InspectConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
-    ..e<$1.Likelihood>(
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
+    ..e<$2.Likelihood>(
         2,
         'minLikelihood',
         $pb.PbFieldType.OE,
-        $1.Likelihood.LIKELIHOOD_UNSPECIFIED,
-        $1.Likelihood.valueOf,
-        $1.Likelihood.values)
+        $2.Likelihood.LIKELIHOOD_UNSPECIFIED,
+        $2.Likelihood.valueOf,
+        $2.Likelihood.values)
     ..a<InspectConfig_FindingLimits>(
         3,
         'limits',
@@ -351,36 +366,38 @@ class InspectConfig extends $pb.GeneratedMessage {
         InspectConfig_FindingLimits.create)
     ..aOB(4, 'includeQuote')
     ..aOB(5, 'excludeInfoTypes')
-    ..pc<$1.CustomInfoType>(
-        6, 'customInfoTypes', $pb.PbFieldType.PM, $1.CustomInfoType.create)
+    ..pc<$2.CustomInfoType>(
+        6, 'customInfoTypes', $pb.PbFieldType.PM, $2.CustomInfoType.create)
     ..pc<ContentOption>(8, 'contentOptions', $pb.PbFieldType.PE, null,
         ContentOption.valueOf, ContentOption.values)
     ..pc<InspectionRuleSet>(
         10, 'ruleSet', $pb.PbFieldType.PM, InspectionRuleSet.create)
     ..hasRequiredFields = false;
 
-  InspectConfig() : super();
-  InspectConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectConfig._() : super();
+  factory InspectConfig() => create();
+  factory InspectConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectConfig clone() => InspectConfig()..mergeFromMessage(this);
   InspectConfig copyWith(void Function(InspectConfig) updates) =>
       super.copyWith((message) => updates(message as InspectConfig));
   $pb.BuilderInfo get info_ => _i;
-  static InspectConfig create() => InspectConfig();
+  @$core.pragma('dart2js:noInline')
+  static InspectConfig create() => InspectConfig._();
   InspectConfig createEmptyInstance() => create();
   static $pb.PbList<InspectConfig> createRepeated() =>
       $pb.PbList<InspectConfig>();
   static InspectConfig getDefault() => _defaultInstance ??= create()..freeze();
   static InspectConfig _defaultInstance;
 
-  $core.List<$1.InfoType> get infoTypes => $_getList(0);
+  $core.List<$2.InfoType> get infoTypes => $_getList(0);
 
-  $1.Likelihood get minLikelihood => $_getN(1);
-  set minLikelihood($1.Likelihood v) {
+  $2.Likelihood get minLikelihood => $_getN(1);
+  set minLikelihood($2.Likelihood v) {
     setField(2, v);
   }
 
@@ -411,7 +428,7 @@ class InspectConfig extends $pb.GeneratedMessage {
   $core.bool hasExcludeInfoTypes() => $_has(4);
   void clearExcludeInfoTypes() => clearField(5);
 
-  $core.List<$1.CustomInfoType> get customInfoTypes => $_getList(5);
+  $core.List<$2.CustomInfoType> get customInfoTypes => $_getList(5);
 
   $core.List<ContentOption> get contentOptions => $_getList(6);
 
@@ -431,18 +448,20 @@ class ByteContentItem extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  ByteContentItem() : super();
-  ByteContentItem.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ByteContentItem.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ByteContentItem._() : super();
+  factory ByteContentItem() => create();
+  factory ByteContentItem.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ByteContentItem.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ByteContentItem clone() => ByteContentItem()..mergeFromMessage(this);
   ByteContentItem copyWith(void Function(ByteContentItem) updates) =>
       super.copyWith((message) => updates(message as ByteContentItem));
   $pb.BuilderInfo get info_ => _i;
-  static ByteContentItem create() => ByteContentItem();
+  @$core.pragma('dart2js:noInline')
+  static ByteContentItem create() => ByteContentItem._();
   ByteContentItem createEmptyInstance() => create();
   static $pb.PbList<ByteContentItem> createRepeated() =>
       $pb.PbList<ByteContentItem>();
@@ -479,25 +498,27 @@ class ContentItem extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContentItem',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [3, 4, 5])
     ..aOS(3, 'value')
     ..a<Table>(4, 'table', $pb.PbFieldType.OM, Table.getDefault, Table.create)
     ..a<ByteContentItem>(5, 'byteItem', $pb.PbFieldType.OM,
         ByteContentItem.getDefault, ByteContentItem.create)
-    ..oo(0, [3, 4, 5])
     ..hasRequiredFields = false;
 
-  ContentItem() : super();
-  ContentItem.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ContentItem.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ContentItem._() : super();
+  factory ContentItem() => create();
+  factory ContentItem.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ContentItem.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ContentItem clone() => ContentItem()..mergeFromMessage(this);
   ContentItem copyWith(void Function(ContentItem) updates) =>
       super.copyWith((message) => updates(message as ContentItem));
   $pb.BuilderInfo get info_ => _i;
-  static ContentItem create() => ContentItem();
+  @$core.pragma('dart2js:noInline')
+  static ContentItem create() => ContentItem._();
   ContentItem createEmptyInstance() => create();
   static $pb.PbList<ContentItem> createRepeated() => $pb.PbList<ContentItem>();
   static ContentItem getDefault() => _defaultInstance ??= create()..freeze();
@@ -538,18 +559,20 @@ class Table_Row extends $pb.GeneratedMessage {
     ..pc<Value>(1, 'values', $pb.PbFieldType.PM, Value.create)
     ..hasRequiredFields = false;
 
-  Table_Row() : super();
-  Table_Row.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Table_Row.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Table_Row._() : super();
+  factory Table_Row() => create();
+  factory Table_Row.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Table_Row.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Table_Row clone() => Table_Row()..mergeFromMessage(this);
   Table_Row copyWith(void Function(Table_Row) updates) =>
       super.copyWith((message) => updates(message as Table_Row));
   $pb.BuilderInfo get info_ => _i;
-  static Table_Row create() => Table_Row();
+  @$core.pragma('dart2js:noInline')
+  static Table_Row create() => Table_Row._();
   Table_Row createEmptyInstance() => create();
   static $pb.PbList<Table_Row> createRepeated() => $pb.PbList<Table_Row>();
   static Table_Row getDefault() => _defaultInstance ??= create()..freeze();
@@ -561,28 +584,30 @@ class Table_Row extends $pb.GeneratedMessage {
 class Table extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.FieldId>(1, 'headers', $pb.PbFieldType.PM, $1.FieldId.create)
+    ..pc<$2.FieldId>(1, 'headers', $pb.PbFieldType.PM, $2.FieldId.create)
     ..pc<Table_Row>(2, 'rows', $pb.PbFieldType.PM, Table_Row.create)
     ..hasRequiredFields = false;
 
-  Table() : super();
-  Table.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Table.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Table._() : super();
+  factory Table() => create();
+  factory Table.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Table.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Table clone() => Table()..mergeFromMessage(this);
   Table copyWith(void Function(Table) updates) =>
       super.copyWith((message) => updates(message as Table));
   $pb.BuilderInfo get info_ => _i;
-  static Table create() => Table();
+  @$core.pragma('dart2js:noInline')
+  static Table create() => Table._();
   Table createEmptyInstance() => create();
   static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
   static Table getDefault() => _defaultInstance ??= create()..freeze();
   static Table _defaultInstance;
 
-  $core.List<$1.FieldId> get headers => $_getList(0);
+  $core.List<$2.FieldId> get headers => $_getList(0);
 
   $core.List<Table_Row> get rows => $_getList(1);
 }
@@ -594,18 +619,20 @@ class InspectResult extends $pb.GeneratedMessage {
     ..aOB(2, 'findingsTruncated')
     ..hasRequiredFields = false;
 
-  InspectResult() : super();
-  InspectResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectResult._() : super();
+  factory InspectResult() => create();
+  factory InspectResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectResult clone() => InspectResult()..mergeFromMessage(this);
   InspectResult copyWith(void Function(InspectResult) updates) =>
       super.copyWith((message) => updates(message as InspectResult));
   $pb.BuilderInfo get info_ => _i;
-  static InspectResult create() => InspectResult();
+  @$core.pragma('dart2js:noInline')
+  static InspectResult create() => InspectResult._();
   InspectResult createEmptyInstance() => create();
   static $pb.PbList<InspectResult> createRepeated() =>
       $pb.PbList<InspectResult>();
@@ -627,35 +654,37 @@ class Finding extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Finding',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..aOS(1, 'quote')
-    ..a<$1.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
-    ..e<$1.Likelihood>(
+    ..a<$2.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
+    ..e<$2.Likelihood>(
         3,
         'likelihood',
         $pb.PbFieldType.OE,
-        $1.Likelihood.LIKELIHOOD_UNSPECIFIED,
-        $1.Likelihood.valueOf,
-        $1.Likelihood.values)
+        $2.Likelihood.LIKELIHOOD_UNSPECIFIED,
+        $2.Likelihood.valueOf,
+        $2.Likelihood.values)
     ..a<Location>(
         4, 'location', $pb.PbFieldType.OM, Location.getDefault, Location.create)
-    ..a<$2.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<QuoteInfo>(7, 'quoteInfo', $pb.PbFieldType.OM, QuoteInfo.getDefault,
         QuoteInfo.create)
     ..hasRequiredFields = false;
 
-  Finding() : super();
-  Finding.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Finding.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Finding._() : super();
+  factory Finding() => create();
+  factory Finding.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Finding.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Finding clone() => Finding()..mergeFromMessage(this);
   Finding copyWith(void Function(Finding) updates) =>
       super.copyWith((message) => updates(message as Finding));
   $pb.BuilderInfo get info_ => _i;
-  static Finding create() => Finding();
+  @$core.pragma('dart2js:noInline')
+  static Finding create() => Finding._();
   Finding createEmptyInstance() => create();
   static $pb.PbList<Finding> createRepeated() => $pb.PbList<Finding>();
   static Finding getDefault() => _defaultInstance ??= create()..freeze();
@@ -669,16 +698,16 @@ class Finding extends $pb.GeneratedMessage {
   $core.bool hasQuote() => $_has(0);
   void clearQuote() => clearField(1);
 
-  $1.InfoType get infoType => $_getN(1);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(1);
+  set infoType($2.InfoType v) {
     setField(2, v);
   }
 
   $core.bool hasInfoType() => $_has(1);
   void clearInfoType() => clearField(2);
 
-  $1.Likelihood get likelihood => $_getN(2);
-  set likelihood($1.Likelihood v) {
+  $2.Likelihood get likelihood => $_getN(2);
+  set likelihood($2.Likelihood v) {
     setField(3, v);
   }
 
@@ -693,8 +722,8 @@ class Finding extends $pb.GeneratedMessage {
   $core.bool hasLocation() => $_has(3);
   void clearLocation() => clearField(4);
 
-  $2.Timestamp get createTime => $_getN(4);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(4);
+  set createTime($3.Timestamp v) {
     setField(6, v);
   }
 
@@ -721,18 +750,20 @@ class Location extends $pb.GeneratedMessage {
         7, 'contentLocations', $pb.PbFieldType.PM, ContentLocation.create)
     ..hasRequiredFields = false;
 
-  Location() : super();
-  Location.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Location.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Location._() : super();
+  factory Location() => create();
+  factory Location.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Location.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Location clone() => Location()..mergeFromMessage(this);
   Location copyWith(void Function(Location) updates) =>
       super.copyWith((message) => updates(message as Location));
   $pb.BuilderInfo get info_ => _i;
-  static Location create() => Location();
+  @$core.pragma('dart2js:noInline')
+  static Location create() => Location._();
   Location createEmptyInstance() => create();
   static $pb.PbList<Location> createRepeated() => $pb.PbList<Location>();
   static Location getDefault() => _defaultInstance ??= create()..freeze();
@@ -774,6 +805,7 @@ class ContentLocation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContentLocation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [2, 3, 5])
     ..aOS(1, 'containerName')
     ..a<RecordLocation>(2, 'recordLocation', $pb.PbFieldType.OM,
         RecordLocation.getDefault, RecordLocation.create)
@@ -781,24 +813,25 @@ class ContentLocation extends $pb.GeneratedMessage {
         ImageLocation.getDefault, ImageLocation.create)
     ..a<DocumentLocation>(5, 'documentLocation', $pb.PbFieldType.OM,
         DocumentLocation.getDefault, DocumentLocation.create)
-    ..a<$2.Timestamp>(6, 'containerTimestamp', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(6, 'containerTimestamp', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..aOS(7, 'containerVersion')
-    ..oo(0, [2, 3, 5])
     ..hasRequiredFields = false;
 
-  ContentLocation() : super();
-  ContentLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ContentLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ContentLocation._() : super();
+  factory ContentLocation() => create();
+  factory ContentLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ContentLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ContentLocation clone() => ContentLocation()..mergeFromMessage(this);
   ContentLocation copyWith(void Function(ContentLocation) updates) =>
       super.copyWith((message) => updates(message as ContentLocation));
   $pb.BuilderInfo get info_ => _i;
-  static ContentLocation create() => ContentLocation();
+  @$core.pragma('dart2js:noInline')
+  static ContentLocation create() => ContentLocation._();
   ContentLocation createEmptyInstance() => create();
   static $pb.PbList<ContentLocation> createRepeated() =>
       $pb.PbList<ContentLocation>();
@@ -842,8 +875,8 @@ class ContentLocation extends $pb.GeneratedMessage {
   $core.bool hasDocumentLocation() => $_has(3);
   void clearDocumentLocation() => clearField(5);
 
-  $2.Timestamp get containerTimestamp => $_getN(4);
-  set containerTimestamp($2.Timestamp v) {
+  $3.Timestamp get containerTimestamp => $_getN(4);
+  set containerTimestamp($3.Timestamp v) {
     setField(6, v);
   }
 
@@ -865,18 +898,20 @@ class DocumentLocation extends $pb.GeneratedMessage {
     ..aInt64(1, 'fileOffset')
     ..hasRequiredFields = false;
 
-  DocumentLocation() : super();
-  DocumentLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentLocation._() : super();
+  factory DocumentLocation() => create();
+  factory DocumentLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentLocation clone() => DocumentLocation()..mergeFromMessage(this);
   DocumentLocation copyWith(void Function(DocumentLocation) updates) =>
       super.copyWith((message) => updates(message as DocumentLocation));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentLocation create() => DocumentLocation();
+  @$core.pragma('dart2js:noInline')
+  static DocumentLocation create() => DocumentLocation._();
   DocumentLocation createEmptyInstance() => create();
   static $pb.PbList<DocumentLocation> createRepeated() =>
       $pb.PbList<DocumentLocation>();
@@ -896,42 +931,44 @@ class DocumentLocation extends $pb.GeneratedMessage {
 class RecordLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordLocation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.RecordKey>(1, 'recordKey', $pb.PbFieldType.OM,
-        $1.RecordKey.getDefault, $1.RecordKey.create)
-    ..a<$1.FieldId>(2, 'fieldId', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.RecordKey>(1, 'recordKey', $pb.PbFieldType.OM,
+        $2.RecordKey.getDefault, $2.RecordKey.create)
+    ..a<$2.FieldId>(2, 'fieldId', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..a<TableLocation>(3, 'tableLocation', $pb.PbFieldType.OM,
         TableLocation.getDefault, TableLocation.create)
     ..hasRequiredFields = false;
 
-  RecordLocation() : super();
-  RecordLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordLocation._() : super();
+  factory RecordLocation() => create();
+  factory RecordLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordLocation clone() => RecordLocation()..mergeFromMessage(this);
   RecordLocation copyWith(void Function(RecordLocation) updates) =>
       super.copyWith((message) => updates(message as RecordLocation));
   $pb.BuilderInfo get info_ => _i;
-  static RecordLocation create() => RecordLocation();
+  @$core.pragma('dart2js:noInline')
+  static RecordLocation create() => RecordLocation._();
   RecordLocation createEmptyInstance() => create();
   static $pb.PbList<RecordLocation> createRepeated() =>
       $pb.PbList<RecordLocation>();
   static RecordLocation getDefault() => _defaultInstance ??= create()..freeze();
   static RecordLocation _defaultInstance;
 
-  $1.RecordKey get recordKey => $_getN(0);
-  set recordKey($1.RecordKey v) {
+  $2.RecordKey get recordKey => $_getN(0);
+  set recordKey($2.RecordKey v) {
     setField(1, v);
   }
 
   $core.bool hasRecordKey() => $_has(0);
   void clearRecordKey() => clearField(1);
 
-  $1.FieldId get fieldId => $_getN(1);
-  set fieldId($1.FieldId v) {
+  $2.FieldId get fieldId => $_getN(1);
+  set fieldId($2.FieldId v) {
     setField(2, v);
   }
 
@@ -953,18 +990,20 @@ class TableLocation extends $pb.GeneratedMessage {
     ..aInt64(1, 'rowIndex')
     ..hasRequiredFields = false;
 
-  TableLocation() : super();
-  TableLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TableLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TableLocation._() : super();
+  factory TableLocation() => create();
+  factory TableLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TableLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TableLocation clone() => TableLocation()..mergeFromMessage(this);
   TableLocation copyWith(void Function(TableLocation) updates) =>
       super.copyWith((message) => updates(message as TableLocation));
   $pb.BuilderInfo get info_ => _i;
-  static TableLocation create() => TableLocation();
+  @$core.pragma('dart2js:noInline')
+  static TableLocation create() => TableLocation._();
   TableLocation createEmptyInstance() => create();
   static $pb.PbList<TableLocation> createRepeated() =>
       $pb.PbList<TableLocation>();
@@ -987,18 +1026,20 @@ class Range extends $pb.GeneratedMessage {
     ..aInt64(2, 'end')
     ..hasRequiredFields = false;
 
-  Range() : super();
-  Range.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Range.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Range._() : super();
+  factory Range() => create();
+  factory Range.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Range.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Range clone() => Range()..mergeFromMessage(this);
   Range copyWith(void Function(Range) updates) =>
       super.copyWith((message) => updates(message as Range));
   $pb.BuilderInfo get info_ => _i;
-  static Range create() => Range();
+  @$core.pragma('dart2js:noInline')
+  static Range create() => Range._();
   Range createEmptyInstance() => create();
   static $pb.PbList<Range> createRepeated() => $pb.PbList<Range>();
   static Range getDefault() => _defaultInstance ??= create()..freeze();
@@ -1028,18 +1069,20 @@ class ImageLocation extends $pb.GeneratedMessage {
         1, 'boundingBoxes', $pb.PbFieldType.PM, BoundingBox.create)
     ..hasRequiredFields = false;
 
-  ImageLocation() : super();
-  ImageLocation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageLocation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageLocation._() : super();
+  factory ImageLocation() => create();
+  factory ImageLocation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageLocation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageLocation clone() => ImageLocation()..mergeFromMessage(this);
   ImageLocation copyWith(void Function(ImageLocation) updates) =>
       super.copyWith((message) => updates(message as ImageLocation));
   $pb.BuilderInfo get info_ => _i;
-  static ImageLocation create() => ImageLocation();
+  @$core.pragma('dart2js:noInline')
+  static ImageLocation create() => ImageLocation._();
   ImageLocation createEmptyInstance() => create();
   static $pb.PbList<ImageLocation> createRepeated() =>
       $pb.PbList<ImageLocation>();
@@ -1058,18 +1101,20 @@ class BoundingBox extends $pb.GeneratedMessage {
     ..a<$core.int>(4, 'height', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  BoundingBox() : super();
-  BoundingBox.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BoundingBox.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BoundingBox._() : super();
+  factory BoundingBox() => create();
+  factory BoundingBox.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BoundingBox.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BoundingBox clone() => BoundingBox()..mergeFromMessage(this);
   BoundingBox copyWith(void Function(BoundingBox) updates) =>
       super.copyWith((message) => updates(message as BoundingBox));
   $pb.BuilderInfo get info_ => _i;
-  static BoundingBox create() => BoundingBox();
+  @$core.pragma('dart2js:noInline')
+  static BoundingBox create() => BoundingBox._();
   BoundingBox createEmptyInstance() => create();
   static $pb.PbList<BoundingBox> createRepeated() => $pb.PbList<BoundingBox>();
   static BoundingBox getDefault() => _defaultInstance ??= create()..freeze();
@@ -1125,21 +1170,23 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RedactImageRequest.ImageRedactionConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
+    ..oo(0, [1, 2])
+    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
     ..aOB(2, 'redactAllText')
     ..a<Color>(
         3, 'redactionColor', $pb.PbFieldType.OM, Color.getDefault, Color.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  RedactImageRequest_ImageRedactionConfig() : super();
-  RedactImageRequest_ImageRedactionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RedactImageRequest_ImageRedactionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RedactImageRequest_ImageRedactionConfig._() : super();
+  factory RedactImageRequest_ImageRedactionConfig() => create();
+  factory RedactImageRequest_ImageRedactionConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RedactImageRequest_ImageRedactionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RedactImageRequest_ImageRedactionConfig clone() =>
       RedactImageRequest_ImageRedactionConfig()..mergeFromMessage(this);
   RedactImageRequest_ImageRedactionConfig copyWith(
@@ -1147,8 +1194,9 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as RedactImageRequest_ImageRedactionConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static RedactImageRequest_ImageRedactionConfig create() =>
-      RedactImageRequest_ImageRedactionConfig();
+      RedactImageRequest_ImageRedactionConfig._();
   RedactImageRequest_ImageRedactionConfig createEmptyInstance() => create();
   static $pb.PbList<RedactImageRequest_ImageRedactionConfig> createRepeated() =>
       $pb.PbList<RedactImageRequest_ImageRedactionConfig>();
@@ -1160,8 +1208,8 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
       _RedactImageRequest_ImageRedactionConfig_TargetByTag[$_whichOneof(0)];
   void clearTarget() => clearField($_whichOneof(0));
 
-  $1.InfoType get infoType => $_getN(0);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(0);
+  set infoType($2.InfoType v) {
     setField(1, v);
   }
 
@@ -1198,18 +1246,20 @@ class RedactImageRequest extends $pb.GeneratedMessage {
         ByteContentItem.getDefault, ByteContentItem.create)
     ..hasRequiredFields = false;
 
-  RedactImageRequest() : super();
-  RedactImageRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RedactImageRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RedactImageRequest._() : super();
+  factory RedactImageRequest() => create();
+  factory RedactImageRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RedactImageRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RedactImageRequest clone() => RedactImageRequest()..mergeFromMessage(this);
   RedactImageRequest copyWith(void Function(RedactImageRequest) updates) =>
       super.copyWith((message) => updates(message as RedactImageRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RedactImageRequest create() => RedactImageRequest();
+  @$core.pragma('dart2js:noInline')
+  static RedactImageRequest create() => RedactImageRequest._();
   RedactImageRequest createEmptyInstance() => create();
   static $pb.PbList<RedactImageRequest> createRepeated() =>
       $pb.PbList<RedactImageRequest>();
@@ -1261,18 +1311,20 @@ class Color extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'blue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Color() : super();
-  Color.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Color.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Color._() : super();
+  factory Color() => create();
+  factory Color.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Color.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Color clone() => Color()..mergeFromMessage(this);
   Color copyWith(void Function(Color) updates) =>
       super.copyWith((message) => updates(message as Color));
   $pb.BuilderInfo get info_ => _i;
-  static Color create() => Color();
+  @$core.pragma('dart2js:noInline')
+  static Color create() => Color._();
   Color createEmptyInstance() => create();
   static $pb.PbList<Color> createRepeated() => $pb.PbList<Color>();
   static Color getDefault() => _defaultInstance ??= create()..freeze();
@@ -1312,18 +1364,20 @@ class RedactImageResponse extends $pb.GeneratedMessage {
         InspectResult.getDefault, InspectResult.create)
     ..hasRequiredFields = false;
 
-  RedactImageResponse() : super();
-  RedactImageResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RedactImageResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RedactImageResponse._() : super();
+  factory RedactImageResponse() => create();
+  factory RedactImageResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RedactImageResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RedactImageResponse clone() => RedactImageResponse()..mergeFromMessage(this);
   RedactImageResponse copyWith(void Function(RedactImageResponse) updates) =>
       super.copyWith((message) => updates(message as RedactImageResponse));
   $pb.BuilderInfo get info_ => _i;
-  static RedactImageResponse create() => RedactImageResponse();
+  @$core.pragma('dart2js:noInline')
+  static RedactImageResponse create() => RedactImageResponse._();
   RedactImageResponse createEmptyInstance() => create();
   static $pb.PbList<RedactImageResponse> createRepeated() =>
       $pb.PbList<RedactImageResponse>();
@@ -1370,20 +1424,22 @@ class DeidentifyContentRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'deidentifyTemplateName')
     ..hasRequiredFields = false;
 
-  DeidentifyContentRequest() : super();
-  DeidentifyContentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeidentifyContentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeidentifyContentRequest._() : super();
+  factory DeidentifyContentRequest() => create();
+  factory DeidentifyContentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeidentifyContentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeidentifyContentRequest clone() =>
       DeidentifyContentRequest()..mergeFromMessage(this);
   DeidentifyContentRequest copyWith(
           void Function(DeidentifyContentRequest) updates) =>
       super.copyWith((message) => updates(message as DeidentifyContentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeidentifyContentRequest create() => DeidentifyContentRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyContentRequest create() => DeidentifyContentRequest._();
   DeidentifyContentRequest createEmptyInstance() => create();
   static $pb.PbList<DeidentifyContentRequest> createRepeated() =>
       $pb.PbList<DeidentifyContentRequest>();
@@ -1449,13 +1505,14 @@ class DeidentifyContentResponse extends $pb.GeneratedMessage {
         TransformationOverview.getDefault, TransformationOverview.create)
     ..hasRequiredFields = false;
 
-  DeidentifyContentResponse() : super();
-  DeidentifyContentResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeidentifyContentResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeidentifyContentResponse._() : super();
+  factory DeidentifyContentResponse() => create();
+  factory DeidentifyContentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeidentifyContentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeidentifyContentResponse clone() =>
       DeidentifyContentResponse()..mergeFromMessage(this);
   DeidentifyContentResponse copyWith(
@@ -1463,7 +1520,8 @@ class DeidentifyContentResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as DeidentifyContentResponse));
   $pb.BuilderInfo get info_ => _i;
-  static DeidentifyContentResponse create() => DeidentifyContentResponse();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyContentResponse create() => DeidentifyContentResponse._();
   DeidentifyContentResponse createEmptyInstance() => create();
   static $pb.PbList<DeidentifyContentResponse> createRepeated() =>
       $pb.PbList<DeidentifyContentResponse>();
@@ -1502,20 +1560,22 @@ class ReidentifyContentRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'reidentifyTemplateName')
     ..hasRequiredFields = false;
 
-  ReidentifyContentRequest() : super();
-  ReidentifyContentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReidentifyContentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReidentifyContentRequest._() : super();
+  factory ReidentifyContentRequest() => create();
+  factory ReidentifyContentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReidentifyContentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReidentifyContentRequest clone() =>
       ReidentifyContentRequest()..mergeFromMessage(this);
   ReidentifyContentRequest copyWith(
           void Function(ReidentifyContentRequest) updates) =>
       super.copyWith((message) => updates(message as ReidentifyContentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ReidentifyContentRequest create() => ReidentifyContentRequest();
+  @$core.pragma('dart2js:noInline')
+  static ReidentifyContentRequest create() => ReidentifyContentRequest._();
   ReidentifyContentRequest createEmptyInstance() => create();
   static $pb.PbList<ReidentifyContentRequest> createRepeated() =>
       $pb.PbList<ReidentifyContentRequest>();
@@ -1581,13 +1641,14 @@ class ReidentifyContentResponse extends $pb.GeneratedMessage {
         TransformationOverview.getDefault, TransformationOverview.create)
     ..hasRequiredFields = false;
 
-  ReidentifyContentResponse() : super();
-  ReidentifyContentResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReidentifyContentResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReidentifyContentResponse._() : super();
+  factory ReidentifyContentResponse() => create();
+  factory ReidentifyContentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReidentifyContentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReidentifyContentResponse clone() =>
       ReidentifyContentResponse()..mergeFromMessage(this);
   ReidentifyContentResponse copyWith(
@@ -1595,7 +1656,8 @@ class ReidentifyContentResponse extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ReidentifyContentResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ReidentifyContentResponse create() => ReidentifyContentResponse();
+  @$core.pragma('dart2js:noInline')
+  static ReidentifyContentResponse create() => ReidentifyContentResponse._();
   ReidentifyContentResponse createEmptyInstance() => create();
   static $pb.PbList<ReidentifyContentResponse> createRepeated() =>
       $pb.PbList<ReidentifyContentResponse>();
@@ -1631,20 +1693,22 @@ class InspectContentRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'inspectTemplateName')
     ..hasRequiredFields = false;
 
-  InspectContentRequest() : super();
-  InspectContentRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectContentRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectContentRequest._() : super();
+  factory InspectContentRequest() => create();
+  factory InspectContentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectContentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectContentRequest clone() =>
       InspectContentRequest()..mergeFromMessage(this);
   InspectContentRequest copyWith(
           void Function(InspectContentRequest) updates) =>
       super.copyWith((message) => updates(message as InspectContentRequest));
   $pb.BuilderInfo get info_ => _i;
-  static InspectContentRequest create() => InspectContentRequest();
+  @$core.pragma('dart2js:noInline')
+  static InspectContentRequest create() => InspectContentRequest._();
   InspectContentRequest createEmptyInstance() => create();
   static $pb.PbList<InspectContentRequest> createRepeated() =>
       $pb.PbList<InspectContentRequest>();
@@ -1692,20 +1756,22 @@ class InspectContentResponse extends $pb.GeneratedMessage {
         InspectResult.getDefault, InspectResult.create)
     ..hasRequiredFields = false;
 
-  InspectContentResponse() : super();
-  InspectContentResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectContentResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectContentResponse._() : super();
+  factory InspectContentResponse() => create();
+  factory InspectContentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectContentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectContentResponse clone() =>
       InspectContentResponse()..mergeFromMessage(this);
   InspectContentResponse copyWith(
           void Function(InspectContentResponse) updates) =>
       super.copyWith((message) => updates(message as InspectContentResponse));
   $pb.BuilderInfo get info_ => _i;
-  static InspectContentResponse create() => InspectContentResponse();
+  @$core.pragma('dart2js:noInline')
+  static InspectContentResponse create() => InspectContentResponse._();
   InspectContentResponse createEmptyInstance() => create();
   static $pb.PbList<InspectContentResponse> createRepeated() =>
       $pb.PbList<InspectContentResponse>();
@@ -1732,8 +1798,9 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputStorageConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.BigQueryTable>(1, 'table', $pb.PbFieldType.OM,
-        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
+    ..oo(0, [1])
+    ..a<$2.BigQueryTable>(1, 'table', $pb.PbFieldType.OM,
+        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
     ..e<OutputStorageConfig_OutputSchema>(
         3,
         'outputSchema',
@@ -1741,21 +1808,22 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
         OutputStorageConfig_OutputSchema.OUTPUT_SCHEMA_UNSPECIFIED,
         OutputStorageConfig_OutputSchema.valueOf,
         OutputStorageConfig_OutputSchema.values)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  OutputStorageConfig() : super();
-  OutputStorageConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutputStorageConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutputStorageConfig._() : super();
+  factory OutputStorageConfig() => create();
+  factory OutputStorageConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutputStorageConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutputStorageConfig clone() => OutputStorageConfig()..mergeFromMessage(this);
   OutputStorageConfig copyWith(void Function(OutputStorageConfig) updates) =>
       super.copyWith((message) => updates(message as OutputStorageConfig));
   $pb.BuilderInfo get info_ => _i;
-  static OutputStorageConfig create() => OutputStorageConfig();
+  @$core.pragma('dart2js:noInline')
+  static OutputStorageConfig create() => OutputStorageConfig._();
   OutputStorageConfig createEmptyInstance() => create();
   static $pb.PbList<OutputStorageConfig> createRepeated() =>
       $pb.PbList<OutputStorageConfig>();
@@ -1767,8 +1835,8 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
       _OutputStorageConfig_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $1.BigQueryTable get table => $_getN(0);
-  set table($1.BigQueryTable v) {
+  $2.BigQueryTable get table => $_getN(0);
+  set table($2.BigQueryTable v) {
     setField(1, v);
   }
 
@@ -1787,31 +1855,33 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
 class InfoTypeStats extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InfoTypeStats',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
+    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
-  InfoTypeStats() : super();
-  InfoTypeStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InfoTypeStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InfoTypeStats._() : super();
+  factory InfoTypeStats() => create();
+  factory InfoTypeStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InfoTypeStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InfoTypeStats clone() => InfoTypeStats()..mergeFromMessage(this);
   InfoTypeStats copyWith(void Function(InfoTypeStats) updates) =>
       super.copyWith((message) => updates(message as InfoTypeStats));
   $pb.BuilderInfo get info_ => _i;
-  static InfoTypeStats create() => InfoTypeStats();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeStats create() => InfoTypeStats._();
   InfoTypeStats createEmptyInstance() => create();
   static $pb.PbList<InfoTypeStats> createRepeated() =>
       $pb.PbList<InfoTypeStats>();
   static InfoTypeStats getDefault() => _defaultInstance ??= create()..freeze();
   static InfoTypeStats _defaultInstance;
 
-  $1.InfoType get infoType => $_getN(0);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(0);
+  set infoType($2.InfoType v) {
     setField(1, v);
   }
 
@@ -1837,13 +1907,15 @@ class InspectDataSourceDetails_RequestedOptions extends $pb.GeneratedMessage {
         InspectJobConfig.getDefault, InspectJobConfig.create)
     ..hasRequiredFields = false;
 
-  InspectDataSourceDetails_RequestedOptions() : super();
-  InspectDataSourceDetails_RequestedOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectDataSourceDetails_RequestedOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectDataSourceDetails_RequestedOptions._() : super();
+  factory InspectDataSourceDetails_RequestedOptions() => create();
+  factory InspectDataSourceDetails_RequestedOptions.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectDataSourceDetails_RequestedOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectDataSourceDetails_RequestedOptions clone() =>
       InspectDataSourceDetails_RequestedOptions()..mergeFromMessage(this);
   InspectDataSourceDetails_RequestedOptions copyWith(
@@ -1851,8 +1923,9 @@ class InspectDataSourceDetails_RequestedOptions extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as InspectDataSourceDetails_RequestedOptions));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InspectDataSourceDetails_RequestedOptions create() =>
-      InspectDataSourceDetails_RequestedOptions();
+      InspectDataSourceDetails_RequestedOptions._();
   InspectDataSourceDetails_RequestedOptions createEmptyInstance() => create();
   static $pb.PbList<InspectDataSourceDetails_RequestedOptions>
       createRepeated() =>
@@ -1888,13 +1961,14 @@ class InspectDataSourceDetails_Result extends $pb.GeneratedMessage {
         3, 'infoTypeStats', $pb.PbFieldType.PM, InfoTypeStats.create)
     ..hasRequiredFields = false;
 
-  InspectDataSourceDetails_Result() : super();
-  InspectDataSourceDetails_Result.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectDataSourceDetails_Result.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectDataSourceDetails_Result._() : super();
+  factory InspectDataSourceDetails_Result() => create();
+  factory InspectDataSourceDetails_Result.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectDataSourceDetails_Result.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectDataSourceDetails_Result clone() =>
       InspectDataSourceDetails_Result()..mergeFromMessage(this);
   InspectDataSourceDetails_Result copyWith(
@@ -1902,8 +1976,9 @@ class InspectDataSourceDetails_Result extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as InspectDataSourceDetails_Result));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InspectDataSourceDetails_Result create() =>
-      InspectDataSourceDetails_Result();
+      InspectDataSourceDetails_Result._();
   InspectDataSourceDetails_Result createEmptyInstance() => create();
   static $pb.PbList<InspectDataSourceDetails_Result> createRepeated() =>
       $pb.PbList<InspectDataSourceDetails_Result>();
@@ -1947,20 +2022,22 @@ class InspectDataSourceDetails extends $pb.GeneratedMessage {
         InspectDataSourceDetails_Result.create)
     ..hasRequiredFields = false;
 
-  InspectDataSourceDetails() : super();
-  InspectDataSourceDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectDataSourceDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectDataSourceDetails._() : super();
+  factory InspectDataSourceDetails() => create();
+  factory InspectDataSourceDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectDataSourceDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectDataSourceDetails clone() =>
       InspectDataSourceDetails()..mergeFromMessage(this);
   InspectDataSourceDetails copyWith(
           void Function(InspectDataSourceDetails) updates) =>
       super.copyWith((message) => updates(message as InspectDataSourceDetails));
   $pb.BuilderInfo get info_ => _i;
-  static InspectDataSourceDetails create() => InspectDataSourceDetails();
+  @$core.pragma('dart2js:noInline')
+  static InspectDataSourceDetails create() => InspectDataSourceDetails._();
   InspectDataSourceDetails createEmptyInstance() => create();
   static $pb.PbList<InspectDataSourceDetails> createRepeated() =>
       $pb.PbList<InspectDataSourceDetails>();
@@ -1995,18 +2072,20 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
     ..aOS(4, 'description')
     ..hasRequiredFields = false;
 
-  InfoTypeDescription() : super();
-  InfoTypeDescription.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InfoTypeDescription.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InfoTypeDescription._() : super();
+  factory InfoTypeDescription() => create();
+  factory InfoTypeDescription.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InfoTypeDescription.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InfoTypeDescription clone() => InfoTypeDescription()..mergeFromMessage(this);
   InfoTypeDescription copyWith(void Function(InfoTypeDescription) updates) =>
       super.copyWith((message) => updates(message as InfoTypeDescription));
   $pb.BuilderInfo get info_ => _i;
-  static InfoTypeDescription create() => InfoTypeDescription();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeDescription create() => InfoTypeDescription._();
   InfoTypeDescription createEmptyInstance() => create();
   static $pb.PbList<InfoTypeDescription> createRepeated() =>
       $pb.PbList<InfoTypeDescription>();
@@ -2048,19 +2127,21 @@ class ListInfoTypesRequest extends $pb.GeneratedMessage {
     ..aOS(2, 'filter')
     ..hasRequiredFields = false;
 
-  ListInfoTypesRequest() : super();
-  ListInfoTypesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInfoTypesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListInfoTypesRequest._() : super();
+  factory ListInfoTypesRequest() => create();
+  factory ListInfoTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListInfoTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListInfoTypesRequest clone() =>
       ListInfoTypesRequest()..mergeFromMessage(this);
   ListInfoTypesRequest copyWith(void Function(ListInfoTypesRequest) updates) =>
       super.copyWith((message) => updates(message as ListInfoTypesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListInfoTypesRequest create() => ListInfoTypesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListInfoTypesRequest create() => ListInfoTypesRequest._();
   ListInfoTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInfoTypesRequest> createRepeated() =>
       $pb.PbList<ListInfoTypesRequest>();
@@ -2092,20 +2173,22 @@ class ListInfoTypesResponse extends $pb.GeneratedMessage {
         1, 'infoTypes', $pb.PbFieldType.PM, InfoTypeDescription.create)
     ..hasRequiredFields = false;
 
-  ListInfoTypesResponse() : super();
-  ListInfoTypesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInfoTypesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListInfoTypesResponse._() : super();
+  factory ListInfoTypesResponse() => create();
+  factory ListInfoTypesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListInfoTypesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListInfoTypesResponse clone() =>
       ListInfoTypesResponse()..mergeFromMessage(this);
   ListInfoTypesResponse copyWith(
           void Function(ListInfoTypesResponse) updates) =>
       super.copyWith((message) => updates(message as ListInfoTypesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListInfoTypesResponse create() => ListInfoTypesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListInfoTypesResponse create() => ListInfoTypesResponse._();
   ListInfoTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInfoTypesResponse> createRepeated() =>
       $pb.PbList<ListInfoTypesResponse>();
@@ -2121,25 +2204,27 @@ class RiskAnalysisJobConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<PrivacyMetric>(1, 'privacyMetric', $pb.PbFieldType.OM,
         PrivacyMetric.getDefault, PrivacyMetric.create)
-    ..a<$1.BigQueryTable>(2, 'sourceTable', $pb.PbFieldType.OM,
-        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
+    ..a<$2.BigQueryTable>(2, 'sourceTable', $pb.PbFieldType.OM,
+        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
     ..pc<Action>(3, 'actions', $pb.PbFieldType.PM, Action.create)
     ..hasRequiredFields = false;
 
-  RiskAnalysisJobConfig() : super();
-  RiskAnalysisJobConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RiskAnalysisJobConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RiskAnalysisJobConfig._() : super();
+  factory RiskAnalysisJobConfig() => create();
+  factory RiskAnalysisJobConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RiskAnalysisJobConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RiskAnalysisJobConfig clone() =>
       RiskAnalysisJobConfig()..mergeFromMessage(this);
   RiskAnalysisJobConfig copyWith(
           void Function(RiskAnalysisJobConfig) updates) =>
       super.copyWith((message) => updates(message as RiskAnalysisJobConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RiskAnalysisJobConfig create() => RiskAnalysisJobConfig();
+  @$core.pragma('dart2js:noInline')
+  static RiskAnalysisJobConfig create() => RiskAnalysisJobConfig._();
   RiskAnalysisJobConfig createEmptyInstance() => create();
   static $pb.PbList<RiskAnalysisJobConfig> createRepeated() =>
       $pb.PbList<RiskAnalysisJobConfig>();
@@ -2155,8 +2240,8 @@ class RiskAnalysisJobConfig extends $pb.GeneratedMessage {
   $core.bool hasPrivacyMetric() => $_has(0);
   void clearPrivacyMetric() => clearField(1);
 
-  $1.BigQueryTable get sourceTable => $_getN(1);
-  set sourceTable($1.BigQueryTable v) {
+  $2.BigQueryTable get sourceTable => $_getN(1);
+  set sourceTable($2.BigQueryTable v) {
     setField(2, v);
   }
 
@@ -2177,28 +2262,30 @@ class QuasiId extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuasiId',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
-    ..a<$1.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
-    ..aOS(3, 'customTag')
-    ..a<$0.Empty>(
-        4, 'inferred', $pb.PbFieldType.OM, $0.Empty.getDefault, $0.Empty.create)
     ..oo(0, [2, 3, 4])
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
+    ..a<$2.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
+    ..aOS(3, 'customTag')
+    ..a<$1.Empty>(
+        4, 'inferred', $pb.PbFieldType.OM, $1.Empty.getDefault, $1.Empty.create)
     ..hasRequiredFields = false;
 
-  QuasiId() : super();
-  QuasiId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuasiId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuasiId._() : super();
+  factory QuasiId() => create();
+  factory QuasiId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuasiId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuasiId clone() => QuasiId()..mergeFromMessage(this);
   QuasiId copyWith(void Function(QuasiId) updates) =>
       super.copyWith((message) => updates(message as QuasiId));
   $pb.BuilderInfo get info_ => _i;
-  static QuasiId create() => QuasiId();
+  @$core.pragma('dart2js:noInline')
+  static QuasiId create() => QuasiId._();
   QuasiId createEmptyInstance() => create();
   static $pb.PbList<QuasiId> createRepeated() => $pb.PbList<QuasiId>();
   static QuasiId getDefault() => _defaultInstance ??= create()..freeze();
@@ -2207,16 +2294,16 @@ class QuasiId extends $pb.GeneratedMessage {
   QuasiId_Tag whichTag() => _QuasiId_TagByTag[$_whichOneof(0)];
   void clearTag() => clearField($_whichOneof(0));
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
   $core.bool hasField_1() => $_has(0);
   void clearField_1() => clearField(1);
 
-  $1.InfoType get infoType => $_getN(1);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(1);
+  set infoType($2.InfoType v) {
     setField(2, v);
   }
 
@@ -2231,8 +2318,8 @@ class QuasiId extends $pb.GeneratedMessage {
   $core.bool hasCustomTag() => $_has(2);
   void clearCustomTag() => clearField(3);
 
-  $0.Empty get inferred => $_getN(3);
-  set inferred($0.Empty v) {
+  $1.Empty get inferred => $_getN(3);
+  set inferred($1.Empty v) {
     setField(4, v);
   }
 
@@ -2244,18 +2331,20 @@ class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StatisticalTable.QuasiIdentifierField',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..aOS(2, 'customTag')
     ..hasRequiredFields = false;
 
-  StatisticalTable_QuasiIdentifierField() : super();
-  StatisticalTable_QuasiIdentifierField.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StatisticalTable_QuasiIdentifierField.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StatisticalTable_QuasiIdentifierField._() : super();
+  factory StatisticalTable_QuasiIdentifierField() => create();
+  factory StatisticalTable_QuasiIdentifierField.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StatisticalTable_QuasiIdentifierField.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StatisticalTable_QuasiIdentifierField clone() =>
       StatisticalTable_QuasiIdentifierField()..mergeFromMessage(this);
   StatisticalTable_QuasiIdentifierField copyWith(
@@ -2263,8 +2352,9 @@ class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as StatisticalTable_QuasiIdentifierField));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StatisticalTable_QuasiIdentifierField create() =>
-      StatisticalTable_QuasiIdentifierField();
+      StatisticalTable_QuasiIdentifierField._();
   StatisticalTable_QuasiIdentifierField createEmptyInstance() => create();
   static $pb.PbList<StatisticalTable_QuasiIdentifierField> createRepeated() =>
       $pb.PbList<StatisticalTable_QuasiIdentifierField>();
@@ -2272,8 +2362,8 @@ class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StatisticalTable_QuasiIdentifierField _defaultInstance;
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
@@ -2294,24 +2384,26 @@ class StatisticalTable extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..pc<StatisticalTable_QuasiIdentifierField>(1, 'quasiIds',
         $pb.PbFieldType.PM, StatisticalTable_QuasiIdentifierField.create)
-    ..a<$1.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
-        $1.FieldId.getDefault, $1.FieldId.create)
-    ..a<$1.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
-        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
+    ..a<$2.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
+        $2.FieldId.getDefault, $2.FieldId.create)
+    ..a<$2.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
+        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
     ..hasRequiredFields = false;
 
-  StatisticalTable() : super();
-  StatisticalTable.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StatisticalTable.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StatisticalTable._() : super();
+  factory StatisticalTable() => create();
+  factory StatisticalTable.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StatisticalTable.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StatisticalTable clone() => StatisticalTable()..mergeFromMessage(this);
   StatisticalTable copyWith(void Function(StatisticalTable) updates) =>
       super.copyWith((message) => updates(message as StatisticalTable));
   $pb.BuilderInfo get info_ => _i;
-  static StatisticalTable create() => StatisticalTable();
+  @$core.pragma('dart2js:noInline')
+  static StatisticalTable create() => StatisticalTable._();
   StatisticalTable createEmptyInstance() => create();
   static $pb.PbList<StatisticalTable> createRepeated() =>
       $pb.PbList<StatisticalTable>();
@@ -2322,16 +2414,16 @@ class StatisticalTable extends $pb.GeneratedMessage {
   $core.List<StatisticalTable_QuasiIdentifierField> get quasiIds =>
       $_getList(0);
 
-  $1.FieldId get relativeFrequency => $_getN(1);
-  set relativeFrequency($1.FieldId v) {
+  $2.FieldId get relativeFrequency => $_getN(1);
+  set relativeFrequency($2.FieldId v) {
     setField(2, v);
   }
 
   $core.bool hasRelativeFrequency() => $_has(1);
   void clearRelativeFrequency() => clearField(2);
 
-  $1.BigQueryTable get table => $_getN(2);
-  set table($1.BigQueryTable v) {
+  $2.BigQueryTable get table => $_getN(2);
+  set table($2.BigQueryTable v) {
     setField(3, v);
   }
 
@@ -2343,17 +2435,18 @@ class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.NumericalStatsConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_NumericalStatsConfig() : super();
-  PrivacyMetric_NumericalStatsConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_NumericalStatsConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_NumericalStatsConfig._() : super();
+  factory PrivacyMetric_NumericalStatsConfig() => create();
+  factory PrivacyMetric_NumericalStatsConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_NumericalStatsConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_NumericalStatsConfig clone() =>
       PrivacyMetric_NumericalStatsConfig()..mergeFromMessage(this);
   PrivacyMetric_NumericalStatsConfig copyWith(
@@ -2361,8 +2454,9 @@ class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PrivacyMetric_NumericalStatsConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_NumericalStatsConfig create() =>
-      PrivacyMetric_NumericalStatsConfig();
+      PrivacyMetric_NumericalStatsConfig._();
   PrivacyMetric_NumericalStatsConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_NumericalStatsConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_NumericalStatsConfig>();
@@ -2370,8 +2464,8 @@ class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_NumericalStatsConfig _defaultInstance;
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
@@ -2383,17 +2477,19 @@ class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.CategoricalStatsConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_CategoricalStatsConfig() : super();
-  PrivacyMetric_CategoricalStatsConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_CategoricalStatsConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_CategoricalStatsConfig._() : super();
+  factory PrivacyMetric_CategoricalStatsConfig() => create();
+  factory PrivacyMetric_CategoricalStatsConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_CategoricalStatsConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_CategoricalStatsConfig clone() =>
       PrivacyMetric_CategoricalStatsConfig()..mergeFromMessage(this);
   PrivacyMetric_CategoricalStatsConfig copyWith(
@@ -2401,8 +2497,9 @@ class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PrivacyMetric_CategoricalStatsConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_CategoricalStatsConfig create() =>
-      PrivacyMetric_CategoricalStatsConfig();
+      PrivacyMetric_CategoricalStatsConfig._();
   PrivacyMetric_CategoricalStatsConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_CategoricalStatsConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_CategoricalStatsConfig>();
@@ -2410,8 +2507,8 @@ class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_CategoricalStatsConfig _defaultInstance;
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
@@ -2423,18 +2520,19 @@ class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KAnonymityConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $1.FieldId.create)
-    ..a<$1.EntityId>(2, 'entityId', $pb.PbFieldType.OM, $1.EntityId.getDefault,
-        $1.EntityId.create)
+    ..pc<$2.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $2.FieldId.create)
+    ..a<$2.EntityId>(2, 'entityId', $pb.PbFieldType.OM, $2.EntityId.getDefault,
+        $2.EntityId.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_KAnonymityConfig() : super();
-  PrivacyMetric_KAnonymityConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_KAnonymityConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_KAnonymityConfig._() : super();
+  factory PrivacyMetric_KAnonymityConfig() => create();
+  factory PrivacyMetric_KAnonymityConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_KAnonymityConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_KAnonymityConfig clone() =>
       PrivacyMetric_KAnonymityConfig()..mergeFromMessage(this);
   PrivacyMetric_KAnonymityConfig copyWith(
@@ -2442,8 +2540,9 @@ class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PrivacyMetric_KAnonymityConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KAnonymityConfig create() =>
-      PrivacyMetric_KAnonymityConfig();
+      PrivacyMetric_KAnonymityConfig._();
   PrivacyMetric_KAnonymityConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_KAnonymityConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_KAnonymityConfig>();
@@ -2451,10 +2550,10 @@ class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_KAnonymityConfig _defaultInstance;
 
-  $core.List<$1.FieldId> get quasiIds => $_getList(0);
+  $core.List<$2.FieldId> get quasiIds => $_getList(0);
 
-  $1.EntityId get entityId => $_getN(1);
-  set entityId($1.EntityId v) {
+  $2.EntityId get entityId => $_getN(1);
+  set entityId($2.EntityId v) {
     setField(2, v);
   }
 
@@ -2466,18 +2565,19 @@ class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.LDiversityConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $1.FieldId.create)
-    ..a<$1.FieldId>(2, 'sensitiveAttribute', $pb.PbFieldType.OM,
-        $1.FieldId.getDefault, $1.FieldId.create)
+    ..pc<$2.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $2.FieldId.create)
+    ..a<$2.FieldId>(2, 'sensitiveAttribute', $pb.PbFieldType.OM,
+        $2.FieldId.getDefault, $2.FieldId.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_LDiversityConfig() : super();
-  PrivacyMetric_LDiversityConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_LDiversityConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_LDiversityConfig._() : super();
+  factory PrivacyMetric_LDiversityConfig() => create();
+  factory PrivacyMetric_LDiversityConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_LDiversityConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_LDiversityConfig clone() =>
       PrivacyMetric_LDiversityConfig()..mergeFromMessage(this);
   PrivacyMetric_LDiversityConfig copyWith(
@@ -2485,8 +2585,9 @@ class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PrivacyMetric_LDiversityConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_LDiversityConfig create() =>
-      PrivacyMetric_LDiversityConfig();
+      PrivacyMetric_LDiversityConfig._();
   PrivacyMetric_LDiversityConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_LDiversityConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_LDiversityConfig>();
@@ -2494,10 +2595,10 @@ class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static PrivacyMetric_LDiversityConfig _defaultInstance;
 
-  $core.List<$1.FieldId> get quasiIds => $_getList(0);
+  $core.List<$2.FieldId> get quasiIds => $_getList(0);
 
-  $1.FieldId get sensitiveAttribute => $_getN(1);
-  set sensitiveAttribute($1.FieldId v) {
+  $2.FieldId get sensitiveAttribute => $_getN(1);
+  set sensitiveAttribute($2.FieldId v) {
     setField(2, v);
   }
 
@@ -2525,24 +2626,26 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.TaggedField',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
-    ..a<$1.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
-    ..aOS(3, 'customTag')
-    ..a<$0.Empty>(
-        4, 'inferred', $pb.PbFieldType.OM, $0.Empty.getDefault, $0.Empty.create)
     ..oo(0, [2, 3, 4])
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
+    ..a<$2.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
+    ..aOS(3, 'customTag')
+    ..a<$1.Empty>(
+        4, 'inferred', $pb.PbFieldType.OM, $1.Empty.getDefault, $1.Empty.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_KMapEstimationConfig_TaggedField() : super();
-  PrivacyMetric_KMapEstimationConfig_TaggedField.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_KMapEstimationConfig_TaggedField.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_KMapEstimationConfig_TaggedField._() : super();
+  factory PrivacyMetric_KMapEstimationConfig_TaggedField() => create();
+  factory PrivacyMetric_KMapEstimationConfig_TaggedField.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_KMapEstimationConfig_TaggedField.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_KMapEstimationConfig_TaggedField clone() =>
       PrivacyMetric_KMapEstimationConfig_TaggedField()..mergeFromMessage(this);
   PrivacyMetric_KMapEstimationConfig_TaggedField copyWith(
@@ -2551,8 +2654,9 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
       super.copyWith((message) =>
           updates(message as PrivacyMetric_KMapEstimationConfig_TaggedField));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig_TaggedField create() =>
-      PrivacyMetric_KMapEstimationConfig_TaggedField();
+      PrivacyMetric_KMapEstimationConfig_TaggedField._();
   PrivacyMetric_KMapEstimationConfig_TaggedField createEmptyInstance() =>
       create();
   static $pb.PbList<PrivacyMetric_KMapEstimationConfig_TaggedField>
@@ -2566,16 +2670,16 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
       _PrivacyMetric_KMapEstimationConfig_TaggedField_TagByTag[$_whichOneof(0)];
   void clearTag() => clearField($_whichOneof(0));
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
   $core.bool hasField_1() => $_has(0);
   void clearField_1() => clearField(1);
 
-  $1.InfoType get infoType => $_getN(1);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(1);
+  set infoType($2.InfoType v) {
     setField(2, v);
   }
 
@@ -2590,8 +2694,8 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
   $core.bool hasCustomTag() => $_has(2);
   void clearCustomTag() => clearField(3);
 
-  $0.Empty get inferred => $_getN(3);
-  set inferred($0.Empty v) {
+  $1.Empty get inferred => $_getN(3);
+  set inferred($1.Empty v) {
     setField(4, v);
   }
 
@@ -2604,20 +2708,22 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.QuasiIdField',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..aOS(2, 'customTag')
     ..hasRequiredFields = false;
 
-  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField() : super();
-  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField._() : super();
+  factory PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField() =>
+      create();
+  factory PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField clone() =>
       PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField()
         ..mergeFromMessage(this);
@@ -2628,9 +2734,10 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
       super.copyWith((message) => updates(message
           as PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
       create() =>
-          PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField();
+          PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField._();
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -2642,8 +2749,8 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
       _defaultInstance;
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
@@ -2669,20 +2776,22 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
         'quasiIds',
         $pb.PbFieldType.PM,
         PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.create)
-    ..a<$1.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
-        $1.FieldId.getDefault, $1.FieldId.create)
-    ..a<$1.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
-        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
+    ..a<$2.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
+        $2.FieldId.getDefault, $2.FieldId.create)
+    ..a<$2.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
+        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable() : super();
-  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_KMapEstimationConfig_AuxiliaryTable._() : super();
+  factory PrivacyMetric_KMapEstimationConfig_AuxiliaryTable() => create();
+  factory PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable clone() =>
       PrivacyMetric_KMapEstimationConfig_AuxiliaryTable()
         ..mergeFromMessage(this);
@@ -2692,8 +2801,9 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
       super.copyWith((message) => updates(
           message as PrivacyMetric_KMapEstimationConfig_AuxiliaryTable));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable create() =>
-      PrivacyMetric_KMapEstimationConfig_AuxiliaryTable();
+      PrivacyMetric_KMapEstimationConfig_AuxiliaryTable._();
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable createEmptyInstance() =>
       create();
   static $pb.PbList<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable>
@@ -2706,16 +2816,16 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
   $core.List<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>
       get quasiIds => $_getList(0);
 
-  $1.FieldId get relativeFrequency => $_getN(1);
-  set relativeFrequency($1.FieldId v) {
+  $2.FieldId get relativeFrequency => $_getN(1);
+  set relativeFrequency($2.FieldId v) {
     setField(2, v);
   }
 
   $core.bool hasRelativeFrequency() => $_has(1);
   void clearRelativeFrequency() => clearField(2);
 
-  $1.BigQueryTable get table => $_getN(2);
-  set table($1.BigQueryTable v) {
+  $2.BigQueryTable get table => $_getN(2);
+  set table($2.BigQueryTable v) {
     setField(3, v);
   }
 
@@ -2740,13 +2850,14 @@ class PrivacyMetric_KMapEstimationConfig extends $pb.GeneratedMessage {
         PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_KMapEstimationConfig() : super();
-  PrivacyMetric_KMapEstimationConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_KMapEstimationConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_KMapEstimationConfig._() : super();
+  factory PrivacyMetric_KMapEstimationConfig() => create();
+  factory PrivacyMetric_KMapEstimationConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_KMapEstimationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_KMapEstimationConfig clone() =>
       PrivacyMetric_KMapEstimationConfig()..mergeFromMessage(this);
   PrivacyMetric_KMapEstimationConfig copyWith(
@@ -2754,8 +2865,9 @@ class PrivacyMetric_KMapEstimationConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PrivacyMetric_KMapEstimationConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig create() =>
-      PrivacyMetric_KMapEstimationConfig();
+      PrivacyMetric_KMapEstimationConfig._();
   PrivacyMetric_KMapEstimationConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_KMapEstimationConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_KMapEstimationConfig>();
@@ -2788,14 +2900,15 @@ class PrivacyMetric_DeltaPresenceEstimationConfig extends $pb.GeneratedMessage {
         3, 'auxiliaryTables', $pb.PbFieldType.PM, StatisticalTable.create)
     ..hasRequiredFields = false;
 
-  PrivacyMetric_DeltaPresenceEstimationConfig() : super();
-  PrivacyMetric_DeltaPresenceEstimationConfig.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric_DeltaPresenceEstimationConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric_DeltaPresenceEstimationConfig._() : super();
+  factory PrivacyMetric_DeltaPresenceEstimationConfig() => create();
+  factory PrivacyMetric_DeltaPresenceEstimationConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric_DeltaPresenceEstimationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric_DeltaPresenceEstimationConfig clone() =>
       PrivacyMetric_DeltaPresenceEstimationConfig()..mergeFromMessage(this);
   PrivacyMetric_DeltaPresenceEstimationConfig copyWith(
@@ -2803,8 +2916,9 @@ class PrivacyMetric_DeltaPresenceEstimationConfig extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as PrivacyMetric_DeltaPresenceEstimationConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_DeltaPresenceEstimationConfig create() =>
-      PrivacyMetric_DeltaPresenceEstimationConfig();
+      PrivacyMetric_DeltaPresenceEstimationConfig._();
   PrivacyMetric_DeltaPresenceEstimationConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_DeltaPresenceEstimationConfig>
       createRepeated() =>
@@ -2849,6 +2963,7 @@ class PrivacyMetric extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PrivacyMetric',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2, 3, 4, 5, 6])
     ..a<PrivacyMetric_NumericalStatsConfig>(
         1,
         'numericalStatsConfig',
@@ -2885,21 +3000,22 @@ class PrivacyMetric extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         PrivacyMetric_DeltaPresenceEstimationConfig.getDefault,
         PrivacyMetric_DeltaPresenceEstimationConfig.create)
-    ..oo(0, [1, 2, 3, 4, 5, 6])
     ..hasRequiredFields = false;
 
-  PrivacyMetric() : super();
-  PrivacyMetric.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrivacyMetric.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrivacyMetric._() : super();
+  factory PrivacyMetric() => create();
+  factory PrivacyMetric.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrivacyMetric.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrivacyMetric clone() => PrivacyMetric()..mergeFromMessage(this);
   PrivacyMetric copyWith(void Function(PrivacyMetric) updates) =>
       super.copyWith((message) => updates(message as PrivacyMetric));
   $pb.BuilderInfo get info_ => _i;
-  static PrivacyMetric create() => PrivacyMetric();
+  @$core.pragma('dart2js:noInline')
+  static PrivacyMetric create() => PrivacyMetric._();
   PrivacyMetric createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric> createRepeated() =>
       $pb.PbList<PrivacyMetric>();
@@ -2972,14 +3088,16 @@ class AnalyzeDataSourceRiskDetails_NumericalStatsResult
     ..pc<Value>(4, 'quantileValues', $pb.PbFieldType.PM, Value.create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_NumericalStatsResult() : super();
-  AnalyzeDataSourceRiskDetails_NumericalStatsResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_NumericalStatsResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails_NumericalStatsResult._() : super();
+  factory AnalyzeDataSourceRiskDetails_NumericalStatsResult() => create();
+  factory AnalyzeDataSourceRiskDetails_NumericalStatsResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_NumericalStatsResult.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_NumericalStatsResult clone() =>
       AnalyzeDataSourceRiskDetails_NumericalStatsResult()
         ..mergeFromMessage(this);
@@ -2989,8 +3107,9 @@ class AnalyzeDataSourceRiskDetails_NumericalStatsResult
       super.copyWith((message) => updates(
           message as AnalyzeDataSourceRiskDetails_NumericalStatsResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_NumericalStatsResult create() =>
-      AnalyzeDataSourceRiskDetails_NumericalStatsResult();
+      AnalyzeDataSourceRiskDetails_NumericalStatsResult._();
   AnalyzeDataSourceRiskDetails_NumericalStatsResult createEmptyInstance() =>
       create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails_NumericalStatsResult>
@@ -3032,16 +3151,18 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistog
     ..aInt64(5, 'bucketValueCount')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket()
+  AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket._()
       : super();
-  AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
       clone() =>
           AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket()
@@ -3054,9 +3175,11 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistog
           super.copyWith((message) => updates(message
               as AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
       create() =>
-          AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket();
+          AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
+              ._();
   AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3116,14 +3239,16 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult
             .create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_CategoricalStatsResult() : super();
-  AnalyzeDataSourceRiskDetails_CategoricalStatsResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_CategoricalStatsResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails_CategoricalStatsResult._() : super();
+  factory AnalyzeDataSourceRiskDetails_CategoricalStatsResult() => create();
+  factory AnalyzeDataSourceRiskDetails_CategoricalStatsResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_CategoricalStatsResult.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_CategoricalStatsResult clone() =>
       AnalyzeDataSourceRiskDetails_CategoricalStatsResult()
         ..mergeFromMessage(this);
@@ -3133,8 +3258,9 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult
       super.copyWith((message) => updates(
           message as AnalyzeDataSourceRiskDetails_CategoricalStatsResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_CategoricalStatsResult create() =>
-      AnalyzeDataSourceRiskDetails_CategoricalStatsResult();
+      AnalyzeDataSourceRiskDetails_CategoricalStatsResult._();
   AnalyzeDataSourceRiskDetails_CategoricalStatsResult createEmptyInstance() =>
       create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails_CategoricalStatsResult>
@@ -3158,16 +3284,18 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
     ..aInt64(2, 'equivalenceClassSize')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass()
+  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass._()
       : super();
-  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
       clone() =>
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass()
@@ -3179,9 +3307,11 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
       super.copyWith((message) => updates(message
           as AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
       create() =>
-          AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass();
+          AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
+              ._();
   AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3221,16 +3351,18 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
     ..aInt64(5, 'bucketValueCount')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket()
+  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket._()
       : super();
-  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
       clone() =>
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket()
@@ -3242,9 +3374,11 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
       super.copyWith((message) => updates(message
           as AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
       create() =>
-          AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket();
+          AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
+              ._();
   AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3306,14 +3440,15 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult
             .create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_KAnonymityResult() : super();
-  AnalyzeDataSourceRiskDetails_KAnonymityResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_KAnonymityResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails_KAnonymityResult._() : super();
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult() => create();
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_KAnonymityResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_KAnonymityResult clone() =>
       AnalyzeDataSourceRiskDetails_KAnonymityResult()..mergeFromMessage(this);
   AnalyzeDataSourceRiskDetails_KAnonymityResult copyWith(
@@ -3322,8 +3457,9 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult
       super.copyWith((message) =>
           updates(message as AnalyzeDataSourceRiskDetails_KAnonymityResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KAnonymityResult create() =>
-      AnalyzeDataSourceRiskDetails_KAnonymityResult();
+      AnalyzeDataSourceRiskDetails_KAnonymityResult._();
   AnalyzeDataSourceRiskDetails_KAnonymityResult createEmptyInstance() =>
       create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails_KAnonymityResult>
@@ -3350,16 +3486,18 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
         4, 'topSensitiveValues', $pb.PbFieldType.PM, ValueFrequency.create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass()
+  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass._()
       : super();
-  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
       clone() =>
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass()
@@ -3371,9 +3509,11 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
       super.copyWith((message) => updates(message
           as AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
       create() =>
-          AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass();
+          AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
+              ._();
   AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3423,16 +3563,18 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
     ..aInt64(5, 'bucketValueCount')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket()
+  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket._()
       : super();
-  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
       clone() =>
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket()
@@ -3444,9 +3586,11 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
       super.copyWith((message) => updates(message
           as AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
       create() =>
-          AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket();
+          AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
+              ._();
   AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3508,14 +3652,15 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult
             .create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_LDiversityResult() : super();
-  AnalyzeDataSourceRiskDetails_LDiversityResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_LDiversityResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails_LDiversityResult._() : super();
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult() => create();
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_LDiversityResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_LDiversityResult clone() =>
       AnalyzeDataSourceRiskDetails_LDiversityResult()..mergeFromMessage(this);
   AnalyzeDataSourceRiskDetails_LDiversityResult copyWith(
@@ -3524,8 +3669,9 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult
       super.copyWith((message) =>
           updates(message as AnalyzeDataSourceRiskDetails_LDiversityResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_LDiversityResult create() =>
-      AnalyzeDataSourceRiskDetails_LDiversityResult();
+      AnalyzeDataSourceRiskDetails_LDiversityResult._();
   AnalyzeDataSourceRiskDetails_LDiversityResult createEmptyInstance() =>
       create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails_LDiversityResult>
@@ -3549,16 +3695,18 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdVal
     ..aInt64(2, 'estimatedAnonymity')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues()
+  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues._()
       : super();
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
       clone() =>
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues()
@@ -3571,9 +3719,11 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdVal
           super.copyWith((message) => updates(message
               as AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
       create() =>
-          AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues();
+          AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
+              ._();
   AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3613,16 +3763,18 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramB
     ..aInt64(7, 'bucketValueCount')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket()
+  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket._()
       : super();
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
       clone() =>
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket()
@@ -3635,9 +3787,11 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramB
           super.copyWith((message) => updates(message
               as AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
       create() =>
-          AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket();
+          AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
+              ._();
   AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3699,14 +3853,16 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult
             .create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult() : super();
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_KMapEstimationResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails_KMapEstimationResult._() : super();
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult() => create();
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_KMapEstimationResult.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_KMapEstimationResult clone() =>
       AnalyzeDataSourceRiskDetails_KMapEstimationResult()
         ..mergeFromMessage(this);
@@ -3716,8 +3872,9 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult
       super.copyWith((message) => updates(
           message as AnalyzeDataSourceRiskDetails_KMapEstimationResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult create() =>
-      AnalyzeDataSourceRiskDetails_KMapEstimationResult();
+      AnalyzeDataSourceRiskDetails_KMapEstimationResult._();
   AnalyzeDataSourceRiskDetails_KMapEstimationResult createEmptyInstance() =>
       create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails_KMapEstimationResult>
@@ -3741,16 +3898,18 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
     ..a<$core.double>(2, 'estimatedProbability', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues()
+  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues._()
       : super();
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
       clone() =>
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues()
@@ -3763,9 +3922,11 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
           super.copyWith((message) => updates(message
               as AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
       create() =>
-          AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues();
+          AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
+              ._();
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3805,16 +3966,18 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
     ..aInt64(7, 'bucketValueCount')
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket()
+  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket._()
       : super();
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
       clone() =>
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket()
@@ -3827,9 +3990,11 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
           super.copyWith((message) => updates(message
               as AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
       create() =>
-          AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket();
+          AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
+              ._();
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -3891,15 +4056,17 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
             .create)
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult() : super();
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult._() : super();
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult() =>
+      create();
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult clone() =>
       AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult()
         ..mergeFromMessage(this);
@@ -3910,8 +4077,9 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
       super.copyWith((message) => updates(message
           as AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult create() =>
-      AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult();
+      AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult._();
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
       createEmptyInstance() => create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult>
@@ -3951,10 +4119,11 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [3, 4, 5, 6, 7, 9])
     ..a<PrivacyMetric>(1, 'requestedPrivacyMetric', $pb.PbFieldType.OM,
         PrivacyMetric.getDefault, PrivacyMetric.create)
-    ..a<$1.BigQueryTable>(2, 'requestedSourceTable', $pb.PbFieldType.OM,
-        $1.BigQueryTable.getDefault, $1.BigQueryTable.create)
+    ..a<$2.BigQueryTable>(2, 'requestedSourceTable', $pb.PbFieldType.OM,
+        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
     ..a<AnalyzeDataSourceRiskDetails_NumericalStatsResult>(
         3,
         'numericalStatsResult',
@@ -3991,16 +4160,16 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.getDefault,
         AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.create)
-    ..oo(0, [3, 4, 5, 6, 7, 9])
     ..hasRequiredFields = false;
 
-  AnalyzeDataSourceRiskDetails() : super();
-  AnalyzeDataSourceRiskDetails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnalyzeDataSourceRiskDetails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnalyzeDataSourceRiskDetails._() : super();
+  factory AnalyzeDataSourceRiskDetails() => create();
+  factory AnalyzeDataSourceRiskDetails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnalyzeDataSourceRiskDetails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnalyzeDataSourceRiskDetails clone() =>
       AnalyzeDataSourceRiskDetails()..mergeFromMessage(this);
   AnalyzeDataSourceRiskDetails copyWith(
@@ -4008,8 +4177,9 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as AnalyzeDataSourceRiskDetails));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails create() =>
-      AnalyzeDataSourceRiskDetails();
+      AnalyzeDataSourceRiskDetails._();
   AnalyzeDataSourceRiskDetails createEmptyInstance() => create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails> createRepeated() =>
       $pb.PbList<AnalyzeDataSourceRiskDetails>();
@@ -4029,8 +4199,8 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
   $core.bool hasRequestedPrivacyMetric() => $_has(0);
   void clearRequestedPrivacyMetric() => clearField(1);
 
-  $1.BigQueryTable get requestedSourceTable => $_getN(1);
-  set requestedSourceTable($1.BigQueryTable v) {
+  $2.BigQueryTable get requestedSourceTable => $_getN(1);
+  set requestedSourceTable($2.BigQueryTable v) {
     setField(2, v);
   }
 
@@ -4103,18 +4273,20 @@ class ValueFrequency extends $pb.GeneratedMessage {
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
-  ValueFrequency() : super();
-  ValueFrequency.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ValueFrequency.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ValueFrequency._() : super();
+  factory ValueFrequency() => create();
+  factory ValueFrequency.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ValueFrequency.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ValueFrequency clone() => ValueFrequency()..mergeFromMessage(this);
   ValueFrequency copyWith(void Function(ValueFrequency) updates) =>
       super.copyWith((message) => updates(message as ValueFrequency));
   $pb.BuilderInfo get info_ => _i;
-  static ValueFrequency create() => ValueFrequency();
+  @$core.pragma('dart2js:noInline')
+  static ValueFrequency create() => ValueFrequency._();
   ValueFrequency createEmptyInstance() => create();
   static $pb.PbList<ValueFrequency> createRepeated() =>
       $pb.PbList<ValueFrequency>();
@@ -4164,38 +4336,40 @@ class Value extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8])
     ..aInt64(1, 'integerValue')
     ..a<$core.double>(2, 'floatValue', $pb.PbFieldType.OD)
     ..aOS(3, 'stringValue')
     ..aOB(4, 'booleanValue')
-    ..a<$2.Timestamp>(5, 'timestampValue', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$3.TimeOfDay>(6, 'timeValue', $pb.PbFieldType.OM,
-        $3.TimeOfDay.getDefault, $3.TimeOfDay.create)
-    ..a<$4.Date>(
-        7, 'dateValue', $pb.PbFieldType.OM, $4.Date.getDefault, $4.Date.create)
-    ..e<$8.DayOfWeek>(
+    ..a<$3.Timestamp>(5, 'timestampValue', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$4.TimeOfDay>(6, 'timeValue', $pb.PbFieldType.OM,
+        $4.TimeOfDay.getDefault, $4.TimeOfDay.create)
+    ..a<$5.Date>(
+        7, 'dateValue', $pb.PbFieldType.OM, $5.Date.getDefault, $5.Date.create)
+    ..e<$9.DayOfWeek>(
         8,
         'dayOfWeekValue',
         $pb.PbFieldType.OE,
-        $8.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
-        $8.DayOfWeek.valueOf,
-        $8.DayOfWeek.values)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8])
+        $9.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
+        $9.DayOfWeek.valueOf,
+        $9.DayOfWeek.values)
     ..hasRequiredFields = false;
 
-  Value() : super();
-  Value.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Value.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Value._() : super();
+  factory Value() => create();
+  factory Value.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Value.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Value clone() => Value()..mergeFromMessage(this);
   Value copyWith(void Function(Value) updates) =>
       super.copyWith((message) => updates(message as Value));
   $pb.BuilderInfo get info_ => _i;
-  static Value create() => Value();
+  @$core.pragma('dart2js:noInline')
+  static Value create() => Value._();
   Value createEmptyInstance() => create();
   static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
   static Value getDefault() => _defaultInstance ??= create()..freeze();
@@ -4236,32 +4410,32 @@ class Value extends $pb.GeneratedMessage {
   $core.bool hasBooleanValue() => $_has(3);
   void clearBooleanValue() => clearField(4);
 
-  $2.Timestamp get timestampValue => $_getN(4);
-  set timestampValue($2.Timestamp v) {
+  $3.Timestamp get timestampValue => $_getN(4);
+  set timestampValue($3.Timestamp v) {
     setField(5, v);
   }
 
   $core.bool hasTimestampValue() => $_has(4);
   void clearTimestampValue() => clearField(5);
 
-  $3.TimeOfDay get timeValue => $_getN(5);
-  set timeValue($3.TimeOfDay v) {
+  $4.TimeOfDay get timeValue => $_getN(5);
+  set timeValue($4.TimeOfDay v) {
     setField(6, v);
   }
 
   $core.bool hasTimeValue() => $_has(5);
   void clearTimeValue() => clearField(6);
 
-  $4.Date get dateValue => $_getN(6);
-  set dateValue($4.Date v) {
+  $5.Date get dateValue => $_getN(6);
+  set dateValue($5.Date v) {
     setField(7, v);
   }
 
   $core.bool hasDateValue() => $_has(6);
   void clearDateValue() => clearField(7);
 
-  $8.DayOfWeek get dayOfWeekValue => $_getN(7);
-  set dayOfWeekValue($8.DayOfWeek v) {
+  $9.DayOfWeek get dayOfWeekValue => $_getN(7);
+  set dayOfWeekValue($9.DayOfWeek v) {
     setField(8, v);
   }
 
@@ -4279,23 +4453,25 @@ class QuoteInfo extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuoteInfo',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [2])
     ..a<DateTime>(
         2, 'dateTime', $pb.PbFieldType.OM, DateTime.getDefault, DateTime.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  QuoteInfo() : super();
-  QuoteInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuoteInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuoteInfo._() : super();
+  factory QuoteInfo() => create();
+  factory QuoteInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuoteInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuoteInfo clone() => QuoteInfo()..mergeFromMessage(this);
   QuoteInfo copyWith(void Function(QuoteInfo) updates) =>
       super.copyWith((message) => updates(message as QuoteInfo));
   $pb.BuilderInfo get info_ => _i;
-  static QuoteInfo create() => QuoteInfo();
+  @$core.pragma('dart2js:noInline')
+  static QuoteInfo create() => QuoteInfo._();
   QuoteInfo createEmptyInstance() => create();
   static $pb.PbList<QuoteInfo> createRepeated() => $pb.PbList<QuoteInfo>();
   static QuoteInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -4320,18 +4496,20 @@ class DateTime_TimeZone extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'offsetMinutes', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  DateTime_TimeZone() : super();
-  DateTime_TimeZone.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DateTime_TimeZone.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DateTime_TimeZone._() : super();
+  factory DateTime_TimeZone() => create();
+  factory DateTime_TimeZone.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DateTime_TimeZone.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DateTime_TimeZone clone() => DateTime_TimeZone()..mergeFromMessage(this);
   DateTime_TimeZone copyWith(void Function(DateTime_TimeZone) updates) =>
       super.copyWith((message) => updates(message as DateTime_TimeZone));
   $pb.BuilderInfo get info_ => _i;
-  static DateTime_TimeZone create() => DateTime_TimeZone();
+  @$core.pragma('dart2js:noInline')
+  static DateTime_TimeZone create() => DateTime_TimeZone._();
   DateTime_TimeZone createEmptyInstance() => create();
   static $pb.PbList<DateTime_TimeZone> createRepeated() =>
       $pb.PbList<DateTime_TimeZone>();
@@ -4351,56 +4529,58 @@ class DateTime_TimeZone extends $pb.GeneratedMessage {
 class DateTime extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DateTime',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$4.Date>(
-        1, 'date', $pb.PbFieldType.OM, $4.Date.getDefault, $4.Date.create)
-    ..e<$8.DayOfWeek>(
+    ..a<$5.Date>(
+        1, 'date', $pb.PbFieldType.OM, $5.Date.getDefault, $5.Date.create)
+    ..e<$9.DayOfWeek>(
         2,
         'dayOfWeek',
         $pb.PbFieldType.OE,
-        $8.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
-        $8.DayOfWeek.valueOf,
-        $8.DayOfWeek.values)
-    ..a<$3.TimeOfDay>(3, 'time', $pb.PbFieldType.OM, $3.TimeOfDay.getDefault,
-        $3.TimeOfDay.create)
+        $9.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
+        $9.DayOfWeek.valueOf,
+        $9.DayOfWeek.values)
+    ..a<$4.TimeOfDay>(3, 'time', $pb.PbFieldType.OM, $4.TimeOfDay.getDefault,
+        $4.TimeOfDay.create)
     ..a<DateTime_TimeZone>(4, 'timeZone', $pb.PbFieldType.OM,
         DateTime_TimeZone.getDefault, DateTime_TimeZone.create)
     ..hasRequiredFields = false;
 
-  DateTime() : super();
-  DateTime.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DateTime.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DateTime._() : super();
+  factory DateTime() => create();
+  factory DateTime.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DateTime.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DateTime clone() => DateTime()..mergeFromMessage(this);
   DateTime copyWith(void Function(DateTime) updates) =>
       super.copyWith((message) => updates(message as DateTime));
   $pb.BuilderInfo get info_ => _i;
-  static DateTime create() => DateTime();
+  @$core.pragma('dart2js:noInline')
+  static DateTime create() => DateTime._();
   DateTime createEmptyInstance() => create();
   static $pb.PbList<DateTime> createRepeated() => $pb.PbList<DateTime>();
   static DateTime getDefault() => _defaultInstance ??= create()..freeze();
   static DateTime _defaultInstance;
 
-  $4.Date get date => $_getN(0);
-  set date($4.Date v) {
+  $5.Date get date => $_getN(0);
+  set date($5.Date v) {
     setField(1, v);
   }
 
   $core.bool hasDate() => $_has(0);
   void clearDate() => clearField(1);
 
-  $8.DayOfWeek get dayOfWeek => $_getN(1);
-  set dayOfWeek($8.DayOfWeek v) {
+  $9.DayOfWeek get dayOfWeek => $_getN(1);
+  set dayOfWeek($9.DayOfWeek v) {
     setField(2, v);
   }
 
   $core.bool hasDayOfWeek() => $_has(1);
   void clearDayOfWeek() => clearField(2);
 
-  $3.TimeOfDay get time => $_getN(2);
-  set time($3.TimeOfDay v) {
+  $4.TimeOfDay get time => $_getN(2);
+  set time($4.TimeOfDay v) {
     setField(3, v);
   }
 
@@ -4431,6 +4611,7 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeidentifyConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2])
     ..a<InfoTypeTransformations>(
         1,
         'infoTypeTransformations',
@@ -4439,21 +4620,22 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
         InfoTypeTransformations.create)
     ..a<RecordTransformations>(2, 'recordTransformations', $pb.PbFieldType.OM,
         RecordTransformations.getDefault, RecordTransformations.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  DeidentifyConfig() : super();
-  DeidentifyConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeidentifyConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeidentifyConfig._() : super();
+  factory DeidentifyConfig() => create();
+  factory DeidentifyConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeidentifyConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeidentifyConfig clone() => DeidentifyConfig()..mergeFromMessage(this);
   DeidentifyConfig copyWith(void Function(DeidentifyConfig) updates) =>
       super.copyWith((message) => updates(message as DeidentifyConfig));
   $pb.BuilderInfo get info_ => _i;
-  static DeidentifyConfig create() => DeidentifyConfig();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyConfig create() => DeidentifyConfig._();
   DeidentifyConfig createEmptyInstance() => create();
   static $pb.PbList<DeidentifyConfig> createRepeated() =>
       $pb.PbList<DeidentifyConfig>();
@@ -4515,6 +4697,7 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PrimitiveTransformation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12])
     ..a<ReplaceValueConfig>(1, 'replaceConfig', $pb.PbFieldType.OM,
         ReplaceValueConfig.getDefault, ReplaceValueConfig.create)
     ..a<RedactConfig>(2, 'redactConfig', $pb.PbFieldType.OM,
@@ -4553,23 +4736,24 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         CryptoDeterministicConfig.getDefault,
         CryptoDeterministicConfig.create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12])
     ..hasRequiredFields = false;
 
-  PrimitiveTransformation() : super();
-  PrimitiveTransformation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PrimitiveTransformation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PrimitiveTransformation._() : super();
+  factory PrimitiveTransformation() => create();
+  factory PrimitiveTransformation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PrimitiveTransformation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PrimitiveTransformation clone() =>
       PrimitiveTransformation()..mergeFromMessage(this);
   PrimitiveTransformation copyWith(
           void Function(PrimitiveTransformation) updates) =>
       super.copyWith((message) => updates(message as PrimitiveTransformation));
   $pb.BuilderInfo get info_ => _i;
-  static PrimitiveTransformation create() => PrimitiveTransformation();
+  @$core.pragma('dart2js:noInline')
+  static PrimitiveTransformation create() => PrimitiveTransformation._();
   PrimitiveTransformation createEmptyInstance() => create();
   static $pb.PbList<PrimitiveTransformation> createRepeated() =>
       $pb.PbList<PrimitiveTransformation>();
@@ -4682,18 +4866,20 @@ class TimePartConfig extends $pb.GeneratedMessage {
         TimePartConfig_TimePart.values)
     ..hasRequiredFields = false;
 
-  TimePartConfig() : super();
-  TimePartConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimePartConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimePartConfig._() : super();
+  factory TimePartConfig() => create();
+  factory TimePartConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimePartConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimePartConfig clone() => TimePartConfig()..mergeFromMessage(this);
   TimePartConfig copyWith(void Function(TimePartConfig) updates) =>
       super.copyWith((message) => updates(message as TimePartConfig));
   $pb.BuilderInfo get info_ => _i;
-  static TimePartConfig create() => TimePartConfig();
+  @$core.pragma('dart2js:noInline')
+  static TimePartConfig create() => TimePartConfig._();
   TimePartConfig createEmptyInstance() => create();
   static $pb.PbList<TimePartConfig> createRepeated() =>
       $pb.PbList<TimePartConfig>();
@@ -4716,18 +4902,20 @@ class CryptoHashConfig extends $pb.GeneratedMessage {
         CryptoKey.create)
     ..hasRequiredFields = false;
 
-  CryptoHashConfig() : super();
-  CryptoHashConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoHashConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoHashConfig._() : super();
+  factory CryptoHashConfig() => create();
+  factory CryptoHashConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoHashConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoHashConfig clone() => CryptoHashConfig()..mergeFromMessage(this);
   CryptoHashConfig copyWith(void Function(CryptoHashConfig) updates) =>
       super.copyWith((message) => updates(message as CryptoHashConfig));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoHashConfig create() => CryptoHashConfig();
+  @$core.pragma('dart2js:noInline')
+  static CryptoHashConfig create() => CryptoHashConfig._();
   CryptoHashConfig createEmptyInstance() => create();
   static $pb.PbList<CryptoHashConfig> createRepeated() =>
       $pb.PbList<CryptoHashConfig>();
@@ -4749,19 +4937,20 @@ class CryptoDeterministicConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
         CryptoKey.create)
-    ..a<$1.InfoType>(2, 'surrogateInfoType', $pb.PbFieldType.OM,
-        $1.InfoType.getDefault, $1.InfoType.create)
-    ..a<$1.FieldId>(3, 'context', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.InfoType>(2, 'surrogateInfoType', $pb.PbFieldType.OM,
+        $2.InfoType.getDefault, $2.InfoType.create)
+    ..a<$2.FieldId>(3, 'context', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..hasRequiredFields = false;
 
-  CryptoDeterministicConfig() : super();
-  CryptoDeterministicConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoDeterministicConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoDeterministicConfig._() : super();
+  factory CryptoDeterministicConfig() => create();
+  factory CryptoDeterministicConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoDeterministicConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoDeterministicConfig clone() =>
       CryptoDeterministicConfig()..mergeFromMessage(this);
   CryptoDeterministicConfig copyWith(
@@ -4769,7 +4958,8 @@ class CryptoDeterministicConfig extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CryptoDeterministicConfig));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoDeterministicConfig create() => CryptoDeterministicConfig();
+  @$core.pragma('dart2js:noInline')
+  static CryptoDeterministicConfig create() => CryptoDeterministicConfig._();
   CryptoDeterministicConfig createEmptyInstance() => create();
   static $pb.PbList<CryptoDeterministicConfig> createRepeated() =>
       $pb.PbList<CryptoDeterministicConfig>();
@@ -4785,16 +4975,16 @@ class CryptoDeterministicConfig extends $pb.GeneratedMessage {
   $core.bool hasCryptoKey() => $_has(0);
   void clearCryptoKey() => clearField(1);
 
-  $1.InfoType get surrogateInfoType => $_getN(1);
-  set surrogateInfoType($1.InfoType v) {
+  $2.InfoType get surrogateInfoType => $_getN(1);
+  set surrogateInfoType($2.InfoType v) {
     setField(2, v);
   }
 
   $core.bool hasSurrogateInfoType() => $_has(1);
   void clearSurrogateInfoType() => clearField(2);
 
-  $1.FieldId get context => $_getN(2);
-  set context($1.FieldId v) {
+  $2.FieldId get context => $_getN(2);
+  set context($2.FieldId v) {
     setField(3, v);
   }
 
@@ -4809,18 +4999,20 @@ class ReplaceValueConfig extends $pb.GeneratedMessage {
         1, 'newValue', $pb.PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false;
 
-  ReplaceValueConfig() : super();
-  ReplaceValueConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReplaceValueConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReplaceValueConfig._() : super();
+  factory ReplaceValueConfig() => create();
+  factory ReplaceValueConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReplaceValueConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReplaceValueConfig clone() => ReplaceValueConfig()..mergeFromMessage(this);
   ReplaceValueConfig copyWith(void Function(ReplaceValueConfig) updates) =>
       super.copyWith((message) => updates(message as ReplaceValueConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ReplaceValueConfig create() => ReplaceValueConfig();
+  @$core.pragma('dart2js:noInline')
+  static ReplaceValueConfig create() => ReplaceValueConfig._();
   ReplaceValueConfig createEmptyInstance() => create();
   static $pb.PbList<ReplaceValueConfig> createRepeated() =>
       $pb.PbList<ReplaceValueConfig>();
@@ -4842,13 +5034,14 @@ class ReplaceWithInfoTypeConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..hasRequiredFields = false;
 
-  ReplaceWithInfoTypeConfig() : super();
-  ReplaceWithInfoTypeConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReplaceWithInfoTypeConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReplaceWithInfoTypeConfig._() : super();
+  factory ReplaceWithInfoTypeConfig() => create();
+  factory ReplaceWithInfoTypeConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReplaceWithInfoTypeConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReplaceWithInfoTypeConfig clone() =>
       ReplaceWithInfoTypeConfig()..mergeFromMessage(this);
   ReplaceWithInfoTypeConfig copyWith(
@@ -4856,7 +5049,8 @@ class ReplaceWithInfoTypeConfig extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ReplaceWithInfoTypeConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ReplaceWithInfoTypeConfig create() => ReplaceWithInfoTypeConfig();
+  @$core.pragma('dart2js:noInline')
+  static ReplaceWithInfoTypeConfig create() => ReplaceWithInfoTypeConfig._();
   ReplaceWithInfoTypeConfig createEmptyInstance() => create();
   static $pb.PbList<ReplaceWithInfoTypeConfig> createRepeated() =>
       $pb.PbList<ReplaceWithInfoTypeConfig>();
@@ -4870,18 +5064,20 @@ class RedactConfig extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..hasRequiredFields = false;
 
-  RedactConfig() : super();
-  RedactConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RedactConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RedactConfig._() : super();
+  factory RedactConfig() => create();
+  factory RedactConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RedactConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RedactConfig clone() => RedactConfig()..mergeFromMessage(this);
   RedactConfig copyWith(void Function(RedactConfig) updates) =>
       super.copyWith((message) => updates(message as RedactConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RedactConfig create() => RedactConfig();
+  @$core.pragma('dart2js:noInline')
+  static RedactConfig create() => RedactConfig._();
   RedactConfig createEmptyInstance() => create();
   static $pb.PbList<RedactConfig> createRepeated() =>
       $pb.PbList<RedactConfig>();
@@ -4904,6 +5100,7 @@ class CharsToIgnore extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CharsToIgnore',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2])
     ..aOS(1, 'charactersToSkip')
     ..e<CharsToIgnore_CommonCharsToIgnore>(
         2,
@@ -4912,21 +5109,22 @@ class CharsToIgnore extends $pb.GeneratedMessage {
         CharsToIgnore_CommonCharsToIgnore.COMMON_CHARS_TO_IGNORE_UNSPECIFIED,
         CharsToIgnore_CommonCharsToIgnore.valueOf,
         CharsToIgnore_CommonCharsToIgnore.values)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  CharsToIgnore() : super();
-  CharsToIgnore.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CharsToIgnore.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CharsToIgnore._() : super();
+  factory CharsToIgnore() => create();
+  factory CharsToIgnore.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CharsToIgnore.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CharsToIgnore clone() => CharsToIgnore()..mergeFromMessage(this);
   CharsToIgnore copyWith(void Function(CharsToIgnore) updates) =>
       super.copyWith((message) => updates(message as CharsToIgnore));
   $pb.BuilderInfo get info_ => _i;
-  static CharsToIgnore create() => CharsToIgnore();
+  @$core.pragma('dart2js:noInline')
+  static CharsToIgnore create() => CharsToIgnore._();
   CharsToIgnore createEmptyInstance() => create();
   static $pb.PbList<CharsToIgnore> createRepeated() =>
       $pb.PbList<CharsToIgnore>();
@@ -4964,18 +5162,20 @@ class CharacterMaskConfig extends $pb.GeneratedMessage {
         4, 'charactersToIgnore', $pb.PbFieldType.PM, CharsToIgnore.create)
     ..hasRequiredFields = false;
 
-  CharacterMaskConfig() : super();
-  CharacterMaskConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CharacterMaskConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CharacterMaskConfig._() : super();
+  factory CharacterMaskConfig() => create();
+  factory CharacterMaskConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CharacterMaskConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CharacterMaskConfig clone() => CharacterMaskConfig()..mergeFromMessage(this);
   CharacterMaskConfig copyWith(void Function(CharacterMaskConfig) updates) =>
       super.copyWith((message) => updates(message as CharacterMaskConfig));
   $pb.BuilderInfo get info_ => _i;
-  static CharacterMaskConfig create() => CharacterMaskConfig();
+  @$core.pragma('dart2js:noInline')
+  static CharacterMaskConfig create() => CharacterMaskConfig._();
   CharacterMaskConfig createEmptyInstance() => create();
   static $pb.PbList<CharacterMaskConfig> createRepeated() =>
       $pb.PbList<CharacterMaskConfig>();
@@ -5020,20 +5220,22 @@ class FixedSizeBucketingConfig extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'bucketSize', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  FixedSizeBucketingConfig() : super();
-  FixedSizeBucketingConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FixedSizeBucketingConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FixedSizeBucketingConfig._() : super();
+  factory FixedSizeBucketingConfig() => create();
+  factory FixedSizeBucketingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixedSizeBucketingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FixedSizeBucketingConfig clone() =>
       FixedSizeBucketingConfig()..mergeFromMessage(this);
   FixedSizeBucketingConfig copyWith(
           void Function(FixedSizeBucketingConfig) updates) =>
       super.copyWith((message) => updates(message as FixedSizeBucketingConfig));
   $pb.BuilderInfo get info_ => _i;
-  static FixedSizeBucketingConfig create() => FixedSizeBucketingConfig();
+  @$core.pragma('dart2js:noInline')
+  static FixedSizeBucketingConfig create() => FixedSizeBucketingConfig._();
   FixedSizeBucketingConfig createEmptyInstance() => create();
   static $pb.PbList<FixedSizeBucketingConfig> createRepeated() =>
       $pb.PbList<FixedSizeBucketingConfig>();
@@ -5075,20 +5277,22 @@ class BucketingConfig_Bucket extends $pb.GeneratedMessage {
         Value.create)
     ..hasRequiredFields = false;
 
-  BucketingConfig_Bucket() : super();
-  BucketingConfig_Bucket.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BucketingConfig_Bucket.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BucketingConfig_Bucket._() : super();
+  factory BucketingConfig_Bucket() => create();
+  factory BucketingConfig_Bucket.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BucketingConfig_Bucket.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BucketingConfig_Bucket clone() =>
       BucketingConfig_Bucket()..mergeFromMessage(this);
   BucketingConfig_Bucket copyWith(
           void Function(BucketingConfig_Bucket) updates) =>
       super.copyWith((message) => updates(message as BucketingConfig_Bucket));
   $pb.BuilderInfo get info_ => _i;
-  static BucketingConfig_Bucket create() => BucketingConfig_Bucket();
+  @$core.pragma('dart2js:noInline')
+  static BucketingConfig_Bucket create() => BucketingConfig_Bucket._();
   BucketingConfig_Bucket createEmptyInstance() => create();
   static $pb.PbList<BucketingConfig_Bucket> createRepeated() =>
       $pb.PbList<BucketingConfig_Bucket>();
@@ -5128,18 +5332,20 @@ class BucketingConfig extends $pb.GeneratedMessage {
         1, 'buckets', $pb.PbFieldType.PM, BucketingConfig_Bucket.create)
     ..hasRequiredFields = false;
 
-  BucketingConfig() : super();
-  BucketingConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BucketingConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BucketingConfig._() : super();
+  factory BucketingConfig() => create();
+  factory BucketingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BucketingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BucketingConfig clone() => BucketingConfig()..mergeFromMessage(this);
   BucketingConfig copyWith(void Function(BucketingConfig) updates) =>
       super.copyWith((message) => updates(message as BucketingConfig));
   $pb.BuilderInfo get info_ => _i;
-  static BucketingConfig create() => BucketingConfig();
+  @$core.pragma('dart2js:noInline')
+  static BucketingConfig create() => BucketingConfig._();
   BucketingConfig createEmptyInstance() => create();
   static $pb.PbList<BucketingConfig> createRepeated() =>
       $pb.PbList<BucketingConfig>();
@@ -5167,10 +5373,11 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoReplaceFfxFpeConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [4, 5, 6])
     ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
         CryptoKey.create)
-    ..a<$1.FieldId>(2, 'context', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(2, 'context', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..e<CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet>(
         4,
         'commonAlphabet',
@@ -5181,18 +5388,18 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
         CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet.values)
     ..aOS(5, 'customAlphabet')
     ..a<$core.int>(6, 'radix', $pb.PbFieldType.O3)
-    ..a<$1.InfoType>(8, 'surrogateInfoType', $pb.PbFieldType.OM,
-        $1.InfoType.getDefault, $1.InfoType.create)
-    ..oo(0, [4, 5, 6])
+    ..a<$2.InfoType>(8, 'surrogateInfoType', $pb.PbFieldType.OM,
+        $2.InfoType.getDefault, $2.InfoType.create)
     ..hasRequiredFields = false;
 
-  CryptoReplaceFfxFpeConfig() : super();
-  CryptoReplaceFfxFpeConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoReplaceFfxFpeConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoReplaceFfxFpeConfig._() : super();
+  factory CryptoReplaceFfxFpeConfig() => create();
+  factory CryptoReplaceFfxFpeConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoReplaceFfxFpeConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoReplaceFfxFpeConfig clone() =>
       CryptoReplaceFfxFpeConfig()..mergeFromMessage(this);
   CryptoReplaceFfxFpeConfig copyWith(
@@ -5200,7 +5407,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CryptoReplaceFfxFpeConfig));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoReplaceFfxFpeConfig create() => CryptoReplaceFfxFpeConfig();
+  @$core.pragma('dart2js:noInline')
+  static CryptoReplaceFfxFpeConfig create() => CryptoReplaceFfxFpeConfig._();
   CryptoReplaceFfxFpeConfig createEmptyInstance() => create();
   static $pb.PbList<CryptoReplaceFfxFpeConfig> createRepeated() =>
       $pb.PbList<CryptoReplaceFfxFpeConfig>();
@@ -5220,8 +5428,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
   $core.bool hasCryptoKey() => $_has(0);
   void clearCryptoKey() => clearField(1);
 
-  $1.FieldId get context => $_getN(1);
-  set context($1.FieldId v) {
+  $2.FieldId get context => $_getN(1);
+  set context($2.FieldId v) {
     setField(2, v);
   }
 
@@ -5253,8 +5461,8 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
   $core.bool hasRadix() => $_has(4);
   void clearRadix() => clearField(6);
 
-  $1.InfoType get surrogateInfoType => $_getN(5);
-  set surrogateInfoType($1.InfoType v) {
+  $2.InfoType get surrogateInfoType => $_getN(5);
+  set surrogateInfoType($2.InfoType v) {
     setField(8, v);
   }
 
@@ -5273,27 +5481,29 @@ class CryptoKey extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoKey',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2, 3])
     ..a<TransientCryptoKey>(1, 'transient', $pb.PbFieldType.OM,
         TransientCryptoKey.getDefault, TransientCryptoKey.create)
     ..a<UnwrappedCryptoKey>(2, 'unwrapped', $pb.PbFieldType.OM,
         UnwrappedCryptoKey.getDefault, UnwrappedCryptoKey.create)
     ..a<KmsWrappedCryptoKey>(3, 'kmsWrapped', $pb.PbFieldType.OM,
         KmsWrappedCryptoKey.getDefault, KmsWrappedCryptoKey.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  CryptoKey() : super();
-  CryptoKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CryptoKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CryptoKey._() : super();
+  factory CryptoKey() => create();
+  factory CryptoKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CryptoKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CryptoKey clone() => CryptoKey()..mergeFromMessage(this);
   CryptoKey copyWith(void Function(CryptoKey) updates) =>
       super.copyWith((message) => updates(message as CryptoKey));
   $pb.BuilderInfo get info_ => _i;
-  static CryptoKey create() => CryptoKey();
+  @$core.pragma('dart2js:noInline')
+  static CryptoKey create() => CryptoKey._();
   CryptoKey createEmptyInstance() => create();
   static $pb.PbList<CryptoKey> createRepeated() => $pb.PbList<CryptoKey>();
   static CryptoKey getDefault() => _defaultInstance ??= create()..freeze();
@@ -5333,18 +5543,20 @@ class TransientCryptoKey extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  TransientCryptoKey() : super();
-  TransientCryptoKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransientCryptoKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransientCryptoKey._() : super();
+  factory TransientCryptoKey() => create();
+  factory TransientCryptoKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransientCryptoKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransientCryptoKey clone() => TransientCryptoKey()..mergeFromMessage(this);
   TransientCryptoKey copyWith(void Function(TransientCryptoKey) updates) =>
       super.copyWith((message) => updates(message as TransientCryptoKey));
   $pb.BuilderInfo get info_ => _i;
-  static TransientCryptoKey create() => TransientCryptoKey();
+  @$core.pragma('dart2js:noInline')
+  static TransientCryptoKey create() => TransientCryptoKey._();
   TransientCryptoKey createEmptyInstance() => create();
   static $pb.PbList<TransientCryptoKey> createRepeated() =>
       $pb.PbList<TransientCryptoKey>();
@@ -5367,18 +5579,20 @@ class UnwrappedCryptoKey extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(1, 'key', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  UnwrappedCryptoKey() : super();
-  UnwrappedCryptoKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UnwrappedCryptoKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UnwrappedCryptoKey._() : super();
+  factory UnwrappedCryptoKey() => create();
+  factory UnwrappedCryptoKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UnwrappedCryptoKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UnwrappedCryptoKey clone() => UnwrappedCryptoKey()..mergeFromMessage(this);
   UnwrappedCryptoKey copyWith(void Function(UnwrappedCryptoKey) updates) =>
       super.copyWith((message) => updates(message as UnwrappedCryptoKey));
   $pb.BuilderInfo get info_ => _i;
-  static UnwrappedCryptoKey create() => UnwrappedCryptoKey();
+  @$core.pragma('dart2js:noInline')
+  static UnwrappedCryptoKey create() => UnwrappedCryptoKey._();
   UnwrappedCryptoKey createEmptyInstance() => create();
   static $pb.PbList<UnwrappedCryptoKey> createRepeated() =>
       $pb.PbList<UnwrappedCryptoKey>();
@@ -5402,18 +5616,20 @@ class KmsWrappedCryptoKey extends $pb.GeneratedMessage {
     ..aOS(2, 'cryptoKeyName')
     ..hasRequiredFields = false;
 
-  KmsWrappedCryptoKey() : super();
-  KmsWrappedCryptoKey.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KmsWrappedCryptoKey.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KmsWrappedCryptoKey._() : super();
+  factory KmsWrappedCryptoKey() => create();
+  factory KmsWrappedCryptoKey.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KmsWrappedCryptoKey.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KmsWrappedCryptoKey clone() => KmsWrappedCryptoKey()..mergeFromMessage(this);
   KmsWrappedCryptoKey copyWith(void Function(KmsWrappedCryptoKey) updates) =>
       super.copyWith((message) => updates(message as KmsWrappedCryptoKey));
   $pb.BuilderInfo get info_ => _i;
-  static KmsWrappedCryptoKey create() => KmsWrappedCryptoKey();
+  @$core.pragma('dart2js:noInline')
+  static KmsWrappedCryptoKey create() => KmsWrappedCryptoKey._();
   KmsWrappedCryptoKey createEmptyInstance() => create();
   static $pb.PbList<KmsWrappedCryptoKey> createRepeated() =>
       $pb.PbList<KmsWrappedCryptoKey>();
@@ -5448,27 +5664,29 @@ class DateShiftConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DateShiftConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [4])
     ..a<$core.int>(1, 'upperBoundDays', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'lowerBoundDays', $pb.PbFieldType.O3)
-    ..a<$1.FieldId>(3, 'context', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(3, 'context', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..a<CryptoKey>(4, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
         CryptoKey.create)
-    ..oo(0, [4])
     ..hasRequiredFields = false;
 
-  DateShiftConfig() : super();
-  DateShiftConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DateShiftConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DateShiftConfig._() : super();
+  factory DateShiftConfig() => create();
+  factory DateShiftConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DateShiftConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DateShiftConfig clone() => DateShiftConfig()..mergeFromMessage(this);
   DateShiftConfig copyWith(void Function(DateShiftConfig) updates) =>
       super.copyWith((message) => updates(message as DateShiftConfig));
   $pb.BuilderInfo get info_ => _i;
-  static DateShiftConfig create() => DateShiftConfig();
+  @$core.pragma('dart2js:noInline')
+  static DateShiftConfig create() => DateShiftConfig._();
   DateShiftConfig createEmptyInstance() => create();
   static $pb.PbList<DateShiftConfig> createRepeated() =>
       $pb.PbList<DateShiftConfig>();
@@ -5496,8 +5714,8 @@ class DateShiftConfig extends $pb.GeneratedMessage {
   $core.bool hasLowerBoundDays() => $_has(1);
   void clearLowerBoundDays() => clearField(2);
 
-  $1.FieldId get context => $_getN(2);
-  set context($1.FieldId v) {
+  $2.FieldId get context => $_getN(2);
+  set context($2.FieldId v) {
     setField(3, v);
   }
 
@@ -5518,7 +5736,7 @@ class InfoTypeTransformations_InfoTypeTransformation
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InfoTypeTransformations.InfoTypeTransformation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $1.InfoType.create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
     ..a<PrimitiveTransformation>(
         2,
         'primitiveTransformation',
@@ -5527,14 +5745,16 @@ class InfoTypeTransformations_InfoTypeTransformation
         PrimitiveTransformation.create)
     ..hasRequiredFields = false;
 
-  InfoTypeTransformations_InfoTypeTransformation() : super();
-  InfoTypeTransformations_InfoTypeTransformation.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InfoTypeTransformations_InfoTypeTransformation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InfoTypeTransformations_InfoTypeTransformation._() : super();
+  factory InfoTypeTransformations_InfoTypeTransformation() => create();
+  factory InfoTypeTransformations_InfoTypeTransformation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InfoTypeTransformations_InfoTypeTransformation.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InfoTypeTransformations_InfoTypeTransformation clone() =>
       InfoTypeTransformations_InfoTypeTransformation()..mergeFromMessage(this);
   InfoTypeTransformations_InfoTypeTransformation copyWith(
@@ -5543,8 +5763,9 @@ class InfoTypeTransformations_InfoTypeTransformation
       super.copyWith((message) =>
           updates(message as InfoTypeTransformations_InfoTypeTransformation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static InfoTypeTransformations_InfoTypeTransformation create() =>
-      InfoTypeTransformations_InfoTypeTransformation();
+      InfoTypeTransformations_InfoTypeTransformation._();
   InfoTypeTransformations_InfoTypeTransformation createEmptyInstance() =>
       create();
   static $pb.PbList<InfoTypeTransformations_InfoTypeTransformation>
@@ -5554,7 +5775,7 @@ class InfoTypeTransformations_InfoTypeTransformation
       _defaultInstance ??= create()..freeze();
   static InfoTypeTransformations_InfoTypeTransformation _defaultInstance;
 
-  $core.List<$1.InfoType> get infoTypes => $_getList(0);
+  $core.List<$2.InfoType> get infoTypes => $_getList(0);
 
   PrimitiveTransformation get primitiveTransformation => $_getN(1);
   set primitiveTransformation(PrimitiveTransformation v) {
@@ -5575,20 +5796,22 @@ class InfoTypeTransformations extends $pb.GeneratedMessage {
         InfoTypeTransformations_InfoTypeTransformation.create)
     ..hasRequiredFields = false;
 
-  InfoTypeTransformations() : super();
-  InfoTypeTransformations.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InfoTypeTransformations.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InfoTypeTransformations._() : super();
+  factory InfoTypeTransformations() => create();
+  factory InfoTypeTransformations.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InfoTypeTransformations.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InfoTypeTransformations clone() =>
       InfoTypeTransformations()..mergeFromMessage(this);
   InfoTypeTransformations copyWith(
           void Function(InfoTypeTransformations) updates) =>
       super.copyWith((message) => updates(message as InfoTypeTransformations));
   $pb.BuilderInfo get info_ => _i;
-  static InfoTypeTransformations create() => InfoTypeTransformations();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeTransformations create() => InfoTypeTransformations._();
   InfoTypeTransformations createEmptyInstance() => create();
   static $pb.PbList<InfoTypeTransformations> createRepeated() =>
       $pb.PbList<InfoTypeTransformations>();
@@ -5615,7 +5838,8 @@ class FieldTransformation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FieldTransformation',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$1.FieldId>(1, 'fields', $pb.PbFieldType.PM, $1.FieldId.create)
+    ..oo(0, [4, 5])
+    ..pc<$2.FieldId>(1, 'fields', $pb.PbFieldType.PM, $2.FieldId.create)
     ..a<RecordCondition>(3, 'condition', $pb.PbFieldType.OM,
         RecordCondition.getDefault, RecordCondition.create)
     ..a<PrimitiveTransformation>(
@@ -5630,21 +5854,22 @@ class FieldTransformation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         InfoTypeTransformations.getDefault,
         InfoTypeTransformations.create)
-    ..oo(0, [4, 5])
     ..hasRequiredFields = false;
 
-  FieldTransformation() : super();
-  FieldTransformation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FieldTransformation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FieldTransformation._() : super();
+  factory FieldTransformation() => create();
+  factory FieldTransformation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FieldTransformation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FieldTransformation clone() => FieldTransformation()..mergeFromMessage(this);
   FieldTransformation copyWith(void Function(FieldTransformation) updates) =>
       super.copyWith((message) => updates(message as FieldTransformation));
   $pb.BuilderInfo get info_ => _i;
-  static FieldTransformation create() => FieldTransformation();
+  @$core.pragma('dart2js:noInline')
+  static FieldTransformation create() => FieldTransformation._();
   FieldTransformation createEmptyInstance() => create();
   static $pb.PbList<FieldTransformation> createRepeated() =>
       $pb.PbList<FieldTransformation>();
@@ -5656,7 +5881,7 @@ class FieldTransformation extends $pb.GeneratedMessage {
       _FieldTransformation_TransformationByTag[$_whichOneof(0)];
   void clearTransformation() => clearField($_whichOneof(0));
 
-  $core.List<$1.FieldId> get fields => $_getList(0);
+  $core.List<$2.FieldId> get fields => $_getList(0);
 
   RecordCondition get condition => $_getN(1);
   set condition(RecordCondition v) {
@@ -5692,20 +5917,22 @@ class RecordTransformations extends $pb.GeneratedMessage {
         2, 'recordSuppressions', $pb.PbFieldType.PM, RecordSuppression.create)
     ..hasRequiredFields = false;
 
-  RecordTransformations() : super();
-  RecordTransformations.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordTransformations.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordTransformations._() : super();
+  factory RecordTransformations() => create();
+  factory RecordTransformations.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordTransformations.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordTransformations clone() =>
       RecordTransformations()..mergeFromMessage(this);
   RecordTransformations copyWith(
           void Function(RecordTransformations) updates) =>
       super.copyWith((message) => updates(message as RecordTransformations));
   $pb.BuilderInfo get info_ => _i;
-  static RecordTransformations create() => RecordTransformations();
+  @$core.pragma('dart2js:noInline')
+  static RecordTransformations create() => RecordTransformations._();
   RecordTransformations createEmptyInstance() => create();
   static $pb.PbList<RecordTransformations> createRepeated() =>
       $pb.PbList<RecordTransformations>();
@@ -5725,18 +5952,20 @@ class RecordSuppression extends $pb.GeneratedMessage {
         RecordCondition.getDefault, RecordCondition.create)
     ..hasRequiredFields = false;
 
-  RecordSuppression() : super();
-  RecordSuppression.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordSuppression.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordSuppression._() : super();
+  factory RecordSuppression() => create();
+  factory RecordSuppression.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordSuppression.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordSuppression clone() => RecordSuppression()..mergeFromMessage(this);
   RecordSuppression copyWith(void Function(RecordSuppression) updates) =>
       super.copyWith((message) => updates(message as RecordSuppression));
   $pb.BuilderInfo get info_ => _i;
-  static RecordSuppression create() => RecordSuppression();
+  @$core.pragma('dart2js:noInline')
+  static RecordSuppression create() => RecordSuppression._();
   RecordSuppression createEmptyInstance() => create();
   static $pb.PbList<RecordSuppression> createRepeated() =>
       $pb.PbList<RecordSuppression>();
@@ -5756,8 +5985,8 @@ class RecordSuppression extends $pb.GeneratedMessage {
 class RecordCondition_Condition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordCondition.Condition',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..e<RelationalOperator>(
         3,
         'operator',
@@ -5768,13 +5997,14 @@ class RecordCondition_Condition extends $pb.GeneratedMessage {
     ..a<Value>(4, 'value', $pb.PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false;
 
-  RecordCondition_Condition() : super();
-  RecordCondition_Condition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordCondition_Condition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordCondition_Condition._() : super();
+  factory RecordCondition_Condition() => create();
+  factory RecordCondition_Condition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordCondition_Condition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordCondition_Condition clone() =>
       RecordCondition_Condition()..mergeFromMessage(this);
   RecordCondition_Condition copyWith(
@@ -5782,7 +6012,8 @@ class RecordCondition_Condition extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as RecordCondition_Condition));
   $pb.BuilderInfo get info_ => _i;
-  static RecordCondition_Condition create() => RecordCondition_Condition();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition_Condition create() => RecordCondition_Condition._();
   RecordCondition_Condition createEmptyInstance() => create();
   static $pb.PbList<RecordCondition_Condition> createRepeated() =>
       $pb.PbList<RecordCondition_Condition>();
@@ -5790,8 +6021,8 @@ class RecordCondition_Condition extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RecordCondition_Condition _defaultInstance;
 
-  $1.FieldId get field_1 => $_getN(0);
-  set field_1($1.FieldId v) {
+  $2.FieldId get field_1 => $_getN(0);
+  set field_1($2.FieldId v) {
     setField(1, v);
   }
 
@@ -5823,13 +6054,14 @@ class RecordCondition_Conditions extends $pb.GeneratedMessage {
         1, 'conditions', $pb.PbFieldType.PM, RecordCondition_Condition.create)
     ..hasRequiredFields = false;
 
-  RecordCondition_Conditions() : super();
-  RecordCondition_Conditions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordCondition_Conditions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordCondition_Conditions._() : super();
+  factory RecordCondition_Conditions() => create();
+  factory RecordCondition_Conditions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordCondition_Conditions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordCondition_Conditions clone() =>
       RecordCondition_Conditions()..mergeFromMessage(this);
   RecordCondition_Conditions copyWith(
@@ -5837,7 +6069,8 @@ class RecordCondition_Conditions extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as RecordCondition_Conditions));
   $pb.BuilderInfo get info_ => _i;
-  static RecordCondition_Conditions create() => RecordCondition_Conditions();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition_Conditions create() => RecordCondition_Conditions._();
   RecordCondition_Conditions createEmptyInstance() => create();
   static $pb.PbList<RecordCondition_Conditions> createRepeated() =>
       $pb.PbList<RecordCondition_Conditions>();
@@ -5859,6 +6092,7 @@ class RecordCondition_Expressions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RecordCondition.Expressions',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [3])
     ..e<RecordCondition_Expressions_LogicalOperator>(
         1,
         'logicalOperator',
@@ -5873,16 +6107,16 @@ class RecordCondition_Expressions extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         RecordCondition_Conditions.getDefault,
         RecordCondition_Conditions.create)
-    ..oo(0, [3])
     ..hasRequiredFields = false;
 
-  RecordCondition_Expressions() : super();
-  RecordCondition_Expressions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordCondition_Expressions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordCondition_Expressions._() : super();
+  factory RecordCondition_Expressions() => create();
+  factory RecordCondition_Expressions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordCondition_Expressions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordCondition_Expressions clone() =>
       RecordCondition_Expressions()..mergeFromMessage(this);
   RecordCondition_Expressions copyWith(
@@ -5890,7 +6124,9 @@ class RecordCondition_Expressions extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as RecordCondition_Expressions));
   $pb.BuilderInfo get info_ => _i;
-  static RecordCondition_Expressions create() => RecordCondition_Expressions();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition_Expressions create() =>
+      RecordCondition_Expressions._();
   RecordCondition_Expressions createEmptyInstance() => create();
   static $pb.PbList<RecordCondition_Expressions> createRepeated() =>
       $pb.PbList<RecordCondition_Expressions>();
@@ -5930,18 +6166,20 @@ class RecordCondition extends $pb.GeneratedMessage {
         RecordCondition_Expressions.create)
     ..hasRequiredFields = false;
 
-  RecordCondition() : super();
-  RecordCondition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RecordCondition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RecordCondition._() : super();
+  factory RecordCondition() => create();
+  factory RecordCondition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RecordCondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RecordCondition clone() => RecordCondition()..mergeFromMessage(this);
   RecordCondition copyWith(void Function(RecordCondition) updates) =>
       super.copyWith((message) => updates(message as RecordCondition));
   $pb.BuilderInfo get info_ => _i;
-  static RecordCondition create() => RecordCondition();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition create() => RecordCondition._();
   RecordCondition createEmptyInstance() => create();
   static $pb.PbList<RecordCondition> createRepeated() =>
       $pb.PbList<RecordCondition>();
@@ -5966,20 +6204,22 @@ class TransformationOverview extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, TransformationSummary.create)
     ..hasRequiredFields = false;
 
-  TransformationOverview() : super();
-  TransformationOverview.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransformationOverview.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransformationOverview._() : super();
+  factory TransformationOverview() => create();
+  factory TransformationOverview.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationOverview.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransformationOverview clone() =>
       TransformationOverview()..mergeFromMessage(this);
   TransformationOverview copyWith(
           void Function(TransformationOverview) updates) =>
       super.copyWith((message) => updates(message as TransformationOverview));
   $pb.BuilderInfo get info_ => _i;
-  static TransformationOverview create() => TransformationOverview();
+  @$core.pragma('dart2js:noInline')
+  static TransformationOverview create() => TransformationOverview._();
   TransformationOverview createEmptyInstance() => create();
   static $pb.PbList<TransformationOverview> createRepeated() =>
       $pb.PbList<TransformationOverview>();
@@ -6014,13 +6254,15 @@ class TransformationSummary_SummaryResult extends $pb.GeneratedMessage {
     ..aOS(3, 'details')
     ..hasRequiredFields = false;
 
-  TransformationSummary_SummaryResult() : super();
-  TransformationSummary_SummaryResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransformationSummary_SummaryResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransformationSummary_SummaryResult._() : super();
+  factory TransformationSummary_SummaryResult() => create();
+  factory TransformationSummary_SummaryResult.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationSummary_SummaryResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransformationSummary_SummaryResult clone() =>
       TransformationSummary_SummaryResult()..mergeFromMessage(this);
   TransformationSummary_SummaryResult copyWith(
@@ -6028,8 +6270,9 @@ class TransformationSummary_SummaryResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TransformationSummary_SummaryResult));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TransformationSummary_SummaryResult create() =>
-      TransformationSummary_SummaryResult();
+      TransformationSummary_SummaryResult._();
   TransformationSummary_SummaryResult createEmptyInstance() => create();
   static $pb.PbList<TransformationSummary_SummaryResult> createRepeated() =>
       $pb.PbList<TransformationSummary_SummaryResult>();
@@ -6065,10 +6308,10 @@ class TransformationSummary_SummaryResult extends $pb.GeneratedMessage {
 class TransformationSummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransformationSummary',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $1.InfoType.getDefault,
-        $1.InfoType.create)
-    ..a<$1.FieldId>(2, 'field_2', $pb.PbFieldType.OM, $1.FieldId.getDefault,
-        $1.FieldId.create)
+    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
+        $2.InfoType.create)
+    ..a<$2.FieldId>(2, 'field_2', $pb.PbFieldType.OM, $2.FieldId.getDefault,
+        $2.FieldId.create)
     ..a<PrimitiveTransformation>(3, 'transformation', $pb.PbFieldType.OM,
         PrimitiveTransformation.getDefault, PrimitiveTransformation.create)
     ..pc<TransformationSummary_SummaryResult>(4, 'results', $pb.PbFieldType.PM,
@@ -6080,20 +6323,22 @@ class TransformationSummary extends $pb.GeneratedMessage {
     ..aInt64(7, 'transformedBytes')
     ..hasRequiredFields = false;
 
-  TransformationSummary() : super();
-  TransformationSummary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TransformationSummary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TransformationSummary._() : super();
+  factory TransformationSummary() => create();
+  factory TransformationSummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TransformationSummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TransformationSummary clone() =>
       TransformationSummary()..mergeFromMessage(this);
   TransformationSummary copyWith(
           void Function(TransformationSummary) updates) =>
       super.copyWith((message) => updates(message as TransformationSummary));
   $pb.BuilderInfo get info_ => _i;
-  static TransformationSummary create() => TransformationSummary();
+  @$core.pragma('dart2js:noInline')
+  static TransformationSummary create() => TransformationSummary._();
   TransformationSummary createEmptyInstance() => create();
   static $pb.PbList<TransformationSummary> createRepeated() =>
       $pb.PbList<TransformationSummary>();
@@ -6101,16 +6346,16 @@ class TransformationSummary extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static TransformationSummary _defaultInstance;
 
-  $1.InfoType get infoType => $_getN(0);
-  set infoType($1.InfoType v) {
+  $2.InfoType get infoType => $_getN(0);
+  set infoType($2.InfoType v) {
     setField(1, v);
   }
 
   $core.bool hasInfoType() => $_has(0);
   void clearInfoType() => clearField(1);
 
-  $1.FieldId get field_2 => $_getN(1);
-  set field_2($1.FieldId v) {
+  $2.FieldId get field_2 => $_getN(1);
+  set field_2($2.FieldId v) {
     setField(2, v);
   }
 
@@ -6155,23 +6400,25 @@ class Schedule extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Schedule',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$5.Duration>(1, 'recurrencePeriodDuration', $pb.PbFieldType.OM,
-        $5.Duration.getDefault, $5.Duration.create)
     ..oo(0, [1])
+    ..a<$6.Duration>(1, 'recurrencePeriodDuration', $pb.PbFieldType.OM,
+        $6.Duration.getDefault, $6.Duration.create)
     ..hasRequiredFields = false;
 
-  Schedule() : super();
-  Schedule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Schedule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Schedule._() : super();
+  factory Schedule() => create();
+  factory Schedule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Schedule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Schedule clone() => Schedule()..mergeFromMessage(this);
   Schedule copyWith(void Function(Schedule) updates) =>
       super.copyWith((message) => updates(message as Schedule));
   $pb.BuilderInfo get info_ => _i;
-  static Schedule create() => Schedule();
+  @$core.pragma('dart2js:noInline')
+  static Schedule create() => Schedule._();
   Schedule createEmptyInstance() => create();
   static $pb.PbList<Schedule> createRepeated() => $pb.PbList<Schedule>();
   static Schedule getDefault() => _defaultInstance ??= create()..freeze();
@@ -6180,8 +6427,8 @@ class Schedule extends $pb.GeneratedMessage {
   Schedule_Option whichOption() => _Schedule_OptionByTag[$_whichOneof(0)];
   void clearOption() => clearField($_whichOneof(0));
 
-  $5.Duration get recurrencePeriodDuration => $_getN(0);
-  set recurrencePeriodDuration($5.Duration v) {
+  $6.Duration get recurrencePeriodDuration => $_getN(0);
+  set recurrencePeriodDuration($6.Duration v) {
     setField(1, v);
   }
 
@@ -6195,26 +6442,28 @@ class InspectTemplate extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<InspectConfig>(6, 'inspectConfig', $pb.PbFieldType.OM,
         InspectConfig.getDefault, InspectConfig.create)
     ..hasRequiredFields = false;
 
-  InspectTemplate() : super();
-  InspectTemplate.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectTemplate.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectTemplate._() : super();
+  factory InspectTemplate() => create();
+  factory InspectTemplate.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectTemplate.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectTemplate clone() => InspectTemplate()..mergeFromMessage(this);
   InspectTemplate copyWith(void Function(InspectTemplate) updates) =>
       super.copyWith((message) => updates(message as InspectTemplate));
   $pb.BuilderInfo get info_ => _i;
-  static InspectTemplate create() => InspectTemplate();
+  @$core.pragma('dart2js:noInline')
+  static InspectTemplate create() => InspectTemplate._();
   InspectTemplate createEmptyInstance() => create();
   static $pb.PbList<InspectTemplate> createRepeated() =>
       $pb.PbList<InspectTemplate>();
@@ -6246,16 +6495,16 @@ class InspectTemplate extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  $2.Timestamp get createTime => $_getN(3);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $2.Timestamp get updateTime => $_getN(4);
-  set updateTime($2.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(4);
+  set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -6277,26 +6526,28 @@ class DeidentifyTemplate extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<$2.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..a<DeidentifyConfig>(6, 'deidentifyConfig', $pb.PbFieldType.OM,
         DeidentifyConfig.getDefault, DeidentifyConfig.create)
     ..hasRequiredFields = false;
 
-  DeidentifyTemplate() : super();
-  DeidentifyTemplate.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeidentifyTemplate.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeidentifyTemplate._() : super();
+  factory DeidentifyTemplate() => create();
+  factory DeidentifyTemplate.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeidentifyTemplate.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeidentifyTemplate clone() => DeidentifyTemplate()..mergeFromMessage(this);
   DeidentifyTemplate copyWith(void Function(DeidentifyTemplate) updates) =>
       super.copyWith((message) => updates(message as DeidentifyTemplate));
   $pb.BuilderInfo get info_ => _i;
-  static DeidentifyTemplate create() => DeidentifyTemplate();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyTemplate create() => DeidentifyTemplate._();
   DeidentifyTemplate createEmptyInstance() => create();
   static $pb.PbList<DeidentifyTemplate> createRepeated() =>
       $pb.PbList<DeidentifyTemplate>();
@@ -6328,16 +6579,16 @@ class DeidentifyTemplate extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(2);
   void clearDescription() => clearField(3);
 
-  $2.Timestamp get createTime => $_getN(3);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(3);
+  set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasCreateTime() => $_has(3);
   void clearCreateTime() => clearField(4);
 
-  $2.Timestamp get updateTime => $_getN(4);
-  set updateTime($2.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(4);
+  set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -6356,37 +6607,39 @@ class DeidentifyTemplate extends $pb.GeneratedMessage {
 class Error extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Error',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$6.Status>(1, 'details', $pb.PbFieldType.OM, $6.Status.getDefault,
-        $6.Status.create)
-    ..pc<$2.Timestamp>(2, 'timestamps', $pb.PbFieldType.PM, $2.Timestamp.create)
+    ..a<$7.Status>(1, 'details', $pb.PbFieldType.OM, $7.Status.getDefault,
+        $7.Status.create)
+    ..pc<$3.Timestamp>(2, 'timestamps', $pb.PbFieldType.PM, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Error() : super();
-  Error.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Error.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Error._() : super();
+  factory Error() => create();
+  factory Error.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Error.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Error clone() => Error()..mergeFromMessage(this);
   Error copyWith(void Function(Error) updates) =>
       super.copyWith((message) => updates(message as Error));
   $pb.BuilderInfo get info_ => _i;
-  static Error create() => Error();
+  @$core.pragma('dart2js:noInline')
+  static Error create() => Error._();
   Error createEmptyInstance() => create();
   static $pb.PbList<Error> createRepeated() => $pb.PbList<Error>();
   static Error getDefault() => _defaultInstance ??= create()..freeze();
   static Error _defaultInstance;
 
-  $6.Status get details => $_getN(0);
-  set details($6.Status v) {
+  $7.Status get details => $_getN(0);
+  set details($7.Status v) {
     setField(1, v);
   }
 
   $core.bool hasDetails() => $_has(0);
   void clearDetails() => clearField(1);
 
-  $core.List<$2.Timestamp> get timestamps => $_getList(1);
+  $core.List<$3.Timestamp> get timestamps => $_getList(1);
 }
 
 enum JobTrigger_Trigger_Trigger { schedule, notSet }
@@ -6399,23 +6652,25 @@ class JobTrigger_Trigger extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobTrigger.Trigger',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1])
     ..a<Schedule>(
         1, 'schedule', $pb.PbFieldType.OM, Schedule.getDefault, Schedule.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  JobTrigger_Trigger() : super();
-  JobTrigger_Trigger.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobTrigger_Trigger.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobTrigger_Trigger._() : super();
+  factory JobTrigger_Trigger() => create();
+  factory JobTrigger_Trigger.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobTrigger_Trigger.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobTrigger_Trigger clone() => JobTrigger_Trigger()..mergeFromMessage(this);
   JobTrigger_Trigger copyWith(void Function(JobTrigger_Trigger) updates) =>
       super.copyWith((message) => updates(message as JobTrigger_Trigger));
   $pb.BuilderInfo get info_ => _i;
-  static JobTrigger_Trigger create() => JobTrigger_Trigger();
+  @$core.pragma('dart2js:noInline')
+  static JobTrigger_Trigger create() => JobTrigger_Trigger._();
   JobTrigger_Trigger createEmptyInstance() => create();
   static $pb.PbList<JobTrigger_Trigger> createRepeated() =>
       $pb.PbList<JobTrigger_Trigger>();
@@ -6445,6 +6700,7 @@ class JobTrigger extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobTrigger',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [4])
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
@@ -6453,12 +6709,12 @@ class JobTrigger extends $pb.GeneratedMessage {
     ..pc<JobTrigger_Trigger>(
         5, 'triggers', $pb.PbFieldType.PM, JobTrigger_Trigger.create)
     ..pc<Error>(6, 'errors', $pb.PbFieldType.PM, Error.create)
-    ..a<$2.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(9, 'lastRunTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(9, 'lastRunTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..e<JobTrigger_Status>(
         10,
         'status',
@@ -6466,21 +6722,22 @@ class JobTrigger extends $pb.GeneratedMessage {
         JobTrigger_Status.STATUS_UNSPECIFIED,
         JobTrigger_Status.valueOf,
         JobTrigger_Status.values)
-    ..oo(0, [4])
     ..hasRequiredFields = false;
 
-  JobTrigger() : super();
-  JobTrigger.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  JobTrigger.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  JobTrigger._() : super();
+  factory JobTrigger() => create();
+  factory JobTrigger.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory JobTrigger.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   JobTrigger clone() => JobTrigger()..mergeFromMessage(this);
   JobTrigger copyWith(void Function(JobTrigger) updates) =>
       super.copyWith((message) => updates(message as JobTrigger));
   $pb.BuilderInfo get info_ => _i;
-  static JobTrigger create() => JobTrigger();
+  @$core.pragma('dart2js:noInline')
+  static JobTrigger create() => JobTrigger._();
   JobTrigger createEmptyInstance() => create();
   static $pb.PbList<JobTrigger> createRepeated() => $pb.PbList<JobTrigger>();
   static JobTrigger getDefault() => _defaultInstance ??= create()..freeze();
@@ -6525,24 +6782,24 @@ class JobTrigger extends $pb.GeneratedMessage {
 
   $core.List<Error> get errors => $_getList(5);
 
-  $2.Timestamp get createTime => $_getN(6);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(6);
+  set createTime($3.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasCreateTime() => $_has(6);
   void clearCreateTime() => clearField(7);
 
-  $2.Timestamp get updateTime => $_getN(7);
-  set updateTime($2.Timestamp v) {
+  $3.Timestamp get updateTime => $_getN(7);
+  set updateTime($3.Timestamp v) {
     setField(8, v);
   }
 
   $core.bool hasUpdateTime() => $_has(7);
   void clearUpdateTime() => clearField(8);
 
-  $2.Timestamp get lastRunTime => $_getN(8);
-  set lastRunTime($2.Timestamp v) {
+  $3.Timestamp get lastRunTime => $_getN(8);
+  set lastRunTime($3.Timestamp v) {
     setField(9, v);
   }
 
@@ -6565,18 +6822,20 @@ class Action_SaveFindings extends $pb.GeneratedMessage {
         OutputStorageConfig.getDefault, OutputStorageConfig.create)
     ..hasRequiredFields = false;
 
-  Action_SaveFindings() : super();
-  Action_SaveFindings.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action_SaveFindings.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action_SaveFindings._() : super();
+  factory Action_SaveFindings() => create();
+  factory Action_SaveFindings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_SaveFindings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action_SaveFindings clone() => Action_SaveFindings()..mergeFromMessage(this);
   Action_SaveFindings copyWith(void Function(Action_SaveFindings) updates) =>
       super.copyWith((message) => updates(message as Action_SaveFindings));
   $pb.BuilderInfo get info_ => _i;
-  static Action_SaveFindings create() => Action_SaveFindings();
+  @$core.pragma('dart2js:noInline')
+  static Action_SaveFindings create() => Action_SaveFindings._();
   Action_SaveFindings createEmptyInstance() => create();
   static $pb.PbList<Action_SaveFindings> createRepeated() =>
       $pb.PbList<Action_SaveFindings>();
@@ -6599,20 +6858,22 @@ class Action_PublishToPubSub extends $pb.GeneratedMessage {
     ..aOS(1, 'topic')
     ..hasRequiredFields = false;
 
-  Action_PublishToPubSub() : super();
-  Action_PublishToPubSub.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action_PublishToPubSub.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action_PublishToPubSub._() : super();
+  factory Action_PublishToPubSub() => create();
+  factory Action_PublishToPubSub.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_PublishToPubSub.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action_PublishToPubSub clone() =>
       Action_PublishToPubSub()..mergeFromMessage(this);
   Action_PublishToPubSub copyWith(
           void Function(Action_PublishToPubSub) updates) =>
       super.copyWith((message) => updates(message as Action_PublishToPubSub));
   $pb.BuilderInfo get info_ => _i;
-  static Action_PublishToPubSub create() => Action_PublishToPubSub();
+  @$core.pragma('dart2js:noInline')
+  static Action_PublishToPubSub create() => Action_PublishToPubSub._();
   Action_PublishToPubSub createEmptyInstance() => create();
   static $pb.PbList<Action_PublishToPubSub> createRepeated() =>
       $pb.PbList<Action_PublishToPubSub>();
@@ -6635,13 +6896,14 @@ class Action_PublishSummaryToCscc extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..hasRequiredFields = false;
 
-  Action_PublishSummaryToCscc() : super();
-  Action_PublishSummaryToCscc.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action_PublishSummaryToCscc.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action_PublishSummaryToCscc._() : super();
+  factory Action_PublishSummaryToCscc() => create();
+  factory Action_PublishSummaryToCscc.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_PublishSummaryToCscc.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action_PublishSummaryToCscc clone() =>
       Action_PublishSummaryToCscc()..mergeFromMessage(this);
   Action_PublishSummaryToCscc copyWith(
@@ -6649,7 +6911,9 @@ class Action_PublishSummaryToCscc extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Action_PublishSummaryToCscc));
   $pb.BuilderInfo get info_ => _i;
-  static Action_PublishSummaryToCscc create() => Action_PublishSummaryToCscc();
+  @$core.pragma('dart2js:noInline')
+  static Action_PublishSummaryToCscc create() =>
+      Action_PublishSummaryToCscc._();
   Action_PublishSummaryToCscc createEmptyInstance() => create();
   static $pb.PbList<Action_PublishSummaryToCscc> createRepeated() =>
       $pb.PbList<Action_PublishSummaryToCscc>();
@@ -6658,19 +6922,54 @@ class Action_PublishSummaryToCscc extends $pb.GeneratedMessage {
   static Action_PublishSummaryToCscc _defaultInstance;
 }
 
+class Action_PublishFindingsToCloudDataCatalog extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Action.PublishFindingsToCloudDataCatalog',
+      package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..hasRequiredFields = false;
+
+  Action_PublishFindingsToCloudDataCatalog._() : super();
+  factory Action_PublishFindingsToCloudDataCatalog() => create();
+  factory Action_PublishFindingsToCloudDataCatalog.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_PublishFindingsToCloudDataCatalog.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  Action_PublishFindingsToCloudDataCatalog clone() =>
+      Action_PublishFindingsToCloudDataCatalog()..mergeFromMessage(this);
+  Action_PublishFindingsToCloudDataCatalog copyWith(
+          void Function(Action_PublishFindingsToCloudDataCatalog) updates) =>
+      super.copyWith((message) =>
+          updates(message as Action_PublishFindingsToCloudDataCatalog));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Action_PublishFindingsToCloudDataCatalog create() =>
+      Action_PublishFindingsToCloudDataCatalog._();
+  Action_PublishFindingsToCloudDataCatalog createEmptyInstance() => create();
+  static $pb.PbList<Action_PublishFindingsToCloudDataCatalog>
+      createRepeated() =>
+          $pb.PbList<Action_PublishFindingsToCloudDataCatalog>();
+  static Action_PublishFindingsToCloudDataCatalog getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static Action_PublishFindingsToCloudDataCatalog _defaultInstance;
+}
+
 class Action_JobNotificationEmails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Action.JobNotificationEmails',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..hasRequiredFields = false;
 
-  Action_JobNotificationEmails() : super();
-  Action_JobNotificationEmails.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action_JobNotificationEmails.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action_JobNotificationEmails._() : super();
+  factory Action_JobNotificationEmails() => create();
+  factory Action_JobNotificationEmails.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action_JobNotificationEmails.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action_JobNotificationEmails clone() =>
       Action_JobNotificationEmails()..mergeFromMessage(this);
   Action_JobNotificationEmails copyWith(
@@ -6678,8 +6977,9 @@ class Action_JobNotificationEmails extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Action_JobNotificationEmails));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Action_JobNotificationEmails create() =>
-      Action_JobNotificationEmails();
+      Action_JobNotificationEmails._();
   Action_JobNotificationEmails createEmptyInstance() => create();
   static $pb.PbList<Action_JobNotificationEmails> createRepeated() =>
       $pb.PbList<Action_JobNotificationEmails>();
@@ -6692,6 +6992,7 @@ enum Action_Action {
   saveFindings,
   pubSub,
   publishSummaryToCscc,
+  publishFindingsToCloudDataCatalog,
   jobNotificationEmails,
   notSet
 }
@@ -6701,11 +7002,13 @@ class Action extends $pb.GeneratedMessage {
     1: Action_Action.saveFindings,
     2: Action_Action.pubSub,
     3: Action_Action.publishSummaryToCscc,
+    5: Action_Action.publishFindingsToCloudDataCatalog,
     8: Action_Action.jobNotificationEmails,
     0: Action_Action.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Action',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1, 2, 3, 5, 8])
     ..a<Action_SaveFindings>(1, 'saveFindings', $pb.PbFieldType.OM,
         Action_SaveFindings.getDefault, Action_SaveFindings.create)
     ..a<Action_PublishToPubSub>(2, 'pubSub', $pb.PbFieldType.OM,
@@ -6716,27 +7019,34 @@ class Action extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Action_PublishSummaryToCscc.getDefault,
         Action_PublishSummaryToCscc.create)
+    ..a<Action_PublishFindingsToCloudDataCatalog>(
+        5,
+        'publishFindingsToCloudDataCatalog',
+        $pb.PbFieldType.OM,
+        Action_PublishFindingsToCloudDataCatalog.getDefault,
+        Action_PublishFindingsToCloudDataCatalog.create)
     ..a<Action_JobNotificationEmails>(
         8,
         'jobNotificationEmails',
         $pb.PbFieldType.OM,
         Action_JobNotificationEmails.getDefault,
         Action_JobNotificationEmails.create)
-    ..oo(0, [1, 2, 3, 8])
     ..hasRequiredFields = false;
 
-  Action() : super();
-  Action.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Action.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Action._() : super();
+  factory Action() => create();
+  factory Action.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Action.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Action clone() => Action()..mergeFromMessage(this);
   Action copyWith(void Function(Action) updates) =>
       super.copyWith((message) => updates(message as Action));
   $pb.BuilderInfo get info_ => _i;
-  static Action create() => Action();
+  @$core.pragma('dart2js:noInline')
+  static Action create() => Action._();
   Action createEmptyInstance() => create();
   static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
   static Action getDefault() => _defaultInstance ??= create()..freeze();
@@ -6769,12 +7079,22 @@ class Action extends $pb.GeneratedMessage {
   $core.bool hasPublishSummaryToCscc() => $_has(2);
   void clearPublishSummaryToCscc() => clearField(3);
 
-  Action_JobNotificationEmails get jobNotificationEmails => $_getN(3);
+  Action_PublishFindingsToCloudDataCatalog
+      get publishFindingsToCloudDataCatalog => $_getN(3);
+  set publishFindingsToCloudDataCatalog(
+      Action_PublishFindingsToCloudDataCatalog v) {
+    setField(5, v);
+  }
+
+  $core.bool hasPublishFindingsToCloudDataCatalog() => $_has(3);
+  void clearPublishFindingsToCloudDataCatalog() => clearField(5);
+
+  Action_JobNotificationEmails get jobNotificationEmails => $_getN(4);
   set jobNotificationEmails(Action_JobNotificationEmails v) {
     setField(8, v);
   }
 
-  $core.bool hasJobNotificationEmails() => $_has(3);
+  $core.bool hasJobNotificationEmails() => $_has(4);
   void clearJobNotificationEmails() => clearField(8);
 }
 
@@ -6788,13 +7108,14 @@ class CreateInspectTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'templateId')
     ..hasRequiredFields = false;
 
-  CreateInspectTemplateRequest() : super();
-  CreateInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateInspectTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateInspectTemplateRequest._() : super();
+  factory CreateInspectTemplateRequest() => create();
+  factory CreateInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateInspectTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateInspectTemplateRequest clone() =>
       CreateInspectTemplateRequest()..mergeFromMessage(this);
   CreateInspectTemplateRequest copyWith(
@@ -6802,8 +7123,9 @@ class CreateInspectTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateInspectTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateInspectTemplateRequest create() =>
-      CreateInspectTemplateRequest();
+      CreateInspectTemplateRequest._();
   CreateInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<CreateInspectTemplateRequest> createRepeated() =>
       $pb.PbList<CreateInspectTemplateRequest>();
@@ -6843,17 +7165,18 @@ class UpdateInspectTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<InspectTemplate>(2, 'inspectTemplate', $pb.PbFieldType.OM,
         InspectTemplate.getDefault, InspectTemplate.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $8.FieldMask.getDefault, $8.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateInspectTemplateRequest() : super();
-  UpdateInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateInspectTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateInspectTemplateRequest._() : super();
+  factory UpdateInspectTemplateRequest() => create();
+  factory UpdateInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateInspectTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateInspectTemplateRequest clone() =>
       UpdateInspectTemplateRequest()..mergeFromMessage(this);
   UpdateInspectTemplateRequest copyWith(
@@ -6861,8 +7184,9 @@ class UpdateInspectTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateInspectTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateInspectTemplateRequest create() =>
-      UpdateInspectTemplateRequest();
+      UpdateInspectTemplateRequest._();
   UpdateInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateInspectTemplateRequest> createRepeated() =>
       $pb.PbList<UpdateInspectTemplateRequest>();
@@ -6886,8 +7210,8 @@ class UpdateInspectTemplateRequest extends $pb.GeneratedMessage {
   $core.bool hasInspectTemplate() => $_has(1);
   void clearInspectTemplate() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $8.FieldMask get updateMask => $_getN(2);
+  set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
@@ -6901,13 +7225,14 @@ class GetInspectTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetInspectTemplateRequest() : super();
-  GetInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetInspectTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetInspectTemplateRequest._() : super();
+  factory GetInspectTemplateRequest() => create();
+  factory GetInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetInspectTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetInspectTemplateRequest clone() =>
       GetInspectTemplateRequest()..mergeFromMessage(this);
   GetInspectTemplateRequest copyWith(
@@ -6915,7 +7240,8 @@ class GetInspectTemplateRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as GetInspectTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetInspectTemplateRequest create() => GetInspectTemplateRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetInspectTemplateRequest create() => GetInspectTemplateRequest._();
   GetInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<GetInspectTemplateRequest> createRepeated() =>
       $pb.PbList<GetInspectTemplateRequest>();
@@ -6942,13 +7268,14 @@ class ListInspectTemplatesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'orderBy')
     ..hasRequiredFields = false;
 
-  ListInspectTemplatesRequest() : super();
-  ListInspectTemplatesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInspectTemplatesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListInspectTemplatesRequest._() : super();
+  factory ListInspectTemplatesRequest() => create();
+  factory ListInspectTemplatesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListInspectTemplatesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListInspectTemplatesRequest clone() =>
       ListInspectTemplatesRequest()..mergeFromMessage(this);
   ListInspectTemplatesRequest copyWith(
@@ -6956,7 +7283,9 @@ class ListInspectTemplatesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListInspectTemplatesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListInspectTemplatesRequest create() => ListInspectTemplatesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListInspectTemplatesRequest create() =>
+      ListInspectTemplatesRequest._();
   ListInspectTemplatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInspectTemplatesRequest> createRepeated() =>
       $pb.PbList<ListInspectTemplatesRequest>();
@@ -7006,13 +7335,14 @@ class ListInspectTemplatesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListInspectTemplatesResponse() : super();
-  ListInspectTemplatesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListInspectTemplatesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListInspectTemplatesResponse._() : super();
+  factory ListInspectTemplatesResponse() => create();
+  factory ListInspectTemplatesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListInspectTemplatesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListInspectTemplatesResponse clone() =>
       ListInspectTemplatesResponse()..mergeFromMessage(this);
   ListInspectTemplatesResponse copyWith(
@@ -7020,8 +7350,9 @@ class ListInspectTemplatesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListInspectTemplatesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListInspectTemplatesResponse create() =>
-      ListInspectTemplatesResponse();
+      ListInspectTemplatesResponse._();
   ListInspectTemplatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInspectTemplatesResponse> createRepeated() =>
       $pb.PbList<ListInspectTemplatesResponse>();
@@ -7047,13 +7378,14 @@ class DeleteInspectTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteInspectTemplateRequest() : super();
-  DeleteInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteInspectTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteInspectTemplateRequest._() : super();
+  factory DeleteInspectTemplateRequest() => create();
+  factory DeleteInspectTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteInspectTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteInspectTemplateRequest clone() =>
       DeleteInspectTemplateRequest()..mergeFromMessage(this);
   DeleteInspectTemplateRequest copyWith(
@@ -7061,8 +7393,9 @@ class DeleteInspectTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteInspectTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteInspectTemplateRequest create() =>
-      DeleteInspectTemplateRequest();
+      DeleteInspectTemplateRequest._();
   DeleteInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInspectTemplateRequest> createRepeated() =>
       $pb.PbList<DeleteInspectTemplateRequest>();
@@ -7088,20 +7421,22 @@ class CreateJobTriggerRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'triggerId')
     ..hasRequiredFields = false;
 
-  CreateJobTriggerRequest() : super();
-  CreateJobTriggerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateJobTriggerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateJobTriggerRequest._() : super();
+  factory CreateJobTriggerRequest() => create();
+  factory CreateJobTriggerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateJobTriggerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateJobTriggerRequest clone() =>
       CreateJobTriggerRequest()..mergeFromMessage(this);
   CreateJobTriggerRequest copyWith(
           void Function(CreateJobTriggerRequest) updates) =>
       super.copyWith((message) => updates(message as CreateJobTriggerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateJobTriggerRequest create() => CreateJobTriggerRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateJobTriggerRequest create() => CreateJobTriggerRequest._();
   CreateJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<CreateJobTriggerRequest> createRepeated() =>
       $pb.PbList<CreateJobTriggerRequest>();
@@ -7140,13 +7475,14 @@ class ActivateJobTriggerRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  ActivateJobTriggerRequest() : super();
-  ActivateJobTriggerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ActivateJobTriggerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ActivateJobTriggerRequest._() : super();
+  factory ActivateJobTriggerRequest() => create();
+  factory ActivateJobTriggerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ActivateJobTriggerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ActivateJobTriggerRequest clone() =>
       ActivateJobTriggerRequest()..mergeFromMessage(this);
   ActivateJobTriggerRequest copyWith(
@@ -7154,7 +7490,8 @@ class ActivateJobTriggerRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ActivateJobTriggerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ActivateJobTriggerRequest create() => ActivateJobTriggerRequest();
+  @$core.pragma('dart2js:noInline')
+  static ActivateJobTriggerRequest create() => ActivateJobTriggerRequest._();
   ActivateJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<ActivateJobTriggerRequest> createRepeated() =>
       $pb.PbList<ActivateJobTriggerRequest>();
@@ -7177,24 +7514,26 @@ class UpdateJobTriggerRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<JobTrigger>(2, 'jobTrigger', $pb.PbFieldType.OM, JobTrigger.getDefault,
         JobTrigger.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $8.FieldMask.getDefault, $8.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateJobTriggerRequest() : super();
-  UpdateJobTriggerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateJobTriggerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateJobTriggerRequest._() : super();
+  factory UpdateJobTriggerRequest() => create();
+  factory UpdateJobTriggerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateJobTriggerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateJobTriggerRequest clone() =>
       UpdateJobTriggerRequest()..mergeFromMessage(this);
   UpdateJobTriggerRequest copyWith(
           void Function(UpdateJobTriggerRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateJobTriggerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateJobTriggerRequest create() => UpdateJobTriggerRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateJobTriggerRequest create() => UpdateJobTriggerRequest._();
   UpdateJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateJobTriggerRequest> createRepeated() =>
       $pb.PbList<UpdateJobTriggerRequest>();
@@ -7218,8 +7557,8 @@ class UpdateJobTriggerRequest extends $pb.GeneratedMessage {
   $core.bool hasJobTrigger() => $_has(1);
   void clearJobTrigger() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $8.FieldMask get updateMask => $_getN(2);
+  set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
@@ -7233,19 +7572,21 @@ class GetJobTriggerRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetJobTriggerRequest() : super();
-  GetJobTriggerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetJobTriggerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetJobTriggerRequest._() : super();
+  factory GetJobTriggerRequest() => create();
+  factory GetJobTriggerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetJobTriggerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetJobTriggerRequest clone() =>
       GetJobTriggerRequest()..mergeFromMessage(this);
   GetJobTriggerRequest copyWith(void Function(GetJobTriggerRequest) updates) =>
       super.copyWith((message) => updates(message as GetJobTriggerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetJobTriggerRequest create() => GetJobTriggerRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetJobTriggerRequest create() => GetJobTriggerRequest._();
   GetJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<GetJobTriggerRequest> createRepeated() =>
       $pb.PbList<GetJobTriggerRequest>();
@@ -7273,27 +7614,29 @@ class CreateDlpJobRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDlpJobRequest',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [2, 3])
     ..aOS(1, 'parent')
     ..a<InspectJobConfig>(2, 'inspectJob', $pb.PbFieldType.OM,
         InspectJobConfig.getDefault, InspectJobConfig.create)
     ..a<RiskAnalysisJobConfig>(3, 'riskJob', $pb.PbFieldType.OM,
         RiskAnalysisJobConfig.getDefault, RiskAnalysisJobConfig.create)
     ..aOS(4, 'jobId')
-    ..oo(0, [2, 3])
     ..hasRequiredFields = false;
 
-  CreateDlpJobRequest() : super();
-  CreateDlpJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDlpJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDlpJobRequest._() : super();
+  factory CreateDlpJobRequest() => create();
+  factory CreateDlpJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDlpJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDlpJobRequest clone() => CreateDlpJobRequest()..mergeFromMessage(this);
   CreateDlpJobRequest copyWith(void Function(CreateDlpJobRequest) updates) =>
       super.copyWith((message) => updates(message as CreateDlpJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateDlpJobRequest create() => CreateDlpJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateDlpJobRequest create() => CreateDlpJobRequest._();
   CreateDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDlpJobRequest> createRepeated() =>
       $pb.PbList<CreateDlpJobRequest>();
@@ -7348,20 +7691,22 @@ class ListJobTriggersRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'filter')
     ..hasRequiredFields = false;
 
-  ListJobTriggersRequest() : super();
-  ListJobTriggersRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListJobTriggersRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListJobTriggersRequest._() : super();
+  factory ListJobTriggersRequest() => create();
+  factory ListJobTriggersRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListJobTriggersRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListJobTriggersRequest clone() =>
       ListJobTriggersRequest()..mergeFromMessage(this);
   ListJobTriggersRequest copyWith(
           void Function(ListJobTriggersRequest) updates) =>
       super.copyWith((message) => updates(message as ListJobTriggersRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListJobTriggersRequest create() => ListJobTriggersRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListJobTriggersRequest create() => ListJobTriggersRequest._();
   ListJobTriggersRequest createEmptyInstance() => create();
   static $pb.PbList<ListJobTriggersRequest> createRepeated() =>
       $pb.PbList<ListJobTriggersRequest>();
@@ -7417,20 +7762,22 @@ class ListJobTriggersResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListJobTriggersResponse() : super();
-  ListJobTriggersResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListJobTriggersResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListJobTriggersResponse._() : super();
+  factory ListJobTriggersResponse() => create();
+  factory ListJobTriggersResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListJobTriggersResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListJobTriggersResponse clone() =>
       ListJobTriggersResponse()..mergeFromMessage(this);
   ListJobTriggersResponse copyWith(
           void Function(ListJobTriggersResponse) updates) =>
       super.copyWith((message) => updates(message as ListJobTriggersResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListJobTriggersResponse create() => ListJobTriggersResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListJobTriggersResponse create() => ListJobTriggersResponse._();
   ListJobTriggersResponse createEmptyInstance() => create();
   static $pb.PbList<ListJobTriggersResponse> createRepeated() =>
       $pb.PbList<ListJobTriggersResponse>();
@@ -7455,20 +7802,22 @@ class DeleteJobTriggerRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteJobTriggerRequest() : super();
-  DeleteJobTriggerRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteJobTriggerRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteJobTriggerRequest._() : super();
+  factory DeleteJobTriggerRequest() => create();
+  factory DeleteJobTriggerRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteJobTriggerRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteJobTriggerRequest clone() =>
       DeleteJobTriggerRequest()..mergeFromMessage(this);
   DeleteJobTriggerRequest copyWith(
           void Function(DeleteJobTriggerRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteJobTriggerRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteJobTriggerRequest create() => DeleteJobTriggerRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteJobTriggerRequest create() => DeleteJobTriggerRequest._();
   DeleteJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteJobTriggerRequest> createRepeated() =>
       $pb.PbList<DeleteJobTriggerRequest>();
@@ -7488,26 +7837,28 @@ class DeleteJobTriggerRequest extends $pb.GeneratedMessage {
 class InspectJobConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectJobConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.StorageConfig>(1, 'storageConfig', $pb.PbFieldType.OM,
-        $1.StorageConfig.getDefault, $1.StorageConfig.create)
+    ..a<$2.StorageConfig>(1, 'storageConfig', $pb.PbFieldType.OM,
+        $2.StorageConfig.getDefault, $2.StorageConfig.create)
     ..a<InspectConfig>(2, 'inspectConfig', $pb.PbFieldType.OM,
         InspectConfig.getDefault, InspectConfig.create)
     ..aOS(3, 'inspectTemplateName')
     ..pc<Action>(4, 'actions', $pb.PbFieldType.PM, Action.create)
     ..hasRequiredFields = false;
 
-  InspectJobConfig() : super();
-  InspectJobConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InspectJobConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InspectJobConfig._() : super();
+  factory InspectJobConfig() => create();
+  factory InspectJobConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InspectJobConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InspectJobConfig clone() => InspectJobConfig()..mergeFromMessage(this);
   InspectJobConfig copyWith(void Function(InspectJobConfig) updates) =>
       super.copyWith((message) => updates(message as InspectJobConfig));
   $pb.BuilderInfo get info_ => _i;
-  static InspectJobConfig create() => InspectJobConfig();
+  @$core.pragma('dart2js:noInline')
+  static InspectJobConfig create() => InspectJobConfig._();
   InspectJobConfig createEmptyInstance() => create();
   static $pb.PbList<InspectJobConfig> createRepeated() =>
       $pb.PbList<InspectJobConfig>();
@@ -7515,8 +7866,8 @@ class InspectJobConfig extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static InspectJobConfig _defaultInstance;
 
-  $1.StorageConfig get storageConfig => $_getN(0);
-  set storageConfig($1.StorageConfig v) {
+  $2.StorageConfig get storageConfig => $_getN(0);
+  set storageConfig($2.StorageConfig v) {
     setField(1, v);
   }
 
@@ -7552,6 +7903,7 @@ class DlpJob extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DlpJob',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [4, 5])
     ..aOS(1, 'name')
     ..e<DlpJobType>(
         2,
@@ -7575,29 +7927,30 @@ class DlpJob extends $pb.GeneratedMessage {
         AnalyzeDataSourceRiskDetails.create)
     ..a<InspectDataSourceDetails>(5, 'inspectDetails', $pb.PbFieldType.OM,
         InspectDataSourceDetails.getDefault, InspectDataSourceDetails.create)
-    ..a<$2.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
-        $2.Timestamp.create)
+    ..a<$3.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..aOS(10, 'jobTriggerName')
     ..pc<Error>(11, 'errors', $pb.PbFieldType.PM, Error.create)
-    ..oo(0, [4, 5])
     ..hasRequiredFields = false;
 
-  DlpJob() : super();
-  DlpJob.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DlpJob.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DlpJob._() : super();
+  factory DlpJob() => create();
+  factory DlpJob.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DlpJob.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DlpJob clone() => DlpJob()..mergeFromMessage(this);
   DlpJob copyWith(void Function(DlpJob) updates) =>
       super.copyWith((message) => updates(message as DlpJob));
   $pb.BuilderInfo get info_ => _i;
-  static DlpJob create() => DlpJob();
+  @$core.pragma('dart2js:noInline')
+  static DlpJob create() => DlpJob._();
   DlpJob createEmptyInstance() => create();
   static $pb.PbList<DlpJob> createRepeated() => $pb.PbList<DlpJob>();
   static DlpJob getDefault() => _defaultInstance ??= create()..freeze();
@@ -7646,24 +7999,24 @@ class DlpJob extends $pb.GeneratedMessage {
   $core.bool hasInspectDetails() => $_has(4);
   void clearInspectDetails() => clearField(5);
 
-  $2.Timestamp get createTime => $_getN(5);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(5);
+  set createTime($3.Timestamp v) {
     setField(6, v);
   }
 
   $core.bool hasCreateTime() => $_has(5);
   void clearCreateTime() => clearField(6);
 
-  $2.Timestamp get startTime => $_getN(6);
-  set startTime($2.Timestamp v) {
+  $3.Timestamp get startTime => $_getN(6);
+  set startTime($3.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasStartTime() => $_has(6);
   void clearStartTime() => clearField(7);
 
-  $2.Timestamp get endTime => $_getN(7);
-  set endTime($2.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(7);
+  set endTime($3.Timestamp v) {
     setField(8, v);
   }
 
@@ -7687,18 +8040,20 @@ class GetDlpJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetDlpJobRequest() : super();
-  GetDlpJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDlpJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDlpJobRequest._() : super();
+  factory GetDlpJobRequest() => create();
+  factory GetDlpJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDlpJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDlpJobRequest clone() => GetDlpJobRequest()..mergeFromMessage(this);
   GetDlpJobRequest copyWith(void Function(GetDlpJobRequest) updates) =>
       super.copyWith((message) => updates(message as GetDlpJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetDlpJobRequest create() => GetDlpJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetDlpJobRequest create() => GetDlpJobRequest._();
   GetDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetDlpJobRequest> createRepeated() =>
       $pb.PbList<GetDlpJobRequest>();
@@ -7732,18 +8087,20 @@ class ListDlpJobsRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'orderBy')
     ..hasRequiredFields = false;
 
-  ListDlpJobsRequest() : super();
-  ListDlpJobsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDlpJobsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDlpJobsRequest._() : super();
+  factory ListDlpJobsRequest() => create();
+  factory ListDlpJobsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDlpJobsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDlpJobsRequest clone() => ListDlpJobsRequest()..mergeFromMessage(this);
   ListDlpJobsRequest copyWith(void Function(ListDlpJobsRequest) updates) =>
       super.copyWith((message) => updates(message as ListDlpJobsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListDlpJobsRequest create() => ListDlpJobsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListDlpJobsRequest create() => ListDlpJobsRequest._();
   ListDlpJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDlpJobsRequest> createRepeated() =>
       $pb.PbList<ListDlpJobsRequest>();
@@ -7807,18 +8164,20 @@ class ListDlpJobsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListDlpJobsResponse() : super();
-  ListDlpJobsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDlpJobsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDlpJobsResponse._() : super();
+  factory ListDlpJobsResponse() => create();
+  factory ListDlpJobsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDlpJobsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDlpJobsResponse clone() => ListDlpJobsResponse()..mergeFromMessage(this);
   ListDlpJobsResponse copyWith(void Function(ListDlpJobsResponse) updates) =>
       super.copyWith((message) => updates(message as ListDlpJobsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListDlpJobsResponse create() => ListDlpJobsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListDlpJobsResponse create() => ListDlpJobsResponse._();
   ListDlpJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDlpJobsResponse> createRepeated() =>
       $pb.PbList<ListDlpJobsResponse>();
@@ -7843,18 +8202,20 @@ class CancelDlpJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  CancelDlpJobRequest() : super();
-  CancelDlpJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CancelDlpJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CancelDlpJobRequest._() : super();
+  factory CancelDlpJobRequest() => create();
+  factory CancelDlpJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CancelDlpJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CancelDlpJobRequest clone() => CancelDlpJobRequest()..mergeFromMessage(this);
   CancelDlpJobRequest copyWith(void Function(CancelDlpJobRequest) updates) =>
       super.copyWith((message) => updates(message as CancelDlpJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CancelDlpJobRequest create() => CancelDlpJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static CancelDlpJobRequest create() => CancelDlpJobRequest._();
   CancelDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<CancelDlpJobRequest> createRepeated() =>
       $pb.PbList<CancelDlpJobRequest>();
@@ -7877,18 +8238,20 @@ class DeleteDlpJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteDlpJobRequest() : super();
-  DeleteDlpJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteDlpJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteDlpJobRequest._() : super();
+  factory DeleteDlpJobRequest() => create();
+  factory DeleteDlpJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteDlpJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteDlpJobRequest clone() => DeleteDlpJobRequest()..mergeFromMessage(this);
   DeleteDlpJobRequest copyWith(void Function(DeleteDlpJobRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteDlpJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteDlpJobRequest create() => DeleteDlpJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDlpJobRequest create() => DeleteDlpJobRequest._();
   DeleteDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDlpJobRequest> createRepeated() =>
       $pb.PbList<DeleteDlpJobRequest>();
@@ -7915,13 +8278,14 @@ class CreateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'templateId')
     ..hasRequiredFields = false;
 
-  CreateDeidentifyTemplateRequest() : super();
-  CreateDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateDeidentifyTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateDeidentifyTemplateRequest._() : super();
+  factory CreateDeidentifyTemplateRequest() => create();
+  factory CreateDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateDeidentifyTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateDeidentifyTemplateRequest clone() =>
       CreateDeidentifyTemplateRequest()..mergeFromMessage(this);
   CreateDeidentifyTemplateRequest copyWith(
@@ -7929,8 +8293,9 @@ class CreateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateDeidentifyTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateDeidentifyTemplateRequest create() =>
-      CreateDeidentifyTemplateRequest();
+      CreateDeidentifyTemplateRequest._();
   CreateDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<CreateDeidentifyTemplateRequest>();
@@ -7970,17 +8335,18 @@ class UpdateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<DeidentifyTemplate>(2, 'deidentifyTemplate', $pb.PbFieldType.OM,
         DeidentifyTemplate.getDefault, DeidentifyTemplate.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $8.FieldMask.getDefault, $8.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateDeidentifyTemplateRequest() : super();
-  UpdateDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateDeidentifyTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateDeidentifyTemplateRequest._() : super();
+  factory UpdateDeidentifyTemplateRequest() => create();
+  factory UpdateDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateDeidentifyTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateDeidentifyTemplateRequest clone() =>
       UpdateDeidentifyTemplateRequest()..mergeFromMessage(this);
   UpdateDeidentifyTemplateRequest copyWith(
@@ -7988,8 +8354,9 @@ class UpdateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateDeidentifyTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateDeidentifyTemplateRequest create() =>
-      UpdateDeidentifyTemplateRequest();
+      UpdateDeidentifyTemplateRequest._();
   UpdateDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<UpdateDeidentifyTemplateRequest>();
@@ -8013,8 +8380,8 @@ class UpdateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   $core.bool hasDeidentifyTemplate() => $_has(1);
   void clearDeidentifyTemplate() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $8.FieldMask get updateMask => $_getN(2);
+  set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
@@ -8029,13 +8396,14 @@ class GetDeidentifyTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetDeidentifyTemplateRequest() : super();
-  GetDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetDeidentifyTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetDeidentifyTemplateRequest._() : super();
+  factory GetDeidentifyTemplateRequest() => create();
+  factory GetDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetDeidentifyTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetDeidentifyTemplateRequest clone() =>
       GetDeidentifyTemplateRequest()..mergeFromMessage(this);
   GetDeidentifyTemplateRequest copyWith(
@@ -8043,8 +8411,9 @@ class GetDeidentifyTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetDeidentifyTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetDeidentifyTemplateRequest create() =>
-      GetDeidentifyTemplateRequest();
+      GetDeidentifyTemplateRequest._();
   GetDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<GetDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<GetDeidentifyTemplateRequest>();
@@ -8071,13 +8440,14 @@ class ListDeidentifyTemplatesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'orderBy')
     ..hasRequiredFields = false;
 
-  ListDeidentifyTemplatesRequest() : super();
-  ListDeidentifyTemplatesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDeidentifyTemplatesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDeidentifyTemplatesRequest._() : super();
+  factory ListDeidentifyTemplatesRequest() => create();
+  factory ListDeidentifyTemplatesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDeidentifyTemplatesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDeidentifyTemplatesRequest clone() =>
       ListDeidentifyTemplatesRequest()..mergeFromMessage(this);
   ListDeidentifyTemplatesRequest copyWith(
@@ -8085,8 +8455,9 @@ class ListDeidentifyTemplatesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListDeidentifyTemplatesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListDeidentifyTemplatesRequest create() =>
-      ListDeidentifyTemplatesRequest();
+      ListDeidentifyTemplatesRequest._();
   ListDeidentifyTemplatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListDeidentifyTemplatesRequest> createRepeated() =>
       $pb.PbList<ListDeidentifyTemplatesRequest>();
@@ -8136,13 +8507,14 @@ class ListDeidentifyTemplatesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListDeidentifyTemplatesResponse() : super();
-  ListDeidentifyTemplatesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListDeidentifyTemplatesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListDeidentifyTemplatesResponse._() : super();
+  factory ListDeidentifyTemplatesResponse() => create();
+  factory ListDeidentifyTemplatesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListDeidentifyTemplatesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListDeidentifyTemplatesResponse clone() =>
       ListDeidentifyTemplatesResponse()..mergeFromMessage(this);
   ListDeidentifyTemplatesResponse copyWith(
@@ -8150,8 +8522,9 @@ class ListDeidentifyTemplatesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListDeidentifyTemplatesResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListDeidentifyTemplatesResponse create() =>
-      ListDeidentifyTemplatesResponse();
+      ListDeidentifyTemplatesResponse._();
   ListDeidentifyTemplatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListDeidentifyTemplatesResponse> createRepeated() =>
       $pb.PbList<ListDeidentifyTemplatesResponse>();
@@ -8177,13 +8550,14 @@ class DeleteDeidentifyTemplateRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteDeidentifyTemplateRequest() : super();
-  DeleteDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteDeidentifyTemplateRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteDeidentifyTemplateRequest._() : super();
+  factory DeleteDeidentifyTemplateRequest() => create();
+  factory DeleteDeidentifyTemplateRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteDeidentifyTemplateRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteDeidentifyTemplateRequest clone() =>
       DeleteDeidentifyTemplateRequest()..mergeFromMessage(this);
   DeleteDeidentifyTemplateRequest copyWith(
@@ -8191,8 +8565,9 @@ class DeleteDeidentifyTemplateRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteDeidentifyTemplateRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeleteDeidentifyTemplateRequest create() =>
-      DeleteDeidentifyTemplateRequest();
+      DeleteDeidentifyTemplateRequest._();
   DeleteDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<DeleteDeidentifyTemplateRequest>();
@@ -8225,22 +8600,23 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'LargeCustomDictionaryConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$1.CloudStoragePath>(1, 'outputPath', $pb.PbFieldType.OM,
-        $1.CloudStoragePath.getDefault, $1.CloudStoragePath.create)
-    ..a<$1.CloudStorageFileSet>(2, 'cloudStorageFileSet', $pb.PbFieldType.OM,
-        $1.CloudStorageFileSet.getDefault, $1.CloudStorageFileSet.create)
-    ..a<$1.BigQueryField>(3, 'bigQueryField', $pb.PbFieldType.OM,
-        $1.BigQueryField.getDefault, $1.BigQueryField.create)
     ..oo(0, [2, 3])
+    ..a<$2.CloudStoragePath>(1, 'outputPath', $pb.PbFieldType.OM,
+        $2.CloudStoragePath.getDefault, $2.CloudStoragePath.create)
+    ..a<$2.CloudStorageFileSet>(2, 'cloudStorageFileSet', $pb.PbFieldType.OM,
+        $2.CloudStorageFileSet.getDefault, $2.CloudStorageFileSet.create)
+    ..a<$2.BigQueryField>(3, 'bigQueryField', $pb.PbFieldType.OM,
+        $2.BigQueryField.getDefault, $2.BigQueryField.create)
     ..hasRequiredFields = false;
 
-  LargeCustomDictionaryConfig() : super();
-  LargeCustomDictionaryConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LargeCustomDictionaryConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LargeCustomDictionaryConfig._() : super();
+  factory LargeCustomDictionaryConfig() => create();
+  factory LargeCustomDictionaryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LargeCustomDictionaryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LargeCustomDictionaryConfig clone() =>
       LargeCustomDictionaryConfig()..mergeFromMessage(this);
   LargeCustomDictionaryConfig copyWith(
@@ -8248,7 +8624,9 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LargeCustomDictionaryConfig));
   $pb.BuilderInfo get info_ => _i;
-  static LargeCustomDictionaryConfig create() => LargeCustomDictionaryConfig();
+  @$core.pragma('dart2js:noInline')
+  static LargeCustomDictionaryConfig create() =>
+      LargeCustomDictionaryConfig._();
   LargeCustomDictionaryConfig createEmptyInstance() => create();
   static $pb.PbList<LargeCustomDictionaryConfig> createRepeated() =>
       $pb.PbList<LargeCustomDictionaryConfig>();
@@ -8260,24 +8638,24 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
       _LargeCustomDictionaryConfig_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
-  $1.CloudStoragePath get outputPath => $_getN(0);
-  set outputPath($1.CloudStoragePath v) {
+  $2.CloudStoragePath get outputPath => $_getN(0);
+  set outputPath($2.CloudStoragePath v) {
     setField(1, v);
   }
 
   $core.bool hasOutputPath() => $_has(0);
   void clearOutputPath() => clearField(1);
 
-  $1.CloudStorageFileSet get cloudStorageFileSet => $_getN(1);
-  set cloudStorageFileSet($1.CloudStorageFileSet v) {
+  $2.CloudStorageFileSet get cloudStorageFileSet => $_getN(1);
+  set cloudStorageFileSet($2.CloudStorageFileSet v) {
     setField(2, v);
   }
 
   $core.bool hasCloudStorageFileSet() => $_has(1);
   void clearCloudStorageFileSet() => clearField(2);
 
-  $1.BigQueryField get bigQueryField => $_getN(2);
-  set bigQueryField($1.BigQueryField v) {
+  $2.BigQueryField get bigQueryField => $_getN(2);
+  set bigQueryField($2.BigQueryField v) {
     setField(3, v);
   }
 
@@ -8292,13 +8670,14 @@ class LargeCustomDictionaryStats extends $pb.GeneratedMessage {
     ..aInt64(1, 'approxNumPhrases')
     ..hasRequiredFields = false;
 
-  LargeCustomDictionaryStats() : super();
-  LargeCustomDictionaryStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LargeCustomDictionaryStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LargeCustomDictionaryStats._() : super();
+  factory LargeCustomDictionaryStats() => create();
+  factory LargeCustomDictionaryStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LargeCustomDictionaryStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LargeCustomDictionaryStats clone() =>
       LargeCustomDictionaryStats()..mergeFromMessage(this);
   LargeCustomDictionaryStats copyWith(
@@ -8306,7 +8685,8 @@ class LargeCustomDictionaryStats extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as LargeCustomDictionaryStats));
   $pb.BuilderInfo get info_ => _i;
-  static LargeCustomDictionaryStats create() => LargeCustomDictionaryStats();
+  @$core.pragma('dart2js:noInline')
+  static LargeCustomDictionaryStats create() => LargeCustomDictionaryStats._();
   LargeCustomDictionaryStats createEmptyInstance() => create();
   static $pb.PbList<LargeCustomDictionaryStats> createRepeated() =>
       $pb.PbList<LargeCustomDictionaryStats>();
@@ -8333,6 +8713,7 @@ class StoredInfoTypeConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeConfig',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [3])
     ..aOS(1, 'displayName')
     ..aOS(2, 'description')
     ..a<LargeCustomDictionaryConfig>(
@@ -8341,22 +8722,23 @@ class StoredInfoTypeConfig extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         LargeCustomDictionaryConfig.getDefault,
         LargeCustomDictionaryConfig.create)
-    ..oo(0, [3])
     ..hasRequiredFields = false;
 
-  StoredInfoTypeConfig() : super();
-  StoredInfoTypeConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StoredInfoTypeConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StoredInfoTypeConfig._() : super();
+  factory StoredInfoTypeConfig() => create();
+  factory StoredInfoTypeConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StoredInfoTypeConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StoredInfoTypeConfig clone() =>
       StoredInfoTypeConfig()..mergeFromMessage(this);
   StoredInfoTypeConfig copyWith(void Function(StoredInfoTypeConfig) updates) =>
       super.copyWith((message) => updates(message as StoredInfoTypeConfig));
   $pb.BuilderInfo get info_ => _i;
-  static StoredInfoTypeConfig create() => StoredInfoTypeConfig();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoTypeConfig create() => StoredInfoTypeConfig._();
   StoredInfoTypeConfig createEmptyInstance() => create();
   static $pb.PbList<StoredInfoTypeConfig> createRepeated() =>
       $pb.PbList<StoredInfoTypeConfig>();
@@ -8403,27 +8785,29 @@ class StoredInfoTypeStats extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeStats',
       package: const $pb.PackageName('google.privacy.dlp.v2'))
+    ..oo(0, [1])
     ..a<LargeCustomDictionaryStats>(
         1,
         'largeCustomDictionary',
         $pb.PbFieldType.OM,
         LargeCustomDictionaryStats.getDefault,
         LargeCustomDictionaryStats.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  StoredInfoTypeStats() : super();
-  StoredInfoTypeStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StoredInfoTypeStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StoredInfoTypeStats._() : super();
+  factory StoredInfoTypeStats() => create();
+  factory StoredInfoTypeStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StoredInfoTypeStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StoredInfoTypeStats clone() => StoredInfoTypeStats()..mergeFromMessage(this);
   StoredInfoTypeStats copyWith(void Function(StoredInfoTypeStats) updates) =>
       super.copyWith((message) => updates(message as StoredInfoTypeStats));
   $pb.BuilderInfo get info_ => _i;
-  static StoredInfoTypeStats create() => StoredInfoTypeStats();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoTypeStats create() => StoredInfoTypeStats._();
   StoredInfoTypeStats createEmptyInstance() => create();
   static $pb.PbList<StoredInfoTypeStats> createRepeated() =>
       $pb.PbList<StoredInfoTypeStats>();
@@ -8449,8 +8833,8 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.privacy.dlp.v2'))
     ..a<StoredInfoTypeConfig>(1, 'config', $pb.PbFieldType.OM,
         StoredInfoTypeConfig.getDefault, StoredInfoTypeConfig.create)
-    ..a<$2.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..e<StoredInfoTypeState>(
         3,
         'state',
@@ -8463,20 +8847,22 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
         StoredInfoTypeStats.getDefault, StoredInfoTypeStats.create)
     ..hasRequiredFields = false;
 
-  StoredInfoTypeVersion() : super();
-  StoredInfoTypeVersion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StoredInfoTypeVersion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StoredInfoTypeVersion._() : super();
+  factory StoredInfoTypeVersion() => create();
+  factory StoredInfoTypeVersion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StoredInfoTypeVersion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StoredInfoTypeVersion clone() =>
       StoredInfoTypeVersion()..mergeFromMessage(this);
   StoredInfoTypeVersion copyWith(
           void Function(StoredInfoTypeVersion) updates) =>
       super.copyWith((message) => updates(message as StoredInfoTypeVersion));
   $pb.BuilderInfo get info_ => _i;
-  static StoredInfoTypeVersion create() => StoredInfoTypeVersion();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoTypeVersion create() => StoredInfoTypeVersion._();
   StoredInfoTypeVersion createEmptyInstance() => create();
   static $pb.PbList<StoredInfoTypeVersion> createRepeated() =>
       $pb.PbList<StoredInfoTypeVersion>();
@@ -8492,8 +8878,8 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
   $core.bool hasConfig() => $_has(0);
   void clearConfig() => clearField(1);
 
-  $2.Timestamp get createTime => $_getN(1);
-  set createTime($2.Timestamp v) {
+  $3.Timestamp get createTime => $_getN(1);
+  set createTime($3.Timestamp v) {
     setField(2, v);
   }
 
@@ -8529,18 +8915,20 @@ class StoredInfoType extends $pb.GeneratedMessage {
         3, 'pendingVersions', $pb.PbFieldType.PM, StoredInfoTypeVersion.create)
     ..hasRequiredFields = false;
 
-  StoredInfoType() : super();
-  StoredInfoType.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StoredInfoType.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StoredInfoType._() : super();
+  factory StoredInfoType() => create();
+  factory StoredInfoType.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StoredInfoType.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StoredInfoType clone() => StoredInfoType()..mergeFromMessage(this);
   StoredInfoType copyWith(void Function(StoredInfoType) updates) =>
       super.copyWith((message) => updates(message as StoredInfoType));
   $pb.BuilderInfo get info_ => _i;
-  static StoredInfoType create() => StoredInfoType();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoType create() => StoredInfoType._();
   StoredInfoType createEmptyInstance() => create();
   static $pb.PbList<StoredInfoType> createRepeated() =>
       $pb.PbList<StoredInfoType>();
@@ -8576,13 +8964,14 @@ class CreateStoredInfoTypeRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'storedInfoTypeId')
     ..hasRequiredFields = false;
 
-  CreateStoredInfoTypeRequest() : super();
-  CreateStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateStoredInfoTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateStoredInfoTypeRequest._() : super();
+  factory CreateStoredInfoTypeRequest() => create();
+  factory CreateStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateStoredInfoTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateStoredInfoTypeRequest clone() =>
       CreateStoredInfoTypeRequest()..mergeFromMessage(this);
   CreateStoredInfoTypeRequest copyWith(
@@ -8590,7 +8979,9 @@ class CreateStoredInfoTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateStoredInfoTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateStoredInfoTypeRequest create() => CreateStoredInfoTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateStoredInfoTypeRequest create() =>
+      CreateStoredInfoTypeRequest._();
   CreateStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<CreateStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<CreateStoredInfoTypeRequest>();
@@ -8630,17 +9021,18 @@ class UpdateStoredInfoTypeRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..a<StoredInfoTypeConfig>(2, 'config', $pb.PbFieldType.OM,
         StoredInfoTypeConfig.getDefault, StoredInfoTypeConfig.create)
-    ..a<$7.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $7.FieldMask.getDefault, $7.FieldMask.create)
+    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
+        $8.FieldMask.getDefault, $8.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateStoredInfoTypeRequest() : super();
-  UpdateStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateStoredInfoTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateStoredInfoTypeRequest._() : super();
+  factory UpdateStoredInfoTypeRequest() => create();
+  factory UpdateStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateStoredInfoTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateStoredInfoTypeRequest clone() =>
       UpdateStoredInfoTypeRequest()..mergeFromMessage(this);
   UpdateStoredInfoTypeRequest copyWith(
@@ -8648,7 +9040,9 @@ class UpdateStoredInfoTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateStoredInfoTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateStoredInfoTypeRequest create() => UpdateStoredInfoTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateStoredInfoTypeRequest create() =>
+      UpdateStoredInfoTypeRequest._();
   UpdateStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<UpdateStoredInfoTypeRequest>();
@@ -8672,8 +9066,8 @@ class UpdateStoredInfoTypeRequest extends $pb.GeneratedMessage {
   $core.bool hasConfig() => $_has(1);
   void clearConfig() => clearField(2);
 
-  $7.FieldMask get updateMask => $_getN(2);
-  set updateMask($7.FieldMask v) {
+  $8.FieldMask get updateMask => $_getN(2);
+  set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
@@ -8687,20 +9081,22 @@ class GetStoredInfoTypeRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetStoredInfoTypeRequest() : super();
-  GetStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetStoredInfoTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetStoredInfoTypeRequest._() : super();
+  factory GetStoredInfoTypeRequest() => create();
+  factory GetStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetStoredInfoTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetStoredInfoTypeRequest clone() =>
       GetStoredInfoTypeRequest()..mergeFromMessage(this);
   GetStoredInfoTypeRequest copyWith(
           void Function(GetStoredInfoTypeRequest) updates) =>
       super.copyWith((message) => updates(message as GetStoredInfoTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetStoredInfoTypeRequest create() => GetStoredInfoTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetStoredInfoTypeRequest create() => GetStoredInfoTypeRequest._();
   GetStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<GetStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<GetStoredInfoTypeRequest>();
@@ -8727,13 +9123,14 @@ class ListStoredInfoTypesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'orderBy')
     ..hasRequiredFields = false;
 
-  ListStoredInfoTypesRequest() : super();
-  ListStoredInfoTypesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListStoredInfoTypesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListStoredInfoTypesRequest._() : super();
+  factory ListStoredInfoTypesRequest() => create();
+  factory ListStoredInfoTypesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListStoredInfoTypesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListStoredInfoTypesRequest clone() =>
       ListStoredInfoTypesRequest()..mergeFromMessage(this);
   ListStoredInfoTypesRequest copyWith(
@@ -8741,7 +9138,8 @@ class ListStoredInfoTypesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListStoredInfoTypesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListStoredInfoTypesRequest create() => ListStoredInfoTypesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListStoredInfoTypesRequest create() => ListStoredInfoTypesRequest._();
   ListStoredInfoTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListStoredInfoTypesRequest> createRepeated() =>
       $pb.PbList<ListStoredInfoTypesRequest>();
@@ -8791,13 +9189,14 @@ class ListStoredInfoTypesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListStoredInfoTypesResponse() : super();
-  ListStoredInfoTypesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListStoredInfoTypesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListStoredInfoTypesResponse._() : super();
+  factory ListStoredInfoTypesResponse() => create();
+  factory ListStoredInfoTypesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListStoredInfoTypesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListStoredInfoTypesResponse clone() =>
       ListStoredInfoTypesResponse()..mergeFromMessage(this);
   ListStoredInfoTypesResponse copyWith(
@@ -8805,7 +9204,9 @@ class ListStoredInfoTypesResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListStoredInfoTypesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListStoredInfoTypesResponse create() => ListStoredInfoTypesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListStoredInfoTypesResponse create() =>
+      ListStoredInfoTypesResponse._();
   ListStoredInfoTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListStoredInfoTypesResponse> createRepeated() =>
       $pb.PbList<ListStoredInfoTypesResponse>();
@@ -8831,13 +9232,14 @@ class DeleteStoredInfoTypeRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteStoredInfoTypeRequest() : super();
-  DeleteStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteStoredInfoTypeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteStoredInfoTypeRequest._() : super();
+  factory DeleteStoredInfoTypeRequest() => create();
+  factory DeleteStoredInfoTypeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteStoredInfoTypeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteStoredInfoTypeRequest clone() =>
       DeleteStoredInfoTypeRequest()..mergeFromMessage(this);
   DeleteStoredInfoTypeRequest copyWith(
@@ -8845,7 +9247,9 @@ class DeleteStoredInfoTypeRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeleteStoredInfoTypeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteStoredInfoTypeRequest create() => DeleteStoredInfoTypeRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteStoredInfoTypeRequest create() =>
+      DeleteStoredInfoTypeRequest._();
   DeleteStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<DeleteStoredInfoTypeRequest>();

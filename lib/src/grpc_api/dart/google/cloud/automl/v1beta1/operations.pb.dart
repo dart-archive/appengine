@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/operations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -42,6 +43,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [8, 10, 15, 16, 21, 22, 24, 25, 26])
     ..pc<$0.Status>(2, 'partialFailures', $pb.PbFieldType.PM, $0.Status.create)
     ..a<$1.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
         $1.Timestamp.getDefault, $1.Timestamp.create)
@@ -98,21 +100,22 @@ class OperationMetadata extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         ExportEvaluatedExamplesOperationMetadata.getDefault,
         ExportEvaluatedExamplesOperationMetadata.create)
-    ..oo(0, [8, 10, 15, 16, 21, 22, 24, 25, 26])
     ..hasRequiredFields = false;
 
-  OperationMetadata() : super();
-  OperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadata._() : super();
+  factory OperationMetadata() => create();
+  factory OperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static OperationMetadata create() => OperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata> createRepeated() =>
       $pb.PbList<OperationMetadata>();
@@ -230,20 +233,22 @@ class DeleteOperationMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  DeleteOperationMetadata() : super();
-  DeleteOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteOperationMetadata._() : super();
+  factory DeleteOperationMetadata() => create();
+  factory DeleteOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteOperationMetadata clone() =>
       DeleteOperationMetadata()..mergeFromMessage(this);
   DeleteOperationMetadata copyWith(
           void Function(DeleteOperationMetadata) updates) =>
       super.copyWith((message) => updates(message as DeleteOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteOperationMetadata create() => DeleteOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static DeleteOperationMetadata create() => DeleteOperationMetadata._();
   DeleteOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<DeleteOperationMetadata> createRepeated() =>
       $pb.PbList<DeleteOperationMetadata>();
@@ -258,13 +263,14 @@ class DeployModelOperationMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  DeployModelOperationMetadata() : super();
-  DeployModelOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeployModelOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeployModelOperationMetadata._() : super();
+  factory DeployModelOperationMetadata() => create();
+  factory DeployModelOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeployModelOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeployModelOperationMetadata clone() =>
       DeployModelOperationMetadata()..mergeFromMessage(this);
   DeployModelOperationMetadata copyWith(
@@ -272,8 +278,9 @@ class DeployModelOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as DeployModelOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static DeployModelOperationMetadata create() =>
-      DeployModelOperationMetadata();
+      DeployModelOperationMetadata._();
   DeployModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<DeployModelOperationMetadata> createRepeated() =>
       $pb.PbList<DeployModelOperationMetadata>();
@@ -288,13 +295,14 @@ class UndeployModelOperationMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  UndeployModelOperationMetadata() : super();
-  UndeployModelOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UndeployModelOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UndeployModelOperationMetadata._() : super();
+  factory UndeployModelOperationMetadata() => create();
+  factory UndeployModelOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UndeployModelOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UndeployModelOperationMetadata clone() =>
       UndeployModelOperationMetadata()..mergeFromMessage(this);
   UndeployModelOperationMetadata copyWith(
@@ -302,8 +310,9 @@ class UndeployModelOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UndeployModelOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UndeployModelOperationMetadata create() =>
-      UndeployModelOperationMetadata();
+      UndeployModelOperationMetadata._();
   UndeployModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<UndeployModelOperationMetadata> createRepeated() =>
       $pb.PbList<UndeployModelOperationMetadata>();
@@ -318,13 +327,14 @@ class CreateModelOperationMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  CreateModelOperationMetadata() : super();
-  CreateModelOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateModelOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateModelOperationMetadata._() : super();
+  factory CreateModelOperationMetadata() => create();
+  factory CreateModelOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateModelOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateModelOperationMetadata clone() =>
       CreateModelOperationMetadata()..mergeFromMessage(this);
   CreateModelOperationMetadata copyWith(
@@ -332,8 +342,9 @@ class CreateModelOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CreateModelOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CreateModelOperationMetadata create() =>
-      CreateModelOperationMetadata();
+      CreateModelOperationMetadata._();
   CreateModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateModelOperationMetadata> createRepeated() =>
       $pb.PbList<CreateModelOperationMetadata>();
@@ -348,13 +359,14 @@ class ImportDataOperationMetadata extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  ImportDataOperationMetadata() : super();
-  ImportDataOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImportDataOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImportDataOperationMetadata._() : super();
+  factory ImportDataOperationMetadata() => create();
+  factory ImportDataOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImportDataOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImportDataOperationMetadata clone() =>
       ImportDataOperationMetadata()..mergeFromMessage(this);
   ImportDataOperationMetadata copyWith(
@@ -362,7 +374,9 @@ class ImportDataOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ImportDataOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ImportDataOperationMetadata create() => ImportDataOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ImportDataOperationMetadata create() =>
+      ImportDataOperationMetadata._();
   ImportDataOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ImportDataOperationMetadata> createRepeated() =>
       $pb.PbList<ImportDataOperationMetadata>();
@@ -391,19 +405,21 @@ class ExportDataOperationMetadata_ExportDataOutputInfo
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportDataOperationMetadata.ExportDataOutputInfo',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 2])
     ..aOS(1, 'gcsOutputDirectory')
     ..aOS(2, 'bigqueryOutputDataset')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  ExportDataOperationMetadata_ExportDataOutputInfo() : super();
-  ExportDataOperationMetadata_ExportDataOutputInfo.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDataOperationMetadata_ExportDataOutputInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDataOperationMetadata_ExportDataOutputInfo._() : super();
+  factory ExportDataOperationMetadata_ExportDataOutputInfo() => create();
+  factory ExportDataOperationMetadata_ExportDataOutputInfo.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDataOperationMetadata_ExportDataOutputInfo.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDataOperationMetadata_ExportDataOutputInfo clone() =>
       ExportDataOperationMetadata_ExportDataOutputInfo()
         ..mergeFromMessage(this);
@@ -413,8 +429,9 @@ class ExportDataOperationMetadata_ExportDataOutputInfo
       super.copyWith((message) =>
           updates(message as ExportDataOperationMetadata_ExportDataOutputInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportDataOperationMetadata_ExportDataOutputInfo create() =>
-      ExportDataOperationMetadata_ExportDataOutputInfo();
+      ExportDataOperationMetadata_ExportDataOutputInfo._();
   ExportDataOperationMetadata_ExportDataOutputInfo createEmptyInstance() =>
       create();
   static $pb.PbList<ExportDataOperationMetadata_ExportDataOutputInfo>
@@ -459,13 +476,14 @@ class ExportDataOperationMetadata extends $pb.GeneratedMessage {
         ExportDataOperationMetadata_ExportDataOutputInfo.create)
     ..hasRequiredFields = false;
 
-  ExportDataOperationMetadata() : super();
-  ExportDataOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportDataOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportDataOperationMetadata._() : super();
+  factory ExportDataOperationMetadata() => create();
+  factory ExportDataOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportDataOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportDataOperationMetadata clone() =>
       ExportDataOperationMetadata()..mergeFromMessage(this);
   ExportDataOperationMetadata copyWith(
@@ -473,7 +491,9 @@ class ExportDataOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExportDataOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static ExportDataOperationMetadata create() => ExportDataOperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static ExportDataOperationMetadata create() =>
+      ExportDataOperationMetadata._();
   ExportDataOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportDataOperationMetadata> createRepeated() =>
       $pb.PbList<ExportDataOperationMetadata>();
@@ -512,19 +532,21 @@ class BatchPredictOperationMetadata_BatchPredictOutputInfo
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchPredictOperationMetadata.BatchPredictOutputInfo',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 2])
     ..aOS(1, 'gcsOutputDirectory')
     ..aOS(2, 'bigqueryOutputDataset')
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  BatchPredictOperationMetadata_BatchPredictOutputInfo() : super();
-  BatchPredictOperationMetadata_BatchPredictOutputInfo.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchPredictOperationMetadata_BatchPredictOutputInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchPredictOperationMetadata_BatchPredictOutputInfo._() : super();
+  factory BatchPredictOperationMetadata_BatchPredictOutputInfo() => create();
+  factory BatchPredictOperationMetadata_BatchPredictOutputInfo.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchPredictOperationMetadata_BatchPredictOutputInfo.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchPredictOperationMetadata_BatchPredictOutputInfo clone() =>
       BatchPredictOperationMetadata_BatchPredictOutputInfo()
         ..mergeFromMessage(this);
@@ -534,8 +556,9 @@ class BatchPredictOperationMetadata_BatchPredictOutputInfo
       super.copyWith((message) => updates(
           message as BatchPredictOperationMetadata_BatchPredictOutputInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchPredictOperationMetadata_BatchPredictOutputInfo create() =>
-      BatchPredictOperationMetadata_BatchPredictOutputInfo();
+      BatchPredictOperationMetadata_BatchPredictOutputInfo._();
   BatchPredictOperationMetadata_BatchPredictOutputInfo createEmptyInstance() =>
       create();
   static $pb.PbList<BatchPredictOperationMetadata_BatchPredictOutputInfo>
@@ -586,13 +609,14 @@ class BatchPredictOperationMetadata extends $pb.GeneratedMessage {
         BatchPredictOperationMetadata_BatchPredictOutputInfo.create)
     ..hasRequiredFields = false;
 
-  BatchPredictOperationMetadata() : super();
-  BatchPredictOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchPredictOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchPredictOperationMetadata._() : super();
+  factory BatchPredictOperationMetadata() => create();
+  factory BatchPredictOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchPredictOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchPredictOperationMetadata clone() =>
       BatchPredictOperationMetadata()..mergeFromMessage(this);
   BatchPredictOperationMetadata copyWith(
@@ -600,8 +624,9 @@ class BatchPredictOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BatchPredictOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BatchPredictOperationMetadata create() =>
-      BatchPredictOperationMetadata();
+      BatchPredictOperationMetadata._();
   BatchPredictOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<BatchPredictOperationMetadata> createRepeated() =>
       $pb.PbList<BatchPredictOperationMetadata>();
@@ -635,14 +660,16 @@ class ExportModelOperationMetadata_ExportModelOutputInfo
     ..aOS(1, 'gcsOutputDirectory')
     ..hasRequiredFields = false;
 
-  ExportModelOperationMetadata_ExportModelOutputInfo() : super();
-  ExportModelOperationMetadata_ExportModelOutputInfo.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportModelOperationMetadata_ExportModelOutputInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportModelOperationMetadata_ExportModelOutputInfo._() : super();
+  factory ExportModelOperationMetadata_ExportModelOutputInfo() => create();
+  factory ExportModelOperationMetadata_ExportModelOutputInfo.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportModelOperationMetadata_ExportModelOutputInfo.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportModelOperationMetadata_ExportModelOutputInfo clone() =>
       ExportModelOperationMetadata_ExportModelOutputInfo()
         ..mergeFromMessage(this);
@@ -652,8 +679,9 @@ class ExportModelOperationMetadata_ExportModelOutputInfo
       super.copyWith((message) => updates(
           message as ExportModelOperationMetadata_ExportModelOutputInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportModelOperationMetadata_ExportModelOutputInfo create() =>
-      ExportModelOperationMetadata_ExportModelOutputInfo();
+      ExportModelOperationMetadata_ExportModelOutputInfo._();
   ExportModelOperationMetadata_ExportModelOutputInfo createEmptyInstance() =>
       create();
   static $pb.PbList<ExportModelOperationMetadata_ExportModelOutputInfo>
@@ -684,13 +712,14 @@ class ExportModelOperationMetadata extends $pb.GeneratedMessage {
         ExportModelOperationMetadata_ExportModelOutputInfo.create)
     ..hasRequiredFields = false;
 
-  ExportModelOperationMetadata() : super();
-  ExportModelOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportModelOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportModelOperationMetadata._() : super();
+  factory ExportModelOperationMetadata() => create();
+  factory ExportModelOperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportModelOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportModelOperationMetadata clone() =>
       ExportModelOperationMetadata()..mergeFromMessage(this);
   ExportModelOperationMetadata copyWith(
@@ -698,8 +727,9 @@ class ExportModelOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExportModelOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportModelOperationMetadata create() =>
-      ExportModelOperationMetadata();
+      ExportModelOperationMetadata._();
   ExportModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportModelOperationMetadata> createRepeated() =>
       $pb.PbList<ExportModelOperationMetadata>();
@@ -725,16 +755,18 @@ class ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
     ..aOS(2, 'bigqueryOutputDataset')
     ..hasRequiredFields = false;
 
-  ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo()
+  ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo._()
       : super();
-  ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  factory ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo() =>
+      create();
+  factory ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
       clone() =>
           ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo()
@@ -746,9 +778,11 @@ class ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
       super.copyWith((message) => updates(message
           as ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
       create() =>
-          ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo();
+          ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
+              ._();
   ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
       createEmptyInstance() => create();
   static $pb.PbList<
@@ -783,13 +817,15 @@ class ExportEvaluatedExamplesOperationMetadata extends $pb.GeneratedMessage {
             .create)
     ..hasRequiredFields = false;
 
-  ExportEvaluatedExamplesOperationMetadata() : super();
-  ExportEvaluatedExamplesOperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEvaluatedExamplesOperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportEvaluatedExamplesOperationMetadata._() : super();
+  factory ExportEvaluatedExamplesOperationMetadata() => create();
+  factory ExportEvaluatedExamplesOperationMetadata.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEvaluatedExamplesOperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEvaluatedExamplesOperationMetadata clone() =>
       ExportEvaluatedExamplesOperationMetadata()..mergeFromMessage(this);
   ExportEvaluatedExamplesOperationMetadata copyWith(
@@ -797,8 +833,9 @@ class ExportEvaluatedExamplesOperationMetadata extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ExportEvaluatedExamplesOperationMetadata));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesOperationMetadata create() =>
-      ExportEvaluatedExamplesOperationMetadata();
+      ExportEvaluatedExamplesOperationMetadata._();
   ExportEvaluatedExamplesOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportEvaluatedExamplesOperationMetadata>
       createRepeated() =>

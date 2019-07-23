@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/scheduler/v1beta1/cloudscheduler.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'job.pb.dart' as $0;
-import '../../../protobuf/field_mask.pb.dart' as $2;
+import 'job.pb.dart' as $1;
+import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class ListJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobsRequest',
@@ -20,18 +21,20 @@ class ListJobsRequest extends $pb.GeneratedMessage {
     ..aOS(6, 'pageToken')
     ..hasRequiredFields = false;
 
-  ListJobsRequest() : super();
-  ListJobsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListJobsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListJobsRequest._() : super();
+  factory ListJobsRequest() => create();
+  factory ListJobsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListJobsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListJobsRequest clone() => ListJobsRequest()..mergeFromMessage(this);
   ListJobsRequest copyWith(void Function(ListJobsRequest) updates) =>
       super.copyWith((message) => updates(message as ListJobsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListJobsRequest create() => ListJobsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListJobsRequest create() => ListJobsRequest._();
   ListJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListJobsRequest> createRepeated() =>
       $pb.PbList<ListJobsRequest>();
@@ -67,22 +70,24 @@ class ListJobsRequest extends $pb.GeneratedMessage {
 class ListJobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobsResponse',
       package: const $pb.PackageName('google.cloud.scheduler.v1beta1'))
-    ..pc<$0.Job>(1, 'jobs', $pb.PbFieldType.PM, $0.Job.create)
+    ..pc<$1.Job>(1, 'jobs', $pb.PbFieldType.PM, $1.Job.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListJobsResponse() : super();
-  ListJobsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListJobsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListJobsResponse._() : super();
+  factory ListJobsResponse() => create();
+  factory ListJobsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListJobsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListJobsResponse clone() => ListJobsResponse()..mergeFromMessage(this);
   ListJobsResponse copyWith(void Function(ListJobsResponse) updates) =>
       super.copyWith((message) => updates(message as ListJobsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListJobsResponse create() => ListJobsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListJobsResponse create() => ListJobsResponse._();
   ListJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListJobsResponse> createRepeated() =>
       $pb.PbList<ListJobsResponse>();
@@ -90,7 +95,7 @@ class ListJobsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListJobsResponse _defaultInstance;
 
-  $core.List<$0.Job> get jobs => $_getList(0);
+  $core.List<$1.Job> get jobs => $_getList(0);
 
   $core.String get nextPageToken => $_getS(1, '');
   set nextPageToken($core.String v) {
@@ -107,18 +112,20 @@ class GetJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetJobRequest() : super();
-  GetJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetJobRequest._() : super();
+  factory GetJobRequest() => create();
+  factory GetJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetJobRequest clone() => GetJobRequest()..mergeFromMessage(this);
   GetJobRequest copyWith(void Function(GetJobRequest) updates) =>
       super.copyWith((message) => updates(message as GetJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetJobRequest create() => GetJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetJobRequest create() => GetJobRequest._();
   GetJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetJobRequest> createRepeated() =>
       $pb.PbList<GetJobRequest>();
@@ -138,21 +145,23 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateJobRequest',
       package: const $pb.PackageName('google.cloud.scheduler.v1beta1'))
     ..aOS(1, 'parent')
-    ..a<$0.Job>(2, 'job', $pb.PbFieldType.OM, $0.Job.getDefault, $0.Job.create)
+    ..a<$1.Job>(2, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
     ..hasRequiredFields = false;
 
-  CreateJobRequest() : super();
-  CreateJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateJobRequest._() : super();
+  factory CreateJobRequest() => create();
+  factory CreateJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateJobRequest clone() => CreateJobRequest()..mergeFromMessage(this);
   CreateJobRequest copyWith(void Function(CreateJobRequest) updates) =>
       super.copyWith((message) => updates(message as CreateJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateJobRequest create() => CreateJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateJobRequest create() => CreateJobRequest._();
   CreateJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateJobRequest> createRepeated() =>
       $pb.PbList<CreateJobRequest>();
@@ -168,8 +177,8 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   $core.bool hasParent() => $_has(0);
   void clearParent() => clearField(1);
 
-  $0.Job get job => $_getN(1);
-  set job($0.Job v) {
+  $1.Job get job => $_getN(1);
+  set job($1.Job v) {
     setField(2, v);
   }
 
@@ -180,23 +189,25 @@ class CreateJobRequest extends $pb.GeneratedMessage {
 class UpdateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateJobRequest',
       package: const $pb.PackageName('google.cloud.scheduler.v1beta1'))
-    ..a<$0.Job>(1, 'job', $pb.PbFieldType.OM, $0.Job.getDefault, $0.Job.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..a<$1.Job>(1, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
+    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
+        $3.FieldMask.getDefault, $3.FieldMask.create)
     ..hasRequiredFields = false;
 
-  UpdateJobRequest() : super();
-  UpdateJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateJobRequest._() : super();
+  factory UpdateJobRequest() => create();
+  factory UpdateJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateJobRequest clone() => UpdateJobRequest()..mergeFromMessage(this);
   UpdateJobRequest copyWith(void Function(UpdateJobRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateJobRequest create() => UpdateJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateJobRequest create() => UpdateJobRequest._();
   UpdateJobRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateJobRequest> createRepeated() =>
       $pb.PbList<UpdateJobRequest>();
@@ -204,16 +215,16 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static UpdateJobRequest _defaultInstance;
 
-  $0.Job get job => $_getN(0);
-  set job($0.Job v) {
+  $1.Job get job => $_getN(0);
+  set job($1.Job v) {
     setField(1, v);
   }
 
   $core.bool hasJob() => $_has(0);
   void clearJob() => clearField(1);
 
-  $2.FieldMask get updateMask => $_getN(1);
-  set updateMask($2.FieldMask v) {
+  $3.FieldMask get updateMask => $_getN(1);
+  set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
@@ -227,18 +238,20 @@ class DeleteJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteJobRequest() : super();
-  DeleteJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteJobRequest._() : super();
+  factory DeleteJobRequest() => create();
+  factory DeleteJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteJobRequest clone() => DeleteJobRequest()..mergeFromMessage(this);
   DeleteJobRequest copyWith(void Function(DeleteJobRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteJobRequest create() => DeleteJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteJobRequest create() => DeleteJobRequest._();
   DeleteJobRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteJobRequest> createRepeated() =>
       $pb.PbList<DeleteJobRequest>();
@@ -261,18 +274,20 @@ class PauseJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  PauseJobRequest() : super();
-  PauseJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PauseJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PauseJobRequest._() : super();
+  factory PauseJobRequest() => create();
+  factory PauseJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PauseJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PauseJobRequest clone() => PauseJobRequest()..mergeFromMessage(this);
   PauseJobRequest copyWith(void Function(PauseJobRequest) updates) =>
       super.copyWith((message) => updates(message as PauseJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static PauseJobRequest create() => PauseJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static PauseJobRequest create() => PauseJobRequest._();
   PauseJobRequest createEmptyInstance() => create();
   static $pb.PbList<PauseJobRequest> createRepeated() =>
       $pb.PbList<PauseJobRequest>();
@@ -295,18 +310,20 @@ class ResumeJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  ResumeJobRequest() : super();
-  ResumeJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ResumeJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ResumeJobRequest._() : super();
+  factory ResumeJobRequest() => create();
+  factory ResumeJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ResumeJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ResumeJobRequest clone() => ResumeJobRequest()..mergeFromMessage(this);
   ResumeJobRequest copyWith(void Function(ResumeJobRequest) updates) =>
       super.copyWith((message) => updates(message as ResumeJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ResumeJobRequest create() => ResumeJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static ResumeJobRequest create() => ResumeJobRequest._();
   ResumeJobRequest createEmptyInstance() => create();
   static $pb.PbList<ResumeJobRequest> createRepeated() =>
       $pb.PbList<ResumeJobRequest>();
@@ -329,18 +346,20 @@ class RunJobRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  RunJobRequest() : super();
-  RunJobRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RunJobRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RunJobRequest._() : super();
+  factory RunJobRequest() => create();
+  factory RunJobRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RunJobRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RunJobRequest clone() => RunJobRequest()..mergeFromMessage(this);
   RunJobRequest copyWith(void Function(RunJobRequest) updates) =>
       super.copyWith((message) => updates(message as RunJobRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RunJobRequest create() => RunJobRequest();
+  @$core.pragma('dart2js:noInline')
+  static RunJobRequest create() => RunJobRequest._();
   RunJobRequest createEmptyInstance() => create();
   static $pb.PbList<RunJobRequest> createRepeated() =>
       $pb.PbList<RunJobRequest>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/quality_score_bucket.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,20 +17,22 @@ class QualityScoreBucketEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  QualityScoreBucketEnum() : super();
-  QualityScoreBucketEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QualityScoreBucketEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QualityScoreBucketEnum._() : super();
+  factory QualityScoreBucketEnum() => create();
+  factory QualityScoreBucketEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QualityScoreBucketEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QualityScoreBucketEnum clone() =>
       QualityScoreBucketEnum()..mergeFromMessage(this);
   QualityScoreBucketEnum copyWith(
           void Function(QualityScoreBucketEnum) updates) =>
       super.copyWith((message) => updates(message as QualityScoreBucketEnum));
   $pb.BuilderInfo get info_ => _i;
-  static QualityScoreBucketEnum create() => QualityScoreBucketEnum();
+  @$core.pragma('dart2js:noInline')
+  static QualityScoreBucketEnum create() => QualityScoreBucketEnum._();
   QualityScoreBucketEnum createEmptyInstance() => create();
   static $pb.PbList<QualityScoreBucketEnum> createRepeated() =>
       $pb.PbList<QualityScoreBucketEnum>();

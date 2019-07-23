@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/regression.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,15 +18,17 @@ class RegressionEvaluationMetrics extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'meanAbsoluteError', $pb.PbFieldType.OF)
     ..a<$core.double>(3, 'meanAbsolutePercentageError', $pb.PbFieldType.OF)
     ..a<$core.double>(4, 'rSquared', $pb.PbFieldType.OF)
+    ..a<$core.double>(5, 'rootMeanSquaredLogError', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  RegressionEvaluationMetrics() : super();
-  RegressionEvaluationMetrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RegressionEvaluationMetrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RegressionEvaluationMetrics._() : super();
+  factory RegressionEvaluationMetrics() => create();
+  factory RegressionEvaluationMetrics.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RegressionEvaluationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RegressionEvaluationMetrics clone() =>
       RegressionEvaluationMetrics()..mergeFromMessage(this);
   RegressionEvaluationMetrics copyWith(
@@ -33,7 +36,9 @@ class RegressionEvaluationMetrics extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as RegressionEvaluationMetrics));
   $pb.BuilderInfo get info_ => _i;
-  static RegressionEvaluationMetrics create() => RegressionEvaluationMetrics();
+  @$core.pragma('dart2js:noInline')
+  static RegressionEvaluationMetrics create() =>
+      RegressionEvaluationMetrics._();
   RegressionEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<RegressionEvaluationMetrics> createRepeated() =>
       $pb.PbList<RegressionEvaluationMetrics>();
@@ -72,4 +77,12 @@ class RegressionEvaluationMetrics extends $pb.GeneratedMessage {
 
   $core.bool hasRSquared() => $_has(3);
   void clearRSquared() => clearField(4);
+
+  $core.double get rootMeanSquaredLogError => $_getN(4);
+  set rootMeanSquaredLogError($core.double v) {
+    $_setFloat(4, v);
+  }
+
+  $core.bool hasRootMeanSquaredLogError() => $_has(4);
+  void clearRootMeanSquaredLogError() => clearField(5);
 }

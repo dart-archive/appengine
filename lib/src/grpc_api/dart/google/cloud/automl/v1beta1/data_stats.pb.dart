@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/data_stats.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -32,6 +33,7 @@ class DataStats extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DataStats',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [3, 4, 5, 6, 7, 8])
     ..aInt64(1, 'distinctValueCount')
     ..aInt64(2, 'nullValueCount')
     ..a<Float64Stats>(3, 'float64Stats', $pb.PbFieldType.OM,
@@ -46,21 +48,23 @@ class DataStats extends $pb.GeneratedMessage {
         StructStats.getDefault, StructStats.create)
     ..a<CategoryStats>(8, 'categoryStats', $pb.PbFieldType.OM,
         CategoryStats.getDefault, CategoryStats.create)
-    ..oo(0, [3, 4, 5, 6, 7, 8])
+    ..aInt64(9, 'validValueCount')
     ..hasRequiredFields = false;
 
-  DataStats() : super();
-  DataStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DataStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DataStats._() : super();
+  factory DataStats() => create();
+  factory DataStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DataStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DataStats clone() => DataStats()..mergeFromMessage(this);
   DataStats copyWith(void Function(DataStats) updates) =>
       super.copyWith((message) => updates(message as DataStats));
   $pb.BuilderInfo get info_ => _i;
-  static DataStats create() => DataStats();
+  @$core.pragma('dart2js:noInline')
+  static DataStats create() => DataStats._();
   DataStats createEmptyInstance() => create();
   static $pb.PbList<DataStats> createRepeated() => $pb.PbList<DataStats>();
   static DataStats getDefault() => _defaultInstance ??= create()..freeze();
@@ -132,6 +136,14 @@ class DataStats extends $pb.GeneratedMessage {
 
   $core.bool hasCategoryStats() => $_has(7);
   void clearCategoryStats() => clearField(8);
+
+  Int64 get validValueCount => $_getI64(8);
+  set validValueCount(Int64 v) {
+    $_setInt64(8, v);
+  }
+
+  $core.bool hasValidValueCount() => $_has(8);
+  void clearValidValueCount() => clearField(9);
 }
 
 class Float64Stats_HistogramBucket extends $pb.GeneratedMessage {
@@ -143,13 +155,14 @@ class Float64Stats_HistogramBucket extends $pb.GeneratedMessage {
     ..aInt64(3, 'count')
     ..hasRequiredFields = false;
 
-  Float64Stats_HistogramBucket() : super();
-  Float64Stats_HistogramBucket.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Float64Stats_HistogramBucket.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Float64Stats_HistogramBucket._() : super();
+  factory Float64Stats_HistogramBucket() => create();
+  factory Float64Stats_HistogramBucket.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Float64Stats_HistogramBucket.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Float64Stats_HistogramBucket clone() =>
       Float64Stats_HistogramBucket()..mergeFromMessage(this);
   Float64Stats_HistogramBucket copyWith(
@@ -157,8 +170,9 @@ class Float64Stats_HistogramBucket extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Float64Stats_HistogramBucket));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Float64Stats_HistogramBucket create() =>
-      Float64Stats_HistogramBucket();
+      Float64Stats_HistogramBucket._();
   Float64Stats_HistogramBucket createEmptyInstance() => create();
   static $pb.PbList<Float64Stats_HistogramBucket> createRepeated() =>
       $pb.PbList<Float64Stats_HistogramBucket>();
@@ -201,18 +215,20 @@ class Float64Stats extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, Float64Stats_HistogramBucket.create)
     ..hasRequiredFields = false;
 
-  Float64Stats() : super();
-  Float64Stats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Float64Stats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Float64Stats._() : super();
+  factory Float64Stats() => create();
+  factory Float64Stats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Float64Stats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Float64Stats clone() => Float64Stats()..mergeFromMessage(this);
   Float64Stats copyWith(void Function(Float64Stats) updates) =>
       super.copyWith((message) => updates(message as Float64Stats));
   $pb.BuilderInfo get info_ => _i;
-  static Float64Stats create() => Float64Stats();
+  @$core.pragma('dart2js:noInline')
+  static Float64Stats create() => Float64Stats._();
   Float64Stats createEmptyInstance() => create();
   static $pb.PbList<Float64Stats> createRepeated() =>
       $pb.PbList<Float64Stats>();
@@ -247,20 +263,22 @@ class StringStats_UnigramStats extends $pb.GeneratedMessage {
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
-  StringStats_UnigramStats() : super();
-  StringStats_UnigramStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StringStats_UnigramStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StringStats_UnigramStats._() : super();
+  factory StringStats_UnigramStats() => create();
+  factory StringStats_UnigramStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StringStats_UnigramStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StringStats_UnigramStats clone() =>
       StringStats_UnigramStats()..mergeFromMessage(this);
   StringStats_UnigramStats copyWith(
           void Function(StringStats_UnigramStats) updates) =>
       super.copyWith((message) => updates(message as StringStats_UnigramStats));
   $pb.BuilderInfo get info_ => _i;
-  static StringStats_UnigramStats create() => StringStats_UnigramStats();
+  @$core.pragma('dart2js:noInline')
+  static StringStats_UnigramStats create() => StringStats_UnigramStats._();
   StringStats_UnigramStats createEmptyInstance() => create();
   static $pb.PbList<StringStats_UnigramStats> createRepeated() =>
       $pb.PbList<StringStats_UnigramStats>();
@@ -292,18 +310,20 @@ class StringStats extends $pb.GeneratedMessage {
         StringStats_UnigramStats.create)
     ..hasRequiredFields = false;
 
-  StringStats() : super();
-  StringStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StringStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StringStats._() : super();
+  factory StringStats() => create();
+  factory StringStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StringStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StringStats clone() => StringStats()..mergeFromMessage(this);
   StringStats copyWith(void Function(StringStats) updates) =>
       super.copyWith((message) => updates(message as StringStats));
   $pb.BuilderInfo get info_ => _i;
-  static StringStats create() => StringStats();
+  @$core.pragma('dart2js:noInline')
+  static StringStats create() => StringStats._();
   StringStats createEmptyInstance() => create();
   static $pb.PbList<StringStats> createRepeated() => $pb.PbList<StringStats>();
   static StringStats getDefault() => _defaultInstance ??= create()..freeze();
@@ -328,13 +348,14 @@ class TimestampStats_GranularStats extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  TimestampStats_GranularStats() : super();
-  TimestampStats_GranularStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimestampStats_GranularStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimestampStats_GranularStats._() : super();
+  factory TimestampStats_GranularStats() => create();
+  factory TimestampStats_GranularStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimestampStats_GranularStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimestampStats_GranularStats clone() =>
       TimestampStats_GranularStats()..mergeFromMessage(this);
   TimestampStats_GranularStats copyWith(
@@ -342,8 +363,9 @@ class TimestampStats_GranularStats extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TimestampStats_GranularStats));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TimestampStats_GranularStats create() =>
-      TimestampStats_GranularStats();
+      TimestampStats_GranularStats._();
   TimestampStats_GranularStats createEmptyInstance() => create();
   static $pb.PbList<TimestampStats_GranularStats> createRepeated() =>
       $pb.PbList<TimestampStats_GranularStats>();
@@ -369,18 +391,20 @@ class TimestampStats extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  TimestampStats() : super();
-  TimestampStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimestampStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimestampStats._() : super();
+  factory TimestampStats() => create();
+  factory TimestampStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimestampStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimestampStats clone() => TimestampStats()..mergeFromMessage(this);
   TimestampStats copyWith(void Function(TimestampStats) updates) =>
       super.copyWith((message) => updates(message as TimestampStats));
   $pb.BuilderInfo get info_ => _i;
-  static TimestampStats create() => TimestampStats();
+  @$core.pragma('dart2js:noInline')
+  static TimestampStats create() => TimestampStats._();
   TimestampStats createEmptyInstance() => create();
   static $pb.PbList<TimestampStats> createRepeated() =>
       $pb.PbList<TimestampStats>();
@@ -398,18 +422,20 @@ class ArrayStats extends $pb.GeneratedMessage {
         DataStats.create)
     ..hasRequiredFields = false;
 
-  ArrayStats() : super();
-  ArrayStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ArrayStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ArrayStats._() : super();
+  factory ArrayStats() => create();
+  factory ArrayStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ArrayStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ArrayStats clone() => ArrayStats()..mergeFromMessage(this);
   ArrayStats copyWith(void Function(ArrayStats) updates) =>
       super.copyWith((message) => updates(message as ArrayStats));
   $pb.BuilderInfo get info_ => _i;
-  static ArrayStats create() => ArrayStats();
+  @$core.pragma('dart2js:noInline')
+  static ArrayStats create() => ArrayStats._();
   ArrayStats createEmptyInstance() => create();
   static $pb.PbList<ArrayStats> createRepeated() => $pb.PbList<ArrayStats>();
   static ArrayStats getDefault() => _defaultInstance ??= create()..freeze();
@@ -439,18 +465,20 @@ class StructStats extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
-  StructStats() : super();
-  StructStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StructStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StructStats._() : super();
+  factory StructStats() => create();
+  factory StructStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StructStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StructStats clone() => StructStats()..mergeFromMessage(this);
   StructStats copyWith(void Function(StructStats) updates) =>
       super.copyWith((message) => updates(message as StructStats));
   $pb.BuilderInfo get info_ => _i;
-  static StructStats create() => StructStats();
+  @$core.pragma('dart2js:noInline')
+  static StructStats create() => StructStats._();
   StructStats createEmptyInstance() => create();
   static $pb.PbList<StructStats> createRepeated() => $pb.PbList<StructStats>();
   static StructStats getDefault() => _defaultInstance ??= create()..freeze();
@@ -467,13 +495,14 @@ class CategoryStats_SingleCategoryStats extends $pb.GeneratedMessage {
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
-  CategoryStats_SingleCategoryStats() : super();
-  CategoryStats_SingleCategoryStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CategoryStats_SingleCategoryStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CategoryStats_SingleCategoryStats._() : super();
+  factory CategoryStats_SingleCategoryStats() => create();
+  factory CategoryStats_SingleCategoryStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CategoryStats_SingleCategoryStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CategoryStats_SingleCategoryStats clone() =>
       CategoryStats_SingleCategoryStats()..mergeFromMessage(this);
   CategoryStats_SingleCategoryStats copyWith(
@@ -481,8 +510,9 @@ class CategoryStats_SingleCategoryStats extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CategoryStats_SingleCategoryStats));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static CategoryStats_SingleCategoryStats create() =>
-      CategoryStats_SingleCategoryStats();
+      CategoryStats_SingleCategoryStats._();
   CategoryStats_SingleCategoryStats createEmptyInstance() => create();
   static $pb.PbList<CategoryStats_SingleCategoryStats> createRepeated() =>
       $pb.PbList<CategoryStats_SingleCategoryStats>();
@@ -514,18 +544,20 @@ class CategoryStats extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, CategoryStats_SingleCategoryStats.create)
     ..hasRequiredFields = false;
 
-  CategoryStats() : super();
-  CategoryStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CategoryStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CategoryStats._() : super();
+  factory CategoryStats() => create();
+  factory CategoryStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CategoryStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CategoryStats clone() => CategoryStats()..mergeFromMessage(this);
   CategoryStats copyWith(void Function(CategoryStats) updates) =>
       super.copyWith((message) => updates(message as CategoryStats));
   $pb.BuilderInfo get info_ => _i;
-  static CategoryStats create() => CategoryStats();
+  @$core.pragma('dart2js:noInline')
+  static CategoryStats create() => CategoryStats._();
   CategoryStats createEmptyInstance() => create();
   static $pb.PbList<CategoryStats> createRepeated() =>
       $pb.PbList<CategoryStats>();
@@ -542,18 +574,20 @@ class CorrelationStats extends $pb.GeneratedMessage {
     ..a<$core.double>(1, 'cramersV', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  CorrelationStats() : super();
-  CorrelationStats.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CorrelationStats.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CorrelationStats._() : super();
+  factory CorrelationStats() => create();
+  factory CorrelationStats.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CorrelationStats.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CorrelationStats clone() => CorrelationStats()..mergeFromMessage(this);
   CorrelationStats copyWith(void Function(CorrelationStats) updates) =>
       super.copyWith((message) => updates(message as CorrelationStats));
   $pb.BuilderInfo get info_ => _i;
-  static CorrelationStats create() => CorrelationStats();
+  @$core.pragma('dart2js:noInline')
+  static CorrelationStats create() => CorrelationStats._();
   CorrelationStats createEmptyInstance() => create();
   static $pb.PbList<CorrelationStats> createRepeated() =>
       $pb.PbList<CorrelationStats>();

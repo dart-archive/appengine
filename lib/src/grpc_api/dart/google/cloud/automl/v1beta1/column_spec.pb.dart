@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/column_spec.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,13 +22,14 @@ class ColumnSpec_CorrelatedColumn extends $pb.GeneratedMessage {
         $1.CorrelationStats.getDefault, $1.CorrelationStats.create)
     ..hasRequiredFields = false;
 
-  ColumnSpec_CorrelatedColumn() : super();
-  ColumnSpec_CorrelatedColumn.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ColumnSpec_CorrelatedColumn.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ColumnSpec_CorrelatedColumn._() : super();
+  factory ColumnSpec_CorrelatedColumn() => create();
+  factory ColumnSpec_CorrelatedColumn.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ColumnSpec_CorrelatedColumn.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ColumnSpec_CorrelatedColumn clone() =>
       ColumnSpec_CorrelatedColumn()..mergeFromMessage(this);
   ColumnSpec_CorrelatedColumn copyWith(
@@ -35,7 +37,9 @@ class ColumnSpec_CorrelatedColumn extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ColumnSpec_CorrelatedColumn));
   $pb.BuilderInfo get info_ => _i;
-  static ColumnSpec_CorrelatedColumn create() => ColumnSpec_CorrelatedColumn();
+  @$core.pragma('dart2js:noInline')
+  static ColumnSpec_CorrelatedColumn create() =>
+      ColumnSpec_CorrelatedColumn._();
   ColumnSpec_CorrelatedColumn createEmptyInstance() => create();
   static $pb.PbList<ColumnSpec_CorrelatedColumn> createRepeated() =>
       $pb.PbList<ColumnSpec_CorrelatedColumn>();
@@ -74,18 +78,20 @@ class ColumnSpec extends $pb.GeneratedMessage {
     ..aOS(6, 'etag')
     ..hasRequiredFields = false;
 
-  ColumnSpec() : super();
-  ColumnSpec.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ColumnSpec.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ColumnSpec._() : super();
+  factory ColumnSpec() => create();
+  factory ColumnSpec.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ColumnSpec.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ColumnSpec clone() => ColumnSpec()..mergeFromMessage(this);
   ColumnSpec copyWith(void Function(ColumnSpec) updates) =>
       super.copyWith((message) => updates(message as ColumnSpec));
   $pb.BuilderInfo get info_ => _i;
-  static ColumnSpec create() => ColumnSpec();
+  @$core.pragma('dart2js:noInline')
+  static ColumnSpec create() => ColumnSpec._();
   ColumnSpec createEmptyInstance() => create();
   static $pb.PbList<ColumnSpec> createRepeated() => $pb.PbList<ColumnSpec>();
   static ColumnSpec getDefault() => _defaultInstance ??= create()..freeze();

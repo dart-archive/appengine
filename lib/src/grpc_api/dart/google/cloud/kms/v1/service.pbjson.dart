@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/kms/v1/service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ListKeyRingsRequest$json = {
   '1': 'ListKeyRingsRequest',
@@ -10,6 +11,8 @@ const ListKeyRingsRequest$json = {
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'order_by', '3': 5, '4': 1, '5': 9, '10': 'orderBy'},
   ],
 };
 
@@ -27,6 +30,8 @@ const ListCryptoKeysRequest$json = {
       '6': '.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionView',
       '10': 'versionView'
     },
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'order_by', '3': 6, '4': 1, '5': 9, '10': 'orderBy'},
   ],
 };
 
@@ -44,6 +49,19 @@ const ListCryptoKeyVersionsRequest$json = {
       '6': '.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionView',
       '10': 'view'
     },
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'order_by', '3': 6, '4': 1, '5': 9, '10': 'orderBy'},
+  ],
+};
+
+const ListImportJobsRequest$json = {
+  '1': 'ListImportJobsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'order_by', '3': 5, '4': 1, '5': 9, '10': 'orderBy'},
   ],
 };
 
@@ -95,6 +113,22 @@ const ListCryptoKeyVersionsResponse$json = {
   ],
 };
 
+const ListImportJobsResponse$json = {
+  '1': 'ListImportJobsResponse',
+  '2': [
+    {
+      '1': 'import_jobs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.kms.v1.ImportJob',
+      '10': 'importJobs'
+    },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {'1': 'total_size', '3': 3, '4': 1, '5': 5, '10': 'totalSize'},
+  ],
+};
+
 const GetKeyRingRequest$json = {
   '1': 'GetKeyRingRequest',
   '2': [
@@ -118,6 +152,13 @@ const GetCryptoKeyVersionRequest$json = {
 
 const GetPublicKeyRequest$json = {
   '1': 'GetPublicKeyRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const GetImportJobRequest$json = {
+  '1': 'GetImportJobRequest',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
@@ -152,6 +193,13 @@ const CreateCryptoKeyRequest$json = {
       '6': '.google.cloud.kms.v1.CryptoKey',
       '10': 'cryptoKey'
     },
+    {
+      '1': 'skip_initial_version_creation',
+      '3': 5,
+      '4': 1,
+      '5': 8,
+      '10': 'skipInitialVersionCreation'
+    },
   ],
 };
 
@@ -166,6 +214,49 @@ const CreateCryptoKeyVersionRequest$json = {
       '5': 11,
       '6': '.google.cloud.kms.v1.CryptoKeyVersion',
       '10': 'cryptoKeyVersion'
+    },
+  ],
+};
+
+const ImportCryptoKeyVersionRequest$json = {
+  '1': 'ImportCryptoKeyVersionRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'algorithm',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm',
+      '10': 'algorithm'
+    },
+    {'1': 'import_job', '3': 4, '4': 1, '5': 9, '10': 'importJob'},
+    {
+      '1': 'rsa_aes_wrapped_key',
+      '3': 5,
+      '4': 1,
+      '5': 12,
+      '9': 0,
+      '10': 'rsaAesWrappedKey'
+    },
+  ],
+  '8': [
+    {'1': 'wrapped_key_material'},
+  ],
+};
+
+const CreateImportJobRequest$json = {
+  '1': 'CreateImportJobRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'import_job_id', '3': 2, '4': 1, '5': 9, '10': 'importJobId'},
+    {
+      '1': 'import_job',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.kms.v1.ImportJob',
+      '10': 'importJob'
     },
   ],
 };

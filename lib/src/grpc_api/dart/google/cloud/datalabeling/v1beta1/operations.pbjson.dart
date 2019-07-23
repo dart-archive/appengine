@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/operations.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ImportDataOperationResponse$json = {
   '1': 'ImportDataOperationResponse',
@@ -50,6 +51,14 @@ const ImportDataOperationMetadata$json = {
       '6': '.google.rpc.Status',
       '10': 'partialFailures'
     },
+    {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
   ],
 };
 
@@ -65,21 +74,20 @@ const ExportDataOperationMetadata$json = {
       '6': '.google.rpc.Status',
       '10': 'partialFailures'
     },
+    {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
   ],
 };
 
 const LabelOperationMetadata$json = {
   '1': 'LabelOperationMetadata',
   '2': [
-    {'1': 'progress_percent', '3': 1, '4': 1, '5': 5, '10': 'progressPercent'},
-    {
-      '1': 'partial_failures',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.rpc.Status',
-      '10': 'partialFailures'
-    },
     {
       '1': 'image_classification_details',
       '3': 3,
@@ -191,16 +199,6 @@ const LabelOperationMetadata$json = {
       '10': 'textClassificationDetails'
     },
     {
-      '1': 'audio_transcription_details',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6':
-          '.google.cloud.datalabeling.v1beta1.LabelAudioTranscriptionOperationMetadata',
-      '9': 0,
-      '10': 'audioTranscriptionDetails'
-    },
-    {
       '1': 'text_entity_extraction_details',
       '3': 13,
       '4': 1,
@@ -209,6 +207,23 @@ const LabelOperationMetadata$json = {
           '.google.cloud.datalabeling.v1beta1.LabelTextEntityExtractionOperationMetadata',
       '9': 0,
       '10': 'textEntityExtractionDetails'
+    },
+    {'1': 'progress_percent', '3': 1, '4': 1, '5': 5, '10': 'progressPercent'},
+    {
+      '1': 'partial_failures',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'partialFailures'
+    },
+    {
+      '1': 'create_time',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
     },
   ],
   '8': [
@@ -370,20 +385,6 @@ const LabelTextClassificationOperationMetadata$json = {
   ],
 };
 
-const LabelAudioTranscriptionOperationMetadata$json = {
-  '1': 'LabelAudioTranscriptionOperationMetadata',
-  '2': [
-    {
-      '1': 'basic_config',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.datalabeling.v1beta1.HumanAnnotationConfig',
-      '10': 'basicConfig'
-    },
-  ],
-};
-
 const LabelTextEntityExtractionOperationMetadata$json = {
   '1': 'LabelTextEntityExtractionOperationMetadata',
   '2': [
@@ -409,6 +410,14 @@ const CreateInstructionMetadata$json = {
       '5': 11,
       '6': '.google.rpc.Status',
       '10': 'partialFailures'
+    },
+    {
+      '1': 'create_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
     },
   ],
 };

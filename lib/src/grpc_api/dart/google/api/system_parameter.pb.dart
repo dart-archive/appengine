@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/system_parameter.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class SystemParameters extends $pb.GeneratedMessage {
         1, 'rules', $pb.PbFieldType.PM, SystemParameterRule.create)
     ..hasRequiredFields = false;
 
-  SystemParameters() : super();
-  SystemParameters.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SystemParameters.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SystemParameters._() : super();
+  factory SystemParameters() => create();
+  factory SystemParameters.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SystemParameters.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SystemParameters clone() => SystemParameters()..mergeFromMessage(this);
   SystemParameters copyWith(void Function(SystemParameters) updates) =>
       super.copyWith((message) => updates(message as SystemParameters));
   $pb.BuilderInfo get info_ => _i;
-  static SystemParameters create() => SystemParameters();
+  @$core.pragma('dart2js:noInline')
+  static SystemParameters create() => SystemParameters._();
   SystemParameters createEmptyInstance() => create();
   static $pb.PbList<SystemParameters> createRepeated() =>
       $pb.PbList<SystemParameters>();
@@ -46,18 +49,20 @@ class SystemParameterRule extends $pb.GeneratedMessage {
         2, 'parameters', $pb.PbFieldType.PM, SystemParameter.create)
     ..hasRequiredFields = false;
 
-  SystemParameterRule() : super();
-  SystemParameterRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SystemParameterRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SystemParameterRule._() : super();
+  factory SystemParameterRule() => create();
+  factory SystemParameterRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SystemParameterRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SystemParameterRule clone() => SystemParameterRule()..mergeFromMessage(this);
   SystemParameterRule copyWith(void Function(SystemParameterRule) updates) =>
       super.copyWith((message) => updates(message as SystemParameterRule));
   $pb.BuilderInfo get info_ => _i;
-  static SystemParameterRule create() => SystemParameterRule();
+  @$core.pragma('dart2js:noInline')
+  static SystemParameterRule create() => SystemParameterRule._();
   SystemParameterRule createEmptyInstance() => create();
   static $pb.PbList<SystemParameterRule> createRepeated() =>
       $pb.PbList<SystemParameterRule>();
@@ -84,18 +89,20 @@ class SystemParameter extends $pb.GeneratedMessage {
     ..aOS(3, 'urlQueryParameter')
     ..hasRequiredFields = false;
 
-  SystemParameter() : super();
-  SystemParameter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SystemParameter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SystemParameter._() : super();
+  factory SystemParameter() => create();
+  factory SystemParameter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SystemParameter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SystemParameter clone() => SystemParameter()..mergeFromMessage(this);
   SystemParameter copyWith(void Function(SystemParameter) updates) =>
       super.copyWith((message) => updates(message as SystemParameter));
   $pb.BuilderInfo get info_ => _i;
-  static SystemParameter create() => SystemParameter();
+  @$core.pragma('dart2js:noInline')
+  static SystemParameter create() => SystemParameter._();
   SystemParameter createEmptyInstance() => create();
   static $pb.PbList<SystemParameter> createRepeated() =>
       $pb.PbList<SystemParameter>();

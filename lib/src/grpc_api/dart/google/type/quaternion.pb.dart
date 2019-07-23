@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/type/quaternion.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class Quaternion extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'w', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Quaternion() : super();
-  Quaternion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Quaternion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Quaternion._() : super();
+  factory Quaternion() => create();
+  factory Quaternion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Quaternion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Quaternion clone() => Quaternion()..mergeFromMessage(this);
   Quaternion copyWith(void Function(Quaternion) updates) =>
       super.copyWith((message) => updates(message as Quaternion));
   $pb.BuilderInfo get info_ => _i;
-  static Quaternion create() => Quaternion();
+  @$core.pragma('dart2js:noInline')
+  static Quaternion create() => Quaternion._();
   Quaternion createEmptyInstance() => create();
   static $pb.PbList<Quaternion> createRepeated() => $pb.PbList<Quaternion>();
   static Quaternion getDefault() => _defaultInstance ??= create()..freeze();

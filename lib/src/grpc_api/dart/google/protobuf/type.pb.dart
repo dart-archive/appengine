@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/protobuf/type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,18 +30,20 @@ class Type extends $pb.GeneratedMessage {
             Syntax.valueOf, Syntax.values)
         ..hasRequiredFields = false;
 
-  Type() : super();
-  Type.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Type.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Type._() : super();
+  factory Type() => create();
+  factory Type.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Type.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Type clone() => Type()..mergeFromMessage(this);
   Type copyWith(void Function(Type) updates) =>
       super.copyWith((message) => updates(message as Type));
   $pb.BuilderInfo get info_ => _i;
-  static Type create() => Type();
+  @$core.pragma('dart2js:noInline')
+  static Type create() => Type._();
   Type createEmptyInstance() => create();
   static $pb.PbList<Type> createRepeated() => $pb.PbList<Type>();
   static Type getDefault() => _defaultInstance ??= create()..freeze();
@@ -99,18 +102,20 @@ class Field extends $pb.GeneratedMessage {
     ..aOS(11, 'defaultValue')
     ..hasRequiredFields = false;
 
-  Field() : super();
-  Field.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Field.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Field._() : super();
+  factory Field() => create();
+  factory Field.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Field.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Field clone() => Field()..mergeFromMessage(this);
   Field copyWith(void Function(Field) updates) =>
       super.copyWith((message) => updates(message as Field));
   $pb.BuilderInfo get info_ => _i;
-  static Field create() => Field();
+  @$core.pragma('dart2js:noInline')
+  static Field create() => Field._();
   Field createEmptyInstance() => create();
   static $pb.PbList<Field> createRepeated() => $pb.PbList<Field>();
   static Field getDefault() => _defaultInstance ??= create()..freeze();
@@ -203,18 +208,20 @@ class Enum extends $pb.GeneratedMessage {
             Syntax.valueOf, Syntax.values)
         ..hasRequiredFields = false;
 
-  Enum() : super();
-  Enum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Enum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Enum._() : super();
+  factory Enum() => create();
+  factory Enum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Enum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Enum clone() => Enum()..mergeFromMessage(this);
   Enum copyWith(void Function(Enum) updates) =>
       super.copyWith((message) => updates(message as Enum));
   $pb.BuilderInfo get info_ => _i;
-  static Enum create() => Enum();
+  @$core.pragma('dart2js:noInline')
+  static Enum create() => Enum._();
   Enum createEmptyInstance() => create();
   static $pb.PbList<Enum> createRepeated() => $pb.PbList<Enum>();
   static Enum getDefault() => _defaultInstance ??= create()..freeze();
@@ -257,18 +264,20 @@ class EnumValue extends $pb.GeneratedMessage {
     ..pc<Option>(3, 'options', $pb.PbFieldType.PM, Option.create)
     ..hasRequiredFields = false;
 
-  EnumValue() : super();
-  EnumValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EnumValue._() : super();
+  factory EnumValue() => create();
+  factory EnumValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnumValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EnumValue clone() => EnumValue()..mergeFromMessage(this);
   EnumValue copyWith(void Function(EnumValue) updates) =>
       super.copyWith((message) => updates(message as EnumValue));
   $pb.BuilderInfo get info_ => _i;
-  static EnumValue create() => EnumValue();
+  @$core.pragma('dart2js:noInline')
+  static EnumValue create() => EnumValue._();
   EnumValue createEmptyInstance() => create();
   static $pb.PbList<EnumValue> createRepeated() => $pb.PbList<EnumValue>();
   static EnumValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -301,18 +310,20 @@ class Option extends $pb.GeneratedMessage {
         2, 'value', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
     ..hasRequiredFields = false;
 
-  Option() : super();
-  Option.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Option.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Option._() : super();
+  factory Option() => create();
+  factory Option.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Option.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Option clone() => Option()..mergeFromMessage(this);
   Option copyWith(void Function(Option) updates) =>
       super.copyWith((message) => updates(message as Option));
   $pb.BuilderInfo get info_ => _i;
-  static Option create() => Option();
+  @$core.pragma('dart2js:noInline')
+  static Option create() => Option._();
   Option createEmptyInstance() => create();
   static $pb.PbList<Option> createRepeated() => $pb.PbList<Option>();
   static Option getDefault() => _defaultInstance ??= create()..freeze();

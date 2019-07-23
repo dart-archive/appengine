@@ -1,53 +1,53 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/home/graph/v1/homegraph.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'homegraph.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'homegraph.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 export 'homegraph.pb.dart';
 
 class HomeGraphApiServiceClient extends $grpc.Client {
-  static final _$requestSyncDevices =
-      $grpc.ClientMethod<RequestSyncDevicesRequest, RequestSyncDevicesResponse>(
-          '/google.home.graph.v1.HomeGraphApiService/RequestSyncDevices',
-          (RequestSyncDevicesRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) =>
-              RequestSyncDevicesResponse.fromBuffer(value));
-  static final _$reportStateAndNotification = $grpc.ClientMethod<
-          ReportStateAndNotificationRequest,
-          ReportStateAndNotificationResponse>(
-      '/google.home.graph.v1.HomeGraphApiService/ReportStateAndNotification',
-      (ReportStateAndNotificationRequest value) => value.writeToBuffer(),
+  static final _$requestSyncDevices = $grpc.ClientMethod<
+          $0.RequestSyncDevicesRequest, $0.RequestSyncDevicesResponse>(
+      '/google.home.graph.v1.HomeGraphApiService/RequestSyncDevices',
+      ($0.RequestSyncDevicesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ReportStateAndNotificationResponse.fromBuffer(value));
+          $0.RequestSyncDevicesResponse.fromBuffer(value));
+  static final _$reportStateAndNotification = $grpc.ClientMethod<
+          $0.ReportStateAndNotificationRequest,
+          $0.ReportStateAndNotificationResponse>(
+      '/google.home.graph.v1.HomeGraphApiService/ReportStateAndNotification',
+      ($0.ReportStateAndNotificationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.ReportStateAndNotificationResponse.fromBuffer(value));
   static final _$deleteAgentUser =
-      $grpc.ClientMethod<DeleteAgentUserRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.DeleteAgentUserRequest, $1.Empty>(
           '/google.home.graph.v1.HomeGraphApiService/DeleteAgentUser',
-          (DeleteAgentUserRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$query = $grpc.ClientMethod<QueryRequest, QueryResponse>(
+          ($0.DeleteAgentUserRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$query = $grpc.ClientMethod<$0.QueryRequest, $0.QueryResponse>(
       '/google.home.graph.v1.HomeGraphApiService/Query',
-      (QueryRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => QueryResponse.fromBuffer(value));
-  static final _$sync = $grpc.ClientMethod<SyncRequest, SyncResponse>(
+      ($0.QueryRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.QueryResponse.fromBuffer(value));
+  static final _$sync = $grpc.ClientMethod<$0.SyncRequest, $0.SyncResponse>(
       '/google.home.graph.v1.HomeGraphApiService/Sync',
-      (SyncRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => SyncResponse.fromBuffer(value));
+      ($0.SyncRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.SyncResponse.fromBuffer(value));
 
   HomeGraphApiServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<RequestSyncDevicesResponse> requestSyncDevices(
-      RequestSyncDevicesRequest request,
+  $grpc.ResponseFuture<$0.RequestSyncDevicesResponse> requestSyncDevices(
+      $0.RequestSyncDevicesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$requestSyncDevices, $async.Stream.fromIterable([request]),
@@ -55,8 +55,8 @@ class HomeGraphApiServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ReportStateAndNotificationResponse>
-      reportStateAndNotification(ReportStateAndNotificationRequest request,
+  $grpc.ResponseFuture<$0.ReportStateAndNotificationResponse>
+      reportStateAndNotification($0.ReportStateAndNotificationRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$reportStateAndNotification, $async.Stream.fromIterable([request]),
@@ -64,7 +64,8 @@ class HomeGraphApiServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteAgentUser(DeleteAgentUserRequest request,
+  $grpc.ResponseFuture<$1.Empty> deleteAgentUser(
+      $0.DeleteAgentUserRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteAgentUser, $async.Stream.fromIterable([request]),
@@ -72,14 +73,14 @@ class HomeGraphApiServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<QueryResponse> query(QueryRequest request,
+  $grpc.ResponseFuture<$0.QueryResponse> query($0.QueryRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$query, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<SyncResponse> sync(SyncRequest request,
+  $grpc.ResponseFuture<$0.SyncResponse> sync($0.SyncRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$sync, $async.Stream.fromIterable([request]),
         options: options);
@@ -91,81 +92,85 @@ abstract class HomeGraphApiServiceBase extends $grpc.Service {
   $core.String get $name => 'google.home.graph.v1.HomeGraphApiService';
 
   HomeGraphApiServiceBase() {
-    $addMethod($grpc.ServiceMethod<RequestSyncDevicesRequest,
-            RequestSyncDevicesResponse>(
+    $addMethod($grpc.ServiceMethod<$0.RequestSyncDevicesRequest,
+            $0.RequestSyncDevicesResponse>(
         'RequestSyncDevices',
         requestSyncDevices_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            RequestSyncDevicesRequest.fromBuffer(value),
-        (RequestSyncDevicesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ReportStateAndNotificationRequest,
-            ReportStateAndNotificationResponse>(
+            $0.RequestSyncDevicesRequest.fromBuffer(value),
+        ($0.RequestSyncDevicesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ReportStateAndNotificationRequest,
+            $0.ReportStateAndNotificationResponse>(
         'ReportStateAndNotification',
         reportStateAndNotification_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ReportStateAndNotificationRequest.fromBuffer(value),
-        (ReportStateAndNotificationResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteAgentUserRequest, $0.Empty>(
+            $0.ReportStateAndNotificationRequest.fromBuffer(value),
+        ($0.ReportStateAndNotificationResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteAgentUserRequest, $1.Empty>(
         'DeleteAgentUser',
         deleteAgentUser_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteAgentUserRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<QueryRequest, QueryResponse>(
+            $0.DeleteAgentUserRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.QueryRequest, $0.QueryResponse>(
         'Query',
         query_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => QueryRequest.fromBuffer(value),
-        (QueryResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<SyncRequest, SyncResponse>(
+        ($core.List<$core.int> value) => $0.QueryRequest.fromBuffer(value),
+        ($0.QueryResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SyncRequest, $0.SyncResponse>(
         'Sync',
         sync_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => SyncRequest.fromBuffer(value),
-        (SyncResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.SyncRequest.fromBuffer(value),
+        ($0.SyncResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<RequestSyncDevicesResponse> requestSyncDevices_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.RequestSyncDevicesResponse> requestSyncDevices_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.RequestSyncDevicesRequest> request) async {
     return requestSyncDevices(call, await request);
   }
 
-  $async.Future<ReportStateAndNotificationResponse>
-      reportStateAndNotification_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ReportStateAndNotificationResponse>
+      reportStateAndNotification_Pre($grpc.ServiceCall call,
+          $async.Future<$0.ReportStateAndNotificationRequest> request) async {
     return reportStateAndNotification(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteAgentUser_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> deleteAgentUser_Pre($grpc.ServiceCall call,
+      $async.Future<$0.DeleteAgentUserRequest> request) async {
     return deleteAgentUser(call, await request);
   }
 
-  $async.Future<QueryResponse> query_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.QueryResponse> query_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.QueryRequest> request) async {
     return query(call, await request);
   }
 
-  $async.Future<SyncResponse> sync_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.SyncResponse> sync_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.SyncRequest> request) async {
     return sync(call, await request);
   }
 
-  $async.Future<RequestSyncDevicesResponse> requestSyncDevices(
-      $grpc.ServiceCall call, RequestSyncDevicesRequest request);
-  $async.Future<ReportStateAndNotificationResponse> reportStateAndNotification(
-      $grpc.ServiceCall call, ReportStateAndNotificationRequest request);
-  $async.Future<$0.Empty> deleteAgentUser(
-      $grpc.ServiceCall call, DeleteAgentUserRequest request);
-  $async.Future<QueryResponse> query(
-      $grpc.ServiceCall call, QueryRequest request);
-  $async.Future<SyncResponse> sync($grpc.ServiceCall call, SyncRequest request);
+  $async.Future<$0.RequestSyncDevicesResponse> requestSyncDevices(
+      $grpc.ServiceCall call, $0.RequestSyncDevicesRequest request);
+  $async.Future<$0.ReportStateAndNotificationResponse>
+      reportStateAndNotification(
+          $grpc.ServiceCall call, $0.ReportStateAndNotificationRequest request);
+  $async.Future<$1.Empty> deleteAgentUser(
+      $grpc.ServiceCall call, $0.DeleteAgentUserRequest request);
+  $async.Future<$0.QueryResponse> query(
+      $grpc.ServiceCall call, $0.QueryRequest request);
+  $async.Future<$0.SyncResponse> sync(
+      $grpc.ServiceCall call, $0.SyncRequest request);
 }

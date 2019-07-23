@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/profile_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const ListProfilesRequest$json = {
   '1': 'ListProfilesRequest',
@@ -133,6 +134,14 @@ const SearchProfilesRequest$json = {
       '6': '.google.cloud.talent.v4beta1.HistogramQuery',
       '10': 'histogramQueries'
     },
+    {'1': 'result_set_id', '3': 12, '4': 1, '5': 9, '10': 'resultSetId'},
+    {
+      '1': 'strict_keywords_search',
+      '3': 13,
+      '4': 1,
+      '5': 8,
+      '10': 'strictKeywordsSearch'
+    },
   ],
 };
 
@@ -179,6 +188,7 @@ const SearchProfilesResponse$json = {
       '6': '.google.cloud.talent.v4beta1.SummarizedProfile',
       '10': 'summarizedProfiles'
     },
+    {'1': 'result_set_id', '3': 7, '4': 1, '5': 9, '10': 'resultSetId'},
   ],
 };
 

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/classification.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -20,20 +21,22 @@ class ClassificationAnnotation extends $pb.GeneratedMessage {
     ..a<$core.double>(1, 'score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  ClassificationAnnotation() : super();
-  ClassificationAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassificationAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClassificationAnnotation._() : super();
+  factory ClassificationAnnotation() => create();
+  factory ClassificationAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClassificationAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClassificationAnnotation clone() =>
       ClassificationAnnotation()..mergeFromMessage(this);
   ClassificationAnnotation copyWith(
           void Function(ClassificationAnnotation) updates) =>
       super.copyWith((message) => updates(message as ClassificationAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static ClassificationAnnotation create() => ClassificationAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static ClassificationAnnotation create() => ClassificationAnnotation._();
   ClassificationAnnotation createEmptyInstance() => create();
   static $pb.PbList<ClassificationAnnotation> createRepeated() =>
       $pb.PbList<ClassificationAnnotation>();
@@ -65,13 +68,14 @@ class VideoClassificationAnnotation extends $pb.GeneratedMessage {
         $0.TimeSegment.getDefault, $0.TimeSegment.create)
     ..hasRequiredFields = false;
 
-  VideoClassificationAnnotation() : super();
-  VideoClassificationAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoClassificationAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoClassificationAnnotation._() : super();
+  factory VideoClassificationAnnotation() => create();
+  factory VideoClassificationAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoClassificationAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoClassificationAnnotation clone() =>
       VideoClassificationAnnotation()..mergeFromMessage(this);
   VideoClassificationAnnotation copyWith(
@@ -79,8 +83,9 @@ class VideoClassificationAnnotation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as VideoClassificationAnnotation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static VideoClassificationAnnotation create() =>
-      VideoClassificationAnnotation();
+      VideoClassificationAnnotation._();
   VideoClassificationAnnotation createEmptyInstance() => create();
   static $pb.PbList<VideoClassificationAnnotation> createRepeated() =>
       $pb.PbList<VideoClassificationAnnotation>();
@@ -134,15 +139,16 @@ class ClassificationEvaluationMetrics_ConfidenceMetricsEntry
     ..a<$core.int>(14, 'positionThreshold', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ClassificationEvaluationMetrics_ConfidenceMetricsEntry() : super();
-  ClassificationEvaluationMetrics_ConfidenceMetricsEntry.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassificationEvaluationMetrics_ConfidenceMetricsEntry.fromJson(
-      $core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClassificationEvaluationMetrics_ConfidenceMetricsEntry._() : super();
+  factory ClassificationEvaluationMetrics_ConfidenceMetricsEntry() => create();
+  factory ClassificationEvaluationMetrics_ConfidenceMetricsEntry.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClassificationEvaluationMetrics_ConfidenceMetricsEntry.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClassificationEvaluationMetrics_ConfidenceMetricsEntry clone() =>
       ClassificationEvaluationMetrics_ConfidenceMetricsEntry()
         ..mergeFromMessage(this);
@@ -152,8 +158,9 @@ class ClassificationEvaluationMetrics_ConfidenceMetricsEntry
       super.copyWith((message) => updates(
           message as ClassificationEvaluationMetrics_ConfidenceMetricsEntry));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ClassificationEvaluationMetrics_ConfidenceMetricsEntry create() =>
-      ClassificationEvaluationMetrics_ConfidenceMetricsEntry();
+      ClassificationEvaluationMetrics_ConfidenceMetricsEntry._();
   ClassificationEvaluationMetrics_ConfidenceMetricsEntry
       createEmptyInstance() => create();
   static $pb.PbList<ClassificationEvaluationMetrics_ConfidenceMetricsEntry>
@@ -285,14 +292,16 @@ class ClassificationEvaluationMetrics_ConfusionMatrix_Row
     ..p<$core.int>(1, 'exampleCount', $pb.PbFieldType.P3)
     ..hasRequiredFields = false;
 
-  ClassificationEvaluationMetrics_ConfusionMatrix_Row() : super();
-  ClassificationEvaluationMetrics_ConfusionMatrix_Row.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassificationEvaluationMetrics_ConfusionMatrix_Row.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClassificationEvaluationMetrics_ConfusionMatrix_Row._() : super();
+  factory ClassificationEvaluationMetrics_ConfusionMatrix_Row() => create();
+  factory ClassificationEvaluationMetrics_ConfusionMatrix_Row.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClassificationEvaluationMetrics_ConfusionMatrix_Row.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClassificationEvaluationMetrics_ConfusionMatrix_Row clone() =>
       ClassificationEvaluationMetrics_ConfusionMatrix_Row()
         ..mergeFromMessage(this);
@@ -302,8 +311,9 @@ class ClassificationEvaluationMetrics_ConfusionMatrix_Row
       super.copyWith((message) => updates(
           message as ClassificationEvaluationMetrics_ConfusionMatrix_Row));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ClassificationEvaluationMetrics_ConfusionMatrix_Row create() =>
-      ClassificationEvaluationMetrics_ConfusionMatrix_Row();
+      ClassificationEvaluationMetrics_ConfusionMatrix_Row._();
   ClassificationEvaluationMetrics_ConfusionMatrix_Row createEmptyInstance() =>
       create();
   static $pb.PbList<ClassificationEvaluationMetrics_ConfusionMatrix_Row>
@@ -329,14 +339,16 @@ class ClassificationEvaluationMetrics_ConfusionMatrix
         ClassificationEvaluationMetrics_ConfusionMatrix_Row.create)
     ..hasRequiredFields = false;
 
-  ClassificationEvaluationMetrics_ConfusionMatrix() : super();
-  ClassificationEvaluationMetrics_ConfusionMatrix.fromBuffer(
-      $core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassificationEvaluationMetrics_ConfusionMatrix.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClassificationEvaluationMetrics_ConfusionMatrix._() : super();
+  factory ClassificationEvaluationMetrics_ConfusionMatrix() => create();
+  factory ClassificationEvaluationMetrics_ConfusionMatrix.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClassificationEvaluationMetrics_ConfusionMatrix.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClassificationEvaluationMetrics_ConfusionMatrix clone() =>
       ClassificationEvaluationMetrics_ConfusionMatrix()..mergeFromMessage(this);
   ClassificationEvaluationMetrics_ConfusionMatrix copyWith(
@@ -345,8 +357,9 @@ class ClassificationEvaluationMetrics_ConfusionMatrix
       super.copyWith((message) =>
           updates(message as ClassificationEvaluationMetrics_ConfusionMatrix));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ClassificationEvaluationMetrics_ConfusionMatrix create() =>
-      ClassificationEvaluationMetrics_ConfusionMatrix();
+      ClassificationEvaluationMetrics_ConfusionMatrix._();
   ClassificationEvaluationMetrics_ConfusionMatrix createEmptyInstance() =>
       create();
   static $pb.PbList<ClassificationEvaluationMetrics_ConfusionMatrix>
@@ -384,13 +397,14 @@ class ClassificationEvaluationMetrics extends $pb.GeneratedMessage {
     ..a<$core.double>(7, 'logLoss', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  ClassificationEvaluationMetrics() : super();
-  ClassificationEvaluationMetrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ClassificationEvaluationMetrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ClassificationEvaluationMetrics._() : super();
+  factory ClassificationEvaluationMetrics() => create();
+  factory ClassificationEvaluationMetrics.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ClassificationEvaluationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ClassificationEvaluationMetrics clone() =>
       ClassificationEvaluationMetrics()..mergeFromMessage(this);
   ClassificationEvaluationMetrics copyWith(
@@ -398,8 +412,9 @@ class ClassificationEvaluationMetrics extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ClassificationEvaluationMetrics));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ClassificationEvaluationMetrics create() =>
-      ClassificationEvaluationMetrics();
+      ClassificationEvaluationMetrics._();
   ClassificationEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<ClassificationEvaluationMetrics> createRepeated() =>
       $pb.PbList<ClassificationEvaluationMetrics>();

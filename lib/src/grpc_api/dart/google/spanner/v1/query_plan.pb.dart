@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/spanner/v1/query_plan.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,18 +24,20 @@ class PlanNode_ChildLink extends $pb.GeneratedMessage {
     ..aOS(3, 'variable')
     ..hasRequiredFields = false;
 
-  PlanNode_ChildLink() : super();
-  PlanNode_ChildLink.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PlanNode_ChildLink.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PlanNode_ChildLink._() : super();
+  factory PlanNode_ChildLink() => create();
+  factory PlanNode_ChildLink.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PlanNode_ChildLink.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PlanNode_ChildLink clone() => PlanNode_ChildLink()..mergeFromMessage(this);
   PlanNode_ChildLink copyWith(void Function(PlanNode_ChildLink) updates) =>
       super.copyWith((message) => updates(message as PlanNode_ChildLink));
   $pb.BuilderInfo get info_ => _i;
-  static PlanNode_ChildLink create() => PlanNode_ChildLink();
+  @$core.pragma('dart2js:noInline')
+  static PlanNode_ChildLink create() => PlanNode_ChildLink._();
   PlanNode_ChildLink createEmptyInstance() => create();
   static $pb.PbList<PlanNode_ChildLink> createRepeated() =>
       $pb.PbList<PlanNode_ChildLink>();
@@ -84,13 +87,14 @@ class PlanNode_ShortRepresentation extends $pb.GeneratedMessage {
         const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
-  PlanNode_ShortRepresentation() : super();
-  PlanNode_ShortRepresentation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PlanNode_ShortRepresentation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PlanNode_ShortRepresentation._() : super();
+  factory PlanNode_ShortRepresentation() => create();
+  factory PlanNode_ShortRepresentation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PlanNode_ShortRepresentation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PlanNode_ShortRepresentation clone() =>
       PlanNode_ShortRepresentation()..mergeFromMessage(this);
   PlanNode_ShortRepresentation copyWith(
@@ -98,8 +102,9 @@ class PlanNode_ShortRepresentation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as PlanNode_ShortRepresentation));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static PlanNode_ShortRepresentation create() =>
-      PlanNode_ShortRepresentation();
+      PlanNode_ShortRepresentation._();
   PlanNode_ShortRepresentation createEmptyInstance() => create();
   static $pb.PbList<PlanNode_ShortRepresentation> createRepeated() =>
       $pb.PbList<PlanNode_ShortRepresentation>();
@@ -144,18 +149,20 @@ class PlanNode extends $pb.GeneratedMessage {
         $0.Struct.getDefault, $0.Struct.create)
     ..hasRequiredFields = false;
 
-  PlanNode() : super();
-  PlanNode.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PlanNode.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PlanNode._() : super();
+  factory PlanNode() => create();
+  factory PlanNode.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PlanNode.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PlanNode clone() => PlanNode()..mergeFromMessage(this);
   PlanNode copyWith(void Function(PlanNode) updates) =>
       super.copyWith((message) => updates(message as PlanNode));
   $pb.BuilderInfo get info_ => _i;
-  static PlanNode create() => PlanNode();
+  @$core.pragma('dart2js:noInline')
+  static PlanNode create() => PlanNode._();
   PlanNode createEmptyInstance() => create();
   static $pb.PbList<PlanNode> createRepeated() => $pb.PbList<PlanNode>();
   static PlanNode getDefault() => _defaultInstance ??= create()..freeze();
@@ -218,18 +225,20 @@ class QueryPlan extends $pb.GeneratedMessage {
     ..pc<PlanNode>(1, 'planNodes', $pb.PbFieldType.PM, PlanNode.create)
     ..hasRequiredFields = false;
 
-  QueryPlan() : super();
-  QueryPlan.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QueryPlan.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QueryPlan._() : super();
+  factory QueryPlan() => create();
+  factory QueryPlan.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QueryPlan.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QueryPlan clone() => QueryPlan()..mergeFromMessage(this);
   QueryPlan copyWith(void Function(QueryPlan) updates) =>
       super.copyWith((message) => updates(message as QueryPlan));
   $pb.BuilderInfo get info_ => _i;
-  static QueryPlan create() => QueryPlan();
+  @$core.pragma('dart2js:noInline')
+  static QueryPlan create() => QueryPlan._();
   QueryPlan createEmptyInstance() => create();
   static $pb.PbList<QueryPlan> createRepeated() => $pb.PbList<QueryPlan>();
   static QueryPlan getDefault() => _defaultInstance ??= create()..freeze();

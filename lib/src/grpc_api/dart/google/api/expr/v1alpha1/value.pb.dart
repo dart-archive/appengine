@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/value.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -48,6 +49,7 @@ class Value extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
       package: const $pb.PackageName('google.api.expr.v1alpha1'))
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15])
     ..e<$1.NullValue>(1, 'nullValue', $pb.PbFieldType.OE,
         $1.NullValue.NULL_VALUE, $1.NullValue.valueOf, $1.NullValue.values)
     ..aOB(2, 'boolValue')
@@ -65,21 +67,22 @@ class Value extends $pb.GeneratedMessage {
     ..a<ListValue>(12, 'listValue', $pb.PbFieldType.OM, ListValue.getDefault,
         ListValue.create)
     ..aOS(15, 'typeValue')
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15])
     ..hasRequiredFields = false;
 
-  Value() : super();
-  Value.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Value.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Value._() : super();
+  factory Value() => create();
+  factory Value.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Value.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Value clone() => Value()..mergeFromMessage(this);
   Value copyWith(void Function(Value) updates) =>
       super.copyWith((message) => updates(message as Value));
   $pb.BuilderInfo get info_ => _i;
-  static Value create() => Value();
+  @$core.pragma('dart2js:noInline')
+  static Value create() => Value._();
   Value createEmptyInstance() => create();
   static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
   static Value getDefault() => _defaultInstance ??= create()..freeze();
@@ -192,18 +195,20 @@ class EnumValue extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'value', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  EnumValue() : super();
-  EnumValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnumValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EnumValue._() : super();
+  factory EnumValue() => create();
+  factory EnumValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnumValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EnumValue clone() => EnumValue()..mergeFromMessage(this);
   EnumValue copyWith(void Function(EnumValue) updates) =>
       super.copyWith((message) => updates(message as EnumValue));
   $pb.BuilderInfo get info_ => _i;
-  static EnumValue create() => EnumValue();
+  @$core.pragma('dart2js:noInline')
+  static EnumValue create() => EnumValue._();
   EnumValue createEmptyInstance() => create();
   static $pb.PbList<EnumValue> createRepeated() => $pb.PbList<EnumValue>();
   static EnumValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -232,18 +237,20 @@ class ListValue extends $pb.GeneratedMessage {
     ..pc<Value>(1, 'values', $pb.PbFieldType.PM, Value.create)
     ..hasRequiredFields = false;
 
-  ListValue() : super();
-  ListValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListValue._() : super();
+  factory ListValue() => create();
+  factory ListValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListValue clone() => ListValue()..mergeFromMessage(this);
   ListValue copyWith(void Function(ListValue) updates) =>
       super.copyWith((message) => updates(message as ListValue));
   $pb.BuilderInfo get info_ => _i;
-  static ListValue create() => ListValue();
+  @$core.pragma('dart2js:noInline')
+  static ListValue create() => ListValue._();
   ListValue createEmptyInstance() => create();
   static $pb.PbList<ListValue> createRepeated() => $pb.PbList<ListValue>();
   static ListValue getDefault() => _defaultInstance ??= create()..freeze();
@@ -259,18 +266,20 @@ class MapValue_Entry extends $pb.GeneratedMessage {
     ..a<Value>(2, 'value', $pb.PbFieldType.OM, Value.getDefault, Value.create)
     ..hasRequiredFields = false;
 
-  MapValue_Entry() : super();
-  MapValue_Entry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MapValue_Entry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MapValue_Entry._() : super();
+  factory MapValue_Entry() => create();
+  factory MapValue_Entry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MapValue_Entry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MapValue_Entry clone() => MapValue_Entry()..mergeFromMessage(this);
   MapValue_Entry copyWith(void Function(MapValue_Entry) updates) =>
       super.copyWith((message) => updates(message as MapValue_Entry));
   $pb.BuilderInfo get info_ => _i;
-  static MapValue_Entry create() => MapValue_Entry();
+  @$core.pragma('dart2js:noInline')
+  static MapValue_Entry create() => MapValue_Entry._();
   MapValue_Entry createEmptyInstance() => create();
   static $pb.PbList<MapValue_Entry> createRepeated() =>
       $pb.PbList<MapValue_Entry>();
@@ -301,18 +310,20 @@ class MapValue extends $pb.GeneratedMessage {
         1, 'entries', $pb.PbFieldType.PM, MapValue_Entry.create)
     ..hasRequiredFields = false;
 
-  MapValue() : super();
-  MapValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MapValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MapValue._() : super();
+  factory MapValue() => create();
+  factory MapValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MapValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MapValue clone() => MapValue()..mergeFromMessage(this);
   MapValue copyWith(void Function(MapValue) updates) =>
       super.copyWith((message) => updates(message as MapValue));
   $pb.BuilderInfo get info_ => _i;
-  static MapValue create() => MapValue();
+  @$core.pragma('dart2js:noInline')
+  static MapValue create() => MapValue._();
   MapValue createEmptyInstance() => create();
   static $pb.PbList<MapValue> createRepeated() => $pb.PbList<MapValue>();
   static MapValue getDefault() => _defaultInstance ??= create()..freeze();

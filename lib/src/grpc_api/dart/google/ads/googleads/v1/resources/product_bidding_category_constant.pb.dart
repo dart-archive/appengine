@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/product_bidding_category_constant.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -48,13 +49,14 @@ class ProductBiddingCategoryConstant extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ProductBiddingCategoryConstant() : super();
-  ProductBiddingCategoryConstant.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProductBiddingCategoryConstant.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProductBiddingCategoryConstant._() : super();
+  factory ProductBiddingCategoryConstant() => create();
+  factory ProductBiddingCategoryConstant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProductBiddingCategoryConstant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProductBiddingCategoryConstant clone() =>
       ProductBiddingCategoryConstant()..mergeFromMessage(this);
   ProductBiddingCategoryConstant copyWith(
@@ -62,8 +64,9 @@ class ProductBiddingCategoryConstant extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ProductBiddingCategoryConstant));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ProductBiddingCategoryConstant create() =>
-      ProductBiddingCategoryConstant();
+      ProductBiddingCategoryConstant._();
   ProductBiddingCategoryConstant createEmptyInstance() => create();
   static $pb.PbList<ProductBiddingCategoryConstant> createRepeated() =>
       $pb.PbList<ProductBiddingCategoryConstant>();

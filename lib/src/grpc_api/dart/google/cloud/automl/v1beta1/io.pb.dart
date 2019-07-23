@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/io.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,6 +21,7 @@ class InputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InputConfig',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 3])
     ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
         GcsSource.create)
     ..m<$core.String, $core.String>(
@@ -34,21 +36,22 @@ class InputConfig extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..a<BigQuerySource>(3, 'bigquerySource', $pb.PbFieldType.OM,
         BigQuerySource.getDefault, BigQuerySource.create)
-    ..oo(0, [1, 3])
     ..hasRequiredFields = false;
 
-  InputConfig() : super();
-  InputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InputConfig._() : super();
+  factory InputConfig() => create();
+  factory InputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InputConfig clone() => InputConfig()..mergeFromMessage(this);
   InputConfig copyWith(void Function(InputConfig) updates) =>
       super.copyWith((message) => updates(message as InputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static InputConfig create() => InputConfig();
+  @$core.pragma('dart2js:noInline')
+  static InputConfig create() => InputConfig._();
   InputConfig createEmptyInstance() => create();
   static $pb.PbList<InputConfig> createRepeated() => $pb.PbList<InputConfig>();
   static InputConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -87,27 +90,29 @@ class BatchPredictInputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchPredictInputConfig',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 2])
     ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
         GcsSource.create)
     ..a<BigQuerySource>(2, 'bigquerySource', $pb.PbFieldType.OM,
         BigQuerySource.getDefault, BigQuerySource.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  BatchPredictInputConfig() : super();
-  BatchPredictInputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchPredictInputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchPredictInputConfig._() : super();
+  factory BatchPredictInputConfig() => create();
+  factory BatchPredictInputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchPredictInputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchPredictInputConfig clone() =>
       BatchPredictInputConfig()..mergeFromMessage(this);
   BatchPredictInputConfig copyWith(
           void Function(BatchPredictInputConfig) updates) =>
       super.copyWith((message) => updates(message as BatchPredictInputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static BatchPredictInputConfig create() => BatchPredictInputConfig();
+  @$core.pragma('dart2js:noInline')
+  static BatchPredictInputConfig create() => BatchPredictInputConfig._();
   BatchPredictInputConfig createEmptyInstance() => create();
   static $pb.PbList<BatchPredictInputConfig> createRepeated() =>
       $pb.PbList<BatchPredictInputConfig>();
@@ -143,18 +148,20 @@ class DocumentInputConfig extends $pb.GeneratedMessage {
         GcsSource.create)
     ..hasRequiredFields = false;
 
-  DocumentInputConfig() : super();
-  DocumentInputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DocumentInputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DocumentInputConfig._() : super();
+  factory DocumentInputConfig() => create();
+  factory DocumentInputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DocumentInputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DocumentInputConfig clone() => DocumentInputConfig()..mergeFromMessage(this);
   DocumentInputConfig copyWith(void Function(DocumentInputConfig) updates) =>
       super.copyWith((message) => updates(message as DocumentInputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static DocumentInputConfig create() => DocumentInputConfig();
+  @$core.pragma('dart2js:noInline')
+  static DocumentInputConfig create() => DocumentInputConfig._();
   DocumentInputConfig createEmptyInstance() => create();
   static $pb.PbList<DocumentInputConfig> createRepeated() =>
       $pb.PbList<DocumentInputConfig>();
@@ -182,25 +189,27 @@ class OutputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputConfig',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 2])
     ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
     ..a<BigQueryDestination>(2, 'bigqueryDestination', $pb.PbFieldType.OM,
         BigQueryDestination.getDefault, BigQueryDestination.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  OutputConfig() : super();
-  OutputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutputConfig._() : super();
+  factory OutputConfig() => create();
+  factory OutputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutputConfig clone() => OutputConfig()..mergeFromMessage(this);
   OutputConfig copyWith(void Function(OutputConfig) updates) =>
       super.copyWith((message) => updates(message as OutputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static OutputConfig create() => OutputConfig();
+  @$core.pragma('dart2js:noInline')
+  static OutputConfig create() => OutputConfig._();
   OutputConfig createEmptyInstance() => create();
   static $pb.PbList<OutputConfig> createRepeated() =>
       $pb.PbList<OutputConfig>();
@@ -243,27 +252,29 @@ class BatchPredictOutputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchPredictOutputConfig',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 2])
     ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
     ..a<BigQueryDestination>(2, 'bigqueryDestination', $pb.PbFieldType.OM,
         BigQueryDestination.getDefault, BigQueryDestination.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  BatchPredictOutputConfig() : super();
-  BatchPredictOutputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchPredictOutputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchPredictOutputConfig._() : super();
+  factory BatchPredictOutputConfig() => create();
+  factory BatchPredictOutputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchPredictOutputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchPredictOutputConfig clone() =>
       BatchPredictOutputConfig()..mergeFromMessage(this);
   BatchPredictOutputConfig copyWith(
           void Function(BatchPredictOutputConfig) updates) =>
       super.copyWith((message) => updates(message as BatchPredictOutputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static BatchPredictOutputConfig create() => BatchPredictOutputConfig();
+  @$core.pragma('dart2js:noInline')
+  static BatchPredictOutputConfig create() => BatchPredictOutputConfig._();
   BatchPredictOutputConfig createEmptyInstance() => create();
   static $pb.PbList<BatchPredictOutputConfig> createRepeated() =>
       $pb.PbList<BatchPredictOutputConfig>();
@@ -307,6 +318,7 @@ class ModelExportOutputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModelExportOutputConfig',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 3])
     ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
     ..m<$core.String, $core.String>(
@@ -322,23 +334,24 @@ class ModelExportOutputConfig extends $pb.GeneratedMessage {
     ..a<GcrDestination>(3, 'gcrDestination', $pb.PbFieldType.OM,
         GcrDestination.getDefault, GcrDestination.create)
     ..aOS(4, 'modelFormat')
-    ..oo(0, [1, 3])
     ..hasRequiredFields = false;
 
-  ModelExportOutputConfig() : super();
-  ModelExportOutputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ModelExportOutputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ModelExportOutputConfig._() : super();
+  factory ModelExportOutputConfig() => create();
+  factory ModelExportOutputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ModelExportOutputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ModelExportOutputConfig clone() =>
       ModelExportOutputConfig()..mergeFromMessage(this);
   ModelExportOutputConfig copyWith(
           void Function(ModelExportOutputConfig) updates) =>
       super.copyWith((message) => updates(message as ModelExportOutputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ModelExportOutputConfig create() => ModelExportOutputConfig();
+  @$core.pragma('dart2js:noInline')
+  static ModelExportOutputConfig create() => ModelExportOutputConfig._();
   ModelExportOutputConfig createEmptyInstance() => create();
   static $pb.PbList<ModelExportOutputConfig> createRepeated() =>
       $pb.PbList<ModelExportOutputConfig>();
@@ -392,18 +405,20 @@ class ExportEvaluatedExamplesOutputConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportEvaluatedExamplesOutputConfig',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [2])
     ..a<BigQueryDestination>(2, 'bigqueryDestination', $pb.PbFieldType.OM,
         BigQueryDestination.getDefault, BigQueryDestination.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  ExportEvaluatedExamplesOutputConfig() : super();
-  ExportEvaluatedExamplesOutputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExportEvaluatedExamplesOutputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExportEvaluatedExamplesOutputConfig._() : super();
+  factory ExportEvaluatedExamplesOutputConfig() => create();
+  factory ExportEvaluatedExamplesOutputConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportEvaluatedExamplesOutputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExportEvaluatedExamplesOutputConfig clone() =>
       ExportEvaluatedExamplesOutputConfig()..mergeFromMessage(this);
   ExportEvaluatedExamplesOutputConfig copyWith(
@@ -411,8 +426,9 @@ class ExportEvaluatedExamplesOutputConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExportEvaluatedExamplesOutputConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesOutputConfig create() =>
-      ExportEvaluatedExamplesOutputConfig();
+      ExportEvaluatedExamplesOutputConfig._();
   ExportEvaluatedExamplesOutputConfig createEmptyInstance() => create();
   static $pb.PbList<ExportEvaluatedExamplesOutputConfig> createRepeated() =>
       $pb.PbList<ExportEvaluatedExamplesOutputConfig>();
@@ -439,18 +455,20 @@ class GcsSource extends $pb.GeneratedMessage {
     ..pPS(1, 'inputUris')
     ..hasRequiredFields = false;
 
-  GcsSource() : super();
-  GcsSource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcsSource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcsSource._() : super();
+  factory GcsSource() => create();
+  factory GcsSource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcsSource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcsSource clone() => GcsSource()..mergeFromMessage(this);
   GcsSource copyWith(void Function(GcsSource) updates) =>
       super.copyWith((message) => updates(message as GcsSource));
   $pb.BuilderInfo get info_ => _i;
-  static GcsSource create() => GcsSource();
+  @$core.pragma('dart2js:noInline')
+  static GcsSource create() => GcsSource._();
   GcsSource createEmptyInstance() => create();
   static $pb.PbList<GcsSource> createRepeated() => $pb.PbList<GcsSource>();
   static GcsSource getDefault() => _defaultInstance ??= create()..freeze();
@@ -465,18 +483,20 @@ class BigQuerySource extends $pb.GeneratedMessage {
     ..aOS(1, 'inputUri')
     ..hasRequiredFields = false;
 
-  BigQuerySource() : super();
-  BigQuerySource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BigQuerySource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BigQuerySource._() : super();
+  factory BigQuerySource() => create();
+  factory BigQuerySource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BigQuerySource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BigQuerySource clone() => BigQuerySource()..mergeFromMessage(this);
   BigQuerySource copyWith(void Function(BigQuerySource) updates) =>
       super.copyWith((message) => updates(message as BigQuerySource));
   $pb.BuilderInfo get info_ => _i;
-  static BigQuerySource create() => BigQuerySource();
+  @$core.pragma('dart2js:noInline')
+  static BigQuerySource create() => BigQuerySource._();
   BigQuerySource createEmptyInstance() => create();
   static $pb.PbList<BigQuerySource> createRepeated() =>
       $pb.PbList<BigQuerySource>();
@@ -498,18 +518,20 @@ class GcsDestination extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  GcsDestination() : super();
-  GcsDestination.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcsDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcsDestination._() : super();
+  factory GcsDestination() => create();
+  factory GcsDestination.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcsDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcsDestination clone() => GcsDestination()..mergeFromMessage(this);
   GcsDestination copyWith(void Function(GcsDestination) updates) =>
       super.copyWith((message) => updates(message as GcsDestination));
   $pb.BuilderInfo get info_ => _i;
-  static GcsDestination create() => GcsDestination();
+  @$core.pragma('dart2js:noInline')
+  static GcsDestination create() => GcsDestination._();
   GcsDestination createEmptyInstance() => create();
   static $pb.PbList<GcsDestination> createRepeated() =>
       $pb.PbList<GcsDestination>();
@@ -531,18 +553,20 @@ class BigQueryDestination extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUri')
     ..hasRequiredFields = false;
 
-  BigQueryDestination() : super();
-  BigQueryDestination.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BigQueryDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BigQueryDestination._() : super();
+  factory BigQueryDestination() => create();
+  factory BigQueryDestination.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BigQueryDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BigQueryDestination clone() => BigQueryDestination()..mergeFromMessage(this);
   BigQueryDestination copyWith(void Function(BigQueryDestination) updates) =>
       super.copyWith((message) => updates(message as BigQueryDestination));
   $pb.BuilderInfo get info_ => _i;
-  static BigQueryDestination create() => BigQueryDestination();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryDestination create() => BigQueryDestination._();
   BigQueryDestination createEmptyInstance() => create();
   static $pb.PbList<BigQueryDestination> createRepeated() =>
       $pb.PbList<BigQueryDestination>();
@@ -565,18 +589,20 @@ class GcrDestination extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUri')
     ..hasRequiredFields = false;
 
-  GcrDestination() : super();
-  GcrDestination.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcrDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcrDestination._() : super();
+  factory GcrDestination() => create();
+  factory GcrDestination.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcrDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcrDestination clone() => GcrDestination()..mergeFromMessage(this);
   GcrDestination copyWith(void Function(GcrDestination) updates) =>
       super.copyWith((message) => updates(message as GcrDestination));
   $pb.BuilderInfo get info_ => _i;
-  static GcrDestination create() => GcrDestination();
+  @$core.pragma('dart2js:noInline')
+  static GcrDestination create() => GcrDestination._();
   GcrDestination createEmptyInstance() => create();
   static $pb.PbList<GcrDestination> createRepeated() =>
       $pb.PbList<GcrDestination>();

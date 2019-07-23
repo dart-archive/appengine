@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/coverage.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +17,20 @@ class LineCoverage extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(2, 'executedLines', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  LineCoverage() : super();
-  LineCoverage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LineCoverage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LineCoverage._() : super();
+  factory LineCoverage() => create();
+  factory LineCoverage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LineCoverage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LineCoverage clone() => LineCoverage()..mergeFromMessage(this);
   LineCoverage copyWith(void Function(LineCoverage) updates) =>
       super.copyWith((message) => updates(message as LineCoverage));
   $pb.BuilderInfo get info_ => _i;
-  static LineCoverage create() => LineCoverage();
+  @$core.pragma('dart2js:noInline')
+  static LineCoverage create() => LineCoverage._();
   LineCoverage createEmptyInstance() => create();
   static $pb.PbList<LineCoverage> createRepeated() =>
       $pb.PbList<LineCoverage>();
@@ -60,18 +63,20 @@ class BranchCoverage extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(4, 'taken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  BranchCoverage() : super();
-  BranchCoverage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BranchCoverage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BranchCoverage._() : super();
+  factory BranchCoverage() => create();
+  factory BranchCoverage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BranchCoverage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BranchCoverage clone() => BranchCoverage()..mergeFromMessage(this);
   BranchCoverage copyWith(void Function(BranchCoverage) updates) =>
       super.copyWith((message) => updates(message as BranchCoverage));
   $pb.BuilderInfo get info_ => _i;
-  static BranchCoverage create() => BranchCoverage();
+  @$core.pragma('dart2js:noInline')
+  static BranchCoverage create() => BranchCoverage._();
   BranchCoverage createEmptyInstance() => create();
   static $pb.PbList<BranchCoverage> createRepeated() =>
       $pb.PbList<BranchCoverage>();
@@ -115,18 +120,20 @@ class FileCoverage extends $pb.GeneratedMessage {
         BranchCoverage.getDefault, BranchCoverage.create)
     ..hasRequiredFields = false;
 
-  FileCoverage() : super();
-  FileCoverage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  FileCoverage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  FileCoverage._() : super();
+  factory FileCoverage() => create();
+  factory FileCoverage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FileCoverage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   FileCoverage clone() => FileCoverage()..mergeFromMessage(this);
   FileCoverage copyWith(void Function(FileCoverage) updates) =>
       super.copyWith((message) => updates(message as FileCoverage));
   $pb.BuilderInfo get info_ => _i;
-  static FileCoverage create() => FileCoverage();
+  @$core.pragma('dart2js:noInline')
+  static FileCoverage create() => FileCoverage._();
   FileCoverage createEmptyInstance() => create();
   static $pb.PbList<FileCoverage> createRepeated() =>
       $pb.PbList<FileCoverage>();
@@ -165,23 +172,56 @@ class ActionCoverage extends $pb.GeneratedMessage {
         2, 'fileCoverages', $pb.PbFieldType.PM, FileCoverage.create)
     ..hasRequiredFields = false;
 
-  ActionCoverage() : super();
-  ActionCoverage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ActionCoverage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ActionCoverage._() : super();
+  factory ActionCoverage() => create();
+  factory ActionCoverage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ActionCoverage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ActionCoverage clone() => ActionCoverage()..mergeFromMessage(this);
   ActionCoverage copyWith(void Function(ActionCoverage) updates) =>
       super.copyWith((message) => updates(message as ActionCoverage));
   $pb.BuilderInfo get info_ => _i;
-  static ActionCoverage create() => ActionCoverage();
+  @$core.pragma('dart2js:noInline')
+  static ActionCoverage create() => ActionCoverage._();
   ActionCoverage createEmptyInstance() => create();
   static $pb.PbList<ActionCoverage> createRepeated() =>
       $pb.PbList<ActionCoverage>();
   static ActionCoverage getDefault() => _defaultInstance ??= create()..freeze();
   static ActionCoverage _defaultInstance;
+
+  $core.List<FileCoverage> get fileCoverages => $_getList(0);
+}
+
+class AggregateCoverage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AggregateCoverage',
+      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+    ..pc<FileCoverage>(
+        1, 'fileCoverages', $pb.PbFieldType.PM, FileCoverage.create)
+    ..hasRequiredFields = false;
+
+  AggregateCoverage._() : super();
+  factory AggregateCoverage() => create();
+  factory AggregateCoverage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AggregateCoverage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  AggregateCoverage clone() => AggregateCoverage()..mergeFromMessage(this);
+  AggregateCoverage copyWith(void Function(AggregateCoverage) updates) =>
+      super.copyWith((message) => updates(message as AggregateCoverage));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static AggregateCoverage create() => AggregateCoverage._();
+  AggregateCoverage createEmptyInstance() => create();
+  static $pb.PbList<AggregateCoverage> createRepeated() =>
+      $pb.PbList<AggregateCoverage>();
+  static AggregateCoverage getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static AggregateCoverage _defaultInstance;
 
   $core.List<FileCoverage> get fileCoverages => $_getList(0);
 }

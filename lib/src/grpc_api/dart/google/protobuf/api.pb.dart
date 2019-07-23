@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/protobuf/api.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,18 +29,20 @@ class Api extends $pb.GeneratedMessage {
             $0.Syntax.valueOf, $0.Syntax.values)
         ..hasRequiredFields = false;
 
-  Api() : super();
-  Api.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Api.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Api._() : super();
+  factory Api() => create();
+  factory Api.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Api.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Api clone() => Api()..mergeFromMessage(this);
   Api copyWith(void Function(Api) updates) =>
       super.copyWith((message) => updates(message as Api));
   $pb.BuilderInfo get info_ => _i;
-  static Api create() => Api();
+  @$core.pragma('dart2js:noInline')
+  static Api create() => Api._();
   Api createEmptyInstance() => create();
   static $pb.PbList<Api> createRepeated() => $pb.PbList<Api>();
   static Api getDefault() => _defaultInstance ??= create()..freeze();
@@ -97,18 +100,20 @@ class Method extends $pb.GeneratedMessage {
         $0.Syntax.valueOf, $0.Syntax.values)
     ..hasRequiredFields = false;
 
-  Method() : super();
-  Method.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Method.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Method._() : super();
+  factory Method() => create();
+  factory Method.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Method.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Method clone() => Method()..mergeFromMessage(this);
   Method copyWith(void Function(Method) updates) =>
       super.copyWith((message) => updates(message as Method));
   $pb.BuilderInfo get info_ => _i;
-  static Method create() => Method();
+  @$core.pragma('dart2js:noInline')
+  static Method create() => Method._();
   Method createEmptyInstance() => create();
   static $pb.PbList<Method> createRepeated() => $pb.PbList<Method>();
   static Method getDefault() => _defaultInstance ??= create()..freeze();
@@ -172,18 +177,20 @@ class Mixin extends $pb.GeneratedMessage {
     ..aOS(2, 'root')
     ..hasRequiredFields = false;
 
-  Mixin() : super();
-  Mixin.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Mixin.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Mixin._() : super();
+  factory Mixin() => create();
+  factory Mixin.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Mixin.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Mixin clone() => Mixin()..mergeFromMessage(this);
   Mixin copyWith(void Function(Mixin) updates) =>
       super.copyWith((message) => updates(message as Mixin));
   $pb.BuilderInfo get info_ => _i;
-  static Mixin create() => Mixin();
+  @$core.pragma('dart2js:noInline')
+  static Mixin create() => Mixin._();
   Mixin createEmptyInstance() => create();
   static $pb.PbList<Mixin> createRepeated() => $pb.PbList<Mixin>();
   static Mixin getDefault() => _defaultInstance ??= create()..freeze();

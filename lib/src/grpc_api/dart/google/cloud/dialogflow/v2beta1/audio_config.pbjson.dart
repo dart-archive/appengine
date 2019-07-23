@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2beta1/audio_config.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const AudioEncoding$json = {
   '1': 'AudioEncoding',
@@ -48,6 +49,30 @@ const OutputAudioEncoding$json = {
   ],
 };
 
+const SpeechWordInfo$json = {
+  '1': 'SpeechWordInfo',
+  '2': [
+    {'1': 'word', '3': 3, '4': 1, '5': 9, '10': 'word'},
+    {
+      '1': 'start_offset',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'startOffset'
+    },
+    {
+      '1': 'end_offset',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Duration',
+      '10': 'endOffset'
+    },
+    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
+  ],
+};
+
 const InputAudioConfig$json = {
   '1': 'InputAudioConfig',
   '2': [
@@ -61,6 +86,7 @@ const InputAudioConfig$json = {
     },
     {'1': 'sample_rate_hertz', '3': 2, '4': 1, '5': 5, '10': 'sampleRateHertz'},
     {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'enable_word_info', '3': 13, '4': 1, '5': 8, '10': 'enableWordInfo'},
     {'1': 'phrase_hints', '3': 4, '4': 3, '5': 9, '10': 'phraseHints'},
     {'1': 'model', '3': 7, '4': 1, '5': 9, '10': 'model'},
     {
@@ -71,6 +97,7 @@ const InputAudioConfig$json = {
       '6': '.google.cloud.dialogflow.v2beta1.SpeechModelVariant',
       '10': 'modelVariant'
     },
+    {'1': 'single_utterance', '3': 8, '4': 1, '5': 8, '10': 'singleUtterance'},
   ],
 };
 

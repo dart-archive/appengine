@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/customer_negative_criterion.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -37,6 +38,7 @@ class CustomerNegativeCriterion extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomerNegativeCriterion',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [4, 5, 6, 7, 8, 9])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
         $0.Int64Value.create)
@@ -59,16 +61,16 @@ class CustomerNegativeCriterion extends $pb.GeneratedMessage {
         $1.YouTubeVideoInfo.getDefault, $1.YouTubeVideoInfo.create)
     ..a<$1.YouTubeChannelInfo>(9, 'youtubeChannel', $pb.PbFieldType.OM,
         $1.YouTubeChannelInfo.getDefault, $1.YouTubeChannelInfo.create)
-    ..oo(0, [4, 5, 6, 7, 8, 9])
     ..hasRequiredFields = false;
 
-  CustomerNegativeCriterion() : super();
-  CustomerNegativeCriterion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerNegativeCriterion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerNegativeCriterion._() : super();
+  factory CustomerNegativeCriterion() => create();
+  factory CustomerNegativeCriterion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerNegativeCriterion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerNegativeCriterion clone() =>
       CustomerNegativeCriterion()..mergeFromMessage(this);
   CustomerNegativeCriterion copyWith(
@@ -76,7 +78,8 @@ class CustomerNegativeCriterion extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CustomerNegativeCriterion));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerNegativeCriterion create() => CustomerNegativeCriterion();
+  @$core.pragma('dart2js:noInline')
+  static CustomerNegativeCriterion create() => CustomerNegativeCriterion._();
   CustomerNegativeCriterion createEmptyInstance() => create();
   static $pb.PbList<CustomerNegativeCriterion> createRepeated() =>
       $pb.PbList<CustomerNegativeCriterion>();

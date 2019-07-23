@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/keyword_plan_ad_group.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -25,18 +26,20 @@ class KeywordPlanAdGroup extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  KeywordPlanAdGroup() : super();
-  KeywordPlanAdGroup.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  KeywordPlanAdGroup.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  KeywordPlanAdGroup._() : super();
+  factory KeywordPlanAdGroup() => create();
+  factory KeywordPlanAdGroup.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory KeywordPlanAdGroup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   KeywordPlanAdGroup clone() => KeywordPlanAdGroup()..mergeFromMessage(this);
   KeywordPlanAdGroup copyWith(void Function(KeywordPlanAdGroup) updates) =>
       super.copyWith((message) => updates(message as KeywordPlanAdGroup));
   $pb.BuilderInfo get info_ => _i;
-  static KeywordPlanAdGroup create() => KeywordPlanAdGroup();
+  @$core.pragma('dart2js:noInline')
+  static KeywordPlanAdGroup create() => KeywordPlanAdGroup._();
   KeywordPlanAdGroup createEmptyInstance() => create();
   static $pb.PbList<KeywordPlanAdGroup> createRepeated() =>
       $pb.PbList<KeywordPlanAdGroup>();

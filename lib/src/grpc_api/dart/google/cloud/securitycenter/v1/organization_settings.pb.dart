@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/securitycenter/v1/organization_settings.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -28,13 +29,15 @@ class OrganizationSettings_AssetDiscoveryConfig extends $pb.GeneratedMessage {
         OrganizationSettings_AssetDiscoveryConfig_InclusionMode.values)
     ..hasRequiredFields = false;
 
-  OrganizationSettings_AssetDiscoveryConfig() : super();
-  OrganizationSettings_AssetDiscoveryConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OrganizationSettings_AssetDiscoveryConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OrganizationSettings_AssetDiscoveryConfig._() : super();
+  factory OrganizationSettings_AssetDiscoveryConfig() => create();
+  factory OrganizationSettings_AssetDiscoveryConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OrganizationSettings_AssetDiscoveryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OrganizationSettings_AssetDiscoveryConfig clone() =>
       OrganizationSettings_AssetDiscoveryConfig()..mergeFromMessage(this);
   OrganizationSettings_AssetDiscoveryConfig copyWith(
@@ -42,8 +45,9 @@ class OrganizationSettings_AssetDiscoveryConfig extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as OrganizationSettings_AssetDiscoveryConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static OrganizationSettings_AssetDiscoveryConfig create() =>
-      OrganizationSettings_AssetDiscoveryConfig();
+      OrganizationSettings_AssetDiscoveryConfig._();
   OrganizationSettings_AssetDiscoveryConfig createEmptyInstance() => create();
   static $pb.PbList<OrganizationSettings_AssetDiscoveryConfig>
       createRepeated() =>
@@ -77,19 +81,21 @@ class OrganizationSettings extends $pb.GeneratedMessage {
         OrganizationSettings_AssetDiscoveryConfig.create)
     ..hasRequiredFields = false;
 
-  OrganizationSettings() : super();
-  OrganizationSettings.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OrganizationSettings.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OrganizationSettings._() : super();
+  factory OrganizationSettings() => create();
+  factory OrganizationSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OrganizationSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OrganizationSettings clone() =>
       OrganizationSettings()..mergeFromMessage(this);
   OrganizationSettings copyWith(void Function(OrganizationSettings) updates) =>
       super.copyWith((message) => updates(message as OrganizationSettings));
   $pb.BuilderInfo get info_ => _i;
-  static OrganizationSettings create() => OrganizationSettings();
+  @$core.pragma('dart2js:noInline')
+  static OrganizationSettings create() => OrganizationSettings._();
   OrganizationSettings createEmptyInstance() => create();
   static $pb.PbList<OrganizationSettings> createRepeated() =>
       $pb.PbList<OrganizationSettings>();

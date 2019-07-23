@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/bidding.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,18 +22,20 @@ class Commission extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  Commission() : super();
-  Commission.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Commission.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Commission._() : super();
+  factory Commission() => create();
+  factory Commission.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Commission.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Commission clone() => Commission()..mergeFromMessage(this);
   Commission copyWith(void Function(Commission) updates) =>
       super.copyWith((message) => updates(message as Commission));
   $pb.BuilderInfo get info_ => _i;
-  static Commission create() => Commission();
+  @$core.pragma('dart2js:noInline')
+  static Commission create() => Commission._();
   Commission createEmptyInstance() => create();
   static $pb.PbList<Commission> createRepeated() => $pb.PbList<Commission>();
   static Commission getDefault() => _defaultInstance ??= create()..freeze();
@@ -52,18 +55,20 @@ class EnhancedCpc extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  EnhancedCpc() : super();
-  EnhancedCpc.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EnhancedCpc.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EnhancedCpc._() : super();
+  factory EnhancedCpc() => create();
+  factory EnhancedCpc.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnhancedCpc.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EnhancedCpc clone() => EnhancedCpc()..mergeFromMessage(this);
   EnhancedCpc copyWith(void Function(EnhancedCpc) updates) =>
       super.copyWith((message) => updates(message as EnhancedCpc));
   $pb.BuilderInfo get info_ => _i;
-  static EnhancedCpc create() => EnhancedCpc();
+  @$core.pragma('dart2js:noInline')
+  static EnhancedCpc create() => EnhancedCpc._();
   EnhancedCpc createEmptyInstance() => create();
   static $pb.PbList<EnhancedCpc> createRepeated() => $pb.PbList<EnhancedCpc>();
   static EnhancedCpc getDefault() => _defaultInstance ??= create()..freeze();
@@ -77,18 +82,20 @@ class ManualCpc extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  ManualCpc() : super();
-  ManualCpc.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManualCpc.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManualCpc._() : super();
+  factory ManualCpc() => create();
+  factory ManualCpc.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManualCpc.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManualCpc clone() => ManualCpc()..mergeFromMessage(this);
   ManualCpc copyWith(void Function(ManualCpc) updates) =>
       super.copyWith((message) => updates(message as ManualCpc));
   $pb.BuilderInfo get info_ => _i;
-  static ManualCpc create() => ManualCpc();
+  @$core.pragma('dart2js:noInline')
+  static ManualCpc create() => ManualCpc._();
   ManualCpc createEmptyInstance() => create();
   static $pb.PbList<ManualCpc> createRepeated() => $pb.PbList<ManualCpc>();
   static ManualCpc getDefault() => _defaultInstance ??= create()..freeze();
@@ -108,18 +115,20 @@ class ManualCpm extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  ManualCpm() : super();
-  ManualCpm.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManualCpm.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManualCpm._() : super();
+  factory ManualCpm() => create();
+  factory ManualCpm.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManualCpm.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManualCpm clone() => ManualCpm()..mergeFromMessage(this);
   ManualCpm copyWith(void Function(ManualCpm) updates) =>
       super.copyWith((message) => updates(message as ManualCpm));
   $pb.BuilderInfo get info_ => _i;
-  static ManualCpm create() => ManualCpm();
+  @$core.pragma('dart2js:noInline')
+  static ManualCpm create() => ManualCpm._();
   ManualCpm createEmptyInstance() => create();
   static $pb.PbList<ManualCpm> createRepeated() => $pb.PbList<ManualCpm>();
   static ManualCpm getDefault() => _defaultInstance ??= create()..freeze();
@@ -131,18 +140,20 @@ class ManualCpv extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  ManualCpv() : super();
-  ManualCpv.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManualCpv.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManualCpv._() : super();
+  factory ManualCpv() => create();
+  factory ManualCpv.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManualCpv.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManualCpv clone() => ManualCpv()..mergeFromMessage(this);
   ManualCpv copyWith(void Function(ManualCpv) updates) =>
       super.copyWith((message) => updates(message as ManualCpv));
   $pb.BuilderInfo get info_ => _i;
-  static ManualCpv create() => ManualCpv();
+  @$core.pragma('dart2js:noInline')
+  static ManualCpv create() => ManualCpv._();
   ManualCpv createEmptyInstance() => create();
   static $pb.PbList<ManualCpv> createRepeated() => $pb.PbList<ManualCpv>();
   static ManualCpv getDefault() => _defaultInstance ??= create()..freeze();
@@ -154,18 +165,20 @@ class MaximizeConversions extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  MaximizeConversions() : super();
-  MaximizeConversions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MaximizeConversions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MaximizeConversions._() : super();
+  factory MaximizeConversions() => create();
+  factory MaximizeConversions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MaximizeConversions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MaximizeConversions clone() => MaximizeConversions()..mergeFromMessage(this);
   MaximizeConversions copyWith(void Function(MaximizeConversions) updates) =>
       super.copyWith((message) => updates(message as MaximizeConversions));
   $pb.BuilderInfo get info_ => _i;
-  static MaximizeConversions create() => MaximizeConversions();
+  @$core.pragma('dart2js:noInline')
+  static MaximizeConversions create() => MaximizeConversions._();
   MaximizeConversions createEmptyInstance() => create();
   static $pb.PbList<MaximizeConversions> createRepeated() =>
       $pb.PbList<MaximizeConversions>();
@@ -181,20 +194,22 @@ class MaximizeConversionValue extends $pb.GeneratedMessage {
         $0.DoubleValue.getDefault, $0.DoubleValue.create)
     ..hasRequiredFields = false;
 
-  MaximizeConversionValue() : super();
-  MaximizeConversionValue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MaximizeConversionValue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MaximizeConversionValue._() : super();
+  factory MaximizeConversionValue() => create();
+  factory MaximizeConversionValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MaximizeConversionValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MaximizeConversionValue clone() =>
       MaximizeConversionValue()..mergeFromMessage(this);
   MaximizeConversionValue copyWith(
           void Function(MaximizeConversionValue) updates) =>
       super.copyWith((message) => updates(message as MaximizeConversionValue));
   $pb.BuilderInfo get info_ => _i;
-  static MaximizeConversionValue create() => MaximizeConversionValue();
+  @$core.pragma('dart2js:noInline')
+  static MaximizeConversionValue create() => MaximizeConversionValue._();
   MaximizeConversionValue createEmptyInstance() => create();
   static $pb.PbList<MaximizeConversionValue> createRepeated() =>
       $pb.PbList<MaximizeConversionValue>();
@@ -234,18 +249,20 @@ class PageOnePromoted extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  PageOnePromoted() : super();
-  PageOnePromoted.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PageOnePromoted.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PageOnePromoted._() : super();
+  factory PageOnePromoted() => create();
+  factory PageOnePromoted.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PageOnePromoted.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PageOnePromoted clone() => PageOnePromoted()..mergeFromMessage(this);
   PageOnePromoted copyWith(void Function(PageOnePromoted) updates) =>
       super.copyWith((message) => updates(message as PageOnePromoted));
   $pb.BuilderInfo get info_ => _i;
-  static PageOnePromoted create() => PageOnePromoted();
+  @$core.pragma('dart2js:noInline')
+  static PageOnePromoted create() => PageOnePromoted._();
   PageOnePromoted createEmptyInstance() => create();
   static $pb.PbList<PageOnePromoted> createRepeated() =>
       $pb.PbList<PageOnePromoted>();
@@ -315,18 +332,20 @@ class TargetCpa extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  TargetCpa() : super();
-  TargetCpa.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetCpa.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetCpa._() : super();
+  factory TargetCpa() => create();
+  factory TargetCpa.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetCpa.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetCpa clone() => TargetCpa()..mergeFromMessage(this);
   TargetCpa copyWith(void Function(TargetCpa) updates) =>
       super.copyWith((message) => updates(message as TargetCpa));
   $pb.BuilderInfo get info_ => _i;
-  static TargetCpa create() => TargetCpa();
+  @$core.pragma('dart2js:noInline')
+  static TargetCpa create() => TargetCpa._();
   TargetCpa createEmptyInstance() => create();
   static $pb.PbList<TargetCpa> createRepeated() => $pb.PbList<TargetCpa>();
   static TargetCpa getDefault() => _defaultInstance ??= create()..freeze();
@@ -362,18 +381,20 @@ class TargetCpm extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.common'))
     ..hasRequiredFields = false;
 
-  TargetCpm() : super();
-  TargetCpm.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetCpm.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetCpm._() : super();
+  factory TargetCpm() => create();
+  factory TargetCpm.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetCpm.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetCpm clone() => TargetCpm()..mergeFromMessage(this);
   TargetCpm copyWith(void Function(TargetCpm) updates) =>
       super.copyWith((message) => updates(message as TargetCpm));
   $pb.BuilderInfo get info_ => _i;
-  static TargetCpm create() => TargetCpm();
+  @$core.pragma('dart2js:noInline')
+  static TargetCpm create() => TargetCpm._();
   TargetCpm createEmptyInstance() => create();
   static $pb.PbList<TargetCpm> createRepeated() => $pb.PbList<TargetCpm>();
   static TargetCpm getDefault() => _defaultInstance ??= create()..freeze();
@@ -399,20 +420,22 @@ class TargetImpressionShare extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  TargetImpressionShare() : super();
-  TargetImpressionShare.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetImpressionShare.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetImpressionShare._() : super();
+  factory TargetImpressionShare() => create();
+  factory TargetImpressionShare.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetImpressionShare.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetImpressionShare clone() =>
       TargetImpressionShare()..mergeFromMessage(this);
   TargetImpressionShare copyWith(
           void Function(TargetImpressionShare) updates) =>
       super.copyWith((message) => updates(message as TargetImpressionShare));
   $pb.BuilderInfo get info_ => _i;
-  static TargetImpressionShare create() => TargetImpressionShare();
+  @$core.pragma('dart2js:noInline')
+  static TargetImpressionShare create() => TargetImpressionShare._();
   TargetImpressionShare createEmptyInstance() => create();
   static $pb.PbList<TargetImpressionShare> createRepeated() =>
       $pb.PbList<TargetImpressionShare>();
@@ -462,18 +485,20 @@ class TargetOutrankShare extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  TargetOutrankShare() : super();
-  TargetOutrankShare.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetOutrankShare.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetOutrankShare._() : super();
+  factory TargetOutrankShare() => create();
+  factory TargetOutrankShare.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetOutrankShare.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetOutrankShare clone() => TargetOutrankShare()..mergeFromMessage(this);
   TargetOutrankShare copyWith(void Function(TargetOutrankShare) updates) =>
       super.copyWith((message) => updates(message as TargetOutrankShare));
   $pb.BuilderInfo get info_ => _i;
-  static TargetOutrankShare create() => TargetOutrankShare();
+  @$core.pragma('dart2js:noInline')
+  static TargetOutrankShare create() => TargetOutrankShare._();
   TargetOutrankShare createEmptyInstance() => create();
   static $pb.PbList<TargetOutrankShare> createRepeated() =>
       $pb.PbList<TargetOutrankShare>();
@@ -533,18 +558,20 @@ class TargetRoas extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  TargetRoas() : super();
-  TargetRoas.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetRoas.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetRoas._() : super();
+  factory TargetRoas() => create();
+  factory TargetRoas.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetRoas.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetRoas clone() => TargetRoas()..mergeFromMessage(this);
   TargetRoas copyWith(void Function(TargetRoas) updates) =>
       super.copyWith((message) => updates(message as TargetRoas));
   $pb.BuilderInfo get info_ => _i;
-  static TargetRoas create() => TargetRoas();
+  @$core.pragma('dart2js:noInline')
+  static TargetRoas create() => TargetRoas._();
   TargetRoas createEmptyInstance() => create();
   static $pb.PbList<TargetRoas> createRepeated() => $pb.PbList<TargetRoas>();
   static TargetRoas getDefault() => _defaultInstance ??= create()..freeze();
@@ -584,18 +611,20 @@ class TargetSpend extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  TargetSpend() : super();
-  TargetSpend.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetSpend.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetSpend._() : super();
+  factory TargetSpend() => create();
+  factory TargetSpend.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetSpend.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetSpend clone() => TargetSpend()..mergeFromMessage(this);
   TargetSpend copyWith(void Function(TargetSpend) updates) =>
       super.copyWith((message) => updates(message as TargetSpend));
   $pb.BuilderInfo get info_ => _i;
-  static TargetSpend create() => TargetSpend();
+  @$core.pragma('dart2js:noInline')
+  static TargetSpend create() => TargetSpend._();
   TargetSpend createEmptyInstance() => create();
   static $pb.PbList<TargetSpend> createRepeated() => $pb.PbList<TargetSpend>();
   static TargetSpend getDefault() => _defaultInstance ??= create()..freeze();
@@ -627,18 +656,20 @@ class PercentCpc extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  PercentCpc() : super();
-  PercentCpc.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PercentCpc.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PercentCpc._() : super();
+  factory PercentCpc() => create();
+  factory PercentCpc.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PercentCpc.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PercentCpc clone() => PercentCpc()..mergeFromMessage(this);
   PercentCpc copyWith(void Function(PercentCpc) updates) =>
       super.copyWith((message) => updates(message as PercentCpc));
   $pb.BuilderInfo get info_ => _i;
-  static PercentCpc create() => PercentCpc();
+  @$core.pragma('dart2js:noInline')
+  static PercentCpc create() => PercentCpc._();
   PercentCpc createEmptyInstance() => create();
   static $pb.PbList<PercentCpc> createRepeated() => $pb.PbList<PercentCpc>();
   static PercentCpc getDefault() => _defaultInstance ??= create()..freeze();

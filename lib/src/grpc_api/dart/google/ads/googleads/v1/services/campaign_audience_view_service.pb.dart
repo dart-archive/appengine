@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_audience_view_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,13 +17,14 @@ class GetCampaignAudienceViewRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCampaignAudienceViewRequest() : super();
-  GetCampaignAudienceViewRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCampaignAudienceViewRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCampaignAudienceViewRequest._() : super();
+  factory GetCampaignAudienceViewRequest() => create();
+  factory GetCampaignAudienceViewRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCampaignAudienceViewRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCampaignAudienceViewRequest clone() =>
       GetCampaignAudienceViewRequest()..mergeFromMessage(this);
   GetCampaignAudienceViewRequest copyWith(
@@ -30,8 +32,9 @@ class GetCampaignAudienceViewRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetCampaignAudienceViewRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetCampaignAudienceViewRequest create() =>
-      GetCampaignAudienceViewRequest();
+      GetCampaignAudienceViewRequest._();
   GetCampaignAudienceViewRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignAudienceViewRequest> createRepeated() =>
       $pb.PbList<GetCampaignAudienceViewRequest>();

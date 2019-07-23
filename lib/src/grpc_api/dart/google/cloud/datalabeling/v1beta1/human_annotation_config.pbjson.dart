@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/human_annotation_config.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const StringAggregationType$json = {
   '1': 'StringAggregationType',
@@ -49,6 +50,13 @@ const HumanAnnotationConfig$json = {
       '4': 3,
       '5': 9,
       '10': 'contributorEmails'
+    },
+    {
+      '1': 'user_email_address',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '10': 'userEmailAddress'
     },
   ],
 };
@@ -181,13 +189,6 @@ const ObjectDetectionConfig$json = {
       '4': 1,
       '5': 9,
       '10': 'annotationSpecSet'
-    },
-    {
-      '1': 'instruction_message',
-      '3': 2,
-      '4': 1,
-      '5': 9,
-      '10': 'instructionMessage'
     },
     {
       '1': 'extraction_frame_rate',

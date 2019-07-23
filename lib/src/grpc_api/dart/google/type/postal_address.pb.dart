@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/type/postal_address.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -25,18 +26,20 @@ class PostalAddress extends $pb.GeneratedMessage {
     ..aOS(11, 'organization')
     ..hasRequiredFields = false;
 
-  PostalAddress() : super();
-  PostalAddress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PostalAddress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PostalAddress._() : super();
+  factory PostalAddress() => create();
+  factory PostalAddress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PostalAddress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PostalAddress clone() => PostalAddress()..mergeFromMessage(this);
   PostalAddress copyWith(void Function(PostalAddress) updates) =>
       super.copyWith((message) => updates(message as PostalAddress));
   $pb.BuilderInfo get info_ => _i;
-  static PostalAddress create() => PostalAddress();
+  @$core.pragma('dart2js:noInline')
+  static PostalAddress create() => PostalAddress._();
   PostalAddress createEmptyInstance() => create();
   static $pb.PbList<PostalAddress> createRepeated() =>
       $pb.PbList<PostalAddress>();

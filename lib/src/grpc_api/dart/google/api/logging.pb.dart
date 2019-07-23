@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/logging.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class Logging_LoggingDestination extends $pb.GeneratedMessage {
     ..aOS(3, 'monitoredResource')
     ..hasRequiredFields = false;
 
-  Logging_LoggingDestination() : super();
-  Logging_LoggingDestination.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Logging_LoggingDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Logging_LoggingDestination._() : super();
+  factory Logging_LoggingDestination() => create();
+  factory Logging_LoggingDestination.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Logging_LoggingDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Logging_LoggingDestination clone() =>
       Logging_LoggingDestination()..mergeFromMessage(this);
   Logging_LoggingDestination copyWith(
@@ -31,7 +33,8 @@ class Logging_LoggingDestination extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Logging_LoggingDestination));
   $pb.BuilderInfo get info_ => _i;
-  static Logging_LoggingDestination create() => Logging_LoggingDestination();
+  @$core.pragma('dart2js:noInline')
+  static Logging_LoggingDestination create() => Logging_LoggingDestination._();
   Logging_LoggingDestination createEmptyInstance() => create();
   static $pb.PbList<Logging_LoggingDestination> createRepeated() =>
       $pb.PbList<Logging_LoggingDestination>();
@@ -59,18 +62,20 @@ class Logging extends $pb.GeneratedMessage {
             $pb.PbFieldType.PM, Logging_LoggingDestination.create)
         ..hasRequiredFields = false;
 
-  Logging() : super();
-  Logging.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Logging.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Logging._() : super();
+  factory Logging() => create();
+  factory Logging.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Logging.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Logging clone() => Logging()..mergeFromMessage(this);
   Logging copyWith(void Function(Logging) updates) =>
       super.copyWith((message) => updates(message as Logging));
   $pb.BuilderInfo get info_ => _i;
-  static Logging create() => Logging();
+  @$core.pragma('dart2js:noInline')
+  static Logging create() => Logging._();
   Logging createEmptyInstance() => create();
   static $pb.PbList<Logging> createRepeated() => $pb.PbList<Logging>();
   static Logging getDefault() => _defaultInstance ??= create()..freeze();

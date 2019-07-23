@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/datalabeling/v1beta1/annotation_spec_set.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,20 +18,23 @@ class AnnotationSpecSet extends $pb.GeneratedMessage {
     ..aOS(3, 'description')
     ..pc<AnnotationSpec>(
         4, 'annotationSpecs', $pb.PbFieldType.PM, AnnotationSpec.create)
+    ..pPS(5, 'blockingResources')
     ..hasRequiredFields = false;
 
-  AnnotationSpecSet() : super();
-  AnnotationSpecSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotationSpecSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotationSpecSet._() : super();
+  factory AnnotationSpecSet() => create();
+  factory AnnotationSpecSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotationSpecSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotationSpecSet clone() => AnnotationSpecSet()..mergeFromMessage(this);
   AnnotationSpecSet copyWith(void Function(AnnotationSpecSet) updates) =>
       super.copyWith((message) => updates(message as AnnotationSpecSet));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotationSpecSet create() => AnnotationSpecSet();
+  @$core.pragma('dart2js:noInline')
+  static AnnotationSpecSet create() => AnnotationSpecSet._();
   AnnotationSpecSet createEmptyInstance() => create();
   static $pb.PbList<AnnotationSpecSet> createRepeated() =>
       $pb.PbList<AnnotationSpecSet>();
@@ -63,6 +67,8 @@ class AnnotationSpecSet extends $pb.GeneratedMessage {
   void clearDescription() => clearField(3);
 
   $core.List<AnnotationSpec> get annotationSpecs => $_getList(3);
+
+  $core.List<$core.String> get blockingResources => $_getList(4);
 }
 
 class AnnotationSpec extends $pb.GeneratedMessage {
@@ -72,18 +78,20 @@ class AnnotationSpec extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
-  AnnotationSpec() : super();
-  AnnotationSpec.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotationSpec.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotationSpec._() : super();
+  factory AnnotationSpec() => create();
+  factory AnnotationSpec.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotationSpec.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotationSpec clone() => AnnotationSpec()..mergeFromMessage(this);
   AnnotationSpec copyWith(void Function(AnnotationSpec) updates) =>
       super.copyWith((message) => updates(message as AnnotationSpec));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotationSpec create() => AnnotationSpec();
+  @$core.pragma('dart2js:noInline')
+  static AnnotationSpec create() => AnnotationSpec._();
   AnnotationSpec createEmptyInstance() => create();
   static $pb.PbList<AnnotationSpec> createRepeated() =>
       $pb.PbList<AnnotationSpec>();

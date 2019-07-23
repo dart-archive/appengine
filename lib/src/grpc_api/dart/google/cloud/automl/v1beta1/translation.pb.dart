@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/translation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,13 +20,14 @@ class TranslationDatasetMetadata extends $pb.GeneratedMessage {
     ..aOS(2, 'targetLanguageCode')
     ..hasRequiredFields = false;
 
-  TranslationDatasetMetadata() : super();
-  TranslationDatasetMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslationDatasetMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslationDatasetMetadata._() : super();
+  factory TranslationDatasetMetadata() => create();
+  factory TranslationDatasetMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslationDatasetMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslationDatasetMetadata clone() =>
       TranslationDatasetMetadata()..mergeFromMessage(this);
   TranslationDatasetMetadata copyWith(
@@ -33,7 +35,8 @@ class TranslationDatasetMetadata extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TranslationDatasetMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static TranslationDatasetMetadata create() => TranslationDatasetMetadata();
+  @$core.pragma('dart2js:noInline')
+  static TranslationDatasetMetadata create() => TranslationDatasetMetadata._();
   TranslationDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TranslationDatasetMetadata> createRepeated() =>
       $pb.PbList<TranslationDatasetMetadata>();
@@ -66,13 +69,14 @@ class TranslationEvaluationMetrics extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'baseBleuScore', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  TranslationEvaluationMetrics() : super();
-  TranslationEvaluationMetrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslationEvaluationMetrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslationEvaluationMetrics._() : super();
+  factory TranslationEvaluationMetrics() => create();
+  factory TranslationEvaluationMetrics.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslationEvaluationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslationEvaluationMetrics clone() =>
       TranslationEvaluationMetrics()..mergeFromMessage(this);
   TranslationEvaluationMetrics copyWith(
@@ -80,8 +84,9 @@ class TranslationEvaluationMetrics extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TranslationEvaluationMetrics));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TranslationEvaluationMetrics create() =>
-      TranslationEvaluationMetrics();
+      TranslationEvaluationMetrics._();
   TranslationEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<TranslationEvaluationMetrics> createRepeated() =>
       $pb.PbList<TranslationEvaluationMetrics>();
@@ -114,20 +119,22 @@ class TranslationModelMetadata extends $pb.GeneratedMessage {
     ..aOS(3, 'targetLanguageCode')
     ..hasRequiredFields = false;
 
-  TranslationModelMetadata() : super();
-  TranslationModelMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslationModelMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslationModelMetadata._() : super();
+  factory TranslationModelMetadata() => create();
+  factory TranslationModelMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslationModelMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslationModelMetadata clone() =>
       TranslationModelMetadata()..mergeFromMessage(this);
   TranslationModelMetadata copyWith(
           void Function(TranslationModelMetadata) updates) =>
       super.copyWith((message) => updates(message as TranslationModelMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static TranslationModelMetadata create() => TranslationModelMetadata();
+  @$core.pragma('dart2js:noInline')
+  static TranslationModelMetadata create() => TranslationModelMetadata._();
   TranslationModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TranslationModelMetadata> createRepeated() =>
       $pb.PbList<TranslationModelMetadata>();
@@ -167,20 +174,22 @@ class TranslationAnnotation extends $pb.GeneratedMessage {
         $0.TextSnippet.getDefault, $0.TextSnippet.create)
     ..hasRequiredFields = false;
 
-  TranslationAnnotation() : super();
-  TranslationAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslationAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslationAnnotation._() : super();
+  factory TranslationAnnotation() => create();
+  factory TranslationAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslationAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslationAnnotation clone() =>
       TranslationAnnotation()..mergeFromMessage(this);
   TranslationAnnotation copyWith(
           void Function(TranslationAnnotation) updates) =>
       super.copyWith((message) => updates(message as TranslationAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static TranslationAnnotation create() => TranslationAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static TranslationAnnotation create() => TranslationAnnotation._();
   TranslationAnnotation createEmptyInstance() => create();
   static $pb.PbList<TranslationAnnotation> createRepeated() =>
       $pb.PbList<TranslationAnnotation>();

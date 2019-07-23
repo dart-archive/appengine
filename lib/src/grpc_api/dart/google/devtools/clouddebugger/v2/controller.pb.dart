@@ -1,37 +1,40 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/clouddebugger/v2/controller.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'data.pb.dart' as $0;
+import 'data.pb.dart' as $1;
 
 class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegisterDebuggeeRequest',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..a<$0.Debuggee>(1, 'debuggee', $pb.PbFieldType.OM, $0.Debuggee.getDefault,
-        $0.Debuggee.create)
+    ..a<$1.Debuggee>(1, 'debuggee', $pb.PbFieldType.OM, $1.Debuggee.getDefault,
+        $1.Debuggee.create)
     ..hasRequiredFields = false;
 
-  RegisterDebuggeeRequest() : super();
-  RegisterDebuggeeRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RegisterDebuggeeRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RegisterDebuggeeRequest._() : super();
+  factory RegisterDebuggeeRequest() => create();
+  factory RegisterDebuggeeRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RegisterDebuggeeRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RegisterDebuggeeRequest clone() =>
       RegisterDebuggeeRequest()..mergeFromMessage(this);
   RegisterDebuggeeRequest copyWith(
           void Function(RegisterDebuggeeRequest) updates) =>
       super.copyWith((message) => updates(message as RegisterDebuggeeRequest));
   $pb.BuilderInfo get info_ => _i;
-  static RegisterDebuggeeRequest create() => RegisterDebuggeeRequest();
+  @$core.pragma('dart2js:noInline')
+  static RegisterDebuggeeRequest create() => RegisterDebuggeeRequest._();
   RegisterDebuggeeRequest createEmptyInstance() => create();
   static $pb.PbList<RegisterDebuggeeRequest> createRepeated() =>
       $pb.PbList<RegisterDebuggeeRequest>();
@@ -39,8 +42,8 @@ class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RegisterDebuggeeRequest _defaultInstance;
 
-  $0.Debuggee get debuggee => $_getN(0);
-  set debuggee($0.Debuggee v) {
+  $1.Debuggee get debuggee => $_getN(0);
+  set debuggee($1.Debuggee v) {
     setField(1, v);
   }
 
@@ -51,24 +54,26 @@ class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
 class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegisterDebuggeeResponse',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..a<$0.Debuggee>(1, 'debuggee', $pb.PbFieldType.OM, $0.Debuggee.getDefault,
-        $0.Debuggee.create)
+    ..a<$1.Debuggee>(1, 'debuggee', $pb.PbFieldType.OM, $1.Debuggee.getDefault,
+        $1.Debuggee.create)
     ..hasRequiredFields = false;
 
-  RegisterDebuggeeResponse() : super();
-  RegisterDebuggeeResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RegisterDebuggeeResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RegisterDebuggeeResponse._() : super();
+  factory RegisterDebuggeeResponse() => create();
+  factory RegisterDebuggeeResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RegisterDebuggeeResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RegisterDebuggeeResponse clone() =>
       RegisterDebuggeeResponse()..mergeFromMessage(this);
   RegisterDebuggeeResponse copyWith(
           void Function(RegisterDebuggeeResponse) updates) =>
       super.copyWith((message) => updates(message as RegisterDebuggeeResponse));
   $pb.BuilderInfo get info_ => _i;
-  static RegisterDebuggeeResponse create() => RegisterDebuggeeResponse();
+  @$core.pragma('dart2js:noInline')
+  static RegisterDebuggeeResponse create() => RegisterDebuggeeResponse._();
   RegisterDebuggeeResponse createEmptyInstance() => create();
   static $pb.PbList<RegisterDebuggeeResponse> createRepeated() =>
       $pb.PbList<RegisterDebuggeeResponse>();
@@ -76,8 +81,8 @@ class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static RegisterDebuggeeResponse _defaultInstance;
 
-  $0.Debuggee get debuggee => $_getN(0);
-  set debuggee($0.Debuggee v) {
+  $1.Debuggee get debuggee => $_getN(0);
+  set debuggee($1.Debuggee v) {
     setField(1, v);
   }
 
@@ -94,13 +99,14 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
     ..aOB(3, 'successOnTimeout')
     ..hasRequiredFields = false;
 
-  ListActiveBreakpointsRequest() : super();
-  ListActiveBreakpointsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListActiveBreakpointsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListActiveBreakpointsRequest._() : super();
+  factory ListActiveBreakpointsRequest() => create();
+  factory ListActiveBreakpointsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListActiveBreakpointsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListActiveBreakpointsRequest clone() =>
       ListActiveBreakpointsRequest()..mergeFromMessage(this);
   ListActiveBreakpointsRequest copyWith(
@@ -108,8 +114,9 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListActiveBreakpointsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListActiveBreakpointsRequest create() =>
-      ListActiveBreakpointsRequest();
+      ListActiveBreakpointsRequest._();
   ListActiveBreakpointsRequest createEmptyInstance() => create();
   static $pb.PbList<ListActiveBreakpointsRequest> createRepeated() =>
       $pb.PbList<ListActiveBreakpointsRequest>();
@@ -146,19 +153,20 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListActiveBreakpointsResponse',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..pc<$0.Breakpoint>(
-        1, 'breakpoints', $pb.PbFieldType.PM, $0.Breakpoint.create)
+    ..pc<$1.Breakpoint>(
+        1, 'breakpoints', $pb.PbFieldType.PM, $1.Breakpoint.create)
     ..aOS(2, 'nextWaitToken')
     ..aOB(3, 'waitExpired')
     ..hasRequiredFields = false;
 
-  ListActiveBreakpointsResponse() : super();
-  ListActiveBreakpointsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListActiveBreakpointsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListActiveBreakpointsResponse._() : super();
+  factory ListActiveBreakpointsResponse() => create();
+  factory ListActiveBreakpointsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListActiveBreakpointsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListActiveBreakpointsResponse clone() =>
       ListActiveBreakpointsResponse()..mergeFromMessage(this);
   ListActiveBreakpointsResponse copyWith(
@@ -166,8 +174,9 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ListActiveBreakpointsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ListActiveBreakpointsResponse create() =>
-      ListActiveBreakpointsResponse();
+      ListActiveBreakpointsResponse._();
   ListActiveBreakpointsResponse createEmptyInstance() => create();
   static $pb.PbList<ListActiveBreakpointsResponse> createRepeated() =>
       $pb.PbList<ListActiveBreakpointsResponse>();
@@ -175,7 +184,7 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ListActiveBreakpointsResponse _defaultInstance;
 
-  $core.List<$0.Breakpoint> get breakpoints => $_getList(0);
+  $core.List<$1.Breakpoint> get breakpoints => $_getList(0);
 
   $core.String get nextWaitToken => $_getS(1, '');
   set nextWaitToken($core.String v) {
@@ -199,17 +208,18 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
       'UpdateActiveBreakpointRequest',
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
     ..aOS(1, 'debuggeeId')
-    ..a<$0.Breakpoint>(2, 'breakpoint', $pb.PbFieldType.OM,
-        $0.Breakpoint.getDefault, $0.Breakpoint.create)
+    ..a<$1.Breakpoint>(2, 'breakpoint', $pb.PbFieldType.OM,
+        $1.Breakpoint.getDefault, $1.Breakpoint.create)
     ..hasRequiredFields = false;
 
-  UpdateActiveBreakpointRequest() : super();
-  UpdateActiveBreakpointRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateActiveBreakpointRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateActiveBreakpointRequest._() : super();
+  factory UpdateActiveBreakpointRequest() => create();
+  factory UpdateActiveBreakpointRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateActiveBreakpointRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateActiveBreakpointRequest clone() =>
       UpdateActiveBreakpointRequest()..mergeFromMessage(this);
   UpdateActiveBreakpointRequest copyWith(
@@ -217,8 +227,9 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateActiveBreakpointRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateActiveBreakpointRequest create() =>
-      UpdateActiveBreakpointRequest();
+      UpdateActiveBreakpointRequest._();
   UpdateActiveBreakpointRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateActiveBreakpointRequest> createRepeated() =>
       $pb.PbList<UpdateActiveBreakpointRequest>();
@@ -234,8 +245,8 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
   $core.bool hasDebuggeeId() => $_has(0);
   void clearDebuggeeId() => clearField(1);
 
-  $0.Breakpoint get breakpoint => $_getN(1);
-  set breakpoint($0.Breakpoint v) {
+  $1.Breakpoint get breakpoint => $_getN(1);
+  set breakpoint($1.Breakpoint v) {
     setField(2, v);
   }
 
@@ -249,13 +260,14 @@ class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
     ..hasRequiredFields = false;
 
-  UpdateActiveBreakpointResponse() : super();
-  UpdateActiveBreakpointResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateActiveBreakpointResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateActiveBreakpointResponse._() : super();
+  factory UpdateActiveBreakpointResponse() => create();
+  factory UpdateActiveBreakpointResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateActiveBreakpointResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateActiveBreakpointResponse clone() =>
       UpdateActiveBreakpointResponse()..mergeFromMessage(this);
   UpdateActiveBreakpointResponse copyWith(
@@ -263,8 +275,9 @@ class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as UpdateActiveBreakpointResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static UpdateActiveBreakpointResponse create() =>
-      UpdateActiveBreakpointResponse();
+      UpdateActiveBreakpointResponse._();
   UpdateActiveBreakpointResponse createEmptyInstance() => create();
   static $pb.PbList<UpdateActiveBreakpointResponse> createRepeated() =>
       $pb.PbList<UpdateActiveBreakpointResponse>();

@@ -1,39 +1,39 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/build/v1/publish_build_event.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'publish_build_event.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'publish_build_event.pb.dart' as $0;
+import '../../../protobuf/empty.pb.dart' as $1;
 export 'publish_build_event.pb.dart';
 
 class PublishBuildEventClient extends $grpc.Client {
   static final _$publishLifecycleEvent =
-      $grpc.ClientMethod<PublishLifecycleEventRequest, $0.Empty>(
+      $grpc.ClientMethod<$0.PublishLifecycleEventRequest, $1.Empty>(
           '/google.devtools.build.v1.PublishBuildEvent/PublishLifecycleEvent',
-          (PublishLifecycleEventRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+          ($0.PublishLifecycleEventRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$publishBuildToolEventStream = $grpc.ClientMethod<
-          PublishBuildToolEventStreamRequest,
-          PublishBuildToolEventStreamResponse>(
+          $0.PublishBuildToolEventStreamRequest,
+          $0.PublishBuildToolEventStreamResponse>(
       '/google.devtools.build.v1.PublishBuildEvent/PublishBuildToolEventStream',
-      (PublishBuildToolEventStreamRequest value) => value.writeToBuffer(),
+      ($0.PublishBuildToolEventStreamRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          PublishBuildToolEventStreamResponse.fromBuffer(value));
+          $0.PublishBuildToolEventStreamResponse.fromBuffer(value));
 
   PublishBuildEventClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$0.Empty> publishLifecycleEvent(
-      PublishLifecycleEventRequest request,
+  $grpc.ResponseFuture<$1.Empty> publishLifecycleEvent(
+      $0.PublishLifecycleEventRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$publishLifecycleEvent, $async.Stream.fromIterable([request]),
@@ -41,9 +41,9 @@ class PublishBuildEventClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseStream<PublishBuildToolEventStreamResponse>
+  $grpc.ResponseStream<$0.PublishBuildToolEventStreamResponse>
       publishBuildToolEventStream(
-          $async.Stream<PublishBuildToolEventStreamRequest> request,
+          $async.Stream<$0.PublishBuildToolEventStreamRequest> request,
           {$grpc.CallOptions options}) {
     final call =
         $createCall(_$publishBuildToolEventStream, request, options: options);
@@ -55,33 +55,34 @@ abstract class PublishBuildEventServiceBase extends $grpc.Service {
   $core.String get $name => 'google.devtools.build.v1.PublishBuildEvent';
 
   PublishBuildEventServiceBase() {
-    $addMethod($grpc.ServiceMethod<PublishLifecycleEventRequest, $0.Empty>(
+    $addMethod($grpc.ServiceMethod<$0.PublishLifecycleEventRequest, $1.Empty>(
         'PublishLifecycleEvent',
         publishLifecycleEvent_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            PublishLifecycleEventRequest.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<PublishBuildToolEventStreamRequest,
-            PublishBuildToolEventStreamResponse>(
+            $0.PublishLifecycleEventRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.PublishBuildToolEventStreamRequest,
+            $0.PublishBuildToolEventStreamResponse>(
         'PublishBuildToolEventStream',
         publishBuildToolEventStream,
         true,
         true,
         ($core.List<$core.int> value) =>
-            PublishBuildToolEventStreamRequest.fromBuffer(value),
-        (PublishBuildToolEventStreamResponse value) => value.writeToBuffer()));
+            $0.PublishBuildToolEventStreamRequest.fromBuffer(value),
+        ($0.PublishBuildToolEventStreamResponse value) =>
+            value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> publishLifecycleEvent_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Empty> publishLifecycleEvent_Pre($grpc.ServiceCall call,
+      $async.Future<$0.PublishLifecycleEventRequest> request) async {
     return publishLifecycleEvent(call, await request);
   }
 
-  $async.Future<$0.Empty> publishLifecycleEvent(
-      $grpc.ServiceCall call, PublishLifecycleEventRequest request);
-  $async.Stream<PublishBuildToolEventStreamResponse>
+  $async.Future<$1.Empty> publishLifecycleEvent(
+      $grpc.ServiceCall call, $0.PublishLifecycleEventRequest request);
+  $async.Stream<$0.PublishBuildToolEventStreamResponse>
       publishBuildToolEventStream($grpc.ServiceCall call,
-          $async.Stream<PublishBuildToolEventStreamRequest> request);
+          $async.Stream<$0.PublishBuildToolEventStreamRequest> request);
 }

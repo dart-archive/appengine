@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/runtimeconfig/v1beta1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,18 +25,20 @@ class RuntimeConfig extends $pb.GeneratedMessage {
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
 
-  RuntimeConfig() : super();
-  RuntimeConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RuntimeConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RuntimeConfig._() : super();
+  factory RuntimeConfig() => create();
+  factory RuntimeConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RuntimeConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RuntimeConfig clone() => RuntimeConfig()..mergeFromMessage(this);
   RuntimeConfig copyWith(void Function(RuntimeConfig) updates) =>
       super.copyWith((message) => updates(message as RuntimeConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RuntimeConfig create() => RuntimeConfig();
+  @$core.pragma('dart2js:noInline')
+  static RuntimeConfig create() => RuntimeConfig._();
   RuntimeConfig createEmptyInstance() => create();
   static $pb.PbList<RuntimeConfig> createRepeated() =>
       $pb.PbList<RuntimeConfig>();
@@ -70,6 +73,7 @@ class Variable extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Variable',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+    ..oo(0, [2, 5])
     ..aOS(1, 'name')
     ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
     ..a<$0.Timestamp>(3, 'updateTime', $pb.PbFieldType.OM,
@@ -82,21 +86,22 @@ class Variable extends $pb.GeneratedMessage {
         VariableState.valueOf,
         VariableState.values)
     ..aOS(5, 'text')
-    ..oo(0, [2, 5])
     ..hasRequiredFields = false;
 
-  Variable() : super();
-  Variable.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Variable.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Variable._() : super();
+  factory Variable() => create();
+  factory Variable.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Variable.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Variable clone() => Variable()..mergeFromMessage(this);
   Variable copyWith(void Function(Variable) updates) =>
       super.copyWith((message) => updates(message as Variable));
   $pb.BuilderInfo get info_ => _i;
-  static Variable create() => Variable();
+  @$core.pragma('dart2js:noInline')
+  static Variable create() => Variable._();
   Variable createEmptyInstance() => create();
   static $pb.PbList<Variable> createRepeated() => $pb.PbList<Variable>();
   static Variable getDefault() => _defaultInstance ??= create()..freeze();
@@ -153,20 +158,22 @@ class EndCondition_Cardinality extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'number', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  EndCondition_Cardinality() : super();
-  EndCondition_Cardinality.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EndCondition_Cardinality.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EndCondition_Cardinality._() : super();
+  factory EndCondition_Cardinality() => create();
+  factory EndCondition_Cardinality.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EndCondition_Cardinality.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EndCondition_Cardinality clone() =>
       EndCondition_Cardinality()..mergeFromMessage(this);
   EndCondition_Cardinality copyWith(
           void Function(EndCondition_Cardinality) updates) =>
       super.copyWith((message) => updates(message as EndCondition_Cardinality));
   $pb.BuilderInfo get info_ => _i;
-  static EndCondition_Cardinality create() => EndCondition_Cardinality();
+  @$core.pragma('dart2js:noInline')
+  static EndCondition_Cardinality create() => EndCondition_Cardinality._();
   EndCondition_Cardinality createEmptyInstance() => create();
   static $pb.PbList<EndCondition_Cardinality> createRepeated() =>
       $pb.PbList<EndCondition_Cardinality>();
@@ -201,23 +208,25 @@ class EndCondition extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EndCondition',
       package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+    ..oo(0, [1])
     ..a<EndCondition_Cardinality>(1, 'cardinality', $pb.PbFieldType.OM,
         EndCondition_Cardinality.getDefault, EndCondition_Cardinality.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  EndCondition() : super();
-  EndCondition.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  EndCondition.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  EndCondition._() : super();
+  factory EndCondition() => create();
+  factory EndCondition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EndCondition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   EndCondition clone() => EndCondition()..mergeFromMessage(this);
   EndCondition copyWith(void Function(EndCondition) updates) =>
       super.copyWith((message) => updates(message as EndCondition));
   $pb.BuilderInfo get info_ => _i;
-  static EndCondition create() => EndCondition();
+  @$core.pragma('dart2js:noInline')
+  static EndCondition create() => EndCondition._();
   EndCondition createEmptyInstance() => create();
   static $pb.PbList<EndCondition> createRepeated() =>
       $pb.PbList<EndCondition>();
@@ -254,18 +263,20 @@ class Waiter extends $pb.GeneratedMessage {
         7, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
     ..hasRequiredFields = false;
 
-  Waiter() : super();
-  Waiter.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Waiter.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Waiter._() : super();
+  factory Waiter() => create();
+  factory Waiter.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Waiter.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Waiter clone() => Waiter()..mergeFromMessage(this);
   Waiter copyWith(void Function(Waiter) updates) =>
       super.copyWith((message) => updates(message as Waiter));
   $pb.BuilderInfo get info_ => _i;
-  static Waiter create() => Waiter();
+  @$core.pragma('dart2js:noInline')
+  static Waiter create() => Waiter._();
   Waiter createEmptyInstance() => create();
   static $pb.PbList<Waiter> createRepeated() => $pb.PbList<Waiter>();
   static Waiter getDefault() => _defaultInstance ??= create()..freeze();

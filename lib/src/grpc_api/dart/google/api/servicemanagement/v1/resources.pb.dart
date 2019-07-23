@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicemanagement/v1/resources.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $1;
-import '../../config_change.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../config_change.pb.dart' as $3;
 
 import 'resources.pbenum.dart';
 
@@ -23,18 +24,20 @@ class ManagedService extends $pb.GeneratedMessage {
     ..aOS(3, 'producerProjectId')
     ..hasRequiredFields = false;
 
-  ManagedService() : super();
-  ManagedService.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ManagedService.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ManagedService._() : super();
+  factory ManagedService() => create();
+  factory ManagedService.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ManagedService.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ManagedService clone() => ManagedService()..mergeFromMessage(this);
   ManagedService copyWith(void Function(ManagedService) updates) =>
       super.copyWith((message) => updates(message as ManagedService));
   $pb.BuilderInfo get info_ => _i;
-  static ManagedService create() => ManagedService();
+  @$core.pragma('dart2js:noInline')
+  static ManagedService create() => ManagedService._();
   ManagedService createEmptyInstance() => create();
   static $pb.PbList<ManagedService> createRepeated() =>
       $pb.PbList<ManagedService>();
@@ -71,20 +74,22 @@ class OperationMetadata_Step extends $pb.GeneratedMessage {
         OperationMetadata_Status.values)
     ..hasRequiredFields = false;
 
-  OperationMetadata_Step() : super();
-  OperationMetadata_Step.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadata_Step.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadata_Step._() : super();
+  factory OperationMetadata_Step() => create();
+  factory OperationMetadata_Step.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationMetadata_Step.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationMetadata_Step clone() =>
       OperationMetadata_Step()..mergeFromMessage(this);
   OperationMetadata_Step copyWith(
           void Function(OperationMetadata_Step) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata_Step));
   $pb.BuilderInfo get info_ => _i;
-  static OperationMetadata_Step create() => OperationMetadata_Step();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata_Step create() => OperationMetadata_Step._();
   OperationMetadata_Step createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata_Step> createRepeated() =>
       $pb.PbList<OperationMetadata_Step>();
@@ -116,22 +121,24 @@ class OperationMetadata extends $pb.GeneratedMessage {
     ..pc<OperationMetadata_Step>(
         2, 'steps', $pb.PbFieldType.PM, OperationMetadata_Step.create)
     ..a<$core.int>(3, 'progressPercentage', $pb.PbFieldType.O3)
-    ..a<$1.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(4, 'startTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..hasRequiredFields = false;
 
-  OperationMetadata() : super();
-  OperationMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OperationMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OperationMetadata._() : super();
+  factory OperationMetadata() => create();
+  factory OperationMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OperationMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
       super.copyWith((message) => updates(message as OperationMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static OperationMetadata create() => OperationMetadata();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata create() => OperationMetadata._();
   OperationMetadata createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata> createRepeated() =>
       $pb.PbList<OperationMetadata>();
@@ -151,8 +158,8 @@ class OperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasProgressPercentage() => $_has(2);
   void clearProgressPercentage() => clearField(3);
 
-  $1.Timestamp get startTime => $_getN(3);
-  set startTime($1.Timestamp v) {
+  $2.Timestamp get startTime => $_getN(3);
+  set startTime($2.Timestamp v) {
     setField(4, v);
   }
 
@@ -169,18 +176,20 @@ class Diagnostic extends $pb.GeneratedMessage {
     ..aOS(3, 'message')
     ..hasRequiredFields = false;
 
-  Diagnostic() : super();
-  Diagnostic.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Diagnostic.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Diagnostic._() : super();
+  factory Diagnostic() => create();
+  factory Diagnostic.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Diagnostic.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Diagnostic clone() => Diagnostic()..mergeFromMessage(this);
   Diagnostic copyWith(void Function(Diagnostic) updates) =>
       super.copyWith((message) => updates(message as Diagnostic));
   $pb.BuilderInfo get info_ => _i;
-  static Diagnostic create() => Diagnostic();
+  @$core.pragma('dart2js:noInline')
+  static Diagnostic create() => Diagnostic._();
   Diagnostic createEmptyInstance() => create();
   static $pb.PbList<Diagnostic> createRepeated() => $pb.PbList<Diagnostic>();
   static Diagnostic getDefault() => _defaultInstance ??= create()..freeze();
@@ -218,18 +227,20 @@ class ConfigSource extends $pb.GeneratedMessage {
     ..aOS(5, 'id')
     ..hasRequiredFields = false;
 
-  ConfigSource() : super();
-  ConfigSource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfigSource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfigSource._() : super();
+  factory ConfigSource() => create();
+  factory ConfigSource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfigSource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfigSource clone() => ConfigSource()..mergeFromMessage(this);
   ConfigSource copyWith(void Function(ConfigSource) updates) =>
       super.copyWith((message) => updates(message as ConfigSource));
   $pb.BuilderInfo get info_ => _i;
-  static ConfigSource create() => ConfigSource();
+  @$core.pragma('dart2js:noInline')
+  static ConfigSource create() => ConfigSource._();
   ConfigSource createEmptyInstance() => create();
   static $pb.PbList<ConfigSource> createRepeated() =>
       $pb.PbList<ConfigSource>();
@@ -261,18 +272,20 @@ class ConfigFile extends $pb.GeneratedMessage {
         ConfigFile_FileType.values)
     ..hasRequiredFields = false;
 
-  ConfigFile() : super();
-  ConfigFile.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfigFile.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfigFile._() : super();
+  factory ConfigFile() => create();
+  factory ConfigFile.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfigFile.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfigFile clone() => ConfigFile()..mergeFromMessage(this);
   ConfigFile copyWith(void Function(ConfigFile) updates) =>
       super.copyWith((message) => updates(message as ConfigFile));
   $pb.BuilderInfo get info_ => _i;
-  static ConfigFile create() => ConfigFile();
+  @$core.pragma('dart2js:noInline')
+  static ConfigFile create() => ConfigFile._();
   ConfigFile createEmptyInstance() => create();
   static $pb.PbList<ConfigFile> createRepeated() => $pb.PbList<ConfigFile>();
   static ConfigFile getDefault() => _defaultInstance ??= create()..freeze();
@@ -309,18 +322,20 @@ class ConfigRef extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  ConfigRef() : super();
-  ConfigRef.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfigRef.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfigRef._() : super();
+  factory ConfigRef() => create();
+  factory ConfigRef.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfigRef.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfigRef clone() => ConfigRef()..mergeFromMessage(this);
   ConfigRef copyWith(void Function(ConfigRef) updates) =>
       super.copyWith((message) => updates(message as ConfigRef));
   $pb.BuilderInfo get info_ => _i;
-  static ConfigRef create() => ConfigRef();
+  @$core.pragma('dart2js:noInline')
+  static ConfigRef create() => ConfigRef._();
   ConfigRef createEmptyInstance() => create();
   static $pb.PbList<ConfigRef> createRepeated() => $pb.PbList<ConfigRef>();
   static ConfigRef getDefault() => _defaultInstance ??= create()..freeze();
@@ -338,29 +353,31 @@ class ConfigRef extends $pb.GeneratedMessage {
 class ChangeReport extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChangeReport',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$2.ConfigChange>(
-        1, 'configChanges', $pb.PbFieldType.PM, $2.ConfigChange.create)
+    ..pc<$3.ConfigChange>(
+        1, 'configChanges', $pb.PbFieldType.PM, $3.ConfigChange.create)
     ..hasRequiredFields = false;
 
-  ChangeReport() : super();
-  ChangeReport.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ChangeReport.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ChangeReport._() : super();
+  factory ChangeReport() => create();
+  factory ChangeReport.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ChangeReport.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ChangeReport clone() => ChangeReport()..mergeFromMessage(this);
   ChangeReport copyWith(void Function(ChangeReport) updates) =>
       super.copyWith((message) => updates(message as ChangeReport));
   $pb.BuilderInfo get info_ => _i;
-  static ChangeReport create() => ChangeReport();
+  @$core.pragma('dart2js:noInline')
+  static ChangeReport create() => ChangeReport._();
   ChangeReport createEmptyInstance() => create();
   static $pb.PbList<ChangeReport> createRepeated() =>
       $pb.PbList<ChangeReport>();
   static ChangeReport getDefault() => _defaultInstance ??= create()..freeze();
   static ChangeReport _defaultInstance;
 
-  $core.List<$2.ConfigChange> get configChanges => $_getList(0);
+  $core.List<$3.ConfigChange> get configChanges => $_getList(0);
 }
 
 class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
@@ -379,13 +396,14 @@ class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
         const $pb.PackageName('google.api.servicemanagement.v1'))
     ..hasRequiredFields = false;
 
-  Rollout_TrafficPercentStrategy() : super();
-  Rollout_TrafficPercentStrategy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Rollout_TrafficPercentStrategy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Rollout_TrafficPercentStrategy._() : super();
+  factory Rollout_TrafficPercentStrategy() => create();
+  factory Rollout_TrafficPercentStrategy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Rollout_TrafficPercentStrategy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Rollout_TrafficPercentStrategy clone() =>
       Rollout_TrafficPercentStrategy()..mergeFromMessage(this);
   Rollout_TrafficPercentStrategy copyWith(
@@ -393,8 +411,9 @@ class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Rollout_TrafficPercentStrategy));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Rollout_TrafficPercentStrategy create() =>
-      Rollout_TrafficPercentStrategy();
+      Rollout_TrafficPercentStrategy._();
   Rollout_TrafficPercentStrategy createEmptyInstance() => create();
   static $pb.PbList<Rollout_TrafficPercentStrategy> createRepeated() =>
       $pb.PbList<Rollout_TrafficPercentStrategy>();
@@ -411,13 +430,14 @@ class Rollout_DeleteServiceStrategy extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
     ..hasRequiredFields = false;
 
-  Rollout_DeleteServiceStrategy() : super();
-  Rollout_DeleteServiceStrategy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Rollout_DeleteServiceStrategy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Rollout_DeleteServiceStrategy._() : super();
+  factory Rollout_DeleteServiceStrategy() => create();
+  factory Rollout_DeleteServiceStrategy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Rollout_DeleteServiceStrategy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Rollout_DeleteServiceStrategy clone() =>
       Rollout_DeleteServiceStrategy()..mergeFromMessage(this);
   Rollout_DeleteServiceStrategy copyWith(
@@ -425,8 +445,9 @@ class Rollout_DeleteServiceStrategy extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Rollout_DeleteServiceStrategy));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Rollout_DeleteServiceStrategy create() =>
-      Rollout_DeleteServiceStrategy();
+      Rollout_DeleteServiceStrategy._();
   Rollout_DeleteServiceStrategy createEmptyInstance() => create();
   static $pb.PbList<Rollout_DeleteServiceStrategy> createRepeated() =>
       $pb.PbList<Rollout_DeleteServiceStrategy>();
@@ -445,9 +466,10 @@ class Rollout extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Rollout',
       package: const $pb.PackageName('google.api.servicemanagement.v1'))
+    ..oo(0, [5, 200])
     ..aOS(1, 'rolloutId')
-    ..a<$1.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
+    ..a<$2.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
+        $2.Timestamp.getDefault, $2.Timestamp.create)
     ..aOS(3, 'createdBy')
     ..e<Rollout_RolloutStatus>(
         4,
@@ -469,21 +491,22 @@ class Rollout extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Rollout_DeleteServiceStrategy.getDefault,
         Rollout_DeleteServiceStrategy.create)
-    ..oo(0, [5, 200])
     ..hasRequiredFields = false;
 
-  Rollout() : super();
-  Rollout.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Rollout.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Rollout._() : super();
+  factory Rollout() => create();
+  factory Rollout.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Rollout.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Rollout clone() => Rollout()..mergeFromMessage(this);
   Rollout copyWith(void Function(Rollout) updates) =>
       super.copyWith((message) => updates(message as Rollout));
   $pb.BuilderInfo get info_ => _i;
-  static Rollout create() => Rollout();
+  @$core.pragma('dart2js:noInline')
+  static Rollout create() => Rollout._();
   Rollout createEmptyInstance() => create();
   static $pb.PbList<Rollout> createRepeated() => $pb.PbList<Rollout>();
   static Rollout getDefault() => _defaultInstance ??= create()..freeze();
@@ -500,8 +523,8 @@ class Rollout extends $pb.GeneratedMessage {
   $core.bool hasRolloutId() => $_has(0);
   void clearRolloutId() => clearField(1);
 
-  $1.Timestamp get createTime => $_getN(1);
-  set createTime($1.Timestamp v) {
+  $2.Timestamp get createTime => $_getN(1);
+  set createTime($2.Timestamp v) {
     setField(2, v);
   }
 

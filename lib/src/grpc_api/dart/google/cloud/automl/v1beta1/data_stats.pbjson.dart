@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/data_stats.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const DataStats$json = {
   '1': 'DataStats',
@@ -69,6 +70,7 @@ const DataStats$json = {
       '10': 'distinctValueCount'
     },
     {'1': 'null_value_count', '3': 2, '4': 1, '5': 3, '10': 'nullValueCount'},
+    {'1': 'valid_value_count', '3': 9, '4': 1, '5': 3, '10': 'validValueCount'},
   ],
   '8': [
     {'1': 'stats'},

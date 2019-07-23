@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/asset_types.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,18 +21,20 @@ class YoutubeVideoAsset extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  YoutubeVideoAsset() : super();
-  YoutubeVideoAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  YoutubeVideoAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  YoutubeVideoAsset._() : super();
+  factory YoutubeVideoAsset() => create();
+  factory YoutubeVideoAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory YoutubeVideoAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   YoutubeVideoAsset clone() => YoutubeVideoAsset()..mergeFromMessage(this);
   YoutubeVideoAsset copyWith(void Function(YoutubeVideoAsset) updates) =>
       super.copyWith((message) => updates(message as YoutubeVideoAsset));
   $pb.BuilderInfo get info_ => _i;
-  static YoutubeVideoAsset create() => YoutubeVideoAsset();
+  @$core.pragma('dart2js:noInline')
+  static YoutubeVideoAsset create() => YoutubeVideoAsset._();
   YoutubeVideoAsset createEmptyInstance() => create();
   static $pb.PbList<YoutubeVideoAsset> createRepeated() =>
       $pb.PbList<YoutubeVideoAsset>();
@@ -55,18 +58,20 @@ class MediaBundleAsset extends $pb.GeneratedMessage {
         $0.BytesValue.create)
     ..hasRequiredFields = false;
 
-  MediaBundleAsset() : super();
-  MediaBundleAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MediaBundleAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MediaBundleAsset._() : super();
+  factory MediaBundleAsset() => create();
+  factory MediaBundleAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MediaBundleAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MediaBundleAsset clone() => MediaBundleAsset()..mergeFromMessage(this);
   MediaBundleAsset copyWith(void Function(MediaBundleAsset) updates) =>
       super.copyWith((message) => updates(message as MediaBundleAsset));
   $pb.BuilderInfo get info_ => _i;
-  static MediaBundleAsset create() => MediaBundleAsset();
+  @$core.pragma('dart2js:noInline')
+  static MediaBundleAsset create() => MediaBundleAsset._();
   MediaBundleAsset createEmptyInstance() => create();
   static $pb.PbList<MediaBundleAsset> createRepeated() =>
       $pb.PbList<MediaBundleAsset>();
@@ -101,18 +106,20 @@ class ImageAsset extends $pb.GeneratedMessage {
         ImageDimension.getDefault, ImageDimension.create)
     ..hasRequiredFields = false;
 
-  ImageAsset() : super();
-  ImageAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageAsset._() : super();
+  factory ImageAsset() => create();
+  factory ImageAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageAsset clone() => ImageAsset()..mergeFromMessage(this);
   ImageAsset copyWith(void Function(ImageAsset) updates) =>
       super.copyWith((message) => updates(message as ImageAsset));
   $pb.BuilderInfo get info_ => _i;
-  static ImageAsset create() => ImageAsset();
+  @$core.pragma('dart2js:noInline')
+  static ImageAsset create() => ImageAsset._();
   ImageAsset createEmptyInstance() => create();
   static $pb.PbList<ImageAsset> createRepeated() => $pb.PbList<ImageAsset>();
   static ImageAsset getDefault() => _defaultInstance ??= create()..freeze();
@@ -162,18 +169,20 @@ class ImageDimension extends $pb.GeneratedMessage {
         $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ImageDimension() : super();
-  ImageDimension.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ImageDimension.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ImageDimension._() : super();
+  factory ImageDimension() => create();
+  factory ImageDimension.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ImageDimension.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ImageDimension clone() => ImageDimension()..mergeFromMessage(this);
   ImageDimension copyWith(void Function(ImageDimension) updates) =>
       super.copyWith((message) => updates(message as ImageDimension));
   $pb.BuilderInfo get info_ => _i;
-  static ImageDimension create() => ImageDimension();
+  @$core.pragma('dart2js:noInline')
+  static ImageDimension create() => ImageDimension._();
   ImageDimension createEmptyInstance() => create();
   static $pb.PbList<ImageDimension> createRepeated() =>
       $pb.PbList<ImageDimension>();
@@ -212,18 +221,20 @@ class TextAsset extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  TextAsset() : super();
-  TextAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAsset._() : super();
+  factory TextAsset() => create();
+  factory TextAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAsset clone() => TextAsset()..mergeFromMessage(this);
   TextAsset copyWith(void Function(TextAsset) updates) =>
       super.copyWith((message) => updates(message as TextAsset));
   $pb.BuilderInfo get info_ => _i;
-  static TextAsset create() => TextAsset();
+  @$core.pragma('dart2js:noInline')
+  static TextAsset create() => TextAsset._();
   TextAsset createEmptyInstance() => create();
   static $pb.PbList<TextAsset> createRepeated() => $pb.PbList<TextAsset>();
   static TextAsset getDefault() => _defaultInstance ??= create()..freeze();

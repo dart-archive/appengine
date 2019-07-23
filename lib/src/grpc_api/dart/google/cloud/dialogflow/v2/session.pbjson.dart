@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/session.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const DetectIntentRequest$json = {
   '1': 'DetectIntentRequest',
@@ -260,7 +261,14 @@ const StreamingDetectIntentRequest$json = {
       '6': '.google.cloud.dialogflow.v2.QueryInput',
       '10': 'queryInput'
     },
-    {'1': 'single_utterance', '3': 4, '4': 1, '5': 8, '10': 'singleUtterance'},
+    {
+      '1': 'single_utterance',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '8': {'3': true},
+      '10': 'singleUtterance',
+    },
     {
       '1': 'output_audio_config',
       '3': 5,

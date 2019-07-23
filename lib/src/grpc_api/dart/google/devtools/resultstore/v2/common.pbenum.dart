@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -101,4 +102,26 @@ class Status extends $pb.ProtobufEnum {
   static Status valueOf($core.int value) => _byValue[value];
 
   const Status._($core.int v, $core.String n) : super(v, n);
+}
+
+class UploadStatus extends $pb.ProtobufEnum {
+  static const UploadStatus UPLOAD_STATUS_UNSPECIFIED =
+      UploadStatus._(0, 'UPLOAD_STATUS_UNSPECIFIED');
+  static const UploadStatus UPLOADING = UploadStatus._(1, 'UPLOADING');
+  static const UploadStatus POST_PROCESSING =
+      UploadStatus._(2, 'POST_PROCESSING');
+  static const UploadStatus IMMUTABLE = UploadStatus._(3, 'IMMUTABLE');
+
+  static const $core.List<UploadStatus> values = <UploadStatus>[
+    UPLOAD_STATUS_UNSPECIFIED,
+    UPLOADING,
+    POST_PROCESSING,
+    IMMUTABLE,
+  ];
+
+  static final $core.Map<$core.int, UploadStatus> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static UploadStatus valueOf($core.int value) => _byValue[value];
+
+  const UploadStatus._($core.int v, $core.String n) : super(v, n);
 }

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/readgroup.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,19 +21,21 @@ class ReadGroup_Experiment extends $pb.GeneratedMessage {
     ..aOS(4, 'instrumentModel')
     ..hasRequiredFields = false;
 
-  ReadGroup_Experiment() : super();
-  ReadGroup_Experiment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroup_Experiment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadGroup_Experiment._() : super();
+  factory ReadGroup_Experiment() => create();
+  factory ReadGroup_Experiment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadGroup_Experiment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadGroup_Experiment clone() =>
       ReadGroup_Experiment()..mergeFromMessage(this);
   ReadGroup_Experiment copyWith(void Function(ReadGroup_Experiment) updates) =>
       super.copyWith((message) => updates(message as ReadGroup_Experiment));
   $pb.BuilderInfo get info_ => _i;
-  static ReadGroup_Experiment create() => ReadGroup_Experiment();
+  @$core.pragma('dart2js:noInline')
+  static ReadGroup_Experiment create() => ReadGroup_Experiment._();
   ReadGroup_Experiment createEmptyInstance() => create();
   static $pb.PbList<ReadGroup_Experiment> createRepeated() =>
       $pb.PbList<ReadGroup_Experiment>();
@@ -83,18 +86,20 @@ class ReadGroup_Program extends $pb.GeneratedMessage {
     ..aOS(5, 'version')
     ..hasRequiredFields = false;
 
-  ReadGroup_Program() : super();
-  ReadGroup_Program.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroup_Program.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadGroup_Program._() : super();
+  factory ReadGroup_Program() => create();
+  factory ReadGroup_Program.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadGroup_Program.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadGroup_Program clone() => ReadGroup_Program()..mergeFromMessage(this);
   ReadGroup_Program copyWith(void Function(ReadGroup_Program) updates) =>
       super.copyWith((message) => updates(message as ReadGroup_Program));
   $pb.BuilderInfo get info_ => _i;
-  static ReadGroup_Program create() => ReadGroup_Program();
+  @$core.pragma('dart2js:noInline')
+  static ReadGroup_Program create() => ReadGroup_Program._();
   ReadGroup_Program createEmptyInstance() => create();
   static $pb.PbList<ReadGroup_Program> createRepeated() =>
       $pb.PbList<ReadGroup_Program>();
@@ -169,18 +174,20 @@ class ReadGroup extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  ReadGroup() : super();
-  ReadGroup.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroup.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadGroup._() : super();
+  factory ReadGroup() => create();
+  factory ReadGroup.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadGroup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadGroup clone() => ReadGroup()..mergeFromMessage(this);
   ReadGroup copyWith(void Function(ReadGroup) updates) =>
       super.copyWith((message) => updates(message as ReadGroup));
   $pb.BuilderInfo get info_ => _i;
-  static ReadGroup create() => ReadGroup();
+  @$core.pragma('dart2js:noInline')
+  static ReadGroup create() => ReadGroup._();
   ReadGroup createEmptyInstance() => create();
   static $pb.PbList<ReadGroup> createRepeated() => $pb.PbList<ReadGroup>();
   static ReadGroup getDefault() => _defaultInstance ??= create()..freeze();

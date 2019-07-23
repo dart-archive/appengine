@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/configuration.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,18 +19,20 @@ class Configuration_Id extends $pb.GeneratedMessage {
     ..aOS(2, 'configurationId')
     ..hasRequiredFields = false;
 
-  Configuration_Id() : super();
-  Configuration_Id.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Configuration_Id.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Configuration_Id._() : super();
+  factory Configuration_Id() => create();
+  factory Configuration_Id.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Configuration_Id.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Configuration_Id clone() => Configuration_Id()..mergeFromMessage(this);
   Configuration_Id copyWith(void Function(Configuration_Id) updates) =>
       super.copyWith((message) => updates(message as Configuration_Id));
   $pb.BuilderInfo get info_ => _i;
-  static Configuration_Id create() => Configuration_Id();
+  @$core.pragma('dart2js:noInline')
+  static Configuration_Id create() => Configuration_Id._();
   Configuration_Id createEmptyInstance() => create();
   static $pb.PbList<Configuration_Id> createRepeated() =>
       $pb.PbList<Configuration_Id>();
@@ -69,20 +72,23 @@ class Configuration extends $pb.GeneratedMessage {
         ConfigurationAttributes.getDefault,
         ConfigurationAttributes.create)
     ..pc<$0.Property>(6, 'properties', $pb.PbFieldType.PM, $0.Property.create)
+    ..aOS(8, 'displayName')
     ..hasRequiredFields = false;
 
-  Configuration() : super();
-  Configuration.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Configuration.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Configuration._() : super();
+  factory Configuration() => create();
+  factory Configuration.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Configuration.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Configuration clone() => Configuration()..mergeFromMessage(this);
   Configuration copyWith(void Function(Configuration) updates) =>
       super.copyWith((message) => updates(message as Configuration));
   $pb.BuilderInfo get info_ => _i;
-  static Configuration create() => Configuration();
+  @$core.pragma('dart2js:noInline')
+  static Configuration create() => Configuration._();
   Configuration createEmptyInstance() => create();
   static $pb.PbList<Configuration> createRepeated() =>
       $pb.PbList<Configuration>();
@@ -122,6 +128,14 @@ class Configuration extends $pb.GeneratedMessage {
   void clearConfigurationAttributes() => clearField(5);
 
   $core.List<$0.Property> get properties => $_getList(4);
+
+  $core.String get displayName => $_getS(5, '');
+  set displayName($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasDisplayName() => $_has(5);
+  void clearDisplayName() => clearField(8);
 }
 
 class ConfigurationAttributes extends $pb.GeneratedMessage {
@@ -130,20 +144,22 @@ class ConfigurationAttributes extends $pb.GeneratedMessage {
     ..aOS(1, 'cpu')
     ..hasRequiredFields = false;
 
-  ConfigurationAttributes() : super();
-  ConfigurationAttributes.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConfigurationAttributes.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConfigurationAttributes._() : super();
+  factory ConfigurationAttributes() => create();
+  factory ConfigurationAttributes.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConfigurationAttributes.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConfigurationAttributes clone() =>
       ConfigurationAttributes()..mergeFromMessage(this);
   ConfigurationAttributes copyWith(
           void Function(ConfigurationAttributes) updates) =>
       super.copyWith((message) => updates(message as ConfigurationAttributes));
   $pb.BuilderInfo get info_ => _i;
-  static ConfigurationAttributes create() => ConfigurationAttributes();
+  @$core.pragma('dart2js:noInline')
+  static ConfigurationAttributes create() => ConfigurationAttributes._();
   ConfigurationAttributes createEmptyInstance() => create();
   static $pb.PbList<ConfigurationAttributes> createRepeated() =>
       $pb.PbList<ConfigurationAttributes>();

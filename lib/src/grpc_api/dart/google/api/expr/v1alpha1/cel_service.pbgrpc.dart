@@ -1,15 +1,15 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/cel_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
+import 'package:grpc/service_api.dart' as $grpc;
 import 'conformance_service.pb.dart' as $0;
 export 'cel_service.pb.dart';
 
@@ -80,17 +80,17 @@ abstract class CelServiceBase extends $grpc.Service {
   }
 
   $async.Future<$0.ParseResponse> parse_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$0.ParseRequest> request) async {
     return parse(call, await request);
   }
 
   $async.Future<$0.CheckResponse> check_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$0.CheckRequest> request) async {
     return check(call, await request);
   }
 
   $async.Future<$0.EvalResponse> eval_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+      $grpc.ServiceCall call, $async.Future<$0.EvalRequest> request) async {
     return eval(call, await request);
   }
 

@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging_metrics.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../api/metric.pb.dart' as $1;
-import '../../api/distribution.pb.dart' as $2;
+import '../../api/metric.pb.dart' as $2;
+import '../../api/distribution.pb.dart' as $3;
 
 import 'logging_metrics.pbenum.dart';
 
@@ -29,8 +30,8 @@ class LogMetric extends $pb.GeneratedMessage {
         LogMetric_ApiVersion.V2,
         LogMetric_ApiVersion.valueOf,
         LogMetric_ApiVersion.values)
-    ..a<$1.MetricDescriptor>(5, 'metricDescriptor', $pb.PbFieldType.OM,
-        $1.MetricDescriptor.getDefault, $1.MetricDescriptor.create)
+    ..a<$2.MetricDescriptor>(5, 'metricDescriptor', $pb.PbFieldType.OM,
+        $2.MetricDescriptor.getDefault, $2.MetricDescriptor.create)
     ..aOS(6, 'valueExtractor')
     ..m<$core.String, $core.String>(
         7,
@@ -42,26 +43,28 @@ class LogMetric extends $pb.GeneratedMessage {
         null,
         null,
         const $pb.PackageName('google.logging.v2'))
-    ..a<$2.Distribution_BucketOptions>(
+    ..a<$3.Distribution_BucketOptions>(
         8,
         'bucketOptions',
         $pb.PbFieldType.OM,
-        $2.Distribution_BucketOptions.getDefault,
-        $2.Distribution_BucketOptions.create)
+        $3.Distribution_BucketOptions.getDefault,
+        $3.Distribution_BucketOptions.create)
     ..hasRequiredFields = false;
 
-  LogMetric() : super();
-  LogMetric.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogMetric.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogMetric._() : super();
+  factory LogMetric() => create();
+  factory LogMetric.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogMetric.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogMetric clone() => LogMetric()..mergeFromMessage(this);
   LogMetric copyWith(void Function(LogMetric) updates) =>
       super.copyWith((message) => updates(message as LogMetric));
   $pb.BuilderInfo get info_ => _i;
-  static LogMetric create() => LogMetric();
+  @$core.pragma('dart2js:noInline')
+  static LogMetric create() => LogMetric._();
   LogMetric createEmptyInstance() => create();
   static $pb.PbList<LogMetric> createRepeated() => $pb.PbList<LogMetric>();
   static LogMetric getDefault() => _defaultInstance ??= create()..freeze();
@@ -103,8 +106,8 @@ class LogMetric extends $pb.GeneratedMessage {
   @$core.Deprecated('This field is deprecated.')
   void clearVersion() => clearField(4);
 
-  $1.MetricDescriptor get metricDescriptor => $_getN(4);
-  set metricDescriptor($1.MetricDescriptor v) {
+  $2.MetricDescriptor get metricDescriptor => $_getN(4);
+  set metricDescriptor($2.MetricDescriptor v) {
     setField(5, v);
   }
 
@@ -121,8 +124,8 @@ class LogMetric extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get labelExtractors => $_getMap(6);
 
-  $2.Distribution_BucketOptions get bucketOptions => $_getN(7);
-  set bucketOptions($2.Distribution_BucketOptions v) {
+  $3.Distribution_BucketOptions get bucketOptions => $_getN(7);
+  set bucketOptions($3.Distribution_BucketOptions v) {
     setField(8, v);
   }
 
@@ -138,20 +141,22 @@ class ListLogMetricsRequest extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  ListLogMetricsRequest() : super();
-  ListLogMetricsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLogMetricsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLogMetricsRequest._() : super();
+  factory ListLogMetricsRequest() => create();
+  factory ListLogMetricsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLogMetricsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLogMetricsRequest clone() =>
       ListLogMetricsRequest()..mergeFromMessage(this);
   ListLogMetricsRequest copyWith(
           void Function(ListLogMetricsRequest) updates) =>
       super.copyWith((message) => updates(message as ListLogMetricsRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListLogMetricsRequest create() => ListLogMetricsRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListLogMetricsRequest create() => ListLogMetricsRequest._();
   ListLogMetricsRequest createEmptyInstance() => create();
   static $pb.PbList<ListLogMetricsRequest> createRepeated() =>
       $pb.PbList<ListLogMetricsRequest>();
@@ -191,20 +196,22 @@ class ListLogMetricsResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListLogMetricsResponse() : super();
-  ListLogMetricsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListLogMetricsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListLogMetricsResponse._() : super();
+  factory ListLogMetricsResponse() => create();
+  factory ListLogMetricsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListLogMetricsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListLogMetricsResponse clone() =>
       ListLogMetricsResponse()..mergeFromMessage(this);
   ListLogMetricsResponse copyWith(
           void Function(ListLogMetricsResponse) updates) =>
       super.copyWith((message) => updates(message as ListLogMetricsResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListLogMetricsResponse create() => ListLogMetricsResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListLogMetricsResponse create() => ListLogMetricsResponse._();
   ListLogMetricsResponse createEmptyInstance() => create();
   static $pb.PbList<ListLogMetricsResponse> createRepeated() =>
       $pb.PbList<ListLogMetricsResponse>();
@@ -229,18 +236,20 @@ class GetLogMetricRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
-  GetLogMetricRequest() : super();
-  GetLogMetricRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetLogMetricRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetLogMetricRequest._() : super();
+  factory GetLogMetricRequest() => create();
+  factory GetLogMetricRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetLogMetricRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetLogMetricRequest clone() => GetLogMetricRequest()..mergeFromMessage(this);
   GetLogMetricRequest copyWith(void Function(GetLogMetricRequest) updates) =>
       super.copyWith((message) => updates(message as GetLogMetricRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetLogMetricRequest create() => GetLogMetricRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetLogMetricRequest create() => GetLogMetricRequest._();
   GetLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<GetLogMetricRequest> createRepeated() =>
       $pb.PbList<GetLogMetricRequest>();
@@ -265,20 +274,22 @@ class CreateLogMetricRequest extends $pb.GeneratedMessage {
         2, 'metric', $pb.PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
     ..hasRequiredFields = false;
 
-  CreateLogMetricRequest() : super();
-  CreateLogMetricRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateLogMetricRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateLogMetricRequest._() : super();
+  factory CreateLogMetricRequest() => create();
+  factory CreateLogMetricRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateLogMetricRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateLogMetricRequest clone() =>
       CreateLogMetricRequest()..mergeFromMessage(this);
   CreateLogMetricRequest copyWith(
           void Function(CreateLogMetricRequest) updates) =>
       super.copyWith((message) => updates(message as CreateLogMetricRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateLogMetricRequest create() => CreateLogMetricRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateLogMetricRequest create() => CreateLogMetricRequest._();
   CreateLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<CreateLogMetricRequest> createRepeated() =>
       $pb.PbList<CreateLogMetricRequest>();
@@ -311,20 +322,22 @@ class UpdateLogMetricRequest extends $pb.GeneratedMessage {
         2, 'metric', $pb.PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
     ..hasRequiredFields = false;
 
-  UpdateLogMetricRequest() : super();
-  UpdateLogMetricRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UpdateLogMetricRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UpdateLogMetricRequest._() : super();
+  factory UpdateLogMetricRequest() => create();
+  factory UpdateLogMetricRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateLogMetricRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UpdateLogMetricRequest clone() =>
       UpdateLogMetricRequest()..mergeFromMessage(this);
   UpdateLogMetricRequest copyWith(
           void Function(UpdateLogMetricRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateLogMetricRequest));
   $pb.BuilderInfo get info_ => _i;
-  static UpdateLogMetricRequest create() => UpdateLogMetricRequest();
+  @$core.pragma('dart2js:noInline')
+  static UpdateLogMetricRequest create() => UpdateLogMetricRequest._();
   UpdateLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateLogMetricRequest> createRepeated() =>
       $pb.PbList<UpdateLogMetricRequest>();
@@ -355,20 +368,22 @@ class DeleteLogMetricRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
-  DeleteLogMetricRequest() : super();
-  DeleteLogMetricRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteLogMetricRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteLogMetricRequest._() : super();
+  factory DeleteLogMetricRequest() => create();
+  factory DeleteLogMetricRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteLogMetricRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteLogMetricRequest clone() =>
       DeleteLogMetricRequest()..mergeFromMessage(this);
   DeleteLogMetricRequest copyWith(
           void Function(DeleteLogMetricRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteLogMetricRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteLogMetricRequest create() => DeleteLogMetricRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteLogMetricRequest create() => DeleteLogMetricRequest._();
   DeleteLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteLogMetricRequest> createRepeated() =>
       $pb.PbList<DeleteLogMetricRequest>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/quota.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -17,18 +18,20 @@ class Quota extends $pb.GeneratedMessage {
     ..pc<MetricRule>(4, 'metricRules', $pb.PbFieldType.PM, MetricRule.create)
     ..hasRequiredFields = false;
 
-  Quota() : super();
-  Quota.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Quota.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Quota._() : super();
+  factory Quota() => create();
+  factory Quota.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Quota.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Quota clone() => Quota()..mergeFromMessage(this);
   Quota copyWith(void Function(Quota) updates) =>
       super.copyWith((message) => updates(message as Quota));
   $pb.BuilderInfo get info_ => _i;
-  static Quota create() => Quota();
+  @$core.pragma('dart2js:noInline')
+  static Quota create() => Quota._();
   Quota createEmptyInstance() => create();
   static $pb.PbList<Quota> createRepeated() => $pb.PbList<Quota>();
   static Quota getDefault() => _defaultInstance ??= create()..freeze();
@@ -55,18 +58,20 @@ class MetricRule extends $pb.GeneratedMessage {
         const $pb.PackageName('google.api'))
     ..hasRequiredFields = false;
 
-  MetricRule() : super();
-  MetricRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MetricRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MetricRule._() : super();
+  factory MetricRule() => create();
+  factory MetricRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MetricRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MetricRule clone() => MetricRule()..mergeFromMessage(this);
   MetricRule copyWith(void Function(MetricRule) updates) =>
       super.copyWith((message) => updates(message as MetricRule));
   $pb.BuilderInfo get info_ => _i;
-  static MetricRule create() => MetricRule();
+  @$core.pragma('dart2js:noInline')
+  static MetricRule create() => MetricRule._();
   MetricRule createEmptyInstance() => create();
   static $pb.PbList<MetricRule> createRepeated() => $pb.PbList<MetricRule>();
   static MetricRule getDefault() => _defaultInstance ??= create()..freeze();
@@ -107,18 +112,20 @@ class QuotaLimit extends $pb.GeneratedMessage {
     ..aOS(12, 'displayName')
     ..hasRequiredFields = false;
 
-  QuotaLimit() : super();
-  QuotaLimit.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  QuotaLimit.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  QuotaLimit._() : super();
+  factory QuotaLimit() => create();
+  factory QuotaLimit.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory QuotaLimit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   QuotaLimit clone() => QuotaLimit()..mergeFromMessage(this);
   QuotaLimit copyWith(void Function(QuotaLimit) updates) =>
       super.copyWith((message) => updates(message as QuotaLimit));
   $pb.BuilderInfo get info_ => _i;
-  static QuotaLimit create() => QuotaLimit();
+  @$core.pragma('dart2js:noInline')
+  static QuotaLimit create() => QuotaLimit._();
   QuotaLimit createEmptyInstance() => create();
   static $pb.PbList<QuotaLimit> createRepeated() => $pb.PbList<QuotaLimit>();
   static QuotaLimit getDefault() => _defaultInstance ??= create()..freeze();

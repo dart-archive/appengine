@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/dialogflow/v2/audio_config.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class InputAudioConfig extends $pb.GeneratedMessage {
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..aOS(3, 'languageCode')
     ..pPS(4, 'phraseHints')
+    ..aOB(8, 'singleUtterance')
     ..e<SpeechModelVariant>(
         10,
         'modelVariant',
@@ -35,18 +37,20 @@ class InputAudioConfig extends $pb.GeneratedMessage {
         SpeechModelVariant.values)
     ..hasRequiredFields = false;
 
-  InputAudioConfig() : super();
-  InputAudioConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InputAudioConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InputAudioConfig._() : super();
+  factory InputAudioConfig() => create();
+  factory InputAudioConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InputAudioConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InputAudioConfig clone() => InputAudioConfig()..mergeFromMessage(this);
   InputAudioConfig copyWith(void Function(InputAudioConfig) updates) =>
       super.copyWith((message) => updates(message as InputAudioConfig));
   $pb.BuilderInfo get info_ => _i;
-  static InputAudioConfig create() => InputAudioConfig();
+  @$core.pragma('dart2js:noInline')
+  static InputAudioConfig create() => InputAudioConfig._();
   InputAudioConfig createEmptyInstance() => create();
   static $pb.PbList<InputAudioConfig> createRepeated() =>
       $pb.PbList<InputAudioConfig>();
@@ -80,12 +84,20 @@ class InputAudioConfig extends $pb.GeneratedMessage {
 
   $core.List<$core.String> get phraseHints => $_getList(3);
 
-  SpeechModelVariant get modelVariant => $_getN(4);
+  $core.bool get singleUtterance => $_get(4, false);
+  set singleUtterance($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  $core.bool hasSingleUtterance() => $_has(4);
+  void clearSingleUtterance() => clearField(8);
+
+  SpeechModelVariant get modelVariant => $_getN(5);
   set modelVariant(SpeechModelVariant v) {
     setField(10, v);
   }
 
-  $core.bool hasModelVariant() => $_has(4);
+  $core.bool hasModelVariant() => $_has(5);
   void clearModelVariant() => clearField(10);
 }
 
@@ -102,19 +114,21 @@ class VoiceSelectionParams extends $pb.GeneratedMessage {
         SsmlVoiceGender.values)
     ..hasRequiredFields = false;
 
-  VoiceSelectionParams() : super();
-  VoiceSelectionParams.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VoiceSelectionParams.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VoiceSelectionParams._() : super();
+  factory VoiceSelectionParams() => create();
+  factory VoiceSelectionParams.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VoiceSelectionParams.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VoiceSelectionParams clone() =>
       VoiceSelectionParams()..mergeFromMessage(this);
   VoiceSelectionParams copyWith(void Function(VoiceSelectionParams) updates) =>
       super.copyWith((message) => updates(message as VoiceSelectionParams));
   $pb.BuilderInfo get info_ => _i;
-  static VoiceSelectionParams create() => VoiceSelectionParams();
+  @$core.pragma('dart2js:noInline')
+  static VoiceSelectionParams create() => VoiceSelectionParams._();
   VoiceSelectionParams createEmptyInstance() => create();
   static $pb.PbList<VoiceSelectionParams> createRepeated() =>
       $pb.PbList<VoiceSelectionParams>();
@@ -150,20 +164,22 @@ class SynthesizeSpeechConfig extends $pb.GeneratedMessage {
     ..pPS(5, 'effectsProfileId')
     ..hasRequiredFields = false;
 
-  SynthesizeSpeechConfig() : super();
-  SynthesizeSpeechConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SynthesizeSpeechConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SynthesizeSpeechConfig._() : super();
+  factory SynthesizeSpeechConfig() => create();
+  factory SynthesizeSpeechConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SynthesizeSpeechConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SynthesizeSpeechConfig clone() =>
       SynthesizeSpeechConfig()..mergeFromMessage(this);
   SynthesizeSpeechConfig copyWith(
           void Function(SynthesizeSpeechConfig) updates) =>
       super.copyWith((message) => updates(message as SynthesizeSpeechConfig));
   $pb.BuilderInfo get info_ => _i;
-  static SynthesizeSpeechConfig create() => SynthesizeSpeechConfig();
+  @$core.pragma('dart2js:noInline')
+  static SynthesizeSpeechConfig create() => SynthesizeSpeechConfig._();
   SynthesizeSpeechConfig createEmptyInstance() => create();
   static $pb.PbList<SynthesizeSpeechConfig> createRepeated() =>
       $pb.PbList<SynthesizeSpeechConfig>();
@@ -221,18 +237,20 @@ class OutputAudioConfig extends $pb.GeneratedMessage {
         SynthesizeSpeechConfig.getDefault, SynthesizeSpeechConfig.create)
     ..hasRequiredFields = false;
 
-  OutputAudioConfig() : super();
-  OutputAudioConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutputAudioConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutputAudioConfig._() : super();
+  factory OutputAudioConfig() => create();
+  factory OutputAudioConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutputAudioConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutputAudioConfig clone() => OutputAudioConfig()..mergeFromMessage(this);
   OutputAudioConfig copyWith(void Function(OutputAudioConfig) updates) =>
       super.copyWith((message) => updates(message as OutputAudioConfig));
   $pb.BuilderInfo get info_ => _i;
-  static OutputAudioConfig create() => OutputAudioConfig();
+  @$core.pragma('dart2js:noInline')
+  static OutputAudioConfig create() => OutputAudioConfig._();
   OutputAudioConfig createEmptyInstance() => create();
   static $pb.PbList<OutputAudioConfig> createRepeated() =>
       $pb.PbList<OutputAudioConfig>();

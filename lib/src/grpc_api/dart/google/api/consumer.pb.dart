@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/consumer.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,18 +20,20 @@ class ProjectProperties extends $pb.GeneratedMessage {
     ..pc<Property>(1, 'properties', $pb.PbFieldType.PM, Property.create)
     ..hasRequiredFields = false;
 
-  ProjectProperties() : super();
-  ProjectProperties.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ProjectProperties.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ProjectProperties._() : super();
+  factory ProjectProperties() => create();
+  factory ProjectProperties.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProjectProperties.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ProjectProperties clone() => ProjectProperties()..mergeFromMessage(this);
   ProjectProperties copyWith(void Function(ProjectProperties) updates) =>
       super.copyWith((message) => updates(message as ProjectProperties));
   $pb.BuilderInfo get info_ => _i;
-  static ProjectProperties create() => ProjectProperties();
+  @$core.pragma('dart2js:noInline')
+  static ProjectProperties create() => ProjectProperties._();
   ProjectProperties createEmptyInstance() => create();
   static $pb.PbList<ProjectProperties> createRepeated() =>
       $pb.PbList<ProjectProperties>();
@@ -55,18 +58,20 @@ class Property extends $pb.GeneratedMessage {
         ..aOS(3, 'description')
         ..hasRequiredFields = false;
 
-  Property() : super();
-  Property.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Property.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Property._() : super();
+  factory Property() => create();
+  factory Property.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Property.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Property clone() => Property()..mergeFromMessage(this);
   Property copyWith(void Function(Property) updates) =>
       super.copyWith((message) => updates(message as Property));
   $pb.BuilderInfo get info_ => _i;
-  static Property create() => Property();
+  @$core.pragma('dart2js:noInline')
+  static Property create() => Property._();
   Property createEmptyInstance() => create();
   static $pb.PbList<Property> createRepeated() => $pb.PbList<Property>();
   static Property getDefault() => _defaultInstance ??= create()..freeze();

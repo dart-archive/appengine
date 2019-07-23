@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/talent/v4beta1/application.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -59,18 +60,20 @@ class Application extends $pb.GeneratedMessage {
     ..aOS(31, 'externalId')
     ..hasRequiredFields = false;
 
-  Application() : super();
-  Application.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Application.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Application._() : super();
+  factory Application() => create();
+  factory Application.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Application.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Application clone() => Application()..mergeFromMessage(this);
   Application copyWith(void Function(Application) updates) =>
       super.copyWith((message) => updates(message as Application));
   $pb.BuilderInfo get info_ => _i;
-  static Application create() => Application();
+  @$core.pragma('dart2js:noInline')
+  static Application create() => Application._();
   Application createEmptyInstance() => create();
   static $pb.PbList<Application> createRepeated() => $pb.PbList<Application>();
   static Application getDefault() => _defaultInstance ??= create()..freeze();

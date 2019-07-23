@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/ad_asset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,18 +28,20 @@ class AdTextAsset extends $pb.GeneratedMessage {
         $1.ServedAssetFieldTypeEnum_ServedAssetFieldType.values)
     ..hasRequiredFields = false;
 
-  AdTextAsset() : super();
-  AdTextAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdTextAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdTextAsset._() : super();
+  factory AdTextAsset() => create();
+  factory AdTextAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdTextAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdTextAsset clone() => AdTextAsset()..mergeFromMessage(this);
   AdTextAsset copyWith(void Function(AdTextAsset) updates) =>
       super.copyWith((message) => updates(message as AdTextAsset));
   $pb.BuilderInfo get info_ => _i;
-  static AdTextAsset create() => AdTextAsset();
+  @$core.pragma('dart2js:noInline')
+  static AdTextAsset create() => AdTextAsset._();
   AdTextAsset createEmptyInstance() => create();
   static $pb.PbList<AdTextAsset> createRepeated() => $pb.PbList<AdTextAsset>();
   static AdTextAsset getDefault() => _defaultInstance ??= create()..freeze();
@@ -68,18 +71,20 @@ class AdImageAsset extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  AdImageAsset() : super();
-  AdImageAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdImageAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdImageAsset._() : super();
+  factory AdImageAsset() => create();
+  factory AdImageAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdImageAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdImageAsset clone() => AdImageAsset()..mergeFromMessage(this);
   AdImageAsset copyWith(void Function(AdImageAsset) updates) =>
       super.copyWith((message) => updates(message as AdImageAsset));
   $pb.BuilderInfo get info_ => _i;
-  static AdImageAsset create() => AdImageAsset();
+  @$core.pragma('dart2js:noInline')
+  static AdImageAsset create() => AdImageAsset._();
   AdImageAsset createEmptyInstance() => create();
   static $pb.PbList<AdImageAsset> createRepeated() =>
       $pb.PbList<AdImageAsset>();
@@ -102,18 +107,20 @@ class AdVideoAsset extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  AdVideoAsset() : super();
-  AdVideoAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdVideoAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdVideoAsset._() : super();
+  factory AdVideoAsset() => create();
+  factory AdVideoAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdVideoAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdVideoAsset clone() => AdVideoAsset()..mergeFromMessage(this);
   AdVideoAsset copyWith(void Function(AdVideoAsset) updates) =>
       super.copyWith((message) => updates(message as AdVideoAsset));
   $pb.BuilderInfo get info_ => _i;
-  static AdVideoAsset create() => AdVideoAsset();
+  @$core.pragma('dart2js:noInline')
+  static AdVideoAsset create() => AdVideoAsset._();
   AdVideoAsset createEmptyInstance() => create();
   static $pb.PbList<AdVideoAsset> createRepeated() =>
       $pb.PbList<AdVideoAsset>();
@@ -136,18 +143,20 @@ class AdMediaBundleAsset extends $pb.GeneratedMessage {
         $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  AdMediaBundleAsset() : super();
-  AdMediaBundleAsset.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdMediaBundleAsset.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdMediaBundleAsset._() : super();
+  factory AdMediaBundleAsset() => create();
+  factory AdMediaBundleAsset.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdMediaBundleAsset.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdMediaBundleAsset clone() => AdMediaBundleAsset()..mergeFromMessage(this);
   AdMediaBundleAsset copyWith(void Function(AdMediaBundleAsset) updates) =>
       super.copyWith((message) => updates(message as AdMediaBundleAsset));
   $pb.BuilderInfo get info_ => _i;
-  static AdMediaBundleAsset create() => AdMediaBundleAsset();
+  @$core.pragma('dart2js:noInline')
+  static AdMediaBundleAsset create() => AdMediaBundleAsset._();
   AdMediaBundleAsset createEmptyInstance() => create();
   static $pb.PbList<AdMediaBundleAsset> createRepeated() =>
       $pb.PbList<AdMediaBundleAsset>();

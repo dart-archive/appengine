@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/context.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class Context extends $pb.GeneratedMessage {
         ..pc<ContextRule>(1, 'rules', $pb.PbFieldType.PM, ContextRule.create)
         ..hasRequiredFields = false;
 
-  Context() : super();
-  Context.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Context.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Context._() : super();
+  factory Context() => create();
+  factory Context.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Context.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Context clone() => Context()..mergeFromMessage(this);
   Context copyWith(void Function(Context) updates) =>
       super.copyWith((message) => updates(message as Context));
   $pb.BuilderInfo get info_ => _i;
-  static Context create() => Context();
+  @$core.pragma('dart2js:noInline')
+  static Context create() => Context._();
   Context createEmptyInstance() => create();
   static $pb.PbList<Context> createRepeated() => $pb.PbList<Context>();
   static Context getDefault() => _defaultInstance ??= create()..freeze();
@@ -45,18 +48,20 @@ class ContextRule extends $pb.GeneratedMessage {
     ..pPS(5, 'allowedResponseExtensions')
     ..hasRequiredFields = false;
 
-  ContextRule() : super();
-  ContextRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ContextRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ContextRule._() : super();
+  factory ContextRule() => create();
+  factory ContextRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ContextRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ContextRule clone() => ContextRule()..mergeFromMessage(this);
   ContextRule copyWith(void Function(ContextRule) updates) =>
       super.copyWith((message) => updates(message as ContextRule));
   $pb.BuilderInfo get info_ => _i;
-  static ContextRule create() => ContextRule();
+  @$core.pragma('dart2js:noInline')
+  static ContextRule create() => ContextRule._();
   ContextRule createEmptyInstance() => create();
   static $pb.PbList<ContextRule> createRepeated() => $pb.PbList<ContextRule>();
   static ContextRule getDefault() => _defaultInstance ??= create()..freeze();

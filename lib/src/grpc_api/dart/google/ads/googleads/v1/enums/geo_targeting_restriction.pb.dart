@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/geo_targeting_restriction.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,13 +18,14 @@ class GeoTargetingRestrictionEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  GeoTargetingRestrictionEnum() : super();
-  GeoTargetingRestrictionEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GeoTargetingRestrictionEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GeoTargetingRestrictionEnum._() : super();
+  factory GeoTargetingRestrictionEnum() => create();
+  factory GeoTargetingRestrictionEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GeoTargetingRestrictionEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GeoTargetingRestrictionEnum clone() =>
       GeoTargetingRestrictionEnum()..mergeFromMessage(this);
   GeoTargetingRestrictionEnum copyWith(
@@ -31,7 +33,9 @@ class GeoTargetingRestrictionEnum extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GeoTargetingRestrictionEnum));
   $pb.BuilderInfo get info_ => _i;
-  static GeoTargetingRestrictionEnum create() => GeoTargetingRestrictionEnum();
+  @$core.pragma('dart2js:noInline')
+  static GeoTargetingRestrictionEnum create() =>
+      GeoTargetingRestrictionEnum._();
   GeoTargetingRestrictionEnum createEmptyInstance() => create();
   static $pb.PbList<GeoTargetingRestrictionEnum> createRepeated() =>
       $pb.PbList<GeoTargetingRestrictionEnum>();

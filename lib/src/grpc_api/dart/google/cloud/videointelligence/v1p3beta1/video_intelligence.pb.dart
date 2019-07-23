@@ -1,18 +1,19 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/videointelligence/v1p3beta1/video_intelligence.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $2;
-import '../../../rpc/status.pb.dart' as $3;
-import '../../../protobuf/timestamp.pb.dart' as $4;
+import '../../../protobuf/duration.pb.dart' as $3;
+import '../../../rpc/status.pb.dart' as $4;
+import '../../../protobuf/timestamp.pb.dart' as $5;
 
 import 'video_intelligence.pbenum.dart';
 
@@ -32,19 +33,21 @@ class AnnotateVideoRequest extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(6, 'inputContent', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
-  AnnotateVideoRequest() : super();
-  AnnotateVideoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateVideoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotateVideoRequest._() : super();
+  factory AnnotateVideoRequest() => create();
+  factory AnnotateVideoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotateVideoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotateVideoRequest clone() =>
       AnnotateVideoRequest()..mergeFromMessage(this);
   AnnotateVideoRequest copyWith(void Function(AnnotateVideoRequest) updates) =>
       super.copyWith((message) => updates(message as AnnotateVideoRequest));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotateVideoRequest create() => AnnotateVideoRequest();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateVideoRequest create() => AnnotateVideoRequest._();
   AnnotateVideoRequest createEmptyInstance() => create();
   static $pb.PbList<AnnotateVideoRequest> createRepeated() =>
       $pb.PbList<AnnotateVideoRequest>();
@@ -126,18 +129,20 @@ class VideoContext extends $pb.GeneratedMessage {
         ObjectTrackingConfig.getDefault, ObjectTrackingConfig.create)
     ..hasRequiredFields = false;
 
-  VideoContext() : super();
-  VideoContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoContext._() : super();
+  factory VideoContext() => create();
+  factory VideoContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoContext clone() => VideoContext()..mergeFromMessage(this);
   VideoContext copyWith(void Function(VideoContext) updates) =>
       super.copyWith((message) => updates(message as VideoContext));
   $pb.BuilderInfo get info_ => _i;
-  static VideoContext create() => VideoContext();
+  @$core.pragma('dart2js:noInline')
+  static VideoContext create() => VideoContext._();
   VideoContext createEmptyInstance() => create();
   static $pb.PbList<VideoContext> createRepeated() =>
       $pb.PbList<VideoContext>();
@@ -213,19 +218,21 @@ class LabelDetectionConfig extends $pb.GeneratedMessage {
     ..a<$core.double>(5, 'videoConfidenceThreshold', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  LabelDetectionConfig() : super();
-  LabelDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LabelDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LabelDetectionConfig._() : super();
+  factory LabelDetectionConfig() => create();
+  factory LabelDetectionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LabelDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LabelDetectionConfig clone() =>
       LabelDetectionConfig()..mergeFromMessage(this);
   LabelDetectionConfig copyWith(void Function(LabelDetectionConfig) updates) =>
       super.copyWith((message) => updates(message as LabelDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
-  static LabelDetectionConfig create() => LabelDetectionConfig();
+  @$core.pragma('dart2js:noInline')
+  static LabelDetectionConfig create() => LabelDetectionConfig._();
   LabelDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<LabelDetectionConfig> createRepeated() =>
       $pb.PbList<LabelDetectionConfig>();
@@ -281,13 +288,14 @@ class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
     ..aOS(1, 'model')
     ..hasRequiredFields = false;
 
-  ShotChangeDetectionConfig() : super();
-  ShotChangeDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ShotChangeDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ShotChangeDetectionConfig._() : super();
+  factory ShotChangeDetectionConfig() => create();
+  factory ShotChangeDetectionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ShotChangeDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ShotChangeDetectionConfig clone() =>
       ShotChangeDetectionConfig()..mergeFromMessage(this);
   ShotChangeDetectionConfig copyWith(
@@ -295,7 +303,8 @@ class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ShotChangeDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ShotChangeDetectionConfig create() => ShotChangeDetectionConfig();
+  @$core.pragma('dart2js:noInline')
+  static ShotChangeDetectionConfig create() => ShotChangeDetectionConfig._();
   ShotChangeDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<ShotChangeDetectionConfig> createRepeated() =>
       $pb.PbList<ShotChangeDetectionConfig>();
@@ -319,19 +328,21 @@ class ObjectTrackingConfig extends $pb.GeneratedMessage {
     ..aOS(1, 'model')
     ..hasRequiredFields = false;
 
-  ObjectTrackingConfig() : super();
-  ObjectTrackingConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ObjectTrackingConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ObjectTrackingConfig._() : super();
+  factory ObjectTrackingConfig() => create();
+  factory ObjectTrackingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ObjectTrackingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ObjectTrackingConfig clone() =>
       ObjectTrackingConfig()..mergeFromMessage(this);
   ObjectTrackingConfig copyWith(void Function(ObjectTrackingConfig) updates) =>
       super.copyWith((message) => updates(message as ObjectTrackingConfig));
   $pb.BuilderInfo get info_ => _i;
-  static ObjectTrackingConfig create() => ObjectTrackingConfig();
+  @$core.pragma('dart2js:noInline')
+  static ObjectTrackingConfig create() => ObjectTrackingConfig._();
   ObjectTrackingConfig createEmptyInstance() => create();
   static $pb.PbList<ObjectTrackingConfig> createRepeated() =>
       $pb.PbList<ObjectTrackingConfig>();
@@ -356,13 +367,14 @@ class ExplicitContentDetectionConfig extends $pb.GeneratedMessage {
     ..aOS(1, 'model')
     ..hasRequiredFields = false;
 
-  ExplicitContentDetectionConfig() : super();
-  ExplicitContentDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExplicitContentDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExplicitContentDetectionConfig._() : super();
+  factory ExplicitContentDetectionConfig() => create();
+  factory ExplicitContentDetectionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExplicitContentDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExplicitContentDetectionConfig clone() =>
       ExplicitContentDetectionConfig()..mergeFromMessage(this);
   ExplicitContentDetectionConfig copyWith(
@@ -370,8 +382,9 @@ class ExplicitContentDetectionConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ExplicitContentDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ExplicitContentDetectionConfig create() =>
-      ExplicitContentDetectionConfig();
+      ExplicitContentDetectionConfig._();
   ExplicitContentDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<ExplicitContentDetectionConfig> createRepeated() =>
       $pb.PbList<ExplicitContentDetectionConfig>();
@@ -396,18 +409,20 @@ class TextDetectionConfig extends $pb.GeneratedMessage {
     ..aOS(2, 'model')
     ..hasRequiredFields = false;
 
-  TextDetectionConfig() : super();
-  TextDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextDetectionConfig._() : super();
+  factory TextDetectionConfig() => create();
+  factory TextDetectionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextDetectionConfig clone() => TextDetectionConfig()..mergeFromMessage(this);
   TextDetectionConfig copyWith(void Function(TextDetectionConfig) updates) =>
       super.copyWith((message) => updates(message as TextDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
-  static TextDetectionConfig create() => TextDetectionConfig();
+  @$core.pragma('dart2js:noInline')
+  static TextDetectionConfig create() => TextDetectionConfig._();
   TextDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<TextDetectionConfig> createRepeated() =>
       $pb.PbList<TextDetectionConfig>();
@@ -430,40 +445,42 @@ class VideoSegment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoSegment',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
-    ..a<$2.Duration>(1, 'startTimeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
-    ..a<$2.Duration>(2, 'endTimeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(1, 'startTimeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
+    ..a<$3.Duration>(2, 'endTimeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..hasRequiredFields = false;
 
-  VideoSegment() : super();
-  VideoSegment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoSegment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoSegment._() : super();
+  factory VideoSegment() => create();
+  factory VideoSegment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoSegment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoSegment clone() => VideoSegment()..mergeFromMessage(this);
   VideoSegment copyWith(void Function(VideoSegment) updates) =>
       super.copyWith((message) => updates(message as VideoSegment));
   $pb.BuilderInfo get info_ => _i;
-  static VideoSegment create() => VideoSegment();
+  @$core.pragma('dart2js:noInline')
+  static VideoSegment create() => VideoSegment._();
   VideoSegment createEmptyInstance() => create();
   static $pb.PbList<VideoSegment> createRepeated() =>
       $pb.PbList<VideoSegment>();
   static VideoSegment getDefault() => _defaultInstance ??= create()..freeze();
   static VideoSegment _defaultInstance;
 
-  $2.Duration get startTimeOffset => $_getN(0);
-  set startTimeOffset($2.Duration v) {
+  $3.Duration get startTimeOffset => $_getN(0);
+  set startTimeOffset($3.Duration v) {
     setField(1, v);
   }
 
   $core.bool hasStartTimeOffset() => $_has(0);
   void clearStartTimeOffset() => clearField(1);
 
-  $2.Duration get endTimeOffset => $_getN(1);
-  set endTimeOffset($2.Duration v) {
+  $3.Duration get endTimeOffset => $_getN(1);
+  set endTimeOffset($3.Duration v) {
     setField(2, v);
   }
 
@@ -480,18 +497,20 @@ class LabelSegment extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  LabelSegment() : super();
-  LabelSegment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LabelSegment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LabelSegment._() : super();
+  factory LabelSegment() => create();
+  factory LabelSegment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LabelSegment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LabelSegment clone() => LabelSegment()..mergeFromMessage(this);
   LabelSegment copyWith(void Function(LabelSegment) updates) =>
       super.copyWith((message) => updates(message as LabelSegment));
   $pb.BuilderInfo get info_ => _i;
-  static LabelSegment create() => LabelSegment();
+  @$core.pragma('dart2js:noInline')
+  static LabelSegment create() => LabelSegment._();
   LabelSegment createEmptyInstance() => create();
   static $pb.PbList<LabelSegment> createRepeated() =>
       $pb.PbList<LabelSegment>();
@@ -519,30 +538,32 @@ class LabelFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelFrame',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
-    ..a<$2.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  LabelFrame() : super();
-  LabelFrame.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LabelFrame.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LabelFrame._() : super();
+  factory LabelFrame() => create();
+  factory LabelFrame.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LabelFrame.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LabelFrame clone() => LabelFrame()..mergeFromMessage(this);
   LabelFrame copyWith(void Function(LabelFrame) updates) =>
       super.copyWith((message) => updates(message as LabelFrame));
   $pb.BuilderInfo get info_ => _i;
-  static LabelFrame create() => LabelFrame();
+  @$core.pragma('dart2js:noInline')
+  static LabelFrame create() => LabelFrame._();
   LabelFrame createEmptyInstance() => create();
   static $pb.PbList<LabelFrame> createRepeated() => $pb.PbList<LabelFrame>();
   static LabelFrame getDefault() => _defaultInstance ??= create()..freeze();
   static LabelFrame _defaultInstance;
 
-  $2.Duration get timeOffset => $_getN(0);
-  set timeOffset($2.Duration v) {
+  $3.Duration get timeOffset => $_getN(0);
+  set timeOffset($3.Duration v) {
     setField(1, v);
   }
 
@@ -567,18 +588,20 @@ class Entity extends $pb.GeneratedMessage {
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
-  Entity() : super();
-  Entity.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Entity.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Entity._() : super();
+  factory Entity() => create();
+  factory Entity.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Entity.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Entity clone() => Entity()..mergeFromMessage(this);
   Entity copyWith(void Function(Entity) updates) =>
       super.copyWith((message) => updates(message as Entity));
   $pb.BuilderInfo get info_ => _i;
-  static Entity create() => Entity();
+  @$core.pragma('dart2js:noInline')
+  static Entity create() => Entity._();
   Entity createEmptyInstance() => create();
   static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
   static Entity getDefault() => _defaultInstance ??= create()..freeze();
@@ -620,18 +643,20 @@ class LabelAnnotation extends $pb.GeneratedMessage {
     ..pc<LabelFrame>(4, 'frames', $pb.PbFieldType.PM, LabelFrame.create)
     ..hasRequiredFields = false;
 
-  LabelAnnotation() : super();
-  LabelAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LabelAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LabelAnnotation._() : super();
+  factory LabelAnnotation() => create();
+  factory LabelAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LabelAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LabelAnnotation clone() => LabelAnnotation()..mergeFromMessage(this);
   LabelAnnotation copyWith(void Function(LabelAnnotation) updates) =>
       super.copyWith((message) => updates(message as LabelAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static LabelAnnotation create() => LabelAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static LabelAnnotation create() => LabelAnnotation._();
   LabelAnnotation createEmptyInstance() => create();
   static $pb.PbList<LabelAnnotation> createRepeated() =>
       $pb.PbList<LabelAnnotation>();
@@ -658,8 +683,8 @@ class ExplicitContentFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExplicitContentFrame',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
-    ..a<$2.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..e<Likelihood>(
         2,
         'pornographyLikelihood',
@@ -669,19 +694,21 @@ class ExplicitContentFrame extends $pb.GeneratedMessage {
         Likelihood.values)
     ..hasRequiredFields = false;
 
-  ExplicitContentFrame() : super();
-  ExplicitContentFrame.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExplicitContentFrame.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExplicitContentFrame._() : super();
+  factory ExplicitContentFrame() => create();
+  factory ExplicitContentFrame.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExplicitContentFrame.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExplicitContentFrame clone() =>
       ExplicitContentFrame()..mergeFromMessage(this);
   ExplicitContentFrame copyWith(void Function(ExplicitContentFrame) updates) =>
       super.copyWith((message) => updates(message as ExplicitContentFrame));
   $pb.BuilderInfo get info_ => _i;
-  static ExplicitContentFrame create() => ExplicitContentFrame();
+  @$core.pragma('dart2js:noInline')
+  static ExplicitContentFrame create() => ExplicitContentFrame._();
   ExplicitContentFrame createEmptyInstance() => create();
   static $pb.PbList<ExplicitContentFrame> createRepeated() =>
       $pb.PbList<ExplicitContentFrame>();
@@ -689,8 +716,8 @@ class ExplicitContentFrame extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static ExplicitContentFrame _defaultInstance;
 
-  $2.Duration get timeOffset => $_getN(0);
-  set timeOffset($2.Duration v) {
+  $3.Duration get timeOffset => $_getN(0);
+  set timeOffset($3.Duration v) {
     setField(1, v);
   }
 
@@ -714,13 +741,14 @@ class ExplicitContentAnnotation extends $pb.GeneratedMessage {
         1, 'frames', $pb.PbFieldType.PM, ExplicitContentFrame.create)
     ..hasRequiredFields = false;
 
-  ExplicitContentAnnotation() : super();
-  ExplicitContentAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExplicitContentAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExplicitContentAnnotation._() : super();
+  factory ExplicitContentAnnotation() => create();
+  factory ExplicitContentAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExplicitContentAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExplicitContentAnnotation clone() =>
       ExplicitContentAnnotation()..mergeFromMessage(this);
   ExplicitContentAnnotation copyWith(
@@ -728,7 +756,8 @@ class ExplicitContentAnnotation extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as ExplicitContentAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static ExplicitContentAnnotation create() => ExplicitContentAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static ExplicitContentAnnotation create() => ExplicitContentAnnotation._();
   ExplicitContentAnnotation createEmptyInstance() => create();
   static $pb.PbList<ExplicitContentAnnotation> createRepeated() =>
       $pb.PbList<ExplicitContentAnnotation>();
@@ -749,20 +778,22 @@ class NormalizedBoundingBox extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'bottom', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  NormalizedBoundingBox() : super();
-  NormalizedBoundingBox.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NormalizedBoundingBox.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NormalizedBoundingBox._() : super();
+  factory NormalizedBoundingBox() => create();
+  factory NormalizedBoundingBox.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NormalizedBoundingBox.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NormalizedBoundingBox clone() =>
       NormalizedBoundingBox()..mergeFromMessage(this);
   NormalizedBoundingBox copyWith(
           void Function(NormalizedBoundingBox) updates) =>
       super.copyWith((message) => updates(message as NormalizedBoundingBox));
   $pb.BuilderInfo get info_ => _i;
-  static NormalizedBoundingBox create() => NormalizedBoundingBox();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedBoundingBox create() => NormalizedBoundingBox._();
   NormalizedBoundingBox createEmptyInstance() => create();
   static $pb.PbList<NormalizedBoundingBox> createRepeated() =>
       $pb.PbList<NormalizedBoundingBox>();
@@ -809,24 +840,26 @@ class TimestampedObject extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..a<NormalizedBoundingBox>(1, 'normalizedBoundingBox', $pb.PbFieldType.OM,
         NormalizedBoundingBox.getDefault, NormalizedBoundingBox.create)
-    ..a<$2.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..pc<DetectedAttribute>(
         3, 'attributes', $pb.PbFieldType.PM, DetectedAttribute.create)
     ..hasRequiredFields = false;
 
-  TimestampedObject() : super();
-  TimestampedObject.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TimestampedObject.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TimestampedObject._() : super();
+  factory TimestampedObject() => create();
+  factory TimestampedObject.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TimestampedObject.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TimestampedObject clone() => TimestampedObject()..mergeFromMessage(this);
   TimestampedObject copyWith(void Function(TimestampedObject) updates) =>
       super.copyWith((message) => updates(message as TimestampedObject));
   $pb.BuilderInfo get info_ => _i;
-  static TimestampedObject create() => TimestampedObject();
+  @$core.pragma('dart2js:noInline')
+  static TimestampedObject create() => TimestampedObject._();
   TimestampedObject createEmptyInstance() => create();
   static $pb.PbList<TimestampedObject> createRepeated() =>
       $pb.PbList<TimestampedObject>();
@@ -842,8 +875,8 @@ class TimestampedObject extends $pb.GeneratedMessage {
   $core.bool hasNormalizedBoundingBox() => $_has(0);
   void clearNormalizedBoundingBox() => clearField(1);
 
-  $2.Duration get timeOffset => $_getN(1);
-  set timeOffset($2.Duration v) {
+  $3.Duration get timeOffset => $_getN(1);
+  set timeOffset($3.Duration v) {
     setField(2, v);
   }
 
@@ -866,18 +899,20 @@ class Track extends $pb.GeneratedMessage {
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  Track() : super();
-  Track.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Track.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Track._() : super();
+  factory Track() => create();
+  factory Track.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Track.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Track clone() => Track()..mergeFromMessage(this);
   Track copyWith(void Function(Track) updates) =>
       super.copyWith((message) => updates(message as Track));
   $pb.BuilderInfo get info_ => _i;
-  static Track create() => Track();
+  @$core.pragma('dart2js:noInline')
+  static Track create() => Track._();
   Track createEmptyInstance() => create();
   static $pb.PbList<Track> createRepeated() => $pb.PbList<Track>();
   static Track getDefault() => _defaultInstance ??= create()..freeze();
@@ -913,18 +948,20 @@ class DetectedAttribute extends $pb.GeneratedMessage {
     ..aOS(3, 'value')
     ..hasRequiredFields = false;
 
-  DetectedAttribute() : super();
-  DetectedAttribute.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DetectedAttribute.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DetectedAttribute._() : super();
+  factory DetectedAttribute() => create();
+  factory DetectedAttribute.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DetectedAttribute.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DetectedAttribute clone() => DetectedAttribute()..mergeFromMessage(this);
   DetectedAttribute copyWith(void Function(DetectedAttribute) updates) =>
       super.copyWith((message) => updates(message as DetectedAttribute));
   $pb.BuilderInfo get info_ => _i;
-  static DetectedAttribute create() => DetectedAttribute();
+  @$core.pragma('dart2js:noInline')
+  static DetectedAttribute create() => DetectedAttribute._();
   DetectedAttribute createEmptyInstance() => create();
   static $pb.PbList<DetectedAttribute> createRepeated() =>
       $pb.PbList<DetectedAttribute>();
@@ -972,8 +1009,8 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
         6, 'shotAnnotations', $pb.PbFieldType.PM, VideoSegment.create)
     ..a<ExplicitContentAnnotation>(7, 'explicitAnnotation', $pb.PbFieldType.OM,
         ExplicitContentAnnotation.getDefault, ExplicitContentAnnotation.create)
-    ..a<$3.Status>(
-        9, 'error', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..a<$4.Status>(
+        9, 'error', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
     ..pc<SpeechTranscription>(11, 'speechTranscriptions', $pb.PbFieldType.PM,
         SpeechTranscription.create)
     ..pc<TextAnnotation>(
@@ -984,20 +1021,22 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
         $pb.PbFieldType.PM, LogoRecognitionAnnotation.create)
     ..hasRequiredFields = false;
 
-  VideoAnnotationResults() : super();
-  VideoAnnotationResults.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoAnnotationResults.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoAnnotationResults._() : super();
+  factory VideoAnnotationResults() => create();
+  factory VideoAnnotationResults.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoAnnotationResults.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoAnnotationResults clone() =>
       VideoAnnotationResults()..mergeFromMessage(this);
   VideoAnnotationResults copyWith(
           void Function(VideoAnnotationResults) updates) =>
       super.copyWith((message) => updates(message as VideoAnnotationResults));
   $pb.BuilderInfo get info_ => _i;
-  static VideoAnnotationResults create() => VideoAnnotationResults();
+  @$core.pragma('dart2js:noInline')
+  static VideoAnnotationResults create() => VideoAnnotationResults._();
   VideoAnnotationResults createEmptyInstance() => create();
   static $pb.PbList<VideoAnnotationResults> createRepeated() =>
       $pb.PbList<VideoAnnotationResults>();
@@ -1029,8 +1068,8 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
   $core.bool hasExplicitAnnotation() => $_has(5);
   void clearExplicitAnnotation() => clearField(7);
 
-  $3.Status get error => $_getN(6);
-  set error($3.Status v) {
+  $4.Status get error => $_getN(6);
+  set error($4.Status v) {
     setField(9, v);
   }
 
@@ -1055,20 +1094,22 @@ class AnnotateVideoResponse extends $pb.GeneratedMessage {
         VideoAnnotationResults.create)
     ..hasRequiredFields = false;
 
-  AnnotateVideoResponse() : super();
-  AnnotateVideoResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateVideoResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotateVideoResponse._() : super();
+  factory AnnotateVideoResponse() => create();
+  factory AnnotateVideoResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotateVideoResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotateVideoResponse clone() =>
       AnnotateVideoResponse()..mergeFromMessage(this);
   AnnotateVideoResponse copyWith(
           void Function(AnnotateVideoResponse) updates) =>
       super.copyWith((message) => updates(message as AnnotateVideoResponse));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotateVideoResponse create() => AnnotateVideoResponse();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateVideoResponse create() => AnnotateVideoResponse._();
   AnnotateVideoResponse createEmptyInstance() => create();
   static $pb.PbList<AnnotateVideoResponse> createRepeated() =>
       $pb.PbList<AnnotateVideoResponse>();
@@ -1085,26 +1126,28 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..aOS(1, 'inputUri')
     ..a<$core.int>(2, 'progressPercent', $pb.PbFieldType.O3)
-    ..a<$4.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
-    ..a<$4.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..a<$5.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..a<$5.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
+        $5.Timestamp.getDefault, $5.Timestamp.create)
     ..hasRequiredFields = false;
 
-  VideoAnnotationProgress() : super();
-  VideoAnnotationProgress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  VideoAnnotationProgress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  VideoAnnotationProgress._() : super();
+  factory VideoAnnotationProgress() => create();
+  factory VideoAnnotationProgress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory VideoAnnotationProgress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   VideoAnnotationProgress clone() =>
       VideoAnnotationProgress()..mergeFromMessage(this);
   VideoAnnotationProgress copyWith(
           void Function(VideoAnnotationProgress) updates) =>
       super.copyWith((message) => updates(message as VideoAnnotationProgress));
   $pb.BuilderInfo get info_ => _i;
-  static VideoAnnotationProgress create() => VideoAnnotationProgress();
+  @$core.pragma('dart2js:noInline')
+  static VideoAnnotationProgress create() => VideoAnnotationProgress._();
   VideoAnnotationProgress createEmptyInstance() => create();
   static $pb.PbList<VideoAnnotationProgress> createRepeated() =>
       $pb.PbList<VideoAnnotationProgress>();
@@ -1128,16 +1171,16 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
   $core.bool hasProgressPercent() => $_has(1);
   void clearProgressPercent() => clearField(2);
 
-  $4.Timestamp get startTime => $_getN(2);
-  set startTime($4.Timestamp v) {
+  $5.Timestamp get startTime => $_getN(2);
+  set startTime($5.Timestamp v) {
     setField(3, v);
   }
 
   $core.bool hasStartTime() => $_has(2);
   void clearStartTime() => clearField(3);
 
-  $4.Timestamp get updateTime => $_getN(3);
-  set updateTime($4.Timestamp v) {
+  $5.Timestamp get updateTime => $_getN(3);
+  set updateTime($5.Timestamp v) {
     setField(4, v);
   }
 
@@ -1153,20 +1196,22 @@ class AnnotateVideoProgress extends $pb.GeneratedMessage {
         VideoAnnotationProgress.create)
     ..hasRequiredFields = false;
 
-  AnnotateVideoProgress() : super();
-  AnnotateVideoProgress.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AnnotateVideoProgress.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AnnotateVideoProgress._() : super();
+  factory AnnotateVideoProgress() => create();
+  factory AnnotateVideoProgress.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AnnotateVideoProgress.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AnnotateVideoProgress clone() =>
       AnnotateVideoProgress()..mergeFromMessage(this);
   AnnotateVideoProgress copyWith(
           void Function(AnnotateVideoProgress) updates) =>
       super.copyWith((message) => updates(message as AnnotateVideoProgress));
   $pb.BuilderInfo get info_ => _i;
-  static AnnotateVideoProgress create() => AnnotateVideoProgress();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateVideoProgress create() => AnnotateVideoProgress._();
   AnnotateVideoProgress createEmptyInstance() => create();
   static $pb.PbList<AnnotateVideoProgress> createRepeated() =>
       $pb.PbList<AnnotateVideoProgress>();
@@ -1193,13 +1238,14 @@ class SpeechTranscriptionConfig extends $pb.GeneratedMessage {
     ..aOB(9, 'enableWordConfidence')
     ..hasRequiredFields = false;
 
-  SpeechTranscriptionConfig() : super();
-  SpeechTranscriptionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechTranscriptionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechTranscriptionConfig._() : super();
+  factory SpeechTranscriptionConfig() => create();
+  factory SpeechTranscriptionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechTranscriptionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechTranscriptionConfig clone() =>
       SpeechTranscriptionConfig()..mergeFromMessage(this);
   SpeechTranscriptionConfig copyWith(
@@ -1207,7 +1253,8 @@ class SpeechTranscriptionConfig extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as SpeechTranscriptionConfig));
   $pb.BuilderInfo get info_ => _i;
-  static SpeechTranscriptionConfig create() => SpeechTranscriptionConfig();
+  @$core.pragma('dart2js:noInline')
+  static SpeechTranscriptionConfig create() => SpeechTranscriptionConfig._();
   SpeechTranscriptionConfig createEmptyInstance() => create();
   static $pb.PbList<SpeechTranscriptionConfig> createRepeated() =>
       $pb.PbList<SpeechTranscriptionConfig>();
@@ -1283,18 +1330,20 @@ class SpeechContext extends $pb.GeneratedMessage {
     ..pPS(1, 'phrases')
     ..hasRequiredFields = false;
 
-  SpeechContext() : super();
-  SpeechContext.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechContext.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechContext._() : super();
+  factory SpeechContext() => create();
+  factory SpeechContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
   SpeechContext copyWith(void Function(SpeechContext) updates) =>
       super.copyWith((message) => updates(message as SpeechContext));
   $pb.BuilderInfo get info_ => _i;
-  static SpeechContext create() => SpeechContext();
+  @$core.pragma('dart2js:noInline')
+  static SpeechContext create() => SpeechContext._();
   SpeechContext createEmptyInstance() => create();
   static $pb.PbList<SpeechContext> createRepeated() =>
       $pb.PbList<SpeechContext>();
@@ -1313,18 +1362,20 @@ class SpeechTranscription extends $pb.GeneratedMessage {
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
 
-  SpeechTranscription() : super();
-  SpeechTranscription.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechTranscription.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechTranscription._() : super();
+  factory SpeechTranscription() => create();
+  factory SpeechTranscription.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechTranscription.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechTranscription clone() => SpeechTranscription()..mergeFromMessage(this);
   SpeechTranscription copyWith(void Function(SpeechTranscription) updates) =>
       super.copyWith((message) => updates(message as SpeechTranscription));
   $pb.BuilderInfo get info_ => _i;
-  static SpeechTranscription create() => SpeechTranscription();
+  @$core.pragma('dart2js:noInline')
+  static SpeechTranscription create() => SpeechTranscription._();
   SpeechTranscription createEmptyInstance() => create();
   static $pb.PbList<SpeechTranscription> createRepeated() =>
       $pb.PbList<SpeechTranscription>();
@@ -1353,13 +1404,14 @@ class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
     ..pc<WordInfo>(3, 'words', $pb.PbFieldType.PM, WordInfo.create)
     ..hasRequiredFields = false;
 
-  SpeechRecognitionAlternative() : super();
-  SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SpeechRecognitionAlternative.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SpeechRecognitionAlternative._() : super();
+  factory SpeechRecognitionAlternative() => create();
+  factory SpeechRecognitionAlternative.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechRecognitionAlternative.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SpeechRecognitionAlternative clone() =>
       SpeechRecognitionAlternative()..mergeFromMessage(this);
   SpeechRecognitionAlternative copyWith(
@@ -1367,8 +1419,9 @@ class SpeechRecognitionAlternative extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as SpeechRecognitionAlternative));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static SpeechRecognitionAlternative create() =>
-      SpeechRecognitionAlternative();
+      SpeechRecognitionAlternative._();
   SpeechRecognitionAlternative createEmptyInstance() => create();
   static $pb.PbList<SpeechRecognitionAlternative> createRepeated() =>
       $pb.PbList<SpeechRecognitionAlternative>();
@@ -1399,42 +1452,44 @@ class WordInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WordInfo',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
-    ..a<$2.Duration>(1, 'startTime', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
-    ..a<$2.Duration>(2, 'endTime', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
+    ..a<$3.Duration>(1, 'startTime', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
+    ..a<$3.Duration>(2, 'endTime', $pb.PbFieldType.OM, $3.Duration.getDefault,
+        $3.Duration.create)
     ..aOS(3, 'word')
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..a<$core.int>(5, 'speakerTag', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  WordInfo() : super();
-  WordInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  WordInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  WordInfo._() : super();
+  factory WordInfo() => create();
+  factory WordInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WordInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   WordInfo clone() => WordInfo()..mergeFromMessage(this);
   WordInfo copyWith(void Function(WordInfo) updates) =>
       super.copyWith((message) => updates(message as WordInfo));
   $pb.BuilderInfo get info_ => _i;
-  static WordInfo create() => WordInfo();
+  @$core.pragma('dart2js:noInline')
+  static WordInfo create() => WordInfo._();
   WordInfo createEmptyInstance() => create();
   static $pb.PbList<WordInfo> createRepeated() => $pb.PbList<WordInfo>();
   static WordInfo getDefault() => _defaultInstance ??= create()..freeze();
   static WordInfo _defaultInstance;
 
-  $2.Duration get startTime => $_getN(0);
-  set startTime($2.Duration v) {
+  $3.Duration get startTime => $_getN(0);
+  set startTime($3.Duration v) {
     setField(1, v);
   }
 
   $core.bool hasStartTime() => $_has(0);
   void clearStartTime() => clearField(1);
 
-  $2.Duration get endTime => $_getN(1);
-  set endTime($2.Duration v) {
+  $3.Duration get endTime => $_getN(1);
+  set endTime($3.Duration v) {
     setField(2, v);
   }
 
@@ -1474,18 +1529,20 @@ class NormalizedVertex extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'y', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  NormalizedVertex() : super();
-  NormalizedVertex.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NormalizedVertex.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NormalizedVertex._() : super();
+  factory NormalizedVertex() => create();
+  factory NormalizedVertex.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NormalizedVertex.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NormalizedVertex clone() => NormalizedVertex()..mergeFromMessage(this);
   NormalizedVertex copyWith(void Function(NormalizedVertex) updates) =>
       super.copyWith((message) => updates(message as NormalizedVertex));
   $pb.BuilderInfo get info_ => _i;
-  static NormalizedVertex create() => NormalizedVertex();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedVertex create() => NormalizedVertex._();
   NormalizedVertex createEmptyInstance() => create();
   static $pb.PbList<NormalizedVertex> createRepeated() =>
       $pb.PbList<NormalizedVertex>();
@@ -1518,20 +1575,22 @@ class NormalizedBoundingPoly extends $pb.GeneratedMessage {
         1, 'vertices', $pb.PbFieldType.PM, NormalizedVertex.create)
     ..hasRequiredFields = false;
 
-  NormalizedBoundingPoly() : super();
-  NormalizedBoundingPoly.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  NormalizedBoundingPoly.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  NormalizedBoundingPoly._() : super();
+  factory NormalizedBoundingPoly() => create();
+  factory NormalizedBoundingPoly.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NormalizedBoundingPoly.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   NormalizedBoundingPoly clone() =>
       NormalizedBoundingPoly()..mergeFromMessage(this);
   NormalizedBoundingPoly copyWith(
           void Function(NormalizedBoundingPoly) updates) =>
       super.copyWith((message) => updates(message as NormalizedBoundingPoly));
   $pb.BuilderInfo get info_ => _i;
-  static NormalizedBoundingPoly create() => NormalizedBoundingPoly();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedBoundingPoly create() => NormalizedBoundingPoly._();
   NormalizedBoundingPoly createEmptyInstance() => create();
   static $pb.PbList<NormalizedBoundingPoly> createRepeated() =>
       $pb.PbList<NormalizedBoundingPoly>();
@@ -1552,18 +1611,20 @@ class TextSegment extends $pb.GeneratedMessage {
     ..pc<TextFrame>(3, 'frames', $pb.PbFieldType.PM, TextFrame.create)
     ..hasRequiredFields = false;
 
-  TextSegment() : super();
-  TextSegment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSegment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSegment._() : super();
+  factory TextSegment() => create();
+  factory TextSegment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSegment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSegment clone() => TextSegment()..mergeFromMessage(this);
   TextSegment copyWith(void Function(TextSegment) updates) =>
       super.copyWith((message) => updates(message as TextSegment));
   $pb.BuilderInfo get info_ => _i;
-  static TextSegment create() => TextSegment();
+  @$core.pragma('dart2js:noInline')
+  static TextSegment create() => TextSegment._();
   TextSegment createEmptyInstance() => create();
   static $pb.PbList<TextSegment> createRepeated() => $pb.PbList<TextSegment>();
   static TextSegment getDefault() => _defaultInstance ??= create()..freeze();
@@ -1594,22 +1655,24 @@ class TextFrame extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..a<NormalizedBoundingPoly>(1, 'rotatedBoundingBox', $pb.PbFieldType.OM,
         NormalizedBoundingPoly.getDefault, NormalizedBoundingPoly.create)
-    ..a<$2.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..hasRequiredFields = false;
 
-  TextFrame() : super();
-  TextFrame.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextFrame.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextFrame._() : super();
+  factory TextFrame() => create();
+  factory TextFrame.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextFrame.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextFrame clone() => TextFrame()..mergeFromMessage(this);
   TextFrame copyWith(void Function(TextFrame) updates) =>
       super.copyWith((message) => updates(message as TextFrame));
   $pb.BuilderInfo get info_ => _i;
-  static TextFrame create() => TextFrame();
+  @$core.pragma('dart2js:noInline')
+  static TextFrame create() => TextFrame._();
   TextFrame createEmptyInstance() => create();
   static $pb.PbList<TextFrame> createRepeated() => $pb.PbList<TextFrame>();
   static TextFrame getDefault() => _defaultInstance ??= create()..freeze();
@@ -1623,8 +1686,8 @@ class TextFrame extends $pb.GeneratedMessage {
   $core.bool hasRotatedBoundingBox() => $_has(0);
   void clearRotatedBoundingBox() => clearField(1);
 
-  $2.Duration get timeOffset => $_getN(1);
-  set timeOffset($2.Duration v) {
+  $3.Duration get timeOffset => $_getN(1);
+  set timeOffset($3.Duration v) {
     setField(2, v);
   }
 
@@ -1640,18 +1703,20 @@ class TextAnnotation extends $pb.GeneratedMessage {
     ..pc<TextSegment>(2, 'segments', $pb.PbFieldType.PM, TextSegment.create)
     ..hasRequiredFields = false;
 
-  TextAnnotation() : super();
-  TextAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextAnnotation._() : super();
+  factory TextAnnotation() => create();
+  factory TextAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextAnnotation clone() => TextAnnotation()..mergeFromMessage(this);
   TextAnnotation copyWith(void Function(TextAnnotation) updates) =>
       super.copyWith((message) => updates(message as TextAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static TextAnnotation create() => TextAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static TextAnnotation create() => TextAnnotation._();
   TextAnnotation createEmptyInstance() => create();
   static $pb.PbList<TextAnnotation> createRepeated() =>
       $pb.PbList<TextAnnotation>();
@@ -1675,22 +1740,24 @@ class ObjectTrackingFrame extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..a<NormalizedBoundingBox>(1, 'normalizedBoundingBox', $pb.PbFieldType.OM,
         NormalizedBoundingBox.getDefault, NormalizedBoundingBox.create)
-    ..a<$2.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
-        $2.Duration.getDefault, $2.Duration.create)
+    ..a<$3.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
+        $3.Duration.getDefault, $3.Duration.create)
     ..hasRequiredFields = false;
 
-  ObjectTrackingFrame() : super();
-  ObjectTrackingFrame.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ObjectTrackingFrame.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ObjectTrackingFrame._() : super();
+  factory ObjectTrackingFrame() => create();
+  factory ObjectTrackingFrame.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ObjectTrackingFrame.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ObjectTrackingFrame clone() => ObjectTrackingFrame()..mergeFromMessage(this);
   ObjectTrackingFrame copyWith(void Function(ObjectTrackingFrame) updates) =>
       super.copyWith((message) => updates(message as ObjectTrackingFrame));
   $pb.BuilderInfo get info_ => _i;
-  static ObjectTrackingFrame create() => ObjectTrackingFrame();
+  @$core.pragma('dart2js:noInline')
+  static ObjectTrackingFrame create() => ObjectTrackingFrame._();
   ObjectTrackingFrame createEmptyInstance() => create();
   static $pb.PbList<ObjectTrackingFrame> createRepeated() =>
       $pb.PbList<ObjectTrackingFrame>();
@@ -1706,8 +1773,8 @@ class ObjectTrackingFrame extends $pb.GeneratedMessage {
   $core.bool hasNormalizedBoundingBox() => $_has(0);
   void clearNormalizedBoundingBox() => clearField(1);
 
-  $2.Duration get timeOffset => $_getN(1);
-  set timeOffset($2.Duration v) {
+  $3.Duration get timeOffset => $_getN(1);
+  set timeOffset($3.Duration v) {
     setField(2, v);
   }
 
@@ -1727,6 +1794,7 @@ class ObjectTrackingAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingAnnotation',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..oo(0, [3, 5])
     ..a<Entity>(
         1, 'entity', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
     ..pc<ObjectTrackingFrame>(
@@ -1735,23 +1803,24 @@ class ObjectTrackingAnnotation extends $pb.GeneratedMessage {
         VideoSegment.create)
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..aInt64(5, 'trackId')
-    ..oo(0, [3, 5])
     ..hasRequiredFields = false;
 
-  ObjectTrackingAnnotation() : super();
-  ObjectTrackingAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ObjectTrackingAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ObjectTrackingAnnotation._() : super();
+  factory ObjectTrackingAnnotation() => create();
+  factory ObjectTrackingAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ObjectTrackingAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ObjectTrackingAnnotation clone() =>
       ObjectTrackingAnnotation()..mergeFromMessage(this);
   ObjectTrackingAnnotation copyWith(
           void Function(ObjectTrackingAnnotation) updates) =>
       super.copyWith((message) => updates(message as ObjectTrackingAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static ObjectTrackingAnnotation create() => ObjectTrackingAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static ObjectTrackingAnnotation create() => ObjectTrackingAnnotation._();
   ObjectTrackingAnnotation createEmptyInstance() => create();
   static $pb.PbList<ObjectTrackingAnnotation> createRepeated() =>
       $pb.PbList<ObjectTrackingAnnotation>();
@@ -1808,13 +1877,14 @@ class LogoRecognitionAnnotation extends $pb.GeneratedMessage {
     ..pc<VideoSegment>(3, 'segments', $pb.PbFieldType.PM, VideoSegment.create)
     ..hasRequiredFields = false;
 
-  LogoRecognitionAnnotation() : super();
-  LogoRecognitionAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  LogoRecognitionAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  LogoRecognitionAnnotation._() : super();
+  factory LogoRecognitionAnnotation() => create();
+  factory LogoRecognitionAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory LogoRecognitionAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   LogoRecognitionAnnotation clone() =>
       LogoRecognitionAnnotation()..mergeFromMessage(this);
   LogoRecognitionAnnotation copyWith(
@@ -1822,7 +1892,8 @@ class LogoRecognitionAnnotation extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as LogoRecognitionAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static LogoRecognitionAnnotation create() => LogoRecognitionAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static LogoRecognitionAnnotation create() => LogoRecognitionAnnotation._();
   LogoRecognitionAnnotation createEmptyInstance() => create();
   static $pb.PbList<LogoRecognitionAnnotation> createRepeated() =>
       $pb.PbList<LogoRecognitionAnnotation>();
@@ -1861,19 +1932,20 @@ class StreamingAnnotateVideoRequest extends $pb.GeneratedMessage {
       'StreamingAnnotateVideoRequest',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..oo(0, [1, 2])
     ..a<StreamingVideoConfig>(1, 'videoConfig', $pb.PbFieldType.OM,
         StreamingVideoConfig.getDefault, StreamingVideoConfig.create)
     ..a<$core.List<$core.int>>(2, 'inputContent', $pb.PbFieldType.OY)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  StreamingAnnotateVideoRequest() : super();
-  StreamingAnnotateVideoRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingAnnotateVideoRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingAnnotateVideoRequest._() : super();
+  factory StreamingAnnotateVideoRequest() => create();
+  factory StreamingAnnotateVideoRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingAnnotateVideoRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingAnnotateVideoRequest clone() =>
       StreamingAnnotateVideoRequest()..mergeFromMessage(this);
   StreamingAnnotateVideoRequest copyWith(
@@ -1881,8 +1953,9 @@ class StreamingAnnotateVideoRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingAnnotateVideoRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingAnnotateVideoRequest create() =>
-      StreamingAnnotateVideoRequest();
+      StreamingAnnotateVideoRequest._();
   StreamingAnnotateVideoRequest createEmptyInstance() => create();
   static $pb.PbList<StreamingAnnotateVideoRequest> createRepeated() =>
       $pb.PbList<StreamingAnnotateVideoRequest>();
@@ -1916,8 +1989,8 @@ class StreamingAnnotateVideoResponse extends $pb.GeneratedMessage {
       'StreamingAnnotateVideoResponse',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
-    ..a<$3.Status>(
-        1, 'error', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
+    ..a<$4.Status>(
+        1, 'error', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
     ..a<StreamingVideoAnnotationResults>(
         2,
         'annotationResults',
@@ -1927,13 +2000,14 @@ class StreamingAnnotateVideoResponse extends $pb.GeneratedMessage {
     ..aOS(3, 'annotationResultsUri')
     ..hasRequiredFields = false;
 
-  StreamingAnnotateVideoResponse() : super();
-  StreamingAnnotateVideoResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingAnnotateVideoResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingAnnotateVideoResponse._() : super();
+  factory StreamingAnnotateVideoResponse() => create();
+  factory StreamingAnnotateVideoResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingAnnotateVideoResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingAnnotateVideoResponse clone() =>
       StreamingAnnotateVideoResponse()..mergeFromMessage(this);
   StreamingAnnotateVideoResponse copyWith(
@@ -1941,8 +2015,9 @@ class StreamingAnnotateVideoResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingAnnotateVideoResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingAnnotateVideoResponse create() =>
-      StreamingAnnotateVideoResponse();
+      StreamingAnnotateVideoResponse._();
   StreamingAnnotateVideoResponse createEmptyInstance() => create();
   static $pb.PbList<StreamingAnnotateVideoResponse> createRepeated() =>
       $pb.PbList<StreamingAnnotateVideoResponse>();
@@ -1950,8 +2025,8 @@ class StreamingAnnotateVideoResponse extends $pb.GeneratedMessage {
       _defaultInstance ??= create()..freeze();
   static StreamingAnnotateVideoResponse _defaultInstance;
 
-  $3.Status get error => $_getN(0);
-  set error($3.Status v) {
+  $4.Status get error => $_getN(0);
+  set error($4.Status v) {
     setField(1, v);
   }
 
@@ -1975,6 +2050,92 @@ class StreamingAnnotateVideoResponse extends $pb.GeneratedMessage {
   void clearAnnotationResultsUri() => clearField(3);
 }
 
+class StreamingAutomlClassificationConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingAutomlClassificationConfig',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..aOS(1, 'modelName')
+    ..hasRequiredFields = false;
+
+  StreamingAutomlClassificationConfig._() : super();
+  factory StreamingAutomlClassificationConfig() => create();
+  factory StreamingAutomlClassificationConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingAutomlClassificationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  StreamingAutomlClassificationConfig clone() =>
+      StreamingAutomlClassificationConfig()..mergeFromMessage(this);
+  StreamingAutomlClassificationConfig copyWith(
+          void Function(StreamingAutomlClassificationConfig) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingAutomlClassificationConfig));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamingAutomlClassificationConfig create() =>
+      StreamingAutomlClassificationConfig._();
+  StreamingAutomlClassificationConfig createEmptyInstance() => create();
+  static $pb.PbList<StreamingAutomlClassificationConfig> createRepeated() =>
+      $pb.PbList<StreamingAutomlClassificationConfig>();
+  static StreamingAutomlClassificationConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static StreamingAutomlClassificationConfig _defaultInstance;
+
+  $core.String get modelName => $_getS(0, '');
+  set modelName($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasModelName() => $_has(0);
+  void clearModelName() => clearField(1);
+}
+
+class StreamingAutomlObjectTrackingConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'StreamingAutomlObjectTrackingConfig',
+      package:
+          const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..aOS(1, 'modelName')
+    ..hasRequiredFields = false;
+
+  StreamingAutomlObjectTrackingConfig._() : super();
+  factory StreamingAutomlObjectTrackingConfig() => create();
+  factory StreamingAutomlObjectTrackingConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingAutomlObjectTrackingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  StreamingAutomlObjectTrackingConfig clone() =>
+      StreamingAutomlObjectTrackingConfig()..mergeFromMessage(this);
+  StreamingAutomlObjectTrackingConfig copyWith(
+          void Function(StreamingAutomlObjectTrackingConfig) updates) =>
+      super.copyWith(
+          (message) => updates(message as StreamingAutomlObjectTrackingConfig));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StreamingAutomlObjectTrackingConfig create() =>
+      StreamingAutomlObjectTrackingConfig._();
+  StreamingAutomlObjectTrackingConfig createEmptyInstance() => create();
+  static $pb.PbList<StreamingAutomlObjectTrackingConfig> createRepeated() =>
+      $pb.PbList<StreamingAutomlObjectTrackingConfig>();
+  static StreamingAutomlObjectTrackingConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static StreamingAutomlObjectTrackingConfig _defaultInstance;
+
+  $core.String get modelName => $_getS(0, '');
+  set modelName($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasModelName() => $_has(0);
+  void clearModelName() => clearField(1);
+}
+
 class StreamingExplicitContentDetectionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StreamingExplicitContentDetectionConfig',
@@ -1982,13 +2143,15 @@ class StreamingExplicitContentDetectionConfig extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..hasRequiredFields = false;
 
-  StreamingExplicitContentDetectionConfig() : super();
-  StreamingExplicitContentDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingExplicitContentDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingExplicitContentDetectionConfig._() : super();
+  factory StreamingExplicitContentDetectionConfig() => create();
+  factory StreamingExplicitContentDetectionConfig.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingExplicitContentDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingExplicitContentDetectionConfig clone() =>
       StreamingExplicitContentDetectionConfig()..mergeFromMessage(this);
   StreamingExplicitContentDetectionConfig copyWith(
@@ -1996,8 +2159,9 @@ class StreamingExplicitContentDetectionConfig extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as StreamingExplicitContentDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingExplicitContentDetectionConfig create() =>
-      StreamingExplicitContentDetectionConfig();
+      StreamingExplicitContentDetectionConfig._();
   StreamingExplicitContentDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingExplicitContentDetectionConfig> createRepeated() =>
       $pb.PbList<StreamingExplicitContentDetectionConfig>();
@@ -2014,13 +2178,14 @@ class StreamingLabelDetectionConfig extends $pb.GeneratedMessage {
     ..aOB(1, 'stationaryCamera')
     ..hasRequiredFields = false;
 
-  StreamingLabelDetectionConfig() : super();
-  StreamingLabelDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingLabelDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingLabelDetectionConfig._() : super();
+  factory StreamingLabelDetectionConfig() => create();
+  factory StreamingLabelDetectionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingLabelDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingLabelDetectionConfig clone() =>
       StreamingLabelDetectionConfig()..mergeFromMessage(this);
   StreamingLabelDetectionConfig copyWith(
@@ -2028,8 +2193,9 @@ class StreamingLabelDetectionConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingLabelDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingLabelDetectionConfig create() =>
-      StreamingLabelDetectionConfig();
+      StreamingLabelDetectionConfig._();
   StreamingLabelDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingLabelDetectionConfig> createRepeated() =>
       $pb.PbList<StreamingLabelDetectionConfig>();
@@ -2053,13 +2219,14 @@ class StreamingObjectTrackingConfig extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..hasRequiredFields = false;
 
-  StreamingObjectTrackingConfig() : super();
-  StreamingObjectTrackingConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingObjectTrackingConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingObjectTrackingConfig._() : super();
+  factory StreamingObjectTrackingConfig() => create();
+  factory StreamingObjectTrackingConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingObjectTrackingConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingObjectTrackingConfig clone() =>
       StreamingObjectTrackingConfig()..mergeFromMessage(this);
   StreamingObjectTrackingConfig copyWith(
@@ -2067,8 +2234,9 @@ class StreamingObjectTrackingConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingObjectTrackingConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingObjectTrackingConfig create() =>
-      StreamingObjectTrackingConfig();
+      StreamingObjectTrackingConfig._();
   StreamingObjectTrackingConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingObjectTrackingConfig> createRepeated() =>
       $pb.PbList<StreamingObjectTrackingConfig>();
@@ -2084,13 +2252,14 @@ class StreamingShotChangeDetectionConfig extends $pb.GeneratedMessage {
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
     ..hasRequiredFields = false;
 
-  StreamingShotChangeDetectionConfig() : super();
-  StreamingShotChangeDetectionConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingShotChangeDetectionConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingShotChangeDetectionConfig._() : super();
+  factory StreamingShotChangeDetectionConfig() => create();
+  factory StreamingShotChangeDetectionConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingShotChangeDetectionConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingShotChangeDetectionConfig clone() =>
       StreamingShotChangeDetectionConfig()..mergeFromMessage(this);
   StreamingShotChangeDetectionConfig copyWith(
@@ -2098,8 +2267,9 @@ class StreamingShotChangeDetectionConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingShotChangeDetectionConfig));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingShotChangeDetectionConfig create() =>
-      StreamingShotChangeDetectionConfig();
+      StreamingShotChangeDetectionConfig._();
   StreamingShotChangeDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingShotChangeDetectionConfig> createRepeated() =>
       $pb.PbList<StreamingShotChangeDetectionConfig>();
@@ -2116,20 +2286,22 @@ class StreamingStorageConfig extends $pb.GeneratedMessage {
     ..aOS(3, 'annotationResultStorageDirectory')
     ..hasRequiredFields = false;
 
-  StreamingStorageConfig() : super();
-  StreamingStorageConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingStorageConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingStorageConfig._() : super();
+  factory StreamingStorageConfig() => create();
+  factory StreamingStorageConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingStorageConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingStorageConfig clone() =>
       StreamingStorageConfig()..mergeFromMessage(this);
   StreamingStorageConfig copyWith(
           void Function(StreamingStorageConfig) updates) =>
       super.copyWith((message) => updates(message as StreamingStorageConfig));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingStorageConfig create() => StreamingStorageConfig();
+  @$core.pragma('dart2js:noInline')
+  static StreamingStorageConfig create() => StreamingStorageConfig._();
   StreamingStorageConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingStorageConfig> createRepeated() =>
       $pb.PbList<StreamingStorageConfig>();
@@ -2169,13 +2341,14 @@ class StreamingVideoAnnotationResults extends $pb.GeneratedMessage {
         ObjectTrackingAnnotation.create)
     ..hasRequiredFields = false;
 
-  StreamingVideoAnnotationResults() : super();
-  StreamingVideoAnnotationResults.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingVideoAnnotationResults.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingVideoAnnotationResults._() : super();
+  factory StreamingVideoAnnotationResults() => create();
+  factory StreamingVideoAnnotationResults.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingVideoAnnotationResults.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingVideoAnnotationResults clone() =>
       StreamingVideoAnnotationResults()..mergeFromMessage(this);
   StreamingVideoAnnotationResults copyWith(
@@ -2183,8 +2356,9 @@ class StreamingVideoAnnotationResults extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as StreamingVideoAnnotationResults));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static StreamingVideoAnnotationResults create() =>
-      StreamingVideoAnnotationResults();
+      StreamingVideoAnnotationResults._();
   StreamingVideoAnnotationResults createEmptyInstance() => create();
   static $pb.PbList<StreamingVideoAnnotationResults> createRepeated() =>
       $pb.PbList<StreamingVideoAnnotationResults>();
@@ -2212,6 +2386,8 @@ enum StreamingVideoConfig_StreamingConfig {
   labelDetectionConfig,
   explicitContentDetectionConfig,
   objectTrackingConfig,
+  automlClassificationConfig,
+  automlObjectTrackingConfig,
   notSet
 }
 
@@ -2222,11 +2398,14 @@ class StreamingVideoConfig extends $pb.GeneratedMessage {
     3: StreamingVideoConfig_StreamingConfig.labelDetectionConfig,
     4: StreamingVideoConfig_StreamingConfig.explicitContentDetectionConfig,
     5: StreamingVideoConfig_StreamingConfig.objectTrackingConfig,
+    21: StreamingVideoConfig_StreamingConfig.automlClassificationConfig,
+    22: StreamingVideoConfig_StreamingConfig.automlObjectTrackingConfig,
     0: StreamingVideoConfig_StreamingConfig.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingVideoConfig',
       package:
           const $pb.PackageName('google.cloud.videointelligence.v1p3beta1'))
+    ..oo(0, [2, 3, 4, 5, 21, 22])
     ..e<StreamingFeature>(
         1,
         'feature',
@@ -2258,24 +2437,37 @@ class StreamingVideoConfig extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         StreamingObjectTrackingConfig.getDefault,
         StreamingObjectTrackingConfig.create)
+    ..a<StreamingAutomlClassificationConfig>(
+        21,
+        'automlClassificationConfig',
+        $pb.PbFieldType.OM,
+        StreamingAutomlClassificationConfig.getDefault,
+        StreamingAutomlClassificationConfig.create)
+    ..a<StreamingAutomlObjectTrackingConfig>(
+        22,
+        'automlObjectTrackingConfig',
+        $pb.PbFieldType.OM,
+        StreamingAutomlObjectTrackingConfig.getDefault,
+        StreamingAutomlObjectTrackingConfig.create)
     ..a<StreamingStorageConfig>(30, 'storageConfig', $pb.PbFieldType.OM,
         StreamingStorageConfig.getDefault, StreamingStorageConfig.create)
-    ..oo(0, [2, 3, 4, 5])
     ..hasRequiredFields = false;
 
-  StreamingVideoConfig() : super();
-  StreamingVideoConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  StreamingVideoConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  StreamingVideoConfig._() : super();
+  factory StreamingVideoConfig() => create();
+  factory StreamingVideoConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory StreamingVideoConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   StreamingVideoConfig clone() =>
       StreamingVideoConfig()..mergeFromMessage(this);
   StreamingVideoConfig copyWith(void Function(StreamingVideoConfig) updates) =>
       super.copyWith((message) => updates(message as StreamingVideoConfig));
   $pb.BuilderInfo get info_ => _i;
-  static StreamingVideoConfig create() => StreamingVideoConfig();
+  @$core.pragma('dart2js:noInline')
+  static StreamingVideoConfig create() => StreamingVideoConfig._();
   StreamingVideoConfig createEmptyInstance() => create();
   static $pb.PbList<StreamingVideoConfig> createRepeated() =>
       $pb.PbList<StreamingVideoConfig>();
@@ -2329,11 +2521,29 @@ class StreamingVideoConfig extends $pb.GeneratedMessage {
   $core.bool hasObjectTrackingConfig() => $_has(4);
   void clearObjectTrackingConfig() => clearField(5);
 
-  StreamingStorageConfig get storageConfig => $_getN(5);
+  StreamingAutomlClassificationConfig get automlClassificationConfig =>
+      $_getN(5);
+  set automlClassificationConfig(StreamingAutomlClassificationConfig v) {
+    setField(21, v);
+  }
+
+  $core.bool hasAutomlClassificationConfig() => $_has(5);
+  void clearAutomlClassificationConfig() => clearField(21);
+
+  StreamingAutomlObjectTrackingConfig get automlObjectTrackingConfig =>
+      $_getN(6);
+  set automlObjectTrackingConfig(StreamingAutomlObjectTrackingConfig v) {
+    setField(22, v);
+  }
+
+  $core.bool hasAutomlObjectTrackingConfig() => $_has(6);
+  void clearAutomlObjectTrackingConfig() => clearField(22);
+
+  StreamingStorageConfig get storageConfig => $_getN(7);
   set storageConfig(StreamingStorageConfig v) {
     setField(30, v);
   }
 
-  $core.bool hasStorageConfig() => $_has(5);
+  $core.bool hasStorageConfig() => $_has(7);
   void clearStorageConfig() => clearField(30);
 }

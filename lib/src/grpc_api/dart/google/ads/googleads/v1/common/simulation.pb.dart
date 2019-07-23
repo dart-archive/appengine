@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/common/simulation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,13 +20,14 @@ class BidModifierSimulationPointList extends $pb.GeneratedMessage {
         1, 'points', $pb.PbFieldType.PM, BidModifierSimulationPoint.create)
     ..hasRequiredFields = false;
 
-  BidModifierSimulationPointList() : super();
-  BidModifierSimulationPointList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BidModifierSimulationPointList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BidModifierSimulationPointList._() : super();
+  factory BidModifierSimulationPointList() => create();
+  factory BidModifierSimulationPointList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BidModifierSimulationPointList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BidModifierSimulationPointList clone() =>
       BidModifierSimulationPointList()..mergeFromMessage(this);
   BidModifierSimulationPointList copyWith(
@@ -33,8 +35,9 @@ class BidModifierSimulationPointList extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BidModifierSimulationPointList));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static BidModifierSimulationPointList create() =>
-      BidModifierSimulationPointList();
+      BidModifierSimulationPointList._();
   BidModifierSimulationPointList createEmptyInstance() => create();
   static $pb.PbList<BidModifierSimulationPointList> createRepeated() =>
       $pb.PbList<BidModifierSimulationPointList>();
@@ -52,13 +55,14 @@ class CpcBidSimulationPointList extends $pb.GeneratedMessage {
         1, 'points', $pb.PbFieldType.PM, CpcBidSimulationPoint.create)
     ..hasRequiredFields = false;
 
-  CpcBidSimulationPointList() : super();
-  CpcBidSimulationPointList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CpcBidSimulationPointList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CpcBidSimulationPointList._() : super();
+  factory CpcBidSimulationPointList() => create();
+  factory CpcBidSimulationPointList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CpcBidSimulationPointList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CpcBidSimulationPointList clone() =>
       CpcBidSimulationPointList()..mergeFromMessage(this);
   CpcBidSimulationPointList copyWith(
@@ -66,7 +70,8 @@ class CpcBidSimulationPointList extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CpcBidSimulationPointList));
   $pb.BuilderInfo get info_ => _i;
-  static CpcBidSimulationPointList create() => CpcBidSimulationPointList();
+  @$core.pragma('dart2js:noInline')
+  static CpcBidSimulationPointList create() => CpcBidSimulationPointList._();
   CpcBidSimulationPointList createEmptyInstance() => create();
   static $pb.PbList<CpcBidSimulationPointList> createRepeated() =>
       $pb.PbList<CpcBidSimulationPointList>();
@@ -84,13 +89,14 @@ class CpvBidSimulationPointList extends $pb.GeneratedMessage {
         1, 'points', $pb.PbFieldType.PM, CpvBidSimulationPoint.create)
     ..hasRequiredFields = false;
 
-  CpvBidSimulationPointList() : super();
-  CpvBidSimulationPointList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CpvBidSimulationPointList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CpvBidSimulationPointList._() : super();
+  factory CpvBidSimulationPointList() => create();
+  factory CpvBidSimulationPointList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CpvBidSimulationPointList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CpvBidSimulationPointList clone() =>
       CpvBidSimulationPointList()..mergeFromMessage(this);
   CpvBidSimulationPointList copyWith(
@@ -98,7 +104,8 @@ class CpvBidSimulationPointList extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as CpvBidSimulationPointList));
   $pb.BuilderInfo get info_ => _i;
-  static CpvBidSimulationPointList create() => CpvBidSimulationPointList();
+  @$core.pragma('dart2js:noInline')
+  static CpvBidSimulationPointList create() => CpvBidSimulationPointList._();
   CpvBidSimulationPointList createEmptyInstance() => create();
   static $pb.PbList<CpvBidSimulationPointList> createRepeated() =>
       $pb.PbList<CpvBidSimulationPointList>();
@@ -117,13 +124,14 @@ class TargetCpaSimulationPointList extends $pb.GeneratedMessage {
         1, 'points', $pb.PbFieldType.PM, TargetCpaSimulationPoint.create)
     ..hasRequiredFields = false;
 
-  TargetCpaSimulationPointList() : super();
-  TargetCpaSimulationPointList.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetCpaSimulationPointList.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetCpaSimulationPointList._() : super();
+  factory TargetCpaSimulationPointList() => create();
+  factory TargetCpaSimulationPointList.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetCpaSimulationPointList.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetCpaSimulationPointList clone() =>
       TargetCpaSimulationPointList()..mergeFromMessage(this);
   TargetCpaSimulationPointList copyWith(
@@ -131,8 +139,9 @@ class TargetCpaSimulationPointList extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TargetCpaSimulationPointList));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TargetCpaSimulationPointList create() =>
-      TargetCpaSimulationPointList();
+      TargetCpaSimulationPointList._();
   TargetCpaSimulationPointList createEmptyInstance() => create();
   static $pb.PbList<TargetCpaSimulationPointList> createRepeated() =>
       $pb.PbList<TargetCpaSimulationPointList>();
@@ -172,13 +181,14 @@ class BidModifierSimulationPoint extends $pb.GeneratedMessage {
     ..a<$0.Int64Value>(13, 'parentTopSlotImpressions', $pb.PbFieldType.OM, $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  BidModifierSimulationPoint() : super();
-  BidModifierSimulationPoint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BidModifierSimulationPoint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BidModifierSimulationPoint._() : super();
+  factory BidModifierSimulationPoint() => create();
+  factory BidModifierSimulationPoint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BidModifierSimulationPoint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BidModifierSimulationPoint clone() =>
       BidModifierSimulationPoint()..mergeFromMessage(this);
   BidModifierSimulationPoint copyWith(
@@ -186,7 +196,8 @@ class BidModifierSimulationPoint extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as BidModifierSimulationPoint));
   $pb.BuilderInfo get info_ => _i;
-  static BidModifierSimulationPoint create() => BidModifierSimulationPoint();
+  @$core.pragma('dart2js:noInline')
+  static BidModifierSimulationPoint create() => BidModifierSimulationPoint._();
   BidModifierSimulationPoint createEmptyInstance() => create();
   static $pb.PbList<BidModifierSimulationPoint> createRepeated() =>
       $pb.PbList<BidModifierSimulationPoint>();
@@ -318,20 +329,22 @@ class CpcBidSimulationPoint extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  CpcBidSimulationPoint() : super();
-  CpcBidSimulationPoint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CpcBidSimulationPoint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CpcBidSimulationPoint._() : super();
+  factory CpcBidSimulationPoint() => create();
+  factory CpcBidSimulationPoint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CpcBidSimulationPoint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CpcBidSimulationPoint clone() =>
       CpcBidSimulationPoint()..mergeFromMessage(this);
   CpcBidSimulationPoint copyWith(
           void Function(CpcBidSimulationPoint) updates) =>
       super.copyWith((message) => updates(message as CpcBidSimulationPoint));
   $pb.BuilderInfo get info_ => _i;
-  static CpcBidSimulationPoint create() => CpcBidSimulationPoint();
+  @$core.pragma('dart2js:noInline')
+  static CpcBidSimulationPoint create() => CpcBidSimulationPoint._();
   CpcBidSimulationPoint createEmptyInstance() => create();
   static $pb.PbList<CpcBidSimulationPoint> createRepeated() =>
       $pb.PbList<CpcBidSimulationPoint>();
@@ -407,20 +420,22 @@ class CpvBidSimulationPoint extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  CpvBidSimulationPoint() : super();
-  CpvBidSimulationPoint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CpvBidSimulationPoint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CpvBidSimulationPoint._() : super();
+  factory CpvBidSimulationPoint() => create();
+  factory CpvBidSimulationPoint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CpvBidSimulationPoint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CpvBidSimulationPoint clone() =>
       CpvBidSimulationPoint()..mergeFromMessage(this);
   CpvBidSimulationPoint copyWith(
           void Function(CpvBidSimulationPoint) updates) =>
       super.copyWith((message) => updates(message as CpvBidSimulationPoint));
   $pb.BuilderInfo get info_ => _i;
-  static CpvBidSimulationPoint create() => CpvBidSimulationPoint();
+  @$core.pragma('dart2js:noInline')
+  static CpvBidSimulationPoint create() => CpvBidSimulationPoint._();
   CpvBidSimulationPoint createEmptyInstance() => create();
   static $pb.PbList<CpvBidSimulationPoint> createRepeated() =>
       $pb.PbList<CpvBidSimulationPoint>();
@@ -472,20 +487,22 @@ class TargetCpaSimulationPoint extends $pb.GeneratedMessage {
         $0.Int64Value.getDefault, $0.Int64Value.create)
     ..hasRequiredFields = false;
 
-  TargetCpaSimulationPoint() : super();
-  TargetCpaSimulationPoint.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TargetCpaSimulationPoint.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TargetCpaSimulationPoint._() : super();
+  factory TargetCpaSimulationPoint() => create();
+  factory TargetCpaSimulationPoint.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TargetCpaSimulationPoint.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TargetCpaSimulationPoint clone() =>
       TargetCpaSimulationPoint()..mergeFromMessage(this);
   TargetCpaSimulationPoint copyWith(
           void Function(TargetCpaSimulationPoint) updates) =>
       super.copyWith((message) => updates(message as TargetCpaSimulationPoint));
   $pb.BuilderInfo get info_ => _i;
-  static TargetCpaSimulationPoint create() => TargetCpaSimulationPoint();
+  @$core.pragma('dart2js:noInline')
+  static TargetCpaSimulationPoint create() => TargetCpaSimulationPoint._();
   TargetCpaSimulationPoint createEmptyInstance() => create();
   static $pb.PbList<TargetCpaSimulationPoint> createRepeated() =>
       $pb.PbList<TargetCpaSimulationPoint>();

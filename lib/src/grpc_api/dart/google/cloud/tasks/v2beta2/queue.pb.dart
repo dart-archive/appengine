@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2beta2/queue.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,6 +28,7 @@ class Queue extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Queue',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..oo(0, [3, 4])
     ..aOS(1, 'name')
     ..a<$0.AppEngineHttpTarget>(3, 'appEngineHttpTarget', $pb.PbFieldType.OM,
         $0.AppEngineHttpTarget.getDefault, $0.AppEngineHttpTarget.create)
@@ -40,21 +42,22 @@ class Queue extends $pb.GeneratedMessage {
         Queue_State.STATE_UNSPECIFIED, Queue_State.valueOf, Queue_State.values)
     ..a<$1.Timestamp>(8, 'purgeTime', $pb.PbFieldType.OM,
         $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..oo(0, [3, 4])
     ..hasRequiredFields = false;
 
-  Queue() : super();
-  Queue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Queue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Queue._() : super();
+  factory Queue() => create();
+  factory Queue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Queue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Queue clone() => Queue()..mergeFromMessage(this);
   Queue copyWith(void Function(Queue) updates) =>
       super.copyWith((message) => updates(message as Queue));
   $pb.BuilderInfo get info_ => _i;
-  static Queue create() => Queue();
+  @$core.pragma('dart2js:noInline')
+  static Queue create() => Queue._();
   Queue createEmptyInstance() => create();
   static $pb.PbList<Queue> createRepeated() => $pb.PbList<Queue>();
   static Queue getDefault() => _defaultInstance ??= create()..freeze();
@@ -128,18 +131,20 @@ class RateLimits extends $pb.GeneratedMessage {
     ..a<$core.int>(3, 'maxConcurrentTasks', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  RateLimits() : super();
-  RateLimits.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RateLimits.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RateLimits._() : super();
+  factory RateLimits() => create();
+  factory RateLimits.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RateLimits.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RateLimits clone() => RateLimits()..mergeFromMessage(this);
   RateLimits copyWith(void Function(RateLimits) updates) =>
       super.copyWith((message) => updates(message as RateLimits));
   $pb.BuilderInfo get info_ => _i;
-  static RateLimits create() => RateLimits();
+  @$core.pragma('dart2js:noInline')
+  static RateLimits create() => RateLimits._();
   RateLimits createEmptyInstance() => create();
   static $pb.PbList<RateLimits> createRepeated() => $pb.PbList<RateLimits>();
   static RateLimits getDefault() => _defaultInstance ??= create()..freeze();
@@ -181,6 +186,7 @@ class RetryConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RetryConfig',
       package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..oo(0, [1, 2])
     ..a<$core.int>(1, 'maxAttempts', $pb.PbFieldType.O3)
     ..aOB(2, 'unlimitedAttempts')
     ..a<$2.Duration>(3, 'maxRetryDuration', $pb.PbFieldType.OM,
@@ -190,21 +196,22 @@ class RetryConfig extends $pb.GeneratedMessage {
     ..a<$2.Duration>(5, 'maxBackoff', $pb.PbFieldType.OM,
         $2.Duration.getDefault, $2.Duration.create)
     ..a<$core.int>(6, 'maxDoublings', $pb.PbFieldType.O3)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  RetryConfig() : super();
-  RetryConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  RetryConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  RetryConfig._() : super();
+  factory RetryConfig() => create();
+  factory RetryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory RetryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   RetryConfig clone() => RetryConfig()..mergeFromMessage(this);
   RetryConfig copyWith(void Function(RetryConfig) updates) =>
       super.copyWith((message) => updates(message as RetryConfig));
   $pb.BuilderInfo get info_ => _i;
-  static RetryConfig create() => RetryConfig();
+  @$core.pragma('dart2js:noInline')
+  static RetryConfig create() => RetryConfig._();
   RetryConfig createEmptyInstance() => create();
   static $pb.PbList<RetryConfig> createRepeated() => $pb.PbList<RetryConfig>();
   static RetryConfig getDefault() => _defaultInstance ??= create()..freeze();

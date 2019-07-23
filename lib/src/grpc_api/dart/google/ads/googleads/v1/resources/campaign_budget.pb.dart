@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign_budget.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -58,18 +59,20 @@ class CampaignBudget extends $pb.GeneratedMessage {
     ..e<$4.BudgetTypeEnum_BudgetType>(18, 'type', $pb.PbFieldType.OE, $4.BudgetTypeEnum_BudgetType.UNSPECIFIED, $4.BudgetTypeEnum_BudgetType.valueOf, $4.BudgetTypeEnum_BudgetType.values)
     ..hasRequiredFields = false;
 
-  CampaignBudget() : super();
-  CampaignBudget.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignBudget.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignBudget._() : super();
+  factory CampaignBudget() => create();
+  factory CampaignBudget.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignBudget.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignBudget clone() => CampaignBudget()..mergeFromMessage(this);
   CampaignBudget copyWith(void Function(CampaignBudget) updates) =>
       super.copyWith((message) => updates(message as CampaignBudget));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignBudget create() => CampaignBudget();
+  @$core.pragma('dart2js:noInline')
+  static CampaignBudget create() => CampaignBudget._();
   CampaignBudget createEmptyInstance() => create();
   static $pb.PbList<CampaignBudget> createRepeated() =>
       $pb.PbList<CampaignBudget>();

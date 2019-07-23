@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/age_range_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +16,20 @@ class AgeRangeView extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  AgeRangeView() : super();
-  AgeRangeView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AgeRangeView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AgeRangeView._() : super();
+  factory AgeRangeView() => create();
+  factory AgeRangeView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AgeRangeView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AgeRangeView clone() => AgeRangeView()..mergeFromMessage(this);
   AgeRangeView copyWith(void Function(AgeRangeView) updates) =>
       super.copyWith((message) => updates(message as AgeRangeView));
   $pb.BuilderInfo get info_ => _i;
-  static AgeRangeView create() => AgeRangeView();
+  @$core.pragma('dart2js:noInline')
+  static AgeRangeView create() => AgeRangeView._();
   AgeRangeView createEmptyInstance() => create();
   static $pb.PbList<AgeRangeView> createRepeated() =>
       $pb.PbList<AgeRangeView>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group_ad.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -43,18 +44,20 @@ class AdGroupAd extends $pb.GeneratedMessage {
         $4.AdStrengthEnum_AdStrength.values)
     ..hasRequiredFields = false;
 
-  AdGroupAd() : super();
-  AdGroupAd.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupAd.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupAd._() : super();
+  factory AdGroupAd() => create();
+  factory AdGroupAd.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupAd.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupAd clone() => AdGroupAd()..mergeFromMessage(this);
   AdGroupAd copyWith(void Function(AdGroupAd) updates) =>
       super.copyWith((message) => updates(message as AdGroupAd));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupAd create() => AdGroupAd();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAd create() => AdGroupAd._();
   AdGroupAd createEmptyInstance() => create();
   static $pb.PbList<AdGroupAd> createRepeated() => $pb.PbList<AdGroupAd>();
   static AdGroupAd getDefault() => _defaultInstance ??= create()..freeze();
@@ -130,20 +133,22 @@ class AdGroupAdPolicySummary extends $pb.GeneratedMessage {
         $6.PolicyApprovalStatusEnum_PolicyApprovalStatus.values)
     ..hasRequiredFields = false;
 
-  AdGroupAdPolicySummary() : super();
-  AdGroupAdPolicySummary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroupAdPolicySummary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroupAdPolicySummary._() : super();
+  factory AdGroupAdPolicySummary() => create();
+  factory AdGroupAdPolicySummary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroupAdPolicySummary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroupAdPolicySummary clone() =>
       AdGroupAdPolicySummary()..mergeFromMessage(this);
   AdGroupAdPolicySummary copyWith(
           void Function(AdGroupAdPolicySummary) updates) =>
       super.copyWith((message) => updates(message as AdGroupAdPolicySummary));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroupAdPolicySummary create() => AdGroupAdPolicySummary();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdPolicySummary create() => AdGroupAdPolicySummary._();
   AdGroupAdPolicySummary createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdPolicySummary> createRepeated() =>
       $pb.PbList<AdGroupAdPolicySummary>();

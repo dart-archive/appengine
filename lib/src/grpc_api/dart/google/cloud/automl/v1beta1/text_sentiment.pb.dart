@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/text_sentiment.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,20 +18,22 @@ class TextSentimentAnnotation extends $pb.GeneratedMessage {
     ..a<$core.int>(1, 'sentiment', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
-  TextSentimentAnnotation() : super();
-  TextSentimentAnnotation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSentimentAnnotation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSentimentAnnotation._() : super();
+  factory TextSentimentAnnotation() => create();
+  factory TextSentimentAnnotation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSentimentAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSentimentAnnotation clone() =>
       TextSentimentAnnotation()..mergeFromMessage(this);
   TextSentimentAnnotation copyWith(
           void Function(TextSentimentAnnotation) updates) =>
       super.copyWith((message) => updates(message as TextSentimentAnnotation));
   $pb.BuilderInfo get info_ => _i;
-  static TextSentimentAnnotation create() => TextSentimentAnnotation();
+  @$core.pragma('dart2js:noInline')
+  static TextSentimentAnnotation create() => TextSentimentAnnotation._();
   TextSentimentAnnotation createEmptyInstance() => create();
   static $pb.PbList<TextSentimentAnnotation> createRepeated() =>
       $pb.PbList<TextSentimentAnnotation>();
@@ -67,13 +70,14 @@ class TextSentimentEvaluationMetrics extends $pb.GeneratedMessage {
     ..pPS(9, 'annotationSpecId')
     ..hasRequiredFields = false;
 
-  TextSentimentEvaluationMetrics() : super();
-  TextSentimentEvaluationMetrics.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSentimentEvaluationMetrics.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSentimentEvaluationMetrics._() : super();
+  factory TextSentimentEvaluationMetrics() => create();
+  factory TextSentimentEvaluationMetrics.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSentimentEvaluationMetrics.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSentimentEvaluationMetrics clone() =>
       TextSentimentEvaluationMetrics()..mergeFromMessage(this);
   TextSentimentEvaluationMetrics copyWith(
@@ -81,8 +85,9 @@ class TextSentimentEvaluationMetrics extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TextSentimentEvaluationMetrics));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static TextSentimentEvaluationMetrics create() =>
-      TextSentimentEvaluationMetrics();
+      TextSentimentEvaluationMetrics._();
   TextSentimentEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<TextSentimentEvaluationMetrics> createRepeated() =>
       $pb.PbList<TextSentimentEvaluationMetrics>();
@@ -155,5 +160,6 @@ class TextSentimentEvaluationMetrics extends $pb.GeneratedMessage {
   $core.bool hasConfusionMatrix() => $_has(7);
   void clearConfusionMatrix() => clearField(8);
 
+  @$core.Deprecated('This field is deprecated.')
   $core.List<$core.String> get annotationSpecId => $_getList(8);
 }

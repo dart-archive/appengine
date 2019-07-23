@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/usage.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,18 +18,20 @@ class Usage extends $pb.GeneratedMessage {
         ..aOS(7, 'producerNotificationChannel')
         ..hasRequiredFields = false;
 
-  Usage() : super();
-  Usage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Usage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Usage._() : super();
+  factory Usage() => create();
+  factory Usage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Usage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Usage clone() => Usage()..mergeFromMessage(this);
   Usage copyWith(void Function(Usage) updates) =>
       super.copyWith((message) => updates(message as Usage));
   $pb.BuilderInfo get info_ => _i;
-  static Usage create() => Usage();
+  @$core.pragma('dart2js:noInline')
+  static Usage create() => Usage._();
   Usage createEmptyInstance() => create();
   static $pb.PbList<Usage> createRepeated() => $pb.PbList<Usage>();
   static Usage getDefault() => _defaultInstance ??= create()..freeze();
@@ -55,18 +58,20 @@ class UsageRule extends $pb.GeneratedMessage {
         ..aOB(3, 'skipServiceControl')
         ..hasRequiredFields = false;
 
-  UsageRule() : super();
-  UsageRule.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  UsageRule.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  UsageRule._() : super();
+  factory UsageRule() => create();
+  factory UsageRule.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UsageRule.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   UsageRule clone() => UsageRule()..mergeFromMessage(this);
   UsageRule copyWith(void Function(UsageRule) updates) =>
       super.copyWith((message) => updates(message as UsageRule));
   $pb.BuilderInfo get info_ => _i;
-  static UsageRule create() => UsageRule();
+  @$core.pragma('dart2js:noInline')
+  static UsageRule create() => UsageRule._();
   UsageRule createEmptyInstance() => create();
   static $pb.PbList<UsageRule> createRepeated() => $pb.PbList<UsageRule>();
   static UsageRule getDefault() => _defaultInstance ??= create()..freeze();

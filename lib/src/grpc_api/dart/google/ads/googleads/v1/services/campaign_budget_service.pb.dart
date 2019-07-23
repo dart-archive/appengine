@@ -1,17 +1,18 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/campaign_budget_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../resources/campaign_budget.pb.dart' as $0;
-import '../../../../protobuf/field_mask.pb.dart' as $1;
-import '../../../../rpc/status.pb.dart' as $2;
+import '../resources/campaign_budget.pb.dart' as $1;
+import '../../../../protobuf/field_mask.pb.dart' as $2;
+import '../../../../rpc/status.pb.dart' as $3;
 
 class GetCampaignBudgetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCampaignBudgetRequest',
@@ -19,20 +20,22 @@ class GetCampaignBudgetRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  GetCampaignBudgetRequest() : super();
-  GetCampaignBudgetRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetCampaignBudgetRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetCampaignBudgetRequest._() : super();
+  factory GetCampaignBudgetRequest() => create();
+  factory GetCampaignBudgetRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetCampaignBudgetRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetCampaignBudgetRequest clone() =>
       GetCampaignBudgetRequest()..mergeFromMessage(this);
   GetCampaignBudgetRequest copyWith(
           void Function(GetCampaignBudgetRequest) updates) =>
       super.copyWith((message) => updates(message as GetCampaignBudgetRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetCampaignBudgetRequest create() => GetCampaignBudgetRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignBudgetRequest create() => GetCampaignBudgetRequest._();
   GetCampaignBudgetRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignBudgetRequest> createRepeated() =>
       $pb.PbList<GetCampaignBudgetRequest>();
@@ -60,13 +63,14 @@ class MutateCampaignBudgetsRequest extends $pb.GeneratedMessage {
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
-  MutateCampaignBudgetsRequest() : super();
-  MutateCampaignBudgetsRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignBudgetsRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignBudgetsRequest._() : super();
+  factory MutateCampaignBudgetsRequest() => create();
+  factory MutateCampaignBudgetsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignBudgetsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignBudgetsRequest clone() =>
       MutateCampaignBudgetsRequest()..mergeFromMessage(this);
   MutateCampaignBudgetsRequest copyWith(
@@ -74,8 +78,9 @@ class MutateCampaignBudgetsRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignBudgetsRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignBudgetsRequest create() =>
-      MutateCampaignBudgetsRequest();
+      MutateCampaignBudgetsRequest._();
   MutateCampaignBudgetsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignBudgetsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignBudgetsRequest>();
@@ -122,30 +127,32 @@ class CampaignBudgetOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignBudgetOperation',
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<$0.CampaignBudget>(1, 'create_1', $pb.PbFieldType.OM,
-        $0.CampaignBudget.getDefault, $0.CampaignBudget.create)
-    ..a<$0.CampaignBudget>(2, 'update', $pb.PbFieldType.OM,
-        $0.CampaignBudget.getDefault, $0.CampaignBudget.create)
-    ..aOS(3, 'remove')
-    ..a<$1.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $1.FieldMask.getDefault, $1.FieldMask.create)
     ..oo(0, [1, 2, 3])
+    ..a<$1.CampaignBudget>(1, 'create_1', $pb.PbFieldType.OM,
+        $1.CampaignBudget.getDefault, $1.CampaignBudget.create)
+    ..a<$1.CampaignBudget>(2, 'update', $pb.PbFieldType.OM,
+        $1.CampaignBudget.getDefault, $1.CampaignBudget.create)
+    ..aOS(3, 'remove')
+    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
+        $2.FieldMask.getDefault, $2.FieldMask.create)
     ..hasRequiredFields = false;
 
-  CampaignBudgetOperation() : super();
-  CampaignBudgetOperation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignBudgetOperation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignBudgetOperation._() : super();
+  factory CampaignBudgetOperation() => create();
+  factory CampaignBudgetOperation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignBudgetOperation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignBudgetOperation clone() =>
       CampaignBudgetOperation()..mergeFromMessage(this);
   CampaignBudgetOperation copyWith(
           void Function(CampaignBudgetOperation) updates) =>
       super.copyWith((message) => updates(message as CampaignBudgetOperation));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignBudgetOperation create() => CampaignBudgetOperation();
+  @$core.pragma('dart2js:noInline')
+  static CampaignBudgetOperation create() => CampaignBudgetOperation._();
   CampaignBudgetOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignBudgetOperation> createRepeated() =>
       $pb.PbList<CampaignBudgetOperation>();
@@ -157,16 +164,16 @@ class CampaignBudgetOperation extends $pb.GeneratedMessage {
       _CampaignBudgetOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
-  $0.CampaignBudget get create_1 => $_getN(0);
-  set create_1($0.CampaignBudget v) {
+  $1.CampaignBudget get create_1 => $_getN(0);
+  set create_1($1.CampaignBudget v) {
     setField(1, v);
   }
 
   $core.bool hasCreate_1() => $_has(0);
   void clearCreate_1() => clearField(1);
 
-  $0.CampaignBudget get update => $_getN(1);
-  set update($0.CampaignBudget v) {
+  $1.CampaignBudget get update => $_getN(1);
+  set update($1.CampaignBudget v) {
     setField(2, v);
   }
 
@@ -181,8 +188,8 @@ class CampaignBudgetOperation extends $pb.GeneratedMessage {
   $core.bool hasRemove() => $_has(2);
   void clearRemove() => clearField(3);
 
-  $1.FieldMask get updateMask => $_getN(3);
-  set updateMask($1.FieldMask v) {
+  $2.FieldMask get updateMask => $_getN(3);
+  set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
@@ -196,17 +203,18 @@ class MutateCampaignBudgetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.services'))
     ..pc<MutateCampaignBudgetResult>(
         2, 'results', $pb.PbFieldType.PM, MutateCampaignBudgetResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
+        $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  MutateCampaignBudgetsResponse() : super();
-  MutateCampaignBudgetsResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignBudgetsResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignBudgetsResponse._() : super();
+  factory MutateCampaignBudgetsResponse() => create();
+  factory MutateCampaignBudgetsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignBudgetsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignBudgetsResponse clone() =>
       MutateCampaignBudgetsResponse()..mergeFromMessage(this);
   MutateCampaignBudgetsResponse copyWith(
@@ -214,8 +222,9 @@ class MutateCampaignBudgetsResponse extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignBudgetsResponse));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static MutateCampaignBudgetsResponse create() =>
-      MutateCampaignBudgetsResponse();
+      MutateCampaignBudgetsResponse._();
   MutateCampaignBudgetsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignBudgetsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignBudgetsResponse>();
@@ -225,8 +234,8 @@ class MutateCampaignBudgetsResponse extends $pb.GeneratedMessage {
 
   $core.List<MutateCampaignBudgetResult> get results => $_getList(0);
 
-  $2.Status get partialFailureError => $_getN(1);
-  set partialFailureError($2.Status v) {
+  $3.Status get partialFailureError => $_getN(1);
+  set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
@@ -241,13 +250,14 @@ class MutateCampaignBudgetResult extends $pb.GeneratedMessage {
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
-  MutateCampaignBudgetResult() : super();
-  MutateCampaignBudgetResult.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MutateCampaignBudgetResult.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MutateCampaignBudgetResult._() : super();
+  factory MutateCampaignBudgetResult() => create();
+  factory MutateCampaignBudgetResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MutateCampaignBudgetResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MutateCampaignBudgetResult clone() =>
       MutateCampaignBudgetResult()..mergeFromMessage(this);
   MutateCampaignBudgetResult copyWith(
@@ -255,7 +265,8 @@ class MutateCampaignBudgetResult extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MutateCampaignBudgetResult));
   $pb.BuilderInfo get info_ => _i;
-  static MutateCampaignBudgetResult create() => MutateCampaignBudgetResult();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignBudgetResult create() => MutateCampaignBudgetResult._();
   MutateCampaignBudgetResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignBudgetResult> createRepeated() =>
       $pb.PbList<MutateCampaignBudgetResult>();

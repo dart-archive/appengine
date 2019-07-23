@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/genomics/v1/readgroupset.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -33,18 +34,20 @@ class ReadGroupSet extends $pb.GeneratedMessage {
         const $pb.PackageName('google.genomics.v1'))
     ..hasRequiredFields = false;
 
-  ReadGroupSet() : super();
-  ReadGroupSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReadGroupSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReadGroupSet._() : super();
+  factory ReadGroupSet() => create();
+  factory ReadGroupSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReadGroupSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReadGroupSet clone() => ReadGroupSet()..mergeFromMessage(this);
   ReadGroupSet copyWith(void Function(ReadGroupSet) updates) =>
       super.copyWith((message) => updates(message as ReadGroupSet));
   $pb.BuilderInfo get info_ => _i;
-  static ReadGroupSet create() => ReadGroupSet();
+  @$core.pragma('dart2js:noInline')
+  static ReadGroupSet create() => ReadGroupSet._();
   ReadGroupSet createEmptyInstance() => create();
   static $pb.PbList<ReadGroupSet> createRepeated() =>
       $pb.PbList<ReadGroupSet>();

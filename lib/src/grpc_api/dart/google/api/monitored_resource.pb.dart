@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/monitored_resource.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -33,13 +34,14 @@ class MonitoredResourceDescriptor extends $pb.GeneratedMessage {
         $2.LaunchStage.values)
     ..hasRequiredFields = false;
 
-  MonitoredResourceDescriptor() : super();
-  MonitoredResourceDescriptor.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MonitoredResourceDescriptor.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MonitoredResourceDescriptor._() : super();
+  factory MonitoredResourceDescriptor() => create();
+  factory MonitoredResourceDescriptor.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MonitoredResourceDescriptor.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MonitoredResourceDescriptor clone() =>
       MonitoredResourceDescriptor()..mergeFromMessage(this);
   MonitoredResourceDescriptor copyWith(
@@ -47,7 +49,9 @@ class MonitoredResourceDescriptor extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as MonitoredResourceDescriptor));
   $pb.BuilderInfo get info_ => _i;
-  static MonitoredResourceDescriptor create() => MonitoredResourceDescriptor();
+  @$core.pragma('dart2js:noInline')
+  static MonitoredResourceDescriptor create() =>
+      MonitoredResourceDescriptor._();
   MonitoredResourceDescriptor createEmptyInstance() => create();
   static $pb.PbList<MonitoredResourceDescriptor> createRepeated() =>
       $pb.PbList<MonitoredResourceDescriptor>();
@@ -114,18 +118,20 @@ class MonitoredResource extends $pb.GeneratedMessage {
         const $pb.PackageName('google.api'))
     ..hasRequiredFields = false;
 
-  MonitoredResource() : super();
-  MonitoredResource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MonitoredResource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MonitoredResource._() : super();
+  factory MonitoredResource() => create();
+  factory MonitoredResource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MonitoredResource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MonitoredResource clone() => MonitoredResource()..mergeFromMessage(this);
   MonitoredResource copyWith(void Function(MonitoredResource) updates) =>
       super.copyWith((message) => updates(message as MonitoredResource));
   $pb.BuilderInfo get info_ => _i;
-  static MonitoredResource create() => MonitoredResource();
+  @$core.pragma('dart2js:noInline')
+  static MonitoredResource create() => MonitoredResource._();
   MonitoredResource createEmptyInstance() => create();
   static $pb.PbList<MonitoredResource> createRepeated() =>
       $pb.PbList<MonitoredResource>();
@@ -161,13 +167,14 @@ class MonitoredResourceMetadata extends $pb.GeneratedMessage {
         const $pb.PackageName('google.api'))
     ..hasRequiredFields = false;
 
-  MonitoredResourceMetadata() : super();
-  MonitoredResourceMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  MonitoredResourceMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  MonitoredResourceMetadata._() : super();
+  factory MonitoredResourceMetadata() => create();
+  factory MonitoredResourceMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory MonitoredResourceMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   MonitoredResourceMetadata clone() =>
       MonitoredResourceMetadata()..mergeFromMessage(this);
   MonitoredResourceMetadata copyWith(
@@ -175,7 +182,8 @@ class MonitoredResourceMetadata extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as MonitoredResourceMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static MonitoredResourceMetadata create() => MonitoredResourceMetadata();
+  @$core.pragma('dart2js:noInline')
+  static MonitoredResourceMetadata create() => MonitoredResourceMetadata._();
   MonitoredResourceMetadata createEmptyInstance() => create();
   static $pb.PbList<MonitoredResourceMetadata> createRepeated() =>
       $pb.PbList<MonitoredResourceMetadata>();

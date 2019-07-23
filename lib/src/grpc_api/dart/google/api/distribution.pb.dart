@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/distribution.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -20,18 +21,20 @@ class Distribution_Range extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'max', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Distribution_Range() : super();
-  Distribution_Range.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_Range.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_Range._() : super();
+  factory Distribution_Range() => create();
+  factory Distribution_Range.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_Range.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_Range clone() => Distribution_Range()..mergeFromMessage(this);
   Distribution_Range copyWith(void Function(Distribution_Range) updates) =>
       super.copyWith((message) => updates(message as Distribution_Range));
   $pb.BuilderInfo get info_ => _i;
-  static Distribution_Range create() => Distribution_Range();
+  @$core.pragma('dart2js:noInline')
+  static Distribution_Range create() => Distribution_Range._();
   Distribution_Range createEmptyInstance() => create();
   static $pb.PbList<Distribution_Range> createRepeated() =>
       $pb.PbList<Distribution_Range>();
@@ -65,13 +68,14 @@ class Distribution_BucketOptions_Linear extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'offset', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Distribution_BucketOptions_Linear() : super();
-  Distribution_BucketOptions_Linear.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_BucketOptions_Linear.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_BucketOptions_Linear._() : super();
+  factory Distribution_BucketOptions_Linear() => create();
+  factory Distribution_BucketOptions_Linear.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_BucketOptions_Linear.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_BucketOptions_Linear clone() =>
       Distribution_BucketOptions_Linear()..mergeFromMessage(this);
   Distribution_BucketOptions_Linear copyWith(
@@ -79,8 +83,9 @@ class Distribution_BucketOptions_Linear extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Distribution_BucketOptions_Linear));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Distribution_BucketOptions_Linear create() =>
-      Distribution_BucketOptions_Linear();
+      Distribution_BucketOptions_Linear._();
   Distribution_BucketOptions_Linear createEmptyInstance() => create();
   static $pb.PbList<Distribution_BucketOptions_Linear> createRepeated() =>
       $pb.PbList<Distribution_BucketOptions_Linear>();
@@ -122,13 +127,15 @@ class Distribution_BucketOptions_Exponential extends $pb.GeneratedMessage {
     ..a<$core.double>(3, 'scale', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
-  Distribution_BucketOptions_Exponential() : super();
-  Distribution_BucketOptions_Exponential.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_BucketOptions_Exponential.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_BucketOptions_Exponential._() : super();
+  factory Distribution_BucketOptions_Exponential() => create();
+  factory Distribution_BucketOptions_Exponential.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_BucketOptions_Exponential.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_BucketOptions_Exponential clone() =>
       Distribution_BucketOptions_Exponential()..mergeFromMessage(this);
   Distribution_BucketOptions_Exponential copyWith(
@@ -136,8 +143,9 @@ class Distribution_BucketOptions_Exponential extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as Distribution_BucketOptions_Exponential));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Distribution_BucketOptions_Exponential create() =>
-      Distribution_BucketOptions_Exponential();
+      Distribution_BucketOptions_Exponential._();
   Distribution_BucketOptions_Exponential createEmptyInstance() => create();
   static $pb.PbList<Distribution_BucketOptions_Exponential> createRepeated() =>
       $pb.PbList<Distribution_BucketOptions_Exponential>();
@@ -177,13 +185,15 @@ class Distribution_BucketOptions_Explicit extends $pb.GeneratedMessage {
     ..p<$core.double>(1, 'bounds', $pb.PbFieldType.PD)
     ..hasRequiredFields = false;
 
-  Distribution_BucketOptions_Explicit() : super();
-  Distribution_BucketOptions_Explicit.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_BucketOptions_Explicit.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_BucketOptions_Explicit._() : super();
+  factory Distribution_BucketOptions_Explicit() => create();
+  factory Distribution_BucketOptions_Explicit.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_BucketOptions_Explicit.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_BucketOptions_Explicit clone() =>
       Distribution_BucketOptions_Explicit()..mergeFromMessage(this);
   Distribution_BucketOptions_Explicit copyWith(
@@ -191,8 +201,9 @@ class Distribution_BucketOptions_Explicit extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Distribution_BucketOptions_Explicit));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static Distribution_BucketOptions_Explicit create() =>
-      Distribution_BucketOptions_Explicit();
+      Distribution_BucketOptions_Explicit._();
   Distribution_BucketOptions_Explicit createEmptyInstance() => create();
   static $pb.PbList<Distribution_BucketOptions_Explicit> createRepeated() =>
       $pb.PbList<Distribution_BucketOptions_Explicit>();
@@ -221,6 +232,7 @@ class Distribution_BucketOptions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Distribution.BucketOptions',
       package: const $pb.PackageName('google.api'))
+    ..oo(0, [1, 2, 3])
     ..a<Distribution_BucketOptions_Linear>(
         1,
         'linearBuckets',
@@ -239,16 +251,16 @@ class Distribution_BucketOptions extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         Distribution_BucketOptions_Explicit.getDefault,
         Distribution_BucketOptions_Explicit.create)
-    ..oo(0, [1, 2, 3])
     ..hasRequiredFields = false;
 
-  Distribution_BucketOptions() : super();
-  Distribution_BucketOptions.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_BucketOptions.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_BucketOptions._() : super();
+  factory Distribution_BucketOptions() => create();
+  factory Distribution_BucketOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_BucketOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_BucketOptions clone() =>
       Distribution_BucketOptions()..mergeFromMessage(this);
   Distribution_BucketOptions copyWith(
@@ -256,7 +268,8 @@ class Distribution_BucketOptions extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as Distribution_BucketOptions));
   $pb.BuilderInfo get info_ => _i;
-  static Distribution_BucketOptions create() => Distribution_BucketOptions();
+  @$core.pragma('dart2js:noInline')
+  static Distribution_BucketOptions create() => Distribution_BucketOptions._();
   Distribution_BucketOptions createEmptyInstance() => create();
   static $pb.PbList<Distribution_BucketOptions> createRepeated() =>
       $pb.PbList<Distribution_BucketOptions>();
@@ -302,20 +315,22 @@ class Distribution_Exemplar extends $pb.GeneratedMessage {
     ..pc<$1.Any>(3, 'attachments', $pb.PbFieldType.PM, $1.Any.create)
     ..hasRequiredFields = false;
 
-  Distribution_Exemplar() : super();
-  Distribution_Exemplar.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution_Exemplar.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution_Exemplar._() : super();
+  factory Distribution_Exemplar() => create();
+  factory Distribution_Exemplar.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution_Exemplar.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution_Exemplar clone() =>
       Distribution_Exemplar()..mergeFromMessage(this);
   Distribution_Exemplar copyWith(
           void Function(Distribution_Exemplar) updates) =>
       super.copyWith((message) => updates(message as Distribution_Exemplar));
   $pb.BuilderInfo get info_ => _i;
-  static Distribution_Exemplar create() => Distribution_Exemplar();
+  @$core.pragma('dart2js:noInline')
+  static Distribution_Exemplar create() => Distribution_Exemplar._();
   Distribution_Exemplar createEmptyInstance() => create();
   static $pb.PbList<Distribution_Exemplar> createRepeated() =>
       $pb.PbList<Distribution_Exemplar>();
@@ -361,18 +376,20 @@ class Distribution extends $pb.GeneratedMessage {
         10, 'exemplars', $pb.PbFieldType.PM, Distribution_Exemplar.create)
     ..hasRequiredFields = false;
 
-  Distribution() : super();
-  Distribution.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Distribution.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Distribution._() : super();
+  factory Distribution() => create();
+  factory Distribution.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Distribution.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Distribution clone() => Distribution()..mergeFromMessage(this);
   Distribution copyWith(void Function(Distribution) updates) =>
       super.copyWith((message) => updates(message as Distribution));
   $pb.BuilderInfo get info_ => _i;
-  static Distribution create() => Distribution();
+  @$core.pragma('dart2js:noInline')
+  static Distribution create() => Distribution._();
   Distribution createEmptyInstance() => create();
   static $pb.PbList<Distribution> createRepeated() =>
       $pb.PbList<Distribution>();

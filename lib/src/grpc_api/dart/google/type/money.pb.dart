@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/type/money.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
@@ -18,18 +19,20 @@ class Money extends $pb.GeneratedMessage {
         ..a<$core.int>(3, 'nanos', $pb.PbFieldType.O3)
         ..hasRequiredFields = false;
 
-  Money() : super();
-  Money.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Money.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Money._() : super();
+  factory Money() => create();
+  factory Money.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Money.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Money clone() => Money()..mergeFromMessage(this);
   Money copyWith(void Function(Money) updates) =>
       super.copyWith((message) => updates(message as Money));
   $pb.BuilderInfo get info_ => _i;
-  static Money create() => Money();
+  @$core.pragma('dart2js:noInline')
+  static Money create() => Money._();
   Money createEmptyInstance() => create();
   static $pb.PbList<Money> createRepeated() => $pb.PbList<Money>();
   static Money getDefault() => _defaultInstance ??= create()..freeze();

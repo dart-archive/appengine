@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/invocation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 const Invocation$json = {
   '1': 'Invocation',
@@ -71,6 +72,22 @@ const Invocation$json = {
       '5': 11,
       '6': '.google.devtools.resultstore.v2.LanguageCoverageSummary',
       '10': 'coverageSummaries'
+    },
+    {
+      '1': 'aggregate_coverage',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.AggregateCoverage',
+      '10': 'aggregateCoverage'
+    },
+    {
+      '1': 'file_processing_errors',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.resultstore.v2.FileProcessingErrors',
+      '10': 'fileProcessingErrors'
     },
   ],
   '3': [Invocation_Id$json],

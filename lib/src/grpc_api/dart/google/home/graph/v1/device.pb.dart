@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/home/graph/v1/device.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -31,18 +32,20 @@ class Device extends $pb.GeneratedMessage {
         11, 'otherDeviceIds', $pb.PbFieldType.PM, AgentOtherDeviceId.create)
     ..hasRequiredFields = false;
 
-  Device() : super();
-  Device.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Device.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Device._() : super();
+  factory Device() => create();
+  factory Device.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Device.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Device clone() => Device()..mergeFromMessage(this);
   Device copyWith(void Function(Device) updates) =>
       super.copyWith((message) => updates(message as Device));
   $pb.BuilderInfo get info_ => _i;
-  static Device create() => Device();
+  @$core.pragma('dart2js:noInline')
+  static Device create() => Device._();
   Device createEmptyInstance() => create();
   static $pb.PbList<Device> createRepeated() => $pb.PbList<Device>();
   static Device getDefault() => _defaultInstance ??= create()..freeze();
@@ -133,18 +136,20 @@ class DeviceNames extends $pb.GeneratedMessage {
     ..pPS(3, 'defaultNames')
     ..hasRequiredFields = false;
 
-  DeviceNames() : super();
-  DeviceNames.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceNames.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceNames._() : super();
+  factory DeviceNames() => create();
+  factory DeviceNames.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceNames.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceNames clone() => DeviceNames()..mergeFromMessage(this);
   DeviceNames copyWith(void Function(DeviceNames) updates) =>
       super.copyWith((message) => updates(message as DeviceNames));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceNames create() => DeviceNames();
+  @$core.pragma('dart2js:noInline')
+  static DeviceNames create() => DeviceNames._();
   DeviceNames createEmptyInstance() => create();
   static $pb.PbList<DeviceNames> createRepeated() => $pb.PbList<DeviceNames>();
   static DeviceNames getDefault() => _defaultInstance ??= create()..freeze();
@@ -172,18 +177,20 @@ class DeviceInfo extends $pb.GeneratedMessage {
     ..aOS(4, 'swVersion')
     ..hasRequiredFields = false;
 
-  DeviceInfo() : super();
-  DeviceInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeviceInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeviceInfo._() : super();
+  factory DeviceInfo() => create();
+  factory DeviceInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeviceInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeviceInfo clone() => DeviceInfo()..mergeFromMessage(this);
   DeviceInfo copyWith(void Function(DeviceInfo) updates) =>
       super.copyWith((message) => updates(message as DeviceInfo));
   $pb.BuilderInfo get info_ => _i;
-  static DeviceInfo create() => DeviceInfo();
+  @$core.pragma('dart2js:noInline')
+  static DeviceInfo create() => DeviceInfo._();
   DeviceInfo createEmptyInstance() => create();
   static $pb.PbList<DeviceInfo> createRepeated() => $pb.PbList<DeviceInfo>();
   static DeviceInfo getDefault() => _defaultInstance ??= create()..freeze();
@@ -229,18 +236,20 @@ class AgentOtherDeviceId extends $pb.GeneratedMessage {
     ..aOS(2, 'deviceId')
     ..hasRequiredFields = false;
 
-  AgentOtherDeviceId() : super();
-  AgentOtherDeviceId.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AgentOtherDeviceId.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AgentOtherDeviceId._() : super();
+  factory AgentOtherDeviceId() => create();
+  factory AgentOtherDeviceId.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AgentOtherDeviceId.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AgentOtherDeviceId clone() => AgentOtherDeviceId()..mergeFromMessage(this);
   AgentOtherDeviceId copyWith(void Function(AgentOtherDeviceId) updates) =>
       super.copyWith((message) => updates(message as AgentOtherDeviceId));
   $pb.BuilderInfo get info_ => _i;
-  static AgentOtherDeviceId create() => AgentOtherDeviceId();
+  @$core.pragma('dart2js:noInline')
+  static AgentOtherDeviceId create() => AgentOtherDeviceId._();
   AgentOtherDeviceId createEmptyInstance() => create();
   static $pb.PbList<AgentOtherDeviceId> createRepeated() =>
       $pb.PbList<AgentOtherDeviceId>();

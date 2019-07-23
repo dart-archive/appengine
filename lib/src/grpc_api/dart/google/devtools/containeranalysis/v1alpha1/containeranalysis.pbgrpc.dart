@@ -1,136 +1,138 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/containeranalysis/v1alpha1/containeranalysis.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'containeranalysis.pb.dart';
-import '../../../protobuf/empty.pb.dart' as $1;
-import '../../../iam/v1/iam_policy.pb.dart' as $2;
-import '../../../iam/v1/policy.pb.dart' as $0;
-import '../../../longrunning/operations.pb.dart' as $3;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'containeranalysis.pb.dart' as $4;
+import '../../../protobuf/empty.pb.dart' as $3;
+import '../../../iam/v1/iam_policy.pb.dart' as $0;
+import '../../../iam/v1/policy.pb.dart' as $1;
+import '../../../longrunning/operations.pb.dart' as $2;
 export 'containeranalysis.pb.dart';
 
 class ContainerAnalysisClient extends $grpc.Client {
-  static final _$getOccurrence = $grpc.ClientMethod<GetOccurrenceRequest,
-          Occurrence>(
+  static final _$getOccurrence = $grpc.ClientMethod<$4.GetOccurrenceRequest,
+          $4.Occurrence>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/GetOccurrence',
-      (GetOccurrenceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Occurrence.fromBuffer(value));
-  static final _$listOccurrences = $grpc.ClientMethod<ListOccurrencesRequest,
-          ListOccurrencesResponse>(
+      ($4.GetOccurrenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Occurrence.fromBuffer(value));
+  static final _$listOccurrences = $grpc.ClientMethod<$4.ListOccurrencesRequest,
+          $4.ListOccurrencesResponse>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/ListOccurrences',
-      (ListOccurrencesRequest value) => value.writeToBuffer(),
+      ($4.ListOccurrencesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListOccurrencesResponse.fromBuffer(value));
-  static final _$deleteOccurrence = $grpc.ClientMethod<DeleteOccurrenceRequest,
-          $1.Empty>(
+          $4.ListOccurrencesResponse.fromBuffer(value));
+  static final _$deleteOccurrence = $grpc.ClientMethod<
+          $4.DeleteOccurrenceRequest, $3.Empty>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/DeleteOccurrence',
-      (DeleteOccurrenceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
-  static final _$createOccurrence = $grpc.ClientMethod<CreateOccurrenceRequest,
-          Occurrence>(
+      ($4.DeleteOccurrenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$createOccurrence = $grpc.ClientMethod<
+          $4.CreateOccurrenceRequest, $4.Occurrence>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/CreateOccurrence',
-      (CreateOccurrenceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Occurrence.fromBuffer(value));
-  static final _$updateOccurrence = $grpc.ClientMethod<UpdateOccurrenceRequest,
-          Occurrence>(
+      ($4.CreateOccurrenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Occurrence.fromBuffer(value));
+  static final _$updateOccurrence = $grpc.ClientMethod<
+          $4.UpdateOccurrenceRequest, $4.Occurrence>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/UpdateOccurrence',
-      (UpdateOccurrenceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Occurrence.fromBuffer(value));
+      ($4.UpdateOccurrenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Occurrence.fromBuffer(value));
   static final _$getOccurrenceNote = $grpc.ClientMethod<
-          GetOccurrenceNoteRequest, Note>(
+          $4.GetOccurrenceNoteRequest, $4.Note>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/GetOccurrenceNote',
-      (GetOccurrenceNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
-  static final _$getNote = $grpc.ClientMethod<GetNoteRequest, Note>(
+      ($4.GetOccurrenceNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Note.fromBuffer(value));
+  static final _$getNote = $grpc.ClientMethod<$4.GetNoteRequest, $4.Note>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/GetNote',
-      (GetNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
-  static final _$listNotes = $grpc.ClientMethod<ListNotesRequest,
-          ListNotesResponse>(
+      ($4.GetNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Note.fromBuffer(value));
+  static final _$listNotes = $grpc.ClientMethod<$4.ListNotesRequest,
+          $4.ListNotesResponse>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/ListNotes',
-      (ListNotesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => ListNotesResponse.fromBuffer(value));
-  static final _$deleteNote = $grpc.ClientMethod<DeleteNoteRequest, $1.Empty>(
+      ($4.ListNotesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.ListNotesResponse.fromBuffer(value));
+  static final _$deleteNote = $grpc.ClientMethod<$4.DeleteNoteRequest,
+          $3.Empty>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/DeleteNote',
-      (DeleteNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
-  static final _$createNote = $grpc.ClientMethod<CreateNoteRequest, Note>(
+      ($4.DeleteNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$createNote = $grpc.ClientMethod<$4.CreateNoteRequest, $4.Note>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/CreateNote',
-      (CreateNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
-  static final _$updateNote = $grpc.ClientMethod<UpdateNoteRequest, Note>(
+      ($4.CreateNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Note.fromBuffer(value));
+  static final _$updateNote = $grpc.ClientMethod<$4.UpdateNoteRequest, $4.Note>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/UpdateNote',
-      (UpdateNoteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => Note.fromBuffer(value));
+      ($4.UpdateNoteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.Note.fromBuffer(value));
   static final _$listNoteOccurrences = $grpc.ClientMethod<
-          ListNoteOccurrencesRequest, ListNoteOccurrencesResponse>(
+          $4.ListNoteOccurrencesRequest, $4.ListNoteOccurrencesResponse>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/ListNoteOccurrences',
-      (ListNoteOccurrencesRequest value) => value.writeToBuffer(),
+      ($4.ListNoteOccurrencesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListNoteOccurrencesResponse.fromBuffer(value));
+          $4.ListNoteOccurrencesResponse.fromBuffer(value));
   static final _$getVulnzOccurrencesSummary = $grpc.ClientMethod<
-          GetVulnzOccurrencesSummaryRequest,
-          GetVulnzOccurrencesSummaryResponse>(
+          $4.GetVulnzOccurrencesSummaryRequest,
+          $4.GetVulnzOccurrencesSummaryResponse>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/GetVulnzOccurrencesSummary',
-      (GetVulnzOccurrencesSummaryRequest value) => value.writeToBuffer(),
+      ($4.GetVulnzOccurrencesSummaryRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          GetVulnzOccurrencesSummaryResponse.fromBuffer(value));
-  static final _$setIamPolicy = $grpc.ClientMethod<$2.SetIamPolicyRequest,
-          $0.Policy>(
+          $4.GetVulnzOccurrencesSummaryResponse.fromBuffer(value));
+  static final _$setIamPolicy = $grpc.ClientMethod<$0.SetIamPolicyRequest,
+          $1.Policy>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/SetIamPolicy',
-      ($2.SetIamPolicyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Policy.fromBuffer(value));
-  static final _$getIamPolicy = $grpc.ClientMethod<$2.GetIamPolicyRequest,
-          $0.Policy>(
+      ($0.SetIamPolicyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
+  static final _$getIamPolicy = $grpc.ClientMethod<$0.GetIamPolicyRequest,
+          $1.Policy>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/GetIamPolicy',
-      ($2.GetIamPolicyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Policy.fromBuffer(value));
+      ($0.GetIamPolicyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
   static final _$testIamPermissions = $grpc.ClientMethod<
-          $2.TestIamPermissionsRequest, $2.TestIamPermissionsResponse>(
+          $0.TestIamPermissionsRequest, $0.TestIamPermissionsResponse>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/TestIamPermissions',
-      ($2.TestIamPermissionsRequest value) => value.writeToBuffer(),
+      ($0.TestIamPermissionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $2.TestIamPermissionsResponse.fromBuffer(value));
-  static final _$createOperation = $grpc.ClientMethod<CreateOperationRequest,
-          $3.Operation>(
+          $0.TestIamPermissionsResponse.fromBuffer(value));
+  static final _$createOperation = $grpc.ClientMethod<$4.CreateOperationRequest,
+          $2.Operation>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/CreateOperation',
-      (CreateOperationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $3.Operation.fromBuffer(value));
-  static final _$updateOperation = $grpc.ClientMethod<UpdateOperationRequest,
-          $3.Operation>(
+      ($4.CreateOperationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$updateOperation = $grpc.ClientMethod<$4.UpdateOperationRequest,
+          $2.Operation>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/UpdateOperation',
-      (UpdateOperationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $3.Operation.fromBuffer(value));
-  static final _$getScanConfig = $grpc.ClientMethod<GetScanConfigRequest,
-          ScanConfig>(
+      ($4.UpdateOperationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Operation.fromBuffer(value));
+  static final _$getScanConfig = $grpc.ClientMethod<$4.GetScanConfigRequest,
+          $4.ScanConfig>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/GetScanConfig',
-      (GetScanConfigRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => ScanConfig.fromBuffer(value));
-  static final _$listScanConfigs = $grpc.ClientMethod<ListScanConfigsRequest,
-          ListScanConfigsResponse>(
+      ($4.GetScanConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.ScanConfig.fromBuffer(value));
+  static final _$listScanConfigs = $grpc.ClientMethod<$4.ListScanConfigsRequest,
+          $4.ListScanConfigsResponse>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/ListScanConfigs',
-      (ListScanConfigsRequest value) => value.writeToBuffer(),
+      ($4.ListScanConfigsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListScanConfigsResponse.fromBuffer(value));
-  static final _$updateScanConfig = $grpc.ClientMethod<UpdateScanConfigRequest,
-          ScanConfig>(
+          $4.ListScanConfigsResponse.fromBuffer(value));
+  static final _$updateScanConfig = $grpc.ClientMethod<
+          $4.UpdateScanConfigRequest, $4.ScanConfig>(
       '/google.devtools.containeranalysis.v1alpha1.ContainerAnalysis/UpdateScanConfig',
-      (UpdateScanConfigRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => ScanConfig.fromBuffer(value));
+      ($4.UpdateScanConfigRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $4.ScanConfig.fromBuffer(value));
 
   ContainerAnalysisClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<Occurrence> getOccurrence(GetOccurrenceRequest request,
+  $grpc.ResponseFuture<$4.Occurrence> getOccurrence(
+      $4.GetOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getOccurrence, $async.Stream.fromIterable([request]),
@@ -138,8 +140,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListOccurrencesResponse> listOccurrences(
-      ListOccurrencesRequest request,
+  $grpc.ResponseFuture<$4.ListOccurrencesResponse> listOccurrences(
+      $4.ListOccurrencesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listOccurrences, $async.Stream.fromIterable([request]),
@@ -147,8 +149,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> deleteOccurrence(
-      DeleteOccurrenceRequest request,
+  $grpc.ResponseFuture<$3.Empty> deleteOccurrence(
+      $4.DeleteOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteOccurrence, $async.Stream.fromIterable([request]),
@@ -156,8 +158,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Occurrence> createOccurrence(
-      CreateOccurrenceRequest request,
+  $grpc.ResponseFuture<$4.Occurrence> createOccurrence(
+      $4.CreateOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createOccurrence, $async.Stream.fromIterable([request]),
@@ -165,8 +167,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Occurrence> updateOccurrence(
-      UpdateOccurrenceRequest request,
+  $grpc.ResponseFuture<$4.Occurrence> updateOccurrence(
+      $4.UpdateOccurrenceRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateOccurrence, $async.Stream.fromIterable([request]),
@@ -174,7 +176,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> getOccurrenceNote(GetOccurrenceNoteRequest request,
+  $grpc.ResponseFuture<$4.Note> getOccurrenceNote(
+      $4.GetOccurrenceNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getOccurrenceNote, $async.Stream.fromIterable([request]),
@@ -182,21 +185,22 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> getNote(GetNoteRequest request,
+  $grpc.ResponseFuture<$4.Note> getNote($4.GetNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$getNote, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListNotesResponse> listNotes(ListNotesRequest request,
+  $grpc.ResponseFuture<$4.ListNotesResponse> listNotes(
+      $4.ListNotesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$listNotes, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Empty> deleteNote(DeleteNoteRequest request,
+  $grpc.ResponseFuture<$3.Empty> deleteNote($4.DeleteNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteNote, $async.Stream.fromIterable([request]),
@@ -204,7 +208,7 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> createNote(CreateNoteRequest request,
+  $grpc.ResponseFuture<$4.Note> createNote($4.CreateNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createNote, $async.Stream.fromIterable([request]),
@@ -212,7 +216,7 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<Note> updateNote(UpdateNoteRequest request,
+  $grpc.ResponseFuture<$4.Note> updateNote($4.UpdateNoteRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateNote, $async.Stream.fromIterable([request]),
@@ -220,8 +224,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListNoteOccurrencesResponse> listNoteOccurrences(
-      ListNoteOccurrencesRequest request,
+  $grpc.ResponseFuture<$4.ListNoteOccurrencesResponse> listNoteOccurrences(
+      $4.ListNoteOccurrencesRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listNoteOccurrences, $async.Stream.fromIterable([request]),
@@ -229,8 +233,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<GetVulnzOccurrencesSummaryResponse>
-      getVulnzOccurrencesSummary(GetVulnzOccurrencesSummaryRequest request,
+  $grpc.ResponseFuture<$4.GetVulnzOccurrencesSummaryResponse>
+      getVulnzOccurrencesSummary($4.GetVulnzOccurrencesSummaryRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getVulnzOccurrencesSummary, $async.Stream.fromIterable([request]),
@@ -238,7 +242,7 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Policy> setIamPolicy($2.SetIamPolicyRequest request,
+  $grpc.ResponseFuture<$1.Policy> setIamPolicy($0.SetIamPolicyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$setIamPolicy, $async.Stream.fromIterable([request]),
@@ -246,7 +250,7 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Policy> getIamPolicy($2.GetIamPolicyRequest request,
+  $grpc.ResponseFuture<$1.Policy> getIamPolicy($0.GetIamPolicyRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getIamPolicy, $async.Stream.fromIterable([request]),
@@ -254,8 +258,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$2.TestIamPermissionsResponse> testIamPermissions(
-      $2.TestIamPermissionsRequest request,
+  $grpc.ResponseFuture<$0.TestIamPermissionsResponse> testIamPermissions(
+      $0.TestIamPermissionsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$testIamPermissions, $async.Stream.fromIterable([request]),
@@ -263,8 +267,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$3.Operation> createOperation(
-      CreateOperationRequest request,
+  $grpc.ResponseFuture<$2.Operation> createOperation(
+      $4.CreateOperationRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createOperation, $async.Stream.fromIterable([request]),
@@ -272,8 +276,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$3.Operation> updateOperation(
-      UpdateOperationRequest request,
+  $grpc.ResponseFuture<$2.Operation> updateOperation(
+      $4.UpdateOperationRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateOperation, $async.Stream.fromIterable([request]),
@@ -281,7 +285,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ScanConfig> getScanConfig(GetScanConfigRequest request,
+  $grpc.ResponseFuture<$4.ScanConfig> getScanConfig(
+      $4.GetScanConfigRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getScanConfig, $async.Stream.fromIterable([request]),
@@ -289,8 +294,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ListScanConfigsResponse> listScanConfigs(
-      ListScanConfigsRequest request,
+  $grpc.ResponseFuture<$4.ListScanConfigsResponse> listScanConfigs(
+      $4.ListScanConfigsRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listScanConfigs, $async.Stream.fromIterable([request]),
@@ -298,8 +303,8 @@ class ContainerAnalysisClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<ScanConfig> updateScanConfig(
-      UpdateScanConfigRequest request,
+  $grpc.ResponseFuture<$4.ScanConfig> updateScanConfig(
+      $4.UpdateScanConfigRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateScanConfig, $async.Stream.fromIterable([request]),
@@ -313,319 +318,328 @@ abstract class ContainerAnalysisServiceBase extends $grpc.Service {
       'google.devtools.containeranalysis.v1alpha1.ContainerAnalysis';
 
   ContainerAnalysisServiceBase() {
-    $addMethod($grpc.ServiceMethod<GetOccurrenceRequest, Occurrence>(
+    $addMethod($grpc.ServiceMethod<$4.GetOccurrenceRequest, $4.Occurrence>(
         'GetOccurrence',
         getOccurrence_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetOccurrenceRequest.fromBuffer(value),
-        (Occurrence value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<ListOccurrencesRequest, ListOccurrencesResponse>(
-            'ListOccurrences',
-            listOccurrences_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                ListOccurrencesRequest.fromBuffer(value),
-            (ListOccurrencesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteOccurrenceRequest, $1.Empty>(
+        ($core.List<$core.int> value) =>
+            $4.GetOccurrenceRequest.fromBuffer(value),
+        ($4.Occurrence value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListOccurrencesRequest,
+            $4.ListOccurrencesResponse>(
+        'ListOccurrences',
+        listOccurrences_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListOccurrencesRequest.fromBuffer(value),
+        ($4.ListOccurrencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.DeleteOccurrenceRequest, $3.Empty>(
         'DeleteOccurrence',
         deleteOccurrence_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            DeleteOccurrenceRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateOccurrenceRequest, Occurrence>(
+            $4.DeleteOccurrenceRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.CreateOccurrenceRequest, $4.Occurrence>(
         'CreateOccurrence',
         createOccurrence_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateOccurrenceRequest.fromBuffer(value),
-        (Occurrence value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateOccurrenceRequest, Occurrence>(
+            $4.CreateOccurrenceRequest.fromBuffer(value),
+        ($4.Occurrence value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateOccurrenceRequest, $4.Occurrence>(
         'UpdateOccurrence',
         updateOccurrence_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateOccurrenceRequest.fromBuffer(value),
-        (Occurrence value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetOccurrenceNoteRequest, Note>(
+            $4.UpdateOccurrenceRequest.fromBuffer(value),
+        ($4.Occurrence value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetOccurrenceNoteRequest, $4.Note>(
         'GetOccurrenceNote',
         getOccurrenceNote_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetOccurrenceNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetNoteRequest, Note>(
+            $4.GetOccurrenceNoteRequest.fromBuffer(value),
+        ($4.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetNoteRequest, $4.Note>(
         'GetNote',
         getNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListNotesRequest, ListNotesResponse>(
+        ($core.List<$core.int> value) => $4.GetNoteRequest.fromBuffer(value),
+        ($4.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListNotesRequest, $4.ListNotesResponse>(
         'ListNotes',
         listNotes_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => ListNotesRequest.fromBuffer(value),
-        (ListNotesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<DeleteNoteRequest, $1.Empty>(
+        ($core.List<$core.int> value) => $4.ListNotesRequest.fromBuffer(value),
+        ($4.ListNotesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.DeleteNoteRequest, $3.Empty>(
         'DeleteNote',
         deleteNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => DeleteNoteRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateNoteRequest, Note>(
+        ($core.List<$core.int> value) => $4.DeleteNoteRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.CreateNoteRequest, $4.Note>(
         'CreateNote',
         createNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => CreateNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateNoteRequest, Note>(
+        ($core.List<$core.int> value) => $4.CreateNoteRequest.fromBuffer(value),
+        ($4.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateNoteRequest, $4.Note>(
         'UpdateNote',
         updateNote_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => UpdateNoteRequest.fromBuffer(value),
-        (Note value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<ListNoteOccurrencesRequest,
-            ListNoteOccurrencesResponse>(
+        ($core.List<$core.int> value) => $4.UpdateNoteRequest.fromBuffer(value),
+        ($4.Note value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListNoteOccurrencesRequest,
+            $4.ListNoteOccurrencesResponse>(
         'ListNoteOccurrences',
         listNoteOccurrences_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListNoteOccurrencesRequest.fromBuffer(value),
-        (ListNoteOccurrencesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetVulnzOccurrencesSummaryRequest,
-            GetVulnzOccurrencesSummaryResponse>(
+            $4.ListNoteOccurrencesRequest.fromBuffer(value),
+        ($4.ListNoteOccurrencesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetVulnzOccurrencesSummaryRequest,
+            $4.GetVulnzOccurrencesSummaryResponse>(
         'GetVulnzOccurrencesSummary',
         getVulnzOccurrencesSummary_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetVulnzOccurrencesSummaryRequest.fromBuffer(value),
-        (GetVulnzOccurrencesSummaryResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.SetIamPolicyRequest, $0.Policy>(
+            $4.GetVulnzOccurrencesSummaryRequest.fromBuffer(value),
+        ($4.GetVulnzOccurrencesSummaryResponse value) =>
+            value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SetIamPolicyRequest, $1.Policy>(
         'SetIamPolicy',
         setIamPolicy_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.SetIamPolicyRequest.fromBuffer(value),
-        ($0.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.GetIamPolicyRequest, $0.Policy>(
+            $0.SetIamPolicyRequest.fromBuffer(value),
+        ($1.Policy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetIamPolicyRequest, $1.Policy>(
         'GetIamPolicy',
         getIamPolicy_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.GetIamPolicyRequest.fromBuffer(value),
-        ($0.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.TestIamPermissionsRequest,
-            $2.TestIamPermissionsResponse>(
+            $0.GetIamPolicyRequest.fromBuffer(value),
+        ($1.Policy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.TestIamPermissionsRequest,
+            $0.TestIamPermissionsResponse>(
         'TestIamPermissions',
         testIamPermissions_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $2.TestIamPermissionsRequest.fromBuffer(value),
-        ($2.TestIamPermissionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<CreateOperationRequest, $3.Operation>(
+            $0.TestIamPermissionsRequest.fromBuffer(value),
+        ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.CreateOperationRequest, $2.Operation>(
         'CreateOperation',
         createOperation_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            CreateOperationRequest.fromBuffer(value),
-        ($3.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateOperationRequest, $3.Operation>(
+            $4.CreateOperationRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateOperationRequest, $2.Operation>(
         'UpdateOperation',
         updateOperation_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateOperationRequest.fromBuffer(value),
-        ($3.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetScanConfigRequest, ScanConfig>(
+            $4.UpdateOperationRequest.fromBuffer(value),
+        ($2.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.GetScanConfigRequest, $4.ScanConfig>(
         'GetScanConfig',
         getScanConfig_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => GetScanConfigRequest.fromBuffer(value),
-        (ScanConfig value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<ListScanConfigsRequest, ListScanConfigsResponse>(
-            'ListScanConfigs',
-            listScanConfigs_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                ListScanConfigsRequest.fromBuffer(value),
-            (ListScanConfigsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<UpdateScanConfigRequest, ScanConfig>(
+        ($core.List<$core.int> value) =>
+            $4.GetScanConfigRequest.fromBuffer(value),
+        ($4.ScanConfig value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.ListScanConfigsRequest,
+            $4.ListScanConfigsResponse>(
+        'ListScanConfigs',
+        listScanConfigs_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $4.ListScanConfigsRequest.fromBuffer(value),
+        ($4.ListScanConfigsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$4.UpdateScanConfigRequest, $4.ScanConfig>(
         'UpdateScanConfig',
         updateScanConfig_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            UpdateScanConfigRequest.fromBuffer(value),
-        (ScanConfig value) => value.writeToBuffer()));
+            $4.UpdateScanConfigRequest.fromBuffer(value),
+        ($4.ScanConfig value) => value.writeToBuffer()));
   }
 
-  $async.Future<Occurrence> getOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Occurrence> getOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetOccurrenceRequest> request) async {
     return getOccurrence(call, await request);
   }
 
-  $async.Future<ListOccurrencesResponse> listOccurrences_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ListOccurrencesResponse> listOccurrences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListOccurrencesRequest> request) async {
     return listOccurrences(call, await request);
   }
 
-  $async.Future<$1.Empty> deleteOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$3.Empty> deleteOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$4.DeleteOccurrenceRequest> request) async {
     return deleteOccurrence(call, await request);
   }
 
-  $async.Future<Occurrence> createOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Occurrence> createOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$4.CreateOccurrenceRequest> request) async {
     return createOccurrence(call, await request);
   }
 
-  $async.Future<Occurrence> updateOccurrence_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Occurrence> updateOccurrence_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateOccurrenceRequest> request) async {
     return updateOccurrence(call, await request);
   }
 
-  $async.Future<Note> getOccurrenceNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Note> getOccurrenceNote_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetOccurrenceNoteRequest> request) async {
     return getOccurrenceNote(call, await request);
   }
 
-  $async.Future<Note> getNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Note> getNote_Pre(
+      $grpc.ServiceCall call, $async.Future<$4.GetNoteRequest> request) async {
     return getNote(call, await request);
   }
 
-  $async.Future<ListNotesResponse> listNotes_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ListNotesResponse> listNotes_Pre($grpc.ServiceCall call,
+      $async.Future<$4.ListNotesRequest> request) async {
     return listNotes(call, await request);
   }
 
-  $async.Future<$1.Empty> deleteNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$3.Empty> deleteNote_Pre($grpc.ServiceCall call,
+      $async.Future<$4.DeleteNoteRequest> request) async {
     return deleteNote(call, await request);
   }
 
-  $async.Future<Note> createNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Note> createNote_Pre($grpc.ServiceCall call,
+      $async.Future<$4.CreateNoteRequest> request) async {
     return createNote(call, await request);
   }
 
-  $async.Future<Note> updateNote_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.Note> updateNote_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateNoteRequest> request) async {
     return updateNote(call, await request);
   }
 
-  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ListNoteOccurrencesResponse> listNoteOccurrences_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListNoteOccurrencesRequest> request) async {
     return listNoteOccurrences(call, await request);
   }
 
-  $async.Future<GetVulnzOccurrencesSummaryResponse>
-      getVulnzOccurrencesSummary_Pre(
-          $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.GetVulnzOccurrencesSummaryResponse>
+      getVulnzOccurrencesSummary_Pre($grpc.ServiceCall call,
+          $async.Future<$4.GetVulnzOccurrencesSummaryRequest> request) async {
     return getVulnzOccurrencesSummary(call, await request);
   }
 
-  $async.Future<$0.Policy> setIamPolicy_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Policy> setIamPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$0.SetIamPolicyRequest> request) async {
     return setIamPolicy(call, await request);
   }
 
-  $async.Future<$0.Policy> getIamPolicy_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.Policy> getIamPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$0.GetIamPolicyRequest> request) async {
     return getIamPolicy(call, await request);
   }
 
-  $async.Future<$2.TestIamPermissionsResponse> testIamPermissions_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.TestIamPermissionsRequest> request) async {
     return testIamPermissions(call, await request);
   }
 
-  $async.Future<$3.Operation> createOperation_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Operation> createOperation_Pre($grpc.ServiceCall call,
+      $async.Future<$4.CreateOperationRequest> request) async {
     return createOperation(call, await request);
   }
 
-  $async.Future<$3.Operation> updateOperation_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.Operation> updateOperation_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateOperationRequest> request) async {
     return updateOperation(call, await request);
   }
 
-  $async.Future<ScanConfig> getScanConfig_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ScanConfig> getScanConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$4.GetScanConfigRequest> request) async {
     return getScanConfig(call, await request);
   }
 
-  $async.Future<ListScanConfigsResponse> listScanConfigs_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ListScanConfigsResponse> listScanConfigs_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$4.ListScanConfigsRequest> request) async {
     return listScanConfigs(call, await request);
   }
 
-  $async.Future<ScanConfig> updateScanConfig_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$4.ScanConfig> updateScanConfig_Pre($grpc.ServiceCall call,
+      $async.Future<$4.UpdateScanConfigRequest> request) async {
     return updateScanConfig(call, await request);
   }
 
-  $async.Future<Occurrence> getOccurrence(
-      $grpc.ServiceCall call, GetOccurrenceRequest request);
-  $async.Future<ListOccurrencesResponse> listOccurrences(
-      $grpc.ServiceCall call, ListOccurrencesRequest request);
-  $async.Future<$1.Empty> deleteOccurrence(
-      $grpc.ServiceCall call, DeleteOccurrenceRequest request);
-  $async.Future<Occurrence> createOccurrence(
-      $grpc.ServiceCall call, CreateOccurrenceRequest request);
-  $async.Future<Occurrence> updateOccurrence(
-      $grpc.ServiceCall call, UpdateOccurrenceRequest request);
-  $async.Future<Note> getOccurrenceNote(
-      $grpc.ServiceCall call, GetOccurrenceNoteRequest request);
-  $async.Future<Note> getNote($grpc.ServiceCall call, GetNoteRequest request);
-  $async.Future<ListNotesResponse> listNotes(
-      $grpc.ServiceCall call, ListNotesRequest request);
-  $async.Future<$1.Empty> deleteNote(
-      $grpc.ServiceCall call, DeleteNoteRequest request);
-  $async.Future<Note> createNote(
-      $grpc.ServiceCall call, CreateNoteRequest request);
-  $async.Future<Note> updateNote(
-      $grpc.ServiceCall call, UpdateNoteRequest request);
-  $async.Future<ListNoteOccurrencesResponse> listNoteOccurrences(
-      $grpc.ServiceCall call, ListNoteOccurrencesRequest request);
-  $async.Future<GetVulnzOccurrencesSummaryResponse> getVulnzOccurrencesSummary(
-      $grpc.ServiceCall call, GetVulnzOccurrencesSummaryRequest request);
-  $async.Future<$0.Policy> setIamPolicy(
-      $grpc.ServiceCall call, $2.SetIamPolicyRequest request);
-  $async.Future<$0.Policy> getIamPolicy(
-      $grpc.ServiceCall call, $2.GetIamPolicyRequest request);
-  $async.Future<$2.TestIamPermissionsResponse> testIamPermissions(
-      $grpc.ServiceCall call, $2.TestIamPermissionsRequest request);
-  $async.Future<$3.Operation> createOperation(
-      $grpc.ServiceCall call, CreateOperationRequest request);
-  $async.Future<$3.Operation> updateOperation(
-      $grpc.ServiceCall call, UpdateOperationRequest request);
-  $async.Future<ScanConfig> getScanConfig(
-      $grpc.ServiceCall call, GetScanConfigRequest request);
-  $async.Future<ListScanConfigsResponse> listScanConfigs(
-      $grpc.ServiceCall call, ListScanConfigsRequest request);
-  $async.Future<ScanConfig> updateScanConfig(
-      $grpc.ServiceCall call, UpdateScanConfigRequest request);
+  $async.Future<$4.Occurrence> getOccurrence(
+      $grpc.ServiceCall call, $4.GetOccurrenceRequest request);
+  $async.Future<$4.ListOccurrencesResponse> listOccurrences(
+      $grpc.ServiceCall call, $4.ListOccurrencesRequest request);
+  $async.Future<$3.Empty> deleteOccurrence(
+      $grpc.ServiceCall call, $4.DeleteOccurrenceRequest request);
+  $async.Future<$4.Occurrence> createOccurrence(
+      $grpc.ServiceCall call, $4.CreateOccurrenceRequest request);
+  $async.Future<$4.Occurrence> updateOccurrence(
+      $grpc.ServiceCall call, $4.UpdateOccurrenceRequest request);
+  $async.Future<$4.Note> getOccurrenceNote(
+      $grpc.ServiceCall call, $4.GetOccurrenceNoteRequest request);
+  $async.Future<$4.Note> getNote(
+      $grpc.ServiceCall call, $4.GetNoteRequest request);
+  $async.Future<$4.ListNotesResponse> listNotes(
+      $grpc.ServiceCall call, $4.ListNotesRequest request);
+  $async.Future<$3.Empty> deleteNote(
+      $grpc.ServiceCall call, $4.DeleteNoteRequest request);
+  $async.Future<$4.Note> createNote(
+      $grpc.ServiceCall call, $4.CreateNoteRequest request);
+  $async.Future<$4.Note> updateNote(
+      $grpc.ServiceCall call, $4.UpdateNoteRequest request);
+  $async.Future<$4.ListNoteOccurrencesResponse> listNoteOccurrences(
+      $grpc.ServiceCall call, $4.ListNoteOccurrencesRequest request);
+  $async.Future<$4.GetVulnzOccurrencesSummaryResponse>
+      getVulnzOccurrencesSummary(
+          $grpc.ServiceCall call, $4.GetVulnzOccurrencesSummaryRequest request);
+  $async.Future<$1.Policy> setIamPolicy(
+      $grpc.ServiceCall call, $0.SetIamPolicyRequest request);
+  $async.Future<$1.Policy> getIamPolicy(
+      $grpc.ServiceCall call, $0.GetIamPolicyRequest request);
+  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
+      $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
+  $async.Future<$2.Operation> createOperation(
+      $grpc.ServiceCall call, $4.CreateOperationRequest request);
+  $async.Future<$2.Operation> updateOperation(
+      $grpc.ServiceCall call, $4.UpdateOperationRequest request);
+  $async.Future<$4.ScanConfig> getScanConfig(
+      $grpc.ServiceCall call, $4.GetScanConfigRequest request);
+  $async.Future<$4.ListScanConfigsResponse> listScanConfigs(
+      $grpc.ServiceCall call, $4.ListScanConfigsRequest request);
+  $async.Future<$4.ScanConfig> updateScanConfig(
+      $grpc.ServiceCall call, $4.UpdateScanConfigRequest request);
 }

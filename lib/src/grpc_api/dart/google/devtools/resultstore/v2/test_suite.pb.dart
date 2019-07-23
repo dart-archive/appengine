@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/test_suite.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -29,18 +30,20 @@ class TestSuite extends $pb.GeneratedMessage {
     ..pc<$1.File>(8, 'files', $pb.PbFieldType.PM, $1.File.create)
     ..hasRequiredFields = false;
 
-  TestSuite() : super();
-  TestSuite.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestSuite.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestSuite._() : super();
+  factory TestSuite() => create();
+  factory TestSuite.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestSuite.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestSuite clone() => TestSuite()..mergeFromMessage(this);
   TestSuite copyWith(void Function(TestSuite) updates) =>
       super.copyWith((message) => updates(message as TestSuite));
   $pb.BuilderInfo get info_ => _i;
-  static TestSuite create() => TestSuite();
+  @$core.pragma('dart2js:noInline')
+  static TestSuite create() => TestSuite._();
   TestSuite createEmptyInstance() => create();
   static $pb.PbList<TestSuite> createRepeated() => $pb.PbList<TestSuite>();
   static TestSuite getDefault() => _defaultInstance ??= create()..freeze();
@@ -83,25 +86,27 @@ class Test extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Test',
       package: const $pb.PackageName('google.devtools.resultstore.v2'))
+    ..oo(0, [1, 2])
     ..a<TestCase>(
         1, 'testCase', $pb.PbFieldType.OM, TestCase.getDefault, TestCase.create)
     ..a<TestSuite>(2, 'testSuite', $pb.PbFieldType.OM, TestSuite.getDefault,
         TestSuite.create)
-    ..oo(0, [1, 2])
     ..hasRequiredFields = false;
 
-  Test() : super();
-  Test.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Test.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Test._() : super();
+  factory Test() => create();
+  factory Test.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Test.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Test clone() => Test()..mergeFromMessage(this);
   Test copyWith(void Function(Test) updates) =>
       super.copyWith((message) => updates(message as Test));
   $pb.BuilderInfo get info_ => _i;
-  static Test create() => Test();
+  @$core.pragma('dart2js:noInline')
+  static Test create() => Test._();
   Test createEmptyInstance() => create();
   static $pb.PbList<Test> createRepeated() => $pb.PbList<Test>();
   static Test getDefault() => _defaultInstance ??= create()..freeze();
@@ -147,18 +152,20 @@ class TestCase extends $pb.GeneratedMessage {
     ..pc<$1.File>(9, 'files', $pb.PbFieldType.PM, $1.File.create)
     ..hasRequiredFields = false;
 
-  TestCase() : super();
-  TestCase.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestCase.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestCase._() : super();
+  factory TestCase() => create();
+  factory TestCase.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestCase.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestCase clone() => TestCase()..mergeFromMessage(this);
   TestCase copyWith(void Function(TestCase) updates) =>
       super.copyWith((message) => updates(message as TestCase));
   $pb.BuilderInfo get info_ => _i;
-  static TestCase create() => TestCase();
+  @$core.pragma('dart2js:noInline')
+  static TestCase create() => TestCase._();
   TestCase createEmptyInstance() => create();
   static $pb.PbList<TestCase> createRepeated() => $pb.PbList<TestCase>();
   static TestCase getDefault() => _defaultInstance ??= create()..freeze();
@@ -215,18 +222,20 @@ class TestFailure extends $pb.GeneratedMessage {
     ..pPS(5, 'actual')
     ..hasRequiredFields = false;
 
-  TestFailure() : super();
-  TestFailure.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestFailure.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestFailure._() : super();
+  factory TestFailure() => create();
+  factory TestFailure.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestFailure.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestFailure clone() => TestFailure()..mergeFromMessage(this);
   TestFailure copyWith(void Function(TestFailure) updates) =>
       super.copyWith((message) => updates(message as TestFailure));
   $pb.BuilderInfo get info_ => _i;
-  static TestFailure create() => TestFailure();
+  @$core.pragma('dart2js:noInline')
+  static TestFailure create() => TestFailure._();
   TestFailure createEmptyInstance() => create();
   static $pb.PbList<TestFailure> createRepeated() => $pb.PbList<TestFailure>();
   static TestFailure getDefault() => _defaultInstance ??= create()..freeze();
@@ -269,18 +278,20 @@ class TestError extends $pb.GeneratedMessage {
     ..aOS(3, 'stackTrace')
     ..hasRequiredFields = false;
 
-  TestError() : super();
-  TestError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TestError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TestError._() : super();
+  factory TestError() => create();
+  factory TestError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TestError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TestError clone() => TestError()..mergeFromMessage(this);
   TestError copyWith(void Function(TestError) updates) =>
       super.copyWith((message) => updates(message as TestError));
   $pb.BuilderInfo get info_ => _i;
-  static TestError create() => TestError();
+  @$core.pragma('dart2js:noInline')
+  static TestError create() => TestError._();
   TestError createEmptyInstance() => create();
   static $pb.PbList<TestError> createRepeated() => $pb.PbList<TestError>();
   static TestError getDefault() => _defaultInstance ??= create()..freeze();

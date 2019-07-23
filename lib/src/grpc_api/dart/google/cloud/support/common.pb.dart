@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/support/common.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -42,18 +43,20 @@ class SupportAccount extends $pb.GeneratedMessage {
         SupportAccount_PricingModel.values)
     ..hasRequiredFields = false;
 
-  SupportAccount() : super();
-  SupportAccount.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SupportAccount.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SupportAccount._() : super();
+  factory SupportAccount() => create();
+  factory SupportAccount.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SupportAccount.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SupportAccount clone() => SupportAccount()..mergeFromMessage(this);
   SupportAccount copyWith(void Function(SupportAccount) updates) =>
       super.copyWith((message) => updates(message as SupportAccount));
   $pb.BuilderInfo get info_ => _i;
-  static SupportAccount create() => SupportAccount();
+  @$core.pragma('dart2js:noInline')
+  static SupportAccount create() => SupportAccount._();
   SupportAccount createEmptyInstance() => create();
   static $pb.PbList<SupportAccount> createRepeated() =>
       $pb.PbList<SupportAccount>();
@@ -162,18 +165,20 @@ class Case extends $pb.GeneratedMessage {
     ..aOS(16, 'category')
     ..hasRequiredFields = false;
 
-  Case() : super();
-  Case.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Case.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Case._() : super();
+  factory Case() => create();
+  factory Case.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Case.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Case clone() => Case()..mergeFromMessage(this);
   Case copyWith(void Function(Case) updates) =>
       super.copyWith((message) => updates(message as Case));
   $pb.BuilderInfo get info_ => _i;
-  static Case create() => Case();
+  @$core.pragma('dart2js:noInline')
+  static Case create() => Case._();
   Case createEmptyInstance() => create();
   static $pb.PbList<Case> createRepeated() => $pb.PbList<Case>();
   static Case getDefault() => _defaultInstance ??= create()..freeze();
@@ -307,18 +312,20 @@ class CustomerIssue extends $pb.GeneratedMessage {
         $0.Timestamp.getDefault, $0.Timestamp.create)
     ..hasRequiredFields = false;
 
-  CustomerIssue() : super();
-  CustomerIssue.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerIssue.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerIssue._() : super();
+  factory CustomerIssue() => create();
+  factory CustomerIssue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerIssue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerIssue clone() => CustomerIssue()..mergeFromMessage(this);
   CustomerIssue copyWith(void Function(CustomerIssue) updates) =>
       super.copyWith((message) => updates(message as CustomerIssue));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerIssue create() => CustomerIssue();
+  @$core.pragma('dart2js:noInline')
+  static CustomerIssue create() => CustomerIssue._();
   CustomerIssue createEmptyInstance() => create();
   static $pb.PbList<CustomerIssue> createRepeated() =>
       $pb.PbList<CustomerIssue>();
@@ -379,18 +386,20 @@ class SupportRole extends $pb.GeneratedMessage {
         SupportRole_Role.values)
     ..hasRequiredFields = false;
 
-  SupportRole() : super();
-  SupportRole.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SupportRole.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SupportRole._() : super();
+  factory SupportRole() => create();
+  factory SupportRole.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SupportRole.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SupportRole clone() => SupportRole()..mergeFromMessage(this);
   SupportRole copyWith(void Function(SupportRole) updates) =>
       super.copyWith((message) => updates(message as SupportRole));
   $pb.BuilderInfo get info_ => _i;
-  static SupportRole create() => SupportRole();
+  @$core.pragma('dart2js:noInline')
+  static SupportRole create() => SupportRole._();
   SupportRole createEmptyInstance() => create();
   static $pb.PbList<SupportRole> createRepeated() => $pb.PbList<SupportRole>();
   static SupportRole getDefault() => _defaultInstance ??= create()..freeze();
@@ -423,18 +432,20 @@ class Comment extends $pb.GeneratedMessage {
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
 
-  Comment() : super();
-  Comment.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Comment.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Comment._() : super();
+  factory Comment() => create();
+  factory Comment.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Comment.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Comment clone() => Comment()..mergeFromMessage(this);
   Comment copyWith(void Function(Comment) updates) =>
       super.copyWith((message) => updates(message as Comment));
   $pb.BuilderInfo get info_ => _i;
-  static Comment create() => Comment();
+  @$core.pragma('dart2js:noInline')
+  static Comment create() => Comment._();
   Comment createEmptyInstance() => create();
   static $pb.PbList<Comment> createRepeated() => $pb.PbList<Comment>();
   static Comment getDefault() => _defaultInstance ??= create()..freeze();
@@ -483,20 +494,22 @@ class IssueTaxonomy_Component extends $pb.GeneratedMessage {
         4, 'subcomponents', $pb.PbFieldType.PM, IssueTaxonomy_Component.create)
     ..hasRequiredFields = false;
 
-  IssueTaxonomy_Component() : super();
-  IssueTaxonomy_Component.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IssueTaxonomy_Component.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IssueTaxonomy_Component._() : super();
+  factory IssueTaxonomy_Component() => create();
+  factory IssueTaxonomy_Component.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IssueTaxonomy_Component.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IssueTaxonomy_Component clone() =>
       IssueTaxonomy_Component()..mergeFromMessage(this);
   IssueTaxonomy_Component copyWith(
           void Function(IssueTaxonomy_Component) updates) =>
       super.copyWith((message) => updates(message as IssueTaxonomy_Component));
   $pb.BuilderInfo get info_ => _i;
-  static IssueTaxonomy_Component create() => IssueTaxonomy_Component();
+  @$core.pragma('dart2js:noInline')
+  static IssueTaxonomy_Component create() => IssueTaxonomy_Component._();
   IssueTaxonomy_Component createEmptyInstance() => create();
   static $pb.PbList<IssueTaxonomy_Component> createRepeated() =>
       $pb.PbList<IssueTaxonomy_Component>();
@@ -541,20 +554,22 @@ class IssueTaxonomy_Category extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.support.common'))
     ..hasRequiredFields = false;
 
-  IssueTaxonomy_Category() : super();
-  IssueTaxonomy_Category.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IssueTaxonomy_Category.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IssueTaxonomy_Category._() : super();
+  factory IssueTaxonomy_Category() => create();
+  factory IssueTaxonomy_Category.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IssueTaxonomy_Category.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IssueTaxonomy_Category clone() =>
       IssueTaxonomy_Category()..mergeFromMessage(this);
   IssueTaxonomy_Category copyWith(
           void Function(IssueTaxonomy_Category) updates) =>
       super.copyWith((message) => updates(message as IssueTaxonomy_Category));
   $pb.BuilderInfo get info_ => _i;
-  static IssueTaxonomy_Category create() => IssueTaxonomy_Category();
+  @$core.pragma('dart2js:noInline')
+  static IssueTaxonomy_Category create() => IssueTaxonomy_Category._();
   IssueTaxonomy_Category createEmptyInstance() => create();
   static $pb.PbList<IssueTaxonomy_Category> createRepeated() =>
       $pb.PbList<IssueTaxonomy_Category>();
@@ -589,18 +604,20 @@ class IssueTaxonomy extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.support.common'))
     ..hasRequiredFields = false;
 
-  IssueTaxonomy() : super();
-  IssueTaxonomy.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  IssueTaxonomy.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  IssueTaxonomy._() : super();
+  factory IssueTaxonomy() => create();
+  factory IssueTaxonomy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory IssueTaxonomy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   IssueTaxonomy clone() => IssueTaxonomy()..mergeFromMessage(this);
   IssueTaxonomy copyWith(void Function(IssueTaxonomy) updates) =>
       super.copyWith((message) => updates(message as IssueTaxonomy));
   $pb.BuilderInfo get info_ => _i;
-  static IssueTaxonomy create() => IssueTaxonomy();
+  @$core.pragma('dart2js:noInline')
+  static IssueTaxonomy create() => IssueTaxonomy._();
   IssueTaxonomy createEmptyInstance() => create();
   static $pb.PbList<IssueTaxonomy> createRepeated() =>
       $pb.PbList<IssueTaxonomy>();

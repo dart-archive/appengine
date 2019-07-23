@@ -1,53 +1,55 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/services/merchant_center_link_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'merchant_center_link_service.pb.dart';
-import '../resources/merchant_center_link.pb.dart' as $0;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'merchant_center_link_service.pb.dart' as $0;
+import '../resources/merchant_center_link.pb.dart' as $1;
 export 'merchant_center_link_service.pb.dart';
 
 class MerchantCenterLinkServiceClient extends $grpc.Client {
   static final _$listMerchantCenterLinks = $grpc.ClientMethod<
-          ListMerchantCenterLinksRequest, ListMerchantCenterLinksResponse>(
+          $0.ListMerchantCenterLinksRequest,
+          $0.ListMerchantCenterLinksResponse>(
       '/google.ads.googleads.v1.services.MerchantCenterLinkService/ListMerchantCenterLinks',
-      (ListMerchantCenterLinksRequest value) => value.writeToBuffer(),
+      ($0.ListMerchantCenterLinksRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          ListMerchantCenterLinksResponse.fromBuffer(value));
+          $0.ListMerchantCenterLinksResponse.fromBuffer(value));
   static final _$getMerchantCenterLink = $grpc.ClientMethod<
-          GetMerchantCenterLinkRequest, $0.MerchantCenterLink>(
+          $0.GetMerchantCenterLinkRequest, $1.MerchantCenterLink>(
       '/google.ads.googleads.v1.services.MerchantCenterLinkService/GetMerchantCenterLink',
-      (GetMerchantCenterLinkRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.MerchantCenterLink.fromBuffer(value));
+      ($0.GetMerchantCenterLinkRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.MerchantCenterLink.fromBuffer(value));
   static final _$mutateMerchantCenterLink = $grpc.ClientMethod<
-          MutateMerchantCenterLinkRequest, MutateMerchantCenterLinkResponse>(
+          $0.MutateMerchantCenterLinkRequest,
+          $0.MutateMerchantCenterLinkResponse>(
       '/google.ads.googleads.v1.services.MerchantCenterLinkService/MutateMerchantCenterLink',
-      (MutateMerchantCenterLinkRequest value) => value.writeToBuffer(),
+      ($0.MutateMerchantCenterLinkRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          MutateMerchantCenterLinkResponse.fromBuffer(value));
+          $0.MutateMerchantCenterLinkResponse.fromBuffer(value));
 
   MerchantCenterLinkServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<ListMerchantCenterLinksResponse> listMerchantCenterLinks(
-      ListMerchantCenterLinksRequest request,
-      {$grpc.CallOptions options}) {
+  $grpc.ResponseFuture<$0.ListMerchantCenterLinksResponse>
+      listMerchantCenterLinks($0.ListMerchantCenterLinksRequest request,
+          {$grpc.CallOptions options}) {
     final call = $createCall(
         _$listMerchantCenterLinks, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.MerchantCenterLink> getMerchantCenterLink(
-      GetMerchantCenterLinkRequest request,
+  $grpc.ResponseFuture<$1.MerchantCenterLink> getMerchantCenterLink(
+      $0.GetMerchantCenterLinkRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getMerchantCenterLink, $async.Stream.fromIterable([request]),
@@ -55,8 +57,8 @@ class MerchantCenterLinkServiceClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<MutateMerchantCenterLinkResponse>
-      mutateMerchantCenterLink(MutateMerchantCenterLinkRequest request,
+  $grpc.ResponseFuture<$0.MutateMerchantCenterLinkResponse>
+      mutateMerchantCenterLink($0.MutateMerchantCenterLinkRequest request,
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$mutateMerchantCenterLink, $async.Stream.fromIterable([request]),
@@ -70,54 +72,57 @@ abstract class MerchantCenterLinkServiceBase extends $grpc.Service {
       'google.ads.googleads.v1.services.MerchantCenterLinkService';
 
   MerchantCenterLinkServiceBase() {
-    $addMethod($grpc.ServiceMethod<ListMerchantCenterLinksRequest,
-            ListMerchantCenterLinksResponse>(
+    $addMethod($grpc.ServiceMethod<$0.ListMerchantCenterLinksRequest,
+            $0.ListMerchantCenterLinksResponse>(
         'ListMerchantCenterLinks',
         listMerchantCenterLinks_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            ListMerchantCenterLinksRequest.fromBuffer(value),
-        (ListMerchantCenterLinksResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<GetMerchantCenterLinkRequest,
-            $0.MerchantCenterLink>(
+            $0.ListMerchantCenterLinksRequest.fromBuffer(value),
+        ($0.ListMerchantCenterLinksResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetMerchantCenterLinkRequest,
+            $1.MerchantCenterLink>(
         'GetMerchantCenterLink',
         getMerchantCenterLink_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            GetMerchantCenterLinkRequest.fromBuffer(value),
-        ($0.MerchantCenterLink value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<MutateMerchantCenterLinkRequest,
-            MutateMerchantCenterLinkResponse>(
+            $0.GetMerchantCenterLinkRequest.fromBuffer(value),
+        ($1.MerchantCenterLink value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.MutateMerchantCenterLinkRequest,
+            $0.MutateMerchantCenterLinkResponse>(
         'MutateMerchantCenterLink',
         mutateMerchantCenterLink_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            MutateMerchantCenterLinkRequest.fromBuffer(value),
-        (MutateMerchantCenterLinkResponse value) => value.writeToBuffer()));
+            $0.MutateMerchantCenterLinkRequest.fromBuffer(value),
+        ($0.MutateMerchantCenterLinkResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<ListMerchantCenterLinksResponse> listMerchantCenterLinks_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.ListMerchantCenterLinksResponse> listMerchantCenterLinks_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.ListMerchantCenterLinksRequest> request) async {
     return listMerchantCenterLinks(call, await request);
   }
 
-  $async.Future<$0.MerchantCenterLink> getMerchantCenterLink_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$1.MerchantCenterLink> getMerchantCenterLink_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetMerchantCenterLinkRequest> request) async {
     return getMerchantCenterLink(call, await request);
   }
 
-  $async.Future<MutateMerchantCenterLinkResponse> mutateMerchantCenterLink_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.MutateMerchantCenterLinkResponse>
+      mutateMerchantCenterLink_Pre($grpc.ServiceCall call,
+          $async.Future<$0.MutateMerchantCenterLinkRequest> request) async {
     return mutateMerchantCenterLink(call, await request);
   }
 
-  $async.Future<ListMerchantCenterLinksResponse> listMerchantCenterLinks(
-      $grpc.ServiceCall call, ListMerchantCenterLinksRequest request);
-  $async.Future<$0.MerchantCenterLink> getMerchantCenterLink(
-      $grpc.ServiceCall call, GetMerchantCenterLinkRequest request);
-  $async.Future<MutateMerchantCenterLinkResponse> mutateMerchantCenterLink(
-      $grpc.ServiceCall call, MutateMerchantCenterLinkRequest request);
+  $async.Future<$0.ListMerchantCenterLinksResponse> listMerchantCenterLinks(
+      $grpc.ServiceCall call, $0.ListMerchantCenterLinksRequest request);
+  $async.Future<$1.MerchantCenterLink> getMerchantCenterLink(
+      $grpc.ServiceCall call, $0.GetMerchantCenterLinkRequest request);
+  $async.Future<$0.MutateMerchantCenterLinkResponse> mutateMerchantCenterLink(
+      $grpc.ServiceCall call, $0.MutateMerchantCenterLinkRequest request);
 }

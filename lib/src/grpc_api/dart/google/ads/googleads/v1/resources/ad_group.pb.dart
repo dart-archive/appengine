@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/ad_group.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -70,18 +71,20 @@ class AdGroup extends $pb.GeneratedMessage {
     ..e<$8.BiddingSourceEnum_BiddingSource>(32, 'effectiveTargetRoasSource', $pb.PbFieldType.OE, $8.BiddingSourceEnum_BiddingSource.UNSPECIFIED, $8.BiddingSourceEnum_BiddingSource.valueOf, $8.BiddingSourceEnum_BiddingSource.values)
     ..hasRequiredFields = false;
 
-  AdGroup() : super();
-  AdGroup.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  AdGroup.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  AdGroup._() : super();
+  factory AdGroup() => create();
+  factory AdGroup.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AdGroup.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   AdGroup clone() => AdGroup()..mergeFromMessage(this);
   AdGroup copyWith(void Function(AdGroup) updates) =>
       super.copyWith((message) => updates(message as AdGroup));
   $pb.BuilderInfo get info_ => _i;
-  static AdGroup create() => AdGroup();
+  @$core.pragma('dart2js:noInline')
+  static AdGroup create() => AdGroup._();
   AdGroup createEmptyInstance() => create();
   static $pb.PbList<AdGroup> createRepeated() => $pb.PbList<AdGroup>();
   static AdGroup getDefault() => _defaultInstance ??= create()..freeze();

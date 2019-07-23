@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/conversion_action.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -39,13 +40,15 @@ class ConversionAction_AttributionModelSettings extends $pb.GeneratedMessage {
         $7.DataDrivenModelStatusEnum_DataDrivenModelStatus.values)
     ..hasRequiredFields = false;
 
-  ConversionAction_AttributionModelSettings() : super();
-  ConversionAction_AttributionModelSettings.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionAction_AttributionModelSettings.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionAction_AttributionModelSettings._() : super();
+  factory ConversionAction_AttributionModelSettings() => create();
+  factory ConversionAction_AttributionModelSettings.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionAction_AttributionModelSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionAction_AttributionModelSettings clone() =>
       ConversionAction_AttributionModelSettings()..mergeFromMessage(this);
   ConversionAction_AttributionModelSettings copyWith(
@@ -53,8 +56,9 @@ class ConversionAction_AttributionModelSettings extends $pb.GeneratedMessage {
       super.copyWith((message) =>
           updates(message as ConversionAction_AttributionModelSettings));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ConversionAction_AttributionModelSettings create() =>
-      ConversionAction_AttributionModelSettings();
+      ConversionAction_AttributionModelSettings._();
   ConversionAction_AttributionModelSettings createEmptyInstance() => create();
   static $pb.PbList<ConversionAction_AttributionModelSettings>
       createRepeated() =>
@@ -94,13 +98,14 @@ class ConversionAction_ValueSettings extends $pb.GeneratedMessage {
         $0.BoolValue.getDefault, $0.BoolValue.create)
     ..hasRequiredFields = false;
 
-  ConversionAction_ValueSettings() : super();
-  ConversionAction_ValueSettings.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionAction_ValueSettings.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionAction_ValueSettings._() : super();
+  factory ConversionAction_ValueSettings() => create();
+  factory ConversionAction_ValueSettings.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionAction_ValueSettings.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionAction_ValueSettings clone() =>
       ConversionAction_ValueSettings()..mergeFromMessage(this);
   ConversionAction_ValueSettings copyWith(
@@ -108,8 +113,9 @@ class ConversionAction_ValueSettings extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ConversionAction_ValueSettings));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static ConversionAction_ValueSettings create() =>
-      ConversionAction_ValueSettings();
+      ConversionAction_ValueSettings._();
   ConversionAction_ValueSettings createEmptyInstance() => create();
   static $pb.PbList<ConversionAction_ValueSettings> createRepeated() =>
       $pb.PbList<ConversionAction_ValueSettings>();
@@ -188,18 +194,20 @@ class ConversionAction extends $pb.GeneratedMessage {
     ..a<$0.StringValue>(16, 'appId', $pb.PbFieldType.OM, $0.StringValue.getDefault, $0.StringValue.create)
     ..hasRequiredFields = false;
 
-  ConversionAction() : super();
-  ConversionAction.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ConversionAction.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ConversionAction._() : super();
+  factory ConversionAction() => create();
+  factory ConversionAction.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ConversionAction.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ConversionAction clone() => ConversionAction()..mergeFromMessage(this);
   ConversionAction copyWith(void Function(ConversionAction) updates) =>
       super.copyWith((message) => updates(message as ConversionAction));
   $pb.BuilderInfo get info_ => _i;
-  static ConversionAction create() => ConversionAction();
+  @$core.pragma('dart2js:noInline')
+  static ConversionAction create() => ConversionAction._();
   ConversionAction createEmptyInstance() => create();
   static $pb.PbList<ConversionAction> createRepeated() =>
       $pb.PbList<ConversionAction>();

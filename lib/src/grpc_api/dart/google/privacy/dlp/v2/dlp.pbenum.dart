@@ -1,8 +1,9 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/privacy/dlp/v2/dlp.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core show int, dynamic, String, List, Map;
@@ -168,6 +169,8 @@ class ByteContentItem_BytesType extends $pb.ProtobufEnum {
       ByteContentItem_BytesType._(4, 'IMAGE_SVG');
   static const ByteContentItem_BytesType TEXT_UTF8 =
       ByteContentItem_BytesType._(5, 'TEXT_UTF8');
+  static const ByteContentItem_BytesType AVRO =
+      ByteContentItem_BytesType._(11, 'AVRO');
 
   static const $core.List<ByteContentItem_BytesType> values =
       <ByteContentItem_BytesType>[
@@ -178,6 +181,7 @@ class ByteContentItem_BytesType extends $pb.ProtobufEnum {
     IMAGE_PNG,
     IMAGE_SVG,
     TEXT_UTF8,
+    AVRO,
   ];
 
   static final $core.Map<$core.int, ByteContentItem_BytesType> _byValue =

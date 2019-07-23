@@ -1,16 +1,17 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/translate/v3beta1/translation_service.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $2;
+import '../../../protobuf/timestamp.pb.dart' as $3;
 
 import 'translation_service.pbenum.dart';
 
@@ -24,13 +25,14 @@ class TranslateTextGlossaryConfig extends $pb.GeneratedMessage {
     ..aOB(2, 'ignoreCase')
     ..hasRequiredFields = false;
 
-  TranslateTextGlossaryConfig() : super();
-  TranslateTextGlossaryConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslateTextGlossaryConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslateTextGlossaryConfig._() : super();
+  factory TranslateTextGlossaryConfig() => create();
+  factory TranslateTextGlossaryConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslateTextGlossaryConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslateTextGlossaryConfig clone() =>
       TranslateTextGlossaryConfig()..mergeFromMessage(this);
   TranslateTextGlossaryConfig copyWith(
@@ -38,7 +40,9 @@ class TranslateTextGlossaryConfig extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as TranslateTextGlossaryConfig));
   $pb.BuilderInfo get info_ => _i;
-  static TranslateTextGlossaryConfig create() => TranslateTextGlossaryConfig();
+  @$core.pragma('dart2js:noInline')
+  static TranslateTextGlossaryConfig create() =>
+      TranslateTextGlossaryConfig._();
   TranslateTextGlossaryConfig createEmptyInstance() => create();
   static $pb.PbList<TranslateTextGlossaryConfig> createRepeated() =>
       $pb.PbList<TranslateTextGlossaryConfig>();
@@ -80,19 +84,21 @@ class TranslateTextRequest extends $pb.GeneratedMessage {
     ..aOS(8, 'parent')
     ..hasRequiredFields = false;
 
-  TranslateTextRequest() : super();
-  TranslateTextRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslateTextRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslateTextRequest._() : super();
+  factory TranslateTextRequest() => create();
+  factory TranslateTextRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslateTextRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslateTextRequest clone() =>
       TranslateTextRequest()..mergeFromMessage(this);
   TranslateTextRequest copyWith(void Function(TranslateTextRequest) updates) =>
       super.copyWith((message) => updates(message as TranslateTextRequest));
   $pb.BuilderInfo get info_ => _i;
-  static TranslateTextRequest create() => TranslateTextRequest();
+  @$core.pragma('dart2js:noInline')
+  static TranslateTextRequest create() => TranslateTextRequest._();
   TranslateTextRequest createEmptyInstance() => create();
   static $pb.PbList<TranslateTextRequest> createRepeated() =>
       $pb.PbList<TranslateTextRequest>();
@@ -159,20 +165,22 @@ class TranslateTextResponse extends $pb.GeneratedMessage {
         3, 'glossaryTranslations', $pb.PbFieldType.PM, Translation.create)
     ..hasRequiredFields = false;
 
-  TranslateTextResponse() : super();
-  TranslateTextResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TranslateTextResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TranslateTextResponse._() : super();
+  factory TranslateTextResponse() => create();
+  factory TranslateTextResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TranslateTextResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TranslateTextResponse clone() =>
       TranslateTextResponse()..mergeFromMessage(this);
   TranslateTextResponse copyWith(
           void Function(TranslateTextResponse) updates) =>
       super.copyWith((message) => updates(message as TranslateTextResponse));
   $pb.BuilderInfo get info_ => _i;
-  static TranslateTextResponse create() => TranslateTextResponse();
+  @$core.pragma('dart2js:noInline')
+  static TranslateTextResponse create() => TranslateTextResponse._();
   TranslateTextResponse createEmptyInstance() => create();
   static $pb.PbList<TranslateTextResponse> createRepeated() =>
       $pb.PbList<TranslateTextResponse>();
@@ -199,18 +207,20 @@ class Translation extends $pb.GeneratedMessage {
     ..aOS(4, 'detectedLanguageCode')
     ..hasRequiredFields = false;
 
-  Translation() : super();
-  Translation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Translation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Translation._() : super();
+  factory Translation() => create();
+  factory Translation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Translation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Translation clone() => Translation()..mergeFromMessage(this);
   Translation copyWith(void Function(Translation) updates) =>
       super.copyWith((message) => updates(message as Translation));
   $pb.BuilderInfo get info_ => _i;
-  static Translation create() => Translation();
+  @$core.pragma('dart2js:noInline')
+  static Translation create() => Translation._();
   Translation createEmptyInstance() => create();
   static $pb.PbList<Translation> createRepeated() => $pb.PbList<Translation>();
   static Translation getDefault() => _defaultInstance ??= create()..freeze();
@@ -259,27 +269,29 @@ class DetectLanguageRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetectLanguageRequest',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
+    ..oo(0, [1])
     ..aOS(1, 'content')
     ..aOS(3, 'mimeType')
     ..aOS(4, 'model')
     ..aOS(5, 'parent')
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  DetectLanguageRequest() : super();
-  DetectLanguageRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DetectLanguageRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DetectLanguageRequest._() : super();
+  factory DetectLanguageRequest() => create();
+  factory DetectLanguageRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DetectLanguageRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DetectLanguageRequest clone() =>
       DetectLanguageRequest()..mergeFromMessage(this);
   DetectLanguageRequest copyWith(
           void Function(DetectLanguageRequest) updates) =>
       super.copyWith((message) => updates(message as DetectLanguageRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DetectLanguageRequest create() => DetectLanguageRequest();
+  @$core.pragma('dart2js:noInline')
+  static DetectLanguageRequest create() => DetectLanguageRequest._();
   DetectLanguageRequest createEmptyInstance() => create();
   static $pb.PbList<DetectLanguageRequest> createRepeated() =>
       $pb.PbList<DetectLanguageRequest>();
@@ -331,18 +343,20 @@ class DetectedLanguage extends $pb.GeneratedMessage {
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
-  DetectedLanguage() : super();
-  DetectedLanguage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DetectedLanguage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DetectedLanguage._() : super();
+  factory DetectedLanguage() => create();
+  factory DetectedLanguage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DetectedLanguage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DetectedLanguage clone() => DetectedLanguage()..mergeFromMessage(this);
   DetectedLanguage copyWith(void Function(DetectedLanguage) updates) =>
       super.copyWith((message) => updates(message as DetectedLanguage));
   $pb.BuilderInfo get info_ => _i;
-  static DetectedLanguage create() => DetectedLanguage();
+  @$core.pragma('dart2js:noInline')
+  static DetectedLanguage create() => DetectedLanguage._();
   DetectedLanguage createEmptyInstance() => create();
   static $pb.PbList<DetectedLanguage> createRepeated() =>
       $pb.PbList<DetectedLanguage>();
@@ -374,20 +388,22 @@ class DetectLanguageResponse extends $pb.GeneratedMessage {
         1, 'languages', $pb.PbFieldType.PM, DetectedLanguage.create)
     ..hasRequiredFields = false;
 
-  DetectLanguageResponse() : super();
-  DetectLanguageResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DetectLanguageResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DetectLanguageResponse._() : super();
+  factory DetectLanguageResponse() => create();
+  factory DetectLanguageResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DetectLanguageResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DetectLanguageResponse clone() =>
       DetectLanguageResponse()..mergeFromMessage(this);
   DetectLanguageResponse copyWith(
           void Function(DetectLanguageResponse) updates) =>
       super.copyWith((message) => updates(message as DetectLanguageResponse));
   $pb.BuilderInfo get info_ => _i;
-  static DetectLanguageResponse create() => DetectLanguageResponse();
+  @$core.pragma('dart2js:noInline')
+  static DetectLanguageResponse create() => DetectLanguageResponse._();
   DetectLanguageResponse createEmptyInstance() => create();
   static $pb.PbList<DetectLanguageResponse> createRepeated() =>
       $pb.PbList<DetectLanguageResponse>();
@@ -407,13 +423,14 @@ class GetSupportedLanguagesRequest extends $pb.GeneratedMessage {
     ..aOS(3, 'parent')
     ..hasRequiredFields = false;
 
-  GetSupportedLanguagesRequest() : super();
-  GetSupportedLanguagesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetSupportedLanguagesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetSupportedLanguagesRequest._() : super();
+  factory GetSupportedLanguagesRequest() => create();
+  factory GetSupportedLanguagesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetSupportedLanguagesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetSupportedLanguagesRequest clone() =>
       GetSupportedLanguagesRequest()..mergeFromMessage(this);
   GetSupportedLanguagesRequest copyWith(
@@ -421,8 +438,9 @@ class GetSupportedLanguagesRequest extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as GetSupportedLanguagesRequest));
   $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
   static GetSupportedLanguagesRequest create() =>
-      GetSupportedLanguagesRequest();
+      GetSupportedLanguagesRequest._();
   GetSupportedLanguagesRequest createEmptyInstance() => create();
   static $pb.PbList<GetSupportedLanguagesRequest> createRepeated() =>
       $pb.PbList<GetSupportedLanguagesRequest>();
@@ -462,18 +480,20 @@ class SupportedLanguages extends $pb.GeneratedMessage {
         1, 'languages', $pb.PbFieldType.PM, SupportedLanguage.create)
     ..hasRequiredFields = false;
 
-  SupportedLanguages() : super();
-  SupportedLanguages.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SupportedLanguages.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SupportedLanguages._() : super();
+  factory SupportedLanguages() => create();
+  factory SupportedLanguages.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SupportedLanguages.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SupportedLanguages clone() => SupportedLanguages()..mergeFromMessage(this);
   SupportedLanguages copyWith(void Function(SupportedLanguages) updates) =>
       super.copyWith((message) => updates(message as SupportedLanguages));
   $pb.BuilderInfo get info_ => _i;
-  static SupportedLanguages create() => SupportedLanguages();
+  @$core.pragma('dart2js:noInline')
+  static SupportedLanguages create() => SupportedLanguages._();
   SupportedLanguages createEmptyInstance() => create();
   static $pb.PbList<SupportedLanguages> createRepeated() =>
       $pb.PbList<SupportedLanguages>();
@@ -493,18 +513,20 @@ class SupportedLanguage extends $pb.GeneratedMessage {
     ..aOB(4, 'supportTarget')
     ..hasRequiredFields = false;
 
-  SupportedLanguage() : super();
-  SupportedLanguage.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  SupportedLanguage.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  SupportedLanguage._() : super();
+  factory SupportedLanguage() => create();
+  factory SupportedLanguage.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SupportedLanguage.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   SupportedLanguage clone() => SupportedLanguage()..mergeFromMessage(this);
   SupportedLanguage copyWith(void Function(SupportedLanguage) updates) =>
       super.copyWith((message) => updates(message as SupportedLanguage));
   $pb.BuilderInfo get info_ => _i;
-  static SupportedLanguage create() => SupportedLanguage();
+  @$core.pragma('dart2js:noInline')
+  static SupportedLanguage create() => SupportedLanguage._();
   SupportedLanguage createEmptyInstance() => create();
   static $pb.PbList<SupportedLanguage> createRepeated() =>
       $pb.PbList<SupportedLanguage>();
@@ -551,18 +573,20 @@ class GcsSource extends $pb.GeneratedMessage {
     ..aOS(1, 'inputUri')
     ..hasRequiredFields = false;
 
-  GcsSource() : super();
-  GcsSource.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcsSource.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcsSource._() : super();
+  factory GcsSource() => create();
+  factory GcsSource.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcsSource.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcsSource clone() => GcsSource()..mergeFromMessage(this);
   GcsSource copyWith(void Function(GcsSource) updates) =>
       super.copyWith((message) => updates(message as GcsSource));
   $pb.BuilderInfo get info_ => _i;
-  static GcsSource create() => GcsSource();
+  @$core.pragma('dart2js:noInline')
+  static GcsSource create() => GcsSource._();
   GcsSource createEmptyInstance() => create();
   static $pb.PbList<GcsSource> createRepeated() => $pb.PbList<GcsSource>();
   static GcsSource getDefault() => _defaultInstance ??= create()..freeze();
@@ -587,24 +611,26 @@ class InputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InputConfig',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
+    ..oo(0, [2])
     ..aOS(1, 'mimeType')
     ..a<GcsSource>(2, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
         GcsSource.create)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  InputConfig() : super();
-  InputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  InputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  InputConfig._() : super();
+  factory InputConfig() => create();
+  factory InputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory InputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   InputConfig clone() => InputConfig()..mergeFromMessage(this);
   InputConfig copyWith(void Function(InputConfig) updates) =>
       super.copyWith((message) => updates(message as InputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static InputConfig create() => InputConfig();
+  @$core.pragma('dart2js:noInline')
+  static InputConfig create() => InputConfig._();
   InputConfig createEmptyInstance() => create();
   static $pb.PbList<InputConfig> createRepeated() => $pb.PbList<InputConfig>();
   static InputConfig getDefault() => _defaultInstance ??= create()..freeze();
@@ -636,18 +662,20 @@ class GcsDestination extends $pb.GeneratedMessage {
     ..aOS(1, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
-  GcsDestination() : super();
-  GcsDestination.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GcsDestination.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GcsDestination._() : super();
+  factory GcsDestination() => create();
+  factory GcsDestination.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GcsDestination.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GcsDestination clone() => GcsDestination()..mergeFromMessage(this);
   GcsDestination copyWith(void Function(GcsDestination) updates) =>
       super.copyWith((message) => updates(message as GcsDestination));
   $pb.BuilderInfo get info_ => _i;
-  static GcsDestination create() => GcsDestination();
+  @$core.pragma('dart2js:noInline')
+  static GcsDestination create() => GcsDestination._();
   GcsDestination createEmptyInstance() => create();
   static $pb.PbList<GcsDestination> createRepeated() =>
       $pb.PbList<GcsDestination>();
@@ -673,23 +701,25 @@ class OutputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputConfig',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
+    ..oo(0, [1])
     ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
         GcsDestination.getDefault, GcsDestination.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  OutputConfig() : super();
-  OutputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  OutputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  OutputConfig._() : super();
+  factory OutputConfig() => create();
+  factory OutputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory OutputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   OutputConfig clone() => OutputConfig()..mergeFromMessage(this);
   OutputConfig copyWith(void Function(OutputConfig) updates) =>
       super.copyWith((message) => updates(message as OutputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static OutputConfig create() => OutputConfig();
+  @$core.pragma('dart2js:noInline')
+  static OutputConfig create() => OutputConfig._();
   OutputConfig createEmptyInstance() => create();
   static $pb.PbList<OutputConfig> createRepeated() =>
       $pb.PbList<OutputConfig>();
@@ -740,13 +770,14 @@ class BatchTranslateTextRequest extends $pb.GeneratedMessage {
         const $pb.PackageName('google.cloud.translation.v3beta1'))
     ..hasRequiredFields = false;
 
-  BatchTranslateTextRequest() : super();
-  BatchTranslateTextRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchTranslateTextRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchTranslateTextRequest._() : super();
+  factory BatchTranslateTextRequest() => create();
+  factory BatchTranslateTextRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchTranslateTextRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchTranslateTextRequest clone() =>
       BatchTranslateTextRequest()..mergeFromMessage(this);
   BatchTranslateTextRequest copyWith(
@@ -754,7 +785,8 @@ class BatchTranslateTextRequest extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as BatchTranslateTextRequest));
   $pb.BuilderInfo get info_ => _i;
-  static BatchTranslateTextRequest create() => BatchTranslateTextRequest();
+  @$core.pragma('dart2js:noInline')
+  static BatchTranslateTextRequest create() => BatchTranslateTextRequest._();
   BatchTranslateTextRequest createEmptyInstance() => create();
   static $pb.PbList<BatchTranslateTextRequest> createRepeated() =>
       $pb.PbList<BatchTranslateTextRequest>();
@@ -809,24 +841,26 @@ class BatchTranslateMetadata extends $pb.GeneratedMessage {
     ..aInt64(2, 'translatedCharacters')
     ..aInt64(3, 'failedCharacters')
     ..aInt64(4, 'totalCharacters')
-    ..a<$2.Timestamp>(5, 'submitTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'submitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  BatchTranslateMetadata() : super();
-  BatchTranslateMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchTranslateMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchTranslateMetadata._() : super();
+  factory BatchTranslateMetadata() => create();
+  factory BatchTranslateMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchTranslateMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchTranslateMetadata clone() =>
       BatchTranslateMetadata()..mergeFromMessage(this);
   BatchTranslateMetadata copyWith(
           void Function(BatchTranslateMetadata) updates) =>
       super.copyWith((message) => updates(message as BatchTranslateMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static BatchTranslateMetadata create() => BatchTranslateMetadata();
+  @$core.pragma('dart2js:noInline')
+  static BatchTranslateMetadata create() => BatchTranslateMetadata._();
   BatchTranslateMetadata createEmptyInstance() => create();
   static $pb.PbList<BatchTranslateMetadata> createRepeated() =>
       $pb.PbList<BatchTranslateMetadata>();
@@ -866,8 +900,8 @@ class BatchTranslateMetadata extends $pb.GeneratedMessage {
   $core.bool hasTotalCharacters() => $_has(3);
   void clearTotalCharacters() => clearField(4);
 
-  $2.Timestamp get submitTime => $_getN(4);
-  set submitTime($2.Timestamp v) {
+  $3.Timestamp get submitTime => $_getN(4);
+  set submitTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -881,26 +915,28 @@ class BatchTranslateResponse extends $pb.GeneratedMessage {
     ..aInt64(1, 'totalCharacters')
     ..aInt64(2, 'translatedCharacters')
     ..aInt64(3, 'failedCharacters')
-    ..a<$2.Timestamp>(4, 'submitTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
-        $2.Timestamp.create)
+    ..a<$3.Timestamp>(4, 'submitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(5, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  BatchTranslateResponse() : super();
-  BatchTranslateResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  BatchTranslateResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  BatchTranslateResponse._() : super();
+  factory BatchTranslateResponse() => create();
+  factory BatchTranslateResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchTranslateResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   BatchTranslateResponse clone() =>
       BatchTranslateResponse()..mergeFromMessage(this);
   BatchTranslateResponse copyWith(
           void Function(BatchTranslateResponse) updates) =>
       super.copyWith((message) => updates(message as BatchTranslateResponse));
   $pb.BuilderInfo get info_ => _i;
-  static BatchTranslateResponse create() => BatchTranslateResponse();
+  @$core.pragma('dart2js:noInline')
+  static BatchTranslateResponse create() => BatchTranslateResponse._();
   BatchTranslateResponse createEmptyInstance() => create();
   static $pb.PbList<BatchTranslateResponse> createRepeated() =>
       $pb.PbList<BatchTranslateResponse>();
@@ -932,16 +968,16 @@ class BatchTranslateResponse extends $pb.GeneratedMessage {
   $core.bool hasFailedCharacters() => $_has(2);
   void clearFailedCharacters() => clearField(3);
 
-  $2.Timestamp get submitTime => $_getN(3);
-  set submitTime($2.Timestamp v) {
+  $3.Timestamp get submitTime => $_getN(3);
+  set submitTime($3.Timestamp v) {
     setField(4, v);
   }
 
   $core.bool hasSubmitTime() => $_has(3);
   void clearSubmitTime() => clearField(4);
 
-  $2.Timestamp get endTime => $_getN(4);
-  set endTime($2.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(4);
+  set endTime($3.Timestamp v) {
     setField(5, v);
   }
 
@@ -959,23 +995,25 @@ class GlossaryInputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GlossaryInputConfig',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
+    ..oo(0, [1])
     ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
         GcsSource.create)
-    ..oo(0, [1])
     ..hasRequiredFields = false;
 
-  GlossaryInputConfig() : super();
-  GlossaryInputConfig.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GlossaryInputConfig.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GlossaryInputConfig._() : super();
+  factory GlossaryInputConfig() => create();
+  factory GlossaryInputConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GlossaryInputConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GlossaryInputConfig clone() => GlossaryInputConfig()..mergeFromMessage(this);
   GlossaryInputConfig copyWith(void Function(GlossaryInputConfig) updates) =>
       super.copyWith((message) => updates(message as GlossaryInputConfig));
   $pb.BuilderInfo get info_ => _i;
-  static GlossaryInputConfig create() => GlossaryInputConfig();
+  @$core.pragma('dart2js:noInline')
+  static GlossaryInputConfig create() => GlossaryInputConfig._();
   GlossaryInputConfig createEmptyInstance() => create();
   static $pb.PbList<GlossaryInputConfig> createRepeated() =>
       $pb.PbList<GlossaryInputConfig>();
@@ -1003,13 +1041,14 @@ class Glossary_LanguageCodePair extends $pb.GeneratedMessage {
     ..aOS(2, 'targetLanguageCode')
     ..hasRequiredFields = false;
 
-  Glossary_LanguageCodePair() : super();
-  Glossary_LanguageCodePair.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Glossary_LanguageCodePair.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Glossary_LanguageCodePair._() : super();
+  factory Glossary_LanguageCodePair() => create();
+  factory Glossary_LanguageCodePair.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Glossary_LanguageCodePair.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Glossary_LanguageCodePair clone() =>
       Glossary_LanguageCodePair()..mergeFromMessage(this);
   Glossary_LanguageCodePair copyWith(
@@ -1017,7 +1056,8 @@ class Glossary_LanguageCodePair extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Glossary_LanguageCodePair));
   $pb.BuilderInfo get info_ => _i;
-  static Glossary_LanguageCodePair create() => Glossary_LanguageCodePair();
+  @$core.pragma('dart2js:noInline')
+  static Glossary_LanguageCodePair create() => Glossary_LanguageCodePair._();
   Glossary_LanguageCodePair createEmptyInstance() => create();
   static $pb.PbList<Glossary_LanguageCodePair> createRepeated() =>
       $pb.PbList<Glossary_LanguageCodePair>();
@@ -1048,13 +1088,14 @@ class Glossary_LanguageCodesSet extends $pb.GeneratedMessage {
     ..pPS(1, 'languageCodes')
     ..hasRequiredFields = false;
 
-  Glossary_LanguageCodesSet() : super();
-  Glossary_LanguageCodesSet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Glossary_LanguageCodesSet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Glossary_LanguageCodesSet._() : super();
+  factory Glossary_LanguageCodesSet() => create();
+  factory Glossary_LanguageCodesSet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Glossary_LanguageCodesSet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Glossary_LanguageCodesSet clone() =>
       Glossary_LanguageCodesSet()..mergeFromMessage(this);
   Glossary_LanguageCodesSet copyWith(
@@ -1062,7 +1103,8 @@ class Glossary_LanguageCodesSet extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as Glossary_LanguageCodesSet));
   $pb.BuilderInfo get info_ => _i;
-  static Glossary_LanguageCodesSet create() => Glossary_LanguageCodesSet();
+  @$core.pragma('dart2js:noInline')
+  static Glossary_LanguageCodesSet create() => Glossary_LanguageCodesSet._();
   Glossary_LanguageCodesSet createEmptyInstance() => create();
   static $pb.PbList<Glossary_LanguageCodesSet> createRepeated() =>
       $pb.PbList<Glossary_LanguageCodesSet>();
@@ -1084,6 +1126,7 @@ class Glossary extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Glossary',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
+    ..oo(0, [3, 4])
     ..aOS(1, 'name')
     ..a<Glossary_LanguageCodePair>(3, 'languagePair', $pb.PbFieldType.OM,
         Glossary_LanguageCodePair.getDefault, Glossary_LanguageCodePair.create)
@@ -1092,25 +1135,26 @@ class Glossary extends $pb.GeneratedMessage {
     ..a<GlossaryInputConfig>(5, 'inputConfig', $pb.PbFieldType.OM,
         GlossaryInputConfig.getDefault, GlossaryInputConfig.create)
     ..a<$core.int>(6, 'entryCount', $pb.PbFieldType.O3)
-    ..a<$2.Timestamp>(7, 'submitTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
-        $2.Timestamp.create)
-    ..oo(0, [3, 4])
+    ..a<$3.Timestamp>(7, 'submitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Glossary() : super();
-  Glossary.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Glossary.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Glossary._() : super();
+  factory Glossary() => create();
+  factory Glossary.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Glossary.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Glossary clone() => Glossary()..mergeFromMessage(this);
   Glossary copyWith(void Function(Glossary) updates) =>
       super.copyWith((message) => updates(message as Glossary));
   $pb.BuilderInfo get info_ => _i;
-  static Glossary create() => Glossary();
+  @$core.pragma('dart2js:noInline')
+  static Glossary create() => Glossary._();
   Glossary createEmptyInstance() => create();
   static $pb.PbList<Glossary> createRepeated() => $pb.PbList<Glossary>();
   static Glossary getDefault() => _defaultInstance ??= create()..freeze();
@@ -1160,16 +1204,16 @@ class Glossary extends $pb.GeneratedMessage {
   $core.bool hasEntryCount() => $_has(4);
   void clearEntryCount() => clearField(6);
 
-  $2.Timestamp get submitTime => $_getN(5);
-  set submitTime($2.Timestamp v) {
+  $3.Timestamp get submitTime => $_getN(5);
+  set submitTime($3.Timestamp v) {
     setField(7, v);
   }
 
   $core.bool hasSubmitTime() => $_has(5);
   void clearSubmitTime() => clearField(7);
 
-  $2.Timestamp get endTime => $_getN(6);
-  set endTime($2.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(6);
+  set endTime($3.Timestamp v) {
     setField(8, v);
   }
 
@@ -1185,20 +1229,22 @@ class CreateGlossaryRequest extends $pb.GeneratedMessage {
         2, 'glossary', $pb.PbFieldType.OM, Glossary.getDefault, Glossary.create)
     ..hasRequiredFields = false;
 
-  CreateGlossaryRequest() : super();
-  CreateGlossaryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateGlossaryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateGlossaryRequest._() : super();
+  factory CreateGlossaryRequest() => create();
+  factory CreateGlossaryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateGlossaryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateGlossaryRequest clone() =>
       CreateGlossaryRequest()..mergeFromMessage(this);
   CreateGlossaryRequest copyWith(
           void Function(CreateGlossaryRequest) updates) =>
       super.copyWith((message) => updates(message as CreateGlossaryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CreateGlossaryRequest create() => CreateGlossaryRequest();
+  @$core.pragma('dart2js:noInline')
+  static CreateGlossaryRequest create() => CreateGlossaryRequest._();
   CreateGlossaryRequest createEmptyInstance() => create();
   static $pb.PbList<CreateGlossaryRequest> createRepeated() =>
       $pb.PbList<CreateGlossaryRequest>();
@@ -1229,18 +1275,20 @@ class GetGlossaryRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  GetGlossaryRequest() : super();
-  GetGlossaryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GetGlossaryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GetGlossaryRequest._() : super();
+  factory GetGlossaryRequest() => create();
+  factory GetGlossaryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GetGlossaryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GetGlossaryRequest clone() => GetGlossaryRequest()..mergeFromMessage(this);
   GetGlossaryRequest copyWith(void Function(GetGlossaryRequest) updates) =>
       super.copyWith((message) => updates(message as GetGlossaryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static GetGlossaryRequest create() => GetGlossaryRequest();
+  @$core.pragma('dart2js:noInline')
+  static GetGlossaryRequest create() => GetGlossaryRequest._();
   GetGlossaryRequest createEmptyInstance() => create();
   static $pb.PbList<GetGlossaryRequest> createRepeated() =>
       $pb.PbList<GetGlossaryRequest>();
@@ -1263,20 +1311,22 @@ class DeleteGlossaryRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
-  DeleteGlossaryRequest() : super();
-  DeleteGlossaryRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteGlossaryRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteGlossaryRequest._() : super();
+  factory DeleteGlossaryRequest() => create();
+  factory DeleteGlossaryRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteGlossaryRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteGlossaryRequest clone() =>
       DeleteGlossaryRequest()..mergeFromMessage(this);
   DeleteGlossaryRequest copyWith(
           void Function(DeleteGlossaryRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteGlossaryRequest));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteGlossaryRequest create() => DeleteGlossaryRequest();
+  @$core.pragma('dart2js:noInline')
+  static DeleteGlossaryRequest create() => DeleteGlossaryRequest._();
   DeleteGlossaryRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteGlossaryRequest> createRepeated() =>
       $pb.PbList<DeleteGlossaryRequest>();
@@ -1302,20 +1352,22 @@ class ListGlossariesRequest extends $pb.GeneratedMessage {
     ..aOS(4, 'filter')
     ..hasRequiredFields = false;
 
-  ListGlossariesRequest() : super();
-  ListGlossariesRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGlossariesRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGlossariesRequest._() : super();
+  factory ListGlossariesRequest() => create();
+  factory ListGlossariesRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGlossariesRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGlossariesRequest clone() =>
       ListGlossariesRequest()..mergeFromMessage(this);
   ListGlossariesRequest copyWith(
           void Function(ListGlossariesRequest) updates) =>
       super.copyWith((message) => updates(message as ListGlossariesRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ListGlossariesRequest create() => ListGlossariesRequest();
+  @$core.pragma('dart2js:noInline')
+  static ListGlossariesRequest create() => ListGlossariesRequest._();
   ListGlossariesRequest createEmptyInstance() => create();
   static $pb.PbList<ListGlossariesRequest> createRepeated() =>
       $pb.PbList<ListGlossariesRequest>();
@@ -1363,20 +1415,22 @@ class ListGlossariesResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
-  ListGlossariesResponse() : super();
-  ListGlossariesResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ListGlossariesResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ListGlossariesResponse._() : super();
+  factory ListGlossariesResponse() => create();
+  factory ListGlossariesResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ListGlossariesResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ListGlossariesResponse clone() =>
       ListGlossariesResponse()..mergeFromMessage(this);
   ListGlossariesResponse copyWith(
           void Function(ListGlossariesResponse) updates) =>
       super.copyWith((message) => updates(message as ListGlossariesResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ListGlossariesResponse create() => ListGlossariesResponse();
+  @$core.pragma('dart2js:noInline')
+  static ListGlossariesResponse create() => ListGlossariesResponse._();
   ListGlossariesResponse createEmptyInstance() => create();
   static $pb.PbList<ListGlossariesResponse> createRepeated() =>
       $pb.PbList<ListGlossariesResponse>();
@@ -1406,24 +1460,26 @@ class CreateGlossaryMetadata extends $pb.GeneratedMessage {
         CreateGlossaryMetadata_State.STATE_UNSPECIFIED,
         CreateGlossaryMetadata_State.valueOf,
         CreateGlossaryMetadata_State.values)
-    ..a<$2.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  CreateGlossaryMetadata() : super();
-  CreateGlossaryMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CreateGlossaryMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CreateGlossaryMetadata._() : super();
+  factory CreateGlossaryMetadata() => create();
+  factory CreateGlossaryMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CreateGlossaryMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CreateGlossaryMetadata clone() =>
       CreateGlossaryMetadata()..mergeFromMessage(this);
   CreateGlossaryMetadata copyWith(
           void Function(CreateGlossaryMetadata) updates) =>
       super.copyWith((message) => updates(message as CreateGlossaryMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static CreateGlossaryMetadata create() => CreateGlossaryMetadata();
+  @$core.pragma('dart2js:noInline')
+  static CreateGlossaryMetadata create() => CreateGlossaryMetadata._();
   CreateGlossaryMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateGlossaryMetadata> createRepeated() =>
       $pb.PbList<CreateGlossaryMetadata>();
@@ -1447,8 +1503,8 @@ class CreateGlossaryMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(1);
   void clearState() => clearField(2);
 
-  $2.Timestamp get submitTime => $_getN(2);
-  set submitTime($2.Timestamp v) {
+  $3.Timestamp get submitTime => $_getN(2);
+  set submitTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -1467,24 +1523,26 @@ class DeleteGlossaryMetadata extends $pb.GeneratedMessage {
         DeleteGlossaryMetadata_State.STATE_UNSPECIFIED,
         DeleteGlossaryMetadata_State.valueOf,
         DeleteGlossaryMetadata_State.values)
-    ..a<$2.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'submitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  DeleteGlossaryMetadata() : super();
-  DeleteGlossaryMetadata.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteGlossaryMetadata.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteGlossaryMetadata._() : super();
+  factory DeleteGlossaryMetadata() => create();
+  factory DeleteGlossaryMetadata.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteGlossaryMetadata.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteGlossaryMetadata clone() =>
       DeleteGlossaryMetadata()..mergeFromMessage(this);
   DeleteGlossaryMetadata copyWith(
           void Function(DeleteGlossaryMetadata) updates) =>
       super.copyWith((message) => updates(message as DeleteGlossaryMetadata));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteGlossaryMetadata create() => DeleteGlossaryMetadata();
+  @$core.pragma('dart2js:noInline')
+  static DeleteGlossaryMetadata create() => DeleteGlossaryMetadata._();
   DeleteGlossaryMetadata createEmptyInstance() => create();
   static $pb.PbList<DeleteGlossaryMetadata> createRepeated() =>
       $pb.PbList<DeleteGlossaryMetadata>();
@@ -1508,8 +1566,8 @@ class DeleteGlossaryMetadata extends $pb.GeneratedMessage {
   $core.bool hasState() => $_has(1);
   void clearState() => clearField(2);
 
-  $2.Timestamp get submitTime => $_getN(2);
-  set submitTime($2.Timestamp v) {
+  $3.Timestamp get submitTime => $_getN(2);
+  set submitTime($3.Timestamp v) {
     setField(3, v);
   }
 
@@ -1521,26 +1579,28 @@ class DeleteGlossaryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteGlossaryResponse',
       package: const $pb.PackageName('google.cloud.translation.v3beta1'))
     ..aOS(1, 'name')
-    ..a<$2.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..a<$2.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
-        $2.Timestamp.create)
+    ..a<$3.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
+        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..a<$3.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
+        $3.Timestamp.create)
     ..hasRequiredFields = false;
 
-  DeleteGlossaryResponse() : super();
-  DeleteGlossaryResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  DeleteGlossaryResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  DeleteGlossaryResponse._() : super();
+  factory DeleteGlossaryResponse() => create();
+  factory DeleteGlossaryResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeleteGlossaryResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   DeleteGlossaryResponse clone() =>
       DeleteGlossaryResponse()..mergeFromMessage(this);
   DeleteGlossaryResponse copyWith(
           void Function(DeleteGlossaryResponse) updates) =>
       super.copyWith((message) => updates(message as DeleteGlossaryResponse));
   $pb.BuilderInfo get info_ => _i;
-  static DeleteGlossaryResponse create() => DeleteGlossaryResponse();
+  @$core.pragma('dart2js:noInline')
+  static DeleteGlossaryResponse create() => DeleteGlossaryResponse._();
   DeleteGlossaryResponse createEmptyInstance() => create();
   static $pb.PbList<DeleteGlossaryResponse> createRepeated() =>
       $pb.PbList<DeleteGlossaryResponse>();
@@ -1556,16 +1616,16 @@ class DeleteGlossaryResponse extends $pb.GeneratedMessage {
   $core.bool hasName() => $_has(0);
   void clearName() => clearField(1);
 
-  $2.Timestamp get submitTime => $_getN(1);
-  set submitTime($2.Timestamp v) {
+  $3.Timestamp get submitTime => $_getN(1);
+  set submitTime($3.Timestamp v) {
     setField(2, v);
   }
 
   $core.bool hasSubmitTime() => $_has(1);
   void clearSubmitTime() => clearField(2);
 
-  $2.Timestamp get endTime => $_getN(2);
-  set endTime($2.Timestamp v) {
+  $3.Timestamp get endTime => $_getN(2);
+  set endTime($3.Timestamp v) {
     setField(3, v);
   }
 

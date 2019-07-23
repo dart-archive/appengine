@@ -1,40 +1,43 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/service_controller.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'operation.pb.dart' as $0;
-import 'check_error.pb.dart' as $1;
-import '../../../rpc/status.pb.dart' as $2;
+import 'operation.pb.dart' as $1;
+import 'check_error.pb.dart' as $2;
+import '../../../rpc/status.pb.dart' as $3;
 
 class CheckRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckRequest',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'serviceName')
-    ..a<$0.Operation>(2, 'operation', $pb.PbFieldType.OM,
-        $0.Operation.getDefault, $0.Operation.create)
+    ..a<$1.Operation>(2, 'operation', $pb.PbFieldType.OM,
+        $1.Operation.getDefault, $1.Operation.create)
     ..aOS(4, 'serviceConfigId')
     ..hasRequiredFields = false;
 
-  CheckRequest() : super();
-  CheckRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckRequest._() : super();
+  factory CheckRequest() => create();
+  factory CheckRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckRequest clone() => CheckRequest()..mergeFromMessage(this);
   CheckRequest copyWith(void Function(CheckRequest) updates) =>
       super.copyWith((message) => updates(message as CheckRequest));
   $pb.BuilderInfo get info_ => _i;
-  static CheckRequest create() => CheckRequest();
+  @$core.pragma('dart2js:noInline')
+  static CheckRequest create() => CheckRequest._();
   CheckRequest createEmptyInstance() => create();
   static $pb.PbList<CheckRequest> createRepeated() =>
       $pb.PbList<CheckRequest>();
@@ -49,8 +52,8 @@ class CheckRequest extends $pb.GeneratedMessage {
   $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  $0.Operation get operation => $_getN(1);
-  set operation($0.Operation v) {
+  $1.Operation get operation => $_getN(1);
+  set operation($1.Operation v) {
     setField(2, v);
   }
 
@@ -77,20 +80,22 @@ class CheckResponse_CheckInfo extends $pb.GeneratedMessage {
         CheckResponse_ConsumerInfo.create)
     ..hasRequiredFields = false;
 
-  CheckResponse_CheckInfo() : super();
-  CheckResponse_CheckInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckResponse_CheckInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckResponse_CheckInfo._() : super();
+  factory CheckResponse_CheckInfo() => create();
+  factory CheckResponse_CheckInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckResponse_CheckInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckResponse_CheckInfo clone() =>
       CheckResponse_CheckInfo()..mergeFromMessage(this);
   CheckResponse_CheckInfo copyWith(
           void Function(CheckResponse_CheckInfo) updates) =>
       super.copyWith((message) => updates(message as CheckResponse_CheckInfo));
   $pb.BuilderInfo get info_ => _i;
-  static CheckResponse_CheckInfo create() => CheckResponse_CheckInfo();
+  @$core.pragma('dart2js:noInline')
+  static CheckResponse_CheckInfo create() => CheckResponse_CheckInfo._();
   CheckResponse_CheckInfo createEmptyInstance() => create();
   static $pb.PbList<CheckResponse_CheckInfo> createRepeated() =>
       $pb.PbList<CheckResponse_CheckInfo>();
@@ -114,13 +119,14 @@ class CheckResponse_ConsumerInfo extends $pb.GeneratedMessage {
     ..aInt64(1, 'projectNumber')
     ..hasRequiredFields = false;
 
-  CheckResponse_ConsumerInfo() : super();
-  CheckResponse_ConsumerInfo.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckResponse_ConsumerInfo.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckResponse_ConsumerInfo._() : super();
+  factory CheckResponse_ConsumerInfo() => create();
+  factory CheckResponse_ConsumerInfo.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckResponse_ConsumerInfo.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckResponse_ConsumerInfo clone() =>
       CheckResponse_ConsumerInfo()..mergeFromMessage(this);
   CheckResponse_ConsumerInfo copyWith(
@@ -128,7 +134,8 @@ class CheckResponse_ConsumerInfo extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CheckResponse_ConsumerInfo));
   $pb.BuilderInfo get info_ => _i;
-  static CheckResponse_ConsumerInfo create() => CheckResponse_ConsumerInfo();
+  @$core.pragma('dart2js:noInline')
+  static CheckResponse_ConsumerInfo create() => CheckResponse_ConsumerInfo._();
   CheckResponse_ConsumerInfo createEmptyInstance() => create();
   static $pb.PbList<CheckResponse_ConsumerInfo> createRepeated() =>
       $pb.PbList<CheckResponse_ConsumerInfo>();
@@ -149,26 +156,28 @@ class CheckResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckResponse',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'operationId')
-    ..pc<$1.CheckError>(
-        2, 'checkErrors', $pb.PbFieldType.PM, $1.CheckError.create)
+    ..pc<$2.CheckError>(
+        2, 'checkErrors', $pb.PbFieldType.PM, $2.CheckError.create)
     ..aOS(5, 'serviceConfigId')
     ..a<CheckResponse_CheckInfo>(6, 'checkInfo', $pb.PbFieldType.OM,
         CheckResponse_CheckInfo.getDefault, CheckResponse_CheckInfo.create)
     ..aOS(11, 'serviceRolloutId')
     ..hasRequiredFields = false;
 
-  CheckResponse() : super();
-  CheckResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CheckResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CheckResponse._() : super();
+  factory CheckResponse() => create();
+  factory CheckResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CheckResponse clone() => CheckResponse()..mergeFromMessage(this);
   CheckResponse copyWith(void Function(CheckResponse) updates) =>
       super.copyWith((message) => updates(message as CheckResponse));
   $pb.BuilderInfo get info_ => _i;
-  static CheckResponse create() => CheckResponse();
+  @$core.pragma('dart2js:noInline')
+  static CheckResponse create() => CheckResponse._();
   CheckResponse createEmptyInstance() => create();
   static $pb.PbList<CheckResponse> createRepeated() =>
       $pb.PbList<CheckResponse>();
@@ -183,7 +192,7 @@ class CheckResponse extends $pb.GeneratedMessage {
   $core.bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  $core.List<$1.CheckError> get checkErrors => $_getList(1);
+  $core.List<$2.CheckError> get checkErrors => $_getList(1);
 
   $core.String get serviceConfigId => $_getS(2, '');
   set serviceConfigId($core.String v) {
@@ -214,22 +223,24 @@ class ReportRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReportRequest',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'serviceName')
-    ..pc<$0.Operation>(2, 'operations', $pb.PbFieldType.PM, $0.Operation.create)
+    ..pc<$1.Operation>(2, 'operations', $pb.PbFieldType.PM, $1.Operation.create)
     ..aOS(3, 'serviceConfigId')
     ..hasRequiredFields = false;
 
-  ReportRequest() : super();
-  ReportRequest.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReportRequest.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReportRequest._() : super();
+  factory ReportRequest() => create();
+  factory ReportRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReportRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReportRequest clone() => ReportRequest()..mergeFromMessage(this);
   ReportRequest copyWith(void Function(ReportRequest) updates) =>
       super.copyWith((message) => updates(message as ReportRequest));
   $pb.BuilderInfo get info_ => _i;
-  static ReportRequest create() => ReportRequest();
+  @$core.pragma('dart2js:noInline')
+  static ReportRequest create() => ReportRequest._();
   ReportRequest createEmptyInstance() => create();
   static $pb.PbList<ReportRequest> createRepeated() =>
       $pb.PbList<ReportRequest>();
@@ -244,7 +255,7 @@ class ReportRequest extends $pb.GeneratedMessage {
   $core.bool hasServiceName() => $_has(0);
   void clearServiceName() => clearField(1);
 
-  $core.List<$0.Operation> get operations => $_getList(1);
+  $core.List<$1.Operation> get operations => $_getList(1);
 
   $core.String get serviceConfigId => $_getS(2, '');
   set serviceConfigId($core.String v) {
@@ -260,17 +271,18 @@ class ReportResponse_ReportError extends $pb.GeneratedMessage {
       'ReportResponse.ReportError',
       package: const $pb.PackageName('google.api.servicecontrol.v1'))
     ..aOS(1, 'operationId')
-    ..a<$2.Status>(
-        2, 'status', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
+    ..a<$3.Status>(
+        2, 'status', $pb.PbFieldType.OM, $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  ReportResponse_ReportError() : super();
-  ReportResponse_ReportError.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReportResponse_ReportError.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReportResponse_ReportError._() : super();
+  factory ReportResponse_ReportError() => create();
+  factory ReportResponse_ReportError.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReportResponse_ReportError.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReportResponse_ReportError clone() =>
       ReportResponse_ReportError()..mergeFromMessage(this);
   ReportResponse_ReportError copyWith(
@@ -278,7 +290,8 @@ class ReportResponse_ReportError extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as ReportResponse_ReportError));
   $pb.BuilderInfo get info_ => _i;
-  static ReportResponse_ReportError create() => ReportResponse_ReportError();
+  @$core.pragma('dart2js:noInline')
+  static ReportResponse_ReportError create() => ReportResponse_ReportError._();
   ReportResponse_ReportError createEmptyInstance() => create();
   static $pb.PbList<ReportResponse_ReportError> createRepeated() =>
       $pb.PbList<ReportResponse_ReportError>();
@@ -294,8 +307,8 @@ class ReportResponse_ReportError extends $pb.GeneratedMessage {
   $core.bool hasOperationId() => $_has(0);
   void clearOperationId() => clearField(1);
 
-  $2.Status get status => $_getN(1);
-  set status($2.Status v) {
+  $3.Status get status => $_getN(1);
+  set status($3.Status v) {
     setField(2, v);
   }
 
@@ -312,18 +325,20 @@ class ReportResponse extends $pb.GeneratedMessage {
     ..aOS(4, 'serviceRolloutId')
     ..hasRequiredFields = false;
 
-  ReportResponse() : super();
-  ReportResponse.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ReportResponse.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ReportResponse._() : super();
+  factory ReportResponse() => create();
+  factory ReportResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ReportResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ReportResponse clone() => ReportResponse()..mergeFromMessage(this);
   ReportResponse copyWith(void Function(ReportResponse) updates) =>
       super.copyWith((message) => updates(message as ReportResponse));
   $pb.BuilderInfo get info_ => _i;
-  static ReportResponse create() => ReportResponse();
+  @$core.pragma('dart2js:noInline')
+  static ReportResponse create() => ReportResponse._();
   ReportResponse createEmptyInstance() => create();
   static $pb.PbList<ReportResponse> createRepeated() =>
       $pb.PbList<ReportResponse>();

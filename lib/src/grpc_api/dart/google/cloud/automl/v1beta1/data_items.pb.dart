@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/automl/v1beta1/data_items.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -22,25 +23,27 @@ class Image extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Image',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 6])
     ..a<$core.List<$core.int>>(1, 'imageBytes', $pb.PbFieldType.OY)
     ..aOS(4, 'thumbnailUri')
     ..a<$0.InputConfig>(6, 'inputConfig', $pb.PbFieldType.OM,
         $0.InputConfig.getDefault, $0.InputConfig.create)
-    ..oo(0, [1, 6])
     ..hasRequiredFields = false;
 
-  Image() : super();
-  Image.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Image.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Image._() : super();
+  factory Image() => create();
+  factory Image.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Image.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Image clone() => Image()..mergeFromMessage(this);
   Image copyWith(void Function(Image) updates) =>
       super.copyWith((message) => updates(message as Image));
   $pb.BuilderInfo get info_ => _i;
-  static Image create() => Image();
+  @$core.pragma('dart2js:noInline')
+  static Image create() => Image._();
   Image createEmptyInstance() => create();
   static $pb.PbList<Image> createRepeated() => $pb.PbList<Image>();
   static Image getDefault() => _defaultInstance ??= create()..freeze();
@@ -82,18 +85,20 @@ class TextSnippet extends $pb.GeneratedMessage {
     ..aOS(4, 'contentUri')
     ..hasRequiredFields = false;
 
-  TextSnippet() : super();
-  TextSnippet.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  TextSnippet.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  TextSnippet._() : super();
+  factory TextSnippet() => create();
+  factory TextSnippet.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory TextSnippet.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   TextSnippet clone() => TextSnippet()..mergeFromMessage(this);
   TextSnippet copyWith(void Function(TextSnippet) updates) =>
       super.copyWith((message) => updates(message as TextSnippet));
   $pb.BuilderInfo get info_ => _i;
-  static TextSnippet create() => TextSnippet();
+  @$core.pragma('dart2js:noInline')
+  static TextSnippet create() => TextSnippet._();
   TextSnippet createEmptyInstance() => create();
   static $pb.PbList<TextSnippet> createRepeated() => $pb.PbList<TextSnippet>();
   static TextSnippet getDefault() => _defaultInstance ??= create()..freeze();
@@ -131,18 +136,20 @@ class Document extends $pb.GeneratedMessage {
         $0.DocumentInputConfig.getDefault, $0.DocumentInputConfig.create)
     ..hasRequiredFields = false;
 
-  Document() : super();
-  Document.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Document.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Document._() : super();
+  factory Document() => create();
+  factory Document.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Document.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Document clone() => Document()..mergeFromMessage(this);
   Document copyWith(void Function(Document) updates) =>
       super.copyWith((message) => updates(message as Document));
   $pb.BuilderInfo get info_ => _i;
-  static Document create() => Document();
+  @$core.pragma('dart2js:noInline')
+  static Document create() => Document._();
   Document createEmptyInstance() => create();
   static $pb.PbList<Document> createRepeated() => $pb.PbList<Document>();
   static Document getDefault() => _defaultInstance ??= create()..freeze();
@@ -164,18 +171,20 @@ class Row extends $pb.GeneratedMessage {
     ..pc<$1.Value>(3, 'values', $pb.PbFieldType.PM, $1.Value.create)
     ..hasRequiredFields = false;
 
-  Row() : super();
-  Row.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Row.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Row._() : super();
+  factory Row() => create();
+  factory Row.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Row.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Row clone() => Row()..mergeFromMessage(this);
   Row copyWith(void Function(Row) updates) =>
       super.copyWith((message) => updates(message as Row));
   $pb.BuilderInfo get info_ => _i;
-  static Row create() => Row();
+  @$core.pragma('dart2js:noInline')
+  static Row create() => Row._();
   Row createEmptyInstance() => create();
   static $pb.PbList<Row> createRepeated() => $pb.PbList<Row>();
   static Row getDefault() => _defaultInstance ??= create()..freeze();
@@ -199,27 +208,29 @@ class ExamplePayload extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExamplePayload',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..oo(0, [1, 2, 3, 4])
     ..a<Image>(1, 'image', $pb.PbFieldType.OM, Image.getDefault, Image.create)
     ..a<TextSnippet>(2, 'textSnippet', $pb.PbFieldType.OM,
         TextSnippet.getDefault, TextSnippet.create)
     ..a<Row>(3, 'row', $pb.PbFieldType.OM, Row.getDefault, Row.create)
     ..a<Document>(
         4, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
-    ..oo(0, [1, 2, 3, 4])
     ..hasRequiredFields = false;
 
-  ExamplePayload() : super();
-  ExamplePayload.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ExamplePayload.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ExamplePayload._() : super();
+  factory ExamplePayload() => create();
+  factory ExamplePayload.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExamplePayload.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExamplePayload clone() => ExamplePayload()..mergeFromMessage(this);
   ExamplePayload copyWith(void Function(ExamplePayload) updates) =>
       super.copyWith((message) => updates(message as ExamplePayload));
   $pb.BuilderInfo get info_ => _i;
-  static ExamplePayload create() => ExamplePayload();
+  @$core.pragma('dart2js:noInline')
+  static ExamplePayload create() => ExamplePayload._();
   ExamplePayload createEmptyInstance() => create();
   static $pb.PbList<ExamplePayload> createRepeated() =>
       $pb.PbList<ExamplePayload>();

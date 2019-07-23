@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign_criterion.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -78,6 +79,34 @@ class CampaignCriterion extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignCriterion',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ])
     ..aOS(1, 'resourceName')
     ..a<$0.StringValue>(4, 'campaign', $pb.PbFieldType.OM,
         $0.StringValue.getDefault, $0.StringValue.create)
@@ -126,48 +155,22 @@ class CampaignCriterion extends $pb.GeneratedMessage {
     ..a<$1.MobileDeviceInfo>(33, 'mobileDevice', $pb.PbFieldType.OM, $1.MobileDeviceInfo.getDefault, $1.MobileDeviceInfo.create)
     ..a<$1.LocationGroupInfo>(34, 'locationGroup', $pb.PbFieldType.OM, $1.LocationGroupInfo.getDefault, $1.LocationGroupInfo.create)
     ..e<$3.CampaignCriterionStatusEnum_CampaignCriterionStatus>(35, 'status', $pb.PbFieldType.OE, $3.CampaignCriterionStatusEnum_CampaignCriterionStatus.UNSPECIFIED, $3.CampaignCriterionStatusEnum_CampaignCriterionStatus.valueOf, $3.CampaignCriterionStatusEnum_CampaignCriterionStatus.values)
-    ..oo(0, [
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34
-    ])
     ..hasRequiredFields = false;
 
-  CampaignCriterion() : super();
-  CampaignCriterion.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignCriterion.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignCriterion._() : super();
+  factory CampaignCriterion() => create();
+  factory CampaignCriterion.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignCriterion.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignCriterion clone() => CampaignCriterion()..mergeFromMessage(this);
   CampaignCriterion copyWith(void Function(CampaignCriterion) updates) =>
       super.copyWith((message) => updates(message as CampaignCriterion));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignCriterion create() => CampaignCriterion();
+  @$core.pragma('dart2js:noInline')
+  static CampaignCriterion create() => CampaignCriterion._();
   CampaignCriterion createEmptyInstance() => create();
   static $pb.PbList<CampaignCriterion> createRepeated() =>
       $pb.PbList<CampaignCriterion>();

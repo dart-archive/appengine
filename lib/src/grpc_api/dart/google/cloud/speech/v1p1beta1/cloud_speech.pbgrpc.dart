@@ -1,49 +1,51 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/speech/v1p1beta1/cloud_speech.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:async' as $async;
 
-import 'package:grpc/service_api.dart' as $grpc;
-
 import 'dart:core' as $core show int, String, List;
 
-import 'cloud_speech.pb.dart';
-import '../../../longrunning/operations.pb.dart' as $1;
+import 'package:grpc/service_api.dart' as $grpc;
+import 'cloud_speech.pb.dart' as $2;
+import '../../../longrunning/operations.pb.dart' as $0;
 export 'cloud_speech.pb.dart';
 
 class SpeechClient extends $grpc.Client {
   static final _$recognize =
-      $grpc.ClientMethod<RecognizeRequest, RecognizeResponse>(
+      $grpc.ClientMethod<$2.RecognizeRequest, $2.RecognizeResponse>(
           '/google.cloud.speech.v1p1beta1.Speech/Recognize',
-          (RecognizeRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => RecognizeResponse.fromBuffer(value));
-  static final _$longRunningRecognize =
-      $grpc.ClientMethod<LongRunningRecognizeRequest, $1.Operation>(
-          '/google.cloud.speech.v1p1beta1.Speech/LongRunningRecognize',
-          (LongRunningRecognizeRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Operation.fromBuffer(value));
-  static final _$streamingRecognize =
-      $grpc.ClientMethod<StreamingRecognizeRequest, StreamingRecognizeResponse>(
-          '/google.cloud.speech.v1p1beta1.Speech/StreamingRecognize',
-          (StreamingRecognizeRequest value) => value.writeToBuffer(),
+          ($2.RecognizeRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              StreamingRecognizeResponse.fromBuffer(value));
+              $2.RecognizeResponse.fromBuffer(value));
+  static final _$longRunningRecognize =
+      $grpc.ClientMethod<$2.LongRunningRecognizeRequest, $0.Operation>(
+          '/google.cloud.speech.v1p1beta1.Speech/LongRunningRecognize',
+          ($2.LongRunningRecognizeRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$streamingRecognize = $grpc.ClientMethod<
+          $2.StreamingRecognizeRequest, $2.StreamingRecognizeResponse>(
+      '/google.cloud.speech.v1p1beta1.Speech/StreamingRecognize',
+      ($2.StreamingRecognizeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $2.StreamingRecognizeResponse.fromBuffer(value));
 
   SpeechClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<RecognizeResponse> recognize(RecognizeRequest request,
+  $grpc.ResponseFuture<$2.RecognizeResponse> recognize(
+      $2.RecognizeRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$recognize, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$1.Operation> longRunningRecognize(
-      LongRunningRecognizeRequest request,
+  $grpc.ResponseFuture<$0.Operation> longRunningRecognize(
+      $2.LongRunningRecognizeRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$longRunningRecognize, $async.Stream.fromIterable([request]),
@@ -51,8 +53,8 @@ class SpeechClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseStream<StreamingRecognizeResponse> streamingRecognize(
-      $async.Stream<StreamingRecognizeRequest> request,
+  $grpc.ResponseStream<$2.StreamingRecognizeResponse> streamingRecognize(
+      $async.Stream<$2.StreamingRecognizeRequest> request,
       {$grpc.CallOptions options}) {
     final call = $createCall(_$streamingRecognize, request, options: options);
     return $grpc.ResponseStream(call);
@@ -63,46 +65,48 @@ abstract class SpeechServiceBase extends $grpc.Service {
   $core.String get $name => 'google.cloud.speech.v1p1beta1.Speech';
 
   SpeechServiceBase() {
-    $addMethod($grpc.ServiceMethod<RecognizeRequest, RecognizeResponse>(
+    $addMethod($grpc.ServiceMethod<$2.RecognizeRequest, $2.RecognizeResponse>(
         'Recognize',
         recognize_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => RecognizeRequest.fromBuffer(value),
-        (RecognizeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<LongRunningRecognizeRequest, $1.Operation>(
-        'LongRunningRecognize',
-        longRunningRecognize_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            LongRunningRecognizeRequest.fromBuffer(value),
-        ($1.Operation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<StreamingRecognizeRequest,
-            StreamingRecognizeResponse>(
+        ($core.List<$core.int> value) => $2.RecognizeRequest.fromBuffer(value),
+        ($2.RecognizeResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.LongRunningRecognizeRequest, $0.Operation>(
+            'LongRunningRecognize',
+            longRunningRecognize_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.LongRunningRecognizeRequest.fromBuffer(value),
+            ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.StreamingRecognizeRequest,
+            $2.StreamingRecognizeResponse>(
         'StreamingRecognize',
         streamingRecognize,
         true,
         true,
         ($core.List<$core.int> value) =>
-            StreamingRecognizeRequest.fromBuffer(value),
-        (StreamingRecognizeResponse value) => value.writeToBuffer()));
+            $2.StreamingRecognizeRequest.fromBuffer(value),
+        ($2.StreamingRecognizeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<RecognizeResponse> recognize_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$2.RecognizeResponse> recognize_Pre($grpc.ServiceCall call,
+      $async.Future<$2.RecognizeRequest> request) async {
     return recognize(call, await request);
   }
 
-  $async.Future<$1.Operation> longRunningRecognize_Pre(
-      $grpc.ServiceCall call, $async.Future request) async {
+  $async.Future<$0.Operation> longRunningRecognize_Pre($grpc.ServiceCall call,
+      $async.Future<$2.LongRunningRecognizeRequest> request) async {
     return longRunningRecognize(call, await request);
   }
 
-  $async.Future<RecognizeResponse> recognize(
-      $grpc.ServiceCall call, RecognizeRequest request);
-  $async.Future<$1.Operation> longRunningRecognize(
-      $grpc.ServiceCall call, LongRunningRecognizeRequest request);
-  $async.Stream<StreamingRecognizeResponse> streamingRecognize(
-      $grpc.ServiceCall call, $async.Stream<StreamingRecognizeRequest> request);
+  $async.Future<$2.RecognizeResponse> recognize(
+      $grpc.ServiceCall call, $2.RecognizeRequest request);
+  $async.Future<$0.Operation> longRunningRecognize(
+      $grpc.ServiceCall call, $2.LongRunningRecognizeRequest request);
+  $async.Stream<$2.StreamingRecognizeResponse> streamingRecognize(
+      $grpc.ServiceCall call,
+      $async.Stream<$2.StreamingRecognizeRequest> request);
 }

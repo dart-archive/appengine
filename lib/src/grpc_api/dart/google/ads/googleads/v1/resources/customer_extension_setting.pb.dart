@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/customer_extension_setting.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -36,20 +37,22 @@ class CustomerExtensionSetting extends $pb.GeneratedMessage {
         $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.values)
     ..hasRequiredFields = false;
 
-  CustomerExtensionSetting() : super();
-  CustomerExtensionSetting.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CustomerExtensionSetting.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CustomerExtensionSetting._() : super();
+  factory CustomerExtensionSetting() => create();
+  factory CustomerExtensionSetting.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CustomerExtensionSetting.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CustomerExtensionSetting clone() =>
       CustomerExtensionSetting()..mergeFromMessage(this);
   CustomerExtensionSetting copyWith(
           void Function(CustomerExtensionSetting) updates) =>
       super.copyWith((message) => updates(message as CustomerExtensionSetting));
   $pb.BuilderInfo get info_ => _i;
-  static CustomerExtensionSetting create() => CustomerExtensionSetting();
+  @$core.pragma('dart2js:noInline')
+  static CustomerExtensionSetting create() => CustomerExtensionSetting._();
   CustomerExtensionSetting createEmptyInstance() => create();
   static $pb.PbList<CustomerExtensionSetting> createRepeated() =>
       $pb.PbList<CustomerExtensionSetting>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/enums/positive_geo_target_type.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,13 +17,14 @@ class PositiveGeoTargetTypeEnum extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.ads.googleads.v1.enums'))
     ..hasRequiredFields = false;
 
-  PositiveGeoTargetTypeEnum() : super();
-  PositiveGeoTargetTypeEnum.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  PositiveGeoTargetTypeEnum.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  PositiveGeoTargetTypeEnum._() : super();
+  factory PositiveGeoTargetTypeEnum() => create();
+  factory PositiveGeoTargetTypeEnum.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PositiveGeoTargetTypeEnum.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   PositiveGeoTargetTypeEnum clone() =>
       PositiveGeoTargetTypeEnum()..mergeFromMessage(this);
   PositiveGeoTargetTypeEnum copyWith(
@@ -30,7 +32,8 @@ class PositiveGeoTargetTypeEnum extends $pb.GeneratedMessage {
       super
           .copyWith((message) => updates(message as PositiveGeoTargetTypeEnum));
   $pb.BuilderInfo get info_ => _i;
-  static PositiveGeoTargetTypeEnum create() => PositiveGeoTargetTypeEnum();
+  @$core.pragma('dart2js:noInline')
+  static PositiveGeoTargetTypeEnum create() => PositiveGeoTargetTypeEnum._();
   PositiveGeoTargetTypeEnum createEmptyInstance() => create();
   static $pb.PbList<PositiveGeoTargetTypeEnum> createRepeated() =>
       $pb.PbList<PositiveGeoTargetTypeEnum>();

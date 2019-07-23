@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/cloud/tasks/v2/task.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -27,6 +28,7 @@ class Task extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Task',
       package: const $pb.PackageName('google.cloud.tasks.v2'))
+    ..oo(0, [2])
     ..aOS(1, 'name')
     ..a<$0.AppEngineHttpRequest>(2, 'appEngineHttpRequest', $pb.PbFieldType.OM,
         $0.AppEngineHttpRequest.getDefault, $0.AppEngineHttpRequest.create)
@@ -44,21 +46,22 @@ class Task extends $pb.GeneratedMessage {
         Attempt.create)
     ..e<Task_View>(11, 'view', $pb.PbFieldType.OE, Task_View.VIEW_UNSPECIFIED,
         Task_View.valueOf, Task_View.values)
-    ..oo(0, [2])
     ..hasRequiredFields = false;
 
-  Task() : super();
-  Task.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Task.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Task._() : super();
+  factory Task() => create();
+  factory Task.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Task.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Task clone() => Task()..mergeFromMessage(this);
   Task copyWith(void Function(Task) updates) =>
       super.copyWith((message) => updates(message as Task));
   $pb.BuilderInfo get info_ => _i;
-  static Task create() => Task();
+  @$core.pragma('dart2js:noInline')
+  static Task create() => Task._();
   Task createEmptyInstance() => create();
   static $pb.PbList<Task> createRepeated() => $pb.PbList<Task>();
   static Task getDefault() => _defaultInstance ??= create()..freeze();
@@ -162,18 +165,20 @@ class Attempt extends $pb.GeneratedMessage {
         $3.Status.getDefault, $3.Status.create)
     ..hasRequiredFields = false;
 
-  Attempt() : super();
-  Attempt.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  Attempt.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  Attempt._() : super();
+  factory Attempt() => create();
+  factory Attempt.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Attempt.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   Attempt clone() => Attempt()..mergeFromMessage(this);
   Attempt copyWith(void Function(Attempt) updates) =>
       super.copyWith((message) => updates(message as Attempt));
   $pb.BuilderInfo get info_ => _i;
-  static Attempt create() => Attempt();
+  @$core.pragma('dart2js:noInline')
+  static Attempt create() => Attempt._();
   Attempt createEmptyInstance() => create();
   static $pb.PbList<Attempt> createRepeated() => $pb.PbList<Attempt>();
   static Attempt getDefault() => _defaultInstance ??= create()..freeze();

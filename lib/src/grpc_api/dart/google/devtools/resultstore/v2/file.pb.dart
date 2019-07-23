@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/devtools/resultstore/v2/file.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -38,18 +39,20 @@ class File extends $pb.GeneratedMessage {
         File_HashType.values)
     ..hasRequiredFields = false;
 
-  File() : super();
-  File.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  File.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  File._() : super();
+  factory File() => create();
+  factory File.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory File.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   File clone() => File()..mergeFromMessage(this);
   File copyWith(void Function(File) updates) =>
       super.copyWith((message) => updates(message as File));
   $pb.BuilderInfo get info_ => _i;
-  static File create() => File();
+  @$core.pragma('dart2js:noInline')
+  static File create() => File._();
   File createEmptyInstance() => create();
   static $pb.PbList<File> createRepeated() => $pb.PbList<File>();
   static File getDefault() => _defaultInstance ??= create()..freeze();
@@ -145,18 +148,20 @@ class ArchiveEntry extends $pb.GeneratedMessage {
     ..aOS(3, 'contentType')
     ..hasRequiredFields = false;
 
-  ArchiveEntry() : super();
-  ArchiveEntry.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  ArchiveEntry.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  ArchiveEntry._() : super();
+  factory ArchiveEntry() => create();
+  factory ArchiveEntry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ArchiveEntry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ArchiveEntry clone() => ArchiveEntry()..mergeFromMessage(this);
   ArchiveEntry copyWith(void Function(ArchiveEntry) updates) =>
       super.copyWith((message) => updates(message as ArchiveEntry));
   $pb.BuilderInfo get info_ => _i;
-  static ArchiveEntry create() => ArchiveEntry();
+  @$core.pragma('dart2js:noInline')
+  static ArchiveEntry create() => ArchiveEntry._();
   ArchiveEntry createEmptyInstance() => create();
   static $pb.PbList<ArchiveEntry> createRepeated() =>
       $pb.PbList<ArchiveEntry>();

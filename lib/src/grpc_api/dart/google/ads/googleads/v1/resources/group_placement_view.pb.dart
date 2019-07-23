@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/group_placement_view.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -32,18 +33,20 @@ class GroupPlacementView extends $pb.GeneratedMessage {
         $1.PlacementTypeEnum_PlacementType.values)
     ..hasRequiredFields = false;
 
-  GroupPlacementView() : super();
-  GroupPlacementView.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  GroupPlacementView.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  GroupPlacementView._() : super();
+  factory GroupPlacementView() => create();
+  factory GroupPlacementView.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory GroupPlacementView.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   GroupPlacementView clone() => GroupPlacementView()..mergeFromMessage(this);
   GroupPlacementView copyWith(void Function(GroupPlacementView) updates) =>
       super.copyWith((message) => updates(message as GroupPlacementView));
   $pb.BuilderInfo get info_ => _i;
-  static GroupPlacementView create() => GroupPlacementView();
+  @$core.pragma('dart2js:noInline')
+  static GroupPlacementView create() => GroupPlacementView._();
   GroupPlacementView createEmptyInstance() => create();
   static $pb.PbList<GroupPlacementView> createRepeated() =>
       $pb.PbList<GroupPlacementView>();

@@ -1,11 +1,12 @@
 ///
 //  Generated code. Do not modify.
 //  source: google/ads/googleads/v1/resources/campaign_criterion_simulation.proto
-///
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name
+//
+// @dart = 2.3
+// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, String;
+    show bool, Deprecated, double, int, List, Map, override, pragma, String;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,6 +27,7 @@ class CampaignCriterionSimulation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CampaignCriterionSimulation',
       package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+    ..oo(0, [8])
     ..aOS(1, 'resourceName')
     ..a<$0.Int64Value>(2, 'campaignId', $pb.PbFieldType.OM,
         $0.Int64Value.getDefault, $0.Int64Value.create)
@@ -57,16 +59,16 @@ class CampaignCriterionSimulation extends $pb.GeneratedMessage {
         $pb.PbFieldType.OM,
         $1.BidModifierSimulationPointList.getDefault,
         $1.BidModifierSimulationPointList.create)
-    ..oo(0, [8])
     ..hasRequiredFields = false;
 
-  CampaignCriterionSimulation() : super();
-  CampaignCriterionSimulation.fromBuffer($core.List<$core.int> i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromBuffer(i, r);
-  CampaignCriterionSimulation.fromJson($core.String i,
-      [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY])
-      : super.fromJson(i, r);
+  CampaignCriterionSimulation._() : super();
+  factory CampaignCriterionSimulation() => create();
+  factory CampaignCriterionSimulation.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CampaignCriterionSimulation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   CampaignCriterionSimulation clone() =>
       CampaignCriterionSimulation()..mergeFromMessage(this);
   CampaignCriterionSimulation copyWith(
@@ -74,7 +76,9 @@ class CampaignCriterionSimulation extends $pb.GeneratedMessage {
       super.copyWith(
           (message) => updates(message as CampaignCriterionSimulation));
   $pb.BuilderInfo get info_ => _i;
-  static CampaignCriterionSimulation create() => CampaignCriterionSimulation();
+  @$core.pragma('dart2js:noInline')
+  static CampaignCriterionSimulation create() =>
+      CampaignCriterionSimulation._();
   CampaignCriterionSimulation createEmptyInstance() => create();
   static $pb.PbList<CampaignCriterionSimulation> createRepeated() =>
       $pb.PbList<CampaignCriterionSimulation>();
