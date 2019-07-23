@@ -1,3 +1,7 @@
+## 0.7.2
+
+ * Update the generated protobufs.
+
 ## 0.7.1
 
  * Update to use `package:grpc` version 2.0
