@@ -1,3 +1,7 @@
+## 0.7.3
+
+ * Add `onAcceptingConnections` callback to `runAppEngine()`
+
 ## 0.7.2
 
  * Update the generated protobufs.
@@ -18,7 +22,7 @@
 ## 0.6.0
 
 **Breaking changes:**
- * Removed poorly documented assets support with broken tests.  
+ * Removed poorly documented assets support with broken tests.
  * Removed memcache as the service was never made it past alpha.
 
 Users of memcache should consider using
@@ -57,7 +61,7 @@ without the logic that this package used to contain.
 ## 0.4.3+1
 
 * When logging requests, the `appengine.googleapis.com/trace_id` label
-  is populated. 
+  is populated.
 
 ## 0.4.3
 
@@ -66,7 +70,7 @@ without the logic that this package used to contain.
   * `referrer`
   * `traceId` via the `X-Cloud-Trace-Context` request header.
 
-* The `appengine.googleapis.com/instance_name` label is also populated for 
+* The `appengine.googleapis.com/instance_name` label is also populated for
   all log entries.
 
 * `traceId` was also added to the `ClientContext` class.

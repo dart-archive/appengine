@@ -43,7 +43,7 @@ Future withAppEngineServices(Future callback()) =>
 /// AppEngine services available within that scope.
 Future runAppEngine(void handler(HttpRequest request, ClientContext context),
     void onError(Object e, StackTrace s),
-    {int port = 8080, bool shared = false}) {
+    {int port = 8080, bool shared = false, void onAcceptingConnections()}) {
   return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
     final appengineServer = AppEngineHttpServer(contextRegistry,
         port: port, shared: shared)
@@ -87,7 +87,7 @@ Future runAppEngine(void handler(HttpRequest request, ClientContext context),
             }
           });
         });
-      });
+      }, onAcceptingConnections: onAcceptingConnections);
     return appengineServer.done;
   });
 }

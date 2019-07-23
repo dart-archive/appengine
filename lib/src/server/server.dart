@@ -36,7 +36,10 @@ class AppEngineHttpServer {
 
   Future get done => _shutdownCompleter.future;
 
-  void run(applicationHandler(HttpRequest request, ClientContext context)) {
+  void run(
+    applicationHandler(HttpRequest request, ClientContext context), {
+    void onAcceptingConnections(),
+  }) {
     final serviceHandlers = {
       '/_ah/start': _start,
       '/_ah/health': _health,
@@ -46,6 +49,9 @@ class AppEngineHttpServer {
     HttpServer.bind(_hostname, _port, shared: _shared)
         .then((HttpServer server) {
       _httpServer = server;
+      if (onAcceptingConnections != null) {
+        onAcceptingConnections();
+      }
 
       server.listen((HttpRequest request) {
         // Default handling is sending the request to the application.
