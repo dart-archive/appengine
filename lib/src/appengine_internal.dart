@@ -41,9 +41,13 @@ Future withAppEngineServices(Future callback()) =>
 ///
 /// The given request [handler] is run inside a new service scope and has all
 /// AppEngine services available within that scope.
-Future runAppEngine(void handler(HttpRequest request, ClientContext context),
-    void onError(Object e, StackTrace s),
-    {int port = 8080, bool shared = false}) {
+Future runAppEngine(
+  void handler(HttpRequest request, ClientContext context),
+  void onError(Object e, StackTrace s), {
+  int port = 8080,
+  bool shared = false,
+  void onAcceptingConnections(InternetAddress address, int port),
+}) {
   return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
     final appengineServer = AppEngineHttpServer(contextRegistry,
         port: port, shared: shared)
@@ -87,7 +91,7 @@ Future runAppEngine(void handler(HttpRequest request, ClientContext context),
             }
           });
         });
-      });
+      }, onAcceptingConnections: onAcceptingConnections);
     return appengineServer.done;
   });
 }

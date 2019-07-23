@@ -27,7 +27,7 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
 /// The [handler] will be executed inside a new request handler zone for every
 /// new request. This will isolate different requests from each other.
 /// Each [handler] has access to a [ClientContext] using the [context] getter
-/// in this library. It can be used to access appengine services, e.g. 
+/// in this library. It can be used to access appengine services, e.g.
 /// datastore.
 ///
 /// In case an uncaught error occurs inside the request handler, the request
@@ -41,10 +41,26 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
 /// You can provide a [port] if you want to run the HTTP server on a different
 /// port than the `8080` default.
 ///
+/// The optional [shared] argument specifies whether additional AppEngine
+/// servers can bind to the same `port`. If `shared` is `true` and more
+/// AppEngine servers from this isolate or other isolates are bound to the
+/// port, then the incoming connections will be distributed among all the bound
+/// servers. Connections can be distributed over multiple isolates this way.
+///
+/// The optional [onAcceptingConnections] callback, if provided, will be
+/// notified when the server is accepting connections on [port]. The `address`
+/// and `port` arguments that are passed to the callback specify the address
+/// and port that the server is listening on.
+///
 /// The returned `Future` will complete when the HTTP server has been shutdown
 /// and is no longer serving requests.
-Future runAppEngine(void handler(HttpRequest request),
-    {Function onError, int port = 8080, bool shared = false}) {
+Future runAppEngine(
+  void handler(HttpRequest request), {
+  Function onError,
+  int port = 8080,
+  bool shared = false,
+  void onAcceptingConnections(InternetAddress address, int port),
+}) {
   var errorHandler;
   if (onError != null) {
     if (onError is ZoneUnaryCallback) {
@@ -61,7 +77,10 @@ Future runAppEngine(void handler(HttpRequest request),
       (HttpRequest request, ClientContext context) {
     ss.register(_APPENGINE_CONTEXT, context);
     handler(request);
-  }, errorHandler, port: port, shared: shared);
+  }, errorHandler,
+      port: port,
+      shared: shared,
+      onAcceptingConnections: onAcceptingConnections);
 }
 
 /// Returns `true`, if the incoming request is an AppEngine cron job request.
