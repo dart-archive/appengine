@@ -171,7 +171,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
 
   final instanceId = await _getInstanceid();
 
-  final context = AppengineContext(isDevEnvironment, projectId, versionId,
+  final context = AppEngineContext(isDevEnvironment, projectId, versionId,
       serviceId, instance, instanceId, pubServeUrl);
 
   final loggerFactory = await _obtainLoggerFactory(context, gcloudKey, zoneId);
@@ -239,7 +239,7 @@ Future<storage.Storage> _obtainStorageService(
 /// The underlying logging implementation will be usable within the current
 /// service scope.
 Future<LoggerFactory> _obtainLoggerFactory(
-    AppengineContext context, String gcloudKey, String zoneId) async {
+    AppEngineContext context, String gcloudKey, String zoneId) async {
   if (context.isDevelopmentEnvironment) {
     return StderrLoggerFactory();
   } else {

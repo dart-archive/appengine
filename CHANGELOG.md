@@ -1,3 +1,7 @@
+## 0.8.0
+
+ * Add `applicationContext` getter to `ClientContext`
+
 ## 0.7.3
 
  * Add `onAcceptingConnections` callback to `runAppEngine()`

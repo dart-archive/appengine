@@ -31,7 +31,7 @@ class ContextRegistry {
   final LoggerFactory _loggingFactory;
   final db.DatastoreDB _db;
   final storage.Storage _storage;
-  final AppengineContext _appengineContext;
+  final AppEngineContext _appengineContext;
 
   final Map<HttpRequest, ClientContext> _request2context = {};
 
@@ -51,8 +51,7 @@ class ContextRegistry {
     }
 
     final services = _getServices(request, traceId);
-    final context = _ClientContextImpl(
-        services, _appengineContext.isDevelopmentEnvironment, traceId);
+    final context = _ClientContextImpl(services, _appengineContext, traceId);
     _request2context[request] = context;
 
     request.response.done.whenComplete(() {
@@ -113,12 +112,19 @@ class ContextRegistry {
 }
 
 class _ClientContextImpl implements ClientContext {
+  _ClientContextImpl(this.services, this.applicationContext, this.traceId);
+
+  @override
   final Services services;
-  final bool isDevelopmentEnvironment;
+
+  @override
+  final AppEngineContext applicationContext;
+
+  @override
   final String traceId;
 
-  _ClientContextImpl(
-      this.services, this.isDevelopmentEnvironment, this.traceId);
+  @override
+  bool get isDevelopmentEnvironment => applicationContext.isDevelopmentEnvironment;
 
   @override
   bool get isProductionEnvironment => !isDevelopmentEnvironment;
