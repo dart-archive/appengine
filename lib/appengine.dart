@@ -13,6 +13,7 @@ import 'src/appengine_internal.dart' as appengine_internal;
 import 'src/client_context.dart';
 
 export 'package:gcloud/http.dart';
+export 'src/appengine_context.dart';
 export 'src/client_context.dart';
 export 'src/errors.dart';
 export 'src/logging.dart';

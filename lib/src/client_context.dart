@@ -7,6 +7,7 @@ library appengine.client_context;
 import 'package:gcloud/db.dart';
 import 'package:gcloud/storage.dart';
 
+import 'appengine_context.dart';
 import 'logging.dart';
 
 abstract class ClientContext {
@@ -19,6 +20,8 @@ abstract class ClientContext {
   bool get isProductionEnvironment;
 
   Services get services;
+
+  AppEngineContext get applicationContext;
 
   /// The `TRACE_ID` value from the `X-Cloud-Trace-Context` request header.
   ///

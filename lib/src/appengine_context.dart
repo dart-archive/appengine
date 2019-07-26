@@ -4,7 +4,7 @@
 
 library appengine.appengine_context;
 
-class AppengineContext {
+class AppEngineContext {
   final String applicationID;
   final String partition;
   final String version;
@@ -13,7 +13,7 @@ class AppengineContext {
   final String instanceId;
   final bool isDevelopmentEnvironment;
 
-  AppengineContext(
+  AppEngineContext(
       this.isDevelopmentEnvironment,
       this.applicationID,
       this.version,
