@@ -336,6 +336,12 @@ Future<String> _getMetadataValue(String path) async {
         'http://metadata.google.internal/computeMetadata/v1/instance/$path',
         headers: {'Metadata-Flavor': 'Google'});
     if (response.statusCode == HttpStatus.ok) {
+      if (response.headers[HttpHeaders.contentTypeHeader].contains('html') ||
+          response.body.contains('<html>')) {
+        // The response is not expected to be HTML. This likely means we're not
+        // running on cloud, and the request was intercepted by an HTTP proxy.
+        return null;
+      }
       return p.split(response.body).last;
     }
 
