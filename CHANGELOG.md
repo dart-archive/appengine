@@ -1,3 +1,7 @@
+## 0.8.1
+
+ * Detect dev mode when running behind a proxy.
+
 ## 0.8.0
 
  * Add `applicationContext` getter to `ClientContext`
