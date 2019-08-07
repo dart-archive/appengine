@@ -54,8 +54,6 @@ Future runAppEngine(
       ..run((request, context) {
         ss.fork(() {
           logging.registerLoggingService(context.services.logging);
-          db.registerDbService(context.services.db);
-          datastore.registerDatastoreService(context.services.db.datastore);
           handler(request, context);
           return request.response.done;
         }, onError: (error, stack) {
@@ -180,10 +178,10 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final storageService =
       await _obtainStorageService(context.applicationID, gcloudKey);
 
-  final dbFactory = _obtainDatastoreFactory(
+  final dbService = await _obtainDatastoreService(
       context.applicationID, dbEmulatorHost, gcloudKey);
 
-  return ContextRegistry(loggerFactory, dbFactory, storageService, context);
+  return ContextRegistry(loggerFactory, dbService, storageService, context);
 }
 
 /// Obtains a gRPC-based datastore implementation.
@@ -208,8 +206,8 @@ Future<ContextRegistry> _initializeAppEngine() async {
 ///
 /// The returned [db.DatastoreDB] will be usable within the current service
 /// scope.
-DatastoreDBFactory _obtainDatastoreFactory(
-    String projectId, String dbEmulatorHost, String gcloudKey) {
+Future<db.DatastoreDB> _obtainDatastoreService(
+    String projectId, String dbEmulatorHost, String gcloudKey) async {
   String endpoint = 'https://datastore.googleapis.com';
   bool needAuthorization = true;
   if (dbEmulatorHost != null && dbEmulatorHost.contains(':')) {
@@ -220,7 +218,10 @@ DatastoreDBFactory _obtainDatastoreFactory(
   }
   final authenticator =
       _obtainAuthenticator(gcloudKey, grpc_datastore_impl.OAuth2Scopes);
-  return _DatastoreDBFactoryImpl(projectId, endpoint, needAuthorization, authenticator);
+  final grpcClient = _getGrpcClientChannel(endpoint, needAuthorization);
+  final rawDatastore = grpc_datastore_impl.GrpcDatastoreImpl(
+      grpcClient, authenticator, projectId);
+  return db.DatastoreDB(rawDatastore, modelDB: db.ModelDBImpl());
 }
 
 /// Creates a storage service using the service account credentials (if given)
@@ -407,22 +408,5 @@ class StderrLoggerFactory implements LoggerFactory {
   @override
   logging.Logging newBackgroundLogger() {
     return stderr_logging_impl.StderrBackgroundLoggingImpl();
-  }
-}
-
-class _DatastoreDBFactoryImpl implements DatastoreDBFactory {
-  _DatastoreDBFactoryImpl(this.projectId, this.endpoint, this.needAuthorization, this.authenticator);
-
-  final String projectId;
-  final String endpoint;
-  final bool needAuthorization;
-  final grpc.HttpBasedAuthenticator authenticator;
-
-  @override
-  db.DatastoreDB newDatastoreDB() {
-    final grpcClient = _getGrpcClientChannel(endpoint, needAuthorization);
-    final rawDatastore = grpc_datastore_impl.GrpcDatastoreImpl(
-        grpcClient, authenticator, projectId);
-    return db.DatastoreDB(rawDatastore, modelDB: db.ModelDBImpl());
   }
 }
