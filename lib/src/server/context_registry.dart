@@ -27,21 +27,16 @@ abstract class LoggerFactory {
   Logging newBackgroundLogger();
 }
 
-/// Interface for classes capable of vending instances of [db.DatastoreDB].
-abstract class DatastoreDBFactory {
-  db.DatastoreDB newDatastoreDB();
-}
-
 class ContextRegistry {
   final LoggerFactory _loggingFactory;
-  final DatastoreDBFactory _dbFactory;
+  final db.DatastoreDB _db;
   final storage.Storage _storage;
   final AppEngineContext _appengineContext;
 
   final Map<HttpRequest, ClientContext> _request2context = {};
 
-  ContextRegistry(this._loggingFactory, this._dbFactory, this._storage,
-      this._appengineContext);
+  ContextRegistry(
+      this._loggingFactory, this._db, this._storage, this._appengineContext);
 
   bool get isDevelopmentEnvironment {
     return _appengineContext.isDevelopmentEnvironment;
@@ -112,7 +107,7 @@ class ContextRegistry {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
 
-    return Services(_dbFactory.newDatastoreDB(), _storage, loggingService);
+    return Services(_db, _storage, loggingService);
   }
 }
 
@@ -129,8 +124,7 @@ class _ClientContextImpl implements ClientContext {
   final String traceId;
 
   @override
-  bool get isDevelopmentEnvironment =>
-      applicationContext.isDevelopmentEnvironment;
+  bool get isDevelopmentEnvironment => applicationContext.isDevelopmentEnvironment;
 
   @override
   bool get isProductionEnvironment => !isDevelopmentEnvironment;
