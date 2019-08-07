@@ -1,3 +1,7 @@
+## 0.9.0
+
+ * Instantiate new `DatastoreDB` instances for each request.
+
 ## 0.8.1
 
  * Detect dev mode when running behind a proxy.
