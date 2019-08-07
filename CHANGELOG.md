@@ -1,3 +1,7 @@
+## 0.10.0
+
+ * Revert `0.9.0`
+
 ## 0.9.0
 
  * Instantiate new `DatastoreDB` instances for each request.
