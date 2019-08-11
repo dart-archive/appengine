@@ -105,25 +105,9 @@ class TablesDatasetMetadata extends $pb.GeneratedMessage {
   void clearStatsUpdateTime() => clearField(7);
 }
 
-enum TablesModelMetadata_AdditionalOptimizationObjectiveConfig {
-  optimizationObjectiveRecallValue,
-  optimizationObjectivePrecisionValue,
-  notSet
-}
-
 class TablesModelMetadata extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int,
-          TablesModelMetadata_AdditionalOptimizationObjectiveConfig>
-      _TablesModelMetadata_AdditionalOptimizationObjectiveConfigByTag = {
-    17: TablesModelMetadata_AdditionalOptimizationObjectiveConfig
-        .optimizationObjectiveRecallValue,
-    18: TablesModelMetadata_AdditionalOptimizationObjectiveConfig
-        .optimizationObjectivePrecisionValue,
-    0: TablesModelMetadata_AdditionalOptimizationObjectiveConfig.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TablesModelMetadata',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..oo(0, [17, 18])
     ..a<$2.ColumnSpec>(2, 'targetColumnSpec', $pb.PbFieldType.OM,
         $2.ColumnSpec.getDefault, $2.ColumnSpec.create)
     ..pc<$2.ColumnSpec>(
@@ -134,10 +118,6 @@ class TablesModelMetadata extends $pb.GeneratedMessage {
     ..aInt64(6, 'trainBudgetMilliNodeHours')
     ..aInt64(7, 'trainCostMilliNodeHours')
     ..aOB(12, 'disableEarlyStopping')
-    ..a<$core.double>(
-        17, 'optimizationObjectiveRecallValue', $pb.PbFieldType.OF)
-    ..a<$core.double>(
-        18, 'optimizationObjectivePrecisionValue', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   TablesModelMetadata._() : super();
@@ -160,13 +140,6 @@ class TablesModelMetadata extends $pb.GeneratedMessage {
   static TablesModelMetadata getDefault() =>
       _defaultInstance ??= create()..freeze();
   static TablesModelMetadata _defaultInstance;
-
-  TablesModelMetadata_AdditionalOptimizationObjectiveConfig
-      whichAdditionalOptimizationObjectiveConfig() =>
-          _TablesModelMetadata_AdditionalOptimizationObjectiveConfigByTag[
-              $_whichOneof(0)];
-  void clearAdditionalOptimizationObjectiveConfig() =>
-      clearField($_whichOneof(0));
 
   $2.ColumnSpec get targetColumnSpec => $_getN(0);
   set targetColumnSpec($2.ColumnSpec v) {
@@ -211,22 +184,6 @@ class TablesModelMetadata extends $pb.GeneratedMessage {
 
   $core.bool hasDisableEarlyStopping() => $_has(6);
   void clearDisableEarlyStopping() => clearField(12);
-
-  $core.double get optimizationObjectiveRecallValue => $_getN(7);
-  set optimizationObjectiveRecallValue($core.double v) {
-    $_setFloat(7, v);
-  }
-
-  $core.bool hasOptimizationObjectiveRecallValue() => $_has(7);
-  void clearOptimizationObjectiveRecallValue() => clearField(17);
-
-  $core.double get optimizationObjectivePrecisionValue => $_getN(8);
-  set optimizationObjectivePrecisionValue($core.double v) {
-    $_setFloat(8, v);
-  }
-
-  $core.bool hasOptimizationObjectivePrecisionValue() => $_has(8);
-  void clearOptimizationObjectivePrecisionValue() => clearField(18);
 }
 
 class TablesAnnotation extends $pb.GeneratedMessage {

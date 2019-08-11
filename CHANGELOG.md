@@ -1,3 +1,7 @@
+## 0.11.0
+
+ * Update gRPC API protos
+
 ## 0.10.0
 
  * Revert `0.9.0`

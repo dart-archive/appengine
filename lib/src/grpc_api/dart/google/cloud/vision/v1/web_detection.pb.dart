@@ -113,53 +113,6 @@ class WebDetection_WebImage extends $pb.GeneratedMessage {
   void clearScore() => clearField(2);
 }
 
-class WebDetection_WebLabel extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebLabel',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..aOS(1, 'label')
-    ..aOS(2, 'languageCode')
-    ..hasRequiredFields = false;
-
-  WebDetection_WebLabel._() : super();
-  factory WebDetection_WebLabel() => create();
-  factory WebDetection_WebLabel.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory WebDetection_WebLabel.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  WebDetection_WebLabel clone() =>
-      WebDetection_WebLabel()..mergeFromMessage(this);
-  WebDetection_WebLabel copyWith(
-          void Function(WebDetection_WebLabel) updates) =>
-      super.copyWith((message) => updates(message as WebDetection_WebLabel));
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static WebDetection_WebLabel create() => WebDetection_WebLabel._();
-  WebDetection_WebLabel createEmptyInstance() => create();
-  static $pb.PbList<WebDetection_WebLabel> createRepeated() =>
-      $pb.PbList<WebDetection_WebLabel>();
-  static WebDetection_WebLabel getDefault() =>
-      _defaultInstance ??= create()..freeze();
-  static WebDetection_WebLabel _defaultInstance;
-
-  $core.String get label => $_getS(0, '');
-  set label($core.String v) {
-    $_setString(0, v);
-  }
-
-  $core.bool hasLabel() => $_has(0);
-  void clearLabel() => clearField(1);
-
-  $core.String get languageCode => $_getS(1, '');
-  set languageCode($core.String v) {
-    $_setString(1, v);
-  }
-
-  $core.bool hasLanguageCode() => $_has(1);
-  void clearLanguageCode() => clearField(2);
-}
-
 class WebDetection_WebPage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebPage',
       package: const $pb.PackageName('google.cloud.vision.v1'))
@@ -221,6 +174,53 @@ class WebDetection_WebPage extends $pb.GeneratedMessage {
   $core.List<WebDetection_WebImage> get fullMatchingImages => $_getList(3);
 
   $core.List<WebDetection_WebImage> get partialMatchingImages => $_getList(4);
+}
+
+class WebDetection_WebLabel extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebLabel',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..aOS(1, 'label')
+    ..aOS(2, 'languageCode')
+    ..hasRequiredFields = false;
+
+  WebDetection_WebLabel._() : super();
+  factory WebDetection_WebLabel() => create();
+  factory WebDetection_WebLabel.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WebDetection_WebLabel.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  WebDetection_WebLabel clone() =>
+      WebDetection_WebLabel()..mergeFromMessage(this);
+  WebDetection_WebLabel copyWith(
+          void Function(WebDetection_WebLabel) updates) =>
+      super.copyWith((message) => updates(message as WebDetection_WebLabel));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebLabel create() => WebDetection_WebLabel._();
+  WebDetection_WebLabel createEmptyInstance() => create();
+  static $pb.PbList<WebDetection_WebLabel> createRepeated() =>
+      $pb.PbList<WebDetection_WebLabel>();
+  static WebDetection_WebLabel getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static WebDetection_WebLabel _defaultInstance;
+
+  $core.String get label => $_getS(0, '');
+  set label($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasLabel() => $_has(0);
+  void clearLabel() => clearField(1);
+
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(1);
+  void clearLanguageCode() => clearField(2);
 }
 
 class WebDetection extends $pb.GeneratedMessage {

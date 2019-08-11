@@ -112,6 +112,11 @@ class ProductSearchClient extends $grpc.Client {
           '/google.cloud.vision.v1.ProductSearch/ImportProductSets',
           ($2.ImportProductSetsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$purgeProducts =
+      $grpc.ClientMethod<$2.PurgeProductsRequest, $0.Operation>(
+          '/google.cloud.vision.v1.ProductSearch/PurgeProducts',
+          ($2.PurgeProductsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
   ProductSearchClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -275,6 +280,15 @@ class ProductSearchClient extends $grpc.Client {
         options: options);
     return $grpc.ResponseFuture(call);
   }
+
+  $grpc.ResponseFuture<$0.Operation> purgeProducts(
+      $2.PurgeProductsRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$purgeProducts, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
 }
 
 abstract class ProductSearchServiceBase extends $grpc.Service {
@@ -431,6 +445,14 @@ abstract class ProductSearchServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.ImportProductSetsRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.PurgeProductsRequest, $0.Operation>(
+        'PurgeProducts',
+        purgeProducts_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.PurgeProductsRequest.fromBuffer(value),
+        ($0.Operation value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.ProductSet> createProductSet_Pre($grpc.ServiceCall call,
@@ -529,6 +551,11 @@ abstract class ProductSearchServiceBase extends $grpc.Service {
     return importProductSets(call, await request);
   }
 
+  $async.Future<$0.Operation> purgeProducts_Pre($grpc.ServiceCall call,
+      $async.Future<$2.PurgeProductsRequest> request) async {
+    return purgeProducts(call, await request);
+  }
+
   $async.Future<$2.ProductSet> createProductSet(
       $grpc.ServiceCall call, $2.CreateProductSetRequest request);
   $async.Future<$2.ListProductSetsResponse> listProductSets(
@@ -565,4 +592,6 @@ abstract class ProductSearchServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ListProductsInProductSetRequest request);
   $async.Future<$0.Operation> importProductSets(
       $grpc.ServiceCall call, $2.ImportProductSetsRequest request);
+  $async.Future<$0.Operation> purgeProducts(
+      $grpc.ServiceCall call, $2.PurgeProductsRequest request);
 }

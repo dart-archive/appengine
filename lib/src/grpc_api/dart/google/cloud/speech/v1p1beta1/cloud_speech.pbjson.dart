@@ -161,14 +161,24 @@ const RecognitionConfig$json = {
       '3': 16,
       '4': 1,
       '5': 8,
-      '10': 'enableSpeakerDiarization'
+      '8': {'3': true},
+      '10': 'enableSpeakerDiarization',
     },
     {
       '1': 'diarization_speaker_count',
       '3': 17,
       '4': 1,
       '5': 5,
-      '10': 'diarizationSpeakerCount'
+      '8': {'3': true},
+      '10': 'diarizationSpeakerCount',
+    },
+    {
+      '1': 'diarization_config',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.speech.v1p1beta1.SpeakerDiarizationConfig',
+      '10': 'diarizationConfig'
     },
     {
       '1': 'metadata',
@@ -196,6 +206,21 @@ const RecognitionConfig_AudioEncoding$json = {
     {'1': 'OGG_OPUS', '2': 6},
     {'1': 'SPEEX_WITH_HEADER_BYTE', '2': 7},
     {'1': 'MP3', '2': 8},
+  ],
+};
+
+const SpeakerDiarizationConfig$json = {
+  '1': 'SpeakerDiarizationConfig',
+  '2': [
+    {
+      '1': 'enable_speaker_diarization',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'enableSpeakerDiarization'
+    },
+    {'1': 'min_speaker_count', '3': 2, '4': 1, '5': 5, '10': 'minSpeakerCount'},
+    {'1': 'max_speaker_count', '3': 3, '4': 1, '5': 5, '10': 'maxSpeakerCount'},
   ],
 };
 

@@ -425,6 +425,14 @@ const VideoAnnotationResults$json = {
   '2': [
     {'1': 'input_uri', '3': 1, '4': 1, '5': 9, '10': 'inputUri'},
     {
+      '1': 'segment',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoSegment',
+      '10': 'segment'
+    },
+    {
       '1': 'segment_label_annotations',
       '3': 2,
       '4': 3,
@@ -433,12 +441,28 @@ const VideoAnnotationResults$json = {
       '10': 'segmentLabelAnnotations'
     },
     {
+      '1': 'segment_presence_label_annotations',
+      '3': 23,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelAnnotation',
+      '10': 'segmentPresenceLabelAnnotations'
+    },
+    {
       '1': 'shot_label_annotations',
       '3': 3,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.videointelligence.v1.LabelAnnotation',
       '10': 'shotLabelAnnotations'
+    },
+    {
+      '1': 'shot_presence_label_annotations',
+      '3': 24,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.LabelAnnotation',
+      '10': 'shotPresenceLabelAnnotations'
     },
     {
       '1': 'frame_label_annotations',
@@ -541,6 +565,22 @@ const VideoAnnotationProgress$json = {
       '5': 11,
       '6': '.google.protobuf.Timestamp',
       '10': 'updateTime'
+    },
+    {
+      '1': 'feature',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.videointelligence.v1.Feature',
+      '10': 'feature'
+    },
+    {
+      '1': 'segment',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.videointelligence.v1.VideoSegment',
+      '10': 'segment'
     },
   ],
 };

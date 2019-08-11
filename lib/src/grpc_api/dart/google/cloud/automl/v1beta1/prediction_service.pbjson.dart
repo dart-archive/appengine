@@ -113,4 +113,24 @@ const BatchPredictRequest_ParamsEntry$json = {
 
 const BatchPredictResult$json = {
   '1': 'BatchPredictResult',
+  '2': [
+    {
+      '1': 'metadata',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.BatchPredictResult.MetadataEntry',
+      '10': 'metadata'
+    },
+  ],
+  '3': [BatchPredictResult_MetadataEntry$json],
+};
+
+const BatchPredictResult_MetadataEntry$json = {
+  '1': 'MetadataEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
 };

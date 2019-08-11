@@ -193,6 +193,16 @@ class BatchPredictRequest extends $pb.GeneratedMessage {
 class BatchPredictResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchPredictResult',
       package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..m<$core.String, $core.String>(
+        1,
+        'metadata',
+        'BatchPredictResult.MetadataEntry',
+        $pb.PbFieldType.OS,
+        $pb.PbFieldType.OS,
+        null,
+        null,
+        null,
+        const $pb.PackageName('google.cloud.automl.v1beta1'))
     ..hasRequiredFields = false;
 
   BatchPredictResult._() : super();
@@ -215,4 +225,6 @@ class BatchPredictResult extends $pb.GeneratedMessage {
   static BatchPredictResult getDefault() =>
       _defaultInstance ??= create()..freeze();
   static BatchPredictResult _defaultInstance;
+
+  $core.Map<$core.String, $core.String> get metadata => $_getMap(0);
 }

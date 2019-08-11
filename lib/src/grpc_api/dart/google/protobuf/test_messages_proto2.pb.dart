@@ -411,6 +411,34 @@ class TestAllTypesProto2 extends $pb.GeneratedMessage {
     ..m<$core.String, ForeignMessageProto2>(72, 'mapStringForeignMessage', 'TestAllTypesProto2.MapStringForeignMessageEntry', $pb.PbFieldType.OS, $pb.PbFieldType.OM, ForeignMessageProto2.create, null, null, const $pb.PackageName('protobuf_test_messages.proto2'))
     ..m<$core.String, TestAllTypesProto2_NestedEnum>(73, 'mapStringNestedEnum', 'TestAllTypesProto2.MapStringNestedEnumEntry', $pb.PbFieldType.OS, $pb.PbFieldType.OE, null, TestAllTypesProto2_NestedEnum.valueOf, TestAllTypesProto2_NestedEnum.values, const $pb.PackageName('protobuf_test_messages.proto2'))
     ..m<$core.String, ForeignEnumProto2>(74, 'mapStringForeignEnum', 'TestAllTypesProto2.MapStringForeignEnumEntry', $pb.PbFieldType.OS, $pb.PbFieldType.OE, null, ForeignEnumProto2.valueOf, ForeignEnumProto2.values, const $pb.PackageName('protobuf_test_messages.proto2'))
+    ..p<$core.int>(75, 'packedInt32', $pb.PbFieldType.K3)
+    ..p<Int64>(76, 'packedInt64', $pb.PbFieldType.K6)
+    ..p<$core.int>(77, 'packedUint32', $pb.PbFieldType.KU3)
+    ..p<Int64>(78, 'packedUint64', $pb.PbFieldType.KU6)
+    ..p<$core.int>(79, 'packedSint32', $pb.PbFieldType.KS3)
+    ..p<Int64>(80, 'packedSint64', $pb.PbFieldType.KS6)
+    ..p<$core.int>(81, 'packedFixed32', $pb.PbFieldType.KF3)
+    ..p<Int64>(82, 'packedFixed64', $pb.PbFieldType.KF6)
+    ..p<$core.int>(83, 'packedSfixed32', $pb.PbFieldType.KSF3)
+    ..p<Int64>(84, 'packedSfixed64', $pb.PbFieldType.KSF6)
+    ..p<$core.double>(85, 'packedFloat', $pb.PbFieldType.KF)
+    ..p<$core.double>(86, 'packedDouble', $pb.PbFieldType.KD)
+    ..p<$core.bool>(87, 'packedBool', $pb.PbFieldType.KB)
+    ..pc<TestAllTypesProto2_NestedEnum>(88, 'packedNestedEnum', $pb.PbFieldType.KE, null, TestAllTypesProto2_NestedEnum.valueOf, TestAllTypesProto2_NestedEnum.values)
+    ..p<$core.int>(89, 'unpackedInt32', $pb.PbFieldType.P3)
+    ..p<Int64>(90, 'unpackedInt64', $pb.PbFieldType.P6)
+    ..p<$core.int>(91, 'unpackedUint32', $pb.PbFieldType.PU3)
+    ..p<Int64>(92, 'unpackedUint64', $pb.PbFieldType.PU6)
+    ..p<$core.int>(93, 'unpackedSint32', $pb.PbFieldType.PS3)
+    ..p<Int64>(94, 'unpackedSint64', $pb.PbFieldType.PS6)
+    ..p<$core.int>(95, 'unpackedFixed32', $pb.PbFieldType.PF3)
+    ..p<Int64>(96, 'unpackedFixed64', $pb.PbFieldType.PF6)
+    ..p<$core.int>(97, 'unpackedSfixed32', $pb.PbFieldType.PSF3)
+    ..p<Int64>(98, 'unpackedSfixed64', $pb.PbFieldType.PSF6)
+    ..p<$core.double>(99, 'unpackedFloat', $pb.PbFieldType.PF)
+    ..p<$core.double>(100, 'unpackedDouble', $pb.PbFieldType.PD)
+    ..p<$core.bool>(101, 'unpackedBool', $pb.PbFieldType.PB)
+    ..pc<TestAllTypesProto2_NestedEnum>(102, 'unpackedNestedEnum', $pb.PbFieldType.PE, null, TestAllTypesProto2_NestedEnum.valueOf, TestAllTypesProto2_NestedEnum.values)
     ..a<$core.int>(111, 'oneofUint32', $pb.PbFieldType.OU3)
     ..a<TestAllTypesProto2_NestedMessage>(112, 'oneofNestedMessage', $pb.PbFieldType.OM, TestAllTypesProto2_NestedMessage.getDefault, TestAllTypesProto2_NestedMessage.create)
     ..aOS(113, 'oneofString')
@@ -729,228 +757,286 @@ class TestAllTypesProto2 extends $pb.GeneratedMessage {
   $core.Map<$core.String, ForeignEnumProto2> get mapStringForeignEnum =>
       $_getMap(61);
 
-  $core.int get oneofUint32 => $_get(62, 0);
+  $core.List<$core.int> get packedInt32 => $_getList(62);
+
+  $core.List<Int64> get packedInt64 => $_getList(63);
+
+  $core.List<$core.int> get packedUint32 => $_getList(64);
+
+  $core.List<Int64> get packedUint64 => $_getList(65);
+
+  $core.List<$core.int> get packedSint32 => $_getList(66);
+
+  $core.List<Int64> get packedSint64 => $_getList(67);
+
+  $core.List<$core.int> get packedFixed32 => $_getList(68);
+
+  $core.List<Int64> get packedFixed64 => $_getList(69);
+
+  $core.List<$core.int> get packedSfixed32 => $_getList(70);
+
+  $core.List<Int64> get packedSfixed64 => $_getList(71);
+
+  $core.List<$core.double> get packedFloat => $_getList(72);
+
+  $core.List<$core.double> get packedDouble => $_getList(73);
+
+  $core.List<$core.bool> get packedBool => $_getList(74);
+
+  $core.List<TestAllTypesProto2_NestedEnum> get packedNestedEnum =>
+      $_getList(75);
+
+  $core.List<$core.int> get unpackedInt32 => $_getList(76);
+
+  $core.List<Int64> get unpackedInt64 => $_getList(77);
+
+  $core.List<$core.int> get unpackedUint32 => $_getList(78);
+
+  $core.List<Int64> get unpackedUint64 => $_getList(79);
+
+  $core.List<$core.int> get unpackedSint32 => $_getList(80);
+
+  $core.List<Int64> get unpackedSint64 => $_getList(81);
+
+  $core.List<$core.int> get unpackedFixed32 => $_getList(82);
+
+  $core.List<Int64> get unpackedFixed64 => $_getList(83);
+
+  $core.List<$core.int> get unpackedSfixed32 => $_getList(84);
+
+  $core.List<Int64> get unpackedSfixed64 => $_getList(85);
+
+  $core.List<$core.double> get unpackedFloat => $_getList(86);
+
+  $core.List<$core.double> get unpackedDouble => $_getList(87);
+
+  $core.List<$core.bool> get unpackedBool => $_getList(88);
+
+  $core.List<TestAllTypesProto2_NestedEnum> get unpackedNestedEnum =>
+      $_getList(89);
+
+  $core.int get oneofUint32 => $_get(90, 0);
   set oneofUint32($core.int v) {
-    $_setUnsignedInt32(62, v);
+    $_setUnsignedInt32(90, v);
   }
 
-  $core.bool hasOneofUint32() => $_has(62);
+  $core.bool hasOneofUint32() => $_has(90);
   void clearOneofUint32() => clearField(111);
 
-  TestAllTypesProto2_NestedMessage get oneofNestedMessage => $_getN(63);
+  TestAllTypesProto2_NestedMessage get oneofNestedMessage => $_getN(91);
   set oneofNestedMessage(TestAllTypesProto2_NestedMessage v) {
     setField(112, v);
   }
 
-  $core.bool hasOneofNestedMessage() => $_has(63);
+  $core.bool hasOneofNestedMessage() => $_has(91);
   void clearOneofNestedMessage() => clearField(112);
 
-  $core.String get oneofString => $_getS(64, '');
+  $core.String get oneofString => $_getS(92, '');
   set oneofString($core.String v) {
-    $_setString(64, v);
+    $_setString(92, v);
   }
 
-  $core.bool hasOneofString() => $_has(64);
+  $core.bool hasOneofString() => $_has(92);
   void clearOneofString() => clearField(113);
 
-  $core.List<$core.int> get oneofBytes => $_getN(65);
+  $core.List<$core.int> get oneofBytes => $_getN(93);
   set oneofBytes($core.List<$core.int> v) {
-    $_setBytes(65, v);
+    $_setBytes(93, v);
   }
 
-  $core.bool hasOneofBytes() => $_has(65);
+  $core.bool hasOneofBytes() => $_has(93);
   void clearOneofBytes() => clearField(114);
 
-  $core.bool get oneofBool => $_get(66, false);
+  $core.bool get oneofBool => $_get(94, false);
   set oneofBool($core.bool v) {
-    $_setBool(66, v);
+    $_setBool(94, v);
   }
 
-  $core.bool hasOneofBool() => $_has(66);
+  $core.bool hasOneofBool() => $_has(94);
   void clearOneofBool() => clearField(115);
 
-  Int64 get oneofUint64 => $_getI64(67);
+  Int64 get oneofUint64 => $_getI64(95);
   set oneofUint64(Int64 v) {
-    $_setInt64(67, v);
+    $_setInt64(95, v);
   }
 
-  $core.bool hasOneofUint64() => $_has(67);
+  $core.bool hasOneofUint64() => $_has(95);
   void clearOneofUint64() => clearField(116);
 
-  $core.double get oneofFloat => $_getN(68);
+  $core.double get oneofFloat => $_getN(96);
   set oneofFloat($core.double v) {
-    $_setFloat(68, v);
+    $_setFloat(96, v);
   }
 
-  $core.bool hasOneofFloat() => $_has(68);
+  $core.bool hasOneofFloat() => $_has(96);
   void clearOneofFloat() => clearField(117);
 
-  $core.double get oneofDouble => $_getN(69);
+  $core.double get oneofDouble => $_getN(97);
   set oneofDouble($core.double v) {
-    $_setDouble(69, v);
+    $_setDouble(97, v);
   }
 
-  $core.bool hasOneofDouble() => $_has(69);
+  $core.bool hasOneofDouble() => $_has(97);
   void clearOneofDouble() => clearField(118);
 
-  TestAllTypesProto2_NestedEnum get oneofEnum => $_getN(70);
+  TestAllTypesProto2_NestedEnum get oneofEnum => $_getN(98);
   set oneofEnum(TestAllTypesProto2_NestedEnum v) {
     setField(119, v);
   }
 
-  $core.bool hasOneofEnum() => $_has(70);
+  $core.bool hasOneofEnum() => $_has(98);
   void clearOneofEnum() => clearField(119);
 
-  TestAllTypesProto2_Data get data => $_getN(71);
+  TestAllTypesProto2_Data get data => $_getN(99);
   set data(TestAllTypesProto2_Data v) {
     setField(201, v);
   }
 
-  $core.bool hasData() => $_has(71);
+  $core.bool hasData() => $_has(99);
   void clearData() => clearField(201);
 
-  $core.int get fieldname1 => $_get(72, 0);
+  $core.int get fieldname1 => $_get(100, 0);
   set fieldname1($core.int v) {
-    $_setSignedInt32(72, v);
+    $_setSignedInt32(100, v);
   }
 
-  $core.bool hasFieldname1() => $_has(72);
+  $core.bool hasFieldname1() => $_has(100);
   void clearFieldname1() => clearField(401);
 
-  $core.int get fieldName2 => $_get(73, 0);
+  $core.int get fieldName2 => $_get(101, 0);
   set fieldName2($core.int v) {
-    $_setSignedInt32(73, v);
+    $_setSignedInt32(101, v);
   }
 
-  $core.bool hasFieldName2() => $_has(73);
+  $core.bool hasFieldName2() => $_has(101);
   void clearFieldName2() => clearField(402);
 
-  $core.int get fieldName3 => $_get(74, 0);
+  $core.int get fieldName3 => $_get(102, 0);
   set fieldName3($core.int v) {
-    $_setSignedInt32(74, v);
+    $_setSignedInt32(102, v);
   }
 
-  $core.bool hasFieldName3() => $_has(74);
+  $core.bool hasFieldName3() => $_has(102);
   void clearFieldName3() => clearField(403);
 
-  $core.int get fieldName4 => $_get(75, 0);
+  $core.int get fieldName4 => $_get(103, 0);
   set fieldName4($core.int v) {
-    $_setSignedInt32(75, v);
+    $_setSignedInt32(103, v);
   }
 
-  $core.bool hasFieldName4() => $_has(75);
+  $core.bool hasFieldName4() => $_has(103);
   void clearFieldName4() => clearField(404);
 
-  $core.int get field0name5 => $_get(76, 0);
+  $core.int get field0name5 => $_get(104, 0);
   set field0name5($core.int v) {
-    $_setSignedInt32(76, v);
+    $_setSignedInt32(104, v);
   }
 
-  $core.bool hasField0name5() => $_has(76);
+  $core.bool hasField0name5() => $_has(104);
   void clearField0name5() => clearField(405);
 
-  $core.int get field0Name6 => $_get(77, 0);
+  $core.int get field0Name6 => $_get(105, 0);
   set field0Name6($core.int v) {
-    $_setSignedInt32(77, v);
+    $_setSignedInt32(105, v);
   }
 
-  $core.bool hasField0Name6() => $_has(77);
+  $core.bool hasField0Name6() => $_has(105);
   void clearField0Name6() => clearField(406);
 
-  $core.int get fieldName7 => $_get(78, 0);
+  $core.int get fieldName7 => $_get(106, 0);
   set fieldName7($core.int v) {
-    $_setSignedInt32(78, v);
+    $_setSignedInt32(106, v);
   }
 
-  $core.bool hasFieldName7() => $_has(78);
+  $core.bool hasFieldName7() => $_has(106);
   void clearFieldName7() => clearField(407);
 
-  $core.int get fieldName8 => $_get(79, 0);
+  $core.int get fieldName8 => $_get(107, 0);
   set fieldName8($core.int v) {
-    $_setSignedInt32(79, v);
+    $_setSignedInt32(107, v);
   }
 
-  $core.bool hasFieldName8() => $_has(79);
+  $core.bool hasFieldName8() => $_has(107);
   void clearFieldName8() => clearField(408);
 
-  $core.int get fieldName9 => $_get(80, 0);
+  $core.int get fieldName9 => $_get(108, 0);
   set fieldName9($core.int v) {
-    $_setSignedInt32(80, v);
+    $_setSignedInt32(108, v);
   }
 
-  $core.bool hasFieldName9() => $_has(80);
+  $core.bool hasFieldName9() => $_has(108);
   void clearFieldName9() => clearField(409);
 
-  $core.int get fieldName10 => $_get(81, 0);
+  $core.int get fieldName10 => $_get(109, 0);
   set fieldName10($core.int v) {
-    $_setSignedInt32(81, v);
+    $_setSignedInt32(109, v);
   }
 
-  $core.bool hasFieldName10() => $_has(81);
+  $core.bool hasFieldName10() => $_has(109);
   void clearFieldName10() => clearField(410);
 
-  $core.int get fIELDNAME11 => $_get(82, 0);
+  $core.int get fIELDNAME11 => $_get(110, 0);
   set fIELDNAME11($core.int v) {
-    $_setSignedInt32(82, v);
+    $_setSignedInt32(110, v);
   }
 
-  $core.bool hasFIELDNAME11() => $_has(82);
+  $core.bool hasFIELDNAME11() => $_has(110);
   void clearFIELDNAME11() => clearField(411);
 
-  $core.int get fIELDName12 => $_get(83, 0);
+  $core.int get fIELDName12 => $_get(111, 0);
   set fIELDName12($core.int v) {
-    $_setSignedInt32(83, v);
+    $_setSignedInt32(111, v);
   }
 
-  $core.bool hasFIELDName12() => $_has(83);
+  $core.bool hasFIELDName12() => $_has(111);
   void clearFIELDName12() => clearField(412);
 
-  $core.int get fieldName13 => $_get(84, 0);
+  $core.int get fieldName13 => $_get(112, 0);
   set fieldName13($core.int v) {
-    $_setSignedInt32(84, v);
+    $_setSignedInt32(112, v);
   }
 
-  $core.bool hasFieldName13() => $_has(84);
+  $core.bool hasFieldName13() => $_has(112);
   void clearFieldName13() => clearField(413);
 
-  $core.int get fieldName14 => $_get(85, 0);
+  $core.int get fieldName14 => $_get(113, 0);
   set fieldName14($core.int v) {
-    $_setSignedInt32(85, v);
+    $_setSignedInt32(113, v);
   }
 
-  $core.bool hasFieldName14() => $_has(85);
+  $core.bool hasFieldName14() => $_has(113);
   void clearFieldName14() => clearField(414);
 
-  $core.int get fieldName15 => $_get(86, 0);
+  $core.int get fieldName15 => $_get(114, 0);
   set fieldName15($core.int v) {
-    $_setSignedInt32(86, v);
+    $_setSignedInt32(114, v);
   }
 
-  $core.bool hasFieldName15() => $_has(86);
+  $core.bool hasFieldName15() => $_has(114);
   void clearFieldName15() => clearField(415);
 
-  $core.int get fieldName16 => $_get(87, 0);
+  $core.int get fieldName16 => $_get(115, 0);
   set fieldName16($core.int v) {
-    $_setSignedInt32(87, v);
+    $_setSignedInt32(115, v);
   }
 
-  $core.bool hasFieldName16() => $_has(87);
+  $core.bool hasFieldName16() => $_has(115);
   void clearFieldName16() => clearField(416);
 
-  $core.int get fieldName17 => $_get(88, 0);
+  $core.int get fieldName17 => $_get(116, 0);
   set fieldName17($core.int v) {
-    $_setSignedInt32(88, v);
+    $_setSignedInt32(116, v);
   }
 
-  $core.bool hasFieldName17() => $_has(88);
+  $core.bool hasFieldName17() => $_has(116);
   void clearFieldName17() => clearField(417);
 
-  $core.int get fieldName18 => $_get(89, 0);
+  $core.int get fieldName18 => $_get(117, 0);
   set fieldName18($core.int v) {
-    $_setSignedInt32(89, v);
+    $_setSignedInt32(117, v);
   }
 
-  $core.bool hasFieldName18() => $_has(89);
+  $core.bool hasFieldName18() => $_has(117);
   void clearFieldName18() => clearField(418);
 }
 

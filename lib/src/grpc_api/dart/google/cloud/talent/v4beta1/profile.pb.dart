@@ -70,6 +70,8 @@ class Profile extends $pb.GeneratedMessage {
     ..pPS(48, 'assignments')
     ..a<Resume>(
         53, 'resume', $pb.PbFieldType.OM, Resume.getDefault, Resume.create)
+    ..pc<$2.Location>(
+        64, 'derivedAddresses', $pb.PbFieldType.PM, $2.Location.create)
     ..hasRequiredFields = false;
 
   Profile._() : super();
@@ -211,6 +213,8 @@ class Profile extends $pb.GeneratedMessage {
 
   $core.bool hasResume() => $_has(26);
   void clearResume() => clearField(53);
+
+  $core.List<$2.Location> get derivedAddresses => $_getList(27);
 }
 
 class Resume extends $pb.GeneratedMessage {

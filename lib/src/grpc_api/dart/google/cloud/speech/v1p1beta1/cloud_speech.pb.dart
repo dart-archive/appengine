@@ -275,6 +275,8 @@ class RecognitionConfig extends $pb.GeneratedMessage {
     ..aOB(16, 'enableSpeakerDiarization')
     ..a<$core.int>(17, 'diarizationSpeakerCount', $pb.PbFieldType.O3)
     ..pPS(18, 'alternativeLanguageCodes')
+    ..a<SpeakerDiarizationConfig>(19, 'diarizationConfig', $pb.PbFieldType.OM,
+        SpeakerDiarizationConfig.getDefault, SpeakerDiarizationConfig.create)
     ..hasRequiredFields = false;
 
   RecognitionConfig._() : super();
@@ -404,23 +406,95 @@ class RecognitionConfig extends $pb.GeneratedMessage {
   $core.bool hasEnableWordConfidence() => $_has(13);
   void clearEnableWordConfidence() => clearField(15);
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool get enableSpeakerDiarization => $_get(14, false);
+  @$core.Deprecated('This field is deprecated.')
   set enableSpeakerDiarization($core.bool v) {
     $_setBool(14, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool hasEnableSpeakerDiarization() => $_has(14);
+  @$core.Deprecated('This field is deprecated.')
   void clearEnableSpeakerDiarization() => clearField(16);
 
+  @$core.Deprecated('This field is deprecated.')
   $core.int get diarizationSpeakerCount => $_get(15, 0);
+  @$core.Deprecated('This field is deprecated.')
   set diarizationSpeakerCount($core.int v) {
     $_setSignedInt32(15, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   $core.bool hasDiarizationSpeakerCount() => $_has(15);
+  @$core.Deprecated('This field is deprecated.')
   void clearDiarizationSpeakerCount() => clearField(17);
 
   $core.List<$core.String> get alternativeLanguageCodes => $_getList(16);
+
+  SpeakerDiarizationConfig get diarizationConfig => $_getN(17);
+  set diarizationConfig(SpeakerDiarizationConfig v) {
+    setField(19, v);
+  }
+
+  $core.bool hasDiarizationConfig() => $_has(17);
+  void clearDiarizationConfig() => clearField(19);
+}
+
+class SpeakerDiarizationConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeakerDiarizationConfig',
+      package: const $pb.PackageName('google.cloud.speech.v1p1beta1'))
+    ..aOB(1, 'enableSpeakerDiarization')
+    ..a<$core.int>(2, 'minSpeakerCount', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'maxSpeakerCount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  SpeakerDiarizationConfig._() : super();
+  factory SpeakerDiarizationConfig() => create();
+  factory SpeakerDiarizationConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeakerDiarizationConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  SpeakerDiarizationConfig clone() =>
+      SpeakerDiarizationConfig()..mergeFromMessage(this);
+  SpeakerDiarizationConfig copyWith(
+          void Function(SpeakerDiarizationConfig) updates) =>
+      super.copyWith((message) => updates(message as SpeakerDiarizationConfig));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SpeakerDiarizationConfig create() => SpeakerDiarizationConfig._();
+  SpeakerDiarizationConfig createEmptyInstance() => create();
+  static $pb.PbList<SpeakerDiarizationConfig> createRepeated() =>
+      $pb.PbList<SpeakerDiarizationConfig>();
+  static SpeakerDiarizationConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static SpeakerDiarizationConfig _defaultInstance;
+
+  $core.bool get enableSpeakerDiarization => $_get(0, false);
+  set enableSpeakerDiarization($core.bool v) {
+    $_setBool(0, v);
+  }
+
+  $core.bool hasEnableSpeakerDiarization() => $_has(0);
+  void clearEnableSpeakerDiarization() => clearField(1);
+
+  $core.int get minSpeakerCount => $_get(1, 0);
+  set minSpeakerCount($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  $core.bool hasMinSpeakerCount() => $_has(1);
+  void clearMinSpeakerCount() => clearField(2);
+
+  $core.int get maxSpeakerCount => $_get(2, 0);
+  set maxSpeakerCount($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  $core.bool hasMaxSpeakerCount() => $_has(2);
+  void clearMaxSpeakerCount() => clearField(3);
 }
 
 class RecognitionMetadata extends $pb.GeneratedMessage {

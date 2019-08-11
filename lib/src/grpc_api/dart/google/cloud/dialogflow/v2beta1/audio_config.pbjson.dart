@@ -49,6 +49,14 @@ const OutputAudioEncoding$json = {
   ],
 };
 
+const SpeechContext$json = {
+  '1': 'SpeechContext',
+  '2': [
+    {'1': 'phrases', '3': 1, '4': 3, '5': 9, '10': 'phrases'},
+    {'1': 'boost', '3': 2, '4': 1, '5': 2, '10': 'boost'},
+  ],
+};
+
 const SpeechWordInfo$json = {
   '1': 'SpeechWordInfo',
   '2': [
@@ -88,6 +96,14 @@ const InputAudioConfig$json = {
     {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
     {'1': 'enable_word_info', '3': 13, '4': 1, '5': 8, '10': 'enableWordInfo'},
     {'1': 'phrase_hints', '3': 4, '4': 3, '5': 9, '10': 'phraseHints'},
+    {
+      '1': 'speech_contexts',
+      '3': 11,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.SpeechContext',
+      '10': 'speechContexts'
+    },
     {'1': 'model', '3': 7, '4': 1, '5': 9, '10': 'model'},
     {
       '1': 'model_variant',
