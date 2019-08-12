@@ -1,4 +1,4 @@
-## 0.11.0
+## 0.10.1
 
  * Update gRPC API protos
 
