@@ -132,6 +132,75 @@ class ProductSearchResults_Result extends $pb.GeneratedMessage {
   void clearImage() => clearField(3);
 }
 
+class ProductSearchResults_ObjectAnnotation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'ProductSearchResults.ObjectAnnotation',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..aOS(1, 'mid')
+    ..aOS(2, 'languageCode')
+    ..aOS(3, 'name')
+    ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  ProductSearchResults_ObjectAnnotation._() : super();
+  factory ProductSearchResults_ObjectAnnotation() => create();
+  factory ProductSearchResults_ObjectAnnotation.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProductSearchResults_ObjectAnnotation.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  ProductSearchResults_ObjectAnnotation clone() =>
+      ProductSearchResults_ObjectAnnotation()..mergeFromMessage(this);
+  ProductSearchResults_ObjectAnnotation copyWith(
+          void Function(ProductSearchResults_ObjectAnnotation) updates) =>
+      super.copyWith((message) =>
+          updates(message as ProductSearchResults_ObjectAnnotation));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ProductSearchResults_ObjectAnnotation create() =>
+      ProductSearchResults_ObjectAnnotation._();
+  ProductSearchResults_ObjectAnnotation createEmptyInstance() => create();
+  static $pb.PbList<ProductSearchResults_ObjectAnnotation> createRepeated() =>
+      $pb.PbList<ProductSearchResults_ObjectAnnotation>();
+  static ProductSearchResults_ObjectAnnotation getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ProductSearchResults_ObjectAnnotation _defaultInstance;
+
+  $core.String get mid => $_getS(0, '');
+  set mid($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasMid() => $_has(0);
+  void clearMid() => clearField(1);
+
+  $core.String get languageCode => $_getS(1, '');
+  set languageCode($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasLanguageCode() => $_has(1);
+  void clearLanguageCode() => clearField(2);
+
+  $core.String get name => $_getS(2, '');
+  set name($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasName() => $_has(2);
+  void clearName() => clearField(3);
+
+  $core.double get score => $_getN(3);
+  set score($core.double v) {
+    $_setFloat(3, v);
+  }
+
+  $core.bool hasScore() => $_has(3);
+  void clearScore() => clearField(4);
+}
+
 class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.GroupedResult',
@@ -140,6 +209,8 @@ class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
         $3.BoundingPoly.getDefault, $3.BoundingPoly.create)
     ..pc<ProductSearchResults_Result>(
         2, 'results', $pb.PbFieldType.PM, ProductSearchResults_Result.create)
+    ..pc<ProductSearchResults_ObjectAnnotation>(3, 'objectAnnotations',
+        $pb.PbFieldType.PM, ProductSearchResults_ObjectAnnotation.create)
     ..hasRequiredFields = false;
 
   ProductSearchResults_GroupedResult._() : super();
@@ -176,6 +247,9 @@ class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
   void clearBoundingPoly() => clearField(1);
 
   $core.List<ProductSearchResults_Result> get results => $_getList(1);
+
+  $core.List<ProductSearchResults_ObjectAnnotation> get objectAnnotations =>
+      $_getList(2);
 }
 
 class ProductSearchResults extends $pb.GeneratedMessage {

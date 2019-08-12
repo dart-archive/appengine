@@ -1007,12 +1007,18 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
         ExplicitContentAnnotation.getDefault, ExplicitContentAnnotation.create)
     ..a<$4.Status>(
         9, 'error', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
+    ..a<VideoSegment>(10, 'segment', $pb.PbFieldType.OM,
+        VideoSegment.getDefault, VideoSegment.create)
     ..pc<SpeechTranscription>(11, 'speechTranscriptions', $pb.PbFieldType.PM,
         SpeechTranscription.create)
     ..pc<TextAnnotation>(
         12, 'textAnnotations', $pb.PbFieldType.PM, TextAnnotation.create)
     ..pc<ObjectTrackingAnnotation>(14, 'objectAnnotations', $pb.PbFieldType.PM,
         ObjectTrackingAnnotation.create)
+    ..pc<LabelAnnotation>(23, 'segmentPresenceLabelAnnotations',
+        $pb.PbFieldType.PM, LabelAnnotation.create)
+    ..pc<LabelAnnotation>(24, 'shotPresenceLabelAnnotations',
+        $pb.PbFieldType.PM, LabelAnnotation.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationResults._() : super();
@@ -1072,11 +1078,24 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
   $core.bool hasError() => $_has(7);
   void clearError() => clearField(9);
 
-  $core.List<SpeechTranscription> get speechTranscriptions => $_getList(8);
+  VideoSegment get segment => $_getN(8);
+  set segment(VideoSegment v) {
+    setField(10, v);
+  }
 
-  $core.List<TextAnnotation> get textAnnotations => $_getList(9);
+  $core.bool hasSegment() => $_has(8);
+  void clearSegment() => clearField(10);
 
-  $core.List<ObjectTrackingAnnotation> get objectAnnotations => $_getList(10);
+  $core.List<SpeechTranscription> get speechTranscriptions => $_getList(9);
+
+  $core.List<TextAnnotation> get textAnnotations => $_getList(10);
+
+  $core.List<ObjectTrackingAnnotation> get objectAnnotations => $_getList(11);
+
+  $core.List<LabelAnnotation> get segmentPresenceLabelAnnotations =>
+      $_getList(12);
+
+  $core.List<LabelAnnotation> get shotPresenceLabelAnnotations => $_getList(13);
 }
 
 class AnnotateVideoResponse extends $pb.GeneratedMessage {
@@ -1121,6 +1140,10 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
         $5.Timestamp.getDefault, $5.Timestamp.create)
     ..a<$5.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
         $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..e<Feature>(5, 'feature', $pb.PbFieldType.OE, Feature.FEATURE_UNSPECIFIED,
+        Feature.valueOf, Feature.values)
+    ..a<VideoSegment>(6, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
+        VideoSegment.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationProgress._() : super();
@@ -1177,6 +1200,22 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
 
   $core.bool hasUpdateTime() => $_has(3);
   void clearUpdateTime() => clearField(4);
+
+  Feature get feature => $_getN(4);
+  set feature(Feature v) {
+    setField(5, v);
+  }
+
+  $core.bool hasFeature() => $_has(4);
+  void clearFeature() => clearField(5);
+
+  VideoSegment get segment => $_getN(5);
+  set segment(VideoSegment v) {
+    setField(6, v);
+  }
+
+  $core.bool hasSegment() => $_has(5);
+  void clearSegment() => clearField(6);
 }
 
 class AnnotateVideoProgress extends $pb.GeneratedMessage {

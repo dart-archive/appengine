@@ -1493,3 +1493,123 @@ class BatchOperationMetadata extends $pb.GeneratedMessage {
   $core.bool hasEndTime() => $_has(2);
   void clearEndTime() => clearField(3);
 }
+
+class ProductSetPurgeConfig extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSetPurgeConfig',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..aOS(1, 'productSetId')
+    ..hasRequiredFields = false;
+
+  ProductSetPurgeConfig._() : super();
+  factory ProductSetPurgeConfig() => create();
+  factory ProductSetPurgeConfig.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProductSetPurgeConfig.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  ProductSetPurgeConfig clone() =>
+      ProductSetPurgeConfig()..mergeFromMessage(this);
+  ProductSetPurgeConfig copyWith(
+          void Function(ProductSetPurgeConfig) updates) =>
+      super.copyWith((message) => updates(message as ProductSetPurgeConfig));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ProductSetPurgeConfig create() => ProductSetPurgeConfig._();
+  ProductSetPurgeConfig createEmptyInstance() => create();
+  static $pb.PbList<ProductSetPurgeConfig> createRepeated() =>
+      $pb.PbList<ProductSetPurgeConfig>();
+  static ProductSetPurgeConfig getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static ProductSetPurgeConfig _defaultInstance;
+
+  $core.String get productSetId => $_getS(0, '');
+  set productSetId($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasProductSetId() => $_has(0);
+  void clearProductSetId() => clearField(1);
+}
+
+enum PurgeProductsRequest_Target {
+  productSetPurgeConfig,
+  deleteOrphanProducts,
+  notSet
+}
+
+class PurgeProductsRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, PurgeProductsRequest_Target>
+      _PurgeProductsRequest_TargetByTag = {
+    2: PurgeProductsRequest_Target.productSetPurgeConfig,
+    3: PurgeProductsRequest_Target.deleteOrphanProducts,
+    0: PurgeProductsRequest_Target.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PurgeProductsRequest',
+      package: const $pb.PackageName('google.cloud.vision.v1'))
+    ..oo(0, [2, 3])
+    ..aOS(1, 'parent')
+    ..a<ProductSetPurgeConfig>(2, 'productSetPurgeConfig', $pb.PbFieldType.OM,
+        ProductSetPurgeConfig.getDefault, ProductSetPurgeConfig.create)
+    ..aOB(3, 'deleteOrphanProducts')
+    ..aOB(4, 'force')
+    ..hasRequiredFields = false;
+
+  PurgeProductsRequest._() : super();
+  factory PurgeProductsRequest() => create();
+  factory PurgeProductsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PurgeProductsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  PurgeProductsRequest clone() =>
+      PurgeProductsRequest()..mergeFromMessage(this);
+  PurgeProductsRequest copyWith(void Function(PurgeProductsRequest) updates) =>
+      super.copyWith((message) => updates(message as PurgeProductsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static PurgeProductsRequest create() => PurgeProductsRequest._();
+  PurgeProductsRequest createEmptyInstance() => create();
+  static $pb.PbList<PurgeProductsRequest> createRepeated() =>
+      $pb.PbList<PurgeProductsRequest>();
+  static PurgeProductsRequest getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static PurgeProductsRequest _defaultInstance;
+
+  PurgeProductsRequest_Target whichTarget() =>
+      _PurgeProductsRequest_TargetByTag[$_whichOneof(0)];
+  void clearTarget() => clearField($_whichOneof(0));
+
+  $core.String get parent => $_getS(0, '');
+  set parent($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasParent() => $_has(0);
+  void clearParent() => clearField(1);
+
+  ProductSetPurgeConfig get productSetPurgeConfig => $_getN(1);
+  set productSetPurgeConfig(ProductSetPurgeConfig v) {
+    setField(2, v);
+  }
+
+  $core.bool hasProductSetPurgeConfig() => $_has(1);
+  void clearProductSetPurgeConfig() => clearField(2);
+
+  $core.bool get deleteOrphanProducts => $_get(2, false);
+  set deleteOrphanProducts($core.bool v) {
+    $_setBool(2, v);
+  }
+
+  $core.bool hasDeleteOrphanProducts() => $_has(2);
+  void clearDeleteOrphanProducts() => clearField(3);
+
+  $core.bool get force => $_get(3, false);
+  set force($core.bool v) {
+    $_setBool(3, v);
+  }
+
+  $core.bool hasForce() => $_has(3);
+  void clearForce() => clearField(4);
+}

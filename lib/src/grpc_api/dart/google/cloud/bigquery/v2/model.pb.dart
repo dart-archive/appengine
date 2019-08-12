@@ -20,6 +20,33 @@ import 'model.pbenum.dart';
 
 export 'model.pbenum.dart';
 
+class Model_KmeansEnums extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model.KmeansEnums',
+      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+    ..hasRequiredFields = false;
+
+  Model_KmeansEnums._() : super();
+  factory Model_KmeansEnums() => create();
+  factory Model_KmeansEnums.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Model_KmeansEnums.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  Model_KmeansEnums clone() => Model_KmeansEnums()..mergeFromMessage(this);
+  Model_KmeansEnums copyWith(void Function(Model_KmeansEnums) updates) =>
+      super.copyWith((message) => updates(message as Model_KmeansEnums));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Model_KmeansEnums create() => Model_KmeansEnums._();
+  Model_KmeansEnums createEmptyInstance() => create();
+  static $pb.PbList<Model_KmeansEnums> createRepeated() =>
+      $pb.PbList<Model_KmeansEnums>();
+  static Model_KmeansEnums getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static Model_KmeansEnums _defaultInstance;
+}
+
 class Model_RegressionMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model.RegressionMetrics',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
@@ -638,6 +665,273 @@ class Model_MultiClassClassificationMetrics extends $pb.GeneratedMessage {
       get confusionMatrixList => $_getList(1);
 }
 
+class Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Model.ClusteringMetrics.Cluster.FeatureValue.CategoricalValue.CategoryCount',
+      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+    ..aOS(1, 'category')
+    ..a<$4.Int64Value>(2, 'count', $pb.PbFieldType.OM, $4.Int64Value.getDefault,
+        $4.Int64Value.create)
+    ..hasRequiredFields = false;
+
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount._()
+      : super();
+  factory Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount() =>
+      create();
+  factory Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+      clone() =>
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount()
+            ..mergeFromMessage(this);
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount copyWith(
+          void Function(
+                  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount)
+              updates) =>
+      super.copyWith((message) => updates(message
+          as Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+      create() =>
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+              ._();
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+      createEmptyInstance() => create();
+  static $pb.PbList<
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount>
+      createRepeated() => $pb.PbList<
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount>();
+  static Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+      getDefault() => _defaultInstance ??= create()..freeze();
+  static Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+      _defaultInstance;
+
+  $core.String get category => $_getS(0, '');
+  set category($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasCategory() => $_has(0);
+  void clearCategory() => clearField(1);
+
+  $4.Int64Value get count => $_getN(1);
+  set count($4.Int64Value v) {
+    setField(2, v);
+  }
+
+  $core.bool hasCount() => $_has(1);
+  void clearCount() => clearField(2);
+}
+
+class Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+    extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Model.ClusteringMetrics.Cluster.FeatureValue.CategoricalValue',
+      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+    ..pc<Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount>(
+        1,
+        'categoryCounts',
+        $pb.PbFieldType.PM,
+        Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount
+            .create)
+    ..hasRequiredFields = false;
+
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue._() : super();
+  factory Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue() =>
+      create();
+  factory Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue.fromJson(
+          $core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue clone() =>
+      Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue()
+        ..mergeFromMessage(this);
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue copyWith(
+          void Function(
+                  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue)
+              updates) =>
+      super.copyWith((message) => updates(message
+          as Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+      create() =>
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue._();
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+      createEmptyInstance() => create();
+  static $pb
+          .PbList<Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue>
+      createRepeated() => $pb.PbList<
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue>();
+  static Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+      getDefault() => _defaultInstance ??= create()..freeze();
+  static Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+      _defaultInstance;
+
+  $core.List<
+          Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount>
+      get categoryCounts => $_getList(0);
+}
+
+enum Model_ClusteringMetrics_Cluster_FeatureValue_Value {
+  numericalValue,
+  categoricalValue,
+  notSet
+}
+
+class Model_ClusteringMetrics_Cluster_FeatureValue
+    extends $pb.GeneratedMessage {
+  static const $core
+          .Map<$core.int, Model_ClusteringMetrics_Cluster_FeatureValue_Value>
+      _Model_ClusteringMetrics_Cluster_FeatureValue_ValueByTag = {
+    2: Model_ClusteringMetrics_Cluster_FeatureValue_Value.numericalValue,
+    3: Model_ClusteringMetrics_Cluster_FeatureValue_Value.categoricalValue,
+    0: Model_ClusteringMetrics_Cluster_FeatureValue_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Model.ClusteringMetrics.Cluster.FeatureValue',
+      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+    ..oo(0, [2, 3])
+    ..aOS(1, 'featureColumn')
+    ..a<$4.DoubleValue>(2, 'numericalValue', $pb.PbFieldType.OM,
+        $4.DoubleValue.getDefault, $4.DoubleValue.create)
+    ..a<Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue>(
+        3,
+        'categoricalValue',
+        $pb.PbFieldType.OM,
+        Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+            .getDefault,
+        Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue.create)
+    ..hasRequiredFields = false;
+
+  Model_ClusteringMetrics_Cluster_FeatureValue._() : super();
+  factory Model_ClusteringMetrics_Cluster_FeatureValue() => create();
+  factory Model_ClusteringMetrics_Cluster_FeatureValue.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Model_ClusteringMetrics_Cluster_FeatureValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  Model_ClusteringMetrics_Cluster_FeatureValue clone() =>
+      Model_ClusteringMetrics_Cluster_FeatureValue()..mergeFromMessage(this);
+  Model_ClusteringMetrics_Cluster_FeatureValue copyWith(
+          void Function(Model_ClusteringMetrics_Cluster_FeatureValue)
+              updates) =>
+      super.copyWith((message) =>
+          updates(message as Model_ClusteringMetrics_Cluster_FeatureValue));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Model_ClusteringMetrics_Cluster_FeatureValue create() =>
+      Model_ClusteringMetrics_Cluster_FeatureValue._();
+  Model_ClusteringMetrics_Cluster_FeatureValue createEmptyInstance() =>
+      create();
+  static $pb.PbList<Model_ClusteringMetrics_Cluster_FeatureValue>
+      createRepeated() =>
+          $pb.PbList<Model_ClusteringMetrics_Cluster_FeatureValue>();
+  static Model_ClusteringMetrics_Cluster_FeatureValue getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static Model_ClusteringMetrics_Cluster_FeatureValue _defaultInstance;
+
+  Model_ClusteringMetrics_Cluster_FeatureValue_Value whichValue() =>
+      _Model_ClusteringMetrics_Cluster_FeatureValue_ValueByTag[$_whichOneof(0)];
+  void clearValue() => clearField($_whichOneof(0));
+
+  $core.String get featureColumn => $_getS(0, '');
+  set featureColumn($core.String v) {
+    $_setString(0, v);
+  }
+
+  $core.bool hasFeatureColumn() => $_has(0);
+  void clearFeatureColumn() => clearField(1);
+
+  $4.DoubleValue get numericalValue => $_getN(1);
+  set numericalValue($4.DoubleValue v) {
+    setField(2, v);
+  }
+
+  $core.bool hasNumericalValue() => $_has(1);
+  void clearNumericalValue() => clearField(2);
+
+  Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue
+      get categoricalValue => $_getN(2);
+  set categoricalValue(
+      Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue v) {
+    setField(3, v);
+  }
+
+  $core.bool hasCategoricalValue() => $_has(2);
+  void clearCategoricalValue() => clearField(3);
+}
+
+class Model_ClusteringMetrics_Cluster extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'Model.ClusteringMetrics.Cluster',
+      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+    ..aInt64(1, 'centroidId')
+    ..pc<Model_ClusteringMetrics_Cluster_FeatureValue>(2, 'featureValues',
+        $pb.PbFieldType.PM, Model_ClusteringMetrics_Cluster_FeatureValue.create)
+    ..a<$4.Int64Value>(3, 'count', $pb.PbFieldType.OM, $4.Int64Value.getDefault,
+        $4.Int64Value.create)
+    ..hasRequiredFields = false;
+
+  Model_ClusteringMetrics_Cluster._() : super();
+  factory Model_ClusteringMetrics_Cluster() => create();
+  factory Model_ClusteringMetrics_Cluster.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Model_ClusteringMetrics_Cluster.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  Model_ClusteringMetrics_Cluster clone() =>
+      Model_ClusteringMetrics_Cluster()..mergeFromMessage(this);
+  Model_ClusteringMetrics_Cluster copyWith(
+          void Function(Model_ClusteringMetrics_Cluster) updates) =>
+      super.copyWith(
+          (message) => updates(message as Model_ClusteringMetrics_Cluster));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Model_ClusteringMetrics_Cluster create() =>
+      Model_ClusteringMetrics_Cluster._();
+  Model_ClusteringMetrics_Cluster createEmptyInstance() => create();
+  static $pb.PbList<Model_ClusteringMetrics_Cluster> createRepeated() =>
+      $pb.PbList<Model_ClusteringMetrics_Cluster>();
+  static Model_ClusteringMetrics_Cluster getDefault() =>
+      _defaultInstance ??= create()..freeze();
+  static Model_ClusteringMetrics_Cluster _defaultInstance;
+
+  Int64 get centroidId => $_getI64(0);
+  set centroidId(Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  $core.bool hasCentroidId() => $_has(0);
+  void clearCentroidId() => clearField(1);
+
+  $core.List<Model_ClusteringMetrics_Cluster_FeatureValue> get featureValues =>
+      $_getList(1);
+
+  $4.Int64Value get count => $_getN(2);
+  set count($4.Int64Value v) {
+    setField(3, v);
+  }
+
+  $core.bool hasCount() => $_has(2);
+  void clearCount() => clearField(3);
+}
+
 class Model_ClusteringMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model.ClusteringMetrics',
       package: const $pb.PackageName('google.cloud.bigquery.v2'))
@@ -645,6 +939,8 @@ class Model_ClusteringMetrics extends $pb.GeneratedMessage {
         $4.DoubleValue.getDefault, $4.DoubleValue.create)
     ..a<$4.DoubleValue>(2, 'meanSquaredDistance', $pb.PbFieldType.OM,
         $4.DoubleValue.getDefault, $4.DoubleValue.create)
+    ..pc<Model_ClusteringMetrics_Cluster>(3, 'clusters', $pb.PbFieldType.PM,
+        Model_ClusteringMetrics_Cluster.create)
     ..hasRequiredFields = false;
 
   Model_ClusteringMetrics._() : super();
@@ -685,6 +981,8 @@ class Model_ClusteringMetrics extends $pb.GeneratedMessage {
 
   $core.bool hasMeanSquaredDistance() => $_has(1);
   void clearMeanSquaredDistance() => clearField(2);
+
+  $core.List<Model_ClusteringMetrics_Cluster> get clusters => $_getList(2);
 }
 
 enum Model_EvaluationMetrics_Metrics {
@@ -848,6 +1146,8 @@ class Model_TrainingRun_TrainingOptions extends $pb.GeneratedMessage {
     ..aInt64(21, 'numClusters')
     ..aOS(22, 'modelUri')
     ..e<Model_OptimizationStrategy>(23, 'optimizationStrategy', $pb.PbFieldType.OE, Model_OptimizationStrategy.OPTIMIZATION_STRATEGY_UNSPECIFIED, Model_OptimizationStrategy.valueOf, Model_OptimizationStrategy.values)
+    ..e<Model_KmeansEnums_KmeansInitializationMethod>(33, 'kmeansInitializationMethod', $pb.PbFieldType.OE, Model_KmeansEnums_KmeansInitializationMethod.KMEANS_INITIALIZATION_METHOD_UNSPECIFIED, Model_KmeansEnums_KmeansInitializationMethod.valueOf, Model_KmeansEnums_KmeansInitializationMethod.values)
+    ..aOS(34, 'kmeansInitializationColumn')
     ..hasRequiredFields = false;
 
   Model_TrainingRun_TrainingOptions._() : super();
@@ -1014,6 +1314,24 @@ class Model_TrainingRun_TrainingOptions extends $pb.GeneratedMessage {
 
   $core.bool hasOptimizationStrategy() => $_has(18);
   void clearOptimizationStrategy() => clearField(23);
+
+  Model_KmeansEnums_KmeansInitializationMethod get kmeansInitializationMethod =>
+      $_getN(19);
+  set kmeansInitializationMethod(
+      Model_KmeansEnums_KmeansInitializationMethod v) {
+    setField(33, v);
+  }
+
+  $core.bool hasKmeansInitializationMethod() => $_has(19);
+  void clearKmeansInitializationMethod() => clearField(33);
+
+  $core.String get kmeansInitializationColumn => $_getS(20, '');
+  set kmeansInitializationColumn($core.String v) {
+    $_setString(20, v);
+  }
+
+  $core.bool hasKmeansInitializationColumn() => $_has(20);
+  void clearKmeansInitializationColumn() => clearField(34);
 }
 
 class Model_TrainingRun_IterationResult_ClusterInfo

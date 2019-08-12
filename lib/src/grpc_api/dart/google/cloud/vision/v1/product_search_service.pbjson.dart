@@ -428,3 +428,38 @@ const BatchOperationMetadata_State$json = {
     {'1': 'CANCELLED', '2': 4},
   ],
 };
+
+const ProductSetPurgeConfig$json = {
+  '1': 'ProductSetPurgeConfig',
+  '2': [
+    {'1': 'product_set_id', '3': 1, '4': 1, '5': 9, '10': 'productSetId'},
+  ],
+};
+
+const PurgeProductsRequest$json = {
+  '1': 'PurgeProductsRequest',
+  '2': [
+    {
+      '1': 'product_set_purge_config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ProductSetPurgeConfig',
+      '9': 0,
+      '10': 'productSetPurgeConfig'
+    },
+    {
+      '1': 'delete_orphan_products',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '9': 0,
+      '10': 'deleteOrphanProducts'
+    },
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'force', '3': 4, '4': 1, '5': 8, '10': 'force'},
+  ],
+  '8': [
+    {'1': 'target'},
+  ],
+};

@@ -60,8 +60,8 @@ const WebDetection$json = {
   '3': [
     WebDetection_WebEntity$json,
     WebDetection_WebImage$json,
-    WebDetection_WebLabel$json,
-    WebDetection_WebPage$json
+    WebDetection_WebPage$json,
+    WebDetection_WebLabel$json
   ],
 };
 
@@ -79,14 +79,6 @@ const WebDetection_WebImage$json = {
   '2': [
     {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
     {'1': 'score', '3': 2, '4': 1, '5': 2, '10': 'score'},
-  ],
-};
-
-const WebDetection_WebLabel$json = {
-  '1': 'WebLabel',
-  '2': [
-    {'1': 'label', '3': 1, '4': 1, '5': 9, '10': 'label'},
-    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };
 
@@ -112,5 +104,13 @@ const WebDetection_WebPage$json = {
       '6': '.google.cloud.vision.v1.WebDetection.WebImage',
       '10': 'partialMatchingImages'
     },
+  ],
+};
+
+const WebDetection_WebLabel$json = {
+  '1': 'WebLabel',
+  '2': [
+    {'1': 'label', '3': 1, '4': 1, '5': 9, '10': 'label'},
+    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };

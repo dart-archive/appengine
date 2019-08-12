@@ -149,3 +149,32 @@ class Model_OptimizationStrategy extends $pb.ProtobufEnum {
 
   const Model_OptimizationStrategy._($core.int v, $core.String n) : super(v, n);
 }
+
+class Model_KmeansEnums_KmeansInitializationMethod extends $pb.ProtobufEnum {
+  static const Model_KmeansEnums_KmeansInitializationMethod
+      KMEANS_INITIALIZATION_METHOD_UNSPECIFIED =
+      Model_KmeansEnums_KmeansInitializationMethod._(
+          0, 'KMEANS_INITIALIZATION_METHOD_UNSPECIFIED');
+  static const Model_KmeansEnums_KmeansInitializationMethod RANDOM =
+      Model_KmeansEnums_KmeansInitializationMethod._(1, 'RANDOM');
+  static const Model_KmeansEnums_KmeansInitializationMethod CUSTOM =
+      Model_KmeansEnums_KmeansInitializationMethod._(2, 'CUSTOM');
+
+  static const $core.List<Model_KmeansEnums_KmeansInitializationMethod> values =
+      <Model_KmeansEnums_KmeansInitializationMethod>[
+    KMEANS_INITIALIZATION_METHOD_UNSPECIFIED,
+    RANDOM,
+    CUSTOM,
+  ];
+
+  static final $core
+          .Map<$core.int, Model_KmeansEnums_KmeansInitializationMethod>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Model_KmeansEnums_KmeansInitializationMethod valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Model_KmeansEnums_KmeansInitializationMethod._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}

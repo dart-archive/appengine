@@ -71,6 +71,7 @@ const Model$json = {
     },
   ],
   '3': [
+    Model_KmeansEnums$json,
     Model_RegressionMetrics$json,
     Model_AggregateClassificationMetrics$json,
     Model_BinaryClassificationMetrics$json,
@@ -87,6 +88,20 @@ const Model$json = {
     Model_DataSplitMethod$json,
     Model_LearnRateStrategy$json,
     Model_OptimizationStrategy$json
+  ],
+};
+
+const Model_KmeansEnums$json = {
+  '1': 'KmeansEnums',
+  '4': [Model_KmeansEnums_KmeansInitializationMethod$json],
+};
+
+const Model_KmeansEnums_KmeansInitializationMethod$json = {
+  '1': 'KmeansInitializationMethod',
+  '2': [
+    {'1': 'KMEANS_INITIALIZATION_METHOD_UNSPECIFIED', '2': 0},
+    {'1': 'RANDOM', '2': 1},
+    {'1': 'CUSTOM', '2': 2},
   ],
 };
 
@@ -403,6 +418,104 @@ const Model_ClusteringMetrics$json = {
       '6': '.google.protobuf.DoubleValue',
       '10': 'meanSquaredDistance'
     },
+    {
+      '1': 'clusters',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.bigquery.v2.Model.ClusteringMetrics.Cluster',
+      '10': 'clusters'
+    },
+  ],
+  '3': [Model_ClusteringMetrics_Cluster$json],
+};
+
+const Model_ClusteringMetrics_Cluster$json = {
+  '1': 'Cluster',
+  '2': [
+    {'1': 'centroid_id', '3': 1, '4': 1, '5': 3, '10': 'centroidId'},
+    {
+      '1': 'feature_values',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.bigquery.v2.Model.ClusteringMetrics.Cluster.FeatureValue',
+      '10': 'featureValues'
+    },
+    {
+      '1': 'count',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'count'
+    },
+  ],
+  '3': [Model_ClusteringMetrics_Cluster_FeatureValue$json],
+};
+
+const Model_ClusteringMetrics_Cluster_FeatureValue$json = {
+  '1': 'FeatureValue',
+  '2': [
+    {'1': 'feature_column', '3': 1, '4': 1, '5': 9, '10': 'featureColumn'},
+    {
+      '1': 'numerical_value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '9': 0,
+      '10': 'numericalValue'
+    },
+    {
+      '1': 'categorical_value',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.bigquery.v2.Model.ClusteringMetrics.Cluster.FeatureValue.CategoricalValue',
+      '9': 0,
+      '10': 'categoricalValue'
+    },
+  ],
+  '3': [Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue$json],
+  '8': [
+    {'1': 'value'},
+  ],
+};
+
+const Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue$json = {
+  '1': 'CategoricalValue',
+  '2': [
+    {
+      '1': 'category_counts',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.bigquery.v2.Model.ClusteringMetrics.Cluster.FeatureValue.CategoricalValue.CategoryCount',
+      '10': 'categoryCounts'
+    },
+  ],
+  '3': [
+    Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount$json
+  ],
+};
+
+const Model_ClusteringMetrics_Cluster_FeatureValue_CategoricalValue_CategoryCount$json =
+    {
+  '1': 'CategoryCount',
+  '2': [
+    {'1': 'category', '3': 1, '4': 1, '5': 9, '10': 'category'},
+    {
+      '1': 'count',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'count'
+    },
   ],
 };
 
@@ -616,6 +729,22 @@ const Model_TrainingRun_TrainingOptions$json = {
       '5': 14,
       '6': '.google.cloud.bigquery.v2.Model.OptimizationStrategy',
       '10': 'optimizationStrategy'
+    },
+    {
+      '1': 'kmeans_initialization_method',
+      '3': 33,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.bigquery.v2.Model.KmeansEnums.KmeansInitializationMethod',
+      '10': 'kmeansInitializationMethod'
+    },
+    {
+      '1': 'kmeans_initialization_column',
+      '3': 34,
+      '4': 1,
+      '5': 9,
+      '10': 'kmeansInitializationColumn'
     },
   ],
   '3': [Model_TrainingRun_TrainingOptions_LabelClassWeightsEntry$json],

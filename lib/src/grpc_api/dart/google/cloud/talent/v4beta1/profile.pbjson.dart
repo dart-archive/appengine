@@ -161,6 +161,15 @@ const Profile$json = {
     },
     {'1': 'processed', '3': 27, '4': 1, '5': 8, '10': 'processed'},
     {'1': 'keyword_snippet', '3': 28, '4': 1, '5': 9, '10': 'keywordSnippet'},
+    {
+      '1': 'derived_addresses',
+      '3': 64,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Location',
+      '8': {},
+      '10': 'derivedAddresses'
+    },
   ],
   '3': [Profile_CustomAttributesEntry$json],
 };

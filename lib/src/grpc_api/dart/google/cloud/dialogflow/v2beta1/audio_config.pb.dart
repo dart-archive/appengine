@@ -16,6 +16,44 @@ import 'audio_config.pbenum.dart';
 
 export 'audio_config.pbenum.dart';
 
+class SpeechContext extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechContext',
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+    ..pPS(1, 'phrases')
+    ..a<$core.double>(2, 'boost', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  SpeechContext._() : super();
+  factory SpeechContext() => create();
+  factory SpeechContext.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SpeechContext.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  SpeechContext clone() => SpeechContext()..mergeFromMessage(this);
+  SpeechContext copyWith(void Function(SpeechContext) updates) =>
+      super.copyWith((message) => updates(message as SpeechContext));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static SpeechContext create() => SpeechContext._();
+  SpeechContext createEmptyInstance() => create();
+  static $pb.PbList<SpeechContext> createRepeated() =>
+      $pb.PbList<SpeechContext>();
+  static SpeechContext getDefault() => _defaultInstance ??= create()..freeze();
+  static SpeechContext _defaultInstance;
+
+  $core.List<$core.String> get phrases => $_getList(0);
+
+  $core.double get boost => $_getN(1);
+  set boost($core.double v) {
+    $_setFloat(1, v);
+  }
+
+  $core.bool hasBoost() => $_has(1);
+  void clearBoost() => clearField(2);
+}
+
 class SpeechWordInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechWordInfo',
       package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
@@ -102,6 +140,8 @@ class InputAudioConfig extends $pb.GeneratedMessage {
         SpeechModelVariant.SPEECH_MODEL_VARIANT_UNSPECIFIED,
         SpeechModelVariant.valueOf,
         SpeechModelVariant.values)
+    ..pc<SpeechContext>(
+        11, 'speechContexts', $pb.PbFieldType.PM, SpeechContext.create)
     ..aOB(13, 'enableWordInfo')
     ..hasRequiredFields = false;
 
@@ -176,12 +216,14 @@ class InputAudioConfig extends $pb.GeneratedMessage {
   $core.bool hasModelVariant() => $_has(6);
   void clearModelVariant() => clearField(10);
 
-  $core.bool get enableWordInfo => $_get(7, false);
+  $core.List<SpeechContext> get speechContexts => $_getList(7);
+
+  $core.bool get enableWordInfo => $_get(8, false);
   set enableWordInfo($core.bool v) {
-    $_setBool(7, v);
+    $_setBool(8, v);
   }
 
-  $core.bool hasEnableWordInfo() => $_has(7);
+  $core.bool hasEnableWordInfo() => $_has(8);
   void clearEnableWordInfo() => clearField(13);
 }
 

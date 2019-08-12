@@ -19,6 +19,7 @@ class TableSpec extends $pb.GeneratedMessage {
     ..aOS(1, 'name')
     ..aOS(2, 'timeColumnSpecId')
     ..aInt64(3, 'rowCount')
+    ..aInt64(4, 'validRowCount')
     ..pc<$0.InputConfig>(
         5, 'inputConfigs', $pb.PbFieldType.PM, $0.InputConfig.create)
     ..aOS(6, 'etag')
@@ -68,21 +69,29 @@ class TableSpec extends $pb.GeneratedMessage {
   $core.bool hasRowCount() => $_has(2);
   void clearRowCount() => clearField(3);
 
-  $core.List<$0.InputConfig> get inputConfigs => $_getList(3);
-
-  $core.String get etag => $_getS(4, '');
-  set etag($core.String v) {
-    $_setString(4, v);
+  Int64 get validRowCount => $_getI64(3);
+  set validRowCount(Int64 v) {
+    $_setInt64(3, v);
   }
 
-  $core.bool hasEtag() => $_has(4);
+  $core.bool hasValidRowCount() => $_has(3);
+  void clearValidRowCount() => clearField(4);
+
+  $core.List<$0.InputConfig> get inputConfigs => $_getList(4);
+
+  $core.String get etag => $_getS(5, '');
+  set etag($core.String v) {
+    $_setString(5, v);
+  }
+
+  $core.bool hasEtag() => $_has(5);
   void clearEtag() => clearField(6);
 
-  Int64 get columnCount => $_getI64(5);
+  Int64 get columnCount => $_getI64(6);
   set columnCount(Int64 v) {
-    $_setInt64(5, v);
+    $_setInt64(6, v);
   }
 
-  $core.bool hasColumnCount() => $_has(5);
+  $core.bool hasColumnCount() => $_has(6);
   void clearColumnCount() => clearField(7);
 }

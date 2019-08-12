@@ -337,6 +337,7 @@ class ClassificationEvaluationMetrics_ConfusionMatrix
         'row',
         $pb.PbFieldType.PM,
         ClassificationEvaluationMetrics_ConfusionMatrix_Row.create)
+    ..pPS(3, 'displayName')
     ..hasRequiredFields = false;
 
   ClassificationEvaluationMetrics_ConfusionMatrix._() : super();
@@ -373,6 +374,8 @@ class ClassificationEvaluationMetrics_ConfusionMatrix
 
   $core.List<ClassificationEvaluationMetrics_ConfusionMatrix_Row> get row =>
       $_getList(1);
+
+  $core.List<$core.String> get displayName => $_getList(2);
 }
 
 class ClassificationEvaluationMetrics extends $pb.GeneratedMessage {

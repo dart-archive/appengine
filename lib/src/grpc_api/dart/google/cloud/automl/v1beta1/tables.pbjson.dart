@@ -100,22 +100,6 @@ const TablesModelMetadata$json = {
       '10': 'optimizationObjective'
     },
     {
-      '1': 'optimization_objective_recall_value',
-      '3': 17,
-      '4': 1,
-      '5': 2,
-      '9': 0,
-      '10': 'optimizationObjectiveRecallValue'
-    },
-    {
-      '1': 'optimization_objective_precision_value',
-      '3': 18,
-      '4': 1,
-      '5': 2,
-      '9': 0,
-      '10': 'optimizationObjectivePrecisionValue'
-    },
-    {
       '1': 'tables_model_column_info',
       '3': 5,
       '4': 3,
@@ -144,9 +128,6 @@ const TablesModelMetadata$json = {
       '5': 8,
       '10': 'disableEarlyStopping'
     },
-  ],
-  '8': [
-    {'1': 'additional_optimization_objective_config'},
   ],
 };
 

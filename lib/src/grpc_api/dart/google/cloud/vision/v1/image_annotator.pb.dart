@@ -1353,6 +1353,8 @@ class AnnotateFileResponse extends $pb.GeneratedMessage {
     ..pc<AnnotateImageResponse>(
         2, 'responses', $pb.PbFieldType.PM, AnnotateImageResponse.create)
     ..a<$core.int>(3, 'totalPages', $pb.PbFieldType.O3)
+    ..a<$8.Status>(
+        4, 'error', $pb.PbFieldType.OM, $8.Status.getDefault, $8.Status.create)
     ..hasRequiredFields = false;
 
   AnnotateFileResponse._() : super();
@@ -1394,6 +1396,14 @@ class AnnotateFileResponse extends $pb.GeneratedMessage {
 
   $core.bool hasTotalPages() => $_has(2);
   void clearTotalPages() => clearField(3);
+
+  $8.Status get error => $_getN(3);
+  set error($8.Status v) {
+    setField(4, v);
+  }
+
+  $core.bool hasError() => $_has(3);
+  void clearError() => clearField(4);
 }
 
 class BatchAnnotateImagesRequest extends $pb.GeneratedMessage {
@@ -1402,6 +1412,7 @@ class BatchAnnotateImagesRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1'))
     ..pc<AnnotateImageRequest>(
         1, 'requests', $pb.PbFieldType.PM, AnnotateImageRequest.create)
+    ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
   BatchAnnotateImagesRequest._() : super();
@@ -1429,6 +1440,14 @@ class BatchAnnotateImagesRequest extends $pb.GeneratedMessage {
   static BatchAnnotateImagesRequest _defaultInstance;
 
   $core.List<AnnotateImageRequest> get requests => $_getList(0);
+
+  $core.String get parent => $_getS(1, '');
+  set parent($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasParent() => $_has(1);
+  void clearParent() => clearField(4);
 }
 
 class BatchAnnotateImagesResponse extends $pb.GeneratedMessage {
@@ -1525,6 +1544,7 @@ class BatchAnnotateFilesRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1'))
     ..pc<AnnotateFileRequest>(
         1, 'requests', $pb.PbFieldType.PM, AnnotateFileRequest.create)
+    ..aOS(3, 'parent')
     ..hasRequiredFields = false;
 
   BatchAnnotateFilesRequest._() : super();
@@ -1552,6 +1572,14 @@ class BatchAnnotateFilesRequest extends $pb.GeneratedMessage {
   static BatchAnnotateFilesRequest _defaultInstance;
 
   $core.List<AnnotateFileRequest> get requests => $_getList(0);
+
+  $core.String get parent => $_getS(1, '');
+  set parent($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasParent() => $_has(1);
+  void clearParent() => clearField(3);
 }
 
 class BatchAnnotateFilesResponse extends $pb.GeneratedMessage {
@@ -1699,6 +1727,7 @@ class AsyncBatchAnnotateImagesRequest extends $pb.GeneratedMessage {
         1, 'requests', $pb.PbFieldType.PM, AnnotateImageRequest.create)
     ..a<OutputConfig>(2, 'outputConfig', $pb.PbFieldType.OM,
         OutputConfig.getDefault, OutputConfig.create)
+    ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
   AsyncBatchAnnotateImagesRequest._() : super();
@@ -1735,6 +1764,14 @@ class AsyncBatchAnnotateImagesRequest extends $pb.GeneratedMessage {
 
   $core.bool hasOutputConfig() => $_has(1);
   void clearOutputConfig() => clearField(2);
+
+  $core.String get parent => $_getS(2, '');
+  set parent($core.String v) {
+    $_setString(2, v);
+  }
+
+  $core.bool hasParent() => $_has(2);
+  void clearParent() => clearField(4);
 }
 
 class AsyncBatchAnnotateImagesResponse extends $pb.GeneratedMessage {
@@ -1785,6 +1822,7 @@ class AsyncBatchAnnotateFilesRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName('google.cloud.vision.v1'))
     ..pc<AsyncAnnotateFileRequest>(
         1, 'requests', $pb.PbFieldType.PM, AsyncAnnotateFileRequest.create)
+    ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
   AsyncBatchAnnotateFilesRequest._() : super();
@@ -1813,6 +1851,14 @@ class AsyncBatchAnnotateFilesRequest extends $pb.GeneratedMessage {
   static AsyncBatchAnnotateFilesRequest _defaultInstance;
 
   $core.List<AsyncAnnotateFileRequest> get requests => $_getList(0);
+
+  $core.String get parent => $_getS(1, '');
+  set parent($core.String v) {
+    $_setString(1, v);
+  }
+
+  $core.bool hasParent() => $_has(1);
+  void clearParent() => clearField(4);
 }
 
 class AsyncBatchAnnotateFilesResponse extends $pb.GeneratedMessage {

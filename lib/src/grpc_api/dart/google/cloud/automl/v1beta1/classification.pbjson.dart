@@ -168,6 +168,7 @@ const ClassificationEvaluationMetrics_ConfusionMatrix$json = {
       '5': 9,
       '10': 'annotationSpecId'
     },
+    {'1': 'display_name', '3': 3, '4': 3, '5': 9, '10': 'displayName'},
     {
       '1': 'row',
       '3': 2,

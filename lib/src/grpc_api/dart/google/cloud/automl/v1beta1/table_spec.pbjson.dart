@@ -17,6 +17,7 @@ const TableSpec$json = {
       '10': 'timeColumnSpecId'
     },
     {'1': 'row_count', '3': 3, '4': 1, '5': 3, '10': 'rowCount'},
+    {'1': 'valid_row_count', '3': 4, '4': 1, '5': 3, '10': 'validRowCount'},
     {'1': 'column_count', '3': 7, '4': 1, '5': 3, '10': 'columnCount'},
     {
       '1': 'input_configs',

@@ -58,6 +58,7 @@ const ProductSearchResults$json = {
   ],
   '3': [
     ProductSearchResults_Result$json,
+    ProductSearchResults_ObjectAnnotation$json,
     ProductSearchResults_GroupedResult$json
   ],
 };
@@ -75,6 +76,16 @@ const ProductSearchResults_Result$json = {
     },
     {'1': 'score', '3': 2, '4': 1, '5': 2, '10': 'score'},
     {'1': 'image', '3': 3, '4': 1, '5': 9, '10': 'image'},
+  ],
+};
+
+const ProductSearchResults_ObjectAnnotation$json = {
+  '1': 'ObjectAnnotation',
+  '2': [
+    {'1': 'mid', '3': 1, '4': 1, '5': 9, '10': 'mid'},
+    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'score', '3': 4, '4': 1, '5': 2, '10': 'score'},
   ],
 };
 
@@ -96,6 +107,14 @@ const ProductSearchResults_GroupedResult$json = {
       '5': 11,
       '6': '.google.cloud.vision.v1.ProductSearchResults.Result',
       '10': 'results'
+    },
+    {
+      '1': 'object_annotations',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.ProductSearchResults.ObjectAnnotation',
+      '10': 'objectAnnotations'
     },
   ],
 };
