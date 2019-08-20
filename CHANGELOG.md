@@ -1,3 +1,7 @@
+## 0.10.2
+
+ * Update gRPC version dependency
+
 ## 0.10.1
 
  * Update gRPC API protos
