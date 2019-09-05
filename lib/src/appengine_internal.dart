@@ -14,6 +14,8 @@ import 'package:gcloud/service_scope.dart' as ss;
 import 'package:gcloud/storage.dart' as storage;
 import 'package:grpc/grpc.dart' as grpc;
 import 'package:googleapis_auth/auth_io.dart' as auth;
+import 'package:grpc/src/client/channel.dart';
+import 'package:grpc/src/client/connection.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
 
@@ -281,16 +283,60 @@ Future<auth.AuthClient> _getAuthClient(
 ///
 /// The returned [grpc.Client] will be usable within the current service scope.
 grpc.ClientChannel _getGrpcClientChannel(String url, bool needAuthorization) {
-  final clientChannel = grpc.ClientChannel(
+  final clientChannel = _ClientChannelWithClientId(grpc.ClientChannel(
     Uri.parse(url).host,
     options: needAuthorization
         ? grpc.ChannelOptions()
         : grpc.ChannelOptions(
             credentials: grpc.ChannelCredentials.insecure(),
           ),
-  );
+  ));
   ss.registerScopeExitCallback(clientChannel.shutdown);
   return clientChannel;
+}
+
+/// Major.minor.patch version of the current Dart SDK.
+final _dartVersion = Platform.version.split(RegExp('[^0-9]')).take(3).join('.');
+
+/// Wraps [grpc.ClientChannel] attaching a client id header to each request.
+class _ClientChannelWithClientId implements grpc.ClientChannel {
+  final grpc.ClientChannel _clientChannel;
+  _ClientChannelWithClientId(this._clientChannel);
+
+  @override
+  grpc.ClientCall<Q, R> createCall<Q, R>(
+    grpc.ClientMethod<Q, R> method,
+    Stream<Q> requests,
+    grpc.CallOptions options,
+  ) =>
+      _clientChannel.createCall<Q, R>(
+        method,
+        requests,
+        grpc.CallOptions(metadata: {
+          'x-goog-api-client': 'gl-dart/$_dartVersion',
+        }).mergedWith(options),
+      );
+
+  @override
+  ClientConnection createConnection() => _clientChannel.createConnection();
+
+  @override
+  Future<ClientConnection> getConnection() => _clientChannel.getConnection();
+
+  @override
+  String get host => _clientChannel.host;
+
+  @override
+  grpc.ChannelOptions get options => _clientChannel.options;
+
+  @override
+  int get port => _clientChannel.port;
+
+  @override
+  Future<void> shutdown() => _clientChannel.shutdown();
+
+  @override
+  Future<void> terminate() => _clientChannel.terminate();
 }
 
 auth.ServiceAccountCredentials _obtainServiceAccountCredentials(
