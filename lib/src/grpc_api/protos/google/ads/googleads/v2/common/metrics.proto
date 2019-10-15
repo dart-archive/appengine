@@ -294,6 +294,10 @@ message Metrics {
   // Average lead value of hotel.
   google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;
 
+  // The average price difference between the price offered by reporting hotel
+  // advertiser and the cheapest price offered by the competing advertiser.
+  google.protobuf.DoubleValue hotel_price_difference_percentage = 129;
+
   // The creative historical quality score.
   google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;
 

@@ -65,6 +65,7 @@ const TransferConfig$json = {
       '3': 2,
       '4': 1,
       '5': 9,
+      '9': 0,
       '10': 'destinationDatasetId'
     },
     {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
@@ -100,6 +101,7 @@ const TransferConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'updateTime'
     },
     {
@@ -108,6 +110,7 @@ const TransferConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'nextRunTime'
     },
     {
@@ -116,10 +119,22 @@ const TransferConfig$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferState',
+      '8': {},
       '10': 'state'
     },
     {'1': 'user_id', '3': 11, '4': 1, '5': 3, '10': 'userId'},
-    {'1': 'dataset_region', '3': 14, '4': 1, '5': 9, '10': 'datasetRegion'},
+    {
+      '1': 'dataset_region',
+      '3': 14,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'datasetRegion'
+    },
+  ],
+  '7': {},
+  '8': [
+    {'1': 'destination'},
   ],
 };
 
@@ -157,6 +172,7 @@ const TransferRun$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'startTime'
     },
     {
@@ -165,6 +181,7 @@ const TransferRun$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'endTime'
     },
     {
@@ -173,6 +190,7 @@ const TransferRun$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'updateTime'
     },
     {
@@ -181,6 +199,7 @@ const TransferRun$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Struct',
+      '8': {},
       '10': 'params'
     },
     {
@@ -188,9 +207,18 @@ const TransferRun$json = {
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
+      '9': 0,
       '10': 'destinationDatasetId'
     },
-    {'1': 'data_source_id', '3': 7, '4': 1, '5': 9, '10': 'dataSourceId'},
+    {
+      '1': 'data_source_id',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'dataSourceId'
+    },
     {
       '1': 'state',
       '3': 8,
@@ -200,7 +228,11 @@ const TransferRun$json = {
       '10': 'state'
     },
     {'1': 'user_id', '3': 11, '4': 1, '5': 3, '10': 'userId'},
-    {'1': 'schedule', '3': 12, '4': 1, '5': 9, '10': 'schedule'},
+    {'1': 'schedule', '3': 12, '4': 1, '5': 9, '8': {}, '10': 'schedule'},
+  ],
+  '7': {},
+  '8': [
+    {'1': 'destination'},
   ],
 };
 

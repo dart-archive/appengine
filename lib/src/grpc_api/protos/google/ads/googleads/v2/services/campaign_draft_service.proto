@@ -69,6 +69,9 @@ service CampaignDraftService {
       post: "/v2/{campaign_draft=customers/*/campaignDrafts/*}:promote"
       body: "*"
     };
+    option (google.longrunning.operation_info) = {
+      response_type: "google.protobuf.Empty"
+    };
   }
 
   // Returns all errors that occurred during CampaignDraft promote. Throws an

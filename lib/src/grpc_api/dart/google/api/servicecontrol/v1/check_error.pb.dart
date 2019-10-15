@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,14 +15,12 @@ export 'check_error.pbenum.dart';
 
 class CheckError extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CheckError',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..e<CheckError_Code>(
-        1,
-        'code',
-        $pb.PbFieldType.OE,
-        CheckError_Code.ERROR_CODE_UNSPECIFIED,
-        CheckError_Code.valueOf,
-        CheckError_Code.values)
+      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..e<CheckError_Code>(1, 'code', $pb.PbFieldType.OE,
+        defaultOrMaker: CheckError_Code.ERROR_CODE_UNSPECIFIED,
+        valueOf: CheckError_Code.valueOf,
+        enumValues: CheckError_Code.values)
     ..aOS(2, 'detail')
     ..hasRequiredFields = false;
 
@@ -43,22 +40,32 @@ class CheckError extends $pb.GeneratedMessage {
   static CheckError create() => CheckError._();
   CheckError createEmptyInstance() => create();
   static $pb.PbList<CheckError> createRepeated() => $pb.PbList<CheckError>();
-  static CheckError getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CheckError getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CheckError>(create);
   static CheckError _defaultInstance;
 
+  @$pb.TagNumber(1)
   CheckError_Code get code => $_getN(0);
+  @$pb.TagNumber(1)
   set code(CheckError_Code v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCode() => clearField(1);
 
-  $core.String get detail => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get detail => $_getSZ(1);
+  @$pb.TagNumber(2)
   set detail($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDetail() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDetail() => clearField(2);
 }

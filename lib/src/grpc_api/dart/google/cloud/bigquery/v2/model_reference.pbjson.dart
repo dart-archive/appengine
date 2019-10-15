@@ -8,8 +8,8 @@
 const ModelReference$json = {
   '1': 'ModelReference',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '10': 'datasetId'},
-    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '10': 'modelId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'datasetId'},
+    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'modelId'},
   ],
 };

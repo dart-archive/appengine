@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,9 +16,10 @@ import '../enums/target_impression_share_location.pbenum.dart' as $2;
 
 class Commission extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Commission',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'commissionRateMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'commissionRateMicros',
+        subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   Commission._() : super();
@@ -38,21 +38,30 @@ class Commission extends $pb.GeneratedMessage {
   static Commission create() => Commission._();
   Commission createEmptyInstance() => create();
   static $pb.PbList<Commission> createRepeated() => $pb.PbList<Commission>();
-  static Commission getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Commission getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Commission>(create);
   static Commission _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get commissionRateMicros => $_getN(0);
+  @$pb.TagNumber(1)
   set commissionRateMicros($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCommissionRateMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCommissionRateMicros() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureCommissionRateMicros() => $_ensure(0);
 }
 
 class EnhancedCpc extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnhancedCpc',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   EnhancedCpc._() : super();
@@ -71,15 +80,18 @@ class EnhancedCpc extends $pb.GeneratedMessage {
   static EnhancedCpc create() => EnhancedCpc._();
   EnhancedCpc createEmptyInstance() => create();
   static $pb.PbList<EnhancedCpc> createRepeated() => $pb.PbList<EnhancedCpc>();
-  static EnhancedCpc getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EnhancedCpc getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnhancedCpc>(create);
   static EnhancedCpc _defaultInstance;
 }
 
 class ManualCpc extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManualCpc',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.BoolValue>(1, 'enhancedCpcEnabled', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.BoolValue>(1, 'enhancedCpcEnabled',
+        subBuilder: $0.BoolValue.create)
     ..hasRequiredFields = false;
 
   ManualCpc._() : super();
@@ -98,21 +110,30 @@ class ManualCpc extends $pb.GeneratedMessage {
   static ManualCpc create() => ManualCpc._();
   ManualCpc createEmptyInstance() => create();
   static $pb.PbList<ManualCpc> createRepeated() => $pb.PbList<ManualCpc>();
-  static ManualCpc getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ManualCpc getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ManualCpc>(create);
   static ManualCpc _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.BoolValue get enhancedCpcEnabled => $_getN(0);
+  @$pb.TagNumber(1)
   set enhancedCpcEnabled($0.BoolValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEnhancedCpcEnabled() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEnhancedCpcEnabled() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.BoolValue ensureEnhancedCpcEnabled() => $_ensure(0);
 }
 
 class ManualCpm extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManualCpm',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ManualCpm._() : super();
@@ -131,13 +152,16 @@ class ManualCpm extends $pb.GeneratedMessage {
   static ManualCpm create() => ManualCpm._();
   ManualCpm createEmptyInstance() => create();
   static $pb.PbList<ManualCpm> createRepeated() => $pb.PbList<ManualCpm>();
-  static ManualCpm getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ManualCpm getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ManualCpm>(create);
   static ManualCpm _defaultInstance;
 }
 
 class ManualCpv extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManualCpv',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ManualCpv._() : super();
@@ -156,13 +180,16 @@ class ManualCpv extends $pb.GeneratedMessage {
   static ManualCpv create() => ManualCpv._();
   ManualCpv createEmptyInstance() => create();
   static $pb.PbList<ManualCpv> createRepeated() => $pb.PbList<ManualCpv>();
-  static ManualCpv getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ManualCpv getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ManualCpv>(create);
   static ManualCpv _defaultInstance;
 }
 
 class MaximizeConversions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MaximizeConversions',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   MaximizeConversions._() : super();
@@ -182,16 +209,17 @@ class MaximizeConversions extends $pb.GeneratedMessage {
   MaximizeConversions createEmptyInstance() => create();
   static $pb.PbList<MaximizeConversions> createRepeated() =>
       $pb.PbList<MaximizeConversions>();
-  static MaximizeConversions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MaximizeConversions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MaximizeConversions>(create);
   static MaximizeConversions _defaultInstance;
 }
 
 class MaximizeConversionValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MaximizeConversionValue',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.DoubleValue>(1, 'targetRoas', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.DoubleValue>(1, 'targetRoas', subBuilder: $0.DoubleValue.create)
     ..hasRequiredFields = false;
 
   MaximizeConversionValue._() : super();
@@ -213,40 +241,46 @@ class MaximizeConversionValue extends $pb.GeneratedMessage {
   MaximizeConversionValue createEmptyInstance() => create();
   static $pb.PbList<MaximizeConversionValue> createRepeated() =>
       $pb.PbList<MaximizeConversionValue>();
-  static MaximizeConversionValue getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MaximizeConversionValue getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MaximizeConversionValue>(create);
   static MaximizeConversionValue _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.DoubleValue get targetRoas => $_getN(0);
+  @$pb.TagNumber(1)
   set targetRoas($0.DoubleValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetRoas() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetRoas() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.DoubleValue ensureTargetRoas() => $_ensure(0);
 }
 
 class PageOnePromoted extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PageOnePromoted',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal>(
-        1,
-        'strategyGoal',
-        $pb.PbFieldType.OE,
-        $1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal
+        1, 'strategyGoal', $pb.PbFieldType.OE,
+        defaultOrMaker: $1
+            .PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal
             .UNSPECIFIED,
-        $1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal.valueOf,
-        $1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal.values)
-    ..a<$0.Int64Value>(2, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.DoubleValue>(3, 'bidModifier', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
-    ..a<$0.BoolValue>(4, 'onlyRaiseCpcBids', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
-    ..a<$0.BoolValue>(5, 'raiseCpcBidWhenBudgetConstrained', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
-    ..a<$0.BoolValue>(6, 'raiseCpcBidWhenQualityScoreIsLow', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
+        valueOf: $1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal
+            .valueOf,
+        enumValues: $1
+            .PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal.values)
+    ..aOM<$0.Int64Value>(2, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.DoubleValue>(3, 'bidModifier', subBuilder: $0.DoubleValue.create)
+    ..aOM<$0.BoolValue>(4, 'onlyRaiseCpcBids', subBuilder: $0.BoolValue.create)
+    ..aOM<$0.BoolValue>(5, 'raiseCpcBidWhenBudgetConstrained',
+        subBuilder: $0.BoolValue.create)
+    ..aOM<$0.BoolValue>(6, 'raiseCpcBidWhenQualityScoreIsLow', subBuilder: $0.BoolValue.create)
     ..hasRequiredFields = false;
 
   PageOnePromoted._() : super();
@@ -266,70 +300,105 @@ class PageOnePromoted extends $pb.GeneratedMessage {
   PageOnePromoted createEmptyInstance() => create();
   static $pb.PbList<PageOnePromoted> createRepeated() =>
       $pb.PbList<PageOnePromoted>();
-  static PageOnePromoted getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PageOnePromoted getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PageOnePromoted>(create);
   static PageOnePromoted _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal
       get strategyGoal => $_getN(0);
+  @$pb.TagNumber(1)
   set strategyGoal(
       $1.PageOnePromotedStrategyGoalEnum_PageOnePromotedStrategyGoal v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStrategyGoal() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStrategyGoal() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(1);
+  @$pb.TagNumber(2)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCpcBidCeilingMicros() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCpcBidCeilingMicros() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.DoubleValue get bidModifier => $_getN(2);
+  @$pb.TagNumber(3)
   set bidModifier($0.DoubleValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBidModifier() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBidModifier() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.DoubleValue ensureBidModifier() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.BoolValue get onlyRaiseCpcBids => $_getN(3);
+  @$pb.TagNumber(4)
   set onlyRaiseCpcBids($0.BoolValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOnlyRaiseCpcBids() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOnlyRaiseCpcBids() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.BoolValue ensureOnlyRaiseCpcBids() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $0.BoolValue get raiseCpcBidWhenBudgetConstrained => $_getN(4);
+  @$pb.TagNumber(5)
   set raiseCpcBidWhenBudgetConstrained($0.BoolValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasRaiseCpcBidWhenBudgetConstrained() => $_has(4);
+  @$pb.TagNumber(5)
   void clearRaiseCpcBidWhenBudgetConstrained() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.BoolValue ensureRaiseCpcBidWhenBudgetConstrained() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $0.BoolValue get raiseCpcBidWhenQualityScoreIsLow => $_getN(5);
+  @$pb.TagNumber(6)
   set raiseCpcBidWhenQualityScoreIsLow($0.BoolValue v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasRaiseCpcBidWhenQualityScoreIsLow() => $_has(5);
+  @$pb.TagNumber(6)
   void clearRaiseCpcBidWhenQualityScoreIsLow() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.BoolValue ensureRaiseCpcBidWhenQualityScoreIsLow() => $_ensure(5);
 }
 
 class TargetCpa extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetCpa',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'targetCpaMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(2, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(3, 'cpcBidFloorMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'targetCpaMicros', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(2, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(3, 'cpcBidFloorMicros',
+        subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   TargetCpa._() : super();
@@ -348,37 +417,58 @@ class TargetCpa extends $pb.GeneratedMessage {
   static TargetCpa create() => TargetCpa._();
   TargetCpa createEmptyInstance() => create();
   static $pb.PbList<TargetCpa> createRepeated() => $pb.PbList<TargetCpa>();
-  static TargetCpa getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetCpa getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TargetCpa>(create);
   static TargetCpa _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get targetCpaMicros => $_getN(0);
+  @$pb.TagNumber(1)
   set targetCpaMicros($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetCpaMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetCpaMicros() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureTargetCpaMicros() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(1);
+  @$pb.TagNumber(2)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCpcBidCeilingMicros() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCpcBidCeilingMicros() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get cpcBidFloorMicros => $_getN(2);
+  @$pb.TagNumber(3)
   set cpcBidFloorMicros($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCpcBidFloorMicros() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCpcBidFloorMicros() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureCpcBidFloorMicros() => $_ensure(2);
 }
 
 class TargetCpm extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetCpm',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TargetCpm._() : super();
@@ -397,27 +487,31 @@ class TargetCpm extends $pb.GeneratedMessage {
   static TargetCpm create() => TargetCpm._();
   TargetCpm createEmptyInstance() => create();
   static $pb.PbList<TargetCpm> createRepeated() => $pb.PbList<TargetCpm>();
-  static TargetCpm getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetCpm getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TargetCpm>(create);
   static TargetCpm _defaultInstance;
 }
 
 class TargetImpressionShare extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetImpressionShare',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$2.TargetImpressionShareLocationEnum_TargetImpressionShareLocation>(
-        1,
-        'location',
-        $pb.PbFieldType.OE,
-        $2.TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+        1, 'location', $pb.PbFieldType.OE,
+        defaultOrMaker: $2
+            .TargetImpressionShareLocationEnum_TargetImpressionShareLocation
             .UNSPECIFIED,
-        $2.TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+        valueOf: $2
+            .TargetImpressionShareLocationEnum_TargetImpressionShareLocation
             .valueOf,
-        $2.TargetImpressionShareLocationEnum_TargetImpressionShareLocation
+        enumValues: $2
+            .TargetImpressionShareLocationEnum_TargetImpressionShareLocation
             .values)
-    ..a<$0.Int64Value>(2, 'locationFractionMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(3, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(2, 'locationFractionMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(3, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   TargetImpressionShare._() : super();
@@ -439,50 +533,67 @@ class TargetImpressionShare extends $pb.GeneratedMessage {
   TargetImpressionShare createEmptyInstance() => create();
   static $pb.PbList<TargetImpressionShare> createRepeated() =>
       $pb.PbList<TargetImpressionShare>();
-  static TargetImpressionShare getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetImpressionShare getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetImpressionShare>(create);
   static TargetImpressionShare _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.TargetImpressionShareLocationEnum_TargetImpressionShareLocation
       get location => $_getN(0);
+  @$pb.TagNumber(1)
   set location(
       $2.TargetImpressionShareLocationEnum_TargetImpressionShareLocation v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLocation() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLocation() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get locationFractionMicros => $_getN(1);
+  @$pb.TagNumber(2)
   set locationFractionMicros($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLocationFractionMicros() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLocationFractionMicros() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureLocationFractionMicros() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(2);
+  @$pb.TagNumber(3)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCpcBidCeilingMicros() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCpcBidCeilingMicros() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(2);
 }
 
 class TargetOutrankShare extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetOutrankShare',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int32Value>(1, 'targetOutrankShareMicros', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..a<$0.StringValue>(2, 'competitorDomain', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.Int64Value>(3, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.BoolValue>(4, 'onlyRaiseCpcBids', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
-    ..a<$0.BoolValue>(5, 'raiseCpcBidWhenQualityScoreIsLow', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int32Value>(1, 'targetOutrankShareMicros',
+        subBuilder: $0.Int32Value.create)
+    ..aOM<$0.StringValue>(2, 'competitorDomain',
+        subBuilder: $0.StringValue.create)
+    ..aOM<$0.Int64Value>(3, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.BoolValue>(4, 'onlyRaiseCpcBids', subBuilder: $0.BoolValue.create)
+    ..aOM<$0.BoolValue>(5, 'raiseCpcBidWhenQualityScoreIsLow',
+        subBuilder: $0.BoolValue.create)
     ..hasRequiredFields = false;
 
   TargetOutrankShare._() : super();
@@ -502,60 +613,91 @@ class TargetOutrankShare extends $pb.GeneratedMessage {
   TargetOutrankShare createEmptyInstance() => create();
   static $pb.PbList<TargetOutrankShare> createRepeated() =>
       $pb.PbList<TargetOutrankShare>();
-  static TargetOutrankShare getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetOutrankShare getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetOutrankShare>(create);
   static TargetOutrankShare _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int32Value get targetOutrankShareMicros => $_getN(0);
+  @$pb.TagNumber(1)
   set targetOutrankShareMicros($0.Int32Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetOutrankShareMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetOutrankShareMicros() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int32Value ensureTargetOutrankShareMicros() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.StringValue get competitorDomain => $_getN(1);
+  @$pb.TagNumber(2)
   set competitorDomain($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCompetitorDomain() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCompetitorDomain() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureCompetitorDomain() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(2);
+  @$pb.TagNumber(3)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCpcBidCeilingMicros() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCpcBidCeilingMicros() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.BoolValue get onlyRaiseCpcBids => $_getN(3);
+  @$pb.TagNumber(4)
   set onlyRaiseCpcBids($0.BoolValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOnlyRaiseCpcBids() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOnlyRaiseCpcBids() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.BoolValue ensureOnlyRaiseCpcBids() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $0.BoolValue get raiseCpcBidWhenQualityScoreIsLow => $_getN(4);
+  @$pb.TagNumber(5)
   set raiseCpcBidWhenQualityScoreIsLow($0.BoolValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasRaiseCpcBidWhenQualityScoreIsLow() => $_has(4);
+  @$pb.TagNumber(5)
   void clearRaiseCpcBidWhenQualityScoreIsLow() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.BoolValue ensureRaiseCpcBidWhenQualityScoreIsLow() => $_ensure(4);
 }
 
 class TargetRoas extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetRoas',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.DoubleValue>(1, 'targetRoas', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
-    ..a<$0.Int64Value>(2, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(3, 'cpcBidFloorMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.DoubleValue>(1, 'targetRoas', subBuilder: $0.DoubleValue.create)
+    ..aOM<$0.Int64Value>(2, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(3, 'cpcBidFloorMicros',
+        subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   TargetRoas._() : super();
@@ -574,41 +716,62 @@ class TargetRoas extends $pb.GeneratedMessage {
   static TargetRoas create() => TargetRoas._();
   TargetRoas createEmptyInstance() => create();
   static $pb.PbList<TargetRoas> createRepeated() => $pb.PbList<TargetRoas>();
-  static TargetRoas getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetRoas getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetRoas>(create);
   static TargetRoas _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.DoubleValue get targetRoas => $_getN(0);
+  @$pb.TagNumber(1)
   set targetRoas($0.DoubleValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetRoas() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetRoas() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.DoubleValue ensureTargetRoas() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(1);
+  @$pb.TagNumber(2)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCpcBidCeilingMicros() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCpcBidCeilingMicros() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get cpcBidFloorMicros => $_getN(2);
+  @$pb.TagNumber(3)
   set cpcBidFloorMicros($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCpcBidFloorMicros() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCpcBidFloorMicros() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureCpcBidFloorMicros() => $_ensure(2);
 }
 
 class TargetSpend extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetSpend',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'targetSpendMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(2, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'targetSpendMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(2, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   TargetSpend._() : super();
@@ -627,33 +790,48 @@ class TargetSpend extends $pb.GeneratedMessage {
   static TargetSpend create() => TargetSpend._();
   TargetSpend createEmptyInstance() => create();
   static $pb.PbList<TargetSpend> createRepeated() => $pb.PbList<TargetSpend>();
-  static TargetSpend getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetSpend getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetSpend>(create);
   static TargetSpend _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get targetSpendMicros => $_getN(0);
+  @$pb.TagNumber(1)
   set targetSpendMicros($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetSpendMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetSpendMicros() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureTargetSpendMicros() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(1);
+  @$pb.TagNumber(2)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCpcBidCeilingMicros() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCpcBidCeilingMicros() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(1);
 }
 
 class PercentCpc extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PercentCpc',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'cpcBidCeilingMicros', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.BoolValue>(2, 'enhancedCpcEnabled', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'cpcBidCeilingMicros',
+        subBuilder: $0.Int64Value.create)
+    ..aOM<$0.BoolValue>(2, 'enhancedCpcEnabled',
+        subBuilder: $0.BoolValue.create)
     ..hasRequiredFields = false;
 
   PercentCpc._() : super();
@@ -672,22 +850,36 @@ class PercentCpc extends $pb.GeneratedMessage {
   static PercentCpc create() => PercentCpc._();
   PercentCpc createEmptyInstance() => create();
   static $pb.PbList<PercentCpc> createRepeated() => $pb.PbList<PercentCpc>();
-  static PercentCpc getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PercentCpc getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PercentCpc>(create);
   static PercentCpc _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get cpcBidCeilingMicros => $_getN(0);
+  @$pb.TagNumber(1)
   set cpcBidCeilingMicros($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCpcBidCeilingMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCpcBidCeilingMicros() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureCpcBidCeilingMicros() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.BoolValue get enhancedCpcEnabled => $_getN(1);
+  @$pb.TagNumber(2)
   set enhancedCpcEnabled($0.BoolValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEnhancedCpcEnabled() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEnhancedCpcEnabled() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.BoolValue ensureEnhancedCpcEnabled() => $_ensure(1);
 }

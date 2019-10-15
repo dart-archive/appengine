@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,21 +15,17 @@ import '../../../protobuf/timestamp.pb.dart' as $7;
 
 class CreateInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'instanceId')
-    ..a<$5.Instance>(3, 'instance', $pb.PbFieldType.OM, $5.Instance.getDefault,
-        $5.Instance.create)
-    ..m<$core.String, $5.Cluster>(
-        4,
-        'clusters',
-        'CreateInstanceRequest.ClustersEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $5.Cluster.create,
-        null,
-        null,
-        const $pb.PackageName('google.bigtable.admin.v2'))
+    ..aOM<$5.Instance>(3, 'instance', subBuilder: $5.Instance.create)
+    ..m<$core.String, $5.Cluster>(4, 'clusters',
+        entryClassName: 'CreateInstanceRequest.ClustersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $5.Cluster.create,
+        packageName: const $pb.PackageName('google.bigtable.admin.v2'))
     ..hasRequiredFields = false;
 
   CreateInstanceRequest._() : super();
@@ -52,40 +47,57 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
   CreateInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<CreateInstanceRequest> createRepeated() =>
       $pb.PbList<CreateInstanceRequest>();
-  static CreateInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateInstanceRequest>(create);
   static CreateInstanceRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get instanceId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get instanceId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set instanceId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInstanceId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInstanceId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $5.Instance get instance => $_getN(2);
+  @$pb.TagNumber(3)
   set instance($5.Instance v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInstance() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInstance() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Instance ensureInstance() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.Map<$core.String, $5.Cluster> get clusters => $_getMap(3);
 }
 
 class GetInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -106,22 +118,28 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   GetInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<GetInstanceRequest> createRepeated() =>
       $pb.PbList<GetInstanceRequest>();
-  static GetInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInstanceRequest>(create);
   static GetInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListInstancesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -144,31 +162,42 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   ListInstancesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInstancesRequest> createRepeated() =>
       $pb.PbList<ListInstancesRequest>();
-  static ListInstancesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstancesRequest>(create);
   static ListInstancesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 }
 
 class ListInstancesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..pc<$5.Instance>(1, 'instances', $pb.PbFieldType.PM, $5.Instance.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.Instance>(1, 'instances', $pb.PbFieldType.PM,
+        subBuilder: $5.Instance.create)
     ..pPS(2, 'failedLocations')
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -192,31 +221,37 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   ListInstancesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInstancesResponse> createRepeated() =>
       $pb.PbList<ListInstancesResponse>();
-  static ListInstancesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstancesResponse>(create);
   static ListInstancesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.Instance> get instances => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get failedLocations => $_getList(1);
 
-  $core.String get nextPageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set nextPageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNextPageToken() => clearField(3);
 }
 
 class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PartialUpdateInstanceRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..a<$5.Instance>(1, 'instance', $pb.PbFieldType.OM, $5.Instance.getDefault,
-        $5.Instance.create)
-    ..a<$6.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $6.FieldMask.getDefault, $6.FieldMask.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Instance>(1, 'instance', subBuilder: $5.Instance.create)
+    ..aOM<$6.FieldMask>(2, 'updateMask', subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   PartialUpdateInstanceRequest._() : super();
@@ -240,30 +275,44 @@ class PartialUpdateInstanceRequest extends $pb.GeneratedMessage {
   PartialUpdateInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<PartialUpdateInstanceRequest> createRepeated() =>
       $pb.PbList<PartialUpdateInstanceRequest>();
-  static PartialUpdateInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PartialUpdateInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartialUpdateInstanceRequest>(create);
   static PartialUpdateInstanceRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.Instance get instance => $_getN(0);
+  @$pb.TagNumber(1)
   set instance($5.Instance v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstance() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstance() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Instance ensureInstance() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteInstanceRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -286,26 +335,31 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   DeleteInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInstanceRequest> createRepeated() =>
       $pb.PbList<DeleteInstanceRequest>();
-  static DeleteInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteInstanceRequest>(create);
   static DeleteInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateClusterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateClusterRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'clusterId')
-    ..a<$5.Cluster>(3, 'cluster', $pb.PbFieldType.OM, $5.Cluster.getDefault,
-        $5.Cluster.create)
+    ..aOM<$5.Cluster>(3, 'cluster', subBuilder: $5.Cluster.create)
     ..hasRequiredFields = false;
 
   CreateClusterRequest._() : super();
@@ -326,38 +380,54 @@ class CreateClusterRequest extends $pb.GeneratedMessage {
   CreateClusterRequest createEmptyInstance() => create();
   static $pb.PbList<CreateClusterRequest> createRepeated() =>
       $pb.PbList<CreateClusterRequest>();
-  static CreateClusterRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateClusterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateClusterRequest>(create);
   static CreateClusterRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get clusterId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get clusterId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set clusterId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasClusterId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearClusterId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $5.Cluster get cluster => $_getN(2);
+  @$pb.TagNumber(3)
   set cluster($5.Cluster v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCluster() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCluster() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Cluster ensureCluster() => $_ensure(2);
 }
 
 class GetClusterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetClusterRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -378,22 +448,28 @@ class GetClusterRequest extends $pb.GeneratedMessage {
   GetClusterRequest createEmptyInstance() => create();
   static $pb.PbList<GetClusterRequest> createRepeated() =>
       $pb.PbList<GetClusterRequest>();
-  static GetClusterRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetClusterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetClusterRequest>(create);
   static GetClusterRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListClustersRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -415,31 +491,42 @@ class ListClustersRequest extends $pb.GeneratedMessage {
   ListClustersRequest createEmptyInstance() => create();
   static $pb.PbList<ListClustersRequest> createRepeated() =>
       $pb.PbList<ListClustersRequest>();
-  static ListClustersRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListClustersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListClustersRequest>(create);
   static ListClustersRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 }
 
 class ListClustersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListClustersResponse',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..pc<$5.Cluster>(1, 'clusters', $pb.PbFieldType.PM, $5.Cluster.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.Cluster>(1, 'clusters', $pb.PbFieldType.PM,
+        subBuilder: $5.Cluster.create)
     ..pPS(2, 'failedLocations')
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -462,26 +549,34 @@ class ListClustersResponse extends $pb.GeneratedMessage {
   ListClustersResponse createEmptyInstance() => create();
   static $pb.PbList<ListClustersResponse> createRepeated() =>
       $pb.PbList<ListClustersResponse>();
-  static ListClustersResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListClustersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListClustersResponse>(create);
   static ListClustersResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.Cluster> get clusters => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get failedLocations => $_getList(1);
 
-  $core.String get nextPageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set nextPageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNextPageToken() => clearField(3);
 }
 
 class DeleteClusterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteClusterRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -503,28 +598,32 @@ class DeleteClusterRequest extends $pb.GeneratedMessage {
   DeleteClusterRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteClusterRequest> createRepeated() =>
       $pb.PbList<DeleteClusterRequest>();
-  static DeleteClusterRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteClusterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteClusterRequest>(create);
   static DeleteClusterRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateInstanceMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceMetadata',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..a<CreateInstanceRequest>(1, 'originalRequest', $pb.PbFieldType.OM,
-        CreateInstanceRequest.getDefault, CreateInstanceRequest.create)
-    ..a<$7.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
-    ..a<$7.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<CreateInstanceRequest>(1, 'originalRequest',
+        subBuilder: CreateInstanceRequest.create)
+    ..aOM<$7.Timestamp>(2, 'requestTime', subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, 'finishTime', subBuilder: $7.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateInstanceMetadata._() : super();
@@ -546,48 +645,62 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   CreateInstanceMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateInstanceMetadata> createRepeated() =>
       $pb.PbList<CreateInstanceMetadata>();
-  static CreateInstanceMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateInstanceMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateInstanceMetadata>(create);
   static CreateInstanceMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   CreateInstanceRequest get originalRequest => $_getN(0);
+  @$pb.TagNumber(1)
   set originalRequest(CreateInstanceRequest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOriginalRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  CreateInstanceRequest ensureOriginalRequest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
+  @$pb.TagNumber(2)
   set requestTime($7.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
+  @$pb.TagNumber(3)
   set finishTime($7.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFinishTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
 class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceMetadata',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..a<PartialUpdateInstanceRequest>(
-        1,
-        'originalRequest',
-        $pb.PbFieldType.OM,
-        PartialUpdateInstanceRequest.getDefault,
-        PartialUpdateInstanceRequest.create)
-    ..a<$7.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
-    ..a<$7.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<PartialUpdateInstanceRequest>(1, 'originalRequest',
+        subBuilder: PartialUpdateInstanceRequest.create)
+    ..aOM<$7.Timestamp>(2, 'requestTime', subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, 'finishTime', subBuilder: $7.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceMetadata._() : super();
@@ -609,44 +722,62 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   UpdateInstanceMetadata createEmptyInstance() => create();
   static $pb.PbList<UpdateInstanceMetadata> createRepeated() =>
       $pb.PbList<UpdateInstanceMetadata>();
-  static UpdateInstanceMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateInstanceMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateInstanceMetadata>(create);
   static UpdateInstanceMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   PartialUpdateInstanceRequest get originalRequest => $_getN(0);
+  @$pb.TagNumber(1)
   set originalRequest(PartialUpdateInstanceRequest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOriginalRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  PartialUpdateInstanceRequest ensureOriginalRequest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
+  @$pb.TagNumber(2)
   set requestTime($7.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
+  @$pb.TagNumber(3)
   set finishTime($7.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFinishTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
 class CreateClusterMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateClusterMetadata',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..a<CreateClusterRequest>(1, 'originalRequest', $pb.PbFieldType.OM,
-        CreateClusterRequest.getDefault, CreateClusterRequest.create)
-    ..a<$7.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
-    ..a<$7.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<CreateClusterRequest>(1, 'originalRequest',
+        subBuilder: CreateClusterRequest.create)
+    ..aOM<$7.Timestamp>(2, 'requestTime', subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, 'finishTime', subBuilder: $7.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateClusterMetadata._() : super();
@@ -668,44 +799,61 @@ class CreateClusterMetadata extends $pb.GeneratedMessage {
   CreateClusterMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateClusterMetadata> createRepeated() =>
       $pb.PbList<CreateClusterMetadata>();
-  static CreateClusterMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateClusterMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateClusterMetadata>(create);
   static CreateClusterMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   CreateClusterRequest get originalRequest => $_getN(0);
+  @$pb.TagNumber(1)
   set originalRequest(CreateClusterRequest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOriginalRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  CreateClusterRequest ensureOriginalRequest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
+  @$pb.TagNumber(2)
   set requestTime($7.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
+  @$pb.TagNumber(3)
   set finishTime($7.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFinishTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
 class UpdateClusterMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateClusterMetadata',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..a<$5.Cluster>(1, 'originalRequest', $pb.PbFieldType.OM,
-        $5.Cluster.getDefault, $5.Cluster.create)
-    ..a<$7.Timestamp>(2, 'requestTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
-    ..a<$7.Timestamp>(3, 'finishTime', $pb.PbFieldType.OM,
-        $7.Timestamp.getDefault, $7.Timestamp.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Cluster>(1, 'originalRequest', subBuilder: $5.Cluster.create)
+    ..aOM<$7.Timestamp>(2, 'requestTime', subBuilder: $7.Timestamp.create)
+    ..aOM<$7.Timestamp>(3, 'finishTime', subBuilder: $7.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateClusterMetadata._() : super();
@@ -727,42 +875,61 @@ class UpdateClusterMetadata extends $pb.GeneratedMessage {
   UpdateClusterMetadata createEmptyInstance() => create();
   static $pb.PbList<UpdateClusterMetadata> createRepeated() =>
       $pb.PbList<UpdateClusterMetadata>();
-  static UpdateClusterMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateClusterMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateClusterMetadata>(create);
   static UpdateClusterMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.Cluster get originalRequest => $_getN(0);
+  @$pb.TagNumber(1)
   set originalRequest($5.Cluster v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOriginalRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOriginalRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Cluster ensureOriginalRequest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $7.Timestamp get requestTime => $_getN(1);
+  @$pb.TagNumber(2)
   set requestTime($7.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Timestamp ensureRequestTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $7.Timestamp get finishTime => $_getN(2);
+  @$pb.TagNumber(3)
   set finishTime($7.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFinishTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFinishTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Timestamp ensureFinishTime() => $_ensure(2);
 }
 
 class CreateAppProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAppProfileRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'appProfileId')
-    ..a<$5.AppProfile>(3, 'appProfile', $pb.PbFieldType.OM,
-        $5.AppProfile.getDefault, $5.AppProfile.create)
+    ..aOM<$5.AppProfile>(3, 'appProfile', subBuilder: $5.AppProfile.create)
     ..aOB(4, 'ignoreWarnings')
     ..hasRequiredFields = false;
 
@@ -785,46 +952,66 @@ class CreateAppProfileRequest extends $pb.GeneratedMessage {
   CreateAppProfileRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAppProfileRequest> createRepeated() =>
       $pb.PbList<CreateAppProfileRequest>();
-  static CreateAppProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateAppProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateAppProfileRequest>(create);
   static CreateAppProfileRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get appProfileId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get appProfileId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set appProfileId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAppProfileId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAppProfileId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $5.AppProfile get appProfile => $_getN(2);
+  @$pb.TagNumber(3)
   set appProfile($5.AppProfile v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAppProfile() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAppProfile() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.AppProfile ensureAppProfile() => $_ensure(2);
 
-  $core.bool get ignoreWarnings => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get ignoreWarnings => $_getBF(3);
+  @$pb.TagNumber(4)
   set ignoreWarnings($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIgnoreWarnings() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIgnoreWarnings() => clearField(4);
 }
 
 class GetAppProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAppProfileRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -846,22 +1033,28 @@ class GetAppProfileRequest extends $pb.GeneratedMessage {
   GetAppProfileRequest createEmptyInstance() => create();
   static $pb.PbList<GetAppProfileRequest> createRepeated() =>
       $pb.PbList<GetAppProfileRequest>();
-  static GetAppProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetAppProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAppProfileRequest>(create);
   static GetAppProfileRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListAppProfilesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAppProfilesRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -886,40 +1079,54 @@ class ListAppProfilesRequest extends $pb.GeneratedMessage {
   ListAppProfilesRequest createEmptyInstance() => create();
   static $pb.PbList<ListAppProfilesRequest> createRepeated() =>
       $pb.PbList<ListAppProfilesRequest>();
-  static ListAppProfilesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListAppProfilesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAppProfilesRequest>(create);
   static ListAppProfilesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListAppProfilesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAppProfilesResponse',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..pc<$5.AppProfile>(
-        1, 'appProfiles', $pb.PbFieldType.PM, $5.AppProfile.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.AppProfile>(1, 'appProfiles', $pb.PbFieldType.PM,
+        subBuilder: $5.AppProfile.create)
     ..aOS(2, 'nextPageToken')
     ..pPS(3, 'failedLocations')
     ..hasRequiredFields = false;
@@ -943,30 +1150,36 @@ class ListAppProfilesResponse extends $pb.GeneratedMessage {
   ListAppProfilesResponse createEmptyInstance() => create();
   static $pb.PbList<ListAppProfilesResponse> createRepeated() =>
       $pb.PbList<ListAppProfilesResponse>();
-  static ListAppProfilesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListAppProfilesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAppProfilesResponse>(create);
   static ListAppProfilesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.AppProfile> get appProfiles => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.String> get failedLocations => $_getList(2);
 }
 
 class UpdateAppProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAppProfileRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
-    ..a<$5.AppProfile>(1, 'appProfile', $pb.PbFieldType.OM,
-        $5.AppProfile.getDefault, $5.AppProfile.create)
-    ..a<$6.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $6.FieldMask.getDefault, $6.FieldMask.create)
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.AppProfile>(1, 'appProfile', subBuilder: $5.AppProfile.create)
+    ..aOM<$6.FieldMask>(2, 'updateMask', subBuilder: $6.FieldMask.create)
     ..aOB(3, 'ignoreWarnings')
     ..hasRequiredFields = false;
 
@@ -989,38 +1202,56 @@ class UpdateAppProfileRequest extends $pb.GeneratedMessage {
   UpdateAppProfileRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAppProfileRequest> createRepeated() =>
       $pb.PbList<UpdateAppProfileRequest>();
-  static UpdateAppProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAppProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAppProfileRequest>(create);
   static UpdateAppProfileRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.AppProfile get appProfile => $_getN(0);
+  @$pb.TagNumber(1)
   set appProfile($5.AppProfile v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAppProfile() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAppProfile() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.AppProfile ensureAppProfile() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.bool get ignoreWarnings => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get ignoreWarnings => $_getBF(2);
+  @$pb.TagNumber(3)
   set ignoreWarnings($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasIgnoreWarnings() => $_has(2);
+  @$pb.TagNumber(3)
   void clearIgnoreWarnings() => clearField(3);
 }
 
 class DeleteAppProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAppProfileRequest',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOB(2, 'ignoreWarnings')
     ..hasRequiredFields = false;
@@ -1044,30 +1275,40 @@ class DeleteAppProfileRequest extends $pb.GeneratedMessage {
   DeleteAppProfileRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAppProfileRequest> createRepeated() =>
       $pb.PbList<DeleteAppProfileRequest>();
-  static DeleteAppProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAppProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAppProfileRequest>(create);
   static DeleteAppProfileRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.bool get ignoreWarnings => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get ignoreWarnings => $_getBF(1);
+  @$pb.TagNumber(2)
   set ignoreWarnings($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIgnoreWarnings() => $_has(1);
+  @$pb.TagNumber(2)
   void clearIgnoreWarnings() => clearField(2);
 }
 
 class UpdateAppProfileMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAppProfileMetadata',
-      package: const $pb.PackageName('google.bigtable.admin.v2'))
+      package: const $pb.PackageName('google.bigtable.admin.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UpdateAppProfileMetadata._() : super();
@@ -1089,7 +1330,8 @@ class UpdateAppProfileMetadata extends $pb.GeneratedMessage {
   UpdateAppProfileMetadata createEmptyInstance() => create();
   static $pb.PbList<UpdateAppProfileMetadata> createRepeated() =>
       $pb.PbList<UpdateAppProfileMetadata>();
-  static UpdateAppProfileMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAppProfileMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAppProfileMetadata>(create);
   static UpdateAppProfileMetadata _defaultInstance;
 }

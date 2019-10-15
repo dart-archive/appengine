@@ -14,6 +14,7 @@ const StandardSqlDataType$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.bigquery.v2.StandardSqlDataType.TypeKind',
+      '8': {},
       '10': 'typeKind'
     },
     {
@@ -64,13 +65,14 @@ const StandardSqlDataType_TypeKind$json = {
 const StandardSqlField$json = {
   '1': 'StandardSqlField',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'type',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.v2.StandardSqlDataType',
+      '8': {},
       '10': 'type'
     },
   ],

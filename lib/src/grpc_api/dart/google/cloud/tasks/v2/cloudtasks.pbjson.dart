@@ -8,7 +8,7 @@
 const ListQueuesRequest$json = {
   '1': 'ListQueuesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
@@ -33,20 +33,21 @@ const ListQueuesResponse$json = {
 const GetQueueRequest$json = {
   '1': 'GetQueueRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const CreateQueueRequest$json = {
   '1': 'CreateQueueRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'queue',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.tasks.v2.Queue',
+      '8': {},
       '10': 'queue'
     },
   ],
@@ -61,6 +62,7 @@ const UpdateQueueRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.tasks.v2.Queue',
+      '8': {},
       '10': 'queue'
     },
     {
@@ -77,35 +79,35 @@ const UpdateQueueRequest$json = {
 const DeleteQueueRequest$json = {
   '1': 'DeleteQueueRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const PurgeQueueRequest$json = {
   '1': 'PurgeQueueRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const PauseQueueRequest$json = {
   '1': 'PauseQueueRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ResumeQueueRequest$json = {
   '1': 'ResumeQueueRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListTasksRequest$json = {
   '1': 'ListTasksRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'response_view',
       '3': 2,
@@ -137,7 +139,7 @@ const ListTasksResponse$json = {
 const GetTaskRequest$json = {
   '1': 'GetTaskRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'response_view',
       '3': 2,
@@ -152,13 +154,14 @@ const GetTaskRequest$json = {
 const CreateTaskRequest$json = {
   '1': 'CreateTaskRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'task',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.tasks.v2.Task',
+      '8': {},
       '10': 'task'
     },
     {
@@ -175,14 +178,14 @@ const CreateTaskRequest$json = {
 const DeleteTaskRequest$json = {
   '1': 'DeleteTaskRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const RunTaskRequest$json = {
   '1': 'RunTaskRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'response_view',
       '3': 2,

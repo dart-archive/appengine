@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity.pb.dart' as $1;
@@ -20,10 +19,10 @@ export 'datastore.pbenum.dart';
 
 class LookupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..a<ReadOptions>(1, 'readOptions', $pb.PbFieldType.OM,
-        ReadOptions.getDefault, ReadOptions.create)
-    ..pc<$1.Key>(3, 'keys', $pb.PbFieldType.PM, $1.Key.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..aOM<ReadOptions>(1, 'readOptions', subBuilder: ReadOptions.create)
+    ..pc<$1.Key>(3, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
@@ -44,36 +43,50 @@ class LookupRequest extends $pb.GeneratedMessage {
   LookupRequest createEmptyInstance() => create();
   static $pb.PbList<LookupRequest> createRepeated() =>
       $pb.PbList<LookupRequest>();
-  static LookupRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LookupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LookupRequest>(create);
   static LookupRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   ReadOptions get readOptions => $_getN(0);
+  @$pb.TagNumber(1)
   set readOptions(ReadOptions v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReadOptions() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReadOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  ReadOptions ensureReadOptions() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $core.List<$1.Key> get keys => $_getList(1);
 
-  $core.String get projectId => $_getS(2, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(2);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(2);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 }
 
 class LookupResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$2.EntityResult>(
-        1, 'found', $pb.PbFieldType.PM, $2.EntityResult.create)
-    ..pc<$2.EntityResult>(
-        2, 'missing', $pb.PbFieldType.PM, $2.EntityResult.create)
-    ..pc<$1.Key>(3, 'deferred', $pb.PbFieldType.PM, $1.Key.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<$2.EntityResult>(1, 'found', $pb.PbFieldType.PM,
+        subBuilder: $2.EntityResult.create)
+    ..pc<$2.EntityResult>(2, 'missing', $pb.PbFieldType.PM,
+        subBuilder: $2.EntityResult.create)
+    ..pc<$1.Key>(3, 'deferred', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
     ..hasRequiredFields = false;
 
   LookupResponse._() : super();
@@ -93,13 +106,18 @@ class LookupResponse extends $pb.GeneratedMessage {
   LookupResponse createEmptyInstance() => create();
   static $pb.PbList<LookupResponse> createRepeated() =>
       $pb.PbList<LookupResponse>();
-  static LookupResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LookupResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LookupResponse>(create);
   static LookupResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.EntityResult> get found => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<$2.EntityResult> get missing => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$1.Key> get deferred => $_getList(2);
 }
 
@@ -113,16 +131,13 @@ class RunQueryRequest extends $pb.GeneratedMessage {
     0: RunQueryRequest_QueryType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..oo(0, [3, 7])
-    ..a<ReadOptions>(1, 'readOptions', $pb.PbFieldType.OM,
-        ReadOptions.getDefault, ReadOptions.create)
-    ..a<$1.PartitionId>(2, 'partitionId', $pb.PbFieldType.OM,
-        $1.PartitionId.getDefault, $1.PartitionId.create)
-    ..a<$2.Query>(
-        3, 'query', $pb.PbFieldType.OM, $2.Query.getDefault, $2.Query.create)
-    ..a<$2.GqlQuery>(7, 'gqlQuery', $pb.PbFieldType.OM, $2.GqlQuery.getDefault,
-        $2.GqlQuery.create)
+    ..aOM<ReadOptions>(1, 'readOptions', subBuilder: ReadOptions.create)
+    ..aOM<$1.PartitionId>(2, 'partitionId', subBuilder: $1.PartitionId.create)
+    ..aOM<$2.Query>(3, 'query', subBuilder: $2.Query.create)
+    ..aOM<$2.GqlQuery>(7, 'gqlQuery', subBuilder: $2.GqlQuery.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
@@ -143,62 +158,91 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   RunQueryRequest createEmptyInstance() => create();
   static $pb.PbList<RunQueryRequest> createRepeated() =>
       $pb.PbList<RunQueryRequest>();
-  static RunQueryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RunQueryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunQueryRequest>(create);
   static RunQueryRequest _defaultInstance;
 
   RunQueryRequest_QueryType whichQueryType() =>
       _RunQueryRequest_QueryTypeByTag[$_whichOneof(0)];
   void clearQueryType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ReadOptions get readOptions => $_getN(0);
+  @$pb.TagNumber(1)
   set readOptions(ReadOptions v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReadOptions() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReadOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  ReadOptions ensureReadOptions() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.PartitionId get partitionId => $_getN(1);
+  @$pb.TagNumber(2)
   set partitionId($1.PartitionId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPartitionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPartitionId() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.PartitionId ensurePartitionId() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $2.Query get query => $_getN(2);
+  @$pb.TagNumber(3)
   set query($2.Query v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasQuery() => $_has(2);
+  @$pb.TagNumber(3)
   void clearQuery() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Query ensureQuery() => $_ensure(2);
 
+  @$pb.TagNumber(7)
   $2.GqlQuery get gqlQuery => $_getN(3);
+  @$pb.TagNumber(7)
   set gqlQuery($2.GqlQuery v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasGqlQuery() => $_has(3);
+  @$pb.TagNumber(7)
   void clearGqlQuery() => clearField(7);
+  @$pb.TagNumber(7)
+  $2.GqlQuery ensureGqlQuery() => $_ensure(3);
 
-  $core.String get projectId => $_getS(4, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(4);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(4);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 }
 
 class RunQueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..a<$2.QueryResultBatch>(1, 'batch', $pb.PbFieldType.OM,
-        $2.QueryResultBatch.getDefault, $2.QueryResultBatch.create)
-    ..a<$2.Query>(
-        2, 'query', $pb.PbFieldType.OM, $2.Query.getDefault, $2.Query.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..aOM<$2.QueryResultBatch>(1, 'batch',
+        subBuilder: $2.QueryResultBatch.create)
+    ..aOM<$2.Query>(2, 'query', subBuilder: $2.Query.create)
     ..hasRequiredFields = false;
 
   RunQueryResponse._() : super();
@@ -218,33 +262,47 @@ class RunQueryResponse extends $pb.GeneratedMessage {
   RunQueryResponse createEmptyInstance() => create();
   static $pb.PbList<RunQueryResponse> createRepeated() =>
       $pb.PbList<RunQueryResponse>();
-  static RunQueryResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RunQueryResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunQueryResponse>(create);
   static RunQueryResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.QueryResultBatch get batch => $_getN(0);
+  @$pb.TagNumber(1)
   set batch($2.QueryResultBatch v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBatch() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBatch() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.QueryResultBatch ensureBatch() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.Query get query => $_getN(1);
+  @$pb.TagNumber(2)
   set query($2.Query v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQuery() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQuery() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Query ensureQuery() => $_ensure(1);
 }
 
 class BeginTransactionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..aOS(8, 'projectId')
-    ..a<TransactionOptions>(10, 'transactionOptions', $pb.PbFieldType.OM,
-        TransactionOptions.getDefault, TransactionOptions.create)
+    ..aOM<TransactionOptions>(10, 'transactionOptions',
+        subBuilder: TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest._() : super();
@@ -266,30 +324,42 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   BeginTransactionRequest createEmptyInstance() => create();
   static $pb.PbList<BeginTransactionRequest> createRepeated() =>
       $pb.PbList<BeginTransactionRequest>();
-  static BeginTransactionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BeginTransactionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BeginTransactionRequest>(create);
   static BeginTransactionRequest _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 
+  @$pb.TagNumber(10)
   TransactionOptions get transactionOptions => $_getN(1);
+  @$pb.TagNumber(10)
   set transactionOptions(TransactionOptions v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasTransactionOptions() => $_has(1);
+  @$pb.TagNumber(10)
   void clearTransactionOptions() => clearField(10);
+  @$pb.TagNumber(10)
+  TransactionOptions ensureTransactionOptions() => $_ensure(1);
 }
 
 class BeginTransactionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -312,22 +382,28 @@ class BeginTransactionResponse extends $pb.GeneratedMessage {
   BeginTransactionResponse createEmptyInstance() => create();
   static $pb.PbList<BeginTransactionResponse> createRepeated() =>
       $pb.PbList<BeginTransactionResponse>();
-  static BeginTransactionResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BeginTransactionResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BeginTransactionResponse>(create);
   static BeginTransactionResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get transaction => $_getN(0);
+  @$pb.TagNumber(1)
   set transaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTransaction() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTransaction() => clearField(1);
 }
 
 class RollbackRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
@@ -349,30 +425,40 @@ class RollbackRequest extends $pb.GeneratedMessage {
   RollbackRequest createEmptyInstance() => create();
   static $pb.PbList<RollbackRequest> createRepeated() =>
       $pb.PbList<RollbackRequest>();
-  static RollbackRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RollbackRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RollbackRequest>(create);
   static RollbackRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get transaction => $_getN(0);
+  @$pb.TagNumber(1)
   set transaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTransaction() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTransaction() => clearField(1);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 }
 
 class RollbackResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   RollbackResponse._() : super();
@@ -392,8 +478,9 @@ class RollbackResponse extends $pb.GeneratedMessage {
   RollbackResponse createEmptyInstance() => create();
   static $pb.PbList<RollbackResponse> createRepeated() =>
       $pb.PbList<RollbackResponse>();
-  static RollbackResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RollbackResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RollbackResponse>(create);
   static RollbackResponse _defaultInstance;
 }
 
@@ -406,17 +493,16 @@ class CommitRequest extends $pb.GeneratedMessage {
     0: CommitRequest_TransactionSelector.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..oo(0, [1])
     ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
-    ..e<CommitRequest_Mode>(
-        5,
-        'mode',
-        $pb.PbFieldType.OE,
-        CommitRequest_Mode.MODE_UNSPECIFIED,
-        CommitRequest_Mode.valueOf,
-        CommitRequest_Mode.values)
-    ..pc<Mutation>(6, 'mutations', $pb.PbFieldType.PM, Mutation.create)
+    ..e<CommitRequest_Mode>(5, 'mode', $pb.PbFieldType.OE,
+        defaultOrMaker: CommitRequest_Mode.MODE_UNSPECIFIED,
+        valueOf: CommitRequest_Mode.valueOf,
+        enumValues: CommitRequest_Mode.values)
+    ..pc<Mutation>(6, 'mutations', $pb.PbFieldType.PM,
+        subBuilder: Mutation.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
@@ -437,45 +523,61 @@ class CommitRequest extends $pb.GeneratedMessage {
   CommitRequest createEmptyInstance() => create();
   static $pb.PbList<CommitRequest> createRepeated() =>
       $pb.PbList<CommitRequest>();
-  static CommitRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CommitRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommitRequest>(create);
   static CommitRequest _defaultInstance;
 
   CommitRequest_TransactionSelector whichTransactionSelector() =>
       _CommitRequest_TransactionSelectorByTag[$_whichOneof(0)];
   void clearTransactionSelector() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get transaction => $_getN(0);
+  @$pb.TagNumber(1)
   set transaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTransaction() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTransaction() => clearField(1);
 
+  @$pb.TagNumber(5)
   CommitRequest_Mode get mode => $_getN(1);
+  @$pb.TagNumber(5)
   set mode(CommitRequest_Mode v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasMode() => $_has(1);
+  @$pb.TagNumber(5)
   void clearMode() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<Mutation> get mutations => $_getList(2);
 
-  $core.String get projectId => $_getS(3, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(3);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(3);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 }
 
 class CommitResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<MutationResult>(
-        3, 'mutationResults', $pb.PbFieldType.PM, MutationResult.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<MutationResult>(3, 'mutationResults', $pb.PbFieldType.PM,
+        subBuilder: MutationResult.create)
     ..a<$core.int>(4, 'indexUpdates', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -496,24 +598,32 @@ class CommitResponse extends $pb.GeneratedMessage {
   CommitResponse createEmptyInstance() => create();
   static $pb.PbList<CommitResponse> createRepeated() =>
       $pb.PbList<CommitResponse>();
-  static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CommitResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommitResponse>(create);
   static CommitResponse _defaultInstance;
 
+  @$pb.TagNumber(3)
   $core.List<MutationResult> get mutationResults => $_getList(0);
 
-  $core.int get indexUpdates => $_get(1, 0);
+  @$pb.TagNumber(4)
+  $core.int get indexUpdates => $_getIZ(1);
+  @$pb.TagNumber(4)
   set indexUpdates($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIndexUpdates() => $_has(1);
+  @$pb.TagNumber(4)
   void clearIndexUpdates() => clearField(4);
 }
 
 class AllocateIdsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, $1.Key.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
     ..aOS(8, 'projectId')
     ..hasRequiredFields = false;
 
@@ -534,25 +644,32 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
   AllocateIdsRequest createEmptyInstance() => create();
   static $pb.PbList<AllocateIdsRequest> createRepeated() =>
       $pb.PbList<AllocateIdsRequest>();
-  static AllocateIdsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AllocateIdsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AllocateIdsRequest>(create);
   static AllocateIdsRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Key> get keys => $_getList(0);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 }
 
 class AllocateIdsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, $1.Key.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
     ..hasRequiredFields = false;
 
   AllocateIdsResponse._() : super();
@@ -572,17 +689,20 @@ class AllocateIdsResponse extends $pb.GeneratedMessage {
   AllocateIdsResponse createEmptyInstance() => create();
   static $pb.PbList<AllocateIdsResponse> createRepeated() =>
       $pb.PbList<AllocateIdsResponse>();
-  static AllocateIdsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AllocateIdsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AllocateIdsResponse>(create);
   static AllocateIdsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Key> get keys => $_getList(0);
 }
 
 class ReserveIdsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsRequest',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, $1.Key.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
     ..aOS(8, 'projectId')
     ..aOS(9, 'databaseId')
     ..hasRequiredFields = false;
@@ -604,32 +724,43 @@ class ReserveIdsRequest extends $pb.GeneratedMessage {
   ReserveIdsRequest createEmptyInstance() => create();
   static $pb.PbList<ReserveIdsRequest> createRepeated() =>
       $pb.PbList<ReserveIdsRequest>();
-  static ReserveIdsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReserveIdsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReserveIdsRequest>(create);
   static ReserveIdsRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Key> get keys => $_getList(0);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(8)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(8)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(8)
   void clearProjectId() => clearField(8);
 
-  $core.String get databaseId => $_getS(2, '');
+  @$pb.TagNumber(9)
+  $core.String get databaseId => $_getSZ(2);
+  @$pb.TagNumber(9)
   set databaseId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasDatabaseId() => $_has(2);
+  @$pb.TagNumber(9)
   void clearDatabaseId() => clearField(9);
 }
 
 class ReserveIdsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsResponse',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ReserveIdsResponse._() : super();
@@ -649,8 +780,9 @@ class ReserveIdsResponse extends $pb.GeneratedMessage {
   ReserveIdsResponse createEmptyInstance() => create();
   static $pb.PbList<ReserveIdsResponse> createRepeated() =>
       $pb.PbList<ReserveIdsResponse>();
-  static ReserveIdsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReserveIdsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReserveIdsResponse>(create);
   static ReserveIdsResponse _defaultInstance;
 }
 
@@ -673,17 +805,14 @@ class Mutation extends $pb.GeneratedMessage {
     0: Mutation_ConflictDetectionStrategy.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7])
     ..oo(1, [8])
-    ..a<$1.Entity>(
-        4, 'insert', $pb.PbFieldType.OM, $1.Entity.getDefault, $1.Entity.create)
-    ..a<$1.Entity>(
-        5, 'update', $pb.PbFieldType.OM, $1.Entity.getDefault, $1.Entity.create)
-    ..a<$1.Entity>(
-        6, 'upsert', $pb.PbFieldType.OM, $1.Entity.getDefault, $1.Entity.create)
-    ..a<$1.Key>(
-        7, 'delete', $pb.PbFieldType.OM, $1.Key.getDefault, $1.Key.create)
+    ..aOM<$1.Entity>(4, 'insert', subBuilder: $1.Entity.create)
+    ..aOM<$1.Entity>(5, 'update', subBuilder: $1.Entity.create)
+    ..aOM<$1.Entity>(6, 'upsert', subBuilder: $1.Entity.create)
+    ..aOM<$1.Key>(7, 'delete', subBuilder: $1.Key.create)
     ..aInt64(8, 'baseVersion')
     ..hasRequiredFields = false;
 
@@ -703,7 +832,9 @@ class Mutation extends $pb.GeneratedMessage {
   static Mutation create() => Mutation._();
   Mutation createEmptyInstance() => create();
   static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
-  static Mutation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Mutation>(create);
   static Mutation _defaultInstance;
 
   Mutation_Operation whichOperation() =>
@@ -714,51 +845,80 @@ class Mutation extends $pb.GeneratedMessage {
       _Mutation_ConflictDetectionStrategyByTag[$_whichOneof(1)];
   void clearConflictDetectionStrategy() => clearField($_whichOneof(1));
 
+  @$pb.TagNumber(4)
   $1.Entity get insert => $_getN(0);
+  @$pb.TagNumber(4)
   set insert($1.Entity v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInsert() => $_has(0);
+  @$pb.TagNumber(4)
   void clearInsert() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Entity ensureInsert() => $_ensure(0);
 
+  @$pb.TagNumber(5)
   $1.Entity get update => $_getN(1);
+  @$pb.TagNumber(5)
   set update($1.Entity v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(5)
   void clearUpdate() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.Entity ensureUpdate() => $_ensure(1);
 
+  @$pb.TagNumber(6)
   $1.Entity get upsert => $_getN(2);
+  @$pb.TagNumber(6)
   set upsert($1.Entity v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasUpsert() => $_has(2);
+  @$pb.TagNumber(6)
   void clearUpsert() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.Entity ensureUpsert() => $_ensure(2);
 
+  @$pb.TagNumber(7)
   $1.Key get delete => $_getN(3);
+  @$pb.TagNumber(7)
   set delete($1.Key v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasDelete() => $_has(3);
+  @$pb.TagNumber(7)
   void clearDelete() => clearField(7);
+  @$pb.TagNumber(7)
+  $1.Key ensureDelete() => $_ensure(3);
 
-  Int64 get baseVersion => $_getI64(4);
-  set baseVersion(Int64 v) {
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get baseVersion => $_getI64(4);
+  @$pb.TagNumber(8)
+  set baseVersion($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasBaseVersion() => $_has(4);
+  @$pb.TagNumber(8)
   void clearBaseVersion() => clearField(8);
 }
 
 class MutationResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutationResult',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
-    ..a<$1.Key>(3, 'key', $pb.PbFieldType.OM, $1.Key.getDefault, $1.Key.create)
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
+    ..aOM<$1.Key>(3, 'key', subBuilder: $1.Key.create)
     ..aInt64(4, 'version')
     ..aOB(5, 'conflictDetected')
     ..hasRequiredFields = false;
@@ -780,31 +940,47 @@ class MutationResult extends $pb.GeneratedMessage {
   MutationResult createEmptyInstance() => create();
   static $pb.PbList<MutationResult> createRepeated() =>
       $pb.PbList<MutationResult>();
-  static MutationResult getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutationResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutationResult>(create);
   static MutationResult _defaultInstance;
 
+  @$pb.TagNumber(3)
   $1.Key get key => $_getN(0);
+  @$pb.TagNumber(3)
   set key($1.Key v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(3)
   void clearKey() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Key ensureKey() => $_ensure(0);
 
-  Int64 get version => $_getI64(1);
-  set version(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get version => $_getI64(1);
+  @$pb.TagNumber(4)
+  set version($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(4)
   void clearVersion() => clearField(4);
 
-  $core.bool get conflictDetected => $_get(2, false);
+  @$pb.TagNumber(5)
+  $core.bool get conflictDetected => $_getBF(2);
+  @$pb.TagNumber(5)
   set conflictDetected($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasConflictDetected() => $_has(2);
+  @$pb.TagNumber(5)
   void clearConflictDetected() => clearField(5);
 }
 
@@ -818,15 +994,14 @@ class ReadOptions extends $pb.GeneratedMessage {
     0: ReadOptions_ConsistencyType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadOptions',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..e<ReadOptions_ReadConsistency>(
-        1,
-        'readConsistency',
-        $pb.PbFieldType.OE,
-        ReadOptions_ReadConsistency.READ_CONSISTENCY_UNSPECIFIED,
-        ReadOptions_ReadConsistency.valueOf,
-        ReadOptions_ReadConsistency.values)
+    ..e<ReadOptions_ReadConsistency>(1, 'readConsistency', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ReadOptions_ReadConsistency.READ_CONSISTENCY_UNSPECIFIED,
+        valueOf: ReadOptions_ReadConsistency.valueOf,
+        enumValues: ReadOptions_ReadConsistency.values)
     ..a<$core.List<$core.int>>(2, 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -846,34 +1021,45 @@ class ReadOptions extends $pb.GeneratedMessage {
   static ReadOptions create() => ReadOptions._();
   ReadOptions createEmptyInstance() => create();
   static $pb.PbList<ReadOptions> createRepeated() => $pb.PbList<ReadOptions>();
-  static ReadOptions getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReadOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReadOptions>(create);
   static ReadOptions _defaultInstance;
 
   ReadOptions_ConsistencyType whichConsistencyType() =>
       _ReadOptions_ConsistencyTypeByTag[$_whichOneof(0)];
   void clearConsistencyType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ReadOptions_ReadConsistency get readConsistency => $_getN(0);
+  @$pb.TagNumber(1)
   set readConsistency(ReadOptions_ReadConsistency v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReadConsistency() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReadConsistency() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
 }
 
 class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.ReadWrite',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'previousTransaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -898,23 +1084,29 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   TransactionOptions_ReadWrite createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadWrite> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadWrite>();
-  static TransactionOptions_ReadWrite getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadWrite getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadWrite>(create);
   static TransactionOptions_ReadWrite _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get previousTransaction => $_getN(0);
+  @$pb.TagNumber(1)
   set previousTransaction($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPreviousTransaction() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPreviousTransaction() => clearField(1);
 }
 
 class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.ReadOnly',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadOnly._() : super();
@@ -938,8 +1130,9 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   TransactionOptions_ReadOnly createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadOnly> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadOnly>();
-  static TransactionOptions_ReadOnly getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadOnly getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadOnly>(create);
   static TransactionOptions_ReadOnly _defaultInstance;
 }
 
@@ -953,20 +1146,13 @@ class TransactionOptions extends $pb.GeneratedMessage {
     0: TransactionOptions_Mode.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
-      package: const $pb.PackageName('google.datastore.v1beta3'))
+      package: const $pb.PackageName('google.datastore.v1beta3'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<TransactionOptions_ReadWrite>(
-        1,
-        'readWrite',
-        $pb.PbFieldType.OM,
-        TransactionOptions_ReadWrite.getDefault,
-        TransactionOptions_ReadWrite.create)
-    ..a<TransactionOptions_ReadOnly>(
-        2,
-        'readOnly',
-        $pb.PbFieldType.OM,
-        TransactionOptions_ReadOnly.getDefault,
-        TransactionOptions_ReadOnly.create)
+    ..aOM<TransactionOptions_ReadWrite>(1, 'readWrite',
+        subBuilder: TransactionOptions_ReadWrite.create)
+    ..aOM<TransactionOptions_ReadOnly>(2, 'readOnly',
+        subBuilder: TransactionOptions_ReadOnly.create)
     ..hasRequiredFields = false;
 
   TransactionOptions._() : super();
@@ -986,27 +1172,40 @@ class TransactionOptions extends $pb.GeneratedMessage {
   TransactionOptions createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions> createRepeated() =>
       $pb.PbList<TransactionOptions>();
-  static TransactionOptions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions>(create);
   static TransactionOptions _defaultInstance;
 
   TransactionOptions_Mode whichMode() =>
       _TransactionOptions_ModeByTag[$_whichOneof(0)];
   void clearMode() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   TransactionOptions_ReadWrite get readWrite => $_getN(0);
+  @$pb.TagNumber(1)
   set readWrite(TransactionOptions_ReadWrite v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReadWrite() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReadWrite() => clearField(1);
+  @$pb.TagNumber(1)
+  TransactionOptions_ReadWrite ensureReadWrite() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   TransactionOptions_ReadOnly get readOnly => $_getN(1);
+  @$pb.TagNumber(2)
   set readOnly(TransactionOptions_ReadOnly v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReadOnly() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReadOnly() => clearField(2);
+  @$pb.TagNumber(2)
+  TransactionOptions_ReadOnly ensureReadOnly() => $_ensure(1);
 }

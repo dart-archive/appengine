@@ -5,24 +5,19 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class DroppedLabels extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DroppedLabels',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..m<$core.String, $core.String>(
-        1,
-        'label',
-        'DroppedLabels.LabelEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, 'label',
+        entryClassName: 'DroppedLabels.LabelEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.monitoring.v3'))
     ..hasRequiredFields = false;
 
   DroppedLabels._() : super();
@@ -42,8 +37,11 @@ class DroppedLabels extends $pb.GeneratedMessage {
   DroppedLabels createEmptyInstance() => create();
   static $pb.PbList<DroppedLabels> createRepeated() =>
       $pb.PbList<DroppedLabels>();
-  static DroppedLabels getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DroppedLabels getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DroppedLabels>(create);
   static DroppedLabels _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.Map<$core.String, $core.String> get label => $_getMap(0);
 }

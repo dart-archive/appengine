@@ -8,15 +8,16 @@
 const WorkflowTemplate$json = {
   '1': 'WorkflowTemplate',
   '2': [
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'version', '3': 3, '4': 1, '5': 5, '10': 'version'},
+    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'version', '3': 3, '4': 1, '5': 5, '8': {}, '10': 'version'},
     {
       '1': 'create_time',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'createTime'
     },
     {
@@ -25,6 +26,7 @@ const WorkflowTemplate$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'updateTime'
     },
     {
@@ -33,6 +35,7 @@ const WorkflowTemplate$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowTemplate.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
     {
@@ -57,10 +60,12 @@ const WorkflowTemplate$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.TemplateParameter',
+      '8': {},
       '10': 'parameters'
     },
   ],
   '3': [WorkflowTemplate_LabelsEntry$json],
+  '7': {},
 };
 
 const WorkflowTemplate_LabelsEntry$json = {
@@ -315,14 +320,15 @@ const ValueValidation$json = {
 const WorkflowMetadata$json = {
   '1': 'WorkflowMetadata',
   '2': [
-    {'1': 'template', '3': 1, '4': 1, '5': 9, '10': 'template'},
-    {'1': 'version', '3': 2, '4': 1, '5': 5, '10': 'version'},
+    {'1': 'template', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'template'},
+    {'1': 'version', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'version'},
     {
       '1': 'create_cluster',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ClusterOperation',
+      '8': {},
       '10': 'createCluster'
     },
     {
@@ -331,6 +337,7 @@ const WorkflowMetadata$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowGraph',
+      '8': {},
       '10': 'graph'
     },
     {
@@ -339,6 +346,7 @@ const WorkflowMetadata$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ClusterOperation',
+      '8': {},
       '10': 'deleteCluster'
     },
     {
@@ -347,9 +355,10 @@ const WorkflowMetadata$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowMetadata.State',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'cluster_name', '3': 7, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'cluster_name', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
     {
       '1': 'parameters',
       '3': 8,
@@ -364,6 +373,7 @@ const WorkflowMetadata$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'startTime'
     },
     {
@@ -372,9 +382,17 @@ const WorkflowMetadata$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'endTime'
     },
-    {'1': 'cluster_uuid', '3': 11, '4': 1, '5': 9, '10': 'clusterUuid'},
+    {
+      '1': 'cluster_uuid',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'clusterUuid'
+    },
   ],
   '3': [WorkflowMetadata_ParametersEntry$json],
   '4': [WorkflowMetadata_State$json],
@@ -402,9 +420,9 @@ const WorkflowMetadata_State$json = {
 const ClusterOperation$json = {
   '1': 'ClusterOperation',
   '2': [
-    {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '10': 'operationId'},
-    {'1': 'error', '3': 2, '4': 1, '5': 9, '10': 'error'},
-    {'1': 'done', '3': 3, '4': 1, '5': 8, '10': 'done'},
+    {'1': 'operation_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'operationId'},
+    {'1': 'error', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'error'},
+    {'1': 'done', '3': 3, '4': 1, '5': 8, '8': {}, '10': 'done'},
   ],
 };
 
@@ -417,6 +435,7 @@ const WorkflowGraph$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowNode',
+      '8': {},
       '10': 'nodes'
     },
   ],
@@ -425,24 +444,26 @@ const WorkflowGraph$json = {
 const WorkflowNode$json = {
   '1': 'WorkflowNode',
   '2': [
-    {'1': 'step_id', '3': 1, '4': 1, '5': 9, '10': 'stepId'},
+    {'1': 'step_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'stepId'},
     {
       '1': 'prerequisite_step_ids',
       '3': 2,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'prerequisiteStepIds'
     },
-    {'1': 'job_id', '3': 3, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'job_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
     {
       '1': 'state',
       '3': 5,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowNode.NodeState',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'error', '3': 6, '4': 1, '5': 9, '10': 'error'},
+    {'1': 'error', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'error'},
   ],
   '4': [WorkflowNode_NodeState$json],
 };
@@ -462,13 +483,14 @@ const WorkflowNode_NodeState$json = {
 const CreateWorkflowTemplateRequest$json = {
   '1': 'CreateWorkflowTemplateRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'template',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowTemplate',
+      '8': {},
       '10': 'template'
     },
   ],
@@ -477,7 +499,7 @@ const CreateWorkflowTemplateRequest$json = {
 const GetWorkflowTemplateRequest$json = {
   '1': 'GetWorkflowTemplateRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'version', '3': 2, '4': 1, '5': 5, '10': 'version'},
   ],
 };
@@ -485,7 +507,7 @@ const GetWorkflowTemplateRequest$json = {
 const InstantiateWorkflowTemplateRequest$json = {
   '1': 'InstantiateWorkflowTemplateRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'version', '3': 2, '4': 1, '5': 5, '10': 'version'},
     {
       '1': 'instance_id',
@@ -521,13 +543,14 @@ const InstantiateWorkflowTemplateRequest_ParametersEntry$json = {
 const InstantiateInlineWorkflowTemplateRequest$json = {
   '1': 'InstantiateInlineWorkflowTemplateRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'template',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowTemplate',
+      '8': {},
       '10': 'template'
     },
     {'1': 'instance_id', '3': 3, '4': 1, '5': 9, '10': 'instanceId'},
@@ -544,6 +567,7 @@ const UpdateWorkflowTemplateRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowTemplate',
+      '8': {},
       '10': 'template'
     },
   ],
@@ -552,7 +576,7 @@ const UpdateWorkflowTemplateRequest$json = {
 const ListWorkflowTemplatesRequest$json = {
   '1': 'ListWorkflowTemplatesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -567,16 +591,24 @@ const ListWorkflowTemplatesResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.WorkflowTemplate',
+      '8': {},
       '10': 'templates'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const DeleteWorkflowTemplateRequest$json = {
   '1': 'DeleteWorkflowTemplateRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'version', '3': 2, '4': 1, '5': 5, '10': 'version'},
   ],
 };

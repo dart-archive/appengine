@@ -9,9 +9,16 @@ const ScanConfig$json = {
   '1': 'ScanConfig',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
     {'1': 'max_qps', '3': 3, '4': 1, '5': 5, '10': 'maxQps'},
-    {'1': 'starting_urls', '3': 4, '4': 3, '5': 9, '10': 'startingUrls'},
+    {
+      '1': 'starting_urls',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'startingUrls'
+    },
     {
       '1': 'authentication',
       '3': 5,
@@ -51,9 +58,18 @@ const ScanConfig$json = {
       '6': '.google.cloud.websecurityscanner.v1alpha.ScanConfig.TargetPlatform',
       '10': 'targetPlatforms'
     },
+    {
+      '1': 'latest_run',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.websecurityscanner.v1alpha.ScanRun',
+      '10': 'latestRun'
+    },
   ],
   '3': [ScanConfig_Authentication$json, ScanConfig_Schedule$json],
   '4': [ScanConfig_UserAgent$json, ScanConfig_TargetPlatform$json],
+  '7': {},
 };
 
 const ScanConfig_Authentication$json = {
@@ -92,17 +108,17 @@ const ScanConfig_Authentication$json = {
 const ScanConfig_Authentication_GoogleAccount$json = {
   '1': 'GoogleAccount',
   '2': [
-    {'1': 'username', '3': 1, '4': 1, '5': 9, '10': 'username'},
-    {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
+    {'1': 'username', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'username'},
+    {'1': 'password', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'password'},
   ],
 };
 
 const ScanConfig_Authentication_CustomAccount$json = {
   '1': 'CustomAccount',
   '2': [
-    {'1': 'username', '3': 1, '4': 1, '5': 9, '10': 'username'},
-    {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
-    {'1': 'login_url', '3': 3, '4': 1, '5': 9, '10': 'loginUrl'},
+    {'1': 'username', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'username'},
+    {'1': 'password', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'password'},
+    {'1': 'login_url', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'loginUrl'},
   ],
 };
 
@@ -122,6 +138,7 @@ const ScanConfig_Schedule$json = {
       '3': 2,
       '4': 1,
       '5': 5,
+      '8': {},
       '10': 'intervalDurationDays'
     },
   ],

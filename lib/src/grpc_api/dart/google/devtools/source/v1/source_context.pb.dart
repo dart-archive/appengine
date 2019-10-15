@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,20 +25,16 @@ class SourceContext extends $pb.GeneratedMessage {
     0: SourceContext_Context.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 6])
-    ..a<CloudRepoSourceContext>(1, 'cloudRepo', $pb.PbFieldType.OM,
-        CloudRepoSourceContext.getDefault, CloudRepoSourceContext.create)
-    ..a<CloudWorkspaceSourceContext>(
-        2,
-        'cloudWorkspace',
-        $pb.PbFieldType.OM,
-        CloudWorkspaceSourceContext.getDefault,
-        CloudWorkspaceSourceContext.create)
-    ..a<GerritSourceContext>(3, 'gerrit', $pb.PbFieldType.OM,
-        GerritSourceContext.getDefault, GerritSourceContext.create)
-    ..a<GitSourceContext>(6, 'git', $pb.PbFieldType.OM,
-        GitSourceContext.getDefault, GitSourceContext.create)
+    ..aOM<CloudRepoSourceContext>(1, 'cloudRepo',
+        subBuilder: CloudRepoSourceContext.create)
+    ..aOM<CloudWorkspaceSourceContext>(2, 'cloudWorkspace',
+        subBuilder: CloudWorkspaceSourceContext.create)
+    ..aOM<GerritSourceContext>(3, 'gerrit',
+        subBuilder: GerritSourceContext.create)
+    ..aOM<GitSourceContext>(6, 'git', subBuilder: GitSourceContext.create)
     ..hasRequiredFields = false;
 
   SourceContext._() : super();
@@ -59,61 +54,82 @@ class SourceContext extends $pb.GeneratedMessage {
   SourceContext createEmptyInstance() => create();
   static $pb.PbList<SourceContext> createRepeated() =>
       $pb.PbList<SourceContext>();
-  static SourceContext getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SourceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SourceContext>(create);
   static SourceContext _defaultInstance;
 
   SourceContext_Context whichContext() =>
       _SourceContext_ContextByTag[$_whichOneof(0)];
   void clearContext() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   CloudRepoSourceContext get cloudRepo => $_getN(0);
+  @$pb.TagNumber(1)
   set cloudRepo(CloudRepoSourceContext v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCloudRepo() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCloudRepo() => clearField(1);
+  @$pb.TagNumber(1)
+  CloudRepoSourceContext ensureCloudRepo() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   CloudWorkspaceSourceContext get cloudWorkspace => $_getN(1);
+  @$pb.TagNumber(2)
   set cloudWorkspace(CloudWorkspaceSourceContext v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCloudWorkspace() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCloudWorkspace() => clearField(2);
+  @$pb.TagNumber(2)
+  CloudWorkspaceSourceContext ensureCloudWorkspace() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   GerritSourceContext get gerrit => $_getN(2);
+  @$pb.TagNumber(3)
   set gerrit(GerritSourceContext v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasGerrit() => $_has(2);
+  @$pb.TagNumber(3)
   void clearGerrit() => clearField(3);
+  @$pb.TagNumber(3)
+  GerritSourceContext ensureGerrit() => $_ensure(2);
 
+  @$pb.TagNumber(6)
   GitSourceContext get git => $_getN(3);
+  @$pb.TagNumber(6)
   set git(GitSourceContext v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasGit() => $_has(3);
+  @$pb.TagNumber(6)
   void clearGit() => clearField(6);
+  @$pb.TagNumber(6)
+  GitSourceContext ensureGit() => $_ensure(3);
 }
 
 class ExtendedSourceContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExtendedSourceContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
-    ..a<SourceContext>(1, 'context', $pb.PbFieldType.OM,
-        SourceContext.getDefault, SourceContext.create)
-    ..m<$core.String, $core.String>(
-        2,
-        'labels',
-        'ExtendedSourceContext.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
+    ..aOM<SourceContext>(1, 'context', subBuilder: SourceContext.create)
+    ..m<$core.String, $core.String>(2, 'labels',
+        entryClassName: 'ExtendedSourceContext.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.devtools.source.v1'))
     ..hasRequiredFields = false;
 
   ExtendedSourceContext._() : super();
@@ -135,26 +151,37 @@ class ExtendedSourceContext extends $pb.GeneratedMessage {
   ExtendedSourceContext createEmptyInstance() => create();
   static $pb.PbList<ExtendedSourceContext> createRepeated() =>
       $pb.PbList<ExtendedSourceContext>();
-  static ExtendedSourceContext getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExtendedSourceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExtendedSourceContext>(create);
   static ExtendedSourceContext _defaultInstance;
 
+  @$pb.TagNumber(1)
   SourceContext get context => $_getN(0);
+  @$pb.TagNumber(1)
   set context(SourceContext v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasContext() => $_has(0);
+  @$pb.TagNumber(1)
   void clearContext() => clearField(1);
+  @$pb.TagNumber(1)
+  SourceContext ensureContext() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 }
 
 class AliasContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AliasContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
-    ..e<AliasContext_Kind>(1, 'kind', $pb.PbFieldType.OE, AliasContext_Kind.ANY,
-        AliasContext_Kind.valueOf, AliasContext_Kind.values)
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
+    ..e<AliasContext_Kind>(1, 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: AliasContext_Kind.ANY,
+        valueOf: AliasContext_Kind.valueOf,
+        enumValues: AliasContext_Kind.values)
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
@@ -175,23 +202,33 @@ class AliasContext extends $pb.GeneratedMessage {
   AliasContext createEmptyInstance() => create();
   static $pb.PbList<AliasContext> createRepeated() =>
       $pb.PbList<AliasContext>();
-  static AliasContext getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AliasContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AliasContext>(create);
   static AliasContext _defaultInstance;
 
+  @$pb.TagNumber(1)
   AliasContext_Kind get kind => $_getN(0);
+  @$pb.TagNumber(1)
   set kind(AliasContext_Kind v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKind() => clearField(1);
 
-  $core.String get name => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
   set name($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearName() => clearField(2);
 }
 
@@ -211,14 +248,13 @@ class CloudRepoSourceContext extends $pb.GeneratedMessage {
     0: CloudRepoSourceContext_Revision.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CloudRepoSourceContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
-    ..a<RepoId>(
-        1, 'repoId', $pb.PbFieldType.OM, RepoId.getDefault, RepoId.create)
+    ..aOM<RepoId>(1, 'repoId', subBuilder: RepoId.create)
     ..aOS(2, 'revisionId')
     ..aOS(3, 'aliasName')
-    ..a<AliasContext>(4, 'aliasContext', $pb.PbFieldType.OM,
-        AliasContext.getDefault, AliasContext.create)
+    ..aOM<AliasContext>(4, 'aliasContext', subBuilder: AliasContext.create)
     ..hasRequiredFields = false;
 
   CloudRepoSourceContext._() : super();
@@ -240,57 +276,79 @@ class CloudRepoSourceContext extends $pb.GeneratedMessage {
   CloudRepoSourceContext createEmptyInstance() => create();
   static $pb.PbList<CloudRepoSourceContext> createRepeated() =>
       $pb.PbList<CloudRepoSourceContext>();
-  static CloudRepoSourceContext getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CloudRepoSourceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloudRepoSourceContext>(create);
   static CloudRepoSourceContext _defaultInstance;
 
   CloudRepoSourceContext_Revision whichRevision() =>
       _CloudRepoSourceContext_RevisionByTag[$_whichOneof(0)];
   void clearRevision() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   RepoId get repoId => $_getN(0);
+  @$pb.TagNumber(1)
   set repoId(RepoId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRepoId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRepoId() => clearField(1);
+  @$pb.TagNumber(1)
+  RepoId ensureRepoId() => $_ensure(0);
 
-  $core.String get revisionId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get revisionId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set revisionId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRevisionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRevisionId() => clearField(2);
 
   @$core.Deprecated('This field is deprecated.')
-  $core.String get aliasName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get aliasName => $_getSZ(2);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
   set aliasName($core.String v) {
     $_setString(2, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
   $core.bool hasAliasName() => $_has(2);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(3)
   void clearAliasName() => clearField(3);
 
+  @$pb.TagNumber(4)
   AliasContext get aliasContext => $_getN(3);
+  @$pb.TagNumber(4)
   set aliasContext(AliasContext v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAliasContext() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAliasContext() => clearField(4);
+  @$pb.TagNumber(4)
+  AliasContext ensureAliasContext() => $_ensure(3);
 }
 
 class CloudWorkspaceSourceContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CloudWorkspaceSourceContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
-    ..a<CloudWorkspaceId>(1, 'workspaceId', $pb.PbFieldType.OM,
-        CloudWorkspaceId.getDefault, CloudWorkspaceId.create)
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
+    ..aOM<CloudWorkspaceId>(1, 'workspaceId',
+        subBuilder: CloudWorkspaceId.create)
     ..aOS(2, 'snapshotId')
     ..hasRequiredFields = false;
 
@@ -315,24 +373,35 @@ class CloudWorkspaceSourceContext extends $pb.GeneratedMessage {
   CloudWorkspaceSourceContext createEmptyInstance() => create();
   static $pb.PbList<CloudWorkspaceSourceContext> createRepeated() =>
       $pb.PbList<CloudWorkspaceSourceContext>();
-  static CloudWorkspaceSourceContext getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CloudWorkspaceSourceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloudWorkspaceSourceContext>(create);
   static CloudWorkspaceSourceContext _defaultInstance;
 
+  @$pb.TagNumber(1)
   CloudWorkspaceId get workspaceId => $_getN(0);
+  @$pb.TagNumber(1)
   set workspaceId(CloudWorkspaceId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasWorkspaceId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearWorkspaceId() => clearField(1);
+  @$pb.TagNumber(1)
+  CloudWorkspaceId ensureWorkspaceId() => $_ensure(0);
 
-  $core.String get snapshotId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get snapshotId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set snapshotId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSnapshotId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSnapshotId() => clearField(2);
 }
 
@@ -352,14 +421,14 @@ class GerritSourceContext extends $pb.GeneratedMessage {
     0: GerritSourceContext_Revision.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GerritSourceContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4, 5])
     ..aOS(1, 'hostUri')
     ..aOS(2, 'gerritProject')
     ..aOS(3, 'revisionId')
     ..aOS(4, 'aliasName')
-    ..a<AliasContext>(5, 'aliasContext', $pb.PbFieldType.OM,
-        AliasContext.getDefault, AliasContext.create)
+    ..aOM<AliasContext>(5, 'aliasContext', subBuilder: AliasContext.create)
     ..hasRequiredFields = false;
 
   GerritSourceContext._() : super();
@@ -379,62 +448,86 @@ class GerritSourceContext extends $pb.GeneratedMessage {
   GerritSourceContext createEmptyInstance() => create();
   static $pb.PbList<GerritSourceContext> createRepeated() =>
       $pb.PbList<GerritSourceContext>();
-  static GerritSourceContext getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GerritSourceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GerritSourceContext>(create);
   static GerritSourceContext _defaultInstance;
 
   GerritSourceContext_Revision whichRevision() =>
       _GerritSourceContext_RevisionByTag[$_whichOneof(0)];
   void clearRevision() => clearField($_whichOneof(0));
 
-  $core.String get hostUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get hostUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set hostUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHostUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHostUri() => clearField(1);
 
-  $core.String get gerritProject => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get gerritProject => $_getSZ(1);
+  @$pb.TagNumber(2)
   set gerritProject($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGerritProject() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGerritProject() => clearField(2);
 
-  $core.String get revisionId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get revisionId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set revisionId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRevisionId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRevisionId() => clearField(3);
 
   @$core.Deprecated('This field is deprecated.')
-  $core.String get aliasName => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get aliasName => $_getSZ(3);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   set aliasName($core.String v) {
     $_setString(3, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   $core.bool hasAliasName() => $_has(3);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   void clearAliasName() => clearField(4);
 
+  @$pb.TagNumber(5)
   AliasContext get aliasContext => $_getN(4);
+  @$pb.TagNumber(5)
   set aliasContext(AliasContext v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAliasContext() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAliasContext() => clearField(5);
+  @$pb.TagNumber(5)
+  AliasContext ensureAliasContext() => $_ensure(4);
 }
 
 class GitSourceContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GitSourceContext',
-      package: const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'url')
     ..aOS(2, 'revisionId')
     ..hasRequiredFields = false;
@@ -456,24 +549,33 @@ class GitSourceContext extends $pb.GeneratedMessage {
   GitSourceContext createEmptyInstance() => create();
   static $pb.PbList<GitSourceContext> createRepeated() =>
       $pb.PbList<GitSourceContext>();
-  static GitSourceContext getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GitSourceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GitSourceContext>(create);
   static GitSourceContext _defaultInstance;
 
-  $core.String get url => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
   set url($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
-  $core.String get revisionId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get revisionId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set revisionId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRevisionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRevisionId() => clearField(2);
 }
 
@@ -486,10 +588,10 @@ class RepoId extends $pb.GeneratedMessage {
     0: RepoId_Id.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RepoId',
-      package: const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<ProjectRepoId>(1, 'projectRepoId', $pb.PbFieldType.OM,
-        ProjectRepoId.getDefault, ProjectRepoId.create)
+    ..aOM<ProjectRepoId>(1, 'projectRepoId', subBuilder: ProjectRepoId.create)
     ..aOS(2, 'uid')
     ..hasRequiredFields = false;
 
@@ -509,32 +611,45 @@ class RepoId extends $pb.GeneratedMessage {
   static RepoId create() => RepoId._();
   RepoId createEmptyInstance() => create();
   static $pb.PbList<RepoId> createRepeated() => $pb.PbList<RepoId>();
-  static RepoId getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RepoId getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RepoId>(create);
   static RepoId _defaultInstance;
 
   RepoId_Id whichId() => _RepoId_IdByTag[$_whichOneof(0)];
   void clearId() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ProjectRepoId get projectRepoId => $_getN(0);
+  @$pb.TagNumber(1)
   set projectRepoId(ProjectRepoId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectRepoId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectRepoId() => clearField(1);
+  @$pb.TagNumber(1)
+  ProjectRepoId ensureProjectRepoId() => $_ensure(0);
 
-  $core.String get uid => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get uid => $_getSZ(1);
+  @$pb.TagNumber(2)
   set uid($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUid() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUid() => clearField(2);
 }
 
 class ProjectRepoId extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProjectRepoId',
-      package: const $pb.PackageName('google.devtools.source.v1'))
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'projectId')
     ..aOS(2, 'repoName')
     ..hasRequiredFields = false;
@@ -556,31 +671,41 @@ class ProjectRepoId extends $pb.GeneratedMessage {
   ProjectRepoId createEmptyInstance() => create();
   static $pb.PbList<ProjectRepoId> createRepeated() =>
       $pb.PbList<ProjectRepoId>();
-  static ProjectRepoId getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProjectRepoId getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProjectRepoId>(create);
   static ProjectRepoId _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
-  $core.String get repoName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get repoName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set repoName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRepoName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRepoName() => clearField(2);
 }
 
 class CloudWorkspaceId extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CloudWorkspaceId',
-      package: const $pb.PackageName('google.devtools.source.v1'))
-    ..a<RepoId>(
-        1, 'repoId', $pb.PbFieldType.OM, RepoId.getDefault, RepoId.create)
+      package: const $pb.PackageName('google.devtools.source.v1'),
+      createEmptyInstance: create)
+    ..aOM<RepoId>(1, 'repoId', subBuilder: RepoId.create)
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
@@ -601,23 +726,34 @@ class CloudWorkspaceId extends $pb.GeneratedMessage {
   CloudWorkspaceId createEmptyInstance() => create();
   static $pb.PbList<CloudWorkspaceId> createRepeated() =>
       $pb.PbList<CloudWorkspaceId>();
-  static CloudWorkspaceId getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CloudWorkspaceId getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CloudWorkspaceId>(create);
   static CloudWorkspaceId _defaultInstance;
 
+  @$pb.TagNumber(1)
   RepoId get repoId => $_getN(0);
+  @$pb.TagNumber(1)
   set repoId(RepoId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRepoId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRepoId() => clearField(1);
+  @$pb.TagNumber(1)
+  RepoId ensureRepoId() => $_ensure(0);
 
-  $core.String get name => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
   set name($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearName() => clearField(2);
 }

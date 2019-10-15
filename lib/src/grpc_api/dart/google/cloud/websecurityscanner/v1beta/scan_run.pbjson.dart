@@ -75,6 +75,7 @@ const ScanRun$json = {
     },
   ],
   '4': [ScanRun_ExecutionState$json, ScanRun_ResultState$json],
+  '7': {},
 };
 
 const ScanRun_ExecutionState$json = {

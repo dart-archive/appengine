@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class HistogramQuery extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistogramQuery',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'histogramQuery')
     ..hasRequiredFields = false;
 
@@ -34,32 +34,34 @@ class HistogramQuery extends $pb.GeneratedMessage {
   HistogramQuery createEmptyInstance() => create();
   static $pb.PbList<HistogramQuery> createRepeated() =>
       $pb.PbList<HistogramQuery>();
-  static HistogramQuery getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HistogramQuery getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HistogramQuery>(create);
   static HistogramQuery _defaultInstance;
 
-  $core.String get histogramQuery => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get histogramQuery => $_getSZ(0);
+  @$pb.TagNumber(1)
   set histogramQuery($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHistogramQuery() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHistogramQuery() => clearField(1);
 }
 
 class HistogramQueryResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistogramQueryResult',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'histogramQuery')
-    ..m<$core.String, Int64>(
-        2,
-        'histogram',
-        'HistogramQueryResult.HistogramEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.O6,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.talent.v4beta1'))
+    ..m<$core.String, $fixnum.Int64>(2, 'histogram',
+        entryClassName: 'HistogramQueryResult.HistogramEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.O6,
+        packageName: const $pb.PackageName('google.cloud.talent.v4beta1'))
     ..hasRequiredFields = false;
 
   HistogramQueryResult._() : super();
@@ -80,17 +82,23 @@ class HistogramQueryResult extends $pb.GeneratedMessage {
   HistogramQueryResult createEmptyInstance() => create();
   static $pb.PbList<HistogramQueryResult> createRepeated() =>
       $pb.PbList<HistogramQueryResult>();
-  static HistogramQueryResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HistogramQueryResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HistogramQueryResult>(create);
   static HistogramQueryResult _defaultInstance;
 
-  $core.String get histogramQuery => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get histogramQuery => $_getSZ(0);
+  @$pb.TagNumber(1)
   set histogramQuery($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHistogramQuery() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHistogramQuery() => clearField(1);
 
-  $core.Map<$core.String, Int64> get histogram => $_getMap(1);
+  @$pb.TagNumber(2)
+  $core.Map<$core.String, $fixnum.Int64> get histogram => $_getMap(1);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'google_ads_field_data_type.pbenum.dart';
 class GoogleAdsFieldDataTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GoogleAdsFieldDataTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   GoogleAdsFieldDataTypeEnum._() : super();
@@ -38,7 +38,8 @@ class GoogleAdsFieldDataTypeEnum extends $pb.GeneratedMessage {
   GoogleAdsFieldDataTypeEnum createEmptyInstance() => create();
   static $pb.PbList<GoogleAdsFieldDataTypeEnum> createRepeated() =>
       $pb.PbList<GoogleAdsFieldDataTypeEnum>();
-  static GoogleAdsFieldDataTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GoogleAdsFieldDataTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GoogleAdsFieldDataTypeEnum>(create);
   static GoogleAdsFieldDataTypeEnum _defaultInstance;
 }

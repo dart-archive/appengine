@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'display_ad_format_setting.pbenum.dart';
 class DisplayAdFormatSettingEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DisplayAdFormatSettingEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   DisplayAdFormatSettingEnum._() : super();
@@ -38,7 +38,8 @@ class DisplayAdFormatSettingEnum extends $pb.GeneratedMessage {
   DisplayAdFormatSettingEnum createEmptyInstance() => create();
   static $pb.PbList<DisplayAdFormatSettingEnum> createRepeated() =>
       $pb.PbList<DisplayAdFormatSettingEnum>();
-  static DisplayAdFormatSettingEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DisplayAdFormatSettingEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DisplayAdFormatSettingEnum>(create);
   static DisplayAdFormatSettingEnum _defaultInstance;
 }

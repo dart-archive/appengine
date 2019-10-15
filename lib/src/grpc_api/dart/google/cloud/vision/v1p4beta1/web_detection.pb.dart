@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class WebDetection_WebEntity extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebEntity',
-      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
+      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'entityId')
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..aOS(3, 'description')
@@ -37,38 +37,52 @@ class WebDetection_WebEntity extends $pb.GeneratedMessage {
   WebDetection_WebEntity createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebEntity> createRepeated() =>
       $pb.PbList<WebDetection_WebEntity>();
-  static WebDetection_WebEntity getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebEntity getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebDetection_WebEntity>(create);
   static WebDetection_WebEntity _defaultInstance;
 
-  $core.String get entityId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get entityId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set entityId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEntityId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEntityId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get score => $_getN(1);
+  @$pb.TagNumber(2)
   set score($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScore() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScore() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 }
 
 class WebDetection_WebImage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebImage',
-      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
+      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'url')
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -92,30 +106,40 @@ class WebDetection_WebImage extends $pb.GeneratedMessage {
   WebDetection_WebImage createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebImage> createRepeated() =>
       $pb.PbList<WebDetection_WebImage>();
-  static WebDetection_WebImage getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebImage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebDetection_WebImage>(create);
   static WebDetection_WebImage _defaultInstance;
 
-  $core.String get url => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
   set url($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get score => $_getN(1);
+  @$pb.TagNumber(2)
   set score($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScore() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScore() => clearField(2);
 }
 
 class WebDetection_WebLabel extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebLabel',
-      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
+      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'label')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
@@ -139,37 +163,47 @@ class WebDetection_WebLabel extends $pb.GeneratedMessage {
   WebDetection_WebLabel createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebLabel> createRepeated() =>
       $pb.PbList<WebDetection_WebLabel>();
-  static WebDetection_WebLabel getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebLabel getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebDetection_WebLabel>(create);
   static WebDetection_WebLabel _defaultInstance;
 
-  $core.String get label => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get label => $_getSZ(0);
+  @$pb.TagNumber(1)
   set label($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLabel() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLabel() => clearField(1);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 }
 
 class WebDetection_WebPage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection.WebPage',
-      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
+      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'url')
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..aOS(3, 'pageTitle')
     ..pc<WebDetection_WebImage>(4, 'fullMatchingImages', $pb.PbFieldType.PM,
-        WebDetection_WebImage.create)
+        subBuilder: WebDetection_WebImage.create)
     ..pc<WebDetection_WebImage>(5, 'partialMatchingImages', $pb.PbFieldType.PM,
-        WebDetection_WebImage.create)
+        subBuilder: WebDetection_WebImage.create)
     ..hasRequiredFields = false;
 
   WebDetection_WebPage._() : super();
@@ -190,54 +224,70 @@ class WebDetection_WebPage extends $pb.GeneratedMessage {
   WebDetection_WebPage createEmptyInstance() => create();
   static $pb.PbList<WebDetection_WebPage> createRepeated() =>
       $pb.PbList<WebDetection_WebPage>();
-  static WebDetection_WebPage getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection_WebPage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebDetection_WebPage>(create);
   static WebDetection_WebPage _defaultInstance;
 
-  $core.String get url => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
   set url($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get score => $_getN(1);
+  @$pb.TagNumber(2)
   set score($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScore() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScore() => clearField(2);
 
-  $core.String get pageTitle => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageTitle => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageTitle($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageTitle() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageTitle() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<WebDetection_WebImage> get fullMatchingImages => $_getList(3);
 
+  @$pb.TagNumber(5)
   $core.List<WebDetection_WebImage> get partialMatchingImages => $_getList(4);
 }
 
 class WebDetection extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebDetection',
-      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'))
-    ..pc<WebDetection_WebEntity>(
-        1, 'webEntities', $pb.PbFieldType.PM, WebDetection_WebEntity.create)
+      package: const $pb.PackageName('google.cloud.vision.v1p4beta1'),
+      createEmptyInstance: create)
+    ..pc<WebDetection_WebEntity>(1, 'webEntities', $pb.PbFieldType.PM,
+        subBuilder: WebDetection_WebEntity.create)
     ..pc<WebDetection_WebImage>(2, 'fullMatchingImages', $pb.PbFieldType.PM,
-        WebDetection_WebImage.create)
+        subBuilder: WebDetection_WebImage.create)
     ..pc<WebDetection_WebImage>(3, 'partialMatchingImages', $pb.PbFieldType.PM,
-        WebDetection_WebImage.create)
+        subBuilder: WebDetection_WebImage.create)
     ..pc<WebDetection_WebPage>(4, 'pagesWithMatchingImages', $pb.PbFieldType.PM,
-        WebDetection_WebPage.create)
+        subBuilder: WebDetection_WebPage.create)
     ..pc<WebDetection_WebImage>(6, 'visuallySimilarImages', $pb.PbFieldType.PM,
-        WebDetection_WebImage.create)
-    ..pc<WebDetection_WebLabel>(
-        8, 'bestGuessLabels', $pb.PbFieldType.PM, WebDetection_WebLabel.create)
+        subBuilder: WebDetection_WebImage.create)
+    ..pc<WebDetection_WebLabel>(8, 'bestGuessLabels', $pb.PbFieldType.PM,
+        subBuilder: WebDetection_WebLabel.create)
     ..hasRequiredFields = false;
 
   WebDetection._() : super();
@@ -257,18 +307,26 @@ class WebDetection extends $pb.GeneratedMessage {
   WebDetection createEmptyInstance() => create();
   static $pb.PbList<WebDetection> createRepeated() =>
       $pb.PbList<WebDetection>();
-  static WebDetection getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebDetection getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebDetection>(create);
   static WebDetection _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<WebDetection_WebEntity> get webEntities => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<WebDetection_WebImage> get fullMatchingImages => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<WebDetection_WebImage> get partialMatchingImages => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<WebDetection_WebPage> get pagesWithMatchingImages => $_getList(3);
 
+  @$pb.TagNumber(6)
   $core.List<WebDetection_WebImage> get visuallySimilarImages => $_getList(4);
 
+  @$pb.TagNumber(8)
   $core.List<WebDetection_WebLabel> get bestGuessLabels => $_getList(5);
 }

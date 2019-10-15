@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,7 +19,8 @@ export 'data.pbenum.dart';
 
 class FormatMessage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FormatMessage',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'format')
     ..pPS(2, 'parameters')
     ..hasRequiredFields = false;
@@ -42,33 +42,37 @@ class FormatMessage extends $pb.GeneratedMessage {
   FormatMessage createEmptyInstance() => create();
   static $pb.PbList<FormatMessage> createRepeated() =>
       $pb.PbList<FormatMessage>();
-  static FormatMessage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FormatMessage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FormatMessage>(create);
   static FormatMessage _defaultInstance;
 
-  $core.String get format => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get format => $_getSZ(0);
+  @$pb.TagNumber(1)
   set format($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFormat() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFormat() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get parameters => $_getList(1);
 }
 
 class StatusMessage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StatusMessage',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOB(1, 'isError')
-    ..e<StatusMessage_Reference>(
-        2,
-        'refersTo',
-        $pb.PbFieldType.OE,
-        StatusMessage_Reference.UNSPECIFIED,
-        StatusMessage_Reference.valueOf,
-        StatusMessage_Reference.values)
-    ..a<FormatMessage>(3, 'description', $pb.PbFieldType.OM,
-        FormatMessage.getDefault, FormatMessage.create)
+    ..e<StatusMessage_Reference>(2, 'refersTo', $pb.PbFieldType.OE,
+        defaultOrMaker: StatusMessage_Reference.UNSPECIFIED,
+        valueOf: StatusMessage_Reference.valueOf,
+        enumValues: StatusMessage_Reference.values)
+    ..aOM<FormatMessage>(3, 'description', subBuilder: FormatMessage.create)
     ..hasRequiredFields = false;
 
   StatusMessage._() : super();
@@ -88,37 +92,54 @@ class StatusMessage extends $pb.GeneratedMessage {
   StatusMessage createEmptyInstance() => create();
   static $pb.PbList<StatusMessage> createRepeated() =>
       $pb.PbList<StatusMessage>();
-  static StatusMessage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StatusMessage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StatusMessage>(create);
   static StatusMessage _defaultInstance;
 
-  $core.bool get isError => $_get(0, false);
+  @$pb.TagNumber(1)
+  $core.bool get isError => $_getBF(0);
+  @$pb.TagNumber(1)
   set isError($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIsError() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIsError() => clearField(1);
 
+  @$pb.TagNumber(2)
   StatusMessage_Reference get refersTo => $_getN(1);
+  @$pb.TagNumber(2)
   set refersTo(StatusMessage_Reference v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRefersTo() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRefersTo() => clearField(2);
 
+  @$pb.TagNumber(3)
   FormatMessage get description => $_getN(2);
+  @$pb.TagNumber(3)
   set description(FormatMessage v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
+  @$pb.TagNumber(3)
+  FormatMessage ensureDescription() => $_ensure(2);
 }
 
 class SourceLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceLocation',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'path')
     ..a<$core.int>(2, 'line', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'column', $pb.PbFieldType.O3)
@@ -141,44 +162,58 @@ class SourceLocation extends $pb.GeneratedMessage {
   SourceLocation createEmptyInstance() => create();
   static $pb.PbList<SourceLocation> createRepeated() =>
       $pb.PbList<SourceLocation>();
-  static SourceLocation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SourceLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SourceLocation>(create);
   static SourceLocation _defaultInstance;
 
-  $core.String get path => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
   set path($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
-  $core.int get line => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get line => $_getIZ(1);
+  @$pb.TagNumber(2)
   set line($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLine() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLine() => clearField(2);
 
-  $core.int get column => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get column => $_getIZ(2);
+  @$pb.TagNumber(3)
   set column($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasColumn() => $_has(2);
+  @$pb.TagNumber(3)
   void clearColumn() => clearField(3);
 }
 
 class Variable extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Variable',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'value')
-    ..pc<Variable>(3, 'members', $pb.PbFieldType.PM, Variable.create)
-    ..a<$0.Int32Value>(4, 'varTableIndex', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..a<StatusMessage>(5, 'status', $pb.PbFieldType.OM,
-        StatusMessage.getDefault, StatusMessage.create)
+    ..pc<Variable>(3, 'members', $pb.PbFieldType.PM,
+        subBuilder: Variable.create)
+    ..aOM<$0.Int32Value>(4, 'varTableIndex', subBuilder: $0.Int32Value.create)
+    ..aOM<StatusMessage>(5, 'status', subBuilder: StatusMessage.create)
     ..aOS(6, 'type')
     ..hasRequiredFields = false;
 
@@ -198,60 +233,88 @@ class Variable extends $pb.GeneratedMessage {
   static Variable create() => Variable._();
   Variable createEmptyInstance() => create();
   static $pb.PbList<Variable> createRepeated() => $pb.PbList<Variable>();
-  static Variable getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Variable getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Variable>(create);
   static Variable _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get value => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
   set value($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<Variable> get members => $_getList(2);
 
+  @$pb.TagNumber(4)
   $0.Int32Value get varTableIndex => $_getN(3);
+  @$pb.TagNumber(4)
   set varTableIndex($0.Int32Value v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasVarTableIndex() => $_has(3);
+  @$pb.TagNumber(4)
   void clearVarTableIndex() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Int32Value ensureVarTableIndex() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   StatusMessage get status => $_getN(4);
+  @$pb.TagNumber(5)
   set status(StatusMessage v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasStatus() => $_has(4);
+  @$pb.TagNumber(5)
   void clearStatus() => clearField(5);
+  @$pb.TagNumber(5)
+  StatusMessage ensureStatus() => $_ensure(4);
 
-  $core.String get type => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get type => $_getSZ(5);
+  @$pb.TagNumber(6)
   set type($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
+  @$pb.TagNumber(6)
   void clearType() => clearField(6);
 }
 
 class StackFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StackFrame',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'function')
-    ..a<SourceLocation>(2, 'location', $pb.PbFieldType.OM,
-        SourceLocation.getDefault, SourceLocation.create)
-    ..pc<Variable>(3, 'arguments', $pb.PbFieldType.PM, Variable.create)
-    ..pc<Variable>(4, 'locals', $pb.PbFieldType.PM, Variable.create)
+    ..aOM<SourceLocation>(2, 'location', subBuilder: SourceLocation.create)
+    ..pc<Variable>(3, 'arguments', $pb.PbFieldType.PM,
+        subBuilder: Variable.create)
+    ..pc<Variable>(4, 'locals', $pb.PbFieldType.PM, subBuilder: Variable.create)
     ..hasRequiredFields = false;
 
   StackFrame._() : super();
@@ -270,75 +333,77 @@ class StackFrame extends $pb.GeneratedMessage {
   static StackFrame create() => StackFrame._();
   StackFrame createEmptyInstance() => create();
   static $pb.PbList<StackFrame> createRepeated() => $pb.PbList<StackFrame>();
-  static StackFrame getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StackFrame getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StackFrame>(create);
   static StackFrame _defaultInstance;
 
-  $core.String get function => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get function => $_getSZ(0);
+  @$pb.TagNumber(1)
   set function($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFunction() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFunction() => clearField(1);
 
+  @$pb.TagNumber(2)
   SourceLocation get location => $_getN(1);
+  @$pb.TagNumber(2)
   set location(SourceLocation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLocation() => clearField(2);
+  @$pb.TagNumber(2)
+  SourceLocation ensureLocation() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<Variable> get arguments => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<Variable> get locals => $_getList(3);
 }
 
 class Breakpoint extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Breakpoint',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'id')
-    ..a<SourceLocation>(2, 'location', $pb.PbFieldType.OM,
-        SourceLocation.getDefault, SourceLocation.create)
+    ..aOM<SourceLocation>(2, 'location', subBuilder: SourceLocation.create)
     ..aOS(3, 'condition')
     ..pPS(4, 'expressions')
     ..aOB(5, 'isFinalState')
-    ..pc<StackFrame>(7, 'stackFrames', $pb.PbFieldType.PM, StackFrame.create)
-    ..pc<Variable>(
-        8, 'evaluatedExpressions', $pb.PbFieldType.PM, Variable.create)
-    ..pc<Variable>(9, 'variableTable', $pb.PbFieldType.PM, Variable.create)
-    ..a<StatusMessage>(10, 'status', $pb.PbFieldType.OM,
-        StatusMessage.getDefault, StatusMessage.create)
-    ..a<$1.Timestamp>(11, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(12, 'finalTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..e<Breakpoint_Action>(
-        13,
-        'action',
-        $pb.PbFieldType.OE,
-        Breakpoint_Action.CAPTURE,
-        Breakpoint_Action.valueOf,
-        Breakpoint_Action.values)
+    ..pc<StackFrame>(7, 'stackFrames', $pb.PbFieldType.PM,
+        subBuilder: StackFrame.create)
+    ..pc<Variable>(8, 'evaluatedExpressions', $pb.PbFieldType.PM,
+        subBuilder: Variable.create)
+    ..pc<Variable>(9, 'variableTable', $pb.PbFieldType.PM,
+        subBuilder: Variable.create)
+    ..aOM<StatusMessage>(10, 'status', subBuilder: StatusMessage.create)
+    ..aOM<$1.Timestamp>(11, 'createTime', subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(12, 'finalTime', subBuilder: $1.Timestamp.create)
+    ..e<Breakpoint_Action>(13, 'action', $pb.PbFieldType.OE,
+        defaultOrMaker: Breakpoint_Action.CAPTURE,
+        valueOf: Breakpoint_Action.valueOf,
+        enumValues: Breakpoint_Action.values)
     ..aOS(14, 'logMessageFormat')
-    ..e<Breakpoint_LogLevel>(
-        15,
-        'logLevel',
-        $pb.PbFieldType.OE,
-        Breakpoint_LogLevel.INFO,
-        Breakpoint_LogLevel.valueOf,
-        Breakpoint_LogLevel.values)
+    ..e<Breakpoint_LogLevel>(15, 'logLevel', $pb.PbFieldType.OE,
+        defaultOrMaker: Breakpoint_LogLevel.INFO,
+        valueOf: Breakpoint_LogLevel.valueOf,
+        enumValues: Breakpoint_LogLevel.values)
     ..aOS(16, 'userEmail')
-    ..m<$core.String, $core.String>(
-        17,
-        'labels',
-        'Breakpoint.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.devtools.clouddebugger.v2'))
+    ..m<$core.String, $core.String>(17, 'labels',
+        entryClassName: 'Breakpoint.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.devtools.clouddebugger.v2'))
     ..hasRequiredFields = false;
 
   Breakpoint._() : super();
@@ -357,111 +422,171 @@ class Breakpoint extends $pb.GeneratedMessage {
   static Breakpoint create() => Breakpoint._();
   Breakpoint createEmptyInstance() => create();
   static $pb.PbList<Breakpoint> createRepeated() => $pb.PbList<Breakpoint>();
-  static Breakpoint getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Breakpoint getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Breakpoint>(create);
   static Breakpoint _defaultInstance;
 
-  $core.String get id => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
   set id($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  @$pb.TagNumber(2)
   SourceLocation get location => $_getN(1);
+  @$pb.TagNumber(2)
   set location(SourceLocation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLocation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLocation() => clearField(2);
+  @$pb.TagNumber(2)
+  SourceLocation ensureLocation() => $_ensure(1);
 
-  $core.String get condition => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get condition => $_getSZ(2);
+  @$pb.TagNumber(3)
   set condition($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCondition() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCondition() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get expressions => $_getList(3);
 
-  $core.bool get isFinalState => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get isFinalState => $_getBF(4);
+  @$pb.TagNumber(5)
   set isFinalState($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasIsFinalState() => $_has(4);
+  @$pb.TagNumber(5)
   void clearIsFinalState() => clearField(5);
 
+  @$pb.TagNumber(7)
   $core.List<StackFrame> get stackFrames => $_getList(5);
 
+  @$pb.TagNumber(8)
   $core.List<Variable> get evaluatedExpressions => $_getList(6);
 
+  @$pb.TagNumber(9)
   $core.List<Variable> get variableTable => $_getList(7);
 
+  @$pb.TagNumber(10)
   StatusMessage get status => $_getN(8);
+  @$pb.TagNumber(10)
   set status(StatusMessage v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasStatus() => $_has(8);
+  @$pb.TagNumber(10)
   void clearStatus() => clearField(10);
+  @$pb.TagNumber(10)
+  StatusMessage ensureStatus() => $_ensure(8);
 
+  @$pb.TagNumber(11)
   $1.Timestamp get createTime => $_getN(9);
+  @$pb.TagNumber(11)
   set createTime($1.Timestamp v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasCreateTime() => $_has(9);
+  @$pb.TagNumber(11)
   void clearCreateTime() => clearField(11);
+  @$pb.TagNumber(11)
+  $1.Timestamp ensureCreateTime() => $_ensure(9);
 
+  @$pb.TagNumber(12)
   $1.Timestamp get finalTime => $_getN(10);
+  @$pb.TagNumber(12)
   set finalTime($1.Timestamp v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasFinalTime() => $_has(10);
+  @$pb.TagNumber(12)
   void clearFinalTime() => clearField(12);
+  @$pb.TagNumber(12)
+  $1.Timestamp ensureFinalTime() => $_ensure(10);
 
+  @$pb.TagNumber(13)
   Breakpoint_Action get action => $_getN(11);
+  @$pb.TagNumber(13)
   set action(Breakpoint_Action v) {
     setField(13, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasAction() => $_has(11);
+  @$pb.TagNumber(13)
   void clearAction() => clearField(13);
 
-  $core.String get logMessageFormat => $_getS(12, '');
+  @$pb.TagNumber(14)
+  $core.String get logMessageFormat => $_getSZ(12);
+  @$pb.TagNumber(14)
   set logMessageFormat($core.String v) {
     $_setString(12, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasLogMessageFormat() => $_has(12);
+  @$pb.TagNumber(14)
   void clearLogMessageFormat() => clearField(14);
 
+  @$pb.TagNumber(15)
   Breakpoint_LogLevel get logLevel => $_getN(13);
+  @$pb.TagNumber(15)
   set logLevel(Breakpoint_LogLevel v) {
     setField(15, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasLogLevel() => $_has(13);
+  @$pb.TagNumber(15)
   void clearLogLevel() => clearField(15);
 
-  $core.String get userEmail => $_getS(14, '');
+  @$pb.TagNumber(16)
+  $core.String get userEmail => $_getSZ(14);
+  @$pb.TagNumber(16)
   set userEmail($core.String v) {
     $_setString(14, v);
   }
 
+  @$pb.TagNumber(16)
   $core.bool hasUserEmail() => $_has(14);
+  @$pb.TagNumber(16)
   void clearUserEmail() => clearField(16);
 
+  @$pb.TagNumber(17)
   $core.Map<$core.String, $core.String> get labels => $_getMap(15);
 }
 
 class Debuggee extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Debuggee',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'project')
     ..aOS(3, 'uniquifier')
@@ -469,22 +594,16 @@ class Debuggee extends $pb.GeneratedMessage {
     ..aOB(5, 'isInactive')
     ..aOS(6, 'agentVersion')
     ..aOB(7, 'isDisabled')
-    ..a<StatusMessage>(8, 'status', $pb.PbFieldType.OM,
-        StatusMessage.getDefault, StatusMessage.create)
-    ..pc<$2.SourceContext>(
-        9, 'sourceContexts', $pb.PbFieldType.PM, $2.SourceContext.create)
-    ..m<$core.String, $core.String>(
-        11,
-        'labels',
-        'Debuggee.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.devtools.clouddebugger.v2'))
+    ..aOM<StatusMessage>(8, 'status', subBuilder: StatusMessage.create)
+    ..pc<$2.SourceContext>(9, 'sourceContexts', $pb.PbFieldType.PM,
+        subBuilder: $2.SourceContext.create)
+    ..m<$core.String, $core.String>(11, 'labels',
+        entryClassName: 'Debuggee.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.devtools.clouddebugger.v2'))
     ..pc<$2.ExtendedSourceContext>(13, 'extSourceContexts', $pb.PbFieldType.PM,
-        $2.ExtendedSourceContext.create)
+        subBuilder: $2.ExtendedSourceContext.create)
     ..hasRequiredFields = false;
 
   Debuggee._() : super();
@@ -503,77 +622,116 @@ class Debuggee extends $pb.GeneratedMessage {
   static Debuggee create() => Debuggee._();
   Debuggee createEmptyInstance() => create();
   static $pb.PbList<Debuggee> createRepeated() => $pb.PbList<Debuggee>();
-  static Debuggee getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Debuggee getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Debuggee>(create);
   static Debuggee _defaultInstance;
 
-  $core.String get id => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
   set id($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
-  $core.String get project => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get project => $_getSZ(1);
+  @$pb.TagNumber(2)
   set project($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProject() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProject() => clearField(2);
 
-  $core.String get uniquifier => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get uniquifier => $_getSZ(2);
+  @$pb.TagNumber(3)
   set uniquifier($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUniquifier() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUniquifier() => clearField(3);
 
-  $core.String get description => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get description => $_getSZ(3);
+  @$pb.TagNumber(4)
   set description($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDescription() => clearField(4);
 
-  $core.bool get isInactive => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get isInactive => $_getBF(4);
+  @$pb.TagNumber(5)
   set isInactive($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasIsInactive() => $_has(4);
+  @$pb.TagNumber(5)
   void clearIsInactive() => clearField(5);
 
-  $core.String get agentVersion => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get agentVersion => $_getSZ(5);
+  @$pb.TagNumber(6)
   set agentVersion($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasAgentVersion() => $_has(5);
+  @$pb.TagNumber(6)
   void clearAgentVersion() => clearField(6);
 
-  $core.bool get isDisabled => $_get(6, false);
+  @$pb.TagNumber(7)
+  $core.bool get isDisabled => $_getBF(6);
+  @$pb.TagNumber(7)
   set isDisabled($core.bool v) {
     $_setBool(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasIsDisabled() => $_has(6);
+  @$pb.TagNumber(7)
   void clearIsDisabled() => clearField(7);
 
+  @$pb.TagNumber(8)
   StatusMessage get status => $_getN(7);
+  @$pb.TagNumber(8)
   set status(StatusMessage v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasStatus() => $_has(7);
+  @$pb.TagNumber(8)
   void clearStatus() => clearField(8);
+  @$pb.TagNumber(8)
+  StatusMessage ensureStatus() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   $core.List<$2.SourceContext> get sourceContexts => $_getList(8);
 
+  @$pb.TagNumber(11)
   $core.Map<$core.String, $core.String> get labels => $_getMap(9);
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(13)
   $core.List<$2.ExtendedSourceContext> get extSourceContexts => $_getList(10);
 }

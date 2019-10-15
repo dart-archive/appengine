@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../../protobuf/field_mask.pb.dart' as $2;
 
 class GetCustomInterestRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCustomInterestRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -38,26 +38,32 @@ class GetCustomInterestRequest extends $pb.GeneratedMessage {
   GetCustomInterestRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomInterestRequest> createRepeated() =>
       $pb.PbList<GetCustomInterestRequest>();
-  static GetCustomInterestRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCustomInterestRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCustomInterestRequest>(create);
   static GetCustomInterestRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateCustomInterestsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomInterestsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<CustomInterestOperation>(
-        2, 'operations', $pb.PbFieldType.PM, CustomInterestOperation.create)
+    ..pc<CustomInterestOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: CustomInterestOperation.create)
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -82,26 +88,36 @@ class MutateCustomInterestsRequest extends $pb.GeneratedMessage {
   MutateCustomInterestsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomInterestsRequest> createRepeated() =>
       $pb.PbList<MutateCustomInterestsRequest>();
-  static MutateCustomInterestsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomInterestsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomInterestsRequest>(create);
   static MutateCustomInterestsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<CustomInterestOperation> get operations => $_getList(1);
 
-  $core.bool get validateOnly => $_get(2, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(2);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(2);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -115,14 +131,12 @@ class CustomInterestOperation extends $pb.GeneratedMessage {
     0: CustomInterestOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomInterestOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$1.CustomInterest>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.CustomInterest.getDefault, $1.CustomInterest.create)
-    ..a<$1.CustomInterest>(2, 'update', $pb.PbFieldType.OM,
-        $1.CustomInterest.getDefault, $1.CustomInterest.create)
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$1.CustomInterest>(1, 'create', subBuilder: $1.CustomInterest.create)
+    ..aOM<$1.CustomInterest>(2, 'update', subBuilder: $1.CustomInterest.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   CustomInterestOperation._() : super();
@@ -144,45 +158,65 @@ class CustomInterestOperation extends $pb.GeneratedMessage {
   CustomInterestOperation createEmptyInstance() => create();
   static $pb.PbList<CustomInterestOperation> createRepeated() =>
       $pb.PbList<CustomInterestOperation>();
-  static CustomInterestOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomInterestOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomInterestOperation>(create);
   static CustomInterestOperation _defaultInstance;
 
   CustomInterestOperation_Operation whichOperation() =>
       _CustomInterestOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.CustomInterest get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.CustomInterest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.CustomInterest ensureCreate_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.CustomInterest get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update($1.CustomInterest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.CustomInterest ensureUpdate() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class MutateCustomInterestsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomInterestsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateCustomInterestResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateCustomInterestResult.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateCustomInterestResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateCustomInterestResult.create)
     ..hasRequiredFields = false;
 
   MutateCustomInterestsResponse._() : super();
@@ -206,17 +240,20 @@ class MutateCustomInterestsResponse extends $pb.GeneratedMessage {
   MutateCustomInterestsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomInterestsResponse> createRepeated() =>
       $pb.PbList<MutateCustomInterestsResponse>();
-  static MutateCustomInterestsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomInterestsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomInterestsResponse>(create);
   static MutateCustomInterestsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateCustomInterestResult> get results => $_getList(0);
 }
 
 class MutateCustomInterestResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomInterestResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -240,15 +277,20 @@ class MutateCustomInterestResult extends $pb.GeneratedMessage {
   MutateCustomInterestResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomInterestResult> createRepeated() =>
       $pb.PbList<MutateCustomInterestResult>();
-  static MutateCustomInterestResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomInterestResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomInterestResult>(create);
   static MutateCustomInterestResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

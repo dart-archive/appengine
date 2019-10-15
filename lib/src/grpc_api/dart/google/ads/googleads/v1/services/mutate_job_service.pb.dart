@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'google_ads_service.pb.dart' as $80;
@@ -16,7 +15,8 @@ import '../../../../rpc/status.pb.dart' as $83;
 
 class CreateMutateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateMutateJobRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
     ..hasRequiredFields = false;
 
@@ -39,22 +39,28 @@ class CreateMutateJobRequest extends $pb.GeneratedMessage {
   CreateMutateJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateMutateJobRequest> createRepeated() =>
       $pb.PbList<CreateMutateJobRequest>();
-  static CreateMutateJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateMutateJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateMutateJobRequest>(create);
   static CreateMutateJobRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 }
 
 class CreateMutateJobResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateMutateJobResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -77,22 +83,28 @@ class CreateMutateJobResponse extends $pb.GeneratedMessage {
   CreateMutateJobResponse createEmptyInstance() => create();
   static $pb.PbList<CreateMutateJobResponse> createRepeated() =>
       $pb.PbList<CreateMutateJobResponse>();
-  static CreateMutateJobResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateMutateJobResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateMutateJobResponse>(create);
   static CreateMutateJobResponse _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class GetMutateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetMutateJobRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -113,22 +125,28 @@ class GetMutateJobRequest extends $pb.GeneratedMessage {
   GetMutateJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetMutateJobRequest> createRepeated() =>
       $pb.PbList<GetMutateJobRequest>();
-  static GetMutateJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetMutateJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetMutateJobRequest>(create);
   static GetMutateJobRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class RunMutateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunMutateJobRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -149,27 +167,33 @@ class RunMutateJobRequest extends $pb.GeneratedMessage {
   RunMutateJobRequest createEmptyInstance() => create();
   static $pb.PbList<RunMutateJobRequest> createRepeated() =>
       $pb.PbList<RunMutateJobRequest>();
-  static RunMutateJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RunMutateJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunMutateJobRequest>(create);
   static RunMutateJobRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class AddMutateJobOperationsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AddMutateJobOperationsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..aOS(2, 'sequenceToken')
-    ..pc<$80.MutateOperation>(
-        3, 'mutateOperations', $pb.PbFieldType.PM, $80.MutateOperation.create)
+    ..pc<$80.MutateOperation>(3, 'mutateOperations', $pb.PbFieldType.PM,
+        subBuilder: $80.MutateOperation.create)
     ..hasRequiredFields = false;
 
   AddMutateJobOperationsRequest._() : super();
@@ -193,33 +217,44 @@ class AddMutateJobOperationsRequest extends $pb.GeneratedMessage {
   AddMutateJobOperationsRequest createEmptyInstance() => create();
   static $pb.PbList<AddMutateJobOperationsRequest> createRepeated() =>
       $pb.PbList<AddMutateJobOperationsRequest>();
-  static AddMutateJobOperationsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AddMutateJobOperationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddMutateJobOperationsRequest>(create);
   static AddMutateJobOperationsRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
-  $core.String get sequenceToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get sequenceToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set sequenceToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSequenceToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSequenceToken() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$80.MutateOperation> get mutateOperations => $_getList(2);
 }
 
 class AddMutateJobOperationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AddMutateJobOperationsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aInt64(1, 'totalOperations')
     ..aOS(2, 'nextSequenceToken')
     ..hasRequiredFields = false;
@@ -245,31 +280,41 @@ class AddMutateJobOperationsResponse extends $pb.GeneratedMessage {
   AddMutateJobOperationsResponse createEmptyInstance() => create();
   static $pb.PbList<AddMutateJobOperationsResponse> createRepeated() =>
       $pb.PbList<AddMutateJobOperationsResponse>();
-  static AddMutateJobOperationsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AddMutateJobOperationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddMutateJobOperationsResponse>(create);
   static AddMutateJobOperationsResponse _defaultInstance;
 
-  Int64 get totalOperations => $_getI64(0);
-  set totalOperations(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get totalOperations => $_getI64(0);
+  @$pb.TagNumber(1)
+  set totalOperations($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTotalOperations() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTotalOperations() => clearField(1);
 
-  $core.String get nextSequenceToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextSequenceToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextSequenceToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextSequenceToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextSequenceToken() => clearField(2);
 }
 
 class ListMutateJobResultsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMutateJobResultsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -296,41 +341,55 @@ class ListMutateJobResultsRequest extends $pb.GeneratedMessage {
   ListMutateJobResultsRequest createEmptyInstance() => create();
   static $pb.PbList<ListMutateJobResultsRequest> createRepeated() =>
       $pb.PbList<ListMutateJobResultsRequest>();
-  static ListMutateJobResultsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListMutateJobResultsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMutateJobResultsRequest>(create);
   static ListMutateJobResultsRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListMutateJobResultsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMutateJobResultsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateJobResult>(
-        1, 'results', $pb.PbFieldType.PM, MutateJobResult.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateJobResult>(1, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateJobResult.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -355,33 +414,35 @@ class ListMutateJobResultsResponse extends $pb.GeneratedMessage {
   ListMutateJobResultsResponse createEmptyInstance() => create();
   static $pb.PbList<ListMutateJobResultsResponse> createRepeated() =>
       $pb.PbList<ListMutateJobResultsResponse>();
-  static ListMutateJobResultsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListMutateJobResultsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMutateJobResultsResponse>(create);
   static ListMutateJobResultsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<MutateJobResult> get results => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class MutateJobResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateJobResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aInt64(1, 'operationIndex')
-    ..a<$80.MutateOperationResponse>(
-        2,
-        'mutateOperationResponse',
-        $pb.PbFieldType.OM,
-        $80.MutateOperationResponse.getDefault,
-        $80.MutateOperationResponse.create)
-    ..a<$83.Status>(3, 'status', $pb.PbFieldType.OM, $83.Status.getDefault,
-        $83.Status.create)
+    ..aOM<$80.MutateOperationResponse>(2, 'mutateOperationResponse',
+        subBuilder: $80.MutateOperationResponse.create)
+    ..aOM<$83.Status>(3, 'status', subBuilder: $83.Status.create)
     ..hasRequiredFields = false;
 
   MutateJobResult._() : super();
@@ -401,31 +462,48 @@ class MutateJobResult extends $pb.GeneratedMessage {
   MutateJobResult createEmptyInstance() => create();
   static $pb.PbList<MutateJobResult> createRepeated() =>
       $pb.PbList<MutateJobResult>();
-  static MutateJobResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateJobResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateJobResult>(create);
   static MutateJobResult _defaultInstance;
 
-  Int64 get operationIndex => $_getI64(0);
-  set operationIndex(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get operationIndex => $_getI64(0);
+  @$pb.TagNumber(1)
+  set operationIndex($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperationIndex() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperationIndex() => clearField(1);
 
+  @$pb.TagNumber(2)
   $80.MutateOperationResponse get mutateOperationResponse => $_getN(1);
+  @$pb.TagNumber(2)
   set mutateOperationResponse($80.MutateOperationResponse v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMutateOperationResponse() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMutateOperationResponse() => clearField(2);
+  @$pb.TagNumber(2)
+  $80.MutateOperationResponse ensureMutateOperationResponse() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $83.Status get status => $_getN(2);
+  @$pb.TagNumber(3)
   set status($83.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
+  @$pb.TagNumber(3)
+  $83.Status ensureStatus() => $_ensure(2);
 }

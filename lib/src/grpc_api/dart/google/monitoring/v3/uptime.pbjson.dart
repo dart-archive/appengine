@@ -33,6 +33,25 @@ const InternalChecker$json = {
     {'1': 'network', '3': 3, '4': 1, '5': 9, '10': 'network'},
     {'1': 'gcp_zone', '3': 4, '4': 1, '5': 9, '10': 'gcpZone'},
     {'1': 'peer_project_id', '3': 6, '4': 1, '5': 9, '10': 'peerProjectId'},
+    {
+      '1': 'state',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.google.monitoring.v3.InternalChecker.State',
+      '10': 'state'
+    },
+  ],
+  '4': [InternalChecker_State$json],
+  '7': {'3': true},
+};
+
+const InternalChecker_State$json = {
+  '1': 'State',
+  '2': [
+    {'1': 'UNSPECIFIED', '2': 0},
+    {'1': 'CREATING', '2': 1},
+    {'1': 'RUNNING', '2': 2},
   ],
 };
 
@@ -109,14 +128,22 @@ const UptimeCheckConfig$json = {
       '6': '.google.monitoring.v3.UptimeCheckRegion',
       '10': 'selectedRegions'
     },
-    {'1': 'is_internal', '3': 15, '4': 1, '5': 8, '10': 'isInternal'},
+    {
+      '1': 'is_internal',
+      '3': 15,
+      '4': 1,
+      '5': 8,
+      '8': {'3': true},
+      '10': 'isInternal',
+    },
     {
       '1': 'internal_checkers',
       '3': 14,
       '4': 3,
       '5': 11,
       '6': '.google.monitoring.v3.InternalChecker',
-      '10': 'internalCheckers'
+      '8': {'3': true},
+      '10': 'internalCheckers',
     },
   ],
   '3': [
@@ -170,6 +197,7 @@ const UptimeCheckConfig_HttpCheck$json = {
       '6': '.google.monitoring.v3.UptimeCheckConfig.HttpCheck.HeadersEntry',
       '10': 'headers'
     },
+    {'1': 'validate_ssl', '3': 7, '4': 1, '5': 8, '10': 'validateSsl'},
   ],
   '3': [
     UptimeCheckConfig_HttpCheck_BasicAuthentication$json,
@@ -205,6 +233,27 @@ const UptimeCheckConfig_ContentMatcher$json = {
   '1': 'ContentMatcher',
   '2': [
     {'1': 'content', '3': 1, '4': 1, '5': 9, '10': 'content'},
+    {
+      '1': 'matcher',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.monitoring.v3.UptimeCheckConfig.ContentMatcher.ContentMatcherOption',
+      '10': 'matcher'
+    },
+  ],
+  '4': [UptimeCheckConfig_ContentMatcher_ContentMatcherOption$json],
+};
+
+const UptimeCheckConfig_ContentMatcher_ContentMatcherOption$json = {
+  '1': 'ContentMatcherOption',
+  '2': [
+    {'1': 'CONTENT_MATCHER_OPTION_UNSPECIFIED', '2': 0},
+    {'1': 'CONTAINS_STRING', '2': 1},
+    {'1': 'NOT_CONTAINS_STRING', '2': 2},
+    {'1': 'MATCHES_REGEX', '2': 3},
+    {'1': 'NOT_MATCHES_REGEX', '2': 4},
   ],
 };
 

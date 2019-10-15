@@ -11,7 +11,14 @@ const Product$json = {
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
     {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
-    {'1': 'product_category', '3': 4, '4': 1, '5': 9, '10': 'productCategory'},
+    {
+      '1': 'product_category',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'productCategory'
+    },
     {
       '1': 'product_labels',
       '3': 5,
@@ -22,6 +29,7 @@ const Product$json = {
     },
   ],
   '3': [Product_KeyValue$json],
+  '7': {},
 };
 
 const Product_KeyValue$json = {
@@ -43,6 +51,7 @@ const ProductSet$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'indexTime'
     },
     {
@@ -51,37 +60,42 @@ const ProductSet$json = {
       '4': 1,
       '5': 11,
       '6': '.google.rpc.Status',
+      '8': {},
       '10': 'indexError'
     },
   ],
+  '7': {},
 };
 
 const ReferenceImage$json = {
   '1': 'ReferenceImage',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'uri', '3': 2, '4': 1, '5': 9, '10': 'uri'},
+    {'1': 'uri', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'uri'},
     {
       '1': 'bounding_polys',
       '3': 3,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.vision.v1.BoundingPoly',
+      '8': {},
       '10': 'boundingPolys'
     },
   ],
+  '7': {},
 };
 
 const CreateProductRequest$json = {
   '1': 'CreateProductRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'product',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.Product',
+      '8': {},
       '10': 'product'
     },
     {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
@@ -91,7 +105,7 @@ const CreateProductRequest$json = {
 const ListProductsRequest$json = {
   '1': 'ListProductsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -115,7 +129,7 @@ const ListProductsResponse$json = {
 const GetProductRequest$json = {
   '1': 'GetProductRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -128,6 +142,7 @@ const UpdateProductRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.Product',
+      '8': {},
       '10': 'product'
     },
     {
@@ -144,20 +159,21 @@ const UpdateProductRequest$json = {
 const DeleteProductRequest$json = {
   '1': 'DeleteProductRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const CreateProductSetRequest$json = {
   '1': 'CreateProductSetRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'product_set',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.ProductSet',
+      '8': {},
       '10': 'productSet'
     },
     {'1': 'product_set_id', '3': 3, '4': 1, '5': 9, '10': 'productSetId'},
@@ -167,7 +183,7 @@ const CreateProductSetRequest$json = {
 const ListProductSetsRequest$json = {
   '1': 'ListProductSetsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -191,7 +207,7 @@ const ListProductSetsResponse$json = {
 const GetProductSetRequest$json = {
   '1': 'GetProductSetRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -204,6 +220,7 @@ const UpdateProductSetRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.ProductSet',
+      '8': {},
       '10': 'productSet'
     },
     {
@@ -220,20 +237,21 @@ const UpdateProductSetRequest$json = {
 const DeleteProductSetRequest$json = {
   '1': 'DeleteProductSetRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const CreateReferenceImageRequest$json = {
   '1': 'CreateReferenceImageRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'reference_image',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.ReferenceImage',
+      '8': {},
       '10': 'referenceImage'
     },
     {
@@ -249,7 +267,7 @@ const CreateReferenceImageRequest$json = {
 const ListReferenceImagesRequest$json = {
   '1': 'ListReferenceImagesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -274,37 +292,37 @@ const ListReferenceImagesResponse$json = {
 const GetReferenceImageRequest$json = {
   '1': 'GetReferenceImageRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const DeleteReferenceImageRequest$json = {
   '1': 'DeleteReferenceImageRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const AddProductToProductSetRequest$json = {
   '1': 'AddProductToProductSetRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'product', '3': 2, '4': 1, '5': 9, '10': 'product'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'product', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'product'},
   ],
 };
 
 const RemoveProductFromProductSetRequest$json = {
   '1': 'RemoveProductFromProductSetRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'product', '3': 2, '4': 1, '5': 9, '10': 'product'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'product', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'product'},
   ],
 };
 
 const ListProductsInProductSetRequest$json = {
   '1': 'ListProductsInProductSetRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -353,13 +371,14 @@ const ImportProductSetsInputConfig$json = {
 const ImportProductSetsRequest$json = {
   '1': 'ImportProductSetsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'input_config',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.ImportProductSetsInputConfig',
+      '8': {},
       '10': 'inputConfig'
     },
   ],
@@ -456,7 +475,7 @@ const PurgeProductsRequest$json = {
       '9': 0,
       '10': 'deleteOrphanProducts'
     },
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'force', '3': 4, '4': 1, '5': 8, '10': 'force'},
   ],
   '8': [

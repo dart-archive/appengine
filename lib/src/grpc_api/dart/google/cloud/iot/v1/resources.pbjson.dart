@@ -185,6 +185,7 @@ const Device$json = {
     },
   ],
   '3': [Device_MetadataEntry$json],
+  '7': {},
 };
 
 const Device_MetadataEntry$json = {
@@ -287,6 +288,7 @@ const DeviceRegistry$json = {
       '10': 'credentials'
     },
   ],
+  '7': {},
 };
 
 const MqttConfig$json = {

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'asset_error.pbenum.dart';
 
 class AssetErrorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssetErrorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.errors'))
+      package: const $pb.PackageName('google.ads.googleads.v1.errors'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AssetErrorEnum._() : super();
@@ -34,6 +34,8 @@ class AssetErrorEnum extends $pb.GeneratedMessage {
   AssetErrorEnum createEmptyInstance() => create();
   static $pb.PbList<AssetErrorEnum> createRepeated() =>
       $pb.PbList<AssetErrorEnum>();
-  static AssetErrorEnum getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AssetErrorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssetErrorEnum>(create);
   static AssetErrorEnum _defaultInstance;
 }

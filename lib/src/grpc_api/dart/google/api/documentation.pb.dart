@@ -5,20 +5,19 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Documentation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Documentation',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
     ..aOS(1, 'summary')
     ..aOS(2, 'overview')
-    ..pc<DocumentationRule>(
-        3, 'rules', $pb.PbFieldType.PM, DocumentationRule.create)
+    ..pc<DocumentationRule>(3, 'rules', $pb.PbFieldType.PM,
+        subBuilder: DocumentationRule.create)
     ..aOS(4, 'documentationRootUrl')
-    ..pc<Page>(5, 'pages', $pb.PbFieldType.PM, Page.create)
+    ..pc<Page>(5, 'pages', $pb.PbFieldType.PM, subBuilder: Page.create)
     ..hasRequiredFields = false;
 
   Documentation._() : super();
@@ -38,41 +37,57 @@ class Documentation extends $pb.GeneratedMessage {
   Documentation createEmptyInstance() => create();
   static $pb.PbList<Documentation> createRepeated() =>
       $pb.PbList<Documentation>();
-  static Documentation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Documentation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Documentation>(create);
   static Documentation _defaultInstance;
 
-  $core.String get summary => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get summary => $_getSZ(0);
+  @$pb.TagNumber(1)
   set summary($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSummary() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSummary() => clearField(1);
 
-  $core.String get overview => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get overview => $_getSZ(1);
+  @$pb.TagNumber(2)
   set overview($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOverview() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOverview() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<DocumentationRule> get rules => $_getList(2);
 
-  $core.String get documentationRootUrl => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get documentationRootUrl => $_getSZ(3);
+  @$pb.TagNumber(4)
   set documentationRootUrl($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDocumentationRootUrl() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDocumentationRootUrl() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<Page> get pages => $_getList(4);
 }
 
 class DocumentationRule extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DocumentationRule',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
     ..aOS(1, 'selector')
     ..aOS(2, 'description')
     ..aOS(3, 'deprecationDescription')
@@ -95,42 +110,55 @@ class DocumentationRule extends $pb.GeneratedMessage {
   DocumentationRule createEmptyInstance() => create();
   static $pb.PbList<DocumentationRule> createRepeated() =>
       $pb.PbList<DocumentationRule>();
-  static DocumentationRule getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DocumentationRule getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DocumentationRule>(create);
   static DocumentationRule _defaultInstance;
 
-  $core.String get selector => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get selector => $_getSZ(0);
+  @$pb.TagNumber(1)
   set selector($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSelector() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSelector() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
-  $core.String get deprecationDescription => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get deprecationDescription => $_getSZ(2);
+  @$pb.TagNumber(3)
   set deprecationDescription($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeprecationDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeprecationDescription() => clearField(3);
 }
 
 class Page extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('Page', package: const $pb.PackageName('google.api'))
-        ..aOS(1, 'name')
-        ..aOS(2, 'content')
-        ..pc<Page>(3, 'subpages', $pb.PbFieldType.PM, Page.create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Page',
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..aOS(1, 'name')
+    ..aOS(2, 'content')
+    ..pc<Page>(3, 'subpages', $pb.PbFieldType.PM, subBuilder: Page.create)
+    ..hasRequiredFields = false;
 
   Page._() : super();
   factory Page() => create();
@@ -148,24 +176,35 @@ class Page extends $pb.GeneratedMessage {
   static Page create() => Page._();
   Page createEmptyInstance() => create();
   static $pb.PbList<Page> createRepeated() => $pb.PbList<Page>();
-  static Page getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Page getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Page>(create);
   static Page _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get content => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get content => $_getSZ(1);
+  @$pb.TagNumber(2)
   set content($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasContent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearContent() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<Page> get subpages => $_getList(2);
 }

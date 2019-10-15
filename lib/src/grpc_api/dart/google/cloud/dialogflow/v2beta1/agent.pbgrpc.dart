@@ -7,12 +7,13 @@
 
 import 'dart:async' as $async;
 
-import 'dart:core' as $core show int, String, List;
+import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
 import 'agent.pb.dart' as $2;
 import '../../../protobuf/empty.pb.dart' as $1;
 import '../../../longrunning/operations.pb.dart' as $0;
+import 'validation_result.pb.dart' as $3;
 export 'agent.pb.dart';
 
 class AgentsClient extends $grpc.Client {
@@ -55,6 +56,12 @@ class AgentsClient extends $grpc.Client {
           '/google.cloud.dialogflow.v2beta1.Agents/RestoreAgent',
           ($2.RestoreAgentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$getValidationResult =
+      $grpc.ClientMethod<$2.GetValidationResultRequest, $3.ValidationResult>(
+          '/google.cloud.dialogflow.v2beta1.Agents/GetValidationResult',
+          ($2.GetValidationResultRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $3.ValidationResult.fromBuffer(value));
 
   AgentsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -119,6 +126,15 @@ class AgentsClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$restoreAgent, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$3.ValidationResult> getValidationResult(
+      $2.GetValidationResultRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$getValidationResult, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -190,6 +206,15 @@ abstract class AgentsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.RestoreAgentRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$2.GetValidationResultRequest, $3.ValidationResult>(
+            'GetValidationResult',
+            getValidationResult_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $2.GetValidationResultRequest.fromBuffer(value),
+            ($3.ValidationResult value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.Agent> getAgent_Pre(
@@ -233,6 +258,12 @@ abstract class AgentsServiceBase extends $grpc.Service {
     return restoreAgent(call, await request);
   }
 
+  $async.Future<$3.ValidationResult> getValidationResult_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.GetValidationResultRequest> request) async {
+    return getValidationResult(call, await request);
+  }
+
   $async.Future<$2.Agent> getAgent(
       $grpc.ServiceCall call, $2.GetAgentRequest request);
   $async.Future<$2.Agent> setAgent(
@@ -249,4 +280,6 @@ abstract class AgentsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ImportAgentRequest request);
   $async.Future<$0.Operation> restoreAgent(
       $grpc.ServiceCall call, $2.RestoreAgentRequest request);
+  $async.Future<$3.ValidationResult> getValidationResult(
+      $grpc.ServiceCall call, $2.GetValidationResultRequest request);
 }

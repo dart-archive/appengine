@@ -66,6 +66,14 @@ const WebhookResponse$json = {
       '6': '.google.cloud.dialogflow.v2.EventInput',
       '10': 'followupEventInput'
     },
+    {
+      '1': 'session_entity_types',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2.SessionEntityType',
+      '10': 'sessionEntityTypes'
+    },
   ],
 };
 

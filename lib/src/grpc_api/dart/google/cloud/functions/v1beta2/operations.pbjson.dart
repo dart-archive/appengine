@@ -35,5 +35,14 @@ const OperationMetadataV1Beta2$json = {
       '6': '.google.protobuf.Any',
       '10': 'request'
     },
+    {'1': 'version_id', '3': 4, '4': 1, '5': 3, '10': 'versionId'},
+    {
+      '1': 'update_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
   ],
 };

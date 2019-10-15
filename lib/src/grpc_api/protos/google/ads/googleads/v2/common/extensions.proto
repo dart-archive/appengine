@@ -345,3 +345,14 @@ message SitelinkFeedItem {
   // parallel tracking.
   google.protobuf.StringValue final_url_suffix = 8;
 }
+
+// Represents a hotel callout extension.
+message HotelCalloutFeedItem {
+  // The callout text.
+  // The length of this string should be between 1 and 25, inclusive.
+  google.protobuf.StringValue text = 1;
+
+  // The language of the hotel callout text.
+  // IETF BCP 47 compliant language code.
+  google.protobuf.StringValue language_code = 2;
+}

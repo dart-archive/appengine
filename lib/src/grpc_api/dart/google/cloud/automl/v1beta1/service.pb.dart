@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,10 +20,10 @@ import 'model_evaluation.pb.dart' as $8;
 
 class CreateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDatasetRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.Dataset>(2, 'dataset', $pb.PbFieldType.OM, $3.Dataset.getDefault,
-        $3.Dataset.create)
+    ..aOM<$3.Dataset>(2, 'dataset', subBuilder: $3.Dataset.create)
     ..hasRequiredFields = false;
 
   CreateDatasetRequest._() : super();
@@ -45,30 +44,42 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   CreateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDatasetRequest> createRepeated() =>
       $pb.PbList<CreateDatasetRequest>();
-  static CreateDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDatasetRequest>(create);
   static CreateDatasetRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Dataset get dataset => $_getN(1);
+  @$pb.TagNumber(2)
   set dataset($3.Dataset v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDataset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDataset() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Dataset ensureDataset() => $_ensure(1);
 }
 
 class GetDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDatasetRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -89,22 +100,28 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
   GetDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<GetDatasetRequest> createRepeated() =>
       $pb.PbList<GetDatasetRequest>();
-  static GetDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDatasetRequest>(create);
   static GetDatasetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListDatasetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
@@ -128,47 +145,66 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
   ListDatasetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsRequest> createRepeated() =>
       $pb.PbList<ListDatasetsRequest>();
-  static ListDatasetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDatasetsRequest>(create);
   static ListDatasetsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(3)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(3)
   void clearFilter() => clearField(3);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 }
 
 class ListDatasetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsResponse',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$3.Dataset>(1, 'datasets', $pb.PbFieldType.PM, $3.Dataset.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$3.Dataset>(1, 'datasets', $pb.PbFieldType.PM,
+        subBuilder: $3.Dataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -190,28 +226,33 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
   ListDatasetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsResponse> createRepeated() =>
       $pb.PbList<ListDatasetsResponse>();
-  static ListDatasetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDatasetsResponse>(create);
   static ListDatasetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Dataset> get datasets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDatasetRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$3.Dataset>(1, 'dataset', $pb.PbFieldType.OM, $3.Dataset.getDefault,
-        $3.Dataset.create)
-    ..a<$9.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Dataset>(1, 'dataset', subBuilder: $3.Dataset.create)
+    ..aOM<$9.FieldMask>(2, 'updateMask', subBuilder: $9.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDatasetRequest._() : super();
@@ -232,30 +273,44 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
   UpdateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDatasetRequest> createRepeated() =>
       $pb.PbList<UpdateDatasetRequest>();
-  static UpdateDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDatasetRequest>(create);
   static UpdateDatasetRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.Dataset get dataset => $_getN(0);
+  @$pb.TagNumber(1)
   set dataset($3.Dataset v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDataset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDataset() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Dataset ensureDataset() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDatasetRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -277,25 +332,30 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
   DeleteDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDatasetRequest> createRepeated() =>
       $pb.PbList<DeleteDatasetRequest>();
-  static DeleteDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDatasetRequest>(create);
   static DeleteDatasetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ImportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDataRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$10.InputConfig>(3, 'inputConfig', $pb.PbFieldType.OM,
-        $10.InputConfig.getDefault, $10.InputConfig.create)
+    ..aOM<$10.InputConfig>(3, 'inputConfig', subBuilder: $10.InputConfig.create)
     ..hasRequiredFields = false;
 
   ImportDataRequest._() : super();
@@ -315,33 +375,45 @@ class ImportDataRequest extends $pb.GeneratedMessage {
   ImportDataRequest createEmptyInstance() => create();
   static $pb.PbList<ImportDataRequest> createRepeated() =>
       $pb.PbList<ImportDataRequest>();
-  static ImportDataRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportDataRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportDataRequest>(create);
   static ImportDataRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   $10.InputConfig get inputConfig => $_getN(1);
+  @$pb.TagNumber(3)
   set inputConfig($10.InputConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInputConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearInputConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $10.InputConfig ensureInputConfig() => $_ensure(1);
 }
 
 class ExportDataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportDataRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$10.OutputConfig>(3, 'outputConfig', $pb.PbFieldType.OM,
-        $10.OutputConfig.getDefault, $10.OutputConfig.create)
+    ..aOM<$10.OutputConfig>(3, 'outputConfig',
+        subBuilder: $10.OutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportDataRequest._() : super();
@@ -361,30 +433,42 @@ class ExportDataRequest extends $pb.GeneratedMessage {
   ExportDataRequest createEmptyInstance() => create();
   static $pb.PbList<ExportDataRequest> createRepeated() =>
       $pb.PbList<ExportDataRequest>();
-  static ExportDataRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportDataRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportDataRequest>(create);
   static ExportDataRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   $10.OutputConfig get outputConfig => $_getN(1);
+  @$pb.TagNumber(3)
   set outputConfig($10.OutputConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOutputConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearOutputConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $10.OutputConfig ensureOutputConfig() => $_ensure(1);
 }
 
 class GetAnnotationSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAnnotationSpecRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -407,25 +491,30 @@ class GetAnnotationSpecRequest extends $pb.GeneratedMessage {
   GetAnnotationSpecRequest createEmptyInstance() => create();
   static $pb.PbList<GetAnnotationSpecRequest> createRepeated() =>
       $pb.PbList<GetAnnotationSpecRequest>();
-  static GetAnnotationSpecRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetAnnotationSpecRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAnnotationSpecRequest>(create);
   static GetAnnotationSpecRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetTableSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTableSpecRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+    ..aOM<$9.FieldMask>(2, 'fieldMask', subBuilder: $9.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetTableSpecRequest._() : super();
@@ -445,33 +534,44 @@ class GetTableSpecRequest extends $pb.GeneratedMessage {
   GetTableSpecRequest createEmptyInstance() => create();
   static $pb.PbList<GetTableSpecRequest> createRepeated() =>
       $pb.PbList<GetTableSpecRequest>();
-  static GetTableSpecRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTableSpecRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTableSpecRequest>(create);
   static GetTableSpecRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get fieldMask => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureFieldMask() => $_ensure(1);
 }
 
 class ListTableSpecsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTableSpecsRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+    ..aOM<$9.FieldMask>(2, 'fieldMask', subBuilder: $9.FieldMask.create)
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -496,55 +596,80 @@ class ListTableSpecsRequest extends $pb.GeneratedMessage {
   ListTableSpecsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTableSpecsRequest> createRepeated() =>
       $pb.PbList<ListTableSpecsRequest>();
-  static ListTableSpecsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTableSpecsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTableSpecsRequest>(create);
   static ListTableSpecsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get fieldMask => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureFieldMask() => $_ensure(1);
 
-  $core.String get filter => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(3)
   set filter($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFilter() => clearField(3);
 
-  $core.int get pageSize => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(3);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(4);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(4);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 }
 
 class ListTableSpecsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTableSpecsResponse',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$5.TableSpec>(1, 'tableSpecs', $pb.PbFieldType.PM, $5.TableSpec.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$5.TableSpec>(1, 'tableSpecs', $pb.PbFieldType.PM,
+        subBuilder: $5.TableSpec.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -567,28 +692,33 @@ class ListTableSpecsResponse extends $pb.GeneratedMessage {
   ListTableSpecsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTableSpecsResponse> createRepeated() =>
       $pb.PbList<ListTableSpecsResponse>();
-  static ListTableSpecsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTableSpecsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTableSpecsResponse>(create);
   static ListTableSpecsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.TableSpec> get tableSpecs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateTableSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTableSpecRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$5.TableSpec>(1, 'tableSpec', $pb.PbFieldType.OM,
-        $5.TableSpec.getDefault, $5.TableSpec.create)
-    ..a<$9.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$5.TableSpec>(1, 'tableSpec', subBuilder: $5.TableSpec.create)
+    ..aOM<$9.FieldMask>(2, 'updateMask', subBuilder: $9.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTableSpecRequest._() : super();
@@ -610,33 +740,46 @@ class UpdateTableSpecRequest extends $pb.GeneratedMessage {
   UpdateTableSpecRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTableSpecRequest> createRepeated() =>
       $pb.PbList<UpdateTableSpecRequest>();
-  static UpdateTableSpecRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTableSpecRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTableSpecRequest>(create);
   static UpdateTableSpecRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.TableSpec get tableSpec => $_getN(0);
+  @$pb.TagNumber(1)
   set tableSpec($5.TableSpec v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTableSpec() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTableSpec() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.TableSpec ensureTableSpec() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class GetColumnSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetColumnSpecRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+    ..aOM<$9.FieldMask>(2, 'fieldMask', subBuilder: $9.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetColumnSpecRequest._() : super();
@@ -657,33 +800,44 @@ class GetColumnSpecRequest extends $pb.GeneratedMessage {
   GetColumnSpecRequest createEmptyInstance() => create();
   static $pb.PbList<GetColumnSpecRequest> createRepeated() =>
       $pb.PbList<GetColumnSpecRequest>();
-  static GetColumnSpecRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetColumnSpecRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetColumnSpecRequest>(create);
   static GetColumnSpecRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get fieldMask => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureFieldMask() => $_ensure(1);
 }
 
 class ListColumnSpecsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListColumnSpecsRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$9.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+    ..aOM<$9.FieldMask>(2, 'fieldMask', subBuilder: $9.FieldMask.create)
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -708,56 +862,80 @@ class ListColumnSpecsRequest extends $pb.GeneratedMessage {
   ListColumnSpecsRequest createEmptyInstance() => create();
   static $pb.PbList<ListColumnSpecsRequest> createRepeated() =>
       $pb.PbList<ListColumnSpecsRequest>();
-  static ListColumnSpecsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListColumnSpecsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListColumnSpecsRequest>(create);
   static ListColumnSpecsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get fieldMask => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureFieldMask() => $_ensure(1);
 
-  $core.String get filter => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(3)
   set filter($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFilter() => clearField(3);
 
-  $core.int get pageSize => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(3);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(4);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(4);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 }
 
 class ListColumnSpecsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListColumnSpecsResponse',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$6.ColumnSpec>(
-        1, 'columnSpecs', $pb.PbFieldType.PM, $6.ColumnSpec.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$6.ColumnSpec>(1, 'columnSpecs', $pb.PbFieldType.PM,
+        subBuilder: $6.ColumnSpec.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -780,28 +958,33 @@ class ListColumnSpecsResponse extends $pb.GeneratedMessage {
   ListColumnSpecsResponse createEmptyInstance() => create();
   static $pb.PbList<ListColumnSpecsResponse> createRepeated() =>
       $pb.PbList<ListColumnSpecsResponse>();
-  static ListColumnSpecsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListColumnSpecsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListColumnSpecsResponse>(create);
   static ListColumnSpecsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$6.ColumnSpec> get columnSpecs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateColumnSpecRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateColumnSpecRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$6.ColumnSpec>(1, 'columnSpec', $pb.PbFieldType.OM,
-        $6.ColumnSpec.getDefault, $6.ColumnSpec.create)
-    ..a<$9.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$6.ColumnSpec>(1, 'columnSpec', subBuilder: $6.ColumnSpec.create)
+    ..aOM<$9.FieldMask>(2, 'updateMask', subBuilder: $9.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateColumnSpecRequest._() : super();
@@ -823,33 +1006,46 @@ class UpdateColumnSpecRequest extends $pb.GeneratedMessage {
   UpdateColumnSpecRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateColumnSpecRequest> createRepeated() =>
       $pb.PbList<UpdateColumnSpecRequest>();
-  static UpdateColumnSpecRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateColumnSpecRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateColumnSpecRequest>(create);
   static UpdateColumnSpecRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $6.ColumnSpec get columnSpec => $_getN(0);
+  @$pb.TagNumber(1)
   set columnSpec($6.ColumnSpec v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasColumnSpec() => $_has(0);
+  @$pb.TagNumber(1)
   void clearColumnSpec() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.ColumnSpec ensureColumnSpec() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $9.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($9.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class CreateModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateModelRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$7.Model>(
-        4, 'model', $pb.PbFieldType.OM, $7.Model.getDefault, $7.Model.create)
+    ..aOM<$7.Model>(4, 'model', subBuilder: $7.Model.create)
     ..hasRequiredFields = false;
 
   CreateModelRequest._() : super();
@@ -869,30 +1065,42 @@ class CreateModelRequest extends $pb.GeneratedMessage {
   CreateModelRequest createEmptyInstance() => create();
   static $pb.PbList<CreateModelRequest> createRepeated() =>
       $pb.PbList<CreateModelRequest>();
-  static CreateModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateModelRequest>(create);
   static CreateModelRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(4)
   $7.Model get model => $_getN(1);
+  @$pb.TagNumber(4)
   set model($7.Model v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasModel() => $_has(1);
+  @$pb.TagNumber(4)
   void clearModel() => clearField(4);
+  @$pb.TagNumber(4)
+  $7.Model ensureModel() => $_ensure(1);
 }
 
 class GetModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetModelRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -913,22 +1121,28 @@ class GetModelRequest extends $pb.GeneratedMessage {
   GetModelRequest createEmptyInstance() => create();
   static $pb.PbList<GetModelRequest> createRepeated() =>
       $pb.PbList<GetModelRequest>();
-  static GetModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetModelRequest>(create);
   static GetModelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListModelsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
@@ -952,47 +1166,65 @@ class ListModelsRequest extends $pb.GeneratedMessage {
   ListModelsRequest createEmptyInstance() => create();
   static $pb.PbList<ListModelsRequest> createRepeated() =>
       $pb.PbList<ListModelsRequest>();
-  static ListModelsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListModelsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListModelsRequest>(create);
   static ListModelsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(3)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(3)
   void clearFilter() => clearField(3);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 }
 
 class ListModelsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsResponse',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$7.Model>(1, 'model', $pb.PbFieldType.PM, $7.Model.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$7.Model>(1, 'model', $pb.PbFieldType.PM, subBuilder: $7.Model.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1013,24 +1245,31 @@ class ListModelsResponse extends $pb.GeneratedMessage {
   ListModelsResponse createEmptyInstance() => create();
   static $pb.PbList<ListModelsResponse> createRepeated() =>
       $pb.PbList<ListModelsResponse>();
-  static ListModelsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListModelsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListModelsResponse>(create);
   static ListModelsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$7.Model> get model => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteModelRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1051,21 +1290,27 @@ class DeleteModelRequest extends $pb.GeneratedMessage {
   DeleteModelRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteModelRequest> createRepeated() =>
       $pb.PbList<DeleteModelRequest>();
-  static DeleteModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteModelRequest>(create);
   static DeleteModelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 enum DeployModelRequest_ModelDeploymentMetadata {
   imageObjectDetectionModelDeploymentMetadata,
+  imageClassificationModelDeploymentMetadata,
   notSet
 }
 
@@ -1074,18 +1319,21 @@ class DeployModelRequest extends $pb.GeneratedMessage {
       _DeployModelRequest_ModelDeploymentMetadataByTag = {
     2: DeployModelRequest_ModelDeploymentMetadata
         .imageObjectDetectionModelDeploymentMetadata,
+    4: DeployModelRequest_ModelDeploymentMetadata
+        .imageClassificationModelDeploymentMetadata,
     0: DeployModelRequest_ModelDeploymentMetadata.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeployModelRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..oo(0, [2])
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..oo(0, [2, 4])
     ..aOS(1, 'name')
-    ..a<$11.ImageObjectDetectionModelDeploymentMetadata>(
-        2,
-        'imageObjectDetectionModelDeploymentMetadata',
-        $pb.PbFieldType.OM,
-        $11.ImageObjectDetectionModelDeploymentMetadata.getDefault,
-        $11.ImageObjectDetectionModelDeploymentMetadata.create)
+    ..aOM<$11.ImageObjectDetectionModelDeploymentMetadata>(
+        2, 'imageObjectDetectionModelDeploymentMetadata',
+        subBuilder: $11.ImageObjectDetectionModelDeploymentMetadata.create)
+    ..aOM<$11.ImageClassificationModelDeploymentMetadata>(
+        4, 'imageClassificationModelDeploymentMetadata',
+        subBuilder: $11.ImageClassificationModelDeploymentMetadata.create)
     ..hasRequiredFields = false;
 
   DeployModelRequest._() : super();
@@ -1105,36 +1353,66 @@ class DeployModelRequest extends $pb.GeneratedMessage {
   DeployModelRequest createEmptyInstance() => create();
   static $pb.PbList<DeployModelRequest> createRepeated() =>
       $pb.PbList<DeployModelRequest>();
-  static DeployModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeployModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeployModelRequest>(create);
   static DeployModelRequest _defaultInstance;
 
   DeployModelRequest_ModelDeploymentMetadata whichModelDeploymentMetadata() =>
       _DeployModelRequest_ModelDeploymentMetadataByTag[$_whichOneof(0)];
   void clearModelDeploymentMetadata() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $11.ImageObjectDetectionModelDeploymentMetadata
       get imageObjectDetectionModelDeploymentMetadata => $_getN(1);
+  @$pb.TagNumber(2)
   set imageObjectDetectionModelDeploymentMetadata(
       $11.ImageObjectDetectionModelDeploymentMetadata v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasImageObjectDetectionModelDeploymentMetadata() => $_has(1);
+  @$pb.TagNumber(2)
   void clearImageObjectDetectionModelDeploymentMetadata() => clearField(2);
+  @$pb.TagNumber(2)
+  $11.ImageObjectDetectionModelDeploymentMetadata
+      ensureImageObjectDetectionModelDeploymentMetadata() => $_ensure(1);
+
+  @$pb.TagNumber(4)
+  $11.ImageClassificationModelDeploymentMetadata
+      get imageClassificationModelDeploymentMetadata => $_getN(2);
+  @$pb.TagNumber(4)
+  set imageClassificationModelDeploymentMetadata(
+      $11.ImageClassificationModelDeploymentMetadata v) {
+    setField(4, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasImageClassificationModelDeploymentMetadata() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearImageClassificationModelDeploymentMetadata() => clearField(4);
+  @$pb.TagNumber(4)
+  $11.ImageClassificationModelDeploymentMetadata
+      ensureImageClassificationModelDeploymentMetadata() => $_ensure(2);
 }
 
 class UndeployModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeployModelRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1156,29 +1434,31 @@ class UndeployModelRequest extends $pb.GeneratedMessage {
   UndeployModelRequest createEmptyInstance() => create();
   static $pb.PbList<UndeployModelRequest> createRepeated() =>
       $pb.PbList<UndeployModelRequest>();
-  static UndeployModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UndeployModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UndeployModelRequest>(create);
   static UndeployModelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ExportModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportModelRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$10.ModelExportOutputConfig>(
-        3,
-        'outputConfig',
-        $pb.PbFieldType.OM,
-        $10.ModelExportOutputConfig.getDefault,
-        $10.ModelExportOutputConfig.create)
+    ..aOM<$10.ModelExportOutputConfig>(3, 'outputConfig',
+        subBuilder: $10.ModelExportOutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportModelRequest._() : super();
@@ -1198,38 +1478,46 @@ class ExportModelRequest extends $pb.GeneratedMessage {
   ExportModelRequest createEmptyInstance() => create();
   static $pb.PbList<ExportModelRequest> createRepeated() =>
       $pb.PbList<ExportModelRequest>();
-  static ExportModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportModelRequest>(create);
   static ExportModelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   $10.ModelExportOutputConfig get outputConfig => $_getN(1);
+  @$pb.TagNumber(3)
   set outputConfig($10.ModelExportOutputConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOutputConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearOutputConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $10.ModelExportOutputConfig ensureOutputConfig() => $_ensure(1);
 }
 
 class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportEvaluatedExamplesRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$10.ExportEvaluatedExamplesOutputConfig>(
-        3,
-        'outputConfig',
-        $pb.PbFieldType.OM,
-        $10.ExportEvaluatedExamplesOutputConfig.getDefault,
-        $10.ExportEvaluatedExamplesOutputConfig.create)
+    ..aOM<$10.ExportEvaluatedExamplesOutputConfig>(3, 'outputConfig',
+        subBuilder: $10.ExportEvaluatedExamplesOutputConfig.create)
     ..hasRequiredFields = false;
 
   ExportEvaluatedExamplesRequest._() : super();
@@ -1253,30 +1541,42 @@ class ExportEvaluatedExamplesRequest extends $pb.GeneratedMessage {
   ExportEvaluatedExamplesRequest createEmptyInstance() => create();
   static $pb.PbList<ExportEvaluatedExamplesRequest> createRepeated() =>
       $pb.PbList<ExportEvaluatedExamplesRequest>();
-  static ExportEvaluatedExamplesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportEvaluatedExamplesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportEvaluatedExamplesRequest>(create);
   static ExportEvaluatedExamplesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   $10.ExportEvaluatedExamplesOutputConfig get outputConfig => $_getN(1);
+  @$pb.TagNumber(3)
   set outputConfig($10.ExportEvaluatedExamplesOutputConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOutputConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearOutputConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $10.ExportEvaluatedExamplesOutputConfig ensureOutputConfig() => $_ensure(1);
 }
 
 class GetModelEvaluationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetModelEvaluationRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1300,23 +1600,29 @@ class GetModelEvaluationRequest extends $pb.GeneratedMessage {
   GetModelEvaluationRequest createEmptyInstance() => create();
   static $pb.PbList<GetModelEvaluationRequest> createRepeated() =>
       $pb.PbList<GetModelEvaluationRequest>();
-  static GetModelEvaluationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetModelEvaluationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetModelEvaluationRequest>(create);
   static GetModelEvaluationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListModelEvaluationsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListModelEvaluationsRequest',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(3, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
@@ -1344,49 +1650,67 @@ class ListModelEvaluationsRequest extends $pb.GeneratedMessage {
   ListModelEvaluationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListModelEvaluationsRequest> createRepeated() =>
       $pb.PbList<ListModelEvaluationsRequest>();
-  static ListModelEvaluationsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListModelEvaluationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListModelEvaluationsRequest>(create);
   static ListModelEvaluationsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(3)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(3)
   void clearFilter() => clearField(3);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 }
 
 class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListModelEvaluationsResponse',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..pc<$8.ModelEvaluation>(
-        1, 'modelEvaluation', $pb.PbFieldType.PM, $8.ModelEvaluation.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$8.ModelEvaluation>(1, 'modelEvaluation', $pb.PbFieldType.PM,
+        subBuilder: $8.ModelEvaluation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1411,17 +1735,23 @@ class ListModelEvaluationsResponse extends $pb.GeneratedMessage {
   ListModelEvaluationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListModelEvaluationsResponse> createRepeated() =>
       $pb.PbList<ListModelEvaluationsResponse>();
-  static ListModelEvaluationsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListModelEvaluationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListModelEvaluationsResponse>(create);
   static ListModelEvaluationsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$8.ModelEvaluation> get modelEvaluation => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }

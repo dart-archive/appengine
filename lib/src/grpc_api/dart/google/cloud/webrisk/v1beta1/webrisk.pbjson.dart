@@ -33,6 +33,7 @@ const ComputeThreatListDiffRequest$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.webrisk.v1beta1.ThreatType',
+      '8': {},
       '10': 'threatType'
     },
     {'1': 'version_token', '3': 2, '4': 1, '5': 12, '10': 'versionToken'},
@@ -43,6 +44,7 @@ const ComputeThreatListDiffRequest$json = {
       '5': 11,
       '6':
           '.google.cloud.webrisk.v1beta1.ComputeThreatListDiffRequest.Constraints',
+      '8': {},
       '10': 'constraints'
     },
   ],
@@ -147,13 +149,14 @@ const ComputeThreatListDiffResponse_ResponseType$json = {
 const SearchUrisRequest$json = {
   '1': 'SearchUrisRequest',
   '2': [
-    {'1': 'uri', '3': 1, '4': 1, '5': 9, '10': 'uri'},
+    {'1': 'uri', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'uri'},
     {
       '1': 'threat_types',
       '3': 2,
       '4': 3,
       '5': 14,
       '6': '.google.cloud.webrisk.v1beta1.ThreatType',
+      '8': {},
       '10': 'threatTypes'
     },
   ],
@@ -206,6 +209,7 @@ const SearchHashesRequest$json = {
       '4': 3,
       '5': 14,
       '6': '.google.cloud.webrisk.v1beta1.ThreatType',
+      '8': {},
       '10': 'threatTypes'
     },
   ],

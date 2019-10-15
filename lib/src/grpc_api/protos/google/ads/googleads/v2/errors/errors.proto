@@ -80,6 +80,7 @@ import "google/ads/googleads/v2/errors/header_error.proto";
 import "google/ads/googleads/v2/errors/id_error.proto";
 import "google/ads/googleads/v2/errors/image_error.proto";
 import "google/ads/googleads/v2/errors/internal_error.proto";
+import "google/ads/googleads/v2/errors/invoice_error.proto";
 import "google/ads/googleads/v2/errors/keyword_plan_ad_group_error.proto";
 import "google/ads/googleads/v2/errors/keyword_plan_campaign_error.proto";
 import "google/ads/googleads/v2/errors/keyword_plan_error.proto";
@@ -109,6 +110,7 @@ import "google/ads/googleads/v2/errors/policy_violation_error.proto";
 import "google/ads/googleads/v2/errors/query_error.proto";
 import "google/ads/googleads/v2/errors/quota_error.proto";
 import "google/ads/googleads/v2/errors/range_error.proto";
+import "google/ads/googleads/v2/errors/reach_plan_error.proto";
 import "google/ads/googleads/v2/errors/recommendation_error.proto";
 import "google/ads/googleads/v2/errors/region_code_error.proto";
 import "google/ads/googleads/v2/errors/request_error.proto";
@@ -478,6 +480,12 @@ message ErrorCode {
 
     // The reasons for the access invitation error
     AccessInvitationErrorEnum.AccessInvitationError access_invitation_error = 124;
+
+    // The reasons for the reach plan error
+    ReachPlanErrorEnum.ReachPlanError reach_plan_error = 125;
+
+    // The reasons for the invoice error
+    InvoiceErrorEnum.InvoiceError invoice_error = 126;
   }
 }
 

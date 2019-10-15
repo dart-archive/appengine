@@ -205,17 +205,17 @@ const Recommendation$json = {
     Recommendation_RecommendationMetrics$json,
     Recommendation_CampaignBudgetRecommendation$json,
     Recommendation_KeywordRecommendation$json,
-    Recommendation_OptimizeAdRotationRecommendation$json,
+    Recommendation_SitelinkExtensionRecommendation$json,
     Recommendation_MoveUnusedBudgetRecommendation$json,
     Recommendation_TextAdRecommendation$json,
     Recommendation_TargetCpaOptInRecommendation$json,
     Recommendation_MaximizeConversionsOptInRecommendation$json,
+    Recommendation_OptimizeAdRotationRecommendation$json,
     Recommendation_EnhancedCpcOptInRecommendation$json,
-    Recommendation_CalloutExtensionRecommendation$json,
-    Recommendation_KeywordMatchTypeRecommendation$json,
     Recommendation_SearchPartnersOptInRecommendation$json,
+    Recommendation_KeywordMatchTypeRecommendation$json,
     Recommendation_MaximizeClicksOptInRecommendation$json,
-    Recommendation_SitelinkExtensionRecommendation$json,
+    Recommendation_CalloutExtensionRecommendation$json,
     Recommendation_CallExtensionRecommendation$json
   ],
   '8': [
@@ -373,8 +373,18 @@ const Recommendation_KeywordRecommendation$json = {
   ],
 };
 
-const Recommendation_OptimizeAdRotationRecommendation$json = {
-  '1': 'OptimizeAdRotationRecommendation',
+const Recommendation_SitelinkExtensionRecommendation$json = {
+  '1': 'SitelinkExtensionRecommendation',
+  '2': [
+    {
+      '1': 'recommended_extensions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.ads.googleads.v2.common.SitelinkFeedItem',
+      '10': 'recommendedExtensions'
+    },
+  ],
 };
 
 const Recommendation_MoveUnusedBudgetRecommendation$json = {
@@ -511,22 +521,16 @@ const Recommendation_MaximizeConversionsOptInRecommendation$json = {
   ],
 };
 
+const Recommendation_OptimizeAdRotationRecommendation$json = {
+  '1': 'OptimizeAdRotationRecommendation',
+};
+
 const Recommendation_EnhancedCpcOptInRecommendation$json = {
   '1': 'EnhancedCpcOptInRecommendation',
 };
 
-const Recommendation_CalloutExtensionRecommendation$json = {
-  '1': 'CalloutExtensionRecommendation',
-  '2': [
-    {
-      '1': 'recommended_extensions',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.ads.googleads.v2.common.CalloutFeedItem',
-      '10': 'recommendedExtensions'
-    },
-  ],
+const Recommendation_SearchPartnersOptInRecommendation$json = {
+  '1': 'SearchPartnersOptInRecommendation',
 };
 
 const Recommendation_KeywordMatchTypeRecommendation$json = {
@@ -552,10 +556,6 @@ const Recommendation_KeywordMatchTypeRecommendation$json = {
   ],
 };
 
-const Recommendation_SearchPartnersOptInRecommendation$json = {
-  '1': 'SearchPartnersOptInRecommendation',
-};
-
 const Recommendation_MaximizeClicksOptInRecommendation$json = {
   '1': 'MaximizeClicksOptInRecommendation',
   '2': [
@@ -570,15 +570,15 @@ const Recommendation_MaximizeClicksOptInRecommendation$json = {
   ],
 };
 
-const Recommendation_SitelinkExtensionRecommendation$json = {
-  '1': 'SitelinkExtensionRecommendation',
+const Recommendation_CalloutExtensionRecommendation$json = {
+  '1': 'CalloutExtensionRecommendation',
   '2': [
     {
       '1': 'recommended_extensions',
       '3': 1,
       '4': 3,
       '5': 11,
-      '6': '.google.ads.googleads.v2.common.SitelinkFeedItem',
+      '6': '.google.ads.googleads.v2.common.CalloutFeedItem',
       '10': 'recommendedExtensions'
     },
   ],

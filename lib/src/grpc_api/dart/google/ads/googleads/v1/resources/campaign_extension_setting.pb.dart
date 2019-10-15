@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,26 +16,23 @@ import '../enums/extension_setting_device.pbenum.dart' as $2;
 
 class CampaignExtensionSetting extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignExtensionSetting',
-      package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v1.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..e<$1.ExtensionTypeEnum_ExtensionType>(
-        2,
-        'extensionType',
-        $pb.PbFieldType.OE,
-        $1.ExtensionTypeEnum_ExtensionType.UNSPECIFIED,
-        $1.ExtensionTypeEnum_ExtensionType.valueOf,
-        $1.ExtensionTypeEnum_ExtensionType.values)
-    ..a<$0.StringValue>(3, 'campaign', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<$0.StringValue>(
-        4, 'extensionFeedItems', $pb.PbFieldType.PM, $0.StringValue.create)
+        2, 'extensionType', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.ExtensionTypeEnum_ExtensionType.UNSPECIFIED,
+        valueOf: $1.ExtensionTypeEnum_ExtensionType.valueOf,
+        enumValues: $1.ExtensionTypeEnum_ExtensionType.values)
+    ..aOM<$0.StringValue>(3, 'campaign', subBuilder: $0.StringValue.create)
+    ..pc<$0.StringValue>(4, 'extensionFeedItems', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..e<$2.ExtensionSettingDeviceEnum_ExtensionSettingDevice>(
-        5,
-        'device',
-        $pb.PbFieldType.OE,
-        $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.UNSPECIFIED,
-        $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.valueOf,
-        $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.values)
+        5, 'device', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.UNSPECIFIED,
+        valueOf: $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.valueOf,
+        enumValues: $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice.values)
     ..hasRequiredFields = false;
 
   CampaignExtensionSetting._() : super();
@@ -58,41 +54,61 @@ class CampaignExtensionSetting extends $pb.GeneratedMessage {
   CampaignExtensionSetting createEmptyInstance() => create();
   static $pb.PbList<CampaignExtensionSetting> createRepeated() =>
       $pb.PbList<CampaignExtensionSetting>();
-  static CampaignExtensionSetting getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CampaignExtensionSetting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CampaignExtensionSetting>(create);
   static CampaignExtensionSetting _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.ExtensionTypeEnum_ExtensionType get extensionType => $_getN(1);
+  @$pb.TagNumber(2)
   set extensionType($1.ExtensionTypeEnum_ExtensionType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExtensionType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExtensionType() => clearField(2);
 
+  @$pb.TagNumber(3)
   $0.StringValue get campaign => $_getN(2);
+  @$pb.TagNumber(3)
   set campaign($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCampaign() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCampaign() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureCampaign() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$0.StringValue> get extensionFeedItems => $_getList(3);
 
+  @$pb.TagNumber(5)
   $2.ExtensionSettingDeviceEnum_ExtensionSettingDevice get device => $_getN(4);
+  @$pb.TagNumber(5)
   set device($2.ExtensionSettingDeviceEnum_ExtensionSettingDevice v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDevice() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDevice() => clearField(5);
 }

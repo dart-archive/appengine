@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'campaign_budget_error.pbenum.dart';
 
 class CampaignBudgetErrorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignBudgetErrorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.errors'))
+      package: const $pb.PackageName('google.ads.googleads.v1.errors'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   CampaignBudgetErrorEnum._() : super();
@@ -36,7 +36,8 @@ class CampaignBudgetErrorEnum extends $pb.GeneratedMessage {
   CampaignBudgetErrorEnum createEmptyInstance() => create();
   static $pb.PbList<CampaignBudgetErrorEnum> createRepeated() =>
       $pb.PbList<CampaignBudgetErrorEnum>();
-  static CampaignBudgetErrorEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CampaignBudgetErrorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CampaignBudgetErrorEnum>(create);
   static CampaignBudgetErrorEnum _defaultInstance;
 }

@@ -8,8 +8,8 @@
 const ReportPhishingRequest$json = {
   '1': 'ReportPhishingRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'uri', '3': 2, '4': 1, '5': 9, '10': 'uri'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'uri', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'uri'},
   ],
 };
 

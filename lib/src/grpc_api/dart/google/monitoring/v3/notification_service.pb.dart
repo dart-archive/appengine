@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,7 +16,8 @@ import '../../protobuf/timestamp.pb.dart' as $4;
 class ListNotificationChannelDescriptorsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListNotificationChannelDescriptorsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'name')
@@ -46,41 +46,57 @@ class ListNotificationChannelDescriptorsRequest extends $pb.GeneratedMessage {
   static $pb.PbList<ListNotificationChannelDescriptorsRequest>
       createRepeated() =>
           $pb.PbList<ListNotificationChannelDescriptorsRequest>();
+  @$core.pragma('dart2js:noInline')
   static ListNotificationChannelDescriptorsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListNotificationChannelDescriptorsRequest>(create);
   static ListNotificationChannelDescriptorsRequest _defaultInstance;
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.String get name => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(4)
   set name($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(4)
   void clearName() => clearField(4);
 }
 
 class ListNotificationChannelDescriptorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListNotificationChannelDescriptorsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$1.NotificationChannelDescriptor>(1, 'channelDescriptors',
-        $pb.PbFieldType.PM, $1.NotificationChannelDescriptor.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$1.NotificationChannelDescriptor>(
+        1, 'channelDescriptors', $pb.PbFieldType.PM,
+        subBuilder: $1.NotificationChannelDescriptor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -107,26 +123,34 @@ class ListNotificationChannelDescriptorsResponse extends $pb.GeneratedMessage {
   static $pb.PbList<ListNotificationChannelDescriptorsResponse>
       createRepeated() =>
           $pb.PbList<ListNotificationChannelDescriptorsResponse>();
+  @$core.pragma('dart2js:noInline')
   static ListNotificationChannelDescriptorsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListNotificationChannelDescriptorsResponse>(create);
   static ListNotificationChannelDescriptorsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.NotificationChannelDescriptor> get channelDescriptors =>
       $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetNotificationChannelDescriptorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetNotificationChannelDescriptorRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -152,25 +176,32 @@ class GetNotificationChannelDescriptorRequest extends $pb.GeneratedMessage {
   GetNotificationChannelDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<GetNotificationChannelDescriptorRequest> createRepeated() =>
       $pb.PbList<GetNotificationChannelDescriptorRequest>();
+  @$core.pragma('dart2js:noInline')
   static GetNotificationChannelDescriptorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetNotificationChannelDescriptorRequest>(create);
   static GetNotificationChannelDescriptorRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class CreateNotificationChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateNotificationChannelRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.NotificationChannel>(2, 'notificationChannel', $pb.PbFieldType.OM,
-        $1.NotificationChannel.getDefault, $1.NotificationChannel.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$1.NotificationChannel>(2, 'notificationChannel',
+        subBuilder: $1.NotificationChannel.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -195,31 +226,44 @@ class CreateNotificationChannelRequest extends $pb.GeneratedMessage {
   CreateNotificationChannelRequest createEmptyInstance() => create();
   static $pb.PbList<CreateNotificationChannelRequest> createRepeated() =>
       $pb.PbList<CreateNotificationChannelRequest>();
-  static CreateNotificationChannelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateNotificationChannelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateNotificationChannelRequest>(
+          create);
   static CreateNotificationChannelRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $1.NotificationChannel get notificationChannel => $_getN(0);
+  @$pb.TagNumber(2)
   set notificationChannel($1.NotificationChannel v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNotificationChannel() => $_has(0);
+  @$pb.TagNumber(2)
   void clearNotificationChannel() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.NotificationChannel ensureNotificationChannel() => $_ensure(0);
 
-  $core.String get name => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class ListNotificationChannelsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListNotificationChannelsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'name')
@@ -248,58 +292,81 @@ class ListNotificationChannelsRequest extends $pb.GeneratedMessage {
   ListNotificationChannelsRequest createEmptyInstance() => create();
   static $pb.PbList<ListNotificationChannelsRequest> createRepeated() =>
       $pb.PbList<ListNotificationChannelsRequest>();
-  static ListNotificationChannelsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListNotificationChannelsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotificationChannelsRequest>(
+          create);
   static ListNotificationChannelsRequest _defaultInstance;
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get name => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(5)
   set name($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(5)
   void clearName() => clearField(5);
 
-  $core.String get filter => $_getS(3, '');
+  @$pb.TagNumber(6)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(6)
   set filter($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(6)
   void clearFilter() => clearField(6);
 
-  $core.String get orderBy => $_getS(4, '');
+  @$pb.TagNumber(7)
+  $core.String get orderBy => $_getSZ(4);
+  @$pb.TagNumber(7)
   set orderBy($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasOrderBy() => $_has(4);
+  @$pb.TagNumber(7)
   void clearOrderBy() => clearField(7);
 }
 
 class ListNotificationChannelsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListNotificationChannelsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(2, 'nextPageToken')
     ..pc<$1.NotificationChannel>(3, 'notificationChannels', $pb.PbFieldType.PM,
-        $1.NotificationChannel.create)
+        subBuilder: $1.NotificationChannel.create)
     ..hasRequiredFields = false;
 
   ListNotificationChannelsResponse._() : super();
@@ -323,25 +390,33 @@ class ListNotificationChannelsResponse extends $pb.GeneratedMessage {
   ListNotificationChannelsResponse createEmptyInstance() => create();
   static $pb.PbList<ListNotificationChannelsResponse> createRepeated() =>
       $pb.PbList<ListNotificationChannelsResponse>();
-  static ListNotificationChannelsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListNotificationChannelsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotificationChannelsResponse>(
+          create);
   static ListNotificationChannelsResponse _defaultInstance;
 
-  $core.String get nextPageToken => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(0);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(0);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$1.NotificationChannel> get notificationChannels => $_getList(1);
 }
 
 class GetNotificationChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetNotificationChannelRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -366,27 +441,32 @@ class GetNotificationChannelRequest extends $pb.GeneratedMessage {
   GetNotificationChannelRequest createEmptyInstance() => create();
   static $pb.PbList<GetNotificationChannelRequest> createRepeated() =>
       $pb.PbList<GetNotificationChannelRequest>();
-  static GetNotificationChannelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetNotificationChannelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetNotificationChannelRequest>(create);
   static GetNotificationChannelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class UpdateNotificationChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateNotificationChannelRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
-    ..a<$1.NotificationChannel>(3, 'notificationChannel', $pb.PbFieldType.OM,
-        $1.NotificationChannel.getDefault, $1.NotificationChannel.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
+    ..aOM<$1.NotificationChannel>(3, 'notificationChannel',
+        subBuilder: $1.NotificationChannel.create)
     ..hasRequiredFields = false;
 
   UpdateNotificationChannelRequest._() : super();
@@ -410,31 +490,46 @@ class UpdateNotificationChannelRequest extends $pb.GeneratedMessage {
   UpdateNotificationChannelRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateNotificationChannelRequest> createRepeated() =>
       $pb.PbList<UpdateNotificationChannelRequest>();
-  static UpdateNotificationChannelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateNotificationChannelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateNotificationChannelRequest>(
+          create);
   static UpdateNotificationChannelRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(0);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(0);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $1.NotificationChannel get notificationChannel => $_getN(1);
+  @$pb.TagNumber(3)
   set notificationChannel($1.NotificationChannel v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNotificationChannel() => $_has(1);
+  @$pb.TagNumber(3)
   void clearNotificationChannel() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.NotificationChannel ensureNotificationChannel() => $_ensure(1);
 }
 
 class DeleteNotificationChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteNotificationChannelRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..aOB(5, 'force')
     ..hasRequiredFields = false;
@@ -460,24 +555,34 @@ class DeleteNotificationChannelRequest extends $pb.GeneratedMessage {
   DeleteNotificationChannelRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteNotificationChannelRequest> createRepeated() =>
       $pb.PbList<DeleteNotificationChannelRequest>();
-  static DeleteNotificationChannelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteNotificationChannelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteNotificationChannelRequest>(
+          create);
   static DeleteNotificationChannelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 
-  $core.bool get force => $_get(1, false);
+  @$pb.TagNumber(5)
+  $core.bool get force => $_getBF(1);
+  @$pb.TagNumber(5)
   set force($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasForce() => $_has(1);
+  @$pb.TagNumber(5)
   void clearForce() => clearField(5);
 }
 
@@ -485,7 +590,8 @@ class SendNotificationChannelVerificationCodeRequest
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SendNotificationChannelVerificationCodeRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -515,16 +621,22 @@ class SendNotificationChannelVerificationCodeRequest
   static $pb.PbList<SendNotificationChannelVerificationCodeRequest>
       createRepeated() =>
           $pb.PbList<SendNotificationChannelVerificationCodeRequest>();
+  @$core.pragma('dart2js:noInline')
   static SendNotificationChannelVerificationCodeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SendNotificationChannelVerificationCodeRequest>(create);
   static SendNotificationChannelVerificationCodeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -532,10 +644,10 @@ class GetNotificationChannelVerificationCodeRequest
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetNotificationChannelVerificationCodeRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$4.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(2, 'expireTime', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   GetNotificationChannelVerificationCodeRequest._() : super();
@@ -563,35 +675,47 @@ class GetNotificationChannelVerificationCodeRequest
   static $pb.PbList<GetNotificationChannelVerificationCodeRequest>
       createRepeated() =>
           $pb.PbList<GetNotificationChannelVerificationCodeRequest>();
+  @$core.pragma('dart2js:noInline')
   static GetNotificationChannelVerificationCodeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetNotificationChannelVerificationCodeRequest>(create);
   static GetNotificationChannelVerificationCodeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $4.Timestamp get expireTime => $_getN(1);
+  @$pb.TagNumber(2)
   set expireTime($4.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExpireTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExpireTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.Timestamp ensureExpireTime() => $_ensure(1);
 }
 
 class GetNotificationChannelVerificationCodeResponse
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetNotificationChannelVerificationCodeResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'code')
-    ..a<$4.Timestamp>(2, 'expireTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(2, 'expireTime', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   GetNotificationChannelVerificationCodeResponse._() : super();
@@ -620,31 +744,44 @@ class GetNotificationChannelVerificationCodeResponse
   static $pb.PbList<GetNotificationChannelVerificationCodeResponse>
       createRepeated() =>
           $pb.PbList<GetNotificationChannelVerificationCodeResponse>();
+  @$core.pragma('dart2js:noInline')
   static GetNotificationChannelVerificationCodeResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetNotificationChannelVerificationCodeResponse>(create);
   static GetNotificationChannelVerificationCodeResponse _defaultInstance;
 
-  $core.String get code => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get code => $_getSZ(0);
+  @$pb.TagNumber(1)
   set code($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCode() => clearField(1);
 
+  @$pb.TagNumber(2)
   $4.Timestamp get expireTime => $_getN(1);
+  @$pb.TagNumber(2)
   set expireTime($4.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExpireTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExpireTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.Timestamp ensureExpireTime() => $_ensure(1);
 }
 
 class VerifyNotificationChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VerifyNotificationChannelRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'code')
     ..hasRequiredFields = false;
@@ -670,23 +807,33 @@ class VerifyNotificationChannelRequest extends $pb.GeneratedMessage {
   VerifyNotificationChannelRequest createEmptyInstance() => create();
   static $pb.PbList<VerifyNotificationChannelRequest> createRepeated() =>
       $pb.PbList<VerifyNotificationChannelRequest>();
-  static VerifyNotificationChannelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VerifyNotificationChannelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VerifyNotificationChannelRequest>(
+          create);
   static VerifyNotificationChannelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get code => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get code => $_getSZ(1);
+  @$pb.TagNumber(2)
   set code($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCode() => clearField(2);
 }

@@ -20,6 +20,36 @@ const CreateSessionRequest$json = {
   ],
 };
 
+const BatchCreateSessionsRequest$json = {
+  '1': 'BatchCreateSessionsRequest',
+  '2': [
+    {'1': 'database', '3': 1, '4': 1, '5': 9, '10': 'database'},
+    {
+      '1': 'session_template',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.spanner.v1.Session',
+      '10': 'sessionTemplate'
+    },
+    {'1': 'session_count', '3': 3, '4': 1, '5': 5, '10': 'sessionCount'},
+  ],
+};
+
+const BatchCreateSessionsResponse$json = {
+  '1': 'BatchCreateSessionsResponse',
+  '2': [
+    {
+      '1': 'session',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.spanner.v1.Session',
+      '10': 'session'
+    },
+  ],
+};
+
 const Session$json = {
   '1': 'Session',
   '2': [

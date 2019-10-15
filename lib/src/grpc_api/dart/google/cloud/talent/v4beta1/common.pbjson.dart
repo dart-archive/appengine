@@ -136,6 +136,7 @@ const Visibility$json = {
     {'1': 'SHARED_WITH_GOOGLE', '2': 2},
     {'1': 'SHARED_WITH_PUBLIC', '2': 3},
   ],
+  '3': {'3': true},
 };
 
 const ContactInfoUsage$json = {
@@ -189,6 +190,17 @@ const Outcome$json = {
     {'1': 'NEUTRAL', '2': 2},
     {'1': 'NEGATIVE', '2': 3},
     {'1': 'OUTCOME_NOT_AVAILABLE', '2': 4},
+  ],
+};
+
+const AvailabilitySignalType$json = {
+  '1': 'AvailabilitySignalType',
+  '2': [
+    {'1': 'AVAILABILITY_SIGNAL_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'JOB_APPLICATION', '2': 1},
+    {'1': 'RESUME_UPDATE', '2': 2},
+    {'1': 'CANDIDATE_UPDATE', '2': 3},
+    {'1': 'CLIENT_SUBMISSION', '2': 4},
   ],
 };
 
@@ -352,6 +364,7 @@ const CompensationInfo$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.CompensationInfo.CompensationRange',
+      '8': {},
       '10': 'annualizedBaseCompensationRange'
     },
     {
@@ -360,6 +373,7 @@ const CompensationInfo$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.CompensationInfo.CompensationRange',
+      '8': {},
       '10': 'annualizedTotalCompensationRange'
     },
   ],
@@ -527,6 +541,7 @@ const Skill$json = {
       '3': 5,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'skillNameSnippet'
     },
   ],
@@ -549,6 +564,7 @@ const Interview$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.Outcome',
+      '8': {},
       '10': 'outcome'
     },
   ],
@@ -561,5 +577,67 @@ const Rating$json = {
     {'1': 'min', '3': 2, '4': 1, '5': 1, '10': 'min'},
     {'1': 'max', '3': 3, '4': 1, '5': 1, '10': 'max'},
     {'1': 'interval', '3': 4, '4': 1, '5': 1, '10': 'interval'},
+  ],
+};
+
+const BatchOperationMetadata$json = {
+  '1': 'BatchOperationMetadata',
+  '2': [
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.talent.v4beta1.BatchOperationMetadata.State',
+      '10': 'state'
+    },
+    {
+      '1': 'state_description',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '10': 'stateDescription'
+    },
+    {'1': 'success_count', '3': 3, '4': 1, '5': 5, '10': 'successCount'},
+    {'1': 'failure_count', '3': 4, '4': 1, '5': 5, '10': 'failureCount'},
+    {'1': 'total_count', '3': 5, '4': 1, '5': 5, '10': 'totalCount'},
+    {
+      '1': 'create_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'update_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
+    {
+      '1': 'end_time',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+  ],
+  '4': [BatchOperationMetadata_State$json],
+};
+
+const BatchOperationMetadata_State$json = {
+  '1': 'State',
+  '2': [
+    {'1': 'STATE_UNSPECIFIED', '2': 0},
+    {'1': 'INITIALIZING', '2': 1},
+    {'1': 'PROCESSING', '2': 2},
+    {'1': 'SUCCEEDED', '2': 3},
+    {'1': 'FAILED', '2': 4},
+    {'1': 'CANCELLING', '2': 5},
+    {'1': 'CANCELLED', '2': 6},
   ],
 };

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,10 +17,10 @@ export 'build.pbenum.dart';
 
 class Build extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Build',
-      package: const $pb.PackageName('grafeas.v1beta1.build'))
+      package: const $pb.PackageName('grafeas.v1beta1.build'),
+      createEmptyInstance: create)
     ..aOS(1, 'builderVersion')
-    ..a<BuildSignature>(2, 'signature', $pb.PbFieldType.OM,
-        BuildSignature.getDefault, BuildSignature.create)
+    ..aOM<BuildSignature>(2, 'signature', subBuilder: BuildSignature.create)
     ..hasRequiredFields = false;
 
   Build._() : super();
@@ -40,39 +39,49 @@ class Build extends $pb.GeneratedMessage {
   static Build create() => Build._();
   Build createEmptyInstance() => create();
   static $pb.PbList<Build> createRepeated() => $pb.PbList<Build>();
-  static Build getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Build getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Build>(create);
   static Build _defaultInstance;
 
-  $core.String get builderVersion => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get builderVersion => $_getSZ(0);
+  @$pb.TagNumber(1)
   set builderVersion($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBuilderVersion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBuilderVersion() => clearField(1);
 
+  @$pb.TagNumber(2)
   BuildSignature get signature => $_getN(1);
+  @$pb.TagNumber(2)
   set signature(BuildSignature v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSignature() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
+  @$pb.TagNumber(2)
+  BuildSignature ensureSignature() => $_ensure(1);
 }
 
 class BuildSignature extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildSignature',
-      package: const $pb.PackageName('grafeas.v1beta1.build'))
+      package: const $pb.PackageName('grafeas.v1beta1.build'),
+      createEmptyInstance: create)
     ..aOS(1, 'publicKey')
     ..a<$core.List<$core.int>>(2, 'signature', $pb.PbFieldType.OY)
     ..aOS(3, 'keyId')
-    ..e<BuildSignature_KeyType>(
-        4,
-        'keyType',
-        $pb.PbFieldType.OE,
-        BuildSignature_KeyType.KEY_TYPE_UNSPECIFIED,
-        BuildSignature_KeyType.valueOf,
-        BuildSignature_KeyType.values)
+    ..e<BuildSignature_KeyType>(4, 'keyType', $pb.PbFieldType.OE,
+        defaultOrMaker: BuildSignature_KeyType.KEY_TYPE_UNSPECIFIED,
+        valueOf: BuildSignature_KeyType.valueOf,
+        enumValues: BuildSignature_KeyType.values)
     ..hasRequiredFields = false;
 
   BuildSignature._() : super();
@@ -92,47 +101,66 @@ class BuildSignature extends $pb.GeneratedMessage {
   BuildSignature createEmptyInstance() => create();
   static $pb.PbList<BuildSignature> createRepeated() =>
       $pb.PbList<BuildSignature>();
-  static BuildSignature getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BuildSignature getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BuildSignature>(create);
   static BuildSignature _defaultInstance;
 
-  $core.String get publicKey => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get publicKey => $_getSZ(0);
+  @$pb.TagNumber(1)
   set publicKey($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPublicKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPublicKey() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get signature => $_getN(1);
+  @$pb.TagNumber(2)
   set signature($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSignature() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
 
-  $core.String get keyId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get keyId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set keyId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKeyId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKeyId() => clearField(3);
 
+  @$pb.TagNumber(4)
   BuildSignature_KeyType get keyType => $_getN(3);
+  @$pb.TagNumber(4)
   set keyType(BuildSignature_KeyType v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasKeyType() => $_has(3);
+  @$pb.TagNumber(4)
   void clearKeyType() => clearField(4);
 }
 
 class Details extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Details',
-      package: const $pb.PackageName('grafeas.v1beta1.build'))
-    ..a<$0.BuildProvenance>(1, 'provenance', $pb.PbFieldType.OM,
-        $0.BuildProvenance.getDefault, $0.BuildProvenance.create)
+      package: const $pb.PackageName('grafeas.v1beta1.build'),
+      createEmptyInstance: create)
+    ..aOM<$0.BuildProvenance>(1, 'provenance',
+        subBuilder: $0.BuildProvenance.create)
     ..aOS(2, 'provenanceBytes')
     ..hasRequiredFields = false;
 
@@ -152,22 +180,34 @@ class Details extends $pb.GeneratedMessage {
   static Details create() => Details._();
   Details createEmptyInstance() => create();
   static $pb.PbList<Details> createRepeated() => $pb.PbList<Details>();
-  static Details getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Details getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Details>(create);
   static Details _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.BuildProvenance get provenance => $_getN(0);
+  @$pb.TagNumber(1)
   set provenance($0.BuildProvenance v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProvenance() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProvenance() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.BuildProvenance ensureProvenance() => $_ensure(0);
 
-  $core.String get provenanceBytes => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get provenanceBytes => $_getSZ(1);
+  @$pb.TagNumber(2)
   set provenanceBytes($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProvenanceBytes() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProvenanceBytes() => clearField(2);
 }

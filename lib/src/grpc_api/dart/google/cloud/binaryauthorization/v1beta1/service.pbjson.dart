@@ -8,7 +8,7 @@
 const GetPolicyRequest$json = {
   '1': 'GetPolicyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -21,6 +21,7 @@ const UpdatePolicyRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.binaryauthorization.v1beta1.Policy',
+      '8': {},
       '10': 'policy'
     },
   ],
@@ -29,14 +30,15 @@ const UpdatePolicyRequest$json = {
 const CreateAttestorRequest$json = {
   '1': 'CreateAttestorRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'attestor_id', '3': 2, '4': 1, '5': 9, '10': 'attestorId'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'attestor_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'attestorId'},
     {
       '1': 'attestor',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.binaryauthorization.v1beta1.Attestor',
+      '8': {},
       '10': 'attestor'
     },
   ],
@@ -45,7 +47,7 @@ const CreateAttestorRequest$json = {
 const GetAttestorRequest$json = {
   '1': 'GetAttestorRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -58,6 +60,7 @@ const UpdateAttestorRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.binaryauthorization.v1beta1.Attestor',
+      '8': {},
       '10': 'attestor'
     },
   ],
@@ -66,7 +69,7 @@ const UpdateAttestorRequest$json = {
 const ListAttestorsRequest$json = {
   '1': 'ListAttestorsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -90,6 +93,6 @@ const ListAttestorsResponse$json = {
 const DeleteAttestorRequest$json = {
   '1': 'DeleteAttestorRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };

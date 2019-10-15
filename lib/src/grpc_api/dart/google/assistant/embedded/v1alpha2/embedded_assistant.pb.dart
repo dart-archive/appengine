@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,10 +25,10 @@ class AssistRequest extends $pb.GeneratedMessage {
     0: AssistRequest_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistRequest',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<AssistConfig>(1, 'config', $pb.PbFieldType.OM, AssistConfig.getDefault,
-        AssistConfig.create)
+    ..aOM<AssistConfig>(1, 'config', subBuilder: AssistConfig.create)
     ..a<$core.List<$core.int>>(2, 'audioIn', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -50,51 +49,57 @@ class AssistRequest extends $pb.GeneratedMessage {
   AssistRequest createEmptyInstance() => create();
   static $pb.PbList<AssistRequest> createRepeated() =>
       $pb.PbList<AssistRequest>();
-  static AssistRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AssistRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssistRequest>(create);
   static AssistRequest _defaultInstance;
 
   AssistRequest_Type whichType() => _AssistRequest_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   AssistConfig get config => $_getN(0);
+  @$pb.TagNumber(1)
   set config(AssistConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  AssistConfig ensureConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get audioIn => $_getN(1);
+  @$pb.TagNumber(2)
   set audioIn($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAudioIn() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAudioIn() => clearField(2);
 }
 
 class AssistResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistResponse',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
-    ..e<AssistResponse_EventType>(
-        1,
-        'eventType',
-        $pb.PbFieldType.OE,
-        AssistResponse_EventType.EVENT_TYPE_UNSPECIFIED,
-        AssistResponse_EventType.valueOf,
-        AssistResponse_EventType.values)
-    ..pc<SpeechRecognitionResult>(
-        2, 'speechResults', $pb.PbFieldType.PM, SpeechRecognitionResult.create)
-    ..a<AudioOut>(
-        3, 'audioOut', $pb.PbFieldType.OM, AudioOut.getDefault, AudioOut.create)
-    ..a<ScreenOut>(4, 'screenOut', $pb.PbFieldType.OM, ScreenOut.getDefault,
-        ScreenOut.create)
-    ..a<DialogStateOut>(5, 'dialogStateOut', $pb.PbFieldType.OM,
-        DialogStateOut.getDefault, DialogStateOut.create)
-    ..a<DeviceAction>(6, 'deviceAction', $pb.PbFieldType.OM,
-        DeviceAction.getDefault, DeviceAction.create)
-    ..a<DebugInfo>(8, 'debugInfo', $pb.PbFieldType.OM, DebugInfo.getDefault,
-        DebugInfo.create)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
+    ..e<AssistResponse_EventType>(1, 'eventType', $pb.PbFieldType.OE,
+        defaultOrMaker: AssistResponse_EventType.EVENT_TYPE_UNSPECIFIED,
+        valueOf: AssistResponse_EventType.valueOf,
+        enumValues: AssistResponse_EventType.values)
+    ..pc<SpeechRecognitionResult>(2, 'speechResults', $pb.PbFieldType.PM,
+        subBuilder: SpeechRecognitionResult.create)
+    ..aOM<AudioOut>(3, 'audioOut', subBuilder: AudioOut.create)
+    ..aOM<ScreenOut>(4, 'screenOut', subBuilder: ScreenOut.create)
+    ..aOM<DialogStateOut>(5, 'dialogStateOut',
+        subBuilder: DialogStateOut.create)
+    ..aOM<DeviceAction>(6, 'deviceAction', subBuilder: DeviceAction.create)
+    ..aOM<DebugInfo>(8, 'debugInfo', subBuilder: DebugInfo.create)
     ..hasRequiredFields = false;
 
   AssistResponse._() : super();
@@ -114,63 +119,101 @@ class AssistResponse extends $pb.GeneratedMessage {
   AssistResponse createEmptyInstance() => create();
   static $pb.PbList<AssistResponse> createRepeated() =>
       $pb.PbList<AssistResponse>();
-  static AssistResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AssistResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssistResponse>(create);
   static AssistResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   AssistResponse_EventType get eventType => $_getN(0);
+  @$pb.TagNumber(1)
   set eventType(AssistResponse_EventType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEventType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEventType() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<SpeechRecognitionResult> get speechResults => $_getList(1);
 
+  @$pb.TagNumber(3)
   AudioOut get audioOut => $_getN(2);
+  @$pb.TagNumber(3)
   set audioOut(AudioOut v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAudioOut() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAudioOut() => clearField(3);
+  @$pb.TagNumber(3)
+  AudioOut ensureAudioOut() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   ScreenOut get screenOut => $_getN(3);
+  @$pb.TagNumber(4)
   set screenOut(ScreenOut v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasScreenOut() => $_has(3);
+  @$pb.TagNumber(4)
   void clearScreenOut() => clearField(4);
+  @$pb.TagNumber(4)
+  ScreenOut ensureScreenOut() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   DialogStateOut get dialogStateOut => $_getN(4);
+  @$pb.TagNumber(5)
   set dialogStateOut(DialogStateOut v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDialogStateOut() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDialogStateOut() => clearField(5);
+  @$pb.TagNumber(5)
+  DialogStateOut ensureDialogStateOut() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   DeviceAction get deviceAction => $_getN(5);
+  @$pb.TagNumber(6)
   set deviceAction(DeviceAction v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDeviceAction() => $_has(5);
+  @$pb.TagNumber(6)
   void clearDeviceAction() => clearField(6);
+  @$pb.TagNumber(6)
+  DeviceAction ensureDeviceAction() => $_ensure(5);
 
+  @$pb.TagNumber(8)
   DebugInfo get debugInfo => $_getN(6);
+  @$pb.TagNumber(8)
   set debugInfo(DebugInfo v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasDebugInfo() => $_has(6);
+  @$pb.TagNumber(8)
   void clearDebugInfo() => clearField(8);
+  @$pb.TagNumber(8)
+  DebugInfo ensureDebugInfo() => $_ensure(6);
 }
 
 class DebugInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DebugInfo',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'aogAgentToAssistantJson')
     ..hasRequiredFields = false;
 
@@ -190,15 +233,21 @@ class DebugInfo extends $pb.GeneratedMessage {
   static DebugInfo create() => DebugInfo._();
   DebugInfo createEmptyInstance() => create();
   static $pb.PbList<DebugInfo> createRepeated() => $pb.PbList<DebugInfo>();
-  static DebugInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DebugInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DebugInfo>(create);
   static DebugInfo _defaultInstance;
 
-  $core.String get aogAgentToAssistantJson => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get aogAgentToAssistantJson => $_getSZ(0);
+  @$pb.TagNumber(1)
   set aogAgentToAssistantJson($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAogAgentToAssistantJson() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAogAgentToAssistantJson() => clearField(1);
 }
 
@@ -212,21 +261,18 @@ class AssistConfig extends $pb.GeneratedMessage {
     0: AssistConfig_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssistConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 6])
-    ..a<AudioInConfig>(1, 'audioInConfig', $pb.PbFieldType.OM,
-        AudioInConfig.getDefault, AudioInConfig.create)
-    ..a<AudioOutConfig>(2, 'audioOutConfig', $pb.PbFieldType.OM,
-        AudioOutConfig.getDefault, AudioOutConfig.create)
-    ..a<DialogStateIn>(3, 'dialogStateIn', $pb.PbFieldType.OM,
-        DialogStateIn.getDefault, DialogStateIn.create)
-    ..a<DeviceConfig>(4, 'deviceConfig', $pb.PbFieldType.OM,
-        DeviceConfig.getDefault, DeviceConfig.create)
-    ..a<DebugConfig>(5, 'debugConfig', $pb.PbFieldType.OM,
-        DebugConfig.getDefault, DebugConfig.create)
+    ..aOM<AudioInConfig>(1, 'audioInConfig', subBuilder: AudioInConfig.create)
+    ..aOM<AudioOutConfig>(2, 'audioOutConfig',
+        subBuilder: AudioOutConfig.create)
+    ..aOM<DialogStateIn>(3, 'dialogStateIn', subBuilder: DialogStateIn.create)
+    ..aOM<DeviceConfig>(4, 'deviceConfig', subBuilder: DeviceConfig.create)
+    ..aOM<DebugConfig>(5, 'debugConfig', subBuilder: DebugConfig.create)
     ..aOS(6, 'textQuery')
-    ..a<ScreenOutConfig>(8, 'screenOutConfig', $pb.PbFieldType.OM,
-        ScreenOutConfig.getDefault, ScreenOutConfig.create)
+    ..aOM<ScreenOutConfig>(8, 'screenOutConfig',
+        subBuilder: ScreenOutConfig.create)
     ..hasRequiredFields = false;
 
   AssistConfig._() : super();
@@ -246,79 +292,119 @@ class AssistConfig extends $pb.GeneratedMessage {
   AssistConfig createEmptyInstance() => create();
   static $pb.PbList<AssistConfig> createRepeated() =>
       $pb.PbList<AssistConfig>();
-  static AssistConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AssistConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssistConfig>(create);
   static AssistConfig _defaultInstance;
 
   AssistConfig_Type whichType() => _AssistConfig_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   AudioInConfig get audioInConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set audioInConfig(AudioInConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAudioInConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAudioInConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  AudioInConfig ensureAudioInConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   AudioOutConfig get audioOutConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set audioOutConfig(AudioOutConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAudioOutConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAudioOutConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  AudioOutConfig ensureAudioOutConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   DialogStateIn get dialogStateIn => $_getN(2);
+  @$pb.TagNumber(3)
   set dialogStateIn(DialogStateIn v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDialogStateIn() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDialogStateIn() => clearField(3);
+  @$pb.TagNumber(3)
+  DialogStateIn ensureDialogStateIn() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   DeviceConfig get deviceConfig => $_getN(3);
+  @$pb.TagNumber(4)
   set deviceConfig(DeviceConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDeviceConfig() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDeviceConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  DeviceConfig ensureDeviceConfig() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   DebugConfig get debugConfig => $_getN(4);
+  @$pb.TagNumber(5)
   set debugConfig(DebugConfig v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDebugConfig() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDebugConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  DebugConfig ensureDebugConfig() => $_ensure(4);
 
-  $core.String get textQuery => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get textQuery => $_getSZ(5);
+  @$pb.TagNumber(6)
   set textQuery($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasTextQuery() => $_has(5);
+  @$pb.TagNumber(6)
   void clearTextQuery() => clearField(6);
 
+  @$pb.TagNumber(8)
   ScreenOutConfig get screenOutConfig => $_getN(6);
+  @$pb.TagNumber(8)
   set screenOutConfig(ScreenOutConfig v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasScreenOutConfig() => $_has(6);
+  @$pb.TagNumber(8)
   void clearScreenOutConfig() => clearField(8);
+  @$pb.TagNumber(8)
+  ScreenOutConfig ensureScreenOutConfig() => $_ensure(6);
 }
 
 class AudioInConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioInConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
-    ..e<AudioInConfig_Encoding>(
-        1,
-        'encoding',
-        $pb.PbFieldType.OE,
-        AudioInConfig_Encoding.ENCODING_UNSPECIFIED,
-        AudioInConfig_Encoding.valueOf,
-        AudioInConfig_Encoding.values)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
+    ..e<AudioInConfig_Encoding>(1, 'encoding', $pb.PbFieldType.OE,
+        defaultOrMaker: AudioInConfig_Encoding.ENCODING_UNSPECIFIED,
+        valueOf: AudioInConfig_Encoding.valueOf,
+        enumValues: AudioInConfig_Encoding.values)
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -339,36 +425,44 @@ class AudioInConfig extends $pb.GeneratedMessage {
   AudioInConfig createEmptyInstance() => create();
   static $pb.PbList<AudioInConfig> createRepeated() =>
       $pb.PbList<AudioInConfig>();
-  static AudioInConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AudioInConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AudioInConfig>(create);
   static AudioInConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   AudioInConfig_Encoding get encoding => $_getN(0);
+  @$pb.TagNumber(1)
   set encoding(AudioInConfig_Encoding v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEncoding() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEncoding() => clearField(1);
 
-  $core.int get sampleRateHertz => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get sampleRateHertz => $_getIZ(1);
+  @$pb.TagNumber(2)
   set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSampleRateHertz() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSampleRateHertz() => clearField(2);
 }
 
 class AudioOutConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioOutConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
-    ..e<AudioOutConfig_Encoding>(
-        1,
-        'encoding',
-        $pb.PbFieldType.OE,
-        AudioOutConfig_Encoding.ENCODING_UNSPECIFIED,
-        AudioOutConfig_Encoding.valueOf,
-        AudioOutConfig_Encoding.values)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
+    ..e<AudioOutConfig_Encoding>(1, 'encoding', $pb.PbFieldType.OE,
+        defaultOrMaker: AudioOutConfig_Encoding.ENCODING_UNSPECIFIED,
+        valueOf: AudioOutConfig_Encoding.valueOf,
+        enumValues: AudioOutConfig_Encoding.values)
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -390,44 +484,56 @@ class AudioOutConfig extends $pb.GeneratedMessage {
   AudioOutConfig createEmptyInstance() => create();
   static $pb.PbList<AudioOutConfig> createRepeated() =>
       $pb.PbList<AudioOutConfig>();
-  static AudioOutConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AudioOutConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AudioOutConfig>(create);
   static AudioOutConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   AudioOutConfig_Encoding get encoding => $_getN(0);
+  @$pb.TagNumber(1)
   set encoding(AudioOutConfig_Encoding v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEncoding() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEncoding() => clearField(1);
 
-  $core.int get sampleRateHertz => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get sampleRateHertz => $_getIZ(1);
+  @$pb.TagNumber(2)
   set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSampleRateHertz() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSampleRateHertz() => clearField(2);
 
-  $core.int get volumePercentage => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get volumePercentage => $_getIZ(2);
+  @$pb.TagNumber(3)
   set volumePercentage($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasVolumePercentage() => $_has(2);
+  @$pb.TagNumber(3)
   void clearVolumePercentage() => clearField(3);
 }
 
 class ScreenOutConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScreenOutConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
-    ..e<ScreenOutConfig_ScreenMode>(
-        1,
-        'screenMode',
-        $pb.PbFieldType.OE,
-        ScreenOutConfig_ScreenMode.SCREEN_MODE_UNSPECIFIED,
-        ScreenOutConfig_ScreenMode.valueOf,
-        ScreenOutConfig_ScreenMode.values)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
+    ..e<ScreenOutConfig_ScreenMode>(1, 'screenMode', $pb.PbFieldType.OE,
+        defaultOrMaker: ScreenOutConfig_ScreenMode.SCREEN_MODE_UNSPECIFIED,
+        valueOf: ScreenOutConfig_ScreenMode.valueOf,
+        enumValues: ScreenOutConfig_ScreenMode.values)
     ..hasRequiredFields = false;
 
   ScreenOutConfig._() : super();
@@ -447,26 +553,32 @@ class ScreenOutConfig extends $pb.GeneratedMessage {
   ScreenOutConfig createEmptyInstance() => create();
   static $pb.PbList<ScreenOutConfig> createRepeated() =>
       $pb.PbList<ScreenOutConfig>();
-  static ScreenOutConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ScreenOutConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScreenOutConfig>(create);
   static ScreenOutConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   ScreenOutConfig_ScreenMode get screenMode => $_getN(0);
+  @$pb.TagNumber(1)
   set screenMode(ScreenOutConfig_ScreenMode v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasScreenMode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearScreenMode() => clearField(1);
 }
 
 class DialogStateIn extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DialogStateIn',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'conversationState', $pb.PbFieldType.OY)
     ..aOS(2, 'languageCode')
-    ..a<DeviceLocation>(5, 'deviceLocation', $pb.PbFieldType.OM,
-        DeviceLocation.getDefault, DeviceLocation.create)
+    ..aOM<DeviceLocation>(5, 'deviceLocation',
+        subBuilder: DeviceLocation.create)
     ..aOB(7, 'isNewConversation')
     ..hasRequiredFields = false;
 
@@ -487,45 +599,66 @@ class DialogStateIn extends $pb.GeneratedMessage {
   DialogStateIn createEmptyInstance() => create();
   static $pb.PbList<DialogStateIn> createRepeated() =>
       $pb.PbList<DialogStateIn>();
-  static DialogStateIn getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DialogStateIn getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DialogStateIn>(create);
   static DialogStateIn _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get conversationState => $_getN(0);
+  @$pb.TagNumber(1)
   set conversationState($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasConversationState() => $_has(0);
+  @$pb.TagNumber(1)
   void clearConversationState() => clearField(1);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 
+  @$pb.TagNumber(5)
   DeviceLocation get deviceLocation => $_getN(2);
+  @$pb.TagNumber(5)
   set deviceLocation(DeviceLocation v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDeviceLocation() => $_has(2);
+  @$pb.TagNumber(5)
   void clearDeviceLocation() => clearField(5);
+  @$pb.TagNumber(5)
+  DeviceLocation ensureDeviceLocation() => $_ensure(2);
 
-  $core.bool get isNewConversation => $_get(3, false);
+  @$pb.TagNumber(7)
+  $core.bool get isNewConversation => $_getBF(3);
+  @$pb.TagNumber(7)
   set isNewConversation($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasIsNewConversation() => $_has(3);
+  @$pb.TagNumber(7)
   void clearIsNewConversation() => clearField(7);
 }
 
 class DeviceConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'deviceId')
     ..aOS(3, 'deviceModelId')
     ..hasRequiredFields = false;
@@ -547,29 +680,40 @@ class DeviceConfig extends $pb.GeneratedMessage {
   DeviceConfig createEmptyInstance() => create();
   static $pb.PbList<DeviceConfig> createRepeated() =>
       $pb.PbList<DeviceConfig>();
-  static DeviceConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeviceConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeviceConfig>(create);
   static DeviceConfig _defaultInstance;
 
-  $core.String get deviceId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get deviceId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set deviceId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDeviceId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDeviceId() => clearField(1);
 
-  $core.String get deviceModelId => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get deviceModelId => $_getSZ(1);
+  @$pb.TagNumber(3)
   set deviceModelId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeviceModelId() => $_has(1);
+  @$pb.TagNumber(3)
   void clearDeviceModelId() => clearField(3);
 }
 
 class AudioOut extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioOut',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'audioData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -589,28 +733,32 @@ class AudioOut extends $pb.GeneratedMessage {
   static AudioOut create() => AudioOut._();
   AudioOut createEmptyInstance() => create();
   static $pb.PbList<AudioOut> createRepeated() => $pb.PbList<AudioOut>();
-  static AudioOut getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AudioOut getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AudioOut>(create);
   static AudioOut _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get audioData => $_getN(0);
+  @$pb.TagNumber(1)
   set audioData($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAudioData() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAudioData() => clearField(1);
 }
 
 class ScreenOut extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScreenOut',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
-    ..e<ScreenOut_Format>(
-        1,
-        'format',
-        $pb.PbFieldType.OE,
-        ScreenOut_Format.FORMAT_UNSPECIFIED,
-        ScreenOut_Format.valueOf,
-        ScreenOut_Format.values)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
+    ..e<ScreenOut_Format>(1, 'format', $pb.PbFieldType.OE,
+        defaultOrMaker: ScreenOut_Format.FORMAT_UNSPECIFIED,
+        valueOf: ScreenOut_Format.valueOf,
+        enumValues: ScreenOut_Format.values)
     ..a<$core.List<$core.int>>(2, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -630,29 +778,40 @@ class ScreenOut extends $pb.GeneratedMessage {
   static ScreenOut create() => ScreenOut._();
   ScreenOut createEmptyInstance() => create();
   static $pb.PbList<ScreenOut> createRepeated() => $pb.PbList<ScreenOut>();
-  static ScreenOut getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ScreenOut getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ScreenOut>(create);
   static ScreenOut _defaultInstance;
 
+  @$pb.TagNumber(1)
   ScreenOut_Format get format => $_getN(0);
+  @$pb.TagNumber(1)
   set format(ScreenOut_Format v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFormat() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFormat() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get data => $_getN(1);
+  @$pb.TagNumber(2)
   set data($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasData() => $_has(1);
+  @$pb.TagNumber(2)
   void clearData() => clearField(2);
 }
 
 class DeviceAction extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceAction',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'deviceRequestJson')
     ..hasRequiredFields = false;
 
@@ -673,21 +832,28 @@ class DeviceAction extends $pb.GeneratedMessage {
   DeviceAction createEmptyInstance() => create();
   static $pb.PbList<DeviceAction> createRepeated() =>
       $pb.PbList<DeviceAction>();
-  static DeviceAction getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeviceAction getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeviceAction>(create);
   static DeviceAction _defaultInstance;
 
-  $core.String get deviceRequestJson => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get deviceRequestJson => $_getSZ(0);
+  @$pb.TagNumber(1)
   set deviceRequestJson($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDeviceRequestJson() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDeviceRequestJson() => clearField(1);
 }
 
 class SpeechRecognitionResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SpeechRecognitionResult',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'transcript')
     ..a<$core.double>(2, 'stability', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -711,39 +877,47 @@ class SpeechRecognitionResult extends $pb.GeneratedMessage {
   SpeechRecognitionResult createEmptyInstance() => create();
   static $pb.PbList<SpeechRecognitionResult> createRepeated() =>
       $pb.PbList<SpeechRecognitionResult>();
-  static SpeechRecognitionResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SpeechRecognitionResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SpeechRecognitionResult>(create);
   static SpeechRecognitionResult _defaultInstance;
 
-  $core.String get transcript => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get transcript => $_getSZ(0);
+  @$pb.TagNumber(1)
   set transcript($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTranscript() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTranscript() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get stability => $_getN(1);
+  @$pb.TagNumber(2)
   set stability($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStability() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStability() => clearField(2);
 }
 
 class DialogStateOut extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DialogStateOut',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'supplementalDisplayText')
     ..a<$core.List<$core.int>>(2, 'conversationState', $pb.PbFieldType.OY)
-    ..e<DialogStateOut_MicrophoneMode>(
-        3,
-        'microphoneMode',
-        $pb.PbFieldType.OE,
-        DialogStateOut_MicrophoneMode.MICROPHONE_MODE_UNSPECIFIED,
-        DialogStateOut_MicrophoneMode.valueOf,
-        DialogStateOut_MicrophoneMode.values)
+    ..e<DialogStateOut_MicrophoneMode>(3, 'microphoneMode', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            DialogStateOut_MicrophoneMode.MICROPHONE_MODE_UNSPECIFIED,
+        valueOf: DialogStateOut_MicrophoneMode.valueOf,
+        enumValues: DialogStateOut_MicrophoneMode.values)
     ..a<$core.int>(4, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -764,45 +938,64 @@ class DialogStateOut extends $pb.GeneratedMessage {
   DialogStateOut createEmptyInstance() => create();
   static $pb.PbList<DialogStateOut> createRepeated() =>
       $pb.PbList<DialogStateOut>();
-  static DialogStateOut getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DialogStateOut getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DialogStateOut>(create);
   static DialogStateOut _defaultInstance;
 
-  $core.String get supplementalDisplayText => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get supplementalDisplayText => $_getSZ(0);
+  @$pb.TagNumber(1)
   set supplementalDisplayText($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSupplementalDisplayText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSupplementalDisplayText() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get conversationState => $_getN(1);
+  @$pb.TagNumber(2)
   set conversationState($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConversationState() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConversationState() => clearField(2);
 
+  @$pb.TagNumber(3)
   DialogStateOut_MicrophoneMode get microphoneMode => $_getN(2);
+  @$pb.TagNumber(3)
   set microphoneMode(DialogStateOut_MicrophoneMode v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMicrophoneMode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMicrophoneMode() => clearField(3);
 
-  $core.int get volumePercentage => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get volumePercentage => $_getIZ(3);
+  @$pb.TagNumber(4)
   set volumePercentage($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasVolumePercentage() => $_has(3);
+  @$pb.TagNumber(4)
   void clearVolumePercentage() => clearField(4);
 }
 
 class DebugConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DebugConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..aOB(6, 'returnDebugInfo')
     ..hasRequiredFields = false;
 
@@ -822,15 +1015,21 @@ class DebugConfig extends $pb.GeneratedMessage {
   static DebugConfig create() => DebugConfig._();
   DebugConfig createEmptyInstance() => create();
   static $pb.PbList<DebugConfig> createRepeated() => $pb.PbList<DebugConfig>();
-  static DebugConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DebugConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DebugConfig>(create);
   static DebugConfig _defaultInstance;
 
-  $core.bool get returnDebugInfo => $_get(0, false);
+  @$pb.TagNumber(6)
+  $core.bool get returnDebugInfo => $_getBF(0);
+  @$pb.TagNumber(6)
   set returnDebugInfo($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasReturnDebugInfo() => $_has(0);
+  @$pb.TagNumber(6)
   void clearReturnDebugInfo() => clearField(6);
 }
 
@@ -843,10 +1042,10 @@ class DeviceLocation extends $pb.GeneratedMessage {
     0: DeviceLocation_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceLocation',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha2'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<$1.LatLng>(1, 'coordinates', $pb.PbFieldType.OM, $1.LatLng.getDefault,
-        $1.LatLng.create)
+    ..aOM<$1.LatLng>(1, 'coordinates', subBuilder: $1.LatLng.create)
     ..hasRequiredFields = false;
 
   DeviceLocation._() : super();
@@ -866,17 +1065,25 @@ class DeviceLocation extends $pb.GeneratedMessage {
   DeviceLocation createEmptyInstance() => create();
   static $pb.PbList<DeviceLocation> createRepeated() =>
       $pb.PbList<DeviceLocation>();
-  static DeviceLocation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeviceLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeviceLocation>(create);
   static DeviceLocation _defaultInstance;
 
   DeviceLocation_Type whichType() => _DeviceLocation_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.LatLng get coordinates => $_getN(0);
+  @$pb.TagNumber(1)
   set coordinates($1.LatLng v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCoordinates() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCoordinates() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.LatLng ensureCoordinates() => $_ensure(0);
 }

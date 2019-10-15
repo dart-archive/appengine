@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,17 +15,15 @@ import '../enums/distance_bucket.pbenum.dart' as $1;
 
 class DistanceView extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DistanceView',
-      package: const $pb.PackageName('google.ads.googleads.v2.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v2.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..e<$1.DistanceBucketEnum_DistanceBucket>(
-        2,
-        'distanceBucket',
-        $pb.PbFieldType.OE,
-        $1.DistanceBucketEnum_DistanceBucket.UNSPECIFIED,
-        $1.DistanceBucketEnum_DistanceBucket.valueOf,
-        $1.DistanceBucketEnum_DistanceBucket.values)
-    ..a<$0.BoolValue>(3, 'metricSystem', $pb.PbFieldType.OM,
-        $0.BoolValue.getDefault, $0.BoolValue.create)
+        2, 'distanceBucket', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.DistanceBucketEnum_DistanceBucket.UNSPECIFIED,
+        valueOf: $1.DistanceBucketEnum_DistanceBucket.valueOf,
+        enumValues: $1.DistanceBucketEnum_DistanceBucket.values)
+    ..aOM<$0.BoolValue>(3, 'metricSystem', subBuilder: $0.BoolValue.create)
     ..hasRequiredFields = false;
 
   DistanceView._() : super();
@@ -46,30 +43,46 @@ class DistanceView extends $pb.GeneratedMessage {
   DistanceView createEmptyInstance() => create();
   static $pb.PbList<DistanceView> createRepeated() =>
       $pb.PbList<DistanceView>();
-  static DistanceView getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DistanceView getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DistanceView>(create);
   static DistanceView _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.DistanceBucketEnum_DistanceBucket get distanceBucket => $_getN(1);
+  @$pb.TagNumber(2)
   set distanceBucket($1.DistanceBucketEnum_DistanceBucket v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDistanceBucket() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDistanceBucket() => clearField(2);
 
+  @$pb.TagNumber(3)
   $0.BoolValue get metricSystem => $_getN(2);
+  @$pb.TagNumber(3)
   set metricSystem($0.BoolValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMetricSystem() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMetricSystem() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.BoolValue ensureMetricSystem() => $_ensure(2);
 }

@@ -72,6 +72,10 @@ service MutateJobService {
       post: "/v2/{resource_name=customers/*/mutateJobs/*}:run"
       body: "*"
     };
+    option (google.longrunning.operation_info) = {
+      response_type: "google.protobuf.Empty"
+      metadata_type: "google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata"
+    };
   }
 
   // Add operations to the mutate job.

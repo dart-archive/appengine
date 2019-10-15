@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'product_channel.pbenum.dart';
 
 class ProductChannelEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductChannelEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ProductChannelEnum._() : super();
@@ -34,7 +34,8 @@ class ProductChannelEnum extends $pb.GeneratedMessage {
   ProductChannelEnum createEmptyInstance() => create();
   static $pb.PbList<ProductChannelEnum> createRepeated() =>
       $pb.PbList<ProductChannelEnum>();
-  static ProductChannelEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductChannelEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductChannelEnum>(create);
   static ProductChannelEnum _defaultInstance;
 }

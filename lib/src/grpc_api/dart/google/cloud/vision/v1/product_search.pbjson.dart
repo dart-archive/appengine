@@ -16,7 +16,7 @@ const ProductSearchParams$json = {
       '6': '.google.cloud.vision.v1.BoundingPoly',
       '10': 'boundingPoly'
     },
-    {'1': 'product_set', '3': 6, '4': 1, '5': 9, '10': 'productSet'},
+    {'1': 'product_set', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'productSet'},
     {
       '1': 'product_categories',
       '3': 7,

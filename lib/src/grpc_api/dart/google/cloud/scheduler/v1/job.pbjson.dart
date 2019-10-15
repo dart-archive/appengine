@@ -97,6 +97,7 @@ const Job$json = {
     },
   ],
   '4': [Job_State$json],
+  '7': {},
   '8': [
     {'1': 'target'},
   ],

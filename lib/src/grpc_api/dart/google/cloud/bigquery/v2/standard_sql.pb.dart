@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,19 +23,17 @@ class StandardSqlDataType extends $pb.GeneratedMessage {
     0: StandardSqlDataType_SubType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StandardSqlDataType',
-      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+      package: const $pb.PackageName('google.cloud.bigquery.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..e<StandardSqlDataType_TypeKind>(
-        1,
-        'typeKind',
-        $pb.PbFieldType.OE,
-        StandardSqlDataType_TypeKind.TYPE_KIND_UNSPECIFIED,
-        StandardSqlDataType_TypeKind.valueOf,
-        StandardSqlDataType_TypeKind.values)
-    ..a<StandardSqlDataType>(2, 'arrayElementType', $pb.PbFieldType.OM,
-        StandardSqlDataType.getDefault, StandardSqlDataType.create)
-    ..a<StandardSqlStructType>(3, 'structType', $pb.PbFieldType.OM,
-        StandardSqlStructType.getDefault, StandardSqlStructType.create)
+    ..e<StandardSqlDataType_TypeKind>(1, 'typeKind', $pb.PbFieldType.OE,
+        defaultOrMaker: StandardSqlDataType_TypeKind.TYPE_KIND_UNSPECIFIED,
+        valueOf: StandardSqlDataType_TypeKind.valueOf,
+        enumValues: StandardSqlDataType_TypeKind.values)
+    ..aOM<StandardSqlDataType>(2, 'arrayElementType',
+        subBuilder: StandardSqlDataType.create)
+    ..aOM<StandardSqlStructType>(3, 'structType',
+        subBuilder: StandardSqlStructType.create)
     ..hasRequiredFields = false;
 
   StandardSqlDataType._() : super();
@@ -56,45 +53,63 @@ class StandardSqlDataType extends $pb.GeneratedMessage {
   StandardSqlDataType createEmptyInstance() => create();
   static $pb.PbList<StandardSqlDataType> createRepeated() =>
       $pb.PbList<StandardSqlDataType>();
-  static StandardSqlDataType getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StandardSqlDataType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StandardSqlDataType>(create);
   static StandardSqlDataType _defaultInstance;
 
   StandardSqlDataType_SubType whichSubType() =>
       _StandardSqlDataType_SubTypeByTag[$_whichOneof(0)];
   void clearSubType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   StandardSqlDataType_TypeKind get typeKind => $_getN(0);
+  @$pb.TagNumber(1)
   set typeKind(StandardSqlDataType_TypeKind v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTypeKind() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTypeKind() => clearField(1);
 
+  @$pb.TagNumber(2)
   StandardSqlDataType get arrayElementType => $_getN(1);
+  @$pb.TagNumber(2)
   set arrayElementType(StandardSqlDataType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasArrayElementType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearArrayElementType() => clearField(2);
+  @$pb.TagNumber(2)
+  StandardSqlDataType ensureArrayElementType() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   StandardSqlStructType get structType => $_getN(2);
+  @$pb.TagNumber(3)
   set structType(StandardSqlStructType v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStructType() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStructType() => clearField(3);
+  @$pb.TagNumber(3)
+  StandardSqlStructType ensureStructType() => $_ensure(2);
 }
 
 class StandardSqlField extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StandardSqlField',
-      package: const $pb.PackageName('google.cloud.bigquery.v2'))
+      package: const $pb.PackageName('google.cloud.bigquery.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<StandardSqlDataType>(2, 'type', $pb.PbFieldType.OM,
-        StandardSqlDataType.getDefault, StandardSqlDataType.create)
+    ..aOM<StandardSqlDataType>(2, 'type',
+        subBuilder: StandardSqlDataType.create)
     ..hasRequiredFields = false;
 
   StandardSqlField._() : super();
@@ -114,32 +129,44 @@ class StandardSqlField extends $pb.GeneratedMessage {
   StandardSqlField createEmptyInstance() => create();
   static $pb.PbList<StandardSqlField> createRepeated() =>
       $pb.PbList<StandardSqlField>();
-  static StandardSqlField getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StandardSqlField getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StandardSqlField>(create);
   static StandardSqlField _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   StandardSqlDataType get type => $_getN(1);
+  @$pb.TagNumber(2)
   set type(StandardSqlDataType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearType() => clearField(2);
+  @$pb.TagNumber(2)
+  StandardSqlDataType ensureType() => $_ensure(1);
 }
 
 class StandardSqlStructType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StandardSqlStructType',
-      package: const $pb.PackageName('google.cloud.bigquery.v2'))
-    ..pc<StandardSqlField>(
-        1, 'fields', $pb.PbFieldType.PM, StandardSqlField.create)
+      package: const $pb.PackageName('google.cloud.bigquery.v2'),
+      createEmptyInstance: create)
+    ..pc<StandardSqlField>(1, 'fields', $pb.PbFieldType.PM,
+        subBuilder: StandardSqlField.create)
     ..hasRequiredFields = false;
 
   StandardSqlStructType._() : super();
@@ -161,9 +188,11 @@ class StandardSqlStructType extends $pb.GeneratedMessage {
   StandardSqlStructType createEmptyInstance() => create();
   static $pb.PbList<StandardSqlStructType> createRepeated() =>
       $pb.PbList<StandardSqlStructType>();
-  static StandardSqlStructType getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StandardSqlStructType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StandardSqlStructType>(create);
   static StandardSqlStructType _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<StandardSqlField> get fields => $_getList(0);
 }

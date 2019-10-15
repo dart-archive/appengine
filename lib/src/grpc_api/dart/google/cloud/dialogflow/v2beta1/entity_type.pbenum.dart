@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class EntityType_Kind extends $pb.ProtobufEnum {
@@ -14,11 +14,14 @@ class EntityType_Kind extends $pb.ProtobufEnum {
       EntityType_Kind._(0, 'KIND_UNSPECIFIED');
   static const EntityType_Kind KIND_MAP = EntityType_Kind._(1, 'KIND_MAP');
   static const EntityType_Kind KIND_LIST = EntityType_Kind._(2, 'KIND_LIST');
+  static const EntityType_Kind KIND_REGEXP =
+      EntityType_Kind._(3, 'KIND_REGEXP');
 
   static const $core.List<EntityType_Kind> values = <EntityType_Kind>[
     KIND_UNSPECIFIED,
     KIND_MAP,
     KIND_LIST,
+    KIND_REGEXP,
   ];
 
   static final $core.Map<$core.int, EntityType_Kind> _byValue =

@@ -8,8 +8,8 @@
 const Policy$json = {
   '1': 'Policy',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'description', '3': 6, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'description', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'description'},
     {
       '1': 'global_policy_evaluation_mode',
       '3': 7,
@@ -17,6 +17,7 @@ const Policy$json = {
       '5': 14,
       '6':
           '.google.cloud.binaryauthorization.v1beta1.Policy.GlobalPolicyEvaluationMode',
+      '8': {},
       '10': 'globalPolicyEvaluationMode'
     },
     {
@@ -26,6 +27,7 @@ const Policy$json = {
       '5': 11,
       '6':
           '.google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern',
+      '8': {},
       '10': 'admissionWhitelistPatterns'
     },
     {
@@ -35,6 +37,7 @@ const Policy$json = {
       '5': 11,
       '6':
           '.google.cloud.binaryauthorization.v1beta1.Policy.ClusterAdmissionRulesEntry',
+      '8': {},
       '10': 'clusterAdmissionRules'
     },
     {
@@ -43,6 +46,7 @@ const Policy$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.binaryauthorization.v1beta1.AdmissionRule',
+      '8': {},
       '10': 'defaultAdmissionRule'
     },
     {
@@ -51,11 +55,13 @@ const Policy$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'updateTime'
     },
   ],
   '3': [Policy_ClusterAdmissionRulesEntry$json],
   '4': [Policy_GlobalPolicyEvaluationMode$json],
+  '7': {},
 };
 
 const Policy_ClusterAdmissionRulesEntry$json = {
@@ -100,6 +106,7 @@ const AdmissionRule$json = {
       '5': 14,
       '6':
           '.google.cloud.binaryauthorization.v1beta1.AdmissionRule.EvaluationMode',
+      '8': {},
       '10': 'evaluationMode'
     },
     {
@@ -107,6 +114,7 @@ const AdmissionRule$json = {
       '3': 2,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'requireAttestationsBy'
     },
     {
@@ -116,6 +124,7 @@ const AdmissionRule$json = {
       '5': 14,
       '6':
           '.google.cloud.binaryauthorization.v1beta1.AdmissionRule.EnforcementMode',
+      '8': {},
       '10': 'enforcementMode'
     },
   ],
@@ -144,8 +153,8 @@ const AdmissionRule_EnforcementMode$json = {
 const Attestor$json = {
   '1': 'Attestor',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'description', '3': 6, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'description', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'description'},
     {
       '1': 'user_owned_drydock_note',
       '3': 3,
@@ -161,9 +170,11 @@ const Attestor$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'updateTime'
     },
   ],
+  '7': {},
   '8': [
     {'1': 'attestor_type'},
   ],
@@ -172,13 +183,21 @@ const Attestor$json = {
 const UserOwnedDrydockNote$json = {
   '1': 'UserOwnedDrydockNote',
   '2': [
-    {'1': 'note_reference', '3': 1, '4': 1, '5': 9, '10': 'noteReference'},
+    {
+      '1': 'note_reference',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'noteReference'
+    },
     {
       '1': 'public_keys',
       '3': 2,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.binaryauthorization.v1beta1.AttestorPublicKey',
+      '8': {},
       '10': 'publicKeys'
     },
     {
@@ -186,6 +205,7 @@ const UserOwnedDrydockNote$json = {
       '3': 3,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'delegationServiceAccountEmail'
     },
   ],
@@ -229,7 +249,7 @@ const PkixPublicKey_SignatureAlgorithm$json = {
 const AttestorPublicKey$json = {
   '1': 'AttestorPublicKey',
   '2': [
-    {'1': 'comment', '3': 1, '4': 1, '5': 9, '10': 'comment'},
+    {'1': 'comment', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'comment'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
     {
       '1': 'ascii_armored_pgp_public_key',

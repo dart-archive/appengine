@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,14 +20,15 @@ export 'notification.pbenum.dart';
 class NotificationChannelDescriptor extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'NotificationChannelDescriptor',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'type')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..pc<$0.LabelDescriptor>(
-        4, 'labels', $pb.PbFieldType.PM, $0.LabelDescriptor.create)
-    ..pc<$2.ServiceTier>(5, 'supportedTiers', $pb.PbFieldType.PE, null,
-        $2.ServiceTier.valueOf, $2.ServiceTier.values)
+    ..pc<$0.LabelDescriptor>(4, 'labels', $pb.PbFieldType.PM,
+        subBuilder: $0.LabelDescriptor.create)
+    ..pc<$2.ServiceTier>(5, 'supportedTiers', $pb.PbFieldType.PE,
+        valueOf: $2.ServiceTier.valueOf, enumValues: $2.ServiceTier.values)
     ..aOS(6, 'name')
     ..hasRequiredFields = false;
 
@@ -53,84 +53,92 @@ class NotificationChannelDescriptor extends $pb.GeneratedMessage {
   NotificationChannelDescriptor createEmptyInstance() => create();
   static $pb.PbList<NotificationChannelDescriptor> createRepeated() =>
       $pb.PbList<NotificationChannelDescriptor>();
-  static NotificationChannelDescriptor getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static NotificationChannelDescriptor getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NotificationChannelDescriptor>(create);
   static NotificationChannelDescriptor _defaultInstance;
 
-  $core.String get type => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get type => $_getSZ(0);
+  @$pb.TagNumber(1)
   set type($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$0.LabelDescriptor> get labels => $_getList(3);
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(5)
   $core.List<$2.ServiceTier> get supportedTiers => $_getList(4);
 
-  $core.String get name => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get name => $_getSZ(5);
+  @$pb.TagNumber(6)
   set name($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasName() => $_has(5);
+  @$pb.TagNumber(6)
   void clearName() => clearField(6);
 }
 
 class NotificationChannel extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NotificationChannel',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'type')
     ..aOS(3, 'displayName')
     ..aOS(4, 'description')
-    ..m<$core.String, $core.String>(
-        5,
-        'labels',
-        'NotificationChannel.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.monitoring.v3'))
+    ..m<$core.String, $core.String>(5, 'labels',
+        entryClassName: 'NotificationChannel.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.monitoring.v3'))
     ..aOS(6, 'name')
-    ..m<$core.String, $core.String>(
-        8,
-        'userLabels',
-        'NotificationChannel.UserLabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.monitoring.v3'))
+    ..m<$core.String, $core.String>(8, 'userLabels',
+        entryClassName: 'NotificationChannel.UserLabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.monitoring.v3'))
     ..e<NotificationChannel_VerificationStatus>(
-        9,
-        'verificationStatus',
-        $pb.PbFieldType.OE,
-        NotificationChannel_VerificationStatus.VERIFICATION_STATUS_UNSPECIFIED,
-        NotificationChannel_VerificationStatus.valueOf,
-        NotificationChannel_VerificationStatus.values)
-    ..a<$1.BoolValue>(11, 'enabled', $pb.PbFieldType.OM,
-        $1.BoolValue.getDefault, $1.BoolValue.create)
+        9, 'verificationStatus', $pb.PbFieldType.OE,
+        defaultOrMaker: NotificationChannel_VerificationStatus
+            .VERIFICATION_STATUS_UNSPECIFIED,
+        valueOf: NotificationChannel_VerificationStatus.valueOf,
+        enumValues: NotificationChannel_VerificationStatus.values)
+    ..aOM<$1.BoolValue>(11, 'enabled', subBuilder: $1.BoolValue.create)
     ..hasRequiredFields = false;
 
   NotificationChannel._() : super();
@@ -150,59 +158,88 @@ class NotificationChannel extends $pb.GeneratedMessage {
   NotificationChannel createEmptyInstance() => create();
   static $pb.PbList<NotificationChannel> createRepeated() =>
       $pb.PbList<NotificationChannel>();
-  static NotificationChannel getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static NotificationChannel getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NotificationChannel>(create);
   static NotificationChannel _defaultInstance;
 
-  $core.String get type => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get type => $_getSZ(0);
+  @$pb.TagNumber(1)
   set type($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(3)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(3)
   void clearDisplayName() => clearField(3);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(4)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(4)
   void clearDescription() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 
-  $core.String get name => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get name => $_getSZ(4);
+  @$pb.TagNumber(6)
   set name($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasName() => $_has(4);
+  @$pb.TagNumber(6)
   void clearName() => clearField(6);
 
+  @$pb.TagNumber(8)
   $core.Map<$core.String, $core.String> get userLabels => $_getMap(5);
 
+  @$pb.TagNumber(9)
   NotificationChannel_VerificationStatus get verificationStatus => $_getN(6);
+  @$pb.TagNumber(9)
   set verificationStatus(NotificationChannel_VerificationStatus v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasVerificationStatus() => $_has(6);
+  @$pb.TagNumber(9)
   void clearVerificationStatus() => clearField(9);
 
+  @$pb.TagNumber(11)
   $1.BoolValue get enabled => $_getN(7);
+  @$pb.TagNumber(11)
   set enabled($1.BoolValue v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasEnabled() => $_has(7);
+  @$pb.TagNumber(11)
   void clearEnabled() => clearField(11);
+  @$pb.TagNumber(11)
+  $1.BoolValue ensureEnabled() => $_ensure(7);
 }

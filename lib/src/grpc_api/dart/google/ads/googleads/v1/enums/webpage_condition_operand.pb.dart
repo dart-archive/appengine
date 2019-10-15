@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'webpage_condition_operand.pbenum.dart';
 class WebpageConditionOperandEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'WebpageConditionOperandEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   WebpageConditionOperandEnum._() : super();
@@ -39,7 +39,8 @@ class WebpageConditionOperandEnum extends $pb.GeneratedMessage {
   WebpageConditionOperandEnum createEmptyInstance() => create();
   static $pb.PbList<WebpageConditionOperandEnum> createRepeated() =>
       $pb.PbList<WebpageConditionOperandEnum>();
-  static WebpageConditionOperandEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebpageConditionOperandEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebpageConditionOperandEnum>(create);
   static WebpageConditionOperandEnum _defaultInstance;
 }

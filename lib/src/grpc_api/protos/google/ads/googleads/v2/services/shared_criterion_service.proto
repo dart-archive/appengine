@@ -19,7 +19,6 @@ package google.ads.googleads.v2.services;
 
 import "google/ads/googleads/v2/resources/shared_criterion.proto";
 import "google/api/annotations.proto";
-import "google/protobuf/wrappers.proto";
 import "google/rpc/status.proto";
 import "google/api/client.proto";
 

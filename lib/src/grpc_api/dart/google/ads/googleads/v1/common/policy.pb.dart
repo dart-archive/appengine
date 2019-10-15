@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,11 +19,10 @@ import '../enums/policy_topic_evidence_destination_not_working_device.pbenum.dar
 
 class PolicyViolationKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyViolationKey',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..a<$0.StringValue>(1, 'policyName', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(2, 'violatingText', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'policyName', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(2, 'violatingText', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PolicyViolationKey._() : super();
@@ -44,34 +42,48 @@ class PolicyViolationKey extends $pb.GeneratedMessage {
   PolicyViolationKey createEmptyInstance() => create();
   static $pb.PbList<PolicyViolationKey> createRepeated() =>
       $pb.PbList<PolicyViolationKey>();
-  static PolicyViolationKey getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyViolationKey getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyViolationKey>(create);
   static PolicyViolationKey _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get policyName => $_getN(0);
+  @$pb.TagNumber(1)
   set policyName($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPolicyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPolicyName() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensurePolicyName() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.StringValue get violatingText => $_getN(1);
+  @$pb.TagNumber(2)
   set violatingText($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasViolatingText() => $_has(1);
+  @$pb.TagNumber(2)
   void clearViolatingText() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureViolatingText() => $_ensure(1);
 }
 
 class PolicyValidationParameter extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyValidationParameter',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..pc<$0.StringValue>(
-        1, 'ignorablePolicyTopics', $pb.PbFieldType.PM, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..pc<$0.StringValue>(1, 'ignorablePolicyTopics', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..pc<PolicyViolationKey>(2, 'exemptPolicyViolationKeys', $pb.PbFieldType.PM,
-        PolicyViolationKey.create)
+        subBuilder: PolicyViolationKey.create)
     ..hasRequiredFields = false;
 
   PolicyValidationParameter._() : super();
@@ -94,31 +106,33 @@ class PolicyValidationParameter extends $pb.GeneratedMessage {
   PolicyValidationParameter createEmptyInstance() => create();
   static $pb.PbList<PolicyValidationParameter> createRepeated() =>
       $pb.PbList<PolicyValidationParameter>();
-  static PolicyValidationParameter getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyValidationParameter getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyValidationParameter>(create);
   static PolicyValidationParameter _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$0.StringValue> get ignorablePolicyTopics => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<PolicyViolationKey> get exemptPolicyViolationKeys => $_getList(1);
 }
 
 class PolicyTopicEntry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyTopicEntry',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..a<$0.StringValue>(1, 'topic', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'topic', subBuilder: $0.StringValue.create)
     ..e<$1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType>(
-        2,
-        'type',
-        $pb.PbFieldType.OE,
-        $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType.UNSPECIFIED,
-        $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType.valueOf,
-        $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType.values)
-    ..pc<PolicyTopicEvidence>(
-        3, 'evidences', $pb.PbFieldType.PM, PolicyTopicEvidence.create)
-    ..pc<PolicyTopicConstraint>(
-        4, 'constraints', $pb.PbFieldType.PM, PolicyTopicConstraint.create)
+        2, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType.UNSPECIFIED,
+        valueOf: $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType.valueOf,
+        enumValues: $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType.values)
+    ..pc<PolicyTopicEvidence>(3, 'evidences', $pb.PbFieldType.PM,
+        subBuilder: PolicyTopicEvidence.create)
+    ..pc<PolicyTopicConstraint>(4, 'constraints', $pb.PbFieldType.PM,
+        subBuilder: PolicyTopicConstraint.create)
     ..hasRequiredFields = false;
 
   PolicyTopicEntry._() : super();
@@ -138,36 +152,51 @@ class PolicyTopicEntry extends $pb.GeneratedMessage {
   PolicyTopicEntry createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEntry> createRepeated() =>
       $pb.PbList<PolicyTopicEntry>();
-  static PolicyTopicEntry getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicEntry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyTopicEntry>(create);
   static PolicyTopicEntry _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get topic => $_getN(0);
+  @$pb.TagNumber(1)
   set topic($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureTopic() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType get type => $_getN(1);
+  @$pb.TagNumber(2)
   set type($1.PolicyTopicEntryTypeEnum_PolicyTopicEntryType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearType() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<PolicyTopicEvidence> get evidences => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<PolicyTopicConstraint> get constraints => $_getList(3);
 }
 
 class PolicyTopicEvidence_TextList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicEvidence.TextList',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..pc<$0.StringValue>(1, 'texts', $pb.PbFieldType.PM, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..pc<$0.StringValue>(1, 'texts', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PolicyTopicEvidence_TextList._() : super();
@@ -191,19 +220,22 @@ class PolicyTopicEvidence_TextList extends $pb.GeneratedMessage {
   PolicyTopicEvidence_TextList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_TextList> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_TextList>();
-  static PolicyTopicEvidence_TextList getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicEvidence_TextList getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyTopicEvidence_TextList>(create);
   static PolicyTopicEvidence_TextList _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$0.StringValue> get texts => $_getList(0);
 }
 
 class PolicyTopicEvidence_WebsiteList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicEvidence.WebsiteList',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..pc<$0.StringValue>(
-        1, 'websites', $pb.PbFieldType.PM, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..pc<$0.StringValue>(1, 'websites', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PolicyTopicEvidence_WebsiteList._() : super();
@@ -227,19 +259,23 @@ class PolicyTopicEvidence_WebsiteList extends $pb.GeneratedMessage {
   PolicyTopicEvidence_WebsiteList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_WebsiteList> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_WebsiteList>();
-  static PolicyTopicEvidence_WebsiteList getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicEvidence_WebsiteList getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyTopicEvidence_WebsiteList>(
+          create);
   static PolicyTopicEvidence_WebsiteList _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$0.StringValue> get websites => $_getList(0);
 }
 
 class PolicyTopicEvidence_DestinationTextList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicEvidence.DestinationTextList',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..pc<$0.StringValue>(
-        1, 'destinationTexts', $pb.PbFieldType.PM, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..pc<$0.StringValue>(1, 'destinationTexts', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PolicyTopicEvidence_DestinationTextList._() : super();
@@ -264,25 +300,28 @@ class PolicyTopicEvidence_DestinationTextList extends $pb.GeneratedMessage {
   PolicyTopicEvidence_DestinationTextList createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_DestinationTextList> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_DestinationTextList>();
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_DestinationTextList getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PolicyTopicEvidence_DestinationTextList>(create);
   static PolicyTopicEvidence_DestinationTextList _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$0.StringValue> get destinationTexts => $_getList(0);
 }
 
 class PolicyTopicEvidence_DestinationMismatch extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicEvidence.DestinationMismatch',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
     ..pc<$2.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_PolicyTopicEvidenceDestinationMismatchUrlType>(
-        1,
-        'urlTypes',
-        $pb.PbFieldType.PE,
-        null,
-        $2.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_PolicyTopicEvidenceDestinationMismatchUrlType
+        1, 'urlTypes', $pb.PbFieldType.PE,
+        valueOf: $2
+            .PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_PolicyTopicEvidenceDestinationMismatchUrlType
             .valueOf,
-        $2.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_PolicyTopicEvidenceDestinationMismatchUrlType
+        enumValues: $2
+            .PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_PolicyTopicEvidenceDestinationMismatchUrlType
             .values)
     ..hasRequiredFields = false;
 
@@ -308,10 +347,13 @@ class PolicyTopicEvidence_DestinationMismatch extends $pb.GeneratedMessage {
   PolicyTopicEvidence_DestinationMismatch createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence_DestinationMismatch> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence_DestinationMismatch>();
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_DestinationMismatch getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PolicyTopicEvidence_DestinationMismatch>(create);
   static PolicyTopicEvidence_DestinationMismatch _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<
           $2.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_PolicyTopicEvidenceDestinationMismatchUrlType>
       get urlTypes => $_getList(0);
@@ -320,21 +362,22 @@ class PolicyTopicEvidence_DestinationMismatch extends $pb.GeneratedMessage {
 class PolicyTopicEvidence_DestinationNotWorking extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicEvidence.DestinationNotWorking',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..a<$0.StringValue>(3, 'expandedUrl', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(3, 'expandedUrl', subBuilder: $0.StringValue.create)
     ..e<$3.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice>(
-        4,
-        'device',
-        $pb.PbFieldType.OE,
-        $3.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
+        4, 'device', $pb.PbFieldType.OE,
+        defaultOrMaker: $3
+            .PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
             .UNSPECIFIED,
-        $3.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
+        valueOf: $3
+            .PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
             .valueOf,
-        $3.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
+        enumValues: $3
+            .PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
             .values)
-    ..a<$0.StringValue>(5, 'lastCheckedDateTime', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+    ..aOM<$0.StringValue>(5, 'lastCheckedDateTime',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PolicyTopicEvidence_DestinationNotWorking._() : super();
@@ -360,36 +403,54 @@ class PolicyTopicEvidence_DestinationNotWorking extends $pb.GeneratedMessage {
   static $pb.PbList<PolicyTopicEvidence_DestinationNotWorking>
       createRepeated() =>
           $pb.PbList<PolicyTopicEvidence_DestinationNotWorking>();
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicEvidence_DestinationNotWorking getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PolicyTopicEvidence_DestinationNotWorking>(create);
   static PolicyTopicEvidence_DestinationNotWorking _defaultInstance;
 
+  @$pb.TagNumber(3)
   $0.StringValue get expandedUrl => $_getN(0);
+  @$pb.TagNumber(3)
   set expandedUrl($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasExpandedUrl() => $_has(0);
+  @$pb.TagNumber(3)
   void clearExpandedUrl() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureExpandedUrl() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $3.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
       get device => $_getN(1);
+  @$pb.TagNumber(4)
   set device(
       $3.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum_PolicyTopicEvidenceDestinationNotWorkingDevice
           v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDevice() => $_has(1);
+  @$pb.TagNumber(4)
   void clearDevice() => clearField(4);
 
+  @$pb.TagNumber(5)
   $0.StringValue get lastCheckedDateTime => $_getN(2);
+  @$pb.TagNumber(5)
   set lastCheckedDateTime($0.StringValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasLastCheckedDateTime() => $_has(2);
+  @$pb.TagNumber(5)
   void clearLastCheckedDateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.StringValue ensureLastCheckedDateTime() => $_ensure(2);
 }
 
 enum PolicyTopicEvidence_Value {
@@ -416,42 +477,21 @@ class PolicyTopicEvidence extends $pb.GeneratedMessage {
     0: PolicyTopicEvidence_Value.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyTopicEvidence',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 4, 5, 6, 7, 8])
-    ..a<$0.Int32Value>(2, 'httpCode', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..a<PolicyTopicEvidence_WebsiteList>(
-        3,
-        'websiteList',
-        $pb.PbFieldType.OM,
-        PolicyTopicEvidence_WebsiteList.getDefault,
-        PolicyTopicEvidence_WebsiteList.create)
-    ..a<PolicyTopicEvidence_TextList>(
-        4,
-        'textList',
-        $pb.PbFieldType.OM,
-        PolicyTopicEvidence_TextList.getDefault,
-        PolicyTopicEvidence_TextList.create)
-    ..a<$0.StringValue>(5, 'languageCode', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<PolicyTopicEvidence_DestinationTextList>(
-        6,
-        'destinationTextList',
-        $pb.PbFieldType.OM,
-        PolicyTopicEvidence_DestinationTextList.getDefault,
-        PolicyTopicEvidence_DestinationTextList.create)
-    ..a<PolicyTopicEvidence_DestinationMismatch>(
-        7,
-        'destinationMismatch',
-        $pb.PbFieldType.OM,
-        PolicyTopicEvidence_DestinationMismatch.getDefault,
-        PolicyTopicEvidence_DestinationMismatch.create)
-    ..a<PolicyTopicEvidence_DestinationNotWorking>(
-        8,
-        'destinationNotWorking',
-        $pb.PbFieldType.OM,
-        PolicyTopicEvidence_DestinationNotWorking.getDefault,
-        PolicyTopicEvidence_DestinationNotWorking.create)
+    ..aOM<$0.Int32Value>(2, 'httpCode', subBuilder: $0.Int32Value.create)
+    ..aOM<PolicyTopicEvidence_WebsiteList>(3, 'websiteList',
+        subBuilder: PolicyTopicEvidence_WebsiteList.create)
+    ..aOM<PolicyTopicEvidence_TextList>(4, 'textList',
+        subBuilder: PolicyTopicEvidence_TextList.create)
+    ..aOM<$0.StringValue>(5, 'languageCode', subBuilder: $0.StringValue.create)
+    ..aOM<PolicyTopicEvidence_DestinationTextList>(6, 'destinationTextList',
+        subBuilder: PolicyTopicEvidence_DestinationTextList.create)
+    ..aOM<PolicyTopicEvidence_DestinationMismatch>(7, 'destinationMismatch',
+        subBuilder: PolicyTopicEvidence_DestinationMismatch.create)
+    ..aOM<PolicyTopicEvidence_DestinationNotWorking>(8, 'destinationNotWorking',
+        subBuilder: PolicyTopicEvidence_DestinationNotWorking.create)
     ..hasRequiredFields = false;
 
   PolicyTopicEvidence._() : super();
@@ -471,80 +511,128 @@ class PolicyTopicEvidence extends $pb.GeneratedMessage {
   PolicyTopicEvidence createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicEvidence> createRepeated() =>
       $pb.PbList<PolicyTopicEvidence>();
-  static PolicyTopicEvidence getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicEvidence getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyTopicEvidence>(create);
   static PolicyTopicEvidence _defaultInstance;
 
   PolicyTopicEvidence_Value whichValue() =>
       _PolicyTopicEvidence_ValueByTag[$_whichOneof(0)];
   void clearValue() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(2)
   $0.Int32Value get httpCode => $_getN(0);
+  @$pb.TagNumber(2)
   set httpCode($0.Int32Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasHttpCode() => $_has(0);
+  @$pb.TagNumber(2)
   void clearHttpCode() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int32Value ensureHttpCode() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   PolicyTopicEvidence_WebsiteList get websiteList => $_getN(1);
+  @$pb.TagNumber(3)
   set websiteList(PolicyTopicEvidence_WebsiteList v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasWebsiteList() => $_has(1);
+  @$pb.TagNumber(3)
   void clearWebsiteList() => clearField(3);
+  @$pb.TagNumber(3)
+  PolicyTopicEvidence_WebsiteList ensureWebsiteList() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   PolicyTopicEvidence_TextList get textList => $_getN(2);
+  @$pb.TagNumber(4)
   set textList(PolicyTopicEvidence_TextList v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTextList() => $_has(2);
+  @$pb.TagNumber(4)
   void clearTextList() => clearField(4);
+  @$pb.TagNumber(4)
+  PolicyTopicEvidence_TextList ensureTextList() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   $0.StringValue get languageCode => $_getN(3);
+  @$pb.TagNumber(5)
   set languageCode($0.StringValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasLanguageCode() => $_has(3);
+  @$pb.TagNumber(5)
   void clearLanguageCode() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.StringValue ensureLanguageCode() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   PolicyTopicEvidence_DestinationTextList get destinationTextList => $_getN(4);
+  @$pb.TagNumber(6)
   set destinationTextList(PolicyTopicEvidence_DestinationTextList v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDestinationTextList() => $_has(4);
+  @$pb.TagNumber(6)
   void clearDestinationTextList() => clearField(6);
+  @$pb.TagNumber(6)
+  PolicyTopicEvidence_DestinationTextList ensureDestinationTextList() =>
+      $_ensure(4);
 
+  @$pb.TagNumber(7)
   PolicyTopicEvidence_DestinationMismatch get destinationMismatch => $_getN(5);
+  @$pb.TagNumber(7)
   set destinationMismatch(PolicyTopicEvidence_DestinationMismatch v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasDestinationMismatch() => $_has(5);
+  @$pb.TagNumber(7)
   void clearDestinationMismatch() => clearField(7);
+  @$pb.TagNumber(7)
+  PolicyTopicEvidence_DestinationMismatch ensureDestinationMismatch() =>
+      $_ensure(5);
 
+  @$pb.TagNumber(8)
   PolicyTopicEvidence_DestinationNotWorking get destinationNotWorking =>
       $_getN(6);
+  @$pb.TagNumber(8)
   set destinationNotWorking(PolicyTopicEvidence_DestinationNotWorking v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasDestinationNotWorking() => $_has(6);
+  @$pb.TagNumber(8)
   void clearDestinationNotWorking() => clearField(8);
+  @$pb.TagNumber(8)
+  PolicyTopicEvidence_DestinationNotWorking ensureDestinationNotWorking() =>
+      $_ensure(6);
 }
 
 class PolicyTopicConstraint_CountryConstraintList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicConstraint.CountryConstraintList',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..a<$0.Int32Value>(1, 'totalTargetedCountries', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..pc<PolicyTopicConstraint_CountryConstraint>(2, 'countries',
-        $pb.PbFieldType.PM, PolicyTopicConstraint_CountryConstraint.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int32Value>(1, 'totalTargetedCountries',
+        subBuilder: $0.Int32Value.create)
+    ..pc<PolicyTopicConstraint_CountryConstraint>(
+        2, 'countries', $pb.PbFieldType.PM,
+        subBuilder: PolicyTopicConstraint_CountryConstraint.create)
     ..hasRequiredFields = false;
 
   PolicyTopicConstraint_CountryConstraintList._() : super();
@@ -570,18 +658,27 @@ class PolicyTopicConstraint_CountryConstraintList extends $pb.GeneratedMessage {
   static $pb.PbList<PolicyTopicConstraint_CountryConstraintList>
       createRepeated() =>
           $pb.PbList<PolicyTopicConstraint_CountryConstraintList>();
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicConstraint_CountryConstraintList getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PolicyTopicConstraint_CountryConstraintList>(create);
   static PolicyTopicConstraint_CountryConstraintList _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int32Value get totalTargetedCountries => $_getN(0);
+  @$pb.TagNumber(1)
   set totalTargetedCountries($0.Int32Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTotalTargetedCountries() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTotalTargetedCountries() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int32Value ensureTotalTargetedCountries() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<PolicyTopicConstraint_CountryConstraint> get countries =>
       $_getList(1);
 }
@@ -589,7 +686,8 @@ class PolicyTopicConstraint_CountryConstraintList extends $pb.GeneratedMessage {
 class PolicyTopicConstraint_ResellerConstraint extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicConstraint.ResellerConstraint',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   PolicyTopicConstraint_ResellerConstraint._() : super();
@@ -615,17 +713,20 @@ class PolicyTopicConstraint_ResellerConstraint extends $pb.GeneratedMessage {
   static $pb.PbList<PolicyTopicConstraint_ResellerConstraint>
       createRepeated() =>
           $pb.PbList<PolicyTopicConstraint_ResellerConstraint>();
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicConstraint_ResellerConstraint getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PolicyTopicConstraint_ResellerConstraint>(create);
   static PolicyTopicConstraint_ResellerConstraint _defaultInstance;
 }
 
 class PolicyTopicConstraint_CountryConstraint extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PolicyTopicConstraint.CountryConstraint',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..a<$0.StringValue>(1, 'countryCriterion', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'countryCriterion',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PolicyTopicConstraint_CountryConstraint._() : super();
@@ -650,17 +751,25 @@ class PolicyTopicConstraint_CountryConstraint extends $pb.GeneratedMessage {
   PolicyTopicConstraint_CountryConstraint createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicConstraint_CountryConstraint> createRepeated() =>
       $pb.PbList<PolicyTopicConstraint_CountryConstraint>();
+  @$core.pragma('dart2js:noInline')
   static PolicyTopicConstraint_CountryConstraint getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PolicyTopicConstraint_CountryConstraint>(create);
   static PolicyTopicConstraint_CountryConstraint _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get countryCriterion => $_getN(0);
+  @$pb.TagNumber(1)
   set countryCriterion($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCountryCriterion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCountryCriterion() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCountryCriterion() => $_ensure(0);
 }
 
 enum PolicyTopicConstraint_Value {
@@ -681,32 +790,20 @@ class PolicyTopicConstraint extends $pb.GeneratedMessage {
     0: PolicyTopicConstraint_Value.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyTopicConstraint',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4])
-    ..a<PolicyTopicConstraint_CountryConstraintList>(
-        1,
-        'countryConstraintList',
-        $pb.PbFieldType.OM,
-        PolicyTopicConstraint_CountryConstraintList.getDefault,
-        PolicyTopicConstraint_CountryConstraintList.create)
-    ..a<PolicyTopicConstraint_ResellerConstraint>(
-        2,
-        'resellerConstraint',
-        $pb.PbFieldType.OM,
-        PolicyTopicConstraint_ResellerConstraint.getDefault,
-        PolicyTopicConstraint_ResellerConstraint.create)
-    ..a<PolicyTopicConstraint_CountryConstraintList>(
-        3,
-        'certificateMissingInCountryList',
-        $pb.PbFieldType.OM,
-        PolicyTopicConstraint_CountryConstraintList.getDefault,
-        PolicyTopicConstraint_CountryConstraintList.create)
-    ..a<PolicyTopicConstraint_CountryConstraintList>(
-        4,
-        'certificateDomainMismatchInCountryList',
-        $pb.PbFieldType.OM,
-        PolicyTopicConstraint_CountryConstraintList.getDefault,
-        PolicyTopicConstraint_CountryConstraintList.create)
+    ..aOM<PolicyTopicConstraint_CountryConstraintList>(
+        1, 'countryConstraintList',
+        subBuilder: PolicyTopicConstraint_CountryConstraintList.create)
+    ..aOM<PolicyTopicConstraint_ResellerConstraint>(2, 'resellerConstraint',
+        subBuilder: PolicyTopicConstraint_ResellerConstraint.create)
+    ..aOM<PolicyTopicConstraint_CountryConstraintList>(
+        3, 'certificateMissingInCountryList',
+        subBuilder: PolicyTopicConstraint_CountryConstraintList.create)
+    ..aOM<PolicyTopicConstraint_CountryConstraintList>(
+        4, 'certificateDomainMismatchInCountryList',
+        subBuilder: PolicyTopicConstraint_CountryConstraintList.create)
     ..hasRequiredFields = false;
 
   PolicyTopicConstraint._() : super();
@@ -728,48 +825,77 @@ class PolicyTopicConstraint extends $pb.GeneratedMessage {
   PolicyTopicConstraint createEmptyInstance() => create();
   static $pb.PbList<PolicyTopicConstraint> createRepeated() =>
       $pb.PbList<PolicyTopicConstraint>();
-  static PolicyTopicConstraint getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PolicyTopicConstraint getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PolicyTopicConstraint>(create);
   static PolicyTopicConstraint _defaultInstance;
 
   PolicyTopicConstraint_Value whichValue() =>
       _PolicyTopicConstraint_ValueByTag[$_whichOneof(0)];
   void clearValue() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   PolicyTopicConstraint_CountryConstraintList get countryConstraintList =>
       $_getN(0);
+  @$pb.TagNumber(1)
   set countryConstraintList(PolicyTopicConstraint_CountryConstraintList v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCountryConstraintList() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCountryConstraintList() => clearField(1);
+  @$pb.TagNumber(1)
+  PolicyTopicConstraint_CountryConstraintList ensureCountryConstraintList() =>
+      $_ensure(0);
 
+  @$pb.TagNumber(2)
   PolicyTopicConstraint_ResellerConstraint get resellerConstraint => $_getN(1);
+  @$pb.TagNumber(2)
   set resellerConstraint(PolicyTopicConstraint_ResellerConstraint v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResellerConstraint() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResellerConstraint() => clearField(2);
+  @$pb.TagNumber(2)
+  PolicyTopicConstraint_ResellerConstraint ensureResellerConstraint() =>
+      $_ensure(1);
 
+  @$pb.TagNumber(3)
   PolicyTopicConstraint_CountryConstraintList
       get certificateMissingInCountryList => $_getN(2);
+  @$pb.TagNumber(3)
   set certificateMissingInCountryList(
       PolicyTopicConstraint_CountryConstraintList v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCertificateMissingInCountryList() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCertificateMissingInCountryList() => clearField(3);
+  @$pb.TagNumber(3)
+  PolicyTopicConstraint_CountryConstraintList
+      ensureCertificateMissingInCountryList() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   PolicyTopicConstraint_CountryConstraintList
       get certificateDomainMismatchInCountryList => $_getN(3);
+  @$pb.TagNumber(4)
   set certificateDomainMismatchInCountryList(
       PolicyTopicConstraint_CountryConstraintList v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCertificateDomainMismatchInCountryList() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCertificateDomainMismatchInCountryList() => clearField(4);
+  @$pb.TagNumber(4)
+  PolicyTopicConstraint_CountryConstraintList
+      ensureCertificateDomainMismatchInCountryList() => $_ensure(3);
 }

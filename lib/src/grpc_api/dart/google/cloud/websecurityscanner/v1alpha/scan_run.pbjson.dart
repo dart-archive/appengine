@@ -59,6 +59,7 @@ const ScanRun$json = {
     {'1': 'progress_percent', '3': 9, '4': 1, '5': 5, '10': 'progressPercent'},
   ],
   '4': [ScanRun_ExecutionState$json, ScanRun_ResultState$json],
+  '7': {},
 };
 
 const ScanRun_ExecutionState$json = {

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'time_type.pbenum.dart';
 
 class TimeTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TimeTypeEnum._() : super();
@@ -34,6 +34,8 @@ class TimeTypeEnum extends $pb.GeneratedMessage {
   TimeTypeEnum createEmptyInstance() => create();
   static $pb.PbList<TimeTypeEnum> createRepeated() =>
       $pb.PbList<TimeTypeEnum>();
-  static TimeTypeEnum getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TimeTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimeTypeEnum>(create);
   static TimeTypeEnum _defaultInstance;
 }

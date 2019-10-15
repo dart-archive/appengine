@@ -8,7 +8,7 @@
 const LoginProfile$json = {
   '1': 'LoginProfile',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'posix_accounts',
       '3': 2,
@@ -49,21 +49,23 @@ const LoginProfile_SshPublicKeysEntry$json = {
 const DeletePosixAccountRequest$json = {
   '1': 'DeletePosixAccountRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const DeleteSshPublicKeyRequest$json = {
   '1': 'DeleteSshPublicKeyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const GetLoginProfileRequest$json = {
   '1': 'GetLoginProfileRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'system_id', '3': 3, '4': 1, '5': 9, '10': 'systemId'},
   ],
 };
 
@@ -77,13 +79,14 @@ const GetSshPublicKeyRequest$json = {
 const ImportSshPublicKeyRequest$json = {
   '1': 'ImportSshPublicKeyRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'ssh_public_key',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.oslogin.common.SshPublicKey',
+      '8': {},
       '10': 'sshPublicKey'
     },
     {'1': 'project_id', '3': 3, '4': 1, '5': 9, '10': 'projectId'},
@@ -107,13 +110,14 @@ const ImportSshPublicKeyResponse$json = {
 const UpdateSshPublicKeyRequest$json = {
   '1': 'UpdateSshPublicKeyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'ssh_public_key',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.oslogin.common.SshPublicKey',
+      '8': {},
       '10': 'sshPublicKey'
     },
     {

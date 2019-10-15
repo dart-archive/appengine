@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,10 +14,10 @@ import 'options.pb.dart' as $2;
 
 class SetIamPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetIamPolicyRequest',
-      package: const $pb.PackageName('google.iam.v1'))
+      package: const $pb.PackageName('google.iam.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'resource')
-    ..a<$1.Policy>(
-        2, 'policy', $pb.PbFieldType.OM, $1.Policy.getDefault, $1.Policy.create)
+    ..aOM<$1.Policy>(2, 'policy', subBuilder: $1.Policy.create)
     ..hasRequiredFields = false;
 
   SetIamPolicyRequest._() : super();
@@ -38,33 +37,45 @@ class SetIamPolicyRequest extends $pb.GeneratedMessage {
   SetIamPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<SetIamPolicyRequest> createRepeated() =>
       $pb.PbList<SetIamPolicyRequest>();
-  static SetIamPolicyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SetIamPolicyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetIamPolicyRequest>(create);
   static SetIamPolicyRequest _defaultInstance;
 
-  $core.String get resource => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resource => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resource($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Policy get policy => $_getN(1);
+  @$pb.TagNumber(2)
   set policy($1.Policy v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPolicy() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPolicy() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Policy ensurePolicy() => $_ensure(1);
 }
 
 class GetIamPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIamPolicyRequest',
-      package: const $pb.PackageName('google.iam.v1'))
+      package: const $pb.PackageName('google.iam.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'resource')
-    ..a<$2.GetPolicyOptions>(2, 'options', $pb.PbFieldType.OM,
-        $2.GetPolicyOptions.getDefault, $2.GetPolicyOptions.create)
+    ..aOM<$2.GetPolicyOptions>(2, 'options',
+        subBuilder: $2.GetPolicyOptions.create)
     ..hasRequiredFields = false;
 
   GetIamPolicyRequest._() : super();
@@ -84,30 +95,42 @@ class GetIamPolicyRequest extends $pb.GeneratedMessage {
   GetIamPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<GetIamPolicyRequest> createRepeated() =>
       $pb.PbList<GetIamPolicyRequest>();
-  static GetIamPolicyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetIamPolicyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetIamPolicyRequest>(create);
   static GetIamPolicyRequest _defaultInstance;
 
-  $core.String get resource => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resource => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resource($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.GetPolicyOptions get options => $_getN(1);
+  @$pb.TagNumber(2)
   set options($2.GetPolicyOptions v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOptions() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOptions() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.GetPolicyOptions ensureOptions() => $_ensure(1);
 }
 
 class TestIamPermissionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestIamPermissionsRequest',
-      package: const $pb.PackageName('google.iam.v1'))
+      package: const $pb.PackageName('google.iam.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'resource')
     ..pPS(2, 'permissions')
     ..hasRequiredFields = false;
@@ -132,25 +155,32 @@ class TestIamPermissionsRequest extends $pb.GeneratedMessage {
   TestIamPermissionsRequest createEmptyInstance() => create();
   static $pb.PbList<TestIamPermissionsRequest> createRepeated() =>
       $pb.PbList<TestIamPermissionsRequest>();
-  static TestIamPermissionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TestIamPermissionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TestIamPermissionsRequest>(create);
   static TestIamPermissionsRequest _defaultInstance;
 
-  $core.String get resource => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resource => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resource($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get permissions => $_getList(1);
 }
 
 class TestIamPermissionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TestIamPermissionsResponse',
-      package: const $pb.PackageName('google.iam.v1'))
+      package: const $pb.PackageName('google.iam.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'permissions')
     ..hasRequiredFields = false;
 
@@ -174,9 +204,11 @@ class TestIamPermissionsResponse extends $pb.GeneratedMessage {
   TestIamPermissionsResponse createEmptyInstance() => create();
   static $pb.PbList<TestIamPermissionsResponse> createRepeated() =>
       $pb.PbList<TestIamPermissionsResponse>();
-  static TestIamPermissionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TestIamPermissionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TestIamPermissionsResponse>(create);
   static TestIamPermissionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get permissions => $_getList(0);
 }

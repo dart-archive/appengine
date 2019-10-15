@@ -8,25 +8,41 @@
 const Model$json = {
   '1': 'Model',
   '2': [
-    {'1': 'etag', '3': 1, '4': 1, '5': 9, '10': 'etag'},
+    {'1': 'etag', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'etag'},
     {
       '1': 'model_reference',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.v2.ModelReference',
+      '8': {},
       '10': 'modelReference'
     },
-    {'1': 'creation_time', '3': 5, '4': 1, '5': 3, '10': 'creationTime'},
+    {
+      '1': 'creation_time',
+      '3': 5,
+      '4': 1,
+      '5': 3,
+      '8': {},
+      '10': 'creationTime'
+    },
     {
       '1': 'last_modified_time',
       '3': 6,
       '4': 1,
       '5': 3,
+      '8': {},
       '10': 'lastModifiedTime'
     },
-    {'1': 'description', '3': 12, '4': 1, '5': 9, '10': 'description'},
-    {'1': 'friendly_name', '3': 14, '4': 1, '5': 9, '10': 'friendlyName'},
+    {'1': 'description', '3': 12, '4': 1, '5': 9, '8': {}, '10': 'description'},
+    {
+      '1': 'friendly_name',
+      '3': 14,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'friendlyName'
+    },
     {
       '1': 'labels',
       '3': 15,
@@ -35,14 +51,30 @@ const Model$json = {
       '6': '.google.cloud.bigquery.v2.Model.LabelsEntry',
       '10': 'labels'
     },
-    {'1': 'expiration_time', '3': 16, '4': 1, '5': 3, '10': 'expirationTime'},
-    {'1': 'location', '3': 13, '4': 1, '5': 9, '10': 'location'},
+    {
+      '1': 'expiration_time',
+      '3': 16,
+      '4': 1,
+      '5': 3,
+      '8': {},
+      '10': 'expirationTime'
+    },
+    {'1': 'location', '3': 13, '4': 1, '5': 9, '8': {}, '10': 'location'},
+    {
+      '1': 'encryption_configuration',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.bigquery.v2.EncryptionConfiguration',
+      '10': 'encryptionConfiguration'
+    },
     {
       '1': 'model_type',
       '3': 7,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.bigquery.v2.Model.ModelType',
+      '8': {},
       '10': 'modelType'
     },
     {
@@ -51,6 +83,7 @@ const Model$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.bigquery.v2.Model.TrainingRun',
+      '8': {},
       '10': 'trainingRuns'
     },
     {
@@ -59,6 +92,7 @@ const Model$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.bigquery.v2.StandardSqlField',
+      '8': {},
       '10': 'featureColumns'
     },
     {
@@ -67,6 +101,7 @@ const Model$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.bigquery.v2.StandardSqlField',
+      '8': {},
       '10': 'labelColumns'
     },
   ],
@@ -902,24 +937,25 @@ const Model_OptimizationStrategy$json = {
 const GetModelRequest$json = {
   '1': 'GetModelRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '10': 'datasetId'},
-    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '10': 'modelId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'datasetId'},
+    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'modelId'},
   ],
 };
 
 const PatchModelRequest$json = {
   '1': 'PatchModelRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '10': 'datasetId'},
-    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '10': 'modelId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'datasetId'},
+    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'modelId'},
     {
       '1': 'model',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.v2.Model',
+      '8': {},
       '10': 'model'
     },
   ],
@@ -928,17 +964,17 @@ const PatchModelRequest$json = {
 const DeleteModelRequest$json = {
   '1': 'DeleteModelRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '10': 'datasetId'},
-    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '10': 'modelId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'datasetId'},
+    {'1': 'model_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'modelId'},
   ],
 };
 
 const ListModelsRequest$json = {
   '1': 'ListModelsRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '10': 'datasetId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'dataset_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'datasetId'},
     {
       '1': 'max_results',
       '3': 3,

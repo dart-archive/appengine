@@ -25,5 +25,6 @@ const AuthorizationErrorEnum_AuthorizationError$json = {
     {'1': 'CUSTOMER_NOT_ENABLED', '2': 24},
     {'1': 'MISSING_TOS', '2': 9},
     {'1': 'DEVELOPER_TOKEN_NOT_APPROVED', '2': 10},
+    {'1': 'INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION', '2': 11},
   ],
 };

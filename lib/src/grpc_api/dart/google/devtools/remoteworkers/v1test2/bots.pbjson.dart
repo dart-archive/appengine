@@ -13,6 +13,7 @@ const BotStatus$json = {
     {'1': 'UNHEALTHY', '2': 2},
     {'1': 'HOST_REBOOTING', '2': 3},
     {'1': 'BOT_TERMINATING', '2': 4},
+    {'1': 'INITIALIZING', '2': 5},
   ],
 };
 
@@ -66,6 +67,7 @@ const BotSession$json = {
     },
     {'1': 'version', '3': 7, '4': 1, '5': 9, '10': 'version'},
   ],
+  '7': {},
 };
 
 const Lease$json = {
@@ -170,13 +172,14 @@ const AdminTemp_Command$json = {
 const CreateBotSessionRequest$json = {
   '1': 'CreateBotSessionRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'bot_session',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.remoteworkers.v1test2.BotSession',
+      '8': {},
       '10': 'botSession'
     },
   ],
@@ -185,13 +188,14 @@ const CreateBotSessionRequest$json = {
 const UpdateBotSessionRequest$json = {
   '1': 'UpdateBotSessionRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'bot_session',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.remoteworkers.v1test2.BotSession',
+      '8': {},
       '10': 'botSession'
     },
     {
@@ -200,34 +204,8 @@ const UpdateBotSessionRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
-  ],
-};
-
-const PostBotEventTempRequest$json = {
-  '1': 'PostBotEventTempRequest',
-  '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {
-      '1': 'type',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6':
-          '.google.devtools.remoteworkers.v1test2.PostBotEventTempRequest.Type',
-      '10': 'type'
-    },
-    {'1': 'msg', '3': 3, '4': 1, '5': 9, '10': 'msg'},
-  ],
-  '4': [PostBotEventTempRequest_Type$json],
-};
-
-const PostBotEventTempRequest_Type$json = {
-  '1': 'Type',
-  '2': [
-    {'1': 'UNSPECIFIED', '2': 0},
-    {'1': 'INFO', '2': 1},
-    {'1': 'ERROR', '2': 2},
   ],
 };

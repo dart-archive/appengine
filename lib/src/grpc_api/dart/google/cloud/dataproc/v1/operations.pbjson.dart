@@ -14,16 +14,18 @@ const ClusterOperationStatus$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1.ClusterOperationStatus.State',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'inner_state', '3': 2, '4': 1, '5': 9, '10': 'innerState'},
-    {'1': 'details', '3': 3, '4': 1, '5': 9, '10': 'details'},
+    {'1': 'inner_state', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'innerState'},
+    {'1': 'details', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'details'},
     {
       '1': 'state_start_time',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'stateStartTime'
     },
   ],
@@ -43,14 +45,15 @@ const ClusterOperationStatus_State$json = {
 const ClusterOperationMetadata$json = {
   '1': 'ClusterOperationMetadata',
   '2': [
-    {'1': 'cluster_name', '3': 7, '4': 1, '5': 9, '10': 'clusterName'},
-    {'1': 'cluster_uuid', '3': 8, '4': 1, '5': 9, '10': 'clusterUuid'},
+    {'1': 'cluster_name', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
+    {'1': 'cluster_uuid', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'clusterUuid'},
     {
       '1': 'status',
       '3': 9,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.ClusterOperationStatus',
+      '8': {},
       '10': 'status'
     },
     {
@@ -59,19 +62,28 @@ const ClusterOperationMetadata$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.ClusterOperationStatus',
+      '8': {},
       '10': 'statusHistory'
     },
-    {'1': 'operation_type', '3': 11, '4': 1, '5': 9, '10': 'operationType'},
-    {'1': 'description', '3': 12, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'operation_type',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'operationType'
+    },
+    {'1': 'description', '3': 12, '4': 1, '5': 9, '8': {}, '10': 'description'},
     {
       '1': 'labels',
       '3': 13,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.ClusterOperationMetadata.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
-    {'1': 'warnings', '3': 14, '4': 3, '5': 9, '10': 'warnings'},
+    {'1': 'warnings', '3': 14, '4': 3, '5': 9, '8': {}, '10': 'warnings'},
   ],
   '3': [ClusterOperationMetadata_LabelsEntry$json],
 };

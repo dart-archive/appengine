@@ -5,16 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SystemParameters extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SystemParameters',
-      package: const $pb.PackageName('google.api'))
-    ..pc<SystemParameterRule>(
-        1, 'rules', $pb.PbFieldType.PM, SystemParameterRule.create)
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..pc<SystemParameterRule>(1, 'rules', $pb.PbFieldType.PM,
+        subBuilder: SystemParameterRule.create)
     ..hasRequiredFields = false;
 
   SystemParameters._() : super();
@@ -34,19 +33,21 @@ class SystemParameters extends $pb.GeneratedMessage {
   SystemParameters createEmptyInstance() => create();
   static $pb.PbList<SystemParameters> createRepeated() =>
       $pb.PbList<SystemParameters>();
-  static SystemParameters getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SystemParameters getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SystemParameters>(create);
   static SystemParameters _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<SystemParameterRule> get rules => $_getList(0);
 }
 
 class SystemParameterRule extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SystemParameterRule',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
     ..aOS(1, 'selector')
-    ..pc<SystemParameter>(
-        2, 'parameters', $pb.PbFieldType.PM, SystemParameter.create)
+    ..pc<SystemParameter>(2, 'parameters', $pb.PbFieldType.PM,
+        subBuilder: SystemParameter.create)
     ..hasRequiredFields = false;
 
   SystemParameterRule._() : super();
@@ -66,24 +67,30 @@ class SystemParameterRule extends $pb.GeneratedMessage {
   SystemParameterRule createEmptyInstance() => create();
   static $pb.PbList<SystemParameterRule> createRepeated() =>
       $pb.PbList<SystemParameterRule>();
-  static SystemParameterRule getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SystemParameterRule getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SystemParameterRule>(create);
   static SystemParameterRule _defaultInstance;
 
-  $core.String get selector => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get selector => $_getSZ(0);
+  @$pb.TagNumber(1)
   set selector($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSelector() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSelector() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<SystemParameter> get parameters => $_getList(1);
 }
 
 class SystemParameter extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SystemParameter',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'httpHeader')
     ..aOS(3, 'urlQueryParameter')
@@ -106,31 +113,44 @@ class SystemParameter extends $pb.GeneratedMessage {
   SystemParameter createEmptyInstance() => create();
   static $pb.PbList<SystemParameter> createRepeated() =>
       $pb.PbList<SystemParameter>();
-  static SystemParameter getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SystemParameter getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SystemParameter>(create);
   static SystemParameter _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get httpHeader => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get httpHeader => $_getSZ(1);
+  @$pb.TagNumber(2)
   set httpHeader($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasHttpHeader() => $_has(1);
+  @$pb.TagNumber(2)
   void clearHttpHeader() => clearField(2);
 
-  $core.String get urlQueryParameter => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get urlQueryParameter => $_getSZ(2);
+  @$pb.TagNumber(3)
   set urlQueryParameter($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUrlQueryParameter() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUrlQueryParameter() => clearField(3);
 }

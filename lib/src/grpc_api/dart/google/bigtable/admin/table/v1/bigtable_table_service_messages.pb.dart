@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,11 +13,11 @@ import 'bigtable_table_data.pb.dart' as $2;
 
 class CreateTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTableRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'tableId')
-    ..a<$2.Table>(
-        3, 'table', $pb.PbFieldType.OM, $2.Table.getDefault, $2.Table.create)
+    ..aOM<$2.Table>(3, 'table', subBuilder: $2.Table.create)
     ..pPS(4, 'initialSplitKeys')
     ..hasRequiredFields = false;
 
@@ -39,40 +38,57 @@ class CreateTableRequest extends $pb.GeneratedMessage {
   CreateTableRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTableRequest> createRepeated() =>
       $pb.PbList<CreateTableRequest>();
-  static CreateTableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTableRequest>(create);
   static CreateTableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get tableId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get tableId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set tableId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTableId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTableId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.Table get table => $_getN(2);
+  @$pb.TagNumber(3)
   set table($2.Table v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTable() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Table ensureTable() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get initialSplitKeys => $_getList(3);
 }
 
 class ListTablesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -93,23 +109,29 @@ class ListTablesRequest extends $pb.GeneratedMessage {
   ListTablesRequest createEmptyInstance() => create();
   static $pb.PbList<ListTablesRequest> createRepeated() =>
       $pb.PbList<ListTablesRequest>();
-  static ListTablesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTablesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTablesRequest>(create);
   static ListTablesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListTablesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTablesResponse',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
-    ..pc<$2.Table>(1, 'tables', $pb.PbFieldType.PM, $2.Table.create)
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
+    ..pc<$2.Table>(1, 'tables', $pb.PbFieldType.PM, subBuilder: $2.Table.create)
     ..hasRequiredFields = false;
 
   ListTablesResponse._() : super();
@@ -129,16 +151,19 @@ class ListTablesResponse extends $pb.GeneratedMessage {
   ListTablesResponse createEmptyInstance() => create();
   static $pb.PbList<ListTablesResponse> createRepeated() =>
       $pb.PbList<ListTablesResponse>();
-  static ListTablesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTablesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTablesResponse>(create);
   static ListTablesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.Table> get tables => $_getList(0);
 }
 
 class GetTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTableRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -159,22 +184,28 @@ class GetTableRequest extends $pb.GeneratedMessage {
   GetTableRequest createEmptyInstance() => create();
   static $pb.PbList<GetTableRequest> createRepeated() =>
       $pb.PbList<GetTableRequest>();
-  static GetTableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTableRequest>(create);
   static GetTableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTableRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -195,22 +226,28 @@ class DeleteTableRequest extends $pb.GeneratedMessage {
   DeleteTableRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTableRequest> createRepeated() =>
       $pb.PbList<DeleteTableRequest>();
-  static DeleteTableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteTableRequest>(create);
   static DeleteTableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class RenameTableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RenameTableRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'newId')
     ..hasRequiredFields = false;
@@ -232,34 +269,44 @@ class RenameTableRequest extends $pb.GeneratedMessage {
   RenameTableRequest createEmptyInstance() => create();
   static $pb.PbList<RenameTableRequest> createRepeated() =>
       $pb.PbList<RenameTableRequest>();
-  static RenameTableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RenameTableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RenameTableRequest>(create);
   static RenameTableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get newId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get newId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set newId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNewId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNewId() => clearField(2);
 }
 
 class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateColumnFamilyRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'columnFamilyId')
-    ..a<$2.ColumnFamily>(3, 'columnFamily', $pb.PbFieldType.OM,
-        $2.ColumnFamily.getDefault, $2.ColumnFamily.create)
+    ..aOM<$2.ColumnFamily>(3, 'columnFamily',
+        subBuilder: $2.ColumnFamily.create)
     ..hasRequiredFields = false;
 
   CreateColumnFamilyRequest._() : super();
@@ -282,38 +329,54 @@ class CreateColumnFamilyRequest extends $pb.GeneratedMessage {
   CreateColumnFamilyRequest createEmptyInstance() => create();
   static $pb.PbList<CreateColumnFamilyRequest> createRepeated() =>
       $pb.PbList<CreateColumnFamilyRequest>();
-  static CreateColumnFamilyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateColumnFamilyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateColumnFamilyRequest>(create);
   static CreateColumnFamilyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get columnFamilyId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get columnFamilyId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set columnFamilyId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasColumnFamilyId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearColumnFamilyId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.ColumnFamily get columnFamily => $_getN(2);
+  @$pb.TagNumber(3)
   set columnFamily($2.ColumnFamily v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasColumnFamily() => $_has(2);
+  @$pb.TagNumber(3)
   void clearColumnFamily() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.ColumnFamily ensureColumnFamily() => $_ensure(2);
 }
 
 class DeleteColumnFamilyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteColumnFamilyRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -337,16 +400,21 @@ class DeleteColumnFamilyRequest extends $pb.GeneratedMessage {
   DeleteColumnFamilyRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteColumnFamilyRequest> createRepeated() =>
       $pb.PbList<DeleteColumnFamilyRequest>();
-  static DeleteColumnFamilyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteColumnFamilyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteColumnFamilyRequest>(create);
   static DeleteColumnFamilyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -364,7 +432,8 @@ class BulkDeleteRowsRequest extends $pb.GeneratedMessage {
     0: BulkDeleteRowsRequest_Target.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BulkDeleteRowsRequest',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'tableName')
     ..a<$core.List<$core.int>>(2, 'rowKeyPrefix', $pb.PbFieldType.OY)
@@ -390,35 +459,48 @@ class BulkDeleteRowsRequest extends $pb.GeneratedMessage {
   BulkDeleteRowsRequest createEmptyInstance() => create();
   static $pb.PbList<BulkDeleteRowsRequest> createRepeated() =>
       $pb.PbList<BulkDeleteRowsRequest>();
-  static BulkDeleteRowsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BulkDeleteRowsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BulkDeleteRowsRequest>(create);
   static BulkDeleteRowsRequest _defaultInstance;
 
   BulkDeleteRowsRequest_Target whichTarget() =>
       _BulkDeleteRowsRequest_TargetByTag[$_whichOneof(0)];
   void clearTarget() => clearField($_whichOneof(0));
 
-  $core.String get tableName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get tableName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set tableName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTableName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTableName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get rowKeyPrefix => $_getN(1);
+  @$pb.TagNumber(2)
   set rowKeyPrefix($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRowKeyPrefix() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRowKeyPrefix() => clearField(2);
 
-  $core.bool get deleteAllDataFromTable => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get deleteAllDataFromTable => $_getBF(2);
+  @$pb.TagNumber(3)
   set deleteAllDataFromTable($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeleteAllDataFromTable() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeleteAllDataFromTable() => clearField(3);
 }

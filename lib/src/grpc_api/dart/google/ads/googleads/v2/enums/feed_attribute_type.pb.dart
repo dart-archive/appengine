@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'feed_attribute_type.pbenum.dart';
 
 class FeedAttributeTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FeedAttributeTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   FeedAttributeTypeEnum._() : super();
@@ -36,7 +36,8 @@ class FeedAttributeTypeEnum extends $pb.GeneratedMessage {
   FeedAttributeTypeEnum createEmptyInstance() => create();
   static $pb.PbList<FeedAttributeTypeEnum> createRepeated() =>
       $pb.PbList<FeedAttributeTypeEnum>();
-  static FeedAttributeTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FeedAttributeTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FeedAttributeTypeEnum>(create);
   static FeedAttributeTypeEnum _defaultInstance;
 }

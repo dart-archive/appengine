@@ -28,6 +28,7 @@ const Stream$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
+  '7': {},
 };
 
 const StreamPosition$json = {
@@ -108,6 +109,7 @@ const ReadSession$json = {
       '10': 'shardingStrategy'
     },
   ],
+  '7': {},
   '8': [
     {'1': 'schema'},
   ],
@@ -122,9 +124,10 @@ const CreateReadSessionRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.storage.v1beta1.TableReference',
+      '8': {},
       '10': 'tableReference'
     },
-    {'1': 'parent', '3': 6, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'table_modifiers',
       '3': 2,
@@ -176,6 +179,7 @@ const ReadRowsRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.storage.v1beta1.StreamPosition',
+      '8': {},
       '10': 'readPosition'
     },
   ],
@@ -198,7 +202,23 @@ const StreamStatus$json = {
       '5': 2,
       '10': 'fractionConsumed'
     },
+    {
+      '1': 'progress',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.bigquery.storage.v1beta1.Progress',
+      '10': 'progress'
+    },
     {'1': 'is_splittable', '3': 3, '4': 1, '5': 8, '10': 'isSplittable'},
+  ],
+};
+
+const Progress$json = {
+  '1': 'Progress',
+  '2': [
+    {'1': 'at_response_start', '3': 1, '4': 1, '5': 2, '10': 'atResponseStart'},
+    {'1': 'at_response_end', '3': 2, '4': 1, '5': 2, '10': 'atResponseEnd'},
   ],
 };
 
@@ -262,6 +282,7 @@ const BatchCreateReadSessionStreamsRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.storage.v1beta1.ReadSession',
+      '8': {},
       '10': 'session'
     },
     {
@@ -269,6 +290,7 @@ const BatchCreateReadSessionStreamsRequest$json = {
       '3': 2,
       '4': 1,
       '5': 5,
+      '8': {},
       '10': 'requestedStreams'
     },
   ],

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'frequency_cap_time_unit.pbenum.dart';
 
 class FrequencyCapTimeUnitEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FrequencyCapTimeUnitEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   FrequencyCapTimeUnitEnum._() : super();
@@ -36,7 +36,8 @@ class FrequencyCapTimeUnitEnum extends $pb.GeneratedMessage {
   FrequencyCapTimeUnitEnum createEmptyInstance() => create();
   static $pb.PbList<FrequencyCapTimeUnitEnum> createRepeated() =>
       $pb.PbList<FrequencyCapTimeUnitEnum>();
-  static FrequencyCapTimeUnitEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FrequencyCapTimeUnitEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FrequencyCapTimeUnitEnum>(create);
   static FrequencyCapTimeUnitEnum _defaultInstance;
 }

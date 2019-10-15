@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Reference extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Reference',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aInt64(2, 'length')
     ..aOS(3, 'md5checksum')
@@ -39,63 +39,91 @@ class Reference extends $pb.GeneratedMessage {
   static Reference create() => Reference._();
   Reference createEmptyInstance() => create();
   static $pb.PbList<Reference> createRepeated() => $pb.PbList<Reference>();
-  static Reference getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Reference getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Reference>(create);
   static Reference _defaultInstance;
 
-  $core.String get id => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
   set id($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
-  Int64 get length => $_getI64(1);
-  set length(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get length => $_getI64(1);
+  @$pb.TagNumber(2)
+  set length($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLength() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLength() => clearField(2);
 
-  $core.String get md5checksum => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get md5checksum => $_getSZ(2);
+  @$pb.TagNumber(3)
   set md5checksum($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMd5checksum() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMd5checksum() => clearField(3);
 
-  $core.String get name => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get name => $_getSZ(3);
+  @$pb.TagNumber(4)
   set name($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
+  @$pb.TagNumber(4)
   void clearName() => clearField(4);
 
-  $core.String get sourceUri => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get sourceUri => $_getSZ(4);
+  @$pb.TagNumber(5)
   set sourceUri($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasSourceUri() => $_has(4);
+  @$pb.TagNumber(5)
   void clearSourceUri() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<$core.String> get sourceAccessions => $_getList(5);
 
-  $core.int get ncbiTaxonId => $_get(6, 0);
+  @$pb.TagNumber(7)
+  $core.int get ncbiTaxonId => $_getIZ(6);
+  @$pb.TagNumber(7)
   set ncbiTaxonId($core.int v) {
     $_setSignedInt32(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasNcbiTaxonId() => $_has(6);
+  @$pb.TagNumber(7)
   void clearNcbiTaxonId() => clearField(7);
 }
 
 class ReferenceSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReferenceSet',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'id')
     ..pPS(2, 'referenceIds')
     ..aOS(3, 'md5checksum')
@@ -123,66 +151,95 @@ class ReferenceSet extends $pb.GeneratedMessage {
   ReferenceSet createEmptyInstance() => create();
   static $pb.PbList<ReferenceSet> createRepeated() =>
       $pb.PbList<ReferenceSet>();
-  static ReferenceSet getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReferenceSet getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReferenceSet>(create);
   static ReferenceSet _defaultInstance;
 
-  $core.String get id => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
   set id($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get referenceIds => $_getList(1);
 
-  $core.String get md5checksum => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get md5checksum => $_getSZ(2);
+  @$pb.TagNumber(3)
   set md5checksum($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMd5checksum() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMd5checksum() => clearField(3);
 
-  $core.int get ncbiTaxonId => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get ncbiTaxonId => $_getIZ(3);
+  @$pb.TagNumber(4)
   set ncbiTaxonId($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasNcbiTaxonId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearNcbiTaxonId() => clearField(4);
 
-  $core.String get description => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get description => $_getSZ(4);
+  @$pb.TagNumber(5)
   set description($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDescription() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDescription() => clearField(5);
 
-  $core.String get assemblyId => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get assemblyId => $_getSZ(5);
+  @$pb.TagNumber(6)
   set assemblyId($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasAssemblyId() => $_has(5);
+  @$pb.TagNumber(6)
   void clearAssemblyId() => clearField(6);
 
-  $core.String get sourceUri => $_getS(6, '');
+  @$pb.TagNumber(7)
+  $core.String get sourceUri => $_getSZ(6);
+  @$pb.TagNumber(7)
   set sourceUri($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasSourceUri() => $_has(6);
+  @$pb.TagNumber(7)
   void clearSourceUri() => clearField(7);
 
+  @$pb.TagNumber(8)
   $core.List<$core.String> get sourceAccessions => $_getList(7);
 }
 
 class SearchReferenceSetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchReferenceSetsRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'md5checksums')
     ..pPS(2, 'accessions')
     ..aOS(3, 'assemblyId')
@@ -210,45 +267,61 @@ class SearchReferenceSetsRequest extends $pb.GeneratedMessage {
   SearchReferenceSetsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchReferenceSetsRequest> createRepeated() =>
       $pb.PbList<SearchReferenceSetsRequest>();
-  static SearchReferenceSetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferenceSetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchReferenceSetsRequest>(create);
   static SearchReferenceSetsRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get md5checksums => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get accessions => $_getList(1);
 
-  $core.String get assemblyId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get assemblyId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set assemblyId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAssemblyId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAssemblyId() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.int get pageSize => $_get(4, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(4);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 }
 
 class SearchReferenceSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchReferenceSetsResponse',
-      package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<ReferenceSet>(
-        1, 'referenceSets', $pb.PbFieldType.PM, ReferenceSet.create)
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<ReferenceSet>(1, 'referenceSets', $pb.PbFieldType.PM,
+        subBuilder: ReferenceSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -273,24 +346,31 @@ class SearchReferenceSetsResponse extends $pb.GeneratedMessage {
   SearchReferenceSetsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchReferenceSetsResponse> createRepeated() =>
       $pb.PbList<SearchReferenceSetsResponse>();
-  static SearchReferenceSetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferenceSetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchReferenceSetsResponse>(create);
   static SearchReferenceSetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ReferenceSet> get referenceSets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetReferenceSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetReferenceSetRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'referenceSetId')
     ..hasRequiredFields = false;
 
@@ -313,22 +393,28 @@ class GetReferenceSetRequest extends $pb.GeneratedMessage {
   GetReferenceSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetReferenceSetRequest> createRepeated() =>
       $pb.PbList<GetReferenceSetRequest>();
-  static GetReferenceSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetReferenceSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetReferenceSetRequest>(create);
   static GetReferenceSetRequest _defaultInstance;
 
-  $core.String get referenceSetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get referenceSetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set referenceSetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReferenceSetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReferenceSetId() => clearField(1);
 }
 
 class SearchReferencesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchReferencesRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'md5checksums')
     ..pPS(2, 'accessions')
     ..aOS(3, 'referenceSetId')
@@ -355,43 +441,60 @@ class SearchReferencesRequest extends $pb.GeneratedMessage {
   SearchReferencesRequest createEmptyInstance() => create();
   static $pb.PbList<SearchReferencesRequest> createRepeated() =>
       $pb.PbList<SearchReferencesRequest>();
-  static SearchReferencesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferencesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchReferencesRequest>(create);
   static SearchReferencesRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get md5checksums => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get accessions => $_getList(1);
 
-  $core.String get referenceSetId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get referenceSetId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set referenceSetId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReferenceSetId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReferenceSetId() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.int get pageSize => $_get(4, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(4);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 }
 
 class SearchReferencesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchReferencesResponse',
-      package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<Reference>(1, 'references', $pb.PbFieldType.PM, Reference.create)
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<Reference>(1, 'references', $pb.PbFieldType.PM,
+        subBuilder: Reference.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -414,24 +517,31 @@ class SearchReferencesResponse extends $pb.GeneratedMessage {
   SearchReferencesResponse createEmptyInstance() => create();
   static $pb.PbList<SearchReferencesResponse> createRepeated() =>
       $pb.PbList<SearchReferencesResponse>();
-  static SearchReferencesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchReferencesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchReferencesResponse>(create);
   static SearchReferencesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Reference> get references => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetReferenceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetReferenceRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'referenceId')
     ..hasRequiredFields = false;
 
@@ -452,22 +562,28 @@ class GetReferenceRequest extends $pb.GeneratedMessage {
   GetReferenceRequest createEmptyInstance() => create();
   static $pb.PbList<GetReferenceRequest> createRepeated() =>
       $pb.PbList<GetReferenceRequest>();
-  static GetReferenceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetReferenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetReferenceRequest>(create);
   static GetReferenceRequest _defaultInstance;
 
-  $core.String get referenceId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get referenceId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set referenceId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReferenceId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReferenceId() => clearField(1);
 }
 
 class ListBasesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBasesRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'referenceId')
     ..aInt64(2, 'start')
     ..aInt64(3, 'end')
@@ -492,54 +608,76 @@ class ListBasesRequest extends $pb.GeneratedMessage {
   ListBasesRequest createEmptyInstance() => create();
   static $pb.PbList<ListBasesRequest> createRepeated() =>
       $pb.PbList<ListBasesRequest>();
-  static ListBasesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListBasesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListBasesRequest>(create);
   static ListBasesRequest _defaultInstance;
 
-  $core.String get referenceId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get referenceId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set referenceId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReferenceId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReferenceId() => clearField(1);
 
-  Int64 get start => $_getI64(1);
-  set start(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get start => $_getI64(1);
+  @$pb.TagNumber(2)
+  set start($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStart() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStart() => clearField(2);
 
-  Int64 get end => $_getI64(2);
-  set end(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get end => $_getI64(2);
+  @$pb.TagNumber(3)
+  set end($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEnd() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEnd() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.int get pageSize => $_get(4, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(4);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 }
 
 class ListBasesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBasesResponse',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aInt64(1, 'offset')
     ..aOS(2, 'sequence')
     ..aOS(3, 'nextPageToken')
@@ -562,31 +700,44 @@ class ListBasesResponse extends $pb.GeneratedMessage {
   ListBasesResponse createEmptyInstance() => create();
   static $pb.PbList<ListBasesResponse> createRepeated() =>
       $pb.PbList<ListBasesResponse>();
-  static ListBasesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListBasesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListBasesResponse>(create);
   static ListBasesResponse _defaultInstance;
 
-  Int64 get offset => $_getI64(0);
-  set offset(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get offset => $_getI64(0);
+  @$pb.TagNumber(1)
+  set offset($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOffset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOffset() => clearField(1);
 
-  $core.String get sequence => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get sequence => $_getSZ(1);
+  @$pb.TagNumber(2)
   set sequence($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSequence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSequence() => clearField(2);
 
-  $core.String get nextPageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set nextPageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNextPageToken() => clearField(3);
 }

@@ -14,6 +14,7 @@ const RecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig',
+      '8': {},
       '10': 'config'
     },
     {
@@ -22,6 +23,7 @@ const RecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1p1beta1.RecognitionAudio',
+      '8': {},
       '10': 'audio'
     },
   ],
@@ -36,6 +38,7 @@ const LongRunningRecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig',
+      '8': {},
       '10': 'config'
     },
     {
@@ -44,6 +47,7 @@ const LongRunningRecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1p1beta1.RecognitionAudio',
+      '8': {},
       '10': 'audio'
     },
   ],
@@ -84,6 +88,7 @@ const StreamingRecognitionConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1p1beta1.RecognitionConfig',
+      '8': {},
       '10': 'config'
     },
     {'1': 'single_utterance', '3': 2, '4': 1, '5': 8, '10': 'singleUtterance'},
@@ -117,7 +122,14 @@ const RecognitionConfig$json = {
       '5': 8,
       '10': 'enableSeparateRecognitionPerChannel'
     },
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
     {
       '1': 'alternative_language_codes',
       '3': 18,
@@ -283,7 +295,14 @@ const RecognitionMetadata$json = {
       '5': 9,
       '10': 'originalMimeType'
     },
-    {'1': 'obfuscated_id', '3': 9, '4': 1, '5': 3, '10': 'obfuscatedId'},
+    {
+      '1': 'obfuscated_id',
+      '3': 9,
+      '4': 1,
+      '5': 3,
+      '8': {'3': true},
+      '10': 'obfuscatedId',
+    },
     {'1': 'audio_topic', '3': 10, '4': 1, '5': 9, '10': 'audioTopic'},
   ],
   '4': [

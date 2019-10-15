@@ -5,13 +5,13 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../api/metric.pb.dart' as $2;
 import '../../api/distribution.pb.dart' as $3;
+import '../../protobuf/timestamp.pb.dart' as $4;
 
 import 'logging_metrics.pbenum.dart';
 
@@ -19,36 +19,27 @@ export 'logging_metrics.pbenum.dart';
 
 class LogMetric extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogMetric',
-      package: const $pb.PackageName('google.logging.v2'))
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOS(3, 'filter')
-    ..e<LogMetric_ApiVersion>(
-        4,
-        'version',
-        $pb.PbFieldType.OE,
-        LogMetric_ApiVersion.V2,
-        LogMetric_ApiVersion.valueOf,
-        LogMetric_ApiVersion.values)
-    ..a<$2.MetricDescriptor>(5, 'metricDescriptor', $pb.PbFieldType.OM,
-        $2.MetricDescriptor.getDefault, $2.MetricDescriptor.create)
+    ..e<LogMetric_ApiVersion>(4, 'version', $pb.PbFieldType.OE,
+        defaultOrMaker: LogMetric_ApiVersion.V2,
+        valueOf: LogMetric_ApiVersion.valueOf,
+        enumValues: LogMetric_ApiVersion.values)
+    ..aOM<$2.MetricDescriptor>(5, 'metricDescriptor',
+        subBuilder: $2.MetricDescriptor.create)
     ..aOS(6, 'valueExtractor')
-    ..m<$core.String, $core.String>(
-        7,
-        'labelExtractors',
-        'LogMetric.LabelExtractorsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.logging.v2'))
-    ..a<$3.Distribution_BucketOptions>(
-        8,
-        'bucketOptions',
-        $pb.PbFieldType.OM,
-        $3.Distribution_BucketOptions.getDefault,
-        $3.Distribution_BucketOptions.create)
+    ..m<$core.String, $core.String>(7, 'labelExtractors',
+        entryClassName: 'LogMetric.LabelExtractorsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.logging.v2'))
+    ..aOM<$3.Distribution_BucketOptions>(8, 'bucketOptions',
+        subBuilder: $3.Distribution_BucketOptions.create)
+    ..aOM<$4.Timestamp>(9, 'createTime', subBuilder: $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(10, 'updateTime', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   LogMetric._() : super();
@@ -67,75 +58,139 @@ class LogMetric extends $pb.GeneratedMessage {
   static LogMetric create() => LogMetric._();
   LogMetric createEmptyInstance() => create();
   static $pb.PbList<LogMetric> createRepeated() => $pb.PbList<LogMetric>();
-  static LogMetric getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LogMetric getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LogMetric>(create);
   static LogMetric _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
-  $core.String get filter => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(3)
   set filter($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFilter() => clearField(3);
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   LogMetric_ApiVersion get version => $_getN(3);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   set version(LogMetric_ApiVersion v) {
     setField(4, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   $core.bool hasVersion() => $_has(3);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   void clearVersion() => clearField(4);
 
+  @$pb.TagNumber(5)
   $2.MetricDescriptor get metricDescriptor => $_getN(4);
+  @$pb.TagNumber(5)
   set metricDescriptor($2.MetricDescriptor v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasMetricDescriptor() => $_has(4);
+  @$pb.TagNumber(5)
   void clearMetricDescriptor() => clearField(5);
+  @$pb.TagNumber(5)
+  $2.MetricDescriptor ensureMetricDescriptor() => $_ensure(4);
 
-  $core.String get valueExtractor => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get valueExtractor => $_getSZ(5);
+  @$pb.TagNumber(6)
   set valueExtractor($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasValueExtractor() => $_has(5);
+  @$pb.TagNumber(6)
   void clearValueExtractor() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.Map<$core.String, $core.String> get labelExtractors => $_getMap(6);
 
+  @$pb.TagNumber(8)
   $3.Distribution_BucketOptions get bucketOptions => $_getN(7);
+  @$pb.TagNumber(8)
   set bucketOptions($3.Distribution_BucketOptions v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasBucketOptions() => $_has(7);
+  @$pb.TagNumber(8)
   void clearBucketOptions() => clearField(8);
+  @$pb.TagNumber(8)
+  $3.Distribution_BucketOptions ensureBucketOptions() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $4.Timestamp get createTime => $_getN(8);
+  @$pb.TagNumber(9)
+  set createTime($4.Timestamp v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasCreateTime() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCreateTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $4.Timestamp ensureCreateTime() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $4.Timestamp get updateTime => $_getN(9);
+  @$pb.TagNumber(10)
+  set updateTime($4.Timestamp v) {
+    setField(10, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasUpdateTime() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearUpdateTime() => clearField(10);
+  @$pb.TagNumber(10)
+  $4.Timestamp ensureUpdateTime() => $_ensure(9);
 }
 
 class ListLogMetricsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLogMetricsRequest',
-      package: const $pb.PackageName('google.logging.v2'))
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -160,39 +215,54 @@ class ListLogMetricsRequest extends $pb.GeneratedMessage {
   ListLogMetricsRequest createEmptyInstance() => create();
   static $pb.PbList<ListLogMetricsRequest> createRepeated() =>
       $pb.PbList<ListLogMetricsRequest>();
-  static ListLogMetricsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListLogMetricsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListLogMetricsRequest>(create);
   static ListLogMetricsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListLogMetricsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLogMetricsResponse',
-      package: const $pb.PackageName('google.logging.v2'))
-    ..pc<LogMetric>(1, 'metrics', $pb.PbFieldType.PM, LogMetric.create)
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
+    ..pc<LogMetric>(1, 'metrics', $pb.PbFieldType.PM,
+        subBuilder: LogMetric.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -215,24 +285,31 @@ class ListLogMetricsResponse extends $pb.GeneratedMessage {
   ListLogMetricsResponse createEmptyInstance() => create();
   static $pb.PbList<ListLogMetricsResponse> createRepeated() =>
       $pb.PbList<ListLogMetricsResponse>();
-  static ListLogMetricsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListLogMetricsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListLogMetricsResponse>(create);
   static ListLogMetricsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<LogMetric> get metrics => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetLogMetricRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLogMetricRequest',
-      package: const $pb.PackageName('google.logging.v2'))
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
@@ -253,25 +330,30 @@ class GetLogMetricRequest extends $pb.GeneratedMessage {
   GetLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<GetLogMetricRequest> createRepeated() =>
       $pb.PbList<GetLogMetricRequest>();
-  static GetLogMetricRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetLogMetricRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLogMetricRequest>(create);
   static GetLogMetricRequest _defaultInstance;
 
-  $core.String get metricName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get metricName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set metricName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMetricName() => clearField(1);
 }
 
 class CreateLogMetricRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateLogMetricRequest',
-      package: const $pb.PackageName('google.logging.v2'))
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<LogMetric>(
-        2, 'metric', $pb.PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
+    ..aOM<LogMetric>(2, 'metric', subBuilder: LogMetric.create)
     ..hasRequiredFields = false;
 
   CreateLogMetricRequest._() : super();
@@ -293,33 +375,44 @@ class CreateLogMetricRequest extends $pb.GeneratedMessage {
   CreateLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<CreateLogMetricRequest> createRepeated() =>
       $pb.PbList<CreateLogMetricRequest>();
-  static CreateLogMetricRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateLogMetricRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateLogMetricRequest>(create);
   static CreateLogMetricRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   LogMetric get metric => $_getN(1);
+  @$pb.TagNumber(2)
   set metric(LogMetric v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMetric() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMetric() => clearField(2);
+  @$pb.TagNumber(2)
+  LogMetric ensureMetric() => $_ensure(1);
 }
 
 class UpdateLogMetricRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateLogMetricRequest',
-      package: const $pb.PackageName('google.logging.v2'))
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'metricName')
-    ..a<LogMetric>(
-        2, 'metric', $pb.PbFieldType.OM, LogMetric.getDefault, LogMetric.create)
+    ..aOM<LogMetric>(2, 'metric', subBuilder: LogMetric.create)
     ..hasRequiredFields = false;
 
   UpdateLogMetricRequest._() : super();
@@ -341,30 +434,42 @@ class UpdateLogMetricRequest extends $pb.GeneratedMessage {
   UpdateLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateLogMetricRequest> createRepeated() =>
       $pb.PbList<UpdateLogMetricRequest>();
-  static UpdateLogMetricRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateLogMetricRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateLogMetricRequest>(create);
   static UpdateLogMetricRequest _defaultInstance;
 
-  $core.String get metricName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get metricName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set metricName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMetricName() => clearField(1);
 
+  @$pb.TagNumber(2)
   LogMetric get metric => $_getN(1);
+  @$pb.TagNumber(2)
   set metric(LogMetric v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMetric() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMetric() => clearField(2);
+  @$pb.TagNumber(2)
+  LogMetric ensureMetric() => $_ensure(1);
 }
 
 class DeleteLogMetricRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteLogMetricRequest',
-      package: const $pb.PackageName('google.logging.v2'))
+      package: const $pb.PackageName('google.logging.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'metricName')
     ..hasRequiredFields = false;
 
@@ -387,15 +492,20 @@ class DeleteLogMetricRequest extends $pb.GeneratedMessage {
   DeleteLogMetricRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteLogMetricRequest> createRepeated() =>
       $pb.PbList<DeleteLogMetricRequest>();
-  static DeleteLogMetricRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteLogMetricRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteLogMetricRequest>(create);
   static DeleteLogMetricRequest _defaultInstance;
 
-  $core.String get metricName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get metricName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set metricName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMetricName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMetricName() => clearField(1);
 }

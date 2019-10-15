@@ -9,13 +9,14 @@ const ClientEvent$json = {
   '1': 'ClientEvent',
   '2': [
     {'1': 'request_id', '3': 1, '4': 1, '5': 9, '10': 'requestId'},
-    {'1': 'event_id', '3': 2, '4': 1, '5': 9, '10': 'eventId'},
+    {'1': 'event_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'eventId'},
     {
       '1': 'create_time',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'createTime'
     },
     {
@@ -52,9 +53,10 @@ const JobEvent$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.JobEvent.JobEventType',
+      '8': {},
       '10': 'type'
     },
-    {'1': 'jobs', '3': 2, '4': 3, '5': 9, '10': 'jobs'},
+    {'1': 'jobs', '3': 2, '4': 3, '5': 9, '8': {}, '10': 'jobs'},
     {'1': 'profile', '3': 3, '4': 1, '5': 9, '10': 'profile'},
   ],
   '4': [JobEvent_JobEventType$json],
@@ -91,9 +93,10 @@ const ProfileEvent$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.ProfileEvent.ProfileEventType',
+      '8': {},
       '10': 'type'
     },
-    {'1': 'profiles', '3': 2, '4': 3, '5': 9, '10': 'profiles'},
+    {'1': 'profiles', '3': 2, '4': 3, '5': 9, '8': {}, '10': 'profiles'},
     {'1': 'jobs', '3': 6, '4': 3, '5': 9, '10': 'jobs'},
   ],
   '4': [ProfileEvent_ProfileEventType$json],

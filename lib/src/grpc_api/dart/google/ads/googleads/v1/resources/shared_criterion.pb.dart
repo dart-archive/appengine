@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -37,32 +36,26 @@ class SharedCriterion extends $pb.GeneratedMessage {
     0: SharedCriterion_Criterion.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SharedCriterion',
-      package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v1.resources'),
+      createEmptyInstance: create)
     ..oo(0, [3, 5, 6, 7, 8, 9])
     ..aOS(1, 'resourceName')
-    ..a<$0.StringValue>(2, 'sharedSet', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$1.KeywordInfo>(3, 'keyword', $pb.PbFieldType.OM,
-        $1.KeywordInfo.getDefault, $1.KeywordInfo.create)
-    ..e<$2.CriterionTypeEnum_CriterionType>(
-        4,
-        'type',
-        $pb.PbFieldType.OE,
-        $2.CriterionTypeEnum_CriterionType.UNSPECIFIED,
-        $2.CriterionTypeEnum_CriterionType.valueOf,
-        $2.CriterionTypeEnum_CriterionType.values)
-    ..a<$1.YouTubeVideoInfo>(5, 'youtubeVideo', $pb.PbFieldType.OM,
-        $1.YouTubeVideoInfo.getDefault, $1.YouTubeVideoInfo.create)
-    ..a<$1.YouTubeChannelInfo>(6, 'youtubeChannel', $pb.PbFieldType.OM,
-        $1.YouTubeChannelInfo.getDefault, $1.YouTubeChannelInfo.create)
-    ..a<$1.PlacementInfo>(7, 'placement', $pb.PbFieldType.OM,
-        $1.PlacementInfo.getDefault, $1.PlacementInfo.create)
-    ..a<$1.MobileAppCategoryInfo>(8, 'mobileAppCategory', $pb.PbFieldType.OM,
-        $1.MobileAppCategoryInfo.getDefault, $1.MobileAppCategoryInfo.create)
-    ..a<$1.MobileApplicationInfo>(9, 'mobileApplication', $pb.PbFieldType.OM,
-        $1.MobileApplicationInfo.getDefault, $1.MobileApplicationInfo.create)
-    ..a<$0.Int64Value>(26, 'criterionId', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+    ..aOM<$0.StringValue>(2, 'sharedSet', subBuilder: $0.StringValue.create)
+    ..aOM<$1.KeywordInfo>(3, 'keyword', subBuilder: $1.KeywordInfo.create)
+    ..e<$2.CriterionTypeEnum_CriterionType>(4, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.CriterionTypeEnum_CriterionType.UNSPECIFIED,
+        valueOf: $2.CriterionTypeEnum_CriterionType.valueOf,
+        enumValues: $2.CriterionTypeEnum_CriterionType.values)
+    ..aOM<$1.YouTubeVideoInfo>(5, 'youtubeVideo',
+        subBuilder: $1.YouTubeVideoInfo.create)
+    ..aOM<$1.YouTubeChannelInfo>(6, 'youtubeChannel',
+        subBuilder: $1.YouTubeChannelInfo.create)
+    ..aOM<$1.PlacementInfo>(7, 'placement', subBuilder: $1.PlacementInfo.create)
+    ..aOM<$1.MobileAppCategoryInfo>(8, 'mobileAppCategory',
+        subBuilder: $1.MobileAppCategoryInfo.create)
+    ..aOM<$1.MobileApplicationInfo>(9, 'mobileApplication',
+        subBuilder: $1.MobileApplicationInfo.create)
+    ..aOM<$0.Int64Value>(26, 'criterionId', subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   SharedCriterion._() : super();
@@ -82,91 +75,148 @@ class SharedCriterion extends $pb.GeneratedMessage {
   SharedCriterion createEmptyInstance() => create();
   static $pb.PbList<SharedCriterion> createRepeated() =>
       $pb.PbList<SharedCriterion>();
-  static SharedCriterion getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SharedCriterion getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SharedCriterion>(create);
   static SharedCriterion _defaultInstance;
 
   SharedCriterion_Criterion whichCriterion() =>
       _SharedCriterion_CriterionByTag[$_whichOneof(0)];
   void clearCriterion() => clearField($_whichOneof(0));
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.StringValue get sharedSet => $_getN(1);
+  @$pb.TagNumber(2)
   set sharedSet($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSharedSet() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSharedSet() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureSharedSet() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $1.KeywordInfo get keyword => $_getN(2);
+  @$pb.TagNumber(3)
   set keyword($1.KeywordInfo v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKeyword() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKeyword() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.KeywordInfo ensureKeyword() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $2.CriterionTypeEnum_CriterionType get type => $_getN(3);
+  @$pb.TagNumber(4)
   set type($2.CriterionTypeEnum_CriterionType v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
+  @$pb.TagNumber(4)
   void clearType() => clearField(4);
 
+  @$pb.TagNumber(5)
   $1.YouTubeVideoInfo get youtubeVideo => $_getN(4);
+  @$pb.TagNumber(5)
   set youtubeVideo($1.YouTubeVideoInfo v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasYoutubeVideo() => $_has(4);
+  @$pb.TagNumber(5)
   void clearYoutubeVideo() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.YouTubeVideoInfo ensureYoutubeVideo() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $1.YouTubeChannelInfo get youtubeChannel => $_getN(5);
+  @$pb.TagNumber(6)
   set youtubeChannel($1.YouTubeChannelInfo v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasYoutubeChannel() => $_has(5);
+  @$pb.TagNumber(6)
   void clearYoutubeChannel() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.YouTubeChannelInfo ensureYoutubeChannel() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $1.PlacementInfo get placement => $_getN(6);
+  @$pb.TagNumber(7)
   set placement($1.PlacementInfo v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasPlacement() => $_has(6);
+  @$pb.TagNumber(7)
   void clearPlacement() => clearField(7);
+  @$pb.TagNumber(7)
+  $1.PlacementInfo ensurePlacement() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $1.MobileAppCategoryInfo get mobileAppCategory => $_getN(7);
+  @$pb.TagNumber(8)
   set mobileAppCategory($1.MobileAppCategoryInfo v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasMobileAppCategory() => $_has(7);
+  @$pb.TagNumber(8)
   void clearMobileAppCategory() => clearField(8);
+  @$pb.TagNumber(8)
+  $1.MobileAppCategoryInfo ensureMobileAppCategory() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   $1.MobileApplicationInfo get mobileApplication => $_getN(8);
+  @$pb.TagNumber(9)
   set mobileApplication($1.MobileApplicationInfo v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasMobileApplication() => $_has(8);
+  @$pb.TagNumber(9)
   void clearMobileApplication() => clearField(9);
+  @$pb.TagNumber(9)
+  $1.MobileApplicationInfo ensureMobileApplication() => $_ensure(8);
 
+  @$pb.TagNumber(26)
   $0.Int64Value get criterionId => $_getN(9);
+  @$pb.TagNumber(26)
   set criterionId($0.Int64Value v) {
     setField(26, v);
   }
 
+  @$pb.TagNumber(26)
   $core.bool hasCriterionId() => $_has(9);
+  @$pb.TagNumber(26)
   void clearCriterionId() => clearField(26);
+  @$pb.TagNumber(26)
+  $0.Int64Value ensureCriterionId() => $_ensure(9);
 }

@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'source.pb.dart' as $0;
@@ -17,10 +16,10 @@ import '../../../protobuf/struct.pbenum.dart' as $1;
 
 class ParsedExpr extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ParsedExpr',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..a<Expr>(2, 'expr', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..a<$0.SourceInfo>(3, 'sourceInfo', $pb.PbFieldType.OM,
-        $0.SourceInfo.getDefault, $0.SourceInfo.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<Expr>(2, 'expr', subBuilder: Expr.create)
+    ..aOM<$0.SourceInfo>(3, 'sourceInfo', subBuilder: $0.SourceInfo.create)
     ..aOS(4, 'syntaxVersion')
     ..hasRequiredFields = false;
 
@@ -40,37 +39,56 @@ class ParsedExpr extends $pb.GeneratedMessage {
   static ParsedExpr create() => ParsedExpr._();
   ParsedExpr createEmptyInstance() => create();
   static $pb.PbList<ParsedExpr> createRepeated() => $pb.PbList<ParsedExpr>();
-  static ParsedExpr getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ParsedExpr getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParsedExpr>(create);
   static ParsedExpr _defaultInstance;
 
+  @$pb.TagNumber(2)
   Expr get expr => $_getN(0);
+  @$pb.TagNumber(2)
   set expr(Expr v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExpr() => $_has(0);
+  @$pb.TagNumber(2)
   void clearExpr() => clearField(2);
+  @$pb.TagNumber(2)
+  Expr ensureExpr() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $0.SourceInfo get sourceInfo => $_getN(1);
+  @$pb.TagNumber(3)
   set sourceInfo($0.SourceInfo v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSourceInfo() => $_has(1);
+  @$pb.TagNumber(3)
   void clearSourceInfo() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.SourceInfo ensureSourceInfo() => $_ensure(1);
 
-  $core.String get syntaxVersion => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get syntaxVersion => $_getSZ(2);
+  @$pb.TagNumber(4)
   set syntaxVersion($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasSyntaxVersion() => $_has(2);
+  @$pb.TagNumber(4)
   void clearSyntaxVersion() => clearField(4);
 }
 
 class Expr_Ident extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.Ident',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -90,23 +108,30 @@ class Expr_Ident extends $pb.GeneratedMessage {
   static Expr_Ident create() => Expr_Ident._();
   Expr_Ident createEmptyInstance() => create();
   static $pb.PbList<Expr_Ident> createRepeated() => $pb.PbList<Expr_Ident>();
-  static Expr_Ident getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Ident getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Expr_Ident>(create);
   static Expr_Ident _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class Expr_Select extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.Select',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..a<Expr>(1, 'operand', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..aOS(2, 'field_2')
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<Expr>(1, 'operand', subBuilder: Expr.create)
+    ..aOS(2, 'field')
     ..aOB(3, 'testOnly')
     ..hasRequiredFields = false;
 
@@ -126,40 +151,57 @@ class Expr_Select extends $pb.GeneratedMessage {
   static Expr_Select create() => Expr_Select._();
   Expr_Select createEmptyInstance() => create();
   static $pb.PbList<Expr_Select> createRepeated() => $pb.PbList<Expr_Select>();
-  static Expr_Select getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Select getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Expr_Select>(create);
   static Expr_Select _defaultInstance;
 
+  @$pb.TagNumber(1)
   Expr get operand => $_getN(0);
+  @$pb.TagNumber(1)
   set operand(Expr v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperand() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperand() => clearField(1);
+  @$pb.TagNumber(1)
+  Expr ensureOperand() => $_ensure(0);
 
-  $core.String get field_2 => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get field_2 => $_getSZ(1);
+  @$pb.TagNumber(2)
   set field_2($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasField_2() => $_has(1);
+  @$pb.TagNumber(2)
   void clearField_2() => clearField(2);
 
-  $core.bool get testOnly => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get testOnly => $_getBF(2);
+  @$pb.TagNumber(3)
   set testOnly($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTestOnly() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTestOnly() => clearField(3);
 }
 
 class Expr_Call extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.Call',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..a<Expr>(1, 'target', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<Expr>(1, 'target', subBuilder: Expr.create)
     ..aOS(2, 'function')
-    ..pc<Expr>(3, 'args', $pb.PbFieldType.PM, Expr.create)
+    ..pc<Expr>(3, 'args', $pb.PbFieldType.PM, subBuilder: Expr.create)
     ..hasRequiredFields = false;
 
   Expr_Call._() : super();
@@ -178,32 +220,46 @@ class Expr_Call extends $pb.GeneratedMessage {
   static Expr_Call create() => Expr_Call._();
   Expr_Call createEmptyInstance() => create();
   static $pb.PbList<Expr_Call> createRepeated() => $pb.PbList<Expr_Call>();
-  static Expr_Call getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Call getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Expr_Call>(create);
   static Expr_Call _defaultInstance;
 
+  @$pb.TagNumber(1)
   Expr get target => $_getN(0);
+  @$pb.TagNumber(1)
   set target(Expr v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTarget() => clearField(1);
+  @$pb.TagNumber(1)
+  Expr ensureTarget() => $_ensure(0);
 
-  $core.String get function => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get function => $_getSZ(1);
+  @$pb.TagNumber(2)
   set function($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFunction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFunction() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<Expr> get args => $_getList(2);
 }
 
 class Expr_CreateList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.CreateList',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..pc<Expr>(1, 'elements', $pb.PbFieldType.PM, Expr.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Expr>(1, 'elements', $pb.PbFieldType.PM, subBuilder: Expr.create)
     ..hasRequiredFields = false;
 
   Expr_CreateList._() : super();
@@ -223,10 +279,12 @@ class Expr_CreateList extends $pb.GeneratedMessage {
   Expr_CreateList createEmptyInstance() => create();
   static $pb.PbList<Expr_CreateList> createRepeated() =>
       $pb.PbList<Expr_CreateList>();
-  static Expr_CreateList getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_CreateList getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Expr_CreateList>(create);
   static Expr_CreateList _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Expr> get elements => $_getList(0);
 }
 
@@ -240,12 +298,13 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
     0: Expr_CreateStruct_Entry_KeyKind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.CreateStruct.Entry',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
     ..aOS(2, 'fieldKey')
-    ..a<Expr>(3, 'mapKey', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..a<Expr>(4, 'value', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
+    ..aOM<Expr>(3, 'mapKey', subBuilder: Expr.create)
+    ..aOM<Expr>(4, 'value', subBuilder: Expr.create)
     ..hasRequiredFields = false;
 
   Expr_CreateStruct_Entry._() : super();
@@ -267,53 +326,75 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   Expr_CreateStruct_Entry createEmptyInstance() => create();
   static $pb.PbList<Expr_CreateStruct_Entry> createRepeated() =>
       $pb.PbList<Expr_CreateStruct_Entry>();
-  static Expr_CreateStruct_Entry getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_CreateStruct_Entry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Expr_CreateStruct_Entry>(create);
   static Expr_CreateStruct_Entry _defaultInstance;
 
   Expr_CreateStruct_Entry_KeyKind whichKeyKind() =>
       _Expr_CreateStruct_Entry_KeyKindByTag[$_whichOneof(0)];
   void clearKeyKind() => clearField($_whichOneof(0));
 
-  $core.int get id => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(1)
   set id($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
-  $core.String get fieldKey => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get fieldKey => $_getSZ(1);
+  @$pb.TagNumber(2)
   set fieldKey($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldKey() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldKey() => clearField(2);
 
+  @$pb.TagNumber(3)
   Expr get mapKey => $_getN(2);
+  @$pb.TagNumber(3)
   set mapKey(Expr v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMapKey() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMapKey() => clearField(3);
+  @$pb.TagNumber(3)
+  Expr ensureMapKey() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   Expr get value => $_getN(3);
+  @$pb.TagNumber(4)
   set value(Expr v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValue() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValue() => clearField(4);
+  @$pb.TagNumber(4)
+  Expr ensureValue() => $_ensure(3);
 }
 
 class Expr_CreateStruct extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.CreateStruct',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'type')
-    ..pc<Expr_CreateStruct_Entry>(
-        2, 'entries', $pb.PbFieldType.PM, Expr_CreateStruct_Entry.create)
+    ..pc<Expr_CreateStruct_Entry>(2, 'entries', $pb.PbFieldType.PM,
+        subBuilder: Expr_CreateStruct_Entry.create)
     ..hasRequiredFields = false;
 
   Expr_CreateStruct._() : super();
@@ -333,32 +414,38 @@ class Expr_CreateStruct extends $pb.GeneratedMessage {
   Expr_CreateStruct createEmptyInstance() => create();
   static $pb.PbList<Expr_CreateStruct> createRepeated() =>
       $pb.PbList<Expr_CreateStruct>();
-  static Expr_CreateStruct getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_CreateStruct getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Expr_CreateStruct>(create);
   static Expr_CreateStruct _defaultInstance;
 
-  $core.String get type => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get type => $_getSZ(0);
+  @$pb.TagNumber(1)
   set type($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Expr_CreateStruct_Entry> get entries => $_getList(1);
 }
 
 class Expr_Comprehension extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr.Comprehension',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'iterVar')
-    ..a<Expr>(2, 'iterRange', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
+    ..aOM<Expr>(2, 'iterRange', subBuilder: Expr.create)
     ..aOS(3, 'accuVar')
-    ..a<Expr>(4, 'accuInit', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..a<Expr>(
-        5, 'loopCondition', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..a<Expr>(6, 'loopStep', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
-    ..a<Expr>(7, 'result', $pb.PbFieldType.OM, Expr.getDefault, Expr.create)
+    ..aOM<Expr>(4, 'accuInit', subBuilder: Expr.create)
+    ..aOM<Expr>(5, 'loopCondition', subBuilder: Expr.create)
+    ..aOM<Expr>(6, 'loopStep', subBuilder: Expr.create)
+    ..aOM<Expr>(7, 'result', subBuilder: Expr.create)
     ..hasRequiredFields = false;
 
   Expr_Comprehension._() : super();
@@ -378,65 +465,104 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   Expr_Comprehension createEmptyInstance() => create();
   static $pb.PbList<Expr_Comprehension> createRepeated() =>
       $pb.PbList<Expr_Comprehension>();
-  static Expr_Comprehension getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr_Comprehension getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Expr_Comprehension>(create);
   static Expr_Comprehension _defaultInstance;
 
-  $core.String get iterVar => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get iterVar => $_getSZ(0);
+  @$pb.TagNumber(1)
   set iterVar($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIterVar() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIterVar() => clearField(1);
 
+  @$pb.TagNumber(2)
   Expr get iterRange => $_getN(1);
+  @$pb.TagNumber(2)
   set iterRange(Expr v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIterRange() => $_has(1);
+  @$pb.TagNumber(2)
   void clearIterRange() => clearField(2);
+  @$pb.TagNumber(2)
+  Expr ensureIterRange() => $_ensure(1);
 
-  $core.String get accuVar => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get accuVar => $_getSZ(2);
+  @$pb.TagNumber(3)
   set accuVar($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAccuVar() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAccuVar() => clearField(3);
 
+  @$pb.TagNumber(4)
   Expr get accuInit => $_getN(3);
+  @$pb.TagNumber(4)
   set accuInit(Expr v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAccuInit() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAccuInit() => clearField(4);
+  @$pb.TagNumber(4)
+  Expr ensureAccuInit() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   Expr get loopCondition => $_getN(4);
+  @$pb.TagNumber(5)
   set loopCondition(Expr v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasLoopCondition() => $_has(4);
+  @$pb.TagNumber(5)
   void clearLoopCondition() => clearField(5);
+  @$pb.TagNumber(5)
+  Expr ensureLoopCondition() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   Expr get loopStep => $_getN(5);
+  @$pb.TagNumber(6)
   set loopStep(Expr v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasLoopStep() => $_has(5);
+  @$pb.TagNumber(6)
   void clearLoopStep() => clearField(6);
+  @$pb.TagNumber(6)
+  Expr ensureLoopStep() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   Expr get result => $_getN(6);
+  @$pb.TagNumber(7)
   set result(Expr v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasResult() => $_has(6);
+  @$pb.TagNumber(7)
   void clearResult() => clearField(7);
+  @$pb.TagNumber(7)
+  Expr ensureResult() => $_ensure(6);
 }
 
 enum Expr_ExprKind {
@@ -462,23 +588,19 @@ class Expr extends $pb.GeneratedMessage {
     0: Expr_ExprKind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Expr',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4, 5, 6, 7, 8, 9])
     ..a<$core.int>(2, 'id', $pb.PbFieldType.O3)
-    ..a<Literal>(3, 'literalExpr', $pb.PbFieldType.OM, Literal.getDefault,
-        Literal.create)
-    ..a<Expr_Ident>(4, 'identExpr', $pb.PbFieldType.OM, Expr_Ident.getDefault,
-        Expr_Ident.create)
-    ..a<Expr_Select>(5, 'selectExpr', $pb.PbFieldType.OM,
-        Expr_Select.getDefault, Expr_Select.create)
-    ..a<Expr_Call>(6, 'callExpr', $pb.PbFieldType.OM, Expr_Call.getDefault,
-        Expr_Call.create)
-    ..a<Expr_CreateList>(7, 'listExpr', $pb.PbFieldType.OM,
-        Expr_CreateList.getDefault, Expr_CreateList.create)
-    ..a<Expr_CreateStruct>(8, 'structExpr', $pb.PbFieldType.OM,
-        Expr_CreateStruct.getDefault, Expr_CreateStruct.create)
-    ..a<Expr_Comprehension>(9, 'comprehensionExpr', $pb.PbFieldType.OM,
-        Expr_Comprehension.getDefault, Expr_Comprehension.create)
+    ..aOM<Literal>(3, 'literalExpr', subBuilder: Literal.create)
+    ..aOM<Expr_Ident>(4, 'identExpr', subBuilder: Expr_Ident.create)
+    ..aOM<Expr_Select>(5, 'selectExpr', subBuilder: Expr_Select.create)
+    ..aOM<Expr_Call>(6, 'callExpr', subBuilder: Expr_Call.create)
+    ..aOM<Expr_CreateList>(7, 'listExpr', subBuilder: Expr_CreateList.create)
+    ..aOM<Expr_CreateStruct>(8, 'structExpr',
+        subBuilder: Expr_CreateStruct.create)
+    ..aOM<Expr_Comprehension>(9, 'comprehensionExpr',
+        subBuilder: Expr_Comprehension.create)
     ..hasRequiredFields = false;
 
   Expr._() : super();
@@ -497,75 +619,123 @@ class Expr extends $pb.GeneratedMessage {
   static Expr create() => Expr._();
   Expr createEmptyInstance() => create();
   static $pb.PbList<Expr> createRepeated() => $pb.PbList<Expr>();
-  static Expr getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Expr getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Expr>(create);
   static Expr _defaultInstance;
 
   Expr_ExprKind whichExprKind() => _Expr_ExprKindByTag[$_whichOneof(0)];
   void clearExprKind() => clearField($_whichOneof(0));
 
-  $core.int get id => $_get(0, 0);
+  @$pb.TagNumber(2)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(2)
   set id($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  @$pb.TagNumber(3)
   Literal get literalExpr => $_getN(1);
+  @$pb.TagNumber(3)
   set literalExpr(Literal v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLiteralExpr() => $_has(1);
+  @$pb.TagNumber(3)
   void clearLiteralExpr() => clearField(3);
+  @$pb.TagNumber(3)
+  Literal ensureLiteralExpr() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   Expr_Ident get identExpr => $_getN(2);
+  @$pb.TagNumber(4)
   set identExpr(Expr_Ident v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIdentExpr() => $_has(2);
+  @$pb.TagNumber(4)
   void clearIdentExpr() => clearField(4);
+  @$pb.TagNumber(4)
+  Expr_Ident ensureIdentExpr() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   Expr_Select get selectExpr => $_getN(3);
+  @$pb.TagNumber(5)
   set selectExpr(Expr_Select v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasSelectExpr() => $_has(3);
+  @$pb.TagNumber(5)
   void clearSelectExpr() => clearField(5);
+  @$pb.TagNumber(5)
+  Expr_Select ensureSelectExpr() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   Expr_Call get callExpr => $_getN(4);
+  @$pb.TagNumber(6)
   set callExpr(Expr_Call v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCallExpr() => $_has(4);
+  @$pb.TagNumber(6)
   void clearCallExpr() => clearField(6);
+  @$pb.TagNumber(6)
+  Expr_Call ensureCallExpr() => $_ensure(4);
 
+  @$pb.TagNumber(7)
   Expr_CreateList get listExpr => $_getN(5);
+  @$pb.TagNumber(7)
   set listExpr(Expr_CreateList v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasListExpr() => $_has(5);
+  @$pb.TagNumber(7)
   void clearListExpr() => clearField(7);
+  @$pb.TagNumber(7)
+  Expr_CreateList ensureListExpr() => $_ensure(5);
 
+  @$pb.TagNumber(8)
   Expr_CreateStruct get structExpr => $_getN(6);
+  @$pb.TagNumber(8)
   set structExpr(Expr_CreateStruct v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasStructExpr() => $_has(6);
+  @$pb.TagNumber(8)
   void clearStructExpr() => clearField(8);
+  @$pb.TagNumber(8)
+  Expr_CreateStruct ensureStructExpr() => $_ensure(6);
 
+  @$pb.TagNumber(9)
   Expr_Comprehension get comprehensionExpr => $_getN(7);
+  @$pb.TagNumber(9)
   set comprehensionExpr(Expr_Comprehension v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasComprehensionExpr() => $_has(7);
+  @$pb.TagNumber(9)
   void clearComprehensionExpr() => clearField(9);
+  @$pb.TagNumber(9)
+  Expr_Comprehension ensureComprehensionExpr() => $_ensure(7);
 }
 
 enum Literal_ConstantKind {
@@ -592,13 +762,17 @@ class Literal extends $pb.GeneratedMessage {
     0: Literal_ConstantKind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Literal',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7])
     ..e<$1.NullValue>(1, 'nullValue', $pb.PbFieldType.OE,
-        $1.NullValue.NULL_VALUE, $1.NullValue.valueOf, $1.NullValue.values)
+        defaultOrMaker: $1.NullValue.NULL_VALUE,
+        valueOf: $1.NullValue.valueOf,
+        enumValues: $1.NullValue.values)
     ..aOB(2, 'boolValue')
     ..aInt64(3, 'int64Value')
-    ..a<Int64>(4, 'uint64Value', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<$fixnum.Int64>(4, 'uint64Value', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.double>(5, 'doubleValue', $pb.PbFieldType.OD)
     ..aOS(6, 'stringValue')
     ..a<$core.List<$core.int>>(7, 'bytesValue', $pb.PbFieldType.OY)
@@ -620,66 +794,96 @@ class Literal extends $pb.GeneratedMessage {
   static Literal create() => Literal._();
   Literal createEmptyInstance() => create();
   static $pb.PbList<Literal> createRepeated() => $pb.PbList<Literal>();
-  static Literal getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Literal getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Literal>(create);
   static Literal _defaultInstance;
 
   Literal_ConstantKind whichConstantKind() =>
       _Literal_ConstantKindByTag[$_whichOneof(0)];
   void clearConstantKind() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.NullValue get nullValue => $_getN(0);
+  @$pb.TagNumber(1)
   set nullValue($1.NullValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNullValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNullValue() => clearField(1);
 
-  $core.bool get boolValue => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get boolValue => $_getBF(1);
+  @$pb.TagNumber(2)
   set boolValue($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBoolValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBoolValue() => clearField(2);
 
-  Int64 get int64Value => $_getI64(2);
-  set int64Value(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get int64Value => $_getI64(2);
+  @$pb.TagNumber(3)
+  set int64Value($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInt64Value() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInt64Value() => clearField(3);
 
-  Int64 get uint64Value => $_getI64(3);
-  set uint64Value(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get uint64Value => $_getI64(3);
+  @$pb.TagNumber(4)
+  set uint64Value($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUint64Value() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUint64Value() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.double get doubleValue => $_getN(4);
+  @$pb.TagNumber(5)
   set doubleValue($core.double v) {
     $_setDouble(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDoubleValue() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDoubleValue() => clearField(5);
 
-  $core.String get stringValue => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get stringValue => $_getSZ(5);
+  @$pb.TagNumber(6)
   set stringValue($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasStringValue() => $_has(5);
+  @$pb.TagNumber(6)
   void clearStringValue() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.List<$core.int> get bytesValue => $_getN(6);
+  @$pb.TagNumber(7)
   set bytesValue($core.List<$core.int> v) {
     $_setBytes(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasBytesValue() => $_has(6);
+  @$pb.TagNumber(7)
   void clearBytesValue() => clearField(7);
 }

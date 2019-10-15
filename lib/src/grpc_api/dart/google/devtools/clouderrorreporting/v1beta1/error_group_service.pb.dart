@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import 'common.pb.dart' as $1;
 class GetGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetGroupRequest',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'groupName')
     ..hasRequiredFields = false;
 
@@ -36,25 +36,30 @@ class GetGroupRequest extends $pb.GeneratedMessage {
   GetGroupRequest createEmptyInstance() => create();
   static $pb.PbList<GetGroupRequest> createRepeated() =>
       $pb.PbList<GetGroupRequest>();
-  static GetGroupRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetGroupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetGroupRequest>(create);
   static GetGroupRequest _defaultInstance;
 
-  $core.String get groupName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get groupName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set groupName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGroupName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGroupName() => clearField(1);
 }
 
 class UpdateGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateGroupRequest',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
-    ..a<$1.ErrorGroup>(1, 'group', $pb.PbFieldType.OM, $1.ErrorGroup.getDefault,
-        $1.ErrorGroup.create)
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$1.ErrorGroup>(1, 'group', subBuilder: $1.ErrorGroup.create)
     ..hasRequiredFields = false;
 
   UpdateGroupRequest._() : super();
@@ -74,15 +79,22 @@ class UpdateGroupRequest extends $pb.GeneratedMessage {
   UpdateGroupRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateGroupRequest> createRepeated() =>
       $pb.PbList<UpdateGroupRequest>();
-  static UpdateGroupRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateGroupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateGroupRequest>(create);
   static UpdateGroupRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.ErrorGroup get group => $_getN(0);
+  @$pb.TagNumber(1)
   set group($1.ErrorGroup v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGroup() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGroup() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.ErrorGroup ensureGroup() => $_ensure(0);
 }

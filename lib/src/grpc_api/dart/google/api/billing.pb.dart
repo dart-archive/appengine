@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Billing_BillingDestination extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Billing.BillingDestination',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'),
+      createEmptyInstance: create)
     ..aOS(1, 'monitoredResource')
     ..pPS(2, 'metrics')
     ..hasRequiredFields = false;
@@ -38,27 +38,34 @@ class Billing_BillingDestination extends $pb.GeneratedMessage {
   Billing_BillingDestination createEmptyInstance() => create();
   static $pb.PbList<Billing_BillingDestination> createRepeated() =>
       $pb.PbList<Billing_BillingDestination>();
-  static Billing_BillingDestination getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Billing_BillingDestination getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Billing_BillingDestination>(create);
   static Billing_BillingDestination _defaultInstance;
 
-  $core.String get monitoredResource => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get monitoredResource => $_getSZ(0);
+  @$pb.TagNumber(1)
   set monitoredResource($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMonitoredResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMonitoredResource() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get metrics => $_getList(1);
 }
 
 class Billing extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('Billing', package: const $pb.PackageName('google.api'))
-        ..pc<Billing_BillingDestination>(8, 'consumerDestinations',
-            $pb.PbFieldType.PM, Billing_BillingDestination.create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Billing',
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..pc<Billing_BillingDestination>(
+        8, 'consumerDestinations', $pb.PbFieldType.PM,
+        subBuilder: Billing_BillingDestination.create)
+    ..hasRequiredFields = false;
 
   Billing._() : super();
   factory Billing() => create();
@@ -76,9 +83,12 @@ class Billing extends $pb.GeneratedMessage {
   static Billing create() => Billing._();
   Billing createEmptyInstance() => create();
   static $pb.PbList<Billing> createRepeated() => $pb.PbList<Billing>();
-  static Billing getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Billing getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Billing>(create);
   static Billing _defaultInstance;
 
+  @$pb.TagNumber(8)
   $core.List<Billing_BillingDestination> get consumerDestinations =>
       $_getList(0);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'operating_system_version_operator_type.pbenum.dart';
 class OperatingSystemVersionOperatorTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'OperatingSystemVersionOperatorTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   OperatingSystemVersionOperatorTypeEnum._() : super();
@@ -40,7 +40,9 @@ class OperatingSystemVersionOperatorTypeEnum extends $pb.GeneratedMessage {
   OperatingSystemVersionOperatorTypeEnum createEmptyInstance() => create();
   static $pb.PbList<OperatingSystemVersionOperatorTypeEnum> createRepeated() =>
       $pb.PbList<OperatingSystemVersionOperatorTypeEnum>();
+  @$core.pragma('dart2js:noInline')
   static OperatingSystemVersionOperatorTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          OperatingSystemVersionOperatorTypeEnum>(create);
   static OperatingSystemVersionOperatorTypeEnum _defaultInstance;
 }

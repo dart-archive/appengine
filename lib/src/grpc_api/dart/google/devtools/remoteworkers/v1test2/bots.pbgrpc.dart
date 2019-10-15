@@ -7,11 +7,10 @@
 
 import 'dart:async' as $async;
 
-import 'dart:core' as $core show int, String, List;
+import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
 import 'bots.pb.dart' as $0;
-import '../../../protobuf/empty.pb.dart' as $1;
 export 'bots.pb.dart';
 
 class BotsClient extends $grpc.Client {
@@ -25,11 +24,6 @@ class BotsClient extends $grpc.Client {
           '/google.devtools.remoteworkers.v1test2.Bots/UpdateBotSession',
           ($0.UpdateBotSessionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.BotSession.fromBuffer(value));
-  static final _$postBotEventTemp =
-      $grpc.ClientMethod<$0.PostBotEventTempRequest, $1.Empty>(
-          '/google.devtools.remoteworkers.v1test2.Bots/PostBotEventTemp',
-          ($0.PostBotEventTempRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   BotsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -48,15 +42,6 @@ class BotsClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$updateBotSession, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
-  }
-
-  $grpc.ResponseFuture<$1.Empty> postBotEventTemp(
-      $0.PostBotEventTempRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$postBotEventTemp, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -82,14 +67,6 @@ abstract class BotsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdateBotSessionRequest.fromBuffer(value),
         ($0.BotSession value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.PostBotEventTempRequest, $1.Empty>(
-        'PostBotEventTemp',
-        postBotEventTemp_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) =>
-            $0.PostBotEventTempRequest.fromBuffer(value),
-        ($1.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.BotSession> createBotSession_Pre($grpc.ServiceCall call,
@@ -102,15 +79,8 @@ abstract class BotsServiceBase extends $grpc.Service {
     return updateBotSession(call, await request);
   }
 
-  $async.Future<$1.Empty> postBotEventTemp_Pre($grpc.ServiceCall call,
-      $async.Future<$0.PostBotEventTempRequest> request) async {
-    return postBotEventTemp(call, await request);
-  }
-
   $async.Future<$0.BotSession> createBotSession(
       $grpc.ServiceCall call, $0.CreateBotSessionRequest request);
   $async.Future<$0.BotSession> updateBotSession(
       $grpc.ServiceCall call, $0.UpdateBotSessionRequest request);
-  $async.Future<$1.Empty> postBotEventTemp(
-      $grpc.ServiceCall call, $0.PostBotEventTempRequest request);
 }

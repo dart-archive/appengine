@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,7 +16,8 @@ import '../../../protobuf/struct.pb.dart' as $2;
 class Asset_SecurityCenterProperties extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Asset.SecurityCenterProperties',
-      package: const $pb.PackageName('google.cloud.securitycenter.v1'))
+      package: const $pb.PackageName('google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..aOS(2, 'resourceType')
     ..aOS(3, 'resourceParent')
@@ -46,48 +46,67 @@ class Asset_SecurityCenterProperties extends $pb.GeneratedMessage {
   Asset_SecurityCenterProperties createEmptyInstance() => create();
   static $pb.PbList<Asset_SecurityCenterProperties> createRepeated() =>
       $pb.PbList<Asset_SecurityCenterProperties>();
-  static Asset_SecurityCenterProperties getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Asset_SecurityCenterProperties getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Asset_SecurityCenterProperties>(create);
   static Asset_SecurityCenterProperties _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
-  $core.String get resourceType => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get resourceType => $_getSZ(1);
+  @$pb.TagNumber(2)
   set resourceType($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResourceType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResourceType() => clearField(2);
 
-  $core.String get resourceParent => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get resourceParent => $_getSZ(2);
+  @$pb.TagNumber(3)
   set resourceParent($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasResourceParent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearResourceParent() => clearField(3);
 
-  $core.String get resourceProject => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get resourceProject => $_getSZ(3);
+  @$pb.TagNumber(4)
   set resourceProject($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResourceProject() => $_has(3);
+  @$pb.TagNumber(4)
   void clearResourceProject() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$core.String> get resourceOwners => $_getList(4);
 }
 
 class Asset_IamPolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Asset.IamPolicy',
-      package: const $pb.PackageName('google.cloud.securitycenter.v1'))
+      package: const $pb.PackageName('google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'policyBlob')
     ..hasRequiredFields = false;
 
@@ -108,47 +127,42 @@ class Asset_IamPolicy extends $pb.GeneratedMessage {
   Asset_IamPolicy createEmptyInstance() => create();
   static $pb.PbList<Asset_IamPolicy> createRepeated() =>
       $pb.PbList<Asset_IamPolicy>();
-  static Asset_IamPolicy getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Asset_IamPolicy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Asset_IamPolicy>(create);
   static Asset_IamPolicy _defaultInstance;
 
-  $core.String get policyBlob => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get policyBlob => $_getSZ(0);
+  @$pb.TagNumber(1)
   set policyBlob($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPolicyBlob() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPolicyBlob() => clearField(1);
 }
 
 class Asset extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Asset',
-      package: const $pb.PackageName('google.cloud.securitycenter.v1'))
+      package: const $pb.PackageName('google.cloud.securitycenter.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Asset_SecurityCenterProperties>(
-        2,
-        'securityCenterProperties',
-        $pb.PbFieldType.OM,
-        Asset_SecurityCenterProperties.getDefault,
-        Asset_SecurityCenterProperties.create)
-    ..m<$core.String, $2.Value>(
-        7,
-        'resourceProperties',
-        'Asset.ResourcePropertiesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $2.Value.create,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.securitycenter.v1'))
-    ..a<$0.SecurityMarks>(8, 'securityMarks', $pb.PbFieldType.OM,
-        $0.SecurityMarks.getDefault, $0.SecurityMarks.create)
-    ..a<$1.Timestamp>(9, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(10, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<Asset_IamPolicy>(11, 'iamPolicy', $pb.PbFieldType.OM,
-        Asset_IamPolicy.getDefault, Asset_IamPolicy.create)
+    ..aOM<Asset_SecurityCenterProperties>(2, 'securityCenterProperties',
+        subBuilder: Asset_SecurityCenterProperties.create)
+    ..m<$core.String, $2.Value>(7, 'resourceProperties',
+        entryClassName: 'Asset.ResourcePropertiesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $2.Value.create,
+        packageName: const $pb.PackageName('google.cloud.securitycenter.v1'))
+    ..aOM<$0.SecurityMarks>(8, 'securityMarks',
+        subBuilder: $0.SecurityMarks.create)
+    ..aOM<$1.Timestamp>(9, 'createTime', subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(10, 'updateTime', subBuilder: $1.Timestamp.create)
+    ..aOM<Asset_IamPolicy>(11, 'iamPolicy', subBuilder: Asset_IamPolicy.create)
     ..hasRequiredFields = false;
 
   Asset._() : super();
@@ -167,56 +181,94 @@ class Asset extends $pb.GeneratedMessage {
   static Asset create() => Asset._();
   Asset createEmptyInstance() => create();
   static $pb.PbList<Asset> createRepeated() => $pb.PbList<Asset>();
-  static Asset getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Asset getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Asset>(create);
   static Asset _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Asset_SecurityCenterProperties get securityCenterProperties => $_getN(1);
+  @$pb.TagNumber(2)
   set securityCenterProperties(Asset_SecurityCenterProperties v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSecurityCenterProperties() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSecurityCenterProperties() => clearField(2);
+  @$pb.TagNumber(2)
+  Asset_SecurityCenterProperties ensureSecurityCenterProperties() =>
+      $_ensure(1);
 
+  @$pb.TagNumber(7)
   $core.Map<$core.String, $2.Value> get resourceProperties => $_getMap(2);
 
+  @$pb.TagNumber(8)
   $0.SecurityMarks get securityMarks => $_getN(3);
+  @$pb.TagNumber(8)
   set securityMarks($0.SecurityMarks v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasSecurityMarks() => $_has(3);
+  @$pb.TagNumber(8)
   void clearSecurityMarks() => clearField(8);
+  @$pb.TagNumber(8)
+  $0.SecurityMarks ensureSecurityMarks() => $_ensure(3);
 
+  @$pb.TagNumber(9)
   $1.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(9)
   set createTime($1.Timestamp v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasCreateTime() => $_has(4);
+  @$pb.TagNumber(9)
   void clearCreateTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $1.Timestamp ensureCreateTime() => $_ensure(4);
 
+  @$pb.TagNumber(10)
   $1.Timestamp get updateTime => $_getN(5);
+  @$pb.TagNumber(10)
   set updateTime($1.Timestamp v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasUpdateTime() => $_has(5);
+  @$pb.TagNumber(10)
   void clearUpdateTime() => clearField(10);
+  @$pb.TagNumber(10)
+  $1.Timestamp ensureUpdateTime() => $_ensure(5);
 
+  @$pb.TagNumber(11)
   Asset_IamPolicy get iamPolicy => $_getN(6);
+  @$pb.TagNumber(11)
   set iamPolicy(Asset_IamPolicy v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasIamPolicy() => $_has(6);
+  @$pb.TagNumber(11)
   void clearIamPolicy() => clearField(11);
+  @$pb.TagNumber(11)
+  Asset_IamPolicy ensureIamPolicy() => $_ensure(6);
 }

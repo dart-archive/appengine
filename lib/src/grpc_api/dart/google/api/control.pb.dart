@@ -5,16 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Control extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('Control', package: const $pb.PackageName('google.api'))
-        ..aOS(1, 'environment')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Control',
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..aOS(1, 'environment')
+    ..hasRequiredFields = false;
 
   Control._() : super();
   factory Control() => create();
@@ -32,14 +31,20 @@ class Control extends $pb.GeneratedMessage {
   static Control create() => Control._();
   Control createEmptyInstance() => create();
   static $pb.PbList<Control> createRepeated() => $pb.PbList<Control>();
-  static Control getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Control getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Control>(create);
   static Control _defaultInstance;
 
-  $core.String get environment => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get environment => $_getSZ(0);
+  @$pb.TagNumber(1)
   set environment($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEnvironment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEnvironment() => clearField(1);
 }

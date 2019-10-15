@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'dsa_page_feed_criterion_field.pbenum.dart';
 class DsaPageFeedCriterionFieldEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DsaPageFeedCriterionFieldEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   DsaPageFeedCriterionFieldEnum._() : super();
@@ -39,7 +39,8 @@ class DsaPageFeedCriterionFieldEnum extends $pb.GeneratedMessage {
   DsaPageFeedCriterionFieldEnum createEmptyInstance() => create();
   static $pb.PbList<DsaPageFeedCriterionFieldEnum> createRepeated() =>
       $pb.PbList<DsaPageFeedCriterionFieldEnum>();
-  static DsaPageFeedCriterionFieldEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DsaPageFeedCriterionFieldEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DsaPageFeedCriterionFieldEnum>(create);
   static DsaPageFeedCriterionFieldEnum _defaultInstance;
 }

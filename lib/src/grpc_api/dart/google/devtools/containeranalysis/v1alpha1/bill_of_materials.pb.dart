@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,21 +19,15 @@ class PackageManager_Distribution extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PackageManager.Distribution',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'cpeUri')
-    ..e<PackageManager_Architecture>(
-        2,
-        'architecture',
-        $pb.PbFieldType.OE,
-        PackageManager_Architecture.ARCHITECTURE_UNSPECIFIED,
-        PackageManager_Architecture.valueOf,
-        PackageManager_Architecture.values)
-    ..a<$0.VulnerabilityType_Version>(
-        3,
-        'latestVersion',
-        $pb.PbFieldType.OM,
-        $0.VulnerabilityType_Version.getDefault,
-        $0.VulnerabilityType_Version.create)
+    ..e<PackageManager_Architecture>(2, 'architecture', $pb.PbFieldType.OE,
+        defaultOrMaker: PackageManager_Architecture.ARCHITECTURE_UNSPECIFIED,
+        valueOf: PackageManager_Architecture.valueOf,
+        enumValues: PackageManager_Architecture.values)
+    ..aOM<$0.VulnerabilityType_Version>(3, 'latestVersion',
+        subBuilder: $0.VulnerabilityType_Version.create)
     ..aOS(4, 'maintainer')
     ..aOS(6, 'url')
     ..aOS(7, 'description')
@@ -61,70 +54,94 @@ class PackageManager_Distribution extends $pb.GeneratedMessage {
   PackageManager_Distribution createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Distribution> createRepeated() =>
       $pb.PbList<PackageManager_Distribution>();
-  static PackageManager_Distribution getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Distribution getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackageManager_Distribution>(create);
   static PackageManager_Distribution _defaultInstance;
 
-  $core.String get cpeUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get cpeUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set cpeUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCpeUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCpeUri() => clearField(1);
 
+  @$pb.TagNumber(2)
   PackageManager_Architecture get architecture => $_getN(1);
+  @$pb.TagNumber(2)
   set architecture(PackageManager_Architecture v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasArchitecture() => $_has(1);
+  @$pb.TagNumber(2)
   void clearArchitecture() => clearField(2);
 
+  @$pb.TagNumber(3)
   $0.VulnerabilityType_Version get latestVersion => $_getN(2);
+  @$pb.TagNumber(3)
   set latestVersion($0.VulnerabilityType_Version v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLatestVersion() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLatestVersion() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.VulnerabilityType_Version ensureLatestVersion() => $_ensure(2);
 
-  $core.String get maintainer => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get maintainer => $_getSZ(3);
+  @$pb.TagNumber(4)
   set maintainer($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasMaintainer() => $_has(3);
+  @$pb.TagNumber(4)
   void clearMaintainer() => clearField(4);
 
-  $core.String get url => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get url => $_getSZ(4);
+  @$pb.TagNumber(6)
   set url($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasUrl() => $_has(4);
+  @$pb.TagNumber(6)
   void clearUrl() => clearField(6);
 
-  $core.String get description => $_getS(5, '');
+  @$pb.TagNumber(7)
+  $core.String get description => $_getSZ(5);
+  @$pb.TagNumber(7)
   set description($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasDescription() => $_has(5);
+  @$pb.TagNumber(7)
   void clearDescription() => clearField(7);
 }
 
 class PackageManager_Location extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PackageManager.Location',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'cpeUri')
-    ..a<$0.VulnerabilityType_Version>(
-        2,
-        'version',
-        $pb.PbFieldType.OM,
-        $0.VulnerabilityType_Version.getDefault,
-        $0.VulnerabilityType_Version.create)
+    ..aOM<$0.VulnerabilityType_Version>(2, 'version',
+        subBuilder: $0.VulnerabilityType_Version.create)
     ..aOS(3, 'path')
     ..hasRequiredFields = false;
 
@@ -147,42 +164,58 @@ class PackageManager_Location extends $pb.GeneratedMessage {
   PackageManager_Location createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Location> createRepeated() =>
       $pb.PbList<PackageManager_Location>();
-  static PackageManager_Location getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Location getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackageManager_Location>(create);
   static PackageManager_Location _defaultInstance;
 
-  $core.String get cpeUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get cpeUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set cpeUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCpeUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCpeUri() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.VulnerabilityType_Version get version => $_getN(1);
+  @$pb.TagNumber(2)
   set version($0.VulnerabilityType_Version v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.VulnerabilityType_Version ensureVersion() => $_ensure(1);
 
-  $core.String get path => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get path => $_getSZ(2);
+  @$pb.TagNumber(3)
   set path($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPath() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPath() => clearField(3);
 }
 
 class PackageManager_Package extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PackageManager.Package',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..pc<PackageManager_Distribution>(10, 'distribution', $pb.PbFieldType.PM,
-        PackageManager_Distribution.create)
+        subBuilder: PackageManager_Distribution.create)
     ..hasRequiredFields = false;
 
   PackageManager_Package._() : super();
@@ -204,18 +237,24 @@ class PackageManager_Package extends $pb.GeneratedMessage {
   PackageManager_Package createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Package> createRepeated() =>
       $pb.PbList<PackageManager_Package>();
-  static PackageManager_Package getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Package getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackageManager_Package>(create);
   static PackageManager_Package _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(10)
   $core.List<PackageManager_Distribution> get distribution => $_getList(1);
 }
 
@@ -223,10 +262,11 @@ class PackageManager_Installation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PackageManager.Installation',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..pc<PackageManager_Location>(
-        2, 'location', $pb.PbFieldType.PM, PackageManager_Location.create)
+    ..pc<PackageManager_Location>(2, 'location', $pb.PbFieldType.PM,
+        subBuilder: PackageManager_Location.create)
     ..hasRequiredFields = false;
 
   PackageManager_Installation._() : super();
@@ -250,25 +290,32 @@ class PackageManager_Installation extends $pb.GeneratedMessage {
   PackageManager_Installation createEmptyInstance() => create();
   static $pb.PbList<PackageManager_Installation> createRepeated() =>
       $pb.PbList<PackageManager_Installation>();
-  static PackageManager_Installation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager_Installation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackageManager_Installation>(create);
   static PackageManager_Installation _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<PackageManager_Location> get location => $_getList(1);
 }
 
 class PackageManager extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PackageManager',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   PackageManager._() : super();
@@ -288,6 +335,8 @@ class PackageManager extends $pb.GeneratedMessage {
   PackageManager createEmptyInstance() => create();
   static $pb.PbList<PackageManager> createRepeated() =>
       $pb.PbList<PackageManager>();
-  static PackageManager getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PackageManager getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackageManager>(create);
   static PackageManager _defaultInstance;
 }

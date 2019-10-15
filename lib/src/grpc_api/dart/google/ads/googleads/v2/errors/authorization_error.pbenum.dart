@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AuthorizationErrorEnum_AuthorizationError extends $pb.ProtobufEnum {
@@ -40,6 +40,10 @@ class AuthorizationErrorEnum_AuthorizationError extends $pb.ProtobufEnum {
       DEVELOPER_TOKEN_NOT_APPROVED =
       AuthorizationErrorEnum_AuthorizationError._(
           10, 'DEVELOPER_TOKEN_NOT_APPROVED');
+  static const AuthorizationErrorEnum_AuthorizationError
+      INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION =
+      AuthorizationErrorEnum_AuthorizationError._(
+          11, 'INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION');
 
   static const $core.List<AuthorizationErrorEnum_AuthorizationError> values =
       <AuthorizationErrorEnum_AuthorizationError>[
@@ -55,6 +59,7 @@ class AuthorizationErrorEnum_AuthorizationError extends $pb.ProtobufEnum {
     CUSTOMER_NOT_ENABLED,
     MISSING_TOS,
     DEVELOPER_TOKEN_NOT_APPROVED,
+    INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION,
   ];
 
   static final $core.Map<$core.int, AuthorizationErrorEnum_AuthorizationError>

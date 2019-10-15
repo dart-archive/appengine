@@ -9,13 +9,14 @@ const EntityType$json = {
   '1': 'EntityType',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
     {
       '1': 'kind',
       '3': 3,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.EntityType.Kind',
+      '8': {},
       '10': 'kind'
     },
     {
@@ -24,6 +25,7 @@ const EntityType$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.EntityType.AutoExpansionMode',
+      '8': {},
       '10': 'autoExpansionMode'
     },
     {
@@ -32,18 +34,28 @@ const EntityType$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '8': {},
       '10': 'entities'
+    },
+    {
+      '1': 'enable_fuzzy_extraction',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'enableFuzzyExtraction'
     },
   ],
   '3': [EntityType_Entity$json],
   '4': [EntityType_Kind$json, EntityType_AutoExpansionMode$json],
+  '7': {},
 };
 
 const EntityType_Entity$json = {
   '1': 'Entity',
   '2': [
-    {'1': 'value', '3': 1, '4': 1, '5': 9, '10': 'value'},
-    {'1': 'synonyms', '3': 2, '4': 3, '5': 9, '10': 'synonyms'},
+    {'1': 'value', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'value'},
+    {'1': 'synonyms', '3': 2, '4': 3, '5': 9, '8': {}, '10': 'synonyms'},
   ],
 };
 
@@ -53,6 +65,7 @@ const EntityType_Kind$json = {
     {'1': 'KIND_UNSPECIFIED', '2': 0},
     {'1': 'KIND_MAP', '2': 1},
     {'1': 'KIND_LIST', '2': 2},
+    {'1': 'KIND_REGEXP', '2': 3},
   ],
 };
 
@@ -67,10 +80,17 @@ const EntityType_AutoExpansionMode$json = {
 const ListEntityTypesRequest$json = {
   '1': 'ListEntityTypesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
-    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
+    {'1': 'page_size', '3': 3, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
   ],
 };
 
@@ -92,24 +112,39 @@ const ListEntityTypesResponse$json = {
 const GetEntityTypeRequest$json = {
   '1': 'GetEntityTypeRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
 const CreateEntityTypeRequest$json = {
   '1': 'CreateEntityTypeRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'entity_type',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.EntityType',
+      '8': {},
       '10': 'entityType'
     },
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
@@ -122,15 +157,24 @@ const UpdateEntityTypeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.EntityType',
+      '8': {},
       '10': 'entityType'
     },
-    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
     {
       '1': 'update_mask',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -139,14 +183,14 @@ const UpdateEntityTypeRequest$json = {
 const DeleteEntityTypeRequest$json = {
   '1': 'DeleteEntityTypeRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const BatchUpdateEntityTypesRequest$json = {
   '1': 'BatchUpdateEntityTypesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'entity_type_batch_uri',
       '3': 2,
@@ -164,13 +208,21 @@ const BatchUpdateEntityTypesRequest$json = {
       '9': 0,
       '10': 'entityTypeBatchInline'
     },
-    {'1': 'language_code', '3': 4, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
     {
       '1': 'update_mask',
       '3': 5,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -196,46 +248,70 @@ const BatchUpdateEntityTypesResponse$json = {
 const BatchDeleteEntityTypesRequest$json = {
   '1': 'BatchDeleteEntityTypesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'entity_type_names', '3': 2, '4': 3, '5': 9, '10': 'entityTypeNames'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'entity_type_names',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'entityTypeNames'
+    },
   ],
 };
 
 const BatchCreateEntitiesRequest$json = {
   '1': 'BatchCreateEntitiesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'entities',
       '3': 2,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '8': {},
       '10': 'entities'
     },
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
 const BatchUpdateEntitiesRequest$json = {
   '1': 'BatchUpdateEntitiesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'entities',
       '3': 2,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '8': {},
       '10': 'entities'
     },
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
     {
       '1': 'update_mask',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -244,9 +320,23 @@ const BatchUpdateEntitiesRequest$json = {
 const BatchDeleteEntitiesRequest$json = {
   '1': 'BatchDeleteEntitiesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'entity_values', '3': 2, '4': 3, '5': 9, '10': 'entityValues'},
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'entity_values',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'entityValues'
+    },
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 

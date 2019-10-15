@@ -1060,6 +1060,24 @@ const ErrorCode$json = {
       '9': 0,
       '10': 'accessInvitationError'
     },
+    {
+      '1': 'reach_plan_error',
+      '3': 125,
+      '4': 1,
+      '5': 14,
+      '6': '.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError',
+      '9': 0,
+      '10': 'reachPlanError'
+    },
+    {
+      '1': 'invoice_error',
+      '3': 126,
+      '4': 1,
+      '5': 14,
+      '6': '.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError',
+      '9': 0,
+      '10': 'invoiceError'
+    },
   ],
   '8': [
     {'1': 'error_code'},

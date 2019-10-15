@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,7 +19,8 @@ import 'task.pbenum.dart' as $5;
 
 class ListQueuesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListQueuesRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -44,47 +44,65 @@ class ListQueuesRequest extends $pb.GeneratedMessage {
   ListQueuesRequest createEmptyInstance() => create();
   static $pb.PbList<ListQueuesRequest> createRepeated() =>
       $pb.PbList<ListQueuesRequest>();
-  static ListQueuesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListQueuesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListQueuesRequest>(create);
   static ListQueuesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListQueuesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListQueuesResponse',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..pc<$3.Queue>(1, 'queues', $pb.PbFieldType.PM, $3.Queue.create)
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
+    ..pc<$3.Queue>(1, 'queues', $pb.PbFieldType.PM, subBuilder: $3.Queue.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -105,24 +123,31 @@ class ListQueuesResponse extends $pb.GeneratedMessage {
   ListQueuesResponse createEmptyInstance() => create();
   static $pb.PbList<ListQueuesResponse> createRepeated() =>
       $pb.PbList<ListQueuesResponse>();
-  static ListQueuesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListQueuesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListQueuesResponse>(create);
   static ListQueuesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Queue> get queues => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -143,25 +168,30 @@ class GetQueueRequest extends $pb.GeneratedMessage {
   GetQueueRequest createEmptyInstance() => create();
   static $pb.PbList<GetQueueRequest> createRepeated() =>
       $pb.PbList<GetQueueRequest>();
-  static GetQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetQueueRequest>(create);
   static GetQueueRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.Queue>(
-        2, 'queue', $pb.PbFieldType.OM, $3.Queue.getDefault, $3.Queue.create)
+    ..aOM<$3.Queue>(2, 'queue', subBuilder: $3.Queue.create)
     ..hasRequiredFields = false;
 
   CreateQueueRequest._() : super();
@@ -181,34 +211,44 @@ class CreateQueueRequest extends $pb.GeneratedMessage {
   CreateQueueRequest createEmptyInstance() => create();
   static $pb.PbList<CreateQueueRequest> createRepeated() =>
       $pb.PbList<CreateQueueRequest>();
-  static CreateQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateQueueRequest>(create);
   static CreateQueueRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Queue get queue => $_getN(1);
+  @$pb.TagNumber(2)
   set queue($3.Queue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQueue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQueue() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Queue ensureQueue() => $_ensure(1);
 }
 
 class UpdateQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..a<$3.Queue>(
-        1, 'queue', $pb.PbFieldType.OM, $3.Queue.getDefault, $3.Queue.create)
-    ..a<$6.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $6.FieldMask.getDefault, $6.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
+    ..aOM<$3.Queue>(1, 'queue', subBuilder: $3.Queue.create)
+    ..aOM<$6.FieldMask>(2, 'updateMask', subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateQueueRequest._() : super();
@@ -228,30 +268,44 @@ class UpdateQueueRequest extends $pb.GeneratedMessage {
   UpdateQueueRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateQueueRequest> createRepeated() =>
       $pb.PbList<UpdateQueueRequest>();
-  static UpdateQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateQueueRequest>(create);
   static UpdateQueueRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.Queue get queue => $_getN(0);
+  @$pb.TagNumber(1)
   set queue($3.Queue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQueue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQueue() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Queue ensureQueue() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -272,22 +326,28 @@ class DeleteQueueRequest extends $pb.GeneratedMessage {
   DeleteQueueRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteQueueRequest> createRepeated() =>
       $pb.PbList<DeleteQueueRequest>();
-  static DeleteQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteQueueRequest>(create);
   static DeleteQueueRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class PurgeQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PurgeQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -308,22 +368,28 @@ class PurgeQueueRequest extends $pb.GeneratedMessage {
   PurgeQueueRequest createEmptyInstance() => create();
   static $pb.PbList<PurgeQueueRequest> createRepeated() =>
       $pb.PbList<PurgeQueueRequest>();
-  static PurgeQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PurgeQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PurgeQueueRequest>(create);
   static PurgeQueueRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class PauseQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PauseQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -344,22 +410,28 @@ class PauseQueueRequest extends $pb.GeneratedMessage {
   PauseQueueRequest createEmptyInstance() => create();
   static $pb.PbList<PauseQueueRequest> createRepeated() =>
       $pb.PbList<PauseQueueRequest>();
-  static PauseQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PauseQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PauseQueueRequest>(create);
   static PauseQueueRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ResumeQueueRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ResumeQueueRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -380,30 +452,33 @@ class ResumeQueueRequest extends $pb.GeneratedMessage {
   ResumeQueueRequest createEmptyInstance() => create();
   static $pb.PbList<ResumeQueueRequest> createRepeated() =>
       $pb.PbList<ResumeQueueRequest>();
-  static ResumeQueueRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ResumeQueueRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ResumeQueueRequest>(create);
   static ResumeQueueRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListTasksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTasksRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..e<$5.Task_View>(
-        2,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..e<$5.Task_View>(2, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
     ..hasRequiredFields = false;
@@ -425,47 +500,65 @@ class ListTasksRequest extends $pb.GeneratedMessage {
   ListTasksRequest createEmptyInstance() => create();
   static $pb.PbList<ListTasksRequest> createRepeated() =>
       $pb.PbList<ListTasksRequest>();
-  static ListTasksRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTasksRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTasksRequest>(create);
   static ListTasksRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $5.Task_View get responseView => $_getN(1);
+  @$pb.TagNumber(2)
   set responseView($5.Task_View v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResponseView() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResponseView() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(5)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(5)
   void clearPageToken() => clearField(5);
 }
 
 class ListTasksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTasksResponse',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..pc<$5.Task>(1, 'tasks', $pb.PbFieldType.PM, $5.Task.create)
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
+    ..pc<$5.Task>(1, 'tasks', $pb.PbFieldType.PM, subBuilder: $5.Task.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -486,32 +579,36 @@ class ListTasksResponse extends $pb.GeneratedMessage {
   ListTasksResponse createEmptyInstance() => create();
   static $pb.PbList<ListTasksResponse> createRepeated() =>
       $pb.PbList<ListTasksResponse>();
-  static ListTasksResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTasksResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTasksResponse>(create);
   static ListTasksResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.Task> get tasks => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTaskRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..e<$5.Task_View>(
-        2,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..e<$5.Task_View>(2, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..hasRequiredFields = false;
 
   GetTaskRequest._() : super();
@@ -531,39 +628,46 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   GetTaskRequest createEmptyInstance() => create();
   static $pb.PbList<GetTaskRequest> createRepeated() =>
       $pb.PbList<GetTaskRequest>();
-  static GetTaskRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTaskRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTaskRequest>(create);
   static GetTaskRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $5.Task_View get responseView => $_getN(1);
+  @$pb.TagNumber(2)
   set responseView($5.Task_View v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResponseView() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResponseView() => clearField(2);
 }
 
 class CreateTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTaskRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$5.Task>(
-        2, 'task', $pb.PbFieldType.OM, $5.Task.getDefault, $5.Task.create)
-    ..e<$5.Task_View>(
-        3,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..aOM<$5.Task>(2, 'task', subBuilder: $5.Task.create)
+    ..e<$5.Task_View>(3, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..hasRequiredFields = false;
 
   CreateTaskRequest._() : super();
@@ -583,38 +687,54 @@ class CreateTaskRequest extends $pb.GeneratedMessage {
   CreateTaskRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTaskRequest> createRepeated() =>
       $pb.PbList<CreateTaskRequest>();
-  static CreateTaskRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTaskRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTaskRequest>(create);
   static CreateTaskRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $5.Task get task => $_getN(1);
+  @$pb.TagNumber(2)
   set task($5.Task v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.Task ensureTask() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $5.Task_View get responseView => $_getN(2);
+  @$pb.TagNumber(3)
   set responseView($5.Task_View v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasResponseView() => $_has(2);
+  @$pb.TagNumber(3)
   void clearResponseView() => clearField(3);
 }
 
 class DeleteTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTaskRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -635,33 +755,35 @@ class DeleteTaskRequest extends $pb.GeneratedMessage {
   DeleteTaskRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTaskRequest> createRepeated() =>
       $pb.PbList<DeleteTaskRequest>();
-  static DeleteTaskRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTaskRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteTaskRequest>(create);
   static DeleteTaskRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class LeaseTasksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LeaseTasksRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'maxTasks', $pb.PbFieldType.O3)
-    ..a<$7.Duration>(3, 'leaseDuration', $pb.PbFieldType.OM,
-        $7.Duration.getDefault, $7.Duration.create)
-    ..e<$5.Task_View>(
-        4,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..aOM<$7.Duration>(3, 'leaseDuration', subBuilder: $7.Duration.create)
+    ..e<$5.Task_View>(4, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..aOS(5, 'filter')
     ..hasRequiredFields = false;
 
@@ -682,55 +804,79 @@ class LeaseTasksRequest extends $pb.GeneratedMessage {
   LeaseTasksRequest createEmptyInstance() => create();
   static $pb.PbList<LeaseTasksRequest> createRepeated() =>
       $pb.PbList<LeaseTasksRequest>();
-  static LeaseTasksRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LeaseTasksRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LeaseTasksRequest>(create);
   static LeaseTasksRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get maxTasks => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get maxTasks => $_getIZ(1);
+  @$pb.TagNumber(2)
   set maxTasks($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxTasks() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxTasks() => clearField(2);
 
+  @$pb.TagNumber(3)
   $7.Duration get leaseDuration => $_getN(2);
+  @$pb.TagNumber(3)
   set leaseDuration($7.Duration v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLeaseDuration() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLeaseDuration() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Duration ensureLeaseDuration() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $5.Task_View get responseView => $_getN(3);
+  @$pb.TagNumber(4)
   set responseView($5.Task_View v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResponseView() => $_has(3);
+  @$pb.TagNumber(4)
   void clearResponseView() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class LeaseTasksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LeaseTasksResponse',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..pc<$5.Task>(1, 'tasks', $pb.PbFieldType.PM, $5.Task.create)
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
+    ..pc<$5.Task>(1, 'tasks', $pb.PbFieldType.PM, subBuilder: $5.Task.create)
     ..hasRequiredFields = false;
 
   LeaseTasksResponse._() : super();
@@ -750,19 +896,21 @@ class LeaseTasksResponse extends $pb.GeneratedMessage {
   LeaseTasksResponse createEmptyInstance() => create();
   static $pb.PbList<LeaseTasksResponse> createRepeated() =>
       $pb.PbList<LeaseTasksResponse>();
-  static LeaseTasksResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LeaseTasksResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LeaseTasksResponse>(create);
   static LeaseTasksResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.Task> get tasks => $_getList(0);
 }
 
 class AcknowledgeTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AcknowledgeTaskRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$8.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
-        $8.Timestamp.getDefault, $8.Timestamp.create)
+    ..aOM<$8.Timestamp>(2, 'scheduleTime', subBuilder: $8.Timestamp.create)
     ..hasRequiredFields = false;
 
   AcknowledgeTaskRequest._() : super();
@@ -784,42 +932,49 @@ class AcknowledgeTaskRequest extends $pb.GeneratedMessage {
   AcknowledgeTaskRequest createEmptyInstance() => create();
   static $pb.PbList<AcknowledgeTaskRequest> createRepeated() =>
       $pb.PbList<AcknowledgeTaskRequest>();
-  static AcknowledgeTaskRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AcknowledgeTaskRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AcknowledgeTaskRequest>(create);
   static AcknowledgeTaskRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $8.Timestamp get scheduleTime => $_getN(1);
+  @$pb.TagNumber(2)
   set scheduleTime($8.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScheduleTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScheduleTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureScheduleTime() => $_ensure(1);
 }
 
 class RenewLeaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RenewLeaseRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$8.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
-        $8.Timestamp.getDefault, $8.Timestamp.create)
-    ..a<$7.Duration>(3, 'leaseDuration', $pb.PbFieldType.OM,
-        $7.Duration.getDefault, $7.Duration.create)
-    ..e<$5.Task_View>(
-        4,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..aOM<$8.Timestamp>(2, 'scheduleTime', subBuilder: $8.Timestamp.create)
+    ..aOM<$7.Duration>(3, 'leaseDuration', subBuilder: $7.Duration.create)
+    ..e<$5.Task_View>(4, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..hasRequiredFields = false;
 
   RenewLeaseRequest._() : super();
@@ -839,56 +994,74 @@ class RenewLeaseRequest extends $pb.GeneratedMessage {
   RenewLeaseRequest createEmptyInstance() => create();
   static $pb.PbList<RenewLeaseRequest> createRepeated() =>
       $pb.PbList<RenewLeaseRequest>();
-  static RenewLeaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RenewLeaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RenewLeaseRequest>(create);
   static RenewLeaseRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $8.Timestamp get scheduleTime => $_getN(1);
+  @$pb.TagNumber(2)
   set scheduleTime($8.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScheduleTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScheduleTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureScheduleTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $7.Duration get leaseDuration => $_getN(2);
+  @$pb.TagNumber(3)
   set leaseDuration($7.Duration v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLeaseDuration() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLeaseDuration() => clearField(3);
+  @$pb.TagNumber(3)
+  $7.Duration ensureLeaseDuration() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $5.Task_View get responseView => $_getN(3);
+  @$pb.TagNumber(4)
   set responseView($5.Task_View v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResponseView() => $_has(3);
+  @$pb.TagNumber(4)
   void clearResponseView() => clearField(4);
 }
 
 class CancelLeaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelLeaseRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$8.Timestamp>(2, 'scheduleTime', $pb.PbFieldType.OM,
-        $8.Timestamp.getDefault, $8.Timestamp.create)
-    ..e<$5.Task_View>(
-        3,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..aOM<$8.Timestamp>(2, 'scheduleTime', subBuilder: $8.Timestamp.create)
+    ..e<$5.Task_View>(3, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..hasRequiredFields = false;
 
   CancelLeaseRequest._() : super();
@@ -908,46 +1081,59 @@ class CancelLeaseRequest extends $pb.GeneratedMessage {
   CancelLeaseRequest createEmptyInstance() => create();
   static $pb.PbList<CancelLeaseRequest> createRepeated() =>
       $pb.PbList<CancelLeaseRequest>();
-  static CancelLeaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CancelLeaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CancelLeaseRequest>(create);
   static CancelLeaseRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $8.Timestamp get scheduleTime => $_getN(1);
+  @$pb.TagNumber(2)
   set scheduleTime($8.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScheduleTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScheduleTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.Timestamp ensureScheduleTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $5.Task_View get responseView => $_getN(2);
+  @$pb.TagNumber(3)
   set responseView($5.Task_View v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasResponseView() => $_has(2);
+  @$pb.TagNumber(3)
   void clearResponseView() => clearField(3);
 }
 
 class RunTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunTaskRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..e<$5.Task_View>(
-        2,
-        'responseView',
-        $pb.PbFieldType.OE,
-        $5.Task_View.VIEW_UNSPECIFIED,
-        $5.Task_View.valueOf,
-        $5.Task_View.values)
+    ..e<$5.Task_View>(2, 'responseView', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.Task_View.VIEW_UNSPECIFIED,
+        valueOf: $5.Task_View.valueOf,
+        enumValues: $5.Task_View.values)
     ..hasRequiredFields = false;
 
   RunTaskRequest._() : super();
@@ -967,22 +1153,32 @@ class RunTaskRequest extends $pb.GeneratedMessage {
   RunTaskRequest createEmptyInstance() => create();
   static $pb.PbList<RunTaskRequest> createRepeated() =>
       $pb.PbList<RunTaskRequest>();
-  static RunTaskRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RunTaskRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunTaskRequest>(create);
   static RunTaskRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $5.Task_View get responseView => $_getN(1);
+  @$pb.TagNumber(2)
   set responseView($5.Task_View v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResponseView() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResponseView() => clearField(2);
 }

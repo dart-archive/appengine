@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,14 +15,12 @@ export 'scan_run_warning_trace.pbenum.dart';
 
 class ScanRunWarningTrace extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanRunWarningTrace',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'))
-    ..e<ScanRunWarningTrace_Code>(
-        1,
-        'code',
-        $pb.PbFieldType.OE,
-        ScanRunWarningTrace_Code.CODE_UNSPECIFIED,
-        ScanRunWarningTrace_Code.valueOf,
-        ScanRunWarningTrace_Code.values)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'),
+      createEmptyInstance: create)
+    ..e<ScanRunWarningTrace_Code>(1, 'code', $pb.PbFieldType.OE,
+        defaultOrMaker: ScanRunWarningTrace_Code.CODE_UNSPECIFIED,
+        valueOf: ScanRunWarningTrace_Code.valueOf,
+        enumValues: ScanRunWarningTrace_Code.values)
     ..hasRequiredFields = false;
 
   ScanRunWarningTrace._() : super();
@@ -43,15 +40,20 @@ class ScanRunWarningTrace extends $pb.GeneratedMessage {
   ScanRunWarningTrace createEmptyInstance() => create();
   static $pb.PbList<ScanRunWarningTrace> createRepeated() =>
       $pb.PbList<ScanRunWarningTrace>();
-  static ScanRunWarningTrace getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ScanRunWarningTrace getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScanRunWarningTrace>(create);
   static ScanRunWarningTrace _defaultInstance;
 
+  @$pb.TagNumber(1)
   ScanRunWarningTrace_Code get code => $_getN(0);
+  @$pb.TagNumber(1)
   set code(ScanRunWarningTrace_Code v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCode() => clearField(1);
 }

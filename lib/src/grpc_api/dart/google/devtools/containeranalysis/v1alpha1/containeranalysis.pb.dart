@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'package_vulnerability.pb.dart' as $5;
@@ -50,45 +49,33 @@ class Occurrence extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Occurrence',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..oo(0, [7, 8, 11, 12, 14, 15, 16])
     ..aOS(1, 'name')
     ..aOS(2, 'resourceUrl')
     ..aOS(3, 'noteName')
     ..aOS(5, 'remediation')
-    ..e<Note_Kind>(6, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
-        Note_Kind.valueOf, Note_Kind.values)
-    ..a<BuildDetails>(7, 'buildDetails', $pb.PbFieldType.OM,
-        BuildDetails.getDefault, BuildDetails.create)
-    ..a<$5.VulnerabilityType_VulnerabilityDetails>(
-        8,
-        'vulnerabilityDetails',
-        $pb.PbFieldType.OM,
-        $5.VulnerabilityType_VulnerabilityDetails.getDefault,
-        $5.VulnerabilityType_VulnerabilityDetails.create)
-    ..a<$6.Timestamp>(9, 'createTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(10, 'updateTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$7.DockerImage_Derived>(11, 'derivedImage', $pb.PbFieldType.OM,
-        $7.DockerImage_Derived.getDefault, $7.DockerImage_Derived.create)
-    ..a<$8.PackageManager_Installation>(
-        12,
-        'installation',
-        $pb.PbFieldType.OM,
-        $8.PackageManager_Installation.getDefault,
-        $8.PackageManager_Installation.create)
-    ..a<Deployable_Deployment>(14, 'deployment', $pb.PbFieldType.OM,
-        Deployable_Deployment.getDefault, Deployable_Deployment.create)
-    ..a<Discovery_Discovered>(15, 'discovered', $pb.PbFieldType.OM,
-        Discovery_Discovered.getDefault, Discovery_Discovered.create)
-    ..a<AttestationAuthority_Attestation>(
-        16,
-        'attestation',
-        $pb.PbFieldType.OM,
-        AttestationAuthority_Attestation.getDefault,
-        AttestationAuthority_Attestation.create)
-    ..a<Resource>(17, 'resource', $pb.PbFieldType.OM, Resource.getDefault, Resource.create)
+    ..e<Note_Kind>(6, 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: Note_Kind.KIND_UNSPECIFIED,
+        valueOf: Note_Kind.valueOf,
+        enumValues: Note_Kind.values)
+    ..aOM<BuildDetails>(7, 'buildDetails', subBuilder: BuildDetails.create)
+    ..aOM<$5.VulnerabilityType_VulnerabilityDetails>(8, 'vulnerabilityDetails',
+        subBuilder: $5.VulnerabilityType_VulnerabilityDetails.create)
+    ..aOM<$6.Timestamp>(9, 'createTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(10, 'updateTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$7.DockerImage_Derived>(11, 'derivedImage',
+        subBuilder: $7.DockerImage_Derived.create)
+    ..aOM<$8.PackageManager_Installation>(12, 'installation',
+        subBuilder: $8.PackageManager_Installation.create)
+    ..aOM<Deployable_Deployment>(14, 'deployment',
+        subBuilder: Deployable_Deployment.create)
+    ..aOM<Discovery_Discovered>(15, 'discovered',
+        subBuilder: Discovery_Discovered.create)
+    ..aOM<AttestationAuthority_Attestation>(16, 'attestation',
+        subBuilder: AttestationAuthority_Attestation.create)
+    ..aOM<Resource>(17, 'resource', subBuilder: Resource.create)
     ..hasRequiredFields = false;
 
   Occurrence._() : super();
@@ -107,143 +94,226 @@ class Occurrence extends $pb.GeneratedMessage {
   static Occurrence create() => Occurrence._();
   Occurrence createEmptyInstance() => create();
   static $pb.PbList<Occurrence> createRepeated() => $pb.PbList<Occurrence>();
-  static Occurrence getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Occurrence getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Occurrence>(create);
   static Occurrence _defaultInstance;
 
   Occurrence_Details whichDetails() =>
       _Occurrence_DetailsByTag[$_whichOneof(0)];
   void clearDetails() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get resourceUrl => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get resourceUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
   set resourceUrl($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResourceUrl() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResourceUrl() => clearField(2);
 
-  $core.String get noteName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get noteName => $_getSZ(2);
+  @$pb.TagNumber(3)
   set noteName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNoteName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNoteName() => clearField(3);
 
-  $core.String get remediation => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get remediation => $_getSZ(3);
+  @$pb.TagNumber(5)
   set remediation($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasRemediation() => $_has(3);
+  @$pb.TagNumber(5)
   void clearRemediation() => clearField(5);
 
+  @$pb.TagNumber(6)
   Note_Kind get kind => $_getN(4);
+  @$pb.TagNumber(6)
   set kind(Note_Kind v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasKind() => $_has(4);
+  @$pb.TagNumber(6)
   void clearKind() => clearField(6);
 
+  @$pb.TagNumber(7)
   BuildDetails get buildDetails => $_getN(5);
+  @$pb.TagNumber(7)
   set buildDetails(BuildDetails v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasBuildDetails() => $_has(5);
+  @$pb.TagNumber(7)
   void clearBuildDetails() => clearField(7);
+  @$pb.TagNumber(7)
+  BuildDetails ensureBuildDetails() => $_ensure(5);
 
+  @$pb.TagNumber(8)
   $5.VulnerabilityType_VulnerabilityDetails get vulnerabilityDetails =>
       $_getN(6);
+  @$pb.TagNumber(8)
   set vulnerabilityDetails($5.VulnerabilityType_VulnerabilityDetails v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasVulnerabilityDetails() => $_has(6);
+  @$pb.TagNumber(8)
   void clearVulnerabilityDetails() => clearField(8);
+  @$pb.TagNumber(8)
+  $5.VulnerabilityType_VulnerabilityDetails ensureVulnerabilityDetails() =>
+      $_ensure(6);
 
+  @$pb.TagNumber(9)
   $6.Timestamp get createTime => $_getN(7);
+  @$pb.TagNumber(9)
   set createTime($6.Timestamp v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasCreateTime() => $_has(7);
+  @$pb.TagNumber(9)
   void clearCreateTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $6.Timestamp ensureCreateTime() => $_ensure(7);
 
+  @$pb.TagNumber(10)
   $6.Timestamp get updateTime => $_getN(8);
+  @$pb.TagNumber(10)
   set updateTime($6.Timestamp v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasUpdateTime() => $_has(8);
+  @$pb.TagNumber(10)
   void clearUpdateTime() => clearField(10);
+  @$pb.TagNumber(10)
+  $6.Timestamp ensureUpdateTime() => $_ensure(8);
 
+  @$pb.TagNumber(11)
   $7.DockerImage_Derived get derivedImage => $_getN(9);
+  @$pb.TagNumber(11)
   set derivedImage($7.DockerImage_Derived v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasDerivedImage() => $_has(9);
+  @$pb.TagNumber(11)
   void clearDerivedImage() => clearField(11);
+  @$pb.TagNumber(11)
+  $7.DockerImage_Derived ensureDerivedImage() => $_ensure(9);
 
+  @$pb.TagNumber(12)
   $8.PackageManager_Installation get installation => $_getN(10);
+  @$pb.TagNumber(12)
   set installation($8.PackageManager_Installation v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasInstallation() => $_has(10);
+  @$pb.TagNumber(12)
   void clearInstallation() => clearField(12);
+  @$pb.TagNumber(12)
+  $8.PackageManager_Installation ensureInstallation() => $_ensure(10);
 
+  @$pb.TagNumber(14)
   Deployable_Deployment get deployment => $_getN(11);
+  @$pb.TagNumber(14)
   set deployment(Deployable_Deployment v) {
     setField(14, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasDeployment() => $_has(11);
+  @$pb.TagNumber(14)
   void clearDeployment() => clearField(14);
+  @$pb.TagNumber(14)
+  Deployable_Deployment ensureDeployment() => $_ensure(11);
 
+  @$pb.TagNumber(15)
   Discovery_Discovered get discovered => $_getN(12);
+  @$pb.TagNumber(15)
   set discovered(Discovery_Discovered v) {
     setField(15, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasDiscovered() => $_has(12);
+  @$pb.TagNumber(15)
   void clearDiscovered() => clearField(15);
+  @$pb.TagNumber(15)
+  Discovery_Discovered ensureDiscovered() => $_ensure(12);
 
+  @$pb.TagNumber(16)
   AttestationAuthority_Attestation get attestation => $_getN(13);
+  @$pb.TagNumber(16)
   set attestation(AttestationAuthority_Attestation v) {
     setField(16, v);
   }
 
+  @$pb.TagNumber(16)
   $core.bool hasAttestation() => $_has(13);
+  @$pb.TagNumber(16)
   void clearAttestation() => clearField(16);
+  @$pb.TagNumber(16)
+  AttestationAuthority_Attestation ensureAttestation() => $_ensure(13);
 
+  @$pb.TagNumber(17)
   Resource get resource => $_getN(14);
+  @$pb.TagNumber(17)
   set resource(Resource v) {
     setField(17, v);
   }
 
+  @$pb.TagNumber(17)
   $core.bool hasResource() => $_has(14);
+  @$pb.TagNumber(17)
   void clearResource() => clearField(17);
+  @$pb.TagNumber(17)
+  Resource ensureResource() => $_ensure(14);
 }
 
 class Resource extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Resource',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..a<$9.Hash>(3, 'contentHash', $pb.PbFieldType.OM, $9.Hash.getDefault,
-        $9.Hash.create)
+    ..aOM<$9.Hash>(3, 'contentHash', subBuilder: $9.Hash.create)
     ..hasRequiredFields = false;
 
   Resource._() : super();
@@ -262,38 +332,55 @@ class Resource extends $pb.GeneratedMessage {
   static Resource create() => Resource._();
   Resource createEmptyInstance() => create();
   static $pb.PbList<Resource> createRepeated() => $pb.PbList<Resource>();
-  static Resource getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Resource getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Resource>(create);
   static Resource _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get uri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get uri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set uri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUri() => clearField(2);
 
+  @$pb.TagNumber(3)
   $9.Hash get contentHash => $_getN(2);
+  @$pb.TagNumber(3)
   set contentHash($9.Hash v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasContentHash() => $_has(2);
+  @$pb.TagNumber(3)
   void clearContentHash() => clearField(3);
+  @$pb.TagNumber(3)
+  $9.Hash ensureContentHash() => $_ensure(2);
 }
 
 class Note_RelatedUrl extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Note.RelatedUrl',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'url')
     ..aOS(2, 'label')
     ..hasRequiredFields = false;
@@ -315,24 +402,33 @@ class Note_RelatedUrl extends $pb.GeneratedMessage {
   Note_RelatedUrl createEmptyInstance() => create();
   static $pb.PbList<Note_RelatedUrl> createRepeated() =>
       $pb.PbList<Note_RelatedUrl>();
-  static Note_RelatedUrl getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Note_RelatedUrl getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Note_RelatedUrl>(create);
   static Note_RelatedUrl _defaultInstance;
 
-  $core.String get url => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
   set url($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
-  $core.String get label => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get label => $_getSZ(1);
+  @$pb.TagNumber(2)
   set label($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLabel() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLabel() => clearField(2);
 }
 
@@ -360,33 +456,32 @@ class Note extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Note',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..oo(0, [6, 8, 13, 14, 17, 18, 19])
     ..aOS(1, 'name')
     ..aOS(3, 'shortDescription')
     ..aOS(4, 'longDescription')
-    ..a<$5.VulnerabilityType>(6, 'vulnerabilityType', $pb.PbFieldType.OM,
-        $5.VulnerabilityType.getDefault, $5.VulnerabilityType.create)
-    ..pc<Note_RelatedUrl>(
-        7, 'relatedUrl', $pb.PbFieldType.PM, Note_RelatedUrl.create)
-    ..a<BuildType>(8, 'buildType', $pb.PbFieldType.OM, BuildType.getDefault,
-        BuildType.create)
-    ..e<Note_Kind>(9, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
-        Note_Kind.valueOf, Note_Kind.values)
-    ..a<$6.Timestamp>(10, 'expirationTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(11, 'createTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(12, 'updateTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$7.DockerImage_Basis>(13, 'baseImage', $pb.PbFieldType.OM,
-        $7.DockerImage_Basis.getDefault, $7.DockerImage_Basis.create)
-    ..a<$8.PackageManager_Package>(14, 'package', $pb.PbFieldType.OM,
-        $8.PackageManager_Package.getDefault, $8.PackageManager_Package.create)
-    ..a<Deployable>(17, 'deployable', $pb.PbFieldType.OM, Deployable.getDefault,
-        Deployable.create)
-    ..a<Discovery>(18, 'discovery', $pb.PbFieldType.OM, Discovery.getDefault, Discovery.create)
-    ..a<AttestationAuthority>(19, 'attestationAuthority', $pb.PbFieldType.OM, AttestationAuthority.getDefault, AttestationAuthority.create)
+    ..aOM<$5.VulnerabilityType>(6, 'vulnerabilityType',
+        subBuilder: $5.VulnerabilityType.create)
+    ..pc<Note_RelatedUrl>(7, 'relatedUrl', $pb.PbFieldType.PM,
+        subBuilder: Note_RelatedUrl.create)
+    ..aOM<BuildType>(8, 'buildType', subBuilder: BuildType.create)
+    ..e<Note_Kind>(9, 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: Note_Kind.KIND_UNSPECIFIED,
+        valueOf: Note_Kind.valueOf,
+        enumValues: Note_Kind.values)
+    ..aOM<$6.Timestamp>(10, 'expirationTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(11, 'createTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(12, 'updateTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$7.DockerImage_Basis>(13, 'baseImage',
+        subBuilder: $7.DockerImage_Basis.create)
+    ..aOM<$8.PackageManager_Package>(14, 'package',
+        subBuilder: $8.PackageManager_Package.create)
+    ..aOM<Deployable>(17, 'deployable', subBuilder: Deployable.create)
+    ..aOM<Discovery>(18, 'discovery', subBuilder: Discovery.create)
+    ..aOM<AttestationAuthority>(19, 'attestationAuthority',
+        subBuilder: AttestationAuthority.create)
     ..hasRequiredFields = false;
 
   Note._() : super();
@@ -405,145 +500,220 @@ class Note extends $pb.GeneratedMessage {
   static Note create() => Note._();
   Note createEmptyInstance() => create();
   static $pb.PbList<Note> createRepeated() => $pb.PbList<Note>();
-  static Note getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Note getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Note>(create);
   static Note _defaultInstance;
 
   Note_NoteType whichNoteType() => _Note_NoteTypeByTag[$_whichOneof(0)];
   void clearNoteType() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get shortDescription => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get shortDescription => $_getSZ(1);
+  @$pb.TagNumber(3)
   set shortDescription($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasShortDescription() => $_has(1);
+  @$pb.TagNumber(3)
   void clearShortDescription() => clearField(3);
 
-  $core.String get longDescription => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get longDescription => $_getSZ(2);
+  @$pb.TagNumber(4)
   set longDescription($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasLongDescription() => $_has(2);
+  @$pb.TagNumber(4)
   void clearLongDescription() => clearField(4);
 
+  @$pb.TagNumber(6)
   $5.VulnerabilityType get vulnerabilityType => $_getN(3);
+  @$pb.TagNumber(6)
   set vulnerabilityType($5.VulnerabilityType v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasVulnerabilityType() => $_has(3);
+  @$pb.TagNumber(6)
   void clearVulnerabilityType() => clearField(6);
+  @$pb.TagNumber(6)
+  $5.VulnerabilityType ensureVulnerabilityType() => $_ensure(3);
 
+  @$pb.TagNumber(7)
   $core.List<Note_RelatedUrl> get relatedUrl => $_getList(4);
 
+  @$pb.TagNumber(8)
   BuildType get buildType => $_getN(5);
+  @$pb.TagNumber(8)
   set buildType(BuildType v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasBuildType() => $_has(5);
+  @$pb.TagNumber(8)
   void clearBuildType() => clearField(8);
+  @$pb.TagNumber(8)
+  BuildType ensureBuildType() => $_ensure(5);
 
+  @$pb.TagNumber(9)
   Note_Kind get kind => $_getN(6);
+  @$pb.TagNumber(9)
   set kind(Note_Kind v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasKind() => $_has(6);
+  @$pb.TagNumber(9)
   void clearKind() => clearField(9);
 
+  @$pb.TagNumber(10)
   $6.Timestamp get expirationTime => $_getN(7);
+  @$pb.TagNumber(10)
   set expirationTime($6.Timestamp v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasExpirationTime() => $_has(7);
+  @$pb.TagNumber(10)
   void clearExpirationTime() => clearField(10);
+  @$pb.TagNumber(10)
+  $6.Timestamp ensureExpirationTime() => $_ensure(7);
 
+  @$pb.TagNumber(11)
   $6.Timestamp get createTime => $_getN(8);
+  @$pb.TagNumber(11)
   set createTime($6.Timestamp v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasCreateTime() => $_has(8);
+  @$pb.TagNumber(11)
   void clearCreateTime() => clearField(11);
+  @$pb.TagNumber(11)
+  $6.Timestamp ensureCreateTime() => $_ensure(8);
 
+  @$pb.TagNumber(12)
   $6.Timestamp get updateTime => $_getN(9);
+  @$pb.TagNumber(12)
   set updateTime($6.Timestamp v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasUpdateTime() => $_has(9);
+  @$pb.TagNumber(12)
   void clearUpdateTime() => clearField(12);
+  @$pb.TagNumber(12)
+  $6.Timestamp ensureUpdateTime() => $_ensure(9);
 
+  @$pb.TagNumber(13)
   $7.DockerImage_Basis get baseImage => $_getN(10);
+  @$pb.TagNumber(13)
   set baseImage($7.DockerImage_Basis v) {
     setField(13, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasBaseImage() => $_has(10);
+  @$pb.TagNumber(13)
   void clearBaseImage() => clearField(13);
+  @$pb.TagNumber(13)
+  $7.DockerImage_Basis ensureBaseImage() => $_ensure(10);
 
+  @$pb.TagNumber(14)
   $8.PackageManager_Package get package => $_getN(11);
+  @$pb.TagNumber(14)
   set package($8.PackageManager_Package v) {
     setField(14, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasPackage() => $_has(11);
+  @$pb.TagNumber(14)
   void clearPackage() => clearField(14);
+  @$pb.TagNumber(14)
+  $8.PackageManager_Package ensurePackage() => $_ensure(11);
 
+  @$pb.TagNumber(17)
   Deployable get deployable => $_getN(12);
+  @$pb.TagNumber(17)
   set deployable(Deployable v) {
     setField(17, v);
   }
 
+  @$pb.TagNumber(17)
   $core.bool hasDeployable() => $_has(12);
+  @$pb.TagNumber(17)
   void clearDeployable() => clearField(17);
+  @$pb.TagNumber(17)
+  Deployable ensureDeployable() => $_ensure(12);
 
+  @$pb.TagNumber(18)
   Discovery get discovery => $_getN(13);
+  @$pb.TagNumber(18)
   set discovery(Discovery v) {
     setField(18, v);
   }
 
+  @$pb.TagNumber(18)
   $core.bool hasDiscovery() => $_has(13);
+  @$pb.TagNumber(18)
   void clearDiscovery() => clearField(18);
+  @$pb.TagNumber(18)
+  Discovery ensureDiscovery() => $_ensure(13);
 
+  @$pb.TagNumber(19)
   AttestationAuthority get attestationAuthority => $_getN(14);
+  @$pb.TagNumber(19)
   set attestationAuthority(AttestationAuthority v) {
     setField(19, v);
   }
 
+  @$pb.TagNumber(19)
   $core.bool hasAttestationAuthority() => $_has(14);
+  @$pb.TagNumber(19)
   void clearAttestationAuthority() => clearField(19);
+  @$pb.TagNumber(19)
+  AttestationAuthority ensureAttestationAuthority() => $_ensure(14);
 }
 
 class Deployable_Deployment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Deployable.Deployment',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'userEmail')
-    ..a<$6.Timestamp>(2, 'deployTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(3, 'undeployTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(2, 'deployTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(3, 'undeployTime', subBuilder: $6.Timestamp.create)
     ..aOS(5, 'address')
     ..pPS(6, 'resourceUri')
-    ..e<Deployable_Deployment_Platform>(
-        7,
-        'platform',
-        $pb.PbFieldType.OE,
-        Deployable_Deployment_Platform.PLATFORM_UNSPECIFIED,
-        Deployable_Deployment_Platform.valueOf,
-        Deployable_Deployment_Platform.values)
+    ..e<Deployable_Deployment_Platform>(7, 'platform', $pb.PbFieldType.OE,
+        defaultOrMaker: Deployable_Deployment_Platform.PLATFORM_UNSPECIFIED,
+        valueOf: Deployable_Deployment_Platform.valueOf,
+        enumValues: Deployable_Deployment_Platform.values)
     ..aOS(8, 'config')
     ..hasRequiredFields = false;
 
@@ -566,65 +736,96 @@ class Deployable_Deployment extends $pb.GeneratedMessage {
   Deployable_Deployment createEmptyInstance() => create();
   static $pb.PbList<Deployable_Deployment> createRepeated() =>
       $pb.PbList<Deployable_Deployment>();
-  static Deployable_Deployment getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Deployable_Deployment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Deployable_Deployment>(create);
   static Deployable_Deployment _defaultInstance;
 
-  $core.String get userEmail => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get userEmail => $_getSZ(0);
+  @$pb.TagNumber(1)
   set userEmail($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUserEmail() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUserEmail() => clearField(1);
 
+  @$pb.TagNumber(2)
   $6.Timestamp get deployTime => $_getN(1);
+  @$pb.TagNumber(2)
   set deployTime($6.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDeployTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDeployTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Timestamp ensureDeployTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $6.Timestamp get undeployTime => $_getN(2);
+  @$pb.TagNumber(3)
   set undeployTime($6.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUndeployTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUndeployTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.Timestamp ensureUndeployTime() => $_ensure(2);
 
-  $core.String get address => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get address => $_getSZ(3);
+  @$pb.TagNumber(5)
   set address($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAddress() => $_has(3);
+  @$pb.TagNumber(5)
   void clearAddress() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<$core.String> get resourceUri => $_getList(4);
 
+  @$pb.TagNumber(7)
   Deployable_Deployment_Platform get platform => $_getN(5);
+  @$pb.TagNumber(7)
   set platform(Deployable_Deployment_Platform v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasPlatform() => $_has(5);
+  @$pb.TagNumber(7)
   void clearPlatform() => clearField(7);
 
-  $core.String get config => $_getS(6, '');
+  @$pb.TagNumber(8)
+  $core.String get config => $_getSZ(6);
+  @$pb.TagNumber(8)
   set config($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasConfig() => $_has(6);
+  @$pb.TagNumber(8)
   void clearConfig() => clearField(8);
 }
 
 class Deployable extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Deployable',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..pPS(1, 'resourceUri')
     ..hasRequiredFields = false;
 
@@ -644,27 +845,28 @@ class Deployable extends $pb.GeneratedMessage {
   static Deployable create() => Deployable._();
   Deployable createEmptyInstance() => create();
   static $pb.PbList<Deployable> createRepeated() => $pb.PbList<Deployable>();
-  static Deployable getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Deployable getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Deployable>(create);
   static Deployable _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get resourceUri => $_getList(0);
 }
 
 class Discovery_Discovered extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Discovery.Discovered',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<$2.Operation>(1, 'operation', $pb.PbFieldType.OM,
-        $2.Operation.getDefault, $2.Operation.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Operation>(1, 'operation', subBuilder: $2.Operation.create)
     ..e<Discovery_Discovered_AnalysisStatus>(
-        5,
-        'analysisStatus',
-        $pb.PbFieldType.OE,
-        Discovery_Discovered_AnalysisStatus.ANALYSIS_STATUS_UNSPECIFIED,
-        Discovery_Discovered_AnalysisStatus.valueOf,
-        Discovery_Discovered_AnalysisStatus.values)
-    ..a<$10.Status>(6, 'analysisStatusError', $pb.PbFieldType.OM,
-        $10.Status.getDefault, $10.Status.create)
+        5, 'analysisStatus', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            Discovery_Discovered_AnalysisStatus.ANALYSIS_STATUS_UNSPECIFIED,
+        valueOf: Discovery_Discovered_AnalysisStatus.valueOf,
+        enumValues: Discovery_Discovered_AnalysisStatus.values)
+    ..aOM<$10.Status>(6, 'analysisStatusError', subBuilder: $10.Status.create)
     ..hasRequiredFields = false;
 
   Discovery_Discovered._() : super();
@@ -685,41 +887,61 @@ class Discovery_Discovered extends $pb.GeneratedMessage {
   Discovery_Discovered createEmptyInstance() => create();
   static $pb.PbList<Discovery_Discovered> createRepeated() =>
       $pb.PbList<Discovery_Discovered>();
-  static Discovery_Discovered getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Discovery_Discovered getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Discovery_Discovered>(create);
   static Discovery_Discovered _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.Operation get operation => $_getN(0);
+  @$pb.TagNumber(1)
   set operation($2.Operation v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperation() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperation() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Operation ensureOperation() => $_ensure(0);
 
+  @$pb.TagNumber(5)
   Discovery_Discovered_AnalysisStatus get analysisStatus => $_getN(1);
+  @$pb.TagNumber(5)
   set analysisStatus(Discovery_Discovered_AnalysisStatus v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAnalysisStatus() => $_has(1);
+  @$pb.TagNumber(5)
   void clearAnalysisStatus() => clearField(5);
 
+  @$pb.TagNumber(6)
   $10.Status get analysisStatusError => $_getN(2);
+  @$pb.TagNumber(6)
   set analysisStatusError($10.Status v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasAnalysisStatusError() => $_has(2);
+  @$pb.TagNumber(6)
   void clearAnalysisStatusError() => clearField(6);
+  @$pb.TagNumber(6)
+  $10.Status ensureAnalysisStatusError() => $_ensure(2);
 }
 
 class Discovery extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Discovery',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..e<Note_Kind>(1, 'analysisKind', $pb.PbFieldType.OE,
-        Note_Kind.KIND_UNSPECIFIED, Note_Kind.valueOf, Note_Kind.values)
+        defaultOrMaker: Note_Kind.KIND_UNSPECIFIED,
+        valueOf: Note_Kind.valueOf,
+        enumValues: Note_Kind.values)
     ..hasRequiredFields = false;
 
   Discovery._() : super();
@@ -738,25 +960,31 @@ class Discovery extends $pb.GeneratedMessage {
   static Discovery create() => Discovery._();
   Discovery createEmptyInstance() => create();
   static $pb.PbList<Discovery> createRepeated() => $pb.PbList<Discovery>();
-  static Discovery getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Discovery getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Discovery>(create);
   static Discovery _defaultInstance;
 
+  @$pb.TagNumber(1)
   Note_Kind get analysisKind => $_getN(0);
+  @$pb.TagNumber(1)
   set analysisKind(Note_Kind v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAnalysisKind() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAnalysisKind() => clearField(1);
 }
 
 class BuildType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildType',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'builderVersion')
-    ..a<BuildSignature>(2, 'signature', $pb.PbFieldType.OM,
-        BuildSignature.getDefault, BuildSignature.create)
+    ..aOM<BuildSignature>(2, 'signature', subBuilder: BuildSignature.create)
     ..hasRequiredFields = false;
 
   BuildType._() : super();
@@ -775,40 +1003,50 @@ class BuildType extends $pb.GeneratedMessage {
   static BuildType create() => BuildType._();
   BuildType createEmptyInstance() => create();
   static $pb.PbList<BuildType> createRepeated() => $pb.PbList<BuildType>();
-  static BuildType getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BuildType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BuildType>(create);
   static BuildType _defaultInstance;
 
-  $core.String get builderVersion => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get builderVersion => $_getSZ(0);
+  @$pb.TagNumber(1)
   set builderVersion($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBuilderVersion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBuilderVersion() => clearField(1);
 
+  @$pb.TagNumber(2)
   BuildSignature get signature => $_getN(1);
+  @$pb.TagNumber(2)
   set signature(BuildSignature v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSignature() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
+  @$pb.TagNumber(2)
+  BuildSignature ensureSignature() => $_ensure(1);
 }
 
 class BuildSignature extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildSignature',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'publicKey')
     ..aOS(2, 'signature')
     ..aOS(3, 'keyId')
-    ..e<BuildSignature_KeyType>(
-        4,
-        'keyType',
-        $pb.PbFieldType.OE,
-        BuildSignature_KeyType.KEY_TYPE_UNSPECIFIED,
-        BuildSignature_KeyType.valueOf,
-        BuildSignature_KeyType.values)
+    ..e<BuildSignature_KeyType>(4, 'keyType', $pb.PbFieldType.OE,
+        defaultOrMaker: BuildSignature_KeyType.KEY_TYPE_UNSPECIFIED,
+        valueOf: BuildSignature_KeyType.valueOf,
+        enumValues: BuildSignature_KeyType.values)
     ..hasRequiredFields = false;
 
   BuildSignature._() : super();
@@ -828,39 +1066,57 @@ class BuildSignature extends $pb.GeneratedMessage {
   BuildSignature createEmptyInstance() => create();
   static $pb.PbList<BuildSignature> createRepeated() =>
       $pb.PbList<BuildSignature>();
-  static BuildSignature getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BuildSignature getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BuildSignature>(create);
   static BuildSignature _defaultInstance;
 
-  $core.String get publicKey => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get publicKey => $_getSZ(0);
+  @$pb.TagNumber(1)
   set publicKey($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPublicKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPublicKey() => clearField(1);
 
-  $core.String get signature => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get signature => $_getSZ(1);
+  @$pb.TagNumber(2)
   set signature($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSignature() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSignature() => clearField(2);
 
-  $core.String get keyId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get keyId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set keyId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKeyId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKeyId() => clearField(3);
 
+  @$pb.TagNumber(4)
   BuildSignature_KeyType get keyType => $_getN(3);
+  @$pb.TagNumber(4)
   set keyType(BuildSignature_KeyType v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasKeyType() => $_has(3);
+  @$pb.TagNumber(4)
   void clearKeyType() => clearField(4);
 }
 
@@ -874,17 +1130,16 @@ class PgpSignedAttestation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PgpSignedAttestation',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..oo(0, [2])
     ..aOS(1, 'signature')
     ..aOS(2, 'pgpKeyId')
-    ..e<PgpSignedAttestation_ContentType>(
-        3,
-        'contentType',
-        $pb.PbFieldType.OE,
-        PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED,
-        PgpSignedAttestation_ContentType.valueOf,
-        PgpSignedAttestation_ContentType.values)
+    ..e<PgpSignedAttestation_ContentType>(3, 'contentType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED,
+        valueOf: PgpSignedAttestation_ContentType.valueOf,
+        enumValues: PgpSignedAttestation_ContentType.values)
     ..hasRequiredFields = false;
 
   PgpSignedAttestation._() : super();
@@ -905,36 +1160,49 @@ class PgpSignedAttestation extends $pb.GeneratedMessage {
   PgpSignedAttestation createEmptyInstance() => create();
   static $pb.PbList<PgpSignedAttestation> createRepeated() =>
       $pb.PbList<PgpSignedAttestation>();
-  static PgpSignedAttestation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PgpSignedAttestation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PgpSignedAttestation>(create);
   static PgpSignedAttestation _defaultInstance;
 
   PgpSignedAttestation_KeyId whichKeyId() =>
       _PgpSignedAttestation_KeyIdByTag[$_whichOneof(0)];
   void clearKeyId() => clearField($_whichOneof(0));
 
-  $core.String get signature => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get signature => $_getSZ(0);
+  @$pb.TagNumber(1)
   set signature($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSignature() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSignature() => clearField(1);
 
-  $core.String get pgpKeyId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pgpKeyId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pgpKeyId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPgpKeyId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPgpKeyId() => clearField(2);
 
+  @$pb.TagNumber(3)
   PgpSignedAttestation_ContentType get contentType => $_getN(2);
+  @$pb.TagNumber(3)
   set contentType(PgpSignedAttestation_ContentType v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasContentType() => $_has(2);
+  @$pb.TagNumber(3)
   void clearContentType() => clearField(3);
 }
 
@@ -943,7 +1211,8 @@ class AttestationAuthority_AttestationAuthorityHint
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AttestationAuthority.AttestationAuthorityHint',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'humanReadableName')
     ..hasRequiredFields = false;
 
@@ -972,16 +1241,22 @@ class AttestationAuthority_AttestationAuthorityHint
   static $pb.PbList<AttestationAuthority_AttestationAuthorityHint>
       createRepeated() =>
           $pb.PbList<AttestationAuthority_AttestationAuthorityHint>();
+  @$core.pragma('dart2js:noInline')
   static AttestationAuthority_AttestationAuthorityHint getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AttestationAuthority_AttestationAuthorityHint>(create);
   static AttestationAuthority_AttestationAuthorityHint _defaultInstance;
 
-  $core.String get humanReadableName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get humanReadableName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set humanReadableName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHumanReadableName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHumanReadableName() => clearField(1);
 }
 
@@ -996,10 +1271,11 @@ class AttestationAuthority_Attestation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AttestationAuthority.Attestation',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<PgpSignedAttestation>(1, 'pgpSignedAttestation', $pb.PbFieldType.OM,
-        PgpSignedAttestation.getDefault, PgpSignedAttestation.create)
+    ..aOM<PgpSignedAttestation>(1, 'pgpSignedAttestation',
+        subBuilder: PgpSignedAttestation.create)
     ..hasRequiredFields = false;
 
   AttestationAuthority_Attestation._() : super();
@@ -1023,33 +1299,38 @@ class AttestationAuthority_Attestation extends $pb.GeneratedMessage {
   AttestationAuthority_Attestation createEmptyInstance() => create();
   static $pb.PbList<AttestationAuthority_Attestation> createRepeated() =>
       $pb.PbList<AttestationAuthority_Attestation>();
-  static AttestationAuthority_Attestation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AttestationAuthority_Attestation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AttestationAuthority_Attestation>(
+          create);
   static AttestationAuthority_Attestation _defaultInstance;
 
   AttestationAuthority_Attestation_Signature whichSignature() =>
       _AttestationAuthority_Attestation_SignatureByTag[$_whichOneof(0)];
   void clearSignature() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   PgpSignedAttestation get pgpSignedAttestation => $_getN(0);
+  @$pb.TagNumber(1)
   set pgpSignedAttestation(PgpSignedAttestation v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPgpSignedAttestation() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPgpSignedAttestation() => clearField(1);
+  @$pb.TagNumber(1)
+  PgpSignedAttestation ensurePgpSignedAttestation() => $_ensure(0);
 }
 
 class AttestationAuthority extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttestationAuthority',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<AttestationAuthority_AttestationAuthorityHint>(
-        1,
-        'hint',
-        $pb.PbFieldType.OM,
-        AttestationAuthority_AttestationAuthorityHint.getDefault,
-        AttestationAuthority_AttestationAuthorityHint.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<AttestationAuthority_AttestationAuthorityHint>(1, 'hint',
+        subBuilder: AttestationAuthority_AttestationAuthorityHint.create)
     ..hasRequiredFields = false;
 
   AttestationAuthority._() : super();
@@ -1070,25 +1351,33 @@ class AttestationAuthority extends $pb.GeneratedMessage {
   AttestationAuthority createEmptyInstance() => create();
   static $pb.PbList<AttestationAuthority> createRepeated() =>
       $pb.PbList<AttestationAuthority>();
-  static AttestationAuthority getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AttestationAuthority getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AttestationAuthority>(create);
   static AttestationAuthority _defaultInstance;
 
+  @$pb.TagNumber(1)
   AttestationAuthority_AttestationAuthorityHint get hint => $_getN(0);
+  @$pb.TagNumber(1)
   set hint(AttestationAuthority_AttestationAuthorityHint v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHint() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHint() => clearField(1);
+  @$pb.TagNumber(1)
+  AttestationAuthority_AttestationAuthorityHint ensureHint() => $_ensure(0);
 }
 
 class BuildDetails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuildDetails',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<$9.BuildProvenance>(1, 'provenance', $pb.PbFieldType.OM,
-        $9.BuildProvenance.getDefault, $9.BuildProvenance.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<$9.BuildProvenance>(1, 'provenance',
+        subBuilder: $9.BuildProvenance.create)
     ..aOS(2, 'provenanceBytes')
     ..hasRequiredFields = false;
 
@@ -1109,30 +1398,43 @@ class BuildDetails extends $pb.GeneratedMessage {
   BuildDetails createEmptyInstance() => create();
   static $pb.PbList<BuildDetails> createRepeated() =>
       $pb.PbList<BuildDetails>();
-  static BuildDetails getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BuildDetails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BuildDetails>(create);
   static BuildDetails _defaultInstance;
 
+  @$pb.TagNumber(1)
   $9.BuildProvenance get provenance => $_getN(0);
+  @$pb.TagNumber(1)
   set provenance($9.BuildProvenance v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProvenance() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProvenance() => clearField(1);
+  @$pb.TagNumber(1)
+  $9.BuildProvenance ensureProvenance() => $_ensure(0);
 
-  $core.String get provenanceBytes => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get provenanceBytes => $_getSZ(1);
+  @$pb.TagNumber(2)
   set provenanceBytes($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProvenanceBytes() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProvenanceBytes() => clearField(2);
 }
 
 class ScanConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanConfig',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'enabled')
@@ -1154,38 +1456,53 @@ class ScanConfig extends $pb.GeneratedMessage {
   static ScanConfig create() => ScanConfig._();
   ScanConfig createEmptyInstance() => create();
   static $pb.PbList<ScanConfig> createRepeated() => $pb.PbList<ScanConfig>();
-  static ScanConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ScanConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScanConfig>(create);
   static ScanConfig _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
-  $core.bool get enabled => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get enabled => $_getBF(2);
+  @$pb.TagNumber(3)
   set enabled($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEnabled() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEnabled() => clearField(3);
 }
 
 class GetOccurrenceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetOccurrenceRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1207,30 +1524,38 @@ class GetOccurrenceRequest extends $pb.GeneratedMessage {
   GetOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<GetOccurrenceRequest> createRepeated() =>
       $pb.PbList<GetOccurrenceRequest>();
-  static GetOccurrenceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetOccurrenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetOccurrenceRequest>(create);
   static GetOccurrenceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListOccurrencesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOccurrencesRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'parent')
-    ..e<Note_Kind>(6, 'kind', $pb.PbFieldType.OE, Note_Kind.KIND_UNSPECIFIED,
-        Note_Kind.valueOf, Note_Kind.values)
+    ..e<Note_Kind>(6, 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: Note_Kind.KIND_UNSPECIFIED,
+        valueOf: Note_Kind.valueOf,
+        enumValues: Note_Kind.values)
     ..hasRequiredFields = false;
 
   ListOccurrencesRequest._() : super();
@@ -1252,64 +1577,91 @@ class ListOccurrencesRequest extends $pb.GeneratedMessage {
   ListOccurrencesRequest createEmptyInstance() => create();
   static $pb.PbList<ListOccurrencesRequest> createRepeated() =>
       $pb.PbList<ListOccurrencesRequest>();
-  static ListOccurrencesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListOccurrencesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListOccurrencesRequest>(create);
   static ListOccurrencesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get parent => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get parent => $_getSZ(4);
+  @$pb.TagNumber(5)
   set parent($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasParent() => $_has(4);
+  @$pb.TagNumber(5)
   void clearParent() => clearField(5);
 
+  @$pb.TagNumber(6)
   Note_Kind get kind => $_getN(5);
+  @$pb.TagNumber(6)
   set kind(Note_Kind v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasKind() => $_has(5);
+  @$pb.TagNumber(6)
   void clearKind() => clearField(6);
 }
 
 class ListOccurrencesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListOccurrencesResponse',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM, Occurrence.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM,
+        subBuilder: Occurrence.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1332,25 +1684,32 @@ class ListOccurrencesResponse extends $pb.GeneratedMessage {
   ListOccurrencesResponse createEmptyInstance() => create();
   static $pb.PbList<ListOccurrencesResponse> createRepeated() =>
       $pb.PbList<ListOccurrencesResponse>();
-  static ListOccurrencesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListOccurrencesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListOccurrencesResponse>(create);
   static ListOccurrencesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Occurrence> get occurrences => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteOccurrenceRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1373,26 +1732,31 @@ class DeleteOccurrenceRequest extends $pb.GeneratedMessage {
   DeleteOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteOccurrenceRequest> createRepeated() =>
       $pb.PbList<DeleteOccurrenceRequest>();
-  static DeleteOccurrenceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteOccurrenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteOccurrenceRequest>(create);
   static DeleteOccurrenceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateOccurrenceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateOccurrenceRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault,
-        Occurrence.create)
+    ..aOM<Occurrence>(2, 'occurrence', subBuilder: Occurrence.create)
     ..aOS(3, 'parent')
     ..hasRequiredFields = false;
 
@@ -1415,44 +1779,58 @@ class CreateOccurrenceRequest extends $pb.GeneratedMessage {
   CreateOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<CreateOccurrenceRequest> createRepeated() =>
       $pb.PbList<CreateOccurrenceRequest>();
-  static CreateOccurrenceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateOccurrenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateOccurrenceRequest>(create);
   static CreateOccurrenceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Occurrence get occurrence => $_getN(1);
+  @$pb.TagNumber(2)
   set occurrence(Occurrence v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOccurrence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOccurrence() => clearField(2);
+  @$pb.TagNumber(2)
+  Occurrence ensureOccurrence() => $_ensure(1);
 
-  $core.String get parent => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get parent => $_getSZ(2);
+  @$pb.TagNumber(3)
   set parent($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasParent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearParent() => clearField(3);
 }
 
 class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateOccurrenceRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Occurrence>(2, 'occurrence', $pb.PbFieldType.OM, Occurrence.getDefault,
-        Occurrence.create)
-    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..aOM<Occurrence>(2, 'occurrence', subBuilder: Occurrence.create)
+    ..aOM<$11.FieldMask>(3, 'updateMask', subBuilder: $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOccurrenceRequest._() : super();
@@ -1474,39 +1852,57 @@ class UpdateOccurrenceRequest extends $pb.GeneratedMessage {
   UpdateOccurrenceRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateOccurrenceRequest> createRepeated() =>
       $pb.PbList<UpdateOccurrenceRequest>();
-  static UpdateOccurrenceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateOccurrenceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateOccurrenceRequest>(create);
   static UpdateOccurrenceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Occurrence get occurrence => $_getN(1);
+  @$pb.TagNumber(2)
   set occurrence(Occurrence v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOccurrence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOccurrence() => clearField(2);
+  @$pb.TagNumber(2)
+  Occurrence ensureOccurrence() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $11.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($11.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $11.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetNoteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetNoteRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1527,22 +1923,29 @@ class GetNoteRequest extends $pb.GeneratedMessage {
   GetNoteRequest createEmptyInstance() => create();
   static $pb.PbList<GetNoteRequest> createRepeated() =>
       $pb.PbList<GetNoteRequest>();
-  static GetNoteRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetNoteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetNoteRequest>(create);
   static GetNoteRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetOccurrenceNoteRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1565,23 +1968,29 @@ class GetOccurrenceNoteRequest extends $pb.GeneratedMessage {
   GetOccurrenceNoteRequest createEmptyInstance() => create();
   static $pb.PbList<GetOccurrenceNoteRequest> createRepeated() =>
       $pb.PbList<GetOccurrenceNoteRequest>();
-  static GetOccurrenceNoteRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetOccurrenceNoteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetOccurrenceNoteRequest>(create);
   static GetOccurrenceNoteRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListNotesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotesRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -1606,56 +2015,78 @@ class ListNotesRequest extends $pb.GeneratedMessage {
   ListNotesRequest createEmptyInstance() => create();
   static $pb.PbList<ListNotesRequest> createRepeated() =>
       $pb.PbList<ListNotesRequest>();
-  static ListNotesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListNotesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotesRequest>(create);
   static ListNotesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get parent => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get parent => $_getSZ(4);
+  @$pb.TagNumber(5)
   set parent($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasParent() => $_has(4);
+  @$pb.TagNumber(5)
   void clearParent() => clearField(5);
 }
 
 class ListNotesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListNotesResponse',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..pc<Note>(1, 'notes', $pb.PbFieldType.PM, Note.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Note>(1, 'notes', $pb.PbFieldType.PM, subBuilder: Note.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1676,25 +2107,32 @@ class ListNotesResponse extends $pb.GeneratedMessage {
   ListNotesResponse createEmptyInstance() => create();
   static $pb.PbList<ListNotesResponse> createRepeated() =>
       $pb.PbList<ListNotesResponse>();
-  static ListNotesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListNotesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotesResponse>(create);
   static ListNotesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Note> get notes => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteNoteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteNoteRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1715,26 +2153,32 @@ class DeleteNoteRequest extends $pb.GeneratedMessage {
   DeleteNoteRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteNoteRequest> createRepeated() =>
       $pb.PbList<DeleteNoteRequest>();
-  static DeleteNoteRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteNoteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteNoteRequest>(create);
   static DeleteNoteRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateNoteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateNoteRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'noteId')
-    ..a<Note>(3, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
+    ..aOM<Note>(3, 'note', subBuilder: Note.create)
     ..aOS(4, 'parent')
     ..hasRequiredFields = false;
 
@@ -1755,51 +2199,70 @@ class CreateNoteRequest extends $pb.GeneratedMessage {
   CreateNoteRequest createEmptyInstance() => create();
   static $pb.PbList<CreateNoteRequest> createRepeated() =>
       $pb.PbList<CreateNoteRequest>();
-  static CreateNoteRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateNoteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateNoteRequest>(create);
   static CreateNoteRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get noteId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get noteId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set noteId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNoteId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNoteId() => clearField(2);
 
+  @$pb.TagNumber(3)
   Note get note => $_getN(2);
+  @$pb.TagNumber(3)
   set note(Note v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNote() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNote() => clearField(3);
+  @$pb.TagNumber(3)
+  Note ensureNote() => $_ensure(2);
 
-  $core.String get parent => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get parent => $_getSZ(3);
+  @$pb.TagNumber(4)
   set parent($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasParent() => $_has(3);
+  @$pb.TagNumber(4)
   void clearParent() => clearField(4);
 }
 
 class UpdateNoteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateNoteRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Note>(2, 'note', $pb.PbFieldType.OM, Note.getDefault, Note.create)
-    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..aOM<Note>(2, 'note', subBuilder: Note.create)
+    ..aOM<$11.FieldMask>(3, 'updateMask', subBuilder: $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateNoteRequest._() : super();
@@ -1819,40 +2282,58 @@ class UpdateNoteRequest extends $pb.GeneratedMessage {
   UpdateNoteRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateNoteRequest> createRepeated() =>
       $pb.PbList<UpdateNoteRequest>();
-  static UpdateNoteRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateNoteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateNoteRequest>(create);
   static UpdateNoteRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Note get note => $_getN(1);
+  @$pb.TagNumber(2)
   set note(Note v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNote() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNote() => clearField(2);
+  @$pb.TagNumber(2)
+  Note ensureNote() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $11.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($11.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $11.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListNoteOccurrencesRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -1879,40 +2360,57 @@ class ListNoteOccurrencesRequest extends $pb.GeneratedMessage {
   ListNoteOccurrencesRequest createEmptyInstance() => create();
   static $pb.PbList<ListNoteOccurrencesRequest> createRepeated() =>
       $pb.PbList<ListNoteOccurrencesRequest>();
-  static ListNoteOccurrencesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListNoteOccurrencesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNoteOccurrencesRequest>(create);
   static ListNoteOccurrencesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
@@ -1920,8 +2418,10 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListNoteOccurrencesResponse',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM, Occurrence.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Occurrence>(1, 'occurrences', $pb.PbFieldType.PM,
+        subBuilder: Occurrence.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1946,29 +2446,35 @@ class ListNoteOccurrencesResponse extends $pb.GeneratedMessage {
   ListNoteOccurrencesResponse createEmptyInstance() => create();
   static $pb.PbList<ListNoteOccurrencesResponse> createRepeated() =>
       $pb.PbList<ListNoteOccurrencesResponse>();
-  static ListNoteOccurrencesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListNoteOccurrencesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNoteOccurrencesResponse>(create);
   static ListNoteOccurrencesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Occurrence> get occurrences => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateOperationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateOperationRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'operationId')
-    ..a<$2.Operation>(3, 'operation', $pb.PbFieldType.OM,
-        $2.Operation.getDefault, $2.Operation.create)
+    ..aOM<$2.Operation>(3, 'operation', subBuilder: $2.Operation.create)
     ..hasRequiredFields = false;
 
   CreateOperationRequest._() : super();
@@ -1990,44 +2496,58 @@ class CreateOperationRequest extends $pb.GeneratedMessage {
   CreateOperationRequest createEmptyInstance() => create();
   static $pb.PbList<CreateOperationRequest> createRepeated() =>
       $pb.PbList<CreateOperationRequest>();
-  static CreateOperationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateOperationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateOperationRequest>(create);
   static CreateOperationRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get operationId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get operationId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set operationId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOperationId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOperationId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.Operation get operation => $_getN(2);
+  @$pb.TagNumber(3)
   set operation($2.Operation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOperation() => $_has(2);
+  @$pb.TagNumber(3)
   void clearOperation() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Operation ensureOperation() => $_ensure(2);
 }
 
 class UpdateOperationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateOperationRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$2.Operation>(3, 'operation', $pb.PbFieldType.OM,
-        $2.Operation.getDefault, $2.Operation.create)
-    ..a<$11.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..aOM<$2.Operation>(3, 'operation', subBuilder: $2.Operation.create)
+    ..aOM<$11.FieldMask>(4, 'updateMask', subBuilder: $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateOperationRequest._() : super();
@@ -2049,43 +2569,59 @@ class UpdateOperationRequest extends $pb.GeneratedMessage {
   UpdateOperationRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateOperationRequest> createRepeated() =>
       $pb.PbList<UpdateOperationRequest>();
-  static UpdateOperationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateOperationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateOperationRequest>(create);
   static UpdateOperationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   $2.Operation get operation => $_getN(1);
+  @$pb.TagNumber(3)
   set operation($2.Operation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOperation() => $_has(1);
+  @$pb.TagNumber(3)
   void clearOperation() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Operation ensureOperation() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $11.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(4)
   set updateMask($11.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $11.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class OperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..a<$6.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(2, 'endTime', $pb.PbFieldType.OM, $6.Timestamp.getDefault,
-        $6.Timestamp.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<$6.Timestamp>(1, 'createTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(2, 'endTime', subBuilder: $6.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata._() : super();
@@ -2105,32 +2641,46 @@ class OperationMetadata extends $pb.GeneratedMessage {
   OperationMetadata createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata> createRepeated() =>
       $pb.PbList<OperationMetadata>();
-  static OperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   $6.Timestamp get createTime => $_getN(0);
+  @$pb.TagNumber(1)
   set createTime($6.Timestamp v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreateTime() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreateTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Timestamp ensureCreateTime() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.Timestamp get endTime => $_getN(1);
+  @$pb.TagNumber(2)
   set endTime($6.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEndTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEndTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Timestamp ensureEndTime() => $_ensure(1);
 }
 
 class GetVulnzOccurrencesSummaryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetVulnzOccurrencesSummaryRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..hasRequiredFields = false;
@@ -2156,24 +2706,34 @@ class GetVulnzOccurrencesSummaryRequest extends $pb.GeneratedMessage {
   GetVulnzOccurrencesSummaryRequest createEmptyInstance() => create();
   static $pb.PbList<GetVulnzOccurrencesSummaryRequest> createRepeated() =>
       $pb.PbList<GetVulnzOccurrencesSummaryRequest>();
-  static GetVulnzOccurrencesSummaryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetVulnzOccurrencesSummaryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetVulnzOccurrencesSummaryRequest>(
+          create);
   static GetVulnzOccurrencesSummaryRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 }
 
@@ -2182,14 +2742,12 @@ class GetVulnzOccurrencesSummaryResponse_SeverityCount
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetVulnzOccurrencesSummaryResponse.SeverityCount',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..e<$5.VulnerabilityType_Severity>(
-        1,
-        'severity',
-        $pb.PbFieldType.OE,
-        $5.VulnerabilityType_Severity.SEVERITY_UNSPECIFIED,
-        $5.VulnerabilityType_Severity.valueOf,
-        $5.VulnerabilityType_Severity.values)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..e<$5.VulnerabilityType_Severity>(1, 'severity', $pb.PbFieldType.OE,
+        defaultOrMaker: $5.VulnerabilityType_Severity.SEVERITY_UNSPECIFIED,
+        valueOf: $5.VulnerabilityType_Severity.valueOf,
+        enumValues: $5.VulnerabilityType_Severity.values)
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
@@ -2220,24 +2778,34 @@ class GetVulnzOccurrencesSummaryResponse_SeverityCount
   static $pb.PbList<GetVulnzOccurrencesSummaryResponse_SeverityCount>
       createRepeated() =>
           $pb.PbList<GetVulnzOccurrencesSummaryResponse_SeverityCount>();
+  @$core.pragma('dart2js:noInline')
   static GetVulnzOccurrencesSummaryResponse_SeverityCount getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetVulnzOccurrencesSummaryResponse_SeverityCount>(create);
   static GetVulnzOccurrencesSummaryResponse_SeverityCount _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.VulnerabilityType_Severity get severity => $_getN(0);
+  @$pb.TagNumber(1)
   set severity($5.VulnerabilityType_Severity v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSeverity() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSeverity() => clearField(1);
 
-  Int64 get count => $_getI64(1);
-  set count(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get count => $_getI64(1);
+  @$pb.TagNumber(2)
+  set count($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCount() => clearField(2);
 }
 
@@ -2245,12 +2813,11 @@ class GetVulnzOccurrencesSummaryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetVulnzOccurrencesSummaryResponse',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..pc<GetVulnzOccurrencesSummaryResponse_SeverityCount>(
-        1,
-        'counts',
-        $pb.PbFieldType.PM,
-        GetVulnzOccurrencesSummaryResponse_SeverityCount.create)
+        1, 'counts', $pb.PbFieldType.PM,
+        subBuilder: GetVulnzOccurrencesSummaryResponse_SeverityCount.create)
     ..hasRequiredFields = false;
 
   GetVulnzOccurrencesSummaryResponse._() : super();
@@ -2274,10 +2841,13 @@ class GetVulnzOccurrencesSummaryResponse extends $pb.GeneratedMessage {
   GetVulnzOccurrencesSummaryResponse createEmptyInstance() => create();
   static $pb.PbList<GetVulnzOccurrencesSummaryResponse> createRepeated() =>
       $pb.PbList<GetVulnzOccurrencesSummaryResponse>();
-  static GetVulnzOccurrencesSummaryResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetVulnzOccurrencesSummaryResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetVulnzOccurrencesSummaryResponse>(
+          create);
   static GetVulnzOccurrencesSummaryResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<GetVulnzOccurrencesSummaryResponse_SeverityCount> get counts =>
       $_getList(0);
 }
@@ -2285,7 +2855,8 @@ class GetVulnzOccurrencesSummaryResponse extends $pb.GeneratedMessage {
 class GetScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetScanConfigRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -2307,23 +2878,29 @@ class GetScanConfigRequest extends $pb.GeneratedMessage {
   GetScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetScanConfigRequest> createRepeated() =>
       $pb.PbList<GetScanConfigRequest>();
-  static GetScanConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetScanConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetScanConfigRequest>(create);
   static GetScanConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListScanConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -2349,48 +2926,67 @@ class ListScanConfigsRequest extends $pb.GeneratedMessage {
   ListScanConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListScanConfigsRequest> createRepeated() =>
       $pb.PbList<ListScanConfigsRequest>();
-  static ListScanConfigsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListScanConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListScanConfigsRequest>(create);
   static ListScanConfigsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListScanConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsResponse',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
-    ..pc<ScanConfig>(1, 'scanConfigs', $pb.PbFieldType.PM, ScanConfig.create)
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<ScanConfig>(1, 'scanConfigs', $pb.PbFieldType.PM,
+        subBuilder: ScanConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -2413,30 +3009,35 @@ class ListScanConfigsResponse extends $pb.GeneratedMessage {
   ListScanConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListScanConfigsResponse> createRepeated() =>
       $pb.PbList<ListScanConfigsResponse>();
-  static ListScanConfigsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListScanConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListScanConfigsResponse>(create);
   static ListScanConfigsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ScanConfig> get scanConfigs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateScanConfigRequest',
       package:
-          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'))
+          const $pb.PackageName('google.devtools.containeranalysis.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM, ScanConfig.getDefault,
-        ScanConfig.create)
-    ..a<$11.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $11.FieldMask.getDefault, $11.FieldMask.create)
+    ..aOM<ScanConfig>(2, 'scanConfig', subBuilder: ScanConfig.create)
+    ..aOM<$11.FieldMask>(3, 'updateMask', subBuilder: $11.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateScanConfigRequest._() : super();
@@ -2458,31 +3059,48 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
   UpdateScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateScanConfigRequest> createRepeated() =>
       $pb.PbList<UpdateScanConfigRequest>();
-  static UpdateScanConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateScanConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateScanConfigRequest>(create);
   static UpdateScanConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   ScanConfig get scanConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set scanConfig(ScanConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScanConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScanConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  ScanConfig ensureScanConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $11.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($11.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $11.FieldMask ensureUpdateMask() => $_ensure(2);
 }

@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class LineCoverage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LineCoverage',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'instrumentedLines', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, 'executedLines', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -34,29 +34,40 @@ class LineCoverage extends $pb.GeneratedMessage {
   LineCoverage createEmptyInstance() => create();
   static $pb.PbList<LineCoverage> createRepeated() =>
       $pb.PbList<LineCoverage>();
-  static LineCoverage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LineCoverage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LineCoverage>(create);
   static LineCoverage _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get instrumentedLines => $_getN(0);
+  @$pb.TagNumber(1)
   set instrumentedLines($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstrumentedLines() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstrumentedLines() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get executedLines => $_getN(1);
+  @$pb.TagNumber(2)
   set executedLines($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExecutedLines() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExecutedLines() => clearField(2);
 }
 
 class BranchCoverage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BranchCoverage',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'branchPresent', $pb.PbFieldType.OY)
     ..p<$core.int>(2, 'branchesInLine', $pb.PbFieldType.P3)
     ..a<$core.List<$core.int>>(3, 'executed', $pb.PbFieldType.OY)
@@ -80,44 +91,59 @@ class BranchCoverage extends $pb.GeneratedMessage {
   BranchCoverage createEmptyInstance() => create();
   static $pb.PbList<BranchCoverage> createRepeated() =>
       $pb.PbList<BranchCoverage>();
-  static BranchCoverage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BranchCoverage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BranchCoverage>(create);
   static BranchCoverage _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get branchPresent => $_getN(0);
+  @$pb.TagNumber(1)
   set branchPresent($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBranchPresent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBranchPresent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get branchesInLine => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get executed => $_getN(2);
+  @$pb.TagNumber(3)
   set executed($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasExecuted() => $_has(2);
+  @$pb.TagNumber(3)
   void clearExecuted() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.int> get taken => $_getN(3);
+  @$pb.TagNumber(4)
   set taken($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTaken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearTaken() => clearField(4);
 }
 
 class FileCoverage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileCoverage',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'path')
-    ..a<LineCoverage>(2, 'lineCoverage', $pb.PbFieldType.OM,
-        LineCoverage.getDefault, LineCoverage.create)
-    ..a<BranchCoverage>(3, 'branchCoverage', $pb.PbFieldType.OM,
-        BranchCoverage.getDefault, BranchCoverage.create)
+    ..aOM<LineCoverage>(2, 'lineCoverage', subBuilder: LineCoverage.create)
+    ..aOM<BranchCoverage>(3, 'branchCoverage',
+        subBuilder: BranchCoverage.create)
     ..hasRequiredFields = false;
 
   FileCoverage._() : super();
@@ -137,39 +163,58 @@ class FileCoverage extends $pb.GeneratedMessage {
   FileCoverage createEmptyInstance() => create();
   static $pb.PbList<FileCoverage> createRepeated() =>
       $pb.PbList<FileCoverage>();
-  static FileCoverage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FileCoverage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FileCoverage>(create);
   static FileCoverage _defaultInstance;
 
-  $core.String get path => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
   set path($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  @$pb.TagNumber(2)
   LineCoverage get lineCoverage => $_getN(1);
+  @$pb.TagNumber(2)
   set lineCoverage(LineCoverage v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLineCoverage() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLineCoverage() => clearField(2);
+  @$pb.TagNumber(2)
+  LineCoverage ensureLineCoverage() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   BranchCoverage get branchCoverage => $_getN(2);
+  @$pb.TagNumber(3)
   set branchCoverage(BranchCoverage v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBranchCoverage() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBranchCoverage() => clearField(3);
+  @$pb.TagNumber(3)
+  BranchCoverage ensureBranchCoverage() => $_ensure(2);
 }
 
 class ActionCoverage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ActionCoverage',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<FileCoverage>(
-        2, 'fileCoverages', $pb.PbFieldType.PM, FileCoverage.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<FileCoverage>(2, 'fileCoverages', $pb.PbFieldType.PM,
+        subBuilder: FileCoverage.create)
     ..hasRequiredFields = false;
 
   ActionCoverage._() : super();
@@ -189,17 +234,21 @@ class ActionCoverage extends $pb.GeneratedMessage {
   ActionCoverage createEmptyInstance() => create();
   static $pb.PbList<ActionCoverage> createRepeated() =>
       $pb.PbList<ActionCoverage>();
-  static ActionCoverage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ActionCoverage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ActionCoverage>(create);
   static ActionCoverage _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<FileCoverage> get fileCoverages => $_getList(0);
 }
 
 class AggregateCoverage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AggregateCoverage',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<FileCoverage>(
-        1, 'fileCoverages', $pb.PbFieldType.PM, FileCoverage.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<FileCoverage>(1, 'fileCoverages', $pb.PbFieldType.PM,
+        subBuilder: FileCoverage.create)
     ..hasRequiredFields = false;
 
   AggregateCoverage._() : super();
@@ -219,9 +268,11 @@ class AggregateCoverage extends $pb.GeneratedMessage {
   AggregateCoverage createEmptyInstance() => create();
   static $pb.PbList<AggregateCoverage> createRepeated() =>
       $pb.PbList<AggregateCoverage>();
-  static AggregateCoverage getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AggregateCoverage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AggregateCoverage>(create);
   static AggregateCoverage _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<FileCoverage> get fileCoverages => $_getList(0);
 }

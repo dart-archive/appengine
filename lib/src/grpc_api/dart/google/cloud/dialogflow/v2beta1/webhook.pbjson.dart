@@ -75,6 +75,14 @@ const WebhookResponse$json = {
       '10': 'followupEventInput'
     },
     {'1': 'end_interaction', '3': 8, '4': 1, '5': 8, '10': 'endInteraction'},
+    {
+      '1': 'session_entity_types',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.SessionEntityType',
+      '10': 'sessionEntityTypes'
+    },
   ],
 };
 

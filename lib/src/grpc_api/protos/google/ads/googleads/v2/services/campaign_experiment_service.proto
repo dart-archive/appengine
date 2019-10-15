@@ -71,6 +71,10 @@ service CampaignExperimentService {
       post: "/v2/customers/{customer_id=*}/campaignExperiments:create"
       body: "*"
     };
+    option (google.longrunning.operation_info) = {
+      response_type: "google.protobuf.Empty"
+      metadata_type: "google.ads.googleads.v2.services.CreateCampaignExperimentMetadata"
+    };
   }
 
   // Updates campaign experiments. Operation statuses are returned.
@@ -100,6 +104,9 @@ service CampaignExperimentService {
     option (google.api.http) = {
       post: "/v2/{campaign_experiment=customers/*/campaignExperiments/*}:promote"
       body: "*"
+    };
+    option (google.longrunning.operation_info) = {
+      response_type: "google.protobuf.Empty"
     };
   }
 

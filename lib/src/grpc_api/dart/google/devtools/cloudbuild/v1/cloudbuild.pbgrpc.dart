@@ -7,7 +7,7 @@
 
 import 'dart:async' as $async;
 
-import 'dart:core' as $core show int, String, List;
+import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
 import 'cloudbuild.pb.dart' as $2;
@@ -72,6 +72,32 @@ class CloudBuildClient extends $grpc.Client {
           '/google.devtools.cloudbuild.v1.CloudBuild/RunBuildTrigger',
           ($2.RunBuildTriggerRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
+  static final _$createWorkerPool =
+      $grpc.ClientMethod<$2.CreateWorkerPoolRequest, $2.WorkerPool>(
+          '/google.devtools.cloudbuild.v1.CloudBuild/CreateWorkerPool',
+          ($2.CreateWorkerPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.WorkerPool.fromBuffer(value));
+  static final _$getWorkerPool =
+      $grpc.ClientMethod<$2.GetWorkerPoolRequest, $2.WorkerPool>(
+          '/google.devtools.cloudbuild.v1.CloudBuild/GetWorkerPool',
+          ($2.GetWorkerPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.WorkerPool.fromBuffer(value));
+  static final _$deleteWorkerPool =
+      $grpc.ClientMethod<$2.DeleteWorkerPoolRequest, $1.Empty>(
+          '/google.devtools.cloudbuild.v1.CloudBuild/DeleteWorkerPool',
+          ($2.DeleteWorkerPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
+  static final _$updateWorkerPool =
+      $grpc.ClientMethod<$2.UpdateWorkerPoolRequest, $2.WorkerPool>(
+          '/google.devtools.cloudbuild.v1.CloudBuild/UpdateWorkerPool',
+          ($2.UpdateWorkerPoolRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $2.WorkerPool.fromBuffer(value));
+  static final _$listWorkerPools =
+      $grpc.ClientMethod<$2.ListWorkerPoolsRequest, $2.ListWorkerPoolsResponse>(
+          '/google.devtools.cloudbuild.v1.CloudBuild/ListWorkerPools',
+          ($2.ListWorkerPoolsRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.ListWorkerPoolsResponse.fromBuffer(value));
 
   CloudBuildClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -169,6 +195,51 @@ class CloudBuildClient extends $grpc.Client {
         options: options);
     return $grpc.ResponseFuture(call);
   }
+
+  $grpc.ResponseFuture<$2.WorkerPool> createWorkerPool(
+      $2.CreateWorkerPoolRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$createWorkerPool, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.WorkerPool> getWorkerPool(
+      $2.GetWorkerPoolRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$getWorkerPool, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$1.Empty> deleteWorkerPool(
+      $2.DeleteWorkerPoolRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$deleteWorkerPool, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.WorkerPool> updateWorkerPool(
+      $2.UpdateWorkerPoolRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$updateWorkerPool, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.ListWorkerPoolsResponse> listWorkerPools(
+      $2.ListWorkerPoolsRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$listWorkerPools, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
 }
 
 abstract class CloudBuildServiceBase extends $grpc.Service {
@@ -263,6 +334,47 @@ abstract class CloudBuildServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $2.RunBuildTriggerRequest.fromBuffer(value),
         ($0.Operation value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateWorkerPoolRequest, $2.WorkerPool>(
+        'CreateWorkerPool',
+        createWorkerPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.CreateWorkerPoolRequest.fromBuffer(value),
+        ($2.WorkerPool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetWorkerPoolRequest, $2.WorkerPool>(
+        'GetWorkerPool',
+        getWorkerPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GetWorkerPoolRequest.fromBuffer(value),
+        ($2.WorkerPool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteWorkerPoolRequest, $1.Empty>(
+        'DeleteWorkerPool',
+        deleteWorkerPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.DeleteWorkerPoolRequest.fromBuffer(value),
+        ($1.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateWorkerPoolRequest, $2.WorkerPool>(
+        'UpdateWorkerPool',
+        updateWorkerPool_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.UpdateWorkerPoolRequest.fromBuffer(value),
+        ($2.WorkerPool value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListWorkerPoolsRequest,
+            $2.ListWorkerPoolsResponse>(
+        'ListWorkerPools',
+        listWorkerPools_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.ListWorkerPoolsRequest.fromBuffer(value),
+        ($2.ListWorkerPoolsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Operation> createBuild_Pre($grpc.ServiceCall call,
@@ -321,6 +433,32 @@ abstract class CloudBuildServiceBase extends $grpc.Service {
     return runBuildTrigger(call, await request);
   }
 
+  $async.Future<$2.WorkerPool> createWorkerPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.CreateWorkerPoolRequest> request) async {
+    return createWorkerPool(call, await request);
+  }
+
+  $async.Future<$2.WorkerPool> getWorkerPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.GetWorkerPoolRequest> request) async {
+    return getWorkerPool(call, await request);
+  }
+
+  $async.Future<$1.Empty> deleteWorkerPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.DeleteWorkerPoolRequest> request) async {
+    return deleteWorkerPool(call, await request);
+  }
+
+  $async.Future<$2.WorkerPool> updateWorkerPool_Pre($grpc.ServiceCall call,
+      $async.Future<$2.UpdateWorkerPoolRequest> request) async {
+    return updateWorkerPool(call, await request);
+  }
+
+  $async.Future<$2.ListWorkerPoolsResponse> listWorkerPools_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.ListWorkerPoolsRequest> request) async {
+    return listWorkerPools(call, await request);
+  }
+
   $async.Future<$0.Operation> createBuild(
       $grpc.ServiceCall call, $2.CreateBuildRequest request);
   $async.Future<$2.Build> getBuild(
@@ -343,4 +481,14 @@ abstract class CloudBuildServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.UpdateBuildTriggerRequest request);
   $async.Future<$0.Operation> runBuildTrigger(
       $grpc.ServiceCall call, $2.RunBuildTriggerRequest request);
+  $async.Future<$2.WorkerPool> createWorkerPool(
+      $grpc.ServiceCall call, $2.CreateWorkerPoolRequest request);
+  $async.Future<$2.WorkerPool> getWorkerPool(
+      $grpc.ServiceCall call, $2.GetWorkerPoolRequest request);
+  $async.Future<$1.Empty> deleteWorkerPool(
+      $grpc.ServiceCall call, $2.DeleteWorkerPoolRequest request);
+  $async.Future<$2.WorkerPool> updateWorkerPool(
+      $grpc.ServiceCall call, $2.UpdateWorkerPoolRequest request);
+  $async.Future<$2.ListWorkerPoolsResponse> listWorkerPools(
+      $grpc.ServiceCall call, $2.ListWorkerPoolsRequest request);
 }

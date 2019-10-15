@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,18 +15,22 @@ import 'source_context.pb.dart' as $1;
 import 'type.pbenum.dart' as $0;
 
 class Api extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('Api', package: const $pb.PackageName('google.protobuf'))
-        ..aOS(1, 'name')
-        ..pc<Method>(2, 'methods', $pb.PbFieldType.PM, Method.create)
-        ..pc<$0.Option>(3, 'options', $pb.PbFieldType.PM, $0.Option.create)
-        ..aOS(4, 'version')
-        ..a<$1.SourceContext>(5, 'sourceContext', $pb.PbFieldType.OM,
-            $1.SourceContext.getDefault, $1.SourceContext.create)
-        ..pc<Mixin>(6, 'mixins', $pb.PbFieldType.PM, Mixin.create)
-        ..e<$0.Syntax>(7, 'syntax', $pb.PbFieldType.OE, $0.Syntax.SYNTAX_PROTO2,
-            $0.Syntax.valueOf, $0.Syntax.values)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Api',
+      package: const $pb.PackageName('google.protobuf'),
+      createEmptyInstance: create)
+    ..aOS(1, 'name')
+    ..pc<Method>(2, 'methods', $pb.PbFieldType.PM, subBuilder: Method.create)
+    ..pc<$0.Option>(3, 'options', $pb.PbFieldType.PM,
+        subBuilder: $0.Option.create)
+    ..aOS(4, 'version')
+    ..aOM<$1.SourceContext>(5, 'sourceContext',
+        subBuilder: $1.SourceContext.create)
+    ..pc<Mixin>(6, 'mixins', $pb.PbFieldType.PM, subBuilder: Mixin.create)
+    ..e<$0.Syntax>(7, 'syntax', $pb.PbFieldType.OE,
+        defaultOrMaker: $0.Syntax.SYNTAX_PROTO2,
+        valueOf: $0.Syntax.valueOf,
+        enumValues: $0.Syntax.values)
+    ..hasRequiredFields = false;
 
   Api._() : super();
   factory Api() => create();
@@ -45,59 +48,86 @@ class Api extends $pb.GeneratedMessage {
   static Api create() => Api._();
   Api createEmptyInstance() => create();
   static $pb.PbList<Api> createRepeated() => $pb.PbList<Api>();
-  static Api getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Api getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Api>(create);
   static Api _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Method> get methods => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$0.Option> get options => $_getList(2);
 
-  $core.String get version => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get version => $_getSZ(3);
+  @$pb.TagNumber(4)
   set version($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasVersion() => $_has(3);
+  @$pb.TagNumber(4)
   void clearVersion() => clearField(4);
 
+  @$pb.TagNumber(5)
   $1.SourceContext get sourceContext => $_getN(4);
+  @$pb.TagNumber(5)
   set sourceContext($1.SourceContext v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasSourceContext() => $_has(4);
+  @$pb.TagNumber(5)
   void clearSourceContext() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.SourceContext ensureSourceContext() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $core.List<Mixin> get mixins => $_getList(5);
 
+  @$pb.TagNumber(7)
   $0.Syntax get syntax => $_getN(6);
+  @$pb.TagNumber(7)
   set syntax($0.Syntax v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasSyntax() => $_has(6);
+  @$pb.TagNumber(7)
   void clearSyntax() => clearField(7);
 }
 
 class Method extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Method',
-      package: const $pb.PackageName('google.protobuf'))
+      package: const $pb.PackageName('google.protobuf'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'requestTypeUrl')
     ..aOB(3, 'requestStreaming')
     ..aOS(4, 'responseTypeUrl')
     ..aOB(5, 'responseStreaming')
-    ..pc<$0.Option>(6, 'options', $pb.PbFieldType.PM, $0.Option.create)
-    ..e<$0.Syntax>(7, 'syntax', $pb.PbFieldType.OE, $0.Syntax.SYNTAX_PROTO2,
-        $0.Syntax.valueOf, $0.Syntax.values)
+    ..pc<$0.Option>(6, 'options', $pb.PbFieldType.PM,
+        subBuilder: $0.Option.create)
+    ..e<$0.Syntax>(7, 'syntax', $pb.PbFieldType.OE,
+        defaultOrMaker: $0.Syntax.SYNTAX_PROTO2,
+        valueOf: $0.Syntax.valueOf,
+        enumValues: $0.Syntax.values)
     ..hasRequiredFields = false;
 
   Method._() : super();
@@ -116,63 +146,91 @@ class Method extends $pb.GeneratedMessage {
   static Method create() => Method._();
   Method createEmptyInstance() => create();
   static $pb.PbList<Method> createRepeated() => $pb.PbList<Method>();
-  static Method getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Method getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Method>(create);
   static Method _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get requestTypeUrl => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get requestTypeUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
   set requestTypeUrl($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestTypeUrl() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestTypeUrl() => clearField(2);
 
-  $core.bool get requestStreaming => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get requestStreaming => $_getBF(2);
+  @$pb.TagNumber(3)
   set requestStreaming($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRequestStreaming() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRequestStreaming() => clearField(3);
 
-  $core.String get responseTypeUrl => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get responseTypeUrl => $_getSZ(3);
+  @$pb.TagNumber(4)
   set responseTypeUrl($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResponseTypeUrl() => $_has(3);
+  @$pb.TagNumber(4)
   void clearResponseTypeUrl() => clearField(4);
 
-  $core.bool get responseStreaming => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get responseStreaming => $_getBF(4);
+  @$pb.TagNumber(5)
   set responseStreaming($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasResponseStreaming() => $_has(4);
+  @$pb.TagNumber(5)
   void clearResponseStreaming() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<$0.Option> get options => $_getList(5);
 
+  @$pb.TagNumber(7)
   $0.Syntax get syntax => $_getN(6);
+  @$pb.TagNumber(7)
   set syntax($0.Syntax v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasSyntax() => $_has(6);
+  @$pb.TagNumber(7)
   void clearSyntax() => clearField(7);
 }
 
 class Mixin extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mixin',
-      package: const $pb.PackageName('google.protobuf'))
+      package: const $pb.PackageName('google.protobuf'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'root')
     ..hasRequiredFields = false;
@@ -193,22 +251,32 @@ class Mixin extends $pb.GeneratedMessage {
   static Mixin create() => Mixin._();
   Mixin createEmptyInstance() => create();
   static $pb.PbList<Mixin> createRepeated() => $pb.PbList<Mixin>();
-  static Mixin getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mixin getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Mixin>(create);
   static Mixin _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get root => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get root => $_getSZ(1);
+  @$pb.TagNumber(2)
   set root($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRoot() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRoot() => clearField(2);
 }

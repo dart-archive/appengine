@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'feed_item_quality_disapproval_reason.pbenum.dart';
 class FeedItemQualityDisapprovalReasonEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'FeedItemQualityDisapprovalReasonEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   FeedItemQualityDisapprovalReasonEnum._() : super();
@@ -40,7 +40,9 @@ class FeedItemQualityDisapprovalReasonEnum extends $pb.GeneratedMessage {
   FeedItemQualityDisapprovalReasonEnum createEmptyInstance() => create();
   static $pb.PbList<FeedItemQualityDisapprovalReasonEnum> createRepeated() =>
       $pb.PbList<FeedItemQualityDisapprovalReasonEnum>();
+  @$core.pragma('dart2js:noInline')
   static FeedItemQualityDisapprovalReasonEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          FeedItemQualityDisapprovalReasonEnum>(create);
   static FeedItemQualityDisapprovalReasonEnum _defaultInstance;
 }

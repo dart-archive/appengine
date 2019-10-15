@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Monitoring_MonitoringDestination extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Monitoring.MonitoringDestination',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'),
+      createEmptyInstance: create)
     ..aOS(1, 'monitoredResource')
     ..pPS(2, 'metrics')
     ..hasRequiredFields = false;
@@ -39,28 +39,37 @@ class Monitoring_MonitoringDestination extends $pb.GeneratedMessage {
   Monitoring_MonitoringDestination createEmptyInstance() => create();
   static $pb.PbList<Monitoring_MonitoringDestination> createRepeated() =>
       $pb.PbList<Monitoring_MonitoringDestination>();
-  static Monitoring_MonitoringDestination getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Monitoring_MonitoringDestination getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Monitoring_MonitoringDestination>(
+          create);
   static Monitoring_MonitoringDestination _defaultInstance;
 
-  $core.String get monitoredResource => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get monitoredResource => $_getSZ(0);
+  @$pb.TagNumber(1)
   set monitoredResource($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMonitoredResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMonitoredResource() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get metrics => $_getList(1);
 }
 
 class Monitoring extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Monitoring',
-      package: const $pb.PackageName('google.api'))
-    ..pc<Monitoring_MonitoringDestination>(1, 'producerDestinations',
-        $pb.PbFieldType.PM, Monitoring_MonitoringDestination.create)
-    ..pc<Monitoring_MonitoringDestination>(2, 'consumerDestinations',
-        $pb.PbFieldType.PM, Monitoring_MonitoringDestination.create)
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..pc<Monitoring_MonitoringDestination>(
+        1, 'producerDestinations', $pb.PbFieldType.PM,
+        subBuilder: Monitoring_MonitoringDestination.create)
+    ..pc<Monitoring_MonitoringDestination>(
+        2, 'consumerDestinations', $pb.PbFieldType.PM,
+        subBuilder: Monitoring_MonitoringDestination.create)
     ..hasRequiredFields = false;
 
   Monitoring._() : super();
@@ -79,12 +88,16 @@ class Monitoring extends $pb.GeneratedMessage {
   static Monitoring create() => Monitoring._();
   Monitoring createEmptyInstance() => create();
   static $pb.PbList<Monitoring> createRepeated() => $pb.PbList<Monitoring>();
-  static Monitoring getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Monitoring getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Monitoring>(create);
   static Monitoring _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Monitoring_MonitoringDestination> get producerDestinations =>
       $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<Monitoring_MonitoringDestination> get consumerDestinations =>
       $_getList(1);
 }

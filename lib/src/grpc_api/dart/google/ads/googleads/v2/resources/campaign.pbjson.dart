@@ -386,12 +386,12 @@ const Campaign$json = {
   '3': [
     Campaign_NetworkSettings$json,
     Campaign_HotelSettingInfo$json,
+    Campaign_SelectiveOptimization$json,
     Campaign_DynamicSearchAdsSetting$json,
+    Campaign_AppCampaignSetting$json,
     Campaign_ShoppingSetting$json,
     Campaign_TrackingSetting$json,
     Campaign_GeoTargetTypeSetting$json,
-    Campaign_SelectiveOptimization$json,
-    Campaign_AppCampaignSetting$json,
     Campaign_VanityPharma$json
   ],
   '8': [
@@ -451,6 +451,20 @@ const Campaign_HotelSettingInfo$json = {
   ],
 };
 
+const Campaign_SelectiveOptimization$json = {
+  '1': 'SelectiveOptimization',
+  '2': [
+    {
+      '1': 'conversion_actions',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'conversionActions'
+    },
+  ],
+};
+
 const Campaign_DynamicSearchAdsSetting$json = {
   '1': 'DynamicSearchAdsSetting',
   '2': [
@@ -485,6 +499,38 @@ const Campaign_DynamicSearchAdsSetting$json = {
       '5': 11,
       '6': '.google.protobuf.StringValue',
       '10': 'feeds'
+    },
+  ],
+};
+
+const Campaign_AppCampaignSetting$json = {
+  '1': 'AppCampaignSetting',
+  '2': [
+    {
+      '1': 'bidding_strategy_goal_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType',
+      '10': 'biddingStrategyGoalType'
+    },
+    {
+      '1': 'app_id',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'appId'
+    },
+    {
+      '1': 'app_store',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore',
+      '10': 'appStore'
     },
   ],
 };
@@ -561,52 +607,6 @@ const Campaign_GeoTargetTypeSetting$json = {
       '6':
           '.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType',
       '10': 'negativeGeoTargetType'
-    },
-  ],
-};
-
-const Campaign_SelectiveOptimization$json = {
-  '1': 'SelectiveOptimization',
-  '2': [
-    {
-      '1': 'conversion_actions',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.google.protobuf.StringValue',
-      '10': 'conversionActions'
-    },
-  ],
-};
-
-const Campaign_AppCampaignSetting$json = {
-  '1': 'AppCampaignSetting',
-  '2': [
-    {
-      '1': 'bidding_strategy_goal_type',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6':
-          '.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType',
-      '10': 'biddingStrategyGoalType'
-    },
-    {
-      '1': 'app_id',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.StringValue',
-      '10': 'appId'
-    },
-    {
-      '1': 'app_store',
-      '3': 3,
-      '4': 1,
-      '5': 14,
-      '6':
-          '.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore',
-      '10': 'appStore'
     },
   ],
 };

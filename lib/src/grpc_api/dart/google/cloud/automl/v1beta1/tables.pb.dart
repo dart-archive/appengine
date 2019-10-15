@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/timestamp.pb.dart' as $0;
@@ -19,23 +18,19 @@ import 'ranges.pb.dart' as $4;
 
 class TablesDatasetMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TablesDatasetMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'primaryTableSpecId')
     ..aOS(2, 'targetColumnSpecId')
     ..aOS(3, 'weightColumnSpecId')
     ..aOS(4, 'mlUseColumnSpecId')
-    ..m<$core.String, $1.CorrelationStats>(
-        6,
-        'targetColumnCorrelations',
-        'TablesDatasetMetadata.TargetColumnCorrelationsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $1.CorrelationStats.create,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$0.Timestamp>(7, 'statsUpdateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..m<$core.String, $1.CorrelationStats>(6, 'targetColumnCorrelations',
+        entryClassName: 'TablesDatasetMetadata.TargetColumnCorrelationsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $1.CorrelationStats.create,
+        packageName: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..aOM<$0.Timestamp>(7, 'statsUpdateTime', subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   TablesDatasetMetadata._() : super();
@@ -57,64 +52,89 @@ class TablesDatasetMetadata extends $pb.GeneratedMessage {
   TablesDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TablesDatasetMetadata> createRepeated() =>
       $pb.PbList<TablesDatasetMetadata>();
-  static TablesDatasetMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TablesDatasetMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TablesDatasetMetadata>(create);
   static TablesDatasetMetadata _defaultInstance;
 
-  $core.String get primaryTableSpecId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get primaryTableSpecId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set primaryTableSpecId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPrimaryTableSpecId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPrimaryTableSpecId() => clearField(1);
 
-  $core.String get targetColumnSpecId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get targetColumnSpecId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set targetColumnSpecId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTargetColumnSpecId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTargetColumnSpecId() => clearField(2);
 
-  $core.String get weightColumnSpecId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get weightColumnSpecId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set weightColumnSpecId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasWeightColumnSpecId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearWeightColumnSpecId() => clearField(3);
 
-  $core.String get mlUseColumnSpecId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get mlUseColumnSpecId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set mlUseColumnSpecId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasMlUseColumnSpecId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearMlUseColumnSpecId() => clearField(4);
 
+  @$pb.TagNumber(6)
   $core.Map<$core.String, $1.CorrelationStats> get targetColumnCorrelations =>
       $_getMap(4);
 
+  @$pb.TagNumber(7)
   $0.Timestamp get statsUpdateTime => $_getN(5);
+  @$pb.TagNumber(7)
   set statsUpdateTime($0.Timestamp v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasStatsUpdateTime() => $_has(5);
+  @$pb.TagNumber(7)
   void clearStatsUpdateTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $0.Timestamp ensureStatsUpdateTime() => $_ensure(5);
 }
 
 class TablesModelMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TablesModelMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$2.ColumnSpec>(2, 'targetColumnSpec', $pb.PbFieldType.OM,
-        $2.ColumnSpec.getDefault, $2.ColumnSpec.create)
-    ..pc<$2.ColumnSpec>(
-        3, 'inputFeatureColumnSpecs', $pb.PbFieldType.PM, $2.ColumnSpec.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$2.ColumnSpec>(2, 'targetColumnSpec',
+        subBuilder: $2.ColumnSpec.create)
+    ..pc<$2.ColumnSpec>(3, 'inputFeatureColumnSpecs', $pb.PbFieldType.PM,
+        subBuilder: $2.ColumnSpec.create)
     ..aOS(4, 'optimizationObjective')
     ..pc<TablesModelColumnInfo>(5, 'tablesModelColumnInfo', $pb.PbFieldType.PM,
-        TablesModelColumnInfo.create)
+        subBuilder: TablesModelColumnInfo.create)
     ..aInt64(6, 'trainBudgetMilliNodeHours')
     ..aInt64(7, 'trainCostMilliNodeHours')
     ..aOB(12, 'disableEarlyStopping')
@@ -137,65 +157,90 @@ class TablesModelMetadata extends $pb.GeneratedMessage {
   TablesModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TablesModelMetadata> createRepeated() =>
       $pb.PbList<TablesModelMetadata>();
-  static TablesModelMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TablesModelMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TablesModelMetadata>(create);
   static TablesModelMetadata _defaultInstance;
 
+  @$pb.TagNumber(2)
   $2.ColumnSpec get targetColumnSpec => $_getN(0);
+  @$pb.TagNumber(2)
   set targetColumnSpec($2.ColumnSpec v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTargetColumnSpec() => $_has(0);
+  @$pb.TagNumber(2)
   void clearTargetColumnSpec() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.ColumnSpec ensureTargetColumnSpec() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $core.List<$2.ColumnSpec> get inputFeatureColumnSpecs => $_getList(1);
 
-  $core.String get optimizationObjective => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get optimizationObjective => $_getSZ(2);
+  @$pb.TagNumber(4)
   set optimizationObjective($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOptimizationObjective() => $_has(2);
+  @$pb.TagNumber(4)
   void clearOptimizationObjective() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<TablesModelColumnInfo> get tablesModelColumnInfo => $_getList(3);
 
-  Int64 get trainBudgetMilliNodeHours => $_getI64(4);
-  set trainBudgetMilliNodeHours(Int64 v) {
+  @$pb.TagNumber(6)
+  $fixnum.Int64 get trainBudgetMilliNodeHours => $_getI64(4);
+  @$pb.TagNumber(6)
+  set trainBudgetMilliNodeHours($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasTrainBudgetMilliNodeHours() => $_has(4);
+  @$pb.TagNumber(6)
   void clearTrainBudgetMilliNodeHours() => clearField(6);
 
-  Int64 get trainCostMilliNodeHours => $_getI64(5);
-  set trainCostMilliNodeHours(Int64 v) {
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get trainCostMilliNodeHours => $_getI64(5);
+  @$pb.TagNumber(7)
+  set trainCostMilliNodeHours($fixnum.Int64 v) {
     $_setInt64(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasTrainCostMilliNodeHours() => $_has(5);
+  @$pb.TagNumber(7)
   void clearTrainCostMilliNodeHours() => clearField(7);
 
-  $core.bool get disableEarlyStopping => $_get(6, false);
+  @$pb.TagNumber(12)
+  $core.bool get disableEarlyStopping => $_getBF(6);
+  @$pb.TagNumber(12)
   set disableEarlyStopping($core.bool v) {
     $_setBool(6, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasDisableEarlyStopping() => $_has(6);
+  @$pb.TagNumber(12)
   void clearDisableEarlyStopping() => clearField(12);
 }
 
 class TablesAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TablesAnnotation',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'score', $pb.PbFieldType.OF)
-    ..a<$3.Value>(
-        2, 'value', $pb.PbFieldType.OM, $3.Value.getDefault, $3.Value.create)
+    ..aOM<$3.Value>(2, 'value', subBuilder: $3.Value.create)
     ..pc<TablesModelColumnInfo>(3, 'tablesModelColumnInfo', $pb.PbFieldType.PM,
-        TablesModelColumnInfo.create)
-    ..a<$4.DoubleRange>(4, 'predictionInterval', $pb.PbFieldType.OM,
-        $4.DoubleRange.getDefault, $4.DoubleRange.create)
+        subBuilder: TablesModelColumnInfo.create)
+    ..aOM<$4.DoubleRange>(4, 'predictionInterval',
+        subBuilder: $4.DoubleRange.create)
     ..hasRequiredFields = false;
 
   TablesAnnotation._() : super();
@@ -215,40 +260,59 @@ class TablesAnnotation extends $pb.GeneratedMessage {
   TablesAnnotation createEmptyInstance() => create();
   static $pb.PbList<TablesAnnotation> createRepeated() =>
       $pb.PbList<TablesAnnotation>();
-  static TablesAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TablesAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TablesAnnotation>(create);
   static TablesAnnotation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get score => $_getN(0);
+  @$pb.TagNumber(1)
   set score($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasScore() => $_has(0);
+  @$pb.TagNumber(1)
   void clearScore() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Value get value => $_getN(1);
+  @$pb.TagNumber(2)
   set value($3.Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Value ensureValue() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<TablesModelColumnInfo> get tablesModelColumnInfo => $_getList(2);
 
+  @$pb.TagNumber(4)
   $4.DoubleRange get predictionInterval => $_getN(3);
+  @$pb.TagNumber(4)
   set predictionInterval($4.DoubleRange v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPredictionInterval() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPredictionInterval() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.DoubleRange ensurePredictionInterval() => $_ensure(3);
 }
 
 class TablesModelColumnInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TablesModelColumnInfo',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'columnSpecName')
     ..aOS(2, 'columnDisplayName')
     ..a<$core.double>(3, 'featureImportance', $pb.PbFieldType.OF)
@@ -273,31 +337,44 @@ class TablesModelColumnInfo extends $pb.GeneratedMessage {
   TablesModelColumnInfo createEmptyInstance() => create();
   static $pb.PbList<TablesModelColumnInfo> createRepeated() =>
       $pb.PbList<TablesModelColumnInfo>();
-  static TablesModelColumnInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TablesModelColumnInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TablesModelColumnInfo>(create);
   static TablesModelColumnInfo _defaultInstance;
 
-  $core.String get columnSpecName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get columnSpecName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set columnSpecName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasColumnSpecName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearColumnSpecName() => clearField(1);
 
-  $core.String get columnDisplayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get columnDisplayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set columnDisplayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasColumnDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearColumnDisplayName() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.double get featureImportance => $_getN(2);
+  @$pb.TagNumber(3)
   set featureImportance($core.double v) {
     $_setFloat(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFeatureImportance() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFeatureImportance() => clearField(3);
 }

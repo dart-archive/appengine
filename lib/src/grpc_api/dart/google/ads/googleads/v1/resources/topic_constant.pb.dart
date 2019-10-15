@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,13 +13,14 @@ import '../../../../protobuf/wrappers.pb.dart' as $0;
 
 class TopicConstant extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TopicConstant',
-      package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v1.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
-    ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
-        $0.Int64Value.create)
-    ..a<$0.StringValue>(3, 'topicConstantParent', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<$0.StringValue>(4, 'path', $pb.PbFieldType.PM, $0.StringValue.create)
+    ..aOM<$0.Int64Value>(2, 'id', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.StringValue>(3, 'topicConstantParent',
+        subBuilder: $0.StringValue.create)
+    ..pc<$0.StringValue>(4, 'path', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   TopicConstant._() : super();
@@ -40,32 +40,51 @@ class TopicConstant extends $pb.GeneratedMessage {
   TopicConstant createEmptyInstance() => create();
   static $pb.PbList<TopicConstant> createRepeated() =>
       $pb.PbList<TopicConstant>();
-  static TopicConstant getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TopicConstant getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TopicConstant>(create);
   static TopicConstant _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureId() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.StringValue get topicConstantParent => $_getN(2);
+  @$pb.TagNumber(3)
   set topicConstantParent($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTopicConstantParent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTopicConstantParent() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureTopicConstantParent() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$0.StringValue> get path => $_getList(3);
 }

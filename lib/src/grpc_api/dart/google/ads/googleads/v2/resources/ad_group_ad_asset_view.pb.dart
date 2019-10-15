@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,32 +19,24 @@ import '../enums/policy_approval_status.pbenum.dart' as $5;
 
 class AdGroupAdAssetView extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupAdAssetView',
-      package: const $pb.PackageName('google.ads.googleads.v2.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v2.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..e<$2.AssetFieldTypeEnum_AssetFieldType>(
-        2,
-        'fieldType',
-        $pb.PbFieldType.OE,
-        $2.AssetFieldTypeEnum_AssetFieldType.UNSPECIFIED,
-        $2.AssetFieldTypeEnum_AssetFieldType.valueOf,
-        $2.AssetFieldTypeEnum_AssetFieldType.values)
-    ..a<AdGroupAdAssetPolicySummary>(
-        3,
-        'policySummary',
-        $pb.PbFieldType.OM,
-        AdGroupAdAssetPolicySummary.getDefault,
-        AdGroupAdAssetPolicySummary.create)
+        2, 'fieldType', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.AssetFieldTypeEnum_AssetFieldType.UNSPECIFIED,
+        valueOf: $2.AssetFieldTypeEnum_AssetFieldType.valueOf,
+        enumValues: $2.AssetFieldTypeEnum_AssetFieldType.values)
+    ..aOM<AdGroupAdAssetPolicySummary>(3, 'policySummary',
+        subBuilder: AdGroupAdAssetPolicySummary.create)
     ..e<$3.AssetPerformanceLabelEnum_AssetPerformanceLabel>(
-        4,
-        'performanceLabel',
-        $pb.PbFieldType.OE,
-        $3.AssetPerformanceLabelEnum_AssetPerformanceLabel.UNSPECIFIED,
-        $3.AssetPerformanceLabelEnum_AssetPerformanceLabel.valueOf,
-        $3.AssetPerformanceLabelEnum_AssetPerformanceLabel.values)
-    ..a<$0.StringValue>(5, 'adGroupAd', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(6, 'asset', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+        4, 'performanceLabel', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $3.AssetPerformanceLabelEnum_AssetPerformanceLabel.UNSPECIFIED,
+        valueOf: $3.AssetPerformanceLabelEnum_AssetPerformanceLabel.valueOf,
+        enumValues: $3.AssetPerformanceLabelEnum_AssetPerformanceLabel.values)
+    ..aOM<$0.StringValue>(5, 'adGroupAd', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(6, 'asset', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   AdGroupAdAssetView._() : super();
@@ -65,80 +56,110 @@ class AdGroupAdAssetView extends $pb.GeneratedMessage {
   AdGroupAdAssetView createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdAssetView> createRepeated() =>
       $pb.PbList<AdGroupAdAssetView>();
-  static AdGroupAdAssetView getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdAssetView getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupAdAssetView>(create);
   static AdGroupAdAssetView _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.AssetFieldTypeEnum_AssetFieldType get fieldType => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldType($2.AssetFieldTypeEnum_AssetFieldType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldType() => clearField(2);
 
+  @$pb.TagNumber(3)
   AdGroupAdAssetPolicySummary get policySummary => $_getN(2);
+  @$pb.TagNumber(3)
   set policySummary(AdGroupAdAssetPolicySummary v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPolicySummary() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPolicySummary() => clearField(3);
+  @$pb.TagNumber(3)
+  AdGroupAdAssetPolicySummary ensurePolicySummary() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $3.AssetPerformanceLabelEnum_AssetPerformanceLabel get performanceLabel =>
       $_getN(3);
+  @$pb.TagNumber(4)
   set performanceLabel($3.AssetPerformanceLabelEnum_AssetPerformanceLabel v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPerformanceLabel() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPerformanceLabel() => clearField(4);
 
+  @$pb.TagNumber(5)
   $0.StringValue get adGroupAd => $_getN(4);
+  @$pb.TagNumber(5)
   set adGroupAd($0.StringValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAdGroupAd() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAdGroupAd() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.StringValue ensureAdGroupAd() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $0.StringValue get asset => $_getN(5);
+  @$pb.TagNumber(6)
   set asset($0.StringValue v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasAsset() => $_has(5);
+  @$pb.TagNumber(6)
   void clearAsset() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.StringValue ensureAsset() => $_ensure(5);
 }
 
 class AdGroupAdAssetPolicySummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AdGroupAdAssetPolicySummary',
-      package: const $pb.PackageName('google.ads.googleads.v2.resources'))
-    ..pc<$1.PolicyTopicEntry>(
-        1, 'policyTopicEntries', $pb.PbFieldType.PM, $1.PolicyTopicEntry.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.resources'),
+      createEmptyInstance: create)
+    ..pc<$1.PolicyTopicEntry>(1, 'policyTopicEntries', $pb.PbFieldType.PM,
+        subBuilder: $1.PolicyTopicEntry.create)
     ..e<$4.PolicyReviewStatusEnum_PolicyReviewStatus>(
-        2,
-        'reviewStatus',
-        $pb.PbFieldType.OE,
-        $4.PolicyReviewStatusEnum_PolicyReviewStatus.UNSPECIFIED,
-        $4.PolicyReviewStatusEnum_PolicyReviewStatus.valueOf,
-        $4.PolicyReviewStatusEnum_PolicyReviewStatus.values)
+        2, 'reviewStatus', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $4.PolicyReviewStatusEnum_PolicyReviewStatus.UNSPECIFIED,
+        valueOf: $4.PolicyReviewStatusEnum_PolicyReviewStatus.valueOf,
+        enumValues: $4.PolicyReviewStatusEnum_PolicyReviewStatus.values)
     ..e<$5.PolicyApprovalStatusEnum_PolicyApprovalStatus>(
-        3,
-        'approvalStatus',
-        $pb.PbFieldType.OE,
-        $5.PolicyApprovalStatusEnum_PolicyApprovalStatus.UNSPECIFIED,
-        $5.PolicyApprovalStatusEnum_PolicyApprovalStatus.valueOf,
-        $5.PolicyApprovalStatusEnum_PolicyApprovalStatus.values)
+        3, 'approvalStatus', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $5.PolicyApprovalStatusEnum_PolicyApprovalStatus.UNSPECIFIED,
+        valueOf: $5.PolicyApprovalStatusEnum_PolicyApprovalStatus.valueOf,
+        enumValues: $5.PolicyApprovalStatusEnum_PolicyApprovalStatus.values)
     ..hasRequiredFields = false;
 
   AdGroupAdAssetPolicySummary._() : super();
@@ -162,26 +183,36 @@ class AdGroupAdAssetPolicySummary extends $pb.GeneratedMessage {
   AdGroupAdAssetPolicySummary createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdAssetPolicySummary> createRepeated() =>
       $pb.PbList<AdGroupAdAssetPolicySummary>();
-  static AdGroupAdAssetPolicySummary getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdAssetPolicySummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupAdAssetPolicySummary>(create);
   static AdGroupAdAssetPolicySummary _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.PolicyTopicEntry> get policyTopicEntries => $_getList(0);
 
+  @$pb.TagNumber(2)
   $4.PolicyReviewStatusEnum_PolicyReviewStatus get reviewStatus => $_getN(1);
+  @$pb.TagNumber(2)
   set reviewStatus($4.PolicyReviewStatusEnum_PolicyReviewStatus v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReviewStatus() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReviewStatus() => clearField(2);
 
+  @$pb.TagNumber(3)
   $5.PolicyApprovalStatusEnum_PolicyApprovalStatus get approvalStatus =>
       $_getN(2);
+  @$pb.TagNumber(3)
   set approvalStatus($5.PolicyApprovalStatusEnum_PolicyApprovalStatus v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasApprovalStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearApprovalStatus() => clearField(3);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'proximity_radius_units.pbenum.dart';
 
 class ProximityRadiusUnitsEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProximityRadiusUnitsEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ProximityRadiusUnitsEnum._() : super();
@@ -36,7 +36,8 @@ class ProximityRadiusUnitsEnum extends $pb.GeneratedMessage {
   ProximityRadiusUnitsEnum createEmptyInstance() => create();
   static $pb.PbList<ProximityRadiusUnitsEnum> createRepeated() =>
       $pb.PbList<ProximityRadiusUnitsEnum>();
-  static ProximityRadiusUnitsEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProximityRadiusUnitsEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProximityRadiusUnitsEnum>(create);
   static ProximityRadiusUnitsEnum _defaultInstance;
 }

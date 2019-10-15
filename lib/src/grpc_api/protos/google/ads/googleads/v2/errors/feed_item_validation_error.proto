@@ -342,6 +342,12 @@ message FeedItemValidationErrorEnum {
 
     // Longitude value is missing.
     MISSING_LONGITUDE_VALUE = 96;
+
+    // Unable to find address.
+    ADDRESS_NOT_FOUND = 97;
+
+    // Cannot target provided address.
+    ADDRESS_NOT_TARGETABLE = 98;
   }
 
 

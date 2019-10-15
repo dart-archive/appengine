@@ -33,5 +33,53 @@ const CustomerClient$json = {
       '6': '.google.protobuf.Int64Value',
       '10': 'level'
     },
+    {
+      '1': 'time_zone',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'timeZone'
+    },
+    {
+      '1': 'test_account',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'testAccount'
+    },
+    {
+      '1': 'manager',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'manager'
+    },
+    {
+      '1': 'descriptive_name',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'descriptiveName'
+    },
+    {
+      '1': 'currency_code',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'currencyCode'
+    },
+    {
+      '1': 'id',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'id'
+    },
   ],
 };

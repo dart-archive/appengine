@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class LocationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationMetadata',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   LocationMetadata._() : super();
@@ -32,7 +32,8 @@ class LocationMetadata extends $pb.GeneratedMessage {
   LocationMetadata createEmptyInstance() => create();
   static $pb.PbList<LocationMetadata> createRepeated() =>
       $pb.PbList<LocationMetadata>();
-  static LocationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LocationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocationMetadata>(create);
   static LocationMetadata _defaultInstance;
 }

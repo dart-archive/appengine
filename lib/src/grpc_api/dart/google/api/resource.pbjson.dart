@@ -19,6 +19,8 @@ const ResourceDescriptor$json = {
       '6': '.google.api.ResourceDescriptor.History',
       '10': 'history'
     },
+    {'1': 'plural', '3': 5, '4': 1, '5': 9, '10': 'plural'},
+    {'1': 'singular', '3': 6, '4': 1, '5': 9, '10': 'singular'},
   ],
   '4': [ResourceDescriptor_History$json],
 };

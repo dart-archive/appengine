@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,7 +22,8 @@ export 'metric_service.pbenum.dart';
 class ListMonitoredResourceDescriptorsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMonitoredResourceDescriptorsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
@@ -52,49 +52,69 @@ class ListMonitoredResourceDescriptorsRequest extends $pb.GeneratedMessage {
   ListMonitoredResourceDescriptorsRequest createEmptyInstance() => create();
   static $pb.PbList<ListMonitoredResourceDescriptorsRequest> createRepeated() =>
       $pb.PbList<ListMonitoredResourceDescriptorsRequest>();
+  @$core.pragma('dart2js:noInline')
   static ListMonitoredResourceDescriptorsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListMonitoredResourceDescriptorsRequest>(create);
   static ListMonitoredResourceDescriptorsRequest _defaultInstance;
 
-  $core.String get filter => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get name => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get name => $_getSZ(3);
+  @$pb.TagNumber(5)
   set name($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasName() => $_has(3);
+  @$pb.TagNumber(5)
   void clearName() => clearField(5);
 }
 
 class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMonitoredResourceDescriptorsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$1.MonitoredResourceDescriptor>(1, 'resourceDescriptors',
-        $pb.PbFieldType.PM, $1.MonitoredResourceDescriptor.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$1.MonitoredResourceDescriptor>(
+        1, 'resourceDescriptors', $pb.PbFieldType.PM,
+        subBuilder: $1.MonitoredResourceDescriptor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -121,26 +141,34 @@ class ListMonitoredResourceDescriptorsResponse extends $pb.GeneratedMessage {
   static $pb.PbList<ListMonitoredResourceDescriptorsResponse>
       createRepeated() =>
           $pb.PbList<ListMonitoredResourceDescriptorsResponse>();
+  @$core.pragma('dart2js:noInline')
   static ListMonitoredResourceDescriptorsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListMonitoredResourceDescriptorsResponse>(create);
   static ListMonitoredResourceDescriptorsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.MonitoredResourceDescriptor> get resourceDescriptors =>
       $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetMonitoredResourceDescriptorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetMonitoredResourceDescriptorRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -166,23 +194,30 @@ class GetMonitoredResourceDescriptorRequest extends $pb.GeneratedMessage {
   GetMonitoredResourceDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<GetMonitoredResourceDescriptorRequest> createRepeated() =>
       $pb.PbList<GetMonitoredResourceDescriptorRequest>();
+  @$core.pragma('dart2js:noInline')
   static GetMonitoredResourceDescriptorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetMonitoredResourceDescriptorRequest>(create);
   static GetMonitoredResourceDescriptorRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class ListMetricDescriptorsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMetricDescriptorsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
@@ -210,49 +245,67 @@ class ListMetricDescriptorsRequest extends $pb.GeneratedMessage {
   ListMetricDescriptorsRequest createEmptyInstance() => create();
   static $pb.PbList<ListMetricDescriptorsRequest> createRepeated() =>
       $pb.PbList<ListMetricDescriptorsRequest>();
-  static ListMetricDescriptorsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListMetricDescriptorsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMetricDescriptorsRequest>(create);
   static ListMetricDescriptorsRequest _defaultInstance;
 
-  $core.String get filter => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get name => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get name => $_getSZ(3);
+  @$pb.TagNumber(5)
   set name($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasName() => $_has(3);
+  @$pb.TagNumber(5)
   void clearName() => clearField(5);
 }
 
 class ListMetricDescriptorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMetricDescriptorsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$2.MetricDescriptor>(
-        1, 'metricDescriptors', $pb.PbFieldType.PM, $2.MetricDescriptor.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$2.MetricDescriptor>(1, 'metricDescriptors', $pb.PbFieldType.PM,
+        subBuilder: $2.MetricDescriptor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -277,25 +330,32 @@ class ListMetricDescriptorsResponse extends $pb.GeneratedMessage {
   ListMetricDescriptorsResponse createEmptyInstance() => create();
   static $pb.PbList<ListMetricDescriptorsResponse> createRepeated() =>
       $pb.PbList<ListMetricDescriptorsResponse>();
-  static ListMetricDescriptorsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListMetricDescriptorsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMetricDescriptorsResponse>(create);
   static ListMetricDescriptorsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.MetricDescriptor> get metricDescriptors => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetMetricDescriptorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetMetricDescriptorRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -319,25 +379,31 @@ class GetMetricDescriptorRequest extends $pb.GeneratedMessage {
   GetMetricDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<GetMetricDescriptorRequest> createRepeated() =>
       $pb.PbList<GetMetricDescriptorRequest>();
-  static GetMetricDescriptorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetMetricDescriptorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetMetricDescriptorRequest>(create);
   static GetMetricDescriptorRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class CreateMetricDescriptorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateMetricDescriptorRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$2.MetricDescriptor>(2, 'metricDescriptor', $pb.PbFieldType.OM,
-        $2.MetricDescriptor.getDefault, $2.MetricDescriptor.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$2.MetricDescriptor>(2, 'metricDescriptor',
+        subBuilder: $2.MetricDescriptor.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -362,31 +428,43 @@ class CreateMetricDescriptorRequest extends $pb.GeneratedMessage {
   CreateMetricDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<CreateMetricDescriptorRequest> createRepeated() =>
       $pb.PbList<CreateMetricDescriptorRequest>();
-  static CreateMetricDescriptorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateMetricDescriptorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateMetricDescriptorRequest>(create);
   static CreateMetricDescriptorRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $2.MetricDescriptor get metricDescriptor => $_getN(0);
+  @$pb.TagNumber(2)
   set metricDescriptor($2.MetricDescriptor v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMetricDescriptor() => $_has(0);
+  @$pb.TagNumber(2)
   void clearMetricDescriptor() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.MetricDescriptor ensureMetricDescriptor() => $_ensure(0);
 
-  $core.String get name => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class DeleteMetricDescriptorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteMetricDescriptorRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -411,35 +489,36 @@ class DeleteMetricDescriptorRequest extends $pb.GeneratedMessage {
   DeleteMetricDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteMetricDescriptorRequest> createRepeated() =>
       $pb.PbList<DeleteMetricDescriptorRequest>();
-  static DeleteMetricDescriptorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteMetricDescriptorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteMetricDescriptorRequest>(create);
   static DeleteMetricDescriptorRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class ListTimeSeriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTimeSeriesRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(2, 'filter')
-    ..a<$4.TimeInterval>(4, 'interval', $pb.PbFieldType.OM,
-        $4.TimeInterval.getDefault, $4.TimeInterval.create)
-    ..a<$4.Aggregation>(5, 'aggregation', $pb.PbFieldType.OM,
-        $4.Aggregation.getDefault, $4.Aggregation.create)
+    ..aOM<$4.TimeInterval>(4, 'interval', subBuilder: $4.TimeInterval.create)
+    ..aOM<$4.Aggregation>(5, 'aggregation', subBuilder: $4.Aggregation.create)
     ..aOS(6, 'orderBy')
-    ..e<ListTimeSeriesRequest_TimeSeriesView>(
-        7,
-        'view',
-        $pb.PbFieldType.OE,
-        ListTimeSeriesRequest_TimeSeriesView.FULL,
-        ListTimeSeriesRequest_TimeSeriesView.valueOf,
-        ListTimeSeriesRequest_TimeSeriesView.values)
+    ..e<ListTimeSeriesRequest_TimeSeriesView>(7, 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: ListTimeSeriesRequest_TimeSeriesView.FULL,
+        valueOf: ListTimeSeriesRequest_TimeSeriesView.valueOf,
+        enumValues: ListTimeSeriesRequest_TimeSeriesView.values)
     ..a<$core.int>(8, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(9, 'pageToken')
     ..aOS(10, 'name')
@@ -464,82 +543,121 @@ class ListTimeSeriesRequest extends $pb.GeneratedMessage {
   ListTimeSeriesRequest createEmptyInstance() => create();
   static $pb.PbList<ListTimeSeriesRequest> createRepeated() =>
       $pb.PbList<ListTimeSeriesRequest>();
-  static ListTimeSeriesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTimeSeriesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTimeSeriesRequest>(create);
   static ListTimeSeriesRequest _defaultInstance;
 
-  $core.String get filter => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
+  @$pb.TagNumber(4)
   $4.TimeInterval get interval => $_getN(1);
+  @$pb.TagNumber(4)
   set interval($4.TimeInterval v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInterval() => $_has(1);
+  @$pb.TagNumber(4)
   void clearInterval() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.TimeInterval ensureInterval() => $_ensure(1);
 
+  @$pb.TagNumber(5)
   $4.Aggregation get aggregation => $_getN(2);
+  @$pb.TagNumber(5)
   set aggregation($4.Aggregation v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAggregation() => $_has(2);
+  @$pb.TagNumber(5)
   void clearAggregation() => clearField(5);
+  @$pb.TagNumber(5)
+  $4.Aggregation ensureAggregation() => $_ensure(2);
 
-  $core.String get orderBy => $_getS(3, '');
+  @$pb.TagNumber(6)
+  $core.String get orderBy => $_getSZ(3);
+  @$pb.TagNumber(6)
   set orderBy($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOrderBy() => $_has(3);
+  @$pb.TagNumber(6)
   void clearOrderBy() => clearField(6);
 
+  @$pb.TagNumber(7)
   ListTimeSeriesRequest_TimeSeriesView get view => $_getN(4);
+  @$pb.TagNumber(7)
   set view(ListTimeSeriesRequest_TimeSeriesView v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasView() => $_has(4);
+  @$pb.TagNumber(7)
   void clearView() => clearField(7);
 
-  $core.int get pageSize => $_get(5, 0);
+  @$pb.TagNumber(8)
+  $core.int get pageSize => $_getIZ(5);
+  @$pb.TagNumber(8)
   set pageSize($core.int v) {
     $_setSignedInt32(5, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasPageSize() => $_has(5);
+  @$pb.TagNumber(8)
   void clearPageSize() => clearField(8);
 
-  $core.String get pageToken => $_getS(6, '');
+  @$pb.TagNumber(9)
+  $core.String get pageToken => $_getSZ(6);
+  @$pb.TagNumber(9)
   set pageToken($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasPageToken() => $_has(6);
+  @$pb.TagNumber(9)
   void clearPageToken() => clearField(9);
 
-  $core.String get name => $_getS(7, '');
+  @$pb.TagNumber(10)
+  $core.String get name => $_getSZ(7);
+  @$pb.TagNumber(10)
   set name($core.String v) {
     $_setString(7, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasName() => $_has(7);
+  @$pb.TagNumber(10)
   void clearName() => clearField(10);
 }
 
 class ListTimeSeriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTimeSeriesResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$5.TimeSeries>(
-        1, 'timeSeries', $pb.PbFieldType.PM, $5.TimeSeries.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$5.TimeSeries>(1, 'timeSeries', $pb.PbFieldType.PM,
+        subBuilder: $5.TimeSeries.create)
     ..aOS(2, 'nextPageToken')
-    ..pc<$6.Status>(3, 'executionErrors', $pb.PbFieldType.PM, $6.Status.create)
+    ..pc<$6.Status>(3, 'executionErrors', $pb.PbFieldType.PM,
+        subBuilder: $6.Status.create)
     ..hasRequiredFields = false;
 
   ListTimeSeriesResponse._() : super();
@@ -561,28 +679,36 @@ class ListTimeSeriesResponse extends $pb.GeneratedMessage {
   ListTimeSeriesResponse createEmptyInstance() => create();
   static $pb.PbList<ListTimeSeriesResponse> createRepeated() =>
       $pb.PbList<ListTimeSeriesResponse>();
-  static ListTimeSeriesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTimeSeriesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTimeSeriesResponse>(create);
   static ListTimeSeriesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.TimeSeries> get timeSeries => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$6.Status> get executionErrors => $_getList(2);
 }
 
 class CreateTimeSeriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTimeSeriesRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$5.TimeSeries>(
-        2, 'timeSeries', $pb.PbFieldType.PM, $5.TimeSeries.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$5.TimeSeries>(2, 'timeSeries', $pb.PbFieldType.PM,
+        subBuilder: $5.TimeSeries.create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -605,28 +731,33 @@ class CreateTimeSeriesRequest extends $pb.GeneratedMessage {
   CreateTimeSeriesRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTimeSeriesRequest> createRepeated() =>
       $pb.PbList<CreateTimeSeriesRequest>();
-  static CreateTimeSeriesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTimeSeriesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTimeSeriesRequest>(create);
   static CreateTimeSeriesRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<$5.TimeSeries> get timeSeries => $_getList(0);
 
-  $core.String get name => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class CreateTimeSeriesError extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTimeSeriesError',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$5.TimeSeries>(1, 'timeSeries', $pb.PbFieldType.OM,
-        $5.TimeSeries.getDefault, $5.TimeSeries.create)
-    ..a<$6.Status>(
-        2, 'status', $pb.PbFieldType.OM, $6.Status.getDefault, $6.Status.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$5.TimeSeries>(1, 'timeSeries', subBuilder: $5.TimeSeries.create)
+    ..aOM<$6.Status>(2, 'status', subBuilder: $6.Status.create)
     ..hasRequiredFields = false;
 
   CreateTimeSeriesError._() : super();
@@ -648,23 +779,36 @@ class CreateTimeSeriesError extends $pb.GeneratedMessage {
   CreateTimeSeriesError createEmptyInstance() => create();
   static $pb.PbList<CreateTimeSeriesError> createRepeated() =>
       $pb.PbList<CreateTimeSeriesError>();
-  static CreateTimeSeriesError getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTimeSeriesError getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTimeSeriesError>(create);
   static CreateTimeSeriesError _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.TimeSeries get timeSeries => $_getN(0);
+  @$pb.TagNumber(1)
   set timeSeries($5.TimeSeries v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTimeSeries() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTimeSeries() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.TimeSeries ensureTimeSeries() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.Status get status => $_getN(1);
+  @$pb.TagNumber(2)
   set status($6.Status v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStatus() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Status ensureStatus() => $_ensure(1);
 }

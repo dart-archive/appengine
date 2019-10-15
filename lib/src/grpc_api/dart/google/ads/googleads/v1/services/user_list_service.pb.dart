@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../rpc/status.pb.dart' as $3;
 
 class GetUserListRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetUserListRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -37,25 +37,31 @@ class GetUserListRequest extends $pb.GeneratedMessage {
   GetUserListRequest createEmptyInstance() => create();
   static $pb.PbList<GetUserListRequest> createRepeated() =>
       $pb.PbList<GetUserListRequest>();
-  static GetUserListRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetUserListRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUserListRequest>(create);
   static GetUserListRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateUserListsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateUserListsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<UserListOperation>(
-        2, 'operations', $pb.PbFieldType.PM, UserListOperation.create)
+    ..pc<UserListOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: UserListOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -79,34 +85,48 @@ class MutateUserListsRequest extends $pb.GeneratedMessage {
   MutateUserListsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateUserListsRequest> createRepeated() =>
       $pb.PbList<MutateUserListsRequest>();
-  static MutateUserListsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateUserListsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateUserListsRequest>(create);
   static MutateUserListsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<UserListOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -121,15 +141,13 @@ class UserListOperation extends $pb.GeneratedMessage {
     0: UserListOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserListOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$1.UserList>(1, 'create_1', $pb.PbFieldType.OM, $1.UserList.getDefault,
-        $1.UserList.create)
-    ..a<$1.UserList>(2, 'update', $pb.PbFieldType.OM, $1.UserList.getDefault,
-        $1.UserList.create)
+    ..aOM<$1.UserList>(1, 'create', subBuilder: $1.UserList.create)
+    ..aOM<$1.UserList>(2, 'update', subBuilder: $1.UserList.create)
     ..aOS(3, 'remove')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UserListOperation._() : super();
@@ -149,54 +167,77 @@ class UserListOperation extends $pb.GeneratedMessage {
   UserListOperation createEmptyInstance() => create();
   static $pb.PbList<UserListOperation> createRepeated() =>
       $pb.PbList<UserListOperation>();
-  static UserListOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UserListOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserListOperation>(create);
   static UserListOperation _defaultInstance;
 
   UserListOperation_Operation whichOperation() =>
       _UserListOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.UserList get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.UserList v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.UserList ensureCreate_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.UserList get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update($1.UserList v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.UserList ensureUpdate() => $_ensure(1);
 
-  $core.String get remove => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(2);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(3);
 }
 
 class MutateUserListsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateUserListsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateUserListResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateUserListResult.create)
-    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $3.Status.getDefault, $3.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateUserListResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateUserListResult.create)
+    ..aOM<$3.Status>(3, 'partialFailureError', subBuilder: $3.Status.create)
     ..hasRequiredFields = false;
 
   MutateUserListsResponse._() : super();
@@ -218,24 +259,33 @@ class MutateUserListsResponse extends $pb.GeneratedMessage {
   MutateUserListsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateUserListsResponse> createRepeated() =>
       $pb.PbList<MutateUserListsResponse>();
-  static MutateUserListsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateUserListsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateUserListsResponse>(create);
   static MutateUserListsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateUserListResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $3.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateUserListResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateUserListResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -257,15 +307,20 @@ class MutateUserListResult extends $pb.GeneratedMessage {
   MutateUserListResult createEmptyInstance() => create();
   static $pb.PbList<MutateUserListResult> createRepeated() =>
       $pb.PbList<MutateUserListResult>();
-  static MutateUserListResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateUserListResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateUserListResult>(create);
   static MutateUserListResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

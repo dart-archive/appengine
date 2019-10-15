@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,8 +13,10 @@ import 'index.pb.dart' as $0;
 
 class Field_IndexConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Field.IndexConfig',
-      package: const $pb.PackageName('google.firestore.admin.v1beta2'))
-    ..pc<$0.Index>(1, 'indexes', $pb.PbFieldType.PM, $0.Index.create)
+      package: const $pb.PackageName('google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
+    ..pc<$0.Index>(1, 'indexes', $pb.PbFieldType.PM,
+        subBuilder: $0.Index.create)
     ..aOB(2, 'usesAncestorConfig')
     ..aOS(3, 'ancestorField')
     ..aOB(4, 'reverting')
@@ -38,43 +39,58 @@ class Field_IndexConfig extends $pb.GeneratedMessage {
   Field_IndexConfig createEmptyInstance() => create();
   static $pb.PbList<Field_IndexConfig> createRepeated() =>
       $pb.PbList<Field_IndexConfig>();
-  static Field_IndexConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Field_IndexConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Field_IndexConfig>(create);
   static Field_IndexConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$0.Index> get indexes => $_getList(0);
 
-  $core.bool get usesAncestorConfig => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get usesAncestorConfig => $_getBF(1);
+  @$pb.TagNumber(2)
   set usesAncestorConfig($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUsesAncestorConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUsesAncestorConfig() => clearField(2);
 
-  $core.String get ancestorField => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get ancestorField => $_getSZ(2);
+  @$pb.TagNumber(3)
   set ancestorField($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAncestorField() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAncestorField() => clearField(3);
 
-  $core.bool get reverting => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get reverting => $_getBF(3);
+  @$pb.TagNumber(4)
   set reverting($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasReverting() => $_has(3);
+  @$pb.TagNumber(4)
   void clearReverting() => clearField(4);
 }
 
 class Field extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Field',
-      package: const $pb.PackageName('google.firestore.admin.v1beta2'))
+      package: const $pb.PackageName('google.firestore.admin.v1beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Field_IndexConfig>(2, 'indexConfig', $pb.PbFieldType.OM,
-        Field_IndexConfig.getDefault, Field_IndexConfig.create)
+    ..aOM<Field_IndexConfig>(2, 'indexConfig',
+        subBuilder: Field_IndexConfig.create)
     ..hasRequiredFields = false;
 
   Field._() : super();
@@ -93,22 +109,34 @@ class Field extends $pb.GeneratedMessage {
   static Field create() => Field._();
   Field createEmptyInstance() => create();
   static $pb.PbList<Field> createRepeated() => $pb.PbList<Field>();
-  static Field getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Field getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Field>(create);
   static Field _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Field_IndexConfig get indexConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set indexConfig(Field_IndexConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIndexConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearIndexConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  Field_IndexConfig ensureIndexConfig() => $_ensure(1);
 }

@@ -30,6 +30,7 @@ const SystemTimestamps$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'expireTime'
     },
   ],

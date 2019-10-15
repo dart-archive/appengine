@@ -28,7 +28,14 @@ const AudioEncoding$json = {
 const ListVoicesRequest$json = {
   '1': 'ListVoicesRequest',
   '2': [
-    {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
@@ -78,6 +85,7 @@ const SynthesizeSpeechRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.texttospeech.v1.SynthesisInput',
+      '8': {},
       '10': 'input'
     },
     {
@@ -86,6 +94,7 @@ const SynthesizeSpeechRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.texttospeech.v1.VoiceSelectionParams',
+      '8': {},
       '10': 'voice'
     },
     {
@@ -94,6 +103,7 @@ const SynthesizeSpeechRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.texttospeech.v1.AudioConfig',
+      '8': {},
       '10': 'audioConfig'
     },
   ],
@@ -113,7 +123,14 @@ const SynthesisInput$json = {
 const VoiceSelectionParams$json = {
   '1': 'VoiceSelectionParams',
   '2': [
-    {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
     {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     {
       '1': 'ssml_gender',
@@ -135,17 +152,40 @@ const AudioConfig$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.texttospeech.v1.AudioEncoding',
+      '8': {},
       '10': 'audioEncoding'
     },
-    {'1': 'speaking_rate', '3': 2, '4': 1, '5': 1, '10': 'speakingRate'},
-    {'1': 'pitch', '3': 3, '4': 1, '5': 1, '10': 'pitch'},
-    {'1': 'volume_gain_db', '3': 4, '4': 1, '5': 1, '10': 'volumeGainDb'},
-    {'1': 'sample_rate_hertz', '3': 5, '4': 1, '5': 5, '10': 'sampleRateHertz'},
+    {
+      '1': 'speaking_rate',
+      '3': 2,
+      '4': 1,
+      '5': 1,
+      '8': {},
+      '10': 'speakingRate'
+    },
+    {'1': 'pitch', '3': 3, '4': 1, '5': 1, '8': {}, '10': 'pitch'},
+    {
+      '1': 'volume_gain_db',
+      '3': 4,
+      '4': 1,
+      '5': 1,
+      '8': {},
+      '10': 'volumeGainDb'
+    },
+    {
+      '1': 'sample_rate_hertz',
+      '3': 5,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'sampleRateHertz'
+    },
     {
       '1': 'effects_profile_id',
       '3': 6,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'effectsProfileId'
     },
   ],

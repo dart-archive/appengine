@@ -8,13 +8,14 @@
 const CreateScanConfigRequest$json = {
   '1': 'CreateScanConfigRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'scan_config',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.websecurityscanner.v1alpha.ScanConfig',
+      '8': {},
       '10': 'scanConfig'
     },
   ],
@@ -23,21 +24,21 @@ const CreateScanConfigRequest$json = {
 const DeleteScanConfigRequest$json = {
   '1': 'DeleteScanConfigRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const GetScanConfigRequest$json = {
   '1': 'GetScanConfigRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListScanConfigsRequest$json = {
   '1': 'ListScanConfigsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
   ],
@@ -52,6 +53,7 @@ const UpdateScanConfigRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.websecurityscanner.v1alpha.ScanConfig',
+      '8': {},
       '10': 'scanConfig'
     },
     {
@@ -60,6 +62,7 @@ const UpdateScanConfigRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -83,21 +86,21 @@ const ListScanConfigsResponse$json = {
 const StartScanRunRequest$json = {
   '1': 'StartScanRunRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const GetScanRunRequest$json = {
   '1': 'GetScanRunRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListScanRunsRequest$json = {
   '1': 'ListScanRunsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
   ],
@@ -121,14 +124,14 @@ const ListScanRunsResponse$json = {
 const StopScanRunRequest$json = {
   '1': 'StopScanRunRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListCrawledUrlsRequest$json = {
   '1': 'ListCrawledUrlsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
   ],
@@ -152,15 +155,15 @@ const ListCrawledUrlsResponse$json = {
 const GetFindingRequest$json = {
   '1': 'GetFindingRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListFindingsRequest$json = {
   '1': 'ListFindingsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'filter'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 4, '4': 1, '5': 5, '10': 'pageSize'},
   ],
@@ -184,7 +187,7 @@ const ListFindingsResponse$json = {
 const ListFindingTypeStatsRequest$json = {
   '1': 'ListFindingTypeStatsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
   ],
 };
 

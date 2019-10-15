@@ -8,10 +8,10 @@
 const CompleteQueryRequest$json = {
   '1': 'CompleteQueryRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'query', '3': 2, '4': 1, '5': 9, '10': 'query'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'query', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'query'},
     {'1': 'language_codes', '3': 3, '4': 3, '5': 9, '10': 'languageCodes'},
-    {'1': 'page_size', '3': 4, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_size', '3': 4, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
     {'1': 'company', '3': 5, '4': 1, '5': 9, '10': 'company'},
     {
       '1': 'scope',

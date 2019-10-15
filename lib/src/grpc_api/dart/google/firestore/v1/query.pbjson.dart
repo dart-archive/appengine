@@ -72,9 +72,9 @@ const StructuredQuery$json = {
     StructuredQuery_CompositeFilter$json,
     StructuredQuery_FieldFilter$json,
     StructuredQuery_UnaryFilter$json,
-    StructuredQuery_FieldReference$json,
+    StructuredQuery_Projection$json,
     StructuredQuery_Order$json,
-    StructuredQuery_Projection$json
+    StructuredQuery_FieldReference$json
   ],
   '4': [StructuredQuery_Direction$json],
 };
@@ -195,6 +195,8 @@ const StructuredQuery_FieldFilter_Operator$json = {
     {'1': 'GREATER_THAN_OR_EQUAL', '2': 4},
     {'1': 'EQUAL', '2': 5},
     {'1': 'ARRAY_CONTAINS', '2': 7},
+    {'1': 'IN', '2': 8},
+    {'1': 'ARRAY_CONTAINS_ANY', '2': 9},
   ],
 };
 
@@ -234,10 +236,17 @@ const StructuredQuery_UnaryFilter_Operator$json = {
   ],
 };
 
-const StructuredQuery_FieldReference$json = {
-  '1': 'FieldReference',
+const StructuredQuery_Projection$json = {
+  '1': 'Projection',
   '2': [
-    {'1': 'field_path', '3': 2, '4': 1, '5': 9, '10': 'fieldPath'},
+    {
+      '1': 'fields',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.firestore.v1.StructuredQuery.FieldReference',
+      '10': 'fields'
+    },
   ],
 };
 
@@ -263,17 +272,10 @@ const StructuredQuery_Order$json = {
   ],
 };
 
-const StructuredQuery_Projection$json = {
-  '1': 'Projection',
+const StructuredQuery_FieldReference$json = {
+  '1': 'FieldReference',
   '2': [
-    {
-      '1': 'fields',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.firestore.v1.StructuredQuery.FieldReference',
-      '10': 'fields'
-    },
+    {'1': 'field_path', '3': 2, '4': 1, '5': 9, '10': 'fieldPath'},
   ],
 };
 

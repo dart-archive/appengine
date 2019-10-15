@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../rpc/status.pb.dart' as $3;
 
 class GetCampaignBudgetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCampaignBudgetRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -39,26 +39,32 @@ class GetCampaignBudgetRequest extends $pb.GeneratedMessage {
   GetCampaignBudgetRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignBudgetRequest> createRepeated() =>
       $pb.PbList<GetCampaignBudgetRequest>();
-  static GetCampaignBudgetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignBudgetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCampaignBudgetRequest>(create);
   static GetCampaignBudgetRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateCampaignBudgetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignBudgetsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<CampaignBudgetOperation>(
-        2, 'operations', $pb.PbFieldType.PM, CampaignBudgetOperation.create)
+    ..pc<CampaignBudgetOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: CampaignBudgetOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -84,34 +90,48 @@ class MutateCampaignBudgetsRequest extends $pb.GeneratedMessage {
   MutateCampaignBudgetsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignBudgetsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignBudgetsRequest>();
-  static MutateCampaignBudgetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignBudgetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignBudgetsRequest>(create);
   static MutateCampaignBudgetsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<CampaignBudgetOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -126,15 +146,13 @@ class CampaignBudgetOperation extends $pb.GeneratedMessage {
     0: CampaignBudgetOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CampaignBudgetOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$1.CampaignBudget>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.CampaignBudget.getDefault, $1.CampaignBudget.create)
-    ..a<$1.CampaignBudget>(2, 'update', $pb.PbFieldType.OM,
-        $1.CampaignBudget.getDefault, $1.CampaignBudget.create)
+    ..aOM<$1.CampaignBudget>(1, 'create', subBuilder: $1.CampaignBudget.create)
+    ..aOM<$1.CampaignBudget>(2, 'update', subBuilder: $1.CampaignBudget.create)
     ..aOS(3, 'remove')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   CampaignBudgetOperation._() : super();
@@ -156,55 +174,78 @@ class CampaignBudgetOperation extends $pb.GeneratedMessage {
   CampaignBudgetOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignBudgetOperation> createRepeated() =>
       $pb.PbList<CampaignBudgetOperation>();
-  static CampaignBudgetOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CampaignBudgetOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CampaignBudgetOperation>(create);
   static CampaignBudgetOperation _defaultInstance;
 
   CampaignBudgetOperation_Operation whichOperation() =>
       _CampaignBudgetOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.CampaignBudget get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.CampaignBudget v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.CampaignBudget ensureCreate_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.CampaignBudget get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update($1.CampaignBudget v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.CampaignBudget ensureUpdate() => $_ensure(1);
 
-  $core.String get remove => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(2);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(3);
 }
 
 class MutateCampaignBudgetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignBudgetsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateCampaignBudgetResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateCampaignBudgetResult.create)
-    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $3.Status.getDefault, $3.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateCampaignBudgetResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateCampaignBudgetResult.create)
+    ..aOM<$3.Status>(3, 'partialFailureError', subBuilder: $3.Status.create)
     ..hasRequiredFields = false;
 
   MutateCampaignBudgetsResponse._() : super();
@@ -228,25 +269,34 @@ class MutateCampaignBudgetsResponse extends $pb.GeneratedMessage {
   MutateCampaignBudgetsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignBudgetsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignBudgetsResponse>();
-  static MutateCampaignBudgetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignBudgetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignBudgetsResponse>(create);
   static MutateCampaignBudgetsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateCampaignBudgetResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $3.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateCampaignBudgetResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignBudgetResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -270,15 +320,20 @@ class MutateCampaignBudgetResult extends $pb.GeneratedMessage {
   MutateCampaignBudgetResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignBudgetResult> createRepeated() =>
       $pb.PbList<MutateCampaignBudgetResult>();
-  static MutateCampaignBudgetResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignBudgetResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignBudgetResult>(create);
   static MutateCampaignBudgetResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

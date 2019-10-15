@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../common.pb.dart' as $1;
@@ -16,7 +15,8 @@ import '../../../protobuf/field_mask.pb.dart' as $2;
 
 class GetSupportAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSupportAccountRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -39,23 +39,29 @@ class GetSupportAccountRequest extends $pb.GeneratedMessage {
   GetSupportAccountRequest createEmptyInstance() => create();
   static $pb.PbList<GetSupportAccountRequest> createRepeated() =>
       $pb.PbList<GetSupportAccountRequest>();
-  static GetSupportAccountRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSupportAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSupportAccountRequest>(create);
   static GetSupportAccountRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListSupportAccountsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListSupportAccountsRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'filter')
     ..aInt64(2, 'pageSize')
     ..aOS(3, 'pageToken')
@@ -81,41 +87,55 @@ class ListSupportAccountsRequest extends $pb.GeneratedMessage {
   ListSupportAccountsRequest createEmptyInstance() => create();
   static $pb.PbList<ListSupportAccountsRequest> createRepeated() =>
       $pb.PbList<ListSupportAccountsRequest>();
-  static ListSupportAccountsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSupportAccountsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSupportAccountsRequest>(create);
   static ListSupportAccountsRequest _defaultInstance;
 
-  $core.String get filter => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(1)
   set filter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
 
-  Int64 get pageSize => $_getI64(1);
-  set pageSize(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get pageSize => $_getI64(1);
+  @$pb.TagNumber(2)
+  set pageSize($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListSupportAccountsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListSupportAccountsResponse',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
-    ..pc<$1.SupportAccount>(
-        1, 'accounts', $pb.PbFieldType.PM, $1.SupportAccount.create)
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<$1.SupportAccount>(1, 'accounts', $pb.PbFieldType.PM,
+        subBuilder: $1.SupportAccount.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -140,24 +160,31 @@ class ListSupportAccountsResponse extends $pb.GeneratedMessage {
   ListSupportAccountsResponse createEmptyInstance() => create();
   static $pb.PbList<ListSupportAccountsResponse> createRepeated() =>
       $pb.PbList<ListSupportAccountsResponse>();
-  static ListSupportAccountsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSupportAccountsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSupportAccountsResponse>(create);
   static ListSupportAccountsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.SupportAccount> get accounts => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetCaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCaseRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -178,21 +205,28 @@ class GetCaseRequest extends $pb.GeneratedMessage {
   GetCaseRequest createEmptyInstance() => create();
   static $pb.PbList<GetCaseRequest> createRepeated() =>
       $pb.PbList<GetCaseRequest>();
-  static GetCaseRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCaseRequest>(create);
   static GetCaseRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListCasesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCasesRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'filter')
     ..aInt64(3, 'pageSize')
@@ -216,47 +250,65 @@ class ListCasesRequest extends $pb.GeneratedMessage {
   ListCasesRequest createEmptyInstance() => create();
   static $pb.PbList<ListCasesRequest> createRepeated() =>
       $pb.PbList<ListCasesRequest>();
-  static ListCasesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCasesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCasesRequest>(create);
   static ListCasesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  Int64 get pageSize => $_getI64(2);
-  set pageSize(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get pageSize => $_getI64(2);
+  @$pb.TagNumber(3)
+  set pageSize($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListCasesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCasesResponse',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
-    ..pc<$1.Case>(1, 'cases', $pb.PbFieldType.PM, $1.Case.create)
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<$1.Case>(1, 'cases', $pb.PbFieldType.PM, subBuilder: $1.Case.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -277,24 +329,31 @@ class ListCasesResponse extends $pb.GeneratedMessage {
   ListCasesResponse createEmptyInstance() => create();
   static $pb.PbList<ListCasesResponse> createRepeated() =>
       $pb.PbList<ListCasesResponse>();
-  static ListCasesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCasesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCasesResponse>(create);
   static ListCasesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Case> get cases => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ListCommentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCommentsRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -315,23 +374,30 @@ class ListCommentsRequest extends $pb.GeneratedMessage {
   ListCommentsRequest createEmptyInstance() => create();
   static $pb.PbList<ListCommentsRequest> createRepeated() =>
       $pb.PbList<ListCommentsRequest>();
-  static ListCommentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCommentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCommentsRequest>(create);
   static ListCommentsRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListCommentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCommentsResponse',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
-    ..pc<$1.Comment>(1, 'comments', $pb.PbFieldType.PM, $1.Comment.create)
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<$1.Comment>(1, 'comments', $pb.PbFieldType.PM,
+        subBuilder: $1.Comment.create)
     ..hasRequiredFields = false;
 
   ListCommentsResponse._() : super();
@@ -352,19 +418,21 @@ class ListCommentsResponse extends $pb.GeneratedMessage {
   ListCommentsResponse createEmptyInstance() => create();
   static $pb.PbList<ListCommentsResponse> createRepeated() =>
       $pb.PbList<ListCommentsResponse>();
-  static ListCommentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCommentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCommentsResponse>(create);
   static ListCommentsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Comment> get comments => $_getList(0);
 }
 
 class CreateCaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCaseRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Case>(
-        2, 'case_2', $pb.PbFieldType.OM, $1.Case.getDefault, $1.Case.create)
+    ..aOM<$1.Case>(2, 'case', subBuilder: $1.Case.create)
     ..hasRequiredFields = false;
 
   CreateCaseRequest._() : super();
@@ -384,34 +452,44 @@ class CreateCaseRequest extends $pb.GeneratedMessage {
   CreateCaseRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCaseRequest> createRepeated() =>
       $pb.PbList<CreateCaseRequest>();
-  static CreateCaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateCaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCaseRequest>(create);
   static CreateCaseRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Case get case_2 => $_getN(1);
+  @$pb.TagNumber(2)
   set case_2($1.Case v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCase_2() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCase_2() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Case ensureCase_2() => $_ensure(1);
 }
 
 class UpdateCaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateCaseRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
-    ..a<$1.Case>(
-        1, 'case_1', $pb.PbFieldType.OM, $1.Case.getDefault, $1.Case.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<$1.Case>(1, 'case', subBuilder: $1.Case.create)
+    ..aOM<$2.FieldMask>(2, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCaseRequest._() : super();
@@ -431,33 +509,46 @@ class UpdateCaseRequest extends $pb.GeneratedMessage {
   UpdateCaseRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateCaseRequest> createRepeated() =>
       $pb.PbList<UpdateCaseRequest>();
-  static UpdateCaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateCaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateCaseRequest>(create);
   static UpdateCaseRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Case get case_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set case_1($1.Case v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCase_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCase_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Case ensureCase_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class CreateCommentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCommentRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.Comment>(2, 'comment', $pb.PbFieldType.OM, $1.Comment.getDefault,
-        $1.Comment.create)
+    ..aOM<$1.Comment>(2, 'comment', subBuilder: $1.Comment.create)
     ..hasRequiredFields = false;
 
   CreateCommentRequest._() : super();
@@ -478,30 +569,42 @@ class CreateCommentRequest extends $pb.GeneratedMessage {
   CreateCommentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCommentRequest> createRepeated() =>
       $pb.PbList<CreateCommentRequest>();
-  static CreateCommentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateCommentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCommentRequest>(create);
   static CreateCommentRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Comment get comment => $_getN(1);
+  @$pb.TagNumber(2)
   set comment($1.Comment v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasComment() => $_has(1);
+  @$pb.TagNumber(2)
   void clearComment() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Comment ensureComment() => $_ensure(1);
 }
 
 class GetIssueTaxonomyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIssueTaxonomyRequest',
-      package: const $pb.PackageName('google.cloud.support.v1alpha1'))
+      package: const $pb.PackageName('google.cloud.support.v1alpha1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   GetIssueTaxonomyRequest._() : super();
@@ -523,7 +626,8 @@ class GetIssueTaxonomyRequest extends $pb.GeneratedMessage {
   GetIssueTaxonomyRequest createEmptyInstance() => create();
   static $pb.PbList<GetIssueTaxonomyRequest> createRepeated() =>
       $pb.PbList<GetIssueTaxonomyRequest>();
-  static GetIssueTaxonomyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetIssueTaxonomyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetIssueTaxonomyRequest>(create);
   static GetIssueTaxonomyRequest _defaultInstance;
 }

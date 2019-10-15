@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'storage.pb.dart' as $2;
@@ -28,8 +27,10 @@ export 'dlp.pbenum.dart';
 
 class ExcludeInfoTypes extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExcludeInfoTypes',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM,
+        subBuilder: $2.InfoType.create)
     ..hasRequiredFields = false;
 
   ExcludeInfoTypes._() : super();
@@ -49,10 +50,12 @@ class ExcludeInfoTypes extends $pb.GeneratedMessage {
   ExcludeInfoTypes createEmptyInstance() => create();
   static $pb.PbList<ExcludeInfoTypes> createRepeated() =>
       $pb.PbList<ExcludeInfoTypes>();
-  static ExcludeInfoTypes getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExcludeInfoTypes getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExcludeInfoTypes>(create);
   static ExcludeInfoTypes _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.InfoType> get infoTypes => $_getList(0);
 }
 
@@ -67,25 +70,19 @@ class ExclusionRule extends $pb.GeneratedMessage {
     0: ExclusionRule_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExclusionRule',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$2.CustomInfoType_Dictionary>(
-        1,
-        'dictionary',
-        $pb.PbFieldType.OM,
-        $2.CustomInfoType_Dictionary.getDefault,
-        $2.CustomInfoType_Dictionary.create)
-    ..a<$2.CustomInfoType_Regex>(2, 'regex', $pb.PbFieldType.OM,
-        $2.CustomInfoType_Regex.getDefault, $2.CustomInfoType_Regex.create)
-    ..a<ExcludeInfoTypes>(3, 'excludeInfoTypes', $pb.PbFieldType.OM,
-        ExcludeInfoTypes.getDefault, ExcludeInfoTypes.create)
-    ..e<MatchingType>(
-        4,
-        'matchingType',
-        $pb.PbFieldType.OE,
-        MatchingType.MATCHING_TYPE_UNSPECIFIED,
-        MatchingType.valueOf,
-        MatchingType.values)
+    ..aOM<$2.CustomInfoType_Dictionary>(1, 'dictionary',
+        subBuilder: $2.CustomInfoType_Dictionary.create)
+    ..aOM<$2.CustomInfoType_Regex>(2, 'regex',
+        subBuilder: $2.CustomInfoType_Regex.create)
+    ..aOM<ExcludeInfoTypes>(3, 'excludeInfoTypes',
+        subBuilder: ExcludeInfoTypes.create)
+    ..e<MatchingType>(4, 'matchingType', $pb.PbFieldType.OE,
+        defaultOrMaker: MatchingType.MATCHING_TYPE_UNSPECIFIED,
+        valueOf: MatchingType.valueOf,
+        enumValues: MatchingType.values)
     ..hasRequiredFields = false;
 
   ExclusionRule._() : super();
@@ -105,42 +102,66 @@ class ExclusionRule extends $pb.GeneratedMessage {
   ExclusionRule createEmptyInstance() => create();
   static $pb.PbList<ExclusionRule> createRepeated() =>
       $pb.PbList<ExclusionRule>();
-  static ExclusionRule getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExclusionRule getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExclusionRule>(create);
   static ExclusionRule _defaultInstance;
 
   ExclusionRule_Type whichType() => _ExclusionRule_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.CustomInfoType_Dictionary get dictionary => $_getN(0);
+  @$pb.TagNumber(1)
   set dictionary($2.CustomInfoType_Dictionary v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDictionary() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDictionary() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.CustomInfoType_Dictionary ensureDictionary() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.CustomInfoType_Regex get regex => $_getN(1);
+  @$pb.TagNumber(2)
   set regex($2.CustomInfoType_Regex v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRegex() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRegex() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.CustomInfoType_Regex ensureRegex() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ExcludeInfoTypes get excludeInfoTypes => $_getN(2);
+  @$pb.TagNumber(3)
   set excludeInfoTypes(ExcludeInfoTypes v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasExcludeInfoTypes() => $_has(2);
+  @$pb.TagNumber(3)
   void clearExcludeInfoTypes() => clearField(3);
+  @$pb.TagNumber(3)
+  ExcludeInfoTypes ensureExcludeInfoTypes() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   MatchingType get matchingType => $_getN(3);
+  @$pb.TagNumber(4)
   set matchingType(MatchingType v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasMatchingType() => $_has(3);
+  @$pb.TagNumber(4)
   void clearMatchingType() => clearField(4);
 }
 
@@ -154,16 +175,12 @@ class InspectionRule extends $pb.GeneratedMessage {
     0: InspectionRule_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectionRule',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$2.CustomInfoType_DetectionRule_HotwordRule>(
-        1,
-        'hotwordRule',
-        $pb.PbFieldType.OM,
-        $2.CustomInfoType_DetectionRule_HotwordRule.getDefault,
-        $2.CustomInfoType_DetectionRule_HotwordRule.create)
-    ..a<ExclusionRule>(2, 'exclusionRule', $pb.PbFieldType.OM,
-        ExclusionRule.getDefault, ExclusionRule.create)
+    ..aOM<$2.CustomInfoType_DetectionRule_HotwordRule>(1, 'hotwordRule',
+        subBuilder: $2.CustomInfoType_DetectionRule_HotwordRule.create)
+    ..aOM<ExclusionRule>(2, 'exclusionRule', subBuilder: ExclusionRule.create)
     ..hasRequiredFields = false;
 
   InspectionRule._() : super();
@@ -183,34 +200,52 @@ class InspectionRule extends $pb.GeneratedMessage {
   InspectionRule createEmptyInstance() => create();
   static $pb.PbList<InspectionRule> createRepeated() =>
       $pb.PbList<InspectionRule>();
-  static InspectionRule getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectionRule getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectionRule>(create);
   static InspectionRule _defaultInstance;
 
   InspectionRule_Type whichType() => _InspectionRule_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.CustomInfoType_DetectionRule_HotwordRule get hotwordRule => $_getN(0);
+  @$pb.TagNumber(1)
   set hotwordRule($2.CustomInfoType_DetectionRule_HotwordRule v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHotwordRule() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHotwordRule() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.CustomInfoType_DetectionRule_HotwordRule ensureHotwordRule() =>
+      $_ensure(0);
 
+  @$pb.TagNumber(2)
   ExclusionRule get exclusionRule => $_getN(1);
+  @$pb.TagNumber(2)
   set exclusionRule(ExclusionRule v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExclusionRule() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExclusionRule() => clearField(2);
+  @$pb.TagNumber(2)
+  ExclusionRule ensureExclusionRule() => $_ensure(1);
 }
 
 class InspectionRuleSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectionRuleSet',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
-    ..pc<InspectionRule>(2, 'rules', $pb.PbFieldType.PM, InspectionRule.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM,
+        subBuilder: $2.InfoType.create)
+    ..pc<InspectionRule>(2, 'rules', $pb.PbFieldType.PM,
+        subBuilder: InspectionRule.create)
     ..hasRequiredFields = false;
 
   InspectionRuleSet._() : super();
@@ -230,21 +265,24 @@ class InspectionRuleSet extends $pb.GeneratedMessage {
   InspectionRuleSet createEmptyInstance() => create();
   static $pb.PbList<InspectionRuleSet> createRepeated() =>
       $pb.PbList<InspectionRuleSet>();
-  static InspectionRuleSet getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectionRuleSet getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectionRuleSet>(create);
   static InspectionRuleSet _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.InfoType> get infoTypes => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<InspectionRule> get rules => $_getList(1);
 }
 
 class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InspectConfig.FindingLimits.InfoTypeLimit',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.InfoType>(1, 'infoType', subBuilder: $2.InfoType.create)
     ..a<$core.int>(2, 'maxFindings', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -271,35 +309,49 @@ class InspectConfig_FindingLimits_InfoTypeLimit extends $pb.GeneratedMessage {
   static $pb.PbList<InspectConfig_FindingLimits_InfoTypeLimit>
       createRepeated() =>
           $pb.PbList<InspectConfig_FindingLimits_InfoTypeLimit>();
+  @$core.pragma('dart2js:noInline')
   static InspectConfig_FindingLimits_InfoTypeLimit getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          InspectConfig_FindingLimits_InfoTypeLimit>(create);
   static InspectConfig_FindingLimits_InfoTypeLimit _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.InfoType get infoType => $_getN(0);
+  @$pb.TagNumber(1)
   set infoType($2.InfoType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInfoType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInfoType() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.InfoType ensureInfoType() => $_ensure(0);
 
-  $core.int get maxFindings => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get maxFindings => $_getIZ(1);
+  @$pb.TagNumber(2)
   set maxFindings($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxFindings() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxFindings() => clearField(2);
 }
 
 class InspectConfig_FindingLimits extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InspectConfig.FindingLimits',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'maxFindingsPerItem', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'maxFindingsPerRequest', $pb.PbFieldType.O3)
-    ..pc<InspectConfig_FindingLimits_InfoTypeLimit>(3, 'maxFindingsPerInfoType',
-        $pb.PbFieldType.PM, InspectConfig_FindingLimits_InfoTypeLimit.create)
+    ..pc<InspectConfig_FindingLimits_InfoTypeLimit>(
+        3, 'maxFindingsPerInfoType', $pb.PbFieldType.PM,
+        subBuilder: InspectConfig_FindingLimits_InfoTypeLimit.create)
     ..hasRequiredFields = false;
 
   InspectConfig_FindingLimits._() : super();
@@ -323,55 +375,60 @@ class InspectConfig_FindingLimits extends $pb.GeneratedMessage {
   InspectConfig_FindingLimits createEmptyInstance() => create();
   static $pb.PbList<InspectConfig_FindingLimits> createRepeated() =>
       $pb.PbList<InspectConfig_FindingLimits>();
-  static InspectConfig_FindingLimits getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectConfig_FindingLimits getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectConfig_FindingLimits>(create);
   static InspectConfig_FindingLimits _defaultInstance;
 
-  $core.int get maxFindingsPerItem => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get maxFindingsPerItem => $_getIZ(0);
+  @$pb.TagNumber(1)
   set maxFindingsPerItem($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMaxFindingsPerItem() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMaxFindingsPerItem() => clearField(1);
 
-  $core.int get maxFindingsPerRequest => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get maxFindingsPerRequest => $_getIZ(1);
+  @$pb.TagNumber(2)
   set maxFindingsPerRequest($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxFindingsPerRequest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxFindingsPerRequest() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<InspectConfig_FindingLimits_InfoTypeLimit>
       get maxFindingsPerInfoType => $_getList(2);
 }
 
 class InspectConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
-    ..e<$2.Likelihood>(
-        2,
-        'minLikelihood',
-        $pb.PbFieldType.OE,
-        $2.Likelihood.LIKELIHOOD_UNSPECIFIED,
-        $2.Likelihood.valueOf,
-        $2.Likelihood.values)
-    ..a<InspectConfig_FindingLimits>(
-        3,
-        'limits',
-        $pb.PbFieldType.OM,
-        InspectConfig_FindingLimits.getDefault,
-        InspectConfig_FindingLimits.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM,
+        subBuilder: $2.InfoType.create)
+    ..e<$2.Likelihood>(2, 'minLikelihood', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.Likelihood.LIKELIHOOD_UNSPECIFIED,
+        valueOf: $2.Likelihood.valueOf,
+        enumValues: $2.Likelihood.values)
+    ..aOM<InspectConfig_FindingLimits>(3, 'limits',
+        subBuilder: InspectConfig_FindingLimits.create)
     ..aOB(4, 'includeQuote')
     ..aOB(5, 'excludeInfoTypes')
-    ..pc<$2.CustomInfoType>(
-        6, 'customInfoTypes', $pb.PbFieldType.PM, $2.CustomInfoType.create)
-    ..pc<ContentOption>(8, 'contentOptions', $pb.PbFieldType.PE, null,
-        ContentOption.valueOf, ContentOption.values)
-    ..pc<InspectionRuleSet>(
-        10, 'ruleSet', $pb.PbFieldType.PM, InspectionRuleSet.create)
+    ..pc<$2.CustomInfoType>(6, 'customInfoTypes', $pb.PbFieldType.PM,
+        subBuilder: $2.CustomInfoType.create)
+    ..pc<ContentOption>(8, 'contentOptions', $pb.PbFieldType.PE,
+        valueOf: ContentOption.valueOf, enumValues: ContentOption.values)
+    ..pc<InspectionRuleSet>(10, 'ruleSet', $pb.PbFieldType.PM,
+        subBuilder: InspectionRuleSet.create)
     ..hasRequiredFields = false;
 
   InspectConfig._() : super();
@@ -391,60 +448,82 @@ class InspectConfig extends $pb.GeneratedMessage {
   InspectConfig createEmptyInstance() => create();
   static $pb.PbList<InspectConfig> createRepeated() =>
       $pb.PbList<InspectConfig>();
-  static InspectConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectConfig>(create);
   static InspectConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.InfoType> get infoTypes => $_getList(0);
 
+  @$pb.TagNumber(2)
   $2.Likelihood get minLikelihood => $_getN(1);
+  @$pb.TagNumber(2)
   set minLikelihood($2.Likelihood v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMinLikelihood() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMinLikelihood() => clearField(2);
 
+  @$pb.TagNumber(3)
   InspectConfig_FindingLimits get limits => $_getN(2);
+  @$pb.TagNumber(3)
   set limits(InspectConfig_FindingLimits v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLimits() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLimits() => clearField(3);
+  @$pb.TagNumber(3)
+  InspectConfig_FindingLimits ensureLimits() => $_ensure(2);
 
-  $core.bool get includeQuote => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get includeQuote => $_getBF(3);
+  @$pb.TagNumber(4)
   set includeQuote($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIncludeQuote() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIncludeQuote() => clearField(4);
 
-  $core.bool get excludeInfoTypes => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get excludeInfoTypes => $_getBF(4);
+  @$pb.TagNumber(5)
   set excludeInfoTypes($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasExcludeInfoTypes() => $_has(4);
+  @$pb.TagNumber(5)
   void clearExcludeInfoTypes() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<$2.CustomInfoType> get customInfoTypes => $_getList(5);
 
+  @$pb.TagNumber(8)
   $core.List<ContentOption> get contentOptions => $_getList(6);
 
+  @$pb.TagNumber(10)
   $core.List<InspectionRuleSet> get ruleSet => $_getList(7);
 }
 
 class ByteContentItem extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ByteContentItem',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..e<ByteContentItem_BytesType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        ByteContentItem_BytesType.BYTES_TYPE_UNSPECIFIED,
-        ByteContentItem_BytesType.valueOf,
-        ByteContentItem_BytesType.values)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<ByteContentItem_BytesType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: ByteContentItem_BytesType.BYTES_TYPE_UNSPECIFIED,
+        valueOf: ByteContentItem_BytesType.valueOf,
+        enumValues: ByteContentItem_BytesType.values)
     ..a<$core.List<$core.int>>(2, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -465,24 +544,33 @@ class ByteContentItem extends $pb.GeneratedMessage {
   ByteContentItem createEmptyInstance() => create();
   static $pb.PbList<ByteContentItem> createRepeated() =>
       $pb.PbList<ByteContentItem>();
-  static ByteContentItem getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ByteContentItem getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ByteContentItem>(create);
   static ByteContentItem _defaultInstance;
 
+  @$pb.TagNumber(1)
   ByteContentItem_BytesType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type(ByteContentItem_BytesType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get data => $_getN(1);
+  @$pb.TagNumber(2)
   set data($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasData() => $_has(1);
+  @$pb.TagNumber(2)
   void clearData() => clearField(2);
 }
 
@@ -497,12 +585,12 @@ class ContentItem extends $pb.GeneratedMessage {
     0: ContentItem_DataItem.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContentItem',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4, 5])
     ..aOS(3, 'value')
-    ..a<Table>(4, 'table', $pb.PbFieldType.OM, Table.getDefault, Table.create)
-    ..a<ByteContentItem>(5, 'byteItem', $pb.PbFieldType.OM,
-        ByteContentItem.getDefault, ByteContentItem.create)
+    ..aOM<Table>(4, 'table', subBuilder: Table.create)
+    ..aOM<ByteContentItem>(5, 'byteItem', subBuilder: ByteContentItem.create)
     ..hasRequiredFields = false;
 
   ContentItem._() : super();
@@ -521,42 +609,61 @@ class ContentItem extends $pb.GeneratedMessage {
   static ContentItem create() => ContentItem._();
   ContentItem createEmptyInstance() => create();
   static $pb.PbList<ContentItem> createRepeated() => $pb.PbList<ContentItem>();
-  static ContentItem getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ContentItem getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ContentItem>(create);
   static ContentItem _defaultInstance;
 
   ContentItem_DataItem whichDataItem() =>
       _ContentItem_DataItemByTag[$_whichOneof(0)];
   void clearDataItem() => clearField($_whichOneof(0));
 
-  $core.String get value => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get value => $_getSZ(0);
+  @$pb.TagNumber(3)
   set value($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(3)
   void clearValue() => clearField(3);
 
+  @$pb.TagNumber(4)
   Table get table => $_getN(1);
+  @$pb.TagNumber(4)
   set table(Table v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTable() => $_has(1);
+  @$pb.TagNumber(4)
   void clearTable() => clearField(4);
+  @$pb.TagNumber(4)
+  Table ensureTable() => $_ensure(1);
 
+  @$pb.TagNumber(5)
   ByteContentItem get byteItem => $_getN(2);
+  @$pb.TagNumber(5)
   set byteItem(ByteContentItem v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasByteItem() => $_has(2);
+  @$pb.TagNumber(5)
   void clearByteItem() => clearField(5);
+  @$pb.TagNumber(5)
+  ByteContentItem ensureByteItem() => $_ensure(2);
 }
 
 class Table_Row extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table.Row',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<Value>(1, 'values', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, 'values', $pb.PbFieldType.PM, subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   Table_Row._() : super();
@@ -575,17 +682,22 @@ class Table_Row extends $pb.GeneratedMessage {
   static Table_Row create() => Table_Row._();
   Table_Row createEmptyInstance() => create();
   static $pb.PbList<Table_Row> createRepeated() => $pb.PbList<Table_Row>();
-  static Table_Row getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Table_Row getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Table_Row>(create);
   static Table_Row _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Value> get values => $_getList(0);
 }
 
 class Table extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.FieldId>(1, 'headers', $pb.PbFieldType.PM, $2.FieldId.create)
-    ..pc<Table_Row>(2, 'rows', $pb.PbFieldType.PM, Table_Row.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.FieldId>(1, 'headers', $pb.PbFieldType.PM,
+        subBuilder: $2.FieldId.create)
+    ..pc<Table_Row>(2, 'rows', $pb.PbFieldType.PM, subBuilder: Table_Row.create)
     ..hasRequiredFields = false;
 
   Table._() : super();
@@ -604,18 +716,23 @@ class Table extends $pb.GeneratedMessage {
   static Table create() => Table._();
   Table createEmptyInstance() => create();
   static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
-  static Table getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Table getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Table>(create);
   static Table _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.FieldId> get headers => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<Table_Row> get rows => $_getList(1);
 }
 
 class InspectResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<Finding>(1, 'findings', $pb.PbFieldType.PM, Finding.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<Finding>(1, 'findings', $pb.PbFieldType.PM, subBuilder: Finding.create)
     ..aOB(2, 'findingsTruncated')
     ..hasRequiredFields = false;
 
@@ -636,39 +753,40 @@ class InspectResult extends $pb.GeneratedMessage {
   InspectResult createEmptyInstance() => create();
   static $pb.PbList<InspectResult> createRepeated() =>
       $pb.PbList<InspectResult>();
-  static InspectResult getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectResult>(create);
   static InspectResult _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Finding> get findings => $_getList(0);
 
-  $core.bool get findingsTruncated => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get findingsTruncated => $_getBF(1);
+  @$pb.TagNumber(2)
   set findingsTruncated($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFindingsTruncated() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFindingsTruncated() => clearField(2);
 }
 
 class Finding extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Finding',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'quote')
-    ..a<$2.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
-    ..e<$2.Likelihood>(
-        3,
-        'likelihood',
-        $pb.PbFieldType.OE,
-        $2.Likelihood.LIKELIHOOD_UNSPECIFIED,
-        $2.Likelihood.valueOf,
-        $2.Likelihood.values)
-    ..a<Location>(
-        4, 'location', $pb.PbFieldType.OM, Location.getDefault, Location.create)
-    ..a<$3.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<QuoteInfo>(7, 'quoteInfo', $pb.PbFieldType.OM, QuoteInfo.getDefault,
-        QuoteInfo.create)
+    ..aOM<$2.InfoType>(2, 'infoType', subBuilder: $2.InfoType.create)
+    ..e<$2.Likelihood>(3, 'likelihood', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.Likelihood.LIKELIHOOD_UNSPECIFIED,
+        valueOf: $2.Likelihood.valueOf,
+        enumValues: $2.Likelihood.values)
+    ..aOM<Location>(4, 'location', subBuilder: Location.create)
+    ..aOM<$3.Timestamp>(6, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<QuoteInfo>(7, 'quoteInfo', subBuilder: QuoteInfo.create)
     ..hasRequiredFields = false;
 
   Finding._() : super();
@@ -687,67 +805,100 @@ class Finding extends $pb.GeneratedMessage {
   static Finding create() => Finding._();
   Finding createEmptyInstance() => create();
   static $pb.PbList<Finding> createRepeated() => $pb.PbList<Finding>();
-  static Finding getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Finding getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Finding>(create);
   static Finding _defaultInstance;
 
-  $core.String get quote => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get quote => $_getSZ(0);
+  @$pb.TagNumber(1)
   set quote($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQuote() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQuote() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.InfoType get infoType => $_getN(1);
+  @$pb.TagNumber(2)
   set infoType($2.InfoType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInfoType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInfoType() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.InfoType ensureInfoType() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $2.Likelihood get likelihood => $_getN(2);
+  @$pb.TagNumber(3)
   set likelihood($2.Likelihood v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLikelihood() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLikelihood() => clearField(3);
 
+  @$pb.TagNumber(4)
   Location get location => $_getN(3);
+  @$pb.TagNumber(4)
   set location(Location v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasLocation() => $_has(3);
+  @$pb.TagNumber(4)
   void clearLocation() => clearField(4);
+  @$pb.TagNumber(4)
+  Location ensureLocation() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   $3.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(6)
   set createTime($3.Timestamp v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateTime() => $_has(4);
+  @$pb.TagNumber(6)
   void clearCreateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Timestamp ensureCreateTime() => $_ensure(4);
 
+  @$pb.TagNumber(7)
   QuoteInfo get quoteInfo => $_getN(5);
+  @$pb.TagNumber(7)
   set quoteInfo(QuoteInfo v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasQuoteInfo() => $_has(5);
+  @$pb.TagNumber(7)
   void clearQuoteInfo() => clearField(7);
+  @$pb.TagNumber(7)
+  QuoteInfo ensureQuoteInfo() => $_ensure(5);
 }
 
 class Location extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Location',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<Range>(
-        1, 'byteRange', $pb.PbFieldType.OM, Range.getDefault, Range.create)
-    ..a<Range>(
-        2, 'codepointRange', $pb.PbFieldType.OM, Range.getDefault, Range.create)
-    ..pc<ContentLocation>(
-        7, 'contentLocations', $pb.PbFieldType.PM, ContentLocation.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<Range>(1, 'byteRange', subBuilder: Range.create)
+    ..aOM<Range>(2, 'codepointRange', subBuilder: Range.create)
+    ..pc<ContentLocation>(7, 'contentLocations', $pb.PbFieldType.PM,
+        subBuilder: ContentLocation.create)
     ..hasRequiredFields = false;
 
   Location._() : super();
@@ -766,25 +917,40 @@ class Location extends $pb.GeneratedMessage {
   static Location create() => Location._();
   Location createEmptyInstance() => create();
   static $pb.PbList<Location> createRepeated() => $pb.PbList<Location>();
-  static Location getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Location getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Location>(create);
   static Location _defaultInstance;
 
+  @$pb.TagNumber(1)
   Range get byteRange => $_getN(0);
+  @$pb.TagNumber(1)
   set byteRange(Range v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasByteRange() => $_has(0);
+  @$pb.TagNumber(1)
   void clearByteRange() => clearField(1);
+  @$pb.TagNumber(1)
+  Range ensureByteRange() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Range get codepointRange => $_getN(1);
+  @$pb.TagNumber(2)
   set codepointRange(Range v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCodepointRange() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCodepointRange() => clearField(2);
+  @$pb.TagNumber(2)
+  Range ensureCodepointRange() => $_ensure(1);
 
+  @$pb.TagNumber(7)
   $core.List<ContentLocation> get contentLocations => $_getList(2);
 }
 
@@ -804,17 +970,17 @@ class ContentLocation extends $pb.GeneratedMessage {
     0: ContentLocation_Location.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContentLocation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 5])
     ..aOS(1, 'containerName')
-    ..a<RecordLocation>(2, 'recordLocation', $pb.PbFieldType.OM,
-        RecordLocation.getDefault, RecordLocation.create)
-    ..a<ImageLocation>(3, 'imageLocation', $pb.PbFieldType.OM,
-        ImageLocation.getDefault, ImageLocation.create)
-    ..a<DocumentLocation>(5, 'documentLocation', $pb.PbFieldType.OM,
-        DocumentLocation.getDefault, DocumentLocation.create)
-    ..a<$3.Timestamp>(6, 'containerTimestamp', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..aOM<RecordLocation>(2, 'recordLocation',
+        subBuilder: RecordLocation.create)
+    ..aOM<ImageLocation>(3, 'imageLocation', subBuilder: ImageLocation.create)
+    ..aOM<DocumentLocation>(5, 'documentLocation',
+        subBuilder: DocumentLocation.create)
+    ..aOM<$3.Timestamp>(6, 'containerTimestamp',
+        subBuilder: $3.Timestamp.create)
     ..aOS(7, 'containerVersion')
     ..hasRequiredFields = false;
 
@@ -835,66 +1001,100 @@ class ContentLocation extends $pb.GeneratedMessage {
   ContentLocation createEmptyInstance() => create();
   static $pb.PbList<ContentLocation> createRepeated() =>
       $pb.PbList<ContentLocation>();
-  static ContentLocation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ContentLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ContentLocation>(create);
   static ContentLocation _defaultInstance;
 
   ContentLocation_Location whichLocation() =>
       _ContentLocation_LocationByTag[$_whichOneof(0)];
   void clearLocation() => clearField($_whichOneof(0));
 
-  $core.String get containerName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get containerName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set containerName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasContainerName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearContainerName() => clearField(1);
 
+  @$pb.TagNumber(2)
   RecordLocation get recordLocation => $_getN(1);
+  @$pb.TagNumber(2)
   set recordLocation(RecordLocation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRecordLocation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRecordLocation() => clearField(2);
+  @$pb.TagNumber(2)
+  RecordLocation ensureRecordLocation() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ImageLocation get imageLocation => $_getN(2);
+  @$pb.TagNumber(3)
   set imageLocation(ImageLocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasImageLocation() => $_has(2);
+  @$pb.TagNumber(3)
   void clearImageLocation() => clearField(3);
+  @$pb.TagNumber(3)
+  ImageLocation ensureImageLocation() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   DocumentLocation get documentLocation => $_getN(3);
+  @$pb.TagNumber(5)
   set documentLocation(DocumentLocation v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDocumentLocation() => $_has(3);
+  @$pb.TagNumber(5)
   void clearDocumentLocation() => clearField(5);
+  @$pb.TagNumber(5)
+  DocumentLocation ensureDocumentLocation() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   $3.Timestamp get containerTimestamp => $_getN(4);
+  @$pb.TagNumber(6)
   set containerTimestamp($3.Timestamp v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasContainerTimestamp() => $_has(4);
+  @$pb.TagNumber(6)
   void clearContainerTimestamp() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Timestamp ensureContainerTimestamp() => $_ensure(4);
 
-  $core.String get containerVersion => $_getS(5, '');
+  @$pb.TagNumber(7)
+  $core.String get containerVersion => $_getSZ(5);
+  @$pb.TagNumber(7)
   set containerVersion($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasContainerVersion() => $_has(5);
+  @$pb.TagNumber(7)
   void clearContainerVersion() => clearField(7);
 }
 
 class DocumentLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DocumentLocation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'fileOffset')
     ..hasRequiredFields = false;
 
@@ -915,28 +1115,31 @@ class DocumentLocation extends $pb.GeneratedMessage {
   DocumentLocation createEmptyInstance() => create();
   static $pb.PbList<DocumentLocation> createRepeated() =>
       $pb.PbList<DocumentLocation>();
-  static DocumentLocation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DocumentLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DocumentLocation>(create);
   static DocumentLocation _defaultInstance;
 
-  Int64 get fileOffset => $_getI64(0);
-  set fileOffset(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get fileOffset => $_getI64(0);
+  @$pb.TagNumber(1)
+  set fileOffset($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFileOffset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFileOffset() => clearField(1);
 }
 
 class RecordLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordLocation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.RecordKey>(1, 'recordKey', $pb.PbFieldType.OM,
-        $2.RecordKey.getDefault, $2.RecordKey.create)
-    ..a<$2.FieldId>(2, 'fieldId', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
-    ..a<TableLocation>(3, 'tableLocation', $pb.PbFieldType.OM,
-        TableLocation.getDefault, TableLocation.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.RecordKey>(1, 'recordKey', subBuilder: $2.RecordKey.create)
+    ..aOM<$2.FieldId>(2, 'fieldId', subBuilder: $2.FieldId.create)
+    ..aOM<TableLocation>(3, 'tableLocation', subBuilder: TableLocation.create)
     ..hasRequiredFields = false;
 
   RecordLocation._() : super();
@@ -956,37 +1159,58 @@ class RecordLocation extends $pb.GeneratedMessage {
   RecordLocation createEmptyInstance() => create();
   static $pb.PbList<RecordLocation> createRepeated() =>
       $pb.PbList<RecordLocation>();
-  static RecordLocation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordLocation>(create);
   static RecordLocation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.RecordKey get recordKey => $_getN(0);
+  @$pb.TagNumber(1)
   set recordKey($2.RecordKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRecordKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRecordKey() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.RecordKey ensureRecordKey() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldId get fieldId => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldId($2.FieldId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldId() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldId ensureFieldId() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   TableLocation get tableLocation => $_getN(2);
+  @$pb.TagNumber(3)
   set tableLocation(TableLocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTableLocation() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTableLocation() => clearField(3);
+  @$pb.TagNumber(3)
+  TableLocation ensureTableLocation() => $_ensure(2);
 }
 
 class TableLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableLocation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'rowIndex')
     ..hasRequiredFields = false;
 
@@ -1007,21 +1231,28 @@ class TableLocation extends $pb.GeneratedMessage {
   TableLocation createEmptyInstance() => create();
   static $pb.PbList<TableLocation> createRepeated() =>
       $pb.PbList<TableLocation>();
-  static TableLocation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableLocation>(create);
   static TableLocation _defaultInstance;
 
-  Int64 get rowIndex => $_getI64(0);
-  set rowIndex(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get rowIndex => $_getI64(0);
+  @$pb.TagNumber(1)
+  set rowIndex($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRowIndex() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRowIndex() => clearField(1);
 }
 
 class Range extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Range',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'start')
     ..aInt64(2, 'end')
     ..hasRequiredFields = false;
@@ -1042,31 +1273,42 @@ class Range extends $pb.GeneratedMessage {
   static Range create() => Range._();
   Range createEmptyInstance() => create();
   static $pb.PbList<Range> createRepeated() => $pb.PbList<Range>();
-  static Range getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Range getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Range>(create);
   static Range _defaultInstance;
 
-  Int64 get start => $_getI64(0);
-  set start(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get start => $_getI64(0);
+  @$pb.TagNumber(1)
+  set start($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStart() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStart() => clearField(1);
 
-  Int64 get end => $_getI64(1);
-  set end(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get end => $_getI64(1);
+  @$pb.TagNumber(2)
+  set end($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEnd() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEnd() => clearField(2);
 }
 
 class ImageLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImageLocation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<BoundingBox>(
-        1, 'boundingBoxes', $pb.PbFieldType.PM, BoundingBox.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<BoundingBox>(1, 'boundingBoxes', $pb.PbFieldType.PM,
+        subBuilder: BoundingBox.create)
     ..hasRequiredFields = false;
 
   ImageLocation._() : super();
@@ -1086,15 +1328,19 @@ class ImageLocation extends $pb.GeneratedMessage {
   ImageLocation createEmptyInstance() => create();
   static $pb.PbList<ImageLocation> createRepeated() =>
       $pb.PbList<ImageLocation>();
-  static ImageLocation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImageLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImageLocation>(create);
   static ImageLocation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<BoundingBox> get boundingBoxes => $_getList(0);
 }
 
 class BoundingBox extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BoundingBox',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'top', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'left', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'width', $pb.PbFieldType.O3)
@@ -1117,39 +1363,57 @@ class BoundingBox extends $pb.GeneratedMessage {
   static BoundingBox create() => BoundingBox._();
   BoundingBox createEmptyInstance() => create();
   static $pb.PbList<BoundingBox> createRepeated() => $pb.PbList<BoundingBox>();
-  static BoundingBox getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BoundingBox getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BoundingBox>(create);
   static BoundingBox _defaultInstance;
 
-  $core.int get top => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get top => $_getIZ(0);
+  @$pb.TagNumber(1)
   set top($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTop() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTop() => clearField(1);
 
-  $core.int get left => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get left => $_getIZ(1);
+  @$pb.TagNumber(2)
   set left($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLeft() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLeft() => clearField(2);
 
-  $core.int get width => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get width => $_getIZ(2);
+  @$pb.TagNumber(3)
   set width($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasWidth() => $_has(2);
+  @$pb.TagNumber(3)
   void clearWidth() => clearField(3);
 
-  $core.int get height => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get height => $_getIZ(3);
+  @$pb.TagNumber(4)
   set height($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasHeight() => $_has(3);
+  @$pb.TagNumber(4)
   void clearHeight() => clearField(4);
 }
 
@@ -1169,13 +1433,12 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RedactImageRequest.ImageRedactionConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
+    ..aOM<$2.InfoType>(1, 'infoType', subBuilder: $2.InfoType.create)
     ..aOB(2, 'redactAllText')
-    ..a<Color>(
-        3, 'redactionColor', $pb.PbFieldType.OM, Color.getDefault, Color.create)
+    ..aOM<Color>(3, 'redactionColor', subBuilder: Color.create)
     ..hasRequiredFields = false;
 
   RedactImageRequest_ImageRedactionConfig._() : super();
@@ -1200,50 +1463,68 @@ class RedactImageRequest_ImageRedactionConfig extends $pb.GeneratedMessage {
   RedactImageRequest_ImageRedactionConfig createEmptyInstance() => create();
   static $pb.PbList<RedactImageRequest_ImageRedactionConfig> createRepeated() =>
       $pb.PbList<RedactImageRequest_ImageRedactionConfig>();
+  @$core.pragma('dart2js:noInline')
   static RedactImageRequest_ImageRedactionConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          RedactImageRequest_ImageRedactionConfig>(create);
   static RedactImageRequest_ImageRedactionConfig _defaultInstance;
 
   RedactImageRequest_ImageRedactionConfig_Target whichTarget() =>
       _RedactImageRequest_ImageRedactionConfig_TargetByTag[$_whichOneof(0)];
   void clearTarget() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.InfoType get infoType => $_getN(0);
+  @$pb.TagNumber(1)
   set infoType($2.InfoType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInfoType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInfoType() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.InfoType ensureInfoType() => $_ensure(0);
 
-  $core.bool get redactAllText => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get redactAllText => $_getBF(1);
+  @$pb.TagNumber(2)
   set redactAllText($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRedactAllText() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRedactAllText() => clearField(2);
 
+  @$pb.TagNumber(3)
   Color get redactionColor => $_getN(2);
+  @$pb.TagNumber(3)
   set redactionColor(Color v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRedactionColor() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRedactionColor() => clearField(3);
+  @$pb.TagNumber(3)
+  Color ensureRedactionColor() => $_ensure(2);
 }
 
 class RedactImageRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RedactImageRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<InspectConfig>(2, 'inspectConfig', $pb.PbFieldType.OM,
-        InspectConfig.getDefault, InspectConfig.create)
-    ..pc<RedactImageRequest_ImageRedactionConfig>(5, 'imageRedactionConfigs',
-        $pb.PbFieldType.PM, RedactImageRequest_ImageRedactionConfig.create)
+    ..aOM<InspectConfig>(2, 'inspectConfig', subBuilder: InspectConfig.create)
+    ..pc<RedactImageRequest_ImageRedactionConfig>(
+        5, 'imageRedactionConfigs', $pb.PbFieldType.PM,
+        subBuilder: RedactImageRequest_ImageRedactionConfig.create)
     ..aOB(6, 'includeFindings')
-    ..a<ByteContentItem>(7, 'byteItem', $pb.PbFieldType.OM,
-        ByteContentItem.getDefault, ByteContentItem.create)
+    ..aOM<ByteContentItem>(7, 'byteItem', subBuilder: ByteContentItem.create)
     ..hasRequiredFields = false;
 
   RedactImageRequest._() : super();
@@ -1263,49 +1544,72 @@ class RedactImageRequest extends $pb.GeneratedMessage {
   RedactImageRequest createEmptyInstance() => create();
   static $pb.PbList<RedactImageRequest> createRepeated() =>
       $pb.PbList<RedactImageRequest>();
-  static RedactImageRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RedactImageRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RedactImageRequest>(create);
   static RedactImageRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   InspectConfig get inspectConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set inspectConfig(InspectConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInspectConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInspectConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectConfig ensureInspectConfig() => $_ensure(1);
 
+  @$pb.TagNumber(5)
   $core.List<RedactImageRequest_ImageRedactionConfig>
       get imageRedactionConfigs => $_getList(2);
 
-  $core.bool get includeFindings => $_get(3, false);
+  @$pb.TagNumber(6)
+  $core.bool get includeFindings => $_getBF(3);
+  @$pb.TagNumber(6)
   set includeFindings($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasIncludeFindings() => $_has(3);
+  @$pb.TagNumber(6)
   void clearIncludeFindings() => clearField(6);
 
+  @$pb.TagNumber(7)
   ByteContentItem get byteItem => $_getN(4);
+  @$pb.TagNumber(7)
   set byteItem(ByteContentItem v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasByteItem() => $_has(4);
+  @$pb.TagNumber(7)
   void clearByteItem() => clearField(7);
+  @$pb.TagNumber(7)
+  ByteContentItem ensureByteItem() => $_ensure(4);
 }
 
 class Color extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Color',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'red', $pb.PbFieldType.OF)
     ..a<$core.double>(2, 'green', $pb.PbFieldType.OF)
     ..a<$core.double>(3, 'blue', $pb.PbFieldType.OF)
@@ -1327,41 +1631,55 @@ class Color extends $pb.GeneratedMessage {
   static Color create() => Color._();
   Color createEmptyInstance() => create();
   static $pb.PbList<Color> createRepeated() => $pb.PbList<Color>();
-  static Color getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Color getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Color>(create);
   static Color _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get red => $_getN(0);
+  @$pb.TagNumber(1)
   set red($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRed() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRed() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get green => $_getN(1);
+  @$pb.TagNumber(2)
   set green($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGreen() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGreen() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.double get blue => $_getN(2);
+  @$pb.TagNumber(3)
   set blue($core.double v) {
     $_setFloat(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBlue() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBlue() => clearField(3);
 }
 
 class RedactImageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RedactImageResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'redactedImage', $pb.PbFieldType.OY)
     ..aOS(2, 'extractedText')
-    ..a<InspectResult>(3, 'inspectResult', $pb.PbFieldType.OM,
-        InspectResult.getDefault, InspectResult.create)
+    ..aOM<InspectResult>(3, 'inspectResult', subBuilder: InspectResult.create)
     ..hasRequiredFields = false;
 
   RedactImageResponse._() : super();
@@ -1381,45 +1699,59 @@ class RedactImageResponse extends $pb.GeneratedMessage {
   RedactImageResponse createEmptyInstance() => create();
   static $pb.PbList<RedactImageResponse> createRepeated() =>
       $pb.PbList<RedactImageResponse>();
-  static RedactImageResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RedactImageResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RedactImageResponse>(create);
   static RedactImageResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get redactedImage => $_getN(0);
+  @$pb.TagNumber(1)
   set redactedImage($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRedactedImage() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRedactedImage() => clearField(1);
 
-  $core.String get extractedText => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get extractedText => $_getSZ(1);
+  @$pb.TagNumber(2)
   set extractedText($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExtractedText() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExtractedText() => clearField(2);
 
+  @$pb.TagNumber(3)
   InspectResult get inspectResult => $_getN(2);
+  @$pb.TagNumber(3)
   set inspectResult(InspectResult v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInspectResult() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInspectResult() => clearField(3);
+  @$pb.TagNumber(3)
+  InspectResult ensureInspectResult() => $_ensure(2);
 }
 
 class DeidentifyContentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeidentifyContentRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<DeidentifyConfig>(2, 'deidentifyConfig', $pb.PbFieldType.OM,
-        DeidentifyConfig.getDefault, DeidentifyConfig.create)
-    ..a<InspectConfig>(3, 'inspectConfig', $pb.PbFieldType.OM,
-        InspectConfig.getDefault, InspectConfig.create)
-    ..a<ContentItem>(4, 'item', $pb.PbFieldType.OM, ContentItem.getDefault,
-        ContentItem.create)
+    ..aOM<DeidentifyConfig>(2, 'deidentifyConfig',
+        subBuilder: DeidentifyConfig.create)
+    ..aOM<InspectConfig>(3, 'inspectConfig', subBuilder: InspectConfig.create)
+    ..aOM<ContentItem>(4, 'item', subBuilder: ContentItem.create)
     ..aOS(5, 'inspectTemplateName')
     ..aOS(6, 'deidentifyTemplateName')
     ..hasRequiredFields = false;
@@ -1443,66 +1775,97 @@ class DeidentifyContentRequest extends $pb.GeneratedMessage {
   DeidentifyContentRequest createEmptyInstance() => create();
   static $pb.PbList<DeidentifyContentRequest> createRepeated() =>
       $pb.PbList<DeidentifyContentRequest>();
-  static DeidentifyContentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyContentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeidentifyContentRequest>(create);
   static DeidentifyContentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   DeidentifyConfig get deidentifyConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set deidentifyConfig(DeidentifyConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDeidentifyConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDeidentifyConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  DeidentifyConfig ensureDeidentifyConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   InspectConfig get inspectConfig => $_getN(2);
+  @$pb.TagNumber(3)
   set inspectConfig(InspectConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInspectConfig() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInspectConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  InspectConfig ensureInspectConfig() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   ContentItem get item => $_getN(3);
+  @$pb.TagNumber(4)
   set item(ContentItem v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasItem() => $_has(3);
+  @$pb.TagNumber(4)
   void clearItem() => clearField(4);
+  @$pb.TagNumber(4)
+  ContentItem ensureItem() => $_ensure(3);
 
-  $core.String get inspectTemplateName => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get inspectTemplateName => $_getSZ(4);
+  @$pb.TagNumber(5)
   set inspectTemplateName($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasInspectTemplateName() => $_has(4);
+  @$pb.TagNumber(5)
   void clearInspectTemplateName() => clearField(5);
 
-  $core.String get deidentifyTemplateName => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get deidentifyTemplateName => $_getSZ(5);
+  @$pb.TagNumber(6)
   set deidentifyTemplateName($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDeidentifyTemplateName() => $_has(5);
+  @$pb.TagNumber(6)
   void clearDeidentifyTemplateName() => clearField(6);
 }
 
 class DeidentifyContentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeidentifyContentResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<ContentItem>(1, 'item', $pb.PbFieldType.OM, ContentItem.getDefault,
-        ContentItem.create)
-    ..a<TransformationOverview>(2, 'overview', $pb.PbFieldType.OM,
-        TransformationOverview.getDefault, TransformationOverview.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<ContentItem>(1, 'item', subBuilder: ContentItem.create)
+    ..aOM<TransformationOverview>(2, 'overview',
+        subBuilder: TransformationOverview.create)
     ..hasRequiredFields = false;
 
   DeidentifyContentResponse._() : super();
@@ -1525,37 +1888,49 @@ class DeidentifyContentResponse extends $pb.GeneratedMessage {
   DeidentifyContentResponse createEmptyInstance() => create();
   static $pb.PbList<DeidentifyContentResponse> createRepeated() =>
       $pb.PbList<DeidentifyContentResponse>();
-  static DeidentifyContentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyContentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeidentifyContentResponse>(create);
   static DeidentifyContentResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   ContentItem get item => $_getN(0);
+  @$pb.TagNumber(1)
   set item(ContentItem v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasItem() => $_has(0);
+  @$pb.TagNumber(1)
   void clearItem() => clearField(1);
+  @$pb.TagNumber(1)
+  ContentItem ensureItem() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   TransformationOverview get overview => $_getN(1);
+  @$pb.TagNumber(2)
   set overview(TransformationOverview v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOverview() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOverview() => clearField(2);
+  @$pb.TagNumber(2)
+  TransformationOverview ensureOverview() => $_ensure(1);
 }
 
 class ReidentifyContentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReidentifyContentRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<DeidentifyConfig>(2, 'reidentifyConfig', $pb.PbFieldType.OM,
-        DeidentifyConfig.getDefault, DeidentifyConfig.create)
-    ..a<InspectConfig>(3, 'inspectConfig', $pb.PbFieldType.OM,
-        InspectConfig.getDefault, InspectConfig.create)
-    ..a<ContentItem>(4, 'item', $pb.PbFieldType.OM, ContentItem.getDefault,
-        ContentItem.create)
+    ..aOM<DeidentifyConfig>(2, 'reidentifyConfig',
+        subBuilder: DeidentifyConfig.create)
+    ..aOM<InspectConfig>(3, 'inspectConfig', subBuilder: InspectConfig.create)
+    ..aOM<ContentItem>(4, 'item', subBuilder: ContentItem.create)
     ..aOS(5, 'inspectTemplateName')
     ..aOS(6, 'reidentifyTemplateName')
     ..hasRequiredFields = false;
@@ -1579,66 +1954,97 @@ class ReidentifyContentRequest extends $pb.GeneratedMessage {
   ReidentifyContentRequest createEmptyInstance() => create();
   static $pb.PbList<ReidentifyContentRequest> createRepeated() =>
       $pb.PbList<ReidentifyContentRequest>();
-  static ReidentifyContentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReidentifyContentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReidentifyContentRequest>(create);
   static ReidentifyContentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   DeidentifyConfig get reidentifyConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set reidentifyConfig(DeidentifyConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReidentifyConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReidentifyConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  DeidentifyConfig ensureReidentifyConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   InspectConfig get inspectConfig => $_getN(2);
+  @$pb.TagNumber(3)
   set inspectConfig(InspectConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInspectConfig() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInspectConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  InspectConfig ensureInspectConfig() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   ContentItem get item => $_getN(3);
+  @$pb.TagNumber(4)
   set item(ContentItem v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasItem() => $_has(3);
+  @$pb.TagNumber(4)
   void clearItem() => clearField(4);
+  @$pb.TagNumber(4)
+  ContentItem ensureItem() => $_ensure(3);
 
-  $core.String get inspectTemplateName => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get inspectTemplateName => $_getSZ(4);
+  @$pb.TagNumber(5)
   set inspectTemplateName($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasInspectTemplateName() => $_has(4);
+  @$pb.TagNumber(5)
   void clearInspectTemplateName() => clearField(5);
 
-  $core.String get reidentifyTemplateName => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get reidentifyTemplateName => $_getSZ(5);
+  @$pb.TagNumber(6)
   set reidentifyTemplateName($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasReidentifyTemplateName() => $_has(5);
+  @$pb.TagNumber(6)
   void clearReidentifyTemplateName() => clearField(6);
 }
 
 class ReidentifyContentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReidentifyContentResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<ContentItem>(1, 'item', $pb.PbFieldType.OM, ContentItem.getDefault,
-        ContentItem.create)
-    ..a<TransformationOverview>(2, 'overview', $pb.PbFieldType.OM,
-        TransformationOverview.getDefault, TransformationOverview.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<ContentItem>(1, 'item', subBuilder: ContentItem.create)
+    ..aOM<TransformationOverview>(2, 'overview',
+        subBuilder: TransformationOverview.create)
     ..hasRequiredFields = false;
 
   ReidentifyContentResponse._() : super();
@@ -1661,35 +2067,47 @@ class ReidentifyContentResponse extends $pb.GeneratedMessage {
   ReidentifyContentResponse createEmptyInstance() => create();
   static $pb.PbList<ReidentifyContentResponse> createRepeated() =>
       $pb.PbList<ReidentifyContentResponse>();
-  static ReidentifyContentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReidentifyContentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReidentifyContentResponse>(create);
   static ReidentifyContentResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   ContentItem get item => $_getN(0);
+  @$pb.TagNumber(1)
   set item(ContentItem v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasItem() => $_has(0);
+  @$pb.TagNumber(1)
   void clearItem() => clearField(1);
+  @$pb.TagNumber(1)
+  ContentItem ensureItem() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   TransformationOverview get overview => $_getN(1);
+  @$pb.TagNumber(2)
   set overview(TransformationOverview v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOverview() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOverview() => clearField(2);
+  @$pb.TagNumber(2)
+  TransformationOverview ensureOverview() => $_ensure(1);
 }
 
 class InspectContentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectContentRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<InspectConfig>(2, 'inspectConfig', $pb.PbFieldType.OM,
-        InspectConfig.getDefault, InspectConfig.create)
-    ..a<ContentItem>(3, 'item', $pb.PbFieldType.OM, ContentItem.getDefault,
-        ContentItem.create)
+    ..aOM<InspectConfig>(2, 'inspectConfig', subBuilder: InspectConfig.create)
+    ..aOM<ContentItem>(3, 'item', subBuilder: ContentItem.create)
     ..aOS(4, 'inspectTemplateName')
     ..hasRequiredFields = false;
 
@@ -1712,48 +2130,69 @@ class InspectContentRequest extends $pb.GeneratedMessage {
   InspectContentRequest createEmptyInstance() => create();
   static $pb.PbList<InspectContentRequest> createRepeated() =>
       $pb.PbList<InspectContentRequest>();
-  static InspectContentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectContentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectContentRequest>(create);
   static InspectContentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   InspectConfig get inspectConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set inspectConfig(InspectConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInspectConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInspectConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectConfig ensureInspectConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ContentItem get item => $_getN(2);
+  @$pb.TagNumber(3)
   set item(ContentItem v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasItem() => $_has(2);
+  @$pb.TagNumber(3)
   void clearItem() => clearField(3);
+  @$pb.TagNumber(3)
+  ContentItem ensureItem() => $_ensure(2);
 
-  $core.String get inspectTemplateName => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get inspectTemplateName => $_getSZ(3);
+  @$pb.TagNumber(4)
   set inspectTemplateName($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInspectTemplateName() => $_has(3);
+  @$pb.TagNumber(4)
   void clearInspectTemplateName() => clearField(4);
 }
 
 class InspectContentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectContentResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<InspectResult>(1, 'result', $pb.PbFieldType.OM,
-        InspectResult.getDefault, InspectResult.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<InspectResult>(1, 'result', subBuilder: InspectResult.create)
     ..hasRequiredFields = false;
 
   InspectContentResponse._() : super();
@@ -1775,17 +2214,24 @@ class InspectContentResponse extends $pb.GeneratedMessage {
   InspectContentResponse createEmptyInstance() => create();
   static $pb.PbList<InspectContentResponse> createRepeated() =>
       $pb.PbList<InspectContentResponse>();
-  static InspectContentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectContentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectContentResponse>(create);
   static InspectContentResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   InspectResult get result => $_getN(0);
+  @$pb.TagNumber(1)
   set result(InspectResult v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResult() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResult() => clearField(1);
+  @$pb.TagNumber(1)
+  InspectResult ensureResult() => $_ensure(0);
 }
 
 enum OutputStorageConfig_Type { table, notSet }
@@ -1797,17 +2243,15 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
     0: OutputStorageConfig_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputStorageConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<$2.BigQueryTable>(1, 'table', $pb.PbFieldType.OM,
-        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
-    ..e<OutputStorageConfig_OutputSchema>(
-        3,
-        'outputSchema',
-        $pb.PbFieldType.OE,
-        OutputStorageConfig_OutputSchema.OUTPUT_SCHEMA_UNSPECIFIED,
-        OutputStorageConfig_OutputSchema.valueOf,
-        OutputStorageConfig_OutputSchema.values)
+    ..aOM<$2.BigQueryTable>(1, 'table', subBuilder: $2.BigQueryTable.create)
+    ..e<OutputStorageConfig_OutputSchema>(3, 'outputSchema', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            OutputStorageConfig_OutputSchema.OUTPUT_SCHEMA_UNSPECIFIED,
+        valueOf: OutputStorageConfig_OutputSchema.valueOf,
+        enumValues: OutputStorageConfig_OutputSchema.values)
     ..hasRequiredFields = false;
 
   OutputStorageConfig._() : super();
@@ -1827,36 +2271,47 @@ class OutputStorageConfig extends $pb.GeneratedMessage {
   OutputStorageConfig createEmptyInstance() => create();
   static $pb.PbList<OutputStorageConfig> createRepeated() =>
       $pb.PbList<OutputStorageConfig>();
-  static OutputStorageConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OutputStorageConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OutputStorageConfig>(create);
   static OutputStorageConfig _defaultInstance;
 
   OutputStorageConfig_Type whichType() =>
       _OutputStorageConfig_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.BigQueryTable get table => $_getN(0);
+  @$pb.TagNumber(1)
   set table($2.BigQueryTable v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTable() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTable() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.BigQueryTable ensureTable() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   OutputStorageConfig_OutputSchema get outputSchema => $_getN(1);
+  @$pb.TagNumber(3)
   set outputSchema(OutputStorageConfig_OutputSchema v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOutputSchema() => $_has(1);
+  @$pb.TagNumber(3)
   void clearOutputSchema() => clearField(3);
 }
 
 class InfoTypeStats extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InfoTypeStats',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.InfoType>(1, 'infoType', subBuilder: $2.InfoType.create)
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
@@ -1877,34 +2332,46 @@ class InfoTypeStats extends $pb.GeneratedMessage {
   InfoTypeStats createEmptyInstance() => create();
   static $pb.PbList<InfoTypeStats> createRepeated() =>
       $pb.PbList<InfoTypeStats>();
-  static InfoTypeStats getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InfoTypeStats>(create);
   static InfoTypeStats _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.InfoType get infoType => $_getN(0);
+  @$pb.TagNumber(1)
   set infoType($2.InfoType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInfoType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInfoType() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.InfoType ensureInfoType() => $_ensure(0);
 
-  Int64 get count => $_getI64(1);
-  set count(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get count => $_getI64(1);
+  @$pb.TagNumber(2)
+  set count($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCount() => clearField(2);
 }
 
 class InspectDataSourceDetails_RequestedOptions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InspectDataSourceDetails.RequestedOptions',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<InspectTemplate>(1, 'snapshotInspectTemplate', $pb.PbFieldType.OM,
-        InspectTemplate.getDefault, InspectTemplate.create)
-    ..a<InspectJobConfig>(3, 'jobConfig', $pb.PbFieldType.OM,
-        InspectJobConfig.getDefault, InspectJobConfig.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<InspectTemplate>(1, 'snapshotInspectTemplate',
+        subBuilder: InspectTemplate.create)
+    ..aOM<InspectJobConfig>(3, 'jobConfig', subBuilder: InspectJobConfig.create)
     ..hasRequiredFields = false;
 
   InspectDataSourceDetails_RequestedOptions._() : super();
@@ -1930,35 +2397,50 @@ class InspectDataSourceDetails_RequestedOptions extends $pb.GeneratedMessage {
   static $pb.PbList<InspectDataSourceDetails_RequestedOptions>
       createRepeated() =>
           $pb.PbList<InspectDataSourceDetails_RequestedOptions>();
+  @$core.pragma('dart2js:noInline')
   static InspectDataSourceDetails_RequestedOptions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          InspectDataSourceDetails_RequestedOptions>(create);
   static InspectDataSourceDetails_RequestedOptions _defaultInstance;
 
+  @$pb.TagNumber(1)
   InspectTemplate get snapshotInspectTemplate => $_getN(0);
+  @$pb.TagNumber(1)
   set snapshotInspectTemplate(InspectTemplate v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSnapshotInspectTemplate() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSnapshotInspectTemplate() => clearField(1);
+  @$pb.TagNumber(1)
+  InspectTemplate ensureSnapshotInspectTemplate() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   InspectJobConfig get jobConfig => $_getN(1);
+  @$pb.TagNumber(3)
   set jobConfig(InspectJobConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasJobConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearJobConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  InspectJobConfig ensureJobConfig() => $_ensure(1);
 }
 
 class InspectDataSourceDetails_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InspectDataSourceDetails.Result',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'processedBytes')
     ..aInt64(2, 'totalEstimatedBytes')
-    ..pc<InfoTypeStats>(
-        3, 'infoTypeStats', $pb.PbFieldType.PM, InfoTypeStats.create)
+    ..pc<InfoTypeStats>(3, 'infoTypeStats', $pb.PbFieldType.PM,
+        subBuilder: InfoTypeStats.create)
     ..hasRequiredFields = false;
 
   InspectDataSourceDetails_Result._() : super();
@@ -1982,44 +2464,48 @@ class InspectDataSourceDetails_Result extends $pb.GeneratedMessage {
   InspectDataSourceDetails_Result createEmptyInstance() => create();
   static $pb.PbList<InspectDataSourceDetails_Result> createRepeated() =>
       $pb.PbList<InspectDataSourceDetails_Result>();
-  static InspectDataSourceDetails_Result getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectDataSourceDetails_Result getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectDataSourceDetails_Result>(
+          create);
   static InspectDataSourceDetails_Result _defaultInstance;
 
-  Int64 get processedBytes => $_getI64(0);
-  set processedBytes(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get processedBytes => $_getI64(0);
+  @$pb.TagNumber(1)
+  set processedBytes($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProcessedBytes() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProcessedBytes() => clearField(1);
 
-  Int64 get totalEstimatedBytes => $_getI64(1);
-  set totalEstimatedBytes(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get totalEstimatedBytes => $_getI64(1);
+  @$pb.TagNumber(2)
+  set totalEstimatedBytes($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTotalEstimatedBytes() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTotalEstimatedBytes() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<InfoTypeStats> get infoTypeStats => $_getList(2);
 }
 
 class InspectDataSourceDetails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectDataSourceDetails',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<InspectDataSourceDetails_RequestedOptions>(
-        2,
-        'requestedOptions',
-        $pb.PbFieldType.OM,
-        InspectDataSourceDetails_RequestedOptions.getDefault,
-        InspectDataSourceDetails_RequestedOptions.create)
-    ..a<InspectDataSourceDetails_Result>(
-        3,
-        'result',
-        $pb.PbFieldType.OM,
-        InspectDataSourceDetails_Result.getDefault,
-        InspectDataSourceDetails_Result.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<InspectDataSourceDetails_RequestedOptions>(2, 'requestedOptions',
+        subBuilder: InspectDataSourceDetails_RequestedOptions.create)
+    ..aOM<InspectDataSourceDetails_Result>(3, 'result',
+        subBuilder: InspectDataSourceDetails_Result.create)
     ..hasRequiredFields = false;
 
   InspectDataSourceDetails._() : super();
@@ -2041,34 +2527,50 @@ class InspectDataSourceDetails extends $pb.GeneratedMessage {
   InspectDataSourceDetails createEmptyInstance() => create();
   static $pb.PbList<InspectDataSourceDetails> createRepeated() =>
       $pb.PbList<InspectDataSourceDetails>();
-  static InspectDataSourceDetails getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectDataSourceDetails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectDataSourceDetails>(create);
   static InspectDataSourceDetails _defaultInstance;
 
+  @$pb.TagNumber(2)
   InspectDataSourceDetails_RequestedOptions get requestedOptions => $_getN(0);
+  @$pb.TagNumber(2)
   set requestedOptions(InspectDataSourceDetails_RequestedOptions v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestedOptions() => $_has(0);
+  @$pb.TagNumber(2)
   void clearRequestedOptions() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectDataSourceDetails_RequestedOptions ensureRequestedOptions() =>
+      $_ensure(0);
 
+  @$pb.TagNumber(3)
   InspectDataSourceDetails_Result get result => $_getN(1);
+  @$pb.TagNumber(3)
   set result(InspectDataSourceDetails_Result v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasResult() => $_has(1);
+  @$pb.TagNumber(3)
   void clearResult() => clearField(3);
+  @$pb.TagNumber(3)
+  InspectDataSourceDetails_Result ensureResult() => $_ensure(1);
 }
 
 class InfoTypeDescription extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InfoTypeDescription',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..pc<InfoTypeSupportedBy>(3, 'supportedBy', $pb.PbFieldType.PE, null,
-        InfoTypeSupportedBy.valueOf, InfoTypeSupportedBy.values)
+    ..pc<InfoTypeSupportedBy>(3, 'supportedBy', $pb.PbFieldType.PE,
+        valueOf: InfoTypeSupportedBy.valueOf,
+        enumValues: InfoTypeSupportedBy.values)
     ..aOS(4, 'description')
     ..hasRequiredFields = false;
 
@@ -2089,40 +2591,55 @@ class InfoTypeDescription extends $pb.GeneratedMessage {
   InfoTypeDescription createEmptyInstance() => create();
   static $pb.PbList<InfoTypeDescription> createRepeated() =>
       $pb.PbList<InfoTypeDescription>();
-  static InfoTypeDescription getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeDescription getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InfoTypeDescription>(create);
   static InfoTypeDescription _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<InfoTypeSupportedBy> get supportedBy => $_getList(2);
 
-  $core.String get description => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get description => $_getSZ(3);
+  @$pb.TagNumber(4)
   set description($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDescription() => clearField(4);
 }
 
 class ListInfoTypesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInfoTypesRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'languageCode')
     ..aOS(2, 'filter')
     ..hasRequiredFields = false;
@@ -2145,32 +2662,42 @@ class ListInfoTypesRequest extends $pb.GeneratedMessage {
   ListInfoTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInfoTypesRequest> createRepeated() =>
       $pb.PbList<ListInfoTypesRequest>();
-  static ListInfoTypesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInfoTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInfoTypesRequest>(create);
   static ListInfoTypesRequest _defaultInstance;
 
-  $core.String get languageCode => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get languageCode => $_getSZ(0);
+  @$pb.TagNumber(1)
   set languageCode($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLanguageCode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLanguageCode() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 }
 
 class ListInfoTypesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInfoTypesResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<InfoTypeDescription>(
-        1, 'infoTypes', $pb.PbFieldType.PM, InfoTypeDescription.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<InfoTypeDescription>(1, 'infoTypes', $pb.PbFieldType.PM,
+        subBuilder: InfoTypeDescription.create)
     ..hasRequiredFields = false;
 
   ListInfoTypesResponse._() : super();
@@ -2192,21 +2719,23 @@ class ListInfoTypesResponse extends $pb.GeneratedMessage {
   ListInfoTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInfoTypesResponse> createRepeated() =>
       $pb.PbList<ListInfoTypesResponse>();
-  static ListInfoTypesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInfoTypesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInfoTypesResponse>(create);
   static ListInfoTypesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<InfoTypeDescription> get infoTypes => $_getList(0);
 }
 
 class RiskAnalysisJobConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RiskAnalysisJobConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<PrivacyMetric>(1, 'privacyMetric', $pb.PbFieldType.OM,
-        PrivacyMetric.getDefault, PrivacyMetric.create)
-    ..a<$2.BigQueryTable>(2, 'sourceTable', $pb.PbFieldType.OM,
-        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
-    ..pc<Action>(3, 'actions', $pb.PbFieldType.PM, Action.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<PrivacyMetric>(1, 'privacyMetric', subBuilder: PrivacyMetric.create)
+    ..aOM<$2.BigQueryTable>(2, 'sourceTable',
+        subBuilder: $2.BigQueryTable.create)
+    ..pc<Action>(3, 'actions', $pb.PbFieldType.PM, subBuilder: Action.create)
     ..hasRequiredFields = false;
 
   RiskAnalysisJobConfig._() : super();
@@ -2228,26 +2757,40 @@ class RiskAnalysisJobConfig extends $pb.GeneratedMessage {
   RiskAnalysisJobConfig createEmptyInstance() => create();
   static $pb.PbList<RiskAnalysisJobConfig> createRepeated() =>
       $pb.PbList<RiskAnalysisJobConfig>();
-  static RiskAnalysisJobConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RiskAnalysisJobConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RiskAnalysisJobConfig>(create);
   static RiskAnalysisJobConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   PrivacyMetric get privacyMetric => $_getN(0);
+  @$pb.TagNumber(1)
   set privacyMetric(PrivacyMetric v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPrivacyMetric() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPrivacyMetric() => clearField(1);
+  @$pb.TagNumber(1)
+  PrivacyMetric ensurePrivacyMetric() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.BigQueryTable get sourceTable => $_getN(1);
+  @$pb.TagNumber(2)
   set sourceTable($2.BigQueryTable v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSourceTable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSourceTable() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.BigQueryTable ensureSourceTable() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<Action> get actions => $_getList(2);
 }
 
@@ -2261,15 +2804,13 @@ class QuasiId extends $pb.GeneratedMessage {
     0: QuasiId_Tag.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuasiId',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
-    ..a<$2.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
+    ..aOM<$2.InfoType>(2, 'infoType', subBuilder: $2.InfoType.create)
     ..aOS(3, 'customTag')
-    ..a<$1.Empty>(
-        4, 'inferred', $pb.PbFieldType.OM, $1.Empty.getDefault, $1.Empty.create)
+    ..aOM<$1.Empty>(4, 'inferred', subBuilder: $1.Empty.create)
     ..hasRequiredFields = false;
 
   QuasiId._() : super();
@@ -2288,51 +2829,75 @@ class QuasiId extends $pb.GeneratedMessage {
   static QuasiId create() => QuasiId._();
   QuasiId createEmptyInstance() => create();
   static $pb.PbList<QuasiId> createRepeated() => $pb.PbList<QuasiId>();
-  static QuasiId getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QuasiId getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QuasiId>(create);
   static QuasiId _defaultInstance;
 
   QuasiId_Tag whichTag() => _QuasiId_TagByTag[$_whichOneof(0)];
   void clearTag() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.InfoType get infoType => $_getN(1);
+  @$pb.TagNumber(2)
   set infoType($2.InfoType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInfoType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInfoType() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.InfoType ensureInfoType() => $_ensure(1);
 
-  $core.String get customTag => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get customTag => $_getSZ(2);
+  @$pb.TagNumber(3)
   set customTag($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCustomTag() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCustomTag() => clearField(3);
 
+  @$pb.TagNumber(4)
   $1.Empty get inferred => $_getN(3);
+  @$pb.TagNumber(4)
   set inferred($1.Empty v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInferred() => $_has(3);
+  @$pb.TagNumber(4)
   void clearInferred() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Empty ensureInferred() => $_ensure(3);
 }
 
 class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StatisticalTable.QuasiIdentifierField',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
     ..aOS(2, 'customTag')
     ..hasRequiredFields = false;
 
@@ -2358,36 +2923,48 @@ class StatisticalTable_QuasiIdentifierField extends $pb.GeneratedMessage {
   StatisticalTable_QuasiIdentifierField createEmptyInstance() => create();
   static $pb.PbList<StatisticalTable_QuasiIdentifierField> createRepeated() =>
       $pb.PbList<StatisticalTable_QuasiIdentifierField>();
+  @$core.pragma('dart2js:noInline')
   static StatisticalTable_QuasiIdentifierField getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          StatisticalTable_QuasiIdentifierField>(create);
   static StatisticalTable_QuasiIdentifierField _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 
-  $core.String get customTag => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get customTag => $_getSZ(1);
+  @$pb.TagNumber(2)
   set customTag($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCustomTag() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCustomTag() => clearField(2);
 }
 
 class StatisticalTable extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StatisticalTable',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<StatisticalTable_QuasiIdentifierField>(1, 'quasiIds',
-        $pb.PbFieldType.PM, StatisticalTable_QuasiIdentifierField.create)
-    ..a<$2.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
-        $2.FieldId.getDefault, $2.FieldId.create)
-    ..a<$2.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
-        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<StatisticalTable_QuasiIdentifierField>(
+        1, 'quasiIds', $pb.PbFieldType.PM,
+        subBuilder: StatisticalTable_QuasiIdentifierField.create)
+    ..aOM<$2.FieldId>(2, 'relativeFrequency', subBuilder: $2.FieldId.create)
+    ..aOM<$2.BigQueryTable>(3, 'table', subBuilder: $2.BigQueryTable.create)
     ..hasRequiredFields = false;
 
   StatisticalTable._() : super();
@@ -2407,36 +2984,50 @@ class StatisticalTable extends $pb.GeneratedMessage {
   StatisticalTable createEmptyInstance() => create();
   static $pb.PbList<StatisticalTable> createRepeated() =>
       $pb.PbList<StatisticalTable>();
-  static StatisticalTable getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StatisticalTable getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StatisticalTable>(create);
   static StatisticalTable _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<StatisticalTable_QuasiIdentifierField> get quasiIds =>
       $_getList(0);
 
+  @$pb.TagNumber(2)
   $2.FieldId get relativeFrequency => $_getN(1);
+  @$pb.TagNumber(2)
   set relativeFrequency($2.FieldId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRelativeFrequency() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRelativeFrequency() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldId ensureRelativeFrequency() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $2.BigQueryTable get table => $_getN(2);
+  @$pb.TagNumber(3)
   set table($2.BigQueryTable v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTable() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.BigQueryTable ensureTable() => $_ensure(2);
 }
 
 class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.NumericalStatsConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_NumericalStatsConfig._() : super();
@@ -2460,25 +3051,33 @@ class PrivacyMetric_NumericalStatsConfig extends $pb.GeneratedMessage {
   PrivacyMetric_NumericalStatsConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_NumericalStatsConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_NumericalStatsConfig>();
-  static PrivacyMetric_NumericalStatsConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PrivacyMetric_NumericalStatsConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PrivacyMetric_NumericalStatsConfig>(
+          create);
   static PrivacyMetric_NumericalStatsConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 }
 
 class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.CategoricalStatsConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_CategoricalStatsConfig._() : super();
@@ -2503,26 +3102,35 @@ class PrivacyMetric_CategoricalStatsConfig extends $pb.GeneratedMessage {
   PrivacyMetric_CategoricalStatsConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_CategoricalStatsConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_CategoricalStatsConfig>();
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_CategoricalStatsConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PrivacyMetric_CategoricalStatsConfig>(create);
   static PrivacyMetric_CategoricalStatsConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 }
 
 class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KAnonymityConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $2.FieldId.create)
-    ..a<$2.EntityId>(2, 'entityId', $pb.PbFieldType.OM, $2.EntityId.getDefault,
-        $2.EntityId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM,
+        subBuilder: $2.FieldId.create)
+    ..aOM<$2.EntityId>(2, 'entityId', subBuilder: $2.EntityId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_KAnonymityConfig._() : super();
@@ -2546,28 +3154,37 @@ class PrivacyMetric_KAnonymityConfig extends $pb.GeneratedMessage {
   PrivacyMetric_KAnonymityConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_KAnonymityConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_KAnonymityConfig>();
-  static PrivacyMetric_KAnonymityConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PrivacyMetric_KAnonymityConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PrivacyMetric_KAnonymityConfig>(create);
   static PrivacyMetric_KAnonymityConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.FieldId> get quasiIds => $_getList(0);
 
+  @$pb.TagNumber(2)
   $2.EntityId get entityId => $_getN(1);
+  @$pb.TagNumber(2)
   set entityId($2.EntityId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEntityId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEntityId() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.EntityId ensureEntityId() => $_ensure(1);
 }
 
 class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.LDiversityConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM, $2.FieldId.create)
-    ..a<$2.FieldId>(2, 'sensitiveAttribute', $pb.PbFieldType.OM,
-        $2.FieldId.getDefault, $2.FieldId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.FieldId>(1, 'quasiIds', $pb.PbFieldType.PM,
+        subBuilder: $2.FieldId.create)
+    ..aOM<$2.FieldId>(2, 'sensitiveAttribute', subBuilder: $2.FieldId.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_LDiversityConfig._() : super();
@@ -2591,19 +3208,27 @@ class PrivacyMetric_LDiversityConfig extends $pb.GeneratedMessage {
   PrivacyMetric_LDiversityConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_LDiversityConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_LDiversityConfig>();
-  static PrivacyMetric_LDiversityConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PrivacyMetric_LDiversityConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PrivacyMetric_LDiversityConfig>(create);
   static PrivacyMetric_LDiversityConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.FieldId> get quasiIds => $_getList(0);
 
+  @$pb.TagNumber(2)
   $2.FieldId get sensitiveAttribute => $_getN(1);
+  @$pb.TagNumber(2)
   set sensitiveAttribute($2.FieldId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSensitiveAttribute() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSensitiveAttribute() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldId ensureSensitiveAttribute() => $_ensure(1);
 }
 
 enum PrivacyMetric_KMapEstimationConfig_TaggedField_Tag {
@@ -2625,15 +3250,13 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.TaggedField',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
-    ..a<$2.InfoType>(2, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
+    ..aOM<$2.InfoType>(2, 'infoType', subBuilder: $2.InfoType.create)
     ..aOS(3, 'customTag')
-    ..a<$1.Empty>(
-        4, 'inferred', $pb.PbFieldType.OM, $1.Empty.getDefault, $1.Empty.create)
+    ..aOM<$1.Empty>(4, 'inferred', subBuilder: $1.Empty.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_KMapEstimationConfig_TaggedField._() : super();
@@ -2662,54 +3285,78 @@ class PrivacyMetric_KMapEstimationConfig_TaggedField
   static $pb.PbList<PrivacyMetric_KMapEstimationConfig_TaggedField>
       createRepeated() =>
           $pb.PbList<PrivacyMetric_KMapEstimationConfig_TaggedField>();
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig_TaggedField getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PrivacyMetric_KMapEstimationConfig_TaggedField>(create);
   static PrivacyMetric_KMapEstimationConfig_TaggedField _defaultInstance;
 
   PrivacyMetric_KMapEstimationConfig_TaggedField_Tag whichTag() =>
       _PrivacyMetric_KMapEstimationConfig_TaggedField_TagByTag[$_whichOneof(0)];
   void clearTag() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.InfoType get infoType => $_getN(1);
+  @$pb.TagNumber(2)
   set infoType($2.InfoType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInfoType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInfoType() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.InfoType ensureInfoType() => $_ensure(1);
 
-  $core.String get customTag => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get customTag => $_getSZ(2);
+  @$pb.TagNumber(3)
   set customTag($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCustomTag() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCustomTag() => clearField(3);
 
+  @$pb.TagNumber(4)
   $1.Empty get inferred => $_getN(3);
+  @$pb.TagNumber(4)
   set inferred($1.Empty v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInferred() => $_has(3);
+  @$pb.TagNumber(4)
   void clearInferred() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Empty ensureInferred() => $_ensure(3);
 }
 
 class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.AuxiliaryTable.QuasiIdField',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
     ..aOS(2, 'customTag')
     ..hasRequiredFields = false;
 
@@ -2744,25 +3391,38 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
           PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>
       createRepeated() => $pb.PbList<
           PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>();
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>(
+          create);
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 
-  $core.String get customTag => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get customTag => $_getSZ(1);
+  @$pb.TagNumber(2)
   set customTag($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCustomTag() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCustomTag() => clearField(2);
 }
 
@@ -2770,16 +3430,15 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig.AuxiliaryTable',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>(
-        1,
-        'quasiIds',
-        $pb.PbFieldType.PM,
-        PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField.create)
-    ..a<$2.FieldId>(2, 'relativeFrequency', $pb.PbFieldType.OM,
-        $2.FieldId.getDefault, $2.FieldId.create)
-    ..a<$2.BigQueryTable>(3, 'table', $pb.PbFieldType.OM,
-        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
+        1, 'quasiIds', $pb.PbFieldType.PM,
+        subBuilder:
+            PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField
+                .create)
+    ..aOM<$2.FieldId>(2, 'relativeFrequency', subBuilder: $2.FieldId.create)
+    ..aOM<$2.BigQueryTable>(3, 'table', subBuilder: $2.BigQueryTable.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_KMapEstimationConfig_AuxiliaryTable._() : super();
@@ -2809,45 +3468,57 @@ class PrivacyMetric_KMapEstimationConfig_AuxiliaryTable
   static $pb.PbList<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable>
       createRepeated() =>
           $pb.PbList<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable>();
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PrivacyMetric_KMapEstimationConfig_AuxiliaryTable>(create);
   static PrivacyMetric_KMapEstimationConfig_AuxiliaryTable _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable_QuasiIdField>
       get quasiIds => $_getList(0);
 
+  @$pb.TagNumber(2)
   $2.FieldId get relativeFrequency => $_getN(1);
+  @$pb.TagNumber(2)
   set relativeFrequency($2.FieldId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRelativeFrequency() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRelativeFrequency() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldId ensureRelativeFrequency() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $2.BigQueryTable get table => $_getN(2);
+  @$pb.TagNumber(3)
   set table($2.BigQueryTable v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTable() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.BigQueryTable ensureTable() => $_ensure(2);
 }
 
 class PrivacyMetric_KMapEstimationConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.KMapEstimationConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<PrivacyMetric_KMapEstimationConfig_TaggedField>(
-        1,
-        'quasiIds',
-        $pb.PbFieldType.PM,
-        PrivacyMetric_KMapEstimationConfig_TaggedField.create)
+        1, 'quasiIds', $pb.PbFieldType.PM,
+        subBuilder: PrivacyMetric_KMapEstimationConfig_TaggedField.create)
     ..aOS(2, 'regionCode')
     ..pc<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable>(
-        3,
-        'auxiliaryTables',
-        $pb.PbFieldType.PM,
-        PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.create)
+        3, 'auxiliaryTables', $pb.PbFieldType.PM,
+        subBuilder: PrivacyMetric_KMapEstimationConfig_AuxiliaryTable.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_KMapEstimationConfig._() : super();
@@ -2871,21 +3542,29 @@ class PrivacyMetric_KMapEstimationConfig extends $pb.GeneratedMessage {
   PrivacyMetric_KMapEstimationConfig createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric_KMapEstimationConfig> createRepeated() =>
       $pb.PbList<PrivacyMetric_KMapEstimationConfig>();
-  static PrivacyMetric_KMapEstimationConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PrivacyMetric_KMapEstimationConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PrivacyMetric_KMapEstimationConfig>(
+          create);
   static PrivacyMetric_KMapEstimationConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<PrivacyMetric_KMapEstimationConfig_TaggedField> get quasiIds =>
       $_getList(0);
 
-  $core.String get regionCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get regionCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set regionCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRegionCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRegionCode() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<PrivacyMetric_KMapEstimationConfig_AuxiliaryTable>
       get auxiliaryTables => $_getList(2);
 }
@@ -2893,11 +3572,12 @@ class PrivacyMetric_KMapEstimationConfig extends $pb.GeneratedMessage {
 class PrivacyMetric_DeltaPresenceEstimationConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PrivacyMetric.DeltaPresenceEstimationConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<QuasiId>(1, 'quasiIds', $pb.PbFieldType.PM, QuasiId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<QuasiId>(1, 'quasiIds', $pb.PbFieldType.PM, subBuilder: QuasiId.create)
     ..aOS(2, 'regionCode')
-    ..pc<StatisticalTable>(
-        3, 'auxiliaryTables', $pb.PbFieldType.PM, StatisticalTable.create)
+    ..pc<StatisticalTable>(3, 'auxiliaryTables', $pb.PbFieldType.PM,
+        subBuilder: StatisticalTable.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric_DeltaPresenceEstimationConfig._() : super();
@@ -2923,20 +3603,28 @@ class PrivacyMetric_DeltaPresenceEstimationConfig extends $pb.GeneratedMessage {
   static $pb.PbList<PrivacyMetric_DeltaPresenceEstimationConfig>
       createRepeated() =>
           $pb.PbList<PrivacyMetric_DeltaPresenceEstimationConfig>();
+  @$core.pragma('dart2js:noInline')
   static PrivacyMetric_DeltaPresenceEstimationConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          PrivacyMetric_DeltaPresenceEstimationConfig>(create);
   static PrivacyMetric_DeltaPresenceEstimationConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<QuasiId> get quasiIds => $_getList(0);
 
-  $core.String get regionCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get regionCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set regionCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRegionCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRegionCode() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<StatisticalTable> get auxiliaryTables => $_getList(2);
 }
 
@@ -2962,44 +3650,22 @@ class PrivacyMetric extends $pb.GeneratedMessage {
     0: PrivacyMetric_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PrivacyMetric',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6])
-    ..a<PrivacyMetric_NumericalStatsConfig>(
-        1,
-        'numericalStatsConfig',
-        $pb.PbFieldType.OM,
-        PrivacyMetric_NumericalStatsConfig.getDefault,
-        PrivacyMetric_NumericalStatsConfig.create)
-    ..a<PrivacyMetric_CategoricalStatsConfig>(
-        2,
-        'categoricalStatsConfig',
-        $pb.PbFieldType.OM,
-        PrivacyMetric_CategoricalStatsConfig.getDefault,
-        PrivacyMetric_CategoricalStatsConfig.create)
-    ..a<PrivacyMetric_KAnonymityConfig>(
-        3,
-        'kAnonymityConfig',
-        $pb.PbFieldType.OM,
-        PrivacyMetric_KAnonymityConfig.getDefault,
-        PrivacyMetric_KAnonymityConfig.create)
-    ..a<PrivacyMetric_LDiversityConfig>(
-        4,
-        'lDiversityConfig',
-        $pb.PbFieldType.OM,
-        PrivacyMetric_LDiversityConfig.getDefault,
-        PrivacyMetric_LDiversityConfig.create)
-    ..a<PrivacyMetric_KMapEstimationConfig>(
-        5,
-        'kMapEstimationConfig',
-        $pb.PbFieldType.OM,
-        PrivacyMetric_KMapEstimationConfig.getDefault,
-        PrivacyMetric_KMapEstimationConfig.create)
-    ..a<PrivacyMetric_DeltaPresenceEstimationConfig>(
-        6,
-        'deltaPresenceEstimationConfig',
-        $pb.PbFieldType.OM,
-        PrivacyMetric_DeltaPresenceEstimationConfig.getDefault,
-        PrivacyMetric_DeltaPresenceEstimationConfig.create)
+    ..aOM<PrivacyMetric_NumericalStatsConfig>(1, 'numericalStatsConfig',
+        subBuilder: PrivacyMetric_NumericalStatsConfig.create)
+    ..aOM<PrivacyMetric_CategoricalStatsConfig>(2, 'categoricalStatsConfig',
+        subBuilder: PrivacyMetric_CategoricalStatsConfig.create)
+    ..aOM<PrivacyMetric_KAnonymityConfig>(3, 'kAnonymityConfig',
+        subBuilder: PrivacyMetric_KAnonymityConfig.create)
+    ..aOM<PrivacyMetric_LDiversityConfig>(4, 'lDiversityConfig',
+        subBuilder: PrivacyMetric_LDiversityConfig.create)
+    ..aOM<PrivacyMetric_KMapEstimationConfig>(5, 'kMapEstimationConfig',
+        subBuilder: PrivacyMetric_KMapEstimationConfig.create)
+    ..aOM<PrivacyMetric_DeltaPresenceEstimationConfig>(
+        6, 'deltaPresenceEstimationConfig',
+        subBuilder: PrivacyMetric_DeltaPresenceEstimationConfig.create)
     ..hasRequiredFields = false;
 
   PrivacyMetric._() : super();
@@ -3019,73 +3685,115 @@ class PrivacyMetric extends $pb.GeneratedMessage {
   PrivacyMetric createEmptyInstance() => create();
   static $pb.PbList<PrivacyMetric> createRepeated() =>
       $pb.PbList<PrivacyMetric>();
-  static PrivacyMetric getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PrivacyMetric getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PrivacyMetric>(create);
   static PrivacyMetric _defaultInstance;
 
   PrivacyMetric_Type whichType() => _PrivacyMetric_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   PrivacyMetric_NumericalStatsConfig get numericalStatsConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set numericalStatsConfig(PrivacyMetric_NumericalStatsConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNumericalStatsConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNumericalStatsConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  PrivacyMetric_NumericalStatsConfig ensureNumericalStatsConfig() =>
+      $_ensure(0);
 
+  @$pb.TagNumber(2)
   PrivacyMetric_CategoricalStatsConfig get categoricalStatsConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set categoricalStatsConfig(PrivacyMetric_CategoricalStatsConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCategoricalStatsConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCategoricalStatsConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  PrivacyMetric_CategoricalStatsConfig ensureCategoricalStatsConfig() =>
+      $_ensure(1);
 
+  @$pb.TagNumber(3)
   PrivacyMetric_KAnonymityConfig get kAnonymityConfig => $_getN(2);
+  @$pb.TagNumber(3)
   set kAnonymityConfig(PrivacyMetric_KAnonymityConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKAnonymityConfig() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKAnonymityConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  PrivacyMetric_KAnonymityConfig ensureKAnonymityConfig() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   PrivacyMetric_LDiversityConfig get lDiversityConfig => $_getN(3);
+  @$pb.TagNumber(4)
   set lDiversityConfig(PrivacyMetric_LDiversityConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasLDiversityConfig() => $_has(3);
+  @$pb.TagNumber(4)
   void clearLDiversityConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  PrivacyMetric_LDiversityConfig ensureLDiversityConfig() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   PrivacyMetric_KMapEstimationConfig get kMapEstimationConfig => $_getN(4);
+  @$pb.TagNumber(5)
   set kMapEstimationConfig(PrivacyMetric_KMapEstimationConfig v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasKMapEstimationConfig() => $_has(4);
+  @$pb.TagNumber(5)
   void clearKMapEstimationConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  PrivacyMetric_KMapEstimationConfig ensureKMapEstimationConfig() =>
+      $_ensure(4);
 
+  @$pb.TagNumber(6)
   PrivacyMetric_DeltaPresenceEstimationConfig
       get deltaPresenceEstimationConfig => $_getN(5);
+  @$pb.TagNumber(6)
   set deltaPresenceEstimationConfig(
       PrivacyMetric_DeltaPresenceEstimationConfig v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDeltaPresenceEstimationConfig() => $_has(5);
+  @$pb.TagNumber(6)
   void clearDeltaPresenceEstimationConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  PrivacyMetric_DeltaPresenceEstimationConfig
+      ensureDeltaPresenceEstimationConfig() => $_ensure(5);
 }
 
 class AnalyzeDataSourceRiskDetails_NumericalStatsResult
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.NumericalStatsResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<Value>(
-        1, 'minValue', $pb.PbFieldType.OM, Value.getDefault, Value.create)
-    ..a<Value>(
-        2, 'maxValue', $pb.PbFieldType.OM, Value.getDefault, Value.create)
-    ..pc<Value>(4, 'quantileValues', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, 'minValue', subBuilder: Value.create)
+    ..aOM<Value>(2, 'maxValue', subBuilder: Value.create)
+    ..pc<Value>(4, 'quantileValues', $pb.PbFieldType.PM,
+        subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_NumericalStatsResult._() : super();
@@ -3115,26 +3823,41 @@ class AnalyzeDataSourceRiskDetails_NumericalStatsResult
   static $pb.PbList<AnalyzeDataSourceRiskDetails_NumericalStatsResult>
       createRepeated() =>
           $pb.PbList<AnalyzeDataSourceRiskDetails_NumericalStatsResult>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_NumericalStatsResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AnalyzeDataSourceRiskDetails_NumericalStatsResult>(create);
   static AnalyzeDataSourceRiskDetails_NumericalStatsResult _defaultInstance;
 
+  @$pb.TagNumber(1)
   Value get minValue => $_getN(0);
+  @$pb.TagNumber(1)
   set minValue(Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMinValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMinValue() => clearField(1);
+  @$pb.TagNumber(1)
+  Value ensureMinValue() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Value get maxValue => $_getN(1);
+  @$pb.TagNumber(2)
   set maxValue(Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxValue() => clearField(2);
+  @$pb.TagNumber(2)
+  Value ensureMaxValue() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $core.List<Value> get quantileValues => $_getList(2);
 }
 
@@ -3142,12 +3865,13 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistog
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.CategoricalStatsResult.CategoricalStatsHistogramBucket',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'valueFrequencyLowerBound')
     ..aInt64(2, 'valueFrequencyUpperBound')
     ..aInt64(3, 'bucketSize')
-    ..pc<ValueFrequency>(
-        4, 'bucketValues', $pb.PbFieldType.PM, ValueFrequency.create)
+    ..pc<ValueFrequency>(4, 'bucketValues', $pb.PbFieldType.PM,
+        subBuilder: ValueFrequency.create)
     ..aInt64(5, 'bucketValueCount')
     ..hasRequiredFields = false;
 
@@ -3186,43 +3910,63 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistog
           AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket>(
+          create);
   static AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
       _defaultInstance;
 
-  Int64 get valueFrequencyLowerBound => $_getI64(0);
-  set valueFrequencyLowerBound(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get valueFrequencyLowerBound => $_getI64(0);
+  @$pb.TagNumber(1)
+  set valueFrequencyLowerBound($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValueFrequencyLowerBound() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValueFrequencyLowerBound() => clearField(1);
 
-  Int64 get valueFrequencyUpperBound => $_getI64(1);
-  set valueFrequencyUpperBound(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get valueFrequencyUpperBound => $_getI64(1);
+  @$pb.TagNumber(2)
+  set valueFrequencyUpperBound($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValueFrequencyUpperBound() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValueFrequencyUpperBound() => clearField(2);
 
-  Int64 get bucketSize => $_getI64(2);
-  set bucketSize(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get bucketSize => $_getI64(2);
+  @$pb.TagNumber(3)
+  set bucketSize($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBucketSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBucketSize() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<ValueFrequency> get bucketValues => $_getList(3);
 
-  Int64 get bucketValueCount => $_getI64(4);
-  set bucketValueCount(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get bucketValueCount => $_getI64(4);
+  @$pb.TagNumber(5)
+  set bucketValueCount($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasBucketValueCount() => $_has(4);
+  @$pb.TagNumber(5)
   void clearBucketValueCount() => clearField(5);
 }
 
@@ -3230,13 +3974,13 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.CategoricalStatsResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket>(
-        5,
-        'valueFrequencyHistogramBuckets',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
-            .create)
+        5, 'valueFrequencyHistogramBuckets', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket
+                .create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_CategoricalStatsResult._() : super();
@@ -3266,10 +4010,13 @@ class AnalyzeDataSourceRiskDetails_CategoricalStatsResult
   static $pb.PbList<AnalyzeDataSourceRiskDetails_CategoricalStatsResult>
       createRepeated() =>
           $pb.PbList<AnalyzeDataSourceRiskDetails_CategoricalStatsResult>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_CategoricalStatsResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AnalyzeDataSourceRiskDetails_CategoricalStatsResult>(create);
   static AnalyzeDataSourceRiskDetails_CategoricalStatsResult _defaultInstance;
 
+  @$pb.TagNumber(5)
   $core.List<
           AnalyzeDataSourceRiskDetails_CategoricalStatsResult_CategoricalStatsHistogramBucket>
       get valueFrequencyHistogramBuckets => $_getList(0);
@@ -3279,8 +4026,10 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityEquivalenceClass',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM,
+        subBuilder: Value.create)
     ..aInt64(2, 'equivalenceClassSize')
     ..hasRequiredFields = false;
 
@@ -3318,19 +4067,27 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass>(
+          create);
   static AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Value> get quasiIdsValues => $_getList(0);
 
-  Int64 get equivalenceClassSize => $_getI64(1);
-  set equivalenceClassSize(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get equivalenceClassSize => $_getI64(1);
+  @$pb.TagNumber(2)
+  set equivalenceClassSize($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEquivalenceClassSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEquivalenceClassSize() => clearField(2);
 }
 
@@ -3338,16 +4095,16 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.KAnonymityResult.KAnonymityHistogramBucket',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'equivalenceClassSizeLowerBound')
     ..aInt64(2, 'equivalenceClassSizeUpperBound')
     ..aInt64(3, 'bucketSize')
     ..pc<AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass>(
-        4,
-        'bucketValues',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
-            .create)
+        4, 'bucketValues', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass
+                .create)
     ..aInt64(5, 'bucketValueCount')
     ..hasRequiredFields = false;
 
@@ -3385,45 +4142,65 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket>(
+          create);
   static AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
       _defaultInstance;
 
-  Int64 get equivalenceClassSizeLowerBound => $_getI64(0);
-  set equivalenceClassSizeLowerBound(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get equivalenceClassSizeLowerBound => $_getI64(0);
+  @$pb.TagNumber(1)
+  set equivalenceClassSizeLowerBound($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEquivalenceClassSizeLowerBound() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEquivalenceClassSizeLowerBound() => clearField(1);
 
-  Int64 get equivalenceClassSizeUpperBound => $_getI64(1);
-  set equivalenceClassSizeUpperBound(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get equivalenceClassSizeUpperBound => $_getI64(1);
+  @$pb.TagNumber(2)
+  set equivalenceClassSizeUpperBound($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEquivalenceClassSizeUpperBound() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEquivalenceClassSizeUpperBound() => clearField(2);
 
-  Int64 get bucketSize => $_getI64(2);
-  set bucketSize(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get bucketSize => $_getI64(2);
+  @$pb.TagNumber(3)
+  set bucketSize($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBucketSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBucketSize() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityEquivalenceClass>
       get bucketValues => $_getList(3);
 
-  Int64 get bucketValueCount => $_getI64(4);
-  set bucketValueCount(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get bucketValueCount => $_getI64(4);
+  @$pb.TagNumber(5)
+  set bucketValueCount($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasBucketValueCount() => $_has(4);
+  @$pb.TagNumber(5)
   void clearBucketValueCount() => clearField(5);
 }
 
@@ -3431,13 +4208,13 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.KAnonymityResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket>(
-        5,
-        'equivalenceClassHistogramBuckets',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
-            .create)
+        5, 'equivalenceClassHistogramBuckets', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket
+                .create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_KAnonymityResult._() : super();
@@ -3465,10 +4242,13 @@ class AnalyzeDataSourceRiskDetails_KAnonymityResult
   static $pb.PbList<AnalyzeDataSourceRiskDetails_KAnonymityResult>
       createRepeated() =>
           $pb.PbList<AnalyzeDataSourceRiskDetails_KAnonymityResult>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KAnonymityResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AnalyzeDataSourceRiskDetails_KAnonymityResult>(create);
   static AnalyzeDataSourceRiskDetails_KAnonymityResult _defaultInstance;
 
+  @$pb.TagNumber(5)
   $core.List<
           AnalyzeDataSourceRiskDetails_KAnonymityResult_KAnonymityHistogramBucket>
       get equivalenceClassHistogramBuckets => $_getList(0);
@@ -3478,12 +4258,14 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityEquivalenceClass',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM,
+        subBuilder: Value.create)
     ..aInt64(2, 'equivalenceClassSize')
     ..aInt64(3, 'numDistinctSensitiveValues')
-    ..pc<ValueFrequency>(
-        4, 'topSensitiveValues', $pb.PbFieldType.PM, ValueFrequency.create)
+    ..pc<ValueFrequency>(4, 'topSensitiveValues', $pb.PbFieldType.PM,
+        subBuilder: ValueFrequency.create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass._()
@@ -3520,29 +4302,42 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass>(
+          create);
   static AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Value> get quasiIdsValues => $_getList(0);
 
-  Int64 get equivalenceClassSize => $_getI64(1);
-  set equivalenceClassSize(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get equivalenceClassSize => $_getI64(1);
+  @$pb.TagNumber(2)
+  set equivalenceClassSize($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEquivalenceClassSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEquivalenceClassSize() => clearField(2);
 
-  Int64 get numDistinctSensitiveValues => $_getI64(2);
-  set numDistinctSensitiveValues(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get numDistinctSensitiveValues => $_getI64(2);
+  @$pb.TagNumber(3)
+  set numDistinctSensitiveValues($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNumDistinctSensitiveValues() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNumDistinctSensitiveValues() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<ValueFrequency> get topSensitiveValues => $_getList(3);
 }
 
@@ -3550,16 +4345,16 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.LDiversityResult.LDiversityHistogramBucket',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'sensitiveValueFrequencyLowerBound')
     ..aInt64(2, 'sensitiveValueFrequencyUpperBound')
     ..aInt64(3, 'bucketSize')
     ..pc<AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass>(
-        4,
-        'bucketValues',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
-            .create)
+        4, 'bucketValues', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass
+                .create)
     ..aInt64(5, 'bucketValueCount')
     ..hasRequiredFields = false;
 
@@ -3597,45 +4392,65 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket>(
+          create);
   static AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
       _defaultInstance;
 
-  Int64 get sensitiveValueFrequencyLowerBound => $_getI64(0);
-  set sensitiveValueFrequencyLowerBound(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get sensitiveValueFrequencyLowerBound => $_getI64(0);
+  @$pb.TagNumber(1)
+  set sensitiveValueFrequencyLowerBound($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSensitiveValueFrequencyLowerBound() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSensitiveValueFrequencyLowerBound() => clearField(1);
 
-  Int64 get sensitiveValueFrequencyUpperBound => $_getI64(1);
-  set sensitiveValueFrequencyUpperBound(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get sensitiveValueFrequencyUpperBound => $_getI64(1);
+  @$pb.TagNumber(2)
+  set sensitiveValueFrequencyUpperBound($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSensitiveValueFrequencyUpperBound() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSensitiveValueFrequencyUpperBound() => clearField(2);
 
-  Int64 get bucketSize => $_getI64(2);
-  set bucketSize(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get bucketSize => $_getI64(2);
+  @$pb.TagNumber(3)
+  set bucketSize($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBucketSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBucketSize() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityEquivalenceClass>
       get bucketValues => $_getList(3);
 
-  Int64 get bucketValueCount => $_getI64(4);
-  set bucketValueCount(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get bucketValueCount => $_getI64(4);
+  @$pb.TagNumber(5)
+  set bucketValueCount($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasBucketValueCount() => $_has(4);
+  @$pb.TagNumber(5)
   void clearBucketValueCount() => clearField(5);
 }
 
@@ -3643,13 +4458,13 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.LDiversityResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket>(
-        5,
-        'sensitiveValueFrequencyHistogramBuckets',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
-            .create)
+        5, 'sensitiveValueFrequencyHistogramBuckets', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket
+                .create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_LDiversityResult._() : super();
@@ -3677,10 +4492,13 @@ class AnalyzeDataSourceRiskDetails_LDiversityResult
   static $pb.PbList<AnalyzeDataSourceRiskDetails_LDiversityResult>
       createRepeated() =>
           $pb.PbList<AnalyzeDataSourceRiskDetails_LDiversityResult>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_LDiversityResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AnalyzeDataSourceRiskDetails_LDiversityResult>(create);
   static AnalyzeDataSourceRiskDetails_LDiversityResult _defaultInstance;
 
+  @$pb.TagNumber(5)
   $core.List<
           AnalyzeDataSourceRiskDetails_LDiversityResult_LDiversityHistogramBucket>
       get sensitiveValueFrequencyHistogramBuckets => $_getList(0);
@@ -3690,8 +4508,10 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdVal
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationQuasiIdValues',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM,
+        subBuilder: Value.create)
     ..aInt64(2, 'estimatedAnonymity')
     ..hasRequiredFields = false;
 
@@ -3730,19 +4550,27 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdVal
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues>(
+          create);
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Value> get quasiIdsValues => $_getList(0);
 
-  Int64 get estimatedAnonymity => $_getI64(1);
-  set estimatedAnonymity(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get estimatedAnonymity => $_getI64(1);
+  @$pb.TagNumber(2)
+  set estimatedAnonymity($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEstimatedAnonymity() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEstimatedAnonymity() => clearField(2);
 }
 
@@ -3750,16 +4578,16 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramB
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.KMapEstimationResult.KMapEstimationHistogramBucket',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'minAnonymity')
     ..aInt64(2, 'maxAnonymity')
     ..aInt64(5, 'bucketSize')
     ..pc<AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues>(
-        6,
-        'bucketValues',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
-            .create)
+        6, 'bucketValues', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues
+                .create)
     ..aInt64(7, 'bucketValueCount')
     ..hasRequiredFields = false;
 
@@ -3798,45 +4626,65 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramB
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket>(
+          create);
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
       _defaultInstance;
 
-  Int64 get minAnonymity => $_getI64(0);
-  set minAnonymity(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get minAnonymity => $_getI64(0);
+  @$pb.TagNumber(1)
+  set minAnonymity($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMinAnonymity() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMinAnonymity() => clearField(1);
 
-  Int64 get maxAnonymity => $_getI64(1);
-  set maxAnonymity(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get maxAnonymity => $_getI64(1);
+  @$pb.TagNumber(2)
+  set maxAnonymity($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxAnonymity() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxAnonymity() => clearField(2);
 
-  Int64 get bucketSize => $_getI64(2);
-  set bucketSize(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get bucketSize => $_getI64(2);
+  @$pb.TagNumber(5)
+  set bucketSize($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasBucketSize() => $_has(2);
+  @$pb.TagNumber(5)
   void clearBucketSize() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationQuasiIdValues>
       get bucketValues => $_getList(3);
 
-  Int64 get bucketValueCount => $_getI64(4);
-  set bucketValueCount(Int64 v) {
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get bucketValueCount => $_getI64(4);
+  @$pb.TagNumber(7)
+  set bucketValueCount($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasBucketValueCount() => $_has(4);
+  @$pb.TagNumber(7)
   void clearBucketValueCount() => clearField(7);
 }
 
@@ -3844,13 +4692,13 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.KMapEstimationResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket>(
-        1,
-        'kMapEstimationHistogram',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
-            .create)
+        1, 'kMapEstimationHistogram', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket
+                .create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_KMapEstimationResult._() : super();
@@ -3880,10 +4728,13 @@ class AnalyzeDataSourceRiskDetails_KMapEstimationResult
   static $pb.PbList<AnalyzeDataSourceRiskDetails_KMapEstimationResult>
       createRepeated() =>
           $pb.PbList<AnalyzeDataSourceRiskDetails_KMapEstimationResult>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AnalyzeDataSourceRiskDetails_KMapEstimationResult>(create);
   static AnalyzeDataSourceRiskDetails_KMapEstimationResult _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<
           AnalyzeDataSourceRiskDetails_KMapEstimationResult_KMapEstimationHistogramBucket>
       get kMapEstimationHistogram => $_getList(0);
@@ -3893,8 +4744,10 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationQuasiIdValues',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, 'quasiIdsValues', $pb.PbFieldType.PM,
+        subBuilder: Value.create)
     ..a<$core.double>(2, 'estimatedProbability', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
@@ -3933,19 +4786,27 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues>(
+          create);
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Value> get quasiIdsValues => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.double get estimatedProbability => $_getN(1);
+  @$pb.TagNumber(2)
   set estimatedProbability($core.double v) {
     $_setDouble(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEstimatedProbability() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEstimatedProbability() => clearField(2);
 }
 
@@ -3953,16 +4814,16 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult.DeltaPresenceEstimationHistogramBucket',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'minProbability', $pb.PbFieldType.OD)
     ..a<$core.double>(2, 'maxProbability', $pb.PbFieldType.OD)
     ..aInt64(5, 'bucketSize')
     ..pc<AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues>(
-        6,
-        'bucketValues',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
-            .create)
+        6, 'bucketValues', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues
+                .create)
     ..aInt64(7, 'bucketValueCount')
     ..hasRequiredFields = false;
 
@@ -4001,45 +4862,65 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEs
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket>(
+          create);
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get minProbability => $_getN(0);
+  @$pb.TagNumber(1)
   set minProbability($core.double v) {
     $_setDouble(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMinProbability() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMinProbability() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get maxProbability => $_getN(1);
+  @$pb.TagNumber(2)
   set maxProbability($core.double v) {
     $_setDouble(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxProbability() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxProbability() => clearField(2);
 
-  Int64 get bucketSize => $_getI64(2);
-  set bucketSize(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get bucketSize => $_getI64(2);
+  @$pb.TagNumber(5)
+  set bucketSize($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasBucketSize() => $_has(2);
+  @$pb.TagNumber(5)
   void clearBucketSize() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationQuasiIdValues>
       get bucketValues => $_getList(3);
 
-  Int64 get bucketValueCount => $_getI64(4);
-  set bucketValueCount(Int64 v) {
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get bucketValueCount => $_getI64(4);
+  @$pb.TagNumber(7)
+  set bucketValueCount($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasBucketValueCount() => $_has(4);
+  @$pb.TagNumber(7)
   void clearBucketValueCount() => clearField(7);
 }
 
@@ -4047,13 +4928,13 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AnalyzeDataSourceRiskDetails.DeltaPresenceEstimationResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket>(
-        1,
-        'deltaPresenceEstimationHistogram',
-        $pb.PbFieldType.PM,
-        AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
-            .create)
+        1, 'deltaPresenceEstimationHistogram', $pb.PbFieldType.PM,
+        subBuilder:
+            AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket
+                .create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult._() : super();
@@ -4085,11 +4966,14 @@ class AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
   static $pb.PbList<AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult>
       createRepeated() => $pb.PbList<
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult>();
+  @$core.pragma('dart2js:noInline')
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult>(create);
   static AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
       _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<
           AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult_DeltaPresenceEstimationHistogramBucket>
       get deltaPresenceEstimationHistogram => $_getList(0);
@@ -4116,50 +5000,30 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
     9: AnalyzeDataSourceRiskDetails_Result.deltaPresenceEstimationResult,
     0: AnalyzeDataSourceRiskDetails_Result.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'AnalyzeDataSourceRiskDetails',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnalyzeDataSourceRiskDetails',
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4, 5, 6, 7, 9])
-    ..a<PrivacyMetric>(1, 'requestedPrivacyMetric', $pb.PbFieldType.OM,
-        PrivacyMetric.getDefault, PrivacyMetric.create)
-    ..a<$2.BigQueryTable>(2, 'requestedSourceTable', $pb.PbFieldType.OM,
-        $2.BigQueryTable.getDefault, $2.BigQueryTable.create)
-    ..a<AnalyzeDataSourceRiskDetails_NumericalStatsResult>(
-        3,
-        'numericalStatsResult',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails_NumericalStatsResult.getDefault,
-        AnalyzeDataSourceRiskDetails_NumericalStatsResult.create)
-    ..a<AnalyzeDataSourceRiskDetails_CategoricalStatsResult>(
-        4,
-        'categoricalStatsResult',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails_CategoricalStatsResult.getDefault,
-        AnalyzeDataSourceRiskDetails_CategoricalStatsResult.create)
-    ..a<AnalyzeDataSourceRiskDetails_KAnonymityResult>(
-        5,
-        'kAnonymityResult',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails_KAnonymityResult.getDefault,
-        AnalyzeDataSourceRiskDetails_KAnonymityResult.create)
-    ..a<AnalyzeDataSourceRiskDetails_LDiversityResult>(
-        6,
-        'lDiversityResult',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails_LDiversityResult.getDefault,
-        AnalyzeDataSourceRiskDetails_LDiversityResult.create)
-    ..a<AnalyzeDataSourceRiskDetails_KMapEstimationResult>(
-        7,
-        'kMapEstimationResult',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails_KMapEstimationResult.getDefault,
-        AnalyzeDataSourceRiskDetails_KMapEstimationResult.create)
-    ..a<AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult>(
-        9,
-        'deltaPresenceEstimationResult',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.getDefault,
-        AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.create)
+    ..aOM<PrivacyMetric>(1, 'requestedPrivacyMetric',
+        subBuilder: PrivacyMetric.create)
+    ..aOM<$2.BigQueryTable>(2, 'requestedSourceTable',
+        subBuilder: $2.BigQueryTable.create)
+    ..aOM<AnalyzeDataSourceRiskDetails_NumericalStatsResult>(
+        3, 'numericalStatsResult',
+        subBuilder: AnalyzeDataSourceRiskDetails_NumericalStatsResult.create)
+    ..aOM<AnalyzeDataSourceRiskDetails_CategoricalStatsResult>(
+        4, 'categoricalStatsResult',
+        subBuilder: AnalyzeDataSourceRiskDetails_CategoricalStatsResult.create)
+    ..aOM<AnalyzeDataSourceRiskDetails_KAnonymityResult>(5, 'kAnonymityResult',
+        subBuilder: AnalyzeDataSourceRiskDetails_KAnonymityResult.create)
+    ..aOM<AnalyzeDataSourceRiskDetails_LDiversityResult>(6, 'lDiversityResult',
+        subBuilder: AnalyzeDataSourceRiskDetails_LDiversityResult.create)
+    ..aOM<AnalyzeDataSourceRiskDetails_KMapEstimationResult>(
+        7, 'kMapEstimationResult',
+        subBuilder: AnalyzeDataSourceRiskDetails_KMapEstimationResult.create)
+    ..aOM<AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult>(
+        9, 'deltaPresenceEstimationResult',
+        subBuilder: AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult.create)
     ..hasRequiredFields = false;
 
   AnalyzeDataSourceRiskDetails._() : super();
@@ -4183,93 +5047,149 @@ class AnalyzeDataSourceRiskDetails extends $pb.GeneratedMessage {
   AnalyzeDataSourceRiskDetails createEmptyInstance() => create();
   static $pb.PbList<AnalyzeDataSourceRiskDetails> createRepeated() =>
       $pb.PbList<AnalyzeDataSourceRiskDetails>();
-  static AnalyzeDataSourceRiskDetails getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AnalyzeDataSourceRiskDetails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnalyzeDataSourceRiskDetails>(create);
   static AnalyzeDataSourceRiskDetails _defaultInstance;
 
   AnalyzeDataSourceRiskDetails_Result whichResult() =>
       _AnalyzeDataSourceRiskDetails_ResultByTag[$_whichOneof(0)];
   void clearResult() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   PrivacyMetric get requestedPrivacyMetric => $_getN(0);
+  @$pb.TagNumber(1)
   set requestedPrivacyMetric(PrivacyMetric v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestedPrivacyMetric() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestedPrivacyMetric() => clearField(1);
+  @$pb.TagNumber(1)
+  PrivacyMetric ensureRequestedPrivacyMetric() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.BigQueryTable get requestedSourceTable => $_getN(1);
+  @$pb.TagNumber(2)
   set requestedSourceTable($2.BigQueryTable v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestedSourceTable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestedSourceTable() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.BigQueryTable ensureRequestedSourceTable() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   AnalyzeDataSourceRiskDetails_NumericalStatsResult get numericalStatsResult =>
       $_getN(2);
+  @$pb.TagNumber(3)
   set numericalStatsResult(
       AnalyzeDataSourceRiskDetails_NumericalStatsResult v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNumericalStatsResult() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNumericalStatsResult() => clearField(3);
+  @$pb.TagNumber(3)
+  AnalyzeDataSourceRiskDetails_NumericalStatsResult
+      ensureNumericalStatsResult() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   AnalyzeDataSourceRiskDetails_CategoricalStatsResult
       get categoricalStatsResult => $_getN(3);
+  @$pb.TagNumber(4)
   set categoricalStatsResult(
       AnalyzeDataSourceRiskDetails_CategoricalStatsResult v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCategoricalStatsResult() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCategoricalStatsResult() => clearField(4);
+  @$pb.TagNumber(4)
+  AnalyzeDataSourceRiskDetails_CategoricalStatsResult
+      ensureCategoricalStatsResult() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   AnalyzeDataSourceRiskDetails_KAnonymityResult get kAnonymityResult =>
       $_getN(4);
+  @$pb.TagNumber(5)
   set kAnonymityResult(AnalyzeDataSourceRiskDetails_KAnonymityResult v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasKAnonymityResult() => $_has(4);
+  @$pb.TagNumber(5)
   void clearKAnonymityResult() => clearField(5);
+  @$pb.TagNumber(5)
+  AnalyzeDataSourceRiskDetails_KAnonymityResult ensureKAnonymityResult() =>
+      $_ensure(4);
 
+  @$pb.TagNumber(6)
   AnalyzeDataSourceRiskDetails_LDiversityResult get lDiversityResult =>
       $_getN(5);
+  @$pb.TagNumber(6)
   set lDiversityResult(AnalyzeDataSourceRiskDetails_LDiversityResult v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasLDiversityResult() => $_has(5);
+  @$pb.TagNumber(6)
   void clearLDiversityResult() => clearField(6);
+  @$pb.TagNumber(6)
+  AnalyzeDataSourceRiskDetails_LDiversityResult ensureLDiversityResult() =>
+      $_ensure(5);
 
+  @$pb.TagNumber(7)
   AnalyzeDataSourceRiskDetails_KMapEstimationResult get kMapEstimationResult =>
       $_getN(6);
+  @$pb.TagNumber(7)
   set kMapEstimationResult(
       AnalyzeDataSourceRiskDetails_KMapEstimationResult v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasKMapEstimationResult() => $_has(6);
+  @$pb.TagNumber(7)
   void clearKMapEstimationResult() => clearField(7);
+  @$pb.TagNumber(7)
+  AnalyzeDataSourceRiskDetails_KMapEstimationResult
+      ensureKMapEstimationResult() => $_ensure(6);
 
+  @$pb.TagNumber(9)
   AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
       get deltaPresenceEstimationResult => $_getN(7);
+  @$pb.TagNumber(9)
   set deltaPresenceEstimationResult(
       AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasDeltaPresenceEstimationResult() => $_has(7);
+  @$pb.TagNumber(9)
   void clearDeltaPresenceEstimationResult() => clearField(9);
+  @$pb.TagNumber(9)
+  AnalyzeDataSourceRiskDetails_DeltaPresenceEstimationResult
+      ensureDeltaPresenceEstimationResult() => $_ensure(7);
 }
 
 class ValueFrequency extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ValueFrequency',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<Value>(1, 'value', $pb.PbFieldType.OM, Value.getDefault, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, 'value', subBuilder: Value.create)
     ..aInt64(2, 'count')
     ..hasRequiredFields = false;
 
@@ -4290,23 +5210,35 @@ class ValueFrequency extends $pb.GeneratedMessage {
   ValueFrequency createEmptyInstance() => create();
   static $pb.PbList<ValueFrequency> createRepeated() =>
       $pb.PbList<ValueFrequency>();
-  static ValueFrequency getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ValueFrequency getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ValueFrequency>(create);
   static ValueFrequency _defaultInstance;
 
+  @$pb.TagNumber(1)
   Value get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value(Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  Value ensureValue() => $_ensure(0);
 
-  Int64 get count => $_getI64(1);
-  set count(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get count => $_getI64(1);
+  @$pb.TagNumber(2)
+  set count($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCount() => clearField(2);
 }
 
@@ -4335,25 +5267,20 @@ class Value extends $pb.GeneratedMessage {
     0: Value_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8])
     ..aInt64(1, 'integerValue')
     ..a<$core.double>(2, 'floatValue', $pb.PbFieldType.OD)
     ..aOS(3, 'stringValue')
     ..aOB(4, 'booleanValue')
-    ..a<$3.Timestamp>(5, 'timestampValue', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$4.TimeOfDay>(6, 'timeValue', $pb.PbFieldType.OM,
-        $4.TimeOfDay.getDefault, $4.TimeOfDay.create)
-    ..a<$5.Date>(
-        7, 'dateValue', $pb.PbFieldType.OM, $5.Date.getDefault, $5.Date.create)
-    ..e<$9.DayOfWeek>(
-        8,
-        'dayOfWeekValue',
-        $pb.PbFieldType.OE,
-        $9.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
-        $9.DayOfWeek.valueOf,
-        $9.DayOfWeek.values)
+    ..aOM<$3.Timestamp>(5, 'timestampValue', subBuilder: $3.Timestamp.create)
+    ..aOM<$4.TimeOfDay>(6, 'timeValue', subBuilder: $4.TimeOfDay.create)
+    ..aOM<$5.Date>(7, 'dateValue', subBuilder: $5.Date.create)
+    ..e<$9.DayOfWeek>(8, 'dayOfWeekValue', $pb.PbFieldType.OE,
+        defaultOrMaker: $9.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
+        valueOf: $9.DayOfWeek.valueOf,
+        enumValues: $9.DayOfWeek.values)
     ..hasRequiredFields = false;
 
   Value._() : super();
@@ -4372,74 +5299,114 @@ class Value extends $pb.GeneratedMessage {
   static Value create() => Value._();
   Value createEmptyInstance() => create();
   static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
-  static Value getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Value getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Value>(create);
   static Value _defaultInstance;
 
   Value_Type whichType() => _Value_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  Int64 get integerValue => $_getI64(0);
-  set integerValue(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get integerValue => $_getI64(0);
+  @$pb.TagNumber(1)
+  set integerValue($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIntegerValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIntegerValue() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get floatValue => $_getN(1);
+  @$pb.TagNumber(2)
   set floatValue($core.double v) {
     $_setDouble(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFloatValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFloatValue() => clearField(2);
 
-  $core.String get stringValue => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get stringValue => $_getSZ(2);
+  @$pb.TagNumber(3)
   set stringValue($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStringValue() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStringValue() => clearField(3);
 
-  $core.bool get booleanValue => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get booleanValue => $_getBF(3);
+  @$pb.TagNumber(4)
   set booleanValue($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasBooleanValue() => $_has(3);
+  @$pb.TagNumber(4)
   void clearBooleanValue() => clearField(4);
 
+  @$pb.TagNumber(5)
   $3.Timestamp get timestampValue => $_getN(4);
+  @$pb.TagNumber(5)
   set timestampValue($3.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTimestampValue() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTimestampValue() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.Timestamp ensureTimestampValue() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $4.TimeOfDay get timeValue => $_getN(5);
+  @$pb.TagNumber(6)
   set timeValue($4.TimeOfDay v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasTimeValue() => $_has(5);
+  @$pb.TagNumber(6)
   void clearTimeValue() => clearField(6);
+  @$pb.TagNumber(6)
+  $4.TimeOfDay ensureTimeValue() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $5.Date get dateValue => $_getN(6);
+  @$pb.TagNumber(7)
   set dateValue($5.Date v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasDateValue() => $_has(6);
+  @$pb.TagNumber(7)
   void clearDateValue() => clearField(7);
+  @$pb.TagNumber(7)
+  $5.Date ensureDateValue() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $9.DayOfWeek get dayOfWeekValue => $_getN(7);
+  @$pb.TagNumber(8)
   set dayOfWeekValue($9.DayOfWeek v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasDayOfWeekValue() => $_has(7);
+  @$pb.TagNumber(8)
   void clearDayOfWeekValue() => clearField(8);
 }
 
@@ -4452,10 +5419,10 @@ class QuoteInfo extends $pb.GeneratedMessage {
     0: QuoteInfo_ParsedQuote.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuoteInfo',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2])
-    ..a<DateTime>(
-        2, 'dateTime', $pb.PbFieldType.OM, DateTime.getDefault, DateTime.create)
+    ..aOM<DateTime>(2, 'dateTime', subBuilder: DateTime.create)
     ..hasRequiredFields = false;
 
   QuoteInfo._() : super();
@@ -4474,25 +5441,34 @@ class QuoteInfo extends $pb.GeneratedMessage {
   static QuoteInfo create() => QuoteInfo._();
   QuoteInfo createEmptyInstance() => create();
   static $pb.PbList<QuoteInfo> createRepeated() => $pb.PbList<QuoteInfo>();
-  static QuoteInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QuoteInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<QuoteInfo>(create);
   static QuoteInfo _defaultInstance;
 
   QuoteInfo_ParsedQuote whichParsedQuote() =>
       _QuoteInfo_ParsedQuoteByTag[$_whichOneof(0)];
   void clearParsedQuote() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(2)
   DateTime get dateTime => $_getN(0);
+  @$pb.TagNumber(2)
   set dateTime(DateTime v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDateTime() => $_has(0);
+  @$pb.TagNumber(2)
   void clearDateTime() => clearField(2);
+  @$pb.TagNumber(2)
+  DateTime ensureDateTime() => $_ensure(0);
 }
 
 class DateTime_TimeZone extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DateTime.TimeZone',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'offsetMinutes', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -4513,35 +5489,36 @@ class DateTime_TimeZone extends $pb.GeneratedMessage {
   DateTime_TimeZone createEmptyInstance() => create();
   static $pb.PbList<DateTime_TimeZone> createRepeated() =>
       $pb.PbList<DateTime_TimeZone>();
-  static DateTime_TimeZone getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DateTime_TimeZone getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DateTime_TimeZone>(create);
   static DateTime_TimeZone _defaultInstance;
 
-  $core.int get offsetMinutes => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get offsetMinutes => $_getIZ(0);
+  @$pb.TagNumber(1)
   set offsetMinutes($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOffsetMinutes() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOffsetMinutes() => clearField(1);
 }
 
 class DateTime extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DateTime',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$5.Date>(
-        1, 'date', $pb.PbFieldType.OM, $5.Date.getDefault, $5.Date.create)
-    ..e<$9.DayOfWeek>(
-        2,
-        'dayOfWeek',
-        $pb.PbFieldType.OE,
-        $9.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
-        $9.DayOfWeek.valueOf,
-        $9.DayOfWeek.values)
-    ..a<$4.TimeOfDay>(3, 'time', $pb.PbFieldType.OM, $4.TimeOfDay.getDefault,
-        $4.TimeOfDay.create)
-    ..a<DateTime_TimeZone>(4, 'timeZone', $pb.PbFieldType.OM,
-        DateTime_TimeZone.getDefault, DateTime_TimeZone.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Date>(1, 'date', subBuilder: $5.Date.create)
+    ..e<$9.DayOfWeek>(2, 'dayOfWeek', $pb.PbFieldType.OE,
+        defaultOrMaker: $9.DayOfWeek.DAY_OF_WEEK_UNSPECIFIED,
+        valueOf: $9.DayOfWeek.valueOf,
+        enumValues: $9.DayOfWeek.values)
+    ..aOM<$4.TimeOfDay>(3, 'time', subBuilder: $4.TimeOfDay.create)
+    ..aOM<DateTime_TimeZone>(4, 'timeZone',
+        subBuilder: DateTime_TimeZone.create)
     ..hasRequiredFields = false;
 
   DateTime._() : super();
@@ -4560,40 +5537,64 @@ class DateTime extends $pb.GeneratedMessage {
   static DateTime create() => DateTime._();
   DateTime createEmptyInstance() => create();
   static $pb.PbList<DateTime> createRepeated() => $pb.PbList<DateTime>();
-  static DateTime getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DateTime getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DateTime>(create);
   static DateTime _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.Date get date => $_getN(0);
+  @$pb.TagNumber(1)
   set date($5.Date v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDate() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDate() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Date ensureDate() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $9.DayOfWeek get dayOfWeek => $_getN(1);
+  @$pb.TagNumber(2)
   set dayOfWeek($9.DayOfWeek v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDayOfWeek() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDayOfWeek() => clearField(2);
 
+  @$pb.TagNumber(3)
   $4.TimeOfDay get time => $_getN(2);
+  @$pb.TagNumber(3)
   set time($4.TimeOfDay v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.TimeOfDay ensureTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   DateTime_TimeZone get timeZone => $_getN(3);
+  @$pb.TagNumber(4)
   set timeZone(DateTime_TimeZone v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTimeZone() => $_has(3);
+  @$pb.TagNumber(4)
   void clearTimeZone() => clearField(4);
+  @$pb.TagNumber(4)
+  DateTime_TimeZone ensureTimeZone() => $_ensure(3);
 }
 
 enum DeidentifyConfig_Transformation {
@@ -4610,16 +5611,13 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
     0: DeidentifyConfig_Transformation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeidentifyConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<InfoTypeTransformations>(
-        1,
-        'infoTypeTransformations',
-        $pb.PbFieldType.OM,
-        InfoTypeTransformations.getDefault,
-        InfoTypeTransformations.create)
-    ..a<RecordTransformations>(2, 'recordTransformations', $pb.PbFieldType.OM,
-        RecordTransformations.getDefault, RecordTransformations.create)
+    ..aOM<InfoTypeTransformations>(1, 'infoTypeTransformations',
+        subBuilder: InfoTypeTransformations.create)
+    ..aOM<RecordTransformations>(2, 'recordTransformations',
+        subBuilder: RecordTransformations.create)
     ..hasRequiredFields = false;
 
   DeidentifyConfig._() : super();
@@ -4639,29 +5637,42 @@ class DeidentifyConfig extends $pb.GeneratedMessage {
   DeidentifyConfig createEmptyInstance() => create();
   static $pb.PbList<DeidentifyConfig> createRepeated() =>
       $pb.PbList<DeidentifyConfig>();
-  static DeidentifyConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeidentifyConfig>(create);
   static DeidentifyConfig _defaultInstance;
 
   DeidentifyConfig_Transformation whichTransformation() =>
       _DeidentifyConfig_TransformationByTag[$_whichOneof(0)];
   void clearTransformation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   InfoTypeTransformations get infoTypeTransformations => $_getN(0);
+  @$pb.TagNumber(1)
   set infoTypeTransformations(InfoTypeTransformations v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInfoTypeTransformations() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInfoTypeTransformations() => clearField(1);
+  @$pb.TagNumber(1)
+  InfoTypeTransformations ensureInfoTypeTransformations() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   RecordTransformations get recordTransformations => $_getN(1);
+  @$pb.TagNumber(2)
   set recordTransformations(RecordTransformations v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRecordTransformations() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRecordTransformations() => clearField(2);
+  @$pb.TagNumber(2)
+  RecordTransformations ensureRecordTransformations() => $_ensure(1);
 }
 
 enum PrimitiveTransformation_Transformation {
@@ -4696,46 +5707,30 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
     0: PrimitiveTransformation_Transformation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PrimitiveTransformation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12])
-    ..a<ReplaceValueConfig>(1, 'replaceConfig', $pb.PbFieldType.OM,
-        ReplaceValueConfig.getDefault, ReplaceValueConfig.create)
-    ..a<RedactConfig>(2, 'redactConfig', $pb.PbFieldType.OM,
-        RedactConfig.getDefault, RedactConfig.create)
-    ..a<CharacterMaskConfig>(3, 'characterMaskConfig', $pb.PbFieldType.OM,
-        CharacterMaskConfig.getDefault, CharacterMaskConfig.create)
-    ..a<CryptoReplaceFfxFpeConfig>(
-        4,
-        'cryptoReplaceFfxFpeConfig',
-        $pb.PbFieldType.OM,
-        CryptoReplaceFfxFpeConfig.getDefault,
-        CryptoReplaceFfxFpeConfig.create)
-    ..a<FixedSizeBucketingConfig>(
-        5,
-        'fixedSizeBucketingConfig',
-        $pb.PbFieldType.OM,
-        FixedSizeBucketingConfig.getDefault,
-        FixedSizeBucketingConfig.create)
-    ..a<BucketingConfig>(6, 'bucketingConfig', $pb.PbFieldType.OM,
-        BucketingConfig.getDefault, BucketingConfig.create)
-    ..a<ReplaceWithInfoTypeConfig>(
-        7,
-        'replaceWithInfoTypeConfig',
-        $pb.PbFieldType.OM,
-        ReplaceWithInfoTypeConfig.getDefault,
-        ReplaceWithInfoTypeConfig.create)
-    ..a<TimePartConfig>(8, 'timePartConfig', $pb.PbFieldType.OM,
-        TimePartConfig.getDefault, TimePartConfig.create)
-    ..a<CryptoHashConfig>(9, 'cryptoHashConfig', $pb.PbFieldType.OM,
-        CryptoHashConfig.getDefault, CryptoHashConfig.create)
-    ..a<DateShiftConfig>(11, 'dateShiftConfig', $pb.PbFieldType.OM,
-        DateShiftConfig.getDefault, DateShiftConfig.create)
-    ..a<CryptoDeterministicConfig>(
-        12,
-        'cryptoDeterministicConfig',
-        $pb.PbFieldType.OM,
-        CryptoDeterministicConfig.getDefault,
-        CryptoDeterministicConfig.create)
+    ..aOM<ReplaceValueConfig>(1, 'replaceConfig',
+        subBuilder: ReplaceValueConfig.create)
+    ..aOM<RedactConfig>(2, 'redactConfig', subBuilder: RedactConfig.create)
+    ..aOM<CharacterMaskConfig>(3, 'characterMaskConfig',
+        subBuilder: CharacterMaskConfig.create)
+    ..aOM<CryptoReplaceFfxFpeConfig>(4, 'cryptoReplaceFfxFpeConfig',
+        subBuilder: CryptoReplaceFfxFpeConfig.create)
+    ..aOM<FixedSizeBucketingConfig>(5, 'fixedSizeBucketingConfig',
+        subBuilder: FixedSizeBucketingConfig.create)
+    ..aOM<BucketingConfig>(6, 'bucketingConfig',
+        subBuilder: BucketingConfig.create)
+    ..aOM<ReplaceWithInfoTypeConfig>(7, 'replaceWithInfoTypeConfig',
+        subBuilder: ReplaceWithInfoTypeConfig.create)
+    ..aOM<TimePartConfig>(8, 'timePartConfig',
+        subBuilder: TimePartConfig.create)
+    ..aOM<CryptoHashConfig>(9, 'cryptoHashConfig',
+        subBuilder: CryptoHashConfig.create)
+    ..aOM<DateShiftConfig>(11, 'dateShiftConfig',
+        subBuilder: DateShiftConfig.create)
+    ..aOM<CryptoDeterministicConfig>(12, 'cryptoDeterministicConfig',
+        subBuilder: CryptoDeterministicConfig.create)
     ..hasRequiredFields = false;
 
   PrimitiveTransformation._() : super();
@@ -4757,113 +5752,178 @@ class PrimitiveTransformation extends $pb.GeneratedMessage {
   PrimitiveTransformation createEmptyInstance() => create();
   static $pb.PbList<PrimitiveTransformation> createRepeated() =>
       $pb.PbList<PrimitiveTransformation>();
-  static PrimitiveTransformation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PrimitiveTransformation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PrimitiveTransformation>(create);
   static PrimitiveTransformation _defaultInstance;
 
   PrimitiveTransformation_Transformation whichTransformation() =>
       _PrimitiveTransformation_TransformationByTag[$_whichOneof(0)];
   void clearTransformation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ReplaceValueConfig get replaceConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set replaceConfig(ReplaceValueConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReplaceConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReplaceConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  ReplaceValueConfig ensureReplaceConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   RedactConfig get redactConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set redactConfig(RedactConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRedactConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRedactConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  RedactConfig ensureRedactConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   CharacterMaskConfig get characterMaskConfig => $_getN(2);
+  @$pb.TagNumber(3)
   set characterMaskConfig(CharacterMaskConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCharacterMaskConfig() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCharacterMaskConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  CharacterMaskConfig ensureCharacterMaskConfig() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   CryptoReplaceFfxFpeConfig get cryptoReplaceFfxFpeConfig => $_getN(3);
+  @$pb.TagNumber(4)
   set cryptoReplaceFfxFpeConfig(CryptoReplaceFfxFpeConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCryptoReplaceFfxFpeConfig() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCryptoReplaceFfxFpeConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  CryptoReplaceFfxFpeConfig ensureCryptoReplaceFfxFpeConfig() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   FixedSizeBucketingConfig get fixedSizeBucketingConfig => $_getN(4);
+  @$pb.TagNumber(5)
   set fixedSizeBucketingConfig(FixedSizeBucketingConfig v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFixedSizeBucketingConfig() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFixedSizeBucketingConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  FixedSizeBucketingConfig ensureFixedSizeBucketingConfig() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   BucketingConfig get bucketingConfig => $_getN(5);
+  @$pb.TagNumber(6)
   set bucketingConfig(BucketingConfig v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasBucketingConfig() => $_has(5);
+  @$pb.TagNumber(6)
   void clearBucketingConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  BucketingConfig ensureBucketingConfig() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   ReplaceWithInfoTypeConfig get replaceWithInfoTypeConfig => $_getN(6);
+  @$pb.TagNumber(7)
   set replaceWithInfoTypeConfig(ReplaceWithInfoTypeConfig v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasReplaceWithInfoTypeConfig() => $_has(6);
+  @$pb.TagNumber(7)
   void clearReplaceWithInfoTypeConfig() => clearField(7);
+  @$pb.TagNumber(7)
+  ReplaceWithInfoTypeConfig ensureReplaceWithInfoTypeConfig() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   TimePartConfig get timePartConfig => $_getN(7);
+  @$pb.TagNumber(8)
   set timePartConfig(TimePartConfig v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasTimePartConfig() => $_has(7);
+  @$pb.TagNumber(8)
   void clearTimePartConfig() => clearField(8);
+  @$pb.TagNumber(8)
+  TimePartConfig ensureTimePartConfig() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   CryptoHashConfig get cryptoHashConfig => $_getN(8);
+  @$pb.TagNumber(9)
   set cryptoHashConfig(CryptoHashConfig v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasCryptoHashConfig() => $_has(8);
+  @$pb.TagNumber(9)
   void clearCryptoHashConfig() => clearField(9);
+  @$pb.TagNumber(9)
+  CryptoHashConfig ensureCryptoHashConfig() => $_ensure(8);
 
+  @$pb.TagNumber(11)
   DateShiftConfig get dateShiftConfig => $_getN(9);
+  @$pb.TagNumber(11)
   set dateShiftConfig(DateShiftConfig v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasDateShiftConfig() => $_has(9);
+  @$pb.TagNumber(11)
   void clearDateShiftConfig() => clearField(11);
+  @$pb.TagNumber(11)
+  DateShiftConfig ensureDateShiftConfig() => $_ensure(9);
 
+  @$pb.TagNumber(12)
   CryptoDeterministicConfig get cryptoDeterministicConfig => $_getN(10);
+  @$pb.TagNumber(12)
   set cryptoDeterministicConfig(CryptoDeterministicConfig v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasCryptoDeterministicConfig() => $_has(10);
+  @$pb.TagNumber(12)
   void clearCryptoDeterministicConfig() => clearField(12);
+  @$pb.TagNumber(12)
+  CryptoDeterministicConfig ensureCryptoDeterministicConfig() => $_ensure(10);
 }
 
 class TimePartConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimePartConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..e<TimePartConfig_TimePart>(
-        1,
-        'partToExtract',
-        $pb.PbFieldType.OE,
-        TimePartConfig_TimePart.TIME_PART_UNSPECIFIED,
-        TimePartConfig_TimePart.valueOf,
-        TimePartConfig_TimePart.values)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..e<TimePartConfig_TimePart>(1, 'partToExtract', $pb.PbFieldType.OE,
+        defaultOrMaker: TimePartConfig_TimePart.TIME_PART_UNSPECIFIED,
+        valueOf: TimePartConfig_TimePart.valueOf,
+        enumValues: TimePartConfig_TimePart.values)
     ..hasRequiredFields = false;
 
   TimePartConfig._() : super();
@@ -4883,23 +5943,29 @@ class TimePartConfig extends $pb.GeneratedMessage {
   TimePartConfig createEmptyInstance() => create();
   static $pb.PbList<TimePartConfig> createRepeated() =>
       $pb.PbList<TimePartConfig>();
-  static TimePartConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TimePartConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimePartConfig>(create);
   static TimePartConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   TimePartConfig_TimePart get partToExtract => $_getN(0);
+  @$pb.TagNumber(1)
   set partToExtract(TimePartConfig_TimePart v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPartToExtract() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPartToExtract() => clearField(1);
 }
 
 class CryptoHashConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoHashConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
-        CryptoKey.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<CryptoKey>(1, 'cryptoKey', subBuilder: CryptoKey.create)
     ..hasRequiredFields = false;
 
   CryptoHashConfig._() : super();
@@ -4919,28 +5985,33 @@ class CryptoHashConfig extends $pb.GeneratedMessage {
   CryptoHashConfig createEmptyInstance() => create();
   static $pb.PbList<CryptoHashConfig> createRepeated() =>
       $pb.PbList<CryptoHashConfig>();
-  static CryptoHashConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CryptoHashConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CryptoHashConfig>(create);
   static CryptoHashConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   CryptoKey get cryptoKey => $_getN(0);
+  @$pb.TagNumber(1)
   set cryptoKey(CryptoKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCryptoKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCryptoKey() => clearField(1);
+  @$pb.TagNumber(1)
+  CryptoKey ensureCryptoKey() => $_ensure(0);
 }
 
 class CryptoDeterministicConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoDeterministicConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
-        CryptoKey.create)
-    ..a<$2.InfoType>(2, 'surrogateInfoType', $pb.PbFieldType.OM,
-        $2.InfoType.getDefault, $2.InfoType.create)
-    ..a<$2.FieldId>(3, 'context', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<CryptoKey>(1, 'cryptoKey', subBuilder: CryptoKey.create)
+    ..aOM<$2.InfoType>(2, 'surrogateInfoType', subBuilder: $2.InfoType.create)
+    ..aOM<$2.FieldId>(3, 'context', subBuilder: $2.FieldId.create)
     ..hasRequiredFields = false;
 
   CryptoDeterministicConfig._() : super();
@@ -4963,40 +6034,59 @@ class CryptoDeterministicConfig extends $pb.GeneratedMessage {
   CryptoDeterministicConfig createEmptyInstance() => create();
   static $pb.PbList<CryptoDeterministicConfig> createRepeated() =>
       $pb.PbList<CryptoDeterministicConfig>();
-  static CryptoDeterministicConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CryptoDeterministicConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CryptoDeterministicConfig>(create);
   static CryptoDeterministicConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   CryptoKey get cryptoKey => $_getN(0);
+  @$pb.TagNumber(1)
   set cryptoKey(CryptoKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCryptoKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCryptoKey() => clearField(1);
+  @$pb.TagNumber(1)
+  CryptoKey ensureCryptoKey() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.InfoType get surrogateInfoType => $_getN(1);
+  @$pb.TagNumber(2)
   set surrogateInfoType($2.InfoType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSurrogateInfoType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSurrogateInfoType() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.InfoType ensureSurrogateInfoType() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $2.FieldId get context => $_getN(2);
+  @$pb.TagNumber(3)
   set context($2.FieldId v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasContext() => $_has(2);
+  @$pb.TagNumber(3)
   void clearContext() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.FieldId ensureContext() => $_ensure(2);
 }
 
 class ReplaceValueConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReplaceValueConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<Value>(
-        1, 'newValue', $pb.PbFieldType.OM, Value.getDefault, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, 'newValue', subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   ReplaceValueConfig._() : super();
@@ -5016,22 +6106,30 @@ class ReplaceValueConfig extends $pb.GeneratedMessage {
   ReplaceValueConfig createEmptyInstance() => create();
   static $pb.PbList<ReplaceValueConfig> createRepeated() =>
       $pb.PbList<ReplaceValueConfig>();
-  static ReplaceValueConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReplaceValueConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReplaceValueConfig>(create);
   static ReplaceValueConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   Value get newValue => $_getN(0);
+  @$pb.TagNumber(1)
   set newValue(Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNewValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNewValue() => clearField(1);
+  @$pb.TagNumber(1)
+  Value ensureNewValue() => $_ensure(0);
 }
 
 class ReplaceWithInfoTypeConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReplaceWithInfoTypeConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ReplaceWithInfoTypeConfig._() : super();
@@ -5054,14 +6152,16 @@ class ReplaceWithInfoTypeConfig extends $pb.GeneratedMessage {
   ReplaceWithInfoTypeConfig createEmptyInstance() => create();
   static $pb.PbList<ReplaceWithInfoTypeConfig> createRepeated() =>
       $pb.PbList<ReplaceWithInfoTypeConfig>();
-  static ReplaceWithInfoTypeConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReplaceWithInfoTypeConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReplaceWithInfoTypeConfig>(create);
   static ReplaceWithInfoTypeConfig _defaultInstance;
 }
 
 class RedactConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RedactConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   RedactConfig._() : super();
@@ -5081,7 +6181,9 @@ class RedactConfig extends $pb.GeneratedMessage {
   RedactConfig createEmptyInstance() => create();
   static $pb.PbList<RedactConfig> createRepeated() =>
       $pb.PbList<RedactConfig>();
-  static RedactConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RedactConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RedactConfig>(create);
   static RedactConfig _defaultInstance;
 }
 
@@ -5099,16 +6201,16 @@ class CharsToIgnore extends $pb.GeneratedMessage {
     0: CharsToIgnore_Characters.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CharsToIgnore',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOS(1, 'charactersToSkip')
     ..e<CharsToIgnore_CommonCharsToIgnore>(
-        2,
-        'commonCharactersToIgnore',
-        $pb.PbFieldType.OE,
-        CharsToIgnore_CommonCharsToIgnore.COMMON_CHARS_TO_IGNORE_UNSPECIFIED,
-        CharsToIgnore_CommonCharsToIgnore.valueOf,
-        CharsToIgnore_CommonCharsToIgnore.values)
+        2, 'commonCharactersToIgnore', $pb.PbFieldType.OE,
+        defaultOrMaker: CharsToIgnore_CommonCharsToIgnore
+            .COMMON_CHARS_TO_IGNORE_UNSPECIFIED,
+        valueOf: CharsToIgnore_CommonCharsToIgnore.valueOf,
+        enumValues: CharsToIgnore_CommonCharsToIgnore.values)
     ..hasRequiredFields = false;
 
   CharsToIgnore._() : super();
@@ -5128,38 +6230,49 @@ class CharsToIgnore extends $pb.GeneratedMessage {
   CharsToIgnore createEmptyInstance() => create();
   static $pb.PbList<CharsToIgnore> createRepeated() =>
       $pb.PbList<CharsToIgnore>();
-  static CharsToIgnore getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CharsToIgnore getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CharsToIgnore>(create);
   static CharsToIgnore _defaultInstance;
 
   CharsToIgnore_Characters whichCharacters() =>
       _CharsToIgnore_CharactersByTag[$_whichOneof(0)];
   void clearCharacters() => clearField($_whichOneof(0));
 
-  $core.String get charactersToSkip => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get charactersToSkip => $_getSZ(0);
+  @$pb.TagNumber(1)
   set charactersToSkip($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCharactersToSkip() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCharactersToSkip() => clearField(1);
 
+  @$pb.TagNumber(2)
   CharsToIgnore_CommonCharsToIgnore get commonCharactersToIgnore => $_getN(1);
+  @$pb.TagNumber(2)
   set commonCharactersToIgnore(CharsToIgnore_CommonCharsToIgnore v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCommonCharactersToIgnore() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCommonCharactersToIgnore() => clearField(2);
 }
 
 class CharacterMaskConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CharacterMaskConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'maskingCharacter')
     ..a<$core.int>(2, 'numberToMask', $pb.PbFieldType.O3)
     ..aOB(3, 'reverseOrder')
-    ..pc<CharsToIgnore>(
-        4, 'charactersToIgnore', $pb.PbFieldType.PM, CharsToIgnore.create)
+    ..pc<CharsToIgnore>(4, 'charactersToIgnore', $pb.PbFieldType.PM,
+        subBuilder: CharsToIgnore.create)
     ..hasRequiredFields = false;
 
   CharacterMaskConfig._() : super();
@@ -5179,44 +6292,57 @@ class CharacterMaskConfig extends $pb.GeneratedMessage {
   CharacterMaskConfig createEmptyInstance() => create();
   static $pb.PbList<CharacterMaskConfig> createRepeated() =>
       $pb.PbList<CharacterMaskConfig>();
-  static CharacterMaskConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CharacterMaskConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CharacterMaskConfig>(create);
   static CharacterMaskConfig _defaultInstance;
 
-  $core.String get maskingCharacter => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get maskingCharacter => $_getSZ(0);
+  @$pb.TagNumber(1)
   set maskingCharacter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMaskingCharacter() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMaskingCharacter() => clearField(1);
 
-  $core.int get numberToMask => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get numberToMask => $_getIZ(1);
+  @$pb.TagNumber(2)
   set numberToMask($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNumberToMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNumberToMask() => clearField(2);
 
-  $core.bool get reverseOrder => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get reverseOrder => $_getBF(2);
+  @$pb.TagNumber(3)
   set reverseOrder($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReverseOrder() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReverseOrder() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<CharsToIgnore> get charactersToIgnore => $_getList(3);
 }
 
 class FixedSizeBucketingConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FixedSizeBucketingConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<Value>(
-        1, 'lowerBound', $pb.PbFieldType.OM, Value.getDefault, Value.create)
-    ..a<Value>(
-        2, 'upperBound', $pb.PbFieldType.OM, Value.getDefault, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, 'lowerBound', subBuilder: Value.create)
+    ..aOM<Value>(2, 'upperBound', subBuilder: Value.create)
     ..a<$core.double>(3, 'bucketSize', $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
@@ -5239,42 +6365,59 @@ class FixedSizeBucketingConfig extends $pb.GeneratedMessage {
   FixedSizeBucketingConfig createEmptyInstance() => create();
   static $pb.PbList<FixedSizeBucketingConfig> createRepeated() =>
       $pb.PbList<FixedSizeBucketingConfig>();
-  static FixedSizeBucketingConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FixedSizeBucketingConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixedSizeBucketingConfig>(create);
   static FixedSizeBucketingConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   Value get lowerBound => $_getN(0);
+  @$pb.TagNumber(1)
   set lowerBound(Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLowerBound() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLowerBound() => clearField(1);
+  @$pb.TagNumber(1)
+  Value ensureLowerBound() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Value get upperBound => $_getN(1);
+  @$pb.TagNumber(2)
   set upperBound(Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpperBound() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpperBound() => clearField(2);
+  @$pb.TagNumber(2)
+  Value ensureUpperBound() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.double get bucketSize => $_getN(2);
+  @$pb.TagNumber(3)
   set bucketSize($core.double v) {
     $_setDouble(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBucketSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBucketSize() => clearField(3);
 }
 
 class BucketingConfig_Bucket extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BucketingConfig.Bucket',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<Value>(1, 'min', $pb.PbFieldType.OM, Value.getDefault, Value.create)
-    ..a<Value>(2, 'max', $pb.PbFieldType.OM, Value.getDefault, Value.create)
-    ..a<Value>(3, 'replacementValue', $pb.PbFieldType.OM, Value.getDefault,
-        Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, 'min', subBuilder: Value.create)
+    ..aOM<Value>(2, 'max', subBuilder: Value.create)
+    ..aOM<Value>(3, 'replacementValue', subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   BucketingConfig_Bucket._() : super();
@@ -5296,40 +6439,60 @@ class BucketingConfig_Bucket extends $pb.GeneratedMessage {
   BucketingConfig_Bucket createEmptyInstance() => create();
   static $pb.PbList<BucketingConfig_Bucket> createRepeated() =>
       $pb.PbList<BucketingConfig_Bucket>();
-  static BucketingConfig_Bucket getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BucketingConfig_Bucket getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BucketingConfig_Bucket>(create);
   static BucketingConfig_Bucket _defaultInstance;
 
+  @$pb.TagNumber(1)
   Value get min => $_getN(0);
+  @$pb.TagNumber(1)
   set min(Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMin() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMin() => clearField(1);
+  @$pb.TagNumber(1)
+  Value ensureMin() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Value get max => $_getN(1);
+  @$pb.TagNumber(2)
   set max(Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMax() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMax() => clearField(2);
+  @$pb.TagNumber(2)
+  Value ensureMax() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   Value get replacementValue => $_getN(2);
+  @$pb.TagNumber(3)
   set replacementValue(Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReplacementValue() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReplacementValue() => clearField(3);
+  @$pb.TagNumber(3)
+  Value ensureReplacementValue() => $_ensure(2);
 }
 
 class BucketingConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BucketingConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<BucketingConfig_Bucket>(
-        1, 'buckets', $pb.PbFieldType.PM, BucketingConfig_Bucket.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<BucketingConfig_Bucket>(1, 'buckets', $pb.PbFieldType.PM,
+        subBuilder: BucketingConfig_Bucket.create)
     ..hasRequiredFields = false;
 
   BucketingConfig._() : super();
@@ -5349,10 +6512,12 @@ class BucketingConfig extends $pb.GeneratedMessage {
   BucketingConfig createEmptyInstance() => create();
   static $pb.PbList<BucketingConfig> createRepeated() =>
       $pb.PbList<BucketingConfig>();
-  static BucketingConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BucketingConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BucketingConfig>(create);
   static BucketingConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<BucketingConfig_Bucket> get buckets => $_getList(0);
 }
 
@@ -5372,24 +6537,20 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
     0: CryptoReplaceFfxFpeConfig_Alphabet.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoReplaceFfxFpeConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [4, 5, 6])
-    ..a<CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
-        CryptoKey.create)
-    ..a<$2.FieldId>(2, 'context', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
+    ..aOM<CryptoKey>(1, 'cryptoKey', subBuilder: CryptoKey.create)
+    ..aOM<$2.FieldId>(2, 'context', subBuilder: $2.FieldId.create)
     ..e<CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet>(
-        4,
-        'commonAlphabet',
-        $pb.PbFieldType.OE,
-        CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet
+        4, 'commonAlphabet', $pb.PbFieldType.OE,
+        defaultOrMaker: CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet
             .FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED,
-        CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet.valueOf,
-        CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet.values)
+        valueOf: CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet.valueOf,
+        enumValues: CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet.values)
     ..aOS(5, 'customAlphabet')
     ..a<$core.int>(6, 'radix', $pb.PbFieldType.O3)
-    ..a<$2.InfoType>(8, 'surrogateInfoType', $pb.PbFieldType.OM,
-        $2.InfoType.getDefault, $2.InfoType.create)
+    ..aOM<$2.InfoType>(8, 'surrogateInfoType', subBuilder: $2.InfoType.create)
     ..hasRequiredFields = false;
 
   CryptoReplaceFfxFpeConfig._() : super();
@@ -5412,62 +6573,93 @@ class CryptoReplaceFfxFpeConfig extends $pb.GeneratedMessage {
   CryptoReplaceFfxFpeConfig createEmptyInstance() => create();
   static $pb.PbList<CryptoReplaceFfxFpeConfig> createRepeated() =>
       $pb.PbList<CryptoReplaceFfxFpeConfig>();
-  static CryptoReplaceFfxFpeConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CryptoReplaceFfxFpeConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CryptoReplaceFfxFpeConfig>(create);
   static CryptoReplaceFfxFpeConfig _defaultInstance;
 
   CryptoReplaceFfxFpeConfig_Alphabet whichAlphabet() =>
       _CryptoReplaceFfxFpeConfig_AlphabetByTag[$_whichOneof(0)];
   void clearAlphabet() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   CryptoKey get cryptoKey => $_getN(0);
+  @$pb.TagNumber(1)
   set cryptoKey(CryptoKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCryptoKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCryptoKey() => clearField(1);
+  @$pb.TagNumber(1)
+  CryptoKey ensureCryptoKey() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldId get context => $_getN(1);
+  @$pb.TagNumber(2)
   set context($2.FieldId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasContext() => $_has(1);
+  @$pb.TagNumber(2)
   void clearContext() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldId ensureContext() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet get commonAlphabet =>
       $_getN(2);
+  @$pb.TagNumber(4)
   set commonAlphabet(CryptoReplaceFfxFpeConfig_FfxCommonNativeAlphabet v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCommonAlphabet() => $_has(2);
+  @$pb.TagNumber(4)
   void clearCommonAlphabet() => clearField(4);
 
-  $core.String get customAlphabet => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get customAlphabet => $_getSZ(3);
+  @$pb.TagNumber(5)
   set customAlphabet($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasCustomAlphabet() => $_has(3);
+  @$pb.TagNumber(5)
   void clearCustomAlphabet() => clearField(5);
 
-  $core.int get radix => $_get(4, 0);
+  @$pb.TagNumber(6)
+  $core.int get radix => $_getIZ(4);
+  @$pb.TagNumber(6)
   set radix($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasRadix() => $_has(4);
+  @$pb.TagNumber(6)
   void clearRadix() => clearField(6);
 
+  @$pb.TagNumber(8)
   $2.InfoType get surrogateInfoType => $_getN(5);
+  @$pb.TagNumber(8)
   set surrogateInfoType($2.InfoType v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasSurrogateInfoType() => $_has(5);
+  @$pb.TagNumber(8)
   void clearSurrogateInfoType() => clearField(8);
+  @$pb.TagNumber(8)
+  $2.InfoType ensureSurrogateInfoType() => $_ensure(5);
 }
 
 enum CryptoKey_Source { transient, unwrapped, kmsWrapped, notSet }
@@ -5480,14 +6672,15 @@ class CryptoKey extends $pb.GeneratedMessage {
     0: CryptoKey_Source.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CryptoKey',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<TransientCryptoKey>(1, 'transient', $pb.PbFieldType.OM,
-        TransientCryptoKey.getDefault, TransientCryptoKey.create)
-    ..a<UnwrappedCryptoKey>(2, 'unwrapped', $pb.PbFieldType.OM,
-        UnwrappedCryptoKey.getDefault, UnwrappedCryptoKey.create)
-    ..a<KmsWrappedCryptoKey>(3, 'kmsWrapped', $pb.PbFieldType.OM,
-        KmsWrappedCryptoKey.getDefault, KmsWrappedCryptoKey.create)
+    ..aOM<TransientCryptoKey>(1, 'transient',
+        subBuilder: TransientCryptoKey.create)
+    ..aOM<UnwrappedCryptoKey>(2, 'unwrapped',
+        subBuilder: UnwrappedCryptoKey.create)
+    ..aOM<KmsWrappedCryptoKey>(3, 'kmsWrapped',
+        subBuilder: KmsWrappedCryptoKey.create)
     ..hasRequiredFields = false;
 
   CryptoKey._() : super();
@@ -5506,40 +6699,61 @@ class CryptoKey extends $pb.GeneratedMessage {
   static CryptoKey create() => CryptoKey._();
   CryptoKey createEmptyInstance() => create();
   static $pb.PbList<CryptoKey> createRepeated() => $pb.PbList<CryptoKey>();
-  static CryptoKey getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CryptoKey getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CryptoKey>(create);
   static CryptoKey _defaultInstance;
 
   CryptoKey_Source whichSource() => _CryptoKey_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   TransientCryptoKey get transient => $_getN(0);
+  @$pb.TagNumber(1)
   set transient(TransientCryptoKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTransient() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTransient() => clearField(1);
+  @$pb.TagNumber(1)
+  TransientCryptoKey ensureTransient() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   UnwrappedCryptoKey get unwrapped => $_getN(1);
+  @$pb.TagNumber(2)
   set unwrapped(UnwrappedCryptoKey v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUnwrapped() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUnwrapped() => clearField(2);
+  @$pb.TagNumber(2)
+  UnwrappedCryptoKey ensureUnwrapped() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   KmsWrappedCryptoKey get kmsWrapped => $_getN(2);
+  @$pb.TagNumber(3)
   set kmsWrapped(KmsWrappedCryptoKey v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKmsWrapped() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKmsWrapped() => clearField(3);
+  @$pb.TagNumber(3)
+  KmsWrappedCryptoKey ensureKmsWrapped() => $_ensure(2);
 }
 
 class TransientCryptoKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransientCryptoKey',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -5560,22 +6774,28 @@ class TransientCryptoKey extends $pb.GeneratedMessage {
   TransientCryptoKey createEmptyInstance() => create();
   static $pb.PbList<TransientCryptoKey> createRepeated() =>
       $pb.PbList<TransientCryptoKey>();
-  static TransientCryptoKey getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransientCryptoKey getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransientCryptoKey>(create);
   static TransientCryptoKey _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UnwrappedCryptoKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnwrappedCryptoKey',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'key', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -5596,22 +6816,28 @@ class UnwrappedCryptoKey extends $pb.GeneratedMessage {
   UnwrappedCryptoKey createEmptyInstance() => create();
   static $pb.PbList<UnwrappedCryptoKey> createRepeated() =>
       $pb.PbList<UnwrappedCryptoKey>();
-  static UnwrappedCryptoKey getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UnwrappedCryptoKey getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UnwrappedCryptoKey>(create);
   static UnwrappedCryptoKey _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
+  @$pb.TagNumber(1)
   set key($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 }
 
 class KmsWrappedCryptoKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KmsWrappedCryptoKey',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'wrappedKey', $pb.PbFieldType.OY)
     ..aOS(2, 'cryptoKeyName')
     ..hasRequiredFields = false;
@@ -5633,24 +6859,33 @@ class KmsWrappedCryptoKey extends $pb.GeneratedMessage {
   KmsWrappedCryptoKey createEmptyInstance() => create();
   static $pb.PbList<KmsWrappedCryptoKey> createRepeated() =>
       $pb.PbList<KmsWrappedCryptoKey>();
-  static KmsWrappedCryptoKey getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static KmsWrappedCryptoKey getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<KmsWrappedCryptoKey>(create);
   static KmsWrappedCryptoKey _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get wrappedKey => $_getN(0);
+  @$pb.TagNumber(1)
   set wrappedKey($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasWrappedKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearWrappedKey() => clearField(1);
 
-  $core.String get cryptoKeyName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get cryptoKeyName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set cryptoKeyName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCryptoKeyName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCryptoKeyName() => clearField(2);
 }
 
@@ -5663,14 +6898,13 @@ class DateShiftConfig extends $pb.GeneratedMessage {
     0: DateShiftConfig_Method.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DateShiftConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [4])
     ..a<$core.int>(1, 'upperBoundDays', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'lowerBoundDays', $pb.PbFieldType.O3)
-    ..a<$2.FieldId>(3, 'context', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
-    ..a<CryptoKey>(4, 'cryptoKey', $pb.PbFieldType.OM, CryptoKey.getDefault,
-        CryptoKey.create)
+    ..aOM<$2.FieldId>(3, 'context', subBuilder: $2.FieldId.create)
+    ..aOM<CryptoKey>(4, 'cryptoKey', subBuilder: CryptoKey.create)
     ..hasRequiredFields = false;
 
   DateShiftConfig._() : super();
@@ -5690,59 +6924,78 @@ class DateShiftConfig extends $pb.GeneratedMessage {
   DateShiftConfig createEmptyInstance() => create();
   static $pb.PbList<DateShiftConfig> createRepeated() =>
       $pb.PbList<DateShiftConfig>();
-  static DateShiftConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DateShiftConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DateShiftConfig>(create);
   static DateShiftConfig _defaultInstance;
 
   DateShiftConfig_Method whichMethod() =>
       _DateShiftConfig_MethodByTag[$_whichOneof(0)];
   void clearMethod() => clearField($_whichOneof(0));
 
-  $core.int get upperBoundDays => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get upperBoundDays => $_getIZ(0);
+  @$pb.TagNumber(1)
   set upperBoundDays($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUpperBoundDays() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUpperBoundDays() => clearField(1);
 
-  $core.int get lowerBoundDays => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get lowerBoundDays => $_getIZ(1);
+  @$pb.TagNumber(2)
   set lowerBoundDays($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLowerBoundDays() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLowerBoundDays() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.FieldId get context => $_getN(2);
+  @$pb.TagNumber(3)
   set context($2.FieldId v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasContext() => $_has(2);
+  @$pb.TagNumber(3)
   void clearContext() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.FieldId ensureContext() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   CryptoKey get cryptoKey => $_getN(3);
+  @$pb.TagNumber(4)
   set cryptoKey(CryptoKey v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCryptoKey() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCryptoKey() => clearField(4);
+  @$pb.TagNumber(4)
+  CryptoKey ensureCryptoKey() => $_ensure(3);
 }
 
 class InfoTypeTransformations_InfoTypeTransformation
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InfoTypeTransformations.InfoTypeTransformation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM, $2.InfoType.create)
-    ..a<PrimitiveTransformation>(
-        2,
-        'primitiveTransformation',
-        $pb.PbFieldType.OM,
-        PrimitiveTransformation.getDefault,
-        PrimitiveTransformation.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<$2.InfoType>(1, 'infoTypes', $pb.PbFieldType.PM,
+        subBuilder: $2.InfoType.create)
+    ..aOM<PrimitiveTransformation>(2, 'primitiveTransformation',
+        subBuilder: PrimitiveTransformation.create)
     ..hasRequiredFields = false;
 
   InfoTypeTransformations_InfoTypeTransformation._() : super();
@@ -5771,29 +7024,37 @@ class InfoTypeTransformations_InfoTypeTransformation
   static $pb.PbList<InfoTypeTransformations_InfoTypeTransformation>
       createRepeated() =>
           $pb.PbList<InfoTypeTransformations_InfoTypeTransformation>();
+  @$core.pragma('dart2js:noInline')
   static InfoTypeTransformations_InfoTypeTransformation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          InfoTypeTransformations_InfoTypeTransformation>(create);
   static InfoTypeTransformations_InfoTypeTransformation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.InfoType> get infoTypes => $_getList(0);
 
+  @$pb.TagNumber(2)
   PrimitiveTransformation get primitiveTransformation => $_getN(1);
+  @$pb.TagNumber(2)
   set primitiveTransformation(PrimitiveTransformation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPrimitiveTransformation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPrimitiveTransformation() => clearField(2);
+  @$pb.TagNumber(2)
+  PrimitiveTransformation ensurePrimitiveTransformation() => $_ensure(1);
 }
 
 class InfoTypeTransformations extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InfoTypeTransformations',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<InfoTypeTransformations_InfoTypeTransformation>(
-        1,
-        'transformations',
-        $pb.PbFieldType.PM,
-        InfoTypeTransformations_InfoTypeTransformation.create)
+        1, 'transformations', $pb.PbFieldType.PM,
+        subBuilder: InfoTypeTransformations_InfoTypeTransformation.create)
     ..hasRequiredFields = false;
 
   InfoTypeTransformations._() : super();
@@ -5815,10 +7076,12 @@ class InfoTypeTransformations extends $pb.GeneratedMessage {
   InfoTypeTransformations createEmptyInstance() => create();
   static $pb.PbList<InfoTypeTransformations> createRepeated() =>
       $pb.PbList<InfoTypeTransformations>();
-  static InfoTypeTransformations getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InfoTypeTransformations getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InfoTypeTransformations>(create);
   static InfoTypeTransformations _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<InfoTypeTransformations_InfoTypeTransformation>
       get transformations => $_getList(0);
 }
@@ -5837,23 +7100,16 @@ class FieldTransformation extends $pb.GeneratedMessage {
     0: FieldTransformation_Transformation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FieldTransformation',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [4, 5])
-    ..pc<$2.FieldId>(1, 'fields', $pb.PbFieldType.PM, $2.FieldId.create)
-    ..a<RecordCondition>(3, 'condition', $pb.PbFieldType.OM,
-        RecordCondition.getDefault, RecordCondition.create)
-    ..a<PrimitiveTransformation>(
-        4,
-        'primitiveTransformation',
-        $pb.PbFieldType.OM,
-        PrimitiveTransformation.getDefault,
-        PrimitiveTransformation.create)
-    ..a<InfoTypeTransformations>(
-        5,
-        'infoTypeTransformations',
-        $pb.PbFieldType.OM,
-        InfoTypeTransformations.getDefault,
-        InfoTypeTransformations.create)
+    ..pc<$2.FieldId>(1, 'fields', $pb.PbFieldType.PM,
+        subBuilder: $2.FieldId.create)
+    ..aOM<RecordCondition>(3, 'condition', subBuilder: RecordCondition.create)
+    ..aOM<PrimitiveTransformation>(4, 'primitiveTransformation',
+        subBuilder: PrimitiveTransformation.create)
+    ..aOM<InfoTypeTransformations>(5, 'infoTypeTransformations',
+        subBuilder: InfoTypeTransformations.create)
     ..hasRequiredFields = false;
 
   FieldTransformation._() : super();
@@ -5873,48 +7129,69 @@ class FieldTransformation extends $pb.GeneratedMessage {
   FieldTransformation createEmptyInstance() => create();
   static $pb.PbList<FieldTransformation> createRepeated() =>
       $pb.PbList<FieldTransformation>();
-  static FieldTransformation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FieldTransformation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FieldTransformation>(create);
   static FieldTransformation _defaultInstance;
 
   FieldTransformation_Transformation whichTransformation() =>
       _FieldTransformation_TransformationByTag[$_whichOneof(0)];
   void clearTransformation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $core.List<$2.FieldId> get fields => $_getList(0);
 
+  @$pb.TagNumber(3)
   RecordCondition get condition => $_getN(1);
+  @$pb.TagNumber(3)
   set condition(RecordCondition v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCondition() => $_has(1);
+  @$pb.TagNumber(3)
   void clearCondition() => clearField(3);
+  @$pb.TagNumber(3)
+  RecordCondition ensureCondition() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   PrimitiveTransformation get primitiveTransformation => $_getN(2);
+  @$pb.TagNumber(4)
   set primitiveTransformation(PrimitiveTransformation v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPrimitiveTransformation() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPrimitiveTransformation() => clearField(4);
+  @$pb.TagNumber(4)
+  PrimitiveTransformation ensurePrimitiveTransformation() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   InfoTypeTransformations get infoTypeTransformations => $_getN(3);
+  @$pb.TagNumber(5)
   set infoTypeTransformations(InfoTypeTransformations v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasInfoTypeTransformations() => $_has(3);
+  @$pb.TagNumber(5)
   void clearInfoTypeTransformations() => clearField(5);
+  @$pb.TagNumber(5)
+  InfoTypeTransformations ensureInfoTypeTransformations() => $_ensure(3);
 }
 
 class RecordTransformations extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordTransformations',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..pc<FieldTransformation>(1, 'fieldTransformations', $pb.PbFieldType.PM,
-        FieldTransformation.create)
-    ..pc<RecordSuppression>(
-        2, 'recordSuppressions', $pb.PbFieldType.PM, RecordSuppression.create)
+        subBuilder: FieldTransformation.create)
+    ..pc<RecordSuppression>(2, 'recordSuppressions', $pb.PbFieldType.PM,
+        subBuilder: RecordSuppression.create)
     ..hasRequiredFields = false;
 
   RecordTransformations._() : super();
@@ -5936,20 +7213,23 @@ class RecordTransformations extends $pb.GeneratedMessage {
   RecordTransformations createEmptyInstance() => create();
   static $pb.PbList<RecordTransformations> createRepeated() =>
       $pb.PbList<RecordTransformations>();
-  static RecordTransformations getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordTransformations getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordTransformations>(create);
   static RecordTransformations _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<FieldTransformation> get fieldTransformations => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<RecordSuppression> get recordSuppressions => $_getList(1);
 }
 
 class RecordSuppression extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordSuppression',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<RecordCondition>(1, 'condition', $pb.PbFieldType.OM,
-        RecordCondition.getDefault, RecordCondition.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<RecordCondition>(1, 'condition', subBuilder: RecordCondition.create)
     ..hasRequiredFields = false;
 
   RecordSuppression._() : super();
@@ -5969,32 +7249,36 @@ class RecordSuppression extends $pb.GeneratedMessage {
   RecordSuppression createEmptyInstance() => create();
   static $pb.PbList<RecordSuppression> createRepeated() =>
       $pb.PbList<RecordSuppression>();
-  static RecordSuppression getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordSuppression getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordSuppression>(create);
   static RecordSuppression _defaultInstance;
 
+  @$pb.TagNumber(1)
   RecordCondition get condition => $_getN(0);
+  @$pb.TagNumber(1)
   set condition(RecordCondition v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCondition() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCondition() => clearField(1);
+  @$pb.TagNumber(1)
+  RecordCondition ensureCondition() => $_ensure(0);
 }
 
 class RecordCondition_Condition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordCondition.Condition',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.FieldId>(1, 'field_1', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
-    ..e<RelationalOperator>(
-        3,
-        'operator',
-        $pb.PbFieldType.OE,
-        RelationalOperator.RELATIONAL_OPERATOR_UNSPECIFIED,
-        RelationalOperator.valueOf,
-        RelationalOperator.values)
-    ..a<Value>(4, 'value', $pb.PbFieldType.OM, Value.getDefault, Value.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.FieldId>(1, 'field', subBuilder: $2.FieldId.create)
+    ..e<RelationalOperator>(3, 'operator', $pb.PbFieldType.OE,
+        defaultOrMaker: RelationalOperator.RELATIONAL_OPERATOR_UNSPECIFIED,
+        valueOf: RelationalOperator.valueOf,
+        enumValues: RelationalOperator.values)
+    ..aOM<Value>(4, 'value', subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   RecordCondition_Condition._() : super();
@@ -6017,41 +7301,59 @@ class RecordCondition_Condition extends $pb.GeneratedMessage {
   RecordCondition_Condition createEmptyInstance() => create();
   static $pb.PbList<RecordCondition_Condition> createRepeated() =>
       $pb.PbList<RecordCondition_Condition>();
-  static RecordCondition_Condition getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition_Condition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordCondition_Condition>(create);
   static RecordCondition_Condition _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.FieldId get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($2.FieldId v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.FieldId ensureField_1() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   RelationalOperator get operator => $_getN(1);
+  @$pb.TagNumber(3)
   set operator(RelationalOperator v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOperator() => $_has(1);
+  @$pb.TagNumber(3)
   void clearOperator() => clearField(3);
 
+  @$pb.TagNumber(4)
   Value get value => $_getN(2);
+  @$pb.TagNumber(4)
   set value(Value v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValue() => $_has(2);
+  @$pb.TagNumber(4)
   void clearValue() => clearField(4);
+  @$pb.TagNumber(4)
+  Value ensureValue() => $_ensure(2);
 }
 
 class RecordCondition_Conditions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RecordCondition.Conditions',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<RecordCondition_Condition>(
-        1, 'conditions', $pb.PbFieldType.PM, RecordCondition_Condition.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<RecordCondition_Condition>(1, 'conditions', $pb.PbFieldType.PM,
+        subBuilder: RecordCondition_Condition.create)
     ..hasRequiredFields = false;
 
   RecordCondition_Conditions._() : super();
@@ -6074,10 +7376,12 @@ class RecordCondition_Conditions extends $pb.GeneratedMessage {
   RecordCondition_Conditions createEmptyInstance() => create();
   static $pb.PbList<RecordCondition_Conditions> createRepeated() =>
       $pb.PbList<RecordCondition_Conditions>();
-  static RecordCondition_Conditions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition_Conditions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordCondition_Conditions>(create);
   static RecordCondition_Conditions _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<RecordCondition_Condition> get conditions => $_getList(0);
 }
 
@@ -6091,22 +7395,17 @@ class RecordCondition_Expressions extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RecordCondition.Expressions',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3])
     ..e<RecordCondition_Expressions_LogicalOperator>(
-        1,
-        'logicalOperator',
-        $pb.PbFieldType.OE,
-        RecordCondition_Expressions_LogicalOperator
+        1, 'logicalOperator', $pb.PbFieldType.OE,
+        defaultOrMaker: RecordCondition_Expressions_LogicalOperator
             .LOGICAL_OPERATOR_UNSPECIFIED,
-        RecordCondition_Expressions_LogicalOperator.valueOf,
-        RecordCondition_Expressions_LogicalOperator.values)
-    ..a<RecordCondition_Conditions>(
-        3,
-        'conditions',
-        $pb.PbFieldType.OM,
-        RecordCondition_Conditions.getDefault,
-        RecordCondition_Conditions.create)
+        valueOf: RecordCondition_Expressions_LogicalOperator.valueOf,
+        enumValues: RecordCondition_Expressions_LogicalOperator.values)
+    ..aOM<RecordCondition_Conditions>(3, 'conditions',
+        subBuilder: RecordCondition_Conditions.create)
     ..hasRequiredFields = false;
 
   RecordCondition_Expressions._() : super();
@@ -6130,40 +7429,48 @@ class RecordCondition_Expressions extends $pb.GeneratedMessage {
   RecordCondition_Expressions createEmptyInstance() => create();
   static $pb.PbList<RecordCondition_Expressions> createRepeated() =>
       $pb.PbList<RecordCondition_Expressions>();
-  static RecordCondition_Expressions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition_Expressions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordCondition_Expressions>(create);
   static RecordCondition_Expressions _defaultInstance;
 
   RecordCondition_Expressions_Type whichType() =>
       _RecordCondition_Expressions_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   RecordCondition_Expressions_LogicalOperator get logicalOperator => $_getN(0);
+  @$pb.TagNumber(1)
   set logicalOperator(RecordCondition_Expressions_LogicalOperator v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLogicalOperator() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLogicalOperator() => clearField(1);
 
+  @$pb.TagNumber(3)
   RecordCondition_Conditions get conditions => $_getN(1);
+  @$pb.TagNumber(3)
   set conditions(RecordCondition_Conditions v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConditions() => $_has(1);
+  @$pb.TagNumber(3)
   void clearConditions() => clearField(3);
+  @$pb.TagNumber(3)
+  RecordCondition_Conditions ensureConditions() => $_ensure(1);
 }
 
 class RecordCondition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RecordCondition',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<RecordCondition_Expressions>(
-        3,
-        'expressions',
-        $pb.PbFieldType.OM,
-        RecordCondition_Expressions.getDefault,
-        RecordCondition_Expressions.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<RecordCondition_Expressions>(3, 'expressions',
+        subBuilder: RecordCondition_Expressions.create)
     ..hasRequiredFields = false;
 
   RecordCondition._() : super();
@@ -6183,25 +7490,34 @@ class RecordCondition extends $pb.GeneratedMessage {
   RecordCondition createEmptyInstance() => create();
   static $pb.PbList<RecordCondition> createRepeated() =>
       $pb.PbList<RecordCondition>();
-  static RecordCondition getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RecordCondition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RecordCondition>(create);
   static RecordCondition _defaultInstance;
 
+  @$pb.TagNumber(3)
   RecordCondition_Expressions get expressions => $_getN(0);
+  @$pb.TagNumber(3)
   set expressions(RecordCondition_Expressions v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasExpressions() => $_has(0);
+  @$pb.TagNumber(3)
   void clearExpressions() => clearField(3);
+  @$pb.TagNumber(3)
+  RecordCondition_Expressions ensureExpressions() => $_ensure(0);
 }
 
 class TransformationOverview extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransformationOverview',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(2, 'transformedBytes')
-    ..pc<TransformationSummary>(3, 'transformationSummaries',
-        $pb.PbFieldType.PM, TransformationSummary.create)
+    ..pc<TransformationSummary>(
+        3, 'transformationSummaries', $pb.PbFieldType.PM,
+        subBuilder: TransformationSummary.create)
     ..hasRequiredFields = false;
 
   TransformationOverview._() : super();
@@ -6223,34 +7539,39 @@ class TransformationOverview extends $pb.GeneratedMessage {
   TransformationOverview createEmptyInstance() => create();
   static $pb.PbList<TransformationOverview> createRepeated() =>
       $pb.PbList<TransformationOverview>();
-  static TransformationOverview getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransformationOverview getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationOverview>(create);
   static TransformationOverview _defaultInstance;
 
-  Int64 get transformedBytes => $_getI64(0);
-  set transformedBytes(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get transformedBytes => $_getI64(0);
+  @$pb.TagNumber(2)
+  set transformedBytes($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransformedBytes() => $_has(0);
+  @$pb.TagNumber(2)
   void clearTransformedBytes() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<TransformationSummary> get transformationSummaries => $_getList(1);
 }
 
 class TransformationSummary_SummaryResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransformationSummary.SummaryResult',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'count')
     ..e<TransformationSummary_TransformationResultCode>(
-        2,
-        'code',
-        $pb.PbFieldType.OE,
-        TransformationSummary_TransformationResultCode
+        2, 'code', $pb.PbFieldType.OE,
+        defaultOrMaker: TransformationSummary_TransformationResultCode
             .TRANSFORMATION_RESULT_CODE_UNSPECIFIED,
-        TransformationSummary_TransformationResultCode.valueOf,
-        TransformationSummary_TransformationResultCode.values)
+        valueOf: TransformationSummary_TransformationResultCode.valueOf,
+        enumValues: TransformationSummary_TransformationResultCode.values)
     ..aOS(3, 'details')
     ..hasRequiredFields = false;
 
@@ -6276,50 +7597,63 @@ class TransformationSummary_SummaryResult extends $pb.GeneratedMessage {
   TransformationSummary_SummaryResult createEmptyInstance() => create();
   static $pb.PbList<TransformationSummary_SummaryResult> createRepeated() =>
       $pb.PbList<TransformationSummary_SummaryResult>();
+  @$core.pragma('dart2js:noInline')
   static TransformationSummary_SummaryResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          TransformationSummary_SummaryResult>(create);
   static TransformationSummary_SummaryResult _defaultInstance;
 
-  Int64 get count => $_getI64(0);
-  set count(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get count => $_getI64(0);
+  @$pb.TagNumber(1)
+  set count($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCount() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCount() => clearField(1);
 
+  @$pb.TagNumber(2)
   TransformationSummary_TransformationResultCode get code => $_getN(1);
+  @$pb.TagNumber(2)
   set code(TransformationSummary_TransformationResultCode v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCode() => clearField(2);
 
-  $core.String get details => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get details => $_getSZ(2);
+  @$pb.TagNumber(3)
   set details($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDetails() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDetails() => clearField(3);
 }
 
 class TransformationSummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransformationSummary',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.InfoType>(1, 'infoType', $pb.PbFieldType.OM, $2.InfoType.getDefault,
-        $2.InfoType.create)
-    ..a<$2.FieldId>(2, 'field_2', $pb.PbFieldType.OM, $2.FieldId.getDefault,
-        $2.FieldId.create)
-    ..a<PrimitiveTransformation>(3, 'transformation', $pb.PbFieldType.OM,
-        PrimitiveTransformation.getDefault, PrimitiveTransformation.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.InfoType>(1, 'infoType', subBuilder: $2.InfoType.create)
+    ..aOM<$2.FieldId>(2, 'field', subBuilder: $2.FieldId.create)
+    ..aOM<PrimitiveTransformation>(3, 'transformation',
+        subBuilder: PrimitiveTransformation.create)
     ..pc<TransformationSummary_SummaryResult>(4, 'results', $pb.PbFieldType.PM,
-        TransformationSummary_SummaryResult.create)
+        subBuilder: TransformationSummary_SummaryResult.create)
     ..pc<FieldTransformation>(5, 'fieldTransformations', $pb.PbFieldType.PM,
-        FieldTransformation.create)
-    ..a<RecordSuppression>(6, 'recordSuppress', $pb.PbFieldType.OM,
-        RecordSuppression.getDefault, RecordSuppression.create)
+        subBuilder: FieldTransformation.create)
+    ..aOM<RecordSuppression>(6, 'recordSuppress',
+        subBuilder: RecordSuppression.create)
     ..aInt64(7, 'transformedBytes')
     ..hasRequiredFields = false;
 
@@ -6342,52 +7676,83 @@ class TransformationSummary extends $pb.GeneratedMessage {
   TransformationSummary createEmptyInstance() => create();
   static $pb.PbList<TransformationSummary> createRepeated() =>
       $pb.PbList<TransformationSummary>();
-  static TransformationSummary getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransformationSummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransformationSummary>(create);
   static TransformationSummary _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.InfoType get infoType => $_getN(0);
+  @$pb.TagNumber(1)
   set infoType($2.InfoType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInfoType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInfoType() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.InfoType ensureInfoType() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldId get field_2 => $_getN(1);
+  @$pb.TagNumber(2)
   set field_2($2.FieldId v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasField_2() => $_has(1);
+  @$pb.TagNumber(2)
   void clearField_2() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldId ensureField_2() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   PrimitiveTransformation get transformation => $_getN(2);
+  @$pb.TagNumber(3)
   set transformation(PrimitiveTransformation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTransformation() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTransformation() => clearField(3);
+  @$pb.TagNumber(3)
+  PrimitiveTransformation ensureTransformation() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<TransformationSummary_SummaryResult> get results => $_getList(3);
 
+  @$pb.TagNumber(5)
   $core.List<FieldTransformation> get fieldTransformations => $_getList(4);
 
+  @$pb.TagNumber(6)
   RecordSuppression get recordSuppress => $_getN(5);
+  @$pb.TagNumber(6)
   set recordSuppress(RecordSuppression v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasRecordSuppress() => $_has(5);
+  @$pb.TagNumber(6)
   void clearRecordSuppress() => clearField(6);
+  @$pb.TagNumber(6)
+  RecordSuppression ensureRecordSuppress() => $_ensure(5);
 
-  Int64 get transformedBytes => $_getI64(6);
-  set transformedBytes(Int64 v) {
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get transformedBytes => $_getI64(6);
+  @$pb.TagNumber(7)
+  set transformedBytes($fixnum.Int64 v) {
     $_setInt64(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasTransformedBytes() => $_has(6);
+  @$pb.TagNumber(7)
   void clearTransformedBytes() => clearField(7);
 }
 
@@ -6399,10 +7764,11 @@ class Schedule extends $pb.GeneratedMessage {
     0: Schedule_Option.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Schedule',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<$6.Duration>(1, 'recurrencePeriodDuration', $pb.PbFieldType.OM,
-        $6.Duration.getDefault, $6.Duration.create)
+    ..aOM<$6.Duration>(1, 'recurrencePeriodDuration',
+        subBuilder: $6.Duration.create)
     ..hasRequiredFields = false;
 
   Schedule._() : super();
@@ -6421,33 +7787,39 @@ class Schedule extends $pb.GeneratedMessage {
   static Schedule create() => Schedule._();
   Schedule createEmptyInstance() => create();
   static $pb.PbList<Schedule> createRepeated() => $pb.PbList<Schedule>();
-  static Schedule getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Schedule getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Schedule>(create);
   static Schedule _defaultInstance;
 
   Schedule_Option whichOption() => _Schedule_OptionByTag[$_whichOneof(0)];
   void clearOption() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $6.Duration get recurrencePeriodDuration => $_getN(0);
+  @$pb.TagNumber(1)
   set recurrencePeriodDuration($6.Duration v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRecurrencePeriodDuration() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRecurrencePeriodDuration() => clearField(1);
+  @$pb.TagNumber(1)
+  $6.Duration ensureRecurrencePeriodDuration() => $_ensure(0);
 }
 
 class InspectTemplate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectTemplate',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<InspectConfig>(6, 'inspectConfig', $pb.PbFieldType.OM,
-        InspectConfig.getDefault, InspectConfig.create)
+    ..aOM<$3.Timestamp>(4, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(5, 'updateTime', subBuilder: $3.Timestamp.create)
+    ..aOM<InspectConfig>(6, 'inspectConfig', subBuilder: InspectConfig.create)
     ..hasRequiredFields = false;
 
   InspectTemplate._() : super();
@@ -6467,71 +7839,101 @@ class InspectTemplate extends $pb.GeneratedMessage {
   InspectTemplate createEmptyInstance() => create();
   static $pb.PbList<InspectTemplate> createRepeated() =>
       $pb.PbList<InspectTemplate>();
-  static InspectTemplate getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectTemplate getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectTemplate>(create);
   static InspectTemplate _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  @$pb.TagNumber(4)
   $3.Timestamp get createTime => $_getN(3);
+  @$pb.TagNumber(4)
   set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.Timestamp ensureCreateTime() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $3.Timestamp get updateTime => $_getN(4);
+  @$pb.TagNumber(5)
   set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasUpdateTime() => $_has(4);
+  @$pb.TagNumber(5)
   void clearUpdateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.Timestamp ensureUpdateTime() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   InspectConfig get inspectConfig => $_getN(5);
+  @$pb.TagNumber(6)
   set inspectConfig(InspectConfig v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasInspectConfig() => $_has(5);
+  @$pb.TagNumber(6)
   void clearInspectConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  InspectConfig ensureInspectConfig() => $_ensure(5);
 }
 
 class DeidentifyTemplate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeidentifyTemplate',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<$3.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<DeidentifyConfig>(6, 'deidentifyConfig', $pb.PbFieldType.OM,
-        DeidentifyConfig.getDefault, DeidentifyConfig.create)
+    ..aOM<$3.Timestamp>(4, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(5, 'updateTime', subBuilder: $3.Timestamp.create)
+    ..aOM<DeidentifyConfig>(6, 'deidentifyConfig',
+        subBuilder: DeidentifyConfig.create)
     ..hasRequiredFields = false;
 
   DeidentifyTemplate._() : super();
@@ -6551,65 +7953,97 @@ class DeidentifyTemplate extends $pb.GeneratedMessage {
   DeidentifyTemplate createEmptyInstance() => create();
   static $pb.PbList<DeidentifyTemplate> createRepeated() =>
       $pb.PbList<DeidentifyTemplate>();
-  static DeidentifyTemplate getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeidentifyTemplate getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeidentifyTemplate>(create);
   static DeidentifyTemplate _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  @$pb.TagNumber(4)
   $3.Timestamp get createTime => $_getN(3);
+  @$pb.TagNumber(4)
   set createTime($3.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.Timestamp ensureCreateTime() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $3.Timestamp get updateTime => $_getN(4);
+  @$pb.TagNumber(5)
   set updateTime($3.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasUpdateTime() => $_has(4);
+  @$pb.TagNumber(5)
   void clearUpdateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.Timestamp ensureUpdateTime() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   DeidentifyConfig get deidentifyConfig => $_getN(5);
+  @$pb.TagNumber(6)
   set deidentifyConfig(DeidentifyConfig v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDeidentifyConfig() => $_has(5);
+  @$pb.TagNumber(6)
   void clearDeidentifyConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  DeidentifyConfig ensureDeidentifyConfig() => $_ensure(5);
 }
 
 class Error extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Error',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$7.Status>(1, 'details', $pb.PbFieldType.OM, $7.Status.getDefault,
-        $7.Status.create)
-    ..pc<$3.Timestamp>(2, 'timestamps', $pb.PbFieldType.PM, $3.Timestamp.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$7.Status>(1, 'details', subBuilder: $7.Status.create)
+    ..pc<$3.Timestamp>(2, 'timestamps', $pb.PbFieldType.PM,
+        subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   Error._() : super();
@@ -6628,17 +8062,26 @@ class Error extends $pb.GeneratedMessage {
   static Error create() => Error._();
   Error createEmptyInstance() => create();
   static $pb.PbList<Error> createRepeated() => $pb.PbList<Error>();
-  static Error getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Error getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Error>(create);
   static Error _defaultInstance;
 
+  @$pb.TagNumber(1)
   $7.Status get details => $_getN(0);
+  @$pb.TagNumber(1)
   set details($7.Status v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDetails() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDetails() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.Status ensureDetails() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$3.Timestamp> get timestamps => $_getList(1);
 }
 
@@ -6651,10 +8094,10 @@ class JobTrigger_Trigger extends $pb.GeneratedMessage {
     0: JobTrigger_Trigger_Trigger.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobTrigger.Trigger',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<Schedule>(
-        1, 'schedule', $pb.PbFieldType.OM, Schedule.getDefault, Schedule.create)
+    ..aOM<Schedule>(1, 'schedule', subBuilder: Schedule.create)
     ..hasRequiredFields = false;
 
   JobTrigger_Trigger._() : super();
@@ -6674,21 +8117,28 @@ class JobTrigger_Trigger extends $pb.GeneratedMessage {
   JobTrigger_Trigger createEmptyInstance() => create();
   static $pb.PbList<JobTrigger_Trigger> createRepeated() =>
       $pb.PbList<JobTrigger_Trigger>();
-  static JobTrigger_Trigger getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobTrigger_Trigger getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobTrigger_Trigger>(create);
   static JobTrigger_Trigger _defaultInstance;
 
   JobTrigger_Trigger_Trigger whichTrigger() =>
       _JobTrigger_Trigger_TriggerByTag[$_whichOneof(0)];
   void clearTrigger() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   Schedule get schedule => $_getN(0);
+  @$pb.TagNumber(1)
   set schedule(Schedule v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSchedule() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSchedule() => clearField(1);
+  @$pb.TagNumber(1)
+  Schedule ensureSchedule() => $_ensure(0);
 }
 
 enum JobTrigger_Job { inspectJob, notSet }
@@ -6699,29 +8149,24 @@ class JobTrigger extends $pb.GeneratedMessage {
     0: JobTrigger_Job.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobTrigger',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [4])
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
-    ..a<InspectJobConfig>(4, 'inspectJob', $pb.PbFieldType.OM,
-        InspectJobConfig.getDefault, InspectJobConfig.create)
-    ..pc<JobTrigger_Trigger>(
-        5, 'triggers', $pb.PbFieldType.PM, JobTrigger_Trigger.create)
-    ..pc<Error>(6, 'errors', $pb.PbFieldType.PM, Error.create)
-    ..a<$3.Timestamp>(7, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(8, 'updateTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(9, 'lastRunTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..e<JobTrigger_Status>(
-        10,
-        'status',
-        $pb.PbFieldType.OE,
-        JobTrigger_Status.STATUS_UNSPECIFIED,
-        JobTrigger_Status.valueOf,
-        JobTrigger_Status.values)
+    ..aOM<InspectJobConfig>(4, 'inspectJob',
+        subBuilder: InspectJobConfig.create)
+    ..pc<JobTrigger_Trigger>(5, 'triggers', $pb.PbFieldType.PM,
+        subBuilder: JobTrigger_Trigger.create)
+    ..pc<Error>(6, 'errors', $pb.PbFieldType.PM, subBuilder: Error.create)
+    ..aOM<$3.Timestamp>(7, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(8, 'updateTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(9, 'lastRunTime', subBuilder: $3.Timestamp.create)
+    ..e<JobTrigger_Status>(10, 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: JobTrigger_Status.STATUS_UNSPECIFIED,
+        valueOf: JobTrigger_Status.valueOf,
+        enumValues: JobTrigger_Status.values)
     ..hasRequiredFields = false;
 
   JobTrigger._() : super();
@@ -6740,86 +8185,131 @@ class JobTrigger extends $pb.GeneratedMessage {
   static JobTrigger create() => JobTrigger._();
   JobTrigger createEmptyInstance() => create();
   static $pb.PbList<JobTrigger> createRepeated() => $pb.PbList<JobTrigger>();
-  static JobTrigger getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobTrigger getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobTrigger>(create);
   static JobTrigger _defaultInstance;
 
   JobTrigger_Job whichJob() => _JobTrigger_JobByTag[$_whichOneof(0)];
   void clearJob() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  @$pb.TagNumber(4)
   InspectJobConfig get inspectJob => $_getN(3);
+  @$pb.TagNumber(4)
   set inspectJob(InspectJobConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInspectJob() => $_has(3);
+  @$pb.TagNumber(4)
   void clearInspectJob() => clearField(4);
+  @$pb.TagNumber(4)
+  InspectJobConfig ensureInspectJob() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $core.List<JobTrigger_Trigger> get triggers => $_getList(4);
 
+  @$pb.TagNumber(6)
   $core.List<Error> get errors => $_getList(5);
 
+  @$pb.TagNumber(7)
   $3.Timestamp get createTime => $_getN(6);
+  @$pb.TagNumber(7)
   set createTime($3.Timestamp v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasCreateTime() => $_has(6);
+  @$pb.TagNumber(7)
   void clearCreateTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $3.Timestamp ensureCreateTime() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $3.Timestamp get updateTime => $_getN(7);
+  @$pb.TagNumber(8)
   set updateTime($3.Timestamp v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasUpdateTime() => $_has(7);
+  @$pb.TagNumber(8)
   void clearUpdateTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $3.Timestamp ensureUpdateTime() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   $3.Timestamp get lastRunTime => $_getN(8);
+  @$pb.TagNumber(9)
   set lastRunTime($3.Timestamp v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasLastRunTime() => $_has(8);
+  @$pb.TagNumber(9)
   void clearLastRunTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $3.Timestamp ensureLastRunTime() => $_ensure(8);
 
+  @$pb.TagNumber(10)
   JobTrigger_Status get status => $_getN(9);
+  @$pb.TagNumber(10)
   set status(JobTrigger_Status v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasStatus() => $_has(9);
+  @$pb.TagNumber(10)
   void clearStatus() => clearField(10);
 }
 
 class Action_SaveFindings extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Action.SaveFindings',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<OutputStorageConfig>(1, 'outputConfig', $pb.PbFieldType.OM,
-        OutputStorageConfig.getDefault, OutputStorageConfig.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<OutputStorageConfig>(1, 'outputConfig',
+        subBuilder: OutputStorageConfig.create)
     ..hasRequiredFields = false;
 
   Action_SaveFindings._() : super();
@@ -6839,22 +8329,30 @@ class Action_SaveFindings extends $pb.GeneratedMessage {
   Action_SaveFindings createEmptyInstance() => create();
   static $pb.PbList<Action_SaveFindings> createRepeated() =>
       $pb.PbList<Action_SaveFindings>();
-  static Action_SaveFindings getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Action_SaveFindings getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Action_SaveFindings>(create);
   static Action_SaveFindings _defaultInstance;
 
+  @$pb.TagNumber(1)
   OutputStorageConfig get outputConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set outputConfig(OutputStorageConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOutputConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOutputConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  OutputStorageConfig ensureOutputConfig() => $_ensure(0);
 }
 
 class Action_PublishToPubSub extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Action.PublishToPubSub',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'topic')
     ..hasRequiredFields = false;
 
@@ -6877,23 +8375,29 @@ class Action_PublishToPubSub extends $pb.GeneratedMessage {
   Action_PublishToPubSub createEmptyInstance() => create();
   static $pb.PbList<Action_PublishToPubSub> createRepeated() =>
       $pb.PbList<Action_PublishToPubSub>();
-  static Action_PublishToPubSub getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Action_PublishToPubSub getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Action_PublishToPubSub>(create);
   static Action_PublishToPubSub _defaultInstance;
 
-  $core.String get topic => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
   set topic($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 }
 
 class Action_PublishSummaryToCscc extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Action.PublishSummaryToCscc',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   Action_PublishSummaryToCscc._() : super();
@@ -6917,15 +8421,17 @@ class Action_PublishSummaryToCscc extends $pb.GeneratedMessage {
   Action_PublishSummaryToCscc createEmptyInstance() => create();
   static $pb.PbList<Action_PublishSummaryToCscc> createRepeated() =>
       $pb.PbList<Action_PublishSummaryToCscc>();
-  static Action_PublishSummaryToCscc getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Action_PublishSummaryToCscc getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Action_PublishSummaryToCscc>(create);
   static Action_PublishSummaryToCscc _defaultInstance;
 }
 
 class Action_PublishFindingsToCloudDataCatalog extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Action.PublishFindingsToCloudDataCatalog',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   Action_PublishFindingsToCloudDataCatalog._() : super();
@@ -6951,15 +8457,18 @@ class Action_PublishFindingsToCloudDataCatalog extends $pb.GeneratedMessage {
   static $pb.PbList<Action_PublishFindingsToCloudDataCatalog>
       createRepeated() =>
           $pb.PbList<Action_PublishFindingsToCloudDataCatalog>();
+  @$core.pragma('dart2js:noInline')
   static Action_PublishFindingsToCloudDataCatalog getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          Action_PublishFindingsToCloudDataCatalog>(create);
   static Action_PublishFindingsToCloudDataCatalog _defaultInstance;
 }
 
 class Action_JobNotificationEmails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Action.JobNotificationEmails',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   Action_JobNotificationEmails._() : super();
@@ -6983,8 +8492,9 @@ class Action_JobNotificationEmails extends $pb.GeneratedMessage {
   Action_JobNotificationEmails createEmptyInstance() => create();
   static $pb.PbList<Action_JobNotificationEmails> createRepeated() =>
       $pb.PbList<Action_JobNotificationEmails>();
-  static Action_JobNotificationEmails getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Action_JobNotificationEmails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Action_JobNotificationEmails>(create);
   static Action_JobNotificationEmails _defaultInstance;
 }
 
@@ -7007,30 +8517,20 @@ class Action extends $pb.GeneratedMessage {
     0: Action_Action.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Action',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 5, 8])
-    ..a<Action_SaveFindings>(1, 'saveFindings', $pb.PbFieldType.OM,
-        Action_SaveFindings.getDefault, Action_SaveFindings.create)
-    ..a<Action_PublishToPubSub>(2, 'pubSub', $pb.PbFieldType.OM,
-        Action_PublishToPubSub.getDefault, Action_PublishToPubSub.create)
-    ..a<Action_PublishSummaryToCscc>(
-        3,
-        'publishSummaryToCscc',
-        $pb.PbFieldType.OM,
-        Action_PublishSummaryToCscc.getDefault,
-        Action_PublishSummaryToCscc.create)
-    ..a<Action_PublishFindingsToCloudDataCatalog>(
-        5,
-        'publishFindingsToCloudDataCatalog',
-        $pb.PbFieldType.OM,
-        Action_PublishFindingsToCloudDataCatalog.getDefault,
-        Action_PublishFindingsToCloudDataCatalog.create)
-    ..a<Action_JobNotificationEmails>(
-        8,
-        'jobNotificationEmails',
-        $pb.PbFieldType.OM,
-        Action_JobNotificationEmails.getDefault,
-        Action_JobNotificationEmails.create)
+    ..aOM<Action_SaveFindings>(1, 'saveFindings',
+        subBuilder: Action_SaveFindings.create)
+    ..aOM<Action_PublishToPubSub>(2, 'pubSub',
+        subBuilder: Action_PublishToPubSub.create)
+    ..aOM<Action_PublishSummaryToCscc>(3, 'publishSummaryToCscc',
+        subBuilder: Action_PublishSummaryToCscc.create)
+    ..aOM<Action_PublishFindingsToCloudDataCatalog>(
+        5, 'publishFindingsToCloudDataCatalog',
+        subBuilder: Action_PublishFindingsToCloudDataCatalog.create)
+    ..aOM<Action_JobNotificationEmails>(8, 'jobNotificationEmails',
+        subBuilder: Action_JobNotificationEmails.create)
     ..hasRequiredFields = false;
 
   Action._() : super();
@@ -7049,62 +8549,96 @@ class Action extends $pb.GeneratedMessage {
   static Action create() => Action._();
   Action createEmptyInstance() => create();
   static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
-  static Action getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Action getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Action>(create);
   static Action _defaultInstance;
 
   Action_Action whichAction() => _Action_ActionByTag[$_whichOneof(0)];
   void clearAction() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   Action_SaveFindings get saveFindings => $_getN(0);
+  @$pb.TagNumber(1)
   set saveFindings(Action_SaveFindings v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSaveFindings() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSaveFindings() => clearField(1);
+  @$pb.TagNumber(1)
+  Action_SaveFindings ensureSaveFindings() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Action_PublishToPubSub get pubSub => $_getN(1);
+  @$pb.TagNumber(2)
   set pubSub(Action_PublishToPubSub v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPubSub() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPubSub() => clearField(2);
+  @$pb.TagNumber(2)
+  Action_PublishToPubSub ensurePubSub() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   Action_PublishSummaryToCscc get publishSummaryToCscc => $_getN(2);
+  @$pb.TagNumber(3)
   set publishSummaryToCscc(Action_PublishSummaryToCscc v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPublishSummaryToCscc() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPublishSummaryToCscc() => clearField(3);
+  @$pb.TagNumber(3)
+  Action_PublishSummaryToCscc ensurePublishSummaryToCscc() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   Action_PublishFindingsToCloudDataCatalog
       get publishFindingsToCloudDataCatalog => $_getN(3);
+  @$pb.TagNumber(5)
   set publishFindingsToCloudDataCatalog(
       Action_PublishFindingsToCloudDataCatalog v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPublishFindingsToCloudDataCatalog() => $_has(3);
+  @$pb.TagNumber(5)
   void clearPublishFindingsToCloudDataCatalog() => clearField(5);
+  @$pb.TagNumber(5)
+  Action_PublishFindingsToCloudDataCatalog
+      ensurePublishFindingsToCloudDataCatalog() => $_ensure(3);
 
+  @$pb.TagNumber(8)
   Action_JobNotificationEmails get jobNotificationEmails => $_getN(4);
+  @$pb.TagNumber(8)
   set jobNotificationEmails(Action_JobNotificationEmails v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasJobNotificationEmails() => $_has(4);
+  @$pb.TagNumber(8)
   void clearJobNotificationEmails() => clearField(8);
+  @$pb.TagNumber(8)
+  Action_JobNotificationEmails ensureJobNotificationEmails() => $_ensure(4);
 }
 
 class CreateInspectTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateInspectTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<InspectTemplate>(2, 'inspectTemplate', $pb.PbFieldType.OM,
-        InspectTemplate.getDefault, InspectTemplate.create)
+    ..aOM<InspectTemplate>(2, 'inspectTemplate',
+        subBuilder: InspectTemplate.create)
     ..aOS(3, 'templateId')
     ..hasRequiredFields = false;
 
@@ -7129,44 +8663,59 @@ class CreateInspectTemplateRequest extends $pb.GeneratedMessage {
   CreateInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<CreateInspectTemplateRequest> createRepeated() =>
       $pb.PbList<CreateInspectTemplateRequest>();
-  static CreateInspectTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateInspectTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateInspectTemplateRequest>(create);
   static CreateInspectTemplateRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   InspectTemplate get inspectTemplate => $_getN(1);
+  @$pb.TagNumber(2)
   set inspectTemplate(InspectTemplate v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInspectTemplate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInspectTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectTemplate ensureInspectTemplate() => $_ensure(1);
 
-  $core.String get templateId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get templateId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set templateId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTemplateId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTemplateId() => clearField(3);
 }
 
 class UpdateInspectTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateInspectTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<InspectTemplate>(2, 'inspectTemplate', $pb.PbFieldType.OM,
-        InspectTemplate.getDefault, InspectTemplate.create)
-    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $8.FieldMask.getDefault, $8.FieldMask.create)
+    ..aOM<InspectTemplate>(2, 'inspectTemplate',
+        subBuilder: InspectTemplate.create)
+    ..aOM<$8.FieldMask>(3, 'updateMask', subBuilder: $8.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateInspectTemplateRequest._() : super();
@@ -7190,38 +8739,56 @@ class UpdateInspectTemplateRequest extends $pb.GeneratedMessage {
   UpdateInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateInspectTemplateRequest> createRepeated() =>
       $pb.PbList<UpdateInspectTemplateRequest>();
-  static UpdateInspectTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateInspectTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateInspectTemplateRequest>(create);
   static UpdateInspectTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   InspectTemplate get inspectTemplate => $_getN(1);
+  @$pb.TagNumber(2)
   set inspectTemplate(InspectTemplate v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInspectTemplate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInspectTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectTemplate ensureInspectTemplate() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $8.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetInspectTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInspectTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -7245,23 +8812,29 @@ class GetInspectTemplateRequest extends $pb.GeneratedMessage {
   GetInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<GetInspectTemplateRequest> createRepeated() =>
       $pb.PbList<GetInspectTemplateRequest>();
-  static GetInspectTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInspectTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInspectTemplateRequest>(create);
   static GetInspectTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListInspectTemplatesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListInspectTemplatesRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -7289,49 +8862,67 @@ class ListInspectTemplatesRequest extends $pb.GeneratedMessage {
   ListInspectTemplatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInspectTemplatesRequest> createRepeated() =>
       $pb.PbList<ListInspectTemplatesRequest>();
-  static ListInspectTemplatesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInspectTemplatesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInspectTemplatesRequest>(create);
   static ListInspectTemplatesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get orderBy => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get orderBy => $_getSZ(3);
+  @$pb.TagNumber(4)
   set orderBy($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOrderBy() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOrderBy() => clearField(4);
 }
 
 class ListInspectTemplatesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListInspectTemplatesResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<InspectTemplate>(
-        1, 'inspectTemplates', $pb.PbFieldType.PM, InspectTemplate.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<InspectTemplate>(1, 'inspectTemplates', $pb.PbFieldType.PM,
+        subBuilder: InspectTemplate.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -7356,25 +8947,32 @@ class ListInspectTemplatesResponse extends $pb.GeneratedMessage {
   ListInspectTemplatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInspectTemplatesResponse> createRepeated() =>
       $pb.PbList<ListInspectTemplatesResponse>();
-  static ListInspectTemplatesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInspectTemplatesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInspectTemplatesResponse>(create);
   static ListInspectTemplatesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<InspectTemplate> get inspectTemplates => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteInspectTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteInspectTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -7399,25 +8997,30 @@ class DeleteInspectTemplateRequest extends $pb.GeneratedMessage {
   DeleteInspectTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInspectTemplateRequest> createRepeated() =>
       $pb.PbList<DeleteInspectTemplateRequest>();
-  static DeleteInspectTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteInspectTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteInspectTemplateRequest>(create);
   static DeleteInspectTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateJobTriggerRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateJobTriggerRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<JobTrigger>(2, 'jobTrigger', $pb.PbFieldType.OM, JobTrigger.getDefault,
-        JobTrigger.create)
+    ..aOM<JobTrigger>(2, 'jobTrigger', subBuilder: JobTrigger.create)
     ..aOS(3, 'triggerId')
     ..hasRequiredFields = false;
 
@@ -7440,38 +9043,54 @@ class CreateJobTriggerRequest extends $pb.GeneratedMessage {
   CreateJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<CreateJobTriggerRequest> createRepeated() =>
       $pb.PbList<CreateJobTriggerRequest>();
-  static CreateJobTriggerRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateJobTriggerRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateJobTriggerRequest>(create);
   static CreateJobTriggerRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   JobTrigger get jobTrigger => $_getN(1);
+  @$pb.TagNumber(2)
   set jobTrigger(JobTrigger v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJobTrigger() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJobTrigger() => clearField(2);
+  @$pb.TagNumber(2)
+  JobTrigger ensureJobTrigger() => $_ensure(1);
 
-  $core.String get triggerId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get triggerId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set triggerId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTriggerId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTriggerId() => clearField(3);
 }
 
 class ActivateJobTriggerRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ActivateJobTriggerRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -7495,27 +9114,31 @@ class ActivateJobTriggerRequest extends $pb.GeneratedMessage {
   ActivateJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<ActivateJobTriggerRequest> createRepeated() =>
       $pb.PbList<ActivateJobTriggerRequest>();
-  static ActivateJobTriggerRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ActivateJobTriggerRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ActivateJobTriggerRequest>(create);
   static ActivateJobTriggerRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateJobTriggerRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateJobTriggerRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<JobTrigger>(2, 'jobTrigger', $pb.PbFieldType.OM, JobTrigger.getDefault,
-        JobTrigger.create)
-    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $8.FieldMask.getDefault, $8.FieldMask.create)
+    ..aOM<JobTrigger>(2, 'jobTrigger', subBuilder: JobTrigger.create)
+    ..aOM<$8.FieldMask>(3, 'updateMask', subBuilder: $8.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateJobTriggerRequest._() : super();
@@ -7537,38 +9160,56 @@ class UpdateJobTriggerRequest extends $pb.GeneratedMessage {
   UpdateJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateJobTriggerRequest> createRepeated() =>
       $pb.PbList<UpdateJobTriggerRequest>();
-  static UpdateJobTriggerRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateJobTriggerRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateJobTriggerRequest>(create);
   static UpdateJobTriggerRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   JobTrigger get jobTrigger => $_getN(1);
+  @$pb.TagNumber(2)
   set jobTrigger(JobTrigger v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJobTrigger() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJobTrigger() => clearField(2);
+  @$pb.TagNumber(2)
+  JobTrigger ensureJobTrigger() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $8.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetJobTriggerRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetJobTriggerRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -7590,16 +9231,21 @@ class GetJobTriggerRequest extends $pb.GeneratedMessage {
   GetJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<GetJobTriggerRequest> createRepeated() =>
       $pb.PbList<GetJobTriggerRequest>();
-  static GetJobTriggerRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetJobTriggerRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetJobTriggerRequest>(create);
   static GetJobTriggerRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -7613,13 +9259,14 @@ class CreateDlpJobRequest extends $pb.GeneratedMessage {
     0: CreateDlpJobRequest_Job.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDlpJobRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'parent')
-    ..a<InspectJobConfig>(2, 'inspectJob', $pb.PbFieldType.OM,
-        InspectJobConfig.getDefault, InspectJobConfig.create)
-    ..a<RiskAnalysisJobConfig>(3, 'riskJob', $pb.PbFieldType.OM,
-        RiskAnalysisJobConfig.getDefault, RiskAnalysisJobConfig.create)
+    ..aOM<InspectJobConfig>(2, 'inspectJob',
+        subBuilder: InspectJobConfig.create)
+    ..aOM<RiskAnalysisJobConfig>(3, 'riskJob',
+        subBuilder: RiskAnalysisJobConfig.create)
     ..aOS(4, 'jobId')
     ..hasRequiredFields = false;
 
@@ -7640,50 +9287,72 @@ class CreateDlpJobRequest extends $pb.GeneratedMessage {
   CreateDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDlpJobRequest> createRepeated() =>
       $pb.PbList<CreateDlpJobRequest>();
-  static CreateDlpJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDlpJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDlpJobRequest>(create);
   static CreateDlpJobRequest _defaultInstance;
 
   CreateDlpJobRequest_Job whichJob() =>
       _CreateDlpJobRequest_JobByTag[$_whichOneof(0)];
   void clearJob() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   InspectJobConfig get inspectJob => $_getN(1);
+  @$pb.TagNumber(2)
   set inspectJob(InspectJobConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInspectJob() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInspectJob() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectJobConfig ensureInspectJob() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   RiskAnalysisJobConfig get riskJob => $_getN(2);
+  @$pb.TagNumber(3)
   set riskJob(RiskAnalysisJobConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRiskJob() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRiskJob() => clearField(3);
+  @$pb.TagNumber(3)
+  RiskAnalysisJobConfig ensureRiskJob() => $_ensure(2);
 
-  $core.String get jobId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get jobId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set jobId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasJobId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearJobId() => clearField(4);
 }
 
 class ListJobTriggersRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobTriggersRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -7710,55 +9379,78 @@ class ListJobTriggersRequest extends $pb.GeneratedMessage {
   ListJobTriggersRequest createEmptyInstance() => create();
   static $pb.PbList<ListJobTriggersRequest> createRepeated() =>
       $pb.PbList<ListJobTriggersRequest>();
-  static ListJobTriggersRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListJobTriggersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListJobTriggersRequest>(create);
   static ListJobTriggersRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get orderBy => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get orderBy => $_getSZ(3);
+  @$pb.TagNumber(4)
   set orderBy($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOrderBy() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOrderBy() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class ListJobTriggersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobTriggersResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<JobTrigger>(1, 'jobTriggers', $pb.PbFieldType.PM, JobTrigger.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<JobTrigger>(1, 'jobTriggers', $pb.PbFieldType.PM,
+        subBuilder: JobTrigger.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -7781,24 +9473,31 @@ class ListJobTriggersResponse extends $pb.GeneratedMessage {
   ListJobTriggersResponse createEmptyInstance() => create();
   static $pb.PbList<ListJobTriggersResponse> createRepeated() =>
       $pb.PbList<ListJobTriggersResponse>();
-  static ListJobTriggersResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListJobTriggersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListJobTriggersResponse>(create);
   static ListJobTriggersResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<JobTrigger> get jobTriggers => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteJobTriggerRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteJobTriggerRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -7821,28 +9520,33 @@ class DeleteJobTriggerRequest extends $pb.GeneratedMessage {
   DeleteJobTriggerRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteJobTriggerRequest> createRepeated() =>
       $pb.PbList<DeleteJobTriggerRequest>();
-  static DeleteJobTriggerRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteJobTriggerRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteJobTriggerRequest>(create);
   static DeleteJobTriggerRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class InspectJobConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InspectJobConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<$2.StorageConfig>(1, 'storageConfig', $pb.PbFieldType.OM,
-        $2.StorageConfig.getDefault, $2.StorageConfig.create)
-    ..a<InspectConfig>(2, 'inspectConfig', $pb.PbFieldType.OM,
-        InspectConfig.getDefault, InspectConfig.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<$2.StorageConfig>(1, 'storageConfig',
+        subBuilder: $2.StorageConfig.create)
+    ..aOM<InspectConfig>(2, 'inspectConfig', subBuilder: InspectConfig.create)
     ..aOS(3, 'inspectTemplateName')
-    ..pc<Action>(4, 'actions', $pb.PbFieldType.PM, Action.create)
+    ..pc<Action>(4, 'actions', $pb.PbFieldType.PM, subBuilder: Action.create)
     ..hasRequiredFields = false;
 
   InspectJobConfig._() : super();
@@ -7862,34 +9566,52 @@ class InspectJobConfig extends $pb.GeneratedMessage {
   InspectJobConfig createEmptyInstance() => create();
   static $pb.PbList<InspectJobConfig> createRepeated() =>
       $pb.PbList<InspectJobConfig>();
-  static InspectJobConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InspectJobConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InspectJobConfig>(create);
   static InspectJobConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.StorageConfig get storageConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set storageConfig($2.StorageConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStorageConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStorageConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.StorageConfig ensureStorageConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   InspectConfig get inspectConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set inspectConfig(InspectConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInspectConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInspectConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  InspectConfig ensureInspectConfig() => $_ensure(1);
 
-  $core.String get inspectTemplateName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get inspectTemplateName => $_getSZ(2);
+  @$pb.TagNumber(3)
   set inspectTemplateName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInspectTemplateName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInspectTemplateName() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<Action> get actions => $_getList(3);
 }
 
@@ -7902,39 +9624,27 @@ class DlpJob extends $pb.GeneratedMessage {
     0: DlpJob_Details.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DlpJob',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [4, 5])
     ..aOS(1, 'name')
-    ..e<DlpJobType>(
-        2,
-        'type',
-        $pb.PbFieldType.OE,
-        DlpJobType.DLP_JOB_TYPE_UNSPECIFIED,
-        DlpJobType.valueOf,
-        DlpJobType.values)
-    ..e<DlpJob_JobState>(
-        3,
-        'state',
-        $pb.PbFieldType.OE,
-        DlpJob_JobState.JOB_STATE_UNSPECIFIED,
-        DlpJob_JobState.valueOf,
-        DlpJob_JobState.values)
-    ..a<AnalyzeDataSourceRiskDetails>(
-        4,
-        'riskDetails',
-        $pb.PbFieldType.OM,
-        AnalyzeDataSourceRiskDetails.getDefault,
-        AnalyzeDataSourceRiskDetails.create)
-    ..a<InspectDataSourceDetails>(5, 'inspectDetails', $pb.PbFieldType.OM,
-        InspectDataSourceDetails.getDefault, InspectDataSourceDetails.create)
-    ..a<$3.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(7, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(8, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
-        $3.Timestamp.create)
+    ..e<DlpJobType>(2, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: DlpJobType.DLP_JOB_TYPE_UNSPECIFIED,
+        valueOf: DlpJobType.valueOf,
+        enumValues: DlpJobType.values)
+    ..e<DlpJob_JobState>(3, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: DlpJob_JobState.JOB_STATE_UNSPECIFIED,
+        valueOf: DlpJob_JobState.valueOf,
+        enumValues: DlpJob_JobState.values)
+    ..aOM<AnalyzeDataSourceRiskDetails>(4, 'riskDetails',
+        subBuilder: AnalyzeDataSourceRiskDetails.create)
+    ..aOM<InspectDataSourceDetails>(5, 'inspectDetails',
+        subBuilder: InspectDataSourceDetails.create)
+    ..aOM<$3.Timestamp>(6, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(7, 'startTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(8, 'endTime', subBuilder: $3.Timestamp.create)
     ..aOS(10, 'jobTriggerName')
-    ..pc<Error>(11, 'errors', $pb.PbFieldType.PM, Error.create)
+    ..pc<Error>(11, 'errors', $pb.PbFieldType.PM, subBuilder: Error.create)
     ..hasRequiredFields = false;
 
   DlpJob._() : super();
@@ -7953,90 +9663,140 @@ class DlpJob extends $pb.GeneratedMessage {
   static DlpJob create() => DlpJob._();
   DlpJob createEmptyInstance() => create();
   static $pb.PbList<DlpJob> createRepeated() => $pb.PbList<DlpJob>();
-  static DlpJob getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DlpJob getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DlpJob>(create);
   static DlpJob _defaultInstance;
 
   DlpJob_Details whichDetails() => _DlpJob_DetailsByTag[$_whichOneof(0)];
   void clearDetails() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   DlpJobType get type => $_getN(1);
+  @$pb.TagNumber(2)
   set type(DlpJobType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearType() => clearField(2);
 
+  @$pb.TagNumber(3)
   DlpJob_JobState get state => $_getN(2);
+  @$pb.TagNumber(3)
   set state(DlpJob_JobState v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(3)
   void clearState() => clearField(3);
 
+  @$pb.TagNumber(4)
   AnalyzeDataSourceRiskDetails get riskDetails => $_getN(3);
+  @$pb.TagNumber(4)
   set riskDetails(AnalyzeDataSourceRiskDetails v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasRiskDetails() => $_has(3);
+  @$pb.TagNumber(4)
   void clearRiskDetails() => clearField(4);
+  @$pb.TagNumber(4)
+  AnalyzeDataSourceRiskDetails ensureRiskDetails() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   InspectDataSourceDetails get inspectDetails => $_getN(4);
+  @$pb.TagNumber(5)
   set inspectDetails(InspectDataSourceDetails v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasInspectDetails() => $_has(4);
+  @$pb.TagNumber(5)
   void clearInspectDetails() => clearField(5);
+  @$pb.TagNumber(5)
+  InspectDataSourceDetails ensureInspectDetails() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $3.Timestamp get createTime => $_getN(5);
+  @$pb.TagNumber(6)
   set createTime($3.Timestamp v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateTime() => $_has(5);
+  @$pb.TagNumber(6)
   void clearCreateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Timestamp ensureCreateTime() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $3.Timestamp get startTime => $_getN(6);
+  @$pb.TagNumber(7)
   set startTime($3.Timestamp v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasStartTime() => $_has(6);
+  @$pb.TagNumber(7)
   void clearStartTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $3.Timestamp ensureStartTime() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $3.Timestamp get endTime => $_getN(7);
+  @$pb.TagNumber(8)
   set endTime($3.Timestamp v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasEndTime() => $_has(7);
+  @$pb.TagNumber(8)
   void clearEndTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $3.Timestamp ensureEndTime() => $_ensure(7);
 
-  $core.String get jobTriggerName => $_getS(8, '');
+  @$pb.TagNumber(10)
+  $core.String get jobTriggerName => $_getSZ(8);
+  @$pb.TagNumber(10)
   set jobTriggerName($core.String v) {
     $_setString(8, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasJobTriggerName() => $_has(8);
+  @$pb.TagNumber(10)
   void clearJobTriggerName() => clearField(10);
 
+  @$pb.TagNumber(11)
   $core.List<Error> get errors => $_getList(9);
 }
 
 class GetDlpJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDlpJobRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -8057,33 +9817,36 @@ class GetDlpJobRequest extends $pb.GeneratedMessage {
   GetDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetDlpJobRequest> createRepeated() =>
       $pb.PbList<GetDlpJobRequest>();
-  static GetDlpJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDlpJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDlpJobRequest>(create);
   static GetDlpJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListDlpJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDlpJobsRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'filter')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..aOS(4, 'parent')
-    ..e<DlpJobType>(
-        5,
-        'type',
-        $pb.PbFieldType.OE,
-        DlpJobType.DLP_JOB_TYPE_UNSPECIFIED,
-        DlpJobType.valueOf,
-        DlpJobType.values)
+    ..e<DlpJobType>(5, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: DlpJobType.DLP_JOB_TYPE_UNSPECIFIED,
+        valueOf: DlpJobType.valueOf,
+        enumValues: DlpJobType.values)
     ..aOS(6, 'orderBy')
     ..hasRequiredFields = false;
 
@@ -8104,63 +9867,89 @@ class ListDlpJobsRequest extends $pb.GeneratedMessage {
   ListDlpJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDlpJobsRequest> createRepeated() =>
       $pb.PbList<ListDlpJobsRequest>();
-  static ListDlpJobsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDlpJobsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDlpJobsRequest>(create);
   static ListDlpJobsRequest _defaultInstance;
 
-  $core.String get filter => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(1)
   set filter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.String get parent => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get parent => $_getSZ(3);
+  @$pb.TagNumber(4)
   set parent($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasParent() => $_has(3);
+  @$pb.TagNumber(4)
   void clearParent() => clearField(4);
 
+  @$pb.TagNumber(5)
   DlpJobType get type => $_getN(4);
+  @$pb.TagNumber(5)
   set type(DlpJobType v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasType() => $_has(4);
+  @$pb.TagNumber(5)
   void clearType() => clearField(5);
 
-  $core.String get orderBy => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get orderBy => $_getSZ(5);
+  @$pb.TagNumber(6)
   set orderBy($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOrderBy() => $_has(5);
+  @$pb.TagNumber(6)
   void clearOrderBy() => clearField(6);
 }
 
 class ListDlpJobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDlpJobsResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<DlpJob>(1, 'jobs', $pb.PbFieldType.PM, DlpJob.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<DlpJob>(1, 'jobs', $pb.PbFieldType.PM, subBuilder: DlpJob.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -8181,24 +9970,31 @@ class ListDlpJobsResponse extends $pb.GeneratedMessage {
   ListDlpJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDlpJobsResponse> createRepeated() =>
       $pb.PbList<ListDlpJobsResponse>();
-  static ListDlpJobsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDlpJobsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDlpJobsResponse>(create);
   static ListDlpJobsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<DlpJob> get jobs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CancelDlpJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CancelDlpJobRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -8219,22 +10015,28 @@ class CancelDlpJobRequest extends $pb.GeneratedMessage {
   CancelDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<CancelDlpJobRequest> createRepeated() =>
       $pb.PbList<CancelDlpJobRequest>();
-  static CancelDlpJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CancelDlpJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CancelDlpJobRequest>(create);
   static CancelDlpJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteDlpJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDlpJobRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -8255,26 +10057,32 @@ class DeleteDlpJobRequest extends $pb.GeneratedMessage {
   DeleteDlpJobRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDlpJobRequest> createRepeated() =>
       $pb.PbList<DeleteDlpJobRequest>();
-  static DeleteDlpJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDlpJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDlpJobRequest>(create);
   static DeleteDlpJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateDeidentifyTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<DeidentifyTemplate>(2, 'deidentifyTemplate', $pb.PbFieldType.OM,
-        DeidentifyTemplate.getDefault, DeidentifyTemplate.create)
+    ..aOM<DeidentifyTemplate>(2, 'deidentifyTemplate',
+        subBuilder: DeidentifyTemplate.create)
     ..aOS(3, 'templateId')
     ..hasRequiredFields = false;
 
@@ -8299,44 +10107,60 @@ class CreateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   CreateDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<CreateDeidentifyTemplateRequest>();
-  static CreateDeidentifyTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDeidentifyTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDeidentifyTemplateRequest>(
+          create);
   static CreateDeidentifyTemplateRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   DeidentifyTemplate get deidentifyTemplate => $_getN(1);
+  @$pb.TagNumber(2)
   set deidentifyTemplate(DeidentifyTemplate v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDeidentifyTemplate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDeidentifyTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  DeidentifyTemplate ensureDeidentifyTemplate() => $_ensure(1);
 
-  $core.String get templateId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get templateId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set templateId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTemplateId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTemplateId() => clearField(3);
 }
 
 class UpdateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateDeidentifyTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<DeidentifyTemplate>(2, 'deidentifyTemplate', $pb.PbFieldType.OM,
-        DeidentifyTemplate.getDefault, DeidentifyTemplate.create)
-    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $8.FieldMask.getDefault, $8.FieldMask.create)
+    ..aOM<DeidentifyTemplate>(2, 'deidentifyTemplate',
+        subBuilder: DeidentifyTemplate.create)
+    ..aOM<$8.FieldMask>(3, 'updateMask', subBuilder: $8.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDeidentifyTemplateRequest._() : super();
@@ -8360,39 +10184,58 @@ class UpdateDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   UpdateDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<UpdateDeidentifyTemplateRequest>();
-  static UpdateDeidentifyTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDeidentifyTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDeidentifyTemplateRequest>(
+          create);
   static UpdateDeidentifyTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   DeidentifyTemplate get deidentifyTemplate => $_getN(1);
+  @$pb.TagNumber(2)
   set deidentifyTemplate(DeidentifyTemplate v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDeidentifyTemplate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDeidentifyTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  DeidentifyTemplate ensureDeidentifyTemplate() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $8.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetDeidentifyTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -8417,23 +10260,29 @@ class GetDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   GetDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<GetDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<GetDeidentifyTemplateRequest>();
-  static GetDeidentifyTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDeidentifyTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDeidentifyTemplateRequest>(create);
   static GetDeidentifyTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListDeidentifyTemplatesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeidentifyTemplatesRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -8461,49 +10310,67 @@ class ListDeidentifyTemplatesRequest extends $pb.GeneratedMessage {
   ListDeidentifyTemplatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListDeidentifyTemplatesRequest> createRepeated() =>
       $pb.PbList<ListDeidentifyTemplatesRequest>();
-  static ListDeidentifyTemplatesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeidentifyTemplatesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeidentifyTemplatesRequest>(create);
   static ListDeidentifyTemplatesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get orderBy => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get orderBy => $_getSZ(3);
+  @$pb.TagNumber(4)
   set orderBy($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOrderBy() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOrderBy() => clearField(4);
 }
 
 class ListDeidentifyTemplatesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeidentifyTemplatesResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<DeidentifyTemplate>(
-        1, 'deidentifyTemplates', $pb.PbFieldType.PM, DeidentifyTemplate.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<DeidentifyTemplate>(1, 'deidentifyTemplates', $pb.PbFieldType.PM,
+        subBuilder: DeidentifyTemplate.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -8528,25 +10395,33 @@ class ListDeidentifyTemplatesResponse extends $pb.GeneratedMessage {
   ListDeidentifyTemplatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListDeidentifyTemplatesResponse> createRepeated() =>
       $pb.PbList<ListDeidentifyTemplatesResponse>();
-  static ListDeidentifyTemplatesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeidentifyTemplatesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeidentifyTemplatesResponse>(
+          create);
   static ListDeidentifyTemplatesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<DeidentifyTemplate> get deidentifyTemplates => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteDeidentifyTemplateRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -8571,16 +10446,22 @@ class DeleteDeidentifyTemplateRequest extends $pb.GeneratedMessage {
   DeleteDeidentifyTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDeidentifyTemplateRequest> createRepeated() =>
       $pb.PbList<DeleteDeidentifyTemplateRequest>();
-  static DeleteDeidentifyTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDeidentifyTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDeidentifyTemplateRequest>(
+          create);
   static DeleteDeidentifyTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -8599,14 +10480,15 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'LargeCustomDictionaryConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..a<$2.CloudStoragePath>(1, 'outputPath', $pb.PbFieldType.OM,
-        $2.CloudStoragePath.getDefault, $2.CloudStoragePath.create)
-    ..a<$2.CloudStorageFileSet>(2, 'cloudStorageFileSet', $pb.PbFieldType.OM,
-        $2.CloudStorageFileSet.getDefault, $2.CloudStorageFileSet.create)
-    ..a<$2.BigQueryField>(3, 'bigQueryField', $pb.PbFieldType.OM,
-        $2.BigQueryField.getDefault, $2.BigQueryField.create)
+    ..aOM<$2.CloudStoragePath>(1, 'outputPath',
+        subBuilder: $2.CloudStoragePath.create)
+    ..aOM<$2.CloudStorageFileSet>(2, 'cloudStorageFileSet',
+        subBuilder: $2.CloudStorageFileSet.create)
+    ..aOM<$2.BigQueryField>(3, 'bigQueryField',
+        subBuilder: $2.BigQueryField.create)
     ..hasRequiredFields = false;
 
   LargeCustomDictionaryConfig._() : super();
@@ -8630,43 +10512,63 @@ class LargeCustomDictionaryConfig extends $pb.GeneratedMessage {
   LargeCustomDictionaryConfig createEmptyInstance() => create();
   static $pb.PbList<LargeCustomDictionaryConfig> createRepeated() =>
       $pb.PbList<LargeCustomDictionaryConfig>();
-  static LargeCustomDictionaryConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LargeCustomDictionaryConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LargeCustomDictionaryConfig>(create);
   static LargeCustomDictionaryConfig _defaultInstance;
 
   LargeCustomDictionaryConfig_Source whichSource() =>
       _LargeCustomDictionaryConfig_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $2.CloudStoragePath get outputPath => $_getN(0);
+  @$pb.TagNumber(1)
   set outputPath($2.CloudStoragePath v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOutputPath() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOutputPath() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.CloudStoragePath ensureOutputPath() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.CloudStorageFileSet get cloudStorageFileSet => $_getN(1);
+  @$pb.TagNumber(2)
   set cloudStorageFileSet($2.CloudStorageFileSet v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCloudStorageFileSet() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCloudStorageFileSet() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.CloudStorageFileSet ensureCloudStorageFileSet() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $2.BigQueryField get bigQueryField => $_getN(2);
+  @$pb.TagNumber(3)
   set bigQueryField($2.BigQueryField v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBigQueryField() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBigQueryField() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.BigQueryField ensureBigQueryField() => $_ensure(2);
 }
 
 class LargeCustomDictionaryStats extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'LargeCustomDictionaryStats',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aInt64(1, 'approxNumPhrases')
     ..hasRequiredFields = false;
 
@@ -8690,16 +10592,21 @@ class LargeCustomDictionaryStats extends $pb.GeneratedMessage {
   LargeCustomDictionaryStats createEmptyInstance() => create();
   static $pb.PbList<LargeCustomDictionaryStats> createRepeated() =>
       $pb.PbList<LargeCustomDictionaryStats>();
-  static LargeCustomDictionaryStats getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LargeCustomDictionaryStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LargeCustomDictionaryStats>(create);
   static LargeCustomDictionaryStats _defaultInstance;
 
-  Int64 get approxNumPhrases => $_getI64(0);
-  set approxNumPhrases(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get approxNumPhrases => $_getI64(0);
+  @$pb.TagNumber(1)
+  set approxNumPhrases($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasApproxNumPhrases() => $_has(0);
+  @$pb.TagNumber(1)
   void clearApproxNumPhrases() => clearField(1);
 }
 
@@ -8712,16 +10619,13 @@ class StoredInfoTypeConfig extends $pb.GeneratedMessage {
     0: StoredInfoTypeConfig_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeConfig',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3])
     ..aOS(1, 'displayName')
     ..aOS(2, 'description')
-    ..a<LargeCustomDictionaryConfig>(
-        3,
-        'largeCustomDictionary',
-        $pb.PbFieldType.OM,
-        LargeCustomDictionaryConfig.getDefault,
-        LargeCustomDictionaryConfig.create)
+    ..aOM<LargeCustomDictionaryConfig>(3, 'largeCustomDictionary',
+        subBuilder: LargeCustomDictionaryConfig.create)
     ..hasRequiredFields = false;
 
   StoredInfoTypeConfig._() : super();
@@ -8742,37 +10646,52 @@ class StoredInfoTypeConfig extends $pb.GeneratedMessage {
   StoredInfoTypeConfig createEmptyInstance() => create();
   static $pb.PbList<StoredInfoTypeConfig> createRepeated() =>
       $pb.PbList<StoredInfoTypeConfig>();
-  static StoredInfoTypeConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoTypeConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StoredInfoTypeConfig>(create);
   static StoredInfoTypeConfig _defaultInstance;
 
   StoredInfoTypeConfig_Type whichType() =>
       _StoredInfoTypeConfig_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
-  $core.String get displayName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get displayName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set displayName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDisplayName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDisplayName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
+  @$pb.TagNumber(3)
   LargeCustomDictionaryConfig get largeCustomDictionary => $_getN(2);
+  @$pb.TagNumber(3)
   set largeCustomDictionary(LargeCustomDictionaryConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLargeCustomDictionary() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLargeCustomDictionary() => clearField(3);
+  @$pb.TagNumber(3)
+  LargeCustomDictionaryConfig ensureLargeCustomDictionary() => $_ensure(2);
 }
 
 enum StoredInfoTypeStats_Type { largeCustomDictionary, notSet }
@@ -8784,14 +10703,11 @@ class StoredInfoTypeStats extends $pb.GeneratedMessage {
     0: StoredInfoTypeStats_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeStats',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<LargeCustomDictionaryStats>(
-        1,
-        'largeCustomDictionary',
-        $pb.PbFieldType.OM,
-        LargeCustomDictionaryStats.getDefault,
-        LargeCustomDictionaryStats.create)
+    ..aOM<LargeCustomDictionaryStats>(1, 'largeCustomDictionary',
+        subBuilder: LargeCustomDictionaryStats.create)
     ..hasRequiredFields = false;
 
   StoredInfoTypeStats._() : super();
@@ -8811,40 +10727,44 @@ class StoredInfoTypeStats extends $pb.GeneratedMessage {
   StoredInfoTypeStats createEmptyInstance() => create();
   static $pb.PbList<StoredInfoTypeStats> createRepeated() =>
       $pb.PbList<StoredInfoTypeStats>();
-  static StoredInfoTypeStats getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoTypeStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StoredInfoTypeStats>(create);
   static StoredInfoTypeStats _defaultInstance;
 
   StoredInfoTypeStats_Type whichType() =>
       _StoredInfoTypeStats_TypeByTag[$_whichOneof(0)];
   void clearType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   LargeCustomDictionaryStats get largeCustomDictionary => $_getN(0);
+  @$pb.TagNumber(1)
   set largeCustomDictionary(LargeCustomDictionaryStats v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLargeCustomDictionary() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLargeCustomDictionary() => clearField(1);
+  @$pb.TagNumber(1)
+  LargeCustomDictionaryStats ensureLargeCustomDictionary() => $_ensure(0);
 }
 
 class StoredInfoTypeVersion extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoTypeVersion',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..a<StoredInfoTypeConfig>(1, 'config', $pb.PbFieldType.OM,
-        StoredInfoTypeConfig.getDefault, StoredInfoTypeConfig.create)
-    ..a<$3.Timestamp>(2, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..e<StoredInfoTypeState>(
-        3,
-        'state',
-        $pb.PbFieldType.OE,
-        StoredInfoTypeState.STORED_INFO_TYPE_STATE_UNSPECIFIED,
-        StoredInfoTypeState.valueOf,
-        StoredInfoTypeState.values)
-    ..pc<Error>(4, 'errors', $pb.PbFieldType.PM, Error.create)
-    ..a<StoredInfoTypeStats>(5, 'stats', $pb.PbFieldType.OM,
-        StoredInfoTypeStats.getDefault, StoredInfoTypeStats.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..aOM<StoredInfoTypeConfig>(1, 'config',
+        subBuilder: StoredInfoTypeConfig.create)
+    ..aOM<$3.Timestamp>(2, 'createTime', subBuilder: $3.Timestamp.create)
+    ..e<StoredInfoTypeState>(3, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: StoredInfoTypeState.STORED_INFO_TYPE_STATE_UNSPECIFIED,
+        valueOf: StoredInfoTypeState.valueOf,
+        enumValues: StoredInfoTypeState.values)
+    ..pc<Error>(4, 'errors', $pb.PbFieldType.PM, subBuilder: Error.create)
+    ..aOM<StoredInfoTypeStats>(5, 'stats',
+        subBuilder: StoredInfoTypeStats.create)
     ..hasRequiredFields = false;
 
   StoredInfoTypeVersion._() : super();
@@ -8866,53 +10786,78 @@ class StoredInfoTypeVersion extends $pb.GeneratedMessage {
   StoredInfoTypeVersion createEmptyInstance() => create();
   static $pb.PbList<StoredInfoTypeVersion> createRepeated() =>
       $pb.PbList<StoredInfoTypeVersion>();
-  static StoredInfoTypeVersion getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoTypeVersion getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StoredInfoTypeVersion>(create);
   static StoredInfoTypeVersion _defaultInstance;
 
+  @$pb.TagNumber(1)
   StoredInfoTypeConfig get config => $_getN(0);
+  @$pb.TagNumber(1)
   set config(StoredInfoTypeConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  StoredInfoTypeConfig ensureConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.Timestamp get createTime => $_getN(1);
+  @$pb.TagNumber(2)
   set createTime($3.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCreateTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCreateTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureCreateTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   StoredInfoTypeState get state => $_getN(2);
+  @$pb.TagNumber(3)
   set state(StoredInfoTypeState v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasState() => $_has(2);
+  @$pb.TagNumber(3)
   void clearState() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<Error> get errors => $_getList(3);
 
+  @$pb.TagNumber(5)
   StoredInfoTypeStats get stats => $_getN(4);
+  @$pb.TagNumber(5)
   set stats(StoredInfoTypeStats v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasStats() => $_has(4);
+  @$pb.TagNumber(5)
   void clearStats() => clearField(5);
+  @$pb.TagNumber(5)
+  StoredInfoTypeStats ensureStats() => $_ensure(4);
 }
 
 class StoredInfoType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StoredInfoType',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<StoredInfoTypeVersion>(2, 'currentVersion', $pb.PbFieldType.OM,
-        StoredInfoTypeVersion.getDefault, StoredInfoTypeVersion.create)
-    ..pc<StoredInfoTypeVersion>(
-        3, 'pendingVersions', $pb.PbFieldType.PM, StoredInfoTypeVersion.create)
+    ..aOM<StoredInfoTypeVersion>(2, 'currentVersion',
+        subBuilder: StoredInfoTypeVersion.create)
+    ..pc<StoredInfoTypeVersion>(3, 'pendingVersions', $pb.PbFieldType.PM,
+        subBuilder: StoredInfoTypeVersion.create)
     ..hasRequiredFields = false;
 
   StoredInfoType._() : super();
@@ -8932,35 +10877,49 @@ class StoredInfoType extends $pb.GeneratedMessage {
   StoredInfoType createEmptyInstance() => create();
   static $pb.PbList<StoredInfoType> createRepeated() =>
       $pb.PbList<StoredInfoType>();
-  static StoredInfoType getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StoredInfoType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StoredInfoType>(create);
   static StoredInfoType _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   StoredInfoTypeVersion get currentVersion => $_getN(1);
+  @$pb.TagNumber(2)
   set currentVersion(StoredInfoTypeVersion v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCurrentVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCurrentVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  StoredInfoTypeVersion ensureCurrentVersion() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<StoredInfoTypeVersion> get pendingVersions => $_getList(2);
 }
 
 class CreateStoredInfoTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateStoredInfoTypeRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<StoredInfoTypeConfig>(2, 'config', $pb.PbFieldType.OM,
-        StoredInfoTypeConfig.getDefault, StoredInfoTypeConfig.create)
+    ..aOM<StoredInfoTypeConfig>(2, 'config',
+        subBuilder: StoredInfoTypeConfig.create)
     ..aOS(3, 'storedInfoTypeId')
     ..hasRequiredFields = false;
 
@@ -8985,44 +10944,59 @@ class CreateStoredInfoTypeRequest extends $pb.GeneratedMessage {
   CreateStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<CreateStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<CreateStoredInfoTypeRequest>();
-  static CreateStoredInfoTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateStoredInfoTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateStoredInfoTypeRequest>(create);
   static CreateStoredInfoTypeRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   StoredInfoTypeConfig get config => $_getN(1);
+  @$pb.TagNumber(2)
   set config(StoredInfoTypeConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  StoredInfoTypeConfig ensureConfig() => $_ensure(1);
 
-  $core.String get storedInfoTypeId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get storedInfoTypeId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set storedInfoTypeId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStoredInfoTypeId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStoredInfoTypeId() => clearField(3);
 }
 
 class UpdateStoredInfoTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateStoredInfoTypeRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<StoredInfoTypeConfig>(2, 'config', $pb.PbFieldType.OM,
-        StoredInfoTypeConfig.getDefault, StoredInfoTypeConfig.create)
-    ..a<$8.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $8.FieldMask.getDefault, $8.FieldMask.create)
+    ..aOM<StoredInfoTypeConfig>(2, 'config',
+        subBuilder: StoredInfoTypeConfig.create)
+    ..aOM<$8.FieldMask>(3, 'updateMask', subBuilder: $8.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateStoredInfoTypeRequest._() : super();
@@ -9046,38 +11020,56 @@ class UpdateStoredInfoTypeRequest extends $pb.GeneratedMessage {
   UpdateStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<UpdateStoredInfoTypeRequest>();
-  static UpdateStoredInfoTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateStoredInfoTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateStoredInfoTypeRequest>(create);
   static UpdateStoredInfoTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   StoredInfoTypeConfig get config => $_getN(1);
+  @$pb.TagNumber(2)
   set config(StoredInfoTypeConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  StoredInfoTypeConfig ensureConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $8.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($8.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class GetStoredInfoTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetStoredInfoTypeRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -9100,23 +11092,29 @@ class GetStoredInfoTypeRequest extends $pb.GeneratedMessage {
   GetStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<GetStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<GetStoredInfoTypeRequest>();
-  static GetStoredInfoTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetStoredInfoTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetStoredInfoTypeRequest>(create);
   static GetStoredInfoTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListStoredInfoTypesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListStoredInfoTypesRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -9143,49 +11141,67 @@ class ListStoredInfoTypesRequest extends $pb.GeneratedMessage {
   ListStoredInfoTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListStoredInfoTypesRequest> createRepeated() =>
       $pb.PbList<ListStoredInfoTypesRequest>();
-  static ListStoredInfoTypesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListStoredInfoTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListStoredInfoTypesRequest>(create);
   static ListStoredInfoTypesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get orderBy => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get orderBy => $_getSZ(3);
+  @$pb.TagNumber(4)
   set orderBy($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOrderBy() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOrderBy() => clearField(4);
 }
 
 class ListStoredInfoTypesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListStoredInfoTypesResponse',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
-    ..pc<StoredInfoType>(
-        1, 'storedInfoTypes', $pb.PbFieldType.PM, StoredInfoType.create)
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
+    ..pc<StoredInfoType>(1, 'storedInfoTypes', $pb.PbFieldType.PM,
+        subBuilder: StoredInfoType.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -9210,25 +11226,32 @@ class ListStoredInfoTypesResponse extends $pb.GeneratedMessage {
   ListStoredInfoTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListStoredInfoTypesResponse> createRepeated() =>
       $pb.PbList<ListStoredInfoTypesResponse>();
-  static ListStoredInfoTypesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListStoredInfoTypesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListStoredInfoTypesResponse>(create);
   static ListStoredInfoTypesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<StoredInfoType> get storedInfoTypes => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteStoredInfoTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteStoredInfoTypeRequest',
-      package: const $pb.PackageName('google.privacy.dlp.v2'))
+      package: const $pb.PackageName('google.privacy.dlp.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -9253,15 +11276,20 @@ class DeleteStoredInfoTypeRequest extends $pb.GeneratedMessage {
   DeleteStoredInfoTypeRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteStoredInfoTypeRequest> createRepeated() =>
       $pb.PbList<DeleteStoredInfoTypeRequest>();
-  static DeleteStoredInfoTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteStoredInfoTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteStoredInfoTypeRequest>(create);
   static DeleteStoredInfoTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

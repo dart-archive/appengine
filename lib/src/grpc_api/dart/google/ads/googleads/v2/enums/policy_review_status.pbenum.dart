@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class PolicyReviewStatusEnum_PolicyReviewStatus extends $pb.ProtobufEnum {
@@ -20,6 +20,8 @@ class PolicyReviewStatusEnum_PolicyReviewStatus extends $pb.ProtobufEnum {
       PolicyReviewStatusEnum_PolicyReviewStatus._(3, 'REVIEWED');
   static const PolicyReviewStatusEnum_PolicyReviewStatus UNDER_APPEAL =
       PolicyReviewStatusEnum_PolicyReviewStatus._(4, 'UNDER_APPEAL');
+  static const PolicyReviewStatusEnum_PolicyReviewStatus ELIGIBLE_MAY_SERVE =
+      PolicyReviewStatusEnum_PolicyReviewStatus._(5, 'ELIGIBLE_MAY_SERVE');
 
   static const $core.List<PolicyReviewStatusEnum_PolicyReviewStatus> values =
       <PolicyReviewStatusEnum_PolicyReviewStatus>[
@@ -28,6 +30,7 @@ class PolicyReviewStatusEnum_PolicyReviewStatus extends $pb.ProtobufEnum {
     REVIEW_IN_PROGRESS,
     REVIEWED,
     UNDER_APPEAL,
+    ELIGIBLE_MAY_SERVE,
   ];
 
   static final $core.Map<$core.int, PolicyReviewStatusEnum_PolicyReviewStatus>

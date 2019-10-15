@@ -18,5 +18,6 @@ const PolicyReviewStatusEnum_PolicyReviewStatus$json = {
     {'1': 'REVIEW_IN_PROGRESS', '2': 2},
     {'1': 'REVIEWED', '2': 3},
     {'1': 'UNDER_APPEAL', '2': 4},
+    {'1': 'ELIGIBLE_MAY_SERVE', '2': 5},
   ],
 };

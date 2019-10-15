@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'ad_group_criterion_status.pbenum.dart';
 class AdGroupCriterionStatusEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AdGroupCriterionStatusEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AdGroupCriterionStatusEnum._() : super();
@@ -38,7 +38,8 @@ class AdGroupCriterionStatusEnum extends $pb.GeneratedMessage {
   AdGroupCriterionStatusEnum createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterionStatusEnum> createRepeated() =>
       $pb.PbList<AdGroupCriterionStatusEnum>();
-  static AdGroupCriterionStatusEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupCriterionStatusEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupCriterionStatusEnum>(create);
   static AdGroupCriterionStatusEnum _defaultInstance;
 }

@@ -318,8 +318,16 @@ const SourceInfo$json = {
       '6': '.google.api.expr.v1alpha1.SourceInfo.PositionsEntry',
       '10': 'positions'
     },
+    {
+      '1': 'macro_calls',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.expr.v1alpha1.SourceInfo.MacroCallsEntry',
+      '10': 'macroCalls'
+    },
   ],
-  '3': [SourceInfo_PositionsEntry$json],
+  '3': [SourceInfo_PositionsEntry$json, SourceInfo_MacroCallsEntry$json],
 };
 
 const SourceInfo_PositionsEntry$json = {
@@ -327,6 +335,22 @@ const SourceInfo_PositionsEntry$json = {
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 3, '10': 'key'},
     {'1': 'value', '3': 2, '4': 1, '5': 5, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+const SourceInfo_MacroCallsEntry$json = {
+  '1': 'MacroCallsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 3, '10': 'key'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.expr.v1alpha1.Expr',
+      '10': 'value'
+    },
   ],
   '7': {'7': true},
 };

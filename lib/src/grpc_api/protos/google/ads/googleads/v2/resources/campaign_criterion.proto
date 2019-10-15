@@ -145,5 +145,8 @@ message CampaignCriterion {
 
     // Location Group
     google.ads.googleads.v2.common.LocationGroupInfo location_group = 34;
+
+    // Custom Affinity.
+    google.ads.googleads.v2.common.CustomAffinityInfo custom_affinity = 36;
   }
 }

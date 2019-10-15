@@ -83,7 +83,8 @@ const LogEntry$json = {
       '4': 1,
       '5': 11,
       '6': '.google.api.MonitoredResourceMetadata',
-      '10': 'metadata'
+      '8': {'3': true},
+      '10': 'metadata',
     },
     {
       '1': 'operation',

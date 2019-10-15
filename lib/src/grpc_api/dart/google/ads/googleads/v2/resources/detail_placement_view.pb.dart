@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,23 +15,19 @@ import '../enums/placement_type.pbenum.dart' as $1;
 
 class DetailPlacementView extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetailPlacementView',
-      package: const $pb.PackageName('google.ads.googleads.v2.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v2.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
-    ..a<$0.StringValue>(2, 'placement', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(3, 'displayName', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(4, 'groupPlacementTargetUrl', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(5, 'targetUrl', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+    ..aOM<$0.StringValue>(2, 'placement', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(3, 'displayName', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(4, 'groupPlacementTargetUrl',
+        subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(5, 'targetUrl', subBuilder: $0.StringValue.create)
     ..e<$1.PlacementTypeEnum_PlacementType>(
-        6,
-        'placementType',
-        $pb.PbFieldType.OE,
-        $1.PlacementTypeEnum_PlacementType.UNSPECIFIED,
-        $1.PlacementTypeEnum_PlacementType.valueOf,
-        $1.PlacementTypeEnum_PlacementType.values)
+        6, 'placementType', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.PlacementTypeEnum_PlacementType.UNSPECIFIED,
+        valueOf: $1.PlacementTypeEnum_PlacementType.valueOf,
+        enumValues: $1.PlacementTypeEnum_PlacementType.values)
     ..hasRequiredFields = false;
 
   DetailPlacementView._() : super();
@@ -52,55 +47,88 @@ class DetailPlacementView extends $pb.GeneratedMessage {
   DetailPlacementView createEmptyInstance() => create();
   static $pb.PbList<DetailPlacementView> createRepeated() =>
       $pb.PbList<DetailPlacementView>();
-  static DetailPlacementView getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DetailPlacementView getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DetailPlacementView>(create);
   static DetailPlacementView _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.StringValue get placement => $_getN(1);
+  @$pb.TagNumber(2)
   set placement($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPlacement() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPlacement() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensurePlacement() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.StringValue get displayName => $_getN(2);
+  @$pb.TagNumber(3)
   set displayName($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDisplayName() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureDisplayName() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.StringValue get groupPlacementTargetUrl => $_getN(3);
+  @$pb.TagNumber(4)
   set groupPlacementTargetUrl($0.StringValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasGroupPlacementTargetUrl() => $_has(3);
+  @$pb.TagNumber(4)
   void clearGroupPlacementTargetUrl() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.StringValue ensureGroupPlacementTargetUrl() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $0.StringValue get targetUrl => $_getN(4);
+  @$pb.TagNumber(5)
   set targetUrl($0.StringValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTargetUrl() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTargetUrl() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.StringValue ensureTargetUrl() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $1.PlacementTypeEnum_PlacementType get placementType => $_getN(5);
+  @$pb.TagNumber(6)
   set placementType($1.PlacementTypeEnum_PlacementType v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPlacementType() => $_has(5);
+  @$pb.TagNumber(6)
   void clearPlacementType() => clearField(6);
 }

@@ -53,6 +53,14 @@ const CommandTask_Inputs$json = {
       '10': 'files'
     },
     {
+      '1': 'inline_blobs',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.remoteworkers.v1test2.Blob',
+      '10': 'inlineBlobs'
+    },
+    {
       '1': 'environment_variables',
       '3': 3,
       '4': 3,
@@ -60,6 +68,13 @@ const CommandTask_Inputs$json = {
       '6':
           '.google.devtools.remoteworkers.v1test2.CommandTask.Inputs.EnvironmentVariable',
       '10': 'environmentVariables'
+    },
+    {
+      '1': 'working_directory',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '10': 'workingDirectory'
     },
   ],
   '3': [CommandTask_Inputs_EnvironmentVariable$json],
@@ -201,12 +216,12 @@ const CommandResult$json = {
       '10': 'overhead',
     },
     {
-      '1': 'statistics',
+      '1': 'metadata',
       '3': 6,
       '4': 3,
       '5': 11,
       '6': '.google.protobuf.Any',
-      '10': 'statistics'
+      '10': 'metadata'
     },
   ],
 };
@@ -248,6 +263,21 @@ const Digest$json = {
   '2': [
     {'1': 'hash', '3': 1, '4': 1, '5': 9, '10': 'hash'},
     {'1': 'size_bytes', '3': 2, '4': 1, '5': 3, '10': 'sizeBytes'},
+  ],
+};
+
+const Blob$json = {
+  '1': 'Blob',
+  '2': [
+    {
+      '1': 'digest',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.remoteworkers.v1test2.Digest',
+      '10': 'digest'
+    },
+    {'1': 'contents', '3': 2, '4': 1, '5': 12, '10': 'contents'},
   ],
 };
 

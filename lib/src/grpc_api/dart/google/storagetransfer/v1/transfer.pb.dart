@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../protobuf/field_mask.pb.dart' as $3;
 class GetGoogleServiceAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetGoogleServiceAccountRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'projectId')
     ..hasRequiredFields = false;
 
@@ -41,24 +41,29 @@ class GetGoogleServiceAccountRequest extends $pb.GeneratedMessage {
   GetGoogleServiceAccountRequest createEmptyInstance() => create();
   static $pb.PbList<GetGoogleServiceAccountRequest> createRepeated() =>
       $pb.PbList<GetGoogleServiceAccountRequest>();
-  static GetGoogleServiceAccountRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetGoogleServiceAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetGoogleServiceAccountRequest>(create);
   static GetGoogleServiceAccountRequest _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 }
 
 class CreateTransferJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTransferJobRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
-    ..a<$1.TransferJob>(1, 'transferJob', $pb.PbFieldType.OM,
-        $1.TransferJob.getDefault, $1.TransferJob.create)
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..aOM<$1.TransferJob>(1, 'transferJob', subBuilder: $1.TransferJob.create)
     ..hasRequiredFields = false;
 
   CreateTransferJobRequest._() : super();
@@ -80,28 +85,35 @@ class CreateTransferJobRequest extends $pb.GeneratedMessage {
   CreateTransferJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTransferJobRequest> createRepeated() =>
       $pb.PbList<CreateTransferJobRequest>();
-  static CreateTransferJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTransferJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTransferJobRequest>(create);
   static CreateTransferJobRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.TransferJob get transferJob => $_getN(0);
+  @$pb.TagNumber(1)
   set transferJob($1.TransferJob v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTransferJob() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTransferJob() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.TransferJob ensureTransferJob() => $_ensure(0);
 }
 
 class UpdateTransferJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTransferJobRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'jobName')
     ..aOS(2, 'projectId')
-    ..a<$1.TransferJob>(3, 'transferJob', $pb.PbFieldType.OM,
-        $1.TransferJob.getDefault, $1.TransferJob.create)
-    ..a<$3.FieldMask>(4, 'updateTransferJobFieldMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<$1.TransferJob>(3, 'transferJob', subBuilder: $1.TransferJob.create)
+    ..aOM<$3.FieldMask>(4, 'updateTransferJobFieldMask',
+        subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTransferJobRequest._() : super();
@@ -123,46 +135,68 @@ class UpdateTransferJobRequest extends $pb.GeneratedMessage {
   UpdateTransferJobRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTransferJobRequest> createRepeated() =>
       $pb.PbList<UpdateTransferJobRequest>();
-  static UpdateTransferJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTransferJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTransferJobRequest>(create);
   static UpdateTransferJobRequest _defaultInstance;
 
-  $core.String get jobName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get jobName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set jobName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasJobName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearJobName() => clearField(1);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $1.TransferJob get transferJob => $_getN(2);
+  @$pb.TagNumber(3)
   set transferJob($1.TransferJob v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTransferJob() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTransferJob() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.TransferJob ensureTransferJob() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $3.FieldMask get updateTransferJobFieldMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateTransferJobFieldMask($3.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateTransferJobFieldMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateTransferJobFieldMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.FieldMask ensureUpdateTransferJobFieldMask() => $_ensure(3);
 }
 
 class GetTransferJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTransferJobRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'jobName')
     ..aOS(2, 'projectId')
     ..hasRequiredFields = false;
@@ -186,30 +220,40 @@ class GetTransferJobRequest extends $pb.GeneratedMessage {
   GetTransferJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetTransferJobRequest> createRepeated() =>
       $pb.PbList<GetTransferJobRequest>();
-  static GetTransferJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTransferJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTransferJobRequest>(create);
   static GetTransferJobRequest _defaultInstance;
 
-  $core.String get jobName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get jobName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set jobName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasJobName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearJobName() => clearField(1);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 }
 
 class ListTransferJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferJobsRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'filter')
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
@@ -234,40 +278,54 @@ class ListTransferJobsRequest extends $pb.GeneratedMessage {
   ListTransferJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTransferJobsRequest> createRepeated() =>
       $pb.PbList<ListTransferJobsRequest>();
-  static ListTransferJobsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTransferJobsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTransferJobsRequest>(create);
   static ListTransferJobsRequest _defaultInstance;
 
-  $core.String get filter => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(1)
   set filter($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(5)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(5)
   void clearPageToken() => clearField(5);
 }
 
 class ListTransferJobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTransferJobsResponse',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
-    ..pc<$1.TransferJob>(
-        1, 'transferJobs', $pb.PbFieldType.PM, $1.TransferJob.create)
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.TransferJob>(1, 'transferJobs', $pb.PbFieldType.PM,
+        subBuilder: $1.TransferJob.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -290,25 +348,32 @@ class ListTransferJobsResponse extends $pb.GeneratedMessage {
   ListTransferJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTransferJobsResponse> createRepeated() =>
       $pb.PbList<ListTransferJobsResponse>();
-  static ListTransferJobsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTransferJobsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTransferJobsResponse>(create);
   static ListTransferJobsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.TransferJob> get transferJobs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class PauseTransferOperationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PauseTransferOperationRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -333,23 +398,29 @@ class PauseTransferOperationRequest extends $pb.GeneratedMessage {
   PauseTransferOperationRequest createEmptyInstance() => create();
   static $pb.PbList<PauseTransferOperationRequest> createRepeated() =>
       $pb.PbList<PauseTransferOperationRequest>();
-  static PauseTransferOperationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PauseTransferOperationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PauseTransferOperationRequest>(create);
   static PauseTransferOperationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ResumeTransferOperationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ResumeTransferOperationRequest',
-      package: const $pb.PackageName('google.storagetransfer.v1'))
+      package: const $pb.PackageName('google.storagetransfer.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -374,15 +445,20 @@ class ResumeTransferOperationRequest extends $pb.GeneratedMessage {
   ResumeTransferOperationRequest createEmptyInstance() => create();
   static $pb.PbList<ResumeTransferOperationRequest> createRepeated() =>
       $pb.PbList<ResumeTransferOperationRequest>();
-  static ResumeTransferOperationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ResumeTransferOperationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ResumeTransferOperationRequest>(create);
   static ResumeTransferOperationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

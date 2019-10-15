@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'listing_group_type.pbenum.dart';
 
 class ListingGroupTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListingGroupTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ListingGroupTypeEnum._() : super();
@@ -35,7 +35,8 @@ class ListingGroupTypeEnum extends $pb.GeneratedMessage {
   ListingGroupTypeEnum createEmptyInstance() => create();
   static $pb.PbList<ListingGroupTypeEnum> createRepeated() =>
       $pb.PbList<ListingGroupTypeEnum>();
-  static ListingGroupTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListingGroupTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListingGroupTypeEnum>(create);
   static ListingGroupTypeEnum _defaultInstance;
 }

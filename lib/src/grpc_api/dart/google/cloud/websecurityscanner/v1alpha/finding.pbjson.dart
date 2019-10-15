@@ -42,6 +42,14 @@ const Finding$json = {
       '10': 'violatingResource'
     },
     {
+      '1': 'vulnerable_headers',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.websecurityscanner.v1alpha.VulnerableHeaders',
+      '10': 'vulnerableHeaders'
+    },
+    {
       '1': 'vulnerable_parameters',
       '3': 13,
       '4': 1,
@@ -59,6 +67,7 @@ const Finding$json = {
     },
   ],
   '4': [Finding_FindingType$json],
+  '7': {},
 };
 
 const Finding_FindingType$json = {
@@ -71,5 +80,10 @@ const Finding_FindingType$json = {
     {'1': 'XSS_CALLBACK', '2': 3},
     {'1': 'XSS_ERROR', '2': 4},
     {'1': 'CLEAR_TEXT_PASSWORD', '2': 6},
+    {'1': 'INVALID_CONTENT_TYPE', '2': 7},
+    {'1': 'XSS_ANGULAR_CALLBACK', '2': 8},
+    {'1': 'INVALID_HEADER', '2': 9},
+    {'1': 'MISSPELLED_SECURITY_HEADER_NAME', '2': 10},
+    {'1': 'MISMATCHING_SECURITY_HEADER_VALUES', '2': 11},
   ],
 };

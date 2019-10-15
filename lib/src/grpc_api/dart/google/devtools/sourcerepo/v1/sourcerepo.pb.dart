@@ -5,20 +5,19 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Repo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Repo',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aInt64(2, 'size')
     ..aOS(3, 'url')
-    ..a<MirrorConfig>(4, 'mirrorConfig', $pb.PbFieldType.OM,
-        MirrorConfig.getDefault, MirrorConfig.create)
+    ..aOM<MirrorConfig>(4, 'mirrorConfig', subBuilder: MirrorConfig.create)
     ..hasRequiredFields = false;
 
   Repo._() : super();
@@ -37,45 +36,66 @@ class Repo extends $pb.GeneratedMessage {
   static Repo create() => Repo._();
   Repo createEmptyInstance() => create();
   static $pb.PbList<Repo> createRepeated() => $pb.PbList<Repo>();
-  static Repo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Repo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Repo>(create);
   static Repo _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  Int64 get size => $_getI64(1);
-  set size(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get size => $_getI64(1);
+  @$pb.TagNumber(2)
+  set size($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSize() => clearField(2);
 
-  $core.String get url => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get url => $_getSZ(2);
+  @$pb.TagNumber(3)
   set url($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUrl() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUrl() => clearField(3);
 
+  @$pb.TagNumber(4)
   MirrorConfig get mirrorConfig => $_getN(3);
+  @$pb.TagNumber(4)
   set mirrorConfig(MirrorConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasMirrorConfig() => $_has(3);
+  @$pb.TagNumber(4)
   void clearMirrorConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  MirrorConfig ensureMirrorConfig() => $_ensure(3);
 }
 
 class MirrorConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MirrorConfig',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'url')
     ..aOS(2, 'webhookId')
     ..aOS(3, 'deployKeyId')
@@ -98,37 +118,52 @@ class MirrorConfig extends $pb.GeneratedMessage {
   MirrorConfig createEmptyInstance() => create();
   static $pb.PbList<MirrorConfig> createRepeated() =>
       $pb.PbList<MirrorConfig>();
-  static MirrorConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MirrorConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MirrorConfig>(create);
   static MirrorConfig _defaultInstance;
 
-  $core.String get url => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
   set url($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 
-  $core.String get webhookId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get webhookId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set webhookId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasWebhookId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearWebhookId() => clearField(2);
 
-  $core.String get deployKeyId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get deployKeyId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set deployKeyId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeployKeyId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeployKeyId() => clearField(3);
 }
 
 class GetRepoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetRepoRequest',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -149,21 +184,28 @@ class GetRepoRequest extends $pb.GeneratedMessage {
   GetRepoRequest createEmptyInstance() => create();
   static $pb.PbList<GetRepoRequest> createRepeated() =>
       $pb.PbList<GetRepoRequest>();
-  static GetRepoRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetRepoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetRepoRequest>(create);
   static GetRepoRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListReposRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListReposRequest',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -186,39 +228,53 @@ class ListReposRequest extends $pb.GeneratedMessage {
   ListReposRequest createEmptyInstance() => create();
   static $pb.PbList<ListReposRequest> createRepeated() =>
       $pb.PbList<ListReposRequest>();
-  static ListReposRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListReposRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListReposRequest>(create);
   static ListReposRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListReposResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListReposResponse',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
-    ..pc<Repo>(1, 'repos', $pb.PbFieldType.PM, Repo.create)
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
+    ..pc<Repo>(1, 'repos', $pb.PbFieldType.PM, subBuilder: Repo.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -239,26 +295,33 @@ class ListReposResponse extends $pb.GeneratedMessage {
   ListReposResponse createEmptyInstance() => create();
   static $pb.PbList<ListReposResponse> createRepeated() =>
       $pb.PbList<ListReposResponse>();
-  static ListReposResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListReposResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListReposResponse>(create);
   static ListReposResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Repo> get repos => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateRepoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateRepoRequest',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<Repo>(2, 'repo', $pb.PbFieldType.OM, Repo.getDefault, Repo.create)
+    ..aOM<Repo>(2, 'repo', subBuilder: Repo.create)
     ..hasRequiredFields = false;
 
   CreateRepoRequest._() : super();
@@ -278,30 +341,42 @@ class CreateRepoRequest extends $pb.GeneratedMessage {
   CreateRepoRequest createEmptyInstance() => create();
   static $pb.PbList<CreateRepoRequest> createRepeated() =>
       $pb.PbList<CreateRepoRequest>();
-  static CreateRepoRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateRepoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateRepoRequest>(create);
   static CreateRepoRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   Repo get repo => $_getN(1);
+  @$pb.TagNumber(2)
   set repo(Repo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRepo() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRepo() => clearField(2);
+  @$pb.TagNumber(2)
+  Repo ensureRepo() => $_ensure(1);
 }
 
 class DeleteRepoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteRepoRequest',
-      package: const $pb.PackageName('google.devtools.sourcerepo.v1'))
+      package: const $pb.PackageName('google.devtools.sourcerepo.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -322,15 +397,20 @@ class DeleteRepoRequest extends $pb.GeneratedMessage {
   DeleteRepoRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteRepoRequest> createRepeated() =>
       $pb.PbList<DeleteRepoRequest>();
-  static DeleteRepoRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteRepoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteRepoRequest>(create);
   static DeleteRepoRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

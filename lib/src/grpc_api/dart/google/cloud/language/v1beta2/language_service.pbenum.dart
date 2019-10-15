@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class EncodingType extends $pb.ProtobufEnum {
@@ -57,6 +57,11 @@ class Entity_Type extends $pb.ProtobufEnum {
   static const Entity_Type WORK_OF_ART = Entity_Type._(5, 'WORK_OF_ART');
   static const Entity_Type CONSUMER_GOOD = Entity_Type._(6, 'CONSUMER_GOOD');
   static const Entity_Type OTHER = Entity_Type._(7, 'OTHER');
+  static const Entity_Type PHONE_NUMBER = Entity_Type._(9, 'PHONE_NUMBER');
+  static const Entity_Type ADDRESS = Entity_Type._(10, 'ADDRESS');
+  static const Entity_Type DATE = Entity_Type._(11, 'DATE');
+  static const Entity_Type NUMBER = Entity_Type._(12, 'NUMBER');
+  static const Entity_Type PRICE = Entity_Type._(13, 'PRICE');
 
   static const $core.List<Entity_Type> values = <Entity_Type>[
     UNKNOWN,
@@ -67,6 +72,11 @@ class Entity_Type extends $pb.ProtobufEnum {
     WORK_OF_ART,
     CONSUMER_GOOD,
     OTHER,
+    PHONE_NUMBER,
+    ADDRESS,
+    DATE,
+    NUMBER,
+    PRICE,
   ];
 
   static final $core.Map<$core.int, Entity_Type> _byValue =

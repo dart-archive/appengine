@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,9 +15,10 @@ import '../enums/targeting_dimension.pbenum.dart' as $1;
 
 class TargetingSetting extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetingSetting',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
-    ..pc<TargetRestriction>(
-        1, 'targetRestrictions', $pb.PbFieldType.PM, TargetRestriction.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
+    ..pc<TargetRestriction>(1, 'targetRestrictions', $pb.PbFieldType.PM,
+        subBuilder: TargetRestriction.create)
     ..hasRequiredFields = false;
 
   TargetingSetting._() : super();
@@ -38,25 +38,26 @@ class TargetingSetting extends $pb.GeneratedMessage {
   TargetingSetting createEmptyInstance() => create();
   static $pb.PbList<TargetingSetting> createRepeated() =>
       $pb.PbList<TargetingSetting>();
-  static TargetingSetting getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetingSetting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetingSetting>(create);
   static TargetingSetting _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<TargetRestriction> get targetRestrictions => $_getList(0);
 }
 
 class TargetRestriction extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TargetRestriction',
-      package: const $pb.PackageName('google.ads.googleads.v1.common'))
+      package: const $pb.PackageName('google.ads.googleads.v1.common'),
+      createEmptyInstance: create)
     ..e<$1.TargetingDimensionEnum_TargetingDimension>(
-        1,
-        'targetingDimension',
-        $pb.PbFieldType.OE,
-        $1.TargetingDimensionEnum_TargetingDimension.UNSPECIFIED,
-        $1.TargetingDimensionEnum_TargetingDimension.valueOf,
-        $1.TargetingDimensionEnum_TargetingDimension.values)
-    ..a<$0.BoolValue>(2, 'bidOnly', $pb.PbFieldType.OM, $0.BoolValue.getDefault,
-        $0.BoolValue.create)
+        1, 'targetingDimension', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $1.TargetingDimensionEnum_TargetingDimension.UNSPECIFIED,
+        valueOf: $1.TargetingDimensionEnum_TargetingDimension.valueOf,
+        enumValues: $1.TargetingDimensionEnum_TargetingDimension.values)
+    ..aOM<$0.BoolValue>(2, 'bidOnly', subBuilder: $0.BoolValue.create)
     ..hasRequiredFields = false;
 
   TargetRestriction._() : super();
@@ -76,24 +77,35 @@ class TargetRestriction extends $pb.GeneratedMessage {
   TargetRestriction createEmptyInstance() => create();
   static $pb.PbList<TargetRestriction> createRepeated() =>
       $pb.PbList<TargetRestriction>();
-  static TargetRestriction getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetRestriction getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetRestriction>(create);
   static TargetRestriction _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.TargetingDimensionEnum_TargetingDimension get targetingDimension =>
       $_getN(0);
+  @$pb.TagNumber(1)
   set targetingDimension($1.TargetingDimensionEnum_TargetingDimension v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetingDimension() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetingDimension() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.BoolValue get bidOnly => $_getN(1);
+  @$pb.TagNumber(2)
   set bidOnly($0.BoolValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBidOnly() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBidOnly() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.BoolValue ensureBidOnly() => $_ensure(1);
 }

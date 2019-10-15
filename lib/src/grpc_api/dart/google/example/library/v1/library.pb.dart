@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Book extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Book',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'author')
     ..aOS(3, 'title')
@@ -35,45 +35,64 @@ class Book extends $pb.GeneratedMessage {
   static Book create() => Book._();
   Book createEmptyInstance() => create();
   static $pb.PbList<Book> createRepeated() => $pb.PbList<Book>();
-  static Book getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Book getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Book>(create);
   static Book _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get author => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get author => $_getSZ(1);
+  @$pb.TagNumber(2)
   set author($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAuthor() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAuthor() => clearField(2);
 
-  $core.String get title => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get title => $_getSZ(2);
+  @$pb.TagNumber(3)
   set title($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTitle() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTitle() => clearField(3);
 
-  $core.bool get read => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get read => $_getBF(3);
+  @$pb.TagNumber(4)
   set read($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasRead() => $_has(3);
+  @$pb.TagNumber(4)
   void clearRead() => clearField(4);
 }
 
 class Shelf extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Shelf',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'theme')
     ..hasRequiredFields = false;
@@ -94,30 +113,41 @@ class Shelf extends $pb.GeneratedMessage {
   static Shelf create() => Shelf._();
   Shelf createEmptyInstance() => create();
   static $pb.PbList<Shelf> createRepeated() => $pb.PbList<Shelf>();
-  static Shelf getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Shelf getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Shelf>(create);
   static Shelf _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get theme => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get theme => $_getSZ(1);
+  @$pb.TagNumber(2)
   set theme($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTheme() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTheme() => clearField(2);
 }
 
 class CreateShelfRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateShelfRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
-    ..a<Shelf>(1, 'shelf', $pb.PbFieldType.OM, Shelf.getDefault, Shelf.create)
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
+    ..aOM<Shelf>(1, 'shelf', subBuilder: Shelf.create)
     ..hasRequiredFields = false;
 
   CreateShelfRequest._() : super();
@@ -137,22 +167,30 @@ class CreateShelfRequest extends $pb.GeneratedMessage {
   CreateShelfRequest createEmptyInstance() => create();
   static $pb.PbList<CreateShelfRequest> createRepeated() =>
       $pb.PbList<CreateShelfRequest>();
-  static CreateShelfRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateShelfRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateShelfRequest>(create);
   static CreateShelfRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Shelf get shelf => $_getN(0);
+  @$pb.TagNumber(1)
   set shelf(Shelf v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasShelf() => $_has(0);
+  @$pb.TagNumber(1)
   void clearShelf() => clearField(1);
+  @$pb.TagNumber(1)
+  Shelf ensureShelf() => $_ensure(0);
 }
 
 class GetShelfRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetShelfRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -173,22 +211,28 @@ class GetShelfRequest extends $pb.GeneratedMessage {
   GetShelfRequest createEmptyInstance() => create();
   static $pb.PbList<GetShelfRequest> createRepeated() =>
       $pb.PbList<GetShelfRequest>();
-  static GetShelfRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetShelfRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetShelfRequest>(create);
   static GetShelfRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListShelvesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListShelvesRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -210,31 +254,41 @@ class ListShelvesRequest extends $pb.GeneratedMessage {
   ListShelvesRequest createEmptyInstance() => create();
   static $pb.PbList<ListShelvesRequest> createRepeated() =>
       $pb.PbList<ListShelvesRequest>();
-  static ListShelvesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListShelvesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListShelvesRequest>(create);
   static ListShelvesRequest _defaultInstance;
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(1)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 }
 
 class ListShelvesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListShelvesResponse',
-      package: const $pb.PackageName('google.example.library.v1'))
-    ..pc<Shelf>(1, 'shelves', $pb.PbFieldType.PM, Shelf.create)
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
+    ..pc<Shelf>(1, 'shelves', $pb.PbFieldType.PM, subBuilder: Shelf.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -255,24 +309,31 @@ class ListShelvesResponse extends $pb.GeneratedMessage {
   ListShelvesResponse createEmptyInstance() => create();
   static $pb.PbList<ListShelvesResponse> createRepeated() =>
       $pb.PbList<ListShelvesResponse>();
-  static ListShelvesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListShelvesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListShelvesResponse>(create);
   static ListShelvesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Shelf> get shelves => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteShelfRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteShelfRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -293,22 +354,28 @@ class DeleteShelfRequest extends $pb.GeneratedMessage {
   DeleteShelfRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteShelfRequest> createRepeated() =>
       $pb.PbList<DeleteShelfRequest>();
-  static DeleteShelfRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteShelfRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteShelfRequest>(create);
   static DeleteShelfRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class MergeShelvesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MergeShelvesRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'otherShelfName')
     ..hasRequiredFields = false;
@@ -330,32 +397,42 @@ class MergeShelvesRequest extends $pb.GeneratedMessage {
   MergeShelvesRequest createEmptyInstance() => create();
   static $pb.PbList<MergeShelvesRequest> createRepeated() =>
       $pb.PbList<MergeShelvesRequest>();
-  static MergeShelvesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MergeShelvesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MergeShelvesRequest>(create);
   static MergeShelvesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get otherShelfName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get otherShelfName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set otherShelfName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOtherShelfName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOtherShelfName() => clearField(2);
 }
 
 class CreateBookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateBookRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Book>(2, 'book', $pb.PbFieldType.OM, Book.getDefault, Book.create)
+    ..aOM<Book>(2, 'book', subBuilder: Book.create)
     ..hasRequiredFields = false;
 
   CreateBookRequest._() : super();
@@ -375,30 +452,42 @@ class CreateBookRequest extends $pb.GeneratedMessage {
   CreateBookRequest createEmptyInstance() => create();
   static $pb.PbList<CreateBookRequest> createRepeated() =>
       $pb.PbList<CreateBookRequest>();
-  static CreateBookRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateBookRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateBookRequest>(create);
   static CreateBookRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Book get book => $_getN(1);
+  @$pb.TagNumber(2)
   set book(Book v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBook() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBook() => clearField(2);
+  @$pb.TagNumber(2)
+  Book ensureBook() => $_ensure(1);
 }
 
 class GetBookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBookRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -419,21 +508,28 @@ class GetBookRequest extends $pb.GeneratedMessage {
   GetBookRequest createEmptyInstance() => create();
   static $pb.PbList<GetBookRequest> createRepeated() =>
       $pb.PbList<GetBookRequest>();
-  static GetBookRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetBookRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBookRequest>(create);
   static GetBookRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListBooksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBooksRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -456,39 +552,53 @@ class ListBooksRequest extends $pb.GeneratedMessage {
   ListBooksRequest createEmptyInstance() => create();
   static $pb.PbList<ListBooksRequest> createRepeated() =>
       $pb.PbList<ListBooksRequest>();
-  static ListBooksRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListBooksRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListBooksRequest>(create);
   static ListBooksRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListBooksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListBooksResponse',
-      package: const $pb.PackageName('google.example.library.v1'))
-    ..pc<Book>(1, 'books', $pb.PbFieldType.PM, Book.create)
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
+    ..pc<Book>(1, 'books', $pb.PbFieldType.PM, subBuilder: Book.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -509,26 +619,33 @@ class ListBooksResponse extends $pb.GeneratedMessage {
   ListBooksResponse createEmptyInstance() => create();
   static $pb.PbList<ListBooksResponse> createRepeated() =>
       $pb.PbList<ListBooksResponse>();
-  static ListBooksResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListBooksResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListBooksResponse>(create);
   static ListBooksResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Book> get books => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateBookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateBookRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Book>(2, 'book', $pb.PbFieldType.OM, Book.getDefault, Book.create)
+    ..aOM<Book>(2, 'book', subBuilder: Book.create)
     ..hasRequiredFields = false;
 
   UpdateBookRequest._() : super();
@@ -548,30 +665,42 @@ class UpdateBookRequest extends $pb.GeneratedMessage {
   UpdateBookRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateBookRequest> createRepeated() =>
       $pb.PbList<UpdateBookRequest>();
-  static UpdateBookRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateBookRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateBookRequest>(create);
   static UpdateBookRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Book get book => $_getN(1);
+  @$pb.TagNumber(2)
   set book(Book v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBook() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBook() => clearField(2);
+  @$pb.TagNumber(2)
+  Book ensureBook() => $_ensure(1);
 }
 
 class DeleteBookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteBookRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -592,22 +721,28 @@ class DeleteBookRequest extends $pb.GeneratedMessage {
   DeleteBookRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteBookRequest> createRepeated() =>
       $pb.PbList<DeleteBookRequest>();
-  static DeleteBookRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteBookRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteBookRequest>(create);
   static DeleteBookRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class MoveBookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MoveBookRequest',
-      package: const $pb.PackageName('google.example.library.v1'))
+      package: const $pb.PackageName('google.example.library.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'otherShelfName')
     ..hasRequiredFields = false;
@@ -629,23 +764,32 @@ class MoveBookRequest extends $pb.GeneratedMessage {
   MoveBookRequest createEmptyInstance() => create();
   static $pb.PbList<MoveBookRequest> createRepeated() =>
       $pb.PbList<MoveBookRequest>();
-  static MoveBookRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MoveBookRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MoveBookRequest>(create);
   static MoveBookRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get otherShelfName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get otherShelfName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set otherShelfName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOtherShelfName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOtherShelfName() => clearField(2);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,17 +29,14 @@ class KeyRange extends $pb.GeneratedMessage {
     0: KeyRange_EndKeyType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeyRange',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..oo(1, [3, 4])
-    ..a<$0.ListValue>(1, 'startClosed', $pb.PbFieldType.OM,
-        $0.ListValue.getDefault, $0.ListValue.create)
-    ..a<$0.ListValue>(2, 'startOpen', $pb.PbFieldType.OM,
-        $0.ListValue.getDefault, $0.ListValue.create)
-    ..a<$0.ListValue>(3, 'endClosed', $pb.PbFieldType.OM,
-        $0.ListValue.getDefault, $0.ListValue.create)
-    ..a<$0.ListValue>(4, 'endOpen', $pb.PbFieldType.OM, $0.ListValue.getDefault,
-        $0.ListValue.create)
+    ..aOM<$0.ListValue>(1, 'startClosed', subBuilder: $0.ListValue.create)
+    ..aOM<$0.ListValue>(2, 'startOpen', subBuilder: $0.ListValue.create)
+    ..aOM<$0.ListValue>(3, 'endClosed', subBuilder: $0.ListValue.create)
+    ..aOM<$0.ListValue>(4, 'endOpen', subBuilder: $0.ListValue.create)
     ..hasRequiredFields = false;
 
   KeyRange._() : super();
@@ -59,7 +55,9 @@ class KeyRange extends $pb.GeneratedMessage {
   static KeyRange create() => KeyRange._();
   KeyRange createEmptyInstance() => create();
   static $pb.PbList<KeyRange> createRepeated() => $pb.PbList<KeyRange>();
-  static KeyRange getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static KeyRange getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<KeyRange>(create);
   static KeyRange _defaultInstance;
 
   KeyRange_StartKeyType whichStartKeyType() =>
@@ -70,44 +68,70 @@ class KeyRange extends $pb.GeneratedMessage {
       _KeyRange_EndKeyTypeByTag[$_whichOneof(1)];
   void clearEndKeyType() => clearField($_whichOneof(1));
 
+  @$pb.TagNumber(1)
   $0.ListValue get startClosed => $_getN(0);
+  @$pb.TagNumber(1)
   set startClosed($0.ListValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStartClosed() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStartClosed() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.ListValue ensureStartClosed() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.ListValue get startOpen => $_getN(1);
+  @$pb.TagNumber(2)
   set startOpen($0.ListValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartOpen() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartOpen() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.ListValue ensureStartOpen() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.ListValue get endClosed => $_getN(2);
+  @$pb.TagNumber(3)
   set endClosed($0.ListValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEndClosed() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEndClosed() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.ListValue ensureEndClosed() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.ListValue get endOpen => $_getN(3);
+  @$pb.TagNumber(4)
   set endOpen($0.ListValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEndOpen() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEndOpen() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.ListValue ensureEndOpen() => $_ensure(3);
 }
 
 class KeySet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeySet',
-      package: const $pb.PackageName('google.spanner.v1'))
-    ..pc<$0.ListValue>(1, 'keys', $pb.PbFieldType.PM, $0.ListValue.create)
-    ..pc<KeyRange>(2, 'ranges', $pb.PbFieldType.PM, KeyRange.create)
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pc<$0.ListValue>(1, 'keys', $pb.PbFieldType.PM,
+        subBuilder: $0.ListValue.create)
+    ..pc<KeyRange>(2, 'ranges', $pb.PbFieldType.PM, subBuilder: KeyRange.create)
     ..aOB(3, 'all')
     ..hasRequiredFields = false;
 
@@ -127,18 +151,26 @@ class KeySet extends $pb.GeneratedMessage {
   static KeySet create() => KeySet._();
   KeySet createEmptyInstance() => create();
   static $pb.PbList<KeySet> createRepeated() => $pb.PbList<KeySet>();
-  static KeySet getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static KeySet getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<KeySet>(create);
   static KeySet _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$0.ListValue> get keys => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<KeyRange> get ranges => $_getList(1);
 
-  $core.bool get all => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get all => $_getBF(2);
+  @$pb.TagNumber(3)
   set all($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAll() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAll() => clearField(3);
 }

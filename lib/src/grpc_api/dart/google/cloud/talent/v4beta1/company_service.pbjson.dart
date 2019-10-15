@@ -8,13 +8,14 @@
 const CreateCompanyRequest$json = {
   '1': 'CreateCompanyRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'company',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Company',
+      '8': {},
       '10': 'company'
     },
   ],
@@ -23,7 +24,7 @@ const CreateCompanyRequest$json = {
 const GetCompanyRequest$json = {
   '1': 'GetCompanyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -36,6 +37,7 @@ const UpdateCompanyRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Company',
+      '8': {},
       '10': 'company'
     },
     {
@@ -52,14 +54,14 @@ const UpdateCompanyRequest$json = {
 const DeleteCompanyRequest$json = {
   '1': 'DeleteCompanyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListCompaniesRequest$json = {
   '1': 'ListCompaniesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'require_open_jobs', '3': 4, '4': 1, '5': 8, '10': 'requireOpenJobs'},

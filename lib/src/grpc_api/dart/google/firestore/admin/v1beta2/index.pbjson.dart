@@ -89,6 +89,7 @@ const Index_QueryScope$json = {
   '2': [
     {'1': 'QUERY_SCOPE_UNSPECIFIED', '2': 0},
     {'1': 'COLLECTION', '2': 1},
+    {'1': 'COLLECTION_GROUP', '2': 2},
   ],
 };
 

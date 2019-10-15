@@ -7,7 +7,7 @@
 
 import 'dart:async' as $async;
 
-import 'dart:core' as $core show int, String, List;
+import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
 import 'functions.pb.dart' as $2;
@@ -47,6 +47,18 @@ class CloudFunctionsServiceClient extends $grpc.Client {
           ($2.CallFunctionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $2.CallFunctionResponse.fromBuffer(value));
+  static final _$generateUploadUrl = $grpc.ClientMethod<
+          $2.GenerateUploadUrlRequest, $2.GenerateUploadUrlResponse>(
+      '/google.cloud.functions.v1beta2.CloudFunctionsService/GenerateUploadUrl',
+      ($2.GenerateUploadUrlRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $2.GenerateUploadUrlResponse.fromBuffer(value));
+  static final _$generateDownloadUrl = $grpc.ClientMethod<
+          $2.GenerateDownloadUrlRequest, $2.GenerateDownloadUrlResponse>(
+      '/google.cloud.functions.v1beta2.CloudFunctionsService/GenerateDownloadUrl',
+      ($2.GenerateDownloadUrlRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $2.GenerateDownloadUrlResponse.fromBuffer(value));
 
   CloudFunctionsServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions options})
@@ -102,6 +114,24 @@ class CloudFunctionsServiceClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$callFunction, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.GenerateUploadUrlResponse> generateUploadUrl(
+      $2.GenerateUploadUrlRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$generateUploadUrl, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$2.GenerateDownloadUrlResponse> generateDownloadUrl(
+      $2.GenerateDownloadUrlRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$generateDownloadUrl, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -162,6 +192,24 @@ abstract class CloudFunctionsServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $2.CallFunctionRequest.fromBuffer(value),
             ($2.CallFunctionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GenerateUploadUrlRequest,
+            $2.GenerateUploadUrlResponse>(
+        'GenerateUploadUrl',
+        generateUploadUrl_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GenerateUploadUrlRequest.fromBuffer(value),
+        ($2.GenerateUploadUrlResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GenerateDownloadUrlRequest,
+            $2.GenerateDownloadUrlResponse>(
+        'GenerateDownloadUrl',
+        generateDownloadUrl_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $2.GenerateDownloadUrlRequest.fromBuffer(value),
+        ($2.GenerateDownloadUrlResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.ListFunctionsResponse> listFunctions_Pre(
@@ -196,6 +244,18 @@ abstract class CloudFunctionsServiceBase extends $grpc.Service {
     return callFunction(call, await request);
   }
 
+  $async.Future<$2.GenerateUploadUrlResponse> generateUploadUrl_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.GenerateUploadUrlRequest> request) async {
+    return generateUploadUrl(call, await request);
+  }
+
+  $async.Future<$2.GenerateDownloadUrlResponse> generateDownloadUrl_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$2.GenerateDownloadUrlRequest> request) async {
+    return generateDownloadUrl(call, await request);
+  }
+
   $async.Future<$2.ListFunctionsResponse> listFunctions(
       $grpc.ServiceCall call, $2.ListFunctionsRequest request);
   $async.Future<$2.CloudFunction> getFunction(
@@ -208,4 +268,8 @@ abstract class CloudFunctionsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DeleteFunctionRequest request);
   $async.Future<$2.CallFunctionResponse> callFunction(
       $grpc.ServiceCall call, $2.CallFunctionRequest request);
+  $async.Future<$2.GenerateUploadUrlResponse> generateUploadUrl(
+      $grpc.ServiceCall call, $2.GenerateUploadUrlRequest request);
+  $async.Future<$2.GenerateDownloadUrlResponse> generateDownloadUrl(
+      $grpc.ServiceCall call, $2.GenerateDownloadUrlRequest request);
 }

@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BillingSetupErrorEnum_BillingSetupError extends $pb.ProtobufEnum {
@@ -63,6 +63,10 @@ class BillingSetupErrorEnum_BillingSetupError extends $pb.ProtobufEnum {
   static const BillingSetupErrorEnum_BillingSetupError
       PAYMENTS_ACCOUNT_INELIGIBLE = BillingSetupErrorEnum_BillingSetupError._(
           16, 'PAYMENTS_ACCOUNT_INELIGIBLE');
+  static const BillingSetupErrorEnum_BillingSetupError
+      CUSTOMER_NEEDS_INTERNAL_APPROVAL =
+      BillingSetupErrorEnum_BillingSetupError._(
+          17, 'CUSTOMER_NEEDS_INTERNAL_APPROVAL');
 
   static const $core.List<BillingSetupErrorEnum_BillingSetupError> values =
       <BillingSetupErrorEnum_BillingSetupError>[
@@ -83,6 +87,7 @@ class BillingSetupErrorEnum_BillingSetupError extends $pb.ProtobufEnum {
     PAYMENTS_ACCOUNT_NOT_FOUND,
     PAYMENTS_PROFILE_INELIGIBLE,
     PAYMENTS_ACCOUNT_INELIGIBLE,
+    CUSTOMER_NEEDS_INTERNAL_APPROVAL,
   ];
 
   static final $core.Map<$core.int, BillingSetupErrorEnum_BillingSetupError>

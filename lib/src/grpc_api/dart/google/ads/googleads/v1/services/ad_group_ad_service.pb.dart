@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,7 +16,8 @@ import '../../../../rpc/status.pb.dart' as $4;
 
 class GetAdGroupAdRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAdGroupAdRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -38,25 +38,31 @@ class GetAdGroupAdRequest extends $pb.GeneratedMessage {
   GetAdGroupAdRequest createEmptyInstance() => create();
   static $pb.PbList<GetAdGroupAdRequest> createRepeated() =>
       $pb.PbList<GetAdGroupAdRequest>();
-  static GetAdGroupAdRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetAdGroupAdRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAdGroupAdRequest>(create);
   static GetAdGroupAdRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateAdGroupAdsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateAdGroupAdsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<AdGroupAdOperation>(
-        2, 'operations', $pb.PbFieldType.PM, AdGroupAdOperation.create)
+    ..pc<AdGroupAdOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: AdGroupAdOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -80,34 +86,48 @@ class MutateAdGroupAdsRequest extends $pb.GeneratedMessage {
   MutateAdGroupAdsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdsRequest> createRepeated() =>
       $pb.PbList<MutateAdGroupAdsRequest>();
-  static MutateAdGroupAdsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateAdGroupAdsRequest>(create);
   static MutateAdGroupAdsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<AdGroupAdOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -122,21 +142,15 @@ class AdGroupAdOperation extends $pb.GeneratedMessage {
     0: AdGroupAdOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupAdOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$1.AdGroupAd>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.AdGroupAd.getDefault, $1.AdGroupAd.create)
-    ..a<$1.AdGroupAd>(2, 'update', $pb.PbFieldType.OM, $1.AdGroupAd.getDefault,
-        $1.AdGroupAd.create)
+    ..aOM<$1.AdGroupAd>(1, 'create', subBuilder: $1.AdGroupAd.create)
+    ..aOM<$1.AdGroupAd>(2, 'update', subBuilder: $1.AdGroupAd.create)
     ..aOS(3, 'remove')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
-    ..a<$3.PolicyValidationParameter>(
-        5,
-        'policyValidationParameter',
-        $pb.PbFieldType.OM,
-        $3.PolicyValidationParameter.getDefault,
-        $3.PolicyValidationParameter.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
+    ..aOM<$3.PolicyValidationParameter>(5, 'policyValidationParameter',
+        subBuilder: $3.PolicyValidationParameter.create)
     ..hasRequiredFields = false;
 
   AdGroupAdOperation._() : super();
@@ -156,62 +170,91 @@ class AdGroupAdOperation extends $pb.GeneratedMessage {
   AdGroupAdOperation createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdOperation> createRepeated() =>
       $pb.PbList<AdGroupAdOperation>();
-  static AdGroupAdOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupAdOperation>(create);
   static AdGroupAdOperation _defaultInstance;
 
   AdGroupAdOperation_Operation whichOperation() =>
       _AdGroupAdOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.AdGroupAd get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.AdGroupAd v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.AdGroupAd ensureCreate_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.AdGroupAd get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update($1.AdGroupAd v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.AdGroupAd ensureUpdate() => $_ensure(1);
 
-  $core.String get remove => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(2);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $3.PolicyValidationParameter get policyValidationParameter => $_getN(4);
+  @$pb.TagNumber(5)
   set policyValidationParameter($3.PolicyValidationParameter v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPolicyValidationParameter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPolicyValidationParameter() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.PolicyValidationParameter ensurePolicyValidationParameter() => $_ensure(4);
 }
 
 class MutateAdGroupAdsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateAdGroupAdsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateAdGroupAdResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateAdGroupAdResult.create)
-    ..a<$4.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $4.Status.getDefault, $4.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateAdGroupAdResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateAdGroupAdResult.create)
+    ..aOM<$4.Status>(3, 'partialFailureError', subBuilder: $4.Status.create)
     ..hasRequiredFields = false;
 
   MutateAdGroupAdsResponse._() : super();
@@ -233,24 +276,33 @@ class MutateAdGroupAdsResponse extends $pb.GeneratedMessage {
   MutateAdGroupAdsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdsResponse> createRepeated() =>
       $pb.PbList<MutateAdGroupAdsResponse>();
-  static MutateAdGroupAdsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateAdGroupAdsResponse>(create);
   static MutateAdGroupAdsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateAdGroupAdResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $4.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($4.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateAdGroupAdResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateAdGroupAdResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -273,15 +325,20 @@ class MutateAdGroupAdResult extends $pb.GeneratedMessage {
   MutateAdGroupAdResult createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdResult> createRepeated() =>
       $pb.PbList<MutateAdGroupAdResult>();
-  static MutateAdGroupAdResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateAdGroupAdResult>(create);
   static MutateAdGroupAdResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

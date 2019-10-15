@@ -5,17 +5,17 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Row extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Row',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'key', $pb.PbFieldType.OY)
-    ..pc<Family>(2, 'families', $pb.PbFieldType.PM, Family.create)
+    ..pc<Family>(2, 'families', $pb.PbFieldType.PM, subBuilder: Family.create)
     ..hasRequiredFields = false;
 
   Row._() : super();
@@ -34,25 +34,33 @@ class Row extends $pb.GeneratedMessage {
   static Row create() => Row._();
   Row createEmptyInstance() => create();
   static $pb.PbList<Row> createRepeated() => $pb.PbList<Row>();
-  static Row getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Row getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Row>(create);
   static Row _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get key => $_getN(0);
+  @$pb.TagNumber(1)
   set key($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Family> get families => $_getList(1);
 }
 
 class Family extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Family',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..pc<Column>(2, 'columns', $pb.PbFieldType.PM, Column.create)
+    ..pc<Column>(2, 'columns', $pb.PbFieldType.PM, subBuilder: Column.create)
     ..hasRequiredFields = false;
 
   Family._() : super();
@@ -71,25 +79,33 @@ class Family extends $pb.GeneratedMessage {
   static Family create() => Family._();
   Family createEmptyInstance() => create();
   static $pb.PbList<Family> createRepeated() => $pb.PbList<Family>();
-  static Family getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Family getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Family>(create);
   static Family _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Column> get columns => $_getList(1);
 }
 
 class Column extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Column',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'qualifier', $pb.PbFieldType.OY)
-    ..pc<Cell>(2, 'cells', $pb.PbFieldType.PM, Cell.create)
+    ..pc<Cell>(2, 'cells', $pb.PbFieldType.PM, subBuilder: Cell.create)
     ..hasRequiredFields = false;
 
   Column._() : super();
@@ -108,23 +124,31 @@ class Column extends $pb.GeneratedMessage {
   static Column create() => Column._();
   Column createEmptyInstance() => create();
   static $pb.PbList<Column> createRepeated() => $pb.PbList<Column>();
-  static Column getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Column getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Column>(create);
   static Column _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get qualifier => $_getN(0);
+  @$pb.TagNumber(1)
   set qualifier($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQualifier() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQualifier() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Cell> get cells => $_getList(1);
 }
 
 class Cell extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Cell',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..aInt64(1, 'timestampMicros')
     ..a<$core.List<$core.int>>(2, 'value', $pb.PbFieldType.OY)
     ..pPS(3, 'labels')
@@ -146,31 +170,43 @@ class Cell extends $pb.GeneratedMessage {
   static Cell create() => Cell._();
   Cell createEmptyInstance() => create();
   static $pb.PbList<Cell> createRepeated() => $pb.PbList<Cell>();
-  static Cell getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Cell getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Cell>(create);
   static Cell _defaultInstance;
 
-  Int64 get timestampMicros => $_getI64(0);
-  set timestampMicros(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get timestampMicros => $_getI64(0);
+  @$pb.TagNumber(1)
+  set timestampMicros($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTimestampMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTimestampMicros() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get value => $_getN(1);
+  @$pb.TagNumber(2)
   set value($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.String> get labels => $_getList(2);
 }
 
 class RowRange extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowRange',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(2, 'startKey', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, 'endKey', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -191,31 +227,43 @@ class RowRange extends $pb.GeneratedMessage {
   static RowRange create() => RowRange._();
   RowRange createEmptyInstance() => create();
   static $pb.PbList<RowRange> createRepeated() => $pb.PbList<RowRange>();
-  static RowRange getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RowRange getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RowRange>(create);
   static RowRange _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get startKey => $_getN(0);
+  @$pb.TagNumber(2)
   set startKey($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartKey() => $_has(0);
+  @$pb.TagNumber(2)
   void clearStartKey() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get endKey => $_getN(1);
+  @$pb.TagNumber(3)
   set endKey($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEndKey() => $_has(1);
+  @$pb.TagNumber(3)
   void clearEndKey() => clearField(3);
 }
 
 class RowSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowSet',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..p<$core.List<$core.int>>(1, 'rowKeys', $pb.PbFieldType.PY)
-    ..pc<RowRange>(2, 'rowRanges', $pb.PbFieldType.PM, RowRange.create)
+    ..pc<RowRange>(2, 'rowRanges', $pb.PbFieldType.PM,
+        subBuilder: RowRange.create)
     ..hasRequiredFields = false;
 
   RowSet._() : super();
@@ -234,11 +282,15 @@ class RowSet extends $pb.GeneratedMessage {
   static RowSet create() => RowSet._();
   RowSet createEmptyInstance() => create();
   static $pb.PbList<RowSet> createRepeated() => $pb.PbList<RowSet>();
-  static RowSet getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RowSet getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RowSet>(create);
   static RowSet _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.List<$core.int>> get rowKeys => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<RowRange> get rowRanges => $_getList(1);
 }
 
@@ -268,7 +320,8 @@ class ColumnRange extends $pb.GeneratedMessage {
     0: ColumnRange_EndQualifier.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ColumnRange',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..oo(1, [4, 5])
     ..aOS(1, 'familyName')
@@ -294,7 +347,9 @@ class ColumnRange extends $pb.GeneratedMessage {
   static ColumnRange create() => ColumnRange._();
   ColumnRange createEmptyInstance() => create();
   static $pb.PbList<ColumnRange> createRepeated() => $pb.PbList<ColumnRange>();
-  static ColumnRange getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ColumnRange getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ColumnRange>(create);
   static ColumnRange _defaultInstance;
 
   ColumnRange_StartQualifier whichStartQualifier() =>
@@ -305,50 +360,71 @@ class ColumnRange extends $pb.GeneratedMessage {
       _ColumnRange_EndQualifierByTag[$_whichOneof(1)];
   void clearEndQualifier() => clearField($_whichOneof(1));
 
-  $core.String get familyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get familyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set familyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFamilyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFamilyName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get startQualifierInclusive => $_getN(1);
+  @$pb.TagNumber(2)
   set startQualifierInclusive($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartQualifierInclusive() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartQualifierInclusive() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get startQualifierExclusive => $_getN(2);
+  @$pb.TagNumber(3)
   set startQualifierExclusive($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStartQualifierExclusive() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStartQualifierExclusive() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.int> get endQualifierInclusive => $_getN(3);
+  @$pb.TagNumber(4)
   set endQualifierInclusive($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEndQualifierInclusive() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEndQualifierInclusive() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$core.int> get endQualifierExclusive => $_getN(4);
+  @$pb.TagNumber(5)
   set endQualifierExclusive($core.List<$core.int> v) {
     $_setBytes(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasEndQualifierExclusive() => $_has(4);
+  @$pb.TagNumber(5)
   void clearEndQualifierExclusive() => clearField(5);
 }
 
 class TimestampRange extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimestampRange',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..aInt64(1, 'startTimestampMicros')
     ..aInt64(2, 'endTimestampMicros')
     ..hasRequiredFields = false;
@@ -370,23 +446,33 @@ class TimestampRange extends $pb.GeneratedMessage {
   TimestampRange createEmptyInstance() => create();
   static $pb.PbList<TimestampRange> createRepeated() =>
       $pb.PbList<TimestampRange>();
-  static TimestampRange getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TimestampRange getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimestampRange>(create);
   static TimestampRange _defaultInstance;
 
-  Int64 get startTimestampMicros => $_getI64(0);
-  set startTimestampMicros(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get startTimestampMicros => $_getI64(0);
+  @$pb.TagNumber(1)
+  set startTimestampMicros($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStartTimestampMicros() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStartTimestampMicros() => clearField(1);
 
-  Int64 get endTimestampMicros => $_getI64(1);
-  set endTimestampMicros(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get endTimestampMicros => $_getI64(1);
+  @$pb.TagNumber(2)
+  set endTimestampMicros($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEndTimestampMicros() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEndTimestampMicros() => clearField(2);
 }
 
@@ -408,7 +494,8 @@ class ValueRange extends $pb.GeneratedMessage {
     0: ValueRange_EndValue.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ValueRange',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..oo(1, [3, 4])
     ..a<$core.List<$core.int>>(1, 'startValueInclusive', $pb.PbFieldType.OY)
@@ -433,7 +520,9 @@ class ValueRange extends $pb.GeneratedMessage {
   static ValueRange create() => ValueRange._();
   ValueRange createEmptyInstance() => create();
   static $pb.PbList<ValueRange> createRepeated() => $pb.PbList<ValueRange>();
-  static ValueRange getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ValueRange getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ValueRange>(create);
   static ValueRange _defaultInstance;
 
   ValueRange_StartValue whichStartValue() =>
@@ -444,43 +533,61 @@ class ValueRange extends $pb.GeneratedMessage {
       _ValueRange_EndValueByTag[$_whichOneof(1)];
   void clearEndValue() => clearField($_whichOneof(1));
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get startValueInclusive => $_getN(0);
+  @$pb.TagNumber(1)
   set startValueInclusive($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStartValueInclusive() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStartValueInclusive() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get startValueExclusive => $_getN(1);
+  @$pb.TagNumber(2)
   set startValueExclusive($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartValueExclusive() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartValueExclusive() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get endValueInclusive => $_getN(2);
+  @$pb.TagNumber(3)
   set endValueInclusive($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEndValueInclusive() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEndValueInclusive() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.int> get endValueExclusive => $_getN(3);
+  @$pb.TagNumber(4)
   set endValueExclusive($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEndValueExclusive() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEndValueExclusive() => clearField(4);
 }
 
 class RowFilter_Chain extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter.Chain',
-      package: const $pb.PackageName('google.bigtable.v1'))
-    ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM, RowFilter.create)
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
+    ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM,
+        subBuilder: RowFilter.create)
     ..hasRequiredFields = false;
 
   RowFilter_Chain._() : super();
@@ -500,17 +607,21 @@ class RowFilter_Chain extends $pb.GeneratedMessage {
   RowFilter_Chain createEmptyInstance() => create();
   static $pb.PbList<RowFilter_Chain> createRepeated() =>
       $pb.PbList<RowFilter_Chain>();
-  static RowFilter_Chain getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter_Chain getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RowFilter_Chain>(create);
   static RowFilter_Chain _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<RowFilter> get filters => $_getList(0);
 }
 
 class RowFilter_Interleave extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter.Interleave',
-      package: const $pb.PackageName('google.bigtable.v1'))
-    ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM, RowFilter.create)
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
+    ..pc<RowFilter>(1, 'filters', $pb.PbFieldType.PM,
+        subBuilder: RowFilter.create)
     ..hasRequiredFields = false;
 
   RowFilter_Interleave._() : super();
@@ -531,22 +642,22 @@ class RowFilter_Interleave extends $pb.GeneratedMessage {
   RowFilter_Interleave createEmptyInstance() => create();
   static $pb.PbList<RowFilter_Interleave> createRepeated() =>
       $pb.PbList<RowFilter_Interleave>();
-  static RowFilter_Interleave getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter_Interleave getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RowFilter_Interleave>(create);
   static RowFilter_Interleave _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<RowFilter> get filters => $_getList(0);
 }
 
 class RowFilter_Condition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter.Condition',
-      package: const $pb.PackageName('google.bigtable.v1'))
-    ..a<RowFilter>(1, 'predicateFilter', $pb.PbFieldType.OM,
-        RowFilter.getDefault, RowFilter.create)
-    ..a<RowFilter>(2, 'trueFilter', $pb.PbFieldType.OM, RowFilter.getDefault,
-        RowFilter.create)
-    ..a<RowFilter>(3, 'falseFilter', $pb.PbFieldType.OM, RowFilter.getDefault,
-        RowFilter.create)
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
+    ..aOM<RowFilter>(1, 'predicateFilter', subBuilder: RowFilter.create)
+    ..aOM<RowFilter>(2, 'trueFilter', subBuilder: RowFilter.create)
+    ..aOM<RowFilter>(3, 'falseFilter', subBuilder: RowFilter.create)
     ..hasRequiredFields = false;
 
   RowFilter_Condition._() : super();
@@ -566,33 +677,52 @@ class RowFilter_Condition extends $pb.GeneratedMessage {
   RowFilter_Condition createEmptyInstance() => create();
   static $pb.PbList<RowFilter_Condition> createRepeated() =>
       $pb.PbList<RowFilter_Condition>();
-  static RowFilter_Condition getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter_Condition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RowFilter_Condition>(create);
   static RowFilter_Condition _defaultInstance;
 
+  @$pb.TagNumber(1)
   RowFilter get predicateFilter => $_getN(0);
+  @$pb.TagNumber(1)
   set predicateFilter(RowFilter v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPredicateFilter() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPredicateFilter() => clearField(1);
+  @$pb.TagNumber(1)
+  RowFilter ensurePredicateFilter() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   RowFilter get trueFilter => $_getN(1);
+  @$pb.TagNumber(2)
   set trueFilter(RowFilter v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTrueFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTrueFilter() => clearField(2);
+  @$pb.TagNumber(2)
+  RowFilter ensureTrueFilter() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   RowFilter get falseFilter => $_getN(2);
+  @$pb.TagNumber(3)
   set falseFilter(RowFilter v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFalseFilter() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFalseFilter() => clearField(3);
+  @$pb.TagNumber(3)
+  RowFilter ensureFalseFilter() => $_ensure(2);
 }
 
 enum RowFilter_Filter {
@@ -642,30 +772,28 @@ class RowFilter extends $pb.GeneratedMessage {
     0: RowFilter_Filter.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RowFilter',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
-    ..a<RowFilter_Chain>(1, 'chain', $pb.PbFieldType.OM,
-        RowFilter_Chain.getDefault, RowFilter_Chain.create)
-    ..a<RowFilter_Interleave>(2, 'interleave', $pb.PbFieldType.OM,
-        RowFilter_Interleave.getDefault, RowFilter_Interleave.create)
-    ..a<RowFilter_Condition>(3, 'condition', $pb.PbFieldType.OM,
-        RowFilter_Condition.getDefault, RowFilter_Condition.create)
+    ..aOM<RowFilter_Chain>(1, 'chain', subBuilder: RowFilter_Chain.create)
+    ..aOM<RowFilter_Interleave>(2, 'interleave',
+        subBuilder: RowFilter_Interleave.create)
+    ..aOM<RowFilter_Condition>(3, 'condition',
+        subBuilder: RowFilter_Condition.create)
     ..a<$core.List<$core.int>>(4, 'rowKeyRegexFilter', $pb.PbFieldType.OY)
     ..aOS(5, 'familyNameRegexFilter')
     ..a<$core.List<$core.int>>(
         6, 'columnQualifierRegexFilter', $pb.PbFieldType.OY)
-    ..a<ColumnRange>(7, 'columnRangeFilter', $pb.PbFieldType.OM,
-        ColumnRange.getDefault, ColumnRange.create)
-    ..a<TimestampRange>(8, 'timestampRangeFilter', $pb.PbFieldType.OM,
-        TimestampRange.getDefault, TimestampRange.create)
+    ..aOM<ColumnRange>(7, 'columnRangeFilter', subBuilder: ColumnRange.create)
+    ..aOM<TimestampRange>(8, 'timestampRangeFilter',
+        subBuilder: TimestampRange.create)
     ..a<$core.List<$core.int>>(9, 'valueRegexFilter', $pb.PbFieldType.OY)
     ..a<$core.int>(10, 'cellsPerRowOffsetFilter', $pb.PbFieldType.O3)
     ..a<$core.int>(11, 'cellsPerRowLimitFilter', $pb.PbFieldType.O3)
     ..a<$core.int>(12, 'cellsPerColumnLimitFilter', $pb.PbFieldType.O3)
     ..aOB(13, 'stripValueTransformer')
     ..a<$core.double>(14, 'rowSampleFilter', $pb.PbFieldType.OD)
-    ..a<ValueRange>(15, 'valueRangeFilter', $pb.PbFieldType.OM,
-        ValueRange.getDefault, ValueRange.create)
+    ..aOM<ValueRange>(15, 'valueRangeFilter', subBuilder: ValueRange.create)
     ..aOB(16, 'sink')
     ..aOB(17, 'passAllFilter')
     ..aOB(18, 'blockAllFilter')
@@ -688,168 +816,259 @@ class RowFilter extends $pb.GeneratedMessage {
   static RowFilter create() => RowFilter._();
   RowFilter createEmptyInstance() => create();
   static $pb.PbList<RowFilter> createRepeated() => $pb.PbList<RowFilter>();
-  static RowFilter getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RowFilter getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RowFilter>(create);
   static RowFilter _defaultInstance;
 
   RowFilter_Filter whichFilter() => _RowFilter_FilterByTag[$_whichOneof(0)];
   void clearFilter() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   RowFilter_Chain get chain => $_getN(0);
+  @$pb.TagNumber(1)
   set chain(RowFilter_Chain v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasChain() => $_has(0);
+  @$pb.TagNumber(1)
   void clearChain() => clearField(1);
+  @$pb.TagNumber(1)
+  RowFilter_Chain ensureChain() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   RowFilter_Interleave get interleave => $_getN(1);
+  @$pb.TagNumber(2)
   set interleave(RowFilter_Interleave v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInterleave() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInterleave() => clearField(2);
+  @$pb.TagNumber(2)
+  RowFilter_Interleave ensureInterleave() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   RowFilter_Condition get condition => $_getN(2);
+  @$pb.TagNumber(3)
   set condition(RowFilter_Condition v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCondition() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCondition() => clearField(3);
+  @$pb.TagNumber(3)
+  RowFilter_Condition ensureCondition() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$core.int> get rowKeyRegexFilter => $_getN(3);
+  @$pb.TagNumber(4)
   set rowKeyRegexFilter($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasRowKeyRegexFilter() => $_has(3);
+  @$pb.TagNumber(4)
   void clearRowKeyRegexFilter() => clearField(4);
 
-  $core.String get familyNameRegexFilter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get familyNameRegexFilter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set familyNameRegexFilter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFamilyNameRegexFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFamilyNameRegexFilter() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<$core.int> get columnQualifierRegexFilter => $_getN(5);
+  @$pb.TagNumber(6)
   set columnQualifierRegexFilter($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasColumnQualifierRegexFilter() => $_has(5);
+  @$pb.TagNumber(6)
   void clearColumnQualifierRegexFilter() => clearField(6);
 
+  @$pb.TagNumber(7)
   ColumnRange get columnRangeFilter => $_getN(6);
+  @$pb.TagNumber(7)
   set columnRangeFilter(ColumnRange v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasColumnRangeFilter() => $_has(6);
+  @$pb.TagNumber(7)
   void clearColumnRangeFilter() => clearField(7);
+  @$pb.TagNumber(7)
+  ColumnRange ensureColumnRangeFilter() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   TimestampRange get timestampRangeFilter => $_getN(7);
+  @$pb.TagNumber(8)
   set timestampRangeFilter(TimestampRange v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasTimestampRangeFilter() => $_has(7);
+  @$pb.TagNumber(8)
   void clearTimestampRangeFilter() => clearField(8);
+  @$pb.TagNumber(8)
+  TimestampRange ensureTimestampRangeFilter() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   $core.List<$core.int> get valueRegexFilter => $_getN(8);
+  @$pb.TagNumber(9)
   set valueRegexFilter($core.List<$core.int> v) {
     $_setBytes(8, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasValueRegexFilter() => $_has(8);
+  @$pb.TagNumber(9)
   void clearValueRegexFilter() => clearField(9);
 
-  $core.int get cellsPerRowOffsetFilter => $_get(9, 0);
+  @$pb.TagNumber(10)
+  $core.int get cellsPerRowOffsetFilter => $_getIZ(9);
+  @$pb.TagNumber(10)
   set cellsPerRowOffsetFilter($core.int v) {
     $_setSignedInt32(9, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasCellsPerRowOffsetFilter() => $_has(9);
+  @$pb.TagNumber(10)
   void clearCellsPerRowOffsetFilter() => clearField(10);
 
-  $core.int get cellsPerRowLimitFilter => $_get(10, 0);
+  @$pb.TagNumber(11)
+  $core.int get cellsPerRowLimitFilter => $_getIZ(10);
+  @$pb.TagNumber(11)
   set cellsPerRowLimitFilter($core.int v) {
     $_setSignedInt32(10, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasCellsPerRowLimitFilter() => $_has(10);
+  @$pb.TagNumber(11)
   void clearCellsPerRowLimitFilter() => clearField(11);
 
-  $core.int get cellsPerColumnLimitFilter => $_get(11, 0);
+  @$pb.TagNumber(12)
+  $core.int get cellsPerColumnLimitFilter => $_getIZ(11);
+  @$pb.TagNumber(12)
   set cellsPerColumnLimitFilter($core.int v) {
     $_setSignedInt32(11, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasCellsPerColumnLimitFilter() => $_has(11);
+  @$pb.TagNumber(12)
   void clearCellsPerColumnLimitFilter() => clearField(12);
 
-  $core.bool get stripValueTransformer => $_get(12, false);
+  @$pb.TagNumber(13)
+  $core.bool get stripValueTransformer => $_getBF(12);
+  @$pb.TagNumber(13)
   set stripValueTransformer($core.bool v) {
     $_setBool(12, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasStripValueTransformer() => $_has(12);
+  @$pb.TagNumber(13)
   void clearStripValueTransformer() => clearField(13);
 
+  @$pb.TagNumber(14)
   $core.double get rowSampleFilter => $_getN(13);
+  @$pb.TagNumber(14)
   set rowSampleFilter($core.double v) {
     $_setDouble(13, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasRowSampleFilter() => $_has(13);
+  @$pb.TagNumber(14)
   void clearRowSampleFilter() => clearField(14);
 
+  @$pb.TagNumber(15)
   ValueRange get valueRangeFilter => $_getN(14);
+  @$pb.TagNumber(15)
   set valueRangeFilter(ValueRange v) {
     setField(15, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasValueRangeFilter() => $_has(14);
+  @$pb.TagNumber(15)
   void clearValueRangeFilter() => clearField(15);
+  @$pb.TagNumber(15)
+  ValueRange ensureValueRangeFilter() => $_ensure(14);
 
-  $core.bool get sink => $_get(15, false);
+  @$pb.TagNumber(16)
+  $core.bool get sink => $_getBF(15);
+  @$pb.TagNumber(16)
   set sink($core.bool v) {
     $_setBool(15, v);
   }
 
+  @$pb.TagNumber(16)
   $core.bool hasSink() => $_has(15);
+  @$pb.TagNumber(16)
   void clearSink() => clearField(16);
 
-  $core.bool get passAllFilter => $_get(16, false);
+  @$pb.TagNumber(17)
+  $core.bool get passAllFilter => $_getBF(16);
+  @$pb.TagNumber(17)
   set passAllFilter($core.bool v) {
     $_setBool(16, v);
   }
 
+  @$pb.TagNumber(17)
   $core.bool hasPassAllFilter() => $_has(16);
+  @$pb.TagNumber(17)
   void clearPassAllFilter() => clearField(17);
 
-  $core.bool get blockAllFilter => $_get(17, false);
+  @$pb.TagNumber(18)
+  $core.bool get blockAllFilter => $_getBF(17);
+  @$pb.TagNumber(18)
   set blockAllFilter($core.bool v) {
     $_setBool(17, v);
   }
 
+  @$pb.TagNumber(18)
   $core.bool hasBlockAllFilter() => $_has(17);
+  @$pb.TagNumber(18)
   void clearBlockAllFilter() => clearField(18);
 
-  $core.String get applyLabelTransformer => $_getS(18, '');
+  @$pb.TagNumber(19)
+  $core.String get applyLabelTransformer => $_getSZ(18);
+  @$pb.TagNumber(19)
   set applyLabelTransformer($core.String v) {
     $_setString(18, v);
   }
 
+  @$pb.TagNumber(19)
   $core.bool hasApplyLabelTransformer() => $_has(18);
+  @$pb.TagNumber(19)
   void clearApplyLabelTransformer() => clearField(19);
 }
 
 class Mutation_SetCell extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.SetCell',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'familyName')
     ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
     ..aInt64(3, 'timestampMicros')
@@ -873,50 +1092,67 @@ class Mutation_SetCell extends $pb.GeneratedMessage {
   Mutation_SetCell createEmptyInstance() => create();
   static $pb.PbList<Mutation_SetCell> createRepeated() =>
       $pb.PbList<Mutation_SetCell>();
-  static Mutation_SetCell getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_SetCell getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Mutation_SetCell>(create);
   static Mutation_SetCell _defaultInstance;
 
-  $core.String get familyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get familyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set familyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFamilyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFamilyName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get columnQualifier => $_getN(1);
+  @$pb.TagNumber(2)
   set columnQualifier($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasColumnQualifier() => $_has(1);
+  @$pb.TagNumber(2)
   void clearColumnQualifier() => clearField(2);
 
-  Int64 get timestampMicros => $_getI64(2);
-  set timestampMicros(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get timestampMicros => $_getI64(2);
+  @$pb.TagNumber(3)
+  set timestampMicros($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTimestampMicros() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTimestampMicros() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.int> get value => $_getN(3);
+  @$pb.TagNumber(4)
   set value($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValue() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValue() => clearField(4);
 }
 
 class Mutation_DeleteFromColumn extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.DeleteFromColumn',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'familyName')
     ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
-    ..a<TimestampRange>(3, 'timeRange', $pb.PbFieldType.OM,
-        TimestampRange.getDefault, TimestampRange.create)
+    ..aOM<TimestampRange>(3, 'timeRange', subBuilder: TimestampRange.create)
     ..hasRequiredFields = false;
 
   Mutation_DeleteFromColumn._() : super();
@@ -939,38 +1175,54 @@ class Mutation_DeleteFromColumn extends $pb.GeneratedMessage {
   Mutation_DeleteFromColumn createEmptyInstance() => create();
   static $pb.PbList<Mutation_DeleteFromColumn> createRepeated() =>
       $pb.PbList<Mutation_DeleteFromColumn>();
-  static Mutation_DeleteFromColumn getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_DeleteFromColumn getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Mutation_DeleteFromColumn>(create);
   static Mutation_DeleteFromColumn _defaultInstance;
 
-  $core.String get familyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get familyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set familyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFamilyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFamilyName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get columnQualifier => $_getN(1);
+  @$pb.TagNumber(2)
   set columnQualifier($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasColumnQualifier() => $_has(1);
+  @$pb.TagNumber(2)
   void clearColumnQualifier() => clearField(2);
 
+  @$pb.TagNumber(3)
   TimestampRange get timeRange => $_getN(2);
+  @$pb.TagNumber(3)
   set timeRange(TimestampRange v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTimeRange() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTimeRange() => clearField(3);
+  @$pb.TagNumber(3)
+  TimestampRange ensureTimeRange() => $_ensure(2);
 }
 
 class Mutation_DeleteFromFamily extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.DeleteFromFamily',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'familyName')
     ..hasRequiredFields = false;
 
@@ -994,22 +1246,28 @@ class Mutation_DeleteFromFamily extends $pb.GeneratedMessage {
   Mutation_DeleteFromFamily createEmptyInstance() => create();
   static $pb.PbList<Mutation_DeleteFromFamily> createRepeated() =>
       $pb.PbList<Mutation_DeleteFromFamily>();
-  static Mutation_DeleteFromFamily getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_DeleteFromFamily getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Mutation_DeleteFromFamily>(create);
   static Mutation_DeleteFromFamily _defaultInstance;
 
-  $core.String get familyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get familyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set familyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFamilyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFamilyName() => clearField(1);
 }
 
 class Mutation_DeleteFromRow extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.DeleteFromRow',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   Mutation_DeleteFromRow._() : super();
@@ -1031,8 +1289,9 @@ class Mutation_DeleteFromRow extends $pb.GeneratedMessage {
   Mutation_DeleteFromRow createEmptyInstance() => create();
   static $pb.PbList<Mutation_DeleteFromRow> createRepeated() =>
       $pb.PbList<Mutation_DeleteFromRow>();
-  static Mutation_DeleteFromRow getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_DeleteFromRow getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Mutation_DeleteFromRow>(create);
   static Mutation_DeleteFromRow _defaultInstance;
 }
 
@@ -1054,16 +1313,16 @@ class Mutation extends $pb.GeneratedMessage {
     0: Mutation_Mutation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4])
-    ..a<Mutation_SetCell>(1, 'setCell', $pb.PbFieldType.OM,
-        Mutation_SetCell.getDefault, Mutation_SetCell.create)
-    ..a<Mutation_DeleteFromColumn>(2, 'deleteFromColumn', $pb.PbFieldType.OM,
-        Mutation_DeleteFromColumn.getDefault, Mutation_DeleteFromColumn.create)
-    ..a<Mutation_DeleteFromFamily>(3, 'deleteFromFamily', $pb.PbFieldType.OM,
-        Mutation_DeleteFromFamily.getDefault, Mutation_DeleteFromFamily.create)
-    ..a<Mutation_DeleteFromRow>(4, 'deleteFromRow', $pb.PbFieldType.OM,
-        Mutation_DeleteFromRow.getDefault, Mutation_DeleteFromRow.create)
+    ..aOM<Mutation_SetCell>(1, 'setCell', subBuilder: Mutation_SetCell.create)
+    ..aOM<Mutation_DeleteFromColumn>(2, 'deleteFromColumn',
+        subBuilder: Mutation_DeleteFromColumn.create)
+    ..aOM<Mutation_DeleteFromFamily>(3, 'deleteFromFamily',
+        subBuilder: Mutation_DeleteFromFamily.create)
+    ..aOM<Mutation_DeleteFromRow>(4, 'deleteFromRow',
+        subBuilder: Mutation_DeleteFromRow.create)
     ..hasRequiredFields = false;
 
   Mutation._() : super();
@@ -1082,43 +1341,69 @@ class Mutation extends $pb.GeneratedMessage {
   static Mutation create() => Mutation._();
   Mutation createEmptyInstance() => create();
   static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
-  static Mutation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Mutation>(create);
   static Mutation _defaultInstance;
 
   Mutation_Mutation whichMutation() => _Mutation_MutationByTag[$_whichOneof(0)];
   void clearMutation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   Mutation_SetCell get setCell => $_getN(0);
+  @$pb.TagNumber(1)
   set setCell(Mutation_SetCell v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSetCell() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSetCell() => clearField(1);
+  @$pb.TagNumber(1)
+  Mutation_SetCell ensureSetCell() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Mutation_DeleteFromColumn get deleteFromColumn => $_getN(1);
+  @$pb.TagNumber(2)
   set deleteFromColumn(Mutation_DeleteFromColumn v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDeleteFromColumn() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDeleteFromColumn() => clearField(2);
+  @$pb.TagNumber(2)
+  Mutation_DeleteFromColumn ensureDeleteFromColumn() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   Mutation_DeleteFromFamily get deleteFromFamily => $_getN(2);
+  @$pb.TagNumber(3)
   set deleteFromFamily(Mutation_DeleteFromFamily v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeleteFromFamily() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeleteFromFamily() => clearField(3);
+  @$pb.TagNumber(3)
+  Mutation_DeleteFromFamily ensureDeleteFromFamily() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   Mutation_DeleteFromRow get deleteFromRow => $_getN(3);
+  @$pb.TagNumber(4)
   set deleteFromRow(Mutation_DeleteFromRow v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDeleteFromRow() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDeleteFromRow() => clearField(4);
+  @$pb.TagNumber(4)
+  Mutation_DeleteFromRow ensureDeleteFromRow() => $_ensure(3);
 }
 
 enum ReadModifyWriteRule_Rule { appendValue, incrementAmount, notSet }
@@ -1131,7 +1416,8 @@ class ReadModifyWriteRule extends $pb.GeneratedMessage {
     0: ReadModifyWriteRule_Rule.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadModifyWriteRule',
-      package: const $pb.PackageName('google.bigtable.v1'))
+      package: const $pb.PackageName('google.bigtable.v1'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'familyName')
     ..a<$core.List<$core.int>>(2, 'columnQualifier', $pb.PbFieldType.OY)
@@ -1156,43 +1442,60 @@ class ReadModifyWriteRule extends $pb.GeneratedMessage {
   ReadModifyWriteRule createEmptyInstance() => create();
   static $pb.PbList<ReadModifyWriteRule> createRepeated() =>
       $pb.PbList<ReadModifyWriteRule>();
-  static ReadModifyWriteRule getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReadModifyWriteRule getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReadModifyWriteRule>(create);
   static ReadModifyWriteRule _defaultInstance;
 
   ReadModifyWriteRule_Rule whichRule() =>
       _ReadModifyWriteRule_RuleByTag[$_whichOneof(0)];
   void clearRule() => clearField($_whichOneof(0));
 
-  $core.String get familyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get familyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set familyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFamilyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFamilyName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get columnQualifier => $_getN(1);
+  @$pb.TagNumber(2)
   set columnQualifier($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasColumnQualifier() => $_has(1);
+  @$pb.TagNumber(2)
   void clearColumnQualifier() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get appendValue => $_getN(2);
+  @$pb.TagNumber(3)
   set appendValue($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAppendValue() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAppendValue() => clearField(3);
 
-  Int64 get incrementAmount => $_getI64(3);
-  set incrementAmount(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get incrementAmount => $_getI64(3);
+  @$pb.TagNumber(4)
+  set incrementAmount($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIncrementAmount() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIncrementAmount() => clearField(4);
 }

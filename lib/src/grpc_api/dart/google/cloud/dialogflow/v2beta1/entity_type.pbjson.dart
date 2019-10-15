@@ -34,6 +34,13 @@ const EntityType$json = {
       '6': '.google.cloud.dialogflow.v2beta1.EntityType.Entity',
       '10': 'entities'
     },
+    {
+      '1': 'enable_fuzzy_extraction',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '10': 'enableFuzzyExtraction'
+    },
   ],
   '3': [EntityType_Entity$json],
   '4': [EntityType_Kind$json, EntityType_AutoExpansionMode$json],
@@ -53,6 +60,7 @@ const EntityType_Kind$json = {
     {'1': 'KIND_UNSPECIFIED', '2': 0},
     {'1': 'KIND_MAP', '2': 1},
     {'1': 'KIND_LIST', '2': 2},
+    {'1': 'KIND_REGEXP', '2': 3},
   ],
 };
 

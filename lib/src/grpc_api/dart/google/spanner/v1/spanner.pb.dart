@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../protobuf/timestamp.pb.dart' as $4;
@@ -26,10 +25,10 @@ export 'spanner.pbenum.dart';
 
 class CreateSessionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSessionRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'database')
-    ..a<Session>(
-        2, 'session', $pb.PbFieldType.OM, Session.getDefault, Session.create)
+    ..aOM<Session>(2, 'session', subBuilder: Session.create)
     ..hasRequiredFields = false;
 
   CreateSessionRequest._() : super();
@@ -50,45 +49,163 @@ class CreateSessionRequest extends $pb.GeneratedMessage {
   CreateSessionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSessionRequest> createRepeated() =>
       $pb.PbList<CreateSessionRequest>();
-  static CreateSessionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateSessionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSessionRequest>(create);
   static CreateSessionRequest _defaultInstance;
 
-  $core.String get database => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get database => $_getSZ(0);
+  @$pb.TagNumber(1)
   set database($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatabase() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatabase() => clearField(1);
 
+  @$pb.TagNumber(2)
   Session get session => $_getN(1);
+  @$pb.TagNumber(2)
   set session(Session v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSession() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSession() => clearField(2);
+  @$pb.TagNumber(2)
+  Session ensureSession() => $_ensure(1);
+}
+
+class BatchCreateSessionsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchCreateSessionsRequest',
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, 'database')
+    ..aOM<Session>(2, 'sessionTemplate', subBuilder: Session.create)
+    ..a<$core.int>(3, 'sessionCount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  BatchCreateSessionsRequest._() : super();
+  factory BatchCreateSessionsRequest() => create();
+  factory BatchCreateSessionsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateSessionsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  BatchCreateSessionsRequest clone() =>
+      BatchCreateSessionsRequest()..mergeFromMessage(this);
+  BatchCreateSessionsRequest copyWith(
+          void Function(BatchCreateSessionsRequest) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchCreateSessionsRequest));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateSessionsRequest create() => BatchCreateSessionsRequest._();
+  BatchCreateSessionsRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateSessionsRequest> createRepeated() =>
+      $pb.PbList<BatchCreateSessionsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateSessionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchCreateSessionsRequest>(create);
+  static BatchCreateSessionsRequest _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get database => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set database($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDatabase() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDatabase() => clearField(1);
+
+  @$pb.TagNumber(2)
+  Session get sessionTemplate => $_getN(1);
+  @$pb.TagNumber(2)
+  set sessionTemplate(Session v) {
+    setField(2, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasSessionTemplate() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSessionTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  Session ensureSessionTemplate() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.int get sessionCount => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set sessionCount($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasSessionCount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSessionCount() => clearField(3);
+}
+
+class BatchCreateSessionsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      'BatchCreateSessionsResponse',
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pc<Session>(1, 'session', $pb.PbFieldType.PM, subBuilder: Session.create)
+    ..hasRequiredFields = false;
+
+  BatchCreateSessionsResponse._() : super();
+  factory BatchCreateSessionsResponse() => create();
+  factory BatchCreateSessionsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchCreateSessionsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  BatchCreateSessionsResponse clone() =>
+      BatchCreateSessionsResponse()..mergeFromMessage(this);
+  BatchCreateSessionsResponse copyWith(
+          void Function(BatchCreateSessionsResponse) updates) =>
+      super.copyWith(
+          (message) => updates(message as BatchCreateSessionsResponse));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateSessionsResponse create() =>
+      BatchCreateSessionsResponse._();
+  BatchCreateSessionsResponse createEmptyInstance() => create();
+  static $pb.PbList<BatchCreateSessionsResponse> createRepeated() =>
+      $pb.PbList<BatchCreateSessionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateSessionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchCreateSessionsResponse>(create);
+  static BatchCreateSessionsResponse _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Session> get session => $_getList(0);
 }
 
 class Session extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Session',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..m<$core.String, $core.String>(
-        2,
-        'labels',
-        'Session.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.spanner.v1'))
-    ..a<$4.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
-    ..a<$4.Timestamp>(4, 'approximateLastUseTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..m<$core.String, $core.String>(2, 'labels',
+        entryClassName: 'Session.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.spanner.v1'))
+    ..aOM<$4.Timestamp>(3, 'createTime', subBuilder: $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(4, 'approximateLastUseTime',
+        subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   Session._() : super();
@@ -107,39 +224,59 @@ class Session extends $pb.GeneratedMessage {
   static Session create() => Session._();
   Session createEmptyInstance() => create();
   static $pb.PbList<Session> createRepeated() => $pb.PbList<Session>();
-  static Session getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Session getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Session>(create);
   static Session _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
+  @$pb.TagNumber(3)
   $4.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(3)
   set createTime($4.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCreateTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.Timestamp ensureCreateTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $4.Timestamp get approximateLastUseTime => $_getN(3);
+  @$pb.TagNumber(4)
   set approximateLastUseTime($4.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasApproximateLastUseTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearApproximateLastUseTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.Timestamp ensureApproximateLastUseTime() => $_ensure(3);
 }
 
 class GetSessionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSessionRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -160,22 +297,28 @@ class GetSessionRequest extends $pb.GeneratedMessage {
   GetSessionRequest createEmptyInstance() => create();
   static $pb.PbList<GetSessionRequest> createRepeated() =>
       $pb.PbList<GetSessionRequest>();
-  static GetSessionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSessionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSessionRequest>(create);
   static GetSessionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListSessionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionsRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'database')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -199,47 +342,65 @@ class ListSessionsRequest extends $pb.GeneratedMessage {
   ListSessionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListSessionsRequest> createRepeated() =>
       $pb.PbList<ListSessionsRequest>();
-  static ListSessionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSessionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSessionsRequest>(create);
   static ListSessionsRequest _defaultInstance;
 
-  $core.String get database => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get database => $_getSZ(0);
+  @$pb.TagNumber(1)
   set database($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatabase() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatabase() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.String get filter => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
   set filter($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 }
 
 class ListSessionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSessionsResponse',
-      package: const $pb.PackageName('google.spanner.v1'))
-    ..pc<Session>(1, 'sessions', $pb.PbFieldType.PM, Session.create)
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pc<Session>(1, 'sessions', $pb.PbFieldType.PM, subBuilder: Session.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -261,24 +422,31 @@ class ListSessionsResponse extends $pb.GeneratedMessage {
   ListSessionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListSessionsResponse> createRepeated() =>
       $pb.PbList<ListSessionsResponse>();
-  static ListSessionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSessionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSessionsResponse>(create);
   static ListSessionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Session> get sessions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteSessionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSessionRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -300,46 +468,44 @@ class DeleteSessionRequest extends $pb.GeneratedMessage {
   DeleteSessionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSessionRequest> createRepeated() =>
       $pb.PbList<DeleteSessionRequest>();
-  static DeleteSessionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSessionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSessionRequest>(create);
   static DeleteSessionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ExecuteSqlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteSqlRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
+    ..aOM<$3.TransactionSelector>(2, 'transaction',
+        subBuilder: $3.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$5.Struct>(
-        4, 'params', $pb.PbFieldType.OM, $5.Struct.getDefault, $5.Struct.create)
-    ..m<$core.String, $6.Type>(
-        5,
-        'paramTypes',
-        'ExecuteSqlRequest.ParamTypesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $6.Type.create,
-        null,
-        null,
-        const $pb.PackageName('google.spanner.v1'))
+    ..aOM<$5.Struct>(4, 'params', subBuilder: $5.Struct.create)
+    ..m<$core.String, $6.Type>(5, 'paramTypes',
+        entryClassName: 'ExecuteSqlRequest.ParamTypesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $6.Type.create,
+        packageName: const $pb.PackageName('google.spanner.v1'))
     ..a<$core.List<$core.int>>(6, 'resumeToken', $pb.PbFieldType.OY)
-    ..e<ExecuteSqlRequest_QueryMode>(
-        7,
-        'queryMode',
-        $pb.PbFieldType.OE,
-        ExecuteSqlRequest_QueryMode.NORMAL,
-        ExecuteSqlRequest_QueryMode.valueOf,
-        ExecuteSqlRequest_QueryMode.values)
+    ..e<ExecuteSqlRequest_QueryMode>(7, 'queryMode', $pb.PbFieldType.OE,
+        defaultOrMaker: ExecuteSqlRequest_QueryMode.NORMAL,
+        valueOf: ExecuteSqlRequest_QueryMode.valueOf,
+        enumValues: ExecuteSqlRequest_QueryMode.values)
     ..a<$core.List<$core.int>>(8, 'partitionToken', $pb.PbFieldType.OY)
     ..aInt64(9, 'seqno')
     ..hasRequiredFields = false;
@@ -361,94 +527,128 @@ class ExecuteSqlRequest extends $pb.GeneratedMessage {
   ExecuteSqlRequest createEmptyInstance() => create();
   static $pb.PbList<ExecuteSqlRequest> createRepeated() =>
       $pb.PbList<ExecuteSqlRequest>();
-  static ExecuteSqlRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteSqlRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteSqlRequest>(create);
   static ExecuteSqlRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
-  $core.String get sql => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get sql => $_getSZ(2);
+  @$pb.TagNumber(3)
   set sql($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSql() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSql() => clearField(3);
 
+  @$pb.TagNumber(4)
   $5.Struct get params => $_getN(3);
+  @$pb.TagNumber(4)
   set params($5.Struct v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
+  @$pb.TagNumber(4)
   void clearParams() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Struct ensureParams() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $core.Map<$core.String, $6.Type> get paramTypes => $_getMap(4);
 
+  @$pb.TagNumber(6)
   $core.List<$core.int> get resumeToken => $_getN(5);
+  @$pb.TagNumber(6)
   set resumeToken($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasResumeToken() => $_has(5);
+  @$pb.TagNumber(6)
   void clearResumeToken() => clearField(6);
 
+  @$pb.TagNumber(7)
   ExecuteSqlRequest_QueryMode get queryMode => $_getN(6);
+  @$pb.TagNumber(7)
   set queryMode(ExecuteSqlRequest_QueryMode v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasQueryMode() => $_has(6);
+  @$pb.TagNumber(7)
   void clearQueryMode() => clearField(7);
 
+  @$pb.TagNumber(8)
   $core.List<$core.int> get partitionToken => $_getN(7);
+  @$pb.TagNumber(8)
   set partitionToken($core.List<$core.int> v) {
     $_setBytes(7, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasPartitionToken() => $_has(7);
+  @$pb.TagNumber(8)
   void clearPartitionToken() => clearField(8);
 
-  Int64 get seqno => $_getI64(8);
-  set seqno(Int64 v) {
+  @$pb.TagNumber(9)
+  $fixnum.Int64 get seqno => $_getI64(8);
+  @$pb.TagNumber(9)
+  set seqno($fixnum.Int64 v) {
     $_setInt64(8, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasSeqno() => $_has(8);
+  @$pb.TagNumber(9)
   void clearSeqno() => clearField(9);
 }
 
 class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExecuteBatchDmlRequest.Statement',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'sql')
-    ..a<$5.Struct>(
-        2, 'params', $pb.PbFieldType.OM, $5.Struct.getDefault, $5.Struct.create)
-    ..m<$core.String, $6.Type>(
-        3,
-        'paramTypes',
-        'ExecuteBatchDmlRequest.Statement.ParamTypesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $6.Type.create,
-        null,
-        null,
-        const $pb.PackageName('google.spanner.v1'))
+    ..aOM<$5.Struct>(2, 'params', subBuilder: $5.Struct.create)
+    ..m<$core.String, $6.Type>(3, 'paramTypes',
+        entryClassName: 'ExecuteBatchDmlRequest.Statement.ParamTypesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $6.Type.create,
+        packageName: const $pb.PackageName('google.spanner.v1'))
     ..hasRequiredFields = false;
 
   ExecuteBatchDmlRequest_Statement._() : super();
@@ -472,37 +672,51 @@ class ExecuteBatchDmlRequest_Statement extends $pb.GeneratedMessage {
   ExecuteBatchDmlRequest_Statement createEmptyInstance() => create();
   static $pb.PbList<ExecuteBatchDmlRequest_Statement> createRepeated() =>
       $pb.PbList<ExecuteBatchDmlRequest_Statement>();
-  static ExecuteBatchDmlRequest_Statement getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteBatchDmlRequest_Statement getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteBatchDmlRequest_Statement>(
+          create);
   static ExecuteBatchDmlRequest_Statement _defaultInstance;
 
-  $core.String get sql => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get sql => $_getSZ(0);
+  @$pb.TagNumber(1)
   set sql($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSql() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSql() => clearField(1);
 
+  @$pb.TagNumber(2)
   $5.Struct get params => $_getN(1);
+  @$pb.TagNumber(2)
   set params($5.Struct v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParams() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParams() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.Struct ensureParams() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.Map<$core.String, $6.Type> get paramTypes => $_getMap(2);
 }
 
 class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
+    ..aOM<$3.TransactionSelector>(2, 'transaction',
+        subBuilder: $3.TransactionSelector.create)
     ..pc<ExecuteBatchDmlRequest_Statement>(3, 'statements', $pb.PbFieldType.PM,
-        ExecuteBatchDmlRequest_Statement.create)
+        subBuilder: ExecuteBatchDmlRequest_Statement.create)
     ..aInt64(4, 'seqno')
     ..hasRequiredFields = false;
 
@@ -525,43 +739,60 @@ class ExecuteBatchDmlRequest extends $pb.GeneratedMessage {
   ExecuteBatchDmlRequest createEmptyInstance() => create();
   static $pb.PbList<ExecuteBatchDmlRequest> createRepeated() =>
       $pb.PbList<ExecuteBatchDmlRequest>();
-  static ExecuteBatchDmlRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteBatchDmlRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteBatchDmlRequest>(create);
   static ExecuteBatchDmlRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<ExecuteBatchDmlRequest_Statement> get statements => $_getList(2);
 
-  Int64 get seqno => $_getI64(3);
-  set seqno(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get seqno => $_getI64(3);
+  @$pb.TagNumber(4)
+  set seqno($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasSeqno() => $_has(3);
+  @$pb.TagNumber(4)
   void clearSeqno() => clearField(4);
 }
 
 class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteBatchDmlResponse',
-      package: const $pb.PackageName('google.spanner.v1'))
-    ..pc<$2.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM, $2.ResultSet.create)
-    ..a<$7.Status>(
-        2, 'status', $pb.PbFieldType.OM, $7.Status.getDefault, $7.Status.create)
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pc<$2.ResultSet>(1, 'resultSets', $pb.PbFieldType.PM,
+        subBuilder: $2.ResultSet.create)
+    ..aOM<$7.Status>(2, 'status', subBuilder: $7.Status.create)
     ..hasRequiredFields = false;
 
   ExecuteBatchDmlResponse._() : super();
@@ -583,24 +814,33 @@ class ExecuteBatchDmlResponse extends $pb.GeneratedMessage {
   ExecuteBatchDmlResponse createEmptyInstance() => create();
   static $pb.PbList<ExecuteBatchDmlResponse> createRepeated() =>
       $pb.PbList<ExecuteBatchDmlResponse>();
-  static ExecuteBatchDmlResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteBatchDmlResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteBatchDmlResponse>(create);
   static ExecuteBatchDmlResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$2.ResultSet> get resultSets => $_getList(0);
 
+  @$pb.TagNumber(2)
   $7.Status get status => $_getN(1);
+  @$pb.TagNumber(2)
   set status($7.Status v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStatus() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Status ensureStatus() => $_ensure(1);
 }
 
 class PartitionOptions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionOptions',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aInt64(1, 'partitionSizeBytes')
     ..aInt64(2, 'maxPartitions')
     ..hasRequiredFields = false;
@@ -622,48 +862,53 @@ class PartitionOptions extends $pb.GeneratedMessage {
   PartitionOptions createEmptyInstance() => create();
   static $pb.PbList<PartitionOptions> createRepeated() =>
       $pb.PbList<PartitionOptions>();
-  static PartitionOptions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PartitionOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartitionOptions>(create);
   static PartitionOptions _defaultInstance;
 
-  Int64 get partitionSizeBytes => $_getI64(0);
-  set partitionSizeBytes(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get partitionSizeBytes => $_getI64(0);
+  @$pb.TagNumber(1)
+  set partitionSizeBytes($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPartitionSizeBytes() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPartitionSizeBytes() => clearField(1);
 
-  Int64 get maxPartitions => $_getI64(1);
-  set maxPartitions(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get maxPartitions => $_getI64(1);
+  @$pb.TagNumber(2)
+  set maxPartitions($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxPartitions() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxPartitions() => clearField(2);
 }
 
 class PartitionQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionQueryRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
+    ..aOM<$3.TransactionSelector>(2, 'transaction',
+        subBuilder: $3.TransactionSelector.create)
     ..aOS(3, 'sql')
-    ..a<$5.Struct>(
-        4, 'params', $pb.PbFieldType.OM, $5.Struct.getDefault, $5.Struct.create)
-    ..m<$core.String, $6.Type>(
-        5,
-        'paramTypes',
-        'PartitionQueryRequest.ParamTypesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $6.Type.create,
-        null,
-        null,
-        const $pb.PackageName('google.spanner.v1'))
-    ..a<PartitionOptions>(6, 'partitionOptions', $pb.PbFieldType.OM,
-        PartitionOptions.getDefault, PartitionOptions.create)
+    ..aOM<$5.Struct>(4, 'params', subBuilder: $5.Struct.create)
+    ..m<$core.String, $6.Type>(5, 'paramTypes',
+        entryClassName: 'PartitionQueryRequest.ParamTypesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $6.Type.create,
+        packageName: const $pb.PackageName('google.spanner.v1'))
+    ..aOM<PartitionOptions>(6, 'partitionOptions',
+        subBuilder: PartitionOptions.create)
     ..hasRequiredFields = false;
 
   PartitionQueryRequest._() : super();
@@ -685,66 +930,94 @@ class PartitionQueryRequest extends $pb.GeneratedMessage {
   PartitionQueryRequest createEmptyInstance() => create();
   static $pb.PbList<PartitionQueryRequest> createRepeated() =>
       $pb.PbList<PartitionQueryRequest>();
-  static PartitionQueryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PartitionQueryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartitionQueryRequest>(create);
   static PartitionQueryRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
-  $core.String get sql => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get sql => $_getSZ(2);
+  @$pb.TagNumber(3)
   set sql($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSql() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSql() => clearField(3);
 
+  @$pb.TagNumber(4)
   $5.Struct get params => $_getN(3);
+  @$pb.TagNumber(4)
   set params($5.Struct v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasParams() => $_has(3);
+  @$pb.TagNumber(4)
   void clearParams() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Struct ensureParams() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $core.Map<$core.String, $6.Type> get paramTypes => $_getMap(4);
 
+  @$pb.TagNumber(6)
   PartitionOptions get partitionOptions => $_getN(5);
+  @$pb.TagNumber(6)
   set partitionOptions(PartitionOptions v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPartitionOptions() => $_has(5);
+  @$pb.TagNumber(6)
   void clearPartitionOptions() => clearField(6);
+  @$pb.TagNumber(6)
+  PartitionOptions ensurePartitionOptions() => $_ensure(5);
 }
 
 class PartitionReadRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionReadRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
+    ..aOM<$3.TransactionSelector>(2, 'transaction',
+        subBuilder: $3.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<$8.KeySet>(
-        6, 'keySet', $pb.PbFieldType.OM, $8.KeySet.getDefault, $8.KeySet.create)
-    ..a<PartitionOptions>(9, 'partitionOptions', $pb.PbFieldType.OM,
-        PartitionOptions.getDefault, PartitionOptions.create)
+    ..aOM<$8.KeySet>(6, 'keySet', subBuilder: $8.KeySet.create)
+    ..aOM<PartitionOptions>(9, 'partitionOptions',
+        subBuilder: PartitionOptions.create)
     ..hasRequiredFields = false;
 
   PartitionReadRequest._() : super();
@@ -765,64 +1038,97 @@ class PartitionReadRequest extends $pb.GeneratedMessage {
   PartitionReadRequest createEmptyInstance() => create();
   static $pb.PbList<PartitionReadRequest> createRepeated() =>
       $pb.PbList<PartitionReadRequest>();
-  static PartitionReadRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PartitionReadRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartitionReadRequest>(create);
   static PartitionReadRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
-  $core.String get table => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get table => $_getSZ(2);
+  @$pb.TagNumber(3)
   set table($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTable() => clearField(3);
 
-  $core.String get index => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get index => $_getSZ(3);
+  @$pb.TagNumber(4)
   set index($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIndex() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIndex() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$core.String> get columns => $_getList(4);
 
+  @$pb.TagNumber(6)
   $8.KeySet get keySet => $_getN(5);
+  @$pb.TagNumber(6)
   set keySet($8.KeySet v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasKeySet() => $_has(5);
+  @$pb.TagNumber(6)
   void clearKeySet() => clearField(6);
+  @$pb.TagNumber(6)
+  $8.KeySet ensureKeySet() => $_ensure(5);
 
+  @$pb.TagNumber(9)
   PartitionOptions get partitionOptions => $_getN(6);
+  @$pb.TagNumber(9)
   set partitionOptions(PartitionOptions v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasPartitionOptions() => $_has(6);
+  @$pb.TagNumber(9)
   void clearPartitionOptions() => clearField(9);
+  @$pb.TagNumber(9)
+  PartitionOptions ensurePartitionOptions() => $_ensure(6);
 }
 
 class Partition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Partition',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'partitionToken', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -842,24 +1148,31 @@ class Partition extends $pb.GeneratedMessage {
   static Partition create() => Partition._();
   Partition createEmptyInstance() => create();
   static $pb.PbList<Partition> createRepeated() => $pb.PbList<Partition>();
-  static Partition getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Partition getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Partition>(create);
   static Partition _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get partitionToken => $_getN(0);
+  @$pb.TagNumber(1)
   set partitionToken($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPartitionToken() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPartitionToken() => clearField(1);
 }
 
 class PartitionResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionResponse',
-      package: const $pb.PackageName('google.spanner.v1'))
-    ..pc<Partition>(1, 'partitions', $pb.PbFieldType.PM, Partition.create)
-    ..a<$3.Transaction>(2, 'transaction', $pb.PbFieldType.OM,
-        $3.Transaction.getDefault, $3.Transaction.create)
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..pc<Partition>(1, 'partitions', $pb.PbFieldType.PM,
+        subBuilder: Partition.create)
+    ..aOM<$3.Transaction>(2, 'transaction', subBuilder: $3.Transaction.create)
     ..hasRequiredFields = false;
 
   PartitionResponse._() : super();
@@ -879,32 +1192,40 @@ class PartitionResponse extends $pb.GeneratedMessage {
   PartitionResponse createEmptyInstance() => create();
   static $pb.PbList<PartitionResponse> createRepeated() =>
       $pb.PbList<PartitionResponse>();
-  static PartitionResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PartitionResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PartitionResponse>(create);
   static PartitionResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Partition> get partitions => $_getList(0);
 
+  @$pb.TagNumber(2)
   $3.Transaction get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($3.Transaction v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Transaction ensureTransaction() => $_ensure(1);
 }
 
 class ReadRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<$3.TransactionSelector>(2, 'transaction', $pb.PbFieldType.OM,
-        $3.TransactionSelector.getDefault, $3.TransactionSelector.create)
+    ..aOM<$3.TransactionSelector>(2, 'transaction',
+        subBuilder: $3.TransactionSelector.create)
     ..aOS(3, 'table')
     ..aOS(4, 'index')
     ..pPS(5, 'columns')
-    ..a<$8.KeySet>(
-        6, 'keySet', $pb.PbFieldType.OM, $8.KeySet.getDefault, $8.KeySet.create)
+    ..aOM<$8.KeySet>(6, 'keySet', subBuilder: $8.KeySet.create)
     ..aInt64(8, 'limit')
     ..a<$core.List<$core.int>>(9, 'resumeToken', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(10, 'partitionToken', $pb.PbFieldType.OY)
@@ -926,82 +1247,122 @@ class ReadRequest extends $pb.GeneratedMessage {
   static ReadRequest create() => ReadRequest._();
   ReadRequest createEmptyInstance() => create();
   static $pb.PbList<ReadRequest> createRepeated() => $pb.PbList<ReadRequest>();
-  static ReadRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReadRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReadRequest>(create);
   static ReadRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.TransactionSelector get transaction => $_getN(1);
+  @$pb.TagNumber(2)
   set transaction($3.TransactionSelector v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransaction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransaction() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.TransactionSelector ensureTransaction() => $_ensure(1);
 
-  $core.String get table => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get table => $_getSZ(2);
+  @$pb.TagNumber(3)
   set table($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTable() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTable() => clearField(3);
 
-  $core.String get index => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get index => $_getSZ(3);
+  @$pb.TagNumber(4)
   set index($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIndex() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIndex() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$core.String> get columns => $_getList(4);
 
+  @$pb.TagNumber(6)
   $8.KeySet get keySet => $_getN(5);
+  @$pb.TagNumber(6)
   set keySet($8.KeySet v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasKeySet() => $_has(5);
+  @$pb.TagNumber(6)
   void clearKeySet() => clearField(6);
+  @$pb.TagNumber(6)
+  $8.KeySet ensureKeySet() => $_ensure(5);
 
-  Int64 get limit => $_getI64(6);
-  set limit(Int64 v) {
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get limit => $_getI64(6);
+  @$pb.TagNumber(8)
+  set limit($fixnum.Int64 v) {
     $_setInt64(6, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasLimit() => $_has(6);
+  @$pb.TagNumber(8)
   void clearLimit() => clearField(8);
 
+  @$pb.TagNumber(9)
   $core.List<$core.int> get resumeToken => $_getN(7);
+  @$pb.TagNumber(9)
   set resumeToken($core.List<$core.int> v) {
     $_setBytes(7, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasResumeToken() => $_has(7);
+  @$pb.TagNumber(9)
   void clearResumeToken() => clearField(9);
 
+  @$pb.TagNumber(10)
   $core.List<$core.int> get partitionToken => $_getN(8);
+  @$pb.TagNumber(10)
   set partitionToken($core.List<$core.int> v) {
     $_setBytes(8, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasPartitionToken() => $_has(8);
+  @$pb.TagNumber(10)
   void clearPartitionToken() => clearField(10);
 }
 
 class BeginTransactionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<$3.TransactionOptions>(2, 'options', $pb.PbFieldType.OM,
-        $3.TransactionOptions.getDefault, $3.TransactionOptions.create)
+    ..aOM<$3.TransactionOptions>(2, 'options',
+        subBuilder: $3.TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest._() : super();
@@ -1023,25 +1384,36 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   BeginTransactionRequest createEmptyInstance() => create();
   static $pb.PbList<BeginTransactionRequest> createRepeated() =>
       $pb.PbList<BeginTransactionRequest>();
-  static BeginTransactionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BeginTransactionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BeginTransactionRequest>(create);
   static BeginTransactionRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.TransactionOptions get options => $_getN(1);
+  @$pb.TagNumber(2)
   set options($3.TransactionOptions v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOptions() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOptions() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.TransactionOptions ensureOptions() => $_ensure(1);
 }
 
 enum CommitRequest_Transaction { transactionId, singleUseTransaction, notSet }
@@ -1054,13 +1426,15 @@ class CommitRequest extends $pb.GeneratedMessage {
     0: CommitRequest_Transaction.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'session')
     ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
-    ..a<$3.TransactionOptions>(3, 'singleUseTransaction', $pb.PbFieldType.OM,
-        $3.TransactionOptions.getDefault, $3.TransactionOptions.create)
-    ..pc<$9.Mutation>(4, 'mutations', $pb.PbFieldType.PM, $9.Mutation.create)
+    ..aOM<$3.TransactionOptions>(3, 'singleUseTransaction',
+        subBuilder: $3.TransactionOptions.create)
+    ..pc<$9.Mutation>(4, 'mutations', $pb.PbFieldType.PM,
+        subBuilder: $9.Mutation.create)
     ..hasRequiredFields = false;
 
   CommitRequest._() : super();
@@ -1080,45 +1454,62 @@ class CommitRequest extends $pb.GeneratedMessage {
   CommitRequest createEmptyInstance() => create();
   static $pb.PbList<CommitRequest> createRepeated() =>
       $pb.PbList<CommitRequest>();
-  static CommitRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CommitRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommitRequest>(create);
   static CommitRequest _defaultInstance;
 
   CommitRequest_Transaction whichTransaction() =>
       _CommitRequest_TransactionByTag[$_whichOneof(0)];
   void clearTransaction() => clearField($_whichOneof(0));
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get transactionId => $_getN(1);
+  @$pb.TagNumber(2)
   set transactionId($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransactionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransactionId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $3.TransactionOptions get singleUseTransaction => $_getN(2);
+  @$pb.TagNumber(3)
   set singleUseTransaction($3.TransactionOptions v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSingleUseTransaction() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSingleUseTransaction() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.TransactionOptions ensureSingleUseTransaction() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$9.Mutation> get mutations => $_getList(3);
 }
 
 class CommitResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
-      package: const $pb.PackageName('google.spanner.v1'))
-    ..a<$4.Timestamp>(1, 'commitTimestamp', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.Timestamp>(1, 'commitTimestamp', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   CommitResponse._() : super();
@@ -1138,21 +1529,30 @@ class CommitResponse extends $pb.GeneratedMessage {
   CommitResponse createEmptyInstance() => create();
   static $pb.PbList<CommitResponse> createRepeated() =>
       $pb.PbList<CommitResponse>();
-  static CommitResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CommitResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CommitResponse>(create);
   static CommitResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.Timestamp get commitTimestamp => $_getN(0);
+  @$pb.TagNumber(1)
   set commitTimestamp($4.Timestamp v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCommitTimestamp() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCommitTimestamp() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.Timestamp ensureCommitTimestamp() => $_ensure(0);
 }
 
 class RollbackRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackRequest',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
     ..a<$core.List<$core.int>>(2, 'transactionId', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1174,23 +1574,32 @@ class RollbackRequest extends $pb.GeneratedMessage {
   RollbackRequest createEmptyInstance() => create();
   static $pb.PbList<RollbackRequest> createRepeated() =>
       $pb.PbList<RollbackRequest>();
-  static RollbackRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RollbackRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RollbackRequest>(create);
   static RollbackRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get transactionId => $_getN(1);
+  @$pb.TagNumber(2)
   set transactionId($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTransactionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTransactionId() => clearField(2);
 }

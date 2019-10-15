@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,7 +16,8 @@ import '../../../../rpc/status.pb.dart' as $5;
 class GetCampaignExperimentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetCampaignExperimentRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -42,26 +42,32 @@ class GetCampaignExperimentRequest extends $pb.GeneratedMessage {
   GetCampaignExperimentRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignExperimentRequest> createRepeated() =>
       $pb.PbList<GetCampaignExperimentRequest>();
-  static GetCampaignExperimentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignExperimentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCampaignExperimentRequest>(create);
   static GetCampaignExperimentRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateCampaignExperimentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignExperimentsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<CampaignExperimentOperation>(
-        2, 'operations', $pb.PbFieldType.PM, CampaignExperimentOperation.create)
+    ..pc<CampaignExperimentOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: CampaignExperimentOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -87,34 +93,49 @@ class MutateCampaignExperimentsRequest extends $pb.GeneratedMessage {
   MutateCampaignExperimentsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignExperimentsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignExperimentsRequest>();
-  static MutateCampaignExperimentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignExperimentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignExperimentsRequest>(
+          create);
   static MutateCampaignExperimentsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<CampaignExperimentOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -129,13 +150,13 @@ class CampaignExperimentOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CampaignExperimentOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$3.CampaignExperiment>(1, 'update', $pb.PbFieldType.OM,
-        $3.CampaignExperiment.getDefault, $3.CampaignExperiment.create)
+    ..aOM<$3.CampaignExperiment>(1, 'update',
+        subBuilder: $3.CampaignExperiment.create)
     ..aOS(2, 'remove')
-    ..a<$4.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $4.FieldMask.getDefault, $4.FieldMask.create)
+    ..aOM<$4.FieldMask>(3, 'updateMask', subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   CampaignExperimentOperation._() : super();
@@ -159,47 +180,64 @@ class CampaignExperimentOperation extends $pb.GeneratedMessage {
   CampaignExperimentOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignExperimentOperation> createRepeated() =>
       $pb.PbList<CampaignExperimentOperation>();
-  static CampaignExperimentOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CampaignExperimentOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CampaignExperimentOperation>(create);
   static CampaignExperimentOperation _defaultInstance;
 
   CampaignExperimentOperation_Operation whichOperation() =>
       _CampaignExperimentOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $3.CampaignExperiment get update => $_getN(0);
+  @$pb.TagNumber(1)
   set update($3.CampaignExperiment v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUpdate() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUpdate() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.CampaignExperiment ensureUpdate() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(2)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRemove() => clearField(2);
 
+  @$pb.TagNumber(3)
   $4.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($4.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class MutateCampaignExperimentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignExperimentsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateCampaignExperimentResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateCampaignExperimentResult.create)
-    ..a<$5.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $5.Status.getDefault, $5.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateCampaignExperimentResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateCampaignExperimentResult.create)
+    ..aOM<$5.Status>(3, 'partialFailureError', subBuilder: $5.Status.create)
     ..hasRequiredFields = false;
 
   MutateCampaignExperimentsResponse._() : super();
@@ -223,25 +261,35 @@ class MutateCampaignExperimentsResponse extends $pb.GeneratedMessage {
   MutateCampaignExperimentsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignExperimentsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignExperimentsResponse>();
-  static MutateCampaignExperimentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignExperimentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignExperimentsResponse>(
+          create);
   static MutateCampaignExperimentsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateCampaignExperimentResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $5.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($5.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateCampaignExperimentResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignExperimentResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -266,26 +314,32 @@ class MutateCampaignExperimentResult extends $pb.GeneratedMessage {
   MutateCampaignExperimentResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignExperimentResult> createRepeated() =>
       $pb.PbList<MutateCampaignExperimentResult>();
-  static MutateCampaignExperimentResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignExperimentResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignExperimentResult>(create);
   static MutateCampaignExperimentResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class CreateCampaignExperimentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateCampaignExperimentRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..a<$3.CampaignExperiment>(2, 'campaignExperiment', $pb.PbFieldType.OM,
-        $3.CampaignExperiment.getDefault, $3.CampaignExperiment.create)
+    ..aOM<$3.CampaignExperiment>(2, 'campaignExperiment',
+        subBuilder: $3.CampaignExperiment.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -310,39 +364,56 @@ class CreateCampaignExperimentRequest extends $pb.GeneratedMessage {
   CreateCampaignExperimentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCampaignExperimentRequest> createRepeated() =>
       $pb.PbList<CreateCampaignExperimentRequest>();
-  static CreateCampaignExperimentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateCampaignExperimentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCampaignExperimentRequest>(
+          create);
   static CreateCampaignExperimentRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.CampaignExperiment get campaignExperiment => $_getN(1);
+  @$pb.TagNumber(2)
   set campaignExperiment($3.CampaignExperiment v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCampaignExperiment() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCampaignExperiment() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.CampaignExperiment ensureCampaignExperiment() => $_ensure(1);
 
-  $core.bool get validateOnly => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get validateOnly => $_getBF(2);
+  @$pb.TagNumber(3)
   set validateOnly($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasValidateOnly() => $_has(2);
+  @$pb.TagNumber(3)
   void clearValidateOnly() => clearField(3);
 }
 
 class CreateCampaignExperimentMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateCampaignExperimentMetadata',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'campaignExperiment')
     ..hasRequiredFields = false;
 
@@ -367,23 +438,30 @@ class CreateCampaignExperimentMetadata extends $pb.GeneratedMessage {
   CreateCampaignExperimentMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateCampaignExperimentMetadata> createRepeated() =>
       $pb.PbList<CreateCampaignExperimentMetadata>();
-  static CreateCampaignExperimentMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateCampaignExperimentMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCampaignExperimentMetadata>(
+          create);
   static CreateCampaignExperimentMetadata _defaultInstance;
 
-  $core.String get campaignExperiment => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get campaignExperiment => $_getSZ(0);
+  @$pb.TagNumber(1)
   set campaignExperiment($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCampaignExperiment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCampaignExperiment() => clearField(1);
 }
 
 class GraduateCampaignExperimentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GraduateCampaignExperimentRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'campaignExperiment')
     ..aOS(2, 'campaignBudget')
     ..hasRequiredFields = false;
@@ -409,31 +487,42 @@ class GraduateCampaignExperimentRequest extends $pb.GeneratedMessage {
   GraduateCampaignExperimentRequest createEmptyInstance() => create();
   static $pb.PbList<GraduateCampaignExperimentRequest> createRepeated() =>
       $pb.PbList<GraduateCampaignExperimentRequest>();
-  static GraduateCampaignExperimentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GraduateCampaignExperimentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GraduateCampaignExperimentRequest>(
+          create);
   static GraduateCampaignExperimentRequest _defaultInstance;
 
-  $core.String get campaignExperiment => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get campaignExperiment => $_getSZ(0);
+  @$pb.TagNumber(1)
   set campaignExperiment($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCampaignExperiment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCampaignExperiment() => clearField(1);
 
-  $core.String get campaignBudget => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get campaignBudget => $_getSZ(1);
+  @$pb.TagNumber(2)
   set campaignBudget($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCampaignBudget() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCampaignBudget() => clearField(2);
 }
 
 class GraduateCampaignExperimentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GraduateCampaignExperimentResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'graduatedCampaign')
     ..hasRequiredFields = false;
 
@@ -458,23 +547,30 @@ class GraduateCampaignExperimentResponse extends $pb.GeneratedMessage {
   GraduateCampaignExperimentResponse createEmptyInstance() => create();
   static $pb.PbList<GraduateCampaignExperimentResponse> createRepeated() =>
       $pb.PbList<GraduateCampaignExperimentResponse>();
-  static GraduateCampaignExperimentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GraduateCampaignExperimentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GraduateCampaignExperimentResponse>(
+          create);
   static GraduateCampaignExperimentResponse _defaultInstance;
 
-  $core.String get graduatedCampaign => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get graduatedCampaign => $_getSZ(0);
+  @$pb.TagNumber(1)
   set graduatedCampaign($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGraduatedCampaign() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGraduatedCampaign() => clearField(1);
 }
 
 class PromoteCampaignExperimentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'PromoteCampaignExperimentRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'campaignExperiment')
     ..hasRequiredFields = false;
 
@@ -499,23 +595,30 @@ class PromoteCampaignExperimentRequest extends $pb.GeneratedMessage {
   PromoteCampaignExperimentRequest createEmptyInstance() => create();
   static $pb.PbList<PromoteCampaignExperimentRequest> createRepeated() =>
       $pb.PbList<PromoteCampaignExperimentRequest>();
-  static PromoteCampaignExperimentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PromoteCampaignExperimentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PromoteCampaignExperimentRequest>(
+          create);
   static PromoteCampaignExperimentRequest _defaultInstance;
 
-  $core.String get campaignExperiment => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get campaignExperiment => $_getSZ(0);
+  @$pb.TagNumber(1)
   set campaignExperiment($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCampaignExperiment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCampaignExperiment() => clearField(1);
 }
 
 class EndCampaignExperimentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'EndCampaignExperimentRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'campaignExperiment')
     ..hasRequiredFields = false;
 
@@ -540,23 +643,29 @@ class EndCampaignExperimentRequest extends $pb.GeneratedMessage {
   EndCampaignExperimentRequest createEmptyInstance() => create();
   static $pb.PbList<EndCampaignExperimentRequest> createRepeated() =>
       $pb.PbList<EndCampaignExperimentRequest>();
-  static EndCampaignExperimentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EndCampaignExperimentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EndCampaignExperimentRequest>(create);
   static EndCampaignExperimentRequest _defaultInstance;
 
-  $core.String get campaignExperiment => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get campaignExperiment => $_getSZ(0);
+  @$pb.TagNumber(1)
   set campaignExperiment($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCampaignExperiment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCampaignExperiment() => clearField(1);
 }
 
 class ListCampaignExperimentAsyncErrorsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCampaignExperimentAsyncErrorsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -585,40 +694,56 @@ class ListCampaignExperimentAsyncErrorsRequest extends $pb.GeneratedMessage {
   static $pb.PbList<ListCampaignExperimentAsyncErrorsRequest>
       createRepeated() =>
           $pb.PbList<ListCampaignExperimentAsyncErrorsRequest>();
+  @$core.pragma('dart2js:noInline')
   static ListCampaignExperimentAsyncErrorsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListCampaignExperimentAsyncErrorsRequest>(create);
   static ListCampaignExperimentAsyncErrorsRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListCampaignExperimentAsyncErrorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCampaignExperimentAsyncErrorsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<$5.Status>(1, 'errors', $pb.PbFieldType.PM, $5.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<$5.Status>(1, 'errors', $pb.PbFieldType.PM,
+        subBuilder: $5.Status.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -645,17 +770,24 @@ class ListCampaignExperimentAsyncErrorsResponse extends $pb.GeneratedMessage {
   static $pb.PbList<ListCampaignExperimentAsyncErrorsResponse>
       createRepeated() =>
           $pb.PbList<ListCampaignExperimentAsyncErrorsResponse>();
+  @$core.pragma('dart2js:noInline')
   static ListCampaignExperimentAsyncErrorsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListCampaignExperimentAsyncErrorsResponse>(create);
   static ListCampaignExperimentAsyncErrorsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.Status> get errors => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }

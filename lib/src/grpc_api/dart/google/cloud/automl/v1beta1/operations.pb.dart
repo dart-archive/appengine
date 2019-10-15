@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -42,64 +41,33 @@ class OperationMetadata extends $pb.GeneratedMessage {
     0: OperationMetadata_Details.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [8, 10, 15, 16, 21, 22, 24, 25, 26])
-    ..pc<$0.Status>(2, 'partialFailures', $pb.PbFieldType.PM, $0.Status.create)
-    ..a<$1.Timestamp>(3, 'createTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<$1.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
-        $1.Timestamp.getDefault, $1.Timestamp.create)
-    ..a<DeleteOperationMetadata>(8, 'deleteDetails', $pb.PbFieldType.OM,
-        DeleteOperationMetadata.getDefault, DeleteOperationMetadata.create)
-    ..a<CreateModelOperationMetadata>(
-        10,
-        'createModelDetails',
-        $pb.PbFieldType.OM,
-        CreateModelOperationMetadata.getDefault,
-        CreateModelOperationMetadata.create)
+    ..pc<$0.Status>(2, 'partialFailures', $pb.PbFieldType.PM,
+        subBuilder: $0.Status.create)
+    ..aOM<$1.Timestamp>(3, 'createTime', subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(4, 'updateTime', subBuilder: $1.Timestamp.create)
+    ..aOM<DeleteOperationMetadata>(8, 'deleteDetails',
+        subBuilder: DeleteOperationMetadata.create)
+    ..aOM<CreateModelOperationMetadata>(10, 'createModelDetails',
+        subBuilder: CreateModelOperationMetadata.create)
     ..a<$core.int>(13, 'progressPercent', $pb.PbFieldType.O3)
-    ..a<ImportDataOperationMetadata>(
-        15,
-        'importDataDetails',
-        $pb.PbFieldType.OM,
-        ImportDataOperationMetadata.getDefault,
-        ImportDataOperationMetadata.create)
-    ..a<BatchPredictOperationMetadata>(
-        16,
-        'batchPredictDetails',
-        $pb.PbFieldType.OM,
-        BatchPredictOperationMetadata.getDefault,
-        BatchPredictOperationMetadata.create)
-    ..a<ExportDataOperationMetadata>(
-        21,
-        'exportDataDetails',
-        $pb.PbFieldType.OM,
-        ExportDataOperationMetadata.getDefault,
-        ExportDataOperationMetadata.create)
-    ..a<ExportModelOperationMetadata>(
-        22,
-        'exportModelDetails',
-        $pb.PbFieldType.OM,
-        ExportModelOperationMetadata.getDefault,
-        ExportModelOperationMetadata.create)
-    ..a<DeployModelOperationMetadata>(
-        24,
-        'deployModelDetails',
-        $pb.PbFieldType.OM,
-        DeployModelOperationMetadata.getDefault,
-        DeployModelOperationMetadata.create)
-    ..a<UndeployModelOperationMetadata>(
-        25,
-        'undeployModelDetails',
-        $pb.PbFieldType.OM,
-        UndeployModelOperationMetadata.getDefault,
-        UndeployModelOperationMetadata.create)
-    ..a<ExportEvaluatedExamplesOperationMetadata>(
-        26,
-        'exportEvaluatedExamplesDetails',
-        $pb.PbFieldType.OM,
-        ExportEvaluatedExamplesOperationMetadata.getDefault,
-        ExportEvaluatedExamplesOperationMetadata.create)
+    ..aOM<ImportDataOperationMetadata>(15, 'importDataDetails',
+        subBuilder: ImportDataOperationMetadata.create)
+    ..aOM<BatchPredictOperationMetadata>(16, 'batchPredictDetails',
+        subBuilder: BatchPredictOperationMetadata.create)
+    ..aOM<ExportDataOperationMetadata>(21, 'exportDataDetails',
+        subBuilder: ExportDataOperationMetadata.create)
+    ..aOM<ExportModelOperationMetadata>(22, 'exportModelDetails',
+        subBuilder: ExportModelOperationMetadata.create)
+    ..aOM<DeployModelOperationMetadata>(24, 'deployModelDetails',
+        subBuilder: DeployModelOperationMetadata.create)
+    ..aOM<UndeployModelOperationMetadata>(25, 'undeployModelDetails',
+        subBuilder: UndeployModelOperationMetadata.create)
+    ..aOM<ExportEvaluatedExamplesOperationMetadata>(
+        26, 'exportEvaluatedExamplesDetails',
+        subBuilder: ExportEvaluatedExamplesOperationMetadata.create)
     ..hasRequiredFields = false;
 
   OperationMetadata._() : super();
@@ -119,118 +87,192 @@ class OperationMetadata extends $pb.GeneratedMessage {
   OperationMetadata createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata> createRepeated() =>
       $pb.PbList<OperationMetadata>();
-  static OperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata _defaultInstance;
 
   OperationMetadata_Details whichDetails() =>
       _OperationMetadata_DetailsByTag[$_whichOneof(0)];
   void clearDetails() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(2)
   $core.List<$0.Status> get partialFailures => $_getList(0);
 
+  @$pb.TagNumber(3)
   $1.Timestamp get createTime => $_getN(1);
+  @$pb.TagNumber(3)
   set createTime($1.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(1);
+  @$pb.TagNumber(3)
   void clearCreateTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Timestamp ensureCreateTime() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $1.Timestamp get updateTime => $_getN(2);
+  @$pb.TagNumber(4)
   set updateTime($1.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateTime() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureUpdateTime() => $_ensure(2);
 
+  @$pb.TagNumber(8)
   DeleteOperationMetadata get deleteDetails => $_getN(3);
+  @$pb.TagNumber(8)
   set deleteDetails(DeleteOperationMetadata v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasDeleteDetails() => $_has(3);
+  @$pb.TagNumber(8)
   void clearDeleteDetails() => clearField(8);
+  @$pb.TagNumber(8)
+  DeleteOperationMetadata ensureDeleteDetails() => $_ensure(3);
 
+  @$pb.TagNumber(10)
   CreateModelOperationMetadata get createModelDetails => $_getN(4);
+  @$pb.TagNumber(10)
   set createModelDetails(CreateModelOperationMetadata v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasCreateModelDetails() => $_has(4);
+  @$pb.TagNumber(10)
   void clearCreateModelDetails() => clearField(10);
+  @$pb.TagNumber(10)
+  CreateModelOperationMetadata ensureCreateModelDetails() => $_ensure(4);
 
-  $core.int get progressPercent => $_get(5, 0);
+  @$pb.TagNumber(13)
+  $core.int get progressPercent => $_getIZ(5);
+  @$pb.TagNumber(13)
   set progressPercent($core.int v) {
     $_setSignedInt32(5, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasProgressPercent() => $_has(5);
+  @$pb.TagNumber(13)
   void clearProgressPercent() => clearField(13);
 
+  @$pb.TagNumber(15)
   ImportDataOperationMetadata get importDataDetails => $_getN(6);
+  @$pb.TagNumber(15)
   set importDataDetails(ImportDataOperationMetadata v) {
     setField(15, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasImportDataDetails() => $_has(6);
+  @$pb.TagNumber(15)
   void clearImportDataDetails() => clearField(15);
+  @$pb.TagNumber(15)
+  ImportDataOperationMetadata ensureImportDataDetails() => $_ensure(6);
 
+  @$pb.TagNumber(16)
   BatchPredictOperationMetadata get batchPredictDetails => $_getN(7);
+  @$pb.TagNumber(16)
   set batchPredictDetails(BatchPredictOperationMetadata v) {
     setField(16, v);
   }
 
+  @$pb.TagNumber(16)
   $core.bool hasBatchPredictDetails() => $_has(7);
+  @$pb.TagNumber(16)
   void clearBatchPredictDetails() => clearField(16);
+  @$pb.TagNumber(16)
+  BatchPredictOperationMetadata ensureBatchPredictDetails() => $_ensure(7);
 
+  @$pb.TagNumber(21)
   ExportDataOperationMetadata get exportDataDetails => $_getN(8);
+  @$pb.TagNumber(21)
   set exportDataDetails(ExportDataOperationMetadata v) {
     setField(21, v);
   }
 
+  @$pb.TagNumber(21)
   $core.bool hasExportDataDetails() => $_has(8);
+  @$pb.TagNumber(21)
   void clearExportDataDetails() => clearField(21);
+  @$pb.TagNumber(21)
+  ExportDataOperationMetadata ensureExportDataDetails() => $_ensure(8);
 
+  @$pb.TagNumber(22)
   ExportModelOperationMetadata get exportModelDetails => $_getN(9);
+  @$pb.TagNumber(22)
   set exportModelDetails(ExportModelOperationMetadata v) {
     setField(22, v);
   }
 
+  @$pb.TagNumber(22)
   $core.bool hasExportModelDetails() => $_has(9);
+  @$pb.TagNumber(22)
   void clearExportModelDetails() => clearField(22);
+  @$pb.TagNumber(22)
+  ExportModelOperationMetadata ensureExportModelDetails() => $_ensure(9);
 
+  @$pb.TagNumber(24)
   DeployModelOperationMetadata get deployModelDetails => $_getN(10);
+  @$pb.TagNumber(24)
   set deployModelDetails(DeployModelOperationMetadata v) {
     setField(24, v);
   }
 
+  @$pb.TagNumber(24)
   $core.bool hasDeployModelDetails() => $_has(10);
+  @$pb.TagNumber(24)
   void clearDeployModelDetails() => clearField(24);
+  @$pb.TagNumber(24)
+  DeployModelOperationMetadata ensureDeployModelDetails() => $_ensure(10);
 
+  @$pb.TagNumber(25)
   UndeployModelOperationMetadata get undeployModelDetails => $_getN(11);
+  @$pb.TagNumber(25)
   set undeployModelDetails(UndeployModelOperationMetadata v) {
     setField(25, v);
   }
 
+  @$pb.TagNumber(25)
   $core.bool hasUndeployModelDetails() => $_has(11);
+  @$pb.TagNumber(25)
   void clearUndeployModelDetails() => clearField(25);
+  @$pb.TagNumber(25)
+  UndeployModelOperationMetadata ensureUndeployModelDetails() => $_ensure(11);
 
+  @$pb.TagNumber(26)
   ExportEvaluatedExamplesOperationMetadata get exportEvaluatedExamplesDetails =>
       $_getN(12);
+  @$pb.TagNumber(26)
   set exportEvaluatedExamplesDetails(
       ExportEvaluatedExamplesOperationMetadata v) {
     setField(26, v);
   }
 
+  @$pb.TagNumber(26)
   $core.bool hasExportEvaluatedExamplesDetails() => $_has(12);
+  @$pb.TagNumber(26)
   void clearExportEvaluatedExamplesDetails() => clearField(26);
+  @$pb.TagNumber(26)
+  ExportEvaluatedExamplesOperationMetadata
+      ensureExportEvaluatedExamplesDetails() => $_ensure(12);
 }
 
 class DeleteOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   DeleteOperationMetadata._() : super();
@@ -252,15 +294,17 @@ class DeleteOperationMetadata extends $pb.GeneratedMessage {
   DeleteOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<DeleteOperationMetadata> createRepeated() =>
       $pb.PbList<DeleteOperationMetadata>();
-  static DeleteOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteOperationMetadata>(create);
   static DeleteOperationMetadata _defaultInstance;
 }
 
 class DeployModelOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeployModelOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   DeployModelOperationMetadata._() : super();
@@ -284,15 +328,17 @@ class DeployModelOperationMetadata extends $pb.GeneratedMessage {
   DeployModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<DeployModelOperationMetadata> createRepeated() =>
       $pb.PbList<DeployModelOperationMetadata>();
-  static DeployModelOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeployModelOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeployModelOperationMetadata>(create);
   static DeployModelOperationMetadata _defaultInstance;
 }
 
 class UndeployModelOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UndeployModelOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UndeployModelOperationMetadata._() : super();
@@ -316,15 +362,17 @@ class UndeployModelOperationMetadata extends $pb.GeneratedMessage {
   UndeployModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<UndeployModelOperationMetadata> createRepeated() =>
       $pb.PbList<UndeployModelOperationMetadata>();
-  static UndeployModelOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UndeployModelOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UndeployModelOperationMetadata>(create);
   static UndeployModelOperationMetadata _defaultInstance;
 }
 
 class CreateModelOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateModelOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   CreateModelOperationMetadata._() : super();
@@ -348,15 +396,17 @@ class CreateModelOperationMetadata extends $pb.GeneratedMessage {
   CreateModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateModelOperationMetadata> createRepeated() =>
       $pb.PbList<CreateModelOperationMetadata>();
-  static CreateModelOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateModelOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateModelOperationMetadata>(create);
   static CreateModelOperationMetadata _defaultInstance;
 }
 
 class ImportDataOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImportDataOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ImportDataOperationMetadata._() : super();
@@ -380,8 +430,9 @@ class ImportDataOperationMetadata extends $pb.GeneratedMessage {
   ImportDataOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ImportDataOperationMetadata> createRepeated() =>
       $pb.PbList<ImportDataOperationMetadata>();
-  static ImportDataOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportDataOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportDataOperationMetadata>(create);
   static ImportDataOperationMetadata _defaultInstance;
 }
 
@@ -404,7 +455,8 @@ class ExportDataOperationMetadata_ExportDataOutputInfo
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportDataOperationMetadata.ExportDataOutputInfo',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOS(1, 'gcsOutputDirectory')
     ..aOS(2, 'bigqueryOutputDataset')
@@ -437,8 +489,10 @@ class ExportDataOperationMetadata_ExportDataOutputInfo
   static $pb.PbList<ExportDataOperationMetadata_ExportDataOutputInfo>
       createRepeated() =>
           $pb.PbList<ExportDataOperationMetadata_ExportDataOutputInfo>();
+  @$core.pragma('dart2js:noInline')
   static ExportDataOperationMetadata_ExportDataOutputInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ExportDataOperationMetadata_ExportDataOutputInfo>(create);
   static ExportDataOperationMetadata_ExportDataOutputInfo _defaultInstance;
 
   ExportDataOperationMetadata_ExportDataOutputInfo_OutputLocation
@@ -447,33 +501,38 @@ class ExportDataOperationMetadata_ExportDataOutputInfo
               $_whichOneof(0)];
   void clearOutputLocation() => clearField($_whichOneof(0));
 
-  $core.String get gcsOutputDirectory => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get gcsOutputDirectory => $_getSZ(0);
+  @$pb.TagNumber(1)
   set gcsOutputDirectory($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsOutputDirectory() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsOutputDirectory() => clearField(1);
 
-  $core.String get bigqueryOutputDataset => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get bigqueryOutputDataset => $_getSZ(1);
+  @$pb.TagNumber(2)
   set bigqueryOutputDataset($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigqueryOutputDataset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBigqueryOutputDataset() => clearField(2);
 }
 
 class ExportDataOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportDataOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<ExportDataOperationMetadata_ExportDataOutputInfo>(
-        1,
-        'outputInfo',
-        $pb.PbFieldType.OM,
-        ExportDataOperationMetadata_ExportDataOutputInfo.getDefault,
-        ExportDataOperationMetadata_ExportDataOutputInfo.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<ExportDataOperationMetadata_ExportDataOutputInfo>(1, 'outputInfo',
+        subBuilder: ExportDataOperationMetadata_ExportDataOutputInfo.create)
     ..hasRequiredFields = false;
 
   ExportDataOperationMetadata._() : super();
@@ -497,17 +556,25 @@ class ExportDataOperationMetadata extends $pb.GeneratedMessage {
   ExportDataOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportDataOperationMetadata> createRepeated() =>
       $pb.PbList<ExportDataOperationMetadata>();
-  static ExportDataOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportDataOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportDataOperationMetadata>(create);
   static ExportDataOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   ExportDataOperationMetadata_ExportDataOutputInfo get outputInfo => $_getN(0);
+  @$pb.TagNumber(1)
   set outputInfo(ExportDataOperationMetadata_ExportDataOutputInfo v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOutputInfo() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOutputInfo() => clearField(1);
+  @$pb.TagNumber(1)
+  ExportDataOperationMetadata_ExportDataOutputInfo ensureOutputInfo() =>
+      $_ensure(0);
 }
 
 enum BatchPredictOperationMetadata_BatchPredictOutputInfo_OutputLocation {
@@ -531,7 +598,8 @@ class BatchPredictOperationMetadata_BatchPredictOutputInfo
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchPredictOperationMetadata.BatchPredictOutputInfo',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOS(1, 'gcsOutputDirectory')
     ..aOS(2, 'bigqueryOutputDataset')
@@ -564,8 +632,10 @@ class BatchPredictOperationMetadata_BatchPredictOutputInfo
   static $pb.PbList<BatchPredictOperationMetadata_BatchPredictOutputInfo>
       createRepeated() =>
           $pb.PbList<BatchPredictOperationMetadata_BatchPredictOutputInfo>();
+  @$core.pragma('dart2js:noInline')
   static BatchPredictOperationMetadata_BatchPredictOutputInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          BatchPredictOperationMetadata_BatchPredictOutputInfo>(create);
   static BatchPredictOperationMetadata_BatchPredictOutputInfo _defaultInstance;
 
   BatchPredictOperationMetadata_BatchPredictOutputInfo_OutputLocation
@@ -574,39 +644,40 @@ class BatchPredictOperationMetadata_BatchPredictOutputInfo
               $_whichOneof(0)];
   void clearOutputLocation() => clearField($_whichOneof(0));
 
-  $core.String get gcsOutputDirectory => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get gcsOutputDirectory => $_getSZ(0);
+  @$pb.TagNumber(1)
   set gcsOutputDirectory($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsOutputDirectory() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsOutputDirectory() => clearField(1);
 
-  $core.String get bigqueryOutputDataset => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get bigqueryOutputDataset => $_getSZ(1);
+  @$pb.TagNumber(2)
   set bigqueryOutputDataset($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigqueryOutputDataset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBigqueryOutputDataset() => clearField(2);
 }
 
 class BatchPredictOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchPredictOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$2.BatchPredictInputConfig>(
-        1,
-        'inputConfig',
-        $pb.PbFieldType.OM,
-        $2.BatchPredictInputConfig.getDefault,
-        $2.BatchPredictInputConfig.create)
-    ..a<BatchPredictOperationMetadata_BatchPredictOutputInfo>(
-        2,
-        'outputInfo',
-        $pb.PbFieldType.OM,
-        BatchPredictOperationMetadata_BatchPredictOutputInfo.getDefault,
-        BatchPredictOperationMetadata_BatchPredictOutputInfo.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$2.BatchPredictInputConfig>(1, 'inputConfig',
+        subBuilder: $2.BatchPredictInputConfig.create)
+    ..aOM<BatchPredictOperationMetadata_BatchPredictOutputInfo>(2, 'outputInfo',
+        subBuilder: BatchPredictOperationMetadata_BatchPredictOutputInfo.create)
     ..hasRequiredFields = false;
 
   BatchPredictOperationMetadata._() : super();
@@ -630,33 +701,48 @@ class BatchPredictOperationMetadata extends $pb.GeneratedMessage {
   BatchPredictOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<BatchPredictOperationMetadata> createRepeated() =>
       $pb.PbList<BatchPredictOperationMetadata>();
-  static BatchPredictOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchPredictOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchPredictOperationMetadata>(create);
   static BatchPredictOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.BatchPredictInputConfig get inputConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set inputConfig($2.BatchPredictInputConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInputConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInputConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.BatchPredictInputConfig ensureInputConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   BatchPredictOperationMetadata_BatchPredictOutputInfo get outputInfo =>
       $_getN(1);
+  @$pb.TagNumber(2)
   set outputInfo(BatchPredictOperationMetadata_BatchPredictOutputInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOutputInfo() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOutputInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  BatchPredictOperationMetadata_BatchPredictOutputInfo ensureOutputInfo() =>
+      $_ensure(1);
 }
 
 class ExportModelOperationMetadata_ExportModelOutputInfo
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportModelOperationMetadata.ExportModelOutputInfo',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'gcsOutputDirectory')
     ..hasRequiredFields = false;
 
@@ -687,29 +773,32 @@ class ExportModelOperationMetadata_ExportModelOutputInfo
   static $pb.PbList<ExportModelOperationMetadata_ExportModelOutputInfo>
       createRepeated() =>
           $pb.PbList<ExportModelOperationMetadata_ExportModelOutputInfo>();
+  @$core.pragma('dart2js:noInline')
   static ExportModelOperationMetadata_ExportModelOutputInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ExportModelOperationMetadata_ExportModelOutputInfo>(create);
   static ExportModelOperationMetadata_ExportModelOutputInfo _defaultInstance;
 
-  $core.String get gcsOutputDirectory => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get gcsOutputDirectory => $_getSZ(0);
+  @$pb.TagNumber(1)
   set gcsOutputDirectory($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsOutputDirectory() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsOutputDirectory() => clearField(1);
 }
 
 class ExportModelOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportModelOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<ExportModelOperationMetadata_ExportModelOutputInfo>(
-        2,
-        'outputInfo',
-        $pb.PbFieldType.OM,
-        ExportModelOperationMetadata_ExportModelOutputInfo.getDefault,
-        ExportModelOperationMetadata_ExportModelOutputInfo.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<ExportModelOperationMetadata_ExportModelOutputInfo>(2, 'outputInfo',
+        subBuilder: ExportModelOperationMetadata_ExportModelOutputInfo.create)
     ..hasRequiredFields = false;
 
   ExportModelOperationMetadata._() : super();
@@ -733,25 +822,34 @@ class ExportModelOperationMetadata extends $pb.GeneratedMessage {
   ExportModelOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ExportModelOperationMetadata> createRepeated() =>
       $pb.PbList<ExportModelOperationMetadata>();
-  static ExportModelOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportModelOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportModelOperationMetadata>(create);
   static ExportModelOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(2)
   ExportModelOperationMetadata_ExportModelOutputInfo get outputInfo =>
       $_getN(0);
+  @$pb.TagNumber(2)
   set outputInfo(ExportModelOperationMetadata_ExportModelOutputInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOutputInfo() => $_has(0);
+  @$pb.TagNumber(2)
   void clearOutputInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  ExportModelOperationMetadata_ExportModelOutputInfo ensureOutputInfo() =>
+      $_ensure(0);
 }
 
 class ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportEvaluatedExamplesOperationMetadata.ExportEvaluatedExamplesOutputInfo',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(2, 'bigqueryOutputDataset')
     ..hasRequiredFields = false;
 
@@ -789,32 +887,37 @@ class ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
           ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo>
       createRepeated() => $pb.PbList<
           ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo>();
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
-      getDefault() => _defaultInstance ??= create()..freeze();
+      getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+              ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo>(
+          create);
   static ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
       _defaultInstance;
 
-  $core.String get bigqueryOutputDataset => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get bigqueryOutputDataset => $_getSZ(0);
+  @$pb.TagNumber(2)
   set bigqueryOutputDataset($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigqueryOutputDataset() => $_has(0);
+  @$pb.TagNumber(2)
   void clearBigqueryOutputDataset() => clearField(2);
 }
 
 class ExportEvaluatedExamplesOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportEvaluatedExamplesOperationMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo>(
-        2,
-        'outputInfo',
-        $pb.PbFieldType.OM,
-        ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
-            .getDefault,
-        ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
-            .create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo>(
+        2, 'outputInfo',
+        subBuilder:
+            ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
+                .create)
     ..hasRequiredFields = false;
 
   ExportEvaluatedExamplesOperationMetadata._() : super();
@@ -840,18 +943,27 @@ class ExportEvaluatedExamplesOperationMetadata extends $pb.GeneratedMessage {
   static $pb.PbList<ExportEvaluatedExamplesOperationMetadata>
       createRepeated() =>
           $pb.PbList<ExportEvaluatedExamplesOperationMetadata>();
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ExportEvaluatedExamplesOperationMetadata>(create);
   static ExportEvaluatedExamplesOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(2)
   ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
       get outputInfo => $_getN(0);
+  @$pb.TagNumber(2)
   set outputInfo(
       ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
           v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOutputInfo() => $_has(0);
+  @$pb.TagNumber(2)
   void clearOutputInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  ExportEvaluatedExamplesOperationMetadata_ExportEvaluatedExamplesOutputInfo
+      ensureOutputInfo() => $_ensure(0);
 }

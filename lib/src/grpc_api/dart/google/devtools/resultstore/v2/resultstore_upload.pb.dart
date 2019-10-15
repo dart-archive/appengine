@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -25,14 +24,13 @@ export 'resultstore_upload.pbenum.dart';
 
 class CreateInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'invocationId')
-    ..a<$1.Invocation>(3, 'invocation', $pb.PbFieldType.OM,
-        $1.Invocation.getDefault, $1.Invocation.create)
+    ..aOM<$1.Invocation>(3, 'invocation', subBuilder: $1.Invocation.create)
     ..aOS(4, 'authorizationToken')
-    ..a<$9.Timestamp>(6, 'autoFinalizeTime', $pb.PbFieldType.OM,
-        $9.Timestamp.getDefault, $9.Timestamp.create)
+    ..aOM<$9.Timestamp>(6, 'autoFinalizeTime', subBuilder: $9.Timestamp.create)
     ..aOS(7, 'initialResumeToken')
     ..a<$core.List<$core.int>>(8, 'uploaderState', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -56,74 +54,106 @@ class CreateInvocationRequest extends $pb.GeneratedMessage {
   CreateInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<CreateInvocationRequest> createRepeated() =>
       $pb.PbList<CreateInvocationRequest>();
-  static CreateInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateInvocationRequest>(create);
   static CreateInvocationRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get invocationId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get invocationId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set invocationId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInvocationId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInvocationId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $1.Invocation get invocation => $_getN(2);
+  @$pb.TagNumber(3)
   set invocation($1.Invocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInvocation() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInvocation() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Invocation ensureInvocation() => $_ensure(2);
 
-  $core.String get authorizationToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get authorizationToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set authorizationToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAuthorizationToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAuthorizationToken() => clearField(4);
 
+  @$pb.TagNumber(6)
   $9.Timestamp get autoFinalizeTime => $_getN(4);
+  @$pb.TagNumber(6)
   set autoFinalizeTime($9.Timestamp v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasAutoFinalizeTime() => $_has(4);
+  @$pb.TagNumber(6)
   void clearAutoFinalizeTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $9.Timestamp ensureAutoFinalizeTime() => $_ensure(4);
 
-  $core.String get initialResumeToken => $_getS(5, '');
+  @$pb.TagNumber(7)
+  $core.String get initialResumeToken => $_getSZ(5);
+  @$pb.TagNumber(7)
   set initialResumeToken($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasInitialResumeToken() => $_has(5);
+  @$pb.TagNumber(7)
   void clearInitialResumeToken() => clearField(7);
 
+  @$pb.TagNumber(8)
   $core.List<$core.int> get uploaderState => $_getN(6);
+  @$pb.TagNumber(8)
   set uploaderState($core.List<$core.int> v) {
     $_setBytes(6, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasUploaderState() => $_has(6);
+  @$pb.TagNumber(8)
   void clearUploaderState() => clearField(8);
 }
 
 class UpdateInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$1.Invocation>(3, 'invocation', $pb.PbFieldType.OM,
-        $1.Invocation.getDefault, $1.Invocation.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Invocation>(3, 'invocation', subBuilder: $1.Invocation.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -146,43 +176,59 @@ class UpdateInvocationRequest extends $pb.GeneratedMessage {
   UpdateInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateInvocationRequest> createRepeated() =>
       $pb.PbList<UpdateInvocationRequest>();
-  static UpdateInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateInvocationRequest>(create);
   static UpdateInvocationRequest _defaultInstance;
 
+  @$pb.TagNumber(3)
   $1.Invocation get invocation => $_getN(0);
+  @$pb.TagNumber(3)
   set invocation($1.Invocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInvocation() => $_has(0);
+  @$pb.TagNumber(3)
   void clearInvocation() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Invocation ensureInvocation() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.String get authorizationToken => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(2);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(2);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class MergeInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MergeInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<$1.Invocation>(3, 'invocation', $pb.PbFieldType.OM,
-        $1.Invocation.getDefault, $1.Invocation.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..aOM<$1.Invocation>(3, 'invocation', subBuilder: $1.Invocation.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -205,46 +251,68 @@ class MergeInvocationRequest extends $pb.GeneratedMessage {
   MergeInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<MergeInvocationRequest> createRepeated() =>
       $pb.PbList<MergeInvocationRequest>();
-  static MergeInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MergeInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MergeInvocationRequest>(create);
   static MergeInvocationRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(3)
   $1.Invocation get invocation => $_getN(1);
+  @$pb.TagNumber(3)
   set invocation($1.Invocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInvocation() => $_has(1);
+  @$pb.TagNumber(3)
   void clearInvocation() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Invocation ensureInvocation() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.String get authorizationToken => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(3);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(3);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class TouchInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TouchInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'authorizationToken')
     ..hasRequiredFields = false;
@@ -268,33 +336,42 @@ class TouchInvocationRequest extends $pb.GeneratedMessage {
   TouchInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<TouchInvocationRequest> createRepeated() =>
       $pb.PbList<TouchInvocationRequest>();
-  static TouchInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TouchInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TouchInvocationRequest>(create);
   static TouchInvocationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get authorizationToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get authorizationToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set authorizationToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAuthorizationToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAuthorizationToken() => clearField(2);
 }
 
 class TouchInvocationResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TouchInvocationResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.Invocation_Id>(2, 'id', $pb.PbFieldType.OM,
-        $1.Invocation_Id.getDefault, $1.Invocation_Id.create)
+    ..aOM<$1.Invocation_Id>(2, 'id', subBuilder: $1.Invocation_Id.create)
     ..hasRequiredFields = false;
 
   TouchInvocationResponse._() : super();
@@ -316,30 +393,42 @@ class TouchInvocationResponse extends $pb.GeneratedMessage {
   TouchInvocationResponse createEmptyInstance() => create();
   static $pb.PbList<TouchInvocationResponse> createRepeated() =>
       $pb.PbList<TouchInvocationResponse>();
-  static TouchInvocationResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TouchInvocationResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TouchInvocationResponse>(create);
   static TouchInvocationResponse _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Invocation_Id get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($1.Invocation_Id v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Invocation_Id ensureId() => $_ensure(1);
 }
 
 class DeleteInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -362,22 +451,28 @@ class DeleteInvocationRequest extends $pb.GeneratedMessage {
   DeleteInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInvocationRequest> createRepeated() =>
       $pb.PbList<DeleteInvocationRequest>();
-  static DeleteInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteInvocationRequest>(create);
   static DeleteInvocationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class FinalizeInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FinalizeInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(3, 'authorizationToken')
     ..hasRequiredFields = false;
@@ -402,34 +497,43 @@ class FinalizeInvocationRequest extends $pb.GeneratedMessage {
   FinalizeInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<FinalizeInvocationRequest> createRepeated() =>
       $pb.PbList<FinalizeInvocationRequest>();
-  static FinalizeInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FinalizeInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FinalizeInvocationRequest>(create);
   static FinalizeInvocationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get authorizationToken => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get authorizationToken => $_getSZ(1);
+  @$pb.TagNumber(3)
   set authorizationToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAuthorizationToken() => $_has(1);
+  @$pb.TagNumber(3)
   void clearAuthorizationToken() => clearField(3);
 }
 
 class FinalizeInvocationResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'FinalizeInvocationResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.Invocation_Id>(2, 'id', $pb.PbFieldType.OM,
-        $1.Invocation_Id.getDefault, $1.Invocation_Id.create)
+    ..aOM<$1.Invocation_Id>(2, 'id', subBuilder: $1.Invocation_Id.create)
     ..hasRequiredFields = false;
 
   FinalizeInvocationResponse._() : super();
@@ -452,35 +556,46 @@ class FinalizeInvocationResponse extends $pb.GeneratedMessage {
   FinalizeInvocationResponse createEmptyInstance() => create();
   static $pb.PbList<FinalizeInvocationResponse> createRepeated() =>
       $pb.PbList<FinalizeInvocationResponse>();
-  static FinalizeInvocationResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FinalizeInvocationResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FinalizeInvocationResponse>(create);
   static FinalizeInvocationResponse _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Invocation_Id get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($1.Invocation_Id v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Invocation_Id ensureId() => $_ensure(1);
 }
 
 class CreateTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'parent')
     ..aOS(3, 'targetId')
-    ..a<$3.Target>(
-        4, 'target', $pb.PbFieldType.OM, $3.Target.getDefault, $3.Target.create)
+    ..aOM<$3.Target>(4, 'target', subBuilder: $3.Target.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -501,58 +616,80 @@ class CreateTargetRequest extends $pb.GeneratedMessage {
   CreateTargetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTargetRequest> createRepeated() =>
       $pb.PbList<CreateTargetRequest>();
-  static CreateTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTargetRequest>(create);
   static CreateTargetRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get parent => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
   set parent($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParent() => clearField(2);
 
-  $core.String get targetId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get targetId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set targetId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTargetId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTargetId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $3.Target get target => $_getN(3);
+  @$pb.TagNumber(4)
   set target($3.Target v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTarget() => $_has(3);
+  @$pb.TagNumber(4)
   void clearTarget() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.Target ensureTarget() => $_ensure(3);
 
-  $core.String get authorizationToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class UpdateTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$3.Target>(
-        3, 'target', $pb.PbFieldType.OM, $3.Target.getDefault, $3.Target.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOM<$3.Target>(3, 'target', subBuilder: $3.Target.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -574,51 +711,71 @@ class UpdateTargetRequest extends $pb.GeneratedMessage {
   UpdateTargetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTargetRequest> createRepeated() =>
       $pb.PbList<UpdateTargetRequest>();
-  static UpdateTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTargetRequest>(create);
   static UpdateTargetRequest _defaultInstance;
 
+  @$pb.TagNumber(3)
   $3.Target get target => $_getN(0);
+  @$pb.TagNumber(3)
   set target($3.Target v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(3)
   void clearTarget() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Target ensureTarget() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.String get authorizationToken => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(2);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(2);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(3, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(3);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(3);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class MergeTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MergeTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<$3.Target>(
-        3, 'target', $pb.PbFieldType.OM, $3.Target.getDefault, $3.Target.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..aOM<$3.Target>(3, 'target', subBuilder: $3.Target.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -640,54 +797,80 @@ class MergeTargetRequest extends $pb.GeneratedMessage {
   MergeTargetRequest createEmptyInstance() => create();
   static $pb.PbList<MergeTargetRequest> createRepeated() =>
       $pb.PbList<MergeTargetRequest>();
-  static MergeTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MergeTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MergeTargetRequest>(create);
   static MergeTargetRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(3)
   $3.Target get target => $_getN(1);
+  @$pb.TagNumber(3)
   set target($3.Target v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTarget() => $_has(1);
+  @$pb.TagNumber(3)
   void clearTarget() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Target ensureTarget() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.String get authorizationToken => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(3);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(3);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(4, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(4);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(4);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class FinalizeTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FinalizeTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(3, 'authorizationToken')
     ..hasRequiredFields = false;
@@ -711,33 +894,42 @@ class FinalizeTargetRequest extends $pb.GeneratedMessage {
   FinalizeTargetRequest createEmptyInstance() => create();
   static $pb.PbList<FinalizeTargetRequest> createRepeated() =>
       $pb.PbList<FinalizeTargetRequest>();
-  static FinalizeTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FinalizeTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FinalizeTargetRequest>(create);
   static FinalizeTargetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get authorizationToken => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get authorizationToken => $_getSZ(1);
+  @$pb.TagNumber(3)
   set authorizationToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAuthorizationToken() => $_has(1);
+  @$pb.TagNumber(3)
   void clearAuthorizationToken() => clearField(3);
 }
 
 class FinalizeTargetResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FinalizeTargetResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$3.Target_Id>(2, 'id', $pb.PbFieldType.OM, $3.Target_Id.getDefault,
-        $3.Target_Id.create)
+    ..aOM<$3.Target_Id>(2, 'id', subBuilder: $3.Target_Id.create)
     ..hasRequiredFields = false;
 
   FinalizeTargetResponse._() : super();
@@ -759,36 +951,48 @@ class FinalizeTargetResponse extends $pb.GeneratedMessage {
   FinalizeTargetResponse createEmptyInstance() => create();
   static $pb.PbList<FinalizeTargetResponse> createRepeated() =>
       $pb.PbList<FinalizeTargetResponse>();
-  static FinalizeTargetResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FinalizeTargetResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FinalizeTargetResponse>(create);
   static FinalizeTargetResponse _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Target_Id get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($3.Target_Id v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Target_Id ensureId() => $_ensure(1);
 }
 
 class CreateConfiguredTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateConfiguredTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'parent')
     ..aOS(3, 'configId')
-    ..a<$4.ConfiguredTarget>(4, 'configuredTarget', $pb.PbFieldType.OM,
-        $4.ConfiguredTarget.getDefault, $4.ConfiguredTarget.create)
+    ..aOM<$4.ConfiguredTarget>(4, 'configuredTarget',
+        subBuilder: $4.ConfiguredTarget.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -813,59 +1017,82 @@ class CreateConfiguredTargetRequest extends $pb.GeneratedMessage {
   CreateConfiguredTargetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateConfiguredTargetRequest> createRepeated() =>
       $pb.PbList<CreateConfiguredTargetRequest>();
-  static CreateConfiguredTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateConfiguredTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateConfiguredTargetRequest>(create);
   static CreateConfiguredTargetRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get parent => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
   set parent($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParent() => clearField(2);
 
-  $core.String get configId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get configId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set configId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConfigId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearConfigId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $4.ConfiguredTarget get configuredTarget => $_getN(3);
+  @$pb.TagNumber(4)
   set configuredTarget($4.ConfiguredTarget v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasConfiguredTarget() => $_has(3);
+  @$pb.TagNumber(4)
   void clearConfiguredTarget() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.ConfiguredTarget ensureConfiguredTarget() => $_ensure(3);
 
-  $core.String get authorizationToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class UpdateConfiguredTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateConfiguredTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$4.ConfiguredTarget>(3, 'configuredTarget', $pb.PbFieldType.OM,
-        $4.ConfiguredTarget.getDefault, $4.ConfiguredTarget.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOM<$4.ConfiguredTarget>(3, 'configuredTarget',
+        subBuilder: $4.ConfiguredTarget.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -891,52 +1118,73 @@ class UpdateConfiguredTargetRequest extends $pb.GeneratedMessage {
   UpdateConfiguredTargetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateConfiguredTargetRequest> createRepeated() =>
       $pb.PbList<UpdateConfiguredTargetRequest>();
-  static UpdateConfiguredTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateConfiguredTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateConfiguredTargetRequest>(create);
   static UpdateConfiguredTargetRequest _defaultInstance;
 
+  @$pb.TagNumber(3)
   $4.ConfiguredTarget get configuredTarget => $_getN(0);
+  @$pb.TagNumber(3)
   set configuredTarget($4.ConfiguredTarget v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConfiguredTarget() => $_has(0);
+  @$pb.TagNumber(3)
   void clearConfiguredTarget() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.ConfiguredTarget ensureConfiguredTarget() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.String get authorizationToken => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(2);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(2);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(3, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(3);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(3);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class MergeConfiguredTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MergeConfiguredTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<$4.ConfiguredTarget>(3, 'configuredTarget', $pb.PbFieldType.OM,
-        $4.ConfiguredTarget.getDefault, $4.ConfiguredTarget.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..aOM<$4.ConfiguredTarget>(3, 'configuredTarget',
+        subBuilder: $4.ConfiguredTarget.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -962,55 +1210,81 @@ class MergeConfiguredTargetRequest extends $pb.GeneratedMessage {
   MergeConfiguredTargetRequest createEmptyInstance() => create();
   static $pb.PbList<MergeConfiguredTargetRequest> createRepeated() =>
       $pb.PbList<MergeConfiguredTargetRequest>();
-  static MergeConfiguredTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MergeConfiguredTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MergeConfiguredTargetRequest>(create);
   static MergeConfiguredTargetRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(3)
   $4.ConfiguredTarget get configuredTarget => $_getN(1);
+  @$pb.TagNumber(3)
   set configuredTarget($4.ConfiguredTarget v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConfiguredTarget() => $_has(1);
+  @$pb.TagNumber(3)
   void clearConfiguredTarget() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.ConfiguredTarget ensureConfiguredTarget() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.String get authorizationToken => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(3);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(3);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(4, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(4);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(4);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class FinalizeConfiguredTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'FinalizeConfiguredTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(3, 'authorizationToken')
     ..hasRequiredFields = false;
@@ -1036,34 +1310,45 @@ class FinalizeConfiguredTargetRequest extends $pb.GeneratedMessage {
   FinalizeConfiguredTargetRequest createEmptyInstance() => create();
   static $pb.PbList<FinalizeConfiguredTargetRequest> createRepeated() =>
       $pb.PbList<FinalizeConfiguredTargetRequest>();
-  static FinalizeConfiguredTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FinalizeConfiguredTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FinalizeConfiguredTargetRequest>(
+          create);
   static FinalizeConfiguredTargetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get authorizationToken => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get authorizationToken => $_getSZ(1);
+  @$pb.TagNumber(3)
   set authorizationToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAuthorizationToken() => $_has(1);
+  @$pb.TagNumber(3)
   void clearAuthorizationToken() => clearField(3);
 }
 
 class FinalizeConfiguredTargetResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'FinalizeConfiguredTargetResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$4.ConfiguredTarget_Id>(2, 'id', $pb.PbFieldType.OM,
-        $4.ConfiguredTarget_Id.getDefault, $4.ConfiguredTarget_Id.create)
+    ..aOM<$4.ConfiguredTarget_Id>(2, 'id',
+        subBuilder: $4.ConfiguredTarget_Id.create)
     ..hasRequiredFields = false;
 
   FinalizeConfiguredTargetResponse._() : super();
@@ -1087,35 +1372,47 @@ class FinalizeConfiguredTargetResponse extends $pb.GeneratedMessage {
   FinalizeConfiguredTargetResponse createEmptyInstance() => create();
   static $pb.PbList<FinalizeConfiguredTargetResponse> createRepeated() =>
       $pb.PbList<FinalizeConfiguredTargetResponse>();
-  static FinalizeConfiguredTargetResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FinalizeConfiguredTargetResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FinalizeConfiguredTargetResponse>(
+          create);
   static FinalizeConfiguredTargetResponse _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $4.ConfiguredTarget_Id get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($4.ConfiguredTarget_Id v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.ConfiguredTarget_Id ensureId() => $_ensure(1);
 }
 
 class CreateActionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateActionRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'parent')
     ..aOS(3, 'actionId')
-    ..a<$5.Action>(
-        4, 'action', $pb.PbFieldType.OM, $5.Action.getDefault, $5.Action.create)
+    ..aOM<$5.Action>(4, 'action', subBuilder: $5.Action.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -1136,58 +1433,80 @@ class CreateActionRequest extends $pb.GeneratedMessage {
   CreateActionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateActionRequest> createRepeated() =>
       $pb.PbList<CreateActionRequest>();
-  static CreateActionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateActionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateActionRequest>(create);
   static CreateActionRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get parent => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
   set parent($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParent() => clearField(2);
 
-  $core.String get actionId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get actionId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set actionId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasActionId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearActionId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $5.Action get action => $_getN(3);
+  @$pb.TagNumber(4)
   set action($5.Action v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAction() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAction() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Action ensureAction() => $_ensure(3);
 
-  $core.String get authorizationToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class UpdateActionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateActionRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$5.Action>(
-        3, 'action', $pb.PbFieldType.OM, $5.Action.getDefault, $5.Action.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOM<$5.Action>(3, 'action', subBuilder: $5.Action.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -1209,51 +1528,71 @@ class UpdateActionRequest extends $pb.GeneratedMessage {
   UpdateActionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateActionRequest> createRepeated() =>
       $pb.PbList<UpdateActionRequest>();
-  static UpdateActionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateActionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateActionRequest>(create);
   static UpdateActionRequest _defaultInstance;
 
+  @$pb.TagNumber(3)
   $5.Action get action => $_getN(0);
+  @$pb.TagNumber(3)
   set action($5.Action v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAction() => $_has(0);
+  @$pb.TagNumber(3)
   void clearAction() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Action ensureAction() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.String get authorizationToken => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(2);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(2);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(3, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(3);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(3);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class MergeActionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MergeActionRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<$5.Action>(
-        3, 'action', $pb.PbFieldType.OM, $5.Action.getDefault, $5.Action.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..aOM<$5.Action>(3, 'action', subBuilder: $5.Action.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -1275,60 +1614,86 @@ class MergeActionRequest extends $pb.GeneratedMessage {
   MergeActionRequest createEmptyInstance() => create();
   static $pb.PbList<MergeActionRequest> createRepeated() =>
       $pb.PbList<MergeActionRequest>();
-  static MergeActionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MergeActionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MergeActionRequest>(create);
   static MergeActionRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(3)
   $5.Action get action => $_getN(1);
+  @$pb.TagNumber(3)
   set action($5.Action v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAction() => $_has(1);
+  @$pb.TagNumber(3)
   void clearAction() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Action ensureAction() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.String get authorizationToken => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(3);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(3);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(4, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(4);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(4);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class CreateConfigurationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateConfigurationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'parent')
     ..aOS(3, 'configId')
-    ..a<$6.Configuration>(4, 'configuration', $pb.PbFieldType.OM,
-        $6.Configuration.getDefault, $6.Configuration.create)
+    ..aOM<$6.Configuration>(4, 'configuration',
+        subBuilder: $6.Configuration.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -1352,59 +1717,82 @@ class CreateConfigurationRequest extends $pb.GeneratedMessage {
   CreateConfigurationRequest createEmptyInstance() => create();
   static $pb.PbList<CreateConfigurationRequest> createRepeated() =>
       $pb.PbList<CreateConfigurationRequest>();
-  static CreateConfigurationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateConfigurationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateConfigurationRequest>(create);
   static CreateConfigurationRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get parent => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
   set parent($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParent() => clearField(2);
 
-  $core.String get configId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get configId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set configId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConfigId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearConfigId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $6.Configuration get configuration => $_getN(3);
+  @$pb.TagNumber(4)
   set configuration($6.Configuration v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasConfiguration() => $_has(3);
+  @$pb.TagNumber(4)
   void clearConfiguration() => clearField(4);
+  @$pb.TagNumber(4)
+  $6.Configuration ensureConfiguration() => $_ensure(3);
 
-  $core.String get authorizationToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class UpdateConfigurationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateConfigurationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$6.Configuration>(3, 'configuration', $pb.PbFieldType.OM,
-        $6.Configuration.getDefault, $6.Configuration.create)
-    ..a<$10.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOM<$6.Configuration>(3, 'configuration',
+        subBuilder: $6.Configuration.create)
+    ..aOM<$10.FieldMask>(4, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(5, 'authorizationToken')
     ..aOB(6, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -1429,51 +1817,72 @@ class UpdateConfigurationRequest extends $pb.GeneratedMessage {
   UpdateConfigurationRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateConfigurationRequest> createRepeated() =>
       $pb.PbList<UpdateConfigurationRequest>();
-  static UpdateConfigurationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateConfigurationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateConfigurationRequest>(create);
   static UpdateConfigurationRequest _defaultInstance;
 
+  @$pb.TagNumber(3)
   $6.Configuration get configuration => $_getN(0);
+  @$pb.TagNumber(3)
   set configuration($6.Configuration v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConfiguration() => $_has(0);
+  @$pb.TagNumber(3)
   void clearConfiguration() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.Configuration ensureConfiguration() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $10.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(4)
   set updateMask($10.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.String get authorizationToken => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(2);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(2);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 
-  $core.bool get createIfNotFound => $_get(3, false);
+  @$pb.TagNumber(6)
+  $core.bool get createIfNotFound => $_getBF(3);
+  @$pb.TagNumber(6)
   set createIfNotFound($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateIfNotFound() => $_has(3);
+  @$pb.TagNumber(6)
   void clearCreateIfNotFound() => clearField(6);
 }
 
 class CreateFileSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateFileSetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'parent')
     ..aOS(3, 'fileSetId')
-    ..a<$7.FileSet>(4, 'fileSet', $pb.PbFieldType.OM, $7.FileSet.getDefault,
-        $7.FileSet.create)
+    ..aOM<$7.FileSet>(4, 'fileSet', subBuilder: $7.FileSet.create)
     ..aOS(5, 'authorizationToken')
     ..hasRequiredFields = false;
 
@@ -1495,58 +1904,80 @@ class CreateFileSetRequest extends $pb.GeneratedMessage {
   CreateFileSetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateFileSetRequest> createRepeated() =>
       $pb.PbList<CreateFileSetRequest>();
-  static CreateFileSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateFileSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateFileSetRequest>(create);
   static CreateFileSetRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get parent => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
   set parent($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParent() => clearField(2);
 
-  $core.String get fileSetId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get fileSetId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set fileSetId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasFileSetId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearFileSetId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $7.FileSet get fileSet => $_getN(3);
+  @$pb.TagNumber(4)
   set fileSet($7.FileSet v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFileSet() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFileSet() => clearField(4);
+  @$pb.TagNumber(4)
+  $7.FileSet ensureFileSet() => $_ensure(3);
 
-  $core.String get authorizationToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get authorizationToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set authorizationToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAuthorizationToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAuthorizationToken() => clearField(5);
 }
 
 class UpdateFileSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateFileSetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..a<$7.FileSet>(1, 'fileSet', $pb.PbFieldType.OM, $7.FileSet.getDefault,
-        $7.FileSet.create)
-    ..a<$10.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..aOM<$7.FileSet>(1, 'fileSet', subBuilder: $7.FileSet.create)
+    ..aOM<$10.FieldMask>(2, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(3, 'authorizationToken')
     ..aOB(4, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -1569,51 +2000,71 @@ class UpdateFileSetRequest extends $pb.GeneratedMessage {
   UpdateFileSetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateFileSetRequest> createRepeated() =>
       $pb.PbList<UpdateFileSetRequest>();
-  static UpdateFileSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateFileSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateFileSetRequest>(create);
   static UpdateFileSetRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $7.FileSet get fileSet => $_getN(0);
+  @$pb.TagNumber(1)
   set fileSet($7.FileSet v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFileSet() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFileSet() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.FileSet ensureFileSet() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $10.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($10.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $10.FieldMask ensureUpdateMask() => $_ensure(1);
 
-  $core.String get authorizationToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get authorizationToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set authorizationToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAuthorizationToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAuthorizationToken() => clearField(3);
 
-  $core.bool get createIfNotFound => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get createIfNotFound => $_getBF(3);
+  @$pb.TagNumber(4)
   set createIfNotFound($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateIfNotFound() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCreateIfNotFound() => clearField(4);
 }
 
 class MergeFileSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MergeFileSetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<$7.FileSet>(2, 'fileSet', $pb.PbFieldType.OM, $7.FileSet.getDefault,
-        $7.FileSet.create)
-    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
+    ..aOM<$7.FileSet>(2, 'fileSet', subBuilder: $7.FileSet.create)
+    ..aOM<$10.FieldMask>(3, 'updateMask', subBuilder: $10.FieldMask.create)
     ..aOS(4, 'authorizationToken')
     ..aOB(5, 'createIfNotFound')
     ..hasRequiredFields = false;
@@ -1635,60 +2086,86 @@ class MergeFileSetRequest extends $pb.GeneratedMessage {
   MergeFileSetRequest createEmptyInstance() => create();
   static $pb.PbList<MergeFileSetRequest> createRepeated() =>
       $pb.PbList<MergeFileSetRequest>();
-  static MergeFileSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MergeFileSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MergeFileSetRequest>(create);
   static MergeFileSetRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $7.FileSet get fileSet => $_getN(1);
+  @$pb.TagNumber(2)
   set fileSet($7.FileSet v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFileSet() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFileSet() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.FileSet ensureFileSet() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $10.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($10.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $10.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.String get authorizationToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get authorizationToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set authorizationToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAuthorizationToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAuthorizationToken() => clearField(4);
 
-  $core.bool get createIfNotFound => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get createIfNotFound => $_getBF(4);
+  @$pb.TagNumber(5)
   set createIfNotFound($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasCreateIfNotFound() => $_has(4);
+  @$pb.TagNumber(5)
   void clearCreateIfNotFound() => clearField(5);
 }
 
 class UploadBatchRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadBatchRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'authorizationToken')
     ..aOS(3, 'nextResumeToken')
     ..aOS(4, 'resumeToken')
-    ..pc<UploadRequest>(
-        5, 'uploadRequests', $pb.PbFieldType.PM, UploadRequest.create)
+    ..pc<UploadRequest>(5, 'uploadRequests', $pb.PbFieldType.PM,
+        subBuilder: UploadRequest.create)
     ..a<$core.List<$core.int>>(6, 'uploaderState', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -1709,56 +2186,79 @@ class UploadBatchRequest extends $pb.GeneratedMessage {
   UploadBatchRequest createEmptyInstance() => create();
   static $pb.PbList<UploadBatchRequest> createRepeated() =>
       $pb.PbList<UploadBatchRequest>();
-  static UploadBatchRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UploadBatchRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadBatchRequest>(create);
   static UploadBatchRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get authorizationToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get authorizationToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set authorizationToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAuthorizationToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAuthorizationToken() => clearField(2);
 
-  $core.String get nextResumeToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get nextResumeToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set nextResumeToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNextResumeToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNextResumeToken() => clearField(3);
 
-  $core.String get resumeToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get resumeToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set resumeToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResumeToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearResumeToken() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<UploadRequest> get uploadRequests => $_getList(4);
 
+  @$pb.TagNumber(6)
   $core.List<$core.int> get uploaderState => $_getN(5);
+  @$pb.TagNumber(6)
   set uploaderState($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasUploaderState() => $_has(5);
+  @$pb.TagNumber(6)
   void clearUploaderState() => clearField(6);
 }
 
 class UploadBatchResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadBatchResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UploadBatchResponse._() : super();
@@ -1778,14 +2278,16 @@ class UploadBatchResponse extends $pb.GeneratedMessage {
   UploadBatchResponse createEmptyInstance() => create();
   static $pb.PbList<UploadBatchResponse> createRepeated() =>
       $pb.PbList<UploadBatchResponse>();
-  static UploadBatchResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UploadBatchResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadBatchResponse>(create);
   static UploadBatchResponse _defaultInstance;
 }
 
 class UploadRequest_Id extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadRequest.Id',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'targetId')
     ..aOS(2, 'configurationId')
     ..aOS(3, 'actionId')
@@ -1809,40 +2311,57 @@ class UploadRequest_Id extends $pb.GeneratedMessage {
   UploadRequest_Id createEmptyInstance() => create();
   static $pb.PbList<UploadRequest_Id> createRepeated() =>
       $pb.PbList<UploadRequest_Id>();
-  static UploadRequest_Id getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UploadRequest_Id getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadRequest_Id>(create);
   static UploadRequest_Id _defaultInstance;
 
-  $core.String get targetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get targetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set targetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTargetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTargetId() => clearField(1);
 
-  $core.String get configurationId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get configurationId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set configurationId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfigurationId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfigurationId() => clearField(2);
 
-  $core.String get actionId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get actionId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set actionId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasActionId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearActionId() => clearField(3);
 
-  $core.String get fileSetId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get fileSetId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set fileSetId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFileSetId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFileSetId() => clearField(4);
 }
 
@@ -1868,31 +2387,24 @@ class UploadRequest extends $pb.GeneratedMessage {
     0: UploadRequest_Resource.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7, 8, 9])
-    ..a<UploadRequest_Id>(1, 'id', $pb.PbFieldType.OM,
-        UploadRequest_Id.getDefault, UploadRequest_Id.create)
-    ..e<UploadRequest_UploadOperation>(
-        2,
-        'uploadOperation',
-        $pb.PbFieldType.OE,
-        UploadRequest_UploadOperation.UPLOAD_OPERATION_UNSPECIFIED,
-        UploadRequest_UploadOperation.valueOf,
-        UploadRequest_UploadOperation.values)
-    ..a<$10.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $10.FieldMask.getDefault, $10.FieldMask.create)
-    ..a<$1.Invocation>(4, 'invocation', $pb.PbFieldType.OM,
-        $1.Invocation.getDefault, $1.Invocation.create)
-    ..a<$3.Target>(
-        5, 'target', $pb.PbFieldType.OM, $3.Target.getDefault, $3.Target.create)
-    ..a<$6.Configuration>(6, 'configuration', $pb.PbFieldType.OM,
-        $6.Configuration.getDefault, $6.Configuration.create)
-    ..a<$4.ConfiguredTarget>(7, 'configuredTarget', $pb.PbFieldType.OM,
-        $4.ConfiguredTarget.getDefault, $4.ConfiguredTarget.create)
-    ..a<$5.Action>(
-        8, 'action', $pb.PbFieldType.OM, $5.Action.getDefault, $5.Action.create)
-    ..a<$7.FileSet>(9, 'fileSet', $pb.PbFieldType.OM, $7.FileSet.getDefault,
-        $7.FileSet.create)
+    ..aOM<UploadRequest_Id>(1, 'id', subBuilder: UploadRequest_Id.create)
+    ..e<UploadRequest_UploadOperation>(2, 'uploadOperation', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            UploadRequest_UploadOperation.UPLOAD_OPERATION_UNSPECIFIED,
+        valueOf: UploadRequest_UploadOperation.valueOf,
+        enumValues: UploadRequest_UploadOperation.values)
+    ..aOM<$10.FieldMask>(3, 'updateMask', subBuilder: $10.FieldMask.create)
+    ..aOM<$1.Invocation>(4, 'invocation', subBuilder: $1.Invocation.create)
+    ..aOM<$3.Target>(5, 'target', subBuilder: $3.Target.create)
+    ..aOM<$6.Configuration>(6, 'configuration',
+        subBuilder: $6.Configuration.create)
+    ..aOM<$4.ConfiguredTarget>(7, 'configuredTarget',
+        subBuilder: $4.ConfiguredTarget.create)
+    ..aOM<$5.Action>(8, 'action', subBuilder: $5.Action.create)
+    ..aOM<$7.FileSet>(9, 'fileSet', subBuilder: $7.FileSet.create)
     ..aOB(10, 'createIfNotFound')
     ..hasRequiredFields = false;
 
@@ -1913,98 +2425,157 @@ class UploadRequest extends $pb.GeneratedMessage {
   UploadRequest createEmptyInstance() => create();
   static $pb.PbList<UploadRequest> createRepeated() =>
       $pb.PbList<UploadRequest>();
-  static UploadRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UploadRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadRequest>(create);
   static UploadRequest _defaultInstance;
 
   UploadRequest_Resource whichResource() =>
       _UploadRequest_ResourceByTag[$_whichOneof(0)];
   void clearResource() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   UploadRequest_Id get id => $_getN(0);
+  @$pb.TagNumber(1)
   set id(UploadRequest_Id v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
+  @$pb.TagNumber(1)
+  UploadRequest_Id ensureId() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   UploadRequest_UploadOperation get uploadOperation => $_getN(1);
+  @$pb.TagNumber(2)
   set uploadOperation(UploadRequest_UploadOperation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUploadOperation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUploadOperation() => clearField(2);
 
+  @$pb.TagNumber(3)
   $10.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($10.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $10.FieldMask ensureUpdateMask() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $1.Invocation get invocation => $_getN(3);
+  @$pb.TagNumber(4)
   set invocation($1.Invocation v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasInvocation() => $_has(3);
+  @$pb.TagNumber(4)
   void clearInvocation() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Invocation ensureInvocation() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $3.Target get target => $_getN(4);
+  @$pb.TagNumber(5)
   set target($3.Target v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTarget() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTarget() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.Target ensureTarget() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $6.Configuration get configuration => $_getN(5);
+  @$pb.TagNumber(6)
   set configuration($6.Configuration v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasConfiguration() => $_has(5);
+  @$pb.TagNumber(6)
   void clearConfiguration() => clearField(6);
+  @$pb.TagNumber(6)
+  $6.Configuration ensureConfiguration() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $4.ConfiguredTarget get configuredTarget => $_getN(6);
+  @$pb.TagNumber(7)
   set configuredTarget($4.ConfiguredTarget v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasConfiguredTarget() => $_has(6);
+  @$pb.TagNumber(7)
   void clearConfiguredTarget() => clearField(7);
+  @$pb.TagNumber(7)
+  $4.ConfiguredTarget ensureConfiguredTarget() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $5.Action get action => $_getN(7);
+  @$pb.TagNumber(8)
   set action($5.Action v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasAction() => $_has(7);
+  @$pb.TagNumber(8)
   void clearAction() => clearField(8);
+  @$pb.TagNumber(8)
+  $5.Action ensureAction() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   $7.FileSet get fileSet => $_getN(8);
+  @$pb.TagNumber(9)
   set fileSet($7.FileSet v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasFileSet() => $_has(8);
+  @$pb.TagNumber(9)
   void clearFileSet() => clearField(9);
+  @$pb.TagNumber(9)
+  $7.FileSet ensureFileSet() => $_ensure(8);
 
-  $core.bool get createIfNotFound => $_get(9, false);
+  @$pb.TagNumber(10)
+  $core.bool get createIfNotFound => $_getBF(9);
+  @$pb.TagNumber(10)
   set createIfNotFound($core.bool v) {
     $_setBool(9, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasCreateIfNotFound() => $_has(9);
+  @$pb.TagNumber(10)
   void clearCreateIfNotFound() => clearField(10);
 }
 
 class GetInvocationUploadMetadataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetInvocationUploadMetadataRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'authorizationToken')
     ..hasRequiredFields = false;
@@ -2030,23 +2601,33 @@ class GetInvocationUploadMetadataRequest extends $pb.GeneratedMessage {
   GetInvocationUploadMetadataRequest createEmptyInstance() => create();
   static $pb.PbList<GetInvocationUploadMetadataRequest> createRepeated() =>
       $pb.PbList<GetInvocationUploadMetadataRequest>();
-  static GetInvocationUploadMetadataRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInvocationUploadMetadataRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInvocationUploadMetadataRequest>(
+          create);
   static GetInvocationUploadMetadataRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get authorizationToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get authorizationToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set authorizationToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAuthorizationToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAuthorizationToken() => clearField(2);
 }

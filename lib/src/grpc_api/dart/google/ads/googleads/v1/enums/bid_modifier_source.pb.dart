@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'bid_modifier_source.pbenum.dart';
 
 class BidModifierSourceEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BidModifierSourceEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   BidModifierSourceEnum._() : super();
@@ -36,7 +36,8 @@ class BidModifierSourceEnum extends $pb.GeneratedMessage {
   BidModifierSourceEnum createEmptyInstance() => create();
   static $pb.PbList<BidModifierSourceEnum> createRepeated() =>
       $pb.PbList<BidModifierSourceEnum>();
-  static BidModifierSourceEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BidModifierSourceEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BidModifierSourceEnum>(create);
   static BidModifierSourceEnum _defaultInstance;
 }

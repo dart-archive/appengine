@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ export 'target.pbenum.dart';
 
 class PullTarget extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullTarget',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   PullTarget._() : super();
@@ -35,13 +35,16 @@ class PullTarget extends $pb.GeneratedMessage {
   static PullTarget create() => PullTarget._();
   PullTarget createEmptyInstance() => create();
   static $pb.PbList<PullTarget> createRepeated() => $pb.PbList<PullTarget>();
-  static PullTarget getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PullTarget getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PullTarget>(create);
   static PullTarget _defaultInstance;
 }
 
 class PullMessage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullMessage',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'payload', $pb.PbFieldType.OY)
     ..aOS(2, 'tag')
     ..hasRequiredFields = false;
@@ -62,31 +65,42 @@ class PullMessage extends $pb.GeneratedMessage {
   static PullMessage create() => PullMessage._();
   PullMessage createEmptyInstance() => create();
   static $pb.PbList<PullMessage> createRepeated() => $pb.PbList<PullMessage>();
-  static PullMessage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PullMessage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PullMessage>(create);
   static PullMessage _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get payload => $_getN(0);
+  @$pb.TagNumber(1)
   set payload($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPayload() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPayload() => clearField(1);
 
-  $core.String get tag => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get tag => $_getSZ(1);
+  @$pb.TagNumber(2)
   set tag($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTag() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTag() => clearField(2);
 }
 
 class AppEngineHttpTarget extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppEngineHttpTarget',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..a<AppEngineRouting>(1, 'appEngineRoutingOverride', $pb.PbFieldType.OM,
-        AppEngineRouting.getDefault, AppEngineRouting.create)
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
+    ..aOM<AppEngineRouting>(1, 'appEngineRoutingOverride',
+        subBuilder: AppEngineRouting.create)
     ..hasRequiredFields = false;
 
   AppEngineHttpTarget._() : super();
@@ -106,42 +120,42 @@ class AppEngineHttpTarget extends $pb.GeneratedMessage {
   AppEngineHttpTarget createEmptyInstance() => create();
   static $pb.PbList<AppEngineHttpTarget> createRepeated() =>
       $pb.PbList<AppEngineHttpTarget>();
-  static AppEngineHttpTarget getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineHttpTarget getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AppEngineHttpTarget>(create);
   static AppEngineHttpTarget _defaultInstance;
 
+  @$pb.TagNumber(1)
   AppEngineRouting get appEngineRoutingOverride => $_getN(0);
+  @$pb.TagNumber(1)
   set appEngineRoutingOverride(AppEngineRouting v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAppEngineRoutingOverride() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAppEngineRoutingOverride() => clearField(1);
+  @$pb.TagNumber(1)
+  AppEngineRouting ensureAppEngineRoutingOverride() => $_ensure(0);
 }
 
 class AppEngineHttpRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppEngineHttpRequest',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
-    ..e<HttpMethod>(
-        1,
-        'httpMethod',
-        $pb.PbFieldType.OE,
-        HttpMethod.HTTP_METHOD_UNSPECIFIED,
-        HttpMethod.valueOf,
-        HttpMethod.values)
-    ..a<AppEngineRouting>(2, 'appEngineRouting', $pb.PbFieldType.OM,
-        AppEngineRouting.getDefault, AppEngineRouting.create)
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
+    ..e<HttpMethod>(1, 'httpMethod', $pb.PbFieldType.OE,
+        defaultOrMaker: HttpMethod.HTTP_METHOD_UNSPECIFIED,
+        valueOf: HttpMethod.valueOf,
+        enumValues: HttpMethod.values)
+    ..aOM<AppEngineRouting>(2, 'appEngineRouting',
+        subBuilder: AppEngineRouting.create)
     ..aOS(3, 'relativeUrl')
-    ..m<$core.String, $core.String>(
-        4,
-        'headers',
-        'AppEngineHttpRequest.HeadersEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.tasks.v2beta2'))
+    ..m<$core.String, $core.String>(4, 'headers',
+        entryClassName: 'AppEngineHttpRequest.HeadersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.tasks.v2beta2'))
     ..a<$core.List<$core.int>>(5, 'payload', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -163,48 +177,69 @@ class AppEngineHttpRequest extends $pb.GeneratedMessage {
   AppEngineHttpRequest createEmptyInstance() => create();
   static $pb.PbList<AppEngineHttpRequest> createRepeated() =>
       $pb.PbList<AppEngineHttpRequest>();
-  static AppEngineHttpRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineHttpRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AppEngineHttpRequest>(create);
   static AppEngineHttpRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   HttpMethod get httpMethod => $_getN(0);
+  @$pb.TagNumber(1)
   set httpMethod(HttpMethod v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHttpMethod() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHttpMethod() => clearField(1);
 
+  @$pb.TagNumber(2)
   AppEngineRouting get appEngineRouting => $_getN(1);
+  @$pb.TagNumber(2)
   set appEngineRouting(AppEngineRouting v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAppEngineRouting() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAppEngineRouting() => clearField(2);
+  @$pb.TagNumber(2)
+  AppEngineRouting ensureAppEngineRouting() => $_ensure(1);
 
-  $core.String get relativeUrl => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get relativeUrl => $_getSZ(2);
+  @$pb.TagNumber(3)
   set relativeUrl($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRelativeUrl() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRelativeUrl() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get headers => $_getMap(3);
 
+  @$pb.TagNumber(5)
   $core.List<$core.int> get payload => $_getN(4);
+  @$pb.TagNumber(5)
   set payload($core.List<$core.int> v) {
     $_setBytes(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPayload() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPayload() => clearField(5);
 }
 
 class AppEngineRouting extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppEngineRouting',
-      package: const $pb.PackageName('google.cloud.tasks.v2beta2'))
+      package: const $pb.PackageName('google.cloud.tasks.v2beta2'),
+      createEmptyInstance: create)
     ..aOS(1, 'service')
     ..aOS(2, 'version')
     ..aOS(3, 'instance')
@@ -228,39 +263,56 @@ class AppEngineRouting extends $pb.GeneratedMessage {
   AppEngineRouting createEmptyInstance() => create();
   static $pb.PbList<AppEngineRouting> createRepeated() =>
       $pb.PbList<AppEngineRouting>();
-  static AppEngineRouting getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AppEngineRouting getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AppEngineRouting>(create);
   static AppEngineRouting _defaultInstance;
 
-  $core.String get service => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get service => $_getSZ(0);
+  @$pb.TagNumber(1)
   set service($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasService() => $_has(0);
+  @$pb.TagNumber(1)
   void clearService() => clearField(1);
 
-  $core.String get version => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get version => $_getSZ(1);
+  @$pb.TagNumber(2)
   set version($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 
-  $core.String get instance => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get instance => $_getSZ(2);
+  @$pb.TagNumber(3)
   set instance($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInstance() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInstance() => clearField(3);
 
-  $core.String get host => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get host => $_getSZ(3);
+  @$pb.TagNumber(4)
   set host($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasHost() => $_has(3);
+  @$pb.TagNumber(4)
   void clearHost() => clearField(4);
 }

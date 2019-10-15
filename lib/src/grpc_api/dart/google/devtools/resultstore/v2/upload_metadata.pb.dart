@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class UploadMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UploadMetadata',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'resumeToken')
     ..a<$core.List<$core.int>>(3, 'uploaderState', $pb.PbFieldType.OY)
@@ -35,30 +35,44 @@ class UploadMetadata extends $pb.GeneratedMessage {
   UploadMetadata createEmptyInstance() => create();
   static $pb.PbList<UploadMetadata> createRepeated() =>
       $pb.PbList<UploadMetadata>();
-  static UploadMetadata getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UploadMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UploadMetadata>(create);
   static UploadMetadata _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get resumeToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get resumeToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set resumeToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResumeToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResumeToken() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get uploaderState => $_getN(2);
+  @$pb.TagNumber(3)
   set uploaderState($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUploaderState() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUploaderState() => clearField(3);
 }

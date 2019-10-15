@@ -8,13 +8,14 @@
 const SessionEntityType$json = {
   '1': 'SessionEntityType',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'entity_override_mode',
       '3': 2,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.SessionEntityType.EntityOverrideMode',
+      '8': {},
       '10': 'entityOverrideMode'
     },
     {
@@ -23,10 +24,12 @@ const SessionEntityType$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.EntityType.Entity',
+      '8': {},
       '10': 'entities'
     },
   ],
   '4': [SessionEntityType_EntityOverrideMode$json],
+  '7': {},
 };
 
 const SessionEntityType_EntityOverrideMode$json = {
@@ -41,9 +44,9 @@ const SessionEntityType_EntityOverrideMode$json = {
 const ListSessionEntityTypesRequest$json = {
   '1': 'ListSessionEntityTypesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
   ],
 };
 
@@ -65,20 +68,21 @@ const ListSessionEntityTypesResponse$json = {
 const GetSessionEntityTypeRequest$json = {
   '1': 'GetSessionEntityTypeRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const CreateSessionEntityTypeRequest$json = {
   '1': 'CreateSessionEntityTypeRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'session_entity_type',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.SessionEntityType',
+      '8': {},
       '10': 'sessionEntityType'
     },
   ],
@@ -93,6 +97,7 @@ const UpdateSessionEntityTypeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.SessionEntityType',
+      '8': {},
       '10': 'sessionEntityType'
     },
     {
@@ -101,6 +106,7 @@ const UpdateSessionEntityTypeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -109,6 +115,6 @@ const UpdateSessionEntityTypeRequest$json = {
 const DeleteSessionEntityTypeRequest$json = {
   '1': 'DeleteSessionEntityTypeRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };

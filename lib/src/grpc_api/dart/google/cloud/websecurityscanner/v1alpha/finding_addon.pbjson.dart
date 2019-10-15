@@ -29,6 +29,37 @@ const VulnerableParameters$json = {
   ],
 };
 
+const VulnerableHeaders$json = {
+  '1': 'VulnerableHeaders',
+  '2': [
+    {
+      '1': 'headers',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.websecurityscanner.v1alpha.VulnerableHeaders.Header',
+      '10': 'headers'
+    },
+    {
+      '1': 'missing_headers',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.websecurityscanner.v1alpha.VulnerableHeaders.Header',
+      '10': 'missingHeaders'
+    },
+  ],
+  '3': [VulnerableHeaders_Header$json],
+};
+
+const VulnerableHeaders_Header$json = {
+  '1': 'Header',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+};
+
 const Xss$json = {
   '1': 'Xss',
   '2': [

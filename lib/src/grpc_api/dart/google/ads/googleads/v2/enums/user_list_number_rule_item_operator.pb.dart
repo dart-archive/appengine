@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'user_list_number_rule_item_operator.pbenum.dart';
 class UserListNumberRuleItemOperatorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UserListNumberRuleItemOperatorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UserListNumberRuleItemOperatorEnum._() : super();
@@ -39,7 +39,9 @@ class UserListNumberRuleItemOperatorEnum extends $pb.GeneratedMessage {
   UserListNumberRuleItemOperatorEnum createEmptyInstance() => create();
   static $pb.PbList<UserListNumberRuleItemOperatorEnum> createRepeated() =>
       $pb.PbList<UserListNumberRuleItemOperatorEnum>();
-  static UserListNumberRuleItemOperatorEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UserListNumberRuleItemOperatorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserListNumberRuleItemOperatorEnum>(
+          create);
   static UserListNumberRuleItemOperatorEnum _defaultInstance;
 }

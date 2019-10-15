@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,29 +19,24 @@ export 'workflow_templates.pbenum.dart';
 
 class WorkflowTemplate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WorkflowTemplate',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'id')
     ..a<$core.int>(3, 'version', $pb.PbFieldType.O3)
-    ..a<$5.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $5.Timestamp.getDefault, $5.Timestamp.create)
-    ..a<$5.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $5.Timestamp.getDefault, $5.Timestamp.create)
-    ..m<$core.String, $core.String>(
-        6,
-        'labels',
-        'WorkflowTemplate.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.dataproc.v1'))
-    ..a<WorkflowTemplatePlacement>(7, 'placement', $pb.PbFieldType.OM,
-        WorkflowTemplatePlacement.getDefault, WorkflowTemplatePlacement.create)
-    ..pc<OrderedJob>(8, 'jobs', $pb.PbFieldType.PM, OrderedJob.create)
-    ..pc<TemplateParameter>(
-        9, 'parameters', $pb.PbFieldType.PM, TemplateParameter.create)
+    ..aOM<$5.Timestamp>(4, 'createTime', subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(5, 'updateTime', subBuilder: $5.Timestamp.create)
+    ..m<$core.String, $core.String>(6, 'labels',
+        entryClassName: 'WorkflowTemplate.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..aOM<WorkflowTemplatePlacement>(7, 'placement',
+        subBuilder: WorkflowTemplatePlacement.create)
+    ..pc<OrderedJob>(8, 'jobs', $pb.PbFieldType.PM,
+        subBuilder: OrderedJob.create)
+    ..pc<TemplateParameter>(9, 'parameters', $pb.PbFieldType.PM,
+        subBuilder: TemplateParameter.create)
     ..hasRequiredFields = false;
 
   WorkflowTemplate._() : super();
@@ -62,62 +56,96 @@ class WorkflowTemplate extends $pb.GeneratedMessage {
   WorkflowTemplate createEmptyInstance() => create();
   static $pb.PbList<WorkflowTemplate> createRepeated() =>
       $pb.PbList<WorkflowTemplate>();
-  static WorkflowTemplate getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowTemplate getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WorkflowTemplate>(create);
   static WorkflowTemplate _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get id => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get id => $_getSZ(1);
+  @$pb.TagNumber(2)
   set id($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
-  $core.int get version => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get version => $_getIZ(2);
+  @$pb.TagNumber(3)
   set version($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasVersion() => $_has(2);
+  @$pb.TagNumber(3)
   void clearVersion() => clearField(3);
 
+  @$pb.TagNumber(4)
   $5.Timestamp get createTime => $_getN(3);
+  @$pb.TagNumber(4)
   set createTime($5.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Timestamp ensureCreateTime() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $5.Timestamp get updateTime => $_getN(4);
+  @$pb.TagNumber(5)
   set updateTime($5.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasUpdateTime() => $_has(4);
+  @$pb.TagNumber(5)
   void clearUpdateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $5.Timestamp ensureUpdateTime() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 
+  @$pb.TagNumber(7)
   WorkflowTemplatePlacement get placement => $_getN(6);
+  @$pb.TagNumber(7)
   set placement(WorkflowTemplatePlacement v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasPlacement() => $_has(6);
+  @$pb.TagNumber(7)
   void clearPlacement() => clearField(7);
+  @$pb.TagNumber(7)
+  WorkflowTemplatePlacement ensurePlacement() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $core.List<OrderedJob> get jobs => $_getList(7);
 
+  @$pb.TagNumber(9)
   $core.List<TemplateParameter> get parameters => $_getList(8);
 }
 
@@ -135,12 +163,13 @@ class WorkflowTemplatePlacement extends $pb.GeneratedMessage {
     0: WorkflowTemplatePlacement_Placement.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WorkflowTemplatePlacement',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<ManagedCluster>(1, 'managedCluster', $pb.PbFieldType.OM,
-        ManagedCluster.getDefault, ManagedCluster.create)
-    ..a<ClusterSelector>(2, 'clusterSelector', $pb.PbFieldType.OM,
-        ClusterSelector.getDefault, ClusterSelector.create)
+    ..aOM<ManagedCluster>(1, 'managedCluster',
+        subBuilder: ManagedCluster.create)
+    ..aOM<ClusterSelector>(2, 'clusterSelector',
+        subBuilder: ClusterSelector.create)
     ..hasRequiredFields = false;
 
   WorkflowTemplatePlacement._() : super();
@@ -163,47 +192,55 @@ class WorkflowTemplatePlacement extends $pb.GeneratedMessage {
   WorkflowTemplatePlacement createEmptyInstance() => create();
   static $pb.PbList<WorkflowTemplatePlacement> createRepeated() =>
       $pb.PbList<WorkflowTemplatePlacement>();
-  static WorkflowTemplatePlacement getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowTemplatePlacement getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WorkflowTemplatePlacement>(create);
   static WorkflowTemplatePlacement _defaultInstance;
 
   WorkflowTemplatePlacement_Placement whichPlacement() =>
       _WorkflowTemplatePlacement_PlacementByTag[$_whichOneof(0)];
   void clearPlacement() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ManagedCluster get managedCluster => $_getN(0);
+  @$pb.TagNumber(1)
   set managedCluster(ManagedCluster v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasManagedCluster() => $_has(0);
+  @$pb.TagNumber(1)
   void clearManagedCluster() => clearField(1);
+  @$pb.TagNumber(1)
+  ManagedCluster ensureManagedCluster() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   ClusterSelector get clusterSelector => $_getN(1);
+  @$pb.TagNumber(2)
   set clusterSelector(ClusterSelector v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasClusterSelector() => $_has(1);
+  @$pb.TagNumber(2)
   void clearClusterSelector() => clearField(2);
+  @$pb.TagNumber(2)
+  ClusterSelector ensureClusterSelector() => $_ensure(1);
 }
 
 class ManagedCluster extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManagedCluster',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(2, 'clusterName')
-    ..a<$2.ClusterConfig>(3, 'config', $pb.PbFieldType.OM,
-        $2.ClusterConfig.getDefault, $2.ClusterConfig.create)
-    ..m<$core.String, $core.String>(
-        4,
-        'labels',
-        'ManagedCluster.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..aOM<$2.ClusterConfig>(3, 'config', subBuilder: $2.ClusterConfig.create)
+    ..m<$core.String, $core.String>(4, 'labels',
+        entryClassName: 'ManagedCluster.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..hasRequiredFields = false;
 
   ManagedCluster._() : super();
@@ -223,42 +260,51 @@ class ManagedCluster extends $pb.GeneratedMessage {
   ManagedCluster createEmptyInstance() => create();
   static $pb.PbList<ManagedCluster> createRepeated() =>
       $pb.PbList<ManagedCluster>();
-  static ManagedCluster getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ManagedCluster getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ManagedCluster>(create);
   static ManagedCluster _defaultInstance;
 
-  $core.String get clusterName => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get clusterName => $_getSZ(0);
+  @$pb.TagNumber(2)
   set clusterName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasClusterName() => $_has(0);
+  @$pb.TagNumber(2)
   void clearClusterName() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.ClusterConfig get config => $_getN(1);
+  @$pb.TagNumber(3)
   set config($2.ClusterConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.ClusterConfig ensureConfig() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 }
 
 class ClusterSelector extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterSelector',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'zone')
-    ..m<$core.String, $core.String>(
-        2,
-        'clusterLabels',
-        'ClusterSelector.ClusterLabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..m<$core.String, $core.String>(2, 'clusterLabels',
+        entryClassName: 'ClusterSelector.ClusterLabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..hasRequiredFields = false;
 
   ClusterSelector._() : super();
@@ -278,18 +324,24 @@ class ClusterSelector extends $pb.GeneratedMessage {
   ClusterSelector createEmptyInstance() => create();
   static $pb.PbList<ClusterSelector> createRepeated() =>
       $pb.PbList<ClusterSelector>();
-  static ClusterSelector getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ClusterSelector getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ClusterSelector>(create);
   static ClusterSelector _defaultInstance;
 
-  $core.String get zone => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get zone => $_getSZ(0);
+  @$pb.TagNumber(1)
   set zone($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasZone() => $_has(0);
+  @$pb.TagNumber(1)
   void clearZone() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get clusterLabels => $_getMap(1);
 }
 
@@ -315,33 +367,23 @@ class OrderedJob extends $pb.GeneratedMessage {
     0: OrderedJob_JobType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OrderedJob',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 4, 5, 6, 7])
     ..aOS(1, 'stepId')
-    ..a<$3.HadoopJob>(2, 'hadoopJob', $pb.PbFieldType.OM,
-        $3.HadoopJob.getDefault, $3.HadoopJob.create)
-    ..a<$3.SparkJob>(3, 'sparkJob', $pb.PbFieldType.OM, $3.SparkJob.getDefault,
-        $3.SparkJob.create)
-    ..a<$3.PySparkJob>(4, 'pysparkJob', $pb.PbFieldType.OM,
-        $3.PySparkJob.getDefault, $3.PySparkJob.create)
-    ..a<$3.HiveJob>(5, 'hiveJob', $pb.PbFieldType.OM, $3.HiveJob.getDefault,
-        $3.HiveJob.create)
-    ..a<$3.PigJob>(
-        6, 'pigJob', $pb.PbFieldType.OM, $3.PigJob.getDefault, $3.PigJob.create)
-    ..a<$3.SparkSqlJob>(7, 'sparkSqlJob', $pb.PbFieldType.OM,
-        $3.SparkSqlJob.getDefault, $3.SparkSqlJob.create)
-    ..m<$core.String, $core.String>(
-        8,
-        'labels',
-        'OrderedJob.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.dataproc.v1'))
-    ..a<$3.JobScheduling>(9, 'scheduling', $pb.PbFieldType.OM,
-        $3.JobScheduling.getDefault, $3.JobScheduling.create)
+    ..aOM<$3.HadoopJob>(2, 'hadoopJob', subBuilder: $3.HadoopJob.create)
+    ..aOM<$3.SparkJob>(3, 'sparkJob', subBuilder: $3.SparkJob.create)
+    ..aOM<$3.PySparkJob>(4, 'pysparkJob', subBuilder: $3.PySparkJob.create)
+    ..aOM<$3.HiveJob>(5, 'hiveJob', subBuilder: $3.HiveJob.create)
+    ..aOM<$3.PigJob>(6, 'pigJob', subBuilder: $3.PigJob.create)
+    ..aOM<$3.SparkSqlJob>(7, 'sparkSqlJob', subBuilder: $3.SparkSqlJob.create)
+    ..m<$core.String, $core.String>(8, 'labels',
+        entryClassName: 'OrderedJob.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..aOM<$3.JobScheduling>(9, 'scheduling',
+        subBuilder: $3.JobScheduling.create)
     ..pPS(10, 'prerequisiteStepIds')
     ..hasRequiredFields = false;
 
@@ -361,90 +403,141 @@ class OrderedJob extends $pb.GeneratedMessage {
   static OrderedJob create() => OrderedJob._();
   OrderedJob createEmptyInstance() => create();
   static $pb.PbList<OrderedJob> createRepeated() => $pb.PbList<OrderedJob>();
-  static OrderedJob getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OrderedJob getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OrderedJob>(create);
   static OrderedJob _defaultInstance;
 
   OrderedJob_JobType whichJobType() =>
       _OrderedJob_JobTypeByTag[$_whichOneof(0)];
   void clearJobType() => clearField($_whichOneof(0));
 
-  $core.String get stepId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get stepId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set stepId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStepId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStepId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.HadoopJob get hadoopJob => $_getN(1);
+  @$pb.TagNumber(2)
   set hadoopJob($3.HadoopJob v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasHadoopJob() => $_has(1);
+  @$pb.TagNumber(2)
   void clearHadoopJob() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.HadoopJob ensureHadoopJob() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $3.SparkJob get sparkJob => $_getN(2);
+  @$pb.TagNumber(3)
   set sparkJob($3.SparkJob v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSparkJob() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSparkJob() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.SparkJob ensureSparkJob() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $3.PySparkJob get pysparkJob => $_getN(3);
+  @$pb.TagNumber(4)
   set pysparkJob($3.PySparkJob v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPysparkJob() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPysparkJob() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.PySparkJob ensurePysparkJob() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $3.HiveJob get hiveJob => $_getN(4);
+  @$pb.TagNumber(5)
   set hiveJob($3.HiveJob v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasHiveJob() => $_has(4);
+  @$pb.TagNumber(5)
   void clearHiveJob() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.HiveJob ensureHiveJob() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $3.PigJob get pigJob => $_getN(5);
+  @$pb.TagNumber(6)
   set pigJob($3.PigJob v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPigJob() => $_has(5);
+  @$pb.TagNumber(6)
   void clearPigJob() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.PigJob ensurePigJob() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $3.SparkSqlJob get sparkSqlJob => $_getN(6);
+  @$pb.TagNumber(7)
   set sparkSqlJob($3.SparkSqlJob v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasSparkSqlJob() => $_has(6);
+  @$pb.TagNumber(7)
   void clearSparkSqlJob() => clearField(7);
+  @$pb.TagNumber(7)
+  $3.SparkSqlJob ensureSparkSqlJob() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $core.Map<$core.String, $core.String> get labels => $_getMap(7);
 
+  @$pb.TagNumber(9)
   $3.JobScheduling get scheduling => $_getN(8);
+  @$pb.TagNumber(9)
   set scheduling($3.JobScheduling v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasScheduling() => $_has(8);
+  @$pb.TagNumber(9)
   void clearScheduling() => clearField(9);
+  @$pb.TagNumber(9)
+  $3.JobScheduling ensureScheduling() => $_ensure(8);
 
+  @$pb.TagNumber(10)
   $core.List<$core.String> get prerequisiteStepIds => $_getList(9);
 }
 
 class TemplateParameter extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TemplateParameter',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..pPS(2, 'fields')
     ..aOS(3, 'description')
-    ..a<ParameterValidation>(4, 'validation', $pb.PbFieldType.OM,
-        ParameterValidation.getDefault, ParameterValidation.create)
+    ..aOM<ParameterValidation>(4, 'validation',
+        subBuilder: ParameterValidation.create)
     ..hasRequiredFields = false;
 
   TemplateParameter._() : super();
@@ -464,35 +557,51 @@ class TemplateParameter extends $pb.GeneratedMessage {
   TemplateParameter createEmptyInstance() => create();
   static $pb.PbList<TemplateParameter> createRepeated() =>
       $pb.PbList<TemplateParameter>();
-  static TemplateParameter getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TemplateParameter getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TemplateParameter>(create);
   static TemplateParameter _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get fields => $_getList(1);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  @$pb.TagNumber(4)
   ParameterValidation get validation => $_getN(3);
+  @$pb.TagNumber(4)
   set validation(ParameterValidation v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidation() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidation() => clearField(4);
+  @$pb.TagNumber(4)
+  ParameterValidation ensureValidation() => $_ensure(3);
 }
 
 enum ParameterValidation_ValidationType { regex, values_, notSet }
@@ -505,12 +614,11 @@ class ParameterValidation extends $pb.GeneratedMessage {
     0: ParameterValidation_ValidationType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ParameterValidation',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<RegexValidation>(1, 'regex', $pb.PbFieldType.OM,
-        RegexValidation.getDefault, RegexValidation.create)
-    ..a<ValueValidation>(2, 'values', $pb.PbFieldType.OM,
-        ValueValidation.getDefault, ValueValidation.create)
+    ..aOM<RegexValidation>(1, 'regex', subBuilder: RegexValidation.create)
+    ..aOM<ValueValidation>(2, 'values', subBuilder: ValueValidation.create)
     ..hasRequiredFields = false;
 
   ParameterValidation._() : super();
@@ -530,34 +638,48 @@ class ParameterValidation extends $pb.GeneratedMessage {
   ParameterValidation createEmptyInstance() => create();
   static $pb.PbList<ParameterValidation> createRepeated() =>
       $pb.PbList<ParameterValidation>();
-  static ParameterValidation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ParameterValidation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParameterValidation>(create);
   static ParameterValidation _defaultInstance;
 
   ParameterValidation_ValidationType whichValidationType() =>
       _ParameterValidation_ValidationTypeByTag[$_whichOneof(0)];
   void clearValidationType() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   RegexValidation get regex => $_getN(0);
+  @$pb.TagNumber(1)
   set regex(RegexValidation v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRegex() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRegex() => clearField(1);
+  @$pb.TagNumber(1)
+  RegexValidation ensureRegex() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   ValueValidation get values => $_getN(1);
+  @$pb.TagNumber(2)
   set values(ValueValidation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValues() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValues() => clearField(2);
+  @$pb.TagNumber(2)
+  ValueValidation ensureValues() => $_ensure(1);
 }
 
 class RegexValidation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegexValidation',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'regexes')
     ..hasRequiredFields = false;
 
@@ -578,16 +700,19 @@ class RegexValidation extends $pb.GeneratedMessage {
   RegexValidation createEmptyInstance() => create();
   static $pb.PbList<RegexValidation> createRepeated() =>
       $pb.PbList<RegexValidation>();
-  static RegexValidation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RegexValidation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegexValidation>(create);
   static RegexValidation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get regexes => $_getList(0);
 }
 
 class ValueValidation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ValueValidation',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'values')
     ..hasRequiredFields = false;
 
@@ -608,46 +733,38 @@ class ValueValidation extends $pb.GeneratedMessage {
   ValueValidation createEmptyInstance() => create();
   static $pb.PbList<ValueValidation> createRepeated() =>
       $pb.PbList<ValueValidation>();
-  static ValueValidation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ValueValidation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ValueValidation>(create);
   static ValueValidation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get values => $_getList(0);
 }
 
 class WorkflowMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WorkflowMetadata',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'template')
     ..a<$core.int>(2, 'version', $pb.PbFieldType.O3)
-    ..a<ClusterOperation>(3, 'createCluster', $pb.PbFieldType.OM,
-        ClusterOperation.getDefault, ClusterOperation.create)
-    ..a<WorkflowGraph>(4, 'graph', $pb.PbFieldType.OM, WorkflowGraph.getDefault,
-        WorkflowGraph.create)
-    ..a<ClusterOperation>(5, 'deleteCluster', $pb.PbFieldType.OM,
-        ClusterOperation.getDefault, ClusterOperation.create)
-    ..e<WorkflowMetadata_State>(
-        6,
-        'state',
-        $pb.PbFieldType.OE,
-        WorkflowMetadata_State.UNKNOWN,
-        WorkflowMetadata_State.valueOf,
-        WorkflowMetadata_State.values)
+    ..aOM<ClusterOperation>(3, 'createCluster',
+        subBuilder: ClusterOperation.create)
+    ..aOM<WorkflowGraph>(4, 'graph', subBuilder: WorkflowGraph.create)
+    ..aOM<ClusterOperation>(5, 'deleteCluster',
+        subBuilder: ClusterOperation.create)
+    ..e<WorkflowMetadata_State>(6, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: WorkflowMetadata_State.UNKNOWN,
+        valueOf: WorkflowMetadata_State.valueOf,
+        enumValues: WorkflowMetadata_State.values)
     ..aOS(7, 'clusterName')
-    ..m<$core.String, $core.String>(
-        8,
-        'parameters',
-        'WorkflowMetadata.ParametersEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.dataproc.v1'))
-    ..a<$5.Timestamp>(9, 'startTime', $pb.PbFieldType.OM,
-        $5.Timestamp.getDefault, $5.Timestamp.create)
-    ..a<$5.Timestamp>(10, 'endTime', $pb.PbFieldType.OM,
-        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..m<$core.String, $core.String>(8, 'parameters',
+        entryClassName: 'WorkflowMetadata.ParametersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..aOM<$5.Timestamp>(9, 'startTime', subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(10, 'endTime', subBuilder: $5.Timestamp.create)
     ..aOS(11, 'clusterUuid')
     ..hasRequiredFields = false;
 
@@ -668,96 +785,149 @@ class WorkflowMetadata extends $pb.GeneratedMessage {
   WorkflowMetadata createEmptyInstance() => create();
   static $pb.PbList<WorkflowMetadata> createRepeated() =>
       $pb.PbList<WorkflowMetadata>();
-  static WorkflowMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WorkflowMetadata>(create);
   static WorkflowMetadata _defaultInstance;
 
-  $core.String get template => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get template => $_getSZ(0);
+  @$pb.TagNumber(1)
   set template($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTemplate() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTemplate() => clearField(1);
 
-  $core.int get version => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get version => $_getIZ(1);
+  @$pb.TagNumber(2)
   set version($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 
+  @$pb.TagNumber(3)
   ClusterOperation get createCluster => $_getN(2);
+  @$pb.TagNumber(3)
   set createCluster(ClusterOperation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCreateCluster() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCreateCluster() => clearField(3);
+  @$pb.TagNumber(3)
+  ClusterOperation ensureCreateCluster() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   WorkflowGraph get graph => $_getN(3);
+  @$pb.TagNumber(4)
   set graph(WorkflowGraph v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasGraph() => $_has(3);
+  @$pb.TagNumber(4)
   void clearGraph() => clearField(4);
+  @$pb.TagNumber(4)
+  WorkflowGraph ensureGraph() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   ClusterOperation get deleteCluster => $_getN(4);
+  @$pb.TagNumber(5)
   set deleteCluster(ClusterOperation v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDeleteCluster() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDeleteCluster() => clearField(5);
+  @$pb.TagNumber(5)
+  ClusterOperation ensureDeleteCluster() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   WorkflowMetadata_State get state => $_getN(5);
+  @$pb.TagNumber(6)
   set state(WorkflowMetadata_State v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasState() => $_has(5);
+  @$pb.TagNumber(6)
   void clearState() => clearField(6);
 
-  $core.String get clusterName => $_getS(6, '');
+  @$pb.TagNumber(7)
+  $core.String get clusterName => $_getSZ(6);
+  @$pb.TagNumber(7)
   set clusterName($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasClusterName() => $_has(6);
+  @$pb.TagNumber(7)
   void clearClusterName() => clearField(7);
 
+  @$pb.TagNumber(8)
   $core.Map<$core.String, $core.String> get parameters => $_getMap(7);
 
+  @$pb.TagNumber(9)
   $5.Timestamp get startTime => $_getN(8);
+  @$pb.TagNumber(9)
   set startTime($5.Timestamp v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasStartTime() => $_has(8);
+  @$pb.TagNumber(9)
   void clearStartTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $5.Timestamp ensureStartTime() => $_ensure(8);
 
+  @$pb.TagNumber(10)
   $5.Timestamp get endTime => $_getN(9);
+  @$pb.TagNumber(10)
   set endTime($5.Timestamp v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasEndTime() => $_has(9);
+  @$pb.TagNumber(10)
   void clearEndTime() => clearField(10);
+  @$pb.TagNumber(10)
+  $5.Timestamp ensureEndTime() => $_ensure(9);
 
-  $core.String get clusterUuid => $_getS(10, '');
+  @$pb.TagNumber(11)
+  $core.String get clusterUuid => $_getSZ(10);
+  @$pb.TagNumber(11)
   set clusterUuid($core.String v) {
     $_setString(10, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasClusterUuid() => $_has(10);
+  @$pb.TagNumber(11)
   void clearClusterUuid() => clearField(11);
 }
 
 class ClusterOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClusterOperation',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'operationId')
     ..aOS(2, 'error')
     ..aOB(3, 'done')
@@ -780,39 +950,54 @@ class ClusterOperation extends $pb.GeneratedMessage {
   ClusterOperation createEmptyInstance() => create();
   static $pb.PbList<ClusterOperation> createRepeated() =>
       $pb.PbList<ClusterOperation>();
-  static ClusterOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ClusterOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ClusterOperation>(create);
   static ClusterOperation _defaultInstance;
 
-  $core.String get operationId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get operationId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set operationId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperationId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperationId() => clearField(1);
 
-  $core.String get error => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get error => $_getSZ(1);
+  @$pb.TagNumber(2)
   set error($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
+  @$pb.TagNumber(2)
   void clearError() => clearField(2);
 
-  $core.bool get done => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get done => $_getBF(2);
+  @$pb.TagNumber(3)
   set done($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDone() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDone() => clearField(3);
 }
 
 class WorkflowGraph extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WorkflowGraph',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
-    ..pc<WorkflowNode>(1, 'nodes', $pb.PbFieldType.PM, WorkflowNode.create)
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
+    ..pc<WorkflowNode>(1, 'nodes', $pb.PbFieldType.PM,
+        subBuilder: WorkflowNode.create)
     ..hasRequiredFields = false;
 
   WorkflowGraph._() : super();
@@ -832,25 +1017,26 @@ class WorkflowGraph extends $pb.GeneratedMessage {
   WorkflowGraph createEmptyInstance() => create();
   static $pb.PbList<WorkflowGraph> createRepeated() =>
       $pb.PbList<WorkflowGraph>();
-  static WorkflowGraph getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowGraph getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WorkflowGraph>(create);
   static WorkflowGraph _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<WorkflowNode> get nodes => $_getList(0);
 }
 
 class WorkflowNode extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WorkflowNode',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'stepId')
     ..pPS(2, 'prerequisiteStepIds')
     ..aOS(3, 'jobId')
-    ..e<WorkflowNode_NodeState>(
-        5,
-        'state',
-        $pb.PbFieldType.OE,
-        WorkflowNode_NodeState.NODE_STATE_UNSPECIFIED,
-        WorkflowNode_NodeState.valueOf,
-        WorkflowNode_NodeState.values)
+    ..e<WorkflowNode_NodeState>(5, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: WorkflowNode_NodeState.NODE_STATE_UNSPECIFIED,
+        valueOf: WorkflowNode_NodeState.valueOf,
+        enumValues: WorkflowNode_NodeState.values)
     ..aOS(6, 'error')
     ..hasRequiredFields = false;
 
@@ -871,51 +1057,70 @@ class WorkflowNode extends $pb.GeneratedMessage {
   WorkflowNode createEmptyInstance() => create();
   static $pb.PbList<WorkflowNode> createRepeated() =>
       $pb.PbList<WorkflowNode>();
-  static WorkflowNode getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WorkflowNode getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WorkflowNode>(create);
   static WorkflowNode _defaultInstance;
 
-  $core.String get stepId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get stepId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set stepId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStepId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStepId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get prerequisiteStepIds => $_getList(1);
 
-  $core.String get jobId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get jobId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set jobId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasJobId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearJobId() => clearField(3);
 
+  @$pb.TagNumber(5)
   WorkflowNode_NodeState get state => $_getN(3);
+  @$pb.TagNumber(5)
   set state(WorkflowNode_NodeState v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasState() => $_has(3);
+  @$pb.TagNumber(5)
   void clearState() => clearField(5);
 
-  $core.String get error => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get error => $_getSZ(4);
+  @$pb.TagNumber(6)
   set error($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasError() => $_has(4);
+  @$pb.TagNumber(6)
   void clearError() => clearField(6);
 }
 
 class CreateWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateWorkflowTemplateRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<WorkflowTemplate>(2, 'template', $pb.PbFieldType.OM,
-        WorkflowTemplate.getDefault, WorkflowTemplate.create)
+    ..aOM<WorkflowTemplate>(2, 'template', subBuilder: WorkflowTemplate.create)
     ..hasRequiredFields = false;
 
   CreateWorkflowTemplateRequest._() : super();
@@ -939,31 +1144,43 @@ class CreateWorkflowTemplateRequest extends $pb.GeneratedMessage {
   CreateWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<CreateWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<CreateWorkflowTemplateRequest>();
-  static CreateWorkflowTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateWorkflowTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateWorkflowTemplateRequest>(create);
   static CreateWorkflowTemplateRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   WorkflowTemplate get template => $_getN(1);
+  @$pb.TagNumber(2)
   set template(WorkflowTemplate v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTemplate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  WorkflowTemplate ensureTemplate() => $_ensure(1);
 }
 
 class GetWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetWorkflowTemplateRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'version', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -988,44 +1205,49 @@ class GetWorkflowTemplateRequest extends $pb.GeneratedMessage {
   GetWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<GetWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<GetWorkflowTemplateRequest>();
-  static GetWorkflowTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetWorkflowTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetWorkflowTemplateRequest>(create);
   static GetWorkflowTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get version => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get version => $_getIZ(1);
+  @$pb.TagNumber(2)
   set version($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 }
 
 class InstantiateWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InstantiateWorkflowTemplateRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'version', $pb.PbFieldType.O3)
     ..aOS(5, 'requestId')
-    ..m<$core.String, $core.String>(
-        6,
-        'parameters',
-        'InstantiateWorkflowTemplateRequest.ParametersEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.dataproc.v1'))
+    ..m<$core.String, $core.String>(6, 'parameters',
+        entryClassName: 'InstantiateWorkflowTemplateRequest.ParametersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.dataproc.v1'))
     ..hasRequiredFields = false;
 
   InstantiateWorkflowTemplateRequest._() : super();
@@ -1049,44 +1271,59 @@ class InstantiateWorkflowTemplateRequest extends $pb.GeneratedMessage {
   InstantiateWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<InstantiateWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<InstantiateWorkflowTemplateRequest>();
-  static InstantiateWorkflowTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InstantiateWorkflowTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InstantiateWorkflowTemplateRequest>(
+          create);
   static InstantiateWorkflowTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get version => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get version => $_getIZ(1);
+  @$pb.TagNumber(2)
   set version($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 
-  $core.String get requestId => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get requestId => $_getSZ(2);
+  @$pb.TagNumber(5)
   set requestId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasRequestId() => $_has(2);
+  @$pb.TagNumber(5)
   void clearRequestId() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.Map<$core.String, $core.String> get parameters => $_getMap(3);
 }
 
 class InstantiateInlineWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'InstantiateInlineWorkflowTemplateRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<WorkflowTemplate>(2, 'template', $pb.PbFieldType.OM,
-        WorkflowTemplate.getDefault, WorkflowTemplate.create)
+    ..aOM<WorkflowTemplate>(2, 'template', subBuilder: WorkflowTemplate.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -1113,41 +1350,57 @@ class InstantiateInlineWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static $pb.PbList<InstantiateInlineWorkflowTemplateRequest>
       createRepeated() =>
           $pb.PbList<InstantiateInlineWorkflowTemplateRequest>();
+  @$core.pragma('dart2js:noInline')
   static InstantiateInlineWorkflowTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          InstantiateInlineWorkflowTemplateRequest>(create);
   static InstantiateInlineWorkflowTemplateRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   WorkflowTemplate get template => $_getN(1);
+  @$pb.TagNumber(2)
   set template(WorkflowTemplate v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTemplate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTemplate() => clearField(2);
+  @$pb.TagNumber(2)
+  WorkflowTemplate ensureTemplate() => $_ensure(1);
 
-  $core.String get requestId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get requestId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set requestId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRequestId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRequestId() => clearField(3);
 }
 
 class UpdateWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateWorkflowTemplateRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
-    ..a<WorkflowTemplate>(1, 'template', $pb.PbFieldType.OM,
-        WorkflowTemplate.getDefault, WorkflowTemplate.create)
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
+    ..aOM<WorkflowTemplate>(1, 'template', subBuilder: WorkflowTemplate.create)
     ..hasRequiredFields = false;
 
   UpdateWorkflowTemplateRequest._() : super();
@@ -1171,23 +1424,31 @@ class UpdateWorkflowTemplateRequest extends $pb.GeneratedMessage {
   UpdateWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<UpdateWorkflowTemplateRequest>();
-  static UpdateWorkflowTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateWorkflowTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateWorkflowTemplateRequest>(create);
   static UpdateWorkflowTemplateRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   WorkflowTemplate get template => $_getN(0);
+  @$pb.TagNumber(1)
   set template(WorkflowTemplate v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTemplate() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTemplate() => clearField(1);
+  @$pb.TagNumber(1)
+  WorkflowTemplate ensureTemplate() => $_ensure(0);
 }
 
 class ListWorkflowTemplatesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListWorkflowTemplatesRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1214,41 +1475,55 @@ class ListWorkflowTemplatesRequest extends $pb.GeneratedMessage {
   ListWorkflowTemplatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListWorkflowTemplatesRequest> createRepeated() =>
       $pb.PbList<ListWorkflowTemplatesRequest>();
-  static ListWorkflowTemplatesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListWorkflowTemplatesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListWorkflowTemplatesRequest>(create);
   static ListWorkflowTemplatesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListWorkflowTemplatesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListWorkflowTemplatesResponse',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
-    ..pc<WorkflowTemplate>(
-        1, 'templates', $pb.PbFieldType.PM, WorkflowTemplate.create)
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
+    ..pc<WorkflowTemplate>(1, 'templates', $pb.PbFieldType.PM,
+        subBuilder: WorkflowTemplate.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1273,25 +1548,32 @@ class ListWorkflowTemplatesResponse extends $pb.GeneratedMessage {
   ListWorkflowTemplatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListWorkflowTemplatesResponse> createRepeated() =>
       $pb.PbList<ListWorkflowTemplatesResponse>();
-  static ListWorkflowTemplatesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListWorkflowTemplatesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListWorkflowTemplatesResponse>(create);
   static ListWorkflowTemplatesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<WorkflowTemplate> get templates => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteWorkflowTemplateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteWorkflowTemplateRequest',
-      package: const $pb.PackageName('google.cloud.dataproc.v1'))
+      package: const $pb.PackageName('google.cloud.dataproc.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'version', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -1317,23 +1599,32 @@ class DeleteWorkflowTemplateRequest extends $pb.GeneratedMessage {
   DeleteWorkflowTemplateRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteWorkflowTemplateRequest> createRepeated() =>
       $pb.PbList<DeleteWorkflowTemplateRequest>();
-  static DeleteWorkflowTemplateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteWorkflowTemplateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteWorkflowTemplateRequest>(create);
   static DeleteWorkflowTemplateRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get version => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get version => $_getIZ(1);
+  @$pb.TagNumber(2)
   set version($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 }

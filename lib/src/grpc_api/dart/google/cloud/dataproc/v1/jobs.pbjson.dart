@@ -64,16 +64,24 @@ const HadoopJob$json = {
       '10': 'mainJarFileUri'
     },
     {'1': 'main_class', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'mainClass'},
-    {'1': 'args', '3': 3, '4': 3, '5': 9, '10': 'args'},
-    {'1': 'jar_file_uris', '3': 4, '4': 3, '5': 9, '10': 'jarFileUris'},
-    {'1': 'file_uris', '3': 5, '4': 3, '5': 9, '10': 'fileUris'},
-    {'1': 'archive_uris', '3': 6, '4': 3, '5': 9, '10': 'archiveUris'},
+    {'1': 'args', '3': 3, '4': 3, '5': 9, '8': {}, '10': 'args'},
+    {
+      '1': 'jar_file_uris',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'jarFileUris'
+    },
+    {'1': 'file_uris', '3': 5, '4': 3, '5': 9, '8': {}, '10': 'fileUris'},
+    {'1': 'archive_uris', '3': 6, '4': 3, '5': 9, '8': {}, '10': 'archiveUris'},
     {
       '1': 'properties',
       '3': 7,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.HadoopJob.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
     {
@@ -82,6 +90,7 @@ const HadoopJob$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.LoggingConfig',
+      '8': {},
       '10': 'loggingConfig'
     },
   ],
@@ -112,16 +121,24 @@ const SparkJob$json = {
       '10': 'mainJarFileUri'
     },
     {'1': 'main_class', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'mainClass'},
-    {'1': 'args', '3': 3, '4': 3, '5': 9, '10': 'args'},
-    {'1': 'jar_file_uris', '3': 4, '4': 3, '5': 9, '10': 'jarFileUris'},
-    {'1': 'file_uris', '3': 5, '4': 3, '5': 9, '10': 'fileUris'},
-    {'1': 'archive_uris', '3': 6, '4': 3, '5': 9, '10': 'archiveUris'},
+    {'1': 'args', '3': 3, '4': 3, '5': 9, '8': {}, '10': 'args'},
+    {
+      '1': 'jar_file_uris',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'jarFileUris'
+    },
+    {'1': 'file_uris', '3': 5, '4': 3, '5': 9, '8': {}, '10': 'fileUris'},
+    {'1': 'archive_uris', '3': 6, '4': 3, '5': 9, '8': {}, '10': 'archiveUris'},
     {
       '1': 'properties',
       '3': 7,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.SparkJob.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
     {
@@ -130,6 +147,7 @@ const SparkJob$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.LoggingConfig',
+      '8': {},
       '10': 'loggingConfig'
     },
   ],
@@ -156,19 +174,35 @@ const PySparkJob$json = {
       '3': 1,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'mainPythonFileUri'
     },
-    {'1': 'args', '3': 2, '4': 3, '5': 9, '10': 'args'},
-    {'1': 'python_file_uris', '3': 3, '4': 3, '5': 9, '10': 'pythonFileUris'},
-    {'1': 'jar_file_uris', '3': 4, '4': 3, '5': 9, '10': 'jarFileUris'},
-    {'1': 'file_uris', '3': 5, '4': 3, '5': 9, '10': 'fileUris'},
-    {'1': 'archive_uris', '3': 6, '4': 3, '5': 9, '10': 'archiveUris'},
+    {'1': 'args', '3': 2, '4': 3, '5': 9, '8': {}, '10': 'args'},
+    {
+      '1': 'python_file_uris',
+      '3': 3,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'pythonFileUris'
+    },
+    {
+      '1': 'jar_file_uris',
+      '3': 4,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'jarFileUris'
+    },
+    {'1': 'file_uris', '3': 5, '4': 3, '5': 9, '8': {}, '10': 'fileUris'},
+    {'1': 'archive_uris', '3': 6, '4': 3, '5': 9, '8': {}, '10': 'archiveUris'},
     {
       '1': 'properties',
       '3': 7,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.PySparkJob.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
     {
@@ -177,6 +211,7 @@ const PySparkJob$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.LoggingConfig',
+      '8': {},
       '10': 'loggingConfig'
     },
   ],
@@ -195,7 +230,7 @@ const PySparkJob_PropertiesEntry$json = {
 const QueryList$json = {
   '1': 'QueryList',
   '2': [
-    {'1': 'queries', '3': 1, '4': 3, '5': 9, '10': 'queries'},
+    {'1': 'queries', '3': 1, '4': 3, '5': 9, '8': {}, '10': 'queries'},
   ],
 };
 
@@ -224,6 +259,7 @@ const HiveJob$json = {
       '3': 3,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'continueOnFailure'
     },
     {
@@ -232,6 +268,7 @@ const HiveJob$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.HiveJob.ScriptVariablesEntry',
+      '8': {},
       '10': 'scriptVariables'
     },
     {
@@ -240,9 +277,17 @@ const HiveJob$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.HiveJob.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
-    {'1': 'jar_file_uris', '3': 6, '4': 3, '5': 9, '10': 'jarFileUris'},
+    {
+      '1': 'jar_file_uris',
+      '3': 6,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'jarFileUris'
+    },
   ],
   '3': [HiveJob_ScriptVariablesEntry$json, HiveJob_PropertiesEntry$json],
   '8': [
@@ -294,6 +339,7 @@ const SparkSqlJob$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.SparkSqlJob.ScriptVariablesEntry',
+      '8': {},
       '10': 'scriptVariables'
     },
     {
@@ -302,15 +348,24 @@ const SparkSqlJob$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.SparkSqlJob.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
-    {'1': 'jar_file_uris', '3': 56, '4': 3, '5': 9, '10': 'jarFileUris'},
+    {
+      '1': 'jar_file_uris',
+      '3': 56,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'jarFileUris'
+    },
     {
       '1': 'logging_config',
       '3': 6,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.LoggingConfig',
+      '8': {},
       '10': 'loggingConfig'
     },
   ],
@@ -366,6 +421,7 @@ const PigJob$json = {
       '3': 3,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'continueOnFailure'
     },
     {
@@ -374,6 +430,7 @@ const PigJob$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.PigJob.ScriptVariablesEntry',
+      '8': {},
       '10': 'scriptVariables'
     },
     {
@@ -382,15 +439,24 @@ const PigJob$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.PigJob.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
-    {'1': 'jar_file_uris', '3': 6, '4': 3, '5': 9, '10': 'jarFileUris'},
+    {
+      '1': 'jar_file_uris',
+      '3': 6,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'jarFileUris'
+    },
     {
       '1': 'logging_config',
       '3': 7,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.LoggingConfig',
+      '8': {},
       '10': 'loggingConfig'
     },
   ],
@@ -421,8 +487,8 @@ const PigJob_PropertiesEntry$json = {
 const JobPlacement$json = {
   '1': 'JobPlacement',
   '2': [
-    {'1': 'cluster_name', '3': 1, '4': 1, '5': 9, '10': 'clusterName'},
-    {'1': 'cluster_uuid', '3': 2, '4': 1, '5': 9, '10': 'clusterUuid'},
+    {'1': 'cluster_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
+    {'1': 'cluster_uuid', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'clusterUuid'},
   ],
 };
 
@@ -435,15 +501,17 @@ const JobStatus$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1.JobStatus.State',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'details', '3': 2, '4': 1, '5': 9, '10': 'details'},
+    {'1': 'details', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'details'},
     {
       '1': 'state_start_time',
       '3': 6,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'stateStartTime'
     },
     {
@@ -452,6 +520,7 @@ const JobStatus$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1.JobStatus.Substate',
+      '8': {},
       '10': 'substate'
     },
   ],
@@ -487,25 +556,26 @@ const JobStatus_Substate$json = {
 const JobReference$json = {
   '1': 'JobReference',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };
 
 const YarnApplication$json = {
   '1': 'YarnApplication',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'state',
       '3': 2,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1.YarnApplication.State',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'progress', '3': 3, '4': 1, '5': 2, '10': 'progress'},
-    {'1': 'tracking_url', '3': 4, '4': 1, '5': 9, '10': 'trackingUrl'},
+    {'1': 'progress', '3': 3, '4': 1, '5': 2, '8': {}, '10': 'progress'},
+    {'1': 'tracking_url', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'trackingUrl'},
   ],
   '4': [YarnApplication_State$json],
 };
@@ -534,6 +604,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.JobReference',
+      '8': {},
       '10': 'reference'
     },
     {
@@ -542,6 +613,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.JobPlacement',
+      '8': {},
       '10': 'placement'
     },
     {
@@ -604,6 +676,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.JobStatus',
+      '8': {},
       '10': 'status'
     },
     {
@@ -612,6 +685,7 @@ const Job$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.JobStatus',
+      '8': {},
       '10': 'statusHistory'
     },
     {
@@ -620,6 +694,7 @@ const Job$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.YarnApplication',
+      '8': {},
       '10': 'yarnApplications'
     },
     {
@@ -627,6 +702,7 @@ const Job$json = {
       '3': 17,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'driverOutputResourceUri'
     },
     {
@@ -634,6 +710,7 @@ const Job$json = {
       '3': 15,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'driverControlFilesUri'
     },
     {
@@ -642,6 +719,7 @@ const Job$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.Job.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
     {
@@ -650,9 +728,10 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.JobScheduling',
+      '8': {},
       '10': 'scheduling'
     },
-    {'1': 'job_uuid', '3': 22, '4': 1, '5': 9, '10': 'jobUuid'},
+    {'1': 'job_uuid', '3': 22, '4': 1, '5': 9, '8': {}, '10': 'jobUuid'},
   ],
   '3': [Job_LabelsEntry$json],
   '8': [
@@ -677,6 +756,7 @@ const JobScheduling$json = {
       '3': 1,
       '4': 1,
       '5': 5,
+      '8': {},
       '10': 'maxFailuresPerHour'
     },
   ],
@@ -685,46 +765,48 @@ const JobScheduling$json = {
 const SubmitJobRequest$json = {
   '1': 'SubmitJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
     {
       '1': 'job',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.Job',
+      '8': {},
       '10': 'job'
     },
-    {'1': 'request_id', '3': 4, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'request_id', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'requestId'},
   ],
 };
 
 const GetJobRequest$json = {
   '1': 'GetJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };
 
 const ListJobsRequest$json = {
   '1': 'ListJobsRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 6, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    {'1': 'cluster_name', '3': 4, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
+    {'1': 'cluster_name', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
     {
       '1': 'job_state_matcher',
       '3': 5,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1.ListJobsRequest.JobStateMatcher',
+      '8': {},
       '10': 'jobStateMatcher'
     },
-    {'1': 'filter', '3': 7, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'filter', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'filter'},
   ],
   '4': [ListJobsRequest_JobStateMatcher$json],
 };
@@ -741,15 +823,16 @@ const ListJobsRequest_JobStateMatcher$json = {
 const UpdateJobRequest$json = {
   '1': 'UpdateJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 2, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 3, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
     {
       '1': 'job',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.Job',
+      '8': {},
       '10': 'job'
     },
     {
@@ -758,6 +841,7 @@ const UpdateJobRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -772,26 +856,34 @@ const ListJobsResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1.Job',
+      '8': {},
       '10': 'jobs'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const CancelJobRequest$json = {
   '1': 'CancelJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };
 
 const DeleteJobRequest$json = {
   '1': 'DeleteJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };

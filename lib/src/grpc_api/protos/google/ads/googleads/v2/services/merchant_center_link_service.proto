@@ -38,7 +38,7 @@ option ruby_package = "Google::Ads::GoogleAds::V2::Services";
 service MerchantCenterLinkService {
   option (google.api.default_host) = "googleads.googleapis.com";
 
-  // Returns Merchant Center links available tor this customer.
+  // Returns Merchant Center links available for this customer.
   rpc ListMerchantCenterLinks(ListMerchantCenterLinksRequest) returns (ListMerchantCenterLinksResponse) {
     option (google.api.http) = {
       get: "/v2/customers/{customer_id=*}/merchantCenterLinks"

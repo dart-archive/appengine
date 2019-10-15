@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,30 +17,26 @@ import '../enums/custom_interest_member_type.pbenum.dart' as $3;
 
 class CustomInterest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomInterest',
-      package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v1.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
-    ..a<$0.Int64Value>(2, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
-        $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(2, 'id', subBuilder: $0.Int64Value.create)
     ..e<$1.CustomInterestStatusEnum_CustomInterestStatus>(
-        3,
-        'status',
-        $pb.PbFieldType.OE,
-        $1.CustomInterestStatusEnum_CustomInterestStatus.UNSPECIFIED,
-        $1.CustomInterestStatusEnum_CustomInterestStatus.valueOf,
-        $1.CustomInterestStatusEnum_CustomInterestStatus.values)
-    ..a<$0.StringValue>(4, 'name', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+        3, 'status', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $1.CustomInterestStatusEnum_CustomInterestStatus.UNSPECIFIED,
+        valueOf: $1.CustomInterestStatusEnum_CustomInterestStatus.valueOf,
+        enumValues: $1.CustomInterestStatusEnum_CustomInterestStatus.values)
+    ..aOM<$0.StringValue>(4, 'name', subBuilder: $0.StringValue.create)
     ..e<$2.CustomInterestTypeEnum_CustomInterestType>(
-        5,
-        'type',
-        $pb.PbFieldType.OE,
-        $2.CustomInterestTypeEnum_CustomInterestType.UNSPECIFIED,
-        $2.CustomInterestTypeEnum_CustomInterestType.valueOf,
-        $2.CustomInterestTypeEnum_CustomInterestType.values)
-    ..a<$0.StringValue>(6, 'description', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<CustomInterestMember>(
-        7, 'members', $pb.PbFieldType.PM, CustomInterestMember.create)
+        5, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $2.CustomInterestTypeEnum_CustomInterestType.UNSPECIFIED,
+        valueOf: $2.CustomInterestTypeEnum_CustomInterestType.valueOf,
+        enumValues: $2.CustomInterestTypeEnum_CustomInterestType.values)
+    ..aOM<$0.StringValue>(6, 'description', subBuilder: $0.StringValue.create)
+    ..pc<CustomInterestMember>(7, 'members', $pb.PbFieldType.PM,
+        subBuilder: CustomInterestMember.create)
     ..hasRequiredFields = false;
 
   CustomInterest._() : super();
@@ -61,72 +56,106 @@ class CustomInterest extends $pb.GeneratedMessage {
   CustomInterest createEmptyInstance() => create();
   static $pb.PbList<CustomInterest> createRepeated() =>
       $pb.PbList<CustomInterest>();
-  static CustomInterest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomInterest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomInterest>(create);
   static CustomInterest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureId() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $1.CustomInterestStatusEnum_CustomInterestStatus get status => $_getN(2);
+  @$pb.TagNumber(3)
   set status($1.CustomInterestStatusEnum_CustomInterestStatus v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
 
+  @$pb.TagNumber(4)
   $0.StringValue get name => $_getN(3);
+  @$pb.TagNumber(4)
   set name($0.StringValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
+  @$pb.TagNumber(4)
   void clearName() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.StringValue ensureName() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $2.CustomInterestTypeEnum_CustomInterestType get type => $_getN(4);
+  @$pb.TagNumber(5)
   set type($2.CustomInterestTypeEnum_CustomInterestType v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasType() => $_has(4);
+  @$pb.TagNumber(5)
   void clearType() => clearField(5);
 
+  @$pb.TagNumber(6)
   $0.StringValue get description => $_getN(5);
+  @$pb.TagNumber(6)
   set description($0.StringValue v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDescription() => $_has(5);
+  @$pb.TagNumber(6)
   void clearDescription() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.StringValue ensureDescription() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $core.List<CustomInterestMember> get members => $_getList(6);
 }
 
 class CustomInterestMember extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomInterestMember',
-      package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v1.resources'),
+      createEmptyInstance: create)
     ..e<$3.CustomInterestMemberTypeEnum_CustomInterestMemberType>(
-        1,
-        'memberType',
-        $pb.PbFieldType.OE,
-        $3.CustomInterestMemberTypeEnum_CustomInterestMemberType.UNSPECIFIED,
-        $3.CustomInterestMemberTypeEnum_CustomInterestMemberType.valueOf,
-        $3.CustomInterestMemberTypeEnum_CustomInterestMemberType.values)
-    ..a<$0.StringValue>(2, 'parameter', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+        1, 'memberType', $pb.PbFieldType.OE,
+        defaultOrMaker: $3
+            .CustomInterestMemberTypeEnum_CustomInterestMemberType.UNSPECIFIED,
+        valueOf:
+            $3.CustomInterestMemberTypeEnum_CustomInterestMemberType.valueOf,
+        enumValues:
+            $3.CustomInterestMemberTypeEnum_CustomInterestMemberType.values)
+    ..aOM<$0.StringValue>(2, 'parameter', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   CustomInterestMember._() : super();
@@ -147,24 +176,35 @@ class CustomInterestMember extends $pb.GeneratedMessage {
   CustomInterestMember createEmptyInstance() => create();
   static $pb.PbList<CustomInterestMember> createRepeated() =>
       $pb.PbList<CustomInterestMember>();
-  static CustomInterestMember getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomInterestMember getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomInterestMember>(create);
   static CustomInterestMember _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.CustomInterestMemberTypeEnum_CustomInterestMemberType get memberType =>
       $_getN(0);
+  @$pb.TagNumber(1)
   set memberType($3.CustomInterestMemberTypeEnum_CustomInterestMemberType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMemberType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMemberType() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.StringValue get parameter => $_getN(1);
+  @$pb.TagNumber(2)
   set parameter($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParameter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParameter() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureParameter() => $_ensure(1);
 }

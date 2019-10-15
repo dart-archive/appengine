@@ -8,13 +8,14 @@
 const CreateDeviceRegistryRequest$json = {
   '1': 'CreateDeviceRegistryRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'device_registry',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.iot.v1.DeviceRegistry',
+      '8': {},
       '10': 'deviceRegistry'
     },
   ],
@@ -23,14 +24,14 @@ const CreateDeviceRegistryRequest$json = {
 const GetDeviceRegistryRequest$json = {
   '1': 'GetDeviceRegistryRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const DeleteDeviceRegistryRequest$json = {
   '1': 'DeleteDeviceRegistryRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -43,6 +44,7 @@ const UpdateDeviceRegistryRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.iot.v1.DeviceRegistry',
+      '8': {},
       '10': 'deviceRegistry'
     },
     {
@@ -51,6 +53,7 @@ const UpdateDeviceRegistryRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -59,7 +62,7 @@ const UpdateDeviceRegistryRequest$json = {
 const ListDeviceRegistriesRequest$json = {
   '1': 'ListDeviceRegistriesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
@@ -83,13 +86,14 @@ const ListDeviceRegistriesResponse$json = {
 const CreateDeviceRequest$json = {
   '1': 'CreateDeviceRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'device',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.iot.v1.Device',
+      '8': {},
       '10': 'device'
     },
   ],
@@ -98,7 +102,7 @@ const CreateDeviceRequest$json = {
 const GetDeviceRequest$json = {
   '1': 'GetDeviceRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'field_mask',
       '3': 2,
@@ -119,6 +123,7 @@ const UpdateDeviceRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.iot.v1.Device',
+      '8': {},
       '10': 'device'
     },
     {
@@ -127,6 +132,7 @@ const UpdateDeviceRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -135,14 +141,14 @@ const UpdateDeviceRequest$json = {
 const DeleteDeviceRequest$json = {
   '1': 'DeleteDeviceRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListDevicesRequest$json = {
   '1': 'ListDevicesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'device_num_ids', '3': 2, '4': 3, '5': 4, '10': 'deviceNumIds'},
     {'1': 'device_ids', '3': 3, '4': 3, '5': 9, '10': 'deviceIds'},
     {
@@ -218,16 +224,16 @@ const ListDevicesResponse$json = {
 const ModifyCloudToDeviceConfigRequest$json = {
   '1': 'ModifyCloudToDeviceConfigRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'version_to_update', '3': 2, '4': 1, '5': 3, '10': 'versionToUpdate'},
-    {'1': 'binary_data', '3': 3, '4': 1, '5': 12, '10': 'binaryData'},
+    {'1': 'binary_data', '3': 3, '4': 1, '5': 12, '8': {}, '10': 'binaryData'},
   ],
 };
 
 const ListDeviceConfigVersionsRequest$json = {
   '1': 'ListDeviceConfigVersionsRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'num_versions', '3': 2, '4': 1, '5': 5, '10': 'numVersions'},
   ],
 };
@@ -249,7 +255,7 @@ const ListDeviceConfigVersionsResponse$json = {
 const ListDeviceStatesRequest$json = {
   '1': 'ListDeviceStatesRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'num_states', '3': 2, '4': 1, '5': 5, '10': 'numStates'},
   ],
 };
@@ -271,8 +277,8 @@ const ListDeviceStatesResponse$json = {
 const SendCommandToDeviceRequest$json = {
   '1': 'SendCommandToDeviceRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'binary_data', '3': 2, '4': 1, '5': 12, '10': 'binaryData'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'binary_data', '3': 2, '4': 1, '5': 12, '8': {}, '10': 'binaryData'},
     {'1': 'subfolder', '3': 3, '4': 1, '5': 9, '10': 'subfolder'},
   ],
 };
@@ -284,9 +290,9 @@ const SendCommandToDeviceResponse$json = {
 const BindDeviceToGatewayRequest$json = {
   '1': 'BindDeviceToGatewayRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'gateway_id', '3': 2, '4': 1, '5': 9, '10': 'gatewayId'},
-    {'1': 'device_id', '3': 3, '4': 1, '5': 9, '10': 'deviceId'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'gateway_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'gatewayId'},
+    {'1': 'device_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'deviceId'},
   ],
 };
 
@@ -297,9 +303,9 @@ const BindDeviceToGatewayResponse$json = {
 const UnbindDeviceFromGatewayRequest$json = {
   '1': 'UnbindDeviceFromGatewayRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'gateway_id', '3': 2, '4': 1, '5': 9, '10': 'gatewayId'},
-    {'1': 'device_id', '3': 3, '4': 1, '5': 9, '10': 'deviceId'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'gateway_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'gatewayId'},
+    {'1': 'device_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'deviceId'},
   ],
 };
 

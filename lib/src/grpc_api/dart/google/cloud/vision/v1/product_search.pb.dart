@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,12 +15,13 @@ import 'product_search_service.pb.dart' as $2;
 
 class ProductSearchParams extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSearchParams',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(6, 'productSet')
     ..pPS(7, 'productCategories')
     ..aOS(8, 'filter')
-    ..a<$3.BoundingPoly>(9, 'boundingPoly', $pb.PbFieldType.OM,
-        $3.BoundingPoly.getDefault, $3.BoundingPoly.create)
+    ..aOM<$3.BoundingPoly>(9, 'boundingPoly',
+        subBuilder: $3.BoundingPoly.create)
     ..hasRequiredFields = false;
 
   ProductSearchParams._() : super();
@@ -41,43 +41,59 @@ class ProductSearchParams extends $pb.GeneratedMessage {
   ProductSearchParams createEmptyInstance() => create();
   static $pb.PbList<ProductSearchParams> createRepeated() =>
       $pb.PbList<ProductSearchParams>();
-  static ProductSearchParams getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductSearchParams getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductSearchParams>(create);
   static ProductSearchParams _defaultInstance;
 
-  $core.String get productSet => $_getS(0, '');
+  @$pb.TagNumber(6)
+  $core.String get productSet => $_getSZ(0);
+  @$pb.TagNumber(6)
   set productSet($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasProductSet() => $_has(0);
+  @$pb.TagNumber(6)
   void clearProductSet() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.List<$core.String> get productCategories => $_getList(1);
 
-  $core.String get filter => $_getS(2, '');
+  @$pb.TagNumber(8)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(8)
   set filter($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(8)
   void clearFilter() => clearField(8);
 
+  @$pb.TagNumber(9)
   $3.BoundingPoly get boundingPoly => $_getN(3);
+  @$pb.TagNumber(9)
   set boundingPoly($3.BoundingPoly v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasBoundingPoly() => $_has(3);
+  @$pb.TagNumber(9)
   void clearBoundingPoly() => clearField(9);
+  @$pb.TagNumber(9)
+  $3.BoundingPoly ensureBoundingPoly() => $_ensure(3);
 }
 
 class ProductSearchResults_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.Result',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..a<$2.Product>(1, 'product', $pb.PbFieldType.OM, $2.Product.getDefault,
-        $2.Product.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Product>(1, 'product', subBuilder: $2.Product.create)
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..aOS(3, 'image')
     ..hasRequiredFields = false;
@@ -103,39 +119,55 @@ class ProductSearchResults_Result extends $pb.GeneratedMessage {
   ProductSearchResults_Result createEmptyInstance() => create();
   static $pb.PbList<ProductSearchResults_Result> createRepeated() =>
       $pb.PbList<ProductSearchResults_Result>();
-  static ProductSearchResults_Result getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductSearchResults_Result getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductSearchResults_Result>(create);
   static ProductSearchResults_Result _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.Product get product => $_getN(0);
+  @$pb.TagNumber(1)
   set product($2.Product v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProduct() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProduct() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Product ensureProduct() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.double get score => $_getN(1);
+  @$pb.TagNumber(2)
   set score($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScore() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScore() => clearField(2);
 
-  $core.String get image => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get image => $_getSZ(2);
+  @$pb.TagNumber(3)
   set image($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasImage() => $_has(2);
+  @$pb.TagNumber(3)
   void clearImage() => clearField(3);
 }
 
 class ProductSearchResults_ObjectAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.ObjectAnnotation',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'mid')
     ..aOS(2, 'languageCode')
     ..aOS(3, 'name')
@@ -164,53 +196,73 @@ class ProductSearchResults_ObjectAnnotation extends $pb.GeneratedMessage {
   ProductSearchResults_ObjectAnnotation createEmptyInstance() => create();
   static $pb.PbList<ProductSearchResults_ObjectAnnotation> createRepeated() =>
       $pb.PbList<ProductSearchResults_ObjectAnnotation>();
+  @$core.pragma('dart2js:noInline')
   static ProductSearchResults_ObjectAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ProductSearchResults_ObjectAnnotation>(create);
   static ProductSearchResults_ObjectAnnotation _defaultInstance;
 
-  $core.String get mid => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get mid => $_getSZ(0);
+  @$pb.TagNumber(1)
   set mid($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMid() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMid() => clearField(1);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 
-  $core.String get name => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.double get score => $_getN(3);
+  @$pb.TagNumber(4)
   set score($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasScore() => $_has(3);
+  @$pb.TagNumber(4)
   void clearScore() => clearField(4);
 }
 
 class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductSearchResults.GroupedResult',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..a<$3.BoundingPoly>(1, 'boundingPoly', $pb.PbFieldType.OM,
-        $3.BoundingPoly.getDefault, $3.BoundingPoly.create)
-    ..pc<ProductSearchResults_Result>(
-        2, 'results', $pb.PbFieldType.PM, ProductSearchResults_Result.create)
-    ..pc<ProductSearchResults_ObjectAnnotation>(3, 'objectAnnotations',
-        $pb.PbFieldType.PM, ProductSearchResults_ObjectAnnotation.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.BoundingPoly>(1, 'boundingPoly',
+        subBuilder: $3.BoundingPoly.create)
+    ..pc<ProductSearchResults_Result>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: ProductSearchResults_Result.create)
+    ..pc<ProductSearchResults_ObjectAnnotation>(
+        3, 'objectAnnotations', $pb.PbFieldType.PM,
+        subBuilder: ProductSearchResults_ObjectAnnotation.create)
     ..hasRequiredFields = false;
 
   ProductSearchResults_GroupedResult._() : super();
@@ -234,33 +286,44 @@ class ProductSearchResults_GroupedResult extends $pb.GeneratedMessage {
   ProductSearchResults_GroupedResult createEmptyInstance() => create();
   static $pb.PbList<ProductSearchResults_GroupedResult> createRepeated() =>
       $pb.PbList<ProductSearchResults_GroupedResult>();
-  static ProductSearchResults_GroupedResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductSearchResults_GroupedResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductSearchResults_GroupedResult>(
+          create);
   static ProductSearchResults_GroupedResult _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.BoundingPoly get boundingPoly => $_getN(0);
+  @$pb.TagNumber(1)
   set boundingPoly($3.BoundingPoly v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBoundingPoly() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBoundingPoly() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.BoundingPoly ensureBoundingPoly() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<ProductSearchResults_Result> get results => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<ProductSearchResults_ObjectAnnotation> get objectAnnotations =>
       $_getList(2);
 }
 
 class ProductSearchResults extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSearchResults',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..a<$4.Timestamp>(2, 'indexTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
-    ..pc<ProductSearchResults_Result>(
-        5, 'results', $pb.PbFieldType.PM, ProductSearchResults_Result.create)
-    ..pc<ProductSearchResults_GroupedResult>(6, 'productGroupedResults',
-        $pb.PbFieldType.PM, ProductSearchResults_GroupedResult.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.Timestamp>(2, 'indexTime', subBuilder: $4.Timestamp.create)
+    ..pc<ProductSearchResults_Result>(5, 'results', $pb.PbFieldType.PM,
+        subBuilder: ProductSearchResults_Result.create)
+    ..pc<ProductSearchResults_GroupedResult>(
+        6, 'productGroupedResults', $pb.PbFieldType.PM,
+        subBuilder: ProductSearchResults_GroupedResult.create)
     ..hasRequiredFields = false;
 
   ProductSearchResults._() : super();
@@ -281,20 +344,29 @@ class ProductSearchResults extends $pb.GeneratedMessage {
   ProductSearchResults createEmptyInstance() => create();
   static $pb.PbList<ProductSearchResults> createRepeated() =>
       $pb.PbList<ProductSearchResults>();
-  static ProductSearchResults getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductSearchResults getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductSearchResults>(create);
   static ProductSearchResults _defaultInstance;
 
+  @$pb.TagNumber(2)
   $4.Timestamp get indexTime => $_getN(0);
+  @$pb.TagNumber(2)
   set indexTime($4.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIndexTime() => $_has(0);
+  @$pb.TagNumber(2)
   void clearIndexTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.Timestamp ensureIndexTime() => $_ensure(0);
 
+  @$pb.TagNumber(5)
   $core.List<ProductSearchResults_Result> get results => $_getList(1);
 
+  @$pb.TagNumber(6)
   $core.List<ProductSearchResults_GroupedResult> get productGroupedResults =>
       $_getList(2);
 }

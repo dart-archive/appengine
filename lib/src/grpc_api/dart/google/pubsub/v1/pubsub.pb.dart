@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../protobuf/duration.pb.dart' as $4;
 
 class MessageStoragePolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MessageStoragePolicy',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'allowedPersistenceRegions')
     ..hasRequiredFields = false;
 
@@ -38,29 +38,27 @@ class MessageStoragePolicy extends $pb.GeneratedMessage {
   MessageStoragePolicy createEmptyInstance() => create();
   static $pb.PbList<MessageStoragePolicy> createRepeated() =>
       $pb.PbList<MessageStoragePolicy>();
-  static MessageStoragePolicy getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MessageStoragePolicy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MessageStoragePolicy>(create);
   static MessageStoragePolicy _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get allowedPersistenceRegions => $_getList(0);
 }
 
 class Topic extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Topic',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..m<$core.String, $core.String>(
-        2,
-        'labels',
-        'Topic.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.pubsub.v1'))
-    ..a<MessageStoragePolicy>(3, 'messageStoragePolicy', $pb.PbFieldType.OM,
-        MessageStoragePolicy.getDefault, MessageStoragePolicy.create)
+    ..m<$core.String, $core.String>(2, 'labels',
+        entryClassName: 'Topic.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1'))
+    ..aOM<MessageStoragePolicy>(3, 'messageStoragePolicy',
+        subBuilder: MessageStoragePolicy.create)
     ..aOS(5, 'kmsKeyName')
     ..hasRequiredFields = false;
 
@@ -80,53 +78,65 @@ class Topic extends $pb.GeneratedMessage {
   static Topic create() => Topic._();
   Topic createEmptyInstance() => create();
   static $pb.PbList<Topic> createRepeated() => $pb.PbList<Topic>();
-  static Topic getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Topic getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Topic>(create);
   static Topic _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get labels => $_getMap(1);
 
+  @$pb.TagNumber(3)
   MessageStoragePolicy get messageStoragePolicy => $_getN(2);
+  @$pb.TagNumber(3)
   set messageStoragePolicy(MessageStoragePolicy v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMessageStoragePolicy() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMessageStoragePolicy() => clearField(3);
+  @$pb.TagNumber(3)
+  MessageStoragePolicy ensureMessageStoragePolicy() => $_ensure(2);
 
-  $core.String get kmsKeyName => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get kmsKeyName => $_getSZ(3);
+  @$pb.TagNumber(5)
   set kmsKeyName($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasKmsKeyName() => $_has(3);
+  @$pb.TagNumber(5)
   void clearKmsKeyName() => clearField(5);
 }
 
 class PubsubMessage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PubsubMessage',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'data', $pb.PbFieldType.OY)
-    ..m<$core.String, $core.String>(
-        2,
-        'attributes',
-        'PubsubMessage.AttributesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.pubsub.v1'))
+    ..m<$core.String, $core.String>(2, 'attributes',
+        entryClassName: 'PubsubMessage.AttributesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1'))
     ..aOS(3, 'messageId')
-    ..a<$2.Timestamp>(4, 'publishTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(4, 'publishTime', subBuilder: $2.Timestamp.create)
     ..aOS(5, 'orderingKey')
     ..hasRequiredFields = false;
 
@@ -147,47 +157,69 @@ class PubsubMessage extends $pb.GeneratedMessage {
   PubsubMessage createEmptyInstance() => create();
   static $pb.PbList<PubsubMessage> createRepeated() =>
       $pb.PbList<PubsubMessage>();
-  static PubsubMessage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PubsubMessage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PubsubMessage>(create);
   static PubsubMessage _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
+  @$pb.TagNumber(1)
   set data($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasData() => $_has(0);
+  @$pb.TagNumber(1)
   void clearData() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get attributes => $_getMap(1);
 
-  $core.String get messageId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get messageId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set messageId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMessageId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMessageId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $2.Timestamp get publishTime => $_getN(3);
+  @$pb.TagNumber(4)
   set publishTime($2.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPublishTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPublishTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.Timestamp ensurePublishTime() => $_ensure(3);
 
-  $core.String get orderingKey => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get orderingKey => $_getSZ(4);
+  @$pb.TagNumber(5)
   set orderingKey($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOrderingKey() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOrderingKey() => clearField(5);
 }
 
 class GetTopicRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTopicRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'topic')
     ..hasRequiredFields = false;
 
@@ -208,25 +240,30 @@ class GetTopicRequest extends $pb.GeneratedMessage {
   GetTopicRequest createEmptyInstance() => create();
   static $pb.PbList<GetTopicRequest> createRepeated() =>
       $pb.PbList<GetTopicRequest>();
-  static GetTopicRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTopicRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTopicRequest>(create);
   static GetTopicRequest _defaultInstance;
 
-  $core.String get topic => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
   set topic($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 }
 
 class UpdateTopicRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTopicRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..a<Topic>(1, 'topic', $pb.PbFieldType.OM, Topic.getDefault, Topic.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOM<Topic>(1, 'topic', subBuilder: Topic.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateTopicRequest._() : super();
@@ -246,32 +283,47 @@ class UpdateTopicRequest extends $pb.GeneratedMessage {
   UpdateTopicRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTopicRequest> createRepeated() =>
       $pb.PbList<UpdateTopicRequest>();
-  static UpdateTopicRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTopicRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTopicRequest>(create);
   static UpdateTopicRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Topic get topic => $_getN(0);
+  @$pb.TagNumber(1)
   set topic(Topic v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
+  @$pb.TagNumber(1)
+  Topic ensureTopic() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class PublishRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PublishRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'topic')
-    ..pc<PubsubMessage>(2, 'messages', $pb.PbFieldType.PM, PubsubMessage.create)
+    ..pc<PubsubMessage>(2, 'messages', $pb.PbFieldType.PM,
+        subBuilder: PubsubMessage.create)
     ..hasRequiredFields = false;
 
   PublishRequest._() : super();
@@ -291,23 +343,31 @@ class PublishRequest extends $pb.GeneratedMessage {
   PublishRequest createEmptyInstance() => create();
   static $pb.PbList<PublishRequest> createRepeated() =>
       $pb.PbList<PublishRequest>();
-  static PublishRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PublishRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PublishRequest>(create);
   static PublishRequest _defaultInstance;
 
-  $core.String get topic => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
   set topic($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<PubsubMessage> get messages => $_getList(1);
 }
 
 class PublishResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PublishResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'messageIds')
     ..hasRequiredFields = false;
 
@@ -328,16 +388,19 @@ class PublishResponse extends $pb.GeneratedMessage {
   PublishResponse createEmptyInstance() => create();
   static $pb.PbList<PublishResponse> createRepeated() =>
       $pb.PbList<PublishResponse>();
-  static PublishResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PublishResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PublishResponse>(create);
   static PublishResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get messageIds => $_getList(0);
 }
 
 class ListTopicsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTopicsRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'project')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -360,39 +423,53 @@ class ListTopicsRequest extends $pb.GeneratedMessage {
   ListTopicsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTopicsRequest> createRepeated() =>
       $pb.PbList<ListTopicsRequest>();
-  static ListTopicsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTopicsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTopicsRequest>(create);
   static ListTopicsRequest _defaultInstance;
 
-  $core.String get project => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get project => $_getSZ(0);
+  @$pb.TagNumber(1)
   set project($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProject() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProject() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListTopicsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTopicsResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..pc<Topic>(1, 'topics', $pb.PbFieldType.PM, Topic.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pc<Topic>(1, 'topics', $pb.PbFieldType.PM, subBuilder: Topic.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -413,25 +490,32 @@ class ListTopicsResponse extends $pb.GeneratedMessage {
   ListTopicsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTopicsResponse> createRepeated() =>
       $pb.PbList<ListTopicsResponse>();
-  static ListTopicsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTopicsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTopicsResponse>(create);
   static ListTopicsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Topic> get topics => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListTopicSubscriptionsRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'topic')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -458,39 +542,53 @@ class ListTopicSubscriptionsRequest extends $pb.GeneratedMessage {
   ListTopicSubscriptionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTopicSubscriptionsRequest> createRepeated() =>
       $pb.PbList<ListTopicSubscriptionsRequest>();
-  static ListTopicSubscriptionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTopicSubscriptionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTopicSubscriptionsRequest>(create);
   static ListTopicSubscriptionsRequest _defaultInstance;
 
-  $core.String get topic => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
   set topic($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListTopicSubscriptionsResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'subscriptions')
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -516,24 +614,31 @@ class ListTopicSubscriptionsResponse extends $pb.GeneratedMessage {
   ListTopicSubscriptionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTopicSubscriptionsResponse> createRepeated() =>
       $pb.PbList<ListTopicSubscriptionsResponse>();
-  static ListTopicSubscriptionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTopicSubscriptionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTopicSubscriptionsResponse>(create);
   static ListTopicSubscriptionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get subscriptions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ListTopicSnapshotsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTopicSnapshotsRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'topic')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -559,39 +664,53 @@ class ListTopicSnapshotsRequest extends $pb.GeneratedMessage {
   ListTopicSnapshotsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTopicSnapshotsRequest> createRepeated() =>
       $pb.PbList<ListTopicSnapshotsRequest>();
-  static ListTopicSnapshotsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTopicSnapshotsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTopicSnapshotsRequest>(create);
   static ListTopicSnapshotsRequest _defaultInstance;
 
-  $core.String get topic => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
   set topic($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListTopicSnapshotsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListTopicSnapshotsResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'snapshots')
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -616,24 +735,31 @@ class ListTopicSnapshotsResponse extends $pb.GeneratedMessage {
   ListTopicSnapshotsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTopicSnapshotsResponse> createRepeated() =>
       $pb.PbList<ListTopicSnapshotsResponse>();
-  static ListTopicSnapshotsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTopicSnapshotsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTopicSnapshotsResponse>(create);
   static ListTopicSnapshotsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get snapshots => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteTopicRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTopicRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'topic')
     ..hasRequiredFields = false;
 
@@ -654,43 +780,45 @@ class DeleteTopicRequest extends $pb.GeneratedMessage {
   DeleteTopicRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTopicRequest> createRepeated() =>
       $pb.PbList<DeleteTopicRequest>();
-  static DeleteTopicRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTopicRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteTopicRequest>(create);
   static DeleteTopicRequest _defaultInstance;
 
-  $core.String get topic => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get topic => $_getSZ(0);
+  @$pb.TagNumber(1)
   set topic($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopic() => clearField(1);
 }
 
 class Subscription extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Subscription',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'topic')
-    ..a<PushConfig>(4, 'pushConfig', $pb.PbFieldType.OM, PushConfig.getDefault,
-        PushConfig.create)
+    ..aOM<PushConfig>(4, 'pushConfig', subBuilder: PushConfig.create)
     ..a<$core.int>(5, 'ackDeadlineSeconds', $pb.PbFieldType.O3)
     ..aOB(7, 'retainAckedMessages')
-    ..a<$4.Duration>(8, 'messageRetentionDuration', $pb.PbFieldType.OM,
-        $4.Duration.getDefault, $4.Duration.create)
-    ..m<$core.String, $core.String>(
-        9,
-        'labels',
-        'Subscription.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.pubsub.v1'))
+    ..aOM<$4.Duration>(8, 'messageRetentionDuration',
+        subBuilder: $4.Duration.create)
+    ..m<$core.String, $core.String>(9, 'labels',
+        entryClassName: 'Subscription.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1'))
     ..aOB(10, 'enableMessageOrdering')
-    ..a<ExpirationPolicy>(11, 'expirationPolicy', $pb.PbFieldType.OM,
-        ExpirationPolicy.getDefault, ExpirationPolicy.create)
+    ..aOM<ExpirationPolicy>(11, 'expirationPolicy',
+        subBuilder: ExpirationPolicy.create)
+    ..aOM<DeadLetterPolicy>(13, 'deadLetterPolicy',
+        subBuilder: DeadLetterPolicy.create)
     ..hasRequiredFields = false;
 
   Subscription._() : super();
@@ -710,81 +838,191 @@ class Subscription extends $pb.GeneratedMessage {
   Subscription createEmptyInstance() => create();
   static $pb.PbList<Subscription> createRepeated() =>
       $pb.PbList<Subscription>();
-  static Subscription getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Subscription getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Subscription>(create);
   static Subscription _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get topic => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get topic => $_getSZ(1);
+  @$pb.TagNumber(2)
   set topic($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTopic() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTopic() => clearField(2);
 
+  @$pb.TagNumber(4)
   PushConfig get pushConfig => $_getN(2);
+  @$pb.TagNumber(4)
   set pushConfig(PushConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPushConfig() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPushConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  PushConfig ensurePushConfig() => $_ensure(2);
 
-  $core.int get ackDeadlineSeconds => $_get(3, 0);
+  @$pb.TagNumber(5)
+  $core.int get ackDeadlineSeconds => $_getIZ(3);
+  @$pb.TagNumber(5)
   set ackDeadlineSeconds($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAckDeadlineSeconds() => $_has(3);
+  @$pb.TagNumber(5)
   void clearAckDeadlineSeconds() => clearField(5);
 
-  $core.bool get retainAckedMessages => $_get(4, false);
+  @$pb.TagNumber(7)
+  $core.bool get retainAckedMessages => $_getBF(4);
+  @$pb.TagNumber(7)
   set retainAckedMessages($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasRetainAckedMessages() => $_has(4);
+  @$pb.TagNumber(7)
   void clearRetainAckedMessages() => clearField(7);
 
+  @$pb.TagNumber(8)
   $4.Duration get messageRetentionDuration => $_getN(5);
+  @$pb.TagNumber(8)
   set messageRetentionDuration($4.Duration v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasMessageRetentionDuration() => $_has(5);
+  @$pb.TagNumber(8)
   void clearMessageRetentionDuration() => clearField(8);
+  @$pb.TagNumber(8)
+  $4.Duration ensureMessageRetentionDuration() => $_ensure(5);
 
+  @$pb.TagNumber(9)
   $core.Map<$core.String, $core.String> get labels => $_getMap(6);
 
-  $core.bool get enableMessageOrdering => $_get(7, false);
+  @$pb.TagNumber(10)
+  $core.bool get enableMessageOrdering => $_getBF(7);
+  @$pb.TagNumber(10)
   set enableMessageOrdering($core.bool v) {
     $_setBool(7, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasEnableMessageOrdering() => $_has(7);
+  @$pb.TagNumber(10)
   void clearEnableMessageOrdering() => clearField(10);
 
+  @$pb.TagNumber(11)
   ExpirationPolicy get expirationPolicy => $_getN(8);
+  @$pb.TagNumber(11)
   set expirationPolicy(ExpirationPolicy v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasExpirationPolicy() => $_has(8);
+  @$pb.TagNumber(11)
   void clearExpirationPolicy() => clearField(11);
+  @$pb.TagNumber(11)
+  ExpirationPolicy ensureExpirationPolicy() => $_ensure(8);
+
+  @$pb.TagNumber(13)
+  DeadLetterPolicy get deadLetterPolicy => $_getN(9);
+  @$pb.TagNumber(13)
+  set deadLetterPolicy(DeadLetterPolicy v) {
+    setField(13, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasDeadLetterPolicy() => $_has(9);
+  @$pb.TagNumber(13)
+  void clearDeadLetterPolicy() => clearField(13);
+  @$pb.TagNumber(13)
+  DeadLetterPolicy ensureDeadLetterPolicy() => $_ensure(9);
+}
+
+class DeadLetterPolicy extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeadLetterPolicy',
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, 'deadLetterTopic')
+    ..a<$core.int>(2, 'maxDeliveryAttempts', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
+  DeadLetterPolicy._() : super();
+  factory DeadLetterPolicy() => create();
+  factory DeadLetterPolicy.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DeadLetterPolicy.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  DeadLetterPolicy clone() => DeadLetterPolicy()..mergeFromMessage(this);
+  DeadLetterPolicy copyWith(void Function(DeadLetterPolicy) updates) =>
+      super.copyWith((message) => updates(message as DeadLetterPolicy));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeadLetterPolicy create() => DeadLetterPolicy._();
+  DeadLetterPolicy createEmptyInstance() => create();
+  static $pb.PbList<DeadLetterPolicy> createRepeated() =>
+      $pb.PbList<DeadLetterPolicy>();
+  @$core.pragma('dart2js:noInline')
+  static DeadLetterPolicy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeadLetterPolicy>(create);
+  static DeadLetterPolicy _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get deadLetterTopic => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set deadLetterTopic($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDeadLetterTopic() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDeadLetterTopic() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get maxDeliveryAttempts => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set maxDeliveryAttempts($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMaxDeliveryAttempts() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMaxDeliveryAttempts() => clearField(2);
 }
 
 class ExpirationPolicy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExpirationPolicy',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..a<$4.Duration>(1, 'ttl', $pb.PbFieldType.OM, $4.Duration.getDefault,
-        $4.Duration.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.Duration>(1, 'ttl', subBuilder: $4.Duration.create)
     ..hasRequiredFields = false;
 
   ExpirationPolicy._() : super();
@@ -804,22 +1042,30 @@ class ExpirationPolicy extends $pb.GeneratedMessage {
   ExpirationPolicy createEmptyInstance() => create();
   static $pb.PbList<ExpirationPolicy> createRepeated() =>
       $pb.PbList<ExpirationPolicy>();
-  static ExpirationPolicy getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExpirationPolicy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExpirationPolicy>(create);
   static ExpirationPolicy _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.Duration get ttl => $_getN(0);
+  @$pb.TagNumber(1)
   set ttl($4.Duration v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTtl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTtl() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.Duration ensureTtl() => $_ensure(0);
 }
 
 class PushConfig_OidcToken extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PushConfig.OidcToken',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceAccountEmail')
     ..aOS(2, 'audience')
     ..hasRequiredFields = false;
@@ -842,24 +1088,33 @@ class PushConfig_OidcToken extends $pb.GeneratedMessage {
   PushConfig_OidcToken createEmptyInstance() => create();
   static $pb.PbList<PushConfig_OidcToken> createRepeated() =>
       $pb.PbList<PushConfig_OidcToken>();
-  static PushConfig_OidcToken getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PushConfig_OidcToken getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PushConfig_OidcToken>(create);
   static PushConfig_OidcToken _defaultInstance;
 
-  $core.String get serviceAccountEmail => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceAccountEmail => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceAccountEmail($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceAccountEmail() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceAccountEmail() => clearField(1);
 
-  $core.String get audience => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get audience => $_getSZ(1);
+  @$pb.TagNumber(2)
   set audience($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAudience() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAudience() => clearField(2);
 }
 
@@ -872,21 +1127,17 @@ class PushConfig extends $pb.GeneratedMessage {
     0: PushConfig_AuthenticationMethod.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PushConfig',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..oo(0, [3])
     ..aOS(1, 'pushEndpoint')
-    ..m<$core.String, $core.String>(
-        2,
-        'attributes',
-        'PushConfig.AttributesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.pubsub.v1'))
-    ..a<PushConfig_OidcToken>(3, 'oidcToken', $pb.PbFieldType.OM,
-        PushConfig_OidcToken.getDefault, PushConfig_OidcToken.create)
+    ..m<$core.String, $core.String>(2, 'attributes',
+        entryClassName: 'PushConfig.AttributesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1'))
+    ..aOM<PushConfig_OidcToken>(3, 'oidcToken',
+        subBuilder: PushConfig_OidcToken.create)
     ..hasRequiredFields = false;
 
   PushConfig._() : super();
@@ -905,38 +1156,52 @@ class PushConfig extends $pb.GeneratedMessage {
   static PushConfig create() => PushConfig._();
   PushConfig createEmptyInstance() => create();
   static $pb.PbList<PushConfig> createRepeated() => $pb.PbList<PushConfig>();
-  static PushConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PushConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PushConfig>(create);
   static PushConfig _defaultInstance;
 
   PushConfig_AuthenticationMethod whichAuthenticationMethod() =>
       _PushConfig_AuthenticationMethodByTag[$_whichOneof(0)];
   void clearAuthenticationMethod() => clearField($_whichOneof(0));
 
-  $core.String get pushEndpoint => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get pushEndpoint => $_getSZ(0);
+  @$pb.TagNumber(1)
   set pushEndpoint($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPushEndpoint() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPushEndpoint() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get attributes => $_getMap(1);
 
+  @$pb.TagNumber(3)
   PushConfig_OidcToken get oidcToken => $_getN(2);
+  @$pb.TagNumber(3)
   set oidcToken(PushConfig_OidcToken v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOidcToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearOidcToken() => clearField(3);
+  @$pb.TagNumber(3)
+  PushConfig_OidcToken ensureOidcToken() => $_ensure(2);
 }
 
 class ReceivedMessage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReceivedMessage',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'ackId')
-    ..a<PubsubMessage>(2, 'message', $pb.PbFieldType.OM,
-        PubsubMessage.getDefault, PubsubMessage.create)
+    ..aOM<PubsubMessage>(2, 'message', subBuilder: PubsubMessage.create)
+    ..a<$core.int>(3, 'deliveryAttempt', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   ReceivedMessage._() : super();
@@ -956,30 +1221,54 @@ class ReceivedMessage extends $pb.GeneratedMessage {
   ReceivedMessage createEmptyInstance() => create();
   static $pb.PbList<ReceivedMessage> createRepeated() =>
       $pb.PbList<ReceivedMessage>();
-  static ReceivedMessage getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReceivedMessage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReceivedMessage>(create);
   static ReceivedMessage _defaultInstance;
 
-  $core.String get ackId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get ackId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set ackId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAckId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAckId() => clearField(1);
 
+  @$pb.TagNumber(2)
   PubsubMessage get message => $_getN(1);
+  @$pb.TagNumber(2)
   set message(PubsubMessage v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMessage() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMessage() => clearField(2);
+  @$pb.TagNumber(2)
+  PubsubMessage ensureMessage() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.int get deliveryAttempt => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set deliveryAttempt($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDeliveryAttempt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDeliveryAttempt() => clearField(3);
 }
 
 class GetSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSubscriptionRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
     ..hasRequiredFields = false;
 
@@ -1002,26 +1291,30 @@ class GetSubscriptionRequest extends $pb.GeneratedMessage {
   GetSubscriptionRequest createEmptyInstance() => create();
   static $pb.PbList<GetSubscriptionRequest> createRepeated() =>
       $pb.PbList<GetSubscriptionRequest>();
-  static GetSubscriptionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSubscriptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSubscriptionRequest>(create);
   static GetSubscriptionRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 }
 
 class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSubscriptionRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..a<Subscription>(1, 'subscription', $pb.PbFieldType.OM,
-        Subscription.getDefault, Subscription.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOM<Subscription>(1, 'subscription', subBuilder: Subscription.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSubscriptionRequest._() : super();
@@ -1044,30 +1337,44 @@ class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
   UpdateSubscriptionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSubscriptionRequest> createRepeated() =>
       $pb.PbList<UpdateSubscriptionRequest>();
-  static UpdateSubscriptionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSubscriptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSubscriptionRequest>(create);
   static UpdateSubscriptionRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Subscription get subscription => $_getN(0);
+  @$pb.TagNumber(1)
   set subscription(Subscription v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
+  @$pb.TagNumber(1)
+  Subscription ensureSubscription() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'project')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1092,40 +1399,54 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   ListSubscriptionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListSubscriptionsRequest> createRepeated() =>
       $pb.PbList<ListSubscriptionsRequest>();
-  static ListSubscriptionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSubscriptionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSubscriptionsRequest>(create);
   static ListSubscriptionsRequest _defaultInstance;
 
-  $core.String get project => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get project => $_getSZ(0);
+  @$pb.TagNumber(1)
   set project($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProject() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProject() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..pc<Subscription>(
-        1, 'subscriptions', $pb.PbFieldType.PM, Subscription.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pc<Subscription>(1, 'subscriptions', $pb.PbFieldType.PM,
+        subBuilder: Subscription.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1149,24 +1470,31 @@ class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   ListSubscriptionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListSubscriptionsResponse> createRepeated() =>
       $pb.PbList<ListSubscriptionsResponse>();
-  static ListSubscriptionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSubscriptionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSubscriptionsResponse>(create);
   static ListSubscriptionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Subscription> get subscriptions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSubscriptionRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
     ..hasRequiredFields = false;
 
@@ -1190,25 +1518,30 @@ class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
   DeleteSubscriptionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSubscriptionRequest> createRepeated() =>
       $pb.PbList<DeleteSubscriptionRequest>();
-  static DeleteSubscriptionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSubscriptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSubscriptionRequest>(create);
   static DeleteSubscriptionRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 }
 
 class ModifyPushConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyPushConfigRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
-    ..a<PushConfig>(2, 'pushConfig', $pb.PbFieldType.OM, PushConfig.getDefault,
-        PushConfig.create)
+    ..aOM<PushConfig>(2, 'pushConfig', subBuilder: PushConfig.create)
     ..hasRequiredFields = false;
 
   ModifyPushConfigRequest._() : super();
@@ -1230,30 +1563,42 @@ class ModifyPushConfigRequest extends $pb.GeneratedMessage {
   ModifyPushConfigRequest createEmptyInstance() => create();
   static $pb.PbList<ModifyPushConfigRequest> createRepeated() =>
       $pb.PbList<ModifyPushConfigRequest>();
-  static ModifyPushConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ModifyPushConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ModifyPushConfigRequest>(create);
   static ModifyPushConfigRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  @$pb.TagNumber(2)
   PushConfig get pushConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set pushConfig(PushConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPushConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPushConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  PushConfig ensurePushConfig() => $_ensure(1);
 }
 
 class PullRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
     ..aOB(2, 'returnImmediately')
     ..a<$core.int>(3, 'maxMessages', $pb.PbFieldType.O3)
@@ -1275,39 +1620,54 @@ class PullRequest extends $pb.GeneratedMessage {
   static PullRequest create() => PullRequest._();
   PullRequest createEmptyInstance() => create();
   static $pb.PbList<PullRequest> createRepeated() => $pb.PbList<PullRequest>();
-  static PullRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PullRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PullRequest>(create);
   static PullRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
-  $core.bool get returnImmediately => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get returnImmediately => $_getBF(1);
+  @$pb.TagNumber(2)
   set returnImmediately($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReturnImmediately() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReturnImmediately() => clearField(2);
 
-  $core.int get maxMessages => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get maxMessages => $_getIZ(2);
+  @$pb.TagNumber(3)
   set maxMessages($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMaxMessages() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMaxMessages() => clearField(3);
 }
 
 class PullResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PullResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..pc<ReceivedMessage>(
-        1, 'receivedMessages', $pb.PbFieldType.PM, ReceivedMessage.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pc<ReceivedMessage>(1, 'receivedMessages', $pb.PbFieldType.PM,
+        subBuilder: ReceivedMessage.create)
     ..hasRequiredFields = false;
 
   PullResponse._() : super();
@@ -1327,15 +1687,19 @@ class PullResponse extends $pb.GeneratedMessage {
   PullResponse createEmptyInstance() => create();
   static $pb.PbList<PullResponse> createRepeated() =>
       $pb.PbList<PullResponse>();
-  static PullResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PullResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PullResponse>(create);
   static PullResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ReceivedMessage> get receivedMessages => $_getList(0);
 }
 
 class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyAckDeadlineRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
     ..a<$core.int>(3, 'ackDeadlineSeconds', $pb.PbFieldType.O3)
     ..pPS(4, 'ackIds')
@@ -1360,32 +1724,43 @@ class ModifyAckDeadlineRequest extends $pb.GeneratedMessage {
   ModifyAckDeadlineRequest createEmptyInstance() => create();
   static $pb.PbList<ModifyAckDeadlineRequest> createRepeated() =>
       $pb.PbList<ModifyAckDeadlineRequest>();
-  static ModifyAckDeadlineRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ModifyAckDeadlineRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ModifyAckDeadlineRequest>(create);
   static ModifyAckDeadlineRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
-  $core.int get ackDeadlineSeconds => $_get(1, 0);
+  @$pb.TagNumber(3)
+  $core.int get ackDeadlineSeconds => $_getIZ(1);
+  @$pb.TagNumber(3)
   set ackDeadlineSeconds($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAckDeadlineSeconds() => $_has(1);
+  @$pb.TagNumber(3)
   void clearAckDeadlineSeconds() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get ackIds => $_getList(2);
 }
 
 class AcknowledgeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AcknowledgeRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
     ..pPS(2, 'ackIds')
     ..hasRequiredFields = false;
@@ -1407,24 +1782,31 @@ class AcknowledgeRequest extends $pb.GeneratedMessage {
   AcknowledgeRequest createEmptyInstance() => create();
   static $pb.PbList<AcknowledgeRequest> createRepeated() =>
       $pb.PbList<AcknowledgeRequest>();
-  static AcknowledgeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AcknowledgeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AcknowledgeRequest>(create);
   static AcknowledgeRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get ackIds => $_getList(1);
 }
 
 class StreamingPullRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingPullRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'subscription')
     ..pPS(2, 'ackIds')
     ..p<$core.int>(3, 'modifyDeadlineSeconds', $pb.PbFieldType.P3)
@@ -1450,38 +1832,51 @@ class StreamingPullRequest extends $pb.GeneratedMessage {
   StreamingPullRequest createEmptyInstance() => create();
   static $pb.PbList<StreamingPullRequest> createRepeated() =>
       $pb.PbList<StreamingPullRequest>();
-  static StreamingPullRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StreamingPullRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingPullRequest>(create);
   static StreamingPullRequest _defaultInstance;
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get ackIds => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get modifyDeadlineSeconds => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get modifyDeadlineAckIds => $_getList(3);
 
-  $core.int get streamAckDeadlineSeconds => $_get(4, 0);
+  @$pb.TagNumber(5)
+  $core.int get streamAckDeadlineSeconds => $_getIZ(4);
+  @$pb.TagNumber(5)
   set streamAckDeadlineSeconds($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasStreamAckDeadlineSeconds() => $_has(4);
+  @$pb.TagNumber(5)
   void clearStreamAckDeadlineSeconds() => clearField(5);
 }
 
 class StreamingPullResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingPullResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..pc<ReceivedMessage>(
-        1, 'receivedMessages', $pb.PbFieldType.PM, ReceivedMessage.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pc<ReceivedMessage>(1, 'receivedMessages', $pb.PbFieldType.PM,
+        subBuilder: ReceivedMessage.create)
     ..hasRequiredFields = false;
 
   StreamingPullResponse._() : super();
@@ -1503,28 +1898,26 @@ class StreamingPullResponse extends $pb.GeneratedMessage {
   StreamingPullResponse createEmptyInstance() => create();
   static $pb.PbList<StreamingPullResponse> createRepeated() =>
       $pb.PbList<StreamingPullResponse>();
-  static StreamingPullResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StreamingPullResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingPullResponse>(create);
   static StreamingPullResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ReceivedMessage> get receivedMessages => $_getList(0);
 }
 
 class CreateSnapshotRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSnapshotRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'subscription')
-    ..m<$core.String, $core.String>(
-        3,
-        'labels',
-        'CreateSnapshotRequest.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.pubsub.v1'))
+    ..m<$core.String, $core.String>(3, 'labels',
+        entryClassName: 'CreateSnapshotRequest.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1'))
     ..hasRequiredFields = false;
 
   CreateSnapshotRequest._() : super();
@@ -1546,36 +1939,45 @@ class CreateSnapshotRequest extends $pb.GeneratedMessage {
   CreateSnapshotRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSnapshotRequest> createRepeated() =>
       $pb.PbList<CreateSnapshotRequest>();
-  static CreateSnapshotRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateSnapshotRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSnapshotRequest>(create);
   static CreateSnapshotRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get subscription => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get subscription => $_getSZ(1);
+  @$pb.TagNumber(2)
   set subscription($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSubscription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSubscription() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 }
 
 class UpdateSnapshotRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSnapshotRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..a<Snapshot>(
-        1, 'snapshot', $pb.PbFieldType.OM, Snapshot.getDefault, Snapshot.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..aOM<Snapshot>(1, 'snapshot', subBuilder: Snapshot.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSnapshotRequest._() : super();
@@ -1597,44 +1999,52 @@ class UpdateSnapshotRequest extends $pb.GeneratedMessage {
   UpdateSnapshotRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSnapshotRequest> createRepeated() =>
       $pb.PbList<UpdateSnapshotRequest>();
-  static UpdateSnapshotRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSnapshotRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSnapshotRequest>(create);
   static UpdateSnapshotRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Snapshot get snapshot => $_getN(0);
+  @$pb.TagNumber(1)
   set snapshot(Snapshot v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSnapshot() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSnapshot() => clearField(1);
+  @$pb.TagNumber(1)
+  Snapshot ensureSnapshot() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class Snapshot extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Snapshot',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'topic')
-    ..a<$2.Timestamp>(3, 'expireTime', $pb.PbFieldType.OM,
-        $2.Timestamp.getDefault, $2.Timestamp.create)
-    ..m<$core.String, $core.String>(
-        4,
-        'labels',
-        'Snapshot.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.pubsub.v1'))
+    ..aOM<$2.Timestamp>(3, 'expireTime', subBuilder: $2.Timestamp.create)
+    ..m<$core.String, $core.String>(4, 'labels',
+        entryClassName: 'Snapshot.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.pubsub.v1'))
     ..hasRequiredFields = false;
 
   Snapshot._() : super();
@@ -1653,39 +2063,57 @@ class Snapshot extends $pb.GeneratedMessage {
   static Snapshot create() => Snapshot._();
   Snapshot createEmptyInstance() => create();
   static $pb.PbList<Snapshot> createRepeated() => $pb.PbList<Snapshot>();
-  static Snapshot getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Snapshot getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Snapshot>(create);
   static Snapshot _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get topic => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get topic => $_getSZ(1);
+  @$pb.TagNumber(2)
   set topic($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTopic() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTopic() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.Timestamp get expireTime => $_getN(2);
+  @$pb.TagNumber(3)
   set expireTime($2.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasExpireTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearExpireTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Timestamp ensureExpireTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 }
 
 class GetSnapshotRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSnapshotRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'snapshot')
     ..hasRequiredFields = false;
 
@@ -1706,22 +2134,28 @@ class GetSnapshotRequest extends $pb.GeneratedMessage {
   GetSnapshotRequest createEmptyInstance() => create();
   static $pb.PbList<GetSnapshotRequest> createRepeated() =>
       $pb.PbList<GetSnapshotRequest>();
-  static GetSnapshotRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSnapshotRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSnapshotRequest>(create);
   static GetSnapshotRequest _defaultInstance;
 
-  $core.String get snapshot => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get snapshot => $_getSZ(0);
+  @$pb.TagNumber(1)
   set snapshot($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSnapshot() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSnapshot() => clearField(1);
 }
 
 class ListSnapshotsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSnapshotsRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'project')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1745,39 +2179,54 @@ class ListSnapshotsRequest extends $pb.GeneratedMessage {
   ListSnapshotsRequest createEmptyInstance() => create();
   static $pb.PbList<ListSnapshotsRequest> createRepeated() =>
       $pb.PbList<ListSnapshotsRequest>();
-  static ListSnapshotsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSnapshotsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSnapshotsRequest>(create);
   static ListSnapshotsRequest _defaultInstance;
 
-  $core.String get project => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get project => $_getSZ(0);
+  @$pb.TagNumber(1)
   set project($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProject() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProject() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListSnapshotsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSnapshotsResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
-    ..pc<Snapshot>(1, 'snapshots', $pb.PbFieldType.PM, Snapshot.create)
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
+    ..pc<Snapshot>(1, 'snapshots', $pb.PbFieldType.PM,
+        subBuilder: Snapshot.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1800,24 +2249,31 @@ class ListSnapshotsResponse extends $pb.GeneratedMessage {
   ListSnapshotsResponse createEmptyInstance() => create();
   static $pb.PbList<ListSnapshotsResponse> createRepeated() =>
       $pb.PbList<ListSnapshotsResponse>();
-  static ListSnapshotsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSnapshotsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSnapshotsResponse>(create);
   static ListSnapshotsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Snapshot> get snapshots => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteSnapshotRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSnapshotRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'snapshot')
     ..hasRequiredFields = false;
 
@@ -1840,16 +2296,21 @@ class DeleteSnapshotRequest extends $pb.GeneratedMessage {
   DeleteSnapshotRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSnapshotRequest> createRepeated() =>
       $pb.PbList<DeleteSnapshotRequest>();
-  static DeleteSnapshotRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSnapshotRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSnapshotRequest>(create);
   static DeleteSnapshotRequest _defaultInstance;
 
-  $core.String get snapshot => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get snapshot => $_getSZ(0);
+  @$pb.TagNumber(1)
   set snapshot($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSnapshot() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSnapshot() => clearField(1);
 }
 
@@ -1863,11 +2324,11 @@ class SeekRequest extends $pb.GeneratedMessage {
     0: SeekRequest_Target.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SeekRequest',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'subscription')
-    ..a<$2.Timestamp>(2, 'time', $pb.PbFieldType.OM, $2.Timestamp.getDefault,
-        $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(2, 'time', subBuilder: $2.Timestamp.create)
     ..aOS(3, 'snapshot')
     ..hasRequiredFields = false;
 
@@ -1887,40 +2348,57 @@ class SeekRequest extends $pb.GeneratedMessage {
   static SeekRequest create() => SeekRequest._();
   SeekRequest createEmptyInstance() => create();
   static $pb.PbList<SeekRequest> createRepeated() => $pb.PbList<SeekRequest>();
-  static SeekRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SeekRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SeekRequest>(create);
   static SeekRequest _defaultInstance;
 
   SeekRequest_Target whichTarget() => _SeekRequest_TargetByTag[$_whichOneof(0)];
   void clearTarget() => clearField($_whichOneof(0));
 
-  $core.String get subscription => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get subscription => $_getSZ(0);
+  @$pb.TagNumber(1)
   set subscription($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.Timestamp get time => $_getN(1);
+  @$pb.TagNumber(2)
   set time($2.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Timestamp ensureTime() => $_ensure(1);
 
-  $core.String get snapshot => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get snapshot => $_getSZ(2);
+  @$pb.TagNumber(3)
   set snapshot($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSnapshot() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSnapshot() => clearField(3);
 }
 
 class SeekResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SeekResponse',
-      package: const $pb.PackageName('google.pubsub.v1'))
+      package: const $pb.PackageName('google.pubsub.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   SeekResponse._() : super();
@@ -1940,6 +2418,8 @@ class SeekResponse extends $pb.GeneratedMessage {
   SeekResponse createEmptyInstance() => create();
   static $pb.PbList<SeekResponse> createRepeated() =>
       $pb.PbList<SeekResponse>();
-  static SeekResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SeekResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SeekResponse>(create);
   static SeekResponse _defaultInstance;
 }

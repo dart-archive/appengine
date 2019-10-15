@@ -79,6 +79,7 @@ const Task$json = {
     },
   ],
   '4': [Task_View$json],
+  '7': {},
   '8': [
     {'1': 'payload_type'},
   ],

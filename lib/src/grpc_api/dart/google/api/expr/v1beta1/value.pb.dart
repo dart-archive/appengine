@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/any.pb.dart' as $0;
@@ -48,24 +47,24 @@ class Value extends $pb.GeneratedMessage {
     0: Value_Kind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15])
     ..e<$1.NullValue>(1, 'nullValue', $pb.PbFieldType.OE,
-        $1.NullValue.NULL_VALUE, $1.NullValue.valueOf, $1.NullValue.values)
+        defaultOrMaker: $1.NullValue.NULL_VALUE,
+        valueOf: $1.NullValue.valueOf,
+        enumValues: $1.NullValue.values)
     ..aOB(2, 'boolValue')
     ..aInt64(3, 'int64Value')
-    ..a<Int64>(4, 'uint64Value', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<$fixnum.Int64>(4, 'uint64Value', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.double>(5, 'doubleValue', $pb.PbFieldType.OD)
     ..aOS(6, 'stringValue')
     ..a<$core.List<$core.int>>(7, 'bytesValue', $pb.PbFieldType.OY)
-    ..a<EnumValue>(9, 'enumValue', $pb.PbFieldType.OM, EnumValue.getDefault,
-        EnumValue.create)
-    ..a<$0.Any>(
-        10, 'objectValue', $pb.PbFieldType.OM, $0.Any.getDefault, $0.Any.create)
-    ..a<MapValue>(11, 'mapValue', $pb.PbFieldType.OM, MapValue.getDefault,
-        MapValue.create)
-    ..a<ListValue>(12, 'listValue', $pb.PbFieldType.OM, ListValue.getDefault,
-        ListValue.create)
+    ..aOM<EnumValue>(9, 'enumValue', subBuilder: EnumValue.create)
+    ..aOM<$0.Any>(10, 'objectValue', subBuilder: $0.Any.create)
+    ..aOM<MapValue>(11, 'mapValue', subBuilder: MapValue.create)
+    ..aOM<ListValue>(12, 'listValue', subBuilder: ListValue.create)
     ..aOS(15, 'typeValue')
     ..hasRequiredFields = false;
 
@@ -85,112 +84,171 @@ class Value extends $pb.GeneratedMessage {
   static Value create() => Value._();
   Value createEmptyInstance() => create();
   static $pb.PbList<Value> createRepeated() => $pb.PbList<Value>();
-  static Value getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Value getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Value>(create);
   static Value _defaultInstance;
 
   Value_Kind whichKind() => _Value_KindByTag[$_whichOneof(0)];
   void clearKind() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.NullValue get nullValue => $_getN(0);
+  @$pb.TagNumber(1)
   set nullValue($1.NullValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNullValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNullValue() => clearField(1);
 
-  $core.bool get boolValue => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get boolValue => $_getBF(1);
+  @$pb.TagNumber(2)
   set boolValue($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBoolValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBoolValue() => clearField(2);
 
-  Int64 get int64Value => $_getI64(2);
-  set int64Value(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get int64Value => $_getI64(2);
+  @$pb.TagNumber(3)
+  set int64Value($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInt64Value() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInt64Value() => clearField(3);
 
-  Int64 get uint64Value => $_getI64(3);
-  set uint64Value(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get uint64Value => $_getI64(3);
+  @$pb.TagNumber(4)
+  set uint64Value($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUint64Value() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUint64Value() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.double get doubleValue => $_getN(4);
+  @$pb.TagNumber(5)
   set doubleValue($core.double v) {
     $_setDouble(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDoubleValue() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDoubleValue() => clearField(5);
 
-  $core.String get stringValue => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get stringValue => $_getSZ(5);
+  @$pb.TagNumber(6)
   set stringValue($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasStringValue() => $_has(5);
+  @$pb.TagNumber(6)
   void clearStringValue() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.List<$core.int> get bytesValue => $_getN(6);
+  @$pb.TagNumber(7)
   set bytesValue($core.List<$core.int> v) {
     $_setBytes(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasBytesValue() => $_has(6);
+  @$pb.TagNumber(7)
   void clearBytesValue() => clearField(7);
 
+  @$pb.TagNumber(9)
   EnumValue get enumValue => $_getN(7);
+  @$pb.TagNumber(9)
   set enumValue(EnumValue v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasEnumValue() => $_has(7);
+  @$pb.TagNumber(9)
   void clearEnumValue() => clearField(9);
+  @$pb.TagNumber(9)
+  EnumValue ensureEnumValue() => $_ensure(7);
 
+  @$pb.TagNumber(10)
   $0.Any get objectValue => $_getN(8);
+  @$pb.TagNumber(10)
   set objectValue($0.Any v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasObjectValue() => $_has(8);
+  @$pb.TagNumber(10)
   void clearObjectValue() => clearField(10);
+  @$pb.TagNumber(10)
+  $0.Any ensureObjectValue() => $_ensure(8);
 
+  @$pb.TagNumber(11)
   MapValue get mapValue => $_getN(9);
+  @$pb.TagNumber(11)
   set mapValue(MapValue v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasMapValue() => $_has(9);
+  @$pb.TagNumber(11)
   void clearMapValue() => clearField(11);
+  @$pb.TagNumber(11)
+  MapValue ensureMapValue() => $_ensure(9);
 
+  @$pb.TagNumber(12)
   ListValue get listValue => $_getN(10);
+  @$pb.TagNumber(12)
   set listValue(ListValue v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasListValue() => $_has(10);
+  @$pb.TagNumber(12)
   void clearListValue() => clearField(12);
+  @$pb.TagNumber(12)
+  ListValue ensureListValue() => $_ensure(10);
 
-  $core.String get typeValue => $_getS(11, '');
+  @$pb.TagNumber(15)
+  $core.String get typeValue => $_getSZ(11);
+  @$pb.TagNumber(15)
   set typeValue($core.String v) {
     $_setString(11, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasTypeValue() => $_has(11);
+  @$pb.TagNumber(15)
   void clearTypeValue() => clearField(15);
 }
 
 class EnumValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnumValue',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'type')
     ..a<$core.int>(2, 'value', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -211,30 +269,41 @@ class EnumValue extends $pb.GeneratedMessage {
   static EnumValue create() => EnumValue._();
   EnumValue createEmptyInstance() => create();
   static $pb.PbList<EnumValue> createRepeated() => $pb.PbList<EnumValue>();
-  static EnumValue getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EnumValue getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnumValue>(create);
   static EnumValue _defaultInstance;
 
-  $core.String get type => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get type => $_getSZ(0);
+  @$pb.TagNumber(1)
   set type($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
-  $core.int get value => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get value => $_getIZ(1);
+  @$pb.TagNumber(2)
   set value($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 }
 
 class ListValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListValue',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..pc<Value>(1, 'values', $pb.PbFieldType.PM, Value.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, 'values', $pb.PbFieldType.PM, subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   ListValue._() : super();
@@ -253,17 +322,21 @@ class ListValue extends $pb.GeneratedMessage {
   static ListValue create() => ListValue._();
   ListValue createEmptyInstance() => create();
   static $pb.PbList<ListValue> createRepeated() => $pb.PbList<ListValue>();
-  static ListValue getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListValue getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListValue>(create);
   static ListValue _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Value> get values => $_getList(0);
 }
 
 class MapValue_Entry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MapValue.Entry',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..a<Value>(1, 'key', $pb.PbFieldType.OM, Value.getDefault, Value.create)
-    ..a<Value>(2, 'value', $pb.PbFieldType.OM, Value.getDefault, Value.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, 'key', subBuilder: Value.create)
+    ..aOM<Value>(2, 'value', subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   MapValue_Entry._() : super();
@@ -283,31 +356,46 @@ class MapValue_Entry extends $pb.GeneratedMessage {
   MapValue_Entry createEmptyInstance() => create();
   static $pb.PbList<MapValue_Entry> createRepeated() =>
       $pb.PbList<MapValue_Entry>();
-  static MapValue_Entry getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MapValue_Entry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MapValue_Entry>(create);
   static MapValue_Entry _defaultInstance;
 
+  @$pb.TagNumber(1)
   Value get key => $_getN(0);
+  @$pb.TagNumber(1)
   set key(Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKey() => clearField(1);
+  @$pb.TagNumber(1)
+  Value ensureKey() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Value get value => $_getN(1);
+  @$pb.TagNumber(2)
   set value(Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
+  @$pb.TagNumber(2)
+  Value ensureValue() => $_ensure(1);
 }
 
 class MapValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MapValue',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..pc<MapValue_Entry>(
-        1, 'entries', $pb.PbFieldType.PM, MapValue_Entry.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<MapValue_Entry>(1, 'entries', $pb.PbFieldType.PM,
+        subBuilder: MapValue_Entry.create)
     ..hasRequiredFields = false;
 
   MapValue._() : super();
@@ -326,8 +414,11 @@ class MapValue extends $pb.GeneratedMessage {
   static MapValue create() => MapValue._();
   MapValue createEmptyInstance() => create();
   static $pb.PbList<MapValue> createRepeated() => $pb.PbList<MapValue>();
-  static MapValue getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MapValue getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MapValue>(create);
   static MapValue _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<MapValue_Entry> get entries => $_getList(0);
 }

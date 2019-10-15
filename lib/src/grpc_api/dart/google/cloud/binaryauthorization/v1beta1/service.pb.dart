@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import 'resources.pb.dart' as $1;
 class GetPolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetPolicyRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -36,25 +36,30 @@ class GetPolicyRequest extends $pb.GeneratedMessage {
   GetPolicyRequest createEmptyInstance() => create();
   static $pb.PbList<GetPolicyRequest> createRepeated() =>
       $pb.PbList<GetPolicyRequest>();
-  static GetPolicyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetPolicyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetPolicyRequest>(create);
   static GetPolicyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdatePolicyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdatePolicyRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
-    ..a<$1.Policy>(
-        1, 'policy', $pb.PbFieldType.OM, $1.Policy.getDefault, $1.Policy.create)
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$1.Policy>(1, 'policy', subBuilder: $1.Policy.create)
     ..hasRequiredFields = false;
 
   UpdatePolicyRequest._() : super();
@@ -74,27 +79,34 @@ class UpdatePolicyRequest extends $pb.GeneratedMessage {
   UpdatePolicyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdatePolicyRequest> createRepeated() =>
       $pb.PbList<UpdatePolicyRequest>();
-  static UpdatePolicyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePolicyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdatePolicyRequest>(create);
   static UpdatePolicyRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Policy get policy => $_getN(0);
+  @$pb.TagNumber(1)
   set policy($1.Policy v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPolicy() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPolicy() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Policy ensurePolicy() => $_ensure(0);
 }
 
 class CreateAttestorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAttestorRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'attestorId')
-    ..a<$1.Attestor>(3, 'attestor', $pb.PbFieldType.OM, $1.Attestor.getDefault,
-        $1.Attestor.create)
+    ..aOM<$1.Attestor>(3, 'attestor', subBuilder: $1.Attestor.create)
     ..hasRequiredFields = false;
 
   CreateAttestorRequest._() : super();
@@ -116,39 +128,55 @@ class CreateAttestorRequest extends $pb.GeneratedMessage {
   CreateAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAttestorRequest> createRepeated() =>
       $pb.PbList<CreateAttestorRequest>();
-  static CreateAttestorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateAttestorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateAttestorRequest>(create);
   static CreateAttestorRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get attestorId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get attestorId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set attestorId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAttestorId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAttestorId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $1.Attestor get attestor => $_getN(2);
+  @$pb.TagNumber(3)
   set attestor($1.Attestor v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAttestor() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAttestor() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Attestor ensureAttestor() => $_ensure(2);
 }
 
 class GetAttestorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAttestorRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -169,25 +197,30 @@ class GetAttestorRequest extends $pb.GeneratedMessage {
   GetAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<GetAttestorRequest> createRepeated() =>
       $pb.PbList<GetAttestorRequest>();
-  static GetAttestorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetAttestorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAttestorRequest>(create);
   static GetAttestorRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateAttestorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAttestorRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
-    ..a<$1.Attestor>(1, 'attestor', $pb.PbFieldType.OM, $1.Attestor.getDefault,
-        $1.Attestor.create)
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$1.Attestor>(1, 'attestor', subBuilder: $1.Attestor.create)
     ..hasRequiredFields = false;
 
   UpdateAttestorRequest._() : super();
@@ -209,23 +242,31 @@ class UpdateAttestorRequest extends $pb.GeneratedMessage {
   UpdateAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateAttestorRequest> createRepeated() =>
       $pb.PbList<UpdateAttestorRequest>();
-  static UpdateAttestorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAttestorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAttestorRequest>(create);
   static UpdateAttestorRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Attestor get attestor => $_getN(0);
+  @$pb.TagNumber(1)
   set attestor($1.Attestor v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAttestor() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAttestor() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Attestor ensureAttestor() => $_ensure(0);
 }
 
 class ListAttestorsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttestorsRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -249,40 +290,55 @@ class ListAttestorsRequest extends $pb.GeneratedMessage {
   ListAttestorsRequest createEmptyInstance() => create();
   static $pb.PbList<ListAttestorsRequest> createRepeated() =>
       $pb.PbList<ListAttestorsRequest>();
-  static ListAttestorsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListAttestorsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAttestorsRequest>(create);
   static ListAttestorsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListAttestorsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttestorsResponse',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
-    ..pc<$1.Attestor>(1, 'attestors', $pb.PbFieldType.PM, $1.Attestor.create)
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$1.Attestor>(1, 'attestors', $pb.PbFieldType.PM,
+        subBuilder: $1.Attestor.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -305,25 +361,32 @@ class ListAttestorsResponse extends $pb.GeneratedMessage {
   ListAttestorsResponse createEmptyInstance() => create();
   static $pb.PbList<ListAttestorsResponse> createRepeated() =>
       $pb.PbList<ListAttestorsResponse>();
-  static ListAttestorsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListAttestorsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAttestorsResponse>(create);
   static ListAttestorsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Attestor> get attestors => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteAttestorRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAttestorRequest',
       package:
-          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'))
+          const $pb.PackageName('google.cloud.binaryauthorization.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -346,15 +409,20 @@ class DeleteAttestorRequest extends $pb.GeneratedMessage {
   DeleteAttestorRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAttestorRequest> createRepeated() =>
       $pb.PbList<DeleteAttestorRequest>();
-  static DeleteAttestorRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAttestorRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAttestorRequest>(create);
   static DeleteAttestorRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

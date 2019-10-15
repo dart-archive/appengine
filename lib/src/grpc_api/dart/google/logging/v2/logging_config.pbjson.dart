@@ -23,6 +23,31 @@ const LogSink$json = {
     {'1': 'writer_identity', '3': 8, '4': 1, '5': 9, '10': 'writerIdentity'},
     {'1': 'include_children', '3': 9, '4': 1, '5': 8, '10': 'includeChildren'},
     {
+      '1': 'bigquery_options',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.logging.v2.BigQueryOptions',
+      '9': 0,
+      '10': 'bigqueryOptions'
+    },
+    {
+      '1': 'create_time',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'update_time',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
+    {
       '1': 'start_time',
       '3': 10,
       '4': 1,
@@ -42,6 +67,9 @@ const LogSink$json = {
     },
   ],
   '4': [LogSink_VersionFormat$json],
+  '8': [
+    {'1': 'options'},
+  ],
 };
 
 const LogSink_VersionFormat$json = {
@@ -50,6 +78,19 @@ const LogSink_VersionFormat$json = {
     {'1': 'VERSION_FORMAT_UNSPECIFIED', '2': 0},
     {'1': 'V2', '2': 1},
     {'1': 'V1', '2': 2},
+  ],
+};
+
+const BigQueryOptions$json = {
+  '1': 'BigQueryOptions',
+  '2': [
+    {
+      '1': 'use_partitioned_tables',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'usePartitionedTables'
+    },
   ],
 };
 
@@ -150,6 +191,22 @@ const LogExclusion$json = {
     {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
     {'1': 'filter', '3': 3, '4': 1, '5': 9, '10': 'filter'},
     {'1': 'disabled', '3': 4, '4': 1, '5': 8, '10': 'disabled'},
+    {
+      '1': 'create_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'update_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
   ],
 };
 

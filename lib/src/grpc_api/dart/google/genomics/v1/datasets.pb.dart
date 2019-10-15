@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,12 +14,12 @@ import '../../protobuf/field_mask.pb.dart' as $5;
 
 class Dataset extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'projectId')
     ..aOS(3, 'name')
-    ..a<$4.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(4, 'createTime', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   Dataset._() : super();
@@ -39,45 +38,66 @@ class Dataset extends $pb.GeneratedMessage {
   static Dataset create() => Dataset._();
   Dataset createEmptyInstance() => create();
   static $pb.PbList<Dataset> createRepeated() => $pb.PbList<Dataset>();
-  static Dataset getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Dataset getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Dataset>(create);
   static Dataset _defaultInstance;
 
-  $core.String get id => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
   set id($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 
-  $core.String get name => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 
+  @$pb.TagNumber(4)
   $4.Timestamp get createTime => $_getN(3);
+  @$pb.TagNumber(4)
   set createTime($4.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.Timestamp ensureCreateTime() => $_ensure(3);
 }
 
 class ListDatasetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'projectId')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -100,39 +120,53 @@ class ListDatasetsRequest extends $pb.GeneratedMessage {
   ListDatasetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsRequest> createRepeated() =>
       $pb.PbList<ListDatasetsRequest>();
-  static ListDatasetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDatasetsRequest>(create);
   static ListDatasetsRequest _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListDatasetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDatasetsResponse',
-      package: const $pb.PackageName('google.genomics.v1'))
-    ..pc<Dataset>(1, 'datasets', $pb.PbFieldType.PM, Dataset.create)
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
+    ..pc<Dataset>(1, 'datasets', $pb.PbFieldType.PM, subBuilder: Dataset.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -154,26 +188,32 @@ class ListDatasetsResponse extends $pb.GeneratedMessage {
   ListDatasetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDatasetsResponse> createRepeated() =>
       $pb.PbList<ListDatasetsResponse>();
-  static ListDatasetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDatasetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDatasetsResponse>(create);
   static ListDatasetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Dataset> get datasets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDatasetRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
-    ..a<Dataset>(
-        1, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
+    ..aOM<Dataset>(1, 'dataset', subBuilder: Dataset.create)
     ..hasRequiredFields = false;
 
   CreateDatasetRequest._() : super();
@@ -194,27 +234,33 @@ class CreateDatasetRequest extends $pb.GeneratedMessage {
   CreateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDatasetRequest> createRepeated() =>
       $pb.PbList<CreateDatasetRequest>();
-  static CreateDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDatasetRequest>(create);
   static CreateDatasetRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Dataset get dataset => $_getN(0);
+  @$pb.TagNumber(1)
   set dataset(Dataset v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDataset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDataset() => clearField(1);
+  @$pb.TagNumber(1)
+  Dataset ensureDataset() => $_ensure(0);
 }
 
 class UpdateDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDatasetRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'datasetId')
-    ..a<Dataset>(
-        2, 'dataset', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
-    ..a<$5.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..aOM<Dataset>(2, 'dataset', subBuilder: Dataset.create)
+    ..aOM<$5.FieldMask>(3, 'updateMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDatasetRequest._() : super();
@@ -235,38 +281,56 @@ class UpdateDatasetRequest extends $pb.GeneratedMessage {
   UpdateDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDatasetRequest> createRepeated() =>
       $pb.PbList<UpdateDatasetRequest>();
-  static UpdateDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDatasetRequest>(create);
   static UpdateDatasetRequest _defaultInstance;
 
-  $core.String get datasetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get datasetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set datasetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatasetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatasetId() => clearField(1);
 
+  @$pb.TagNumber(2)
   Dataset get dataset => $_getN(1);
+  @$pb.TagNumber(2)
   set dataset(Dataset v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDataset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDataset() => clearField(2);
+  @$pb.TagNumber(2)
+  Dataset ensureDataset() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $5.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($5.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class DeleteDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDatasetRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
@@ -288,22 +352,28 @@ class DeleteDatasetRequest extends $pb.GeneratedMessage {
   DeleteDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDatasetRequest> createRepeated() =>
       $pb.PbList<DeleteDatasetRequest>();
-  static DeleteDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDatasetRequest>(create);
   static DeleteDatasetRequest _defaultInstance;
 
-  $core.String get datasetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get datasetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set datasetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatasetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatasetId() => clearField(1);
 }
 
 class UndeleteDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteDatasetRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
@@ -326,22 +396,28 @@ class UndeleteDatasetRequest extends $pb.GeneratedMessage {
   UndeleteDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<UndeleteDatasetRequest> createRepeated() =>
       $pb.PbList<UndeleteDatasetRequest>();
-  static UndeleteDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UndeleteDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UndeleteDatasetRequest>(create);
   static UndeleteDatasetRequest _defaultInstance;
 
-  $core.String get datasetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get datasetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set datasetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatasetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatasetId() => clearField(1);
 }
 
 class GetDatasetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDatasetRequest',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'datasetId')
     ..hasRequiredFields = false;
 
@@ -362,15 +438,20 @@ class GetDatasetRequest extends $pb.GeneratedMessage {
   GetDatasetRequest createEmptyInstance() => create();
   static $pb.PbList<GetDatasetRequest> createRepeated() =>
       $pb.PbList<GetDatasetRequest>();
-  static GetDatasetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDatasetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDatasetRequest>(create);
   static GetDatasetRequest _defaultInstance;
 
-  $core.String get datasetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get datasetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set datasetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatasetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatasetId() => clearField(1);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../../rpc/status.pb.dart' as $2;
 
 class GetSharedCriterionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSharedCriterionRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -39,26 +39,32 @@ class GetSharedCriterionRequest extends $pb.GeneratedMessage {
   GetSharedCriterionRequest createEmptyInstance() => create();
   static $pb.PbList<GetSharedCriterionRequest> createRepeated() =>
       $pb.PbList<GetSharedCriterionRequest>();
-  static GetSharedCriterionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSharedCriterionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSharedCriterionRequest>(create);
   static GetSharedCriterionRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateSharedCriteriaRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateSharedCriteriaRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<SharedCriterionOperation>(
-        2, 'operations', $pb.PbFieldType.PM, SharedCriterionOperation.create)
+    ..pc<SharedCriterionOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: SharedCriterionOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -84,34 +90,48 @@ class MutateSharedCriteriaRequest extends $pb.GeneratedMessage {
   MutateSharedCriteriaRequest createEmptyInstance() => create();
   static $pb.PbList<MutateSharedCriteriaRequest> createRepeated() =>
       $pb.PbList<MutateSharedCriteriaRequest>();
-  static MutateSharedCriteriaRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateSharedCriteriaRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateSharedCriteriaRequest>(create);
   static MutateSharedCriteriaRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<SharedCriterionOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -125,10 +145,11 @@ class SharedCriterionOperation extends $pb.GeneratedMessage {
     0: SharedCriterionOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SharedCriterionOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 3])
-    ..a<$1.SharedCriterion>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.SharedCriterion.getDefault, $1.SharedCriterion.create)
+    ..aOM<$1.SharedCriterion>(1, 'create',
+        subBuilder: $1.SharedCriterion.create)
     ..aOS(3, 'remove')
     ..hasRequiredFields = false;
 
@@ -151,39 +172,50 @@ class SharedCriterionOperation extends $pb.GeneratedMessage {
   SharedCriterionOperation createEmptyInstance() => create();
   static $pb.PbList<SharedCriterionOperation> createRepeated() =>
       $pb.PbList<SharedCriterionOperation>();
-  static SharedCriterionOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SharedCriterionOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SharedCriterionOperation>(create);
   static SharedCriterionOperation _defaultInstance;
 
   SharedCriterionOperation_Operation whichOperation() =>
       _SharedCriterionOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.SharedCriterion get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.SharedCriterion v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.SharedCriterion ensureCreate_1() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 }
 
 class MutateSharedCriteriaResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateSharedCriteriaResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateSharedCriterionResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateSharedCriterionResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateSharedCriterionResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateSharedCriterionResult.create)
+    ..aOM<$2.Status>(3, 'partialFailureError', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateSharedCriteriaResponse._() : super();
@@ -207,25 +239,34 @@ class MutateSharedCriteriaResponse extends $pb.GeneratedMessage {
   MutateSharedCriteriaResponse createEmptyInstance() => create();
   static $pb.PbList<MutateSharedCriteriaResponse> createRepeated() =>
       $pb.PbList<MutateSharedCriteriaResponse>();
-  static MutateSharedCriteriaResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateSharedCriteriaResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateSharedCriteriaResponse>(create);
   static MutateSharedCriteriaResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateSharedCriterionResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $2.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateSharedCriterionResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateSharedCriterionResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -250,15 +291,20 @@ class MutateSharedCriterionResult extends $pb.GeneratedMessage {
   MutateSharedCriterionResult createEmptyInstance() => create();
   static $pb.PbList<MutateSharedCriterionResult> createRepeated() =>
       $pb.PbList<MutateSharedCriterionResult>();
-  static MutateSharedCriterionResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateSharedCriterionResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateSharedCriterionResult>(create);
   static MutateSharedCriterionResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

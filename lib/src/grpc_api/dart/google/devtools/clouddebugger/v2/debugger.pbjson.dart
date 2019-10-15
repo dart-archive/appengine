@@ -8,16 +8,24 @@
 const SetBreakpointRequest$json = {
   '1': 'SetBreakpointRequest',
   '2': [
-    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'debuggeeId'},
     {
       '1': 'breakpoint',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.clouddebugger.v2.Breakpoint',
+      '8': {},
       '10': 'breakpoint'
     },
-    {'1': 'client_version', '3': 4, '4': 1, '5': 9, '10': 'clientVersion'},
+    {
+      '1': 'client_version',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'clientVersion'
+    },
   ],
 };
 
@@ -38,9 +46,23 @@ const SetBreakpointResponse$json = {
 const GetBreakpointRequest$json = {
   '1': 'GetBreakpointRequest',
   '2': [
-    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
-    {'1': 'breakpoint_id', '3': 2, '4': 1, '5': 9, '10': 'breakpointId'},
-    {'1': 'client_version', '3': 4, '4': 1, '5': 9, '10': 'clientVersion'},
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'debuggeeId'},
+    {
+      '1': 'breakpoint_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'breakpointId'
+    },
+    {
+      '1': 'client_version',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'clientVersion'
+    },
   ],
 };
 
@@ -61,16 +83,30 @@ const GetBreakpointResponse$json = {
 const DeleteBreakpointRequest$json = {
   '1': 'DeleteBreakpointRequest',
   '2': [
-    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
-    {'1': 'breakpoint_id', '3': 2, '4': 1, '5': 9, '10': 'breakpointId'},
-    {'1': 'client_version', '3': 3, '4': 1, '5': 9, '10': 'clientVersion'},
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'debuggeeId'},
+    {
+      '1': 'breakpoint_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'breakpointId'
+    },
+    {
+      '1': 'client_version',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'clientVersion'
+    },
   ],
 };
 
 const ListBreakpointsRequest$json = {
   '1': 'ListBreakpointsRequest',
   '2': [
-    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'debuggeeId'},
     {'1': 'include_all_users', '3': 2, '4': 1, '5': 8, '10': 'includeAllUsers'},
     {'1': 'include_inactive', '3': 3, '4': 1, '5': 8, '10': 'includeInactive'},
     {
@@ -91,7 +127,14 @@ const ListBreakpointsRequest$json = {
       '10': 'stripResults',
     },
     {'1': 'wait_token', '3': 6, '4': 1, '5': 9, '10': 'waitToken'},
-    {'1': 'client_version', '3': 8, '4': 1, '5': 9, '10': 'clientVersion'},
+    {
+      '1': 'client_version',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'clientVersion'
+    },
   ],
   '3': [ListBreakpointsRequest_BreakpointActionValue$json],
 };
@@ -128,9 +171,16 @@ const ListBreakpointsResponse$json = {
 const ListDebuggeesRequest$json = {
   '1': 'ListDebuggeesRequest',
   '2': [
-    {'1': 'project', '3': 2, '4': 1, '5': 9, '10': 'project'},
+    {'1': 'project', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'project'},
     {'1': 'include_inactive', '3': 3, '4': 1, '5': 8, '10': 'includeInactive'},
-    {'1': 'client_version', '3': 4, '4': 1, '5': 9, '10': 'clientVersion'},
+    {
+      '1': 'client_version',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'clientVersion'
+    },
   ],
 };
 

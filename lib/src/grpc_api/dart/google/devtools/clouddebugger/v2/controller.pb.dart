@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,9 +13,9 @@ import 'data.pb.dart' as $1;
 
 class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegisterDebuggeeRequest',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..a<$1.Debuggee>(1, 'debuggee', $pb.PbFieldType.OM, $1.Debuggee.getDefault,
-        $1.Debuggee.create)
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Debuggee>(1, 'debuggee', subBuilder: $1.Debuggee.create)
     ..hasRequiredFields = false;
 
   RegisterDebuggeeRequest._() : super();
@@ -38,24 +37,31 @@ class RegisterDebuggeeRequest extends $pb.GeneratedMessage {
   RegisterDebuggeeRequest createEmptyInstance() => create();
   static $pb.PbList<RegisterDebuggeeRequest> createRepeated() =>
       $pb.PbList<RegisterDebuggeeRequest>();
-  static RegisterDebuggeeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RegisterDebuggeeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterDebuggeeRequest>(create);
   static RegisterDebuggeeRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Debuggee get debuggee => $_getN(0);
+  @$pb.TagNumber(1)
   set debuggee($1.Debuggee v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDebuggee() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDebuggee() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Debuggee ensureDebuggee() => $_ensure(0);
 }
 
 class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RegisterDebuggeeResponse',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..a<$1.Debuggee>(1, 'debuggee', $pb.PbFieldType.OM, $1.Debuggee.getDefault,
-        $1.Debuggee.create)
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Debuggee>(1, 'debuggee', subBuilder: $1.Debuggee.create)
     ..hasRequiredFields = false;
 
   RegisterDebuggeeResponse._() : super();
@@ -77,23 +83,31 @@ class RegisterDebuggeeResponse extends $pb.GeneratedMessage {
   RegisterDebuggeeResponse createEmptyInstance() => create();
   static $pb.PbList<RegisterDebuggeeResponse> createRepeated() =>
       $pb.PbList<RegisterDebuggeeResponse>();
-  static RegisterDebuggeeResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RegisterDebuggeeResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RegisterDebuggeeResponse>(create);
   static RegisterDebuggeeResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Debuggee get debuggee => $_getN(0);
+  @$pb.TagNumber(1)
   set debuggee($1.Debuggee v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDebuggee() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDebuggee() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Debuggee ensureDebuggee() => $_ensure(0);
 }
 
 class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListActiveBreakpointsRequest',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'debuggeeId')
     ..aOS(2, 'waitToken')
     ..aOB(3, 'successOnTimeout')
@@ -120,41 +134,55 @@ class ListActiveBreakpointsRequest extends $pb.GeneratedMessage {
   ListActiveBreakpointsRequest createEmptyInstance() => create();
   static $pb.PbList<ListActiveBreakpointsRequest> createRepeated() =>
       $pb.PbList<ListActiveBreakpointsRequest>();
-  static ListActiveBreakpointsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListActiveBreakpointsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListActiveBreakpointsRequest>(create);
   static ListActiveBreakpointsRequest _defaultInstance;
 
-  $core.String get debuggeeId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get debuggeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set debuggeeId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDebuggeeId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDebuggeeId() => clearField(1);
 
-  $core.String get waitToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get waitToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set waitToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasWaitToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearWaitToken() => clearField(2);
 
-  $core.bool get successOnTimeout => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get successOnTimeout => $_getBF(2);
+  @$pb.TagNumber(3)
   set successOnTimeout($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSuccessOnTimeout() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSuccessOnTimeout() => clearField(3);
 }
 
 class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListActiveBreakpointsResponse',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
-    ..pc<$1.Breakpoint>(
-        1, 'breakpoints', $pb.PbFieldType.PM, $1.Breakpoint.create)
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
+    ..pc<$1.Breakpoint>(1, 'breakpoints', $pb.PbFieldType.PM,
+        subBuilder: $1.Breakpoint.create)
     ..aOS(2, 'nextWaitToken')
     ..aOB(3, 'waitExpired')
     ..hasRequiredFields = false;
@@ -180,36 +208,46 @@ class ListActiveBreakpointsResponse extends $pb.GeneratedMessage {
   ListActiveBreakpointsResponse createEmptyInstance() => create();
   static $pb.PbList<ListActiveBreakpointsResponse> createRepeated() =>
       $pb.PbList<ListActiveBreakpointsResponse>();
-  static ListActiveBreakpointsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListActiveBreakpointsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListActiveBreakpointsResponse>(create);
   static ListActiveBreakpointsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Breakpoint> get breakpoints => $_getList(0);
 
-  $core.String get nextWaitToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextWaitToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextWaitToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextWaitToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextWaitToken() => clearField(2);
 
-  $core.bool get waitExpired => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get waitExpired => $_getBF(2);
+  @$pb.TagNumber(3)
   set waitExpired($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasWaitExpired() => $_has(2);
+  @$pb.TagNumber(3)
   void clearWaitExpired() => clearField(3);
 }
 
 class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateActiveBreakpointRequest',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'debuggeeId')
-    ..a<$1.Breakpoint>(2, 'breakpoint', $pb.PbFieldType.OM,
-        $1.Breakpoint.getDefault, $1.Breakpoint.create)
+    ..aOM<$1.Breakpoint>(2, 'breakpoint', subBuilder: $1.Breakpoint.create)
     ..hasRequiredFields = false;
 
   UpdateActiveBreakpointRequest._() : super();
@@ -233,31 +271,43 @@ class UpdateActiveBreakpointRequest extends $pb.GeneratedMessage {
   UpdateActiveBreakpointRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateActiveBreakpointRequest> createRepeated() =>
       $pb.PbList<UpdateActiveBreakpointRequest>();
-  static UpdateActiveBreakpointRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateActiveBreakpointRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateActiveBreakpointRequest>(create);
   static UpdateActiveBreakpointRequest _defaultInstance;
 
-  $core.String get debuggeeId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get debuggeeId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set debuggeeId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDebuggeeId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDebuggeeId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Breakpoint get breakpoint => $_getN(1);
+  @$pb.TagNumber(2)
   set breakpoint($1.Breakpoint v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBreakpoint() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBreakpoint() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Breakpoint ensureBreakpoint() => $_ensure(1);
 }
 
 class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateActiveBreakpointResponse',
-      package: const $pb.PackageName('google.devtools.clouddebugger.v2'))
+      package: const $pb.PackageName('google.devtools.clouddebugger.v2'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UpdateActiveBreakpointResponse._() : super();
@@ -281,7 +331,8 @@ class UpdateActiveBreakpointResponse extends $pb.GeneratedMessage {
   UpdateActiveBreakpointResponse createEmptyInstance() => create();
   static $pb.PbList<UpdateActiveBreakpointResponse> createRepeated() =>
       $pb.PbList<UpdateActiveBreakpointResponse>();
-  static UpdateActiveBreakpointResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateActiveBreakpointResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateActiveBreakpointResponse>(create);
   static UpdateActiveBreakpointResponse _defaultInstance;
 }

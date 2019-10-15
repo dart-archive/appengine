@@ -73,6 +73,9 @@ message ExtensionTypeEnum {
 
     // Affiliate location.
     AFFILIATE_LOCATION = 13;
+
+    // Hotel callout
+    HOTEL_CALLOUT = 15;
   }
 
 

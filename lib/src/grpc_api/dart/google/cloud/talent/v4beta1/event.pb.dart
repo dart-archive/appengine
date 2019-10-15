@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,16 +25,14 @@ class ClientEvent extends $pb.GeneratedMessage {
     0: ClientEvent_Event.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClientEvent',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..oo(0, [5, 6])
     ..aOS(1, 'requestId')
     ..aOS(2, 'eventId')
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<JobEvent>(
-        5, 'jobEvent', $pb.PbFieldType.OM, JobEvent.getDefault, JobEvent.create)
-    ..a<ProfileEvent>(6, 'profileEvent', $pb.PbFieldType.OM,
-        ProfileEvent.getDefault, ProfileEvent.create)
+    ..aOM<$0.Timestamp>(4, 'createTime', subBuilder: $0.Timestamp.create)
+    ..aOM<JobEvent>(5, 'jobEvent', subBuilder: JobEvent.create)
+    ..aOM<ProfileEvent>(6, 'profileEvent', subBuilder: ProfileEvent.create)
     ..aOS(9, 'eventNotes')
     ..hasRequiredFields = false;
 
@@ -55,71 +52,101 @@ class ClientEvent extends $pb.GeneratedMessage {
   static ClientEvent create() => ClientEvent._();
   ClientEvent createEmptyInstance() => create();
   static $pb.PbList<ClientEvent> createRepeated() => $pb.PbList<ClientEvent>();
-  static ClientEvent getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ClientEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ClientEvent>(create);
   static ClientEvent _defaultInstance;
 
   ClientEvent_Event whichEvent() => _ClientEvent_EventByTag[$_whichOneof(0)];
   void clearEvent() => clearField($_whichOneof(0));
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get eventId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get eventId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set eventId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEventId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEventId() => clearField(2);
 
+  @$pb.TagNumber(4)
   $0.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(4)
   set createTime($0.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(2);
+  @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureCreateTime() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   JobEvent get jobEvent => $_getN(3);
+  @$pb.TagNumber(5)
   set jobEvent(JobEvent v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasJobEvent() => $_has(3);
+  @$pb.TagNumber(5)
   void clearJobEvent() => clearField(5);
+  @$pb.TagNumber(5)
+  JobEvent ensureJobEvent() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   ProfileEvent get profileEvent => $_getN(4);
+  @$pb.TagNumber(6)
   set profileEvent(ProfileEvent v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasProfileEvent() => $_has(4);
+  @$pb.TagNumber(6)
   void clearProfileEvent() => clearField(6);
+  @$pb.TagNumber(6)
+  ProfileEvent ensureProfileEvent() => $_ensure(4);
 
-  $core.String get eventNotes => $_getS(5, '');
+  @$pb.TagNumber(9)
+  $core.String get eventNotes => $_getSZ(5);
+  @$pb.TagNumber(9)
   set eventNotes($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasEventNotes() => $_has(5);
+  @$pb.TagNumber(9)
   void clearEventNotes() => clearField(9);
 }
 
 class JobEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobEvent',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..e<JobEvent_JobEventType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        JobEvent_JobEventType.JOB_EVENT_TYPE_UNSPECIFIED,
-        JobEvent_JobEventType.valueOf,
-        JobEvent_JobEventType.values)
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
+    ..e<JobEvent_JobEventType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: JobEvent_JobEventType.JOB_EVENT_TYPE_UNSPECIFIED,
+        valueOf: JobEvent_JobEventType.valueOf,
+        enumValues: JobEvent_JobEventType.values)
     ..pPS(2, 'jobs')
     ..aOS(3, 'profile')
     ..hasRequiredFields = false;
@@ -140,38 +167,48 @@ class JobEvent extends $pb.GeneratedMessage {
   static JobEvent create() => JobEvent._();
   JobEvent createEmptyInstance() => create();
   static $pb.PbList<JobEvent> createRepeated() => $pb.PbList<JobEvent>();
-  static JobEvent getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobEvent getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<JobEvent>(create);
   static JobEvent _defaultInstance;
 
+  @$pb.TagNumber(1)
   JobEvent_JobEventType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type(JobEvent_JobEventType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get jobs => $_getList(1);
 
-  $core.String get profile => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get profile => $_getSZ(2);
+  @$pb.TagNumber(3)
   set profile($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasProfile() => $_has(2);
+  @$pb.TagNumber(3)
   void clearProfile() => clearField(3);
 }
 
 class ProfileEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProfileEvent',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..e<ProfileEvent_ProfileEventType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        ProfileEvent_ProfileEventType.PROFILE_EVENT_TYPE_UNSPECIFIED,
-        ProfileEvent_ProfileEventType.valueOf,
-        ProfileEvent_ProfileEventType.values)
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
+    ..e<ProfileEvent_ProfileEventType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ProfileEvent_ProfileEventType.PROFILE_EVENT_TYPE_UNSPECIFIED,
+        valueOf: ProfileEvent_ProfileEventType.valueOf,
+        enumValues: ProfileEvent_ProfileEventType.values)
     ..pPS(2, 'profiles')
     ..pPS(6, 'jobs')
     ..hasRequiredFields = false;
@@ -193,18 +230,26 @@ class ProfileEvent extends $pb.GeneratedMessage {
   ProfileEvent createEmptyInstance() => create();
   static $pb.PbList<ProfileEvent> createRepeated() =>
       $pb.PbList<ProfileEvent>();
-  static ProfileEvent getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProfileEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProfileEvent>(create);
   static ProfileEvent _defaultInstance;
 
+  @$pb.TagNumber(1)
   ProfileEvent_ProfileEventType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type(ProfileEvent_ProfileEventType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get profiles => $_getList(1);
 
+  @$pb.TagNumber(6)
   $core.List<$core.String> get jobs => $_getList(2);
 }

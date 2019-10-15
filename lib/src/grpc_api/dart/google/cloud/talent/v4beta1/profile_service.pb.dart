@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/field_mask.pb.dart' as $3;
@@ -19,12 +18,13 @@ import 'histogram.pb.dart' as $6;
 
 class ListProfilesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProfilesRequest',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
-    ..a<$3.FieldMask>(4, 'readMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<$3.FieldMask>(4, 'readMask', subBuilder: $3.FieldMask.create)
+    ..aOS(5, 'filter')
     ..hasRequiredFields = false;
 
   ListProfilesRequest._() : super();
@@ -44,47 +44,80 @@ class ListProfilesRequest extends $pb.GeneratedMessage {
   ListProfilesRequest createEmptyInstance() => create();
   static $pb.PbList<ListProfilesRequest> createRepeated() =>
       $pb.PbList<ListProfilesRequest>();
-  static ListProfilesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProfilesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProfilesRequest>(create);
   static ListProfilesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  @$pb.TagNumber(4)
   $3.FieldMask get readMask => $_getN(3);
+  @$pb.TagNumber(4)
   set readMask($3.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasReadMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearReadMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.FieldMask ensureReadMask() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set filter($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearFilter() => clearField(5);
 }
 
 class ListProfilesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProfilesResponse',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..pc<$1.Profile>(1, 'profiles', $pb.PbFieldType.PM, $1.Profile.create)
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
+    ..pc<$1.Profile>(1, 'profiles', $pb.PbFieldType.PM,
+        subBuilder: $1.Profile.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -106,27 +139,33 @@ class ListProfilesResponse extends $pb.GeneratedMessage {
   ListProfilesResponse createEmptyInstance() => create();
   static $pb.PbList<ListProfilesResponse> createRepeated() =>
       $pb.PbList<ListProfilesResponse>();
-  static ListProfilesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProfilesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProfilesResponse>(create);
   static ListProfilesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Profile> get profiles => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateProfileRequest',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Profile>(2, 'profile', $pb.PbFieldType.OM, $1.Profile.getDefault,
-        $1.Profile.create)
+    ..aOM<$1.Profile>(2, 'profile', subBuilder: $1.Profile.create)
     ..hasRequiredFields = false;
 
   CreateProfileRequest._() : super();
@@ -147,30 +186,42 @@ class CreateProfileRequest extends $pb.GeneratedMessage {
   CreateProfileRequest createEmptyInstance() => create();
   static $pb.PbList<CreateProfileRequest> createRepeated() =>
       $pb.PbList<CreateProfileRequest>();
-  static CreateProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateProfileRequest>(create);
   static CreateProfileRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Profile get profile => $_getN(1);
+  @$pb.TagNumber(2)
   set profile($1.Profile v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProfile() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProfile() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Profile ensureProfile() => $_ensure(1);
 }
 
 class GetProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetProfileRequest',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -191,26 +242,30 @@ class GetProfileRequest extends $pb.GeneratedMessage {
   GetProfileRequest createEmptyInstance() => create();
   static $pb.PbList<GetProfileRequest> createRepeated() =>
       $pb.PbList<GetProfileRequest>();
-  static GetProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetProfileRequest>(create);
   static GetProfileRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateProfileRequest',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..a<$1.Profile>(1, 'profile', $pb.PbFieldType.OM, $1.Profile.getDefault,
-        $1.Profile.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
+    ..aOM<$1.Profile>(1, 'profile', subBuilder: $1.Profile.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProfileRequest._() : super();
@@ -231,30 +286,44 @@ class UpdateProfileRequest extends $pb.GeneratedMessage {
   UpdateProfileRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateProfileRequest> createRepeated() =>
       $pb.PbList<UpdateProfileRequest>();
-  static UpdateProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateProfileRequest>(create);
   static UpdateProfileRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Profile get profile => $_getN(0);
+  @$pb.TagNumber(1)
   set profile($1.Profile v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProfile() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProfile() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Profile ensureProfile() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteProfileRequest',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -276,35 +345,41 @@ class DeleteProfileRequest extends $pb.GeneratedMessage {
   DeleteProfileRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteProfileRequest> createRepeated() =>
       $pb.PbList<DeleteProfileRequest>();
-  static DeleteProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteProfileRequest>(create);
   static DeleteProfileRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class SearchProfilesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchProfilesRequest',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$4.RequestMetadata>(2, 'requestMetadata', $pb.PbFieldType.OM,
-        $4.RequestMetadata.getDefault, $4.RequestMetadata.create)
-    ..a<$5.ProfileQuery>(3, 'profileQuery', $pb.PbFieldType.OM,
-        $5.ProfileQuery.getDefault, $5.ProfileQuery.create)
+    ..aOM<$4.RequestMetadata>(2, 'requestMetadata',
+        subBuilder: $4.RequestMetadata.create)
+    ..aOM<$5.ProfileQuery>(3, 'profileQuery',
+        subBuilder: $5.ProfileQuery.create)
     ..a<$core.int>(4, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(5, 'pageToken')
     ..a<$core.int>(6, 'offset', $pb.PbFieldType.O3)
     ..aOB(7, 'disableSpellCheck')
     ..aOS(8, 'orderBy')
     ..aOB(9, 'caseSensitiveSort')
-    ..pc<$6.HistogramQuery>(
-        10, 'histogramQueries', $pb.PbFieldType.PM, $6.HistogramQuery.create)
+    ..pc<$6.HistogramQuery>(10, 'histogramQueries', $pb.PbFieldType.PM,
+        subBuilder: $6.HistogramQuery.create)
     ..aOS(12, 'resultSetId')
     ..aOB(13, 'strictKeywordsSearch')
     ..hasRequiredFields = false;
@@ -328,114 +403,166 @@ class SearchProfilesRequest extends $pb.GeneratedMessage {
   SearchProfilesRequest createEmptyInstance() => create();
   static $pb.PbList<SearchProfilesRequest> createRepeated() =>
       $pb.PbList<SearchProfilesRequest>();
-  static SearchProfilesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchProfilesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchProfilesRequest>(create);
   static SearchProfilesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $4.RequestMetadata get requestMetadata => $_getN(1);
+  @$pb.TagNumber(2)
   set requestMetadata($4.RequestMetadata v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRequestMetadata() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRequestMetadata() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.RequestMetadata ensureRequestMetadata() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $5.ProfileQuery get profileQuery => $_getN(2);
+  @$pb.TagNumber(3)
   set profileQuery($5.ProfileQuery v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasProfileQuery() => $_has(2);
+  @$pb.TagNumber(3)
   void clearProfileQuery() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.ProfileQuery ensureProfileQuery() => $_ensure(2);
 
-  $core.int get pageSize => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(3);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 
-  $core.String get pageToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get pageToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set pageToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPageToken() => clearField(5);
 
-  $core.int get offset => $_get(5, 0);
+  @$pb.TagNumber(6)
+  $core.int get offset => $_getIZ(5);
+  @$pb.TagNumber(6)
   set offset($core.int v) {
     $_setSignedInt32(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOffset() => $_has(5);
+  @$pb.TagNumber(6)
   void clearOffset() => clearField(6);
 
-  $core.bool get disableSpellCheck => $_get(6, false);
+  @$pb.TagNumber(7)
+  $core.bool get disableSpellCheck => $_getBF(6);
+  @$pb.TagNumber(7)
   set disableSpellCheck($core.bool v) {
     $_setBool(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasDisableSpellCheck() => $_has(6);
+  @$pb.TagNumber(7)
   void clearDisableSpellCheck() => clearField(7);
 
-  $core.String get orderBy => $_getS(7, '');
+  @$pb.TagNumber(8)
+  $core.String get orderBy => $_getSZ(7);
+  @$pb.TagNumber(8)
   set orderBy($core.String v) {
     $_setString(7, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasOrderBy() => $_has(7);
+  @$pb.TagNumber(8)
   void clearOrderBy() => clearField(8);
 
-  $core.bool get caseSensitiveSort => $_get(8, false);
+  @$pb.TagNumber(9)
+  $core.bool get caseSensitiveSort => $_getBF(8);
+  @$pb.TagNumber(9)
   set caseSensitiveSort($core.bool v) {
     $_setBool(8, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasCaseSensitiveSort() => $_has(8);
+  @$pb.TagNumber(9)
   void clearCaseSensitiveSort() => clearField(9);
 
+  @$pb.TagNumber(10)
   $core.List<$6.HistogramQuery> get histogramQueries => $_getList(9);
 
-  $core.String get resultSetId => $_getS(10, '');
+  @$pb.TagNumber(12)
+  $core.String get resultSetId => $_getSZ(10);
+  @$pb.TagNumber(12)
   set resultSetId($core.String v) {
     $_setString(10, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasResultSetId() => $_has(10);
+  @$pb.TagNumber(12)
   void clearResultSetId() => clearField(12);
 
-  $core.bool get strictKeywordsSearch => $_get(11, false);
+  @$pb.TagNumber(13)
+  $core.bool get strictKeywordsSearch => $_getBF(11);
+  @$pb.TagNumber(13)
   set strictKeywordsSearch($core.bool v) {
     $_setBool(11, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasStrictKeywordsSearch() => $_has(11);
+  @$pb.TagNumber(13)
   void clearStrictKeywordsSearch() => clearField(13);
 }
 
 class SearchProfilesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchProfilesResponse',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
     ..aInt64(1, 'estimatedTotalSize')
-    ..a<$4.SpellingCorrection>(2, 'spellCorrection', $pb.PbFieldType.OM,
-        $4.SpellingCorrection.getDefault, $4.SpellingCorrection.create)
-    ..a<$4.ResponseMetadata>(3, 'metadata', $pb.PbFieldType.OM,
-        $4.ResponseMetadata.getDefault, $4.ResponseMetadata.create)
+    ..aOM<$4.SpellingCorrection>(2, 'spellCorrection',
+        subBuilder: $4.SpellingCorrection.create)
+    ..aOM<$4.ResponseMetadata>(3, 'metadata',
+        subBuilder: $4.ResponseMetadata.create)
     ..aOS(4, 'nextPageToken')
-    ..pc<$6.HistogramQueryResult>(5, 'histogramQueryResults',
-        $pb.PbFieldType.PM, $6.HistogramQueryResult.create)
-    ..pc<SummarizedProfile>(
-        6, 'summarizedProfiles', $pb.PbFieldType.PM, SummarizedProfile.create)
+    ..pc<$6.HistogramQueryResult>(
+        5, 'histogramQueryResults', $pb.PbFieldType.PM,
+        subBuilder: $6.HistogramQueryResult.create)
+    ..pc<SummarizedProfile>(6, 'summarizedProfiles', $pb.PbFieldType.PM,
+        subBuilder: SummarizedProfile.create)
     ..aOS(7, 'resultSetId')
     ..hasRequiredFields = false;
 
@@ -458,61 +585,89 @@ class SearchProfilesResponse extends $pb.GeneratedMessage {
   SearchProfilesResponse createEmptyInstance() => create();
   static $pb.PbList<SearchProfilesResponse> createRepeated() =>
       $pb.PbList<SearchProfilesResponse>();
-  static SearchProfilesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchProfilesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchProfilesResponse>(create);
   static SearchProfilesResponse _defaultInstance;
 
-  Int64 get estimatedTotalSize => $_getI64(0);
-  set estimatedTotalSize(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get estimatedTotalSize => $_getI64(0);
+  @$pb.TagNumber(1)
+  set estimatedTotalSize($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEstimatedTotalSize() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEstimatedTotalSize() => clearField(1);
 
+  @$pb.TagNumber(2)
   $4.SpellingCorrection get spellCorrection => $_getN(1);
+  @$pb.TagNumber(2)
   set spellCorrection($4.SpellingCorrection v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSpellCorrection() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSpellCorrection() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.SpellingCorrection ensureSpellCorrection() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $4.ResponseMetadata get metadata => $_getN(2);
+  @$pb.TagNumber(3)
   set metadata($4.ResponseMetadata v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMetadata() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMetadata() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.ResponseMetadata ensureMetadata() => $_ensure(2);
 
-  $core.String get nextPageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get nextPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set nextPageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasNextPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearNextPageToken() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$6.HistogramQueryResult> get histogramQueryResults => $_getList(4);
 
+  @$pb.TagNumber(6)
   $core.List<SummarizedProfile> get summarizedProfiles => $_getList(5);
 
-  $core.String get resultSetId => $_getS(6, '');
+  @$pb.TagNumber(7)
+  $core.String get resultSetId => $_getSZ(6);
+  @$pb.TagNumber(7)
   set resultSetId($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasResultSetId() => $_has(6);
+  @$pb.TagNumber(7)
   void clearResultSetId() => clearField(7);
 }
 
 class SummarizedProfile extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SummarizedProfile',
-      package: const $pb.PackageName('google.cloud.talent.v4beta1'))
-    ..pc<$1.Profile>(1, 'profiles', $pb.PbFieldType.PM, $1.Profile.create)
-    ..a<$1.Profile>(2, 'summary', $pb.PbFieldType.OM, $1.Profile.getDefault,
-        $1.Profile.create)
+      package: const $pb.PackageName('google.cloud.talent.v4beta1'),
+      createEmptyInstance: create)
+    ..pc<$1.Profile>(1, 'profiles', $pb.PbFieldType.PM,
+        subBuilder: $1.Profile.create)
+    ..aOM<$1.Profile>(2, 'summary', subBuilder: $1.Profile.create)
     ..hasRequiredFields = false;
 
   SummarizedProfile._() : super();
@@ -532,17 +687,25 @@ class SummarizedProfile extends $pb.GeneratedMessage {
   SummarizedProfile createEmptyInstance() => create();
   static $pb.PbList<SummarizedProfile> createRepeated() =>
       $pb.PbList<SummarizedProfile>();
-  static SummarizedProfile getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SummarizedProfile getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SummarizedProfile>(create);
   static SummarizedProfile _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Profile> get profiles => $_getList(0);
 
+  @$pb.TagNumber(2)
   $1.Profile get summary => $_getN(1);
+  @$pb.TagNumber(2)
   set summary($1.Profile v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSummary() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSummary() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Profile ensureSummary() => $_ensure(1);
 }

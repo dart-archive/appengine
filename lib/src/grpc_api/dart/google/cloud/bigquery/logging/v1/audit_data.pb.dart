@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../../protobuf/timestamp.pb.dart' as $0;
@@ -67,49 +66,45 @@ class AuditData extends $pb.GeneratedMessage {
     0: AuditData_Response.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditData',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 16])
     ..oo(1, [9, 10, 11, 12, 13, 14, 15, 18])
-    ..a<TableInsertRequest>(1, 'tableInsertRequest', $pb.PbFieldType.OM,
-        TableInsertRequest.getDefault, TableInsertRequest.create)
-    ..a<DatasetListRequest>(2, 'datasetListRequest', $pb.PbFieldType.OM,
-        DatasetListRequest.getDefault, DatasetListRequest.create)
-    ..a<DatasetInsertRequest>(3, 'datasetInsertRequest', $pb.PbFieldType.OM,
-        DatasetInsertRequest.getDefault, DatasetInsertRequest.create)
-    ..a<DatasetUpdateRequest>(4, 'datasetUpdateRequest', $pb.PbFieldType.OM,
-        DatasetUpdateRequest.getDefault, DatasetUpdateRequest.create)
-    ..a<JobInsertRequest>(5, 'jobInsertRequest', $pb.PbFieldType.OM,
-        JobInsertRequest.getDefault, JobInsertRequest.create)
-    ..a<JobQueryRequest>(6, 'jobQueryRequest', $pb.PbFieldType.OM,
-        JobQueryRequest.getDefault, JobQueryRequest.create)
-    ..a<JobGetQueryResultsRequest>(
-        7,
-        'jobGetQueryResultsRequest',
-        $pb.PbFieldType.OM,
-        JobGetQueryResultsRequest.getDefault,
-        JobGetQueryResultsRequest.create)
-    ..a<TableDataListRequest>(8, 'tableDataListRequest', $pb.PbFieldType.OM,
-        TableDataListRequest.getDefault, TableDataListRequest.create)
-    ..a<TableInsertResponse>(9, 'tableInsertResponse', $pb.PbFieldType.OM,
-        TableInsertResponse.getDefault, TableInsertResponse.create)
-    ..a<TableUpdateResponse>(10, 'tableUpdateResponse', $pb.PbFieldType.OM,
-        TableUpdateResponse.getDefault, TableUpdateResponse.create)
-    ..a<DatasetInsertResponse>(11, 'datasetInsertResponse', $pb.PbFieldType.OM,
-        DatasetInsertResponse.getDefault, DatasetInsertResponse.create)
-    ..a<DatasetUpdateResponse>(12, 'datasetUpdateResponse', $pb.PbFieldType.OM,
-        DatasetUpdateResponse.getDefault, DatasetUpdateResponse.create)
-    ..a<JobQueryResponse>(13, 'jobQueryResponse', $pb.PbFieldType.OM,
-        JobQueryResponse.getDefault, JobQueryResponse.create)
-    ..a<JobGetQueryResultsResponse>(
-        14,
-        'jobGetQueryResultsResponse',
-        $pb.PbFieldType.OM,
-        JobGetQueryResultsResponse.getDefault,
-        JobGetQueryResultsResponse.create)
-    ..a<JobQueryDoneResponse>(15, 'jobQueryDoneResponse', $pb.PbFieldType.OM, JobQueryDoneResponse.getDefault, JobQueryDoneResponse.create)
-    ..a<TableUpdateRequest>(16, 'tableUpdateRequest', $pb.PbFieldType.OM, TableUpdateRequest.getDefault, TableUpdateRequest.create)
-    ..a<JobCompletedEvent>(17, 'jobCompletedEvent', $pb.PbFieldType.OM, JobCompletedEvent.getDefault, JobCompletedEvent.create)
-    ..a<JobInsertResponse>(18, 'jobInsertResponse', $pb.PbFieldType.OM, JobInsertResponse.getDefault, JobInsertResponse.create)
+    ..aOM<TableInsertRequest>(1, 'tableInsertRequest',
+        subBuilder: TableInsertRequest.create)
+    ..aOM<DatasetListRequest>(2, 'datasetListRequest',
+        subBuilder: DatasetListRequest.create)
+    ..aOM<DatasetInsertRequest>(3, 'datasetInsertRequest',
+        subBuilder: DatasetInsertRequest.create)
+    ..aOM<DatasetUpdateRequest>(4, 'datasetUpdateRequest',
+        subBuilder: DatasetUpdateRequest.create)
+    ..aOM<JobInsertRequest>(5, 'jobInsertRequest',
+        subBuilder: JobInsertRequest.create)
+    ..aOM<JobQueryRequest>(6, 'jobQueryRequest',
+        subBuilder: JobQueryRequest.create)
+    ..aOM<JobGetQueryResultsRequest>(7, 'jobGetQueryResultsRequest',
+        subBuilder: JobGetQueryResultsRequest.create)
+    ..aOM<TableDataListRequest>(8, 'tableDataListRequest',
+        subBuilder: TableDataListRequest.create)
+    ..aOM<TableInsertResponse>(9, 'tableInsertResponse',
+        subBuilder: TableInsertResponse.create)
+    ..aOM<TableUpdateResponse>(10, 'tableUpdateResponse',
+        subBuilder: TableUpdateResponse.create)
+    ..aOM<DatasetInsertResponse>(11, 'datasetInsertResponse',
+        subBuilder: DatasetInsertResponse.create)
+    ..aOM<DatasetUpdateResponse>(12, 'datasetUpdateResponse',
+        subBuilder: DatasetUpdateResponse.create)
+    ..aOM<JobQueryResponse>(13, 'jobQueryResponse',
+        subBuilder: JobQueryResponse.create)
+    ..aOM<JobGetQueryResultsResponse>(14, 'jobGetQueryResultsResponse',
+        subBuilder: JobGetQueryResultsResponse.create)
+    ..aOM<JobQueryDoneResponse>(15, 'jobQueryDoneResponse',
+        subBuilder: JobQueryDoneResponse.create)
+    ..aOM<TableUpdateRequest>(16, 'tableUpdateRequest',
+        subBuilder: TableUpdateRequest.create)
+    ..aOM<JobCompletedEvent>(17, 'jobCompletedEvent',
+        subBuilder: JobCompletedEvent.create)
+    ..aOM<JobInsertResponse>(18, 'jobInsertResponse', subBuilder: JobInsertResponse.create)
     ..hasRequiredFields = false;
 
   AuditData._() : super();
@@ -128,7 +123,9 @@ class AuditData extends $pb.GeneratedMessage {
   static AuditData create() => AuditData._();
   AuditData createEmptyInstance() => create();
   static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
-  static AuditData getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AuditData getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuditData>(create);
   static AuditData _defaultInstance;
 
   AuditData_Request whichRequest() => _AuditData_RequestByTag[$_whichOneof(0)];
@@ -138,156 +135,264 @@ class AuditData extends $pb.GeneratedMessage {
       _AuditData_ResponseByTag[$_whichOneof(1)];
   void clearResponse() => clearField($_whichOneof(1));
 
+  @$pb.TagNumber(1)
   TableInsertRequest get tableInsertRequest => $_getN(0);
+  @$pb.TagNumber(1)
   set tableInsertRequest(TableInsertRequest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTableInsertRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTableInsertRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  TableInsertRequest ensureTableInsertRequest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   DatasetListRequest get datasetListRequest => $_getN(1);
+  @$pb.TagNumber(2)
   set datasetListRequest(DatasetListRequest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDatasetListRequest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDatasetListRequest() => clearField(2);
+  @$pb.TagNumber(2)
+  DatasetListRequest ensureDatasetListRequest() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   DatasetInsertRequest get datasetInsertRequest => $_getN(2);
+  @$pb.TagNumber(3)
   set datasetInsertRequest(DatasetInsertRequest v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDatasetInsertRequest() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDatasetInsertRequest() => clearField(3);
+  @$pb.TagNumber(3)
+  DatasetInsertRequest ensureDatasetInsertRequest() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   DatasetUpdateRequest get datasetUpdateRequest => $_getN(3);
+  @$pb.TagNumber(4)
   set datasetUpdateRequest(DatasetUpdateRequest v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDatasetUpdateRequest() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDatasetUpdateRequest() => clearField(4);
+  @$pb.TagNumber(4)
+  DatasetUpdateRequest ensureDatasetUpdateRequest() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   JobInsertRequest get jobInsertRequest => $_getN(4);
+  @$pb.TagNumber(5)
   set jobInsertRequest(JobInsertRequest v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasJobInsertRequest() => $_has(4);
+  @$pb.TagNumber(5)
   void clearJobInsertRequest() => clearField(5);
+  @$pb.TagNumber(5)
+  JobInsertRequest ensureJobInsertRequest() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   JobQueryRequest get jobQueryRequest => $_getN(5);
+  @$pb.TagNumber(6)
   set jobQueryRequest(JobQueryRequest v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasJobQueryRequest() => $_has(5);
+  @$pb.TagNumber(6)
   void clearJobQueryRequest() => clearField(6);
+  @$pb.TagNumber(6)
+  JobQueryRequest ensureJobQueryRequest() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   JobGetQueryResultsRequest get jobGetQueryResultsRequest => $_getN(6);
+  @$pb.TagNumber(7)
   set jobGetQueryResultsRequest(JobGetQueryResultsRequest v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasJobGetQueryResultsRequest() => $_has(6);
+  @$pb.TagNumber(7)
   void clearJobGetQueryResultsRequest() => clearField(7);
+  @$pb.TagNumber(7)
+  JobGetQueryResultsRequest ensureJobGetQueryResultsRequest() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   TableDataListRequest get tableDataListRequest => $_getN(7);
+  @$pb.TagNumber(8)
   set tableDataListRequest(TableDataListRequest v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasTableDataListRequest() => $_has(7);
+  @$pb.TagNumber(8)
   void clearTableDataListRequest() => clearField(8);
+  @$pb.TagNumber(8)
+  TableDataListRequest ensureTableDataListRequest() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   TableInsertResponse get tableInsertResponse => $_getN(8);
+  @$pb.TagNumber(9)
   set tableInsertResponse(TableInsertResponse v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasTableInsertResponse() => $_has(8);
+  @$pb.TagNumber(9)
   void clearTableInsertResponse() => clearField(9);
+  @$pb.TagNumber(9)
+  TableInsertResponse ensureTableInsertResponse() => $_ensure(8);
 
+  @$pb.TagNumber(10)
   TableUpdateResponse get tableUpdateResponse => $_getN(9);
+  @$pb.TagNumber(10)
   set tableUpdateResponse(TableUpdateResponse v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasTableUpdateResponse() => $_has(9);
+  @$pb.TagNumber(10)
   void clearTableUpdateResponse() => clearField(10);
+  @$pb.TagNumber(10)
+  TableUpdateResponse ensureTableUpdateResponse() => $_ensure(9);
 
+  @$pb.TagNumber(11)
   DatasetInsertResponse get datasetInsertResponse => $_getN(10);
+  @$pb.TagNumber(11)
   set datasetInsertResponse(DatasetInsertResponse v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasDatasetInsertResponse() => $_has(10);
+  @$pb.TagNumber(11)
   void clearDatasetInsertResponse() => clearField(11);
+  @$pb.TagNumber(11)
+  DatasetInsertResponse ensureDatasetInsertResponse() => $_ensure(10);
 
+  @$pb.TagNumber(12)
   DatasetUpdateResponse get datasetUpdateResponse => $_getN(11);
+  @$pb.TagNumber(12)
   set datasetUpdateResponse(DatasetUpdateResponse v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasDatasetUpdateResponse() => $_has(11);
+  @$pb.TagNumber(12)
   void clearDatasetUpdateResponse() => clearField(12);
+  @$pb.TagNumber(12)
+  DatasetUpdateResponse ensureDatasetUpdateResponse() => $_ensure(11);
 
+  @$pb.TagNumber(13)
   JobQueryResponse get jobQueryResponse => $_getN(12);
+  @$pb.TagNumber(13)
   set jobQueryResponse(JobQueryResponse v) {
     setField(13, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasJobQueryResponse() => $_has(12);
+  @$pb.TagNumber(13)
   void clearJobQueryResponse() => clearField(13);
+  @$pb.TagNumber(13)
+  JobQueryResponse ensureJobQueryResponse() => $_ensure(12);
 
+  @$pb.TagNumber(14)
   JobGetQueryResultsResponse get jobGetQueryResultsResponse => $_getN(13);
+  @$pb.TagNumber(14)
   set jobGetQueryResultsResponse(JobGetQueryResultsResponse v) {
     setField(14, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasJobGetQueryResultsResponse() => $_has(13);
+  @$pb.TagNumber(14)
   void clearJobGetQueryResultsResponse() => clearField(14);
+  @$pb.TagNumber(14)
+  JobGetQueryResultsResponse ensureJobGetQueryResultsResponse() => $_ensure(13);
 
+  @$pb.TagNumber(15)
   JobQueryDoneResponse get jobQueryDoneResponse => $_getN(14);
+  @$pb.TagNumber(15)
   set jobQueryDoneResponse(JobQueryDoneResponse v) {
     setField(15, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasJobQueryDoneResponse() => $_has(14);
+  @$pb.TagNumber(15)
   void clearJobQueryDoneResponse() => clearField(15);
+  @$pb.TagNumber(15)
+  JobQueryDoneResponse ensureJobQueryDoneResponse() => $_ensure(14);
 
+  @$pb.TagNumber(16)
   TableUpdateRequest get tableUpdateRequest => $_getN(15);
+  @$pb.TagNumber(16)
   set tableUpdateRequest(TableUpdateRequest v) {
     setField(16, v);
   }
 
+  @$pb.TagNumber(16)
   $core.bool hasTableUpdateRequest() => $_has(15);
+  @$pb.TagNumber(16)
   void clearTableUpdateRequest() => clearField(16);
+  @$pb.TagNumber(16)
+  TableUpdateRequest ensureTableUpdateRequest() => $_ensure(15);
 
+  @$pb.TagNumber(17)
   JobCompletedEvent get jobCompletedEvent => $_getN(16);
+  @$pb.TagNumber(17)
   set jobCompletedEvent(JobCompletedEvent v) {
     setField(17, v);
   }
 
+  @$pb.TagNumber(17)
   $core.bool hasJobCompletedEvent() => $_has(16);
+  @$pb.TagNumber(17)
   void clearJobCompletedEvent() => clearField(17);
+  @$pb.TagNumber(17)
+  JobCompletedEvent ensureJobCompletedEvent() => $_ensure(16);
 
+  @$pb.TagNumber(18)
   JobInsertResponse get jobInsertResponse => $_getN(17);
+  @$pb.TagNumber(18)
   set jobInsertResponse(JobInsertResponse v) {
     setField(18, v);
   }
 
+  @$pb.TagNumber(18)
   $core.bool hasJobInsertResponse() => $_has(17);
+  @$pb.TagNumber(18)
   void clearJobInsertResponse() => clearField(18);
+  @$pb.TagNumber(18)
+  JobInsertResponse ensureJobInsertResponse() => $_ensure(17);
 }
 
 class TableInsertRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableInsertRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Table>(
-        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Table>(1, 'resource', subBuilder: Table.create)
     ..hasRequiredFields = false;
 
   TableInsertRequest._() : super();
@@ -307,24 +412,31 @@ class TableInsertRequest extends $pb.GeneratedMessage {
   TableInsertRequest createEmptyInstance() => create();
   static $pb.PbList<TableInsertRequest> createRepeated() =>
       $pb.PbList<TableInsertRequest>();
-  static TableInsertRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableInsertRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableInsertRequest>(create);
   static TableInsertRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Table get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Table v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Table ensureResource() => $_ensure(0);
 }
 
 class TableUpdateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableUpdateRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Table>(
-        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Table>(1, 'resource', subBuilder: Table.create)
     ..hasRequiredFields = false;
 
   TableUpdateRequest._() : super();
@@ -344,24 +456,31 @@ class TableUpdateRequest extends $pb.GeneratedMessage {
   TableUpdateRequest createEmptyInstance() => create();
   static $pb.PbList<TableUpdateRequest> createRepeated() =>
       $pb.PbList<TableUpdateRequest>();
-  static TableUpdateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableUpdateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableUpdateRequest>(create);
   static TableUpdateRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Table get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Table v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Table ensureResource() => $_ensure(0);
 }
 
 class TableInsertResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableInsertResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Table>(
-        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Table>(1, 'resource', subBuilder: Table.create)
     ..hasRequiredFields = false;
 
   TableInsertResponse._() : super();
@@ -381,24 +500,31 @@ class TableInsertResponse extends $pb.GeneratedMessage {
   TableInsertResponse createEmptyInstance() => create();
   static $pb.PbList<TableInsertResponse> createRepeated() =>
       $pb.PbList<TableInsertResponse>();
-  static TableInsertResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableInsertResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableInsertResponse>(create);
   static TableInsertResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   Table get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Table v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Table ensureResource() => $_ensure(0);
 }
 
 class TableUpdateResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableUpdateResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Table>(
-        1, 'resource', $pb.PbFieldType.OM, Table.getDefault, Table.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Table>(1, 'resource', subBuilder: Table.create)
     ..hasRequiredFields = false;
 
   TableUpdateResponse._() : super();
@@ -418,22 +544,30 @@ class TableUpdateResponse extends $pb.GeneratedMessage {
   TableUpdateResponse createEmptyInstance() => create();
   static $pb.PbList<TableUpdateResponse> createRepeated() =>
       $pb.PbList<TableUpdateResponse>();
-  static TableUpdateResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableUpdateResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableUpdateResponse>(create);
   static TableUpdateResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   Table get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Table v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Table ensureResource() => $_ensure(0);
 }
 
 class DatasetListRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetListRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOB(1, 'listAll')
     ..hasRequiredFields = false;
 
@@ -454,24 +588,29 @@ class DatasetListRequest extends $pb.GeneratedMessage {
   DatasetListRequest createEmptyInstance() => create();
   static $pb.PbList<DatasetListRequest> createRepeated() =>
       $pb.PbList<DatasetListRequest>();
-  static DatasetListRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetListRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetListRequest>(create);
   static DatasetListRequest _defaultInstance;
 
-  $core.bool get listAll => $_get(0, false);
+  @$pb.TagNumber(1)
+  $core.bool get listAll => $_getBF(0);
+  @$pb.TagNumber(1)
   set listAll($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasListAll() => $_has(0);
+  @$pb.TagNumber(1)
   void clearListAll() => clearField(1);
 }
 
 class DatasetInsertRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetInsertRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Dataset>(
-        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Dataset>(1, 'resource', subBuilder: Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetInsertRequest._() : super();
@@ -492,24 +631,31 @@ class DatasetInsertRequest extends $pb.GeneratedMessage {
   DatasetInsertRequest createEmptyInstance() => create();
   static $pb.PbList<DatasetInsertRequest> createRepeated() =>
       $pb.PbList<DatasetInsertRequest>();
-  static DatasetInsertRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetInsertRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetInsertRequest>(create);
   static DatasetInsertRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Dataset get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Dataset v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Dataset ensureResource() => $_ensure(0);
 }
 
 class DatasetInsertResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetInsertResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Dataset>(
-        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Dataset>(1, 'resource', subBuilder: Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetInsertResponse._() : super();
@@ -531,24 +677,31 @@ class DatasetInsertResponse extends $pb.GeneratedMessage {
   DatasetInsertResponse createEmptyInstance() => create();
   static $pb.PbList<DatasetInsertResponse> createRepeated() =>
       $pb.PbList<DatasetInsertResponse>();
-  static DatasetInsertResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetInsertResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetInsertResponse>(create);
   static DatasetInsertResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   Dataset get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Dataset v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Dataset ensureResource() => $_ensure(0);
 }
 
 class DatasetUpdateRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetUpdateRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Dataset>(
-        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Dataset>(1, 'resource', subBuilder: Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetUpdateRequest._() : super();
@@ -569,24 +722,31 @@ class DatasetUpdateRequest extends $pb.GeneratedMessage {
   DatasetUpdateRequest createEmptyInstance() => create();
   static $pb.PbList<DatasetUpdateRequest> createRepeated() =>
       $pb.PbList<DatasetUpdateRequest>();
-  static DatasetUpdateRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetUpdateRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetUpdateRequest>(create);
   static DatasetUpdateRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Dataset get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Dataset v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Dataset ensureResource() => $_ensure(0);
 }
 
 class DatasetUpdateResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetUpdateResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Dataset>(
-        1, 'resource', $pb.PbFieldType.OM, Dataset.getDefault, Dataset.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Dataset>(1, 'resource', subBuilder: Dataset.create)
     ..hasRequiredFields = false;
 
   DatasetUpdateResponse._() : super();
@@ -608,23 +768,31 @@ class DatasetUpdateResponse extends $pb.GeneratedMessage {
   DatasetUpdateResponse createEmptyInstance() => create();
   static $pb.PbList<DatasetUpdateResponse> createRepeated() =>
       $pb.PbList<DatasetUpdateResponse>();
-  static DatasetUpdateResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetUpdateResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetUpdateResponse>(create);
   static DatasetUpdateResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   Dataset get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Dataset v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Dataset ensureResource() => $_ensure(0);
 }
 
 class JobInsertRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobInsertRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Job>(1, 'resource', $pb.PbFieldType.OM, Job.getDefault, Job.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Job>(1, 'resource', subBuilder: Job.create)
     ..hasRequiredFields = false;
 
   JobInsertRequest._() : super();
@@ -644,23 +812,31 @@ class JobInsertRequest extends $pb.GeneratedMessage {
   JobInsertRequest createEmptyInstance() => create();
   static $pb.PbList<JobInsertRequest> createRepeated() =>
       $pb.PbList<JobInsertRequest>();
-  static JobInsertRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobInsertRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobInsertRequest>(create);
   static JobInsertRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Job get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Job v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Job ensureResource() => $_ensure(0);
 }
 
 class JobInsertResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobInsertResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Job>(1, 'resource', $pb.PbFieldType.OM, Job.getDefault, Job.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Job>(1, 'resource', subBuilder: Job.create)
     ..hasRequiredFields = false;
 
   JobInsertResponse._() : super();
@@ -680,26 +856,33 @@ class JobInsertResponse extends $pb.GeneratedMessage {
   JobInsertResponse createEmptyInstance() => create();
   static $pb.PbList<JobInsertResponse> createRepeated() =>
       $pb.PbList<JobInsertResponse>();
-  static JobInsertResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobInsertResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobInsertResponse>(create);
   static JobInsertResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   Job get resource => $_getN(0);
+  @$pb.TagNumber(1)
   set resource(Job v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResource() => clearField(1);
+  @$pb.TagNumber(1)
+  Job ensureResource() => $_ensure(0);
 }
 
 class JobQueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobQueryRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'query')
     ..a<$core.int>(2, 'maxResults', $pb.PbFieldType.OU3)
-    ..a<DatasetName>(3, 'defaultDataset', $pb.PbFieldType.OM,
-        DatasetName.getDefault, DatasetName.create)
+    ..aOM<DatasetName>(3, 'defaultDataset', subBuilder: DatasetName.create)
     ..aOS(4, 'projectId')
     ..aOB(5, 'dryRun')
     ..hasRequiredFields = false;
@@ -721,56 +904,81 @@ class JobQueryRequest extends $pb.GeneratedMessage {
   JobQueryRequest createEmptyInstance() => create();
   static $pb.PbList<JobQueryRequest> createRepeated() =>
       $pb.PbList<JobQueryRequest>();
-  static JobQueryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobQueryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobQueryRequest>(create);
   static JobQueryRequest _defaultInstance;
 
-  $core.String get query => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get query => $_getSZ(0);
+  @$pb.TagNumber(1)
   set query($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQuery() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQuery() => clearField(1);
 
-  $core.int get maxResults => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get maxResults => $_getIZ(1);
+  @$pb.TagNumber(2)
   set maxResults($core.int v) {
     $_setUnsignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxResults() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxResults() => clearField(2);
 
+  @$pb.TagNumber(3)
   DatasetName get defaultDataset => $_getN(2);
+  @$pb.TagNumber(3)
   set defaultDataset(DatasetName v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDefaultDataset() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDefaultDataset() => clearField(3);
+  @$pb.TagNumber(3)
+  DatasetName ensureDefaultDataset() => $_ensure(2);
 
-  $core.String get projectId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get projectId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set projectId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasProjectId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearProjectId() => clearField(4);
 
-  $core.bool get dryRun => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get dryRun => $_getBF(4);
+  @$pb.TagNumber(5)
   set dryRun($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDryRun() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDryRun() => clearField(5);
 }
 
 class JobQueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobQueryResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Int64>(1, 'totalResults', $pb.PbFieldType.OU6, Int64.ZERO)
-    ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, 'totalResults', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<Job>(2, 'job', subBuilder: Job.create)
     ..hasRequiredFields = false;
 
   JobQueryResponse._() : super();
@@ -790,32 +998,45 @@ class JobQueryResponse extends $pb.GeneratedMessage {
   JobQueryResponse createEmptyInstance() => create();
   static $pb.PbList<JobQueryResponse> createRepeated() =>
       $pb.PbList<JobQueryResponse>();
-  static JobQueryResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobQueryResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobQueryResponse>(create);
   static JobQueryResponse _defaultInstance;
 
-  Int64 get totalResults => $_getI64(0);
-  set totalResults(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get totalResults => $_getI64(0);
+  @$pb.TagNumber(1)
+  set totalResults($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTotalResults() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTotalResults() => clearField(1);
 
+  @$pb.TagNumber(2)
   Job get job => $_getN(1);
+  @$pb.TagNumber(2)
   set job(Job v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJob() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJob() => clearField(2);
+  @$pb.TagNumber(2)
+  Job ensureJob() => $_ensure(1);
 }
 
 class JobGetQueryResultsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobGetQueryResultsRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'maxResults', $pb.PbFieldType.OU3)
-    ..a<Int64>(2, 'startRow', $pb.PbFieldType.OU6, Int64.ZERO)
+    ..a<$fixnum.Int64>(2, 'startRow', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false;
 
   JobGetQueryResultsRequest._() : super();
@@ -838,33 +1059,44 @@ class JobGetQueryResultsRequest extends $pb.GeneratedMessage {
   JobGetQueryResultsRequest createEmptyInstance() => create();
   static $pb.PbList<JobGetQueryResultsRequest> createRepeated() =>
       $pb.PbList<JobGetQueryResultsRequest>();
-  static JobGetQueryResultsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobGetQueryResultsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobGetQueryResultsRequest>(create);
   static JobGetQueryResultsRequest _defaultInstance;
 
-  $core.int get maxResults => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get maxResults => $_getIZ(0);
+  @$pb.TagNumber(1)
   set maxResults($core.int v) {
     $_setUnsignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMaxResults() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMaxResults() => clearField(1);
 
-  Int64 get startRow => $_getI64(1);
-  set startRow(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get startRow => $_getI64(1);
+  @$pb.TagNumber(2)
+  set startRow($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartRow() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartRow() => clearField(2);
 }
 
 class JobGetQueryResultsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'JobGetQueryResultsResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Int64>(1, 'totalResults', $pb.PbFieldType.OU6, Int64.ZERO)
-    ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, 'totalResults', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<Job>(2, 'job', subBuilder: Job.create)
     ..hasRequiredFields = false;
 
   JobGetQueryResultsResponse._() : super();
@@ -887,31 +1119,43 @@ class JobGetQueryResultsResponse extends $pb.GeneratedMessage {
   JobGetQueryResultsResponse createEmptyInstance() => create();
   static $pb.PbList<JobGetQueryResultsResponse> createRepeated() =>
       $pb.PbList<JobGetQueryResultsResponse>();
-  static JobGetQueryResultsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobGetQueryResultsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobGetQueryResultsResponse>(create);
   static JobGetQueryResultsResponse _defaultInstance;
 
-  Int64 get totalResults => $_getI64(0);
-  set totalResults(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get totalResults => $_getI64(0);
+  @$pb.TagNumber(1)
+  set totalResults($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTotalResults() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTotalResults() => clearField(1);
 
+  @$pb.TagNumber(2)
   Job get job => $_getN(1);
+  @$pb.TagNumber(2)
   set job(Job v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJob() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJob() => clearField(2);
+  @$pb.TagNumber(2)
+  Job ensureJob() => $_ensure(1);
 }
 
 class JobQueryDoneResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobQueryDoneResponse',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Job>(1, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<Job>(1, 'job', subBuilder: Job.create)
     ..hasRequiredFields = false;
 
   JobQueryDoneResponse._() : super();
@@ -932,24 +1176,32 @@ class JobQueryDoneResponse extends $pb.GeneratedMessage {
   JobQueryDoneResponse createEmptyInstance() => create();
   static $pb.PbList<JobQueryDoneResponse> createRepeated() =>
       $pb.PbList<JobQueryDoneResponse>();
-  static JobQueryDoneResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobQueryDoneResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobQueryDoneResponse>(create);
   static JobQueryDoneResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   Job get job => $_getN(0);
+  @$pb.TagNumber(1)
   set job(Job v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasJob() => $_has(0);
+  @$pb.TagNumber(1)
   void clearJob() => clearField(1);
+  @$pb.TagNumber(1)
+  Job ensureJob() => $_ensure(0);
 }
 
 class JobCompletedEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobCompletedEvent',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'eventName')
-    ..a<Job>(2, 'job', $pb.PbFieldType.OM, Job.getDefault, Job.create)
+    ..aOM<Job>(2, 'job', subBuilder: Job.create)
     ..hasRequiredFields = false;
 
   JobCompletedEvent._() : super();
@@ -969,31 +1221,44 @@ class JobCompletedEvent extends $pb.GeneratedMessage {
   JobCompletedEvent createEmptyInstance() => create();
   static $pb.PbList<JobCompletedEvent> createRepeated() =>
       $pb.PbList<JobCompletedEvent>();
-  static JobCompletedEvent getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobCompletedEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobCompletedEvent>(create);
   static JobCompletedEvent _defaultInstance;
 
-  $core.String get eventName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get eventName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set eventName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEventName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEventName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Job get job => $_getN(1);
+  @$pb.TagNumber(2)
   set job(Job v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJob() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJob() => clearField(2);
+  @$pb.TagNumber(2)
+  Job ensureJob() => $_ensure(1);
 }
 
 class TableDataListRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableDataListRequest',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<Int64>(1, 'startRow', $pb.PbFieldType.OU6, Int64.ZERO)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, 'startRow', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.int>(2, 'maxResults', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
@@ -1015,42 +1280,47 @@ class TableDataListRequest extends $pb.GeneratedMessage {
   TableDataListRequest createEmptyInstance() => create();
   static $pb.PbList<TableDataListRequest> createRepeated() =>
       $pb.PbList<TableDataListRequest>();
-  static TableDataListRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableDataListRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableDataListRequest>(create);
   static TableDataListRequest _defaultInstance;
 
-  Int64 get startRow => $_getI64(0);
-  set startRow(Int64 v) {
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get startRow => $_getI64(0);
+  @$pb.TagNumber(1)
+  set startRow($fixnum.Int64 v) {
     $_setInt64(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStartRow() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStartRow() => clearField(1);
 
-  $core.int get maxResults => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get maxResults => $_getIZ(1);
+  @$pb.TagNumber(2)
   set maxResults($core.int v) {
     $_setUnsignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxResults() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxResults() => clearField(2);
 }
 
 class Table extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<TableName>(1, 'tableName', $pb.PbFieldType.OM, TableName.getDefault,
-        TableName.create)
-    ..a<TableInfo>(
-        2, 'info', $pb.PbFieldType.OM, TableInfo.getDefault, TableInfo.create)
-    ..a<TableViewDefinition>(4, 'view', $pb.PbFieldType.OM,
-        TableViewDefinition.getDefault, TableViewDefinition.create)
-    ..a<$0.Timestamp>(5, 'expireTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(6, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(7, 'truncateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<TableName>(1, 'tableName', subBuilder: TableName.create)
+    ..aOM<TableInfo>(2, 'info', subBuilder: TableInfo.create)
+    ..aOM<TableViewDefinition>(4, 'view',
+        subBuilder: TableViewDefinition.create)
+    ..aOM<$0.Timestamp>(5, 'expireTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(6, 'createTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(7, 'truncateTime', subBuilder: $0.Timestamp.create)
     ..aOS(8, 'schemaJson')
     ..hasRequiredFields = false;
 
@@ -1070,69 +1340,112 @@ class Table extends $pb.GeneratedMessage {
   static Table create() => Table._();
   Table createEmptyInstance() => create();
   static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
-  static Table getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Table getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Table>(create);
   static Table _defaultInstance;
 
+  @$pb.TagNumber(1)
   TableName get tableName => $_getN(0);
+  @$pb.TagNumber(1)
   set tableName(TableName v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTableName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTableName() => clearField(1);
+  @$pb.TagNumber(1)
+  TableName ensureTableName() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   TableInfo get info => $_getN(1);
+  @$pb.TagNumber(2)
   set info(TableInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInfo() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  TableInfo ensureInfo() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   TableViewDefinition get view => $_getN(2);
+  @$pb.TagNumber(4)
   set view(TableViewDefinition v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasView() => $_has(2);
+  @$pb.TagNumber(4)
   void clearView() => clearField(4);
+  @$pb.TagNumber(4)
+  TableViewDefinition ensureView() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   $0.Timestamp get expireTime => $_getN(3);
+  @$pb.TagNumber(5)
   set expireTime($0.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasExpireTime() => $_has(3);
+  @$pb.TagNumber(5)
   void clearExpireTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.Timestamp ensureExpireTime() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   $0.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(6)
   set createTime($0.Timestamp v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasCreateTime() => $_has(4);
+  @$pb.TagNumber(6)
   void clearCreateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.Timestamp ensureCreateTime() => $_ensure(4);
 
+  @$pb.TagNumber(7)
   $0.Timestamp get truncateTime => $_getN(5);
+  @$pb.TagNumber(7)
   set truncateTime($0.Timestamp v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasTruncateTime() => $_has(5);
+  @$pb.TagNumber(7)
   void clearTruncateTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $0.Timestamp ensureTruncateTime() => $_ensure(5);
 
-  $core.String get schemaJson => $_getS(6, '');
+  @$pb.TagNumber(8)
+  $core.String get schemaJson => $_getSZ(6);
+  @$pb.TagNumber(8)
   set schemaJson($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasSchemaJson() => $_has(6);
+  @$pb.TagNumber(8)
   void clearSchemaJson() => clearField(8);
 }
 
 class TableInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableInfo',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'friendlyName')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -1153,29 +1466,40 @@ class TableInfo extends $pb.GeneratedMessage {
   static TableInfo create() => TableInfo._();
   TableInfo createEmptyInstance() => create();
   static $pb.PbList<TableInfo> createRepeated() => $pb.PbList<TableInfo>();
-  static TableInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TableInfo>(create);
   static TableInfo _defaultInstance;
 
-  $core.String get friendlyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get friendlyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set friendlyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFriendlyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFriendlyName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 }
 
 class TableViewDefinition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableViewDefinition',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'query')
     ..hasRequiredFields = false;
 
@@ -1196,34 +1520,35 @@ class TableViewDefinition extends $pb.GeneratedMessage {
   TableViewDefinition createEmptyInstance() => create();
   static $pb.PbList<TableViewDefinition> createRepeated() =>
       $pb.PbList<TableViewDefinition>();
-  static TableViewDefinition getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableViewDefinition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableViewDefinition>(create);
   static TableViewDefinition _defaultInstance;
 
-  $core.String get query => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get query => $_getSZ(0);
+  @$pb.TagNumber(1)
   set query($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQuery() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQuery() => clearField(1);
 }
 
 class Dataset extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Dataset',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<DatasetName>(1, 'datasetName', $pb.PbFieldType.OM,
-        DatasetName.getDefault, DatasetName.create)
-    ..a<DatasetInfo>(2, 'info', $pb.PbFieldType.OM, DatasetInfo.getDefault,
-        DatasetInfo.create)
-    ..a<$0.Timestamp>(4, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(5, 'updateTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<BigQueryAcl>(6, 'acl', $pb.PbFieldType.OM, BigQueryAcl.getDefault,
-        BigQueryAcl.create)
-    ..a<$1.Duration>(8, 'defaultTableExpireDuration', $pb.PbFieldType.OM,
-        $1.Duration.getDefault, $1.Duration.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<DatasetName>(1, 'datasetName', subBuilder: DatasetName.create)
+    ..aOM<DatasetInfo>(2, 'info', subBuilder: DatasetInfo.create)
+    ..aOM<$0.Timestamp>(4, 'createTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(5, 'updateTime', subBuilder: $0.Timestamp.create)
+    ..aOM<BigQueryAcl>(6, 'acl', subBuilder: BigQueryAcl.create)
+    ..aOM<$1.Duration>(8, 'defaultTableExpireDuration',
+        subBuilder: $1.Duration.create)
     ..hasRequiredFields = false;
 
   Dataset._() : super();
@@ -1242,61 +1567,100 @@ class Dataset extends $pb.GeneratedMessage {
   static Dataset create() => Dataset._();
   Dataset createEmptyInstance() => create();
   static $pb.PbList<Dataset> createRepeated() => $pb.PbList<Dataset>();
-  static Dataset getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Dataset getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Dataset>(create);
   static Dataset _defaultInstance;
 
+  @$pb.TagNumber(1)
   DatasetName get datasetName => $_getN(0);
+  @$pb.TagNumber(1)
   set datasetName(DatasetName v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDatasetName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDatasetName() => clearField(1);
+  @$pb.TagNumber(1)
+  DatasetName ensureDatasetName() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   DatasetInfo get info => $_getN(1);
+  @$pb.TagNumber(2)
   set info(DatasetInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInfo() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  DatasetInfo ensureInfo() => $_ensure(1);
 
+  @$pb.TagNumber(4)
   $0.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(4)
   set createTime($0.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(2);
+  @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureCreateTime() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   $0.Timestamp get updateTime => $_getN(3);
+  @$pb.TagNumber(5)
   set updateTime($0.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasUpdateTime() => $_has(3);
+  @$pb.TagNumber(5)
   void clearUpdateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.Timestamp ensureUpdateTime() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   BigQueryAcl get acl => $_getN(4);
+  @$pb.TagNumber(6)
   set acl(BigQueryAcl v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasAcl() => $_has(4);
+  @$pb.TagNumber(6)
   void clearAcl() => clearField(6);
+  @$pb.TagNumber(6)
+  BigQueryAcl ensureAcl() => $_ensure(4);
 
+  @$pb.TagNumber(8)
   $1.Duration get defaultTableExpireDuration => $_getN(5);
+  @$pb.TagNumber(8)
   set defaultTableExpireDuration($1.Duration v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasDefaultTableExpireDuration() => $_has(5);
+  @$pb.TagNumber(8)
   void clearDefaultTableExpireDuration() => clearField(8);
+  @$pb.TagNumber(8)
+  $1.Duration ensureDefaultTableExpireDuration() => $_ensure(5);
 }
 
 class DatasetInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetInfo',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'friendlyName')
     ..aOS(2, 'description')
     ..hasRequiredFields = false;
@@ -1317,36 +1681,46 @@ class DatasetInfo extends $pb.GeneratedMessage {
   static DatasetInfo create() => DatasetInfo._();
   DatasetInfo createEmptyInstance() => create();
   static $pb.PbList<DatasetInfo> createRepeated() => $pb.PbList<DatasetInfo>();
-  static DatasetInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetInfo>(create);
   static DatasetInfo _defaultInstance;
 
-  $core.String get friendlyName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get friendlyName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set friendlyName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFriendlyName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFriendlyName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 }
 
 class BigQueryAcl_Entry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryAcl.Entry',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'role')
     ..aOS(2, 'groupEmail')
     ..aOS(3, 'userEmail')
     ..aOS(4, 'domain')
     ..aOS(5, 'specialGroup')
-    ..a<TableName>(6, 'viewName', $pb.PbFieldType.OM, TableName.getDefault,
-        TableName.create)
+    ..aOM<TableName>(6, 'viewName', subBuilder: TableName.create)
     ..hasRequiredFields = false;
 
   BigQueryAcl_Entry._() : super();
@@ -1366,64 +1740,92 @@ class BigQueryAcl_Entry extends $pb.GeneratedMessage {
   BigQueryAcl_Entry createEmptyInstance() => create();
   static $pb.PbList<BigQueryAcl_Entry> createRepeated() =>
       $pb.PbList<BigQueryAcl_Entry>();
-  static BigQueryAcl_Entry getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryAcl_Entry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryAcl_Entry>(create);
   static BigQueryAcl_Entry _defaultInstance;
 
-  $core.String get role => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get role => $_getSZ(0);
+  @$pb.TagNumber(1)
   set role($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRole() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRole() => clearField(1);
 
-  $core.String get groupEmail => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get groupEmail => $_getSZ(1);
+  @$pb.TagNumber(2)
   set groupEmail($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGroupEmail() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGroupEmail() => clearField(2);
 
-  $core.String get userEmail => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get userEmail => $_getSZ(2);
+  @$pb.TagNumber(3)
   set userEmail($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUserEmail() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUserEmail() => clearField(3);
 
-  $core.String get domain => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get domain => $_getSZ(3);
+  @$pb.TagNumber(4)
   set domain($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDomain() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDomain() => clearField(4);
 
-  $core.String get specialGroup => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get specialGroup => $_getSZ(4);
+  @$pb.TagNumber(5)
   set specialGroup($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasSpecialGroup() => $_has(4);
+  @$pb.TagNumber(5)
   void clearSpecialGroup() => clearField(5);
 
+  @$pb.TagNumber(6)
   TableName get viewName => $_getN(5);
+  @$pb.TagNumber(6)
   set viewName(TableName v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasViewName() => $_has(5);
+  @$pb.TagNumber(6)
   void clearViewName() => clearField(6);
+  @$pb.TagNumber(6)
+  TableName ensureViewName() => $_ensure(5);
 }
 
 class BigQueryAcl extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryAcl',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..pc<BigQueryAcl_Entry>(
-        1, 'entries', $pb.PbFieldType.PM, BigQueryAcl_Entry.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..pc<BigQueryAcl_Entry>(1, 'entries', $pb.PbFieldType.PM,
+        subBuilder: BigQueryAcl_Entry.create)
     ..hasRequiredFields = false;
 
   BigQueryAcl._() : super();
@@ -1442,23 +1844,24 @@ class BigQueryAcl extends $pb.GeneratedMessage {
   static BigQueryAcl create() => BigQueryAcl._();
   BigQueryAcl createEmptyInstance() => create();
   static $pb.PbList<BigQueryAcl> createRepeated() => $pb.PbList<BigQueryAcl>();
-  static BigQueryAcl getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryAcl getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryAcl>(create);
   static BigQueryAcl _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<BigQueryAcl_Entry> get entries => $_getList(0);
 }
 
 class Job extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Job',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<JobName>(
-        1, 'jobName', $pb.PbFieldType.OM, JobName.getDefault, JobName.create)
-    ..a<JobConfiguration>(2, 'jobConfiguration', $pb.PbFieldType.OM,
-        JobConfiguration.getDefault, JobConfiguration.create)
-    ..a<JobStatus>(3, 'jobStatus', $pb.PbFieldType.OM, JobStatus.getDefault,
-        JobStatus.create)
-    ..a<JobStatistics>(4, 'jobStatistics', $pb.PbFieldType.OM,
-        JobStatistics.getDefault, JobStatistics.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<JobName>(1, 'jobName', subBuilder: JobName.create)
+    ..aOM<JobConfiguration>(2, 'jobConfiguration',
+        subBuilder: JobConfiguration.create)
+    ..aOM<JobStatus>(3, 'jobStatus', subBuilder: JobStatus.create)
+    ..aOM<JobStatistics>(4, 'jobStatistics', subBuilder: JobStatistics.create)
     ..hasRequiredFields = false;
 
   Job._() : super();
@@ -1477,54 +1880,79 @@ class Job extends $pb.GeneratedMessage {
   static Job create() => Job._();
   Job createEmptyInstance() => create();
   static $pb.PbList<Job> createRepeated() => $pb.PbList<Job>();
-  static Job getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Job getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Job>(create);
   static Job _defaultInstance;
 
+  @$pb.TagNumber(1)
   JobName get jobName => $_getN(0);
+  @$pb.TagNumber(1)
   set jobName(JobName v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasJobName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearJobName() => clearField(1);
+  @$pb.TagNumber(1)
+  JobName ensureJobName() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   JobConfiguration get jobConfiguration => $_getN(1);
+  @$pb.TagNumber(2)
   set jobConfiguration(JobConfiguration v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJobConfiguration() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJobConfiguration() => clearField(2);
+  @$pb.TagNumber(2)
+  JobConfiguration ensureJobConfiguration() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   JobStatus get jobStatus => $_getN(2);
+  @$pb.TagNumber(3)
   set jobStatus(JobStatus v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasJobStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearJobStatus() => clearField(3);
+  @$pb.TagNumber(3)
+  JobStatus ensureJobStatus() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   JobStatistics get jobStatistics => $_getN(3);
+  @$pb.TagNumber(4)
   set jobStatistics(JobStatistics v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasJobStatistics() => $_has(3);
+  @$pb.TagNumber(4)
   void clearJobStatistics() => clearField(4);
+  @$pb.TagNumber(4)
+  JobStatistics ensureJobStatistics() => $_ensure(3);
 }
 
 class JobConfiguration_Query extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration.Query',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'query')
-    ..a<TableName>(2, 'destinationTable', $pb.PbFieldType.OM,
-        TableName.getDefault, TableName.create)
+    ..aOM<TableName>(2, 'destinationTable', subBuilder: TableName.create)
     ..aOS(3, 'createDisposition')
     ..aOS(4, 'writeDisposition')
-    ..a<DatasetName>(5, 'defaultDataset', $pb.PbFieldType.OM,
-        DatasetName.getDefault, DatasetName.create)
-    ..pc<TableDefinition>(
-        6, 'tableDefinitions', $pb.PbFieldType.PM, TableDefinition.create)
+    ..aOM<DatasetName>(5, 'defaultDataset', subBuilder: DatasetName.create)
+    ..pc<TableDefinition>(6, 'tableDefinitions', $pb.PbFieldType.PM,
+        subBuilder: TableDefinition.create)
     ..hasRequiredFields = false;
 
   JobConfiguration_Query._() : super();
@@ -1546,59 +1974,85 @@ class JobConfiguration_Query extends $pb.GeneratedMessage {
   JobConfiguration_Query createEmptyInstance() => create();
   static $pb.PbList<JobConfiguration_Query> createRepeated() =>
       $pb.PbList<JobConfiguration_Query>();
-  static JobConfiguration_Query getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobConfiguration_Query getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobConfiguration_Query>(create);
   static JobConfiguration_Query _defaultInstance;
 
-  $core.String get query => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get query => $_getSZ(0);
+  @$pb.TagNumber(1)
   set query($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQuery() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQuery() => clearField(1);
 
+  @$pb.TagNumber(2)
   TableName get destinationTable => $_getN(1);
+  @$pb.TagNumber(2)
   set destinationTable(TableName v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDestinationTable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDestinationTable() => clearField(2);
+  @$pb.TagNumber(2)
+  TableName ensureDestinationTable() => $_ensure(1);
 
-  $core.String get createDisposition => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get createDisposition => $_getSZ(2);
+  @$pb.TagNumber(3)
   set createDisposition($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCreateDisposition() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCreateDisposition() => clearField(3);
 
-  $core.String get writeDisposition => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get writeDisposition => $_getSZ(3);
+  @$pb.TagNumber(4)
   set writeDisposition($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasWriteDisposition() => $_has(3);
+  @$pb.TagNumber(4)
   void clearWriteDisposition() => clearField(4);
 
+  @$pb.TagNumber(5)
   DatasetName get defaultDataset => $_getN(4);
+  @$pb.TagNumber(5)
   set defaultDataset(DatasetName v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDefaultDataset() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDefaultDataset() => clearField(5);
+  @$pb.TagNumber(5)
+  DatasetName ensureDefaultDataset() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $core.List<TableDefinition> get tableDefinitions => $_getList(5);
 }
 
 class JobConfiguration_Load extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration.Load',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'sourceUris')
-    ..a<TableName>(3, 'destinationTable', $pb.PbFieldType.OM,
-        TableName.getDefault, TableName.create)
+    ..aOM<TableName>(3, 'destinationTable', subBuilder: TableName.create)
     ..aOS(4, 'createDisposition')
     ..aOS(5, 'writeDisposition')
     ..aOS(6, 'schemaJson')
@@ -1623,51 +2077,71 @@ class JobConfiguration_Load extends $pb.GeneratedMessage {
   JobConfiguration_Load createEmptyInstance() => create();
   static $pb.PbList<JobConfiguration_Load> createRepeated() =>
       $pb.PbList<JobConfiguration_Load>();
-  static JobConfiguration_Load getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobConfiguration_Load getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobConfiguration_Load>(create);
   static JobConfiguration_Load _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get sourceUris => $_getList(0);
 
+  @$pb.TagNumber(3)
   TableName get destinationTable => $_getN(1);
+  @$pb.TagNumber(3)
   set destinationTable(TableName v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDestinationTable() => $_has(1);
+  @$pb.TagNumber(3)
   void clearDestinationTable() => clearField(3);
+  @$pb.TagNumber(3)
+  TableName ensureDestinationTable() => $_ensure(1);
 
-  $core.String get createDisposition => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get createDisposition => $_getSZ(2);
+  @$pb.TagNumber(4)
   set createDisposition($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCreateDisposition() => $_has(2);
+  @$pb.TagNumber(4)
   void clearCreateDisposition() => clearField(4);
 
-  $core.String get writeDisposition => $_getS(3, '');
+  @$pb.TagNumber(5)
+  $core.String get writeDisposition => $_getSZ(3);
+  @$pb.TagNumber(5)
   set writeDisposition($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasWriteDisposition() => $_has(3);
+  @$pb.TagNumber(5)
   void clearWriteDisposition() => clearField(5);
 
-  $core.String get schemaJson => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get schemaJson => $_getSZ(4);
+  @$pb.TagNumber(6)
   set schemaJson($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasSchemaJson() => $_has(4);
+  @$pb.TagNumber(6)
   void clearSchemaJson() => clearField(6);
 }
 
 class JobConfiguration_Extract extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration.Extract',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..pPS(1, 'destinationUris')
-    ..a<TableName>(2, 'sourceTable', $pb.PbFieldType.OM, TableName.getDefault,
-        TableName.create)
+    ..aOM<TableName>(2, 'sourceTable', subBuilder: TableName.create)
     ..hasRequiredFields = false;
 
   JobConfiguration_Extract._() : super();
@@ -1689,28 +2163,37 @@ class JobConfiguration_Extract extends $pb.GeneratedMessage {
   JobConfiguration_Extract createEmptyInstance() => create();
   static $pb.PbList<JobConfiguration_Extract> createRepeated() =>
       $pb.PbList<JobConfiguration_Extract>();
-  static JobConfiguration_Extract getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobConfiguration_Extract getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobConfiguration_Extract>(create);
   static JobConfiguration_Extract _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get destinationUris => $_getList(0);
 
+  @$pb.TagNumber(2)
   TableName get sourceTable => $_getN(1);
+  @$pb.TagNumber(2)
   set sourceTable(TableName v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSourceTable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSourceTable() => clearField(2);
+  @$pb.TagNumber(2)
+  TableName ensureSourceTable() => $_ensure(1);
 }
 
 class JobConfiguration_TableCopy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'JobConfiguration.TableCopy',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..pc<TableName>(1, 'sourceTables', $pb.PbFieldType.PM, TableName.create)
-    ..a<TableName>(2, 'destinationTable', $pb.PbFieldType.OM,
-        TableName.getDefault, TableName.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..pc<TableName>(1, 'sourceTables', $pb.PbFieldType.PM,
+        subBuilder: TableName.create)
+    ..aOM<TableName>(2, 'destinationTable', subBuilder: TableName.create)
     ..aOS(3, 'createDisposition')
     ..aOS(4, 'writeDisposition')
     ..hasRequiredFields = false;
@@ -1735,34 +2218,50 @@ class JobConfiguration_TableCopy extends $pb.GeneratedMessage {
   JobConfiguration_TableCopy createEmptyInstance() => create();
   static $pb.PbList<JobConfiguration_TableCopy> createRepeated() =>
       $pb.PbList<JobConfiguration_TableCopy>();
-  static JobConfiguration_TableCopy getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobConfiguration_TableCopy getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobConfiguration_TableCopy>(create);
   static JobConfiguration_TableCopy _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<TableName> get sourceTables => $_getList(0);
 
+  @$pb.TagNumber(2)
   TableName get destinationTable => $_getN(1);
+  @$pb.TagNumber(2)
   set destinationTable(TableName v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDestinationTable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDestinationTable() => clearField(2);
+  @$pb.TagNumber(2)
+  TableName ensureDestinationTable() => $_ensure(1);
 
-  $core.String get createDisposition => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get createDisposition => $_getSZ(2);
+  @$pb.TagNumber(3)
   set createDisposition($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCreateDisposition() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCreateDisposition() => clearField(3);
 
-  $core.String get writeDisposition => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get writeDisposition => $_getSZ(3);
+  @$pb.TagNumber(4)
   set writeDisposition($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasWriteDisposition() => $_has(3);
+  @$pb.TagNumber(4)
   void clearWriteDisposition() => clearField(4);
 }
 
@@ -1778,20 +2277,17 @@ class JobConfiguration extends $pb.GeneratedMessage {
     0: JobConfiguration_Configuration.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobConfiguration',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..oo(0, [5, 6, 7, 8])
-    ..a<JobConfiguration_Query>(5, 'query', $pb.PbFieldType.OM,
-        JobConfiguration_Query.getDefault, JobConfiguration_Query.create)
-    ..a<JobConfiguration_Load>(6, 'load', $pb.PbFieldType.OM,
-        JobConfiguration_Load.getDefault, JobConfiguration_Load.create)
-    ..a<JobConfiguration_Extract>(7, 'extract', $pb.PbFieldType.OM,
-        JobConfiguration_Extract.getDefault, JobConfiguration_Extract.create)
-    ..a<JobConfiguration_TableCopy>(
-        8,
-        'tableCopy',
-        $pb.PbFieldType.OM,
-        JobConfiguration_TableCopy.getDefault,
-        JobConfiguration_TableCopy.create)
+    ..aOM<JobConfiguration_Query>(5, 'query',
+        subBuilder: JobConfiguration_Query.create)
+    ..aOM<JobConfiguration_Load>(6, 'load',
+        subBuilder: JobConfiguration_Load.create)
+    ..aOM<JobConfiguration_Extract>(7, 'extract',
+        subBuilder: JobConfiguration_Extract.create)
+    ..aOM<JobConfiguration_TableCopy>(8, 'tableCopy',
+        subBuilder: JobConfiguration_TableCopy.create)
     ..aOB(9, 'dryRun')
     ..hasRequiredFields = false;
 
@@ -1812,58 +2308,88 @@ class JobConfiguration extends $pb.GeneratedMessage {
   JobConfiguration createEmptyInstance() => create();
   static $pb.PbList<JobConfiguration> createRepeated() =>
       $pb.PbList<JobConfiguration>();
-  static JobConfiguration getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobConfiguration getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobConfiguration>(create);
   static JobConfiguration _defaultInstance;
 
   JobConfiguration_Configuration whichConfiguration() =>
       _JobConfiguration_ConfigurationByTag[$_whichOneof(0)];
   void clearConfiguration() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(5)
   JobConfiguration_Query get query => $_getN(0);
+  @$pb.TagNumber(5)
   set query(JobConfiguration_Query v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasQuery() => $_has(0);
+  @$pb.TagNumber(5)
   void clearQuery() => clearField(5);
+  @$pb.TagNumber(5)
+  JobConfiguration_Query ensureQuery() => $_ensure(0);
 
+  @$pb.TagNumber(6)
   JobConfiguration_Load get load => $_getN(1);
+  @$pb.TagNumber(6)
   set load(JobConfiguration_Load v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasLoad() => $_has(1);
+  @$pb.TagNumber(6)
   void clearLoad() => clearField(6);
+  @$pb.TagNumber(6)
+  JobConfiguration_Load ensureLoad() => $_ensure(1);
 
+  @$pb.TagNumber(7)
   JobConfiguration_Extract get extract => $_getN(2);
+  @$pb.TagNumber(7)
   set extract(JobConfiguration_Extract v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasExtract() => $_has(2);
+  @$pb.TagNumber(7)
   void clearExtract() => clearField(7);
+  @$pb.TagNumber(7)
+  JobConfiguration_Extract ensureExtract() => $_ensure(2);
 
+  @$pb.TagNumber(8)
   JobConfiguration_TableCopy get tableCopy => $_getN(3);
+  @$pb.TagNumber(8)
   set tableCopy(JobConfiguration_TableCopy v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasTableCopy() => $_has(3);
+  @$pb.TagNumber(8)
   void clearTableCopy() => clearField(8);
+  @$pb.TagNumber(8)
+  JobConfiguration_TableCopy ensureTableCopy() => $_ensure(3);
 
-  $core.bool get dryRun => $_get(4, false);
+  @$pb.TagNumber(9)
+  $core.bool get dryRun => $_getBF(4);
+  @$pb.TagNumber(9)
   set dryRun($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasDryRun() => $_has(4);
+  @$pb.TagNumber(9)
   void clearDryRun() => clearField(9);
 }
 
 class TableDefinition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableDefinition',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..pPS(2, 'sourceUris')
     ..hasRequiredFields = false;
@@ -1885,27 +2411,33 @@ class TableDefinition extends $pb.GeneratedMessage {
   TableDefinition createEmptyInstance() => create();
   static $pb.PbList<TableDefinition> createRepeated() =>
       $pb.PbList<TableDefinition>();
-  static TableDefinition getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableDefinition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TableDefinition>(create);
   static TableDefinition _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get sourceUris => $_getList(1);
 }
 
 class JobStatus extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobStatus',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'state')
-    ..a<$2.Status>(
-        2, 'error', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
+    ..aOM<$2.Status>(2, 'error', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   JobStatus._() : super();
@@ -1924,35 +2456,45 @@ class JobStatus extends $pb.GeneratedMessage {
   static JobStatus create() => JobStatus._();
   JobStatus createEmptyInstance() => create();
   static $pb.PbList<JobStatus> createRepeated() => $pb.PbList<JobStatus>();
-  static JobStatus getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobStatus getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<JobStatus>(create);
   static JobStatus _defaultInstance;
 
-  $core.String get state => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get state => $_getSZ(0);
+  @$pb.TagNumber(1)
   set state($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
+  @$pb.TagNumber(1)
   void clearState() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.Status get error => $_getN(1);
+  @$pb.TagNumber(2)
   set error($2.Status v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
+  @$pb.TagNumber(2)
   void clearError() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Status ensureError() => $_ensure(1);
 }
 
 class JobStatistics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobStatistics',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
-    ..a<$0.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$0.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $0.Timestamp.getDefault,
-        $0.Timestamp.create)
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, 'createTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, 'startTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(3, 'endTime', subBuilder: $0.Timestamp.create)
     ..aInt64(4, 'totalProcessedBytes')
     ..aInt64(5, 'totalBilledBytes')
     ..a<$core.int>(7, 'billingTier', $pb.PbFieldType.O3)
@@ -1975,61 +2517,94 @@ class JobStatistics extends $pb.GeneratedMessage {
   JobStatistics createEmptyInstance() => create();
   static $pb.PbList<JobStatistics> createRepeated() =>
       $pb.PbList<JobStatistics>();
-  static JobStatistics getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobStatistics getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<JobStatistics>(create);
   static JobStatistics _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Timestamp get createTime => $_getN(0);
+  @$pb.TagNumber(1)
   set createTime($0.Timestamp v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreateTime() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreateTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureCreateTime() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
   set startTime($0.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureStartTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
   set endTime($0.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEndTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Timestamp ensureEndTime() => $_ensure(2);
 
-  Int64 get totalProcessedBytes => $_getI64(3);
-  set totalProcessedBytes(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get totalProcessedBytes => $_getI64(3);
+  @$pb.TagNumber(4)
+  set totalProcessedBytes($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTotalProcessedBytes() => $_has(3);
+  @$pb.TagNumber(4)
   void clearTotalProcessedBytes() => clearField(4);
 
-  Int64 get totalBilledBytes => $_getI64(4);
-  set totalBilledBytes(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get totalBilledBytes => $_getI64(4);
+  @$pb.TagNumber(5)
+  set totalBilledBytes($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTotalBilledBytes() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTotalBilledBytes() => clearField(5);
 
-  $core.int get billingTier => $_get(5, 0);
+  @$pb.TagNumber(7)
+  $core.int get billingTier => $_getIZ(5);
+  @$pb.TagNumber(7)
   set billingTier($core.int v) {
     $_setSignedInt32(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasBillingTier() => $_has(5);
+  @$pb.TagNumber(7)
   void clearBillingTier() => clearField(7);
 }
 
 class DatasetName extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DatasetName',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..hasRequiredFields = false;
@@ -2050,29 +2625,40 @@ class DatasetName extends $pb.GeneratedMessage {
   static DatasetName create() => DatasetName._();
   DatasetName createEmptyInstance() => create();
   static $pb.PbList<DatasetName> createRepeated() => $pb.PbList<DatasetName>();
-  static DatasetName getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DatasetName getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DatasetName>(create);
   static DatasetName _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
-  $core.String get datasetId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get datasetId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set datasetId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDatasetId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDatasetId() => clearField(2);
 }
 
 class TableName extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableName',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'projectId')
     ..aOS(2, 'datasetId')
     ..aOS(3, 'tableId')
@@ -2094,37 +2680,52 @@ class TableName extends $pb.GeneratedMessage {
   static TableName create() => TableName._();
   TableName createEmptyInstance() => create();
   static $pb.PbList<TableName> createRepeated() => $pb.PbList<TableName>();
-  static TableName getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableName getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TableName>(create);
   static TableName _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
-  $core.String get datasetId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get datasetId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set datasetId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDatasetId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDatasetId() => clearField(2);
 
-  $core.String get tableId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get tableId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set tableId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTableId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTableId() => clearField(3);
 }
 
 class JobName extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('JobName',
-      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'))
+      package: const $pb.PackageName('google.cloud.bigquery.logging.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'projectId')
     ..aOS(2, 'jobId')
     ..hasRequiredFields = false;
@@ -2145,22 +2746,32 @@ class JobName extends $pb.GeneratedMessage {
   static JobName create() => JobName._();
   JobName createEmptyInstance() => create();
   static $pb.PbList<JobName> createRepeated() => $pb.PbList<JobName>();
-  static JobName getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static JobName getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<JobName>(create);
   static JobName _defaultInstance;
 
-  $core.String get projectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get projectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set projectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
-  $core.String get jobId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get jobId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set jobId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJobId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJobId() => clearField(2);
 }

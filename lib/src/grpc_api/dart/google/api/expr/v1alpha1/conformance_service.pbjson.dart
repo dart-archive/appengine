@@ -8,7 +8,7 @@
 const ParseRequest$json = {
   '1': 'ParseRequest',
   '2': [
-    {'1': 'cel_source', '3': 1, '4': 1, '5': 9, '10': 'celSource'},
+    {'1': 'cel_source', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'celSource'},
     {'1': 'syntax_version', '3': 2, '4': 1, '5': 9, '10': 'syntaxVersion'},
     {'1': 'source_location', '3': 3, '4': 1, '5': 9, '10': 'sourceLocation'},
     {'1': 'disable_macros', '3': 4, '4': 1, '5': 8, '10': 'disableMacros'},
@@ -46,6 +46,7 @@ const CheckRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.api.expr.v1alpha1.ParsedExpr',
+      '8': {},
       '10': 'parsedExpr'
     },
     {

@@ -30,5 +30,6 @@ const BillingSetupErrorEnum_BillingSetupError$json = {
     {'1': 'PAYMENTS_ACCOUNT_NOT_FOUND', '2': 14},
     {'1': 'PAYMENTS_PROFILE_INELIGIBLE', '2': 15},
     {'1': 'PAYMENTS_ACCOUNT_INELIGIBLE', '2': 16},
+    {'1': 'CUSTOMER_NEEDS_INTERNAL_APPROVAL', '2': 17},
   ],
 };

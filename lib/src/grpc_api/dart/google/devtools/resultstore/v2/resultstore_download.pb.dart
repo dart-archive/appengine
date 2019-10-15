@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'invocation.pb.dart' as $1;
@@ -20,7 +19,8 @@ import 'file_set.pb.dart' as $7;
 
 class GetInvocationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInvocationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -42,16 +42,21 @@ class GetInvocationRequest extends $pb.GeneratedMessage {
   GetInvocationRequest createEmptyInstance() => create();
   static $pb.PbList<GetInvocationRequest> createRepeated() =>
       $pb.PbList<GetInvocationRequest>();
-  static GetInvocationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInvocationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInvocationRequest>(create);
   static GetInvocationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -65,7 +70,8 @@ class SearchInvocationsRequest extends $pb.GeneratedMessage {
     0: SearchInvocationsRequest_PageStart.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchInvocationsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..a<$core.int>(1, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(2, 'pageToken')
@@ -94,68 +100,94 @@ class SearchInvocationsRequest extends $pb.GeneratedMessage {
   SearchInvocationsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchInvocationsRequest> createRepeated() =>
       $pb.PbList<SearchInvocationsRequest>();
-  static SearchInvocationsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchInvocationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchInvocationsRequest>(create);
   static SearchInvocationsRequest _defaultInstance;
 
   SearchInvocationsRequest_PageStart whichPageStart() =>
       _SearchInvocationsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(1)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  Int64 get offset => $_getI64(2);
-  set offset(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get offset => $_getI64(2);
+  @$pb.TagNumber(3)
+  set offset($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOffset() => $_has(2);
+  @$pb.TagNumber(3)
   void clearOffset() => clearField(3);
 
-  $core.String get query => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get query => $_getSZ(3);
+  @$pb.TagNumber(4)
   set query($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasQuery() => $_has(3);
+  @$pb.TagNumber(4)
   void clearQuery() => clearField(4);
 
-  $core.String get projectId => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get projectId => $_getSZ(4);
+  @$pb.TagNumber(5)
   set projectId($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasProjectId() => $_has(4);
+  @$pb.TagNumber(5)
   void clearProjectId() => clearField(5);
 
-  $core.bool get exactMatch => $_get(5, false);
+  @$pb.TagNumber(7)
+  $core.bool get exactMatch => $_getBF(5);
+  @$pb.TagNumber(7)
   set exactMatch($core.bool v) {
     $_setBool(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasExactMatch() => $_has(5);
+  @$pb.TagNumber(7)
   void clearExactMatch() => clearField(7);
 }
 
 class SearchInvocationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchInvocationsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$1.Invocation>(
-        1, 'invocations', $pb.PbFieldType.PM, $1.Invocation.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$1.Invocation>(1, 'invocations', $pb.PbFieldType.PM,
+        subBuilder: $1.Invocation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -179,25 +211,32 @@ class SearchInvocationsResponse extends $pb.GeneratedMessage {
   SearchInvocationsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchInvocationsResponse> createRepeated() =>
       $pb.PbList<SearchInvocationsResponse>();
-  static SearchInvocationsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchInvocationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchInvocationsResponse>(create);
   static SearchInvocationsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Invocation> get invocations => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetInvocationDownloadMetadataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetInvocationDownloadMetadataRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -223,22 +262,29 @@ class GetInvocationDownloadMetadataRequest extends $pb.GeneratedMessage {
   GetInvocationDownloadMetadataRequest createEmptyInstance() => create();
   static $pb.PbList<GetInvocationDownloadMetadataRequest> createRepeated() =>
       $pb.PbList<GetInvocationDownloadMetadataRequest>();
+  @$core.pragma('dart2js:noInline')
   static GetInvocationDownloadMetadataRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetInvocationDownloadMetadataRequest>(create);
   static GetInvocationDownloadMetadataRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetConfigurationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetConfigurationRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -261,16 +307,21 @@ class GetConfigurationRequest extends $pb.GeneratedMessage {
   GetConfigurationRequest createEmptyInstance() => create();
   static $pb.PbList<GetConfigurationRequest> createRepeated() =>
       $pb.PbList<GetConfigurationRequest>();
-  static GetConfigurationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetConfigurationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetConfigurationRequest>(create);
   static GetConfigurationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -284,7 +335,8 @@ class ListConfigurationsRequest extends $pb.GeneratedMessage {
     0: ListConfigurationsRequest_PageStart.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListConfigurationsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
@@ -313,61 +365,83 @@ class ListConfigurationsRequest extends $pb.GeneratedMessage {
   ListConfigurationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListConfigurationsRequest> createRepeated() =>
       $pb.PbList<ListConfigurationsRequest>();
-  static ListConfigurationsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListConfigurationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListConfigurationsRequest>(create);
   static ListConfigurationsRequest _defaultInstance;
 
   ListConfigurationsRequest_PageStart whichPageStart() =>
       _ListConfigurationsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  Int64 get offset => $_getI64(3);
-  set offset(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get offset => $_getI64(3);
+  @$pb.TagNumber(4)
+  set offset($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOffset() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOffset() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class ListConfigurationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListConfigurationsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$3.Configuration>(
-        1, 'configurations', $pb.PbFieldType.PM, $3.Configuration.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$3.Configuration>(1, 'configurations', $pb.PbFieldType.PM,
+        subBuilder: $3.Configuration.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -391,24 +465,31 @@ class ListConfigurationsResponse extends $pb.GeneratedMessage {
   ListConfigurationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListConfigurationsResponse> createRepeated() =>
       $pb.PbList<ListConfigurationsResponse>();
-  static ListConfigurationsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListConfigurationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListConfigurationsResponse>(create);
   static ListConfigurationsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Configuration> get configurations => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -429,16 +510,21 @@ class GetTargetRequest extends $pb.GeneratedMessage {
   GetTargetRequest createEmptyInstance() => create();
   static $pb.PbList<GetTargetRequest> createRepeated() =>
       $pb.PbList<GetTargetRequest>();
-  static GetTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTargetRequest>(create);
   static GetTargetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -452,7 +538,8 @@ class ListTargetsRequest extends $pb.GeneratedMessage {
     0: ListTargetsRequest_PageStart.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTargetsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
@@ -478,59 +565,82 @@ class ListTargetsRequest extends $pb.GeneratedMessage {
   ListTargetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTargetsRequest> createRepeated() =>
       $pb.PbList<ListTargetsRequest>();
-  static ListTargetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTargetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTargetsRequest>(create);
   static ListTargetsRequest _defaultInstance;
 
   ListTargetsRequest_PageStart whichPageStart() =>
       _ListTargetsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  Int64 get offset => $_getI64(3);
-  set offset(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get offset => $_getI64(3);
+  @$pb.TagNumber(4)
+  set offset($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOffset() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOffset() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class ListTargetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTargetsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$4.Target>(1, 'targets', $pb.PbFieldType.PM, $4.Target.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$4.Target>(1, 'targets', $pb.PbFieldType.PM,
+        subBuilder: $4.Target.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -551,25 +661,32 @@ class ListTargetsResponse extends $pb.GeneratedMessage {
   ListTargetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTargetsResponse> createRepeated() =>
       $pb.PbList<ListTargetsResponse>();
-  static ListTargetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTargetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTargetsResponse>(create);
   static ListTargetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$4.Target> get targets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetConfiguredTargetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetConfiguredTargetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -593,16 +710,21 @@ class GetConfiguredTargetRequest extends $pb.GeneratedMessage {
   GetConfiguredTargetRequest createEmptyInstance() => create();
   static $pb.PbList<GetConfiguredTargetRequest> createRepeated() =>
       $pb.PbList<GetConfiguredTargetRequest>();
-  static GetConfiguredTargetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetConfiguredTargetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetConfiguredTargetRequest>(create);
   static GetConfiguredTargetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -617,7 +739,8 @@ class ListConfiguredTargetsRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListConfiguredTargetsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
@@ -647,61 +770,83 @@ class ListConfiguredTargetsRequest extends $pb.GeneratedMessage {
   ListConfiguredTargetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListConfiguredTargetsRequest> createRepeated() =>
       $pb.PbList<ListConfiguredTargetsRequest>();
-  static ListConfiguredTargetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListConfiguredTargetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListConfiguredTargetsRequest>(create);
   static ListConfiguredTargetsRequest _defaultInstance;
 
   ListConfiguredTargetsRequest_PageStart whichPageStart() =>
       _ListConfiguredTargetsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  Int64 get offset => $_getI64(3);
-  set offset(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get offset => $_getI64(3);
+  @$pb.TagNumber(4)
+  set offset($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOffset() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOffset() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class ListConfiguredTargetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListConfiguredTargetsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$5.ConfiguredTarget>(
-        1, 'configuredTargets', $pb.PbFieldType.PM, $5.ConfiguredTarget.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$5.ConfiguredTarget>(1, 'configuredTargets', $pb.PbFieldType.PM,
+        subBuilder: $5.ConfiguredTarget.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -726,24 +871,31 @@ class ListConfiguredTargetsResponse extends $pb.GeneratedMessage {
   ListConfiguredTargetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListConfiguredTargetsResponse> createRepeated() =>
       $pb.PbList<ListConfiguredTargetsResponse>();
-  static ListConfiguredTargetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListConfiguredTargetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListConfiguredTargetsResponse>(create);
   static ListConfiguredTargetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.ConfiguredTarget> get configuredTargets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetActionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetActionRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -764,16 +916,21 @@ class GetActionRequest extends $pb.GeneratedMessage {
   GetActionRequest createEmptyInstance() => create();
   static $pb.PbList<GetActionRequest> createRepeated() =>
       $pb.PbList<GetActionRequest>();
-  static GetActionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetActionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetActionRequest>(create);
   static GetActionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -787,7 +944,8 @@ class ListActionsRequest extends $pb.GeneratedMessage {
     0: ListActionsRequest_PageStart.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListActionsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
@@ -813,59 +971,82 @@ class ListActionsRequest extends $pb.GeneratedMessage {
   ListActionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListActionsRequest> createRepeated() =>
       $pb.PbList<ListActionsRequest>();
-  static ListActionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListActionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListActionsRequest>(create);
   static ListActionsRequest _defaultInstance;
 
   ListActionsRequest_PageStart whichPageStart() =>
       _ListActionsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  Int64 get offset => $_getI64(3);
-  set offset(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get offset => $_getI64(3);
+  @$pb.TagNumber(4)
+  set offset($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOffset() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOffset() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class ListActionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListActionsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$6.Action>(1, 'actions', $pb.PbFieldType.PM, $6.Action.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$6.Action>(1, 'actions', $pb.PbFieldType.PM,
+        subBuilder: $6.Action.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -886,24 +1067,31 @@ class ListActionsResponse extends $pb.GeneratedMessage {
   ListActionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListActionsResponse> createRepeated() =>
       $pb.PbList<ListActionsResponse>();
-  static ListActionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListActionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListActionsResponse>(create);
   static ListActionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$6.Action> get actions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetFileSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFileSetRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -924,16 +1112,21 @@ class GetFileSetRequest extends $pb.GeneratedMessage {
   GetFileSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetFileSetRequest> createRepeated() =>
       $pb.PbList<GetFileSetRequest>();
-  static GetFileSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFileSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFileSetRequest>(create);
   static GetFileSetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -947,7 +1140,8 @@ class ListFileSetsRequest extends $pb.GeneratedMessage {
     0: ListFileSetsRequest_PageStart.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFileSetsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
@@ -973,59 +1167,82 @@ class ListFileSetsRequest extends $pb.GeneratedMessage {
   ListFileSetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListFileSetsRequest> createRepeated() =>
       $pb.PbList<ListFileSetsRequest>();
-  static ListFileSetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFileSetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFileSetsRequest>(create);
   static ListFileSetsRequest _defaultInstance;
 
   ListFileSetsRequest_PageStart whichPageStart() =>
       _ListFileSetsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  Int64 get offset => $_getI64(3);
-  set offset(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get offset => $_getI64(3);
+  @$pb.TagNumber(4)
+  set offset($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOffset() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOffset() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 }
 
 class ListFileSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFileSetsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$7.FileSet>(1, 'fileSets', $pb.PbFieldType.PM, $7.FileSet.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$7.FileSet>(1, 'fileSets', $pb.PbFieldType.PM,
+        subBuilder: $7.FileSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1047,18 +1264,24 @@ class ListFileSetsResponse extends $pb.GeneratedMessage {
   ListFileSetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListFileSetsResponse> createRepeated() =>
       $pb.PbList<ListFileSetsResponse>();
-  static ListFileSetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFileSetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFileSetsResponse>(create);
   static ListFileSetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$7.FileSet> get fileSets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
@@ -1072,7 +1295,8 @@ class TraverseFileSetsRequest extends $pb.GeneratedMessage {
     0: TraverseFileSetsRequest_PageStart.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TraverseFileSetsRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..oo(0, [3, 4])
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
@@ -1099,51 +1323,70 @@ class TraverseFileSetsRequest extends $pb.GeneratedMessage {
   TraverseFileSetsRequest createEmptyInstance() => create();
   static $pb.PbList<TraverseFileSetsRequest> createRepeated() =>
       $pb.PbList<TraverseFileSetsRequest>();
-  static TraverseFileSetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TraverseFileSetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TraverseFileSetsRequest>(create);
   static TraverseFileSetsRequest _defaultInstance;
 
   TraverseFileSetsRequest_PageStart whichPageStart() =>
       _TraverseFileSetsRequest_PageStartByTag[$_whichOneof(0)];
   void clearPageStart() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  Int64 get offset => $_getI64(3);
-  set offset(Int64 v) {
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get offset => $_getI64(3);
+  @$pb.TagNumber(4)
+  set offset($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOffset() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOffset() => clearField(4);
 }
 
 class TraverseFileSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TraverseFileSetsResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..pc<$7.FileSet>(1, 'fileSets', $pb.PbFieldType.PM, $7.FileSet.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..pc<$7.FileSet>(1, 'fileSets', $pb.PbFieldType.PM,
+        subBuilder: $7.FileSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1166,17 +1409,23 @@ class TraverseFileSetsResponse extends $pb.GeneratedMessage {
   TraverseFileSetsResponse createEmptyInstance() => create();
   static $pb.PbList<TraverseFileSetsResponse> createRepeated() =>
       $pb.PbList<TraverseFileSetsResponse>();
-  static TraverseFileSetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TraverseFileSetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TraverseFileSetsResponse>(create);
   static TraverseFileSetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$7.FileSet> get fileSets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }

@@ -8,21 +8,22 @@
 const TranslateTextGlossaryConfig$json = {
   '1': 'TranslateTextGlossaryConfig',
   '2': [
-    {'1': 'glossary', '3': 1, '4': 1, '5': 9, '10': 'glossary'},
-    {'1': 'ignore_case', '3': 2, '4': 1, '5': 8, '10': 'ignoreCase'},
+    {'1': 'glossary', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'glossary'},
+    {'1': 'ignore_case', '3': 2, '4': 1, '5': 8, '8': {}, '10': 'ignoreCase'},
   ],
 };
 
 const TranslateTextRequest$json = {
   '1': 'TranslateTextRequest',
   '2': [
-    {'1': 'contents', '3': 1, '4': 3, '5': 9, '10': 'contents'},
-    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'contents', '3': 1, '4': 3, '5': 9, '8': {}, '10': 'contents'},
+    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'mimeType'},
     {
       '1': 'source_language_code',
       '3': 4,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'sourceLanguageCode'
     },
     {
@@ -30,16 +31,18 @@ const TranslateTextRequest$json = {
       '3': 5,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'targetLanguageCode'
     },
-    {'1': 'parent', '3': 8, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'model', '3': 6, '4': 1, '5': 9, '10': 'model'},
+    {'1': 'parent', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'model', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'model'},
     {
       '1': 'glossary_config',
       '3': 7,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.translation.v3.TranslateTextGlossaryConfig',
+      '8': {},
       '10': 'glossaryConfig'
     },
     {
@@ -48,6 +51,7 @@ const TranslateTextRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.translation.v3.TranslateTextRequest.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
   ],
@@ -111,16 +115,17 @@ const Translation$json = {
 const DetectLanguageRequest$json = {
   '1': 'DetectLanguageRequest',
   '2': [
-    {'1': 'parent', '3': 5, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'model', '3': 4, '4': 1, '5': 9, '10': 'model'},
+    {'1': 'parent', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'model', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'model'},
     {'1': 'content', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'content'},
-    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'mimeType'},
     {
       '1': 'labels',
       '3': 6,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.translation.v3.DetectLanguageRequest.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
   ],
@@ -164,15 +169,16 @@ const DetectLanguageResponse$json = {
 const GetSupportedLanguagesRequest$json = {
   '1': 'GetSupportedLanguagesRequest',
   '2': [
-    {'1': 'parent', '3': 3, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'display_language_code',
       '3': 1,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'displayLanguageCode'
     },
-    {'1': 'model', '3': 2, '4': 1, '5': 9, '10': 'model'},
+    {'1': 'model', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'model'},
   ],
 };
 
@@ -210,7 +216,7 @@ const GcsSource$json = {
 const InputConfig$json = {
   '1': 'InputConfig',
   '2': [
-    {'1': 'mime_type', '3': 1, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'mime_type', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'mimeType'},
     {
       '1': 'gcs_source',
       '3': 2,
@@ -254,12 +260,13 @@ const OutputConfig$json = {
 const BatchTranslateTextRequest$json = {
   '1': 'BatchTranslateTextRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'source_language_code',
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'sourceLanguageCode'
     },
     {
@@ -267,6 +274,7 @@ const BatchTranslateTextRequest$json = {
       '3': 3,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'targetLanguageCodes'
     },
     {
@@ -275,6 +283,7 @@ const BatchTranslateTextRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.translation.v3.BatchTranslateTextRequest.ModelsEntry',
+      '8': {},
       '10': 'models'
     },
     {
@@ -283,6 +292,7 @@ const BatchTranslateTextRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.translation.v3.InputConfig',
+      '8': {},
       '10': 'inputConfigs'
     },
     {
@@ -291,6 +301,7 @@ const BatchTranslateTextRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.translation.v3.OutputConfig',
+      '8': {},
       '10': 'outputConfig'
     },
     {
@@ -300,6 +311,7 @@ const BatchTranslateTextRequest$json = {
       '5': 11,
       '6':
           '.google.cloud.translation.v3.BatchTranslateTextRequest.GlossariesEntry',
+      '8': {},
       '10': 'glossaries'
     },
     {
@@ -308,6 +320,7 @@ const BatchTranslateTextRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.translation.v3.BatchTranslateTextRequest.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
   ],
@@ -487,13 +500,14 @@ const Glossary$json = {
       '6': '.google.cloud.translation.v3.GlossaryInputConfig',
       '10': 'inputConfig'
     },
-    {'1': 'entry_count', '3': 6, '4': 1, '5': 5, '10': 'entryCount'},
+    {'1': 'entry_count', '3': 6, '4': 1, '5': 5, '8': {}, '10': 'entryCount'},
     {
       '1': 'submit_time',
       '3': 7,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'submitTime'
     },
     {
@@ -502,10 +516,12 @@ const Glossary$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'endTime'
     },
   ],
   '3': [Glossary_LanguageCodePair$json, Glossary_LanguageCodesSet$json],
+  '7': {},
   '8': [
     {'1': 'languages'},
   ],
@@ -541,13 +557,14 @@ const Glossary_LanguageCodesSet$json = {
 const CreateGlossaryRequest$json = {
   '1': 'CreateGlossaryRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'glossary',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.translation.v3.Glossary',
+      '8': {},
       '10': 'glossary'
     },
   ],
@@ -556,24 +573,24 @@ const CreateGlossaryRequest$json = {
 const GetGlossaryRequest$json = {
   '1': 'GetGlossaryRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const DeleteGlossaryRequest$json = {
   '1': 'DeleteGlossaryRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListGlossariesRequest$json = {
   '1': 'ListGlossariesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    {'1': 'filter', '3': 4, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
+    {'1': 'filter', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'filter'},
   ],
 };
 

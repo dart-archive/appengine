@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'access_reason.pbenum.dart';
 
 class AccessReasonEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AccessReasonEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AccessReasonEnum._() : super();
@@ -34,7 +34,8 @@ class AccessReasonEnum extends $pb.GeneratedMessage {
   AccessReasonEnum createEmptyInstance() => create();
   static $pb.PbList<AccessReasonEnum> createRepeated() =>
       $pb.PbList<AccessReasonEnum>();
-  static AccessReasonEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AccessReasonEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AccessReasonEnum>(create);
   static AccessReasonEnum _defaultInstance;
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,7 +20,8 @@ export 'appengine.pbenum.dart';
 
 class GetApplicationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetApplicationRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -44,22 +44,28 @@ class GetApplicationRequest extends $pb.GeneratedMessage {
   GetApplicationRequest createEmptyInstance() => create();
   static $pb.PbList<GetApplicationRequest> createRepeated() =>
       $pb.PbList<GetApplicationRequest>();
-  static GetApplicationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetApplicationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetApplicationRequest>(create);
   static GetApplicationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class RepairApplicationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RepairApplicationRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -82,22 +88,28 @@ class RepairApplicationRequest extends $pb.GeneratedMessage {
   RepairApplicationRequest createEmptyInstance() => create();
   static $pb.PbList<RepairApplicationRequest> createRepeated() =>
       $pb.PbList<RepairApplicationRequest>();
-  static RepairApplicationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RepairApplicationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RepairApplicationRequest>(create);
   static RepairApplicationRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListServicesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -120,39 +132,54 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   ListServicesRequest createEmptyInstance() => create();
   static $pb.PbList<ListServicesRequest> createRepeated() =>
       $pb.PbList<ListServicesRequest>();
-  static ListServicesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServicesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServicesRequest>(create);
   static ListServicesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListServicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesResponse',
-      package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$7.Service>(1, 'services', $pb.PbFieldType.PM, $7.Service.create)
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
+    ..pc<$7.Service>(1, 'services', $pb.PbFieldType.PM,
+        subBuilder: $7.Service.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -174,24 +201,31 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   ListServicesResponse createEmptyInstance() => create();
   static $pb.PbList<ListServicesResponse> createRepeated() =>
       $pb.PbList<ListServicesResponse>();
-  static ListServicesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServicesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServicesResponse>(create);
   static ListServicesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$7.Service> get services => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -212,27 +246,31 @@ class GetServiceRequest extends $pb.GeneratedMessage {
   GetServiceRequest createEmptyInstance() => create();
   static $pb.PbList<GetServiceRequest> createRepeated() =>
       $pb.PbList<GetServiceRequest>();
-  static GetServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetServiceRequest>(create);
   static GetServiceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateServiceRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$7.Service>(2, 'service', $pb.PbFieldType.OM, $7.Service.getDefault,
-        $7.Service.create)
-    ..a<$9.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+    ..aOM<$7.Service>(2, 'service', subBuilder: $7.Service.create)
+    ..aOM<$9.FieldMask>(3, 'updateMask', subBuilder: $9.FieldMask.create)
     ..aOB(4, 'migrateTraffic')
     ..hasRequiredFields = false;
 
@@ -254,46 +292,68 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   UpdateServiceRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateServiceRequest> createRepeated() =>
       $pb.PbList<UpdateServiceRequest>();
-  static UpdateServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateServiceRequest>(create);
   static UpdateServiceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $7.Service get service => $_getN(1);
+  @$pb.TagNumber(2)
   set service($7.Service v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasService() => $_has(1);
+  @$pb.TagNumber(2)
   void clearService() => clearField(2);
+  @$pb.TagNumber(2)
+  $7.Service ensureService() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $9.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($9.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $9.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.bool get migrateTraffic => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get migrateTraffic => $_getBF(3);
+  @$pb.TagNumber(4)
   set migrateTraffic($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasMigrateTraffic() => $_has(3);
+  @$pb.TagNumber(4)
   void clearMigrateTraffic() => clearField(4);
 }
 
 class DeleteServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteServiceRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -315,25 +375,33 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
   DeleteServiceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteServiceRequest> createRepeated() =>
       $pb.PbList<DeleteServiceRequest>();
-  static DeleteServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteServiceRequest>(create);
   static DeleteServiceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListVersionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..e<VersionView>(2, 'view', $pb.PbFieldType.OE, VersionView.BASIC,
-        VersionView.valueOf, VersionView.values)
+    ..e<VersionView>(2, 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: VersionView.BASIC,
+        valueOf: VersionView.valueOf,
+        enumValues: VersionView.values)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
@@ -355,47 +423,66 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   ListVersionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListVersionsRequest> createRepeated() =>
       $pb.PbList<ListVersionsRequest>();
-  static ListVersionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListVersionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListVersionsRequest>(create);
   static ListVersionsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   VersionView get view => $_getN(1);
+  @$pb.TagNumber(2)
   set view(VersionView v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasView() => $_has(1);
+  @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsResponse',
-      package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$6.Version>(1, 'versions', $pb.PbFieldType.PM, $6.Version.create)
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
+    ..pc<$6.Version>(1, 'versions', $pb.PbFieldType.PM,
+        subBuilder: $6.Version.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -417,27 +504,36 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
   ListVersionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListVersionsResponse> createRepeated() =>
       $pb.PbList<ListVersionsResponse>();
-  static ListVersionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListVersionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListVersionsResponse>(create);
   static ListVersionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$6.Version> get versions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVersionRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..e<VersionView>(2, 'view', $pb.PbFieldType.OE, VersionView.BASIC,
-        VersionView.valueOf, VersionView.values)
+    ..e<VersionView>(2, 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: VersionView.BASIC,
+        valueOf: VersionView.valueOf,
+        enumValues: VersionView.values)
     ..hasRequiredFields = false;
 
   GetVersionRequest._() : super();
@@ -457,33 +553,42 @@ class GetVersionRequest extends $pb.GeneratedMessage {
   GetVersionRequest createEmptyInstance() => create();
   static $pb.PbList<GetVersionRequest> createRepeated() =>
       $pb.PbList<GetVersionRequest>();
-  static GetVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetVersionRequest>(create);
   static GetVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   VersionView get view => $_getN(1);
+  @$pb.TagNumber(2)
   set view(VersionView v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasView() => $_has(1);
+  @$pb.TagNumber(2)
   void clearView() => clearField(2);
 }
 
 class CreateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$6.Version>(2, 'version', $pb.PbFieldType.OM, $6.Version.getDefault,
-        $6.Version.create)
+    ..aOM<$6.Version>(2, 'version', subBuilder: $6.Version.create)
     ..hasRequiredFields = false;
 
   CreateVersionRequest._() : super();
@@ -504,35 +609,45 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   CreateVersionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateVersionRequest> createRepeated() =>
       $pb.PbList<CreateVersionRequest>();
-  static CreateVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateVersionRequest>(create);
   static CreateVersionRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $6.Version get version => $_getN(1);
+  @$pb.TagNumber(2)
   set version($6.Version v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Version ensureVersion() => $_ensure(1);
 }
 
 class UpdateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVersionRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$6.Version>(2, 'version', $pb.PbFieldType.OM, $6.Version.getDefault,
-        $6.Version.create)
-    ..a<$9.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $9.FieldMask.getDefault, $9.FieldMask.create)
+    ..aOM<$6.Version>(2, 'version', subBuilder: $6.Version.create)
+    ..aOM<$9.FieldMask>(3, 'updateMask', subBuilder: $9.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateVersionRequest._() : super();
@@ -553,38 +668,56 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   UpdateVersionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateVersionRequest> createRepeated() =>
       $pb.PbList<UpdateVersionRequest>();
-  static UpdateVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateVersionRequest>(create);
   static UpdateVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $6.Version get version => $_getN(1);
+  @$pb.TagNumber(2)
   set version($6.Version v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Version ensureVersion() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $9.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($9.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $9.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class DeleteVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteVersionRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -606,22 +739,28 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
   DeleteVersionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteVersionRequest> createRepeated() =>
       $pb.PbList<DeleteVersionRequest>();
-  static DeleteVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteVersionRequest>(create);
   static DeleteVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListInstancesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -645,39 +784,54 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   ListInstancesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInstancesRequest> createRepeated() =>
       $pb.PbList<ListInstancesRequest>();
-  static ListInstancesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstancesRequest>(create);
   static ListInstancesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListInstancesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse',
-      package: const $pb.PackageName('google.appengine.v1'))
-    ..pc<$5.Instance>(1, 'instances', $pb.PbFieldType.PM, $5.Instance.create)
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
+    ..pc<$5.Instance>(1, 'instances', $pb.PbFieldType.PM,
+        subBuilder: $5.Instance.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -700,24 +854,31 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   ListInstancesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInstancesResponse> createRepeated() =>
       $pb.PbList<ListInstancesResponse>();
-  static ListInstancesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstancesResponse>(create);
   static ListInstancesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$5.Instance> get instances => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -738,22 +899,28 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   GetInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<GetInstanceRequest> createRepeated() =>
       $pb.PbList<GetInstanceRequest>();
-  static GetInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInstanceRequest>(create);
   static GetInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteInstanceRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -776,22 +943,28 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   DeleteInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInstanceRequest> createRepeated() =>
       $pb.PbList<DeleteInstanceRequest>();
-  static DeleteInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteInstanceRequest>(create);
   static DeleteInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DebugInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DebugInstanceRequest',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -813,15 +986,20 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
   DebugInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<DebugInstanceRequest> createRepeated() =>
       $pb.PbList<DebugInstanceRequest>();
-  static DebugInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DebugInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DebugInstanceRequest>(create);
   static DebugInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

@@ -14,6 +14,7 @@ const Schema$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.ColumnSchema',
+      '8': {},
       '10': 'columns'
     },
   ],
@@ -22,8 +23,8 @@ const Schema$json = {
 const ColumnSchema$json = {
   '1': 'ColumnSchema',
   '2': [
-    {'1': 'column', '3': 6, '4': 1, '5': 9, '10': 'column'},
-    {'1': 'type', '3': 1, '4': 1, '5': 9, '10': 'type'},
+    {'1': 'column', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'column'},
+    {'1': 'type', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'type'},
     {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
     {'1': 'mode', '3': 3, '4': 1, '5': 9, '10': 'mode'},
     {

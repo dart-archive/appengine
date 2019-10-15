@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'vanity_pharma_text.pbenum.dart';
 
 class VanityPharmaTextEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VanityPharmaTextEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   VanityPharmaTextEnum._() : super();
@@ -35,7 +35,8 @@ class VanityPharmaTextEnum extends $pb.GeneratedMessage {
   VanityPharmaTextEnum createEmptyInstance() => create();
   static $pb.PbList<VanityPharmaTextEnum> createRepeated() =>
       $pb.PbList<VanityPharmaTextEnum>();
-  static VanityPharmaTextEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VanityPharmaTextEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VanityPharmaTextEnum>(create);
   static VanityPharmaTextEnum _defaultInstance;
 }
