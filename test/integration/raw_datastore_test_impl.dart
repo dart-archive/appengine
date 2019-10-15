@@ -1017,7 +1017,7 @@ runTests(Datastore datastore, String namespace) {
           return Future.forEach(futures, (f) => f()).then(expectAsync1((_) {}));
         });
       });
-    });
+    }, timeout: Timeout(Duration(minutes: 2)));
   });
 }
 

@@ -16,7 +16,7 @@ import 'db/metamodel_tests.dart' as metamodel_tests;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
 
 main() async {
-  final endpoint = 'https://datastore.googleapis.com';
+  final endpoint = 'datastore.googleapis.com';
 
   final String nsPrefix = Platform.operatingSystem;
 
