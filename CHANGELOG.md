@@ -1,3 +1,10 @@
+## 0.10.3
+
+ * Update Protobuf to v1.0.0
+ * Add client library identification header
+ * Fix `grpc/datastore` tests
+
+
 ## 0.10.2
 
  * Update gRPC version dependency
